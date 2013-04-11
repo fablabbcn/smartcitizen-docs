@@ -1,0 +1,30 @@
+<h1>Tutorials</h1>
+
+<h2>Getting Started</h2>
+
+<h3>Download and install Arduino IDE</h3>
+
+<p>The first step to use and configure a SCK is getting the <em>Arduino IDE</em>, which is nothing more than the program you use to upload a program (also called sketch) to an Arduino board. You can <a href="http://arduino.cc/en/Main/Software">download</a> the appropiate binaries for your operating system from the official website of Arduino, or, if you like bleeding-edge technology you can compile it from source by downloading the latest version of the code in <a href="https://code.google.com/p/arduino">Google Code</a> (instructions on how to compile source can be found <a href="https://code.google.com/p/arduino/wiki/BuildingArduino">here</a>). Install drivers if necessary and get the system up and running, as described in the <a href="http://arduino.cc/en/Guide/HomePage">official website</a> (choose your OS). The SCK core is a modified Arduino Leonardo, thus you have to select it in the Arduino IDE as follows: <em>Tools>>Board>>Arduino Leonardo</em>. Now you should be able to run the application and get a similar window to this following one:</p>
+
+<p><img src="../pics/ArduinoIDE.png" alt="Arduino IDE window" title=""></p>
+
+<h3>Uploading the firmware to the board</h3>
+
+<p>Now it's time to grab the SmartCitizen firmware from our repository in <a href="https://github.com/fablabbcn/Smart-Citizen-Kit">GitHub</a>. There are two ways to do this:</p>
+
+<ul>
+<li>Press the button that says <em>ZIP</em> in GitHub so you can download a zipped version of the entire repository.</li>
+<li>If you have Git installed in your machine you can just type the following in your terminal: <code>git clone git://github.com/fablabbcn/Smart-Citizen-Kit.git</code></li>
+</ul>
+
+<p>Next open the main file, <code>Sck_*.ino</code>, with the previously downloaded IDE and press <code>CTRL+U</code>, which will upload the program to the board.</p>
+
+<h3>Configuring the SCK</h3>
+
+<p>Now you the board knows what to do but it also has to be able to upload all gathered information to the Internet. Thus you need to set the ESSID (name of your wireless local area network), the associated password, etc. At the moment you can do this via <em>telnet</em> or by executing a python script, also located in <a href="https://github.com/fablabbcn/Smart-Citizen-Kit">our repository</a> thus you already have it in your computer. The script features a wizard-like form that will help you through the process of configuring your board.</p>
+
+<h3>Start sharing</h3>
+
+<p>Head to the <a href="http://smartcitizen.me">Smart Citizen website</a>, create an account and register your SCK along with its unique ID (MAC address). You're ready to go now. And remember, sharing is caring.</p>
+
+<p><img src="../pics/sck-hand.jpg" alt="Smart Citizen" title=""></p>
