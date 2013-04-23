@@ -3,7 +3,6 @@ SmartCitizen.doc
 
 Markdown and HTML files that concern the documentation about the Smart Citizen Kit, from how to get the SCK to creating your own shields.
 
-
 ## Index
 
 - Introduction
@@ -17,8 +16,8 @@ Markdown and HTML files that concern the documentation about the Smart Citizen K
     - Components
         - Core components
         - Ambient shield components
-    - Pinout
     - Firmware
 - Extending the SCK
+    - Pinout
     - I2C pins
     - Creating your own shield
