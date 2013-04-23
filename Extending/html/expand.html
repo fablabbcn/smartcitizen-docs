@@ -1,0 +1,33 @@
+<h1>Extending the Smart Citizen Kit</h1>
+
+<h2>Pinout</h2>
+
+<p>In order to add new features or just modify the code to transmit what you want, you shall know how the pins are ordered. The following table summarizes it all up.</p>
+
+<p>| --------- | --------- |
+| GND       | GND       |
+| IO3 (10)  | IO2 (9)   |
+| IO1 (13)  | IO0 (5)   |
+| SCL       | SDA       |
+| S5  (A1)  | S4  (A0)  |
+| S3  (A3)  | S2  (A2)  |
+| S1  (A5)  | S0  (A4)  |
+| VBAT      | VBAT      |
+| --------- | --------- |</p>
+
+<h2>Making your own shield</h2>
+
+<p>If you want to make your own shield from scratch and you use EAGLE PCB editor (or any compatible one) you should start by downloading our <em>Ambient Shield</em> template from <a href="http://#">here</a>.</p>
+
+<h2>I2C pins</h2>
+
+<p>I2C is a two-wire interface used to establish a communication between devices of any kind, developed by Philips in the mid-90s.</p>
+
+<p>As you can see in the <em>Ambient Shield</em> there are two columns of pings, called <code>I2C_0</code> and <code>I2C_1</code>. Each one of this columns have the following pins which you can solder:
+- <code>+5V</code>: power supply 
+- <code>VBAT</code>: secondary power supply
+- <code>SDA</code>: data line
+- <code>SCL</code>: clock line
+- <code>GND</code>: ground</p>
+
+<p>With the help of this input/output pins you can connect any device that speaks I2C, even another Arduino!</p>
