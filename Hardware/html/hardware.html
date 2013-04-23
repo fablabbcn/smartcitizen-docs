@@ -1,0 +1,61 @@
+<h1>Hardware</h1>
+
+<h2>Components</h2>
+
+<p>Now all the pieces that the SCK consists of will be described. Along each product a link will be attached which redirects to their datasheet.</p>
+
+<h2>Core components</h2>
+
+<h3>RTC Clock</h3>
+
+<p>The core board utilises a crystal oscillator that acts as a 16MHz real time clock. It needs an external power source to ensure it is always working and that is why you need to place a button cell in the bottom part of the core board.</p>
+
+<h3>Atmel Mega 32U4-AU</h3>
+
+<p>As for the central processing unit the SCK uses an AVR chip from Atmel, as the Arduino Leonardo does. This is a low power, high performance 8-bit microcontroller, which at the same time has USB built-in capabilities, which allows oprating systems to recognise it as a regular mouse.</p>
+
+<h3>Panel</h3>
+
+<p>TBD.</p>
+
+<h2>Ambient shield components</h2>
+
+<p>This shield measures, as its name indicates, environmental factors. More precisely: temperature, humidity, CO, NO2, light and noise.</p>
+
+<h3>Temperature and humidity</h3>
+
+<p>This two measurements are obtained thanks to the <a href="http://dlnmh9ip6v2uc.cloudfront.net/datasheets/Sensors/Weather/RHT03.pdf"><em>DHT22 sensor</em></a>, manufactured by Aosong Electronics, a Chinese corporation. They are quite cheap (you can obtain it for around $12USD) and are very precise. The output is not in analogic form but in digital form, meaning that the signal is in the either ones or zeros, thus requiring some extra "intelligence" to interpret the results.</p>
+
+<p><img src="../pics/dht22" alt="DHT22 Sensor" title=""></p>
+
+<p>The necessary libraries are already implemented to use along with Arduino and can be found in <a href="https://github.com/nethoncho/Arduino-DHT22">GitHub</a>. They were initially developed by Ben Adams in 2011 and implements a non-standard single wire protocol, necessary to establish a successful connection between Arduino and the sensor.</p>
+
+<p>In the SCK code, you'll be able to find this library inside the <code>SmartCitizenAmbient.cpp</code> and <code>SmartCitizenAmbient.h</code> files. More precisely, you shall find a function named <code>DHT22</code>.</p>
+
+<h3>CO</h3>
+
+<p>Carbon monoxide levels are measured through the <a href="http://www.e2v.com/e2v/assets/File/sensors_datasheets/metal_oxide/MICS-5525.pdf"><em>MiCS 5525 sensor</em></a>, a sensor made by e2v. This time the output is not digital but analogic. That means the sensing resistance decreases when CO is around. The main structure of this sensor consists on a heating resistor and the previously mentioned sensing layer.</p>
+
+<p>When it comes to the code there are three main functions that help obtaining the actual CO level, which are <code>getMICS</code> (which gets the actual reading), <code>VH_MICS</code> and <code>readVH</code> (sets the heating voltage and reads its value respectively), and <code>RL_MICS</code> (sets the value of RL not to damage the sensing layer) also found inside the files that does everything for the ambient shield (<code>SmartCitizenAmbient.cpp</code> and <code>SmartCitizenAmbient.h</code>).</p>
+
+<h3>NO2</h3>
+
+<p>Nitrogen dioxide is measured buy another e2v sensor. In detail we are talking about the <a href="http://www.e2v.com/e2v/assets/File/sensors_datasheets/metal_oxide/MICS-2710.pdf"><em>MiCS 2710</em></a>, a small, low power and precise NO2 sensor.</p>
+
+<p>Luckily, we can use the same functions implemented for the previous e2v sensors so there is no need to explain what they do again.</p>
+
+<h3>Light and noise</h3>
+
+<p>To quantify light and noise levels we used a LDR (light dependant resitor) and a microphone. The market is highly saturated with this kind of components, but for the sake of this project we chose the following ones:
+- LDR: <a href="http://www.farnell.com/datasheets/1475763.pdf"><em>Excelitas Tech VT935G</em></a>
+- Microphone: <a href="http://www.farnell.com/datasheets/1671459.pdf"><em>Pro Signal ABM-705-RC</em></a></p>
+
+<h3>2.4GHz ISM spectrum</h3>
+
+<p>Although this is measured using the core component <a href="https://www.sparkfun.com/datasheets/Wireless/WiFi/rn-131-ds.pdf">WiFly</a>, it is an environmental factor as well. With a Wi-Fi enabled component we can check how many SSIDs are transmitting at one given time thus giving an approximate idea on how saturated is this band of the spectrum.</p>
+
+<h2>Firmware</h2>
+
+<p>The main firmware file called is the <code>*.ino</code> file you'll find in our <a href="https://github.com/fablabbcn/Smart-Citizen-Kit">github repository</a>. An overview on how it works can be seen on the next picture:</p>
+
+<p><img src="../pics/SCK_firm.png" alt="SCK firmware flow diagram" title=""></p>
