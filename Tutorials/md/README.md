@@ -8,17 +8,20 @@ The first step to use and configure a SCK is getting the *Arduino IDE*, which is
 ![Arduino IDE window](../pics/ArduinoIDE.png)
 
 ### Uploading the firmware to the board
-Now it's time to grab the SmartCitizen firmware from our repository in [GitHub](https://github.com/fablabbcn/Smart-Citizen-Kit). There are two ways to do this:
+The board already comes with a stable version of the firmware. You can skip this step if you want.
 
+However, ff you want the bleeding-edge version (unconfigured) of the firmware then you shall grab it from our repository in [GitHub](https://github.com/fablabbcn/Smart-Citizen-Kit). There are two ways to do this:
 - Press the button that says *ZIP* in GitHub so you can download a zipped version of the entire repository.
 - If you have Git installed in your machine you can just type the following in your terminal: `git clone git://github.com/fablabbcn/Smart-Citizen-Kit.git`
 
 Next open the main file, `Sck_*.ino`, with the previously downloaded IDE and press `CTRL+U`, which will upload the program to the board.
 
 ### Configuring the SCK
-Now you the board knows what to do but it also has to be able to upload all gathered information to the Internet, thus you need to configure your network. You can easily do this inside the very own platform. Enter the appropriate [section](http://#) and select the ESSID, its password, the encryption scheme it uses (WEP, WPA or WPA2) and the kind of antenna the SCK will be using. The applet will do the rest for you.
+If you downloaded the latest version of our firmware or stayed with the default one now the board knows what to do but it also has to be able to upload all gathered information to the Internet, thus you need to configure your network. You can easily do this inside the very own platform. Enter the appropriate [section](http://#) and select the ESSID, its password, the encryption scheme it uses (WEP, WPA or WPA2) and the kind of antenna the SCK will be using. The applet will do the rest for you.
 
-On the other hand there are two alternative methods if the applet doesn't work in your system or you want to "go a little deeper". Via *telnet* or by executing a python script, also located in [our repository](https://github.com/fablabbcn/Smart-Citizen-Kit). The script features a wizard-like form that will help you through the process of configuring your board. That means you can even configure the SCK from your smartphone if you have the privileges and the right app to execute an external scripts.
+There is also another option, which is using our [cross-platform standalone Processing application](http://#). From there, you can select the appropriate vales and the program will upload them automatically to the board.
+
+On the other hand, you can browse the code and "hardcode" all these values in the config file, named `ConfigDefault.ino`.
 
 ### Start sharing
 Head to the [Smart Citizen website](http://smartcitizen.me), create an account and register your SCK along with its unique ID (MAC address). You're ready to go now. And remember, sharing is caring.
