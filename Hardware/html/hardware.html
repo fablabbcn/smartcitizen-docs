@@ -12,7 +12,7 @@
 
 <h3>Atmel Mega 32U4-AU</h3>
 
-<p>As for the central processing unit the SCK uses an AVR chip from Atmel, as the Arduino Leonardo does. This is a low power, high performance 8-bit microcontroller, which at the same time has USB built-in capabilities, which allows operating systems to recognise it as a regular mouse.</p>
+<p>As for the central processing unit the SCK uses an AVR chip from Atmel, as the Arduino Leonardo does. This is a low power, high performance 8-bit microcontroller, which at the same time has USB built-in capabilities, allowing operating systems to recognise it as a regular mouse.</p>
 
 <h3>Energy modules</h3>
 
@@ -58,21 +58,33 @@
 
 <p>The necessary libraries are already implemented to use along with Arduino and can be found in <a href="https://github.com/nethoncho/Arduino-DHT22">GitHub</a>. They were initially developed by Ben Adams in 2011 and implements a non-standard single wire protocol, necessary to establish a successful connection between Arduino and the sensor.</p>
 
+<p>As for the values range it can obtain:
+- 0-100% humidity readings with 2-5% accuracy
+- -40 to 80°C temperature readings ±0.5°C accuracy </p>
+
 <h3>CO</h3>
+
+<p><img src="../pics/mics5525.gif" alt="MiCS 5525 CO sensor" title=""></p>
 
 <p>Carbon monoxide levels are measured through the <a href="http://www.e2v.com/e2v/assets/File/sensors_datasheets/metal_oxide/MICS-5525.pdf">MiCS 5525 sensor</a>, a sensor made by e2v. This time the output is not digital but analogic. That means the sensing resistance decreases when CO is around. The main structure of this sensor consists on a heating resistor and the previously mentioned sensing layer. </p>
 
-<p>CO levels are inversely proportional to <code>Rs/R0</code>, as it can be seen on the datasheet. <code>Rs</code> is varies in an inversely proportional manner to CO levels, and <code>R0</code> is a fixed sensing resistance whill shall be measured under controlled ambient conditions (it slightly varies from sensor to sensor). Since in the first iterations of the project we didn't have such conditions, we now upload <code>Rs</code> to the Internet. Later on, we will upload via firmware the value of <code>R0</code>, thus allowing to measure actual CO levels.</p>
+<p>CO levels are <em>inversely proportional</em> to <code>Rs/R0</code>, as it can be seen on the datasheet. <code>Rs</code> is varies in an inversely proportional way to CO levels, and <code>R0</code> is a fixed sensing resistance whill shall be measured under controlled ambient conditions (given that it slightly varies from sensor to sensor). Since in the first iterations of the project we didn't dispose of such conditions, we currently upload <code>Rs</code> to the Internet. Later on, we will update via firmware the value of <code>R0</code>, thus allowing to measure actual CO levels.</p>
 
-<p>To measure CO levels a small procedure must be followed. Before reading, the sensor must be heated for 5 seconds, then let it cold for 9 seconds and finally perform a reading.</p>
+<p><img src="../pics/rvsppmco.png" alt="Rs/R0 vs ppm" title=""></p>
+
+<p>To measure CO levels a small procedure must be followed. Before reading, the sensor must be heated for 5 seconds, then let it cold for 9 seconds and finally perform a reading. Actual CO values can vary from 1 to 1000 ppm.</p>
 
 <h3>NO2</h3>
 
+<p><img src="../pics/mics2710.jpg" alt="MiCS 2710 NO2 sensor" title=""></p>
+
 <p>Nitrogen dioxide is measured buy another e2v sensor. In detail we are talking about the <a href="http://www.e2v.com/e2v/assets/File/sensors_datasheets/metal_oxide/MICS-2710.pdf">MiCS 2710</a>, a small, low power and precise NO2 sensor.</p>
 
-<p>As it happens with the CO sensor, NO2 levels are also calculated in terms of <code>Rs</code> and <code>R0</code>. This time, <code>Rs/R0</code> is directly proportional to NO2 levels. And again, the information uploaded to the internet is just the value of <code>Rs</code> since <code>R0</code> couldn't be measured when the first ships shipped.</p>
+<p>As NO2 levels arise, internal resistance of the sensor increases, as depicted below. More precisely, NO2 levels are calculated in terms of <code>Rs</code> (varying resistance) and <code>R0</code> (fixed). This time, <code>Rs/R0</code> is <em>directly proportional</em> to NO2 levels. And again, the information uploaded to the internet is just the value of <code>Rs</code> since <code>R0</code> couldn't be measured when the first ships shipped.</p>
 
-<p>Before reading an actual value of <code>Rs</code>, the sensor must be heated until it reaches 220ºC. This is done by heating during 30s then perform a read.</p>
+<p><img src="../pics/rvsppm.png" alt="Rs/R0 vs ppm" title=""></p>
+
+<p>To actually gather a value of <code>Rs</code>, the sensor must be heated until it reaches 220ºC. This is done by heating during 30s then perform a read. NO2 values can oscillate between 0.05 and 5 ppm.</p>
 
 <h3>Light and noise</h3>
 
@@ -80,12 +92,14 @@
 - LDR: <a href="http://www.farnell.com/datasheets/1475763.pdf">Excelitas Tech VT935G</a>
 - Microphone: <a href="http://www.farnell.com/datasheets/1671459.pdf">Pro Signal ABM-705-RC</a></p>
 
+<p>The range of values they can obtain is infinite, since they are analog sensors.</p>
+
 <h3>2.4GHz ISM spectrum</h3>
 
-<p>Although this is measured using the core component WiFly, it is an environmental factor as well. With a Wi-Fi enabled component we can check how many SSIDs are transmitting at one given time thus giving an approximate idea on how saturated is this band of the spectrum.</p>
+<p>Although this is measured using the core component WiFly, it is an environmental factor as well. With a Wi-Fi enabled component we can check how many SSIDs are active at one given time thus giving an approximate idea on how saturated is this slice of the spectrum.</p>
 
 <h2>Firmware</h2>
 
-<p>The main firmware file called is the <code>*.ino</code> file you'll find in our <a href="https://github.com/fablabbcn/Smart-Citizen-Kit">github repository</a>. An overview on how it works can be seen on the next picture:</p>
+<p>The main firmware file is the <code>*.ino</code> file you'll find in our <a href="https://github.com/fablabbcn/Smart-Citizen-Kit">github repository</a>. An overview on how it works can be seen on the next picture:</p>
 
 <p><img src="../pics/SCK_firm.png" alt="SCK firmware flow diagram" title=""></p>
