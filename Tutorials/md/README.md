@@ -24,7 +24,7 @@ Afterwards you have to fill in all the fields. To better geolocate your SCK you 
 
 If you downloaded the latest version of our firmware or stayed with the default one now the board knows "what to do" but it also has to be able to upload all gathered information to the Internet, thus you need to configure your network. You can easily do this inside the very own platform. To do so, go to the [Dashboard](http://test.smartcitizen.me/users/dashboard) and select the *Sensors* tab, where you'll see sensor board you just registered. Inside that sensor tab, press the *Configure* button.
 
-![Configuring the SCK](../pics/configuring.png)
+![Configuring the SCK](../pics/configure.png)
 
 Your browser will probably ask for permissions to run a Java applet, where you shall press the *Run* button. 
 
