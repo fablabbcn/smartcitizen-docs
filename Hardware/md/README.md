@@ -42,7 +42,7 @@ This shield measures, as its name indicates, environmental factors. More precise
 ### Temperature and humidity
 This two measurements are obtained thanks to the [DHT22 sensor](http://dlnmh9ip6v2uc.cloudfront.net/datasheets/Sensors/Weather/RHT03.pdf), manufactured by Aosong Electronics, a Chinese corporation. They are quite cheap (you can obtain it for around $12USD) and are very precise. The output is not in analogic form but in digital form, meaning that the signal is in the either ones or zeros, thus requiring some extra "intelligence" to interpret the results.
 
-![DHT22 Sensor](../pics/dht22)
+![DHT22 Sensor](../pics/dht22.jpg)
 
 The necessary libraries are already implemented to use along with Arduino and can be found in [GitHub](https://github.com/nethoncho/Arduino-DHT22). They were initially developed by Ben Adams in 2011 and implements a non-standard single wire protocol, necessary to establish a successful connection between Arduino and the sensor.
 
