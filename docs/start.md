@@ -63,7 +63,7 @@ Troubleshooting
 
 
 
-APPS
+Apps
 ====
 ### iOS
 ### Android
