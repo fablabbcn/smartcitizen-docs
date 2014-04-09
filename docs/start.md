@@ -1,9 +1,12 @@
 Getting Started
 =====
 
-![Smart Citizen kit 1.1](../img/sck_1.1_3.jpg)
-
 ### Adding a Smart Citizen Kit
+
+![Smart Citizen kit 1.1](img/sck_1.1_3.jpg)
+
+Thanks! The Smart Citizen Team wants to thank you for being here, for purchasing a kit, joining the platform taking part on this adventure.
+
 ### Manual set up: The Serial Way 
 ### Manual set up: The Compilation Way
 ### Attaching the solar panel
