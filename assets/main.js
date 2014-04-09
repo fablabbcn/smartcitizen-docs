@@ -1,3 +1,10 @@
+/*
+
+Proudly based on the Spark Labs, Inc. FlatDoc template. 
+
+*/
+
+
 var Docs = {
   section: "start",
   subsection: "docs",

@@ -6,8 +6,8 @@ Proudly based on the Spark Labs, Inc. FlatDoc template.
 
 
 #logo {
-  height: 32px;
-  width: 85px;
+  height: 45px;
+  width: 105px;
   float: left;
   margin: -5px 0 -7px 0;
   display: block;
@@ -28,7 +28,7 @@ a.contribute:hover {
 a,
 .menu a,
 .menu a:visited {
-  color: #00adef;
+  color: #38cef3;
 }
 
 a:hover,
@@ -41,13 +41,13 @@ a:hover,
 }
 
 .button, .button:visited {
-  background: #00adef;
+  background: #00d79c;
   border:0;
   padding: 5px 25px 7px;
 }
 
 .button:hover {
-  background: #007daf;
+  background: #00d79c;
 }
 
 .menubar .level-1:not(:first-of-type) {
@@ -335,3 +335,83 @@ hr {
     from, to { background: rgba(0,0,0,0.1); }
     50% { background: inherit; }
 }
+
+/*
+
+SMARTCITIZEN ADDONS - temp
+
+*/
+
+
+.header {
+/*  background: #292B36; */  
+  background: #00131f;
+}
+
+.menubar {
+/*  background: #f1f1f1;
+*/}
+
+/*.menu a.level-1 {
+  font-family: montserrat, sans-serif;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  font-weight: bold;
+}
+*/
+@import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700&subset=latin,latin-ext);
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Nobile:400,700);
+
+body {
+font-family:"Open Sans Condensed",Helvetica,Arial,sans-serif;
+font-size:16px;
+color:gray;
+font-weight:300;
+-webkit-font-smoothing: antialiased;
+text-rendering: optimizeLegibility;
+padding-bottom: 0;
+}
+
+h1,h2,h3,h4 {
+font-family:"Open Sans Condensed",Helvetica,Arial,sans-serif;
+font-weight:700;
+-webkit-font-smoothing: antialiased;
+text-rendering: optimizeLegibility;
+padding-bottom: 0;
+}
+
+h1 {
+font-size:44px;
+color:#fff;
+margin:13px 0 0;
+padding:0;
+}
+
+h2 {
+font-size:1.25em;
+color:#fff;
+line-height:1em;
+margin:0;
+padding:0;
+}
+
+h3 {
+font-size:24px;
+line-height:33px;
+}
+
+h4 {
+font-size:1em;
+color:#38cef3;
+line-height:1em;
+margin-right:10px;
+}
+
+p {
+font-family:"Open Sans Condensed",Helvetica,Arial,sans-serif !important;
+font-size:14px;
+color:#666;
+text-align:left;
+margin:10px 0;
+}
+

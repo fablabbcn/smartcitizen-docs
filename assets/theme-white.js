@@ -1,3 +1,10 @@
+/*
+
+Proudly based on the Spark Labs, Inc. FlatDoc template. 
+
+*/
+
+
 (function($) {
   var $window = $(window);
   var $document = $(document);
