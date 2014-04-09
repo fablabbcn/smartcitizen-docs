@@ -23,7 +23,10 @@
   <!-- Flatdoc -->
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src='http://rstacruz.github.io/flatdoc/v/0.8.0/legacy.js'></script>
-  <script src='http://rstacruz.github.io/flatdoc/v/0.8.0/flatdoc.js'></script>
+  <script src='assets/flatdoc-mod.js'></script>
+
+  <!-- Sammy.js for routing -->
+  <script src="assets/sammy-0.7.4.min.js"></script>
 
   <!-- Favicon -->
   <link href="assets/favicon.ico" type="image/x-icon" rel="icon">
@@ -33,21 +36,14 @@
   <link  href='http://rstacruz.github.io/flatdoc/v/0.8.0/theme-white/style.css' rel='stylesheet'>
   <script src='http://rstacruz.github.io/flatdoc/v/0.8.0/theme-white/script.js'></script>
 
+  <!-- FlatDoc addons by Spark -->
+  <link href='assets/style.css' rel='stylesheet'>
+
   <!-- Meta -->
   <meta content="SmartCitizen Docs" property="og:title">
   <meta content="The SmartCitizen Platform Documentation" name="description">
   <meta property="og:image" content="http://www.smartcitizen.me/img/alogo_sc_200x200.png">
 
-  <!-- Flatdoc theme -->
-  <link href='assets/theme-white.css' rel='stylesheet'>
-  <script src='assets/theme-white.js'></script>
-
-  <!-- Sammy.js for routing -->
-  <script src="assets/sammy-0.7.4.min.js"></script>
-
-  <!-- Spark theme mods -->
-  <link href='assets/style.css' rel='stylesheet'>
-  <script src='assets/spark.js'></script>
 
   <!-- Initializer -->
   <script>
@@ -61,13 +57,14 @@
   <div id="docs">
     <div class='header'>
       <div class='left'>
-        <h1>Smart Citizen</h1>
+        <a href="https://www.smartcitizen.me">
+          <img src="assets/smartcitizenlogo.png" id="logo">
+        </a>
         <ul>
           <li><a href='https://github.com/fablabbcn/SmartCitizen.doc'>View on GitHub</a></li>
         </ul>
       </div>
       <div class='right'>
-        <!-- GitHub buttons: see http://ghbtns.com -->
         <iframe src="http://ghbtns.com/github-btn.html?user=fablabbcn&amp;repo=SmartCitizen.doc&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
       </div>
     </div>
@@ -85,7 +82,6 @@
     <div id="markdown" style="display:none;">
     </div>
   </div>
-
 
   <!-- Custom -->
   <script src='assets/main.js'></script>
