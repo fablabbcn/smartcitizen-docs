@@ -17,7 +17,7 @@ Note that this tutorial works for both SCK v1.0 (from the Goteo crowdfunding cam
  
 All the steps in this tutorial have been tested with Arduino 1.0.5. We strongly recommend not to use the Beta version of Arduino IDE as we encountered issues with drivers and serial communication.
 
-STEP 1: Configuring Wi-fi settings
+STEP 1: Configuring the Wi-Fi settings
 
 - Open Arduino IDE.
 
