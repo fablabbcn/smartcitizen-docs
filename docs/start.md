@@ -11,13 +11,13 @@ Thanks! The Smart Citizen Team wants to thank you for being here, for purchasing
 
 SET UP YOUR KIT USING THE SERIAL COMMUNICATION
 
-With this tutorial you will configure your Smart Citizen Kit (hereafter SCK) by using the Serial communication. You will register your Wi-Fi settings into the SCK and save the SCK’s MAC address in our server.
+With this tutorial you will configure your Smart Citizen Kit (hereafter SCK) using the serial communication. You will register your Wi-Fi settings into the SCK and save the SCK’s MAC address in our server.
  
-The SCK, like most Arduino chips, has the ability to communicate through serial communication (when plugged with a proper USB cable). The SCK uses the WiFly module to communicate with your Wi-Fi router. Through serial, we will send the commands directly with this module to set your Wi-Fi settings and extract the MAC address used by our server to verify your identity.
+The SCK, like most Arduino chips, has the ability to communicate through serial protocol (when plugged with a proper USB cable). The SCK uses the WiFly module to communicate with your Wi-Fi router. Through serial, you will be able to send the commands directly with this module to set your Wi-Fi settings and extract the MAC address used by our server to verify your identity.
  
 This tutorial works for both SCK v1.0 (from the Goteo crowdfunding campaign) and SCK v1.1 (from the KickStarter crowdfunding campaign), independently of the firmware version used.
  
-This tutorial is been tested with Arduino 1.0.5. We strongly recommend not to use the Beta version of Arduino IDE as we encountered issues with drivers and serial communications.
+This tutorial is been tested with Arduino 1.0.5. We strongly recommend not to use the Beta version of Arduino IDE as we encountered issues with drivers and serial communication.
 
 Configure Wifi Setting
 
@@ -34,14 +34,17 @@ Configure Wifi Setting
 - Set the options to "115200 baud" and “No line return” (drop-down menu at the bottom-right of the monitor window).
 
 - Wake up the module and activate the Wi-Fi command mode:
+- 
 *$$$*
 
 - Change to “Carriage return” option (drop-down menu at the bottom-right of the monitor window)
 
-- Add a new SSID to memory by typing :
-*set wlan ssid XXX*
+- Add a new SSID to memory by typing:
+- 
+*set wlan ssid XXX**
 
 - Add a new phrase to memory (optional, password for WPA1 & WPA2):*
+- 
 *set wlan phrase XXX**
 
 - Add a new key to memory  (optional, password for WEP & WEP64):*
