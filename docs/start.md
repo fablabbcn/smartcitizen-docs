@@ -23,11 +23,11 @@ STEP 1: Configuring the Wi-Fi settings
 
 - Connect your SCK via USB.
 
-- Choose the right USB port (generally the last one).
+- From the Tools > Board menu, choose the right USB port (generally the last one).
 
-- Select the right board: Leonardo for SCK v1.0 (Goteo) or LilyPad for SCK v1.1 (Kickstarter).
+- From the Tools > Serial port menu, select the right board. This is Leonardo for SCK v1.0 (Goteo) or LilyPad for SCK v1.1 (Kickstarter).
 
-- Open the serial monitor in the Arduino IDE (button at the top-right of the main window).
+- Open the serial monitor window in the Arduino IDE (button at the top-right of the main window).
 
 - Set the options to "115200 baud" and “No line return” (drop-down menu at the bottom-right of the monitor window).
 
@@ -90,6 +90,62 @@ http://forum.smartcitizen.me/
 
 
 ### Manual set up: The Compilation Way
+
+This tutorial will drive you toward a manual way of setting your Smart Citizen Kit (SCK) by editing directly the source code. As the code is Open Source, one way of setting the Wi-Fi of your SCK is to download the latest firmware, edit some lines of code, recompile it and upload it to the kit. 
+ 
+One advantage of this system is that it gives you the opportunity to register multiple Wi-Fi networks at the same time. This is useful if your SCK is traveling from one location to another where the Wi-Fi credentials are known. The downside of this method is that you can not extract the MAC address of your kit, therefore making it this way is not suitable for the first setup of your kit. Please, refer to other tutorials available.
+ 
+
+STEP 1: Getting the Firmware
+
+You can download the latest firmware on our Github : 
+https://github.com/fablabbcn/Smart-Citizen-Kit/releases
+As you may know, the hardware and software are based on the arduino project. we will use the Arduino IDE to edit the firmware and upload it to the kit. This tutorial have been tested with arduino 1.0.5. Get the Arduino IDE at http://arduino.cc/en/Main/Software.
+Open the file Smart-Citizen-Kit/sck_beta_v0_8_5/sck_beta_v0_8_5.ino
+ 
+
+STEP 2: Editing the code
+
+If you want to set the network configuration manually, you should go to the SCKBase tab and modify the lines you see below:
+ 
+*#define redes 0
+ 
+*#if (redes > 0)*
+*char** *mySSID[redes] = { "Red1" , "Red2" , "Red3" };*
+*char** *myPassword[redes] = { "Pass1" , "Pass2" , "Pass3" };*
+*char** *wifiEncript[redes] = { WPA2 , WPA2 , WPA2 };*
+*char** *antennaExt[redes] = { INT_ANT , INT_ANT , INT_ANT }; //EXT_ANT*
+*#endif*
+
+The easiest way would be to write "#define redes X" (where X is the number of WI-FI networks you are going to use),  add the name of your network in "RedX" and the corresponding password in "PassX". You could also choose the encryption mode that fits with your network's configuration (OPEN, WEP, WPA1, WPA2, WEP64) or the type of antenna you are using (*INT_ANT* for internal antenna (default) or *EXT_ANT* for external antenna).
+ 
+If you register only one wifi credential, you should obtain something like :
+ 
+*#define redes 1*
+ 
+*#if (redes > 0)*
+*char** *mySSID[redes] = { "MyWifiSSID" };*
+*char** *myPassword[redes] = { "MyPassword"};*
+*char** *wifiEncript[redes] = { WPA2 };*
+*char** *antennaExt[redes] = { INT_ANT };* 
+*#endif*
+ 
+STEP 3: Registering the kit in the database
+
+After you've uploaded your own script, don't forget to register the kit in our database and save there your kit mac address. To find this mac address, you can use the serial command "get mac". by following the tutorial Manual Setup, the Serial way. 
+
+Alternatively, have a look at the wifi module on the board and read the serial number  under the bar code (something like "131G0006662116E4" on kit v1.0 or "0006662116E4" on kit v.1.1). 
+
+The mac adress is the last 12 digit of this serial, separated by colon every two number. You should obtain something similar to "00:06:66:21:16:E4".
+
+In both cases, you have to pass by the configuration page of your kit, and fill the mac address input field. Then press the register your kit button.
+ 
+Wait for some minutes and you should see data comming to the website !
+ 
+If you have any question or are looking for more information, have a look at our forum :
+http://forum.smartcitizen.me
+
+
 ### Attaching the solar panel
 ### Sensor calibration
 ### Connecting from an iPhone
