@@ -17,7 +17,7 @@ Note that this tutorial works for both SCK v1.0 (from the Goteo crowdfunding cam
  
 All the steps in this tutorial have been tested with Arduino 1.0.5. We strongly recommend not to use the Beta version of Arduino IDE as we encountered issues with drivers and serial communication.
 
-STEP 1: Configure Wifi Setting
+STEP 1: Configuring Wi-fi settings
 
 - Open Arduino IDE.
 
@@ -70,15 +70,13 @@ STEP 1: Configure Wifi Setting
 *Note: You have to replace XXX with your value, filling any space with the dollar ($) character .
 
 
-STEP 2: Register your kit online
+STEP 2: Registering your kit online
 
 - Go to the configuration page of your kit: http://smartcitizen.me/devices/configure/XXX (do not forget to replace XXX with your kit's ID)
 
-- In the MAC address text input, paste the MAC address given by the command get mac. It should be something like: 
+- In the MAC address text input, paste the MAC address given by the command *get mac*. It should be something like: *00:06:66:21:17:33*
 
-*00:06:66:21:17:33*
-
-- Click Register the kit
+- Click on "Register the kit"
  
 You are now done with the manual configuration of your SCK. Wait for a few minutes to see your data coming on the server and being displayed on the web page. You can also check that everything is ok by looking at the Arduino serial monitor. Debug messages coming from your SCK should look like this:
 
