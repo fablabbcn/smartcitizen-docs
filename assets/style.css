@@ -37,7 +37,7 @@ a:hover,
 }
 
 .menu a.active:after {
-  background: #000000;
+  background: #00adef;
 }
 
 .button, .button:visited {
@@ -69,7 +69,7 @@ a:hover,
 }
 
 .content iframe {
-  max-width: 480px;
+  max-width: 800px;
 }
 
 .content table th,
