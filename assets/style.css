@@ -28,14 +28,12 @@ a.contribute:hover {
 a,
 .menu a,
 .menu a:visited {
-  /*color: #38cef3;*/
-  color: #4c6d63;
+  color: #38cef3;
 }
 
 a:hover,
 .menu a:hover {
-  color: #4c6d63;
-  /*color: #006d9f;*/
+  color: #006d9f;
 }
 
 .menu a.active:after {
