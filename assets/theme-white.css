@@ -640,7 +640,7 @@ text-transform: uppercase;
 }
 .menu a.level-3 {
     font-weight: normal;
-    font-size: 0.7em;
+    font-size: 0.85em;
     padding-left: 10px;
 }
 .menu a.active {
