@@ -372,7 +372,7 @@ padding-left: 5px;
 body {
 font-family:"Open Sans Condensed",Helvetica,Arial,sans-serif;
 font-size:16px;
-color:gray;
+color:red;
 font-weight:300;
 -webkit-font-smoothing: antialiased;
 text-rendering: optimizeLegibility;
@@ -380,7 +380,7 @@ padding-bottom: 0;
 }
 
 h1,h2,h3,h4 {
-font-family:"Open Sans Condensed",Helvetica,Arial,sans-serif;
+font-family:"Open Sans Condensed", Helvetica, Arial, sans-serif;
 font-weight:700;
 -webkit-font-smoothing: antialiased;
 text-rendering: optimizeLegibility;
@@ -388,7 +388,7 @@ padding-bottom: 0;
 }
 
 h1 {
-font-size:84px;
+font-size:44px;
 /*color:#fff;*/
 color:#fff;
 margin:13px 0 0;
