@@ -174,7 +174,7 @@ hr {
 
 @media (min-width: 1340px) {
   body:not(.no-literate) .content img {
-    width: 800px;
+    width: 600px;
     margin-right: -135px;
   }
 }
