@@ -37,7 +37,7 @@ a:hover,
 }
 
 .menu a.active:after {
-  background: #00adef;
+  background: #000000;
 }
 
 .button, .button:visited {
