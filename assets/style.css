@@ -56,6 +56,7 @@ a:hover,
 
 .content h1 {
   font-size: 2em;
+  color: black;
 }
 
 .content h2 {
@@ -345,7 +346,7 @@ SMARTCITIZEN ADDONS - temp
 
 .header {
 /*  background: #292B36; */  
-  background: #00131f;
+  background: black;
 }
 
 .menubar {
