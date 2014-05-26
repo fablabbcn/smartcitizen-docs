@@ -28,7 +28,8 @@ a.contribute:hover {
 a,
 .menu a,
 .menu a:visited {
-  color: #38cef3;
+  /*color: #38cef3;*/
+  color: #4c6d63;
 }
 
 a:hover,
