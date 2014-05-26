@@ -15,7 +15,7 @@ Proudly based on the Spark Labs, Inc. FlatDoc template.
 
 a.contribute {
   font-size: 0.7em;
-  color: #5ed4f2;
+  color: #9090aa;
   padding-right: 30px;
   text-transform: ;
   font-weight: normal;
@@ -33,7 +33,8 @@ a,
 
 a:hover,
 .menu a:hover {
-  color: #006d9f;
+  color: #4c6d63;
+  /*color: #006d9f;*/
 }
 
 .menu a.active:after {
