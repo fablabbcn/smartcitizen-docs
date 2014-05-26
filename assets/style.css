@@ -69,7 +69,7 @@ a:hover,
 }
 
 .content iframe {
-  max-width: 800px;
+  max-width: 480px;
 }
 
 .content table th,
@@ -174,7 +174,7 @@ hr {
 
 @media (min-width: 1340px) {
   body:not(.no-literate) .content img {
-    width: 480px;
+    width: 800px;
     margin-right: -135px;
   }
 }
