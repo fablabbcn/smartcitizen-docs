@@ -360,8 +360,9 @@ SMARTCITIZEN ADDONS - temp
 }
 
 .menu a.level-3 {
+font-family: montserrat, sans-serif;
 font-weight: normal;
-font-size: 0.80em;
+font-size: 0.85em;
 padding-left: 5px;
 }
 
