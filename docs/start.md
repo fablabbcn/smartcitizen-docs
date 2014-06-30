@@ -89,41 +89,51 @@ This tutorial will drive you toward a manual way of setting your Smart Citizen K
 One advantage of this system is that it gives you the opportunity to register multiple Wi-Fi networks at the same time. This is useful if your SCK is traveling from one location to another where the Wi-Fi credentials are known. The downside of this method is that you can not extract the MAC address of your kit, therefore making it this way is not suitable for the first setup of your kit. Please, refer to other tutorials available.
  
 
-STEP 1: Getting the Firmware
+#### STEP 1: Getting the Firmware
 
 You can download the latest firmware on our Github : 
 https://github.com/fablabbcn/Smart-Citizen-Kit/releases
 As you may know, the hardware and software are based on the arduino project. we will use the Arduino IDE to edit the firmware and upload it to the kit. This tutorial have been tested with arduino 1.0.5. Get the Arduino IDE at http://arduino.cc/en/Main/Software.
-Open the file Smart-Citizen-Kit/sck_beta_v0_8_5/sck_beta_v0_8_5.ino
- 
 
-STEP 2: Editing the code
+Open the file Smart-Citizen-Kit/sck_beta_v0_8_5/sck_beta_v0_8_5.ino
+
+#### STEP 2: Editing the code
 
 If you want to set the network configuration manually, you should go to the SCKBase tab and modify the lines you see below:
  
-*#define redes 0
+``` 
+#define networks 0
+#if (networks > 0)
+char* mySSID[networks]      = { 
+  "Red1"        , "Red2"        , "Red3"             };
+char* myPassword[networks]  = { 
+  "Pass1"      , "Pass2"       , "Pass3"            };
+char* wifiEncript[networks] = { 
+  WPA2         , WPA2          , WPA2               };
+char* antennaExt[networks]  = { 
+  INT_ANT      , INT_ANT       , INT_ANT            }; //EXT_ANT
+#endif
+ ```
  
-*#if (redes > 0)*
-*char** *mySSID[redes] = { "Red1" , "Red2" , "Red3" };*
-*char** *myPassword[redes] = { "Pass1" , "Pass2" , "Pass3" };*
-*char** *wifiEncript[redes] = { WPA2 , WPA2 , WPA2 };*
-*char** *antennaExt[redes] = { INT_ANT , INT_ANT , INT_ANT }; //EXT_ANT*
-*#endif*
-
 The easiest way would be to write "#define redes X" (where X is the number of WI-FI networks you are going to use),  add the name of your network in "RedX" and the corresponding password in "PassX". You could also choose the encryption mode that fits with your network's configuration (OPEN, WEP, WPA1, WPA2, WEP64) or the type of antenna you are using (*INT_ANT* for internal antenna (default) or *EXT_ANT* for external antenna).
  
-If you register only one wifi credential, you should obtain something like :
+If you register only one wifi credential, you should obtain something like:
  
-*#define redes 1*
+ ``` 
+#define networks 1
+#if (networks > 0)
+char* mySSID[networks]      = { 
+  "MyWifiSSID"    };
+char* myPassword[networks]  = { 
+  "MyPassword"    };
+char* wifiEncript[networks] = { 
+  WPA2            };
+char* antennaExt[networks]  = { 
+  INT_ANT         }; //EXT_ANT
+#endif
+ ```
  
-*#if (redes > 0)*
-*char** *mySSID[redes] = { "MyWifiSSID" };*
-*char** *myPassword[redes] = { "MyPassword"};*
-*char** *wifiEncript[redes] = { WPA2 };*
-*char** *antennaExt[redes] = { INT_ANT };* 
-*#endif*
- 
-STEP 3: Registering the kit in the database
+#### STEP 3: Registering the kit in the database
 
 After you've uploaded your own script, don't forget to register the kit in our database and save there your kit mac address. To find this mac address, you can use the serial command "get mac". by following the tutorial Manual Setup, the Serial way. 
 
