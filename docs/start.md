@@ -101,7 +101,7 @@ Open the file Smart-Citizen-Kit/sck_beta_v0_8_5/sck_beta_v0_8_5.ino
 
 If you want to set the network configuration manually, you should go to the SCKBase tab and modify the lines you see below:
  
-```arduino
+```Arduino
 #define networks 0
 #if (networks > 0)
 char* mySSID[networks]      = { 
@@ -119,7 +119,7 @@ The easiest way would be to write "#define redes X" (where X is the number of WI
  
 If you register only one wifi credential, you should obtain something like:
  
- ```arduino 
+ ```Arduino 
 #define networks 1
 #if (networks > 0)
 char* mySSID[networks]      = { 
