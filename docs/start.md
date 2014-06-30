@@ -95,7 +95,7 @@ You can download the latest firmware on our Github :
 https://github.com/fablabbcn/Smart-Citizen-Kit/releases
 As you may know, the hardware and software are based on the arduino project. we will use the Arduino IDE to edit the firmware and upload it to the kit. This tutorial have been tested with arduino 1.0.5. Get the Arduino IDE at http://arduino.cc/en/Main/Software.
 
-Open the file Smart-Citizen-Kit/sck_beta_v0_8_5/sck_beta_v0_8_5.ino
+Open the file Smart-Citizen-Kit/sck_beta_v0_8_5/sck_beta_v0_X_X.ino
 
 #### STEP 2: Editing the code
 
