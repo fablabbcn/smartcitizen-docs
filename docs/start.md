@@ -22,7 +22,7 @@ STEP 1: Configuring the Wi-Fi settings
 - Open Arduino IDE.
 - Connect your SCK via USB.
 - From the Tools > Board menu, choose the right USB port (generally the last one).
-- From the Tools > Serial port menu, select the right board. This is Leonardo for SCK v1.0 (Goteo) or LilyPad for SCK v1.1 (Kickstarter).
+- From the Tools > Serial port menu, select the right board. This is Leonardo for SCK v1.0 (Goteo) or LilyPad Arduino USB for SCK v1.1 (Kickstarter).
 - Open the serial monitor window in the Arduino IDE (button at the top-right of the main window).
 - Set the options to "115200 baud" and “No line return” (drop-down menu at the bottom-right of the monitor window).
 - Wake up the module and activate the Wi-Fi command mode:
