@@ -25,20 +25,25 @@ STEP 1: Configuring the Wi-Fi settings
 - From the Tools > Serial port menu, select the right board. This is Leonardo for SCK v1.0 (Goteo) or LilyPad Arduino USB for SCK v1.1 (Kickstarter).
 - Open the serial monitor window in the Arduino IDE (button at the top-right of the main window).
 - Set the options to "115200 baud" and “No line return” (drop-down menu at the bottom-right of the monitor window).
-- Wake up the module and activate the Wi-Fi command mode:
+- Wake up the module and activate the Wi-Fi command mode by typing in the serial monitor:
+
 *$$$*
 
 - Change to “Carriage return” option (drop-down menu at the bottom-right of the monitor window)
 
 - Add a new SSID to memory by typing:
 
-*set wlan ssid XXX**
+*set wlan ssid XXX*
 
-- Add a new phrase to memory (optional, password for WPA1 & WPA2):*
+Note: You have to replace XXX with your ssid name, filling any space with the dollar ($) character.
 
-*set wlan phrase XXX**
+- Add a new phrase to memory (optional, password for WPA1 & WPA2):
 
-- Add a new key to memory  (optional, password for WEP & WEP64):*
+*set wlan phrase XXX*
+
+Note: You have to replace XXX with your phrase, filling any space with the dollar ($) character.
+
+- Add a new key to memory  (optional, password for WEP & WEP64):
 
 *set wlan key XXX*
 
@@ -50,17 +55,15 @@ STEP 1: Configuring the Wi-Fi settings
 
 *set wlan ext_antenna XXX*
 
-- Get the MAC address of the kit
+- Get the MAC address of the kit by typing:
 
 *get mac*
 
 - Copy/Save the answer for further use.
 
-- Exit and go back to the normal operational mode
+- Exit and go back to the normal operational mode by typing:
 
 *exit*
- 
-*Note: You have to replace XXX with your value, filling any space with the dollar ($) character .
 
 
 STEP 2: Registering your kit online
