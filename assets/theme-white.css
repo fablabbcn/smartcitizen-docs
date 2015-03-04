@@ -131,7 +131,7 @@ a:hover {
 }
 .content code {
     font-family: Menlo, monospace;
-    background: #f3f6fb;
+    background: #272822;
     padding: 1px 3px;
     font-size: 0.95em;
 }
@@ -261,7 +261,7 @@ body: not(.big-h3) .content h3 {
   }
 }
 body.no-literate .content pre > code {
-    background: #f3f6fb;
+    background: #272822;
     border: solid 1px #e7eaee;
     border-top: solid 1px #dbdde2;
     border-left: solid 1px #e2e5e9;
@@ -282,7 +282,7 @@ body.no-literate .content pre > code: : -webkit-scrollbar-thumb {
     background: #ddd;
     -webkit-border-radius: 8px;
     border-radius: 8px;
-    border: solid 4px #f3f6fb;
+    border: solid 4px #272822;
 }
 body.no-literate .content pre > code:hover: : -webkit-scrollbar-thumb {
     background: #999;
@@ -293,7 +293,7 @@ body.no-literate .content pre > code:hover: : -webkit-scrollbar-thumb {
 
 {
     .content pre > code {
-        background: #f3f6fb;
+        background: #272822;
         border: solid 1px #e7eaee;
         border-top: solid 1px #dbdde2;
         border-left: solid 1px #e2e5e9;
@@ -314,7 +314,7 @@ body.no-literate .content pre > code:hover: : -webkit-scrollbar-thumb {
      background: #ddd;
      -webkit-border-radius: 8px;
      border-radius: 8px;
-     border: solid 4px #f3f6fb;
+     border: solid 4px #272822;
 }
 .content pre > code:hover: : -webkit-scrollbar-thumb {
     background: #999;
@@ -364,7 +364,7 @@ letter-spacing: -1px;
 
 {
     body: not(.no-literate) .content-root {
-        background-color: #f3f6fb;
+        background-color: #272822;
         -webkit-box-shadow: inset 780px 0 #fff, inset 781px 0 #dfe2e7, inset 790px 0 5px -10px rgba(0, 0, 0, 0.1);
         box-shadow: inset 780px 0 #fff, inset 781px 0 #dfe2e7, inset 790px 0 5px -10px rgba(0, 0, 0, 0.1);
    }
@@ -420,7 +420,7 @@ body: not(.no-literate): not(.big-h3) .content > h3 {
 }
 }
 .header {
-    background: #f3f6fb;
+    background: #272822;
     text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
     border-bottom: solid 1px #dfe2e7;
     padding: 15px 15px 15px 30px;
