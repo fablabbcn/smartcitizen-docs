@@ -418,7 +418,7 @@ The sensor board contains the necessary sensors for measuring the pollution para
 ![MICS2710](img/v1.0/sensor_board_MICS2710.jpg)
 ![MICS4514](img/sensor_board_MICS4514.jpg)
 
-**NO2 AND CO2 SENSORS**
+**NO2 AND CO SENSORS**
 
 To measure these two gases we chose <a href="http://www.e2v.com/" target="_blank">e2v</a> sensors. In particular, metal oxide sensors MICS5525 and MICS2710, for version 1.0. And MICS4514, for version 1.1, that contains both sensors in one.
 
