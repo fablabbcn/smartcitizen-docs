@@ -565,7 +565,7 @@ Here are the different paths you can take in order to built your own backend.
 
 ### How to use the SD Card?
 
-You have to use <a href="https://github.com/fablabbcn/Smart-Citizen-Kit/tree/master/sck_beta_v0_8_6_SDCARD" target="_blank">sck_beta_v0_8_6_SDCARD firmware</a> that is a version optimized for SD cards.
+You have to use <a href="https://github.com/fablabbcn/Smart-Citizen-Kit/tree/master/sck_beta_v0_8_7_SDCARD" target="_blank">sck_beta_SDCARD firmware</a> that is a version optimized for SD cards.
 
 ### Which LiPo batteries to use?
 
