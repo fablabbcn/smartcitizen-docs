@@ -49,11 +49,11 @@ Click on the SAVE SENSOR button. Congratulations!! You've added your first SCK a
 
 Good job, both you and your SCK are registered. Now it's time to configure and upload the firmware that will be the brains of your SCK.
 
-If this is the first time registering a SCK, you should install the <a href="https://codebender.cc/static/plugin" target="_blank">Codebender</a> plugin extention for your browser (Codebender lets you configure the SCK from the Smart Citizen website rather than hard coding everything).  Also, you'll need to download the <a href="http://arduino.cc/en/Main/Software" target="_blank">Arduino</a> drivers (if you haven't already done this for something else you've built).
+If this is the first time registering a SCK, you should install the <a href="https://chrome.google.com/webstore/search/smart%20citizen?utm_campaign=en&utm_source=en-et-na-us-oc-webstrext&utm_medium=et" target="_blank">SCK</a> plugin extension for CHROME. Click on the ADD TO CHROME button. Also, you'll need to download the <a href="http://arduino.cc/en/Main/Software" target="_blank">Arduino</a> drivers (if you haven't already done this for something else you've built).
 
 OK, time to unpack your SCK. Connect the USB cable to your SCK and your computer. Turn on your SCK at the switch in the upper left corner of the base board.  Now, go back to the Smart Citizen website and to your SENSOR dashboard. Click on the CONFIGURE button.
 
-If you've installed the Codebender extention and the Arduino drivers, you'll be able to click on START PROCESS button. Wait a few seconds while Codebender plugin does its job. 
+If you've installed the SCK extension and the Arduino drivers, you'll be able to click on START PROCESS button. Wait a few seconds while SCK extension does its job. 
 
 When it has finished you’ll see a form to setup your wifi connection and data update interval parameters. Complete the fields with your SSID (this is your wifi network's name), ENCRYPTION MODE and PASSWORD PHRASE. Then, click on SYNC button. Wait a few seconds (your SCK is learning your wifi credentials).
 
