@@ -126,7 +126,7 @@ hr {
     clear: both;
   }
 
-  body:not(.no-literate) .content table {
+  body.content table {
     width: 380px;
     padding-left: 20px;
     padding-right: 20px;
