@@ -9,59 +9,59 @@ Welcome aboard! The Smart Citizen Team wants to thank you for being here, for pu
 
 To join the Smart Citizen family, we're going to walk you through the steps to add your Smart Citizen Kit to the platform. (we'll refer to the Smart Citizen Kit as the "SCK" for now on).
 
-First, go to <a href="https://smartcitizen.me/" target="_blank">smartcitizen.me</a> in a web browser (please choose Firefox or CHROME). Click <a href="https://smartcitizen.me/users/add" target="_blank">REGISTER</a> in the upper right menu. Complete the required fields and click REGISTER button.
+First, go to <a href="https://smartcitizen.me/" target="_blank">smartcitizen.me</a> using your web browser, currently only Google Chrome is supported for this process. Click <a href="https://smartcitizen.me/users/add" target="_blank">REGISTER</a> in the upper right menu. Complete the required fields and click REGISTER button.
 
 Required Fields:
 
-- USERNAME - Pick any name you want as long as someone else isn't already using the it.
+- **Username** - Pick any name you want as long as someone else isn't already using the it.
 
-- EMAIL - Enter your email address.
+- **Email** - Enter your email address.
 
-- PASSWORD - Must be at least 6 characters.
+- **Password** - Must be at least 6 characters.
 
-- CITY - Enter the name of the city you're located (doesn't need to be the same as you SCK).
+- **City** - Enter the name of the city you're located (doesn't need to be the same as you SCK).
 
-- COUNTRY - Enter your Country (doesn't need to be the same as you SCK).
+- **Country** - Enter your Country (doesn't need to be the same as you SCK).
 
 Optional Fields:
 
- - WEBSITE - If you add a website, a link is added to your CITIZEN profile page (which can be viewed by the public).
+ - **Website** - If you add a website, a link is added to your CITIZEN profile page (which can be viewed by the public).
 
- - FILE - This adds a custom avatar. Click "Choose File" then find the image you want to use.  The image will appear next to you profile information.
+ - **File** - This adds a custom avatar. Click "Choose File" then find the image you want to use.  The image will appear next to you profile information.
 
 Once you’ve completed the required fields, click REGISTER.  Congratulations!! You've registered yourself and will be directed to your CITIZEN dashboard. (You can always return to your CITIZEN dashboard by clicking the LOG-IN button at the very top right of the <a href="https://smartcitizen.me/" target="_blank">smartcitizen.me</a> homepage)
 
 Now, let's add your SCK! From you CITIZEN dashboard, click on ADD SMART CITIZEN KIT.  Complete each field: 
 
- - TITLE - Give your SCK a name.  This title will be associated with your SCK data.
+ - **Title** - Give your SCK a name.  This title will be associated with your SCK data.
 
- - ELEVATION - If you don't know it, a simple Google search should help you.  Knowing your SCK's elevation helps to understand the data it collects.
+ - **Elevation** - If you don't know it, a simple Google search should help you.  Knowing your SCK's elevation helps to understand the data it collects.
 
- - EXPOSURE - Choose INDOOR or OUTDOOR.  Again, this helps to understand the data.
+ - **Exposure** - Choose INDOOR or OUTDOOR.  Again, this helps to understand the data.
 
- - KIT VERSION - Most likely you have a 1.1 SCK. The only way you would be using a 1.0 SCK is if you got it from the original GOTEO crowdfunding campaign, or if you got it from someone else that got it from GOTEO. 
+ - **Kit Version** - Most likely you have a 1.1 SCK. The only way you would be using a 1.0 SCK is if you got it from the original GOTEO crowdfunding campaign, or if you got it from someone else that got it from GOTEO. 
 
- - GEOLOCATION - There are two ways to complete this section: AUTO COMPLETE ON or AUTO COMPLETE OFF.  AUTO COMPLETE ON lets you type in the name of your city, then lets you choose it from a drop-down list (This will give you an approximate latitude and longitude).  AUTO COMPLETE OFF will put a blue flag on the map to the left of the form.  You then drag the flag to the SCK's location on the map.  By zooming in you can pin-point the exact latitude and longitude of your SCK (the closer you get, the better the data will be).
+ - **Geolocation** - There are two ways to complete this section: AUTO COMPLETE ON or AUTO COMPLETE OFF.  AUTO COMPLETE ON lets you type in the name of your city, then lets you choose it from a drop-down list (This will give you an approximate latitude and longitude).  AUTO COMPLETE OFF will put a blue flag on the map to the left of the form.  You then drag the flag to the SCK's location on the map.  By zooming in you can pin-point the exact latitude and longitude of your SCK (the closer you get, the better the data will be).
 
- - DESCRIPTION - This is an optional field that helps inform others of your SCK's unique set-up.  Information like "in my garage" or "im my woodshop" could help others understand why some of your data looks the way it does.
+ - **Description** - This is an optional field that helps inform others of your SCK's unique set-up.  Information like "in my garage" or "im my woodshop" could help others understand why some of your data looks the way it does.
 
-Click on the SAVE SENSOR button. Congratulations!! You've added your first SCK and will be directed to your SENSOR dashboard. Your SCK now has an official device ID (it can bee seen in your browser's address bar, it is the number at the end of the url). 
+Click on the **Save sensor** button. Congratulations!! You've added your first ** and will be directed to your ** dashboard. Your SCK now has an official device ID (it can bee seen in your browser's address bar, it is the number at the end of the url). 
 
 Good job, both you and your SCK are registered. Now it's time to configure and upload the firmware that will be the brains of your SCK.
 
-If this is the first time registering a SCK, you should install the <a href="https://chrome.google.com/webstore/search/smart%20citizen?utm_campaign=en&utm_source=en-et-na-us-oc-webstrext&utm_medium=et" target="_blank">SCK</a> plugin extension for CHROME. Click on the ADD TO CHROME button. Also, you'll need to download the <a href="http://arduino.cc/en/Main/Software" target="_blank">Arduino</a> drivers (if you haven't already done this for something else you've built).
+If this is the first time registering a SCK, you should install the <a href="https://chrome.google.com/webstore/detail/smart-citizen-kit/llohmdkdoablhnefekgllopdgmmphpif" target="_blank">SCK</a> plugin extension for CHROME. Click on the ADD TO CHROME button. In windows, you'll need to download the <a href="http://arduino.cc/en/Main/Software" target="_blank">Arduino</a> drivers (if you haven't already done this for something else you've built).
 
-OK, time to unpack your SCK. Connect the USB cable to your SCK and your computer. Turn on your SCK at the switch in the upper left corner of the base board.  Now, go back to the Smart Citizen website and to your SENSOR dashboard. Click on the CONFIGURE button.
+OK, time to unpack your SCK. Connect the USB cable to your SCK and your computer. Turn on your SCK at the switch in the upper left corner of the base board.  Now, go back to the Smart Citizen website and to your **SENSOR** dashboard. Click on the **CONFIGURE** button.
 
 If you've installed the SCK extension and the Arduino drivers, you'll be able to click on START PROCESS button. Wait a few seconds while SCK extension does its job. 
 
-When it has finished you’ll see a form to setup your wifi connection and data update interval parameters. Complete the fields with your SSID (this is your wifi network's name), ENCRYPTION MODE and PASSWORD PHRASE. Then, click on SYNC button. Wait a few seconds (your SCK is learning your wifi credentials).
+When it has finished you’ll see a form to setup your wifi connection and data update interval parameters. Complete the fields with your **SSID** (this is your wifi network's name), **ENCRYPTION MODE** (you can leave the default for most networks, WPA2) and **PASSWORD PHRASE**. Then, click on **SYNC** button. Wait a few seconds (your SCK is learning your wifi credentials).
 
-When the sync has finished, you should see something similar to "00:06:66:21:16:E4" in the MAC ADDRESS field. Click on the REGISTER THE KIT button. Now reset your SCK in order the changes take effect.
+When the sync has finished, you should see something similar to "00:06:66:21:16:E4" in the **MAC ADDRESS** field. Click on the **REGISTER THE KIT** button. Now reset your SCK in order the changes take effect.
 
 Wow! That was so easy!!
 
-Back to your SENSOR dashboard. Wait a few minutes and reload the page. See if some data has been uploaded to the Smart Citizen database. To check this take a look at the field "Last Update" (If everything worked, you should see something like "Last Update: 31 seconds ago").  After the Smart Citizen database has had a few days to gather your data, you'll be able to check it from <a href="https://smartcitizen.me/" target="_blank">smartcitizen.me</a>. 
+Back to your **SENSOR****** dashboard. Wait a few minutes and reload the page. See if some data has been uploaded to the Smart Citizen database. To check this take a look at the field "Last Update" (If everything worked, you should see something like "Last Update: 31 seconds ago").  After the Smart Citizen database has had a few days to gather your data, you'll be able to check it from <a href="https://smartcitizen.me/" target="_blank">smartcitizen.me</a>. 
 
 ### Manual set up: The Serial Way 
 
@@ -73,7 +73,7 @@ Note that this tutorial works for both SCK v1.0 (from the Goteo crowdfunding cam
  
 All the steps in this tutorial have been tested with Arduino 1.0.5. We strongly recommend not to use the Beta version of Arduino IDE as we encountered issues with drivers and serial communication.
 
-STEP 1: Configuring the Wi-Fi settings
+**STEP 1: Configuring the Wi-Fi settings**
 
 - Open Arduino IDE.
 - Connect your SCK via USB.
@@ -83,50 +83,50 @@ STEP 1: Configuring the Wi-Fi settings
 - Set the options to "115200 baud" and “No line return” (drop-down menu at the bottom-right of the monitor window).
 - Wake up the module and activate the Wi-Fi command mode by typing in the serial monitor:
 
-*$$$*
+`$$$`
 
 - Change to “Carriage return” option (drop-down menu at the bottom-right of the monitor window)
 
 - Add a new SSID to memory by typing:
 
-*set wlan ssid XXX*
+`set wlan ssid XXX`
 
 Note: You have to replace XXX with your ssid name, filling any space with the dollar ($) character.
 
 - Add a new phrase to memory (optional, password for WPA1 & WPA2):
 
-*set wlan phrase XXX*
+`set wlan phrase XXX`
 
 Note: You have to replace XXX with your phrase, filling any space with the dollar ($) character.
 
 - Add a new key to memory  (optional, password for WEP & WEP64):
 
-*set wlan key XXX*
+`set wlan key XXX`
 
 - Add an authentication method into memory (replace XXX by “0” for Open,  “1” for WEP, “2” for WPA1, “4” for WPA2, “8” for WEP64):
 
-*set wlan auth XXX*
+`set wlan auth XXX`
 
 - Add an antenna type into memory (replace XXX by “0” to use the internal antenna or “1” if you use an external antenna):
 
-*set wlan ext_antenna XXX*
+`set wlan ext_antenna XXX`
 
 - Get the MAC address of the kit by typing:
 
-*get mac*
+`get mac`
 
 - Copy/Save the answer for further use.
 
 - Exit and go back to the normal operational mode by typing:
 
-*exit*
+`exit`
  
 
-STEP 2: Registering your kit online
+**STEP 2: Registering your kit online**
 
 - Go to the configuration page of your kit: http://smartcitizen.me/devices/configure/XXX (do not forget to replace XXX with your kit's ID)
 
-- In the MAC address text input, paste the MAC address given by the command *get mac*. It should be something like: *00:06:66:21:17:33*
+- In the MAC address text input, paste the MAC address given by the command `get mac`. It should be something like: `00:06:66:21:17:33`
 
 - Click on "Register the kit"
  
@@ -237,30 +237,30 @@ The Smart Citizen Kit can be managed over a basic serial protocol. You just need
 
 ### Basic SCK commands
 
-- **$$$** (Wake up the module and activate the Wi-Fi)
-- **set wlan ssid XXX** (Add a new SSID to memory9)
-- **set wlan phrase XXX** (Add a new phrase to memory)
-- **set wlan key XXX** (Add a new key to memmory)
-- **set wlan auth XXX** (Add an authentication method into memory)
-- **set wlan ext_antenna XXX** (Add an antenna type into memmory)
-- **get mac** (Get the MAC address of the kit)
-- **exit** (Go back to normal operational mode)
+- `$$$` (Wake up the module and activate the Wi-Fi)
+- `set wlan ssid XXX` (Add a new SSID to memory9)
+- `set wlan phrase XXX` (Add a new phrase to memory)
+- `set wlan key XXX` (Add a new key to memmory)
+- `set wlan auth XXX` (Add an authentication method into memory)
+- `set wlan ext_antenna XXX` (Add an antenna type into memmory)
+- `get mac` (Get the MAC address of the kit)
+- `exit` (Go back to normal operational mode)
 
 ### Special SCK commands
 
-- **get time update** (Retrieve the sensor update interval)
-- **set time update XXX** (Update the sensor update interval)
-- **get number updates** (Retrieve the max number of bulk updates allowed)
-- **set number updates XXX** (Update the max number of bulk updates allowed)
-- **get apikey** (Retrieve the kit APIKEY)
-- **set apikey XXX** (Update the kit APIKEY)
-- **get wlan ssid** (Retrieve the SSID saved on the kit)
-- **get wlan phrase** (Retrieve the phrase and KEY saved on the kit)
-- **get wlan auth** (Retrieve the authentication methods saved on the kit)
-- **get wlan ext_antenna** (Retrieve the antenna types saved on the kit)
-- **clear nets** (Remove all saved Wi-Fi configuration information)
-- **exit** (Goes back to normal operational mode)
-- **data** (Retrieves sensor readings stored in memory)
+- `get time update` (Retrieve the sensor update interval)
+- `set time update XXX` (Update the sensor update interval)
+- `get number updates` (Retrieve the max number of bulk updates allowed)
+- `set number updates XXX` (Update the max number of bulk updates allowed)
+- `get apikey` (Retrieve the kit APIKEY)
+- `set apikey XXX` (Update the kit APIKEY)
+- `get wlan ssid` (Retrieve the SSID saved on the kit)
+- `get wlan phrase` (Retrieve the phrase and KEY saved on the kit)
+- `get wlan auth` (Retrieve the authentication methods saved on the kit)
+- `get wlan ext_antenna` (Retrieve the antenna types saved on the kit)
+- `clear nets` (Remove all saved Wi-Fi configuration information)
+- `exit` (Goes back to normal operational mode)
+- `data` (Retrieves sensor readings stored in memory)
 
 ### Basic WiFly commands
 
@@ -565,7 +565,66 @@ Here are the different paths you can take in order to built your own backend.
 
 ### How to use the SD Card?
 
-You have to use <a href="https://github.com/fablabbcn/Smart-Citizen-Kit/tree/master/sck_beta_v0_8_7_SDCARD" target="_blank">sck_beta_SDCARD firmware</a> that is a version optimized for SD cards.
+1. **microSD**: We recomend formating **micro SD** cards using the official SD tool you can download [here](https://www.sdcard.org/downloads/formatter_4/).
+
+2. **RTC**: Place a **CR1220** cell battery on your kit. Before uploading the SD firmware use the on-line configuration tool at [smartcitizen.me](https://smartcitizen.me) to set your Wi-Fi credentials. Your kit will connect to the internet and sync its the internal clock with our remote servers.
+
+3. You can now install the <a href="https://github.com/fablabbcn/Smart-Citizen-Kit/tree/master/sck_beta_v0_8_7_SDCARD" target="_blank">**SD firmware**</a> using the Arduino IDE. 
+
+**Dependencies:**
+
+* In order to compile and upload the firmware you will need to install the **SdFat** library for Arduino.
+
+* Download the library [here](https://github.com/greiman/SdFat) and install the library following the [instructions](http://arduino.cc/en/Guide/Libraries).
+
+**Boards:**
+
+* For SmartCitizen Kit version 1.0 select `Tools/Boards/Arduino Leonardo` on the Arduino IDE (ATmega 32U4 at 16Mhz) 
+
+* For SmartCitizen Kit version 1.1 select `Tools/Boards/Lylipad Arduino USB` on the Arduino IDE (ATmega 32U4 at 8Mhz) 
+
+**SD data format**
+
+When using the **SD firmware** on the SCK, data is stored as **CSV** ([comma separated](http://en.wikipedia.org/wiki/Comma-separated_values)) file on the SD card.
+
+This is an example of the output file once opened on a spreadsheet application:
+
+| Temperature | Humidity| Light   | Battery | Solar Panel | CO     | NO2  | Noise| UTC			  	    | 
+|-------------|---------|---------|---------|-------------|--------|------|------|----------------------|
+| 2821.20     | 4072.00 | 4413.10 | 96.40   | 0.00        | 94.67  | 0.65 | 5.23 | 2000-01-01  00:00:02 |
+| 2784.40     | 4236.80 | 5936.70 | 96.10   | 0.00        | 278.27 | 1.05 | 2.39 | 2000-01-01  00:00:02 |
+
+**Data Conversions**
+
+The data stored is automatically converted to the proper units in firmware.
+
+If you prefer to do the conversions manually set `DataRaw       false` in the `Constants.h` file and apply the formulas on the following table:
+
+
+| ID  | Sensor       | Units | Conversion Formula                                 
+|-----|--------------|-------|---------------------------------------------|
+| 0   | Temperature  | ºC    |  T = -53 + 175.72 / 65536.0 * ( Traw * 10 ) |
+| 1   | Humidity     | %Rel  |  H =   7 + 125.0  / 65536.0 * ( Hraw * 10 ) |
+| 2   | Light        | Lux   |  L = Lraw / 10                              |
+| 3   | Battery      | %     |  Not required                               |
+| 4   | Panel        | mV    |  Not required                               |                                             
+| 5   | CO      	  | kOhm  |  Not required                               |                                            
+| 6   | NO2          | kOhm  |  Not required                               |                               
+| 7   | Noise        | dB    |  Apply the conversion table from mV to dB: [CSV](https://gist.github.com/pral2a/d767cc45874361fd38bf) 
+| 8   | Date         | DD:MM:YY |  Not required                            |                             
+| 9   | Time         | hh:mm:ss |  Not required                            |                            
+
+
+### How to import the SD card data?
+
+You can import the recorded data in to [smartcitizen.me](http://smartcitizen.me)
+
+In your device page you will find the **Import SD** along with the Edit and Configure options.
+
+![image](https://smartcitizen.me/img/sck-sd-import.png)
+
+Using a microSD card reader get the **post.csv** file from your card, select it and click import. Data will be imported in to your device, data existing on the file already imported will be skipped. Your kit should be running the latest SD firmware  and the SCK time (RTC) should be set in order data can be imported.
+
 
 ### Which LiPo batteries to use?
 
