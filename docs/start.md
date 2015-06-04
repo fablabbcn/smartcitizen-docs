@@ -567,9 +567,9 @@ Here are the different paths you can take in order to built your own backend.
 
 1. **microSD**: We recomend formating **micro SD** cards using the official SD tool you can download [here](https://www.sdcard.org/downloads/formatter_4/).
 
-2. **RTC**: Place a **CR1220** cell battery on your kit. Before uploading the SD firmware use the on-line configuration tool at [smartcitizen.me](https://smartcitizen.me) to set your Wi-Fi credentials. Your kit will connect to the internet and sync its the internal clock with our remote servers.
+2. **RTC**: Place a **CR1220** cell battery on your kit. Before uploading the SD firmware use the on-line configuration tool at [smartcitizen.me](https://smartcitizen.me) to set your Wi-Fi credentials. Turn your kit off and on for a minute, the blue led's will blink and your kit will connect to the internet and sync its the internal clock with our remote servers. Once the time is set the cell battery will keep SCK time in sync for more than 4 years.
 
-3. You can now install the <a href="https://github.com/fablabbcn/Smart-Citizen-Kit/tree/master/sck_beta_v0_8_7_SDCARD" target="_blank">**SD firmware**</a> using the Arduino IDE. 
+3. You can now install the <a href="https://github.com/fablabbcn/Smart-Citizen-Kit/tree/master/sck_beta_v0_8_7_SDCARD" target="_blank">**SD firmware**</a> using the [Arduino IDE](http://www.arduino.cc/en/Main/Software). 
 
 **Dependencies:**
 
