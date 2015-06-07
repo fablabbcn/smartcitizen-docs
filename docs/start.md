@@ -133,13 +133,9 @@ Note: You have to replace XXX with your phrase, filling any space with the dolla
 You are now done with the manual configuration of your SCK. Wait for a few minutes to see your data coming on the server and being displayed on the web page. You can also check that everything is ok by looking at the Arduino serial monitor. Debug messages coming from your SCK should look like this:
 
 
-If you want to explore further options with the WiFly module, a full list of commands is available at:
-https://github.com/fablabbcn/Smart-Citizen-Kit/blob/master/sck-commands.md
+If you want to explore further options with the WiFly module check [The SCK Command Line](http://docs.smartcitizen.me/#/start/the-sck-command-line) section.
 
-If you encounter any issue, please share your problem on the forum:
-http://forum.smartcitizen.me/
-
-
+If you encounter any issue, please share your problem on the [forum](http://forum.smartcitizen.me/)
 
 ### Manual set up: The Compilation Way
 
