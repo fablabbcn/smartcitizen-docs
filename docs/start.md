@@ -538,7 +538,8 @@ You can download the files through this links.
 <a href="http://www.thingiverse.com/thing:262891" target="_blank">Smart Citizen Enclosure 1.0</a><br>
 <a href="http://www.thingiverse.com/thing:236976" target="_blank">Smart Citizen Enclosure 1.1</a>
 
-![Enclosure](img/new_case.jpg)
+![Enclosure](img/new_case_2.jpg)
+![Enclosure2](img/new_case.jpg)
 
 Also, we are working in new cases that will be available soon.
 
@@ -753,7 +754,7 @@ You can easily check each time your kit is pusblishing data to our platform in r
 * Go to your device edit page in [smartcitizen.me](http://smartcitizen.me), set Debug Enabled and save it.
 * Visit [data.smartcitizen.me/debug](http://data.smartcitizen.me/debug) you will see the data from all the devices on debug mode every time they publish in real time. You can indetify your device by the devie id. **Note data comes uncalibrated.*
 
-![image](https://smartcitizen.me/img/sck-sd-import.png)
+![image](img/data_debug.png)
 
 ### Which LiPo batteries to use?
 
