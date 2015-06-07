@@ -659,7 +659,7 @@ Each sensor is implemented as a separate function and some general methods are a
 
 **How to proceed**
 
-Here are the different paths you can take in order to built your own backend.
+Here are the different paths you can take in order to built your own backend:
 
 - Create a fork of the the <a href="https://github.com/fablabbcn/Smart-Citizen-Kit/tree/master" target="_blank">Smart Citizen Kit firmware</a> in order to send the data as your custom backend expect it.
 
@@ -729,6 +729,14 @@ In your device page you will find the **Import SD** along with the Edit and Conf
 
 Using a microSD card reader get the **post.csv** file from your card, select it and click import. Data will be imported in to your device, data existing on the file already imported will be skipped. Your kit should be running the latest SD firmware  and the SCK time (RTC) should be set in order data can be imported.
 
+### Is my kit pusblishing data properly?
+
+You can easily check each time your kit is pusblishing data to our platform in real time by enabling the debug mode on your device.
+
+* Go to your device edit page in [smartcitizen.me](http://smartcitizen.me), set Debug Enabled and save it.
+* Visit [data.smartcitizen.me/debug](http://data.smartcitizen.me/debug) you will see the data from all the devices on debug mode every time they publish in real time. You can indetify your device by the devie id. **Note data comes uncalibrated.*
+
+![image](https://smartcitizen.me/img/sck-sd-import.png)
 
 ### Which LiPo batteries to use?
 
