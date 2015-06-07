@@ -625,7 +625,7 @@ Values are send without the proper scaling and some sensors as temperature, humi
 | nets      | Nets        | Wi-Fi Networks      | Not required                                  | Not required                              |
 | timestamp | Timestamp   | YYYY-MM-DD hh:mm:ss | Not required                                  | Not required                              |
 
-You can use the **SCKSensorData** php class to re-scale and calibrate the received data. Check the code [here](http://). 
+You can use the **SCKSensorData** php class to re-scale and calibrate the received data. Check the code [here](https://github.com/fablabbcn/Smart-Citizen-Kit/blob/master/data/sck_sensor_data.php). 
 
 Here is an example how to use it to receive a request, converted and store it in a CSV file:
 
@@ -675,6 +675,7 @@ Each sensor is implemented as a separate function and some general methods are a
 	}
 ?>
 ```
+You can find the complete example [here](https://github.com/fablabbcn/Smart-Citizen-Kit/blob/master/data/examples/add.php).
 
 **How to proceed**
 
