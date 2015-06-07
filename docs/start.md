@@ -154,43 +154,40 @@ You can download the latest firmware on our Github :
 https://github.com/fablabbcn/Smart-Citizen-Kit/releases
 As you may know, the hardware and software are based on the arduino project. we will use the Arduino IDE to edit the firmware and upload it to the kit. This tutorial have been tested with arduino 1.0.5. Get the Arduino IDE at http://arduino.cc/en/Main/Software.
 
-Open the file Smart-Citizen-Kit/sck_beta_v0_8_5/sck_beta_v0_X_X.ino
+Open the file `Smart-Citizen-Kit/sck_beta_v0_8_5/sck_beta_v0_X_X.ino`
 
 #### STEP 2: Editing the code
 
 If you want to set the network configuration manually, you should go to the SCKBase tab and modify the lines you see below:
  
-```Arduino
-#define networks 0
-#if (networks > 0)
-char* mySSID[networks]      = { 
-  "Red1"        , "Red2"        , "Red3"             };
-char* myPassword[networks]  = { 
-  "Pass1"      , "Pass2"       , "Pass3"            };
-char* wifiEncript[networks] = { 
-  WPA2         , WPA2          , WPA2               };
-char* antennaExt[networks]  = { 
-  INT_ANT      , INT_ANT       , INT_ANT            }; //EXT_ANT
-#endif
- ```
+	
+	#define networks 0
+	#if (networks > 0)
+	char* mySSID[networks]      = { 
+  	"Red1"        , "Red2"        , "Red3"             };
+	char* myPassword[networks]  = { 
+  	"Pass1"      , "Pass2"       , "Pass3"            };
+	char* wifiEncript[networks] = { 
+  	WPA2         , WPA2          , WPA2               };
+	char* antennaExt[networks]  = { 
+  	INT_ANT      , INT_ANT       , INT_ANT            }; //EXT_ANT
+	#endif
  
 The easiest way would be to write "#define networks X" (where X is the number of WI-FI networks you are going to use),  add the name of your network in "RedX" and the corresponding password in "PassX". You could also choose the encryption mode that fits with your network's configuration (OPEN, WEP, WPA1, WPA2, WEP64) or the type of antenna you are using (*INT_ANT* for internal antenna (default) or *EXT_ANT* for external antenna).
  
 If you register only one wifi credential, you should obtain something like:
  
- ```Arduino 
-#define networks 1
-#if (networks > 0)
-char* mySSID[networks]      = { 
-  "MyWifiSSID"    };
-char* myPassword[networks]  = { 
-  "MyPassword"    };
-char* wifiEncript[networks] = { 
-  WPA2            };
-char* antennaExt[networks]  = { 
-  INT_ANT         }; //EXT_ANT
-#endif
- ```
+	#define networks 1
+	#if (networks > 0)
+	char* mySSID[networks]      = { 
+	"MyWifiSSID"    };
+	char* myPassword[networks]  = { 
+  	"MyPassword"    };
+	char* wifiEncript[networks] = { 
+  	WPA2            };
+	char* antennaExt[networks]  = { 
+  	INT_ANT         }; //EXT_ANT
+	#endif
  
 #### STEP 3: Registering the kit in the database
 
@@ -226,7 +223,7 @@ In both versions, yo have to attach the plus of solar panel to the plus pad of t
 The Sck Command Line
 =====
 
-The Smart Citizen Kit can be managed over a basic serial protocol. You just need the Arduino IDE Serial Monitor or any other Serial Utility like Screen in order to use it.
+The Smart Citizen Kit can be managed over a basic serial protocol. You just need the **Arduino IDE Serial Monitor** or any other **Serial Utility** like **Screen** in order to use it.
 
 **How to use it**
 
@@ -491,7 +488,7 @@ Due to the ease of the I2C protocol. We’ve included and I2C bus to provide to 
 
 
 | Smart Citizen Kit |           | SCK 1.0 (Goteo Board)       | SCK 1.1 (Kickstarter Board)       |
-|:-----------|:---------:|:---------------------------:|:---------------------------:|
+|:-----------|:---------:|:-----------------:|:-----------------:|
 | **Data Board**        |           |                                                                                  |                                                                                     |
 | **MCU**               |           | ATMEGA32U4                                                                       | ATMEGA32U4                                                                          |
 | **Clock**             |           | 16Mhz                                                                            | 8Mhz                                                                                |
@@ -590,15 +587,78 @@ Faq
 ====
 ### How to store data in your own database?
 
+**Kit's request**
+
 The Smart Citizen Kit is publishing by default the data as a PUT Http request, the sensor data is encoded as JSON.
 
-Here you can see how a kit's request will look like.
+Here you can see how a kit's request will look like *(Note the request is not standard as it do not contains a payload)*:
+
+	PUT /add HTTP/1.1
+	Host: data.smartcitizen.me
+	User-Agent: SmartCitizen
+	X-SmartCitizenMacADDR: 00:00:00:00:00:00
+	X-SmartCitizenVersion: 1.1-0.8.5-A
+	X-SmartCitizenData: [{"temp":"29090.6", "hum":"6815.74", "light":"30000", 	"bat":"786", "panel":"0", "co":"112500", "no2":"200000", "noise":"2", 	"nets":"10", "timestamp":"2013-10-28 1:34:26"}]
+
+Here you have a kit's request as a  **Curl** for test purposes:
 
 ``
 curl -X PUT -H 'Host: data.smartcitizen.me' -H 'User-Agent: SmartCitizen' -H 'X-SmartCitizenMacADDR: 00:00:00:00:00:00' -H 'X-SmartCitizenVersion: 1.1-0.8.5-A' -H 'X-SmartCitizenData: [{"temp":"29090.6", "hum":"6815.74", "light":"30000", "bat":"786", "panel":"0", "co":"112500", "no2":"200000", "noise":"2", "nets":"10", "timestamp":"2013-10-28 1:34:26"}]' data.smartcitizen.me/add
 ``
 
-Data for the temperature, humidity and noise is sent it in raw and then calibrated in our platform.
+**Data processing**
+
+Values are send without the proper scaling and some sensors as temperature, humidity and noise are sent in raw and then calibrated in our platform.
+
+
+|Key|Sensor|Units|Conversion formula|Conversion Methos|
+|---|---|---|---|---|
+|temp|Temperature|ºC|T = -53 + 175.72 / 65536.0 * Traw|SCKSensorData::tempConversion($rawTemp)|
+|hum|Humidity|%Rel|H = 7 + 125.0 / 65536.0 * Hraw|SCKSensorData::humConversion($rawHum)|
+|light|Light|Lux|L = Lraw / 10|SCKSensorData::lightConversion($rawLight)|
+|noise|Noise|dB|Apply the conversion table from mV to dB: [CSV](https://gist.github.com/pral2a/d767cc45874361fd38bf) |SCKSensorData::noiseConversion($rawNoise)|
+|co|CO|kOhm|CO = COraw / 10000|SCKSensorData::coConversion($rawCO)|
+|no2|NO2|kOhm|NO2 = NO2raw / 10000|SCKSensorData::no2Conversion($rawNO2)|
+|bat|Battery|%|B = Braw / 10|SCKSensorData::batConversion($rawBat)|
+|panel|Panel|mV|P = Praw / 10000|SCKSensorData::panelConversion($rawPanel)|
+|nets|Nets|Wi-Fi Networks|Not required|Not required|
+|timestamp|Timestamp|YYYY-MM-DD hh:mm:ss|Not required|Not required|
+
+You can use the **SCKSensorData** php class to re-scale and calibrate the received data. Download it [sck_sensor_data.php](http://). Here is an example how to use it:
+
+	<?php
+		$smartData = new SCKSensorData();
+	
+		$payload = '[{"temp":"29090.6", "hum":"6815.74", "light":"30000", "bat":"786", "panel":"0", "co":"112500", "no2":"200000", "noise":"2", "nets":"10", "timestamp":"2013-10-28 01:34:26"}]';
+	
+		$datapoints = json_decode($payload, true);
+	
+		foreach ($datapoints as $datapoint) {
+				print_r($smartData::SCK11Calibration($datapoint));
+		}
+	?>
+
+Each sensor is implemented as a separate function and some general methods are available for simplifing the work. Here is an example:
+
+	/**
+	 * noiseCalibration
+	 *
+	 * Noise calibration for SCK1.1 sound sensor. Converts mV in to dBs. 
+	 * Based on a linear regresion from a lookup table (db.json) obtained after real measurements from our test facility.
+	 * 
+	 *
+	 * @param float $rawSound
+	 * @return float noise as sound pressure in dB
+	 *
+	 */
+	
+	public function noiseCalibration($rawSound)
+	{
+		$dbTable = json_decode(file_get_contents("db.json"), true);
+		return round(self::tableCalibration($dbTable, $rawSound), 2);
+	}
+
+**How to proceed**
 
 Here are the different paths you can take in order to built your own backend.
 
@@ -606,7 +666,7 @@ Here are the different paths you can take in order to built your own backend.
 
 - Create your own custom backend. We can share all the different modules of our backend in order for you to receive data as on the curl example above, calibrate it and store it. Contact us at <a href="mailto:support@smartcitizen.me">support@smartcitizen.me</a>.
 
-- Keep using our backend but request our public API <a href="http://api.smartcitizen.me/" target="_blank">api.smartcitizen.me</a> and then fill your local Mysql with it.
+- Keep using our backend but request our public API <a href="http://api.smartcitizen.me/" target="_blank">api.smartcitizen.me</a> and then fill database choise with it.
 
 ### How to use the SD Card?
 
@@ -690,10 +750,12 @@ Because the actual sensor is limited by the curve boundings from 50dB to 103dB
 ### Browsers compatibility
 
 The SmartCitizen platform is built using the latest Web technologies (such as HTML5, SVG and CSS3). These languages serve as a foundation for today’s websites and web applications. 
+
 To enjoy Smart Citizen, we recommend you to use:
 
 Google Chrome 25+
 Firefox Mozilla 20+
+
 ### What are the LEDs for, and what does the LED blinking mean?
 
 There are 5 LEDs, they are all on the base half of the SCK.  They can be understood in three groups:
