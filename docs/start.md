@@ -160,35 +160,34 @@ Open the file `Smart-Citizen-Kit/sck_beta_v0_8_5/sck_beta_v0_X_X.ino`
 
 If you want to set the network configuration manually, you should go to the SCKBase tab and modify the lines you see below:
  
-	
-	#define networks 0
-	#if (networks > 0)
-	char* mySSID[networks]      = { 
-  	"Red1"        , "Red2"        , "Red3"             };
-	char* myPassword[networks]  = { 
-  	"Pass1"      , "Pass2"       , "Pass3"            };
-	char* wifiEncript[networks] = { 
-  	WPA2         , WPA2          , WPA2               };
-	char* antennaExt[networks]  = { 
-  	INT_ANT      , INT_ANT       , INT_ANT            }; //EXT_ANT
-	#endif
+```	cpp
+#define networks 0
+#if (networks > 0)
+char* mySSID[networks]      = { 
+  "Red1"        , "Red2"        , "Red3"             };
+char* myPassword[networks]  = { 
+  "Pass1"      , "Pass2"       , "Pass3"            };
+char* wifiEncript[networks] = { 
+  WPA2         , WPA2          , WPA2               };
+char* antennaExt[networks]  = { 
+  INT_ANT      , INT_ANT       , INT_ANT            }; //EXT_ANT
+#endif
+```
  
 The easiest way would be to write "#define networks X" (where X is the number of WI-FI networks you are going to use),  add the name of your network in "RedX" and the corresponding password in "PassX". You could also choose the encryption mode that fits with your network's configuration (OPEN, WEP, WPA1, WPA2, WEP64) or the type of antenna you are using (*INT_ANT* for internal antenna (default) or *EXT_ANT* for external antenna).
  
 If you register only one wifi credential, you should obtain something like:
- 
-	#define networks 1
-	#if (networks > 0)
-	char* mySSID[networks]      = { 
-	"MyWifiSSID"    };
-	char* myPassword[networks]  = { 
-  	"MyPassword"    };
-	char* wifiEncript[networks] = { 
-  	WPA2            };
-	char* antennaExt[networks]  = { 
-  	INT_ANT         }; //EXT_ANT
-	#endif
- 
+
+```	cpp 
+#define networks 1
+#if (networks > 0)
+char* mySSID[networks]      = { "MyWifiSSID"};
+char* myPassword[networks]  = { "MyPassword"};
+char* wifiEncript[networks] = { WPA2 };
+char* antennaExt[networks]  = { INT_ANT };
+#endif
+```
+
 #### STEP 3: Registering the kit in the database
 
 After you've uploaded your own script, don't forget to register the kit in our database and save there your kit mac address. To find this mac address, you can use the serial command "get mac". by following the tutorial Manual Setup, the Serial way. 
@@ -487,45 +486,45 @@ Due to the ease of the I2C protocol. We’ve included and I2C bus to provide to 
 ### Detailed specifications
 
 
-| Smart Citizen Kit |           | SCK 1.0 (Goteo Board)       | SCK 1.1 (Kickstarter Board)       |
-|:-----------|:---------:|:-----------------:|:-----------------:|
-| **Data Board**        |           |                                                                                  |                                                                                     |
-| **MCU**               |           | ATMEGA32U4                                                                       | ATMEGA32U4                                                                          |
-| **Clock**             |           | 16Mhz                                                                            | 8Mhz                                                                                |
-| **WiFi**             |           | Microchip RN-131 802.11 b/g                                                                            | Microchip RN-131 802.11 b/g                                                                                |
-| **Firmware**         |           | https://github.com/fablabbcn/Smart-Citizen-Kit                                   | https://github.com/fablabbcn/Smart-Citizen-Kit                                      |
-| **Design files**      |           | https://github.com/fablabbcn/Smart-Citizen-Kit/tree/master/hardware/Goteo/v1.01  | https://github.com/fablabbcn/Smart-Citizen-Kit/tree/master/hardware/Kickstarter     |
-| **Ambient Board**     |           |                                                                                  |                                                                                     |
-| **Light**             | *Part*      | PVD-P8001                                                                        | BH1730FVC                                                                           |
-|                   | *Type*      | LDR Analog Light Sensor                                                          | Digital Ambient Light Sensor                                                        |
-|                   | *Units*     | %                                                                                | Lux                                                                                 |
-|                   | *Datasheet* | https://github.com/fablabbcn/Smart-Citizen-Kit/wiki/Datasheets/PDV-P8001.pdf     | https://github.com/fablabbcn/Smart-Citizen-Kit/wiki/Datasheets/BH-1730FCV.pdf       |
-|                   | Firmware  | `SCKAmbient::getLight();`                                                           | `SCKAmbient::getLight():`                                                              |
-| **Temp**              | *Part*      | DHT22                                                                            | HPP828E031 (SHT21)                                                                  |
-|                   | *Type*      | Digital Temperature and Relative Humidity Sensor                                 | Digital Temperature and Relative Humidity Sensor                                    |
-|                   | *Units*     | ºC                                                                               | ºC                                                                                  |
-|                   | *Datasheet* | https://github.com/fablabbcn/Smart-Citizen-Kit/wiki/Datasheets/DHT22.pdf         | https://github.com/fablabbcn/Smart-Citizen-Kit/wiki/Datasheets/HTU-21D.pdf          |
-|                   | Firmware  | `SCKAmbient::getDHT22();` `SCKAmbient::getHumidity();`                               | `SCKAmbient::getSHT21();` `SCKAmbient::getTemperature();`                               |
-| **Humidity**          | *Part*      | DHT22                                                                            | HPP828E031 (SHT21)                                                                  |
-|                   | *Type*      | Digital Temperature and Relative Humidity Sensor                                 | Digital Temperature and Relative Humidity Sensor                                    |
-|                   | *Units*     | % Rel                                                                            | % Rel                                                                               |
-|                   | *Datasheet* | https://github.com/fablabbcn/Smart-Citizen-Kit/wiki/Datasheets/DHT22.pdf         | https://github.com/fablabbcn/Smart-Citizen-Kit/wiki/Datasheets/HTU-21D.pdf          |
-|                   | Firmware  | `SCKAmbient::getDHT22();` `SCKAmbient::getHumidity();`                               | `SCKAmbient::getSHT21();` `SCKAmbient::getHumidity();`                                  |
-| **Noise**             | *Part*      | POM-3044P-R                                                                      | POM-3044P-R                                                                         |
-|                   | *Type*      | Electret microphone with envelop follower sound pressure sensor                  | Electret microphone with envelop follower sound pressure sensor                     |
-|                   | *Units*     | dB                                                                               | dB                                                                                  |
-|                   | *Datasheet* | https://github.com/fablabbcn/Smart-Citizen-Kit/wiki/Datasheets/POM-3044P-R.pdf   | https://github.com/fablabbcn/Smart-Citizen-Kit/wiki/Datasheets/POM-3044P-R.pdf      |
-|                   | *Firmware*  | `SCKAmbient::getNoise();`                                                          | `SCKAmbient::getNoise();`                                                             |
-| **CO**                | *Part*      | MICS-5525                                                                        | MiCS-4514                                                                           |
-|                   | *Type*      | MOS CO gas sensor                                                                | MOS CO and NO2 gas sensor                                                           |
-|                   | *Units*     | kOhm (ppm)                                                                       | kOhm (ppm)                                                                          |
-|                   | *Datasheet* | https://github.com/fablabbcn/Smart-Citizen-Kit/wiki/Datasheets/MICS-5525_CO.pdf  | https://github.com/fablabbcn/Smart-Citizen-Kit/wiki/Datasheets/MiCS-4514_CO_NO2.pdf |
-|                   | *Firmware*  | `SCKAmbient::getMICS();`                                                           | `SCKAmbient::getMICS();`                                                              |
-| **NO2**               | *Part*      | MICS-2710                                                                        | MiCS-4514                                                                           |
-|                   | *Type*      | MOS NO2 gas sensor                                                               | MOS CO and NO2 gas sensor                                                           |
-|                   | *Units*     | kOhm (ppm)                                                                       | kOhm (ppm)                                                                          |
-|                   | *Datasheet* | https://github.com/fablabbcn/Smart-Citizen-Kit/wiki/Datasheets/MICS-2710_NO2.pdf | https://github.com/fablabbcn/Smart-Citizen-Kit/wiki/Datasheets/MiCS-4514_CO_NO2.pdf |
-|                   | *Firmware*  | `SCKAmbient::getMICS();`                                                           | `SCKAmbient::getMICS();`                                                              |
+| Smart Citizen Kit |           SCK 1.0 (Goteo Board)       | SCK 1.1 (Kickstarter Board)       |
+|:-----------|:-----------------:|:-----------------:|
+| **Data Board**                  |                                                                                  |                                                                                     |
+| **MCU**                         | ATMEGA32U4                                                                       | ATMEGA32U4                                                                          |
+| **Clock**                       | 16Mhz                                                                            | 8Mhz                                                                                |
+| **WiFi**                       | Microchip RN-131 802.11 b/g                                                                            | Microchip RN-131 802.11 b/g                                                                                |
+| **Firmware**                    | [Repository](https://github.com/fablabbcn/Smart-Citizen-Kit)                                    | [Repository](https://github.com/fablabbcn/Smart-Citizen-Kit)                                    |
+| **Design files**                 | [v1.01](https://github.com/fablabbcn/Smart-Citizen-Kit/tree/master/hardware/Goteo/v1.01)  | [v1.1](https://github.com/fablabbcn/Smart-Citizen-Kit/tree/master/hardware/Kickstarter)     |
+| **Ambient Board**                |                                                                                  |                                                                                     |
+| **Light**                    | PVD-P8001                                                                        | BH1730FVC                                                                           |
+|                    *Type*      | LDR Analog Light Sensor                                                          | Digital Ambient Light Sensor                                                        |
+|                    *Units*     | %                                                                                | Lux                                                                                 |
+|                    *Datasheet* | [PDV-P8001.pdf](https://github.com/fablabbcn/Smart-Citizen-Kit/wiki/Datasheets/PDV-P8001.pdf)     | [BH-1730FCV.pdf](https://github.com/fablabbcn/Smart-Citizen-Kit/wiki/Datasheets/BH-1730FCV.pdf)       |
+|                    *Firmware*   | `SCKAmbient::getLight();`                                                           | `SCKAmbient::getLight():`                                                              |
+| **Temp**                     | DHT22                                                                            | HPP828E031 (SHT21)                                                                  |
+|                    *Type*      | Digital Temperature and Relative Humidity Sensor                                 | Digital Temperature and Relative Humidity Sensor                                    |
+|                    *Units*     | ºC                                                                               | ºC                                                                                  |
+|                    *Datasheet* | [DHT22.pdf](https://github.com/fablabbcn/Smart-Citizen-Kit/wiki/Datasheets/DHT22.pdf)         | [HTU-21D.pdf](https://github.com/fablabbcn/Smart-Citizen-Kit/wiki/Datasheets/HTU-21D.pdf)          |
+|                    *Firmware*   | `SCKAmbient::getDHT22();` `SCKAmbient::getHumidity();`                               | `SCKAmbient::getSHT21();` `SCKAmbient::getTemperature();`                               |
+| **Humidity**                 | DHT22                                                                            | HPP828E031 (SHT21)                                                                  |
+|                    *Type*      | Digital Temperature and Relative Humidity Sensor                                 | Digital Temperature and Relative Humidity Sensor                                    |
+|                    *Units*     | % Rel                                                                            | % Rel                                                                               |
+|                    *Datasheet* | [DHT22.pdf](https://github.com/fablabbcn/Smart-Citizen-Kit/wiki/Datasheets/DHT22.pdf)         | [HTU-21D.pdf](https://github.com/fablabbcn/Smart-Citizen-Kit/wiki/Datasheets/HTU-21D.pdf)          |
+|                    *Firmware*   | `SCKAmbient::getDHT22();` `SCKAmbient::getHumidity();`                               | `SCKAmbient::getSHT21();` `SCKAmbient::getHumidity();`                                  |
+| **Noise**                   | POM-3044P-R                                                                      | POM-3044P-R                                                                         |
+|                    *Type*      | Electret microphone with envelop follower sound pressure sensor                  | Electret microphone with envelop follower sound pressure sensor                     |
+|                    *Units*     | dB                                                                               | dB                                                                                  |
+|                    *Datasheet* | [OM-3044P-R.pdf](https://github.com/fablabbcn/Smart-Citizen-Kit/wiki/Datasheets/POM-3044P-R.pdf)   | [OM-3044P-R.pdf](https://github.com/fablabbcn/Smart-Citizen-Kit/wiki/Datasheets/POM-3044P-R.pdf)      |
+|                    *Firmware*  | `SCKAmbient::getNoise();`                                                          | `SCKAmbient::getNoise();`                                                             |
+| **CO**                       | MICS-5525                                                                        | MiCS-4514                                                                           |
+|                    *Type*      | MOS CO gas sensor                                                                | MOS CO and NO2 gas sensor                                                           |
+|                    *Units*     | kOhm (ppm)                                                                       | kOhm (ppm)                                                                          |
+|                    *Datasheet* | [MICS-5525_CO.pdf](https://github.com/fablabbcn/Smart-Citizen-Kit/wiki/Datasheets/MICS-5525_CO.pdf)  | [MiCS-4514_CO_NO2.pdf](https://github.com/fablabbcn/Smart-Citizen-Kit/wiki/Datasheets/MiCS-4514_CO_NO2.pdf) |
+|                    *Firmware*  | `SCKAmbient::getMICS();`                                                           | `SCKAmbient::getMICS();`                                                              |
+| **NO2**                     | MICS-2710                                                                        | MiCS-4514                                                                           |
+|                    *Type*      | MOS NO2 gas sensor                                                               | MOS CO and NO2 gas sensor                                                           |
+|                    *Units*     | kOhm (ppm)                                                                       | kOhm (ppm)                                                                          |
+|                    *Datasheet* | [MICS-2710_NO2.pdf](https://github.com/fablabbcn/Smart-Citizen-Kit/wiki/Datasheets/MICS-2710_NO2.pdf) | [MiCS-4514_CO_NO2.pdf](https://github.com/fablabbcn/Smart-Citizen-Kit/wiki/Datasheets/MiCS-4514_CO_NO2.pdf) |
+|                    *Firmware*  | `SCKAmbient::getMICS();`                                                           | `SCKAmbient::getMICS();`                                                              |
 
 
 ### Enclosures
@@ -593,66 +592,74 @@ The Smart Citizen Kit is publishing by default the data as a PUT Http request, t
 
 Here you can see how a kit's request will look like *(Note the request is not standard as it do not contains a payload)*:
 
-	PUT /add HTTP/1.1
-	Host: data.smartcitizen.me
-	User-Agent: SmartCitizen
-	X-SmartCitizenMacADDR: 00:00:00:00:00:00
-	X-SmartCitizenVersion: 1.1-0.8.5-A
-	X-SmartCitizenData: [{"temp":"29090.6", "hum":"6815.74", "light":"30000", 	"bat":"786", "panel":"0", "co":"112500", "no2":"200000", "noise":"2", 	"nets":"10", "timestamp":"2013-10-28 1:34:26"}]
+``` shell
+PUT /add HTTP/1.1
+Host: data.smartcitizen.me
+User-Agent: SmartCitizen
+X-SmartCitizenMacADDR: 00:00:00:00:00:00
+X-SmartCitizenVersion: 1.1-0.8.5-A
+X-SmartCitizenData: [{"temp":"29090.6", "hum":"6815.74", "light":"30000", "bat":"786", "panel":"0", "co":"112500", "no2":"200000", "noise":"2", "nets":"10", "timestamp":"2013-10-28 1:34:26"}]
+```
 
 Here you have a kit's request as a  **Curl** for test purposes:
 
-``
+``` shell
 $ curl -X PUT -H 'Host: data.smartcitizen.me' -H 'User-Agent: SmartCitizen' -H 'X-SmartCitizenMacADDR: 00:00:00:00:00:00' -H 'X-SmartCitizenVersion: 1.1-0.8.5-A' -H 'X-SmartCitizenData: [{"temp":"29090.6", "hum":"6815.74", "light":"30000", "bat":"786", "panel":"0", "co":"112500", "no2":"200000", "noise":"2", "nets":"10", "timestamp":"2013-10-28 1:34:26"}]' data.smartcitizen.me/add
-``
+```
 
 **Data processing**
 
 Values are send without the proper scaling and some sensors as temperature, humidity and noise are sent in raw and then calibrated in our platform. This are the conversion required for **SCK 1.1** and above.
 
-|Key|Sensor|Units|Conversion formula|Conversion Methos|
-|---|---|---|---|---|
-|temp|Temperature|ºC|T = -53 + 175.72 / 65536.0 * Traw|SCKSensorData::tempConversion($rawTemp)|
-|hum|Humidity|%Rel|H = 7 + 125.0 / 65536.0 * Hraw|SCKSensorData::humConversion($rawHum)|
-|light|Light|Lux|L = Lraw / 10|SCKSensorData::lightConversion($rawLight)|
-|noise|Noise|dB|Apply the conversion table from mV to dB: [CSV](https://gist.github.com/pral2a/d767cc45874361fd38bf) |SCKSensorData::noiseConversion($rawNoise)|
-|co|CO|kOhm|CO = COraw / 10000|SCKSensorData::coConversion($rawCO)|
-|no2|NO2|kOhm|NO2 = NO2raw / 10000|SCKSensorData::no2Conversion($rawNO2)|
-|bat|Battery|%|B = Braw / 10|SCKSensorData::batConversion($rawBat)|
-|panel|Panel|mV|P = Praw / 10000|SCKSensorData::panelConversion($rawPanel)|
-|nets|Nets|Wi-Fi Networks|Not required|Not required|
-|timestamp|Timestamp|YYYY-MM-DD hh:mm:ss|Not required|Not required|
+| Key       | Sensor      | Units               | Conversion formula                            | Conversion Methos                         |
+|-----------|-------------|---------------------|-----------------------------------------------|-------------------------------------------|
+| temp      | Temperature | ºC                  | T = -53 + 175.72 / 65536.0 * Traw             | SCKSensorData::tempConversion($rawTemp)   |
+| hum       | Humidity    | %Rel                | H = 7 + 125.0 / 65536.0 * Hraw                | SCKSensorData::humConversion($rawHum)     |
+| light     | Light       | Lux                 | L = Lraw / 10                                 | SCKSensorData::lightConversion($rawLight) |
+| noise     | Noise       | dB                  | Apply the conversion table from mV to dB: [CSV](https://gist.github.com/pral2a/d767cc45874361fd38bf) | SCKSensorData::noiseConversion($rawNoise) |
+| co        | CO          | kOhm                | CO = COraw / 10000                            | SCKSensorData::coConversion($rawCO)       |
+| no2       | NO2         | kOhm                | NO2 = NO2raw / 10000                          | SCKSensorData::no2Conversion($rawNO2)     |
+| bat       | Battery     | %                   | B = Braw / 10                                 | SCKSensorData::batConversion($rawBat)     |
+| panel     | Panel       | mV                  | P = Praw / 10000                              | SCKSensorData::panelConversion($rawPanel) |
+| nets      | Nets        | Wi-Fi Networks      | Not required                                  | Not required                              |
+| timestamp | Timestamp   | YYYY-MM-DD hh:mm:ss | Not required                                  | Not required                              |
 
 You can use the **SCKSensorData** php class to re-scale and calibrate the received data. Check the code [here](http://). 
 
 Here is an example how to use it to receive a request, converted and store it in a CSV file:
 
-    <?php
-        include('../sck_sensor_data.php');
+``` php
+<?php
+	include('../sck_sensor_data.php');
 
-        $headers = getallheaders();
-        
-        $data = $headers['X-SmartCitizenData'];
+	$headers = getallheaders();
 
-        $datapoints = json_decode($data, true);
+	$data = $headers['X-SmartCitizenData'];
 
-        foreach ($datapoints as $datapoint) {
-            $datapoint = SCKSensorData::SCK11Convert($datapoint);
-            $csv .= implode(', ', $datapoint);
-        }
+	$datapoints = json_decode($data, true);
 
-        $csv .= PHP_EOL;
+	foreach ($datapoints as $datapoint) {
+	$datapoint = SCKSensorData::SCK11Convert($datapoint);
+		$csv .= implode(', ', $datapoint);
+	}
 
-        file_put_contents('./data.csv', $csv, FILE_APPEND);
-    ?>
+	$csv .= PHP_EOL;
+
+	file_put_contents('./data.csv', $csv, FILE_APPEND);
+?>
+```
 
 Each sensor is implemented as a separate function and some general methods are available for simplifing the work. Here is an example:
+
+``` php
+<?php
 
 	/**
 	 * noiseCalibration
 	 *
 	 * Noise calibration for SCK1.1 sound sensor. Converts mV in to dBs. 
-	 * Based on a linear regresion from a lookup table (db.json) obtained after real measurements from our test facility.
+	 * Based on a linear regresion from a lookup table (db.json) 
+	 * obtained after real measurements from our test facility.
 	 * 
 	 *
 	 * @param float $rawSound
@@ -665,6 +672,8 @@ Each sensor is implemented as a separate function and some general methods are a
 		$dbTable = json_decode(file_get_contents("db.json"), true);
 		return round(self::tableCalibration($dbTable, $rawSound), 2);
 	}
+?>
+```
 
 **How to proceed**
 
@@ -702,10 +711,10 @@ When using the **SD firmware** on the SCK, data is stored as **CSV** ([comma sep
 
 This is an example of the output file once opened on a spreadsheet application:
 
-| Temperature | Humidity| Light   | Battery | Solar Panel | CO     | NO2  | Noise| UTC			  	    | 
-|-------------|---------|---------|---------|-------------|--------|------|------|----------------------|
-| 2821.20     | 4072.00 | 4413.10 | 96.40   | 0.00        | 94.67  | 0.65 | 5.23 | 2000-01-01  00:00:02 |
-| 2784.40     | 4236.80 | 5936.70 | 96.10   | 0.00        | 278.27 | 1.05 | 2.39 | 2000-01-01  00:00:02 |
+| Temperature | Humidity | Light   | Battery | Solar Panel | CO     | NO2  | Noise | UTC                 |
+|-------------|----------|---------|---------|-------------|--------|------|-------|---------------------|
+| 2821.20     | 4072.00  | 4413.10 | 96.40   | 0.00        | 94.67  | 0.65 | 5.23  | 2000-01-01 00:00:02 |
+| 2784.40     | 4236.80  | 5936.70 | 96.10   | 0.00        | 278.27 | 1.05 | 2.39  | 2000-01-01 00:00:02 |
 
 **Data Conversions**
 
@@ -713,19 +722,18 @@ The data stored is automatically converted to the proper units in firmware.
 
 If you prefer to do the conversions manually set `DataRaw       false` in the `Constants.h` file and apply the formulas on the following table:
 
-
-| ID  | Sensor       | Units | Conversion Formula                                 
-|-----|--------------|-------|---------------------------------------------|
-| 0   | Temperature  | ºC    |  T = -53 + 175.72 / 65536.0 * ( Traw * 10 ) |
-| 1   | Humidity     | %Rel  |  H =   7 + 125.0  / 65536.0 * ( Hraw * 10 ) |
-| 2   | Light        | Lux   |  L = Lraw / 10                              |
-| 3   | Battery      | %     |  Not required                               |
-| 4   | Panel        | mV    |  Not required                               |                                             
-| 5   | CO      	  | kOhm  |  Not required                               |                                            
-| 6   | NO2          | kOhm  |  Not required                               |                               
-| 7   | Noise        | dB    |  Apply the conversion table from mV to dB: [CSV](https://gist.github.com/pral2a/d767cc45874361fd38bf) 
-| 8   | Date         | DD:MM:YY |  Not required                            |                             
-| 9   | Time         | hh:mm:ss |  Not required                            |                            
+| ID | Sensor      | Units    | Conversion Formula                            |
+|----|-------------|----------|-----------------------------------------------|
+| 0  | Temperature | ºC       | T = -53 + 175.72 / 65536.0 * ( Traw * 10 )    |
+| 1  | Humidity    | %Rel     | H = 7 + 125.0 / 65536.0 * ( Hraw * 10 )       |
+| 2  | Light       | Lux      | L = Lraw / 10                                 |
+| 3  | Battery     | %        | Not required                                  |
+| 4  | Panel       | mV       | Not required                                  |
+| 5  | CO          | kOhm     | Not required                                  |
+| 6  | NO2         | kOhm     | Not required                                  |
+| 7  | Noise       | dB       | Apply the conversion table from mV to dB: [CSV](https://gist.github.com/pral2a/d767cc45874361fd38bf)       |
+| 8  | Date        | DD:MM:YY | Not required                                  |
+| 9  | Time        | hh:mm:ss | Not required                                  |
 
 
 ### How to import the SD card data?

@@ -71,6 +71,7 @@ a:hover,
   max-width: 480px;
 }
 
+
 .content table th,
 .content table td {
   padding: 5px;
@@ -95,6 +96,8 @@ hr {
   display: none;
 }
 
+
+
 @media (min-width: 1180px) {
 
   hr {
@@ -102,6 +105,12 @@ hr {
     clear: both;
   }
 
+  .content table {
+    table-layout:fixed;
+    width: 600px;
+    margin-left: 40px;
+    margin-right: 40px;
+  }
 
   body:not(.no-literate) .content img {
     width: 330px;
@@ -126,13 +135,7 @@ hr {
     clear: both;
   }
 
-  body.content table {
-    width: 380px;
-    padding-left: 20px;
-    padding-right: 20px;
-    float: right;
-    clear: right;
-  }
+
 
   body:not(.no-literate) .content > p,
   body:not(.no-literate) .content > ul,
