@@ -603,13 +603,12 @@ Here you can see how a kit's request will look like *(Note the request is not st
 Here you have a kit's request as a  **Curl** for test purposes:
 
 ``
-curl -X PUT -H 'Host: data.smartcitizen.me' -H 'User-Agent: SmartCitizen' -H 'X-SmartCitizenMacADDR: 00:00:00:00:00:00' -H 'X-SmartCitizenVersion: 1.1-0.8.5-A' -H 'X-SmartCitizenData: [{"temp":"29090.6", "hum":"6815.74", "light":"30000", "bat":"786", "panel":"0", "co":"112500", "no2":"200000", "noise":"2", "nets":"10", "timestamp":"2013-10-28 1:34:26"}]' data.smartcitizen.me/add
+$ curl -X PUT -H 'Host: data.smartcitizen.me' -H 'User-Agent: SmartCitizen' -H 'X-SmartCitizenMacADDR: 00:00:00:00:00:00' -H 'X-SmartCitizenVersion: 1.1-0.8.5-A' -H 'X-SmartCitizenData: [{"temp":"29090.6", "hum":"6815.74", "light":"30000", "bat":"786", "panel":"0", "co":"112500", "no2":"200000", "noise":"2", "nets":"10", "timestamp":"2013-10-28 1:34:26"}]' data.smartcitizen.me/add
 ``
 
 **Data processing**
 
-Values are send without the proper scaling and some sensors as temperature, humidity and noise are sent in raw and then calibrated in our platform.
-
+Values are send without the proper scaling and some sensors as temperature, humidity and noise are sent in raw and then calibrated in our platform. This are the conversion required for **SCK 1.1** and above.
 
 |Key|Sensor|Units|Conversion formula|Conversion Methos|
 |---|---|---|---|---|
