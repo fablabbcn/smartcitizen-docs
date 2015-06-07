@@ -650,6 +650,8 @@ Here is an example how to use it to receive a request, converted and store it in
 ?>
 ```
 
+You can find the complete example [here](https://github.com/fablabbcn/Smart-Citizen-Kit/blob/master/data/examples/add.php).
+
 Each sensor is implemented as a separate function and some general methods are available for simplifing the work. Here is an example:
 
 ``` php
@@ -675,8 +677,6 @@ Each sensor is implemented as a separate function and some general methods are a
 	}
 ?>
 ```
-You can find the complete example [here](https://github.com/fablabbcn/Smart-Citizen-Kit/blob/master/data/examples/add.php).
-
 **How to proceed**
 
 Here are the different paths you can take in order to built your own backend:
