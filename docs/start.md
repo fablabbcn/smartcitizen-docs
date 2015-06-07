@@ -623,19 +623,28 @@ Values are send without the proper scaling and some sensors as temperature, humi
 |nets|Nets|Wi-Fi Networks|Not required|Not required|
 |timestamp|Timestamp|YYYY-MM-DD hh:mm:ss|Not required|Not required|
 
-You can use the **SCKSensorData** php class to re-scale and calibrate the received data. Download it [sck_sensor_data.php](http://). Here is an example how to use it:
+You can use the **SCKSensorData** php class to re-scale and calibrate the received data. Check the code [here](http://). 
 
-	<?php
-		$smartData = new SCKSensorData();
-	
-		$payload = '[{"temp":"29090.6", "hum":"6815.74", "light":"30000", "bat":"786", "panel":"0", "co":"112500", "no2":"200000", "noise":"2", "nets":"10", "timestamp":"2013-10-28 01:34:26"}]';
-	
-		$datapoints = json_decode($payload, true);
-	
-		foreach ($datapoints as $datapoint) {
-				print_r($smartData::SCK11Calibration($datapoint));
-		}
-	?>
+Here is an example how to use it to receive a request, converted and store it in a CSV file:
+
+    <?php
+        include('../sck_sensor_data.php');
+
+        $headers = getallheaders();
+        
+        $data = $headers['X-SmartCitizenData'];
+
+        $datapoints = json_decode($data, true);
+
+        foreach ($datapoints as $datapoint) {
+            $datapoint = SCKSensorData::SCK11Convert($datapoint);
+            $csv .= implode(', ', $datapoint);
+        }
+
+        $csv .= PHP_EOL;
+
+        file_put_contents('./data.csv', $csv, FILE_APPEND);
+    ?>
 
 Each sensor is implemented as a separate function and some general methods are available for simplifing the work. Here is an example:
 
