@@ -307,15 +307,6 @@ The SCK Main Board connects to the Sensor Board 16 pin connectoir. This is are h
 | VBAT      | VBAT      |
 
 
-## Voltage Regulation
-
-You connect a 3.3V regulator to VBAT and GND with a couple of capacitors (depending on the regulator you use) to get a steady 3.3v voltage from the battery.
-
-## Useful links
-
-* http://arduino.cc/en/Hacking/PinMapping32u4
-
-
 **CPU** 
 
 Both versions of the SCK (1.0 and 1.1) are using the same CPU, ATMEGA32U4(Arduino Leonardo). With the difference that the 1.0 works at 5V and 16MHZ and the 1.1 works at 3.3V and 8MHZ. In the 1.1 version we’ve improved the power consumption. 
