@@ -53,7 +53,7 @@ If this is the first time registering a SCK, you should install the <a href="htt
 
 ![Sck Chrome App](img/sck_app_chrome.png)
 
-In Windows you will need to install the Arduino Drivers if you haven not done it before. If you already have Arduino installed you should not need to reinstall it.
+In Windows you will need to install the Arduino Drivers if you haven't done it before. If you already have Arduino installed you should not need to reinstall it.
 
 Check [How to install the drivers on Windows?](#/start/how-to-install-the-drivers-on-windows) section for more information.
 
@@ -794,7 +794,7 @@ Please contact [support@smartcitizen.me](mailto:support@smartcitizen.me) describ
 
 ### How to install the drivers on Windows?
 
-In Windows you will need to install the Arduino Drivers if you haven not done it before.
+In Windows you will need to install the Arduino Drivers if you haven't done it before.
 
 #### Windows 8, 7, Vista, and XP
 
