@@ -293,7 +293,7 @@ The main board contains the basic functionality like sensor I/O to read de senso
 
 **PINOUT**
 
-The SCK Main Board connects to the Sensor Board 16 pin connectoir. This is are how the pins are laid out on the board. The numbers in brackets are the actual pin numbers of the microcontroller. Pins IO* are digital and S* are analogue.
+The SCK Main Board connects to the Sensor Board 16 pin connectoir. This is are how the pins are laid out on the board. The numbers in brackets are the actual pin numbers of the microcontroller. Pins IO are digital and S are analogue.
 
 |           |           |
 | --------- | --------- |
