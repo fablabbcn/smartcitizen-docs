@@ -106,10 +106,11 @@ hr {
   }
 
   .content table {
-    table-layout:fixed;
-    width: 600px;
+    width: 50%;
     margin-left: 40px;
     margin-right: 40px;
+    display: block;
+    clear: both;
   }
 
   body:not(.no-literate) .content img {

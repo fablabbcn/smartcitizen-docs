@@ -492,7 +492,8 @@ body.no-literate .content pre > code:hover::-webkit-scrollbar-thumb {
   }
   body:not(.no-literate) .content > h1,
   body:not(.no-literate) .content > h2,
-  body:not(.no-literate) .content > h3 {
+  body:not(.no-literate) .content > h3
+   {
     clear: both;
     width: 100%;
   }

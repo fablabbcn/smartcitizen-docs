@@ -291,9 +291,10 @@ The main board contains the basic functionality like sensor I/O to read de senso
 ![Main Board CPU](img/v1.0/main_board_cpu.jpg)
 ![Main Board CPU](img/main_board_cpu.jpg)
 
-**PINOUT**
+#####PINOUT
 
 The SCK Main Board connects to the Sensor Board 16 pin connectoir. This is are how the pins are laid out on the board. The numbers in brackets are the actual pin numbers of the microcontroller. Pins IO are digital and S are analogue.
+
 
 |           |           |
 | --------- | --------- |
@@ -307,7 +308,7 @@ The SCK Main Board connects to the Sensor Board 16 pin connectoir. This is are h
 | VBAT      | VBAT      |
 
 
-**CPU** 
+#####CPU 
 
 Both versions of the SCK (1.0 and 1.1) are using the same CPU, ATMEGA32U4(Arduino Leonardo). With the difference that the 1.0 works at 5V and 16MHZ and the 1.1 works at 3.3V and 8MHZ. In the 1.1 version we’ve improved the power consumption. 
 
@@ -317,14 +318,14 @@ This CPU has native USB and an UART TTL port allowing us to connect directly wit
 
 ![usb connectors](img/usb_connectors.png)
 
-**USB CONNECTOR**
+#####USB CONNECTOR
 
 The 1.0 version uses a Mini USB connector and 1.1 version uses a Micro USB.
 
 ![wifly module](img/v1.0/main_board_wifly.jpg)
 ![wifly module](img/main_board_wifly.jpg)
 
-**WIFI MODULE**
+#####WIFI MODULE
 
 The RN-131 module is a standalone, embedded wireless 802.11 b/g networking module. With its small form factor and extremely low power consumption, the RN-131 fits perfectly for the SCK wireless communication requirements.
 
@@ -353,7 +354,7 @@ Main features:
 ![MAX604](img/v1.0/main_board_MAX604.jpg)
 ![MCP1725](img/main_board_MCP1725.jpg)
 
-**BATTERY POWERING**
+#####BATTERY POWERING
 
 For powering the SCK, in both versions, we are using a 3.7v 2000 mAh li-on battery. 
 
@@ -372,7 +373,7 @@ In 1.1 version, to simplify, the voltage of entire SCK was unified to 3.3V. The 
 ![MCP73831](img/v1.0/main_board_MCP73831.jpg)
 ![MCP73831](img/main_board_MCP73831.jpg)
 
-**BATTERY CHARGING**
+#####BATTERY CHARGING
 
 For charging the battery there are two ways, USB or solar panel. To carry out the charging we are using MCP73831 IC. 
 
@@ -383,7 +384,7 @@ For the solar panel way, in 1.0 version the solar panel have to be 12v and 500mA
 ![LM2674](img/v1.0/main_board_LM2674.jpg)
 ![LM2674](img/main_board_LM2674.jpg)
 
-**SOLAR PANEL CHARGING**
+#####SOLAR PANEL CHARGING
 
 As the solar panel produces 12v, depending on the sunlight conditions, we have to reduce the voltage to 5v to feed up the Vin of the MCP73831 charger IC. 
 
@@ -394,7 +395,7 @@ To carry out this task we are using the LM2674 IC, a very efficient IC, with a r
 ![DS1307](img/v1.0/main_board_DS1307.jpg)
 ![DS1339Y-3+](img/main_board_DS1339Y-3+.jpg)
 
-**RTC (REAL TIME CLOCK)**
+#####RTC (REAL TIME CLOCK)
 
 The SCK has a real time clock for when the kit is offline. For this task we chose the DS1307 IC for the 1.0 version and the DS1339Y-3+ IC for the 1.1 version. Different IC due to the different voltages, 5V for the 1.0 version and 3.3V for the 1.1 version.
 
@@ -404,7 +405,7 @@ The SCK has a real time clock for when the kit is offline. For this task we chos
 ![DM3CS](img/v1.0/main_board_DM3CS.jpg)
 ![DM3CS](img/main_board_DM3CS.jpg)
 
-**SD CARD READER**
+#####SD CARD READER
 
 The SD card is used to store the data captured by the sensors when the kit is offline. Then, when the kit is online, the data will be uploaded to the platform. 
 
@@ -415,7 +416,7 @@ To hold the SD card we are using the DM3CS holder. The SD card is powered at 3.3
 ![24LC256](img/v1.0/main_board_24LC256.jpg)
 ![24LC256](img/main_board_24LC256.jpg)
 
-**EEPROM MEMORY**
+#####EEPROM MEMORY
 
 For the users that don’t have a SD card we’ve added an EEPROM memory to store the data when the SCK is offline.
 
@@ -424,7 +425,7 @@ We chose the 24LC256 IC that can store 32kBytes, it communicates with the CPU th
 <a href="http://ww1.microchip.com/downloads/en/DeviceDoc/20001203U.pdf" target="_blank">24LC256 datasheet</a>
 
 
-**MAIN BOARD BASIC SENSORS**
+#####MAIN BOARD BASIC SENSORS
 
 The main board has some basic sensors:
 
@@ -443,7 +444,7 @@ The sensor board contains the necessary sensors for measuring the pollution para
 ![MICS2710](img/v1.0/sensor_board_MICS2710.jpg)
 ![MICS4514](img/sensor_board_MICS4514.jpg)
 
-**NO2 AND CO SENSORS**
+#####NO2 AND CO SENSORS
 
 To measure these two gases we chose <a href="http://www.e2v.com/" target="_blank">e2v</a> sensors. In particular, metal oxide sensors MICS5525 and MICS2710, for version 1.0. And MICS4514, for version 1.1, that contains both sensors in one.
 
@@ -456,7 +457,7 @@ Metal oxide sensors are based on oxide semiconductors. Their electrical conducti
 ![LDR](img/v1.0/sensor_board_LDR.jpg)
 ![H1730FVC](img/sensor_board_BH1730FVC.jpg)
 
-**LIGHT SENSOR**
+#####LIGHT SENSOR
 
 The light sensor is a basic element to know the light pollution. In version 1.0, was used a LDR(light-dependent resistor) whose voltage varies depending on the light conditions.
 
@@ -467,7 +468,7 @@ For version 1.1, was used a photodiode BH1730FVC. This sensor contains an I2C bu
 ![Noise Sensor](img/v1.0/sensor_board_noise_sensor.jpg)
 ![Noise Sensor](img/sensor_board_noise_sensor.jpg)
 
-**NOISE SENSOR**
+#####NOISE SENSOR
 
 The noise sensor is based on an electret microphone. For the version 1.0, the audio signal is passed through an operational amplifier configured as band pass filter.
 
@@ -481,7 +482,7 @@ For the version 1.1, POM-3044P-R was used. The amplification step was modified a
 ![RHT22 Sensor](img/v1.0/sensor_board_RHT22.jpg)
 ![SHT21 Sensor](img/sensor_board_SHT21.jpg)
 
-**TEMPERATURE AND HUMIDITY SENSOR**
+#####TEMPERATURE AND HUMIDITY SENSOR
 
 To measure temperature and humidity was used a module that integrates both sensors. 
 
@@ -494,7 +495,7 @@ For version 1.1 was used the SHT21, it has I2C protocol and a more fast response
 
 ![ADXL345](img/sensor_board_ADXL345.jpg)
 
-**3 AXIS ACCELEROMETEER**
+#####3 AXIS ACCELEROMETEER
 
 In version 1.0 was detected that some measures vary depending on the orientation the SCK. 
 
@@ -507,7 +508,7 @@ The ADXL345 has I2C protocol to interface with.
 ![I2C Bus](img/v1.0/sensor_board_i2c_bus.jpg)
 ![I2C Bus](img/sensor_board_i2c_bus.jpg)
 
-**I2C EXPANSION BUS**
+#####I2C EXPANSION BUS
 
 Due to the ease of the I2C protocol. We’ve included and I2C bus to provide to the community the opportunity of expanding the SCK.
 
