@@ -53,8 +53,9 @@ If this is the first time registering a SCK, you should install the <a href="htt
 
 ![Sck Chrome App](img/sck_app_chrome.png)
 
-In **Windows**, you'll need to download the <a href="http://arduino.cc/en/Main/Software" target="_blank">Arduino drivers</a> (if you haven't already done this for something else you've built).
+In Windows you will need to install the Arduino Drivers if you haven not done it before. If you already have Arduino installed you should not need to reinstall it.
 
+Check [How to install the drivers on Windows?](#/start/how-to-install-the-drivers-on-windows) section for more information.
 
 
 OK, time to unpack your SCK. Connect the USB cable to your SCK and your computer. Turn on your SCK at the switch in the upper left corner of the base board.  Now, go back to the Smart Citizen website and to your **SENSOR** dashboard. Click on the **CONFIGURE** button.
@@ -65,7 +66,9 @@ When it has finished you’ll see a form to setup your wifi connection and data 
 
 When the sync has finished, you should see something similar to "00:06:66:21:16:E4" in the **MAC ADDRESS** field. Click on the **REGISTER THE KIT** button. Now reset your SCK in order the changes take effect.
 
-Wow! That was so easy!!
+**Wow! That was so easy!**
+
+**Issues? **Contact us at <a href="mailto:support@smartcitizen.me">support@smartcitizen.me</a> or visit our [forum](http://forum.smartcitizen.me/).
 
 Back to your **SENSOR** dashboard. Wait a few minutes and reload the page. See if some data has been uploaded to the Smart Citizen database. To check this take a look at the field "Last Update" (If everything worked, you should see something like "Last Update: 31 seconds ago").  After the Smart Citizen database has had a few days to gather your data, you'll be able to check it from <a href="https://smartcitizen.me/" target="_blank">smartcitizen.me</a>. 
 
@@ -771,6 +774,67 @@ You can easily check each time your kit is pusblishing data to our platform in r
 Current [API](http://api.smartcitizen.me/) allows you acces historical and latest value of the devices you own. We current offers [special API access](http://api.smartcitizen.me/#api-Devices-GetDevicesInfo) to all devices for research and academic purposes. 
 
 Please contact [support@smartcitizen.me](mailto:support@smartcitizen.me) describing how you expect to use the data and we will give you access to it.
+
+### How to install the drivers on Windows?
+
+In Windows you will need to install the Arduino Drivers if you haven not done it before.
+
+#### Windows 8, 7, Vista, and XP
+
+*   Go to the Arduino [download page](http://arduino.cc/en/Main/Software) and download the latest version of the Arduino software for Windows.
+*   When the download is finished, un-zip it and open up the Arduino folder to confirm that yes, there are indeed some files and sub-folders inside. The file structure is important so don’t be moving any files around unless you really know what you’re doing.
+*   Power up your Arduino by connecting your Arduino board to your computer with a USB cable (or FTDI connector if you’re using an Arduino pro). You should see the an LED labed ‘ON’ light up. ([this diagram](https://learn.sparkfun.com/tutorials/what-is-an-arduino/whats-on-the-board) shows the placement of the power LED on the UNO).
+*   If you’re running Windows 8, you’ll need to disable driver signing, so go see the Windows 8 section. If you’re running Windows 7, Vista, or XP, you’ll need to install some drivers, so head to the Windows 7, Vista, and XP section down below.
+
+#### Windows 8
+
+Windows 8 comes with a nice little security ‘feature’ that ‘protects’ you from unsigned driver installation. The Smart Citizen Kit driver is not signed so you’ll have to tell Windows to disable driver signing. This issue has been addressed in newer releases of the Arduino IDE, but if you run into issues, you can try this fix first.
+
+For a nice, step-by-step tutorial with pictures [click here](https://learn.sparkfun.com/tutorials/disabling-driver-signature-on-windows-8/overview), otherwise the steps are outlined below.
+
+To _temporarily_ disable driver signing:
+
+*   From the Metro Start Screen, open Settings (move your mouse to the bottom-right-corner of the screen and wait for the pop-out bar to appear, then click the Gear icon)
+*   Click ‘More PC Settings’
+*   Click ‘General’
+*   Scroll down, and click ‘Restart now’ under ‘Advanced startup’.
+*   Wait a bit.
+*   Click ‘Troubleshoot’.
+*   Click ‘Advanced Options’
+*   Click ‘Windows Startup Settings’
+*   Click Restart.
+*   When your computer restarts, select ‘Disable driver signature enforcement‘ from the list.
+
+To _permanently_ disable driver signing (recommended, but has some minor security implications):
+
+*   Go to the metro start screen
+*   Type in “cmd”
+*   Right click “Command Prompt” and select “Run as Administrator” from the buttons on the bottom of your screen
+*   Type/paste in the following commands: bcdedit -set loadoptions DISABLE_INTEGRITY_CHECKS bcdedit -set TESTSIGNING ON
+*   Reboot!
+
+#### Windows 7, Vista, and XP
+
+Installing the Drivers for the Arduino Uno (from Arduino.cc)
+
+*   Plug in your board and wait for Windows to begin it’s driver installation process
+*   After a few moments, the process will fail, despite its best efforts
+*   Click on the Start Menu, and open up the Control Panel
+*   While in the Control Panel, navigate to System and Security. Next, click on System
+*   Once the System window is up, open the Device Manager
+*   Look under Ports (COM & LPT). You should see an open port named “Arduino UNO (COMxx)”. If there is no COM & LPT section, look under ‘Other Devices’ for ‘Unknown Device’
+
+[![alt text](img/windows_driver_1.png)](img/windows_driver_1.png)
+
+*   Right click on the “Arduino UNO (COMxx)” or “Unknown Device” port and choose the “Update Driver Software” option
+*   Next, choose the “Browse my computer for Driver software” option
+
+[![alt text](img/windows_driver_2.png)](img/windows_driver_2.png)
+
+*   Finally, navigate to and select the Uno’s driver file, named “ArduinoUNO.inf”, located in the “Drivers” folder of the Arduino Software download (not the “FTDI USB Drivers” sub-directory). If you cannot see the .inf file, it is probably just hidden. You can select the ‘drivers’ folder with the ‘search sub-folders’ option selected instead.
+*   Windows will finish up the driver installation from there
+
+*This documentaion is proudly based on [Sparkfun Arduino on Windows](https://learn.sparkfun.com/tutorials/installing-arduino-ide/windows) tutorial - CC BY-NC-SA 3.0.*
 
 ### Which LiPo batteries to use?
 
