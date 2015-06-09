@@ -7,9 +7,9 @@ Getting Started
 
 Welcome aboard! The Smart Citizen Team wants to thank you for being here, for purchasing a kit, and for joining the community taking part in this adventure.
 
-To join the Smart Citizen family, we're going to walk you through the steps to add your Smart Citizen Kit to the platform. (we'll refer to the Smart Citizen Kit as the "SCK" for now on).
+To join the Smart Citizen family, we're going to walk you through the steps to add your Smart Citizen Kit to the platform *(we'll refer to the Smart Citizen Kit as the "SCK" for now on)*.
 
-First, go to <a href="https://smartcitizen.me/" target="_blank">smartcitizen.me</a> using your web browser, currently only Google Chrome is supported for this process. Click <a href="https://smartcitizen.me/users/add" target="_blank">REGISTER</a> in the upper right menu. Complete the required fields and click REGISTER button.
+First, go to <a href="https://smartcitizen.me/" target="_blank">smartcitizen.me</a> using your web browser, currently only Google Chrome is supported for this process. Click <a href="https://smartcitizen.me/users/add" target="_blank">**REGISTER**</a> in the upper right menu. Complete the required fields and click REGISTER button.
 
 Required Fields:
 
@@ -49,7 +49,7 @@ Click on the **Save sensor** button. Congratulations!! You've added your first *
 
 Good job, both you and your SCK are registered. Now it's time to configure and upload the firmware that will be the brains of your SCK.
 
-If this is the first time registering a SCK, you should install the <a href="https://chrome.google.com/webstore/detail/smart-citizen-kit/llohmdkdoablhnefekgllopdgmmphpif" target="_blank">SCK</a> plugin extension for CHROME. Click on the ADD TO CHROME button. In windows, you'll need to download the <a href="http://arduino.cc/en/Main/Software" target="_blank">Arduino</a> drivers (if you haven't already done this for something else you've built).
+If this is the first time registering a SCK, you should install the <a href="https://chrome.google.com/webstore/detail/smart-citizen-kit/llohmdkdoablhnefekgllopdgmmphpif" target="_blank">Smart Citizen Kit Chrome Extension</a>. Click on the ADD TO CHROME button. In **Windows**, you'll need to download the <a href="http://arduino.cc/en/Main/Software" target="_blank">Arduino drivers</a> (if you haven't already done this for something else you've built).
 
 OK, time to unpack your SCK. Connect the USB cable to your SCK and your computer. Turn on your SCK at the switch in the upper left corner of the base board.  Now, go back to the Smart Citizen website and to your **SENSOR** dashboard. Click on the **CONFIGURE** button.
 
@@ -61,7 +61,7 @@ When the sync has finished, you should see something similar to "00:06:66:21:16:
 
 Wow! That was so easy!!
 
-Back to your **SENSOR****** dashboard. Wait a few minutes and reload the page. See if some data has been uploaded to the Smart Citizen database. To check this take a look at the field "Last Update" (If everything worked, you should see something like "Last Update: 31 seconds ago").  After the Smart Citizen database has had a few days to gather your data, you'll be able to check it from <a href="https://smartcitizen.me/" target="_blank">smartcitizen.me</a>. 
+Back to your **SENSOR** dashboard. Wait a few minutes and reload the page. See if some data has been uploaded to the Smart Citizen database. To check this take a look at the field "Last Update" (If everything worked, you should see something like "Last Update: 31 seconds ago").  After the Smart Citizen database has had a few days to gather your data, you'll be able to check it from <a href="https://smartcitizen.me/" target="_blank">smartcitizen.me</a>. 
 
 ### Manual set up: The Serial Way 
 
@@ -129,9 +129,11 @@ Note: You have to replace XXX with your phrase, filling any space with the dolla
 - In the MAC address text input, paste the MAC address given by the command `get mac`. It should be something like: `00:06:66:21:17:33`
 
 - Click on "Register the kit"
+
+![Register The Kit](img/register_kit.png)
+
  
 You are now done with the manual configuration of your SCK. Wait for a few minutes to see your data coming on the server and being displayed on the web page. You can also check that everything is ok by looking at the Arduino serial monitor. Debug messages coming from your SCK should look like this:
-
 
 If you want to explore further options with the WiFly module check [The SCK Command Line](http://docs.smartcitizen.me/#/start/the-sck-command-line) section.
 
@@ -146,9 +148,11 @@ One advantage of this system is that it gives you the opportunity to register mu
 
 #### STEP 1: Getting the Firmware
 
-You can download the latest firmware on our Github : 
+You can download the latest firmware on our Github: 
+
 https://github.com/fablabbcn/Smart-Citizen-Kit/releases
-As you may know, the hardware and software are based on the arduino project. we will use the Arduino IDE to edit the firmware and upload it to the kit. This tutorial have been tested with arduino 1.0.5. Get the Arduino IDE at http://arduino.cc/en/Main/Software.
+
+As you may know, the hardware and software are based on the arduino project. We will use the Arduino IDE to edit the firmware and upload it to the kit. This tutorial have been tested with Arduino 1.0.5. Download the [Arduino IDE](http://arduino.cc/en/Main/Software.).
 
 Open the file `Smart-Citizen-Kit/sck_beta_v0_8_5/sck_beta_v0_X_X.ino`
 
@@ -190,14 +194,13 @@ After you've uploaded your own script, don't forget to register the kit in our d
 
 Alternatively, have a look at the wifi module on the board and read the serial number  under the bar code (something like "131G0006662116E4" on kit v1.0 or "0006662116E4" on kit v.1.1). 
 
-The mac adress is the last 12 digit of this serial, separated by colon every two number. You should obtain something similar to "00:06:66:21:16:E4".
+The [mac adress](http://en.wikipedia.org/wiki/MAC_address) is the last 12 digit of this serial, separated by colon every two number. You should obtain something similar to `00:06:66:21:16:E4`.
 
 In both cases, you have to pass by the configuration page of your kit, and fill the mac address input field. Then press the register your kit button.
  
 Wait for some minutes and you should see data comming to the website !
  
-If you have any question or are looking for more information, have a look at our forum :
-http://forum.smartcitizen.me
+If you have any question or are looking for more information, have a look at our [forum](http://forum.smartcitizen.me).
 
 ### Attaching the solar panel
 
@@ -752,6 +755,12 @@ You can easily check each time your kit is pusblishing data to our platform in r
 * Visit [data.smartcitizen.me/debug](http://data.smartcitizen.me/debug) you will see the data from all the devices on debug mode every time they publish in real time. You can indetify your device by the devie id. **Note data comes uncalibrated.*
 
 ![image](img/data_debug.png)
+
+### How to retrieve other kit's data?
+
+Current [API](http://api.smartcitizen.me/) allows you acces historical and latest value of the devices you own. We current offers [special API access](http://api.smartcitizen.me/#api-Devices-GetDevicesInfo) to all devices for research and academic purposes. 
+
+Please contact [support@smartcitizen.me](mailto:support@smartcitizen.me) describing how you expect to use the data and we will give you access to it.
 
 ### Which LiPo batteries to use?
 
