@@ -49,7 +49,13 @@ Click on the **Save sensor** button. Congratulations!! You've added your first *
 
 Good job, both you and your SCK are registered. Now it's time to configure and upload the firmware that will be the brains of your SCK.
 
-If this is the first time registering a SCK, you should install the <a href="https://chrome.google.com/webstore/detail/smart-citizen-kit/llohmdkdoablhnefekgllopdgmmphpif" target="_blank">Smart Citizen Kit Chrome Extension</a>. Click on the ADD TO CHROME button. In **Windows**, you'll need to download the <a href="http://arduino.cc/en/Main/Software" target="_blank">Arduino drivers</a> (if you haven't already done this for something else you've built).
+If this is the first time registering a SCK, you should install the <a href="https://chrome.google.com/webstore/detail/smart-citizen-kit/llohmdkdoablhnefekgllopdgmmphpif" target="_blank">Smart Citizen Kit Chrome Extension</a>. Click on the ADD TO CHROME button. 
+
+![Sck Chrome App](img/sck_app_chrome.png)
+
+In **Windows**, you'll need to download the <a href="http://arduino.cc/en/Main/Software" target="_blank">Arduino drivers</a> (if you haven't already done this for something else you've built).
+
+
 
 OK, time to unpack your SCK. Connect the USB cable to your SCK and your computer. Turn on your SCK at the switch in the upper left corner of the base board.  Now, go back to the Smart Citizen website and to your **SENSOR** dashboard. Click on the **CONFIGURE** button.
 
@@ -215,7 +221,11 @@ In both versions, yo have to attach the plus of solar panel to the plus pad of t
 
 ### Sensor calibration
 
-### Connecting from an iPhone
+**Coming soon!**
+
+### Connecting from an iPhone or Android
+
+**Coming soon!**
 
 
 The Sck Command Line
