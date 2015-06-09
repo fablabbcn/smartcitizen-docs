@@ -291,6 +291,31 @@ The main board contains the basic functionality like sensor I/O to read de senso
 ![Main Board CPU](img/v1.0/main_board_cpu.jpg)
 ![Main Board CPU](img/main_board_cpu.jpg)
 
+**PINOUT**
+
+The SCK Main Board connects to the Sensor Board 16 pin connectoir. This is are how the pins are laid out on the board. The numbers in brackets are the actual pin numbers of the microcontroller. Pins IO* are digital and S* are analogue.
+
+|           |           |
+| --------- | --------- |
+| GND       | GND       |
+| IO3 (10)  | IO2 (9)   |
+| IO1 (13)  | IO0 (5)   |
+| SCL       | SDA       |
+| S5  (A1)  | S4  (A0)  |
+| S3  (A3)  | S2  (A2)  |
+| S1  (A5)  | S0  (A4)  |
+| VBAT      | VBAT      |
+
+
+## Voltage Regulation
+
+You connect a 3.3V regulator to VBAT and GND with a couple of capacitors (depending on the regulator you use) to get a steady 3.3v voltage from the battery.
+
+## Useful links
+
+* http://arduino.cc/en/Hacking/PinMapping32u4
+
+
 **CPU** 
 
 Both versions of the SCK (1.0 and 1.1) are using the same CPU, ATMEGA32U4(Arduino Leonardo). With the difference that the 1.0 works at 5V and 16MHZ and the 1.1 works at 3.3V and 8MHZ. In the 1.1 version we’ve improved the power consumption. 
