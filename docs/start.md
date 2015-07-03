@@ -62,7 +62,7 @@ OK, time to unpack your SCK. Connect the USB cable to your SCK and your computer
 
 If you've installed the SCK extension and the Arduino drivers, you'll be able to click on START PROCESS button. Wait a few seconds while SCK extension does its job. 
 
-When it has finished you’ll see a form to setup your wifi connection and data update interval parameters. Complete the fields with your **SSID** (this is your wifi network's name), **ENCRYPTION MODE** (you can leave the default for most networks, WPA2) and **PASSWORD PHRASE**. Then, click on **SYNC** button. Wait a few seconds (your SCK is learning your wifi credentials).
+When it has finished you’ll see a form to setup your wifi connection and data update interval parameters. Complete the fields with your **SSID** (this is your wifi network's name, it can't be longer tham 32 characters), **ENCRYPTION MODE** (you can leave the default for most networks, WPA2) and **PASSWORD PHRASE**. Then, click on **SYNC** button. Wait a few seconds (your SCK is learning your wifi credentials).
 
 When the sync has finished, you should see something similar to "00:06:66:21:16:E4" in the **MAC ADDRESS** field. Click on the **REGISTER THE KIT** button. Now reset your SCK in order the changes take effect.
 
@@ -100,7 +100,7 @@ All the steps in this tutorial have been tested with Arduino 1.0.5. We strongly 
 
 `set wlan ssid XXX`
 
-Note: You have to replace XXX with your ssid name, filling any space with the dollar ($) character.
+Note: You have to replace XXX with your ssid name, filling any space with the dollar ($) character. Due to hardware limitations it can't be longer tham 32 characters.
 
 - Add a new phrase to memory (optional, password for WPA1 & WPA2):
 
@@ -183,7 +183,7 @@ char* antennaExt[networks]  = {
 #endif
 ```
  
-The easiest way would be to write "#define networks X" (where X is the number of WI-FI networks you are going to use),  add the name of your network in "RedX" and the corresponding password in "PassX". You could also choose the encryption mode that fits with your network's configuration (OPEN, WEP, WPA1, WPA2, WEP64) or the type of antenna you are using (*INT_ANT* for internal antenna (default) or *EXT_ANT* for external antenna).
+The easiest way would be to write `"#define networks X"` (where X is the number of WI-FI networks you are going to use), add the name of your network in `RedX` and the corresponding password in `PassX`. Due to hardware limitations neither the password or the ssid can't be longer tham 32 characters. On `wifiEncript` you could also choose the encryption mode that fits with your network's configuration (`OPEN`, `WEP`, `WPA1`, `WPA2`, `WEP64`). Om `antennaExt` you can choose the type of antenna you are using (`INT_ANT` for internal antenna (default) or `EXT_ANT` for external antenna).
  
 If you register only one wifi credential, you should obtain something like:
 
