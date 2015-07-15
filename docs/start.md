@@ -567,8 +567,8 @@ You can download the files through this links.
 <a href="http://www.thingiverse.com/thing:262891" target="_blank">Smart Citizen Enclosure 1.0</a><br>
 <a href="http://www.thingiverse.com/thing:236976" target="_blank">Smart Citizen Enclosure 1.1</a>
 
-![Enclosure](img/new_case_2.jpg)
-![Enclosure2](img/new_case.jpg)
+![Enclosure](img/case_5.jpg)
+![Enclosure2](img/case_6.jpg)
 
 Also, we are working in new cases that will be available soon.
 
