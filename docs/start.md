@@ -82,7 +82,7 @@ Note that this tutorial works for both SCK v1.0 (from the Goteo crowdfunding cam
  
 All the steps in this tutorial have been tested with Arduino 1.0.5. We strongly recommend not to use the Beta version of Arduino IDE as we encountered issues with drivers and serial communication.
 
-**STEP 1: Configuring the Wi-Fi settings**
+#### STEP 1: Configuring the Wi-Fi settings
 
 - Open Arduino IDE.
 - Connect your SCK via USB.
@@ -131,15 +131,20 @@ Note: You have to replace XXX with your phrase, filling any space with the dolla
 `exit`
  
 
-**STEP 2: Registering your kit online**
+#### STEP 2: Registering the kit in the platform
 
-- Go to the configuration page of your kit: http://smartcitizen.me/devices/configure/XXX (do not forget to replace XXX with your kit's ID)
+After you've uploaded your own script, don't forget to register the kit in our database and save there your kit mac address. To find this mac address, you can use the serial command "get mac". by following the tutorial Manual Setup, the Serial way. 
 
-- In the MAC address text input, paste the MAC address given by the command `get mac`. It should be something like: `00:06:66:21:17:33`
+Alternatively, have a look at the wifi module on the board and read the serial number  under the bar code (something like "131G0006662116E4" on kit v1.0 or "0006662116E4" on kit v.1.1). 
 
-- Click on "Register the kit"
+![Find The Mac Address](mac_manual_sticker.jpg)
+
+The [mac adress](http://en.wikipedia.org/wiki/MAC_address) is the last 12 digit of this serial, separated by a colon every two number. From a number like `0006662116E4` you would write `00:06:66:21:16:E4`.
+
+In both cases, you have to pass by the configuration page of your kit, and fill the mac address input field. Then press the register your kit button.
 
 ![Register The Kit](img/register_kit.png)
+
 
  
 You are now done with the manual configuration of your SCK. Wait for a few minutes to see your data coming on the server and being displayed on the web page. You can also check that everything is ok by looking at the Arduino serial monitor. Debug messages coming from your SCK should look like this:
@@ -163,7 +168,7 @@ https://github.com/fablabbcn/Smart-Citizen-Kit/releases
 
 As you may know, the hardware and software are based on the arduino project. We will use the Arduino IDE to edit the firmware and upload it to the kit. This tutorial have been tested with Arduino 1.0.5. Download the [Arduino IDE](http://arduino.cc/en/Main/Software.).
 
-Open the file `Smart-Citizen-Kit/sck_beta_v0_8_5/sck_beta_v0_X_X.ino`
+Open the file `Smart-Citizen-Kit/sck_beta_v0_9_0/sck_beta_v0_X_X.ino`
 
 #### STEP 2: Editing the code
 
@@ -197,19 +202,23 @@ char* antennaExt[networks]  = { INT_ANT };
 #endif
 ```
 
-#### STEP 3: Registering the kit in the database
+#### STEP 3: Registering the kit in the platform
 
 After you've uploaded your own script, don't forget to register the kit in our database and save there your kit mac address. To find this mac address, you can use the serial command "get mac". by following the tutorial Manual Setup, the Serial way. 
 
 Alternatively, have a look at the wifi module on the board and read the serial number  under the bar code (something like "131G0006662116E4" on kit v1.0 or "0006662116E4" on kit v.1.1). 
 
-The [mac adress](http://en.wikipedia.org/wiki/MAC_address) is the last 12 digit of this serial, separated by colon every two number. You should obtain something similar to `00:06:66:21:16:E4`.
+![Find The Mac Address](mac_manual_sticker.jpg)
+
+The [mac adress](http://en.wikipedia.org/wiki/MAC_address) is the last 12 digit of this serial, separated by a colon every two number. From a number like `0006662116E4` you would write `00:06:66:21:16:E4`.
 
 In both cases, you have to pass by the configuration page of your kit, and fill the mac address input field. Then press the register your kit button.
+
+![Register The Kit](img/register_kit.png)
  
-Wait for some minutes and you should see data comming to the website !
- 
-If you have any question or are looking for more information, have a look at our [forum](http://forum.smartcitizen.me).
+You are now done with the manual configuration of your SCK. Wait for a few minutes to see your data coming on the server and being displayed on the web page. You can also check that everything is ok by looking at the Arduino serial monitor.
+
+If you encounter any issue, please share your problem on the [forum](http://forum.smartcitizen.me/)
 
 ### Attaching the solar panel
 
