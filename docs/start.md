@@ -137,7 +137,7 @@ After you've uploaded your own script, don't forget to register the kit in our d
 
 Alternatively, have a look at the wifi module on the board and read the serial number  under the bar code (something like "131G0006662116E4" on kit v1.0 or "0006662116E4" on kit v.1.1). 
 
-![Find The Mac Address](mac_manual_sticker.jpg)
+![Find The Mac Address](img/mac_manual_sticker.jpg)
 
 The [mac adress](http://en.wikipedia.org/wiki/MAC_address) is the last 12 digit of this serial, separated by a colon every two number. From a number like `0006662116E4` you would write `00:06:66:21:16:E4`.
 
@@ -208,7 +208,7 @@ After you've uploaded your own script, don't forget to register the kit in our d
 
 Alternatively, have a look at the wifi module on the board and read the serial number  under the bar code (something like "131G0006662116E4" on kit v1.0 or "0006662116E4" on kit v.1.1). 
 
-![Find The Mac Address](mac_manual_sticker.jpg)
+![Find The Mac Address](img/mac_manual_sticker.jpg)
 
 The [mac adress](http://en.wikipedia.org/wiki/MAC_address) is the last 12 digit of this serial, separated by a colon every two number. From a number like `0006662116E4` you would write `00:06:66:21:16:E4`.
 
