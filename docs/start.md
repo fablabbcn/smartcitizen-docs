@@ -203,19 +203,19 @@ char* antennaExt[networks]  = { INT_ANT };
 ```
 #### STEP 3: Uploading the code
 
+![Select the board](img/arduino_board.png)
+
 On the Arduino IDE *Tools* menu you should select the right **Board** in the *Boards* menu:
- 
+
 * For SmartCitizen Kit version 1.0 select *Arduino Leonardo* (ATmega 32U4 at 16Mhz) 
 
 * For SmartCitizen Kit version 1.1 select *Arduino LilyPad USB*(ATmega 32U4 at 8Mhz)
 
-![Select the board](img/arduino_board.png)
-
 The Arduino IDE should automatically select the right USB port but you can check in in the *Tools* in the *Ports* menu.
 
-Now you just need to click the *Upload* button and Arduino will do the rest for you!
-
 ![Upload the firmware](img/arduino_upload.png)
+
+Now you just need to click the *Upload* button and Arduino will do the rest for you!
 
 In case you have any issue please check first the [Arduino Troubleshooting](https://www.arduino.cc/en/guide/troubleshooting) guide. 
 
