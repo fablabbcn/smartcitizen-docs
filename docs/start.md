@@ -168,11 +168,11 @@ https://github.com/fablabbcn/Smart-Citizen-Kit/releases
 
 As you may know, the hardware and software are based on the arduino project. We will use the Arduino IDE to edit the firmware and upload it to the kit. This tutorial have been tested with Arduino 1.0.5. Download the [Arduino IDE](http://arduino.cc/en/Main/Software.).
 
-Open the file `Smart-Citizen-Kit/sck_beta_v0_9_0/sck_beta_v0_X_X.ino`
+Open the file `Smart-Citizen-Kit/sck_beta_v0_9_0/sck_beta_v0_9.ino`
 
 #### STEP 2: Editing the code
 
-If you want to set the network configuration manually, you should go to the SCKBase tab and modify the lines you see below:
+If you want to set the network configuration manually, you should go to the `Constants.h tab and modify the lines you see below:
  
 ```	cpp
 #define networks 0
@@ -201,8 +201,25 @@ char* wifiEncript[networks] = { WPA2 };
 char* antennaExt[networks]  = { INT_ANT };
 #endif
 ```
+#### STEP 3: Uploading the code
 
-#### STEP 3: Registering the kit in the platform
+On the Arduino IDE *Tools* menu you should select the right **Board** in the *Boards* menu:
+ 
+* For SmartCitizen Kit version 1.0 select *Arduino Leonardo* (ATmega 32U4 at 16Mhz) 
+
+* For SmartCitizen Kit version 1.1 select *Arduino LilyPad USB*(ATmega 32U4 at 8Mhz)
+
+![Select the board](img/arduino_board.png)
+
+The Arduino IDE should automatically select the right USB port but you can check in in the *Tools* in the *Ports* menu.
+
+Now you just need to click the *Upload* button and Arduino will do the rest for you!
+
+![Upload the firmware](img/arduino_upload.png)
+
+In case you have any issue please check first the [Arduino Troubleshooting](https://www.arduino.cc/en/guide/troubleshooting) guide. 
+
+#### STEP 4: Registering the kit in the platform
 
 After you've uploaded your own script, don't forget to register the kit in our database and save there your kit mac address. To find this mac address, you can use the serial command "get mac". by following the tutorial Manual Setup, the Serial way. 
 
