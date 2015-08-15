@@ -213,7 +213,7 @@ On the Arduino IDE *Tools* menu you should select the right **Board** in the *Bo
 
 The Arduino IDE should automatically select the right USB port but you can check in in the *Tools* in the *Ports* menu.
 
-![Upload the firmware](img/arduino_upload.png)
+![Upload the firmware](img/arduino_upload_small.png)
 
 Now you just need to click the *Upload* button and Arduino will do the rest for you!
 
