@@ -5,11 +5,13 @@ Getting Started
 
 ![Smart Citizen kit 1.1](img/sck_1.1_3.jpg)
 
-Welcome aboard! The Smart Citizen Team wants to thank you for being here, for purchasing a kit, and for joining the community taking part in this adventure.
+*Welcome aboard!* The Smart Citizen Team wants to thank you for being here, for purchasing a kit, and for joining the community taking part in this adventure.
 
-To join the Smart Citizen family, we're going to walk you through the steps to add your Smart Citizen Kit to the platform *(we'll refer to the Smart Citizen Kit as the "SCK" for now on)*.
+To join the *Smart Citizen family*, we're going to walk you through the steps to add your Smart Citizen Kit to the platform, we'll refer to the Smart Citizen Kit as the *SCK* for now on.
 
-First, go to <a href="https://smartcitizen.me/" target="_blank">smartcitizen.me</a> using your web browser, currently only Google Chrome is supported for this process. Click <a href="https://smartcitizen.me/users/add" target="_blank">**REGISTER**</a> in the upper right menu. Complete the required fields and click REGISTER button.
+*SIGN UP*
+
+First, go to <a href="https://smartcitizen.me/" target="_blank">smartcitizen.me</a> using your web browser, currently only Google Chrome is supported for the SCK configuration process. Click in **Go to the platform** and then **Sign up** on the upper right menu. Complete the required fields, accept the *[Terms of use and privacy](https://smartcitizen.me/privacy)* and click the **Sign up** button.
 
 Required Fields:
 
@@ -19,62 +21,93 @@ Required Fields:
 
 - **Password** - Must be at least 6 characters.
 
-- **City** - Enter the name of the city you're located (doesn't need to be the same as you SCK).
+You are now registered, you will receive an email notification. You will be able to complete your user details  later on your [profile page](https://smartcitizen.me/profile/users).
 
-- **Country** - Enter your Country (doesn't need to be the same as you SCK).
+*ADD YOUR SMART CITIZEN KIT*
 
-Optional Fields:
+On the upper right menu click on **Log in** and write the access credentials you just choosed. Go on your user icon on the upper right corner and click [Profile](https://smartcitizen.me/profile/kits). On your kit's profile page clik on [Add a new kit](https://smartcitizen.me/kits/new).
 
- - **Website** - If you add a website, a link is added to your CITIZEN profile page (which can be viewed by the public).
+Please, provide basic information about your kit so others can understandt better how you set it up and how you plan to use it.
 
- - **File** - This adds a custom avatar. Click "Choose File" then find the image you want to use.  The image will appear next to you profile information.
+ - **Title** - Give your SCK a name. This title will be associated with your SCK data.
 
-Once you’ve completed the required fields, click REGISTER.  Congratulations!! You've registered yourself and will be directed to your CITIZEN dashboard. (You can always return to your CITIZEN dashboard by clicking the LOG-IN button at the very top right of the <a href="https://smartcitizen.me/" target="_blank">smartcitizen.me</a> homepage)
+ - **Exposure** - The SCK is designed to work outdoors but maybe you like to test it indoors first. Choose INDOOR or OUTDOOR to help others understand the data you will provide. 
 
-Now, let's add your SCK! From you CITIZEN dashboard, click on ADD SMART CITIZEN KIT.  Complete each field: 
+ - **Kit location** - Please, let us locate you, later you can adjust the location by dragging the marker on the map.
 
- - **Title** - Give your SCK a name.  This title will be associated with your SCK data.
+ - **Kit tags** - We suggest you to add tags to help other find your kit. Choose from the available tags or submit a tag request on the [Forum](http://forum.smartcitizen.me).
 
- - **Elevation** - If you don't know it, a simple Google search should help you.  Knowing your SCK's elevation helps to understand the data it collects.
+ - **Description** - This is an optional field that helps  others understand the data you provide.  Why is it for? Is this part of any kind of project? Information like "outdoors in my balcony facing the road" or "in my garden under a tree" could help others understand why some of your data looks the way it does.
 
- - **Exposure** - Choose INDOOR or OUTDOOR.  Again, this helps to understand the data.
+Click on the **Next** button, you are close to the end.
 
- - **Kit Version** - Most likely you have a 1.1 SCK. The only way you would be using a 1.0 SCK is if you got it from the original GOTEO crowdfunding campaign, or if you got it from someone else that got it from GOTEO. 
+*SETUP YOUR SMART CITIZEN KIT*
 
- - **Geolocation** - There are two ways to complete this section: AUTO COMPLETE ON or AUTO COMPLETE OFF.  AUTO COMPLETE ON lets you type in the name of your city, then lets you choose it from a drop-down list (This will give you an approximate latitude and longitude).  AUTO COMPLETE OFF will put a blue flag on the map to the left of the form.  You then drag the flag to the SCK's location on the map.  By zooming in you can pin-point the exact latitude and longitude of your SCK (the closer you get, the better the data will be).
+In order to have your kit connected to the Smart Citizen platform, we need a few step involving the connexion of your kit to your computer. This tool will help you register your kit to the platform, setup your kit's Wi-Fi settings and update its firmware. Currently we support Google Chrome in Win, Mac and Linux.
 
- - **Description** - This is an optional field that helps inform others of your SCK's unique set-up.  Information like "in my garage" or "im my woodshop" could help others understand why some of your data looks the way it does.
+*If you are on Windows check first [How to install the drivers on Windows?](#/start/how-to-install-the-drivers-on-windows) section for more information.* 
 
-Click on the **Save sensor** button. Congratulations!! You've added your first ** and will be directed to your ** dashboard. Your SCK now has an official device ID (it can bee seen in your browser's address bar, it is the number at the end of the url). 
-
-Good job, both you and your SCK are registered. Now it's time to configure and upload the firmware that will be the brains of your SCK.
-
-If this is the first time registering a SCK, you should install the <a href="https://chrome.google.com/webstore/detail/smart-citizen-kit/llohmdkdoablhnefekgllopdgmmphpif" target="_blank">Smart Citizen Kit Chrome Extension</a>. Click on the ADD TO CHROME button. 
+Click on the *ADD TO CHROME* button and wait for the extension to install. 
 
 ![Sck Chrome App](img/sck_app_chrome.png)
 
-In Windows you will need to install the Arduino Drivers if you haven't done it before. If you already have Arduino installed you should not need to reinstall it.
+Finally its time to unpack your SCK. Connect the micro USB cable to your SCK and your computer and turn on the SCK switch on the upper left corner. 
 
-Check [How to install the drivers on Windows?](#/start/how-to-install-the-drivers-on-windows) section for more information.
+On the dropdown menu you should select the port your SCK is connected. 
 
+*On Mac and Linux the port will be named Smart itizen. On Windows this is likely to be COM3 or higher (COM1 and COM2 are usually reserved for hardware serial ports). To find out, you can disconnect your SCK and check the drodown; the entry that disappears should be the SCK board. Reconnect the board and select that serial port.*
 
-OK, time to unpack your SCK. Connect the USB cable to your SCK and your computer. Turn on your SCK at the switch in the upper left corner of the base board.  Now, go back to the Smart Citizen website and to your **SENSOR** dashboard. Click on the **CONFIGURE** button.
+*If you have any issue check your kit is properly connected, switched ON and you do not have the Arduino software open.* 
 
-If you've installed the SCK extension and the Arduino drivers, you'll be able to click on START PROCESS button. Wait a few seconds while SCK extension does its job. 
+Now just click **Start process** in order to start configuring your kit. 
 
-When it has finished you’ll see a form to setup your wifi connection and data update interval parameters. Complete the fields with your **SSID** (this is your wifi network's name, it can't be longer tham 32 characters), **ENCRYPTION MODE** (you can leave the default for most networks, WPA2) and **PASSWORD PHRASE**. Then, click on **SYNC** button. Wait a few seconds (your SCK is learning your wifi credentials).
+*We recommend you to  switch your kit OFF and ON in order to reset the kit before you start.*
 
-When the sync has finished, you should see something similar to "00:06:66:21:16:E4" in the **MAC ADDRESS** field. Click on the **REGISTER THE KIT** button. Now reset your SCK in order the changes take effect.
+We will first verify your SCK version and we will encourage you to update your firmware but you can always skip this process.
 
-**Wow! That was so easy!**
+After skipping or updating the firmware you will see the *Wi-Fi and update time settings*.
 
-**Issues? **Contact us at <a href="mailto:support@smartcitizen.me">support@smartcitizen.me</a> or visit our [forum](http://forum.smartcitizen.me/).
+*You can add up to 5 different Wi-Fi credentials in your kit. This will allow your kit to connect to multiple networks in case one fails or you will like to move in between to places*
 
-Back to your **SENSOR** dashboard. Wait a few minutes and reload the page. See if some data has been uploaded to the Smart Citizen database. To check this take a look at the field "Last Update" (If everything worked, you should see something like "Last Update: 31 seconds ago").  After the Smart Citizen database has had a few days to gather your data, you'll be able to check it from <a href="https://smartcitizen.me/" target="_blank">smartcitizen.me</a>. 
+You should complete the fields with your router or access point information:
+
+*At home you should find all the requested information below your home fiber or DSL router on schools and companies you can contact your IT team*
+
+ - **SSID** - This is your Wifi network's name, for example: _My Home Wifi_. 
+ 
+ - **Phrase** - This is your Wi-Fi _password_, you will usually find it written under your router or you can contact your IT team. If your Wi-Fi doesn't have a password just leave it empty and select _Open Wi-Fi network_ on the _Encryption_ dropdown. 
+ 
+*Take care the SSID and Phrase can't be longer than 19 characters and they can't contain the `$` symbol.*
+ 
+ - **Encryption** -  _Optional_  You can leave it to _WPA2_ this is the default for most modern networks. 
+
+ - **External Antena** - _Optional_ Is your SCK quite far away from Wi-Fi access point? You can use an external antena with your SCK. Check the [How to use an external antena?](http://)
+
+Next step is optional, you can set your SCK update interval to optimize the battery performance and sensor resolution ratio.
+
+*By default your SCK will take a reading every minute and post it on-line*
+
+ - **Reading interval** - This defines every how much time your SCK sensors will take a reading and record it. You can set it from 1 minute to an hour.
+  
+ - **Number posts** - This defines every how much sensor readings your SCK will publish the reading on-line. You can set it from 1 to 20.
+
+Now is time to record the settings on your SCK, just click on **Sync** and wait for 30 seconds till the button switches back to **Done**. 
+
+*If there is any issue during the process this will be displayed on the **Message window** above. Please, copy the message and contact [support@smartcitizen.me](mailto:support@smartcitizen.me) *
+
+Last but now least you will see your SCK *Mac Address* registered below this is the ID of your SCK. Just click on **Save** and wait for your kit to publish. **Done!**
+
+*You might need to wait up to 2 minutes and refresh your broswer in order to see your SCK first post in your device page.*
+
+ - **Did you change the time update settings?** *Take care in case you changed the **Reading interval** and **Number posts** settings your kit can take longer to publish.*
+
+ - **Did you registered your SCK before, did your SCK belong to someone else before?** *Take care your SCK can be registered ince at a time in case you registered before check [How to unlink your SCK?](http://) or contact [support@smartcitizen.me](mailto:support@smartcitizen.me) .*
+ 
+*Please, if your kit is not publishing properly contact [support@smartcitizen.me](mailto:support@smartcitizen.me) or ask for help in the [forum](http://forum.smartcitizen.me/) .*
 
 ### Manual set up: The Serial Way 
 
-In this tutorial you will configure your SCK using serial communication. By using serial communication, you will register your Wi-Fi settings into the SCK and save the SCK’s MAC address in our server.
+In this tutorial aimed to advaced users you will configure your SCK using serial communication. By using serial communication, you will register your Wi-Fi settings into the SCK and save the SCK’s MAC address in our server.
  
 The SCK, like most Arduino chips, has the ability to communicate through serial protocol (when plugged with a proper USB cable). The SCK uses the WiFly module to communicate with your Wi-Fi router. Anyway, through serial communication you will be able to send the commands directly with this module to set your Wi-Fi settings and extract the MAC address used by our server to verify your identity.
  
@@ -155,7 +188,7 @@ If you encounter any issue, please share your problem on the [forum](http://foru
 
 ### Manual set up: The Compilation Way
 
-This tutorial will drive you toward a manual way of setting your Smart Citizen Kit (SCK) by editing directly the source code. As the code is Open Source, one way of setting the Wi-Fi of your SCK is to download the latest firmware, edit some lines of code, recompile it and upload it to the kit. 
+This tutorial  aimed to advaced users we will drive you toward a manual way of setting your SCK by editing directly the source code. As the code is Open Source, one way of setting the Wi-Fi of your SCK is to download the latest firmware, edit some lines of code, recompile it and upload it to the kit. 
  
 One advantage of this system is that it gives you the opportunity to register multiple Wi-Fi networks at the same time. This is useful if your SCK is traveling from one location to another where the Wi-Fi credentials are known. The downside of this method is that you can not extract the MAC address of your kit, therefore making it this way is not suitable for the first setup of your kit. Please, refer to other tutorials available.
  
@@ -741,6 +774,12 @@ Here are the different paths you can take in order to built your own backend:
 - Create your own custom backend. We can share all the different modules of our backend in order for you to receive data as on the curl example above, calibrate it and store it. Contact us at <a href="mailto:support@smartcitizen.me">support@smartcitizen.me</a>.
 
 - Keep using our backend but request our public API <a href="http://api.smartcitizen.me/" target="_blank">api.smartcitizen.me</a> and then fill database choise with it.
+
+### Is my home wireless internet going to work with the SCK?
+
+The Smart Citizen Kit is designed to work with most home and office standard Wi-Fi routers and access points. However we do not support network names or passwords longer than *19 characters* or with a `$` character.
+
+We also do not support **WPA Enterprise** networks or **Captive portal** log in as the ones on some big companies and airports. We suggest you contact your IT support team, they can enable you special access ib the network based on your device **Mac Address**. 
 
 ### How to use the SD Card?
 
