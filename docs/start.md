@@ -101,7 +101,7 @@ Last but now least you will see your SCK *Mac Address* registered below this is 
 
  - **Did you change the time update settings?** *Take care in case you changed the **Reading interval** and **Number posts** settings your kit can take longer to publish.*
 
- - **Did you registered your SCK before, did your SCK belong to someone else before?** *Take care your SCK can be registered once at a time in case you registered before check [How to unlink your SCK?](http://) or contact [support@smartcitizen.me](mailto:support@smartcitizen.me) .*
+ - **Did you registered your SCK before, did your SCK belong to someone else before?** *Take care your SCK can be registered once at a time in case you registered before check [How to unlink your SCK?](http://docs.smartcitizen.me/#/start/how-do-i-register-again-my-sck) or contact [support@smartcitizen.me](mailto:support@smartcitizen.me) .*
  
 *Please, if your kit is not publishing properly contact [support@smartcitizen.me](mailto:support@smartcitizen.me) or ask for help in the [forum](http://forum.smartcitizen.me/) .*
 
@@ -176,7 +176,7 @@ The [mac address](http://en.wikipedia.org/wiki/MAC_address) is the last 12 digit
 
 In both cases, you have to pass by the configuration page of your kit, and fill the mac address input field. Then press the register your kit button.
 
-![Register The Kit](img/register_kit.png)
+![Register The Kit](img/mac_2.png)
 
 
  
@@ -264,7 +264,7 @@ The [mac address](http://en.wikipedia.org/wiki/MAC_address) is the last 12 digit
 
 In both cases, you have to pass by the configuration page of your kit, and fill the mac address input field. Then press the register your kit button.
 
-![Register The Kit](img/register_kit.png)
+![Register The Kit](img/mac_2.png)
  
 You are now done with the manual configuration of your SCK. Wait for a few minutes to see your data coming on the server and being displayed on the web page. You can also check that everything is ok by looking at the Arduino serial monitor.
 
@@ -678,6 +678,8 @@ It is really important to understand a SCK can be just registered one time to on
 _Imagine how confusing it will be a single physical device publishing as two separate kits on the platform in two different locations!_
 
 That's why you will need to *unlink* your SCK before you can register it again as another kit or when you would like to give your device to someone else to use it.
+
+![Register The Kit](img/mac_1.png)
 
 Go to your Kits profile [page](https://smartcitizen.me/profile/kits) select the kit you will like to unlink and go to **Setup**. You don't need to connect your SCK, just scroll down, remove the Mad Address number from the field and click **Save**.
 
