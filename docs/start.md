@@ -25,9 +25,9 @@ You are now registered, you will receive an email notification. You will be able
 
 *ADD YOUR SMART CITIZEN KIT*
 
-On the upper right menu click on **Log in** and write the access credentials you just choosed. Go on your user icon on the upper right corner and click [Profile](https://smartcitizen.me/profile/kits). On your kit's profile page clik on [Add a new kit](https://smartcitizen.me/kits/new).
+On the upper right menu click on **Log in** and write the access credentials you just choose. Go on your user icon on the upper right corner and click [Profile](https://smartcitizen.me/profile/kits). On your kit's profile page click on [Add a new kit](https://smartcitizen.me/kits/new).
 
-Please, provide basic information about your kit so others can understandt better how you set it up and how you plan to use it.
+Please, provide basic information about your kit so others can understand better how you set it up and how you plan to use it.
 
  - **Title** - Give your SCK a name. This title will be associated with your SCK data.
 
@@ -55,7 +55,7 @@ Finally its time to unpack your SCK. Connect the micro USB cable to your SCK and
 
 On the dropdown menu you should select the port your SCK is connected. 
 
-*On Mac and Linux the port will be named Smart itizen. On Windows this is likely to be COM3 or higher (COM1 and COM2 are usually reserved for hardware serial ports). To find out, you can disconnect your SCK and check the drodown; the entry that disappears should be the SCK board. Reconnect the board and select that serial port.*
+*On Mac and Linux the port will be named Smart citizen. On Windows this is likely to be COM3 or higher (COM1 and COM2 are usually reserved for hardware serial ports). To find out, you can disconnect your SCK and check the dropdown; the entry that disappears should be the SCK board. Reconnect the board and select that serial port.*
 
 *If you have any issue check your kit is properly connected, switched ON and you do not have the Arduino software open.* 
 
@@ -81,7 +81,7 @@ You should complete the fields with your router or access point information:
  
  - **Encryption** -  _Optional_  You can leave it to _WPA2_ this is the default for most modern networks. 
 
- - **External Antena** - _Optional_ Is your SCK quite far away from Wi-Fi access point? You can use an external antena with your SCK. Check the [How to use an external antena?](http://)
+ - **External Antenna** - _Optional_ Is your SCK quite far away from Wi-Fi access point? You can use an external antenna with your SCK. Check the [How to use an external antenna?](http://docs.smartcitizen.me/#/start/how-i-can-extend-the-wi-fi-range) )
 
 Next step is optional, you can set your SCK update interval to optimize the battery performance and sensor resolution ratio.
 
@@ -97,17 +97,17 @@ Now is time to record the settings on your SCK, just click on **Sync** and wait 
 
 Last but now least you will see your SCK *Mac Address* registered below this is the ID of your SCK. Just click on **Save** and wait for your kit to publish. **Done!**
 
-*You might need to wait up to 2 minutes and refresh your broswer in order to see your SCK first post in your device page.*
+*You might need to wait up to 2 minutes and refresh your browser in order to see your SCK first post in your device page.*
 
  - **Did you change the time update settings?** *Take care in case you changed the **Reading interval** and **Number posts** settings your kit can take longer to publish.*
 
- - **Did you registered your SCK before, did your SCK belong to someone else before?** *Take care your SCK can be registered ince at a time in case you registered before check [How to unlink your SCK?](http://) or contact [support@smartcitizen.me](mailto:support@smartcitizen.me) .*
+ - **Did you registered your SCK before, did your SCK belong to someone else before?** *Take care your SCK can be registered once at a time in case you registered before check [How to unlink your SCK?](http://) or contact [support@smartcitizen.me](mailto:support@smartcitizen.me) .*
  
 *Please, if your kit is not publishing properly contact [support@smartcitizen.me](mailto:support@smartcitizen.me) or ask for help in the [forum](http://forum.smartcitizen.me/) .*
 
 ### Manual set up: The Serial Way 
 
-In this tutorial aimed to advaced users you will configure your SCK using serial communication. By using serial communication, you will register your Wi-Fi settings into the SCK and save the SCK’s MAC address in our server.
+In this tutorial aimed to advanced users you will configure your SCK using serial communication. By using serial communication, you will register your Wi-Fi settings into the SCK and save the SCK’s MAC address in our server.
  
 The SCK, like most Arduino chips, has the ability to communicate through serial protocol (when plugged with a proper USB cable). The SCK uses the WiFly module to communicate with your Wi-Fi router. Anyway, through serial communication you will be able to send the commands directly with this module to set your Wi-Fi settings and extract the MAC address used by our server to verify your identity.
  
@@ -172,7 +172,7 @@ Alternatively, have a look at the wifi module on the board and read the serial n
 
 ![Find The Mac Address](img/mac_manual_sticker.jpg)
 
-The [mac adress](http://en.wikipedia.org/wiki/MAC_address) is the last 12 digit of this serial, separated by a colon every two number. From a number like `0006662116E4` you would write `00:06:66:21:16:E4`.
+The [mac address](http://en.wikipedia.org/wiki/MAC_address) is the last 12 digit of this serial, separated by a colon every two number. From a number like `0006662116E4` you would write `00:06:66:21:16:E4`.
 
 In both cases, you have to pass by the configuration page of your kit, and fill the mac address input field. Then press the register your kit button.
 
@@ -188,7 +188,7 @@ If you encounter any issue, please share your problem on the [forum](http://foru
 
 ### Manual set up: The Compilation Way
 
-This tutorial  aimed to advaced users we will drive you toward a manual way of setting your SCK by editing directly the source code. As the code is Open Source, one way of setting the Wi-Fi of your SCK is to download the latest firmware, edit some lines of code, recompile it and upload it to the kit. 
+This tutorial  aimed to advanced users we will drive you toward a manual way of setting your SCK by editing directly the source code. As the code is Open Source, one way of setting the Wi-Fi of your SCK is to download the latest firmware, edit some lines of code, recompile it and upload it to the kit. 
  
 One advantage of this system is that it gives you the opportunity to register multiple Wi-Fi networks at the same time. This is useful if your SCK is traveling from one location to another where the Wi-Fi credentials are known. The downside of this method is that you can not extract the MAC address of your kit, therefore making it this way is not suitable for the first setup of your kit. Please, refer to other tutorials available.
  
@@ -199,7 +199,7 @@ You can download the latest firmware on our Github:
 
 https://github.com/fablabbcn/Smart-Citizen-Kit/releases
 
-As you may know, the hardware and software are based on the arduino project. We will use the Arduino IDE to edit the firmware and upload it to the kit. This tutorial have been tested with Arduino 1.0.5. Download the [Arduino IDE](http://arduino.cc/en/Main/Software.).
+As you may know, the hardware and software are based on the Arduino project. We will use the Arduino IDE to edit the firmware and upload it to the kit. This tutorial have been tested with Arduino 1.0.5. Download the [Arduino IDE](http://arduino.cc/en/Main/Software.).
 
 Open the file `Smart-Citizen-Kit/sck_beta_v0_9_0/sck_beta_v0_9.ino`
 
@@ -260,7 +260,7 @@ Alternatively, have a look at the wifi module on the board and read the serial n
 
 ![Find The Mac Address](img/mac_manual_sticker.jpg)
 
-The [mac adress](http://en.wikipedia.org/wiki/MAC_address) is the last 12 digit of this serial, separated by a colon every two number. From a number like `0006662116E4` you would write `00:06:66:21:16:E4`.
+The [mac address](http://en.wikipedia.org/wiki/MAC_address) is the last 12 digit of this serial, separated by a colon every two number. From a number like `0006662116E4` you would write `00:06:66:21:16:E4`.
 
 In both cases, you have to pass by the configuration page of your kit, and fill the mac address input field. Then press the register your kit button.
 
@@ -275,7 +275,7 @@ If you encounter any issue, please share your problem on the [forum](http://foru
 ![Solar Panel](img/v1.0/main_board_solar_panel.jpg)
 ![Solar Panel](img/main_board_solar_panel.jpg)
 
-The solar panel it should fulfil the specification of a voltage bigger than 8v and less than 15v, 12v is the recommended voltage, and a minimum of 500mA.
+The solar panel it should fulfill the specification of a voltage bigger than 8v and less than 15v, 12v is the recommended voltage, and a minimum of 500mA.
 
 In order to attach the solar panel you have to solder the cables of the solar panel to the pads marked in the next image for version 1.0 of the SCK. For version 1.1 you have to connect the cables to the connector marked in the next image. 
 
@@ -307,9 +307,9 @@ The Smart Citizen Kit can be managed over a basic serial protocol. You just need
 - `$$$` (Wake up the module and activate the Wi-Fi)
 - `set wlan ssid XXX` (Add a new SSID to memory9)
 - `set wlan phrase XXX` (Add a new phrase to memory)
-- `set wlan key XXX` (Add a new key to memmory)
+- `set wlan key XXX` (Add a new key to memory)
 - `set wlan auth XXX` (Add an authentication method into memory)
-- `set wlan ext_antenna XXX` (Add an antenna type into memmory)
+- `set wlan ext_antenna XXX` (Add an antenna type into memory)
 - `get mac` (Get the MAC address of the kit)
 - `exit` (Go back to normal operational mode)
 
@@ -352,7 +352,7 @@ The main board contains the basic functionality like sensor I/O to read de senso
 
 #####PINOUT
 
-The SCK Main Board connects to the Sensor Board 16 pin connectoir. This is are how the pins are laid out on the board. The numbers in brackets are the actual pin numbers of the microcontroller. Pins IO are digital and S are analogue.
+The SCK Main Board connects to the Sensor Board 16 pin connector. This is are how the pins are laid out on the board. The numbers in brackets are the actual pin numbers of the micro controller. Pins IO are digital and S are analogue.
 
 
 |           |           |
@@ -554,7 +554,7 @@ For version 1.1 was used the SHT21, it has I2C protocol and a more fast response
 
 ![ADXL345](img/sensor_board_ADXL345.jpg)
 
-#####3 AXIS ACCELEROMETEER
+#####3 AXIS ACCELEROMETER
 
 In version 1.0 was detected that some measures vary depending on the orientation the SCK. 
 
@@ -630,8 +630,9 @@ You can download the files through this links.
 ![Enclosure2](img/case_6.jpg)
 
 Also, we are working in new cases that will be available soon.
-
+  
 <a href="assets/case_assembly.pdf" target="_blank">Smart Citizen Enclosure Assembly Instructions</a>
+
 
 ### Acrylic cases 
 
@@ -646,13 +647,13 @@ Software
 ====
 ### Inside the SC Platform
 
-Once you've added your SCK to the plattform and it's capturing and sending data correctly, you can interact with the plattform in several ways. Visualizing the data, downloading the data and interacting with the data through the API.
+Once you've added your SCK to the platform and it's capturing and sending data correctly, you can interact with the platform in several ways. Visualizing the data, downloading the data and interacting with the data through the API.
 
 **Data Visualization**
 
-To visualize the data of your device, you have to sign in into the platfform. Once you've signed, you'll be in your dashboard, click on SENSORS tab, click on one of your sensors and click in the button SHOW IN MAP.
+To visualize the data of your device, you have to sign in into the platform. Once you've signed, you'll be in your dashboard, click on SENSORS tab, click on one of your sensors and click in the button SHOW IN MAP.
 
-Now, at bottom of your browser will appear a panel for visulize your data. You can visualize one by one or multiple together. For this, you can switch between the different sensors data clicking on the icons under the label FILTER. Also, you can change between different periods of time, selecting HOUR, DAY, WEEK... in the SHOW LAST drop-down selector.
+Now, at bottom of your browser will appear a panel for visualize your data. You can visualize one by one or multiple together. For this, you can switch between the different sensors data clicking on the icons under the label FILTER. Also, you can change between different periods of time, selecting HOUR, DAY, WEEK... in the SHOW LAST drop-down selector.
 
 **Download Data**
 
@@ -660,130 +661,38 @@ If you are interested in use the data captured by your sensors, you can download
 
 **API**
 
-The <a href="http://api.smartcitizen.me/" target="_blank">Smart Citizen API</a> allows you to request back information from your devices and do incredible things with it.
+The <a href="http://developer.smartcitizen.me/" target="_blank">Smart Citizen API</a> allows you to request back information from your devices and do incredible things with it.
 
 It is a <a href="https://en.wikipedia.org/wiki/Representational_state_transfer" target="_blank">REST</a> API and it returns the information in <a href="https://en.wikipedia.org/wiki/Json" target="_blank">JSON</a> format. This means you can easily access the information from any language like Javascript, PHP, Processing.org, Python, and start doing things with it quickly.
 
-To access the API you will always need and api_key you can obtain <a href="http://smartcitizen.me/users/dashboard" target="_blank">here</a>.
-
-The API is currently under BETA more functions will be comming soon. Please, report any problem or suggestion on the <a href="http://forum.smartcitizen.me/" target="_blank">forum</a>.
-
-<a href="http://api.smartcitizen.me/" target="_blank">api.smartcitizen.me</a>
+<a href="http://developer.smartcitizen.me/" target="_blank">developer.smartcitizen.me</a>
 
 
 Faq
 ====
-### How to store data in your own database?
 
-**Kit's request**
+### How do I register again my SCK?
 
-The Smart Citizen Kit is publishing by default the data as a PUT Http request, the sensor data is encoded as JSON.
+It is really important to understand a SCK can be just registered one time to one device in the platform. 
 
-Here you can see how a kit's request will look like *(Note the request is not standard as it do not contains a payload)*:
+_Imagine how confusing it will be a single physical device publishing as two separate kits on the platform in two different locations!_
 
-``` shell
-PUT /add HTTP/1.1
-Host: data.smartcitizen.me
-User-Agent: SmartCitizen
-X-SmartCitizenMacADDR: 00:00:00:00:00:00
-X-SmartCitizenVersion: 1.1-0.8.5-A
-X-SmartCitizenData: [{"temp":"29090.6", "hum":"6815.74", "light":"30000", "bat":"786", "panel":"0", "co":"112500", "no2":"200000", "noise":"2", "nets":"10", "timestamp":"2013-10-28 1:34:26"}]
-```
+That's why you will need to *unlink* your SCK before you can register it again as another kit or when you would like to give your device to someone else to use it.
 
-Here you have a kit's request as a  **Curl** for test purposes:
+Go to your Kits profile [page](https://smartcitizen.me/profile/kits) select the kit you will like to unlink and go to **Setup**. You don't need to connect your SCK, just scroll down, remove the Mad Address number from the field and click **Save**.
 
-``` shell
-$ curl -X PUT -H 'Host: data.smartcitizen.me' -H 'User-Agent: SmartCitizen' -H 'X-SmartCitizenMacADDR: 00:00:00:00:00:00' -H 'X-SmartCitizenVersion: 1.1-0.8.5-A' -H 'X-SmartCitizenData: [{"temp":"29090.6", "hum":"6815.74", "light":"30000", "bat":"786", "panel":"0", "co":"112500", "no2":"200000", "noise":"2", "nets":"10", "timestamp":"2013-10-28 1:34:26"}]' data.smartcitizen.me/add
-```
+_This way your kit will keep all the data on the platform but you will be able to register your SCK again as another kit. You can alway register again your SCK on the same device by following the standard setup process._
 
-**Data processing**
-
-Values are send without the proper scaling and some sensors as temperature, humidity and noise are sent in raw and then calibrated in our platform. This are the conversion required for **SCK 1.1** and above.
-
-| Key       | Sensor      | Units               | Conversion formula                            | Conversion Methos                         |
-|-----------|-------------|---------------------|-----------------------------------------------|-------------------------------------------|
-| temp      | Temperature | ºC                  | T = -53 + 175.72 / 65536.0 * Traw             | SCKSensorData::tempConversion($rawTemp)   |
-| hum       | Humidity    | %Rel                | H = 7 + 125.0 / 65536.0 * Hraw                | SCKSensorData::humConversion($rawHum)     |
-| light     | Light       | Lux                 | L = Lraw / 10                                 | SCKSensorData::lightConversion($rawLight) |
-| noise     | Noise       | dB                  | Apply the conversion table from mV to dB: [CSV](https://gist.github.com/pral2a/d767cc45874361fd38bf) | SCKSensorData::noiseConversion($rawNoise) |
-| co        | CO          | kOhm                | CO = COraw / 10000                            | SCKSensorData::coConversion($rawCO)       |
-| no2       | NO2         | kOhm                | NO2 = NO2raw / 10000                          | SCKSensorData::no2Conversion($rawNO2)     |
-| bat       | Battery     | %                   | B = Braw / 10                                 | SCKSensorData::batConversion($rawBat)     |
-| panel     | Panel       | mV                  | P = Praw / 10000                              | SCKSensorData::panelConversion($rawPanel) |
-| nets      | Nets        | Wi-Fi Networks      | Not required                                  | Not required                              |
-| timestamp | Timestamp   | YYYY-MM-DD hh:mm:ss | Not required                                  | Not required                              |
-
-You can use the **[SCKSensorData](https://github.com/fablabbcn/Smart-Citizen-Kit/blob/master/data/) php** class to re-scale and calibrate the received data. Check it on [github](https://github.com/fablabbcn/Smart-Citizen-Kit/blob/master/data/).
-
-Here is an example how to use it to receive a request, converted and store it in a CSV file:
-
-``` php
-<?php
-	include('../sck_sensor_data.php');
-
-	$headers = getallheaders();
-
-	$data = $headers['X-SmartCitizenData'];
-
-	$datapoints = json_decode($data, true);
-
-	foreach ($datapoints as $datapoint) {
-	$datapoint = SCKSensorData::SCK11Convert($datapoint);
-		$csv .= implode(', ', $datapoint);
-	}
-
-	$csv .= PHP_EOL;
-
-	file_put_contents('./data.csv', $csv, FILE_APPEND);
-?>
-```
-
-You can find the complete example [here](https://github.com/fablabbcn/Smart-Citizen-Kit/blob/master/data/examples/add.php).
-
-Each sensor is implemented as a separate function and some general methods are available for simplifing the work. Here is an example:
-
-``` php
-<?php
-
-	/**
-	 * noiseCalibration
-	 *
-	 * Noise calibration for SCK1.1 sound sensor. Converts mV in to dBs. 
-	 * Based on a linear regresion from a lookup table (db.json) 
-	 * obtained after real measurements from our test facility.
-	 * 
-	 *
-	 * @param float $rawSound
-	 * @return float noise as sound pressure in dB
-	 *
-	 */
-	
-	public function noiseCalibration($rawSound)
-	{
-		$dbTable = json_decode(file_get_contents("db.json"), true);
-		return round(self::tableCalibration($dbTable, $rawSound), 2);
-	}
-?>
-```
-**How to proceed**
-
-Here are the different paths you can take in order to built your own backend:
-
-- Create a fork of the the <a href="https://github.com/fablabbcn/Smart-Citizen-Kit/tree/master" target="_blank">Smart Citizen Kit firmware</a> in order to send the data as your custom backend expect it.
-
-- Create your own custom backend. We can share all the different modules of our backend in order for you to receive data as on the curl example above, calibrate it and store it. Contact us at <a href="mailto:support@smartcitizen.me">support@smartcitizen.me</a>.
-
-- Keep using our backend but request our public API <a href="http://api.smartcitizen.me/" target="_blank">api.smartcitizen.me</a> and then fill database choise with it.
 
 ### Is my home wireless internet going to work with the SCK?
 
 The Smart Citizen Kit is designed to work with most home and office standard Wi-Fi routers and access points. However we do not support network names or passwords longer than *19 characters* or with a `$` character.
 
-We also do not support **WPA Enterprise** networks or **Captive portal** log in as the ones on some big companies and airports. We suggest you contact your IT support team, they can enable you special access ib the network based on your device **Mac Address**. 
+We also do not support **WPA Enterprise** networks or **Captive portal** log in as the ones on some big companies and airports. We suggest you contact your IT support team, they can enable you special access in the network based on your device **Mac Address**. 
 
 ### How to use the SD Card?
 
-1. **microSD**: We recomend formating **micro SD** cards using the official SD tool you can download [here](https://www.sdcard.org/downloads/formatter_4/).
+1. **microSD**: We recommend formatting **micro SD** cards using the official SD tool you can download [here](https://www.sdcard.org/downloads/formatter_4/).
 
 2. **RTC**: Place a **CR1220** cell battery on your kit. Before uploading the SD firmware use the on-line configuration tool at [smartcitizen.me](https://smartcitizen.me) to set your Wi-Fi credentials. Turn your kit off and on for a minute, the blue led's will blink and your kit will connect to the internet and sync its the internal clock with our remote servers. Once the time is set the cell battery will keep SCK time in sync for more than 4 years.
 
@@ -834,6 +743,8 @@ If you prefer to do the conversions manually set `DataRaw       false` in the `C
 
 ### How to import the SD card data?
 
+**Sorry, this is temporary disabled! We are working on a new release.**
+
 You can import the recorded data in to [smartcitizen.me](http://smartcitizen.me)
 
 In your device page you will find the **Import SD** along with the Edit and Configure options.
@@ -842,20 +753,123 @@ In your device page you will find the **Import SD** along with the Edit and Conf
 
 Using a microSD card reader get the **post.csv** file from your card, select it and click import. Data will be imported in to your device, data existing on the file already imported will be skipped. Your kit should be running the latest SD firmware  and the SCK time (RTC) should be set in order data can be imported.
 
-### Is my kit pusblishing data properly?
+### Is my kit publishing data properly?
 
-You can easily check each time your kit is pusblishing data to our platform in real time by enabling the debug mode on your device.
+**Sorry, this is temporary disabled! We are working on a new release.**
+
+You can easily check each time your kit is publishing data to our platform in real time by enabling the debug mode on your device.
 
 * Go to your device edit page in [smartcitizen.me](http://smartcitizen.me), set Debug Enabled and save it.
-* Visit [data.smartcitizen.me/debug](http://data.smartcitizen.me/debug) you will see the data from all the devices on debug mode every time they publish in real time. You can indetify your device by the devie id. **Note data comes uncalibrated.*
+* Visit [data.smartcitizen.me/debug](http://data.smartcitizen.me/debug) you will see the data from all the devices on debug mode every time they publish in real time. You can identify your device by the device id. **Note data comes uncalibrated.*
 
 ![image](img/data_debug.png)
 
 ### How to retrieve other kit's data?
 
-Current [API](http://api.smartcitizen.me/) allows you acces historical and latest value of the devices you own. We current offers [special API access](http://api.smartcitizen.me/#api-Devices-GetDevicesInfo) to all devices for research and academic purposes. 
+Current [API](http://developer.smartcitizen.me/) allows you full access to all the Smart Citizen Platform. Please, ask in the [forum](http://forum.smartcitizen.me/) or contact [support@smartcitizen.me](mailto:support@smartcitizen.me) for any questions regarding the API.
 
-Please contact [support@smartcitizen.me](mailto:support@smartcitizen.me) describing how you expect to use the data and we will give you access to it.
+### How to store data in your own database?
+
+**Kit's request**
+
+The Smart Citizen Kit is publishing by default the data as a PUT Http request, the sensor data is encoded as JSON.
+
+Here you can see how a kit's request will look like *(Note the request is not standard as it do not contains a payload)*:
+
+``` shell
+PUT /add HTTP/1.1
+Host: data.smartcitizen.me
+User-Agent: SmartCitizen
+X-SmartCitizenMacADDR: 00:00:00:00:00:00
+X-SmartCitizenVersion: 1.1-0.8.5-A
+X-SmartCitizenData: [{"temp":"29090.6", "hum":"6815.74", "light":"30000", "bat":"786", "panel":"0", "co":"112500", "no2":"200000", "noise":"2", "nets":"10", "timestamp":"2013-10-28 1:34:26"}]
+```
+
+Here you have a kit's request as a  **Curl** for test purposes:
+
+``` shell
+$ curl -X PUT -H 'Host: data.smartcitizen.me' -H 'User-Agent: SmartCitizen' -H 'X-SmartCitizenMacADDR: 00:00:00:00:00:00' -H 'X-SmartCitizenVersion: 1.1-0.8.5-A' -H 'X-SmartCitizenData: [{"temp":"29090.6", "hum":"6815.74", "light":"30000", "bat":"786", "panel":"0", "co":"112500", "no2":"200000", "noise":"2", "nets":"10", "timestamp":"2013-10-28 1:34:26"}]' data.smartcitizen.me/add
+```
+
+**Data processing**
+
+Values are send without the proper scaling and some sensors as temperature, humidity and noise are sent in raw and then calibrated in our platform. This are the conversion required for **SCK 1.1** and above.
+
+| Key       | Sensor      | Units               | Conversion formula                            | Conversion Method                         |
+|-----------|-------------|---------------------|-----------------------------------------------|-------------------------------------------|
+| temp      | Temperature | ºC                  | T = -53 + 175.72 / 65536.0 * Traw             | SCKSensorData::tempConversion($rawTemp)   |
+| hum       | Humidity    | %Rel                | H = 7 + 125.0 / 65536.0 * Hraw                | SCKSensorData::humConversion($rawHum)     |
+| light     | Light       | Lux                 | L = Lraw / 10                                 | SCKSensorData::lightConversion($rawLight) |
+| noise     | Noise       | dB                  | Apply the conversion table from mV to dB: [CSV](https://gist.github.com/pral2a/d767cc45874361fd38bf) | SCKSensorData::noiseConversion($rawNoise) |
+| co        | CO          | kOhm                | CO = COraw / 10000                            | SCKSensorData::coConversion($rawCO)       |
+| no2       | NO2         | kOhm                | NO2 = NO2raw / 10000                          | SCKSensorData::no2Conversion($rawNO2)     |
+| bat       | Battery     | %                   | B = Braw / 10                                 | SCKSensorData::batConversion($rawBat)     |
+| panel     | Panel       | mV                  | P = Praw / 10000                              | SCKSensorData::panelConversion($rawPanel) |
+| nets      | Nets        | Wi-Fi Networks      | Not required                                  | Not required                              |
+| timestamp | Timestamp   | YYYY-MM-DD hh:mm:ss | Not required                                  | Not required                              |
+
+You can use the **[SCKSensorData](https://github.com/fablabbcn/Smart-Citizen-Kit/blob/master/data/) php** class to re-scale and calibrate the received data. Check it on [github](https://github.com/fablabbcn/Smart-Citizen-Kit/blob/master/data/).
+
+Here is an example how to use it to receive a request, converted and store it in a CSV file:
+
+``` php
+<?php
+	include('../sck_sensor_data.php');
+
+	$headers = getallheaders();
+
+	$data = $headers['X-SmartCitizenData'];
+
+	$datapoints = json_decode($data, true);
+
+	foreach ($datapoints as $datapoint) {
+	$datapoint = SCKSensorData::SCK11Convert($datapoint);
+		$csv .= implode(', ', $datapoint);
+	}
+
+	$csv .= PHP_EOL;
+
+	file_put_contents('./data.csv', $csv, FILE_APPEND);
+?>
+```
+
+You can find the complete example [here](https://github.com/fablabbcn/Smart-Citizen-Kit/blob/master/data/examples/add.php).
+
+Each sensor is implemented as a separate function and some general methods are available for simplifying the work. Here is an example:
+
+``` php
+<?php
+
+	/**
+	 * noiseCalibration
+	 *
+	 * Noise calibration for SCK1.1 sound sensor. Converts mV in to dBs. 
+	 * Based on a linear regression from a lookup table (db.json) 
+	 * obtained after real measurements from our test facility.
+	 * 
+	 *
+	 * @param float $rawSound
+	 * @return float noise as sound pressure in dB
+	 *
+	 */
+	
+	public function noiseCalibration($rawSound)
+	{
+		$dbTable = json_decode(file_get_contents("db.json"), true);
+		return round(self::tableCalibration($dbTable, $rawSound), 2);
+	}
+?>
+```
+**How to proceed**
+
+Here are the different paths you can take in order to built your own backend:
+
+- Create a fork of the the <a href="https://github.com/fablabbcn/Smart-Citizen-Kit/tree/master" target="_blank">Smart Citizen Kit firmware</a> in order to send the data as your custom backend expect it.
+
+- Create your own custom backend. We can share all the different modules of our backend in order for you to receive data as on the curl example above, calibrate it and store it. Contact us at <a href="mailto:support@smartcitizen.me">support@smartcitizen.me</a>.
+
+- Keep using our backend but request our API <a href="http://developer.smartcitizen.me/" target="_blank">developer.smartcitizen.me</a> and then fill database choosen with it.
+
 
 ### How to install the drivers on Windows?
 
@@ -865,7 +879,7 @@ In Windows you will need to install the Arduino Drivers if you haven't done it b
 
 *   Go to the Arduino [download page](http://arduino.cc/en/Main/Software) and download the latest version of the Arduino software for Windows.
 *   When the download is finished, un-zip it and open up the Arduino folder to confirm that yes, there are indeed some files and sub-folders inside. The file structure is important so don’t be moving any files around unless you really know what you’re doing.
-*   Power up your Arduino by connecting your Arduino board to your computer with a USB cable (or FTDI connector if you’re using an Arduino pro). You should see the an LED labed ‘ON’ light up. ([this diagram](https://learn.sparkfun.com/tutorials/what-is-an-arduino/whats-on-the-board) shows the placement of the power LED on the UNO).
+*   Power up your Arduino by connecting your Arduino board to your computer with a USB cable (or FTDI connector if you’re using an Arduino pro). You should see the an LED labeled ‘ON’ light up. ([this diagram](https://learn.sparkfun.com/tutorials/what-is-an-arduino/whats-on-the-board) shows the placement of the power LED on the UNO).
 *   If you’re running Windows 8, you’ll need to disable driver signing, so go see the Windows 8 section. If you’re running Windows 7, Vista, or XP, you’ll need to install some drivers, so head to the Windows 7, Vista, and XP section down below.
 
 #### Windows 8
@@ -916,7 +930,7 @@ Installing the Drivers for the Arduino Uno (from Arduino.cc)
 *   Finally, navigate to and select the Uno’s driver file, named “ArduinoUNO.inf”, located in the “Drivers” folder of the Arduino Software download (not the “FTDI USB Drivers” sub-directory). If you cannot see the .inf file, it is probably just hidden. You can select the ‘drivers’ folder with the ‘search sub-folders’ option selected instead.
 *   Windows will finish up the driver installation from there
 
-*This documentaion is proudly based on [Sparkfun Arduino on Windows](https://learn.sparkfun.com/tutorials/installing-arduino-ide/windows) tutorial - CC BY-NC-SA 3.0.*
+*This documentation is proudly based on [Sparkfun Arduino on Windows](https://learn.sparkfun.com/tutorials/installing-arduino-ide/windows) tutorial - CC BY-NC-SA 3.0.*
 
 ### Which LiPo batteries to use?
 
@@ -924,15 +938,21 @@ The battery that we are providing is 3.7v and 2000mAh
 
 ### Which solar panels to use?
 
-The solar panel it should fulfil the specification of a voltage bigger than 8v and less than 15v, 12v is the recommended voltage, and a minimum of 500mA.
+The solar panel it should fulfill the specification of a voltage bigger than 8v and less than 15v, 12v is the recommended voltage, and a minimum of 500mA.
 
+### How I can extend the Wi-Fi range?
+
+Is your SCK quite far away from Wi-Fi access point? You can use an external antenna with your SCK. 
+
+The Wi-Fi modules has a U.FL antenna connector. We recommend you to use a [U.FL to RP-SMA adaptor](https://www.sparkfun.com/products/662) in order to use [standard Wi-Fi antennas](https://www.sparkfun.com/products/558). You then will need to enable the *External Antenna* on the [Wi-Fi setup process](http://docs.smartcitizen.me/#/start/adding-a-smart-citizen-kit) by selecting _External Antenna_. 
+ 
 ### What is the spec (battery type) for the button-cell for the RTC?
 
 The RTC battery is a CR1220
 
 ### Why is 50dB the microphone lowest value?
 
-Because the actual sensor is limited by the curve boundings from 50dB to 103dB
+Because the actual sensor is limited by the curve bounding from 50dB to 103dB
 
 ### Browsers compatibility
 
@@ -943,13 +963,15 @@ To enjoy Smart Citizen, we recommend you to use:
 Google Chrome 25+
 Firefox Mozilla 20+
 
+For the kit setup process only Google Chrome is supported.
+
 ### What are the LEDs for, and what does the LED blinking mean?
 
 There are 5 LEDs, they are all on the base half of the SCK.  They can be understood in three groups:
 
- - LED2 and LED1 - These are the two yellow (or orange) LEDs in the lower center-letf of the board.  You will only see these lit when your USB cable is connected to the SCK and you are configuring or otherwise interacting with the SCK.  LED2 is the "RX USB" and will be lit when the SCK is receiving information via the USB connection. LED1 is the "TX USB" and will be lit when the SCK is sending information via the USB connection.   
+ - LED2 and LED1 - These are the two yellow (or orange) LEDs in the lower center-left of the board.  You will only see these lit when your USB cable is connected to the SCK and you are configuring or otherwise interacting with the SCK.  LED2 is the "RX USB" and will be lit when the SCK is receiving information via the USB connection. LED1 is the "TX USB" and will be lit when the SCK is sending information via the USB connection.   
 
- - LED4 and LED3 - These are the two blue LEDs in the lower center of the board.  You will see these blink often. LED3 is the "WiFi Association" and LED4 is the "WiFi Connection." The blue LEDs will blink each time the SCK posts new data wirelessly. This is normal behavior and is expected, but it only happens in bursts (then there will be no blue LED lit for about 30-40 seconds). If your blue LEDs are blinking back and forth non-stop, this means your SCK has lost its WiFi connection. Check to make sure your router is still on, and tht you're still in range of it.
+ - LED4 and LED3 - These are the two blue LEDs in the lower center of the board.  You will see these blink often. LED3 is the "WiFi Association" and LED4 is the "WiFi Connection." The blue LEDs will blink each time the SCK posts new data wirelessly. This is normal behavior and is expected, but it only happens in bursts (then there will be no blue LED lit for about 30-40 seconds). If your blue LEDs are blinking back and forth non-stop, this means your SCK has lost its WiFi connection. Check to make sure your router is still on, and that you're still in range of it.
 
  - LED5 - This is the green LED in the upper left corner.  It will be lit when the SCK is turned on and has power.
 
@@ -999,7 +1021,7 @@ This may be due:
 If you're having problems updating the firmware you can try one of these two options:
 
 - Update the latest firmware through the web browser configurator.
-- Update the latest firmware throught Arduino IDE.
+- Update the latest firmware through Arduino IDE.
 
 If you're still having problems it's may be due to a hardware or software issue, contact us at <a href="mailto:support@smartcitizen.me">support@smartcitizen.me</a>.
 
@@ -1008,7 +1030,7 @@ If you're still having problems it's may be due to a hardware or software issue,
 If you're getting this message, the may be due:
 
 - Configuration process is not finished correctly.
-- The WIFI module of your SCK is corrupted, so MAC address is not accesible. To repair your wifi module refer to this <a href="" target="_blank">tutorial</a>.
+- The WIFI module of your SCK is corrupted, so MAC address is not accessible. To repair your wifi module refer to this <a href="" target="_blank">tutorial</a>.
 
 ### Collapsed USB port
 
