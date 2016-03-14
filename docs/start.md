@@ -751,8 +751,6 @@ You can import the recorded data in to [smartcitizen.me](http://smartcitizen.me)
 
 In your device page you will find the **Import SD** along with the Edit and Configure options.
 
-![image](https://smartcitizen.me/img/sck-sd-import.png)
-
 Using a microSD card reader get the **post.csv** file from your card, select it and click import. Data will be imported in to your device, data existing on the file already imported will be skipped. Your kit should be running the latest SD firmware  and the SCK time (RTC) should be set in order data can be imported.
 
 ### Is my kit publishing data properly?
