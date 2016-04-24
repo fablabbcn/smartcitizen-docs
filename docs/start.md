@@ -55,17 +55,27 @@ Finally its time to unpack your SCK. Connect the micro USB cable to your SCK and
 
 On the dropdown menu you should select the port your SCK is connected. 
 
-*On Mac and Linux the port will be named Smart citizen. On Windows this is likely to be COM3 or higher (COM1 and COM2 are usually reserved for hardware serial ports). To find out, you can disconnect your SCK and check the dropdown; the entry that disappears should be the SCK board. Reconnect the board and select that serial port.*
+*On Mac and Linux the port will be named Smartcitizen or something like /dev/ttyACM0. On Windows this is likely to be COM3 or higher (COM1 and COM2 are usually reserved for hardware serial ports). To find out, you can disconnect your SCK and check the dropdown; the entry that disappears should be the SCK board. Reconnect the board and select that serial port.*
 
-*If you have any issue check your kit is properly connected, switched ON and you do not have the Arduino software open.* 
+*If you have any issue check your kit is properly connected, switched ON and you do not have the Arduino IDE or other software that uses the serial port open. We recommend you to switch your kit OFF and ON in order to reset the kit before you start.*
 
 Now just click **Start process** in order to start configuring your kit. 
 
-*We recommend you to  switch your kit OFF and ON in order to reset the kit before you start.*
+The configurator will try to determine your hardware and firmware version, if your **firmware version is below 0.9.3** you need to update the firmware in order to continue with the process.
 
-We will first verify your SCK version and we will encourage you to update your firmware but you can always skip this process.
+![Old firmware](img/conf1.jpg)
 
-After skipping or updating the firmware you will see the *Wi-Fi and update time settings*.
+If the configurator can't communicate with your board it will report an **Unrecognized board**, we recommend you to try a couple of times, disconnecting your kit, reloading the page and connecting it again to make sure that this is not just a serial port communication problem. 
+
+If the configurator still can't communicate with your kit it may be a firmware/hardware problem. You may try to install the firmware and see if this solves the problem.
+
+![Unrecognized board](img/conf2.jpg)
+
+If you **can't upload the firmware** please refer to the [Firmware update problem](#/start/firmware-update-problem) section or try doing a [Manual set up.](#/start/manual-set-up-the-compilation-way)
+
+After firmware is installed/updated we can continue with Wi-Fi settings.
+
+![Wifi settings](img/conf3.jpg)
 
 *You can add up to 5 different Wi-Fi credentials in your kit. This will allow your kit to connect to multiple networks in case one fails or you will like to move in between to places*
 
@@ -81,9 +91,11 @@ You should complete the fields with your router or access point information:
  
  - **Encryption** -  _Optional_  You can leave it to _WPA2_ this is the default for most modern networks. 
 
- - **External Antenna** - _Optional_ Is your SCK quite far away from Wi-Fi access point? You can use an external antenna with your SCK. Check the [How to use an external antenna?](http://docs.smartcitizen.me/#/start/how-i-can-extend-the-wi-fi-range) )
+ - **External Antenna** - _Optional_ Is your SCK quite far away from Wi-Fi access point? You can use an external antenna with your SCK. Check the [How to use an external antenna?](#/start/how-i-can-extend-the-wi-fi-range) )
 
 Next step is optional, you can set your SCK update interval to optimize the battery performance and sensor resolution ratio.
+
+![Udate interval](img/conf4.jpg)
 
 *By default your SCK will take a reading every minute and post it on-line*
 
@@ -91,17 +103,15 @@ Next step is optional, you can set your SCK update interval to optimize the batt
   
  - **Number posts** - This defines every how much sensor readings your SCK will publish the reading on-line. You can set it from 1 to 20.
 
-Now is time to record the settings on your SCK, just click on **Sync** and wait for 30 seconds till the button switches back to **Done**. 
+Now is time to record the settings on your SCK, just click on **Sync Settings** and wait for a moment. 
 
-*If there is any issue during the process this will be displayed on the **Message window** above. Please, copy the message and contact [support@smartcitizen.me](mailto:support@smartcitizen.me) *
+*If there is any issue during the process this will be displayed on the **Message window** above. I f you need help please contact [support@smartcitizen.me](mailto:support@smartcitizen.me) *
 
 Last but now least you will see your SCK *Mac Address* registered below this is the ID of your SCK. Just click on **Save** and wait for your kit to publish. **Done!**
 
-*You might need to wait up to 2 minutes and refresh your browser in order to see your SCK first post in your device page.*
+*You might need to wait up to 2 minutes or more if you changed the time update settings and refresh your browser in order to see your SCK first post in your device page.*
 
- - **Did you change the time update settings?** *Take care in case you changed the **Reading interval** and **Number posts** settings your kit can take longer to publish.*
-
- - **Did you registered your SCK before, did your SCK belong to someone else before?** *Take care your SCK can be registered once at a time in case you registered before check [How to unlink your SCK?](http://docs.smartcitizen.me/#/start/how-do-i-register-again-my-sck) or contact [support@smartcitizen.me](mailto:support@smartcitizen.me) .*
+ **Did you registered your SCK before or did your SCK belong to someone else before?** *Take care your SCK can be registered once at a time, in case you registered before check [How to unlink your SCK?](#/start/how-do-i-register-again-my-sck) or contact [support@smartcitizen.me](mailto:support@smartcitizen.me) .*
  
 *Please, if your kit is not publishing properly contact [support@smartcitizen.me](mailto:support@smartcitizen.me) or ask for help in the [forum](http://forum.smartcitizen.me/) .*
 
@@ -113,7 +123,6 @@ The SCK, like most Arduino chips, has the ability to communicate through serial 
  
 Note that this tutorial works for both SCK v1.0 (from the Goteo crowdfunding campaign) and SCK v1.1 (from the KickStarter crowdfunding campaign), independently of the firmware version used.
  
-All the steps in this tutorial have been tested with Arduino 1.0.5. We strongly recommend not to use the Beta version of Arduino IDE as we encountered issues with drivers and serial communication.
 
 #### STEP 1: Configuring the Wi-Fi settings
 
@@ -133,7 +142,7 @@ All the steps in this tutorial have been tested with Arduino 1.0.5. We strongly 
 
 `set wlan ssid XXX`
 
-Note: You have to replace XXX with your ssid name, filling any space with the dollar ($) character. Due to hardware limitations it can't be longer tham 32 characters.
+Note: You have to replace XXX with your ssid name, filling any space with the dollar ($) character. Due to hardware limitations it can't be longer than 32 characters.
 
 - Add a new phrase to memory (optional, password for WPA1 & WPA2):
 
@@ -162,19 +171,18 @@ Note: You have to replace XXX with your phrase, filling any space with the dolla
 - Exit and go back to the normal operational mode by typing:
 
 `exit`
- 
+
+
 
 #### STEP 2: Registering the kit in the platform
 
-After you've uploaded your own script, don't forget to register the kit in our database and save there your kit mac address. To find this mac address, you can use the serial command "get mac". by following the tutorial Manual Setup, the Serial way. 
-
-Alternatively, have a look at the wifi module on the board and read the serial number  under the bar code (something like "131G0006662116E4" on kit v1.0 or "0006662116E4" on kit v.1.1). 
+After you've uploaded your settings, don't forget to register your kit in our database by saving it's mac address. To find the mac address, you can use the serial command "get mac". Or have a look at the wifi module on the board and read the serial number under the bar code (something like "131G0006662116E4" on kit v1.0 or "0006662116E4" on kit v.1.1). 
 
 ![Find The Mac Address](img/mac_manual_sticker.jpg)
 
 The [mac address](http://en.wikipedia.org/wiki/MAC_address) is the last 12 digit of this serial, separated by a colon every two number. From a number like `0006662116E4` you would write `00:06:66:21:16:E4`.
 
-In both cases, you have to pass by the configuration page of your kit, and fill the mac address input field. Then press the register your kit button.
+In both cases, you have to fill the mac address input field in the configuration page of your kit and press the save button.
 
 ![Register The Kit](img/mac_2.png)
 
@@ -182,16 +190,18 @@ In both cases, you have to pass by the configuration page of your kit, and fill 
  
 You are now done with the manual configuration of your SCK. Wait for a few minutes to see your data coming on the server and being displayed on the web page. You can also check that everything is ok by looking at the Arduino serial monitor. Debug messages coming from your SCK should look like this:
 
-If you want to explore further options with the WiFly module check [The SCK Command Line](http://docs.smartcitizen.me/#/start/the-sck-command-line) section.
+If you want to explore further options with the WiFly module check [The SCK Command Line](#/start/the-sck-command-line) section.
 
 If you encounter any issue, please share your problem on the [forum](http://forum.smartcitizen.me/)
 
 ### Manual set up: The Compilation Way
 
-This tutorial  aimed to advanced users we will drive you toward a manual way of setting your SCK by editing directly the source code. As the code is Open Source, one way of setting the Wi-Fi of your SCK is to download the latest firmware, edit some lines of code, recompile it and upload it to the kit. 
+This tutorial is aimed to advanced users, we will guide you through the process of setting up your kit by editing directly the source code. As the code is Open Source, one way of setting the Wi-Fi of your SCK is to download the latest firmware, edit some lines of code, recompile it and upload it to the kit. 
  
-One advantage of this system is that it gives you the opportunity to register multiple Wi-Fi networks at the same time. This is useful if your SCK is traveling from one location to another where the Wi-Fi credentials are known. The downside of this method is that you can not extract the MAC address of your kit, therefore making it this way is not suitable for the first setup of your kit. Please, refer to other tutorials available.
- 
+One advantage of this method is that it gives you the opportunity to register multiple Wi-Fi networks at the same time and make the persistent. The Wi-fi networks that you register directly in the source code are called *hardcoded* and the only way to remove them is with the same process of compiling and uploading the firmware again. This is useful if your SCK is traveling from one location to another where the Wi-Fi credentials are known.
+
+The downside of this method is that you can not extract the MAC address of your kit, if you don't know it yet you will have to use the method described in [The Serial Way](#/start/manual-set-up-the-serial-way) or via the configurator in the setup page of your kit.
+
 
 #### STEP 1: Getting the Firmware
 
@@ -199,41 +209,52 @@ You can download the latest firmware on our Github:
 
 https://github.com/fablabbcn/Smart-Citizen-Kit/releases
 
-As you may know, the hardware and software are based on the Arduino project. We will use the Arduino IDE to edit the firmware and upload it to the kit. This tutorial have been tested with Arduino 1.0.5. Download the [Arduino IDE](http://arduino.cc/en/Main/Software.).
+As you may know, the hardware and software are based on the Arduino project. We will use the Arduino IDE to edit the firmware and upload it to the kit. This tutorial have been tested with Arduino 1.6.8, please download and install the [Arduino IDE](https://www.arduino.cc/en/Main/Software).
 
-Open the file `Smart-Citizen-Kit/sck_beta_v0_9_0/sck_beta_v0_9.ino`
+Once installed open the file `Smart-Citizen-Kit/sck_beta_v0_9_0/sck_beta_v0_9.ino`
 
 #### STEP 2: Editing the code
 
-If you want to set the network configuration manually, you should go to the `Constants.h tab and modify the lines you see below:
+If you want to set the network configuration manually, you should go to the `Constants.h` tab and modify the lines you see below:
  
 ```	cpp
 #define networks 0
 #if (networks > 0)
-char* mySSID[networks]      = { 
-  "Red1"        , "Red2"        , "Red3"             };
-char* myPassword[networks]  = { 
-  "Pass1"      , "Pass2"       , "Pass3"            };
-char* wifiEncript[networks] = { 
-  WPA2         , WPA2          , WPA2               };
-char* antennaExt[networks]  = { 
-  INT_ANT      , INT_ANT       , INT_ANT            }; //EXT_ANT
-#endif
+static char* mySSID[networks]      = { 
+  "SSID1"      , "SSID2"     		};
+static char* myPassword[networks]  = { 
+  "PASS1"      , "PASS2"			};
+static char* wifiEncript[networks] = { 
+  WPA2         , WPA2               };
+static char* antennaExt[networks]  = { 
+  INT_ANT      , INT_ANT            };
+#endif      
 ```
  
-The easiest way would be to write `"#define networks X"` (where X is the number of WI-FI networks you are going to use), add the name of your network in `RedX` and the corresponding password in `PassX`. Due to hardware limitations neither the password or the ssid can't be longer tham 32 characters. On `wifiEncript` you could also choose the encryption mode that fits with your network's configuration (`OPEN`, `WEP`, `WPA1`, `WPA2`, `WEP64`). Om `antennaExt` you can choose the type of antenna you are using (`INT_ANT` for internal antenna (default) or `EXT_ANT` for external antenna).
+The easiest way would be to write `"#define networks X"` (where X is the number of WI-FI networks you are going to use) and fill the options for your network:
+
+- Add the name of your network in `SSIDX` and the corresponding password in `PASSX`. Due to hardware limitations neither the password or the ssid can't be longer tham 32 characters.
+- On `wifiEncript` you could also choose the encryption mode that fits with your network's configuration (`OPEN`, `WEP`, `WPA1`, `WPA2`, `WEP64`).
+- On `antennaExt` you can choose the type of antenna you are using (`INT_ANT` for internal antenna (default) or `EXT_ANT` for external antenna).
  
-If you register only one wifi credential, you should obtain something like:
+If you register only one wifi credential, you should obtain something like this:
 
 ```	cpp 
 #define networks 1
 #if (networks > 0)
-char* mySSID[networks]      = { "MyWifiSSID"};
-char* myPassword[networks]  = { "MyPassword"};
+char* mySSID[networks]      = { "MyWifiSSID" };
+char* myPassword[networks]  = { "MyPassword" };
 char* wifiEncript[networks] = { WPA2 };
 char* antennaExt[networks]  = { INT_ANT };
 #endif
 ```
+
+*Note that if you configure more than one Wi-fi network you have to separate the variables with a comma, for example:* 
+```cpp
+char* mySSID[networks] = { "MyFirstSSID", "MySecondSSID" };
+```
+
+
 #### STEP 3: Uploading the code
 
 ![Select the board](img/arduino_board.png)
@@ -242,44 +263,44 @@ On the Arduino IDE *Tools* menu you should select the right **Board** in the *Bo
 
 * For SmartCitizen Kit version 1.0 select *Arduino Leonardo* (ATmega 32U4 at 16Mhz) 
 
-* For SmartCitizen Kit version 1.1 select *Arduino LilyPad USB*(ATmega 32U4 at 8Mhz)
+* For SmartCitizen Kit version 1.1 select *Arduino LilyPad USB* (ATmega 32U4 at 8Mhz)
 
-The Arduino IDE should automatically select the right USB port but you can check in in the *Tools* in the *Ports* menu.
+The Arduino IDE should automatically select the right USB port but you can check it in the *Tools* >> *Port* menu.  
 
 ![Upload the firmware](img/arduino_upload_small.png)
 
-Now you just need to click the *Upload* button and Arduino will do the rest for you!
+Now you just need to click the *Upload*  button and Arduino will do the rest for you!
 
-In case you have any issue please check first the [Arduino Troubleshooting](https://www.arduino.cc/en/guide/troubleshooting) guide. 
+In case you have any issue please check the [Arduino Troubleshooting](https://www.arduino.cc/en/guide/troubleshooting) guide. 
 
 #### STEP 4: Registering the kit in the platform
 
-After you've uploaded your own script, don't forget to register the kit in our database and save there your kit mac address. To find this mac address, you can use the serial command "get mac". by following the tutorial Manual Setup, the Serial way. 
 
-Alternatively, have a look at the wifi module on the board and read the serial number  under the bar code (something like "131G0006662116E4" on kit v1.0 or "0006662116E4" on kit v.1.1). 
+After you’ve uploaded your settings, don’t forget to register your kit in our database by saving it’s mac address. To find the mac address, you can use the serial command “get mac”  by following the section [The Serial Way](#/start/manual-set-up-the-serial-way). Or have a look at the wifi module on the board and read the serial number under the bar code (something like “131G0006662116E4” on kit v1.0 or “0006662116E4” on kit v.1.1).
+
 
 ![Find The Mac Address](img/mac_manual_sticker.jpg)
 
 The [mac address](http://en.wikipedia.org/wiki/MAC_address) is the last 12 digit of this serial, separated by a colon every two number. From a number like `0006662116E4` you would write `00:06:66:21:16:E4`.
 
-In both cases, you have to pass by the configuration page of your kit, and fill the mac address input field. Then press the register your kit button.
+In both cases, you have to fill the mac address input field in the configuration page of your kit and press the save button.
 
 ![Register The Kit](img/mac_2.png)
  
-You are now done with the manual configuration of your SCK. Wait for a few minutes to see your data coming on the server and being displayed on the web page. You can also check that everything is ok by looking at the Arduino serial monitor.
+You are now done with the manual configuration of your SCK. Wait for a few minutes to see your data coming on the server and being displayed on the web page. You can also check that everything is ok by looking the output of your kit via the Arduino serial monitor.
 
 If you encounter any issue, please share your problem on the [forum](http://forum.smartcitizen.me/)
 
 ### Attaching the solar panel
 
-![Solar Panel](img/v1.0/main_board_solar_panel.jpg)
-![Solar Panel](img/main_board_solar_panel.jpg)
-
-The solar panel it should fulfill the specification of a voltage bigger than 8v and less than 15v, 12v is the recommended voltage, and a minimum of 500mA.
+The solar panel should fulfill the specification of a voltage bigger than 8v and less than 15v, 12v is the recommended voltage, and a minimum of 500mA.
 
 In order to attach the solar panel you have to solder the cables of the solar panel to the pads marked in the next image for version 1.0 of the SCK. For version 1.1 you have to connect the cables to the connector marked in the next image. 
 
 In both versions, yo have to attach the plus of solar panel to the plus pad of the SCK, and the minus of the solar panel to the minus pad of the SCK.
+
+![Solar Panel](img/v1.0/main_board_solar_panel.jpg)
+![Solar Panel](img/main_board_solar_panel.jpg)
 
 ### Sensor calibration
 
@@ -302,7 +323,7 @@ The Smart Citizen Kit can be managed over a basic serial protocol. You just need
 - Notice all the commands except the starting command($$$) require a carriage return at the end: CR or \r. If you are using the Arduino IDE is enough if you change to “Carriage return” option (drop-down menu at the bottom-right of the monitor window).
 - Call any command you want, change XXX with the corresponding value, filling any space with the dollar ($) character.
 
-### Basic SCK commands
+### SCK Wifly commands
 
 - `$$$` (Wake up the module and activate the Wi-Fi)
 - `set wlan ssid XXX` (Add a new SSID to memory9)
@@ -310,49 +331,46 @@ The Smart Citizen Kit can be managed over a basic serial protocol. You just need
 - `set wlan key XXX` (Add a new key to memory)
 - `set wlan auth XXX` (Add an authentication method into memory)
 - `set wlan ext_antenna XXX` (Add an antenna type into memory)
-- `get mac` (Get the MAC address of the kit)
 - `exit` (Go back to normal operational mode)
 
-### Special SCK commands
+If you want to know more about wifly commands look at the [WiFly Command Reference](http://ww1.microchip.com/downloads/en/DeviceDoc/50002230A.pdf)
 
+### SCK commands
+
+- `###` (Wake up the module and enter SCK commands mode)
+- `get mac` (Get the MAC address of the kit)
 - `get time update` (Retrieve the sensor update interval)
-- `set time update XXX` (Update the sensor update interval)
-- `get number updates` (Retrieve the max number of bulk updates allowed)
-- `set number updates XXX` (Update the max number of bulk updates allowed)
+- `set time update XXX` (Update the sensor update interval, *10-3600 sec*)
+- `get number updates` (Retrieve the max number of bulk updates)
+- `set number updates XXX` (Update the max number of bulk updates, *1-20 updates*)
 - `get apikey` (Retrieve the kit APIKEY)
 - `set apikey XXX` (Update the kit APIKEY)
 - `get wlan ssid` (Retrieve the SSID saved on the kit)
 - `get wlan phrase` (Retrieve the phrase and KEY saved on the kit)
-- `get wlan auth` (Retrieve the authentication methods saved on the kit)
-- `get wlan ext_antenna` (Retrieve the antenna types saved on the kit)
+- `get wlan auth` (Retrieve the authentication method saved on the kit)
+- `get wlan ext_antenna` (Retrieve the antenna type saved on the kit)
 - `clear nets` (Remove all saved Wi-Fi configuration information)
-- `exit` (Goes back to normal operational mode)
+- `clear memory` (Reset to defaults all configuration information)
+- `get all` (Retrieve all settings saved on the kit in a single line: *|version|MAC|ssid,phrase,auth,ext_antenna|hardcodedNets|timeUpdate|numUpdate|*)
 - `data` (Retrieves sensor readings stored in memory)
+- `exit` (Goes back to normal operational mode)
 
-### Basic WiFly commands
 
-To deepening into wifly commands look at the link below:
-
-<a href="http://ww1.microchip.com/downloads/en/DeviceDoc/50002230A.pdf" target="_blank">WiFly Command Reference</a>
 
 Hardware
 =====
 ### Inside the SCK
 
-
-![Main Board](img/v1.0/main_board.jpg)
-![Main Board](img/main_board.jpg)
-
 #### Main Board
 
-The main board contains the basic functionality like sensor I/O to read de sensor values, communicate with the platform through the wifi module, manage the power and battery charging.
+The main board contains the basic functionality like sensor I/O to read de sensor values, communication with the platform through the wifi module, manage the power and battery charging.
 
 ![Main Board CPU](img/v1.0/main_board_cpu.jpg)
 ![Main Board CPU](img/main_board_cpu.jpg)
 
 #####PINOUT
 
-The SCK Main Board connects to the Sensor Board 16 pin connector. This is are how the pins are laid out on the board. The numbers in brackets are the actual pin numbers of the micro controller. Pins IO are digital and S are analogue.
+The SCK Main Board connects to the Sensor Board 16 pin connector. This is how the pins are laid out on the board. The numbers in brackets are the actual pin numbers of the micro controller. Pins IO are digital and S are analogue.
 
 
 |           |           |
@@ -369,24 +387,26 @@ The SCK Main Board connects to the Sensor Board 16 pin connector. This is are ho
 
 #####CPU 
 
-Both versions of the SCK (1.0 and 1.1) are using the same CPU, ATMEGA32U4(Arduino Leonardo). With the difference that the 1.0 works at 5V and 16MHZ and the 1.1 works at 3.3V and 8MHZ. In the 1.1 version we’ve improved the power consumption. 
+Both versions of the SCK (1.0 and 1.1) are using the same CPU, ATMEGA32U4 (Arduino Leonardo). With the difference that the 1.0 works at 5V and 16MHZ and the 1.1 works at 3.3V and 8MHZ. In the 1.1 version we’ve improved the power consumption. 
 
 This CPU has native USB and an UART TTL port allowing us to connect directly with the WIFI module.
 
-<a href="http://www.atmel.com/images/doc7766.pdf" target="_blank">ATMEGA32U4 datasheet</a>
-
-![usb connectors](img/usb_connectors.png)
+[ATMEGA32U4 datasheet](http://www.atmel.com/Images/Atmel-7766-8-bit-AVR-ATmega16U4-32U4_Datasheet.pdf)
 
 #####USB CONNECTOR
 
 The 1.0 version uses a Mini USB connector and 1.1 version uses a Micro USB.
 
-![wifly module](img/v1.0/main_board_wifly.jpg)
-![wifly module](img/main_board_wifly.jpg)
+![usb connectors](img/usb_connectors.png)
+
+
 
 #####WIFI MODULE
 
 The RN-131 module is a standalone, embedded wireless 802.11 b/g networking module. With its small form factor and extremely low power consumption, the RN-131 fits perfectly for the SCK wireless communication requirements.
+
+![wifly module](img/v1.0/main_board_wifly.jpg)
+![wifly module](img/main_board_wifly.jpg)
 
 Main features:
 
@@ -409,77 +429,81 @@ Main features:
 
 <a href="http://ww1.microchip.com/downloads/en/DeviceDoc/rn-131-ds-v3.2r.pdf" target="_blank">WIFLY module - RN-131 datasheet</a>
 
-![NCP1400](img/v1.0/main_board_NCP1400.jpg)
-![MAX604](img/v1.0/main_board_MAX604.jpg)
-![MCP1725](img/main_board_MCP1725.jpg)
 
 #####BATTERY POWERING
 
 For powering the SCK, in both versions, we are using a 3.7v 2000 mAh li-on battery. 
 
-In 1.0 version, SCK uses two different voltages, 3.3V and 5V to power the IC’s. 
+SCK version 1.0 uses two different voltages, 3.3V and 5V to power the IC’s. To get 5V from 3.3v we are using a step-up based on NCP1400, thus having a stable voltage at 5v and 100mA. On the other hand, to regulate the voltage and to obtain 3.3v, the SCK uses the IC MAX604.
 
-To elevate to 5V we are using a step-up based on NCP1400, thus having a stable voltage at 5v and 100mA.
+![NCP1400](img/v1.0/main_board_NCP1400.jpg)
+![MAX604](img/v1.0/main_board_MAX604.jpg)
 
-On the other hand, to regulate the voltage and to obtain 3.3v, the SCK uses the IC MAX604.
+[NCP1400 datasheet](http://www.onsemi.com/pub_link/Collateral/NCP1400A-D.PDF)  
+[MAX604 datasheet](http://www.solarbotics.net/library/datasheets/MAX604.pdf)  
 
-In 1.1 version, to simplify, the voltage of entire SCK was unified to 3.3V. The responsible to regulate the voltage from 3.7v to 3.3v is the MCP1725 IC.
+In 1.1 version, to make things simpler, the voltage of entire SCK was unified to 3.3V. The responsible to regulate the voltage from 3.7v to 3.3v is the MCP1725 IC.
 
-<a href="http://www.onsemi.com/pub_link/Collateral/NCP1400A-D.PDF" target="_blank">NCP1400 datasheet</a><br>
-<a href="http://www.solarbotics.net/library/datasheets/MAX604.pdf" target="_blank">MAX604 datasheet</a><br>
-<a href="http://ww1.microchip.com/downloads/en/DeviceDoc/22026b.pdf" target="_blank">MCP1725 datasheet</a>
+![MCP1725](img/main_board_MCP1725.jpg)
 
-![MCP73831](img/v1.0/main_board_MCP73831.jpg)
-![MCP73831](img/main_board_MCP73831.jpg)
+[MCP1725 datasheet](http://ww1.microchip.com/downloads/en/DeviceDoc/22026b.pdf)  
+
 
 #####BATTERY CHARGING
 
 For charging the battery there are two ways, USB or solar panel. To carry out the charging we are using MCP73831 IC. 
 
-For the solar panel way, in 1.0 version the solar panel have to be 12v and 500mA. In 1.1 version, the solar panel can be more versatile in terms of amperage. 
+For charging the battery in 1.0 version the solar panel have to be 12v and 500mA. In 1.1 version, the solar panel can be more versatile in terms of amperage. 
 
-<a href="http://ww1.microchip.com/downloads/en/DeviceDoc/20001984g.pdf" target="_blank">MCP73831 datasheet</a>
+![MCP73831](img/v1.0/main_board_MCP73831.jpg)
+![MCP73831](img/main_board_MCP73831.jpg)
+
+[MCP73831 datasheet](http://ww1.microchip.com/downloads/en/DeviceDoc/20001984g.pdf)
+
+
+#####SOLAR PANEL CHARGING
+
+Depending on the sunlight conditions the solar panel produces up to 12v, we have to reduce the voltage to 5v to feed up the Vin of the MCP73831 charger IC. 
+
+To carry out this task we are using the LM2674 IC, a very efficient IC, with a rate of 91% of performance.
 
 ![LM2674](img/v1.0/main_board_LM2674.jpg)
 ![LM2674](img/main_board_LM2674.jpg)
 
-#####SOLAR PANEL CHARGING
+[LM2674 datasheet](http://www.ti.com/lit/ds/symlink/lm2674.pdf)
 
-As the solar panel produces 12v, depending on the sunlight conditions, we have to reduce the voltage to 5v to feed up the Vin of the MCP73831 charger IC. 
 
-To carry out this task we are using the LM2674 IC, a very efficient IC, with a rate of 91% of performance.
+#####RTC (REAL TIME CLOCK)
 
-<a href="http://www.ti.com/lit/ds/symlink/lm2674.pdf" target="_blank">LM2674 datasheet</a>
+The SCK has a real time clock for keeping track of time when the kit is offline. For this task we chose the DS1307 IC for the 1.0 version and the DS1339Y-3+ IC for the 1.1 version. Different IC due to the different voltages, 5V for the 1.0 version and 3.3V for the 1.1 version.
 
 ![DS1307](img/v1.0/main_board_DS1307.jpg)
 ![DS1339Y-3+](img/main_board_DS1339Y-3+.jpg)
 
-#####RTC (REAL TIME CLOCK)
-
-The SCK has a real time clock for when the kit is offline. For this task we chose the DS1307 IC for the 1.0 version and the DS1339Y-3+ IC for the 1.1 version. Different IC due to the different voltages, 5V for the 1.0 version and 3.3V for the 1.1 version.
 
 <a href="http://datasheets.maximintegrated.com/en/ds/DS1307.pdf" target="_blank">DS1307 datasheet</a><br>
 <a href="http://datasheets.maximintegrated.com/en/ds/DS1339-DS1339U.pdf" target="_blank">DS1339Y-3+ datasheet</a>
 
-![DM3CS](img/v1.0/main_board_DM3CS.jpg)
-![DM3CS](img/main_board_DM3CS.jpg)
 
 #####SD CARD READER
 
-The SD card is used to store the data captured by the sensors when the kit is offline. Then, when the kit is online, the data will be uploaded to the platform. 
+The SD card is used to store the data captured by the sensors when the kit is offline. When the kit gets connected, the data will be reeded from the SD card and uploaded to the platform. 
 
 To hold the SD card we are using the DM3CS holder. The SD card is powered at 3.3V and communicates with the CPU through SPI protocol.
 
+![DM3CS](img/v1.0/main_board_DM3CS.jpg)
+![DM3CS](img/main_board_DM3CS.jpg)
+
 <a href="http://www.mouser.com/ds/2/185/e60900232-38395.pdf" target="_blank">DM3CS datasheet</a>
+
+
+#####EEPROM MEMORY
+
+For the users that don’t have a SD card we’ve added an EEPROM memory to store the data when the SCK is offline. We chose the 24LC256 IC that can store 32kBytes, it communicates with the CPU through I2C protocol.
 
 ![24LC256](img/v1.0/main_board_24LC256.jpg)
 ![24LC256](img/main_board_24LC256.jpg)
 
-#####EEPROM MEMORY
-
-For the users that don’t have a SD card we’ve added an EEPROM memory to store the data when the SCK is offline.
-
-We chose the 24LC256 IC that can store 32kBytes, it communicates with the CPU through I2C protocol.
 
 <a href="http://ww1.microchip.com/downloads/en/DeviceDoc/20001203U.pdf" target="_blank">24LC256 datasheet</a>
 
@@ -492,16 +516,14 @@ The main board has some basic sensors:
 - Measurement of the solar panel level
 - Measurement of the wireless networks detected
 
-![Sensor Board](img/v1.0/sensor_board.jpg)
-![Sensor Board](img/sensor_board.jpg)
 
 #### SENSOR BOARD
 
-The sensor board contains the necessary sensors for measuring the pollution parameters. This means NO2 and CO gases, sunlight, noise pollution, temperature, humidity. Also, the sensor board has an I2C bus, this allows to expand the SCK to other kind of sensors.
+The sensor board contains the necessary sensors for measuring all the other parameters. This means NO2 and CO gases, sunlight, noise pollution, temperature, humidity. Also, the sensor board has an I2C bus, this allows to expand the SCK to other kind of sensors.
 
-![MICS5525](img/v1.0/sensor_board_MICS5525.jpg)
-![MICS2710](img/v1.0/sensor_board_MICS2710.jpg)
-![MICS4514](img/sensor_board_MICS4514.jpg)
+![Sensor Board](img/v1.0/sensor_board.jpg)
+![Sensor Board](img/sensor_board.jpg)
+
 
 #####NO2 AND CO SENSORS
 
@@ -509,80 +531,88 @@ To measure these two gases we chose <a href="http://www.e2v.com/" target="_blank
 
 Metal oxide sensors are based on oxide semiconductors. Their electrical conductivity is modulated due to the reaction between the semiconductor and the gases in the atmosphere.
 
+![MICS5525](img/v1.0/sensor_board_MICS5525.jpg)
+![MICS2710](img/v1.0/sensor_board_MICS2710.jpg)
+![MICS4514](img/sensor_board_MICS4514.jpg)
+
 <a href="http://www.e2v.com/shared/content/resources/File/sensors_datasheets/Metal_Oxide/mics-5525.pdf" target="_blank">MICS5525 datasheet</a><br>
 <a href="http://www.cdiweb.com/datasheets/e2v/mics-2710.pdf" target="_blank">MICS2710 datasheet</a><br>
 <a href="http://files.manylabs.org/datasheets/MICS-4514.pdf" target="_blank">MICS4514 datasheet</a>
 
-![LDR](img/v1.0/sensor_board_LDR.jpg)
-![H1730FVC](img/sensor_board_BH1730FVC.jpg)
 
 #####LIGHT SENSOR
 
-The light sensor is a basic element to know the light pollution. In version 1.0, was used a LDR(light-dependent resistor) whose voltage varies depending on the light conditions.
+The light sensor is a basic element to know the light pollution. In version 1.0, was used a LDR (light-dependent resistor) whose voltage varies depending on the light conditions.
 
 For version 1.1, was used a photodiode BH1730FVC. This sensor contains an I2C bus that gives us directly the amount of lux of ambient and infrared light.
 
+![LDR](img/v1.0/sensor_board_LDR.jpg)
+![H1730FVC](img/sensor_board_BH1730FVC.jpg)
+
 <a href="http://www.farnell.com/datasheets/1813319.pdf" target="_blank">BH1730FVC datasheet</a>
 
-![Noise Sensor](img/v1.0/sensor_board_noise_sensor.jpg)
-![Noise Sensor](img/sensor_board_noise_sensor.jpg)
 
 #####NOISE SENSOR
 
-The noise sensor is based on an electret microphone. For the version 1.0, the audio signal is passed through an operational amplifier configured as band pass filter.
+The noise sensor is based on an electret microphone. For the version 1.0 WM-61A was used as the microphone, the captured audio signal is passed through an operational amplifier configured as band pass filter.
 
-For the version 1.0, WM-61A was used for the microphone.
+![Noise Sensor](img/v1.0/sensor_board_noise_sensor.jpg)
 
-For the version 1.1, POM-3044P-R was used. The amplification step was modified adding a variable gain, allowing us to measure very low and very high signals.
+For the version 1.1 POM-3044P-R was used. The amplification step was modified adding a variable gain, allowing us to measure very low and very high signals.
+
+![Noise Sensor](img/sensor_board_noise_sensor.jpg)
 
 <a href="http://industrial.panasonic.com/www-data/pdf/ABA5000/ABA5000CE22.pdf" target="_blank">WM-61A datasheet</a><br>
 <a href="http://www.farnell.com/datasheets/40113.pdf" target="_blank">POM-3044P-R datasheet</a>
 
-![RHT22 Sensor](img/v1.0/sensor_board_RHT22.jpg)
-![SHT21 Sensor](img/sensor_board_SHT21.jpg)
 
 #####TEMPERATURE AND HUMIDITY SENSOR
 
-To measure temperature and humidity was used a module that integrates both sensors. 
+To measure temperature and humidity a module that integrates both sensors was used. 
 
-For version 1.0 was used the RHT22, it has one wire digital interface.
+For version 1.0 the RHT22 was used, it has *one wire* digital interface.
 
-For version 1.1 was used the SHT21, it has I2C protocol and a more fast response between measures than the RHT22.
+![RHT22 Sensor](img/v1.0/sensor_board_RHT22.jpg)
+
+For version 1.1 the SHT21 was used, it has *I2C* protocol and faster response between measures than the RHT22.
+
+![SHT21 Sensor](img/sensor_board_SHT21.jpg)
 
 <a href="https://www.sparkfun.com/datasheets/Sensors/Temperature/DHT22.pdf" target="_blank">RHT22 datasheet</a><br>
-<a href="http://www.sensirion.com/fileadmin/user_upload/customers/sensirion/Dokumente/Humidity/Sensirion_Humidity_SHT21_Datasheet_V4.pdf" target="_blank">SHT21 datasheet</a>
+<a href="http://www.mouser.com/ds/2/682/Sensirion_Humidity_SHT21_Datasheet_V4-469715.pdf" target="_blank">SHT21 datasheet</a>
 
-![ADXL345](img/sensor_board_ADXL345.jpg)
 
 #####3 AXIS ACCELEROMETER
 
-In version 1.0 was detected that some measures vary depending on the orientation the SCK. 
+In version 1.0 we detected that some measures vary depending on the orientation of the SCK. 
 
-For this, in version 1.1, was added an accelerometer(ADXL345) to detect the position and to compensate the measures depending on the orientation of the SCK.
+That's why in version 1.1 we added the ADXL345 accelerometer to detect the position and to compensate the measures depending on the orientation of 
+the SCK. This accelerometer communicates via I2C protocol with the kit.
 
-The ADXL345 has I2C protocol to interface with.
+![ADXL345](img/sensor_board_ADXL345.jpg)
 
 <a href="http://www.analog.com/static/imported-files/data_sheets/ADXL345.pdf" target="_blank">ADXL345 datasheet</a>
 
-![I2C Bus](img/v1.0/sensor_board_i2c_bus.jpg)
-![I2C Bus](img/sensor_board_i2c_bus.jpg)
 
 #####I2C EXPANSION BUS
 
 Due to the ease of the I2C protocol. We’ve included and I2C bus to provide to the community the opportunity of expanding the SCK.
 
+![I2C Bus](img/v1.0/sensor_board_i2c_bus.jpg)
+![I2C Bus](img/sensor_board_i2c_bus.jpg)
+
 ### Detailed specifications
 
 
 | Smart Citizen Kit |           SCK 1.0 (Goteo Board)       | SCK 1.1 (Kickstarter Board)       |
-|:-----------|:-----------------:|:-----------------:|
-| **Data Board**                  |                                                                                  |                                                                                     |
+|-----------|-----------------|-----------------|
+| ***Data Board***                  |                                                                                  |                                                                                     |
 | **MCU**                         | ATMEGA32U4                                                                       | ATMEGA32U4                                                                          |
 | **Clock**                       | 16Mhz                                                                            | 8Mhz                                                                                |
 | **WiFi**                       | Microchip RN-131 802.11 b/g                                                                            | Microchip RN-131 802.11 b/g                                                                                |
 | **Firmware**                    | [Repository](https://github.com/fablabbcn/Smart-Citizen-Kit)                                    | [Repository](https://github.com/fablabbcn/Smart-Citizen-Kit)                                    |
 | **Design files**                 | [v1.01](https://github.com/fablabbcn/Smart-Citizen-Kit/tree/master/hardware/Goteo/v1.01)  | [v1.1](https://github.com/fablabbcn/Smart-Citizen-Kit/tree/master/hardware/Kickstarter)     |
-| **Ambient Board**                |                                                                                  |                                                                                     |
+| ***Ambient Board***                |                                                                                  |                                                                                     |
 | **Light**                    | PVD-P8001                                                                        | BH1730FVC                                                                           |
 |                    *Type*      | LDR Analog Light Sensor                                                          | Digital Ambient Light Sensor                                                        |
 |                    *Units*     | %                                                                                | Lux                                                                                 |
@@ -664,8 +694,6 @@ If you are interested in use the data captured by your sensors, you can download
 The <a href="http://developer.smartcitizen.me/" target="_blank">Smart Citizen API</a> allows you to request back information from your devices and do incredible things with it.
 
 It is a <a href="https://en.wikipedia.org/wiki/Representational_state_transfer" target="_blank">REST</a> API and it returns the information in <a href="https://en.wikipedia.org/wiki/Json" target="_blank">JSON</a> format. This means you can easily access the information from any language like Javascript, PHP, Processing.org, Python, and start doing things with it quickly.
-
-<a href="http://developer.smartcitizen.me/" target="_blank">developer.smartcitizen.me</a>
 
 
 Faq
@@ -879,7 +907,7 @@ In Windows you will need to install the Arduino Drivers if you haven't done it b
 
 *   Go to the Arduino [download page](http://arduino.cc/en/Main/Software) and download the latest version of the Arduino software for Windows.
 *   When the download is finished, un-zip it and open up the Arduino folder to confirm that yes, there are indeed some files and sub-folders inside. The file structure is important so don’t be moving any files around unless you really know what you’re doing.
-*   Power up your Arduino by connecting your Arduino board to your computer with a USB cable (or FTDI connector if you’re using an Arduino pro). You should see the an LED labeled ‘ON’ light up. ([this diagram](https://learn.sparkfun.com/tutorials/what-is-an-arduino/whats-on-the-board) shows the placement of the power LED on the UNO).
+*   Power up your Smart Citizen Kit by connecting it to your computer with a USB cable. You should see the green LED near the on/off switch light up.
 *   If you’re running Windows 8, you’ll need to disable driver signing, so go see the Windows 8 section. If you’re running Windows 7, Vista, or XP, you’ll need to install some drivers, so head to the Windows 7, Vista, and XP section down below.
 
 #### Windows 8
