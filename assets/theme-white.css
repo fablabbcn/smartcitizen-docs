@@ -127,6 +127,9 @@ a {
 a:hover {
   color: #228a8a;
 }
+p {
+  color: #111111;
+}
 /* ----------------------------------------------------------------------------
  * Content styling
  */
@@ -199,7 +202,8 @@ a:hover {
 .content i,
 .content em {
   font-style: italic;
-  color: #9090aa;
+  color: #545476;
+  /*color: #9090aa;*/
 }
 .content code {
   font-family: Menlo, monospace;
@@ -327,7 +331,7 @@ body:not(.big-h3) .content h3 {
   padding-bottom: 10px;
 }
 body:not(.big-h3) .content h3 {
-  font-size: 0.9em;
+  font-size: 1.5em;
 }
 .content h1:first-child {
   padding-top: 0;
@@ -636,10 +640,12 @@ body.no-literate .content pre > code:hover::-webkit-scrollbar-thumb {
   text-rendering: optimizeLegibility;
 }
 .menubar .section {
-  padding: 30px 30px;
+  padding: 15px;
+  padding-right: 35px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  background-color: #DFECF0;
 }
 .menubar .section + .section {
   border-top: solid 1px #dfe2e7;
@@ -702,13 +708,14 @@ a.big.button:hover:visited {
   .menubar.fixed {
     position: fixed;
     overflow-y: auto;
+    background-color: #DFECF0;
   }
   .menubar.fixed {
     -webkit-overflow-scrolling: touch;
   }
   .menubar.fixed::-webkit-scrollbar {
-    width: 15px;
-    height: 15px;
+    width: 5px;
+    height: 5px;
   }
   .menubar.fixed::-webkit-scrollbar-thumb {
     background: #ddd;
@@ -748,12 +755,12 @@ a.big.button:hover:visited {
 .menu a.level-1 {
   font-family: montserrat, sans-serif;
   text-transform: uppercase;
-  font-size: 0.9em;
+  font-size: 1.3em;
   font-weight: bold;
 }
 .menu a.level-1,
 .menu a.level-1:visited {
-  color: #9090aa;
+   color: #4DA0B4;
 }
 .menu a.level-1:hover {
   color: #565666;
@@ -761,10 +768,16 @@ a.big.button:hover:visited {
 .menu a.level-2 {
   font-weight: normal;
 }
-.menu a.level-3 {
-  font-weight: normal;
-  font-size: 0.9em;
+.menu a.level-3,
+.menu a.level-3:visited {
+  font-weight: 500;
+  font-size: 1.05em;
   padding-left: 10px;
+  color: #222222;
+  line-height:1.4
+}
+.menu a.level-3:hover {
+  color: #228a8a !important;
 }
 .menu a.active {
   font-weight: bold !important;
@@ -827,4 +840,12 @@ code .comment {
 .title-area > div {
   position: relative;
   z-index: 1;
+}
+body a,
+body a:visited {
+  color: #0093C6;
+  text-decoration: none;
+}
+body a:hover{
+  color: #21D4FF;
 }
