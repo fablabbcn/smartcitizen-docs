@@ -1,7 +1,6 @@
 /* ----------------------------------------------------------------------------
  * Fonts
  */
-@import url("http://fonts.googleapis.com/css?family=Montserrat:700|Open+Sans:300");
 /* ----------------------------------------------------------------------------
  * Base
  */
@@ -107,7 +106,6 @@ body,
 td,
 textarea,
 input {
-  font-family: Helvetica Neue, Open Sans, sans-serif;
   line-height: 1.6;
   font-size: 13px;
   color: #505050;
@@ -159,9 +157,7 @@ p {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
-.content pre {
-  font-family: Menlo, monospace;
-}
+
 .content ul > li {
   list-style-type: disc;
 }
@@ -206,7 +202,6 @@ p {
   /*color: #9090aa;*/
 }
 .content code {
-  font-family: Menlo, monospace;
   background: #f3f6fb;
   padding: 1px 3px;
   font-size: 0.95em;
@@ -255,7 +250,6 @@ p {
 .content h3 {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  font-family: montserrat;
   padding-bottom: 0;
 }
 .content h1 + p,
@@ -426,7 +420,6 @@ body.no-literate .content pre > code:hover::-webkit-scrollbar-thumb {
 .button {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  font-family: montserrat, sans-serif;
   letter-spacing: -1px;
   font-weight: bold;
   display: inline-block;
@@ -584,7 +577,6 @@ body.no-literate .content pre > code:hover::-webkit-scrollbar-thumb {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   font-weight: bold;
-  font-family: montserrat, sans-serif;
   font-size: 13px;
 }
 .header h1,
@@ -668,7 +660,6 @@ a.big.button {
   border: solid 3px #2badad;
   -webkit-border-radius: 30px;
   border-radius: 30px;
-  font-family: montserrat, sans-serif;
 }
 a.big.button,
 a.big.button:visited {
@@ -695,14 +686,14 @@ a.big.button:hover:visited {
 }
 @media (min-width: 768px) /* Desktop */ {
   .content-root {
-    padding-left: 230px;
+    padding-left: 260px;
   }
   .menubar {
     position: absolute;
     left: 0;
     top: 0;
     bottom: 0;
-    width: 230px;
+    width: 260px;
     border-right: solid 1px #dfe2e7;
   }
   .menubar.fixed {
@@ -753,7 +744,6 @@ a.big.button:hover:visited {
   color: #228a8a;
 }
 .menu a.level-1 {
-  font-family: montserrat, sans-serif;
   text-transform: uppercase;
   font-size: 1.3em;
   font-weight: bold;
@@ -818,7 +808,6 @@ code .comment {
 .large-brief .content > h1:first-child + p,
 .content > p.brief {
   font-size: 1.3em;
-  font-family: Open Sans, sans-serif;
   font-weight: 300;
 }
 .title-area {
