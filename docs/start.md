@@ -679,15 +679,9 @@ Software
 
 Once you've added your SCK to the platform and it's capturing and sending data correctly, you can interact with the platform in several ways. Visualizing the data, downloading the data and interacting with the data through the API.
 
-**Data Visualization**
-
-To visualize the data of your device, you have to sign in into the platform. Once you've signed, you'll be in your dashboard, click on SENSORS tab, click on one of your sensors and click in the button SHOW IN MAP.
-
-Now, at bottom of your browser will appear a panel for visualize your data. You can visualize one by one or multiple together. For this, you can switch between the different sensors data clicking on the icons under the label FILTER. Also, you can change between different periods of time, selecting HOUR, DAY, WEEK... in the SHOW LAST drop-down selector.
-
 **Download Data**
 
-If you are interested in use the data captured by your sensors, you can download all the data for later use. To do this, go to your sensor profile, at the bottom there is a selector under the label DOWNLOAD DATA. You can choose between 3 different formats, CSV, XML and JSON.
+If you are interested in use the data captured by your sensors, you can download all the data for later use. To do this, go to your device page, at the bottom there is a button called *DOWNLOAD DATA*. You will receive an email with a link to download your data on <a href="https://en.wikipedia.org/wiki/Comma-separated_values" target="_blank">CSV</a> format in less than a minute,
 
 **API**
 
