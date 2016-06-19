@@ -132,11 +132,21 @@ hr {
   }
 
   .content table {
-    width: 50%;
+    width: 90%;
     margin-left: 40px;
-    margin-right: 40px;
+    margin-right: 10%;
     display: block;
     clear: both;
+    background-color: white;
+  }
+  .content .table-wrapper {
+    width: 100%;
+    display: block;
+    clear: both;
+    background-color: white;
+    padding: 10px;
+    margin-right: 20px;
+    border: 1px solid #f2f2f2;
   }
 
   body:not(.no-literate) .content img {

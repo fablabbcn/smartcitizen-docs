@@ -657,7 +657,7 @@ Lexer.prototype.token = function(src, top) {
 
       for (i = 0; i < item.align.length; i++) {
         if (/^ *-+: *$/.test(item.align[i])) {
-          item.align[i] = 'right';
+          item.aliwgn[i] = 'right';
         } else if (/^ *:-+: *$/.test(item.align[i])) {
           item.align[i] = 'center';
         } else if (/^ *:-+ *$/.test(item.align[i])) {
@@ -1345,9 +1345,9 @@ Parser.prototype.tok = function() {
       }
       body += '</tbody>\n';
 
-      return '<table>\n'
+      return '<div class="table-wrapper"><table>\n'
         + body
-        + '</table>\n';
+        + '</table></div>\n';
     }
     case 'blockquote_start': {
       var body = '';
