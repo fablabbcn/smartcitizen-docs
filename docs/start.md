@@ -558,7 +558,7 @@ The noise sensor is based on an electret microphone. For the version 1.0 WM-61A 
 
 ![Noise Sensor](img/v1.0/sensor_board_noise_sensor.jpg)
 
-For the version 1.1 POM-3044P-R was used. The amplification step was modified adding a variable gain, allowing us to measure very low and very high signals.
+For the version 1.1 POM-3044P-R was used.
 
 ![Noise Sensor](img/sensor_board_noise_sensor.jpg)
 
