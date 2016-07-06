@@ -1053,7 +1053,8 @@ If you're having problems updating the firmware you can try one of these two opt
 
 If you're still having problems it's may be due to a hardware or software issue, contact us at <a href="mailto:support@smartcitizen.me">support@smartcitizen.me</a>.
 
-#### No MAC address registered
+
+### No MAC address registered
 
 If you're getting this message, the may be due:
 
@@ -1071,3 +1072,79 @@ Depending on the conditions, the battery wires can suffer until its break. We en
 ### Non-Stop Blue LED Blinking
 
 If your blue LEDs are blinking back and forth non-stop, this means your SCK has lost its WiFi connection. Check to make sure your router is still on, and that you're still in range.
+
+### Reinstall the bootloader using another Arduino
+
+In this tutorial we are going to show you how turn an Arduino into AVR ISP to burn the bootloader to your SCK.
+
+*The bootloader is a small piece of code running inside your Smart Citizen Kit allowing it to be programmed and configured over USB. If suddenly you do not see anymore the USB / Serial port when connecting your Kit to a Computer maybe your bootloader crashed and it is time to reinstall it.*
+
+![Select the board](img/arduino-uno-isp-2.jpg)
+
+#### Parts:
+
+- [Arduino Board](https://store.arduino.cc/product/GBX00066)
+- [6 Patch Cables Male Female](http://www.seeedstudio.com/item_detail.html?p_id=1319)
+
+
+#### Software:
+
+- [Arduino IDE](https://www.arduino.cc/en/Main/Software) 
+
+#### Instructions:
+- Open the **ArduinoISP** sketch example in menu `File > Examples > ArduinoISP`.
+- Select the correct board and ports in the menu `Tools > Board >  Port` and `Tools > Board >  Port` that correspond to the board you are using as the programmer (e.g., Arduino UNO).
+- Upload the **ArduinoISP** sketch.
+- Wire your Arduino board to the SCK as shown in the diagram below using the Patch cables.
+
+*Take care the ISCP VCC goes to the 3.3V Pin on the Arduino UNO since the Smart Citizen Kit works at 3.3V*
+
+![Select the board](img/arduino-uno-isp.png)
+
+- Select the  board in the `Tools > Board menu` 
+
+	- For SmartCitizen Kit version 1.0 select *Arduino Leonardo* (ATmega 32U4 at 16Mhz) 
+	- For SmartCitizen Kit version 1.1 select *Arduino LilyPad USB* (ATmega 32U4 at 8Mhz)
+
+- Select in `Tools > Programmer > Arduino as ISP`.
+- Select in `Tools > Burn Bootloader`. This step can take some minutes.
+- *Done!* Please, go back to the on-line setup page in order to install the firmware again.
+
+![Select the board](img/arduino_board.png)
+
+*We know this is not an easy task! For any question contact [support@smartcitizen.me](mailto:support@smartcitizen.me) or ask for help in the [forum](http://forum.smartcitizen.me/).*
+
+### Reinstall the bootloader using the AVRISP MKII
+
+In this tutorial we are going to show you how to program the SCK with the Atmel AVRISP MKII In-System Programmer. This is not a common tool you might have but we suggest you ask your closest [Fab Lab](https://www.fablabs.io/map).
+
+*The bootloader is a small piece of code running inside your Smart Citizen Kit allowing it to be programmed and configured over USB. If suddenly you do not see anymore the USB / Serial port when connecting your Kit to a Computer maybe your bootloader crashed and it is time to reinstall it.*
+
+
+#### Parts:
+
+- [AVRISP mkII](http://www.atmel.com/tools/AVRISPMKII.aspx) 
+
+#### Software:
+
+- [Arduino IDE](https://www.arduino.cc/en/Main/Software)
+
+#### Instructions:
+
+- Connect the AVRISP mkII with the USB cable to the computer. 
+- Connect your Smart Citizen Kit to the computer with the micro-USB cable.
+- Connect the six pins bus cable of the AVRISP mkII to the ISP connector of the SCK Board as shown the picture. 
+
+![Select the board](img/atmel-isp.png)
+
+- Switch on your Smart Citizen Kit, you'll find out a tiny switch in one side.
+- Select the  board in the `Tools > Board menu` 
+	- For SmartCitizen Kit version 1.0 select *Arduino Leonardo* (ATmega 32U4 at 16Mhz) 
+	- For SmartCitizen Kit version 1.1 select *Arduino LilyPad USB* (ATmega 32U4 at 8Mhz)
+- Select in `Tools > Programmer > AVRISP MKII`.
+- Select in `Tools > Burn Bootloader`. This step can take some minutes, the led  AVRISP mkII will blink and after go green.
+- *Done!* Please, go back to the on-line setup page in order to install the firmware again.
+
+*We know this is not an easy task! For any question contact [support@smartcitizen.me](mailto:support@smartcitizen.me) or ask for help in the [forum](http://forum.smartcitizen.me/) .*
+
+
