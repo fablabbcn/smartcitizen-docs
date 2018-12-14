@@ -649,7 +649,8 @@ Due to the ease of the I2C protocol. We’ve included and I2C bus to provide to 
 | *Performance*       |                                                                                                       | Linearity R²<0.0 *                                                                                          | *Under tests*                                                                                                                                                   |
 
 ** * ** [South Coast AQMD]( http://www.aqmd.gov/aq-spec/evaluations#&MainContent_C001_Col00=2) The correlation coefficient (R²) is a statistical parameter indicating how well the performance of each sensor compares to that of a Federal Reference or Federal Equivalent Method (FRM and FEM, respectively) instrument. An R² approaching the value of 1 reflects a near perfect agreement, whereas a value of 0 indicates a complete lack of correlation
-** * ** Internal Smart Citizen Team WIP Evaluation Tests
+
+** * ** Internal Smart Citizen Team WIP Evaluation Tests
 
 ### Enclosures
 
@@ -1008,7 +1009,7 @@ Troubleshooting
 
 ### Add an SSID with two words
 
-If your SSID has more than one word yo have to fill any space with the dollar ($) character.
+If your SSID has more than one word you have to fill any spaces with the dollar ($) character.
 
 ### Serial port already in use
 
