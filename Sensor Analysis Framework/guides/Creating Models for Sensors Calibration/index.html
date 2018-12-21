@@ -1,0 +1,3438 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Smart Citizen Documentation">
+      
+      
+        <link rel="canonical" href="https://docs.smartcitizen.me/Sensor Analysis Framework/guides/Creating Models for Sensors Calibration/">
+      
+      
+        <meta name="author" content="Smart Citizen Team">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../../assets/images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.0.2, mkdocs-material-3.0.3">
+    
+    
+      
+        <title>Creating Models for Sensors Calibration - Smart Citizen Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/application.451f80e5.css">
+      
+        <link rel="stylesheet" href="../../../assets/stylesheets/application-palette.22915126.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#2196f3">
+      
+    
+    
+      <script src="../../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../../assets/fonts/material-icons.css">
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="blue" data-md-color-accent="yelllow">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="../../../#creating-models-for-the-low-cost-sensors-calibration" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Application header -->
+<header class="md-header" data-md-component="header">
+
+  <!-- Top-level navigation -->
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+
+      <!-- Link to home -->
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://docs.smartcitizen.me/"
+            title="Smart Citizen Docs"
+            class="md-header-nav__button md-logo">
+          
+            <img style="margin-top: -5px;" src="../../../assets/images/logo.svg" height="32" />
+          
+        </a>
+      </div>
+
+      <!-- Button to toggle drawer -->
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button"
+            for="__drawer"></label>
+      </div>
+
+      <!-- Header title -->
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title"
+            data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                Smart Citizen Docs
+              </span>
+              <span class="md-header-nav__topic">
+                Creating Models for Sensors Calibration
+              </span>
+            
+          
+        </div>
+      </div>
+
+      <!-- Button to open search dialogue -->
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button"
+                for="__search"></label>
+
+            <!-- Search interface -->
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+
+      <!-- Repository containing source -->
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../../.." title="Home" class="md-tabs__link">
+        Home
+      </a>
+    
+  </li>
+
+      
+        
+      
+        
+      
+        
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../Components/" title="Components" class="md-tabs__link">
+          Components
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../Legacy Hardware/" title="Legacy Hardware" class="md-tabs__link">
+          Legacy Hardware
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../" title="Sensor Analysis Framework" class="md-tabs__link md-tabs__link--active">
+          Sensor Analysis Framework
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../Sensor Platform/" title="Sensor Platform" class="md-tabs__link">
+          Sensor Platform
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://docs.smartcitizen.me/" title="Smart Citizen Docs" class="md-nav__button md-logo">
+      
+        <img src="../../../assets/images/logo.svg" width="48" height="48">
+      
+    </a>
+    Smart Citizen Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item">
+    <a href="../../.." title="Home"
+        class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item">
+    <a href="../../../Smart Citizen Kit/" title="Smart Citizen Kit"
+        class="md-nav__link">
+      Smart Citizen Kit
+    </a>
+  </li>
+
+    
+      
+      
+      <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item">
+    <a href="../../../Smart Citizen Station/" title="Smart Citizen Station"
+        class="md-nav__link">
+      Smart Citizen Station
+    </a>
+  </li>
+
+    
+      
+      
+      <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item">
+    <a href="../../../_FAQ/" title=" FAQ"
+        class="md-nav__link">
+       FAQ
+    </a>
+  </li>
+
+    
+      
+      
+      <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item md-nav__item--nested">
+
+    <!-- Active checkbox expands items contained within nested section -->
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5"
+          type="checkbox" id="nav-5" />
+    
+
+    <!-- Expand active pages -->
+    <label class="md-nav__link" for="nav-5">
+      Components
+    </label>
+    <nav class="md-nav" data-md-component="collapsible"
+        data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Components
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+
+        <!-- Render nested item list -->
+        
+        
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item">
+    <a href="../../../Components/" title="Index"
+        class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item md-nav__item--nested">
+
+    <!-- Active checkbox expands items contained within nested section -->
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-2"
+          type="checkbox" id="nav-5-2" />
+    
+
+    <!-- Expand active pages -->
+    <label class="md-nav__link" for="nav-5-2">
+      Data Board
+    </label>
+    <nav class="md-nav" data-md-component="collapsible"
+        data-md-level="2">
+      <label class="md-nav__title" for="nav-5-2">
+        Data Board
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+
+        <!-- Render nested item list -->
+        
+        
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item">
+    <a href="../../../Components/Data Board/" title="Index"
+        class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+<!-- Currently active page -->
+
+        
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item md-nav__item--nested">
+
+    <!-- Active checkbox expands items contained within nested section -->
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-3"
+          type="checkbox" id="nav-5-3" />
+    
+
+    <!-- Expand active pages -->
+    <label class="md-nav__link" for="nav-5-3">
+      Firmware
+    </label>
+    <nav class="md-nav" data-md-component="collapsible"
+        data-md-level="2">
+      <label class="md-nav__title" for="nav-5-3">
+        Firmware
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+
+        <!-- Render nested item list -->
+        
+        
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item">
+    <a href="../../../Components/Firmware/" title="Index"
+        class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item md-nav__item--nested">
+
+    <!-- Active checkbox expands items contained within nested section -->
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-3-2"
+          type="checkbox" id="nav-5-3-2" />
+    
+
+    <!-- Expand active pages -->
+    <label class="md-nav__link" for="nav-5-3-2">
+      Guides
+    </label>
+    <nav class="md-nav" data-md-component="collapsible"
+        data-md-level="3">
+      <label class="md-nav__title" for="nav-5-3-2">
+        Guides
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+
+        <!-- Render nested item list -->
+        
+        
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item">
+    <a href="../../../Components/Firmware/guides/Debug the firmware/" title="Debug the firmware"
+        class="md-nav__link">
+      Debug the firmware
+    </a>
+  </li>
+
+        
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item">
+    <a href="../../../Components/Firmware/guides/Edit the Firmware/" title="Edit the Firmware"
+        class="md-nav__link">
+      Edit the Firmware
+    </a>
+  </li>
+
+        
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item">
+    <a href="../../../Components/Firmware/guides/Update the firmware/" title="Update the firmware"
+        class="md-nav__link">
+      Update the firmware
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+<!-- Currently active page -->
+
+        
+      </ul>
+    </nav>
+  </li>
+
+<!-- Currently active page -->
+
+        
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item md-nav__item--nested">
+
+    <!-- Active checkbox expands items contained within nested section -->
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-4"
+          type="checkbox" id="nav-5-4" />
+    
+
+    <!-- Expand active pages -->
+    <label class="md-nav__link" for="nav-5-4">
+      Gas Pro Sensor Board
+    </label>
+    <nav class="md-nav" data-md-component="collapsible"
+        data-md-level="2">
+      <label class="md-nav__title" for="nav-5-4">
+        Gas Pro Sensor Board
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+
+        <!-- Render nested item list -->
+        
+        
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item">
+    <a href="../../../Components/Gas Pro Sensor Board/" title="Index"
+        class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item">
+    <a href="../../../Components/Gas Pro Sensor Board/Electrochemical Sensors/" title="Electrochemical Sensors"
+        class="md-nav__link">
+      Electrochemical Sensors
+    </a>
+  </li>
+
+        
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item md-nav__item--nested">
+
+    <!-- Active checkbox expands items contained within nested section -->
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-4-3"
+          type="checkbox" id="nav-5-4-3" />
+    
+
+    <!-- Expand active pages -->
+    <label class="md-nav__link" for="nav-5-4-3">
+      Guides
+    </label>
+    <nav class="md-nav" data-md-component="collapsible"
+        data-md-level="3">
+      <label class="md-nav__title" for="nav-5-4-3">
+        Guides
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+
+        <!-- Render nested item list -->
+        
+        
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item">
+    <a href="../../../Components/Gas Pro Sensor Board/guides/Advanced setup/" title="Advanced setup"
+        class="md-nav__link">
+      Advanced setup
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+<!-- Currently active page -->
+
+        
+      </ul>
+    </nav>
+  </li>
+
+<!-- Currently active page -->
+
+        
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item md-nav__item--nested">
+
+    <!-- Active checkbox expands items contained within nested section -->
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-5"
+          type="checkbox" id="nav-5-5" />
+    
+
+    <!-- Expand active pages -->
+    <label class="md-nav__link" for="nav-5-5">
+      PM Sensor Board
+    </label>
+    <nav class="md-nav" data-md-component="collapsible"
+        data-md-level="2">
+      <label class="md-nav__title" for="nav-5-5">
+        PM Sensor Board
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+
+        <!-- Render nested item list -->
+        
+        
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item">
+    <a href="../../../Components/PM Sensor Board/" title="Index"
+        class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item">
+    <a href="../../../Components/PM Sensor Board/Plantower PMS/" title="Plantower PMS"
+        class="md-nav__link">
+      Plantower PMS
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+<!-- Currently active page -->
+
+        
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item md-nav__item--nested">
+
+    <!-- Active checkbox expands items contained within nested section -->
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-6"
+          type="checkbox" id="nav-5-6" />
+    
+
+    <!-- Expand active pages -->
+    <label class="md-nav__link" for="nav-5-6">
+      Urban Sensor Board
+    </label>
+    <nav class="md-nav" data-md-component="collapsible"
+        data-md-level="2">
+      <label class="md-nav__title" for="nav-5-6">
+        Urban Sensor Board
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+
+        <!-- Render nested item list -->
+        
+        
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item">
+    <a href="../../../Components/Urban Sensor Board/" title="Index"
+        class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item md-nav__item--nested">
+
+    <!-- Active checkbox expands items contained within nested section -->
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-6-2"
+          type="checkbox" id="nav-5-6-2" />
+    
+
+    <!-- Expand active pages -->
+    <label class="md-nav__link" for="nav-5-6-2">
+      Metal Oxide Sensor
+    </label>
+    <nav class="md-nav" data-md-component="collapsible"
+        data-md-level="3">
+      <label class="md-nav__title" for="nav-5-6-2">
+        Metal Oxide Sensor
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+
+        <!-- Render nested item list -->
+        
+        
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item">
+    <a href="../../../Components/Urban Sensor Board/Metal Oxide Sensor/" title="Index"
+        class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item">
+    <a href="../../../Components/Urban Sensor Board/Metal Oxide Sensor/Implementation/" title="Implementation"
+        class="md-nav__link">
+      Implementation
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+<!-- Currently active page -->
+
+        
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item md-nav__item--nested">
+
+    <!-- Active checkbox expands items contained within nested section -->
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-6-3"
+          type="checkbox" id="nav-5-6-3" />
+    
+
+    <!-- Expand active pages -->
+    <label class="md-nav__link" for="nav-5-6-3">
+      Noise Sensor
+    </label>
+    <nav class="md-nav" data-md-component="collapsible"
+        data-md-level="3">
+      <label class="md-nav__title" for="nav-5-6-3">
+        Noise Sensor
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+
+        <!-- Render nested item list -->
+        
+        
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item">
+    <a href="../../../Components/Urban Sensor Board/Noise Sensor/" title="Index"
+        class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item">
+    <a href="../../../Components/Urban Sensor Board/Noise Sensor/Implementation/" title="Implementation"
+        class="md-nav__link">
+      Implementation
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+<!-- Currently active page -->
+
+        
+      </ul>
+    </nav>
+  </li>
+
+<!-- Currently active page -->
+
+        
+      </ul>
+    </nav>
+  </li>
+
+<!-- Currently active page -->
+
+    
+      
+      
+      <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item md-nav__item--nested">
+
+    <!-- Active checkbox expands items contained within nested section -->
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6"
+          type="checkbox" id="nav-6" />
+    
+
+    <!-- Expand active pages -->
+    <label class="md-nav__link" for="nav-6">
+      Legacy Hardware
+    </label>
+    <nav class="md-nav" data-md-component="collapsible"
+        data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Legacy Hardware
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+
+        <!-- Render nested item list -->
+        
+        
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item">
+    <a href="../../../Legacy Hardware/" title="Index"
+        class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item">
+    <a href="../../../Legacy Hardware/Command Line/" title="Command Line"
+        class="md-nav__link">
+      Command Line
+    </a>
+  </li>
+
+        
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item">
+    <a href="../../../Legacy Hardware/Faq/" title="Faq"
+        class="md-nav__link">
+      Faq
+    </a>
+  </li>
+
+        
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item">
+    <a href="../../../Legacy Hardware/Hardware/" title="Hardware"
+        class="md-nav__link">
+      Hardware
+    </a>
+  </li>
+
+        
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item">
+    <a href="../../../Legacy Hardware/Troubleshooting/" title="Troubleshooting"
+        class="md-nav__link">
+      Troubleshooting
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+<!-- Currently active page -->
+
+    
+      
+      
+      <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+  
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+
+    <!-- Active checkbox expands items contained within nested section -->
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7"
+          type="checkbox" id="nav-7" checked />
+    
+
+    <!-- Expand active pages -->
+    <label class="md-nav__link" for="nav-7">
+      Sensor Analysis Framework
+    </label>
+    <nav class="md-nav" data-md-component="collapsible"
+        data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        Sensor Analysis Framework
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+
+        <!-- Render nested item list -->
+        
+        
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item">
+    <a href="../../" title="Index"
+        class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item">
+    <a href="../../Low Cost Sensors Calibration/" title="Low Cost Sensors Calibration"
+        class="md-nav__link">
+      Low Cost Sensors Calibration
+    </a>
+  </li>
+
+        
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+  
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+
+    <!-- Active checkbox expands items contained within nested section -->
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-3"
+          type="checkbox" id="nav-7-3" checked />
+    
+
+    <!-- Expand active pages -->
+    <label class="md-nav__link" for="nav-7-3">
+      Guides
+    </label>
+    <nav class="md-nav" data-md-component="collapsible"
+        data-md-level="2">
+      <label class="md-nav__title" for="nav-7-3">
+        Guides
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+
+        <!-- Render nested item list -->
+        
+        
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+  
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item md-nav__item--active">
+    
+
+    <!-- Active checkbox expands items contained within nested section -->
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc"
+        type="checkbox" id="__toc" />
+
+    <!-- Hack: see partials/toc.html for more information -->
+    
+      
+    
+
+    <!-- Render table of contents, if not empty -->
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Creating Models for Sensors Calibration
+      </label>
+    
+    <a href="./" title="Creating Models for Sensors Calibration"
+        class="md-nav__link md-nav__link--active">
+      Creating Models for Sensors Calibration
+    </a>
+
+    <!-- Show table of contents -->
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ordinary-least-squares-example" title="Ordinary Least Squares example" class="md-nav__link">
+    Ordinary Least Squares example
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#machine-learning-example" title="Machine learning example" class="md-nav__link">
+    Machine learning example
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#model-comparison" title="Model comparison" class="md-nav__link">
+    Model comparison
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#results" title="Results" class="md-nav__link">
+    Results
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#export-the-models" title="Export the models" class="md-nav__link">
+    Export the models
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#load-models-from-disk" title="Load Models from Disk" class="md-nav__link">
+    Load Models from Disk
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" title="References" class="md-nav__link">
+    References
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+<!-- Main navigation item -->
+
+        
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item">
+    <a href="../Install the framework/" title="Install the framework"
+        class="md-nav__link">
+      Install the framework
+    </a>
+  </li>
+
+        
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item">
+    <a href="../Post processing the Stations Data/" title="Post processing the Stations Data"
+        class="md-nav__link">
+      Post processing the Stations Data
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+<!-- Currently active page -->
+
+        
+      </ul>
+    </nav>
+  </li>
+
+<!-- Currently active page -->
+
+    
+      
+      
+      <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item md-nav__item--nested">
+
+    <!-- Active checkbox expands items contained within nested section -->
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8"
+          type="checkbox" id="nav-8" />
+    
+
+    <!-- Expand active pages -->
+    <label class="md-nav__link" for="nav-8">
+      Sensor Platform
+    </label>
+    <nav class="md-nav" data-md-component="collapsible"
+        data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        Sensor Platform
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+
+        <!-- Render nested item list -->
+        
+        
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item">
+    <a href="../../../Sensor Platform/" title="Index"
+        class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item md-nav__item--nested">
+
+    <!-- Active checkbox expands items contained within nested section -->
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-2"
+          type="checkbox" id="nav-8-2" />
+    
+
+    <!-- Expand active pages -->
+    <label class="md-nav__link" for="nav-8-2">
+      Guides
+    </label>
+    <nav class="md-nav" data-md-component="collapsible"
+        data-md-level="2">
+      <label class="md-nav__title" for="nav-8-2">
+        Guides
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+
+        <!-- Render nested item list -->
+        
+        
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item">
+    <a href="../../../Sensor Platform/guides/Downloading the Data/" title="Downloading the Data"
+        class="md-nav__link">
+      Downloading the Data
+    </a>
+  </li>
+
+        
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item">
+    <a href="../../../Sensor Platform/guides/Onboarding Sensors/" title="Onboarding Sensors"
+        class="md-nav__link">
+      Onboarding Sensors
+    </a>
+  </li>
+
+        
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item">
+    <a href="../../../Sensor Platform/guides/Uploading SD Card Data/" title="Uploading SD Card Data"
+        class="md-nav__link">
+      Uploading SD Card Data
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+<!-- Currently active page -->
+
+        
+      </ul>
+    </nav>
+  </li>
+
+<!-- Currently active page -->
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ordinary-least-squares-example" title="Ordinary Least Squares example" class="md-nav__link">
+    Ordinary Least Squares example
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#machine-learning-example" title="Machine learning example" class="md-nav__link">
+    Machine learning example
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#model-comparison" title="Model comparison" class="md-nav__link">
+    Model comparison
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#results" title="Results" class="md-nav__link">
+    Results
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#export-the-models" title="Export the models" class="md-nav__link">
+    Export the models
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#load-models-from-disk" title="Load Models from Disk" class="md-nav__link">
+    Load Models from Disk
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" title="References" class="md-nav__link">
+    References
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="creating-models-for-the-low-cost-sensors-calibration">Creating models for the low cost sensors calibration<a class="headerlink" href="#creating-models-for-the-low-cost-sensors-calibration" title="Permanent link">Link</a></h1>
+<p>In this section, we will work on the development of two models for the MOS sensors in the Smart Smart Citizen Kit. In the Sensor Analysis Framework, we have implemented two different approaches for model calibration:</p>
+<ul>
+<li><strong>Ordinary Least Squares (OLS)</strong>: based on the <a href="http://www.statsmodels.org/stable">statsmodels package</a>, the model is able to input whichever expression referring to the kit's available data and perform OLS regression over the defined training and test data</li>
+<li><strong>Machine Learning (MLP or LSTM)</strong>: based on the <a href="https://keras.io/">keras package</a> using <a href="https://www.tensorflow.org/">tensorflow</a> in the backend. This framework can be used to train larger collections of data, where we want to be, among others:<ul>
+<li>Robust to noise</li>
+<li>Learn non-linear relationships</li>
+<li>Aware of temporal dependence</li>
+</ul>
+</li>
+</ul>
+<h2 id="ordinary-least-squares-example">Ordinary Least Squares example<a class="headerlink" href="#ordinary-least-squares-example" title="Permanent link">Link</a></h2>
+<p>Let's delve first into an OLS example. The framework comes with a very simple interface to develop and interact with the models. By running these two cells we will generate the preliminary tweaks for the dataframes:</p>
+<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">test_utils</span> <span class="kn">import</span> <span class="n">combine_data</span>
+
+<span class="n">name_combined_data</span> <span class="o">=</span> <span class="s1">&#39;COMBINED_DEVICES&#39;</span>
+
+<span class="k">for</span> <span class="n">reading</span> <span class="ow">in</span> <span class="n">readings</span><span class="p">:</span>
+    <span class="c1">## Since we don&#39;t know if there are more or less channels than last time</span>
+    <span class="c1">## (and tbh, I don&#39;t feel like checking), remove the key</span>
+    <span class="n">readings</span><span class="p">[</span><span class="n">reading</span><span class="p">][</span><span class="s1">&#39;devices&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;COMBINED_DEVICES&#39;</span><span class="p">,</span> <span class="bp">None</span><span class="p">)</span>
+    <span class="c1">## And then add it again</span>
+    <span class="n">dataframe</span> <span class="o">=</span> <span class="n">combine_data</span><span class="p">(</span><span class="n">readings</span><span class="p">[</span><span class="n">reading</span><span class="p">][</span><span class="s1">&#39;devices&#39;</span><span class="p">],</span> <span class="bp">True</span><span class="p">)</span>
+    <span class="n">readings</span><span class="p">[</span><span class="n">reading</span><span class="p">][</span><span class="s1">&#39;devices&#39;</span><span class="p">][</span><span class="n">name_combined_data</span><span class="p">]</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+    <span class="n">readings</span><span class="p">[</span><span class="n">reading</span><span class="p">][</span><span class="s1">&#39;devices&#39;</span><span class="p">][</span><span class="n">name_combined_data</span><span class="p">][</span><span class="s1">&#39;data&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+    <span class="n">readings</span><span class="p">[</span><span class="n">reading</span><span class="p">][</span><span class="s1">&#39;devices&#39;</span><span class="p">][</span><span class="n">name_combined_data</span><span class="p">][</span><span class="s1">&#39;data&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">dataframe</span>
+</pre></div>
+
+<p>Output:</p>
+<div class="codehilite"><pre><span></span><span class="n">Dataframe</span> <span class="n">has</span> <span class="n">been</span> <span class="n">combined</span> <span class="k">for</span> <span class="n">model</span> <span class="n">preparation</span>
+</pre></div>
+
+<p>Here we can list all the available channels for our test:</p>
+<div class="codehilite"><pre><span></span><span class="n">test_linear_regression</span> <span class="o">=</span> <span class="s1">&#39;2018-08_INT_STATION_TEST_SUMMER_HOLIDAYS&#39;</span>
+
+<span class="k">for</span> <span class="n">channel</span> <span class="ow">in</span> <span class="n">readings</span><span class="p">[</span><span class="n">test_linear_regression</span><span class="p">][</span><span class="s1">&#39;devices&#39;</span><span class="p">][</span><span class="n">name_combined_data</span><span class="p">][</span><span class="s1">&#39;data&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+    <span class="k">print</span> <span class="n">channel</span>
+</pre></div>
+
+<p>Output:</p>
+<div class="codehilite"><pre><span></span><span class="n">BATT_4748</span>
+<span class="n">CO_AD_BASE_4748</span>
+<span class="n">CO_AD_BASE_filter_4748</span>
+<span class="n">CO_MICS_RAW_4748</span>
+<span class="n">EXT_HUM_4748</span>
+<span class="n">EXT_TEMP_4748</span>
+<span class="n">GB_1A_4748</span>
+<span class="n">GB_1W_4748</span>
+<span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="n">PM_1_4748</span>
+<span class="n">PM_10_4748</span>
+<span class="n">PM_25_4748</span>
+<span class="n">PM_DALLAS_TEMP_4748</span>
+<span class="n">PRESS_4748</span>
+<span class="n">TEMP_4748</span>
+<span class="n">O3_AD_BASE_filter_4748</span>
+</pre></div>
+
+<p>And now, it's time to set up our model. In the cell below we can define the channel and features for the regression. </p>
+<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">linear_regression_utils</span> <span class="kn">import</span> <span class="n">prepData</span><span class="p">,</span> <span class="n">fit_model</span>
+
+<span class="c1">## Select data</span>
+<span class="c1"># Always have an item called &#39;REF&#39;, the rest can be anything</span>
+<span class="n">tuple_features</span> <span class="o">=</span> <span class="p">([</span><span class="s1">&#39;REF&#39;</span><span class="p">,</span> <span class="s1">&#39;CO_AD_BASE_4748&#39;</span><span class="p">],</span>
+                 <span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;CO_MICS_RAW_4748&#39;</span><span class="p">],</span>
+                 <span class="p">[</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;TEMP_4748&#39;</span><span class="p">],</span>
+                 <span class="p">[</span><span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;HUM_4748&#39;</span><span class="p">],</span>
+                 <span class="p">[</span><span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="s1">&#39;PM_25_4748&#39;</span><span class="p">])</span>
+
+<span class="n">formula_expression</span> <span class="o">=</span> <span class="s1">&#39;REF ~ A + np.power(A,2) + B + np.power(B,2) + C + D&#39;</span>
+
+<span class="n">min_date</span> <span class="o">=</span> <span class="s1">&#39;2018-08-31 00:00:00&#39;</span>
+<span class="n">max_date</span> <span class="o">=</span> <span class="s1">&#39;2018-09-06 00:00:00&#39;</span>
+
+<span class="n">ratio_train</span> <span class="o">=</span> <span class="mf">2.</span><span class="o">/</span><span class="mi">3</span> <span class="c1"># Important that this is a float, don&#39;t forget the .</span>
+
+<span class="n">filter_data</span> <span class="o">=</span> <span class="bp">True</span>
+<span class="n">alpha_filter</span> <span class="o">=</span> <span class="mf">0.1</span>
+
+<span class="n">dataframeModel</span> <span class="o">=</span> <span class="n">readings</span><span class="p">[</span><span class="n">test_linear_regression</span><span class="p">][</span><span class="s1">&#39;devices&#39;</span><span class="p">][</span><span class="n">name_combined_data</span><span class="p">][</span><span class="s1">&#39;data&#39;</span><span class="p">]</span>
+
+<span class="n">dataTrain</span><span class="p">,</span> <span class="n">dataTest</span> <span class="o">=</span> <span class="n">prepData</span><span class="p">(</span><span class="n">dataframeModel</span><span class="p">,</span> <span class="n">tuple_features</span><span class="p">,</span> <span class="n">min_date</span><span class="p">,</span> <span class="n">max_date</span><span class="p">,</span> <span class="n">ratio_train</span><span class="p">,</span> <span class="n">filter_data</span><span class="p">,</span> <span class="n">alpha_filter</span><span class="p">)</span>
+<span class="n">model</span><span class="p">,</span> <span class="n">train_rmse</span><span class="p">,</span> <span class="n">test_rmse</span> <span class="o">=</span> <span class="n">fit_model</span><span class="p">(</span><span class="n">formula_expression</span><span class="p">,</span> <span class="n">dataTrain</span><span class="p">,</span> <span class="n">dataTest</span>
+</pre></div>
+
+<p>We have to keep at least the key <code class="codehilite">&#39;REF &#39;</code> within the <code class="codehilite">tuple_features</code>, but the rest can be renamed at will. We can also input whichever <code class="codehilite">formula_expression</code> for the model regression in the following format:</p>
+<div class="codehilite"><pre><span></span><span class="n">formula_expression</span> <span class="o">=</span> <span class="s1">&#39;REF ~ A + np.power(A,2) + B + np.power(B,2) + C + D&#39;</span>
+</pre></div>
+
+<p>Which converts to:</p>
+<div>
+<div class="MathJax_Preview">
+REF = A + A^2 + B + B^2 + C + D + Intercept
+</div>
+<script type="math/tex; mode=display">
+REF = A + A^2 + B + B^2 + C + D + Intercept
+</script>
+</div>
+<p>We can also define the ratio between the train and test dataset and the minimum dates to use within the datasets (globally):</p>
+<div class="codehilite"><pre><span></span><span class="n">min_date</span> <span class="o">=</span> <span class="s1">&#39;2018-08-31 00:00:00&#39;</span>
+<span class="n">max_date</span> <span class="o">=</span> <span class="s1">&#39;2018-09-06 00:00:00&#39;</span>
+
+<span class="n">ratio_train</span> <span class="o">=</span> <span class="mf">2.</span><span class="o">/</span><span class="mi">3</span> <span class="c1"># Important that this is a float, don&#39;t forget the .</span>
+</pre></div>
+
+<p>Finally, if our data is too noisy, we can apply an <code class="codehilite">exponential smoothing</code> function, by setting <code class="codehilite">filter_data = True</code> and the alpha coefficient (0.1, 0.2 is already very filtered:</p>
+<div class="codehilite"><pre><span></span><span class="n">filter_data</span> <span class="o">=</span> <span class="bp">True</span>
+<span class="n">alpha_filter</span> <span class="o">=</span> <span class="mf">0.1</span>
+</pre></div>
+
+<p>If we run this cell, we will perform model calibration, with the following output:</p>
+<div class="codehilite"><pre><span></span>                            <span class="n">OLS</span> <span class="n">Regression</span> <span class="n">Results</span>                            
+<span class="o">==============================================================================</span>
+<span class="n">Dep</span><span class="o">.</span> <span class="n">Variable</span><span class="p">:</span>                    <span class="n">REF</span>   <span class="n">R</span><span class="o">-</span><span class="n">squared</span><span class="p">:</span>                       <span class="mf">0.676</span>
+<span class="n">Model</span><span class="p">:</span>                            <span class="n">OLS</span>   <span class="n">Adj</span><span class="o">.</span> <span class="n">R</span><span class="o">-</span><span class="n">squared</span><span class="p">:</span>                  <span class="mf">0.673</span>
+<span class="n">Method</span><span class="p">:</span>                 <span class="n">Least</span> <span class="n">Squares</span>   <span class="n">F</span><span class="o">-</span><span class="n">statistic</span><span class="p">:</span>                     <span class="mf">197.5</span>
+<span class="n">Date</span><span class="p">:</span>                <span class="n">Thu</span><span class="p">,</span> <span class="mo">06</span> <span class="n">Sep</span> <span class="mi">2018</span>   <span class="n">Prob</span> <span class="p">(</span><span class="n">F</span><span class="o">-</span><span class="n">statistic</span><span class="p">):</span>          <span class="mf">1.87e-135</span>
+<span class="n">Time</span><span class="p">:</span>                        <span class="mi">12</span><span class="p">:</span><span class="mi">25</span><span class="p">:</span><span class="mi">17</span>   <span class="n">Log</span><span class="o">-</span><span class="n">Likelihood</span><span class="p">:</span>                 <span class="mf">1142.9</span>
+<span class="n">No</span><span class="o">.</span> <span class="n">Observations</span><span class="p">:</span>                 <span class="mi">575</span>   <span class="n">AIC</span><span class="p">:</span>                            <span class="o">-</span><span class="mf">2272.</span>
+<span class="n">Df</span> <span class="n">Residuals</span><span class="p">:</span>                     <span class="mi">568</span>   <span class="n">BIC</span><span class="p">:</span>                            <span class="o">-</span><span class="mf">2241.</span>
+<span class="n">Df</span> <span class="n">Model</span><span class="p">:</span>                           <span class="mi">6</span>                                         
+<span class="n">Covariance</span> <span class="n">Type</span><span class="p">:</span>            <span class="n">nonrobust</span>                                         
+<span class="o">==================================================================================</span>
+                     <span class="n">coef</span>    <span class="n">std</span> <span class="n">err</span>          <span class="n">t</span>      <span class="n">P</span><span class="o">&gt;|</span><span class="n">t</span><span class="o">|</span>      <span class="p">[</span><span class="mf">0.025</span>      <span class="mf">0.975</span><span class="p">]</span>
+<span class="o">----------------------------------------------------------------------------------</span>
+<span class="n">Intercept</span>         <span class="o">-</span><span class="mf">3.7042</span>      <span class="mf">0.406</span>     <span class="o">-</span><span class="mf">9.133</span>      <span class="mf">0.000</span>      <span class="o">-</span><span class="mf">4.501</span>      <span class="o">-</span><span class="mf">2.908</span>
+<span class="n">A</span>                  <span class="mf">0.0011</span>      <span class="mf">0.000</span>      <span class="mf">2.953</span>      <span class="mf">0.003</span>       <span class="mf">0.000</span>       <span class="mf">0.002</span>
+<span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">-</span><span class="mf">3.863e-05</span>   <span class="mf">7.03e-06</span>     <span class="o">-</span><span class="mf">5.496</span>      <span class="mf">0.000</span>   <span class="o">-</span><span class="mf">5.24e-05</span>   <span class="o">-</span><span class="mf">2.48e-05</span>
+<span class="n">B</span>                  <span class="mf">0.2336</span>      <span class="mf">0.024</span>      <span class="mf">9.863</span>      <span class="mf">0.000</span>       <span class="mf">0.187</span>       <span class="mf">0.280</span>
+<span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="n">B</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>    <span class="o">-</span><span class="mf">0.0032</span>      <span class="mf">0.000</span>     <span class="o">-</span><span class="mf">9.267</span>      <span class="mf">0.000</span>      <span class="o">-</span><span class="mf">0.004</span>      <span class="o">-</span><span class="mf">0.003</span>
+<span class="n">C</span>                 <span class="o">-</span><span class="mf">0.0014</span>      <span class="mf">0.001</span>     <span class="o">-</span><span class="mf">2.755</span>      <span class="mf">0.006</span>      <span class="o">-</span><span class="mf">0.002</span>      <span class="o">-</span><span class="mf">0.000</span>
+<span class="n">D</span>                  <span class="mf">0.0127</span>      <span class="mf">0.001</span>     <span class="mf">24.378</span>      <span class="mf">0.000</span>       <span class="mf">0.012</span>       <span class="mf">0.014</span>
+<span class="o">==============================================================================</span>
+<span class="n">Omnibus</span><span class="p">:</span>                        <span class="mf">7.316</span>   <span class="n">Durbin</span><span class="o">-</span><span class="n">Watson</span><span class="p">:</span>                   <span class="mf">0.026</span>
+<span class="n">Prob</span><span class="p">(</span><span class="n">Omnibus</span><span class="p">):</span>                  <span class="mf">0.026</span>   <span class="n">Jarque</span><span class="o">-</span><span class="n">Bera</span> <span class="p">(</span><span class="n">JB</span><span class="p">):</span>               <span class="mf">10.245</span>
+<span class="n">Skew</span><span class="p">:</span>                          <span class="o">-</span><span class="mf">0.076</span>   <span class="n">Prob</span><span class="p">(</span><span class="n">JB</span><span class="p">):</span>                      <span class="mf">0.00596</span>
+<span class="n">Kurtosis</span><span class="p">:</span>                       <span class="mf">3.636</span>   <span class="n">Cond</span><span class="o">.</span> <span class="n">No</span><span class="o">.</span>                     <span class="mf">4.29e+05</span>
+<span class="o">==============================================================================</span>
+
+<span class="n">Warnings</span><span class="p">:</span>
+<span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">Standard</span> <span class="n">Errors</span> <span class="n">assume</span> <span class="n">that</span> <span class="n">the</span> <span class="n">covariance</span> <span class="n">matrix</span> <span class="n">of</span> <span class="n">the</span> <span class="n">errors</span> <span class="ow">is</span> <span class="n">correctly</span> <span class="n">specified</span><span class="o">.</span>
+<span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">The</span> <span class="n">condition</span> <span class="n">number</span> <span class="ow">is</span> <span class="n">large</span><span class="p">,</span> <span class="mf">4.29e+05</span><span class="o">.</span> <span class="n">This</span> <span class="n">might</span> <span class="n">indicate</span> <span class="n">that</span> <span class="n">there</span> <span class="n">are</span>
+<span class="n">strong</span> <span class="n">multicollinearity</span> <span class="ow">or</span> <span class="n">other</span> <span class="n">numerical</span> <span class="n">problems</span><span class="o">.</span>
+</pre></div>
+
+<p>This output brings a lot of information. First, we find what the dependent variable is, in our case always <code class="codehilite">&#39;REF&#39;</code>. The type of model used and some general information is shown below that.</p>
+<p>More statistically important information is found in the rest of the output. Some key data:</p>
+<ul>
+<li><em>R-squared and adjusted R-squared</em>: this is our classic correlation coefficient or R<sup>2</sup>. The adjusted one aims to correct the model overfitting by the inclusion of too many variables, and for that introduces a penalty on the number of variables included</li>
+<li>Below, we can find a summary of the <em>model coefficients</em> applied to all the variables and the P&gt;|t| term, which indicates the significance of the term introduced in the model</li>
+<li><em>Model quality diagnostics</em> are also indicated. Kurtosis and skewness are metrics for determining the distribution of the residuals. They indicate how the residuals of the model resemble a normal distribution. Below, we will review more on diagnosis plots. The <a href="https://en.wikipedia.org/wiki/Jarque–Bera_test">Jarque Bera test</a> indicates if the residuals are normally distributed (the null hypothesis is a joint hypothesis of the skewness being zero and the excess kurtosis being zero), and a value of zero indicates that the data is normally distributed. If the Jarque Bera test is valid (in the case above it isn't), the Durbin Watson is applicable in order to check for autocorrelation of the residuals (meaning that the residuals of our model are related among themselves and that we haven't captured some characteristics of our data with the tested model).</li>
+</ul>
+<p>Finally, there is a warning at the bottom indicating that the condition number is large. It suggests we might have multicollinearity problems in our model, which means that some of the independent variables might be correlated among themselves and that they are probably not necessary.</p>
+<p>Our function also depicts the results in a graphical way for us to see the model itself. It will show the training and test datasets (as <code class="codehilite">Reference Train</code> and <code class="codehilite">Reference Test</code> respectively), and the prediction results. The mean and absolute confidence intervals for 95% confidence are also shown:</p>
+<p><img alt="" src="https://i.imgur.com/M9TBeBT.png" /></p>
+<p>Now we can look at some other model quality plots. If we run the cell below, we will obtain an adaptation of the summary plots from <strong>R</strong>:</p>
+<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">linear_regression_utils</span> <span class="kn">import</span> <span class="n">modelRplots</span>
+<span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
+
+<span class="n">modelRplots</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">dataTrain</span><span class="p">,</span> <span class="n">dataTest</span><span class="p">)</span>
+</pre></div>
+
+<p>Let's review the output step by step:</p>
+<ul>
+<li><strong>Residual vs Fitted</strong> and <strong>Scale Location plot</strong>: these plots represents the model <a href="https://en.wikipedia.org/wiki/Heteroscedasticity">heteroscedasticity </a>, which is a representation of the residuals versus the fitted values. This polot is helpful to check if the errors are distributed homogeneously and that we are not penalising high, low, or other values. There is also a red line which represents the average trend of this distribution which, we want it to be horizontal. For more information visit <a href="https://stats.stackexchange.com/questions/76226/interpreting-the-residuals-vs-fitted-values-plot-for-verifying-the-assumptions">here</a> and <a href="https://stats.stackexchange.com/questions/52089/what-does-having-constant-variance-in-a-linear-regression-model-mean/52107#52107">here</a>. Clearly, in this model we are missing something:</li>
+</ul>
+<p><img alt="" src="https://i.imgur.com/QR2Ya4r.png" /></p>
+<ul>
+<li>
+<p><strong>Normal QQ</strong>: the qq-plot is a representation of the kurtosis and skewness of the residuals distribution. If the data were well described by a normal distribution, the values should be about the same, i.e.: on the diagonal (red line). For example, in our case the model presents a deviation on both tails, indicating skewness. In general, a simple rubric to interpret a qq-plot is that if a given tail twists off counterclockwise from the reference line, there is more data in that tail of your distribution than in a theoretical normal, and if a tail twists off clockwise there is less data in that tail of your distribution than in a theoretical normal. In other words:</p>
+<ul>
+<li>if both tails twist counterclockwise we have heavy tails (leptokurtosis),</li>
+<li>if both tails twist clockwise, we have light tails (platykurtosis),</li>
+<li>if the right tail twists counterclockwise and the left tail twists clockwise, we have right skew</li>
+<li>if the left tail twists counterclockwise and the right tail twists clockwise, we have left skew</li>
+</ul>
+</li>
+</ul>
+<div style="text-align:center">
+<img src ="https://i.imgur.com/4ldXI80.png" alt="QQ-plot" class="cover"/>
+</div>
+
+<ul>
+<li>
+<p><strong>Residuals vs Leverage</strong>: this plot is probably the most complex of them all. It shows how much leverage one single point has on the whole regression. It can be interpreted as how the average line that passes through all the data (that we are calculating with the OLS) can be modified by 'far' points in the distribution, for example, outliers. This leverage can be seen as how much a single point is able to pull down or up the average line. One way to think about whether or not the results are driven by a given data point is to calculate how far the predicted values for your data would move if your model were fit without the data point in question. This calculated total distance is called Cook's distance. We can have four cases (more information from source, <a href="https://stats.stackexchange.com/questions/58141/interpreting-plot-lm#65864">here</a>)</p>
+<ul>
+<li>everything is fine (the best)</li>
+<li>high-leverage, but low-standardized residual point</li>
+<li>low-leverage, but high-standardized residual point</li>
+<li>high-leverage, high-standardized residual point (the worst)</li>
+</ul>
+</li>
+</ul>
+<div style="text-align:center">
+<img src ="https://i.imgur.com/BXsS6tE.png" alt="Cook Distance Plot" class="cover"/>
+</div>
+
+<p>In this case, we see that our model has some points with higher leverage but low residuals (probably not too bad) and that the higher residuals are found with low leverage, which means that our model is safe to outliers. If we run this function without the filtering, some outliers will be present and the plot turns into:</p>
+<div style="text-align:center">
+<img src ="https://i.imgur.com/NQLA4lw.png" alt="Cook Distance Plot" class="cover"/>
+</div>
+
+<h2 id="machine-learning-example">Machine learning example<a class="headerlink" href="#machine-learning-example" title="Permanent link">Link</a></h2>
+<p>As we have seen in the <a href="https://docs.iscape.smartcitizen.me/Sensor%20Analysis%20Framework/Low%20Cost%20Sensors%20Calibration/">the calibration section</a>, machine learning algorithms promise a better representation of the sensor's data, being able to learn robust non-linear models and sequential dependencies. For that reason, we have implemented an easy to use interface based on <a href="https://keras.io/">keras</a> with <a href="https://www.tensorflow.org/">Tensorflow</a> backend, in order to train sequential models <sup id="fnref:third"><a class="footnote-ref" href="#fn:third" rel="footnote">3</a></sup>.</p>
+<p>The workflow for a supervised learning algorithm reads as follows:</p>
+<ul>
+<li>Reframe the data as a supervised learning algorithm and split into training and test dataframe. More information can be found <a href="https://machinelearningmastery.com/convert-time-series-supervised-learning-problem-python/">here</a></li>
+<li>Define Model and fit for training dataset</li>
+<li>Evaluate test dataframe and extract metrics</li>
+</ul>
+<p>Let's go step by step. In order to reframe the data as a supervised learning algorithm, we have created a function called <code class="codehilite">prep_dataframe_ML</code> which is the only one function we'll have to interact with:</p>
+<div class="codehilite"><pre><span></span><span class="c1"># Combine all data in one dataframe</span>
+<span class="kn">from</span> <span class="nn">ml_utils</span> <span class="kn">import</span> <span class="n">prep_dataframe_ML</span>
+
+<span class="c1"># Always have an item called &#39;REF&#39;, the rest can be anything</span>
+<span class="n">tuple_features</span> <span class="o">=</span> <span class="p">([</span><span class="s1">&#39;REF&#39;</span><span class="p">,</span> <span class="s1">&#39;CO_AD_BASE_STATION_CASE&#39;</span><span class="p">],</span>
+                 <span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;CO_MICS_RAW_STATION_CASE&#39;</span><span class="p">],</span>
+                 <span class="p">[</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;TEMP_STATION_CASE&#39;</span><span class="p">],</span>
+                 <span class="p">[</span><span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;HUM_STATION_CASE&#39;</span><span class="p">],</span>
+                 <span class="p">[</span><span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="s1">&#39;PM_25_STATION_CASE&#39;</span><span class="p">])</span>
+
+<span class="n">model_name</span> <span class="o">=</span> <span class="s1">&#39;LSTM NO2&#39;</span>
+
+<span class="n">ratio_train</span> <span class="o">=</span> <span class="mf">3.</span><span class="o">/</span><span class="mi">4</span> <span class="c1"># Important that this is a float, don&#39;t forget the .</span>
+<span class="n">alpha_filter</span> <span class="o">=</span> <span class="mf">0.9</span> <span class="c1"># 1 means no filtering</span>
+
+<span class="c1"># Number of lags for the model</span>
+<span class="n">n_lags</span> <span class="o">=</span> <span class="mi">1</span>
+
+<span class="n">dataframeModel</span> <span class="o">=</span> <span class="n">readings</span><span class="p">[</span><span class="n">test_model</span><span class="p">][</span><span class="s1">&#39;devices&#39;</span><span class="p">][</span><span class="n">name_combined_data</span><span class="p">][</span><span class="s1">&#39;data&#39;</span><span class="p">]</span>
+
+<span class="n">index</span><span class="p">,</span> <span class="n">train_X</span><span class="p">,</span> <span class="n">train_y</span><span class="p">,</span> <span class="n">test_X</span><span class="p">,</span> <span class="n">test_y</span><span class="p">,</span> <span class="n">scaler</span><span class="p">,</span> <span class="n">n_train_periods</span> <span class="o">=</span> <span class="n">prep_dataframe_ML</span><span class="p">(</span><span class="n">dataframeModel</span><span class="p">,</span> <span class="n">min_date</span><span class="p">,</span> <span class="n">max_date</span><span class="p">,</span> <span class="n">tuple_features</span><span class="p">,</span> <span class="n">n_lags</span><span class="p">,</span> <span class="n">ratio_train</span><span class="p">,</span> <span class="n">alpha_filter</span><span class="p">)</span>
+</pre></div>
+
+<p>Output:</p>
+<div class="codehilite"><pre><span></span><span class="n">DataFrame</span> <span class="n">has</span> <span class="n">been</span> <span class="n">reframed</span> <span class="ow">and</span> <span class="n">prepared</span> <span class="k">for</span> <span class="n">supervised</span> <span class="n">learning</span>
+<span class="n">Reference</span> <span class="ow">is</span><span class="p">:</span> <span class="n">CO_AD_BASE_STATION_CASE</span>
+<span class="n">Features</span> <span class="n">are</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;CO_MICS_RAW_STATION_CASE&#39;</span><span class="p">,</span> <span class="s1">&#39;TEMP_STATION_CASE&#39;</span><span class="p">,</span> <span class="s1">&#39;HUM_STATION_CASE&#39;</span><span class="p">,</span> <span class="s1">&#39;PM_25_STATION_CASE&#39;</span><span class="p">]</span>
+<span class="n">Traning</span> <span class="n">X</span> <span class="n">Shape</span> <span class="p">(</span><span class="mi">1508</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="n">Training</span> <span class="n">Y</span> <span class="n">Shape</span> <span class="p">(</span><span class="mi">1508</span><span class="p">,),</span> <span class="n">Test</span> <span class="n">X</span> <span class="n">Shape</span> <span class="p">(</span><span class="mi">501</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="n">Test</span> <span class="n">Y</span> <span class="n">Shape</span> <span class="p">(</span><span class="mi">501</span><span class="p">,)</span>
+</pre></div>
+
+<p>Now, we can fit our model. The main function is <code class="codehilite">fit_model_ML</code> and currently implements a simple LSTM network. This network can be redefined easily by modifying the underlying function.</p>
+<div class="codehilite"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">fit_model_ML</span><span class="p">(</span><span class="n">train_X</span><span class="p">,</span> <span class="n">train_y</span><span class="p">,</span> <span class="n">test_X</span><span class="p">,</span> <span class="n">test_y</span><span class="p">,</span> <span class="n">epochs</span> <span class="o">=</span> <span class="mi">50</span><span class="p">,</span> <span class="n">batch_size</span> <span class="o">=</span> <span class="mi">72</span><span class="p">,</span> <span class="n">verbose</span> <span class="o">=</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+
+<div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">fit_model_ML</span><span class="p">(</span><span class="n">train_X</span><span class="p">,</span> <span class="n">train_y</span><span class="p">,</span> <span class="n">test_X</span><span class="p">,</span> <span class="n">test_y</span><span class="p">,</span> <span class="n">epochs</span> <span class="o">=</span> <span class="mi">50</span><span class="p">,</span> <span class="n">batch_size</span> <span class="o">=</span> <span class="mi">72</span><span class="p">,</span> <span class="n">verbose</span> <span class="o">=</span> <span class="mi">2</span><span class="p">):</span>
+
+    <span class="n">model</span> <span class="o">=</span> <span class="n">Sequential</span><span class="p">()</span>
+    <span class="n">layers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">50</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+    <span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">LSTM</span><span class="p">(</span><span class="n">layers</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">return_sequences</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">input_shape</span><span class="o">=</span><span class="p">(</span><span class="n">train_X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">train_X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">2</span><span class="p">])))</span>
+    <span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Dropout</span><span class="p">(</span><span class="mf">0.2</span><span class="p">))</span>
+    <span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">LSTM</span><span class="p">(</span><span class="n">layers</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">return_sequences</span><span class="o">=</span><span class="bp">False</span><span class="p">))</span>
+    <span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Dropout</span><span class="p">(</span><span class="mf">0.2</span><span class="p">))</span>
+    <span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Dense</span><span class="p">(</span><span class="n">output_dim</span><span class="o">=</span><span class="n">layers</span><span class="p">[</span><span class="mi">2</span><span class="p">]))</span>
+    <span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Activation</span><span class="p">(</span><span class="s2">&quot;linear&quot;</span><span class="p">))</span>
+    <span class="n">model</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">loss</span><span class="o">=</span><span class="s1">&#39;mse&#39;</span><span class="p">,</span> <span class="n">optimizer</span><span class="o">=</span><span class="s1">&#39;rmsprop&#39;</span><span class="p">)</span>
+
+    <span class="c1"># fit network</span>
+    <span class="n">history</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">train_X</span><span class="p">,</span> <span class="n">train_y</span><span class="p">,</span> <span class="n">epochs</span><span class="o">=</span><span class="n">epochs</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="n">batch_size</span><span class="p">,</span> <span class="n">validation_data</span><span class="o">=</span><span class="p">(</span><span class="n">test_X</span><span class="p">,</span> <span class="n">test_y</span><span class="p">),</span> <span class="n">verbose</span><span class="o">=</span><span class="n">verbose</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+    <span class="c1"># plot history</span>
+    <span class="n">fig</span> <span class="o">=</span> <span class="n">plot</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
+    <span class="n">plot</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">history</span><span class="o">.</span><span class="n">history</span><span class="p">[</span><span class="s1">&#39;loss&#39;</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;train&#39;</span><span class="p">)</span>
+    <span class="n">plot</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">history</span><span class="o">.</span><span class="n">history</span><span class="p">[</span><span class="s1">&#39;val_loss&#39;</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;test&#39;</span><span class="p">)</span>
+    <span class="n">plot</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Epochs (-)&#39;</span><span class="p">)</span>
+    <span class="n">plot</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Loss (-)&#39;</span><span class="p">)</span>
+    <span class="n">plot</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Model Convergence&#39;</span><span class="p">)</span>
+    <span class="n">plot</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;best&#39;</span><span class="p">)</span>
+    <span class="n">plot</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+    <span class="k">return</span> <span class="n">model</span>
+</pre></div>
+
+<p>This function will return the model and it's learning outcomes:</p>
+<div class="codehilite"><pre><span></span><span class="n">Train</span> <span class="n">on</span> <span class="mi">1508</span> <span class="n">samples</span><span class="p">,</span> <span class="n">validate</span> <span class="n">on</span> <span class="mi">501</span> <span class="n">samples</span>
+<span class="n">Epoch</span> <span class="mi">1</span><span class="o">/</span><span class="mi">50</span>
+ <span class="o">-</span> <span class="mi">1</span><span class="n">s</span> <span class="o">-</span> <span class="n">loss</span><span class="p">:</span> <span class="mf">0.0500</span> <span class="o">-</span> <span class="n">val_loss</span><span class="p">:</span> <span class="mf">0.0051</span>
+<span class="n">Epoch</span> <span class="mi">2</span><span class="o">/</span><span class="mi">50</span>
+ <span class="o">-</span> <span class="mi">0</span><span class="n">s</span> <span class="o">-</span> <span class="n">loss</span><span class="p">:</span> <span class="mf">0.0200</span> <span class="o">-</span> <span class="n">val_loss</span><span class="p">:</span> <span class="mf">0.0058</span>
+<span class="n">Epoch</span> <span class="mi">3</span><span class="o">/</span><span class="mi">50</span>
+ <span class="o">-</span> <span class="mi">0</span><span class="n">s</span> <span class="o">-</span> <span class="n">loss</span><span class="p">:</span> <span class="mf">0.0158</span> <span class="o">-</span> <span class="n">val_loss</span><span class="p">:</span> <span class="mf">0.0052</span>
+<span class="o">...</span>
+</pre></div>
+
+<p><img alt="" src="https://i.imgur.com/5QoPq3n.png" /></p>
+<p>Then, we can evaluate the model and plot it's results:</p>
+<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">ml_utils</span> <span class="kn">import</span> <span class="n">predict_ML</span>
+<span class="kn">from</span> <span class="nn">signal_utils</span> <span class="kn">import</span> <span class="n">metrics</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plot</span>
+<span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
+
+<span class="n">inv_y_train</span><span class="p">,</span> <span class="n">inv_yhat_train</span> <span class="o">=</span> <span class="n">predict_ML</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">train_X</span><span class="p">,</span> <span class="n">train_y</span><span class="p">,</span> <span class="n">n_lags</span><span class="p">,</span> <span class="n">scaler</span><span class="p">)</span>
+<span class="n">inv_y_test</span><span class="p">,</span> <span class="n">inv_yhat_test</span> <span class="o">=</span> <span class="n">predict_ML</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">test_X</span><span class="p">,</span> <span class="n">test_y</span><span class="p">,</span> <span class="n">n_lags</span><span class="p">,</span> <span class="n">scaler</span><span class="p">)</span>
+</pre></div>
+
+<p><img alt="" src="https://i.imgur.com/v1drQ74.png" /></p>
+<h2 id="model-comparison">Model comparison<a class="headerlink" href="#model-comparison" title="Permanent link">Link</a></h2>
+<p>Here is a visual comparison of both models:</p>
+<div class="codehilite"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">plot</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+<span class="c1"># Actual data</span>
+<span class="n">plot</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">index</span><span class="p">[:</span><span class="n">n_train_periods</span><span class="p">],</span> <span class="n">inv_y_train</span><span class="p">,</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;Reference Train&#39;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.3</span><span class="p">)</span>
+<span class="n">plot</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">index</span><span class="p">[</span><span class="n">n_train_periods</span><span class="o">+</span><span class="n">n_lags</span><span class="p">:],</span> <span class="n">inv_y_test</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;Reference Test&#39;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.3</span><span class="p">)</span>
+
+<span class="c1"># Fitted Values for Training</span>
+<span class="n">plot</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">index</span><span class="p">[:</span><span class="n">n_train_periods</span><span class="p">],</span> <span class="n">inv_yhat_train</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;ML Prediction Train&#39;</span><span class="p">)</span>
+<span class="n">plot</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">index</span><span class="p">[</span><span class="n">n_train_periods</span><span class="o">+</span><span class="n">n_lags</span><span class="p">:],</span> <span class="n">inv_yhat_test</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;ML Prediction Test&#39;</span><span class="p">)</span>
+
+<span class="c1"># OLS</span>
+<span class="n">plot</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">dataTrain</span><span class="p">[</span><span class="s1">&#39;index&#39;</span><span class="p">],</span> <span class="n">predictionTrain</span><span class="p">,</span> <span class="s1">&#39;g&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;OLS Prediction Train&#39;</span><span class="p">)</span>
+<span class="n">plot</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">dataTest</span><span class="p">[</span><span class="s1">&#39;index&#39;</span><span class="p">],</span> <span class="n">predictionTest</span><span class="p">,</span> <span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;OLS Prediction Test&#39;</span><span class="p">)</span>
+
+<span class="n">plot</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span> <span class="o">=</span> <span class="s1">&#39;best&#39;</span><span class="p">)</span>
+<span class="n">plot</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;CO (ppm)&#39;</span><span class="p">)</span>
+<span class="n">plot</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Date (-)&#39;</span><span class="p">)</span>
+</pre></div>
+
+<p>Output:</p>
+<p><img alt="" src="https://i.imgur.com/56eVx5P.png" /></p>
+<p>It is very difficult though, to know which one is performing better. Let's then evaluate and compare our models. In order to evaluate it's metrics, we will be using the following principles<sup id="fnref:first"><a class="footnote-ref" href="#fn:first" rel="footnote">1</a></sup><sup id="fnref:second"><a class="footnote-ref" href="#fn:second" rel="footnote">2</a></sup>:</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>In all of the expressions below, the letter <em>m</em> indicates the model field, <em>r</em> indicates the reference field. Overbar is average and <span><span class="MathJax_Preview">\sigma</span><script type="math/tex">\sigma</script></span> is the standard deviation.</p>
+</div>
+<p><strong>Linear correlation Coefficient</strong>
+A measure of the agreement between two signals:</p>
+<div>
+<div class="MathJax_Preview">
+R = {{1 \over N} \sum_{i=0}^n (m_n-\overline m)( r_n-\overline r ) \over \sigma_m\sigma_r}
+</div>
+<script type="math/tex; mode=display">
+R = {{1 \over N} \sum_{i=0}^n (m_n-\overline m)( r_n-\overline r ) \over \sigma_m\sigma_r}
+</script>
+</div>
+<p>The correlation coefficient is bounded by the range <span><span class="MathJax_Preview">-1 \le R \le 1</span><script type="math/tex">-1 \le R \le 1</script></span>. However, it is difficult to discern information about the differences in amplitude between two signals from R alone.</p>
+<p><strong>Normalized standard deviation</strong>
+A measure of the differences in amplitude between two signals:
+$$
+\sigma * = {\sigma_m \over \sigma_r}
+$$</p>
+<p><strong><em>unbiased</em> Root-Mean-Square Difference</strong>
+A measure of how close the modelled points fall to teach other:</p>
+<div>
+<div class="MathJax_Preview">
+RMSD' = \Bigl( {1 \over N} \sum_{n=1}^N [(m_n - \overline m)-(r_n - \overline r)]^2  \Bigr)^{0.5}
+</div>
+<script type="math/tex; mode=display">
+RMSD' = \Bigl( {1 \over N} \sum_{n=1}^N [(m_n - \overline m)-(r_n - \overline r)]^2  \Bigr)^{0.5}
+</script>
+</div>
+<p><strong>Potential Bias</strong>
+Difference between the means of two fields:
+$$
+B = \overline m - \overline r
+$$
+<strong>Total RMSD</strong>
+A measure of the average magnitude of difference:
+$$
+RMSD = \Bigl( {1 \over N} \sum_{n=1}^N (m_n - r_n)^2  \Bigr)^{0.5}
+$$</p>
+<p>In other words, the unbiased RMSD (RMSD') is equal to the total RMSD if there is no bias between the model and the reference fields (i.e. B = 0). The relationship between both reads:</p>
+<div>
+<div class="MathJax_Preview">
+RMSD^2 = B^2 + RMSD'^2
+</div>
+<script type="math/tex; mode=display">
+RMSD^2 = B^2 + RMSD'^2
+</script>
+</div>
+<p>In contrast, the unbiased RMSD may be conceptualized as an overall measure of the agreement between the aplitude (<span><span class="MathJax_Preview">\sigma</span><script type="math/tex">\sigma</script></span>) and phase (<span><span class="MathJax_Preview">\phi</span><script type="math/tex">\phi</script></span>) of two temporal patterns. For this reason, the correlation coefficient (<span><span class="MathJax_Preview">R</span><script type="math/tex">R</script></span>), normalised standard deviation (<span><span class="MathJax_Preview">\sigma*</span><script type="math/tex">\sigma*</script></span>), and unbiased RMSD are all referred to as <strong>patern statistics</strong>, related to one another by:</p>
+<div>
+<div class="MathJax_Preview">
+RMSD'^2 = \sigma_r^2 + \sigma_m^2 - 2\sigma_r\sigma_mR
+</div>
+<script type="math/tex; mode=display">
+RMSD'^2 = \sigma_r^2 + \sigma_m^2 - 2\sigma_r\sigma_mR
+</script>
+</div>
+<p><strong>Normalized and unbiased RMSD</strong>
+If we recast in standard deviation normalized units (indicated by the asterisk) it becomes:</p>
+<div>
+<div class="MathJax_Preview">
+RMSD'^* = \sqrt { 1 + \sigma*^2 - 2\sigma*R}
+</div>
+<script type="math/tex; mode=display">
+RMSD'^* = \sqrt { 1 + \sigma*^2 - 2\sigma*R}
+</script>
+</div>
+<p><strong>NB</strong>: the minimum of this function occurrs when <span><span class="MathJax_Preview">\sigma* = R</span><script type="math/tex">\sigma* = R</script></span>.</p>
+<p><strong>Normalized bias</strong>
+Gives information about the mean difference but normalized by the <span><span class="MathJax_Preview">\sigma*</span><script type="math/tex">\sigma*</script></span>
+$$
+B* = {\overline m - \overline r \over \sigma_r}
+$$</p>
+<p><strong>Target diagrams</strong>
+The target diagram is a plot that provides summary information about the <strong>pattern statistics as well as the bias</strong> thus yielding an overview of their respective contributions to the total RMSD. In a simple Cartesian coordinate system, the unbiased RMSD may serve as the X-axis and the bias may serve as the Y-axis. The distance between the origin and the model versus observation statistics (any point, s, within the X,Y Cartesian space) is then equal to the total RMSD. If all is normalized by the <span><span class="MathJax_Preview">\sigma_r</span><script type="math/tex">\sigma_r</script></span>, the distance from the origin is again the <em>standard deviation normalized total RMSD</em>:<sup id="fnref2:first"><a class="footnote-ref" href="#fn:first" rel="footnote">1</a></sup></p>
+<div>
+<div class="MathJax_Preview">
+RMSD^{*2} = B^{*2}+RMSD^{*'2}
+</div>
+<script type="math/tex; mode=display">
+RMSD^{*2} = B^{*2}+RMSD^{*'2}
+</script>
+</div>
+<p>The resulting target diagram then provides information about:</p>
+<ul>
+<li>whether the <span><span class="MathJax_Preview">\sigma_m</span><script type="math/tex">\sigma_m</script></span> is larger or smaller thann the <span><span class="MathJax_Preview">\sigma_r</span><script type="math/tex">\sigma_r</script></span></li>
+<li>whether there is a positive or negative bias</li>
+</ul>
+<div style="text-align:center">
+<img src ="https://i.imgur.com/x8NY4kD.png">
+</div>
+
+<p><em>Image Source: Jolliff et al. <sup id="fnref3:first"><a class="footnote-ref" href="#fn:first" rel="footnote">1</a></sup></em></p>
+<p>Any point greater than RMSD*=1 is to be considered a poor performer since it doesn't offer improvement over the time series average.</p>
+<p>Interestingly, the target diagram has no information about the correlation coefficient R, but some can be inferred, knowing that all the points within the RMSD* &lt;1 are positively correlated (R&gt;0), although, in <sup id="fnref4:first"><a class="footnote-ref" href="#fn:first" rel="footnote">1</a></sup> it is shown that a circle marker with radius <span><span class="MathJax_Preview">M_{R1}</span><script type="math/tex">M_{R1}</script></span>, means that all the points between that marker and the origin have a R coefficient larger than R1, where:</p>
+<div>
+<div class="MathJax_Preview">
+M_{R1} = min(RMSD*') = \sqrt {1+R1^2-2R1^2}
+</div>
+<script type="math/tex; mode=display">
+M_{R1} = min(RMSD*') = \sqrt {1+R1^2-2R1^2}
+</script>
+</div>
+<h2 id="results">Results<a class="headerlink" href="#results" title="Permanent link">Link</a></h2>
+<p>Let's now compare both models. If we execute this line, we will retrieve all model metrics:</p>
+<div class="codehilite"><pre><span></span><span class="n">metrics_model_train</span> <span class="o">=</span> <span class="n">metrics</span><span class="p">(</span><span class="n">inv_y_train</span><span class="p">,</span> <span class="n">inv_yhat_train</span><span class="p">)</span>
+<span class="n">metrics_model_test</span> <span class="o">=</span> <span class="n">metrics</span><span class="p">(</span><span class="n">inv_y_test</span><span class="p">,</span> <span class="n">inv_yhat_test</span><span class="p">)</span>
+
+<span class="c1">## Metrics Train</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\t\t</span><span class="s1"> Train </span><span class="se">\t\t</span><span class="s1"> Test&#39;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">metrics_model_train</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+    <span class="k">print</span> <span class="p">(</span><span class="s1">&#39;</span><span class="si">% s</span><span class="s1">: </span><span class="se">\t</span><span class="s1"> </span><span class="si">%.5f</span><span class="s1"> </span><span class="se">\t</span><span class="s1"> </span><span class="si">%.5f</span><span class="s1"> &#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">metrics_model_train</span><span class="p">[</span><span class="n">item</span><span class="p">],</span> <span class="n">metrics_model_test</span><span class="p">[</span><span class="n">item</span><span class="p">]))</span>
+</pre></div>
+
+<p>Output:</p>
+<div class="codehilite"><pre><span></span>             <span class="n">Train</span>       <span class="n">Test</span>
+<span class="n">avg_ref</span><span class="p">:</span>         <span class="mf">0.65426</span>     <span class="mf">0.53583</span> 
+<span class="n">sig_est</span><span class="p">:</span>         <span class="mf">0.08412</span>     <span class="mf">0.03160</span> 
+<span class="n">RMSD</span><span class="p">:</span>            <span class="mf">0.08439</span>     <span class="mf">0.05511</span> 
+<span class="n">avg_est</span><span class="p">:</span>         <span class="mf">0.61639</span>     <span class="mf">0.53135</span> 
+<span class="n">sigma_norm</span><span class="p">:</span>          <span class="mf">0.67749</span>     <span class="mf">0.50032</span> 
+<span class="n">sign_sigma</span><span class="p">:</span>          <span class="o">-</span><span class="mf">1.00000</span>    <span class="o">-</span><span class="mf">1.00000</span> 
+<span class="n">sig_ref</span><span class="p">:</span>         <span class="mf">0.12416</span>     <span class="mf">0.06317</span> 
+<span class="n">bias</span><span class="p">:</span>            <span class="o">-</span><span class="mf">0.03787</span>    <span class="o">-</span><span class="mf">0.00448</span> 
+<span class="n">RMSD_norm_unb</span><span class="p">:</span>       <span class="mf">0.68200</span>     <span class="mf">0.87258</span> 
+<span class="n">rsquared</span><span class="p">:</span>        <span class="mf">0.53801</span>     <span class="mf">0.23874</span> 
+<span class="n">normalised_bias</span><span class="p">:</span>     <span class="o">-</span><span class="mf">0.30502</span>    <span class="o">-</span><span class="mf">0.07093</span>
+</pre></div>
+
+<p>And finally, we can compare both models, training and test dataframe with the function:</p>
+<div class="codehilite"><pre><span></span><span class="n">targetDiagram</span><span class="p">(</span><span class="n">_dataframe</span><span class="p">,</span> <span class="n">_plot_train</span><span class="p">)</span>
+</pre></div>
+
+<p>Output:</p>
+<p><img alt="" src="https://i.imgur.com/PBuBOpw.png" /></p>
+<p>Here, every point that falls inside the yellow circle, will have an R<sup>2</sup> over 0.7, and so will be the red and green for R<sup>2</sup> over 0.5 and 0.9 respectively. We see that only one of our models performs well in that sense, which is the training dataset of the OLS. However, this dataset performs pretty badly in the test dataset, being the LSTM options much better. This target diagram offers information about how the hyperparameters affect our networks. For instance, increasing the training epochs from 100 to 200 does not affect greatly on model performance, but the effect of filtering the data beforehand to reduce the noise shows a much better model performance in both, training and test dataframe.</p>
+<h2 id="export-the-models">Export the models<a class="headerlink" href="#export-the-models" title="Permanent link">Link</a></h2>
+<p>Let's now assume that we are happy with our models. Depending on the model we have developed (OLS or ML ), we follow different approaches for the export:</p>
+<p><strong><em>Machine Learning Model</em></strong></p>
+<p>We will use <code class="codehilite">joblib</code> to save the model metrics and parameters. The <code class="codehilite">keras</code> model will be saved with the <code class="codehilite">to_json</code> property of the <code class="codehilite">model</code> and the weights in an <code class="codehilite">h5</code> format with the <code class="codehilite">save_weights</code>ght:</p>
+<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">os.path</span> <span class="kn">import</span> <span class="n">join</span>
+<span class="kn">from</span> <span class="nn">sklearn.externals</span> <span class="kn">import</span> <span class="n">joblib</span>
+
+<span class="n">modelDirML</span> <span class="o">=</span> <span class="s1">&#39;/path/to/modelDir&#39;</span>
+<span class="n">filenameML</span> <span class="o">=</span> <span class="n">join</span><span class="p">(</span><span class="n">modelDirML</span><span class="p">,</span> <span class="n">model_name_ML</span><span class="p">)</span>
+
+<span class="c1"># Save everything</span>
+<span class="n">joblib</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">dictModel</span><span class="p">[</span><span class="n">model_name_ML</span><span class="p">][</span><span class="s1">&#39;metrics&#39;</span><span class="p">],</span> <span class="n">filenameML</span> <span class="o">+</span> <span class="s1">&#39;_metrics.sav&#39;</span><span class="p">)</span>
+<span class="n">joblib</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">dictModel</span><span class="p">[</span><span class="n">model_name_ML</span><span class="p">][</span><span class="s1">&#39;parameters&#39;</span><span class="p">],</span> <span class="n">filenameML</span> <span class="o">+</span> <span class="s1">&#39;_parameters.sav&#39;</span><span class="p">)</span>
+<span class="n">model_json</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">to_json</span><span class="p">()</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filenameML</span> <span class="o">+</span> <span class="s2">&quot;_model.json&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">json_file</span><span class="p">:</span>
+    <span class="n">json_file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">model_json</span><span class="p">)</span>
+
+<span class="n">model</span><span class="o">.</span><span class="n">save_weights</span><span class="p">(</span><span class="n">filenameML</span> <span class="o">+</span> <span class="s2">&quot;_model.h5&quot;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Model &quot;</span> <span class="o">+</span> <span class="n">model_name_ML</span> <span class="o">+</span> <span class="s2">&quot; saved in: &quot;</span> <span class="o">+</span> <span class="n">modelDir</span><span class="p">)</span>
+</pre></div>
+
+<p>Output:</p>
+<div class="codehilite"><pre><span></span><span class="n">Model</span> <span class="n">LSTM</span> <span class="n">CO</span> <span class="mi">200</span> <span class="n">epochs</span> <span class="n">Filter</span> <span class="mf">0.9</span> <span class="n">saved</span> <span class="ow">in</span><span class="p">:</span> <span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">modelDir</span>
+</pre></div>
+
+<p>And in our directory:</p>
+<div class="codehilite"><pre><span></span>➜  models ls -l
+-rw-r--r-- Sep <span class="m">11</span> <span class="m">12</span>:54 LSTM CO <span class="m">200</span> epochs Filter <span class="m">0</span>.9_metrics.sav
+-rw-r--r-- Sep <span class="m">11</span> <span class="m">12</span>:54 LSTM CO <span class="m">200</span> epochs Filter <span class="m">0</span>.9_model.h5
+-rw-r--r-- Sep <span class="m">11</span> <span class="m">12</span>:54 LSTM CO <span class="m">200</span> epochs Filter <span class="m">0</span>.9_model.json
+-rw-r--r-- Sep <span class="m">11</span> <span class="m">12</span>:54 LSTM CO <span class="m">200</span> epochs Filter <span class="m">0</span>.9_parameters.sav
+</pre></div>
+
+<p><strong><em>OLS model</em></strong></p>
+<p>We will use <code class="codehilite">joblib</code> for all the objects serialisation in this case:</p>
+<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">os.path</span> <span class="kn">import</span> <span class="n">join</span>
+<span class="kn">from</span> <span class="nn">sklearn.externals</span> <span class="kn">import</span> <span class="n">joblib</span>
+
+<span class="n">modelDir_OLS</span> <span class="o">=</span> <span class="s1">&#39;/path/to/model&#39;</span>
+<span class="n">filename_OLS</span> <span class="o">=</span> <span class="n">join</span><span class="p">(</span><span class="n">modelDir_OLS</span><span class="p">,</span> <span class="n">model_name_OLS</span><span class="p">)</span>
+
+<span class="c1"># Save everything</span>
+<span class="n">joblib</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">dictModel</span><span class="p">[</span><span class="n">model_name_OLS</span><span class="p">][</span><span class="s1">&#39;metrics&#39;</span><span class="p">],</span> <span class="n">filename_OLS</span> <span class="o">+</span> <span class="s1">&#39;_metrics.sav&#39;</span><span class="p">)</span>
+<span class="n">joblib</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">dictModel</span><span class="p">[</span><span class="n">model_name_OLS</span><span class="p">][</span><span class="s1">&#39;parameters&#39;</span><span class="p">],</span> <span class="n">filename_OLS</span> <span class="o">+</span> <span class="s1">&#39;_parameters.sav&#39;</span><span class="p">)</span>
+<span class="n">joblib</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">dictModel</span><span class="p">[</span><span class="n">model_name_OLS</span><span class="p">][</span><span class="s1">&#39;model&#39;</span><span class="p">],</span> <span class="n">filename_OLS</span> <span class="o">+</span> <span class="s1">&#39;_model.sav&#39;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Model saved in: &quot;</span> <span class="o">+</span> <span class="n">modelDir_OLS</span><span class="p">)</span>
+</pre></div>
+
+<p>Output:</p>
+<div class="codehilite"><pre><span></span><span class="n">Model</span> <span class="n">saved</span> <span class="ow">in</span><span class="p">:</span> <span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">model</span>
+</pre></div>
+
+<p>And in the terminal:</p>
+<div class="codehilite"><pre><span></span>➜  models ls -l
+total <span class="m">1928</span>
+-rw-r--r-- Sep <span class="m">11</span> <span class="m">12</span>:53 CO_MICS + Log<span class="o">(</span>CO_MICS<span class="o">)</span> + Poly<span class="o">(</span>T<span class="o">)</span> + PM25_metrics.sav
+-rw-r--r-- Sep <span class="m">11</span> <span class="m">12</span>:53 CO_MICS + Log<span class="o">(</span>CO_MICS<span class="o">)</span> + Poly<span class="o">(</span>T<span class="o">)</span> + PM25_model.sav
+-rw-r--r-- Sep <span class="m">11</span> <span class="m">12</span>:53 CO_MICS + Log<span class="o">(</span>CO_MICS<span class="o">)</span> + Poly<span class="o">(</span>T<span class="o">)</span> + PM25_parameters.sav
+</pre></div>
+
+<h2 id="load-models-from-disk">Load Models from Disk<a class="headerlink" href="#load-models-from-disk" title="Permanent link">Link</a></h2>
+<p>Now, sometime after having exported our model, let's assume we need to get it back:</p>
+<p><strong><em>Machine Learning Model</em></strong></p>
+<p>We will use the symmetric functions from <code class="codehilite">joblib</code> and <code class="codehilite">keras</code>:</p>
+<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">os.path</span> <span class="kn">import</span> <span class="n">join</span>
+<span class="kn">from</span> <span class="nn">sklearn.externals</span> <span class="kn">import</span> <span class="n">joblib</span>
+<span class="kn">from</span> <span class="nn">keras.models</span> <span class="kn">import</span> <span class="n">model_from_json</span>
+
+<span class="n">modelDirML</span> <span class="o">=</span> <span class="s1">&#39;/path/to/model&#39;</span>
+<span class="n">filenameML</span> <span class="o">=</span> <span class="n">join</span><span class="p">(</span><span class="n">modelDirML</span><span class="p">,</span> <span class="n">model_name_ML</span><span class="p">)</span>
+
+<span class="c1"># Load Model and weights</span>
+<span class="n">json_file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filenameML</span> <span class="o">+</span> <span class="s2">&quot;_model.json&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span>
+<span class="n">loaded_model_json</span> <span class="o">=</span> <span class="n">json_file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="n">json_file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<span class="n">loaded_model</span> <span class="o">=</span> <span class="n">model_from_json</span><span class="p">(</span><span class="n">loaded_model_json</span><span class="p">)</span>
+<span class="n">loaded_model</span><span class="o">.</span><span class="n">load_weights</span><span class="p">(</span><span class="n">filenameML</span> <span class="o">+</span> <span class="s2">&quot;_model.h5&quot;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Loaded &quot;</span> <span class="o">+</span> <span class="n">model_name_ML</span> <span class="o">+</span> <span class="s2">&quot; from disk&quot;</span><span class="p">)</span>
+
+<span class="c1"># Load params and metrics</span>
+<span class="n">loaded_params</span> <span class="o">=</span> <span class="n">joblib</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">filenameML</span> <span class="o">+</span> <span class="s1">&#39;_parameters.sav&#39;</span><span class="p">)</span>
+<span class="n">loaded_metrics</span> <span class="o">=</span> <span class="n">joblib</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">filenameML</span> <span class="o">+</span> <span class="s1">&#39;_metrics.sav&#39;</span><span class="p">)</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">loaded_params</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">loaded_metrics</span><span class="p">)</span>
+</pre></div>
+
+<p>Output:</p>
+<div class="codehilite"><pre><span></span><span class="n">Loaded</span> <span class="n">LSTM</span> <span class="n">CO</span> <span class="mi">200</span> <span class="n">epochs</span> <span class="n">Filter</span> <span class="mf">0.9</span> <span class="kn">from</span> <span class="nn">disk</span>
+
+<span class="p">{</span><span class="s1">&#39;features&#39;</span><span class="p">:</span> <span class="p">([</span><span class="s1">&#39;REF&#39;</span><span class="p">,</span> <span class="s1">&#39;CO_AD_BASE_STATION_CASE&#39;</span><span class="p">],</span>
+  <span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;CO_MICS_RAW_STATION_CASE&#39;</span><span class="p">],</span>
+  <span class="p">[</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;TEMP_STATION_CASE&#39;</span><span class="p">],</span>
+  <span class="p">[</span><span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;HUM_STATION_CASE&#39;</span><span class="p">],</span>
+  <span class="p">[</span><span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="s1">&#39;PM_25_STATION_CASE&#39;</span><span class="p">])}</span>
+
+<span class="p">{</span><span class="s1">&#39;test&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;RMSD&#39;</span><span class="p">:</span> <span class="mf">0.055340715974325445</span><span class="p">,</span>
+  <span class="s1">&#39;RMSD_norm_unb&#39;</span><span class="p">:</span> <span class="mf">0.8761932784857427</span><span class="p">,</span>
+  <span class="s1">&#39;avg_est&#39;</span><span class="p">:</span> <span class="mf">0.5344016428091338</span><span class="p">,</span>
+  <span class="s1">&#39;avg_ref&#39;</span><span class="p">:</span> <span class="mf">0.5358268506805136</span><span class="p">,</span>
+  <span class="s1">&#39;bias&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mf">0.0014252078713797856</span><span class="p">,</span>
+  <span class="s1">&#39;normalised_bias&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mf">0.022562028100955915</span><span class="p">,</span>
+  <span class="s1">&#39;rsquared&#39;</span><span class="p">:</span> <span class="mf">0.23248054249786632</span><span class="p">,</span>
+  <span class="s1">&#39;sig_est&#39;</span><span class="p">:</span> <span class="mf">0.03133999875370688</span><span class="p">,</span>
+  <span class="s1">&#39;sig_ref&#39;</span><span class="p">:</span> <span class="mf">0.06316842905267908</span><span class="p">,</span>
+  <span class="s1">&#39;sigma_norm&#39;</span><span class="p">:</span> <span class="mf">0.4961338951071746</span><span class="p">,</span>
+  <span class="s1">&#39;sign_sigma&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">},</span>
+ <span class="s1">&#39;train&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;RMSD&#39;</span><span class="p">:</span> <span class="mf">0.08111001248781997</span><span class="p">,</span>
+  <span class="s1">&#39;RMSD_norm_unb&#39;</span><span class="p">:</span> <span class="mf">0.6549199203336652</span><span class="p">,</span>
+  <span class="s1">&#39;avg_est&#39;</span><span class="p">:</span> <span class="mf">0.6204429297293235</span><span class="p">,</span>
+  <span class="s1">&#39;avg_ref&#39;</span><span class="p">:</span> <span class="mf">0.6542569775479774</span><span class="p">,</span>
+  <span class="s1">&#39;bias&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mf">0.033814047818653936</span><span class="p">,</span>
+  <span class="s1">&#39;normalised_bias&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mf">0.27234526337748927</span><span class="p">,</span>
+  <span class="s1">&#39;rsquared&#39;</span><span class="p">:</span> <span class="mf">0.573229625070228</span><span class="p">,</span>
+  <span class="s1">&#39;sig_est&#39;</span><span class="p">:</span> <span class="mf">0.08824634698454116</span><span class="p">,</span>
+  <span class="s1">&#39;sig_ref&#39;</span><span class="p">:</span> <span class="mf">0.12415875128250474</span><span class="p">,</span>
+  <span class="s1">&#39;sigma_norm&#39;</span><span class="p">:</span> <span class="mf">0.7107541439729025</span><span class="p">,</span>
+  <span class="s1">&#39;sign_sigma&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">}}</span>
+</pre></div>
+
+<p><strong><em>OLS Model</em></strong></p>
+<p>Similarly, we will use the <code class="codehilite">joblib.load</code> function:</p>
+<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">os.path</span> <span class="kn">import</span> <span class="n">join</span>
+<span class="kn">from</span> <span class="nn">sklearn.externals</span> <span class="kn">import</span> <span class="n">joblib</span>
+
+<span class="n">modelDir_OLS</span> <span class="o">=</span> <span class="s1">&#39;/path/to/model&#39;</span>
+<span class="n">filename_OLS</span> <span class="o">=</span> <span class="n">join</span><span class="p">(</span><span class="n">modelDir_OLS</span><span class="p">,</span> <span class="n">model_name_OLS</span><span class="p">)</span>
+
+<span class="c1"># Load everything</span>
+<span class="n">loaded_metrics</span> <span class="o">=</span> <span class="n">joblib</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">filename_OLS</span> <span class="o">+</span> <span class="s1">&#39;_metrics.sav&#39;</span><span class="p">)</span>
+<span class="n">loaded_params</span> <span class="o">=</span> <span class="n">joblib</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">filename_OLS</span> <span class="o">+</span> <span class="s1">&#39;_parameters.sav&#39;</span><span class="p">)</span>
+<span class="n">loaded_model</span> <span class="o">=</span> <span class="n">joblib</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">filename_OLS</span> <span class="o">+</span> <span class="s1">&#39;_model.sav&#39;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Loaded &quot;</span> <span class="o">+</span> <span class="n">model_name_OLS</span> <span class="o">+</span> <span class="s2">&quot; from disk&quot;</span><span class="p">)</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">loaded_params</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">loaded_metrics</span><span class="p">)</span>
+</pre></div>
+
+<p>Output:
+<div class="codehilite"><pre><span></span><span class="n">Loaded</span> <span class="n">CO_MICS</span> <span class="o">+</span> <span class="n">Log</span><span class="p">(</span><span class="n">CO_MICS</span><span class="p">)</span> <span class="o">+</span> <span class="n">Poly</span><span class="p">(</span><span class="n">T</span><span class="p">)</span> <span class="o">+</span> <span class="n">PM25</span> <span class="kn">from</span> <span class="nn">disk</span>
+
+<span class="p">{</span><span class="s1">&#39;features&#39;</span><span class="p">:</span> <span class="p">([</span><span class="s1">&#39;REF&#39;</span><span class="p">,</span> <span class="s1">&#39;CO_AD_BASE_STATION_CASE&#39;</span><span class="p">],</span>
+  <span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;CO_MICS_RAW_STATION_CASE&#39;</span><span class="p">],</span>
+  <span class="p">[</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;TEMP_STATION_CASE&#39;</span><span class="p">],</span>
+  <span class="p">[</span><span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;HUM_STATION_CASE&#39;</span><span class="p">],</span>
+  <span class="p">[</span><span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="s1">&#39;PM_25_STATION_CASE&#39;</span><span class="p">]),</span>
+ <span class="s1">&#39;formula&#39;</span><span class="p">:</span> <span class="s1">&#39;REF ~ np.log10(A) + A + B + np.power(B,2) + D&#39;</span><span class="p">}</span>
+
+<span class="p">{</span><span class="s1">&#39;test&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;RMSD&#39;</span><span class="p">:</span> <span class="mf">0.0440714230263565</span><span class="p">,</span>
+  <span class="s1">&#39;RMSD_norm_unb&#39;</span><span class="p">:</span> <span class="mf">0.8723428704290845</span><span class="p">,</span>
+  <span class="s1">&#39;avg_est&#39;</span><span class="p">:</span> <span class="mf">0.550690169722107</span><span class="p">,</span>
+  <span class="s1">&#39;avg_ref&#39;</span><span class="p">:</span> <span class="mf">0.5351888829750784</span><span class="p">,</span>
+  <span class="s1">&#39;bias&#39;</span><span class="p">:</span> <span class="mf">0.015501286747028664</span><span class="p">,</span>
+  <span class="s1">&#39;normalised_bias&#39;</span><span class="p">:</span> <span class="mf">0.30432821283315176</span><span class="p">,</span>
+  <span class="s1">&#39;rsquared&#39;</span><span class="p">:</span> <span class="mf">0.2513771504173782</span><span class="p">,</span>
+  <span class="s1">&#39;sig_est&#39;</span><span class="p">:</span> <span class="mf">0.031200761981503004</span><span class="p">,</span>
+  <span class="s1">&#39;sig_ref&#39;</span><span class="p">:</span> <span class="mf">0.05093608181350988</span><span class="p">,</span>
+  <span class="s1">&#39;sigma_norm&#39;</span><span class="p">:</span> <span class="mf">0.6125473509277183</span><span class="p">,</span>
+  <span class="s1">&#39;sign_sigma&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">},</span>
+ <span class="s1">&#39;train&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;RMSD&#39;</span><span class="p">:</span> <span class="mf">0.062207196964372664</span><span class="p">,</span>
+  <span class="s1">&#39;RMSD_norm_unb&#39;</span><span class="p">:</span> <span class="mf">0.5279216759963998</span><span class="p">,</span>
+  <span class="s1">&#39;avg_est&#39;</span><span class="p">:</span> <span class="mf">0.6559505800446772</span><span class="p">,</span>
+  <span class="s1">&#39;avg_ref&#39;</span><span class="p">:</span> <span class="mf">0.6559505800448995</span><span class="p">,</span>
+  <span class="s1">&#39;bias&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mf">2.2226664952995634e-13</span><span class="p">,</span>
+  <span class="s1">&#39;normalised_bias&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mf">1.8862669894154184e-12</span><span class="p">,</span>
+  <span class="s1">&#39;rsquared&#39;</span><span class="p">:</span> <span class="mf">0.721298704013152</span><span class="p">,</span>
+  <span class="s1">&#39;sig_est&#39;</span><span class="p">:</span> <span class="mf">0.10007571794915669</span><span class="p">,</span>
+  <span class="s1">&#39;sig_ref&#39;</span><span class="p">:</span> <span class="mf">0.11783414054170561</span><span class="p">,</span>
+  <span class="s1">&#39;sigma_norm&#39;</span><span class="p">:</span> <span class="mf">0.849293061324077</span><span class="p">,</span>
+  <span class="s1">&#39;sign_sigma&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">}}</span>
+</pre></div></p>
+<p>And that's it! Now it is time to iterate and compare our models.</p>
+<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">Link</a></h2>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:first">
+<p><a href="http://www.itl.nist.gov/div898/handbook/mpc/section5/mpc52.htm">Engineering statistics handbook</a>&#160;<a class="footnote-backref" href="#fnref:first" rev="footnote" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:first" rev="footnote" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:first" rev="footnote" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:first" rev="footnote" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:second">
+<p><a href="https://www.sciencedirect.com/science/article/pii/S0924796308001140">Summary diagrams for coupled hydrodynamic-ecosystem model skill assessment (Jolliff et al.)</a>&#160;<a class="footnote-backref" href="#fnref:second" rev="footnote" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:third">
+<p><a href="https://machinelearningmastery.com">Machine learning mastery</a>&#160;<a class="footnote-backref" href="#fnref:third" rev="footnote" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+
+
+<!-- Application footer -->
+<footer class="md-footer">
+
+  <!-- Link to previous and/or next page -->
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+
+        <!-- Link to previous page -->
+        
+          <a href="../../Low Cost Sensors Calibration/"
+              title="Low Cost Sensors Calibration"
+              class="md-flex md-footer-nav__link md-footer-nav__link--prev"
+              rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back
+                    md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch
+                  md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Low Cost Sensors Calibration
+              </span>
+            </div>
+          </a>
+        
+
+        <!-- Link to next page -->
+        
+          <a href="../Install the framework/"
+              title="Install the framework"
+              class="md-flex md-footer-nav__link md-footer-nav__link--next"
+              rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch
+                  md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Install the framework
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward
+                    md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+
+  <!-- Further information -->
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+
+      <!-- Copyright and theme information -->
+      <div class="md-footer-copyright">
+		        <img style="margin-top: 20px" alt="The Smart Citizen has received funding from the European Community’s H2020 Programme under Grant Agreement No. 689954." src="/assets/images/eu-flag.png">
+         		<p class="md-footer-copyright__highlight">The Smart Citizen has received funding from the European Community’s H2020 Programme under Grant Agreement No. 689954.</p>
+            <p>Except where otherwise noted, content on this site is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
+                <a class="github-button" href="https://github.com/fablabbcn/smartcitizen-docs" aria-label="Check the source code">Check the documentation source code</a>
+      </div>
+
+      <!-- Social links -->
+      
+        
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../../../assets/fonts/font-awesome.css">
+    
+      <a href="https://twitter.com/smartcitizenkit" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://www.facebook.com/smartcitizenBCN/" class="md-footer-social__link fa fa-facebook"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/application.583bbe55.js"></script>
+      
+      <script>app.initialize({version:"1.0.2",url:{base:"../../.."}})</script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+        <script src="https://buttons.github.io/buttons.js"></script>
+      
+    
+    
+      
+    
+  </body>
+</html>

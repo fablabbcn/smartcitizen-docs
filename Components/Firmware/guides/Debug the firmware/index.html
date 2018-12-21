@@ -13,7 +13,7 @@
         <meta name="description" content="Smart Citizen Documentation">
       
       
-        <link rel="canonical" href="https://docs.smartcitizen.me/">
+        <link rel="canonical" href="https://docs.smartcitizen.me/Components/Firmware/guides/Debug the firmware/">
       
       
         <meta name="author" content="Smart Citizen Team">
@@ -37,18 +37,18 @@
       
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
-      <link rel="shortcut icon" href="assets/images/favicon.ico">
+      <link rel="shortcut icon" href="../../../../assets/images/favicon.ico">
       <meta name="generator" content="mkdocs-1.0.2, mkdocs-material-3.0.3">
     
     
       
-        <title>Smart Citizen Docs</title>
+        <title>Debug the firmware - Smart Citizen Docs</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/application.451f80e5.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/application.451f80e5.css">
       
-        <link rel="stylesheet" href="assets/stylesheets/application-palette.22915126.css">
+        <link rel="stylesheet" href="../../../../assets/stylesheets/application-palette.22915126.css">
       
       
         
@@ -57,7 +57,7 @@
       
     
     
-      <script src="assets/javascripts/modernizr.1aa3b519.js"></script>
+      <script src="../../../../assets/javascripts/modernizr.1aa3b519.js"></script>
     
     
       <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
@@ -66,7 +66,7 @@
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
-    <link rel="stylesheet" href="assets/fonts/material-icons.css">
+    <link rel="stylesheet" href="../../../../assets/fonts/material-icons.css">
     
     
   </head>
@@ -85,7 +85,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#welcome" tabindex="1" class="md-skip">
+      <a href="../../../../#introduction" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -125,7 +125,7 @@
             title="Smart Citizen Docs"
             class="md-header-nav__button md-logo">
           
-            <img style="margin-top: -5px;" src="assets/images/logo.svg" height="32" />
+            <img style="margin-top: -5px;" src="../../../../assets/images/logo.svg" height="32" />
           
         </a>
       </div>
@@ -146,7 +146,7 @@
                 Smart Citizen Docs
               </span>
               <span class="md-header-nav__topic">
-                Home
+                Debug the firmware
               </span>
             
           
@@ -201,14 +201,16 @@
       
         
 
-<nav class="md-tabs" data-md-component="tabs">
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
   <div class="md-tabs__inner md-grid">
     <ul class="md-tabs__list">
       
         
   <li class="md-tabs__item">
     
-      <a href="." title="Home" class="md-tabs__link md-tabs__link--active">
+      <a href="../../../.." title="Home" class="md-tabs__link">
         Home
       </a>
     
@@ -226,7 +228,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="Components/" title="Components" class="md-tabs__link">
+        <a href="../../../" title="Components" class="md-tabs__link md-tabs__link--active">
           Components
         </a>
       
@@ -239,7 +241,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="Legacy Hardware/" title="Legacy Hardware" class="md-tabs__link">
+        <a href="../../../../Legacy Hardware/" title="Legacy Hardware" class="md-tabs__link">
           Legacy Hardware
         </a>
       
@@ -252,7 +254,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="Sensor Analysis Framework/" title="Sensor Analysis Framework" class="md-tabs__link">
+        <a href="../../../../Sensor Analysis Framework/" title="Sensor Analysis Framework" class="md-tabs__link">
           Sensor Analysis Framework
         </a>
       
@@ -265,7 +267,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="Sensor Platform/" title="Sensor Platform" class="md-tabs__link">
+        <a href="../../../../Sensor Platform/" title="Sensor Platform" class="md-tabs__link">
           Sensor Platform
         </a>
       
@@ -288,7 +290,7 @@
   <label class="md-nav__title md-nav__title--site" for="__drawer">
     <a href="https://docs.smartcitizen.me/" title="Smart Citizen Docs" class="md-nav__button md-logo">
       
-        <img src="assets/images/logo.svg" width="48" height="48">
+        <img src="../../../../assets/images/logo.svg" width="48" height="48">
       
     </a>
     Smart Citizen Docs
@@ -323,78 +325,15 @@
 <!-- Determine class according to level -->
 
 
-  
-
 
 <!-- Main navigation item with nested items -->
 
-  <li class="md-nav__item md-nav__item--active">
-    
-
-    <!-- Active checkbox expands items contained within nested section -->
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc"
-        type="checkbox" id="__toc" />
-
-    <!-- Hack: see partials/toc.html for more information -->
-    
-      
-    
-
-    <!-- Render table of contents, if not empty -->
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Home
-      </label>
-    
-    <a href="." title="Home"
-        class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../../../.." title="Home"
+        class="md-nav__link">
       Home
     </a>
-
-    <!-- Show table of contents -->
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#sections" title="Sections" class="md-nav__link">
-    Sections
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#guides" title="Guides" class="md-nav__link">
-    Guides
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#open-source" title="Open Source" class="md-nav__link">
-    Open Source
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
-
-<!-- Main navigation item -->
 
     
       
@@ -428,7 +367,7 @@
 <!-- Main navigation item with nested items -->
 
   <li class="md-nav__item">
-    <a href="Smart Citizen Kit/" title="Smart Citizen Kit"
+    <a href="../../../../Smart Citizen Kit/" title="Smart Citizen Kit"
         class="md-nav__link">
       Smart Citizen Kit
     </a>
@@ -466,7 +405,7 @@
 <!-- Main navigation item with nested items -->
 
   <li class="md-nav__item">
-    <a href="Smart Citizen Station/" title="Smart Citizen Station"
+    <a href="../../../../Smart Citizen Station/" title="Smart Citizen Station"
         class="md-nav__link">
       Smart Citizen Station
     </a>
@@ -504,7 +443,7 @@
 <!-- Main navigation item with nested items -->
 
   <li class="md-nav__item">
-    <a href="_FAQ/" title=" FAQ"
+    <a href="../../../../_FAQ/" title=" FAQ"
         class="md-nav__link">
        FAQ
     </a>
@@ -538,15 +477,17 @@
 <!-- Determine class according to level -->
 
 
+  
+
 
 <!-- Main navigation item with nested items -->
 
-  <li class="md-nav__item md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
 
     <!-- Active checkbox expands items contained within nested section -->
     
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5"
-          type="checkbox" id="nav-5" />
+          type="checkbox" id="nav-5" checked />
     
 
     <!-- Expand active pages -->
@@ -594,7 +535,7 @@
 <!-- Main navigation item with nested items -->
 
   <li class="md-nav__item">
-    <a href="Components/" title="Index"
+    <a href="../../../" title="Index"
         class="md-nav__link">
       Index
     </a>
@@ -684,7 +625,7 @@
 <!-- Main navigation item with nested items -->
 
   <li class="md-nav__item">
-    <a href="Components/Data Board/" title="Index"
+    <a href="../../../Data Board/" title="Index"
         class="md-nav__link">
       Index
     </a>
@@ -725,15 +666,17 @@
 <!-- Determine class according to level -->
 
 
+  
+
 
 <!-- Main navigation item with nested items -->
 
-  <li class="md-nav__item md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
 
     <!-- Active checkbox expands items contained within nested section -->
     
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-3"
-          type="checkbox" id="nav-5-3" />
+          type="checkbox" id="nav-5-3" checked />
     
 
     <!-- Expand active pages -->
@@ -781,7 +724,7 @@
 <!-- Main navigation item with nested items -->
 
   <li class="md-nav__item">
-    <a href="Components/Firmware/" title="Index"
+    <a href="../../" title="Index"
         class="md-nav__link">
       Index
     </a>
@@ -815,15 +758,17 @@
 <!-- Determine class according to level -->
 
 
+  
+
 
 <!-- Main navigation item with nested items -->
 
-  <li class="md-nav__item md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
 
     <!-- Active checkbox expands items contained within nested section -->
     
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-3-2"
-          type="checkbox" id="nav-5-3-2" />
+          type="checkbox" id="nav-5-3-2" checked />
     
 
     <!-- Expand active pages -->
@@ -867,15 +812,195 @@
 <!-- Determine class according to level -->
 
 
+  
+
 
 <!-- Main navigation item with nested items -->
 
-  <li class="md-nav__item">
-    <a href="Components/Firmware/guides/Debug the firmware/" title="Debug the firmware"
-        class="md-nav__link">
+  <li class="md-nav__item md-nav__item--active">
+    
+
+    <!-- Active checkbox expands items contained within nested section -->
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc"
+        type="checkbox" id="__toc" />
+
+    <!-- Hack: see partials/toc.html for more information -->
+    
+
+    <!-- Render table of contents, if not empty -->
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Debug the firmware
+      </label>
+    
+    <a href="./" title="Debug the firmware"
+        class="md-nav__link md-nav__link--active">
       Debug the firmware
     </a>
+
+    <!-- Show table of contents -->
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" title="Introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#debugger-setup-using-a-raspberry-pi" title="Debugger setup using a Raspberry Pi" class="md-nav__link">
+    Debugger setup using a Raspberry Pi
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#openocd-installation" title="Openocd installation" class="md-nav__link">
+    Openocd installation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uploading-sck-firmware" title="Uploading SCK Firmware" class="md-nav__link">
+    Uploading SCK Firmware
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gdb" title="GDB" class="md-nav__link">
+    GDB
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#general-description" title="General description" class="md-nav__link">
+    General description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#debugging-session-with-raspberry-pi-as-the-openocd-server" title="Debugging session with Raspberry Pi as the OpenOCD server" class="md-nav__link">
+    Debugging session with Raspberry Pi as the OpenOCD server
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#breakpoints" title="Breakpoints" class="md-nav__link">
+    Breakpoints
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#printing-setting-variables-and-more" title="Printing / setting variables and more" class="md-nav__link">
+    Printing / setting variables and more
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gdb-console" title="GDB Console" class="md-nav__link">
+    GDB Console
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tui" title="TUI" class="md-nav__link">
+    TUI
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gdb-init-file" title="GDB init file" class="md-nav__link">
+    GDB init file
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gdb-from-sublime-text" title="GDB from Sublime Text" class="md-nav__link">
+    GDB from Sublime Text
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference" title="Reference" class="md-nav__link">
+    Reference
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#general-gdb-references-and-examples" title="General GDB references and examples" class="md-nav__link">
+    General GDB references and examples
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-notes-from-platformio-configuration" title="Additional notes from Platformio configuration" class="md-nav__link">
+    Additional notes from Platformio configuration
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
+
+<!-- Main navigation item -->
 
         
           
@@ -909,7 +1034,7 @@
 <!-- Main navigation item with nested items -->
 
   <li class="md-nav__item">
-    <a href="Components/Firmware/guides/Edit the Firmware/" title="Edit the Firmware"
+    <a href="../Edit the Firmware/" title="Edit the Firmware"
         class="md-nav__link">
       Edit the Firmware
     </a>
@@ -947,7 +1072,7 @@
 <!-- Main navigation item with nested items -->
 
   <li class="md-nav__item">
-    <a href="Components/Firmware/guides/Update the firmware/" title="Update the firmware"
+    <a href="../Update the firmware/" title="Update the firmware"
         class="md-nav__link">
       Update the firmware
     </a>
@@ -1051,7 +1176,7 @@
 <!-- Main navigation item with nested items -->
 
   <li class="md-nav__item">
-    <a href="Components/Gas Pro Sensor Board/" title="Index"
+    <a href="../../../Gas Pro Sensor Board/" title="Index"
         class="md-nav__link">
       Index
     </a>
@@ -1089,7 +1214,7 @@
 <!-- Main navigation item with nested items -->
 
   <li class="md-nav__item">
-    <a href="Components/Gas Pro Sensor Board/Electrochemical Sensors/" title="Electrochemical Sensors"
+    <a href="../../../Gas Pro Sensor Board/Electrochemical Sensors/" title="Electrochemical Sensors"
         class="md-nav__link">
       Electrochemical Sensors
     </a>
@@ -1179,7 +1304,7 @@
 <!-- Main navigation item with nested items -->
 
   <li class="md-nav__item">
-    <a href="Components/Gas Pro Sensor Board/guides/Advanced setup/" title="Advanced setup"
+    <a href="../../../Gas Pro Sensor Board/guides/Advanced setup/" title="Advanced setup"
         class="md-nav__link">
       Advanced setup
     </a>
@@ -1283,7 +1408,7 @@
 <!-- Main navigation item with nested items -->
 
   <li class="md-nav__item">
-    <a href="Components/PM Sensor Board/" title="Index"
+    <a href="../../../PM Sensor Board/" title="Index"
         class="md-nav__link">
       Index
     </a>
@@ -1321,7 +1446,7 @@
 <!-- Main navigation item with nested items -->
 
   <li class="md-nav__item">
-    <a href="Components/PM Sensor Board/Plantower PMS/" title="Plantower PMS"
+    <a href="../../../PM Sensor Board/Plantower PMS/" title="Plantower PMS"
         class="md-nav__link">
       Plantower PMS
     </a>
@@ -1418,7 +1543,7 @@
 <!-- Main navigation item with nested items -->
 
   <li class="md-nav__item">
-    <a href="Components/Urban Sensor Board/" title="Index"
+    <a href="../../../Urban Sensor Board/" title="Index"
         class="md-nav__link">
       Index
     </a>
@@ -1508,7 +1633,7 @@
 <!-- Main navigation item with nested items -->
 
   <li class="md-nav__item">
-    <a href="Components/Urban Sensor Board/Metal Oxide Sensor/" title="Index"
+    <a href="../../../Urban Sensor Board/Metal Oxide Sensor/" title="Index"
         class="md-nav__link">
       Index
     </a>
@@ -1546,7 +1671,7 @@
 <!-- Main navigation item with nested items -->
 
   <li class="md-nav__item">
-    <a href="Components/Urban Sensor Board/Metal Oxide Sensor/Implementation/" title="Implementation"
+    <a href="../../../Urban Sensor Board/Metal Oxide Sensor/Implementation/" title="Implementation"
         class="md-nav__link">
       Implementation
     </a>
@@ -1643,7 +1768,7 @@
 <!-- Main navigation item with nested items -->
 
   <li class="md-nav__item">
-    <a href="Components/Urban Sensor Board/Noise Sensor/" title="Index"
+    <a href="../../../Urban Sensor Board/Noise Sensor/" title="Index"
         class="md-nav__link">
       Index
     </a>
@@ -1681,7 +1806,7 @@
 <!-- Main navigation item with nested items -->
 
   <li class="md-nav__item">
-    <a href="Components/Urban Sensor Board/Noise Sensor/Implementation/" title="Implementation"
+    <a href="../../../Urban Sensor Board/Noise Sensor/Implementation/" title="Implementation"
         class="md-nav__link">
       Implementation
     </a>
@@ -1792,7 +1917,7 @@
 <!-- Main navigation item with nested items -->
 
   <li class="md-nav__item">
-    <a href="Legacy Hardware/" title="Index"
+    <a href="../../../../Legacy Hardware/" title="Index"
         class="md-nav__link">
       Index
     </a>
@@ -1830,7 +1955,7 @@
 <!-- Main navigation item with nested items -->
 
   <li class="md-nav__item">
-    <a href="Legacy Hardware/Command Line/" title="Command Line"
+    <a href="../../../../Legacy Hardware/Command Line/" title="Command Line"
         class="md-nav__link">
       Command Line
     </a>
@@ -1868,7 +1993,7 @@
 <!-- Main navigation item with nested items -->
 
   <li class="md-nav__item">
-    <a href="Legacy Hardware/Faq/" title="Faq"
+    <a href="../../../../Legacy Hardware/Faq/" title="Faq"
         class="md-nav__link">
       Faq
     </a>
@@ -1906,7 +2031,7 @@
 <!-- Main navigation item with nested items -->
 
   <li class="md-nav__item">
-    <a href="Legacy Hardware/Hardware/" title="Hardware"
+    <a href="../../../../Legacy Hardware/Hardware/" title="Hardware"
         class="md-nav__link">
       Hardware
     </a>
@@ -1944,7 +2069,7 @@
 <!-- Main navigation item with nested items -->
 
   <li class="md-nav__item">
-    <a href="Legacy Hardware/Troubleshooting/" title="Troubleshooting"
+    <a href="../../../../Legacy Hardware/Troubleshooting/" title="Troubleshooting"
         class="md-nav__link">
       Troubleshooting
     </a>
@@ -2041,7 +2166,7 @@
 <!-- Main navigation item with nested items -->
 
   <li class="md-nav__item">
-    <a href="Sensor Analysis Framework/" title="Index"
+    <a href="../../../../Sensor Analysis Framework/" title="Index"
         class="md-nav__link">
       Index
     </a>
@@ -2079,7 +2204,7 @@
 <!-- Main navigation item with nested items -->
 
   <li class="md-nav__item">
-    <a href="Sensor Analysis Framework/Low Cost Sensors Calibration/" title="Low Cost Sensors Calibration"
+    <a href="../../../../Sensor Analysis Framework/Low Cost Sensors Calibration/" title="Low Cost Sensors Calibration"
         class="md-nav__link">
       Low Cost Sensors Calibration
     </a>
@@ -2169,7 +2294,7 @@
 <!-- Main navigation item with nested items -->
 
   <li class="md-nav__item">
-    <a href="Sensor Analysis Framework/guides/Creating Models for Sensors Calibration/" title="Creating Models for Sensors Calibration"
+    <a href="../../../../Sensor Analysis Framework/guides/Creating Models for Sensors Calibration/" title="Creating Models for Sensors Calibration"
         class="md-nav__link">
       Creating Models for Sensors Calibration
     </a>
@@ -2207,7 +2332,7 @@
 <!-- Main navigation item with nested items -->
 
   <li class="md-nav__item">
-    <a href="Sensor Analysis Framework/guides/Install the framework/" title="Install the framework"
+    <a href="../../../../Sensor Analysis Framework/guides/Install the framework/" title="Install the framework"
         class="md-nav__link">
       Install the framework
     </a>
@@ -2245,7 +2370,7 @@
 <!-- Main navigation item with nested items -->
 
   <li class="md-nav__item">
-    <a href="Sensor Analysis Framework/guides/Post processing the Stations Data/" title="Post processing the Stations Data"
+    <a href="../../../../Sensor Analysis Framework/guides/Post processing the Stations Data/" title="Post processing the Stations Data"
         class="md-nav__link">
       Post processing the Stations Data
     </a>
@@ -2349,7 +2474,7 @@
 <!-- Main navigation item with nested items -->
 
   <li class="md-nav__item">
-    <a href="Sensor Platform/" title="Index"
+    <a href="../../../../Sensor Platform/" title="Index"
         class="md-nav__link">
       Index
     </a>
@@ -2439,7 +2564,7 @@
 <!-- Main navigation item with nested items -->
 
   <li class="md-nav__item">
-    <a href="Sensor Platform/guides/Downloading the Data/" title="Downloading the Data"
+    <a href="../../../../Sensor Platform/guides/Downloading the Data/" title="Downloading the Data"
         class="md-nav__link">
       Downloading the Data
     </a>
@@ -2477,7 +2602,7 @@
 <!-- Main navigation item with nested items -->
 
   <li class="md-nav__item">
-    <a href="Sensor Platform/guides/Onboarding Sensors/" title="Onboarding Sensors"
+    <a href="../../../../Sensor Platform/guides/Onboarding Sensors/" title="Onboarding Sensors"
         class="md-nav__link">
       Onboarding Sensors
     </a>
@@ -2515,7 +2640,7 @@
 <!-- Main navigation item with nested items -->
 
   <li class="md-nav__item">
-    <a href="Sensor Platform/guides/Uploading SD Card Data/" title="Uploading SD Card Data"
+    <a href="../../../../Sensor Platform/guides/Uploading SD Card Data/" title="Uploading SD Card Data"
         class="md-nav__link">
       Uploading SD Card Data
     </a>
@@ -2550,30 +2675,149 @@
 <nav class="md-nav md-nav--secondary">
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#sections" title="Sections" class="md-nav__link">
-    Sections
+  <a href="#introduction" title="Introduction" class="md-nav__link">
+    Introduction
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#guides" title="Guides" class="md-nav__link">
-    Guides
+  <a href="#debugger-setup-using-a-raspberry-pi" title="Debugger setup using a Raspberry Pi" class="md-nav__link">
+    Debugger setup using a Raspberry Pi
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#openocd-installation" title="Openocd installation" class="md-nav__link">
+    Openocd installation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uploading-sck-firmware" title="Uploading SCK Firmware" class="md-nav__link">
+    Uploading SCK Firmware
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#open-source" title="Open Source" class="md-nav__link">
-    Open Source
+  <a href="#gdb" title="GDB" class="md-nav__link">
+    GDB
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#general-description" title="General description" class="md-nav__link">
+    General description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#debugging-session-with-raspberry-pi-as-the-openocd-server" title="Debugging session with Raspberry Pi as the OpenOCD server" class="md-nav__link">
+    Debugging session with Raspberry Pi as the OpenOCD server
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#breakpoints" title="Breakpoints" class="md-nav__link">
+    Breakpoints
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#printing-setting-variables-and-more" title="Printing / setting variables and more" class="md-nav__link">
+    Printing / setting variables and more
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gdb-console" title="GDB Console" class="md-nav__link">
+    GDB Console
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tui" title="TUI" class="md-nav__link">
+    TUI
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gdb-init-file" title="GDB init file" class="md-nav__link">
+    GDB init file
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gdb-from-sublime-text" title="GDB from Sublime Text" class="md-nav__link">
+    GDB from Sublime Text
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference" title="Reference" class="md-nav__link">
+    Reference
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#general-gdb-references-and-examples" title="General GDB references and examples" class="md-nav__link">
+    General GDB references and examples
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-notes-from-platformio-configuration" title="Additional notes from Platformio configuration" class="md-nav__link">
+    Additional notes from Platformio configuration
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2594,59 +2838,319 @@
               
                 
                 
-                <h1 id="welcome">Welcome!<a class="headerlink" href="#welcome" title="Permanent link">Link</a></h1>
-<div class="admonition warning">
-<p class="admonition-title">We are in Beta!</p>
-<p>This documentation is brand new and currently in BETA! You can open an <a href="https://github.com/fablabbcn/smartcitizen-docs/issues/new">issue</a> with your questions or comments</p>
-</div>
-<p><img alt="" src="https://i.imgur.com/cCbOxV6.jpg" /></p>
-<h2 id="sections">Sections<a class="headerlink" href="#sections" title="Permanent link">Link</a></h2>
+                  <h1>Debug the firmware</h1>
+                
+                <h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">Link</a></h2>
+<p>Sometimes (many times actually), our code won't do what we want it to do and we need to take a look at what it's doing. By using a <strong>debugger</strong> we will be able to see what is going on <em>inside</em> another program while it executes or even crashes. This is fairly straight forward when you code for a modern day computer, since most IDEs have a proper interface integrated for it. However, debugging a chip like the <em>SAMD21</em> can sometimes be tricky and here is where it's interesting to use a debugging kit.</p>
+<p><img alt="" src="https://imgs.xkcd.com/comics/fixing_problems.png" /></p>
+<p><em>Image Credit: <a href="https://xkcd.com/">XKCD</a></em></p>
+<p>To keep it simple: our final target is to be able to <strong>interact</strong> with the SAMD21 (or the chip) <strong>while it's executing the program</strong> and tell it to pause the execution, give us the value of some variables and then continue. We will release a fairly extensive report with documentation on this process, but for those interested in reading an overview on how to debug, this post can be a short introduction.</p>
+<p>So, here we go! The first item we need is the <a href="http://openocd.org/"><strong>Open On-Chip Debugger</strong> (OpenOCD)</a> which provides debugging with the assistance of a <strong>debug adapter</strong>. This adapter is a small hardware module which helps provide the right kind of electrical signaling to the target being debugged. These are required since the debug host, on which OpenOCD runs (i.e. your computer, a Raspberry PI...) won’t usually have native support for such signaling, or the connector needed to hook up to the target.</p>
+<p><img alt="" src="https://i.imgur.com/qJ2fV3N.jpg" /></p>
+<p><em>Image Credit: Smart Citizen</em></p>
+<p>These adapters are sometimes packaged as discrete dongles, which may generically be called <strong>hardware interface dongles</strong> (and are quite expensive). Some development boards also integrate them directly, which may let the development board connect directly to the debug host over USB (and sometimes also to power it over USB, like the <a href="https://store.arduino.cc/genuino-zero">Arduino Genuino Zero</a>). In the case of the <strong>Smart Smart Citizen Kit</strong>, we have a <strong>SWD</strong> Adapter that supports <em>Serial Wire Debug</em> signaling to communicate with the <em>ARM core</em>. In our approach, <strong>using a complete open toolchain</strong>, OpenOCD is be running on a Raspberry Pi, and communicating with the SCK's SWD through the GPIO pins of the Pi.</p>
+<pre class="uml-sequence-diagram"><code>GDB-&gt;OpenOCD: Let's debug the SCK
+OpenOCD-&gt;GDB: OK!
+OpenOCD-&gt;SCK: We are debugging you
+Note right of SCK: SCK thinks
+SCK-&gt;OpenOCD: OK!
+GDB-&gt;OpenOCD: Load firmware
+GDB-&gt;OpenOCD: Set Breakpoints
+OpenOCD-&gt;SCK: Do it!
+OpenOCD-&gt;SCK: Run!
+Note right of SCK: SCK runs
+Note right of SCK: SCK hits a breakpoint
+SCK-&gt;GDB: Temperature sensor reading is 500ºC
+Note left of GDB: Oh, oh...</code></pre>
+
+<p>Finally, to be able to actually <strong>see what is going on inside our firmware while it executes</strong>, we need something that is able to read and understand the machine code and hand it over to a human understandable interface. This is where <a href="https://www.gnu.org/software/gdb/"><strong>GDB</strong></a> kicks in and helps us by:</p>
+<ul>
+<li>Starting our program, specifying anything that might affect its behavior.</li>
+<li>Make our program stop on specified conditions.</li>
+<li>Examine what has happened when our program has stopped.</li>
+<li>Change things in our program, so we can experiment with correcting the effects of one bug and go on to learn about another.</li>
+</ul>
+<p>GDB and OpenOCD will be running in a Raspberry Pi hooked up to the SWD interface of the SCK, and we will see what's going on in them from our computer's terminal via SSH. Fairly <em>simple</em>, right? Now, we can make some changes to our code, make GDB flash it to the SCK and keep debugging in a completely open toolchain!</p>
+<h2 id="debugger-setup-using-a-raspberry-pi">Debugger setup using a Raspberry Pi<a class="headerlink" href="#debugger-setup-using-a-raspberry-pi" title="Permanent link">Link</a></h2>
 <ul>
 <li>
-<p><strong>Main:</strong> Contains the <a href="Smart Citizen Kit"><strong>Smart Citizen Kit</strong></a> and <a href="Smart Citizen Station"><strong>Smart Citizen Stations</strong></a> documentation to help you use them.</p>
+<p>First download and copy <a href="https://www.raspberrypi.org/downloads/raspbian/">Raspbian Lite</a> to your SDcard, here are the installation <a href="https://www.raspberrypi.org/documentation/installation/installing-images/README.md">docs</a>.</p>
 </li>
 <li>
-<p><strong>Components:</strong> Contains all the documentation on the different <a href="Components"><strong>hardware sensor modules</strong></a> with detailed insights on the sensors behaviour and calibration.</p>
+<p>Add wifi configuration</p>
+<p>Create a file name <code class="codehilite">wpa_supplicant.conf</code> on the <code class="codehilite">/boot</code> partition of the SD card, the content of this file should looks like this:</p>
+<p>```shell=
+ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+update_config=1</p>
+<p>network={
+    ssid="wifi_ssid"
+    psk="wifi_password"
+}
+```
+Replacing wifi_ssid and wifi_password with your actual wifi network     information. The wpa_supplicant.conf file will be copied to /etc/wpa_supplicant/ directory automatically once the Raspberry Pi is booted up.</p>
 </li>
 <li>
-<p><strong>Legacy Hardware:</strong> Are you a piooner of participatory sensing looking for the original SCK 1.0 and SCK 1.1 documentation? Check the <a href="Legacy Hardware"><strong>Legacy Hardware</strong></a> section!</p>
+<p>Enable SSH server.</p>
+<p>SSH access is disabled as default for security reasons. To enable the SSH server when Raspberry Pi is booted up for the first time: create a file called <code class="codehilite">ssh</code> with no file extension and no contents, and copy it to the <code class="codehilite">/boot</code> partition on the SD card.</p>
 </li>
 <li>
-<p><strong>Sensor Analysis Framework:</strong> Contains all the documentation on the <a href="Sensor Analysis Framework"><strong>data post processing framework</strong></a> to obtain insights from the data calibrated by the sensors.</p>
-</li>
-<li>
-<p><strong>Sensor Platform:</strong> Contains all the documentation on the <a href="Sensor Platform"><strong>sensors web platform</strong></a> were data is collected, stored and vizualized.</p>
+<p>Find your raspberry on the network</p>
 </li>
 </ul>
-<h2 id="guides">Guides<a class="headerlink" href="#guides" title="Permanent link">Link</a></h2>
-<p>The documentation contains multiple guides as step-by-step tutorials to perform important tasks as installing a sensor type or uploadig the software on the sensors.</p>
-<div class="admonition info">
-<p class="admonition-title">Example guides</p>
+<p>In order to find a raspberry pi over the network we can use commands like these:</p>
+<p><strong>Linux</strong>
+```shell=
+MY_IP_RANGE=$(ip addr | grep 'state UP' -A2 | tail -n1 | awk '{print $2}') &amp;&amp; nmap -sn <span><span class="MathJax_Preview">MY_IP_RANGE &amp;&amp; IP=</span><script type="math/tex">MY_IP_RANGE && IP=</script></span>(arp -na | grep b8:27:eb | grep -Eo '[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}') &amp;&amp; ssh $IP;
+<div class="codehilite"><pre><span></span>**Mac** (To be reviewed)
+```shell=
+MY_RANGE=$(ip addr | grep &quot;UP&quot; -A3 | grep &#39;192&#39; -A0 | awk &#39;{print $2}&#39;) &amp;&amp; nmap -sn $MY_RANGE &amp;&amp; arp -na | grep b8:27:eb
+</pre></div></p>
 <ul>
-<li><a href="Smart Citizen Kit/#how-to-install">Installing the Smart Citizen Kit</a></li>
-<li><a href="Smart Citizen Station/#how-to-install">Installing the Smart Citizen Station</a></li>
-<li><a href="/Legacy Hardware">Installing the an Smart Citizen Kit 1.0 / 1.1</a></li>
-<li><a href="Sensor Platform/guides/Onboarding Sensors">Onboarding new Sensors</a></li>
-<li><a href="Sensor Platform/guides/Uploading SD Card Data">Uploading SD Card Data</a></li>
-<li><a href="Components/Firmware/guides/Update the firmware">Update the Firmware</a></li>
-<li><a href="Components/Firmware/guides/Edit the Firmware">Edit the Firmware</a></li>
-<li><a href="/Sensor Analysis Framework/guides/Creating Models for Sensors Calibration/">Use Machine Learning to Create Models for Sensors Calibration</a></li>
-<li><a href="/Sensor Analysis Framework/guides/Post processing the Stations Data/">Post process the stations data</a></li>
+<li>
+<p>SSH login without password:</p>
+<ul>
+<li>Si nunca has generado RSA key: <code class="codehilite">ssh-keygen</code> sin poner nada en la passphrase.</li>
+<li>Copiar la clave a la raspberry: <code class="codehilite">ssh-copy-id -i ~/.ssh/id_rsa.pub raspi-address</code></li>
 </ul>
-</div>
-<h2 id="open-source">Open Source<a class="headerlink" href="#open-source" title="Permanent link">Link</a></h2>
-<p><strong>We're against black boxes!</strong></p>
-<p>The entire project it is released under open source licenses: </p>
+<p>Ya que esté lista la raspberry con conectarla debe bootear y conectarse sola a la red, el commando que esta arriba (<code class="codehilite">MY_IP...</code>) la localiza y hace ssh login.</p>
+</li>
+</ul>
+<p>Once you are logged to your raspberry pi and connected to the internet, do a <strong>system upgrade</strong>:
+```shell=
+sudo apt-get install rpi-update
+sudo rpi-update
+sudo apt-get update &amp;&amp; sudo apt-get dist-upgrade
+<div class="codehilite"><pre><span></span>Install some **dependencies**:
+
+```shell=
+sudo apt-get install git autoconf libtool make pkg-config libusb-1.0-0 libusb-1.0-0-dev telnet sshfs
+</pre></div></p>
+<h3 id="openocd-installation">Openocd installation<a class="headerlink" href="#openocd-installation" title="Permanent link">Link</a></h3>
 <ul>
-<li>Hardware components: <a href="https://www.ohwr.org/licenses/cern-ohl/license_versions/v1.2">CERN Open Hardware License v1.2</a></li>
-<li>Core firmware: <a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GNU GPL v3.0</a></li>
-<li>Software platform: <a href="https://www.gnu.org/licenses/agpl-3.0.en.html">GNU AGLP v3.0</a></li>
+<li>Clon <strong>openocd</strong> repository and compile:
+<code class="codehilite">shell=git clone git://git.code.sf.net/p/openocd/code openocd-codecd openocd-code./bootstrap./configure --enable-sysfsgpio --enable-bcm2835gpiomakesudo make installwzxhzdk:3You can store this file in OpenOCD scripts dir so it will auto find it</code>shell=
+sudo mv sck.cfg /usr/local/share/openocd/scripts/
+<div class="codehilite"><pre><span></span>and then run the OpenOCD server with:
+```shell=
+sudo openocd -f sck.cfg
+</pre></div></li>
+</ul>
+<p>Then you can connect to OpenOCD, if you want to connect from an external computer, replace <code class="codehilite">127.0.0.1</code> with your Raspberry Pi IP address.
+<code class="codehilite">shell=telnet 127.0.0.1 4444wzxhzdk:5Then you can connect to OpenOCD from your computer with:</code>shell=
+telnet raspi_address 4444
+<div class="codehilite"><pre><span></span>### Uploading Arduino original bootloader
+
+* Get the bootloader file [here](https://github.com/arduino/ArduinoCore-samd/tree/master/bootloaders/zero) and build it.
+
+* Connect to OpenOCD server and run:
+```shell=
+reset halt
+at91samd bootloader 0
+at91samd chip-erase
+program samd21_sam_ba.bin verify
+at91samd bootloader 8192
+reset run
+</pre></div>
+If you don't see any error youre done!</p>
+<h3 id="uploading-sck-firmware">Uploading SCK Firmware<a class="headerlink" href="#uploading-sck-firmware" title="Permanent link">Link</a></h3>
+<ul>
+<li>Install platformio, download and build SCK firmware</li>
+<li>Connect to OpenOCD server and run:
+<code class="codehilite">`shell=reset haltflash write_image firmware.bin 8192verify_image firmware.bin 8192reset runreset run</code></li>
+</ul>
+<h2 id="gdb"><img alt="" src="https://i.imgur.com/0iMkHRt.png" />  GDB<a class="headerlink" href="#gdb" title="Permanent link">Link</a></h2>
+<h3 id="general-description">General description<a class="headerlink" href="#general-description" title="Permanent link">Link</a></h3>
+<p>The purpose of a debugger such as GDB is to allow you to see what is going on “inside” another program while it executes—or what another program was doing at the moment it crashed.</p>
+<p>GDB can do four main kinds of things (plus other things in support of these) to help you catch bugs in the act:
+* Start your program, specifying anything that might affect its behavior.
+* Make your program stop on specified conditions.
+* Examine what has happened, when your program has stopped.
+* Change things in your program, so you can experiment with correcting the effects of one bug and go on to learn about another.</p>
+<h3 id="debugging-session-with-raspberry-pi-as-the-openocd-server">Debugging session with Raspberry Pi as the OpenOCD server<a class="headerlink" href="#debugging-session-with-raspberry-pi-as-the-openocd-server" title="Permanent link">Link</a></h3>
+<p>Once your raspberry pi is setup with above instructions you can just do:
+```shell=
+ssh pi@RaspberryAddress sudo openocd -f sck.cfg &amp;
+cd /platformio_project/path
+arm-none-eabi-gdb ./pioenvs/zeroUSB/firmware.elf
+(gdb) target remote RaspberryAddress:3333
+(gdb) monitor reset run
+<div class="codehilite"><pre><span></span>If you are using *platformio*, you need to modify the compiling option to avoid optimisation with -0g message to the compiler. In case you are not using *platformio*, activate verbose compiling output at Arduino IDE and find your compiled .elf directory.
+</pre></div>
+[env:zeroUSB]
+platform = atmelsam
+board = zeroUSB
+framework = arduino
+build_flags = -Og
+<div class="codehilite"><pre><span></span>Now we are all set and ready to go. The debugger is waiting for instructions on the execution, which we detail below.
+
+!!! info
+    **Quick handy instructions inside GDB environment**
+    1. *(gdb)* appears in every line and you don&#39;t have to type it each time
+    2. In case you need to exit GDB, just type in `quit`, but remember always killing the process before, should you have a target running
+    ```shell=
+    (gdb) kill
+    (gdb) quit
+    ```
+    3. `RET` repeats the previous command
+
+### GDB commands
+
+All commands in gdb during debugging are detailed in the GDB guide, chapter [GDB commands in detail (continue and stepping)](https://sourceware.org/gdb/onlinedocs/gdb/Continuing-and-Stepping.html)
+
+An **extract** of some useful commands are detailed below:
+
+#### Continuing and stepping
+
+`continue [ignore-count]`
+
+* Resumes program execution until next breakpoint. `[ignore-count]` argument allows to specify a further number of times to ingore a breakpoint.
+```shell=
+(gdb) continue
+Continuing.
+
+Breakpoint 1, tick () at src/HOLA.cpp:9
+9   void tick() {
+</pre></div></p>
+<p><code class="codehilite">step count</code></p>
+<ul>
+<li>Continues running your program until control reaches a <strong>different source line</strong>, only availabe for source lines and functions compiled with debugging information. <code class="codehilite">count</code> is optional and states the number of steps to be performed before stopping, if no breakpoint arrives earlier.</li>
+</ul>
+<p><code class="codehilite">next [count]</code></p>
+<ul>
+<li>Continue to the next source line <strong>without going into functions</strong>. It has the same functionality as step, but it stays in the same stack frame. <code class="codehilite">count</code> works as in <code class="codehilite">step count</code>. As well, it understands jumps calls as in the end of <code class="codehilite">for</code> loops and return to the beginning of the loop.</li>
 </ul>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>Check the <strong>Source files</strong> section for each component and explore the software source code and the hardware blueprints.</p>
-<p><img alt="" src="https://i.imgur.com/X1fUET3.png" /></p>
+<p><code class="codehilite">set step-mode on/off</code> sets the behaviour of <code class="codehilite">(gdb)</code> when stepping into a function with no debugging information. In the case of <code class="codehilite">step-mode on</code>, it inspects the first line of code of the function, whereas on <code class="codehilite">step-mode off</code> it skips the function completely.</p>
 </div>
+<p><code class="codehilite">finish</code></p>
+<ul>
+<li>Continue running until <strong>just after function in the selected stack frame returns</strong>.</li>
+</ul>
+<p><code class="codehilite">until</code></p>
+<ul>
+<li>Has the same behaviour as <code class="codehilite">step</code>, but it <strong>ignores the jumps between lines due to loops</strong> (for, whiles, etc), continuing to the next source code with incremental line number.</li>
+</ul>
+<h4 id="breakpoints">Breakpoints<a class="headerlink" href="#breakpoints" title="Permanent link">Link</a></h4>
+<p><code class="codehilite">info breakpoints</code></p>
+<ul>
+<li>Retrieve information about breakpoints
+```shell=
+(gdb) info breakpoints
+Num     Type           Disp Enb
+ress    What
+1       breakpoint     keep y   0x00002140 in tick() at src/HOLA.cpp:9
+    breakpoint already hit 15 times
+<div class="codehilite"><pre><span></span>`break`
+
+* Set a breakpoint in a specific function
+```shell=
+(gdb) break loop
+</pre></div></li>
+<li>Set a breakpoint in a specific line (344)
+```shell=
+(gdb) break main.cpp:344
+<div class="codehilite"><pre><span></span>!!! info
+    Use the **tbreak** command instead of break if you want to stop the program once, and then remove the breakpoint. More **breakpoint condition** options can be found [**here**](https://sourceware.org/gdb/current/onlinedocs/gdb/Conditions.html#Conditions) you can find 
+
+`watchpoint`
+
+* Set a watchpoint [**watchpoint**](https://sourceware.org/gdb/current/onlinedocs/gdb/Set-Watchpoints.html#Set-Watchpoints) to only stop once a variable has a certain value.
+```shell=
+(gdb) watch timer
+</pre></div></li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Type in <code class="codehilite">info watchpoints</code> to get information about watchpoints.</p>
+</div>
+<p><code class="codehilite">commands</code></p>
+<ul>
+<li>Set a <strong>list of actions</strong> related to the breakpoint:
+```shell=
+break main.cpp:50
+commands
+silent
+printf "count is %d\n",count
+cont
+end
+<div class="codehilite"><pre><span></span>`delete`
+
+* Delete a breakpoint
+```shell=
+(gdb) delete 1
+(gdb) info breakpoints
+No breakpoints or watchpoints.
+</pre></div></li>
+</ul>
+<h4 id="printing-setting-variables-and-more">Printing / setting variables and more<a class="headerlink" href="#printing-setting-variables-and-more" title="Permanent link">Link</a></h4>
+<p><code class="codehilite">loop</code></p>
+<ul>
+<li>
+<p>Read what is around a certain function
+<code class="codehilite">``shell=(gdb) l loop25    //while (!Serial) {26      //; // wait for serial port to connect. Needed for native USB port only27    //}28  }2930  void loop() {31    // put your main code here, to run repeatedly:32    Serial.println(&quot;HOLA&quot;);33    tick();34    Serial.println(millis());wzxhzdk:12</code>set`</p>
+</li>
+<li>
+<p>Set variable to a certain value
+```shell=
+(gdb) set timer = 0
+<div class="codehilite"><pre><span></span>#### Target commands (load)
+`load filename offset`
+
+* `Load` it is meant to make filename (an executable) available for debugging on the remote system—by downloading it. `load` also records the filename symbol table in GDB, like the add-symbol-file command. The file is loaded at whatever address is specified in the executable, also into flash memory.
+
+### Making changes in the code
+Anytime we make a change in the code, we don&#39;t need to reload the debugging session. We can easily do so by:
+
+1. Compile the code:
+    a. Define Shell build in Sublime Text and configure a build sytem with:
+
+    ```
+    &quot;shell_cmd&quot;: &quot;cd .. &amp;&amp; pio run&quot;
+    ```
+
+    Then, everytime you hit Ctrl+B (Cmd+B) and you use your custom build system, it will automatically use this option.
+
+    b. Or hit `pio run` in another terminal located in your project root directory
+
+2. In gdb, `load` file. This will reload the file defined at the beginning of your debugging session and upload it to the target
+```shell=
+(gdb) load
+Loading section .text, size 0x2e50 lma 0x2000
+Loading section .ramfunc, size 0x60 lma 0x4e50
+Loading section .data, size 0x110 lma 0x4eb0
+Start address 0x2910, load size 12224
+Transfer rate: 3 KB/sec, 4074 bytes/write.
+</pre></div></p>
+</li>
+<li>Keep debugging</li>
+</ul>
+<h3 id="gdb-console">GDB Console<a class="headerlink" href="#gdb-console" title="Permanent link">Link</a></h3>
+<h4 id="tui">TUI<a class="headerlink" href="#tui" title="Permanent link">Link</a></h4>
+<p>GDB has a console GUI option available with the command line option <strong>--tui</strong>
+In the upper frame you can see the code that's being executed.</p>
+<p><img alt="" src="http://www.yolinux.com/TUTORIALS/images/GDB-tui.png" /></p>
+<h4 id="gdb-init-file">GDB init file<a class="headerlink" href="#gdb-init-file" title="Permanent link">Link</a></h4>
+<p>From this <a href="https://github.com/cyrus-and/gdb-dashboard">example dashboard</a> we can generate a custom .gdbinit file for the SCK which will be placed in the HOME directory... (ON GOING)</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Would be interesting to generate a custom option for production validation and one for internal debugging purposes</p>
+</div>
+<p>For references about where to locate the .gdbinit and more custom behaviour for gdb in general see <a href="http://www.dirac.org/linux/gdb/03-Initialization,_Listing,_And_Running.php">here</a>.</p>
+<h3 id="gdb-from-sublime-text">GDB from Sublime Text<a class="headerlink" href="#gdb-from-sublime-text" title="Permanent link">Link</a></h3>
+<p><a href="http://docs.platformio.org/en/latest/ide/sublimetext.html">Setup Platformio project with sublime Text</a>
+<a href="http://developers-club.com/posts/270789/">Setup sublimeGDB</a></p>
+<h2 id="reference">Reference<a class="headerlink" href="#reference" title="Permanent link">Link</a></h2>
+<h3 id="general-gdb-references-and-examples">General GDB references and examples<a class="headerlink" href="#general-gdb-references-and-examples" title="Permanent link">Link</a></h3>
+<p><a href="https://sourceware.org/gdb/current/onlinedocs/gdb/Summary.html#Summary">Debugging with GDB - Book</a></p>
+<p><a href="http://openocd.org/doc-release/html/GDB-and-OpenOCD.html#GDB-and-OpenOCD">Debugging example from GDB and OpenOCD</a></p>
+<p><a href="http://starter-kit.nettigo.eu/2015/debug-sketch-on-arduino-zero-pro-with-gdb-and-openocd/">Arduino zero example</a></p>
+<h3 id="additional-notes-from-platformio-configuration">Additional notes from Platformio configuration<a class="headerlink" href="#additional-notes-from-platformio-configuration" title="Permanent link">Link</a></h3>
+<ol>
+<li>How to set other <a href="http://docs.platformio.org/en/latest/projectconf/section_env_debug.html#projectconf-debug-server">DEBUG FLAGS</a></li>
+<li>About project configuration with <a href="http://docs.platformio.org/en/latest/projectconf.html">Platformio init</a></li>
+<li>Check <a href="https://community.platformio.org/t/confusion-surrounding-preprocessor-build-flags-ifdefs-with-cmake-and-clion/2119"><strong>here</strong></a> for building an *.ini file with custom build target for debugging and production.</li>
+</ol>
                 
                   
                 
@@ -2695,11 +3199,30 @@
 
         <!-- Link to previous page -->
         
+          <a href="../../"
+              title="Index"
+              class="md-flex md-footer-nav__link md-footer-nav__link--prev"
+              rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back
+                    md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch
+                  md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Index
+              </span>
+            </div>
+          </a>
+        
 
         <!-- Link to next page -->
         
-          <a href="Smart Citizen Kit/"
-              title="Smart Citizen Kit"
+          <a href="../Edit the Firmware/"
+              title="Edit the Firmware"
               class="md-flex md-footer-nav__link md-footer-nav__link--next"
               rel="next">
             <div class="md-flex__cell md-flex__cell--stretch
@@ -2708,7 +3231,7 @@
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Smart Citizen Kit
+                Edit the Firmware
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
@@ -2737,7 +3260,7 @@
       
         
   <div class="md-footer-social">
-    <link rel="stylesheet" href="./assets/fonts/font-awesome.css">
+    <link rel="stylesheet" href="../../../../assets/fonts/font-awesome.css">
     
       <a href="https://twitter.com/smartcitizenkit" class="md-footer-social__link fa fa-twitter"></a>
     
@@ -2752,9 +3275,9 @@
       
     </div>
     
-      <script src="assets/javascripts/application.583bbe55.js"></script>
+      <script src="../../../../assets/javascripts/application.583bbe55.js"></script>
       
-      <script>app.initialize({version:"1.0.2",url:{base:"."}})</script>
+      <script>app.initialize({version:"1.0.2",url:{base:"../../../.."}})</script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       
