@@ -27,6 +27,9 @@ Of course! The data collected by your sensor is available for anyone on the Smar
 ## How does the sensors record the data?
 The sensor can work in network and SD card modes. In network mode, the sensor publish data to the SC platform over Wi-Fi every minute. In SD card mode, all the collected data is stored locally in CSV format, and it can be later uploaded manually to the platform using the “Manual Data Upload” option.
 
+## What networks does it support?
+The SCK supports Wi-Fi WEP, WPA/WPA2 and open networks that are common networks in domestic environments and small businesses. However, like many other embedded devices such as Apple TV® or Chromecast®, it **does not** support networks with captive portals such as those found in Airports and Hotels. Currently, it also **does not** WPA/WPA2 Enterprise networks such as EDUROAM. However, they will be supported in the future after a firmware updated. 
+
 ## Is there a mobile phone that lets me view the data?
 Currently, there is an android app available, but we are working to make the website fully mobile device friendly, so that no mobile phone app is required. We would rather focus the time of our small team on the kits themselves instead of maintaining apps. So our final aim is to be app free, but fully mobile friendly.
 
