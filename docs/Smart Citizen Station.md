@@ -199,7 +199,7 @@ The Station can be directly powered at 220V AC (Consumption MAX 33W).
 
 #### <span class="led small red"> </span> Setup mode
 
-In this mode, the Kit is ready to be configured in **network** mode or **SD card** in [**onboarding.iscape.smartcitizen.me**](https://onboarding.iscape.smartcitizen.me/).
+In this mode, the Kit is ready to be configured in **network** mode or **SD card** in [**start.smartcitizen.me**](https://start.smartcitizen.me/).
 
 | LED color                            |  Kit status                             |
 |------------------------------------------|------------------------------------------- |

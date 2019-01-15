@@ -2,7 +2,7 @@ Smart Citizen Kit
 ===========
 
 !!! tip "Quick links"
-	:rocket: **Installation: [onboarding.iscape.smartcitizen.me](https://onboarding.iscape.smartcitizen.me/)**
+	:rocket: **Installation: [start.smartcitizen.me](https://start.smartcitizen.me/)**
 
 	:earth_africa: **Platform: [smartcitizen.me](https://smartcitizen.me)**
 
@@ -36,7 +36,7 @@ The sensor comes mounted and almost ready to be used
 
 ![](https://i.imgur.com/GfQy84y.jpg)
 
-The only thing we should do is connect the battery. The kit will light in red and we will be able to configure it by following the instructions at [**onboarding.iscape.smartcitizen.me**](https://attention.smartcitizen.me).
+The only thing we should do is connect the battery. The kit will light in red and we will be able to configure it by following the instructions at [**start.smartcitizen.me**](https://start.smartcitizen.me).
 
 ![](https://i.imgur.com/5mjUhWr.png)
 
@@ -78,7 +78,7 @@ _Remember that in addition to the colors you will have the state color of the ki
 
 #### <span class="led small red"> </span> Setup mode
 
-In this mode, the Kit is ready to be configured in **network** mode or **SD card** in [**onboarding.iscape.smartcitizen.me**](https://onboarding.iscape.smartcitizen.me/).
+In this mode, the Kit is ready to be configured in **network** mode or **SD card** in [**start.smartcitizen.me**](https://start.smartcitizen.me/).
 
 | LED color                            |  Kit status                             |
 |------------------------------------------|------------------------------------------- |
