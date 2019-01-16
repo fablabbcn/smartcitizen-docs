@@ -2,7 +2,7 @@ Welcome!
 ========
 
 !!! warning "We are in Beta!"
-	This documentation is brand new and currently in BETA! You can open an [issue](https://github.com/fablabbcn/smartcitizen-docs/issues/new) with your questions or comments
+	This documentation is brand new and currently in BETA! You can open an [issue](https://github.com/fablabbcn/smartcitizen-docs/issues/new) with your questions or comments.
 
 ![](https://i.imgur.com/cCbOxV6.jpg)
 
