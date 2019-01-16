@@ -2,7 +2,7 @@
 
 
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="no-js">
   <head>
     
@@ -38,7 +38,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.0.2, mkdocs-material-3.0.3">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.2.0">
     
     
       
@@ -46,7 +46,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application.451f80e5.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application.572ca0f0.css">
       
         <link rel="stylesheet" href="../../assets/stylesheets/application-palette.22915126.css">
       
@@ -57,16 +57,17 @@
       
     
     
-      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
+      <script src="../../assets/javascripts/modernizr.8c900955.js"></script>
     
     
-      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
       
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
     <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
     
     
   </head>
@@ -85,7 +86,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="../../#hardware" tabindex="1" class="md-skip">
+      <a href="#hardware" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -2918,8 +2919,8 @@
 <h3 id="inside-the-sck">Inside the SCK<a class="headerlink" href="#inside-the-sck" title="Permanent link">Link</a></h3>
 <h4 id="main-board">Main Board<a class="headerlink" href="#main-board" title="Permanent link">Link</a></h4>
 <p>The main board contains the basic functionality like sensor I/O to read de sensor values, communication with the platform through the wifi module, manage the power and battery charging.</p>
-<p><img alt="Main Board CPU" src="../../assets/images/sck_1/v1.0/main_board_cpu.jpg" />
-<img alt="Main Board CPU" src="../../assets/images/sck_1/main_board_cpu.jpg" /></p>
+<p><img alt="Main Board CPU" src="/assets/images/sck_1/v1.0/main_board_cpu.jpg" />
+<img alt="Main Board CPU" src="/assets/images/sck_1/main_board_cpu.jpg" /></p>
 <h5 id="pinout">PINOUT<a class="headerlink" href="#pinout" title="Permanent link">Link</a></h5>
 <p>The SCK Main Board connects to the Sensor Board 16 pin connector. This is how the pins are laid out on the board. The numbers in brackets are the actual pin numbers of the micro controller. Pins IO are digital and S are analogue.</p>
 <table>
@@ -2970,11 +2971,11 @@
 <p><a href="http://www.atmel.com/Images/Atmel-7766-8-bit-AVR-ATmega16U4-32U4_Datasheet.pdf">ATMEGA32U4 datasheet</a></p>
 <h5 id="usb-connector">USB CONNECTOR<a class="headerlink" href="#usb-connector" title="Permanent link">Link</a></h5>
 <p>The 1.0 version uses a Mini USB connector and 1.1 version uses a Micro USB.</p>
-<p><img alt="usb connectors" src="../../assets/images/sck_1/usb_connectors.png" /></p>
+<p><img alt="usb connectors" src="/assets/images/sck_1/usb_connectors.png" /></p>
 <h5 id="wifi-module">WIFI MODULE<a class="headerlink" href="#wifi-module" title="Permanent link">Link</a></h5>
 <p>The RN-131 module is a standalone, embedded wireless 802.11 b/g networking module. With its small form factor and extremely low power consumption, the RN-131 fits perfectly for the SCK wireless communication requirements.</p>
-<p><img alt="wifly module" src="../../assets/images/sck_1/v1.0/main_board_wifly.jpg" />
-<img alt="wifly module" src="../../assets/images/sck_1/main_board_wifly.jpg" /></p>
+<p><img alt="wifly module" src="/assets/images/sck_1/v1.0/main_board_wifly.jpg" />
+<img alt="wifly module" src="/assets/images/sck_1/main_board_wifly.jpg" /></p>
 <p>Main features:</p>
 <ul>
 <li>Qualified 2.4-GHz IEEE 802.11b/g transceiver</li>
@@ -2998,41 +2999,41 @@
 <h5 id="battery-powering">BATTERY POWERING<a class="headerlink" href="#battery-powering" title="Permanent link">Link</a></h5>
 <p>For powering the SCK, in both versions, we are using a 3.7v 2000 mAh li-on battery.</p>
 <p>SCK version 1.0 uses two different voltages, 3.3V and 5V to power the IC’s. To get 5V from 3.3v we are using a step-up based on NCP1400, thus having a stable voltage at 5v and 100mA. On the other hand, to regulate the voltage and to obtain 3.3v, the SCK uses the IC MAX604.</p>
-<p><img alt="NCP1400" src="../../assets/images/sck_1/v1.0/main_board_NCP1400.jpg" />
-<img alt="MAX604" src="../../assets/images/sck_1/v1.0/main_board_MAX604.jpg" /></p>
+<p><img alt="NCP1400" src="/assets/images/sck_1/v1.0/main_board_NCP1400.jpg" />
+<img alt="MAX604" src="/assets/images/sck_1/v1.0/main_board_MAX604.jpg" /></p>
 <p><a href="http://www.onsemi.com/pub_link/Collateral/NCP1400A-D.PDF">NCP1400 datasheet</a>
 <a href="http://www.solarbotics.net/library/datasheets/MAX604.pdf">MAX604 datasheet</a></p>
 <p>In 1.1 version, to make things simpler, the voltage of entire SCK was unified to 3.3V. The responsible to regulate the voltage from 3.7v to 3.3v is the MCP1725 IC.</p>
-<p><img alt="MCP1725" src="../../assets/images/sck_1/main_board_MCP1725.jpg" /></p>
+<p><img alt="MCP1725" src="/assets/images/sck_1/main_board_MCP1725.jpg" /></p>
 <p><a href="http://ww1.microchip.com/downloads/en/DeviceDoc/22026b.pdf">MCP1725 datasheet</a></p>
 <h5 id="battery-charging">BATTERY CHARGING<a class="headerlink" href="#battery-charging" title="Permanent link">Link</a></h5>
 <p>For charging the battery there are two ways, USB or solar panel. To carry out the charging we are using MCP73831 IC.</p>
 <p>For charging the battery in 1.0 version the solar panel have to be 12v and 500mA. In 1.1 version, the solar panel can be more versatile in terms of amperage.</p>
-<p><img alt="MCP73831" src="../../assets/images/sck_1/v1.0/main_board_MCP73831.jpg" />
-<img alt="MCP73831" src="../../assets/images/sck_1/main_board_MCP73831.jpg" /></p>
+<p><img alt="MCP73831" src="/assets/images/sck_1/v1.0/main_board_MCP73831.jpg" />
+<img alt="MCP73831" src="/assets/images/sck_1/main_board_MCP73831.jpg" /></p>
 <p><a href="http://ww1.microchip.com/downloads/en/DeviceDoc/20001984g.pdf">MCP73831 datasheet</a></p>
 <h5 id="solar-panel-charging">SOLAR PANEL CHARGING<a class="headerlink" href="#solar-panel-charging" title="Permanent link">Link</a></h5>
 <p>Depending on the sunlight conditions the solar panel produces up to 12v, we have to reduce the voltage to 5v to feed up the Vin of the MCP73831 charger IC.</p>
 <p>To carry out this task we are using the LM2674 IC, a very efficient IC, with a rate of 91% of performance.</p>
-<p><img alt="LM2674" src="../../assets/images/sck_1/v1.0/main_board_LM2674.jpg" />
-<img alt="LM2674" src="../../assets/images/sck_1/main_board_LM2674.jpg" /></p>
+<p><img alt="LM2674" src="/assets/images/sck_1/v1.0/main_board_LM2674.jpg" />
+<img alt="LM2674" src="/assets/images/sck_1/main_board_LM2674.jpg" /></p>
 <p><a href="http://www.ti.com/lit/ds/symlink/lm2674.pdf">LM2674 datasheet</a></p>
 <h5 id="rtc-real-time-clock">RTC (REAL TIME CLOCK)<a class="headerlink" href="#rtc-real-time-clock" title="Permanent link">Link</a></h5>
 <p>The SCK has a real time clock for keeping track of time when the kit is offline. For this task we chose the DS1307 IC for the 1.0 version and the DS1339Y-3+ IC for the 1.1 version. Different IC due to the different voltages, 5V for the 1.0 version and 3.3V for the 1.1 version.</p>
-<p><img alt="DS1307" src="../../assets/images/sck_1/v1.0/main_board_DS1307.jpg" />
-<img alt="DS1339Y-3+" src="../../assets/images/sck_1/main_board_DS1339Y-3+.jpg" /></p>
+<p><img alt="DS1307" src="/assets/images/sck_1/v1.0/main_board_DS1307.jpg" />
+<img alt="DS1339Y-3+" src="/assets/images/sck_1/main_board_DS1339Y-3+.jpg" /></p>
 <p><a href="http://datasheets.maximintegrated.com/en/ds/DS1307.pdf" target="_blank">DS1307 datasheet</a><br>
 <a href="http://datasheets.maximintegrated.com/en/ds/DS1339-DS1339U.pdf" target="_blank">DS1339Y-3+ datasheet</a></p>
 <h5 id="sd-card-reader">SD CARD READER<a class="headerlink" href="#sd-card-reader" title="Permanent link">Link</a></h5>
 <p>The SD card is used to store the data captured by the sensors when the kit is offline. When the kit gets connected, the data will be reeded from the SD card and uploaded to the platform.</p>
 <p>To hold the SD card we are using the DM3CS holder. The SD card is powered at 3.3V and communicates with the CPU through SPI protocol.</p>
-<p><img alt="DM3CS" src="../../assets/images/sck_1/v1.0/main_board_DM3CS.jpg" />
-<img alt="DM3CS" src="../../assets/images/sck_1/main_board_DM3CS.jpg" /></p>
+<p><img alt="DM3CS" src="/assets/images/sck_1/v1.0/main_board_DM3CS.jpg" />
+<img alt="DM3CS" src="/assets/images/sck_1/main_board_DM3CS.jpg" /></p>
 <p><a href="http://www.mouser.com/ds/2/185/e60900232-38395.pdf" target="_blank">DM3CS datasheet</a></p>
 <h5 id="eeprom-memory">EEPROM MEMORY<a class="headerlink" href="#eeprom-memory" title="Permanent link">Link</a></h5>
 <p>For the users that don’t have a SD card we’ve added an EEPROM memory to store the data when the SCK is offline. We chose the 24LC256 IC that can store 32kBytes, it communicates with the CPU through I2C protocol.</p>
-<p><img alt="24LC256" src="../../assets/images/sck_1/v1.0/main_board_24LC256.jpg" />
-<img alt="24LC256" src="../../assets/images/sck_1/main_board_24LC256.jpg" /></p>
+<p><img alt="24LC256" src="/assets/images/sck_1/v1.0/main_board_24LC256.jpg" />
+<img alt="24LC256" src="/assets/images/sck_1/main_board_24LC256.jpg" /></p>
 <p><a href="http://ww1.microchip.com/downloads/en/DeviceDoc/20001203U.pdf" target="_blank">24LC256 datasheet</a></p>
 <h5 id="main-board-basic-sensors">MAIN BOARD BASIC SENSORS<a class="headerlink" href="#main-board-basic-sensors" title="Permanent link">Link</a></h5>
 <p>The main board has some basic sensors:</p>
@@ -3043,48 +3044,48 @@
 </ul>
 <h4 id="sensor-board">SENSOR BOARD<a class="headerlink" href="#sensor-board" title="Permanent link">Link</a></h4>
 <p>The sensor board contains the necessary sensors for measuring all the other parameters. This means NO2 and CO gases, sunlight, noise pollution, temperature, humidity. Also, the sensor board has an I2C bus, this allows to expand the SCK to other kind of sensors.</p>
-<p><img alt="Sensor Board" src="../../assets/images/sck_1/v1.0/sensor_board.jpg" />
-<img alt="Sensor Board" src="../../assets/images/sck_1/sensor_board.jpg" /></p>
+<p><img alt="Sensor Board" src="/assets/images/sck_1/v1.0/sensor_board.jpg" />
+<img alt="Sensor Board" src="/assets/images/sck_1/sensor_board.jpg" /></p>
 <h5 id="no2-and-co-sensors">NO2 AND CO SENSORS<a class="headerlink" href="#no2-and-co-sensors" title="Permanent link">Link</a></h5>
 <p>To measure these two gases we chose <a href="http://www.e2v.com/" target="_blank">e2v</a> sensors. In particular, metal oxide sensors MICS5525 and MICS2710, for version 1.0. And MICS4514, for version 1.1, that contains both sensors in one.</p>
 <p>Metal oxide sensors are based on oxide semiconductors. Their electrical conductivity is modulated due to the reaction between the semiconductor and the gases in the atmosphere.</p>
-<p><img alt="MICS5525" src="../../assets/images/sck_1/v1.0/sensor_board_MICS5525.jpg" />
-<img alt="MICS2710" src="../../assets/images/sck_1/v1.0/sensor_board_MICS2710.jpg" />
-<img alt="MICS4514" src="../../assets/images/sck_1/sensor_board_MICS4514.jpg" /></p>
+<p><img alt="MICS5525" src="/assets/images/sck_1/v1.0/sensor_board_MICS5525.jpg" />
+<img alt="MICS2710" src="/assets/images/sck_1/v1.0/sensor_board_MICS2710.jpg" />
+<img alt="MICS4514" src="/assets/images/sck_1/sensor_board_MICS4514.jpg" /></p>
 <p><a href="http://www.e2v.com/shared/content/resources/File/sensors_datasheets/Metal_Oxide/mics-5525.pdf" target="_blank">MICS5525 datasheet</a><br>
 <a href="http://www.cdiweb.com/datasheets/e2v/mics-2710.pdf" target="_blank">MICS2710 datasheet</a><br>
 <a href="http://files.manylabs.org/datasheets/MICS-4514.pdf" target="_blank">MICS4514 datasheet</a></p>
 <h5 id="light-sensor">LIGHT SENSOR<a class="headerlink" href="#light-sensor" title="Permanent link">Link</a></h5>
 <p>The light sensor is a basic element to know the light pollution. In version 1.0, was used a LDR (light-dependent resistor) whose voltage varies depending on the light conditions.</p>
 <p>For version 1.1, was used a photodiode BH1730FVC. This sensor contains an I2C bus that gives us directly the amount of lux of ambient and infrared light.</p>
-<p><img alt="LDR" src="../../assets/images/sck_1/v1.0/sensor_board_LDR.jpg" />
-<img alt="H1730FVC" src="../../assets/images/sck_1/sensor_board_BH1730FVC.jpg" /></p>
+<p><img alt="LDR" src="/assets/images/sck_1/v1.0/sensor_board_LDR.jpg" />
+<img alt="H1730FVC" src="/assets/images/sck_1/sensor_board_BH1730FVC.jpg" /></p>
 <p><a href="http://www.farnell.com/datasheets/1813319.pdf" target="_blank">BH1730FVC datasheet</a></p>
 <h5 id="noise-sensor">NOISE SENSOR<a class="headerlink" href="#noise-sensor" title="Permanent link">Link</a></h5>
 <p>The noise sensor is based on an electret microphone. For the version 1.0 WM-61A was used as the microphone, the captured audio signal is passed through an operational amplifier configured as band pass filter.</p>
-<p><img alt="Noise Sensor" src="../../assets/images/sck_1/v1.0/sensor_board_noise_sensor.jpg" /></p>
+<p><img alt="Noise Sensor" src="/assets/images/sck_1/v1.0/sensor_board_noise_sensor.jpg" /></p>
 <p>For the version 1.1 POM-3044P-R was used.</p>
-<p><img alt="Noise Sensor" src="../../assets/images/sck_1/sensor_board_noise_sensor.jpg" /></p>
+<p><img alt="Noise Sensor" src="/assets/images/sck_1/sensor_board_noise_sensor.jpg" /></p>
 <p><a href="http://industrial.panasonic.com/www-data/pdf/ABA5000/ABA5000CE22.pdf" target="_blank">WM-61A datasheet</a><br>
 <a href="http://www.farnell.com/datasheets/40113.pdf" target="_blank">POM-3044P-R datasheet</a></p>
 <h5 id="temperature-and-humidity-sensor">TEMPERATURE AND HUMIDITY SENSOR<a class="headerlink" href="#temperature-and-humidity-sensor" title="Permanent link">Link</a></h5>
 <p>To measure temperature and humidity a module that integrates both sensors was used.</p>
 <p>For version 1.0 the RHT22 was used, it has <em>one wire</em> digital interface.</p>
-<p><img alt="RHT22 Sensor" src="../../assets/images/sck_1/v1.0/sensor_board_RHT22.jpg" /></p>
+<p><img alt="RHT22 Sensor" src="/assets/images/sck_1/v1.0/sensor_board_RHT22.jpg" /></p>
 <p>For version 1.1 the SHT21 was used, it has <em>I2C</em> protocol and faster response between measures than the RHT22.</p>
-<p><img alt="SHT21 Sensor" src="../../assets/images/sck_1/sensor_board_SHT21.jpg" /></p>
+<p><img alt="SHT21 Sensor" src="/assets/images/sck_1/sensor_board_SHT21.jpg" /></p>
 <p><a href="https://www.sparkfun.com/datasheets/Sensors/Temperature/DHT22.pdf" target="_blank">RHT22 datasheet</a><br>
 <a href="http://www.mouser.com/ds/2/682/Sensirion_Humidity_SHT21_Datasheet_V4-469715.pdf" target="_blank">SHT21 datasheet</a></p>
 <h5 id="3-axis-accelerometer">3 AXIS ACCELEROMETER<a class="headerlink" href="#3-axis-accelerometer" title="Permanent link">Link</a></h5>
 <p>In version 1.0 we detected that some measures vary depending on the orientation of the SCK.</p>
 <p>That's why in version 1.1 we added the ADXL345 accelerometer to detect the position and to compensate the measures depending on the orientation of
 the SCK. This accelerometer communicates via I2C protocol with the kit.</p>
-<p><img alt="ADXL345" src="../../assets/images/sck_1/sensor_board_ADXL345.jpg" /></p>
+<p><img alt="ADXL345" src="/assets/images/sck_1/sensor_board_ADXL345.jpg" /></p>
 <p><a href="http://www.analog.com/static/imported-files/data_sheets/ADXL345.pdf" target="_blank">ADXL345 datasheet</a></p>
 <h5 id="i2c-expansion-bus">I2C EXPANSION BUS<a class="headerlink" href="#i2c-expansion-bus" title="Permanent link">Link</a></h5>
 <p>Due to the ease of the I2C protocol. We’ve included and I2C bus to provide to the community the opportunity of expanding the SCK.</p>
-<p><img alt="I2C Bus" src="../../assets/images/sck_1/v1.0/sensor_board_i2c_bus.jpg" />
-<img alt="I2C Bus" src="../../assets/images/sck_1/sensor_board_i2c_bus.jpg" /></p>
+<p><img alt="I2C Bus" src="/assets/images/sck_1/v1.0/sensor_board_i2c_bus.jpg" />
+<img alt="I2C Bus" src="/assets/images/sck_1/sensor_board_i2c_bus.jpg" /></p>
 <h3 id="detailed-specifications">Detailed specifications<a class="headerlink" href="#detailed-specifications" title="Permanent link">Link</a></h3>
 <table>
 <thead>
@@ -3359,17 +3360,17 @@ the SCK. This accelerometer communicates via I2C protocol with the kit.</p>
 <p><strong> * </strong> <a href="http://www.aqmd.gov/aq-spec/evaluations#&amp;MainContent_C001_Col00=2">South Coast AQMD</a> The correlation coefficient (R²) is a statistical parameter indicating how well the performance of each sensor compares to that of a Federal Reference or Federal Equivalent Method (FRM and FEM, respectively) instrument. An R² approaching the value of 1 reflects a near perfect agreement, whereas a value of 0 indicates a complete lack of correlation</p>
 <p><strong> * </strong> Internal Smart Citizen Team WIP Evaluation Tests</p>
 <h3 id="enclosures">Enclosures<a class="headerlink" href="#enclosures" title="Permanent link">Link</a></h3>
-<p><img alt="Enclosure" src="../../assets/images/sck_1/case.jpg" /></p>
+<p><img alt="Enclosure" src="/assets/images/sck_1/case.jpg" /></p>
 <p>We have designed a laser cut cover for an acrylic material and a 3D-Printed enclosure to better safeguard the hardware, particularly for outdoor applications.</p>
 <p>You can download the files through this links.</p>
 <p><a href="http://www.thingiverse.com/thing:262891" target="_blank">Smart Citizen Enclosure 1.0</a><br>
 <a href="http://www.thingiverse.com/thing:236976" target="_blank">Smart Citizen Enclosure 1.1</a></p>
-<p><img alt="Enclosure" src="../../assets/images/sck_1/case_5.jpg" />
-<img alt="Enclosure2" src="../../assets/images/sck_1/case_6.jpg" /></p>
+<p><img alt="Enclosure" src="/assets/images/sck_1/case_5.jpg" />
+<img alt="Enclosure2" src="/assets/images/sck_1/case_6.jpg" /></p>
 <p>Also, we are working in new cases that will be available soon.</p>
 <p><a href="assets/case_assembly.pdf" target="_blank">Smart Citizen Enclosure Assembly Instructions</a></p>
 <h3 id="acrylic-cases">Acrylic cases<a class="headerlink" href="#acrylic-cases" title="Permanent link">Link</a></h3>
-<p><img alt="Acrylic" src="../../assets/images/sck_1/acrylic.jpg" /></p>
+<p><img alt="Acrylic" src="/assets/images/sck_1/acrylic.jpg" /></p>
 <p>This case has been designed to protect the electronics on the circuit boards and allows for mount the SCK's hardware on walls and other surfaces without much trouble. Particularly for indoor applications.</p>
 <p><a href="https://github.com/acrobotic/Ai_Enclosure_SCK/tree/master/laser_cut" target="_blank">Acrylic cases</a></p>
                 
@@ -3496,9 +3497,9 @@ the SCK. This accelerometer communicates via I2C protocol with the kit.</p>
       
     </div>
     
-      <script src="../../assets/javascripts/application.583bbe55.js"></script>
+      <script src="../../assets/javascripts/application.b41f3d20.js"></script>
       
-      <script>app.initialize({version:"1.0.2",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       
