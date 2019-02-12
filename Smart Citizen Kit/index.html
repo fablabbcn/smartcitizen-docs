@@ -38,7 +38,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../assets/images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.2.0">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.3.0">
     
     
       
@@ -57,7 +57,7 @@
       
     
     
-      <script src="../assets/javascripts/modernizr.8c900955.js"></script>
+      <script src="../assets/javascripts/modernizr.962652e9.js"></script>
     
     
       
@@ -68,6 +68,9 @@
     
     <link rel="stylesheet" href="../assets/fonts/material-icons.css">
     
+    
+    
+      
     
     
   </head>
@@ -413,6 +416,26 @@
   <a href="#measurements" title="Measurements" class="md-nav__link">
     Measurements
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sck-21" title="SCK 2.1" class="md-nav__link">
+    SCK 2.1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sck-20" title="SCK 2.0" class="md-nav__link">
+    SCK 2.0
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2747,6 +2770,26 @@
     Measurements
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sck-21" title="SCK 2.1" class="md-nav__link">
+    SCK 2.1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sck-20" title="SCK 2.0" class="md-nav__link">
+    SCK 2.0
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2952,10 +2995,16 @@
                 
                 
                 <h1 id="smart-citizen-kit">Smart Citizen Kit<a class="headerlink" href="#smart-citizen-kit" title="Permanent link">Link</a></h1>
+<div class="admonition info">
+<p class="admonition-title">A note about versions</p>
+<p><strong>The following section contains information about the SCK 2.0 and the SCK 2.1.</strong></p>
+<p>The <strong>SCK 2.0</strong> was the development version for the now commercially available <strong>SCK 2.1</strong> sponsored thanks to the <a href="https://www.iscapeproject.eu/">iSCAPE project</a> under European Community’s H2020 Programme under Grant Agreement No. <a href="https://cordis.europa.eu/project/rcn/202639/en">689954</a></p>
+</div>
 <div class="admonition tip">
 <p class="admonition-title">Quick links</p>
 <p><img alt="🚀" class="emojione" src="https://cdn.jsdelivr.net/emojione/assets/svg/1f680.svg" title=":rocket:" /> <strong>Installation: <a href="https://start.smartcitizen.me/">start.smartcitizen.me</a></strong></p>
 <p><img alt="🌍" class="emojione" src="https://cdn.jsdelivr.net/emojione/assets/svg/1f30d.svg" title=":earth_africa:" /> <strong>Platform: <a href="https://smartcitizen.me">smartcitizen.me</a></strong></p>
+<p><img alt="💬" class="emojione" src="https://cdn.jsdelivr.net/emojione/assets/svg/1f4ac.svg" title=":speech_balloon:" /> <strong>Discuss: <a href="https://forum.smartcitizen.me">forum.smartcitizen.me</a></strong></p>
 <p><img alt="❓" class="emojione" src="https://cdn.jsdelivr.net/emojione/assets/svg/2753.svg" title=":question:" /> <strong>Support: <a href="mailto: support@smartcitizen.me">support@smartcitizen.me</a></strong></p>
 </div>
 <h2 id="the-kit"><img alt="🎁" class="emojione" src="https://cdn.jsdelivr.net/emojione/assets/svg/1f381.svg" title=":gift:" /> The Kit<a class="headerlink" href="#the-kit" title="Permanent link">Link</a></h2>
@@ -2967,11 +3016,18 @@
 <li>USB cable and a USB charger to charge the battery.</li>
 </ol>
 <h2 id="measurements"><img alt="👂" class="emojione" src="https://cdn.jsdelivr.net/emojione/assets/svg/1f442.svg" title=":ear:" /> Measurements<a class="headerlink" href="#measurements" title="Permanent link">Link</a></h2>
+<p>All the Smart Citizen Kit new sensors generation measure at least air temperature, relative humidity, noise level, ambient light, barometric pressure and particulate matter.</p>
+<h3 id="sck-21">SCK 2.1<a class="headerlink" href="#sck-21" title="Permanent link">Link</a></h3>
+<div class="admonition info">
+<p class="admonition-title">Important!</p>
+<p>Detailed information is currently under development and can be partially found on the previous <a href="/Components/Urban%20Sensor%20Board/">SCK 2.0 Urban Sensor Board</a> on the <a href="/Components">Components</a> section.</p>
+<p><strong>More information coming soon!</strong></p>
+</div>
 <table>
 <thead>
 <tr>
-<th>Mesura</th>
-<th>Unitats</th>
+<th>Measurement</th>
+<th>Units</th>
 <th>Sensors</th>
 </tr>
 </thead>
@@ -3002,9 +3058,66 @@
 <td>NXP MPL3115A26</td>
 </tr>
 <tr>
-<td>Particulate Matter PM &frac12;.5/10</td>
+<td>Equivalent Carbon Dioxide</td>
+<td>ppm</td>
+<td>AMS CCS811</td>
+</tr>
+<tr>
+<td>Volatile Organic Compounds</td>
+<td>ppb</td>
+<td>AMS CCS811</td>
+</tr>
+<tr>
+<td>Particulate Matter PM 1 / 2.5 / 10</td>
 <td>µg/m3</td>
-<td>PMS 7003</td>
+<td>PMS 5003</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sck-20">SCK 2.0<a class="headerlink" href="#sck-20" title="Permanent link">Link</a></h3>
+<div class="admonition info">
+<p class="admonition-title">Important!</p>
+<p><strong>SCK 2.0 was the development version for the now commercially available SCK 2.1</strong></p>
+<p>The board also includes a SGX MICS-4514 and a MAXIM MAX3010 but those are not supported by the standard firmware configuration. Fore more information visit the <a href="Components/Urban%20Sensor%20Board/">Urban Sensor Board</a> on the <a href="Components">Components</a> section.</p>
+</div>
+<table>
+<thead>
+<tr>
+<th>Measurement</th>
+<th>Units</th>
+<th>Sensors</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Air temperature</td>
+<td>ºC</td>
+<td>Sensirion SHT-31</td>
+</tr>
+<tr>
+<td>Relative Humidity</td>
+<td>% REL</td>
+<td>Sensirion SHT-31</td>
+</tr>
+<tr>
+<td>Noise level</td>
+<td>dBA</td>
+<td>Invensense ICS-434342</td>
+</tr>
+<tr>
+<td>Ambient light</td>
+<td>Lux</td>
+<td>Rohm BH1721FVC</td>
+</tr>
+<tr>
+<td>Barometric pressure</td>
+<td>Pa</td>
+<td>NXP MPL3115A26</td>
+</tr>
+<tr>
+<td>Particulate Matter PM 1 / 2.5 / 10</td>
+<td>µg/m3</td>
+<td>PMS 5003</td>
 </tr>
 </tbody>
 </table>
@@ -3584,16 +3697,13 @@ We recommend using a tablet power adaptor, instead of a computer USB port, for q
       
     </div>
     
-      <script src="../assets/javascripts/application.b41f3d20.js"></script>
+      <script src="../assets/javascripts/application.a353778b.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       
         <script src="https://buttons.github.io/buttons.js"></script>
-      
-    
-    
       
     
   </body>
