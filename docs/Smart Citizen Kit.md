@@ -1,12 +1,23 @@
 Smart Citizen Kit
 ===========
 
+!!! info "A note about versions"
+    **The following section contains information about the SCK 2.0 and the SCK 2.1.**
+
+    The **SCK 2.0** was the development version for the now commercially available **SCK 2.1** sponsored thanks to the [iSCAPE project](https://www.iscapeproject.eu/) under European Community’s H2020 Programme under Grant Agreement No. [689954](https://cordis.europa.eu/project/rcn/202639/en)
+
 !!! tip "Quick links"
 	:rocket: **Installation: [start.smartcitizen.me](https://start.smartcitizen.me/)**
 
 	:earth_africa: **Platform: [smartcitizen.me](https://smartcitizen.me)**
 
+
+    :speech_balloon: **Discuss: [forum.smartcitizen.me](https://forum.smartcitizen.me)**
+
+
 	:question: **Support: [support@smartcitizen.me](mailto: support@smartcitizen.me)**
+
+
 
 ## :gift: The Kit
 
@@ -20,15 +31,41 @@ The Smart Citizen Kit 2.0.
 
 ## :ear: Measurements
 
-| Mesura                                       | Unitats                                        | Sensors               |
-|----------------------------------------------|------------------------------------------------|-----------------------|
-| Air temperature                        | ºC                                             | Sensirion SHT-31      |
-| Relative Humidity                              | % REL                                          | Sensirion SHT-31      |
-| Noise level                             | dBA                                            | Invensense ICS-434342 |
-| Ambient light                                | Lux                                            | Rohm BH1721FVC        |
-|  Barometric pressure                          | Pa                                             | NXP MPL3115A26        |
-| Particulate Matter PM 1/2.5/10          | µg/m3                                          | PMS 7003              |
+All the Smart Citizen Kit new sensors generation measure at least air temperature, relative humidity, noise level, ambient light, barometric pressure and particulate matter.
 
+### SCK 2.1
+
+!!! info "Important!"
+    Detailed information is currently under development and can be partially found on the previous [SCK 2.0 Urban Sensor Board](/Components/Urban%20Sensor%20Board/) on the [Components](/Components) section.
+
+    **More information coming soon!**
+
+| Measurement                    | Units | Sensors               |
+|--------------------------------|-------|-----------------------|
+| Air temperature                | ºC    | Sensirion SHT-31      |
+| Relative Humidity              | % REL | Sensirion SHT-31      |
+| Noise level                    | dBA   | Invensense ICS-434342 |
+| Ambient light                  | Lux   | Rohm BH1721FVC        |
+| Barometric pressure            | Pa    | NXP MPL3115A26        |
+| Equivalent Carbon Dioxide      | ppm   | AMS CCS811            |
+| Volatile Organic Compounds     | ppb   | AMS CCS811            |
+| Particulate Matter PM 1 / 2.5 / 10 | µg/m3 | PMS 5003              |
+
+### SCK 2.0
+
+!!! info "Important!"
+    **SCK 2.0 was the development version for the now commercially available SCK 2.1**
+
+    The board also includes a SGX MICS-4514 and a MAXIM MAX3010 but those are not supported by the standard firmware configuration. Fore more information visit the [Urban Sensor Board](Components/Urban%20Sensor%20Board/) on the [Components](Components) section.
+
+| Measurement                    | Units | Sensors               |
+|--------------------------------|-------|-----------------------|
+| Air temperature                | ºC    | Sensirion SHT-31      |
+| Relative Humidity              | % REL | Sensirion SHT-31      |
+| Noise level                    | dBA   | Invensense ICS-434342 |
+| Ambient light                  | Lux   | Rohm BH1721FVC        |
+| Barometric pressure            | Pa    | NXP MPL3115A26        |
+| Particulate Matter PM 1 / 2.5 / 10 | µg/m3 | PMS 5003              |
 
 ## :notebook: Instructions
 
