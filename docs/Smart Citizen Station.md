@@ -184,13 +184,12 @@ The Station can be directly powered at 220V AC (Consumption MAX 33W).
 
 ## The button
 
-| Funció            | Acció del botó                                                                                   |
-|-------------------|--------------------------------------------------------------------------------------------------|
-| **ON**                | Push the button                                                                                  |
-| **OFF**               | Push the button for 5 seconds                                                                |
-| **CHANGE MODE**       | Push the button multiple times to choose: *Setup* <span class="led small red"></span>  *Wi-Fi* <span class="led small blue"></span> *Pink* <span class="led small pink"></span> |
-| **FACTORY RESET** | Push the button 15 seconds for a full reset                                              |
-
+| Function          | Button action                                                                                                                                                                   |
+|-------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **ON**            | Push the button                                                                                                                                                                 |
+| **OFF**           | Push the button for 5 seconds                                                                                                                                                   |
+| **CHANGE MODE**   | Push the button multiple times to choose: *Setup* <span class="led small red"></span>  *Wi-Fi* <span class="led small blue"></span> *Pink* <span class="led small pink"></span> |
+| **FACTORY RESET** | Push the button 15 seconds for a full reset                                                                                                                                     |                                          |
 
 ![](https://i.imgur.com/uJ0JJIb.jpg)
 
