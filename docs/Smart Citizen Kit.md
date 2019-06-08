@@ -164,9 +164,14 @@ If we do not have an internet connection we can use the SD mode. In this case th
 If we want to leave the kit on the outside for a few days you will need to provide it with extra protection.
  
 !!! warning
-    Keep in mind that casing is designed for short outdoor deployments. If you want a case for long exhibitions abroad, we will soon have a much more rugged enclosure ready!
+    Keep in mind that casing is designed for short outdoor deployments. If you want a case for long exhibitions abroad, we will soon have a much more rugged enclosure ready! Also, feel free to explore all our [enclosures repository](https://github.com/fablabbcn/smartcitizen-enclosures) for this and other versions of our hardware.
 
 !!! example "Step by step"
+
+    **First, you will need the two 3D printed clips. You can [download the STL](https://github.com/fablabbcn/smartcitizen-enclosures/blob/master/SmartCitizen%20DIY%20Clips%20V2.0-2.1/3D%20Print%20Clips.stl) file and print them easily on any RepRap or similar FDM printer. If you don't know how to find a 3D printer, you can look for your nearest [Fab Lab](https://www.fablabs.io/labs) or use [3D Hubs](https://www.3dhubs.com/3dprint).**
+
+    <script src="https://embed.github.com/view/3d/fablabbcn/smartcitizen-enclosures/master/SmartCitizen%20DIY%20Clips%20V2.0-2.1/3D%20Print%20Clips.stl"></script>
+
 
     1.Use scissors to cut an empty plastic bottle at about 12 cm from the top
 
