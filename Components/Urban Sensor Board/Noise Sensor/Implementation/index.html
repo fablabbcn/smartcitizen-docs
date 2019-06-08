@@ -1,100 +1,4 @@
-
-
-
-
-<!doctype html>
-<html lang="en" class="no-js">
-  <head>
-    
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width,initial-scale=1">
-      <meta http-equiv="x-ua-compatible" content="ie=edge">
-      
-        <meta name="description" content="Smart Citizen Documentation">
-      
-      
-        <link rel="canonical" href="https://docs.smartcitizen.me/Components/Urban Sensor Board/Noise Sensor/Implementation/">
-      
-      
-        <meta name="author" content="Smart Citizen Team">
-      
-      
-        <meta name="lang:clipboard.copy" content="Copy to clipboard">
-      
-        <meta name="lang:clipboard.copied" content="Copied to clipboard">
-      
-        <meta name="lang:search.language" content="en">
-      
-        <meta name="lang:search.pipeline.stopwords" content="True">
-      
-        <meta name="lang:search.pipeline.trimmer" content="True">
-      
-        <meta name="lang:search.result.none" content="No matching documents">
-      
-        <meta name="lang:search.result.one" content="1 matching document">
-      
-        <meta name="lang:search.result.other" content="# matching documents">
-      
-        <meta name="lang:search.tokenizer" content="[\s\-]+">
-      
-      <link rel="shortcut icon" href="../../../../assets/images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.0.1">
-    
-    
-      
-        <title>Implementation - Smart Citizen Docs</title>
-      
-    
-    
-      <link rel="stylesheet" href="../../../../assets/stylesheets/application.982221ab.css">
-      
-        <link rel="stylesheet" href="../../../../assets/stylesheets/application-palette.224b79ff.css">
-      
-      
-        
-        
-        <meta name="theme-color" content="#2196f3">
-      
-    
-    
-      <script src="../../../../assets/javascripts/modernizr.1f0bcf2b.js"></script>
-    
-    
-      
-        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
-        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
-      
-    
-    <link rel="stylesheet" href="../../../../assets/fonts/material-icons.css">
-    
-    
-    
-      
-    
-    
-  </head>
-  
-    
-    
-    <body dir="ltr" data-md-color-primary="blue" data-md-color-accent="yelllow">
-  
-    <svg class="md-svg">
-      <defs>
-        
-        
-      </defs>
-    </svg>
-    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
-    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
-    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
-    
-      <a href="#noise-sensor-implementation" tabindex="1" class="md-skip">
-        Skip to content
-      </a>
-    
-    
-      <!--
+<!doctype html><html lang="en" class="no-js"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="x-ua-compatible" content="ie=edge"><meta name="description" content="Smart Citizen Documentation"><link rel="canonical" href="https://docs.smartcitizen.me/Components/Urban Sensor Board/Noise Sensor/Implementation/"><meta name="author" content="Smart Citizen Team"><meta name="lang:clipboard.copy" content="Copy to clipboard"><meta name="lang:clipboard.copied" content="Copied to clipboard"><meta name="lang:search.language" content="en"><meta name="lang:search.pipeline.stopwords" content="True"><meta name="lang:search.pipeline.trimmer" content="True"><meta name="lang:search.result.none" content="No matching documents"><meta name="lang:search.result.one" content="1 matching document"><meta name="lang:search.result.other" content="# matching documents"><meta name="lang:search.tokenizer" content="[\s\-]+"><link rel="shortcut icon" href="../../../../assets/images/favicon.ico"><meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.3.1"><title>Implementation - Smart Citizen Docs</title><link rel="stylesheet" href="../../../../assets/stylesheets/application.4031d38b.css"><link rel="stylesheet" href="../../../../assets/stylesheets/application-palette.224b79ff.css"><meta name="theme-color" content="#2196f3"><script src="../../../../assets/javascripts/modernizr.74668098.js"></script><link href="https://fonts.gstatic.com" rel="preconnect" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=swap"><style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style><link rel="stylesheet" href="../../../../assets/fonts/material-icons.css"></head><body dir="ltr" data-md-color-primary="blue" data-md-color-accent="yelllow"><svg class="md-svg"><defs></defs></svg> <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off"> <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off"> <label class="md-overlay" data-md-component="overlay" for="__drawer"></label><a href="#noise-sensor-implementation" tabindex="1" class="md-skip">Skip to content </a><!--
   Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
 
   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -165,29 +69,7 @@
                 for="__search"></label>
 
             <!-- Search interface -->
-            
-<div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
-      <label class="md-icon md-search__icon" for="__search"></label>
-      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
-        &#xE5CD;
-      </button>
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="result">
-          <div class="md-search-result__meta">
-            Type to start searching
-          </div>
-          <ol class="md-search-result__list"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+            <div class="md-search" data-md-component="search" role="dialog"><label class="md-search__overlay" for="__search"></label><div class="md-search__inner" role="search"><form class="md-search__form" name="search"><input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active"> <label class="md-icon md-search__icon" for="__search"></label> <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">&#xE5CD;</button></form><div class="md-search__output"><div class="md-search__scrollwrap" data-md-scrollfix><div class="md-search-result" data-md-component="result"><div class="md-search-result__meta">Type to start searching</div><ol class="md-search-result__list"></ol></div></div></div></div></div>
           
         
       </div>
@@ -196,115 +78,7 @@
       
     </div>
   </nav>
-</header>
-    
-    <div class="md-container">
-      
-        
-      
-      
-        
-
-  
-
-<nav class="md-tabs md-tabs--active" data-md-component="tabs">
-  <div class="md-tabs__inner md-grid">
-    <ul class="md-tabs__list">
-      
-        
-  <li class="md-tabs__item">
-    
-      <a href="../../../.." title="Home" class="md-tabs__link">
-        Home
-      </a>
-    
-  </li>
-
-      
-        
-      
-        
-      
-        
-      
-        
-  
-  
-    <li class="md-tabs__item">
-      
-        <a href="../../../" title="Components" class="md-tabs__link md-tabs__link--active">
-          Components
-        </a>
-      
-    </li>
-  
-
-      
-        
-  
-  
-    <li class="md-tabs__item">
-      
-        <a href="../../../../Legacy Hardware/" title="Legacy Hardware" class="md-tabs__link">
-          Legacy Hardware
-        </a>
-      
-    </li>
-  
-
-      
-        
-  
-  
-    <li class="md-tabs__item">
-      
-        <a href="../../../../Sensor Analysis Framework/" title="Sensor Analysis Framework" class="md-tabs__link">
-          Sensor Analysis Framework
-        </a>
-      
-    </li>
-  
-
-      
-        
-  
-  
-    <li class="md-tabs__item">
-      
-        <a href="../../../../Sensor Platform/" title="Sensor Platform" class="md-tabs__link">
-          Sensor Platform
-        </a>
-      
-    </li>
-  
-
-      
-    </ul>
-  </div>
-</nav>
-      
-      <main class="md-main">
-        <div class="md-main__inner md-grid" data-md-component="container">
-          
-            
-              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    <nav class="md-nav md-nav--primary" data-md-level="0">
-  <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="https://docs.smartcitizen.me/" title="Smart Citizen Docs" class="md-nav__button md-logo">
-      
-        <img src="../../../../assets/images/logo.svg" width="48" height="48">
-      
-    </a>
-    Smart Citizen Docs
-  </label>
-  
-  <ul class="md-nav__list" data-md-scrollfix>
-    
-      
-      
-      <!--
+</header><div class="md-container"><nav class="md-tabs md-tabs--active" data-md-component="tabs"><div class="md-tabs__inner md-grid"><ul class="md-tabs__list"><li class="md-tabs__item"><a href="../../../.." title="Home" class="md-tabs__link">Home</a></li><li class="md-tabs__item"><a href="../../../" title="Components" class="md-tabs__link md-tabs__link--active">Components</a></li><li class="md-tabs__item"><a href="../../../../Legacy Hardware/" title="Legacy Hardware" class="md-tabs__link">Legacy Hardware</a></li><li class="md-tabs__item"><a href="../../../../Sensor Analysis Framework/" title="Sensor Analysis Framework" class="md-tabs__link">Sensor Analysis Framework</a></li><li class="md-tabs__item"><a href="../../../../Sensor Platform/" title="Sensor Platform" class="md-tabs__link">Sensor Platform</a></li></ul></div></nav><main class="md-main"><div class="md-main__inner md-grid" data-md-component="container"><div class="md-sidebar md-sidebar--primary" data-md-component="navigation"><div class="md-sidebar__scrollwrap"><div class="md-sidebar__inner"><nav class="md-nav md-nav--primary" data-md-level="0"><label class="md-nav__title md-nav__title--site" for="__drawer"><a href="https://docs.smartcitizen.me/" title="Smart Citizen Docs" class="md-nav__button md-logo"><img src="../../../../assets/images/logo.svg" width="48" height="48"></a>Smart Citizen Docs</label><ul class="md-nav__list" data-md-scrollfix><!--
   Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
 
   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -338,11 +112,7 @@
       Home
     </a>
   </li>
-
-    
-      
-      
-      <!--
+<!--
   Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
 
   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -376,11 +146,7 @@
       Smart Citizen Kit
     </a>
   </li>
-
-    
-      
-      
-      <!--
+<!--
   Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
 
   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -414,11 +180,7 @@
       Smart Citizen Station
     </a>
   </li>
-
-    
-      
-      
-      <!--
+<!--
   Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
 
   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -452,11 +214,7 @@
        FAQ
     </a>
   </li>
-
-    
-      
-      
-      <!--
+<!--
   Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
 
   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -1656,57 +1414,7 @@
 
     <!-- Show table of contents -->
     
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#firmware" title="Firmware" class="md-nav__link">
-    Firmware
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#audio-i2s-library" title="Audio I2S Library" class="md-nav__link">
-    Audio I2S Library
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#smart-citizen-audio-library" title="Smart Citizen Audio Library" class="md-nav__link">
-    Smart Citizen Audio Library
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#source-files" title="Source files" class="md-nav__link">
-    Source files
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
+      <nav class="md-nav md-nav--secondary"><label class="md-nav__title" for="__toc">Table of contents</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="#firmware" title="Firmware" class="md-nav__link">Firmware</a><nav class="md-nav"><ul class="md-nav__list"><li class="md-nav__item"><a href="#audio-i2s-library" title="Audio I2S Library" class="md-nav__link">Audio I2S Library</a></li><li class="md-nav__item"><a href="#smart-citizen-audio-library" title="Smart Citizen Audio Library" class="md-nav__link">Smart Citizen Audio Library</a></li></ul></nav></li><li class="md-nav__item"><a href="#source-files" title="Source files" class="md-nav__link">Source files</a></li></ul></nav>
     
   </li>
 
@@ -1732,11 +1440,7 @@
   </li>
 
 <!-- Currently active page -->
-
-    
-      
-      
-      <!--
+<!--
   Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
 
   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -1981,11 +1685,7 @@
   </li>
 
 <!-- Currently active page -->
-
-    
-      
-      
-      <!--
+<!--
   Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
 
   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -2289,11 +1989,7 @@
   </li>
 
 <!-- Currently active page -->
-
-    
-      
-      
-      <!--
+<!--
   Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
 
   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -2559,80 +2255,7 @@
   </li>
 
 <!-- Currently active page -->
-
-    
-  </ul>
-</nav>
-                  </div>
-                </div>
-              </div>
-            
-            
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#firmware" title="Firmware" class="md-nav__link">
-    Firmware
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#audio-i2s-library" title="Audio I2S Library" class="md-nav__link">
-    Audio I2S Library
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#smart-citizen-audio-library" title="Smart Citizen Audio Library" class="md-nav__link">
-    Smart Citizen Audio Library
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#source-files" title="Source files" class="md-nav__link">
-    Source files
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
-          
-          <div class="md-content">
-            <article class="md-content__inner md-typeset">
-              
-                
-                
-                <h1 id="noise-sensor-implementation">Noise Sensor Implementation<a class="headerlink" href="#noise-sensor-implementation" title="Permanent link">Link</a></h1>
+</ul></nav></div></div></div><div class="md-sidebar md-sidebar--secondary" data-md-component="toc"><div class="md-sidebar__scrollwrap"><div class="md-sidebar__inner"><nav class="md-nav md-nav--secondary"><label class="md-nav__title" for="__toc">Table of contents</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="#firmware" title="Firmware" class="md-nav__link">Firmware</a><nav class="md-nav"><ul class="md-nav__list"><li class="md-nav__item"><a href="#audio-i2s-library" title="Audio I2S Library" class="md-nav__link">Audio I2S Library</a></li><li class="md-nav__item"><a href="#smart-citizen-audio-library" title="Smart Citizen Audio Library" class="md-nav__link">Smart Citizen Audio Library</a></li></ul></nav></li><li class="md-nav__item"><a href="#source-files" title="Source files" class="md-nav__link">Source files</a></li></ul></nav></div></div></div><div class="md-content"><article class="md-content__inner md-typeset"><h1 id="noise-sensor-implementation">Noise Sensor Implementation<a class="headerlink" href="#noise-sensor-implementation" title="Permanent link">Link</a></h1>
 <div class="admonition warning">
 <p class="admonition-title">Work in progress</p>
 </div>
@@ -2663,22 +2286,7 @@ Library intented for firmware implementation in the SmartSmart Citizen Kit 2.0, 
 </ul>
 <h2 id="source-files">Source files<a class="headerlink" href="#source-files" title="Permanent link">Link</a></h2>
 <p><a class="github-button" data-size="large" href="https://github.com/fablabbcn/smartcitizen-kit-audio/archive/master.zip" data-icon="octicon-cloud-download" aria-label="Download from GitHub">Download</a></p>
-<p><a class="github-button" data-size="large" href="https://github.com/fablabbcn/smartcitizen-kit-audio" aria-label="Check the source code">Check the source code</a></p>
-                
-                  
-                
-              
-              
-                
-
-
-              
-            </article>
-          </div>
-        </div>
-      </main>
-      
-        <!--
+<p><a class="github-button" data-size="large" href="https://github.com/fablabbcn/smartcitizen-kit-audio" aria-label="Check the source code">Check the source code</a></p></article></div></div></main><!--
   Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
 
   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -2771,31 +2379,8 @@ Library intented for firmware implementation in the SmartSmart Citizen Kit 2.0, 
 
       <!-- Social links -->
       
-        
-  <div class="md-footer-social">
-    <link rel="stylesheet" href="../../../../assets/fonts/font-awesome.css">
-    
-      <a href="https://twitter.com/smartcitizenkit" class="md-footer-social__link fa fa-twitter"></a>
-    
-      <a href="https://www.facebook.com/smartcitizenBCN/" class="md-footer-social__link fa fa-facebook"></a>
-    
-  </div>
-
+        <div class="md-footer-social"><link rel="stylesheet" href="../../../../assets/fonts/font-awesome.css"> <a href="https://twitter.com/smartcitizenkit" class="md-footer-social__link fa fa-twitter"></a>  <a href="https://www.facebook.com/smartcitizenBCN/" class="md-footer-social__link fa fa-facebook"></a> </div>
       
     </div>
   </div>
-</footer>
-      
-    </div>
-    
-      <script src="../../../../assets/javascripts/application.b806dc00.js"></script>
-      
-      <script>app.initialize({version:"1.0.4",url:{base:"../../../.."}})</script>
-      
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-      
-        <script src="https://buttons.github.io/buttons.js"></script>
-      
-    
-  </body>
-</html>
+</footer></div><script src="../../../../assets/javascripts/application.b260a35d.js"></script><script>app.initialize({version:"1.0.4",url:{base:"../../../.."}})</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script><script src="https://buttons.github.io/buttons.js"></script></body></html>

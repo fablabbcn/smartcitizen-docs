@@ -1,100 +1,4 @@
-
-
-
-
-<!doctype html>
-<html lang="en" class="no-js">
-  <head>
-    
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width,initial-scale=1">
-      <meta http-equiv="x-ua-compatible" content="ie=edge">
-      
-        <meta name="description" content="Smart Citizen Documentation">
-      
-      
-        <link rel="canonical" href="https://docs.smartcitizen.me/Sensor Analysis Framework/guides/Post processing the Stations Data/">
-      
-      
-        <meta name="author" content="Smart Citizen Team">
-      
-      
-        <meta name="lang:clipboard.copy" content="Copy to clipboard">
-      
-        <meta name="lang:clipboard.copied" content="Copied to clipboard">
-      
-        <meta name="lang:search.language" content="en">
-      
-        <meta name="lang:search.pipeline.stopwords" content="True">
-      
-        <meta name="lang:search.pipeline.trimmer" content="True">
-      
-        <meta name="lang:search.result.none" content="No matching documents">
-      
-        <meta name="lang:search.result.one" content="1 matching document">
-      
-        <meta name="lang:search.result.other" content="# matching documents">
-      
-        <meta name="lang:search.tokenizer" content="[\s\-]+">
-      
-      <link rel="shortcut icon" href="../../../assets/images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.0.1">
-    
-    
-      
-        <title>Post processing the Stations Data - Smart Citizen Docs</title>
-      
-    
-    
-      <link rel="stylesheet" href="../../../assets/stylesheets/application.982221ab.css">
-      
-        <link rel="stylesheet" href="../../../assets/stylesheets/application-palette.224b79ff.css">
-      
-      
-        
-        
-        <meta name="theme-color" content="#2196f3">
-      
-    
-    
-      <script src="../../../assets/javascripts/modernizr.1f0bcf2b.js"></script>
-    
-    
-      
-        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
-        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
-      
-    
-    <link rel="stylesheet" href="../../../assets/fonts/material-icons.css">
-    
-    
-    
-      
-    
-    
-  </head>
-  
-    
-    
-    <body dir="ltr" data-md-color-primary="blue" data-md-color-accent="yelllow">
-  
-    <svg class="md-svg">
-      <defs>
-        
-        
-      </defs>
-    </svg>
-    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
-    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
-    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
-    
-      <a href="#post-processing-the-stations-data" tabindex="1" class="md-skip">
-        Skip to content
-      </a>
-    
-    
-      <!--
+<!doctype html><html lang="en" class="no-js"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="x-ua-compatible" content="ie=edge"><meta name="description" content="Smart Citizen Documentation"><link rel="canonical" href="https://docs.smartcitizen.me/Sensor Analysis Framework/guides/Post processing the Stations Data/"><meta name="author" content="Smart Citizen Team"><meta name="lang:clipboard.copy" content="Copy to clipboard"><meta name="lang:clipboard.copied" content="Copied to clipboard"><meta name="lang:search.language" content="en"><meta name="lang:search.pipeline.stopwords" content="True"><meta name="lang:search.pipeline.trimmer" content="True"><meta name="lang:search.result.none" content="No matching documents"><meta name="lang:search.result.one" content="1 matching document"><meta name="lang:search.result.other" content="# matching documents"><meta name="lang:search.tokenizer" content="[\s\-]+"><link rel="shortcut icon" href="../../../assets/images/favicon.ico"><meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.3.1"><title>Post processing the Stations Data - Smart Citizen Docs</title><link rel="stylesheet" href="../../../assets/stylesheets/application.4031d38b.css"><link rel="stylesheet" href="../../../assets/stylesheets/application-palette.224b79ff.css"><meta name="theme-color" content="#2196f3"><script src="../../../assets/javascripts/modernizr.74668098.js"></script><link href="https://fonts.gstatic.com" rel="preconnect" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=swap"><style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style><link rel="stylesheet" href="../../../assets/fonts/material-icons.css"></head><body dir="ltr" data-md-color-primary="blue" data-md-color-accent="yelllow"><svg class="md-svg"><defs></defs></svg> <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off"> <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off"> <label class="md-overlay" data-md-component="overlay" for="__drawer"></label><a href="#post-processing-the-stations-data" tabindex="1" class="md-skip">Skip to content </a><!--
   Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
 
   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -165,29 +69,7 @@
                 for="__search"></label>
 
             <!-- Search interface -->
-            
-<div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
-      <label class="md-icon md-search__icon" for="__search"></label>
-      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
-        &#xE5CD;
-      </button>
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="result">
-          <div class="md-search-result__meta">
-            Type to start searching
-          </div>
-          <ol class="md-search-result__list"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+            <div class="md-search" data-md-component="search" role="dialog"><label class="md-search__overlay" for="__search"></label><div class="md-search__inner" role="search"><form class="md-search__form" name="search"><input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active"> <label class="md-icon md-search__icon" for="__search"></label> <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">&#xE5CD;</button></form><div class="md-search__output"><div class="md-search__scrollwrap" data-md-scrollfix><div class="md-search-result" data-md-component="result"><div class="md-search-result__meta">Type to start searching</div><ol class="md-search-result__list"></ol></div></div></div></div></div>
           
         
       </div>
@@ -196,115 +78,7 @@
       
     </div>
   </nav>
-</header>
-    
-    <div class="md-container">
-      
-        
-      
-      
-        
-
-  
-
-<nav class="md-tabs md-tabs--active" data-md-component="tabs">
-  <div class="md-tabs__inner md-grid">
-    <ul class="md-tabs__list">
-      
-        
-  <li class="md-tabs__item">
-    
-      <a href="../../.." title="Home" class="md-tabs__link">
-        Home
-      </a>
-    
-  </li>
-
-      
-        
-      
-        
-      
-        
-      
-        
-  
-  
-    <li class="md-tabs__item">
-      
-        <a href="../../../Components/" title="Components" class="md-tabs__link">
-          Components
-        </a>
-      
-    </li>
-  
-
-      
-        
-  
-  
-    <li class="md-tabs__item">
-      
-        <a href="../../../Legacy Hardware/" title="Legacy Hardware" class="md-tabs__link">
-          Legacy Hardware
-        </a>
-      
-    </li>
-  
-
-      
-        
-  
-  
-    <li class="md-tabs__item">
-      
-        <a href="../../" title="Sensor Analysis Framework" class="md-tabs__link md-tabs__link--active">
-          Sensor Analysis Framework
-        </a>
-      
-    </li>
-  
-
-      
-        
-  
-  
-    <li class="md-tabs__item">
-      
-        <a href="../../../Sensor Platform/" title="Sensor Platform" class="md-tabs__link">
-          Sensor Platform
-        </a>
-      
-    </li>
-  
-
-      
-    </ul>
-  </div>
-</nav>
-      
-      <main class="md-main">
-        <div class="md-main__inner md-grid" data-md-component="container">
-          
-            
-              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    <nav class="md-nav md-nav--primary" data-md-level="0">
-  <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="https://docs.smartcitizen.me/" title="Smart Citizen Docs" class="md-nav__button md-logo">
-      
-        <img src="../../../assets/images/logo.svg" width="48" height="48">
-      
-    </a>
-    Smart Citizen Docs
-  </label>
-  
-  <ul class="md-nav__list" data-md-scrollfix>
-    
-      
-      
-      <!--
+</header><div class="md-container"><nav class="md-tabs md-tabs--active" data-md-component="tabs"><div class="md-tabs__inner md-grid"><ul class="md-tabs__list"><li class="md-tabs__item"><a href="../../.." title="Home" class="md-tabs__link">Home</a></li><li class="md-tabs__item"><a href="../../../Components/" title="Components" class="md-tabs__link">Components</a></li><li class="md-tabs__item"><a href="../../../Legacy Hardware/" title="Legacy Hardware" class="md-tabs__link">Legacy Hardware</a></li><li class="md-tabs__item"><a href="../../" title="Sensor Analysis Framework" class="md-tabs__link md-tabs__link--active">Sensor Analysis Framework</a></li><li class="md-tabs__item"><a href="../../../Sensor Platform/" title="Sensor Platform" class="md-tabs__link">Sensor Platform</a></li></ul></div></nav><main class="md-main"><div class="md-main__inner md-grid" data-md-component="container"><div class="md-sidebar md-sidebar--primary" data-md-component="navigation"><div class="md-sidebar__scrollwrap"><div class="md-sidebar__inner"><nav class="md-nav md-nav--primary" data-md-level="0"><label class="md-nav__title md-nav__title--site" for="__drawer"><a href="https://docs.smartcitizen.me/" title="Smart Citizen Docs" class="md-nav__button md-logo"><img src="../../../assets/images/logo.svg" width="48" height="48"></a>Smart Citizen Docs</label><ul class="md-nav__list" data-md-scrollfix><!--
   Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
 
   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -338,11 +112,7 @@
       Home
     </a>
   </li>
-
-    
-      
-      
-      <!--
+<!--
   Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
 
   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -376,11 +146,7 @@
       Smart Citizen Kit
     </a>
   </li>
-
-    
-      
-      
-      <!--
+<!--
   Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
 
   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -414,11 +180,7 @@
       Smart Citizen Station
     </a>
   </li>
-
-    
-      
-      
-      <!--
+<!--
   Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
 
   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -452,11 +214,7 @@
        FAQ
     </a>
   </li>
-
-    
-      
-      
-      <!--
+<!--
   Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
 
   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -1650,11 +1408,7 @@
   </li>
 
 <!-- Currently active page -->
-
-    
-      
-      
-      <!--
+<!--
   Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
 
   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -1899,11 +1653,7 @@
   </li>
 
 <!-- Currently active page -->
-
-    
-      
-      
-      <!--
+<!--
   Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
 
   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -2218,51 +1968,7 @@
 
     <!-- Show table of contents -->
     
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#load-in-the-data" title="Load in the data" class="md-nav__link">
-    Load in the data
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#explore-the-data" title="Explore the data" class="md-nav__link">
-    Explore the data
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#adding-calculated-channels" title="Adding calculated channels" class="md-nav__link">
-    Adding calculated channels
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#calculating-the-actual-pollutant-concentrations" title="Calculating the actual pollutant concentrations" class="md-nav__link">
-    Calculating the actual pollutant concentrations
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
+      <nav class="md-nav md-nav--secondary"><label class="md-nav__title" for="__toc">Table of contents</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="#load-in-the-data" title="Load in the data" class="md-nav__link">Load in the data</a></li><li class="md-nav__item"><a href="#explore-the-data" title="Explore the data" class="md-nav__link">Explore the data</a></li><li class="md-nav__item"><a href="#adding-calculated-channels" title="Adding calculated channels" class="md-nav__link">Adding calculated channels</a></li><li class="md-nav__item"><a href="#calculating-the-actual-pollutant-concentrations" title="Calculating the actual pollutant concentrations" class="md-nav__link">Calculating the actual pollutant concentrations</a></li></ul></nav>
     
   </li>
 
@@ -2281,11 +1987,7 @@
   </li>
 
 <!-- Currently active page -->
-
-    
-      
-      
-      <!--
+<!--
   Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
 
   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -2551,74 +2253,7 @@
   </li>
 
 <!-- Currently active page -->
-
-    
-  </ul>
-</nav>
-                  </div>
-                </div>
-              </div>
-            
-            
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#load-in-the-data" title="Load in the data" class="md-nav__link">
-    Load in the data
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#explore-the-data" title="Explore the data" class="md-nav__link">
-    Explore the data
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#adding-calculated-channels" title="Adding calculated channels" class="md-nav__link">
-    Adding calculated channels
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#calculating-the-actual-pollutant-concentrations" title="Calculating the actual pollutant concentrations" class="md-nav__link">
-    Calculating the actual pollutant concentrations
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
-          
-          <div class="md-content">
-            <article class="md-content__inner md-typeset">
-              
-                
-                
-                <h1 id="post-processing-the-stations-data">Post processing the Stations Data<a class="headerlink" href="#post-processing-the-stations-data" title="Permanent link">Link</a></h1>
+</ul></nav></div></div></div><div class="md-sidebar md-sidebar--secondary" data-md-component="toc"><div class="md-sidebar__scrollwrap"><div class="md-sidebar__inner"><nav class="md-nav md-nav--secondary"><label class="md-nav__title" for="__toc">Table of contents</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="#load-in-the-data" title="Load in the data" class="md-nav__link">Load in the data</a></li><li class="md-nav__item"><a href="#explore-the-data" title="Explore the data" class="md-nav__link">Explore the data</a></li><li class="md-nav__item"><a href="#adding-calculated-channels" title="Adding calculated channels" class="md-nav__link">Adding calculated channels</a></li><li class="md-nav__item"><a href="#calculating-the-actual-pollutant-concentrations" title="Calculating the actual pollutant concentrations" class="md-nav__link">Calculating the actual pollutant concentrations</a></li></ul></nav></div></div></div><div class="md-content"><article class="md-content__inner md-typeset"><h1 id="post-processing-the-stations-data">Post processing the Stations Data<a class="headerlink" href="#post-processing-the-stations-data" title="Permanent link">Link</a></h1>
 <p>The stations data can be fully processed within the <a href="https://docs.iscape.smartcitizen.me/Sensor%20Analysis%20Framework/">sensor analysis framework</a> provided. In this guide, we will go through a working <em>live</em> example that will use available data from a permanent Smart Citizen Station in <strong>Fablab BCN</strong>. The available sensors are listed <a href="https://docs.iscape.smartcitizen.me/Living%20Lab%20Station/">here</a>.</p>
 <h4 id="load-in-the-data">Load in the data<a class="headerlink" href="#load-in-the-data" title="Permanent link">Link</a></h4>
 <p>So first, we will load in the data from this station. The device number is the <strong>4748</strong>, and is available in <a href="https://smartcitizen.me/kits/4748">here</a>.</p>
@@ -2626,36 +2261,36 @@
 <p><img alt="" src="https://i.imgur.com/TIkpY72.png" /></p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>In the field <em>Kit list</em> we can also input a comma separated list of devices such as: <code class="codehilite">4748, 4565, 4587</code> and we will load all the data for you.</p>
+<p>In the field <em>Kit list</em> we can also input a comma separated list of devices such as: <code class="codehilite"><span class="mi">4748</span><span class="p">,</span> <span class="mi">4565</span><span class="p">,</span> <span class="mi">4587</span></code> and we will load all the data for you.</p>
 </div>
 <p>We can now explore the available readings in our test with something like:</p>
 <p><div class="codehilite"><pre><span></span><span class="c1">## This will output the devices we have in the selected test</span>
 <span class="k">print</span> <span class="n">readings</span><span class="p">[</span><span class="s1">&#39;STATION_FABLAB_BCN&#39;</span><span class="p">][</span><span class="s1">&#39;devices&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
 </pre></div>
 <strong>Output</strong>:
-<div class="codehilite"><pre><span></span>[u&#39;4748&#39;]
+<div class="codehilite"><pre><span></span><span class="p">[</span><span class="n">u</span><span class="s1">&#39;4748&#39;</span><span class="p">]</span>
 </pre></div></p>
 <p>If we want to have access to the actual data, we can go under:</p>
 <p><div class="codehilite"><pre><span></span><span class="c1">## This will output the dataframe&#39;s first 4 lines</span>
 <span class="k">print</span> <span class="n">readings</span><span class="p">[</span><span class="s1">&#39;STATION_FABLAB_BCN&#39;</span><span class="p">][</span><span class="s1">&#39;devices&#39;</span><span class="p">][</span><span class="s1">&#39;4748&#39;</span><span class="p">][</span><span class="s1">&#39;data&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
 </pre></div>
 <strong>Output</strong>:
-<div class="codehilite"><pre><span></span>                           BATT  CO_MICS_RAW    EXT_HUM   EXT_TEMP     GB_1A  \
-2018-08-24 17:00:00+02:00   0.0    73.441111  47.652222  30.663333  4.517778
-2018-08-24 17:10:00+02:00   0.0   129.049000  46.632000  31.209000  3.905000
-2018-08-24 17:20:00+02:00   0.0    53.738333  45.901667  31.616667  3.808333
-2018-08-24 17:30:00+02:00  74.5   122.405000  45.655000  31.810000  3.925000 ...
+<div class="codehilite"><pre><span></span>                           <span class="n">BATT</span>  <span class="n">CO_MICS_RAW</span>    <span class="n">EXT_HUM</span>   <span class="n">EXT_TEMP</span>     <span class="n">GB_1A</span>  <span class="err">\</span>
+<span class="mi">2018</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">24</span> <span class="mi">17</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="o">+</span><span class="mi">02</span><span class="p">:</span><span class="mi">00</span>   <span class="mi">0</span><span class="p">.</span><span class="mi">0</span>    <span class="mi">73</span><span class="p">.</span><span class="mi">441111</span>  <span class="mi">47</span><span class="p">.</span><span class="mi">652222</span>  <span class="mi">30</span><span class="p">.</span><span class="mi">663333</span>  <span class="mi">4</span><span class="p">.</span><span class="mi">517778</span>
+<span class="mi">2018</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">24</span> <span class="mi">17</span><span class="p">:</span><span class="mi">10</span><span class="p">:</span><span class="mi">00</span><span class="o">+</span><span class="mi">02</span><span class="p">:</span><span class="mi">00</span>   <span class="mi">0</span><span class="p">.</span><span class="mi">0</span>   <span class="mi">129</span><span class="p">.</span><span class="mi">049000</span>  <span class="mi">46</span><span class="p">.</span><span class="mi">632000</span>  <span class="mi">31</span><span class="p">.</span><span class="mi">209000</span>  <span class="mi">3</span><span class="p">.</span><span class="mi">905000</span>
+<span class="mi">2018</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">24</span> <span class="mi">17</span><span class="p">:</span><span class="mi">20</span><span class="p">:</span><span class="mi">00</span><span class="o">+</span><span class="mi">02</span><span class="p">:</span><span class="mi">00</span>   <span class="mi">0</span><span class="p">.</span><span class="mi">0</span>    <span class="mi">53</span><span class="p">.</span><span class="mi">738333</span>  <span class="mi">45</span><span class="p">.</span><span class="mi">901667</span>  <span class="mi">31</span><span class="p">.</span><span class="mi">616667</span>  <span class="mi">3</span><span class="p">.</span><span class="mi">808333</span>
+<span class="mi">2018</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">24</span> <span class="mi">17</span><span class="p">:</span><span class="mi">30</span><span class="p">:</span><span class="mi">00</span><span class="o">+</span><span class="mi">02</span><span class="p">:</span><span class="mi">00</span>  <span class="mi">74</span><span class="p">.</span><span class="mi">5</span>   <span class="mi">122</span><span class="p">.</span><span class="mi">405000</span>  <span class="mi">45</span><span class="p">.</span><span class="mi">655000</span>  <span class="mi">31</span><span class="p">.</span><span class="mi">810000</span>  <span class="mi">3</span><span class="p">.</span><span class="mi">925000</span> <span class="p">...</span>
 </pre></div></p>
 <p>Or if we want to see the available recordings:
 <div class="codehilite"><pre><span></span><span class="c1">## This will output the dataframe columns</span>
 <span class="k">print</span> <span class="n">readings</span><span class="p">[</span><span class="s1">&#39;STATION_FABLAB_BCN&#39;</span><span class="p">][</span><span class="s1">&#39;devices&#39;</span><span class="p">][</span><span class="s1">&#39;4748&#39;</span><span class="p">][</span><span class="s1">&#39;data&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">columns</span>
 </pre></div>
 <strong>Output</strong>:
-<div class="codehilite"><pre><span></span>Index([u&#39;BATT&#39;, u&#39;CO_MICS_RAW&#39;, u&#39;EXT_HUM&#39;, u&#39;EXT_TEMP&#39;, u&#39;GB_1A&#39;, u&#39;GB_1W&#39;,
-       u&#39;GB_2A&#39;, u&#39;GB_2W&#39;, u&#39;GB_3A&#39;, u&#39;GB_3W&#39;, u&#39;HUM&#39;, u&#39;LIGHT&#39;,
-       u&#39;NO2_MICS_RAW&#39;, u&#39;PM_1&#39;, u&#39;PM_10&#39;, u&#39;PM_25&#39;, u&#39;PM_DALLAS_TEMP&#39;,
-       u&#39;PRESS&#39;, u&#39;TEMP&#39;],
-      dtype=&#39;object&#39;)
+<div class="codehilite"><pre><span></span><span class="k">Index</span><span class="p">([</span><span class="n">u</span><span class="s1">&#39;BATT&#39;</span><span class="p">,</span> <span class="n">u</span><span class="s1">&#39;CO_MICS_RAW&#39;</span><span class="p">,</span> <span class="n">u</span><span class="s1">&#39;EXT_HUM&#39;</span><span class="p">,</span> <span class="n">u</span><span class="s1">&#39;EXT_TEMP&#39;</span><span class="p">,</span> <span class="n">u</span><span class="s1">&#39;GB_1A&#39;</span><span class="p">,</span> <span class="n">u</span><span class="s1">&#39;GB_1W&#39;</span><span class="p">,</span>
+       <span class="n">u</span><span class="s1">&#39;GB_2A&#39;</span><span class="p">,</span> <span class="n">u</span><span class="s1">&#39;GB_2W&#39;</span><span class="p">,</span> <span class="n">u</span><span class="s1">&#39;GB_3A&#39;</span><span class="p">,</span> <span class="n">u</span><span class="s1">&#39;GB_3W&#39;</span><span class="p">,</span> <span class="n">u</span><span class="s1">&#39;HUM&#39;</span><span class="p">,</span> <span class="n">u</span><span class="s1">&#39;LIGHT&#39;</span><span class="p">,</span>
+       <span class="n">u</span><span class="s1">&#39;NO2_MICS_RAW&#39;</span><span class="p">,</span> <span class="n">u</span><span class="s1">&#39;PM_1&#39;</span><span class="p">,</span> <span class="n">u</span><span class="s1">&#39;PM_10&#39;</span><span class="p">,</span> <span class="n">u</span><span class="s1">&#39;PM_25&#39;</span><span class="p">,</span> <span class="n">u</span><span class="s1">&#39;PM_DALLAS_TEMP&#39;</span><span class="p">,</span>
+       <span class="n">u</span><span class="s1">&#39;PRESS&#39;</span><span class="p">,</span> <span class="n">u</span><span class="s1">&#39;TEMP&#39;</span><span class="p">],</span>
+      <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;object&#39;</span><span class="p">)</span>
 </pre></div></p>
 <p>For more information about the <strong>test structure</strong>, all the fields are detailed in <a href="https://docs.iscape.smartcitizen.me/Sensor%20Analysis%20Framework/#loading-in-the-data">here</a>.</p>
 <p>If the device is an station, we will have to input the sensor references for the alphasense devices. We have prepared the framework to input this easily:</p>
@@ -2663,7 +2298,7 @@
 <span class="k">print</span> <span class="n">readings</span><span class="p">[</span><span class="s1">&#39;STATION_FABLAB_BCN&#39;</span><span class="p">][</span><span class="s1">&#39;devices&#39;</span><span class="p">][</span><span class="s1">&#39;4748&#39;</span><span class="p">][</span><span class="s1">&#39;alphasense&#39;</span><span class="p">]</span>
 </pre></div>
 <strong>Output</strong>:
-<div class="codehilite"><pre><span></span>{&#39;O3&#39;: &#39;TEMPORARY_O3&#39;, &#39;SLOTS&#39;: &#39;TEMPORARY_SLOTS&#39;, &#39;CO&#39;: &#39;TEMPORARY_CO&#39;, &#39;NO2&#39;: &#39;TEMPORARY_NO2&#39;}
+<div class="codehilite"><pre><span></span><span class="err">{</span><span class="s1">&#39;O3&#39;</span><span class="p">:</span> <span class="s1">&#39;TEMPORARY_O3&#39;</span><span class="p">,</span> <span class="s1">&#39;SLOTS&#39;</span><span class="p">:</span> <span class="s1">&#39;TEMPORARY_SLOTS&#39;</span><span class="p">,</span> <span class="s1">&#39;CO&#39;</span><span class="p">:</span> <span class="s1">&#39;TEMPORARY_CO&#39;</span><span class="p">,</span> <span class="s1">&#39;NO2&#39;</span><span class="p">:</span> <span class="s1">&#39;TEMPORARY_NO2&#39;</span><span class="err">}</span>
 </pre></div></p>
 <p>As you can see, we have no data in this struct, but we can easily fill it put by:</p>
 <p><div class="codehilite"><pre><span></span><span class="n">readings</span><span class="p">[</span><span class="s1">&#39;STATION_FABLAB_BCN&#39;</span><span class="p">][</span><span class="s1">&#39;devices&#39;</span><span class="p">][</span><span class="s1">&#39;4748&#39;</span><span class="p">][</span><span class="s1">&#39;alphasense&#39;</span><span class="p">][</span><span class="s1">&#39;O3&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">204560316</span>
@@ -2674,9 +2309,9 @@
 <span class="k">print</span> <span class="n">readings</span><span class="p">[</span><span class="s1">&#39;STATION_FABLAB_BCN&#39;</span><span class="p">][</span><span class="s1">&#39;devices&#39;</span><span class="p">][</span><span class="s1">&#39;4748&#39;</span><span class="p">][</span><span class="s1">&#39;alphasense&#39;</span><span class="p">]</span>
 </pre></div>
 <strong>Output</strong>:
-<div class="codehilite"><pre><span></span>{&#39;O3&#39;: 204560316, &#39;SLOTS&#39;: (&#39;NO2&#39;, &#39;CO&#39;, &#39;O3&#39;), &#39;CO&#39;: 162031257, &#39;NO2&#39;: 202160413}
+<div class="codehilite"><pre><span></span><span class="err">{</span><span class="s1">&#39;O3&#39;</span><span class="p">:</span> <span class="mi">204560316</span><span class="p">,</span> <span class="s1">&#39;SLOTS&#39;</span><span class="p">:</span> <span class="p">(</span><span class="s1">&#39;NO2&#39;</span><span class="p">,</span> <span class="s1">&#39;CO&#39;</span><span class="p">,</span> <span class="s1">&#39;O3&#39;</span><span class="p">),</span> <span class="s1">&#39;CO&#39;</span><span class="p">:</span> <span class="mi">162031257</span><span class="p">,</span> <span class="s1">&#39;NO2&#39;</span><span class="p">:</span> <span class="mi">202160413</span><span class="err">}</span>
 </pre></div></p>
-<p>Note that each of these fields is necessary for our posterior calculations. Each of the <code class="codehilite">O3</code>, <code class="codehilite">NO~2~</code>, <code class="codehilite">CO</code> fields relate to the manufacturer's reference of each of the sensors, whilst the <code class="codehilite">SLOTS</code> field relates to the order at which the sensors are placed. <strong>Normally</strong>, the stations are delivered with the SLOTS field as: <code class="codehilite">(&#39;CO&#39;, &#39;NO~2~&#39;, &#39;O3&#39;)</code>, meaning that the <em>CO sensor</em> is in the slot #1, the <em>NO<sub>2</sub> sensor</em> in the slot #2 and the <em>O3 sensor</em> in the slot #3.</p>
+<p>Note that each of these fields is necessary for our posterior calculations. Each of the <code class="codehilite"><span class="n">O3</span></code>, <code class="codehilite"><span class="k">NO</span><span class="o">~</span><span class="mi">2</span><span class="o">~</span></code>, <code class="codehilite"><span class="n">CO</span></code> fields relate to the manufacturer's reference of each of the sensors, whilst the <code class="codehilite"><span class="n">SLOTS</span></code> field relates to the order at which the sensors are placed. <strong>Normally</strong>, the stations are delivered with the SLOTS field as: <code class="codehilite"><span class="p">(</span><span class="s1">&#39;CO&#39;</span><span class="p">,</span> <span class="s1">&#39;NO~2~&#39;</span><span class="p">,</span> <span class="s1">&#39;O3&#39;</span><span class="p">)</span></code>, meaning that the <em>CO sensor</em> is in the slot #1, the <em>NO<sub>2</sub> sensor</em> in the slot #2 and the <em>O3 sensor</em> in the slot #3.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>Normally we refer to the OX-B431 sensor as O3, although it measures both, O3+NO<sub>2</sub> mixing ratios, and therefore we use O3 or OX indistinctively.</p>
@@ -2686,23 +2321,23 @@
 <p>You might have noticed that the slots we have input are not matching to our own description... Our bad!</p>
 </div>
 <h4 id="explore-the-data">Explore the data<a class="headerlink" href="#explore-the-data" title="Permanent link">Link</a></h4>
-<p>We can now have a look at the station's data. We can go to the Section <code class="codehilite">Exploratory Data Analysis</code> and use the range of available interfaces for the data analysis. We would like to serve this as a flexible tool, in which the priority is to generate proper analysis. For this, we have some interesting interactive plots as:</p>
+<p>We can now have a look at the station's data. We can go to the Section <code class="codehilite"><span class="n">Exploratory</span> <span class="k">Data</span> <span class="n">Analysis</span></code> and use the range of available interfaces for the data analysis. We would like to serve this as a flexible tool, in which the priority is to generate proper analysis. For this, we have some interesting interactive plots as:</p>
 <ul>
 <li>Time Series Plot</li>
 <li>Back2Back correlation plots</li>
 <li>Correlogram</li>
 <li>Heat maps</li>
 </ul>
-<p>Let's run a simple example. We will plot all the concerned <code class="codehilite">alphasense</code> signals using the interface. We could also do this by code, but we find it less time consuming and more data analysis dedicated:</p>
+<p>Let's run a simple example. We will plot all the concerned <code class="codehilite"><span class="n">alphasense</span></code> signals using the interface. We could also do this by code, but we find it less time consuming and more data analysis dedicated:</p>
 <p><img alt="" src="https://i.imgur.com/TTfFF9w.png" /></p>
 <p>We can select within the channels available in the dataframe, for each of the devices within a test. All the devices are supossed to have overlapping timestamps, so they can be compared easily. Hence, here is where the concept of test is interesting, since all the devices within a test can be easily grouped and compared:</p>
 <p><img alt="" src="https://i.imgur.com/R4fK2cX.png" /></p>
 <p>In this example we have selected all three alphasense sensors available data  and plotted them with the working and auxiliary electrodes. We can here explore with the <a href="http://plot.ly">plotly</a> integrated commands to review the data.</p>
-<p>Here, it is important to see how the <strong>sensors adapt to the environment</strong> once they have their power restored after a power cut, or after the first use. For example, in the case of the <code class="codehilite">CO</code> measurement, after the power restorage on 31<sup>st</sup> of August, the sensor is clearly experiencing an stabilisation that has to be discarded in our calculations:</p>
+<p>Here, it is important to see how the <strong>sensors adapt to the environment</strong> once they have their power restored after a power cut, or after the first use. For example, in the case of the <code class="codehilite"><span class="n">CO</span></code> measurement, after the power restorage on 31<sup>st</sup> of August, the sensor is clearly experiencing an stabilisation that has to be discarded in our calculations:</p>
 <p><img alt="" src="https://i.imgur.com/GyG1KbL.jpg" /></p>
 <p>We can also see how some metrics correlate among themselves and analyse potential sources for multicollinearity in our model. For this, we will study how every two measurments correlate among themselves in the following interface:</p>
 <p><img alt="" src="https://i.imgur.com/s5CYIDW.png" /></p>
-<p>We will use a very straightforward example: let's see how temperature and relative humidity correlate and see if there might be variations in the absolute humidity that might affect the variations in the relative humidity that are not explained by the temperature. If we select our channels and <em>Check</em> on <code class="codehilite">Crop Data in X axis</code> and input our dates we will have the following:</p>
+<p>We will use a very straightforward example: let's see how temperature and relative humidity correlate and see if there might be variations in the absolute humidity that might affect the variations in the relative humidity that are not explained by the temperature. If we select our channels and <em>Check</em> on <code class="codehilite"><span class="n">Crop</span> <span class="k">Data</span> <span class="k">in</span> <span class="n">X</span> <span class="n">axis</span></code> and input our dates we will have the following:</p>
 <p><img alt="" src="https://i.imgur.com/ZS7Xnfs.png" /></p>
 <p>Here, we can see that both are anticorrelated (Pearson = -0.61) and although they have a clear inverse trend, their R2 is low:</p>
 <p><img alt="" src="https://i.imgur.com/lvWtVUq.png" /></p>
@@ -2733,7 +2368,7 @@ P^*_{H2O} (mbar) = (1,0007+3,46x10^{-6}xP)x6.1121e^{17,520T/(240,97+T)}
 <span class="n">P_H2O_EQ</span> <span class="o">=</span> <span class="p">(</span><span class="mf">1.0007</span> <span class="o">+</span> <span class="mf">3.46</span><span class="o">*</span><span class="mf">1e-6</span><span class="o">*</span><span class="n">PRESS</span><span class="o">*</span><span class="mi">10</span><span class="p">)</span><span class="o">*</span><span class="mf">6.1121</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="mf">17.502</span><span class="o">*</span><span class="n">TEMP</span><span class="o">/</span><span class="p">(</span><span class="mf">240.97</span><span class="o">+</span><span class="n">TEMP</span><span class="p">))</span>
 </pre></div>
 
-<p>Note that we can input any type of expression in the <code class="codehilite">Formula Field</code> that can be subject to evaluation as in a Python formula. Note as well that <code class="codehilite">numpy</code> operations are allowed and that they can be written in line.</p>
+<p>Note that we can input any type of expression in the <code class="codehilite"><span class="n">Formula</span> <span class="n">Field</span></code> that can be subject to evaluation as in a Python formula. Note as well that <code class="codehilite"><span class="n">numpy</span></code> operations are allowed and that they can be written in line.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>If you want to calculate this formula for several devices within a test, select all of them and the calculator will make the available in the dropdowns the common metrics.</p>
@@ -2748,10 +2383,10 @@ We can now verify that the partial pressure is not constant and plotting it with
 <p>If we analyse the data in periods where the partial vapour pressure is fairly constant (i.e. 31<sup>st</sup> of Aug, we see that variations of the temperature are directly correlated with the relative humidity, whilst days as the 2<sup>nd</sup> of September show greater variations in both, temperature and partial vapour pressure that provoke a lower correlation in the temperature and humidity:</p>
 <p><img alt="" src="https://i.imgur.com/L2jdyt0.jpg" /></p>
 <h4 id="calculating-the-actual-pollutant-concentrations">Calculating the actual pollutant concentrations<a class="headerlink" href="#calculating-the-actual-pollutant-concentrations" title="Permanent link">Link</a></h4>
-<p>Now that we know how to get around in the notebook, explore data and add channels in a simple way, lets calculate actual pollutant concentrations. For this, we will use the section <code class="codehilite">AlphaSense Baseline Calibration</code>. In this block, we will apply the methodology exlained in <a href="https://docs.iscape.smartcitizen.me/Components/Gas%20Pro%20Sensor%20Board/Electrochemical%20Sensors/">this section</a> in order to calculate actual pollutant concentrations.</p>
+<p>Now that we know how to get around in the notebook, explore data and add channels in a simple way, lets calculate actual pollutant concentrations. For this, we will use the section <code class="codehilite"><span class="n">AlphaSense</span> <span class="n">Baseline</span> <span class="n">Calibration</span></code>. In this block, we will apply the methodology exlained in <a href="https://docs.iscape.smartcitizen.me/Components/Gas%20Pro%20Sensor%20Board/Electrochemical%20Sensors/">this section</a> in order to calculate actual pollutant concentrations.</p>
 <p>For this, in the above mentioned section, if we run the cell, we will see an output like the following:</p>
 <p><img alt="" src="https://i.imgur.com/Zg8qtRa.png" /></p>
-<p>This will list all the available devices that contain alphasense data. Remember to include the calibration data mentioned before in the <code class="codehilite">dict</code> so that we can calculate the final concentrations.</p>
+<p>This will list all the available devices that contain alphasense data. Remember to include the calibration data mentioned before in the <code class="codehilite"><span class="n">dict</span></code> so that we can calculate the final concentrations.</p>
 <p>For reference, all the alphasense data is under <a href="https://github.com/fablabbcn/smartcitizen-iscape-data/blob/master/calData/AlphaSense.json">this repository</a>, which looks like:</p>
 <div class="codehilite"><pre><span></span><span class="p">{</span><span class="nt">&quot;Target 2&quot;</span><span class="p">:</span> <span class="s2">&quot;na&quot;</span><span class="p">,</span> <span class="nt">&quot;Target 1&quot;</span><span class="p">:</span> <span class="s2">&quot;CO&quot;</span><span class="p">,</span> <span class="nt">&quot;Serial No&quot;</span><span class="p">:</span> <span class="s2">&quot;162031254&quot;</span><span class="p">,</span> <span class="nt">&quot;Sensitivity 1&quot;</span><span class="p">:</span> <span class="s2">&quot;568.3&quot;</span><span class="p">,</span> <span class="nt">&quot;Sensitivity 2&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span> <span class="nt">&quot;Zero Current&quot;</span><span class="p">:</span> <span class="s2">&quot;-34&quot;</span><span class="p">,</span> <span class="nt">&quot;Aux Zero Current&quot;</span><span class="p">:</span> <span class="s2">&quot;-20.8&quot;</span><span class="p">}</span>
 <span class="p">{</span><span class="nt">&quot;Target 2&quot;</span><span class="p">:</span> <span class="s2">&quot;na&quot;</span><span class="p">,</span> <span class="nt">&quot;Target 1&quot;</span><span class="p">:</span> <span class="s2">&quot;CO&quot;</span><span class="p">,</span> <span class="nt">&quot;Serial No&quot;</span><span class="p">:</span> <span class="s2">&quot;162031257&quot;</span><span class="p">,</span> <span class="nt">&quot;Sensitivity 1&quot;</span><span class="p">:</span> <span class="s2">&quot;493.1&quot;</span><span class="p">,</span> <span class="nt">&quot;Sensitivity 2&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span> <span class="nt">&quot;Zero Current&quot;</span><span class="p">:</span> <span class="s2">&quot;-69.4&quot;</span><span class="p">,</span> <span class="nt">&quot;Aux Zero Current&quot;</span><span class="p">:</span> <span class="s2">&quot;-18.6&quot;</span><span class="p">}</span>
@@ -2791,22 +2426,7 @@ Concentration \ [ppm] = {I_{WE}-n(I_{AE}) \ [nA] \over Sensitivity \ [nA/ ppm]}
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>OX sensor in this station is not giving good results (probably it's ageing has provoked a sensitivity loss), and therefore, the data will not be shown here.</p>
-</div>
-                
-                  
-                
-              
-              
-                
-
-
-              
-            </article>
-          </div>
-        </div>
-      </main>
-      
-        <!--
+</div></article></div></div></main><!--
   Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
 
   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -2899,31 +2519,8 @@ Concentration \ [ppm] = {I_{WE}-n(I_{AE}) \ [nA] \over Sensitivity \ [nA/ ppm]}
 
       <!-- Social links -->
       
-        
-  <div class="md-footer-social">
-    <link rel="stylesheet" href="../../../assets/fonts/font-awesome.css">
-    
-      <a href="https://twitter.com/smartcitizenkit" class="md-footer-social__link fa fa-twitter"></a>
-    
-      <a href="https://www.facebook.com/smartcitizenBCN/" class="md-footer-social__link fa fa-facebook"></a>
-    
-  </div>
-
+        <div class="md-footer-social"><link rel="stylesheet" href="../../../assets/fonts/font-awesome.css"> <a href="https://twitter.com/smartcitizenkit" class="md-footer-social__link fa fa-twitter"></a>  <a href="https://www.facebook.com/smartcitizenBCN/" class="md-footer-social__link fa fa-facebook"></a> </div>
       
     </div>
   </div>
-</footer>
-      
-    </div>
-    
-      <script src="../../../assets/javascripts/application.b806dc00.js"></script>
-      
-      <script>app.initialize({version:"1.0.4",url:{base:"../../.."}})</script>
-      
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-      
-        <script src="https://buttons.github.io/buttons.js"></script>
-      
-    
-  </body>
-</html>
+</footer></div><script src="../../../assets/javascripts/application.b260a35d.js"></script><script>app.initialize({version:"1.0.4",url:{base:"../../.."}})</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script><script src="https://buttons.github.io/buttons.js"></script></body></html>
