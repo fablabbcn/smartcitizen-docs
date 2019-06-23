@@ -1,4 +1,100 @@
-<!doctype html><html lang="en" class="no-js"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="x-ua-compatible" content="ie=edge"><meta name="description" content="Smart Citizen Documentation"><link rel="canonical" href="https://docs.smartcitizen.me/Components/Firmware/guides/Edit the Firmware/"><meta name="author" content="Smart Citizen Team"><meta name="lang:clipboard.copy" content="Copy to clipboard"><meta name="lang:clipboard.copied" content="Copied to clipboard"><meta name="lang:search.language" content="en"><meta name="lang:search.pipeline.stopwords" content="True"><meta name="lang:search.pipeline.trimmer" content="True"><meta name="lang:search.result.none" content="No matching documents"><meta name="lang:search.result.one" content="1 matching document"><meta name="lang:search.result.other" content="# matching documents"><meta name="lang:search.tokenizer" content="[\s\-]+"><link rel="shortcut icon" href="../../../../assets/images/favicon.ico"><meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.3.1"><title>Edit the Firmware - Smart Citizen Docs</title><link rel="stylesheet" href="../../../../assets/stylesheets/application.4031d38b.css"><link rel="stylesheet" href="../../../../assets/stylesheets/application-palette.224b79ff.css"><meta name="theme-color" content="#2196f3"><script src="../../../../assets/javascripts/modernizr.74668098.js"></script><link href="https://fonts.gstatic.com" rel="preconnect" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=swap"><style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style><link rel="stylesheet" href="../../../../assets/fonts/material-icons.css"></head><body dir="ltr" data-md-color-primary="blue" data-md-color-accent="yelllow"><svg class="md-svg"><defs></defs></svg> <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off"> <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off"> <label class="md-overlay" data-md-component="overlay" for="__drawer"></label><a href="#development-enviroment" tabindex="1" class="md-skip">Skip to content </a><!--
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Smart Citizen Documentation">
+      
+      
+        <link rel="canonical" href="https://docs.smartcitizen.me/Components/Firmware/guides/Edit the Firmware/">
+      
+      
+        <meta name="author" content="Smart Citizen Team">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../../../assets/images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.0">
+    
+    
+      
+        <title>Edit the Firmware - Smart Citizen Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/application.0284f74d.css">
+      
+        <link rel="stylesheet" href="../../../../assets/stylesheets/application-palette.01803549.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#2196f3">
+      
+    
+    
+      <script src="../../../../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../../../assets/fonts/material-icons.css">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="blue" data-md-color-accent="yelllow">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#development-enviroment" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <!--
   Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
 
   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -69,7 +165,29 @@
                 for="__search"></label>
 
             <!-- Search interface -->
-            <div class="md-search" data-md-component="search" role="dialog"><label class="md-search__overlay" for="__search"></label><div class="md-search__inner" role="search"><form class="md-search__form" name="search"><input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active"> <label class="md-icon md-search__icon" for="__search"></label> <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">&#xE5CD;</button></form><div class="md-search__output"><div class="md-search__scrollwrap" data-md-scrollfix><div class="md-search-result" data-md-component="result"><div class="md-search-result__meta">Type to start searching</div><ol class="md-search-result__list"></ol></div></div></div></div></div>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
           
         
       </div>
@@ -78,7 +196,115 @@
       
     </div>
   </nav>
-</header><div class="md-container"><nav class="md-tabs md-tabs--active" data-md-component="tabs"><div class="md-tabs__inner md-grid"><ul class="md-tabs__list"><li class="md-tabs__item"><a href="../../../.." title="Home" class="md-tabs__link">Home</a></li><li class="md-tabs__item"><a href="../../../" title="Components" class="md-tabs__link md-tabs__link--active">Components</a></li><li class="md-tabs__item"><a href="../../../../Legacy Hardware/" title="Legacy Hardware" class="md-tabs__link">Legacy Hardware</a></li><li class="md-tabs__item"><a href="../../../../Sensor Analysis Framework/" title="Sensor Analysis Framework" class="md-tabs__link">Sensor Analysis Framework</a></li><li class="md-tabs__item"><a href="../../../../Sensor Platform/" title="Sensor Platform" class="md-tabs__link">Sensor Platform</a></li></ul></div></nav><main class="md-main"><div class="md-main__inner md-grid" data-md-component="container"><div class="md-sidebar md-sidebar--primary" data-md-component="navigation"><div class="md-sidebar__scrollwrap"><div class="md-sidebar__inner"><nav class="md-nav md-nav--primary" data-md-level="0"><label class="md-nav__title md-nav__title--site" for="__drawer"><a href="https://docs.smartcitizen.me/" title="Smart Citizen Docs" class="md-nav__button md-logo"><img src="../../../../assets/images/logo.svg" width="48" height="48"></a>Smart Citizen Docs</label><ul class="md-nav__list" data-md-scrollfix><!--
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../../../.." title="Home" class="md-tabs__link">
+        Home
+      </a>
+    
+  </li>
+
+      
+        
+      
+        
+      
+        
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../" title="Components" class="md-tabs__link md-tabs__link--active">
+          Components
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../../Legacy Hardware/" title="Legacy Hardware" class="md-tabs__link">
+          Legacy Hardware
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../../Sensor Analysis Framework/" title="Sensor Analysis Framework" class="md-tabs__link">
+          Sensor Analysis Framework
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../../Sensor Platform/" title="Sensor Platform" class="md-tabs__link">
+          Sensor Platform
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://docs.smartcitizen.me/" title="Smart Citizen Docs" class="md-nav__button md-logo">
+      
+        <img src="../../../../assets/images/logo.svg" width="48" height="48">
+      
+    </a>
+    Smart Citizen Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      <!--
   Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
 
   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -112,7 +338,11 @@
       Home
     </a>
   </li>
-<!--
+
+    
+      
+      
+      <!--
   Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
 
   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -146,7 +376,11 @@
       Smart Citizen Kit
     </a>
   </li>
-<!--
+
+    
+      
+      
+      <!--
   Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
 
   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -180,7 +414,11 @@
       Smart Citizen Station
     </a>
   </li>
-<!--
+
+    
+      
+      
+      <!--
   Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
 
   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -214,7 +452,11 @@
        FAQ
     </a>
   </li>
-<!--
+
+    
+      
+      
+      <!--
   Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
 
   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -640,7 +882,83 @@
 
     <!-- Show table of contents -->
     
-      <nav class="md-nav md-nav--secondary"><label class="md-nav__title" for="__toc">Table of contents</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="#development-enviroment" title="Development enviroment" class="md-nav__link">Development enviroment</a></li><li class="md-nav__item"><a href="#getting-the-firmware" title="Getting the firmware" class="md-nav__link">Getting the firmware</a></li><li class="md-nav__item"><a href="#samd21-bootloader" title="SAMD21 bootloader" class="md-nav__link">SAMD21 bootloader</a></li><li class="md-nav__item"><a href="#samd21-firmware" title="SAMD21 firmware" class="md-nav__link">SAMD21 firmware</a><nav class="md-nav"><ul class="md-nav__list"><li class="md-nav__item"><a href="#build-script" title="Build script" class="md-nav__link">Build script</a></li><li class="md-nav__item"><a href="#manual-install" title="Manual install" class="md-nav__link">Manual install</a></li></ul></nav></li><li class="md-nav__item"><a href="#esp8266-firmware" title="ESP8266 firmware" class="md-nav__link">ESP8266 firmware</a></li><li class="md-nav__item"><a href="#esp8266-filesystem" title="ESP8266 filesystem" class="md-nav__link">ESP8266 filesystem</a></li></ul></nav>
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#development-enviroment" title="Development enviroment" class="md-nav__link">
+    Development enviroment
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-the-firmware" title="Getting the firmware" class="md-nav__link">
+    Getting the firmware
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#samd21-bootloader" title="SAMD21 bootloader" class="md-nav__link">
+    SAMD21 bootloader
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#samd21-firmware" title="SAMD21 firmware" class="md-nav__link">
+    SAMD21 firmware
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#build-script" title="Build script" class="md-nav__link">
+    Build script
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manual-install" title="Manual install" class="md-nav__link">
+    Manual install
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#esp8266-firmware" title="ESP8266 firmware" class="md-nav__link">
+    ESP8266 firmware
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#esp8266-filesystem" title="ESP8266 filesystem" class="md-nav__link">
+    ESP8266 filesystem
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -1438,7 +1756,11 @@
   </li>
 
 <!-- Currently active page -->
-<!--
+
+    
+      
+      
+      <!--
   Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
 
   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -1683,7 +2005,11 @@
   </li>
 
 <!-- Currently active page -->
-<!--
+
+    
+      
+      
+      <!--
   Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
 
   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -1987,7 +2313,11 @@
   </li>
 
 <!-- Currently active page -->
-<!--
+
+    
+      
+      
+      <!--
   Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
 
   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -2253,20 +2583,121 @@
   </li>
 
 <!-- Currently active page -->
-</ul></nav></div></div></div><div class="md-sidebar md-sidebar--secondary" data-md-component="toc"><div class="md-sidebar__scrollwrap"><div class="md-sidebar__inner"><nav class="md-nav md-nav--secondary"><label class="md-nav__title" for="__toc">Table of contents</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="#development-enviroment" title="Development enviroment" class="md-nav__link">Development enviroment</a></li><li class="md-nav__item"><a href="#getting-the-firmware" title="Getting the firmware" class="md-nav__link">Getting the firmware</a></li><li class="md-nav__item"><a href="#samd21-bootloader" title="SAMD21 bootloader" class="md-nav__link">SAMD21 bootloader</a></li><li class="md-nav__item"><a href="#samd21-firmware" title="SAMD21 firmware" class="md-nav__link">SAMD21 firmware</a><nav class="md-nav"><ul class="md-nav__list"><li class="md-nav__item"><a href="#build-script" title="Build script" class="md-nav__link">Build script</a></li><li class="md-nav__item"><a href="#manual-install" title="Manual install" class="md-nav__link">Manual install</a></li></ul></nav></li><li class="md-nav__item"><a href="#esp8266-firmware" title="ESP8266 firmware" class="md-nav__link">ESP8266 firmware</a></li><li class="md-nav__item"><a href="#esp8266-filesystem" title="ESP8266 filesystem" class="md-nav__link">ESP8266 filesystem</a></li></ul></nav></div></div></div><div class="md-content"><article class="md-content__inner md-typeset"><h1>Edit the Firmware</h1><p>The data board of your SmartSmart Citizen Kit is has two <strong>two microcontrollers</strong>:</p>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#development-enviroment" title="Development enviroment" class="md-nav__link">
+    Development enviroment
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-the-firmware" title="Getting the firmware" class="md-nav__link">
+    Getting the firmware
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#samd21-bootloader" title="SAMD21 bootloader" class="md-nav__link">
+    SAMD21 bootloader
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#samd21-firmware" title="SAMD21 firmware" class="md-nav__link">
+    SAMD21 firmware
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#build-script" title="Build script" class="md-nav__link">
+    Build script
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manual-install" title="Manual install" class="md-nav__link">
+    Manual install
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#esp8266-firmware" title="ESP8266 firmware" class="md-nav__link">
+    ESP8266 firmware
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#esp8266-filesystem" title="ESP8266 filesystem" class="md-nav__link">
+    ESP8266 filesystem
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Edit the Firmware</h1>
+                
+                <p>The data board of your SmartSmart Citizen Kit is has two <strong>two microcontrollers</strong>:</p>
 <p><img alt="" src="https://i.imgur.com/wYoz4G8.png" /></p>
 <p>The main one is an <strong>Atmel SAMD21</strong>, this chip is in charge of all the normal tasks like reading the sensors, saving data, interacting with the user, etc. For this chip we need two software components the bootloader and the main firmware.</p>
 <p>For communications the SCK has an <strong>ESP8266 microcontroler with Wifi capabilities</strong>, this chip receives instructions from the SAMD21 via serial port and takes care of publishing the collected data through the network. This chip needs a main firmware and a filesystem that stores the web pages for the <a href="http://placeholder_for_setup_mode_page">setup mode</a> server.</p>
 <h2 id="development-enviroment">Development enviroment<a class="headerlink" href="#development-enviroment" title="Permanent link">Link</a></h2>
 <p>The SmartSmart Citizen Kit Firmware is on our <a href="https://github.com/fablabbcn/smartcitizen-kit-20">repository on github</a> so you will need <a href="https://mirrors.edge.kernel.org/pub/software/scm/git/">git</a> software <a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">installed</a>.</p>
 <p>To build the SmartSmart Citizen Kit firmware you need a linux computer with <a href="https://platformio.org/">platformio</a> installed, you don't need the full IDE installation (Atom). You can follow <a href="http://docs.platformio.org/en/latest/installation.html#super-quick-mac-linux">this instructions</a> to install only the console version.</p>
-<p>For bootloader upload you also need <a href="http://openocd.org/">OpenOCD</a> somewhere in your PATH. You can use platformIO provided binary, normally it is located in <code class="codehilite"><span class="o">~/</span><span class="p">.</span><span class="n">platformio</span><span class="o">/</span><span class="n">packages</span><span class="o">/</span><span class="n">tool</span><span class="o">-</span><span class="n">openocd</span></code>.</p>
+<p>For bootloader upload you also need <a href="http://openocd.org/">OpenOCD</a> somewhere in your PATH. You can use platformIO provided binary, normally it is located in <code class="codehilite">~/.platformio/packages/tool-openocd</code>.</p>
 <h2 id="getting-the-firmware">Getting the firmware<a class="headerlink" href="#getting-the-firmware" title="Permanent link">Link</a></h2>
 <p>To get the firmware just run:</p>
 <div class="codehilite"><pre><span></span>git clone --recursive https://github.com/fablabbcn/smartcitizen-kit-20
 </pre></div>
 
-<p>The bootloader repository is a <a href="https://git-scm.com/book/en/v2/Git-Tools-Submodules">submodule</a> of the main firmware so you must do a <code class="codehilite"><span class="c1">--recursive</span></code> clone to get it.</p>
+<p>The bootloader repository is a <a href="https://git-scm.com/book/en/v2/Git-Tools-Submodules">submodule</a> of the main firmware so you must do a <code class="codehilite">--recursive</code> clone to get it.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>I you download manually (with the <em>clone or download</em> button on github) you will <strong>not</strong> get the bootloader code, but you can get it from <a href="https://github.com/fablabbcn/uf2-samdx1/tree/88aa54c1afab2647904aaccbe1a6b960c02fdb24">here</a>.</p>
@@ -2288,7 +2719,7 @@
 <p>The bootloader we just flashed allows a very simple way of uploading the SCK firmware based on the <a href="https://github.com/Microsoft/uf2">UF2</a> format, when you <strong>double-click the reset button</strong> of your kit it will expose a <a href="https://en.wikipedia.org/wiki/USB_mass_storage_device_class">MSD</a> interface to your computer and a new drive will popup where you can just drag the compiled firmware file (converted to UF2 format).</p>
 <p><img alt="" src="https://i.imgur.com/tAofJ0g.png" /></p>
 <h3 id="build-script">Build script<a class="headerlink" href="#build-script" title="Permanent link">Link</a></h3>
-<p>You can use the same script used to flash the bootloader (<code class="codehilite"><span class="n">build</span><span class="p">.</span><span class="n">sh</span></code>) that will do everything for you: compile the firmware, convert the binary to UF2 format and upload it to the kit:</p>
+<p>You can use the same script used to flash the bootloader (<code class="codehilite">build.sh</code>) that will do everything for you: compile the firmware, convert the binary to UF2 format and upload it to the kit:</p>
 <div class="codehilite"><pre><span></span>./build.sh sam
 </pre></div>
 
@@ -2320,7 +2751,7 @@ Now <strong>double-click the reset button of your kit</strong> open your favorit
 <p>Keep in mind that if your computer is not configured to automount new drives you will need to mount your sck manually (<a href="https://linuxconfig.org/howto-mount-usb-drive-in-linux">as any other USB drive</a>).</p>
 </div>
 <h2 id="esp8266-firmware">ESP8266 firmware<a class="headerlink" href="#esp8266-firmware" title="Permanent link">Link</a></h2>
-<p>Just like the other parts of the process this is also covered by our <code class="codehilite"><span class="n">build</span><span class="p">.</span><span class="n">sh</span></code> script. So you can just do:</p>
+<p>Just like the other parts of the process this is also covered by our <code class="codehilite">build.sh</code> script. So you can just do:</p>
 <p><div class="codehilite"><pre><span></span>./build.sh esp
 </pre></div>
 As before, if this is the first time you do it, it will take a while on downloading dependecies and building the firmware.</p>
@@ -2335,7 +2766,22 @@ Our <a href="https://github.com/fablabbcn/smartcitizen-kit-20/blob/master/esp/up
 <p>This process is very similar to the previous one you just need to add the letters <em>fs</em>, and wait a little longer ;)</p>
 <p><div class="codehilite"><pre><span></span>./build.sh espfs
 </pre></div>
-<img alt="" src="https://i.imgur.com/z3BjMJw.png" /></p></article></div></div></main><!--
+<img alt="" src="https://i.imgur.com/z3BjMJw.png" /></p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        <!--
   Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
 
   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -2428,8 +2874,31 @@ Our <a href="https://github.com/fablabbcn/smartcitizen-kit-20/blob/master/esp/up
 
       <!-- Social links -->
       
-        <div class="md-footer-social"><link rel="stylesheet" href="../../../../assets/fonts/font-awesome.css"> <a href="https://twitter.com/smartcitizenkit" class="md-footer-social__link fa fa-twitter"></a>  <a href="https://www.facebook.com/smartcitizenBCN/" class="md-footer-social__link fa fa-facebook"></a> </div>
+        
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../../../../assets/fonts/font-awesome.css">
+    
+      <a href="https://twitter.com/smartcitizenkit" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://www.facebook.com/smartcitizenBCN/" class="md-footer-social__link fa fa-facebook"></a>
+    
+  </div>
+
       
     </div>
   </div>
-</footer></div><script src="../../../../assets/javascripts/application.b260a35d.js"></script><script>app.initialize({version:"1.0.4",url:{base:"../../../.."}})</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script><script src="https://buttons.github.io/buttons.js"></script></body></html>
+</footer>
+      
+    </div>
+    
+      <script src="../../../../assets/javascripts/application.245445c6.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../../../.."}})</script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+        <script src="https://buttons.github.io/buttons.js"></script>
+      
+    
+  </body>
+</html>
