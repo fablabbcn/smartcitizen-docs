@@ -1,25 +1,31 @@
 When new features are developed or bugs are fixed we will release new versions of the SCK firmware.
 
+!!! info
+	If you already configured your kit on the smartcitizen platform **you will need the token that the platform gave you during the onboarding process**, to recover it from your kit:  
+
+	1. **Click your kit button** until the kit is in [setup mode](../../../../Smart%20Citizen%20Kit/#setup-mode), the led should be red.  
+	2. **Connecto to the kit** with your mobile device as you did during the onboarding process.  
+	3. **Write down the token** of your kit.  
+
+	![](../../../../assets/images/sck_2/ap_token.png)
+
+	After updating the firmware follow this same steps to input the token and wifi credentials, after this your kit will be publishing on the same registered device than before.
+
 !!! example "Updating your kit is very simple"
 
-	1. **Connect your kit** with a micro USB cable to your computer.
-
-	2. **Double click the reset button** of your SCK, the SCK led should turn green and a new drive called _SCK-20_ should appear on your computer file browser.
-
-	![](https://i.imgur.com/tAofJ0g.png)
-
-
-	3. Inside the _SCK-20_ drive you should see some files, **double click the _INDEX.HTM_** file and our  [github releases page](https://github.com/fablabbcn/smartcitizen-kit-20/releases/latest) will open in your browser. **Download the new firmware** called _SAM_firmware_XXX.uf2_ and save it to your computer.
-
-	![](https://i.imgur.com/QR03uNO.png)
+	* **Connect your kit** with a micro USB cable to your computer.
+	* **Double click the reset button** of your SCK, the SCK led should turn green and a new drive called _SCK-20_ should appear on your computer file browser.
+	![](../../../../assets/images/sck_2/reset_button.png)
+	* Inside the _SCK-20_ drive you should see some files, **double click the _INDEX.HTM_** file and our  [github releases page](https://github.com/fablabbcn/smartcitizen-kit-20/releases/latest) will open in your browser. **Download the new firmware** called _SAM_firmware_XXX.uf2_ and save it to your computer.
+	![](../../../../assets/images/sck_2/uf2_index.png)
 
 	!!! tip
 		You can backup your current firmware version just saving the file called _CURRENT.UF2_.
 
+	* Simply **drag the firmware file you downloaded over the _SCK-20_ drive**, your kit led will blink in green and after some seconds it will reset and start with the new version.
 
-	4. Simply **drag the firmware file you downloaded over the _SCK-20_ drive**, your kit led will blink in green and after some seconds it will reset and start with the new version.
-
-	![](https://i.imgur.com/17sDL2a.png)
+	![](../../../../assets/images/sck_2/uf2_drag.png)
 
 
-	5. After the update you just done, when your SCK gets connected to the network it will **check for an updated versión of the wifi chip (ESP8266) firmware**. If there is a new version your SCK will update automatically.
+
+	* After the update you just done, you can configure your kit as a new device following the [onboarding](https:start.smartcitizen.me) process or use your previous token as explained before.
