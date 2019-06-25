@@ -1489,9 +1489,47 @@
 <!-- Main navigation item with nested items -->
 
   <li class="md-nav__item">
-    <a href="../../../Components/Urban Sensor Board/Metal Oxide Sensor/Implementation/" title="Implementation"
+    <a href="../../../Components/Urban Sensor Board/Metal Oxide Sensor/CCS811/" title="CCS811"
         class="md-nav__link">
-      Implementation
+      CCS811
+    </a>
+  </li>
+
+        
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item">
+    <a href="../../../Components/Urban Sensor Board/Metal Oxide Sensor/MICS/" title="MICS"
+        class="md-nav__link">
+      MICS
     </a>
   </li>
 
@@ -2745,7 +2783,7 @@
 <span class="n">model</span><span class="p">,</span> <span class="n">train_rmse</span><span class="p">,</span> <span class="n">test_rmse</span> <span class="o">=</span> <span class="n">fit_model</span><span class="p">(</span><span class="n">formula_expression</span><span class="p">,</span> <span class="n">dataTrain</span><span class="p">,</span> <span class="n">dataTest</span>
 </pre></div>
 
-<p>We have to keep at least the key <code class="codehilite">&#39;REF &#39;</code> within the <code class="codehilite">tuple_features</code>, but the rest can be renamed at will. We can also input whichever <code class="codehilite">formula_expression</code> for the model regression in the following format:</p>
+<p>We have to keep at least the key <code class="codehilite"><span class="s1">&#39;REF &#39;</span></code> within the <code class="codehilite"><span class="n">tuple_features</span></code>, but the rest can be renamed at will. We can also input whichever <code class="codehilite"><span class="n">formula_expression</span></code> for the model regression in the following format:</p>
 <div class="codehilite"><pre><span></span><span class="n">formula_expression</span> <span class="o">=</span> <span class="s1">&#39;REF ~ A + np.power(A,2) + B + np.power(B,2) + C + D&#39;</span>
 </pre></div>
 
@@ -2765,7 +2803,7 @@ REF = A + A^2 + B + B^2 + C + D + Intercept
 <span class="n">ratio_train</span> <span class="o">=</span> <span class="mf">2.</span><span class="o">/</span><span class="mi">3</span> <span class="c1"># Important that this is a float, don&#39;t forget the .</span>
 </pre></div>
 
-<p>Finally, if our data is too noisy, we can apply an <code class="codehilite">exponential smoothing</code> function, by setting <code class="codehilite">filter_data = True</code> and the alpha coefficient (0.1, 0.2 is already very filtered:</p>
+<p>Finally, if our data is too noisy, we can apply an <code class="codehilite"><span class="n">exponential</span> <span class="n">smoothing</span></code> function, by setting <code class="codehilite"><span class="n">filter_data</span> <span class="o">=</span> <span class="k">True</span></code> and the alpha coefficient (0.1, 0.2 is already very filtered:</p>
 <div class="codehilite"><pre><span></span><span class="n">filter_data</span> <span class="o">=</span> <span class="bp">True</span>
 <span class="n">alpha_filter</span> <span class="o">=</span> <span class="mf">0.1</span>
 </pre></div>
@@ -2805,7 +2843,7 @@ REF = A + A^2 + B + B^2 + C + D + Intercept
 <span class="n">strong</span> <span class="n">multicollinearity</span> <span class="ow">or</span> <span class="n">other</span> <span class="n">numerical</span> <span class="n">problems</span><span class="o">.</span>
 </pre></div>
 
-<p>This output brings a lot of information. First, we find what the dependent variable is, in our case always <code class="codehilite">&#39;REF&#39;</code>. The type of model used and some general information is shown below that.</p>
+<p>This output brings a lot of information. First, we find what the dependent variable is, in our case always <code class="codehilite"><span class="s1">&#39;REF&#39;</span></code>. The type of model used and some general information is shown below that.</p>
 <p>More statistically important information is found in the rest of the output. Some key data:</p>
 <ul>
 <li><em>R-squared and adjusted R-squared</em>: this is our classic correlation coefficient or R<sup>2</sup>. The adjusted one aims to correct the model overfitting by the inclusion of too many variables, and for that introduces a penalty on the number of variables included</li>
@@ -2813,7 +2851,7 @@ REF = A + A^2 + B + B^2 + C + D + Intercept
 <li><em>Model quality diagnostics</em> are also indicated. Kurtosis and skewness are metrics for determining the distribution of the residuals. They indicate how the residuals of the model resemble a normal distribution. Below, we will review more on diagnosis plots. The <a href="https://en.wikipedia.org/wiki/Jarque–Bera_test">Jarque Bera test</a> indicates if the residuals are normally distributed (the null hypothesis is a joint hypothesis of the skewness being zero and the excess kurtosis being zero), and a value of zero indicates that the data is normally distributed. If the Jarque Bera test is valid (in the case above it isn't), the Durbin Watson is applicable in order to check for autocorrelation of the residuals (meaning that the residuals of our model are related among themselves and that we haven't captured some characteristics of our data with the tested model).</li>
 </ul>
 <p>Finally, there is a warning at the bottom indicating that the condition number is large. It suggests we might have multicollinearity problems in our model, which means that some of the independent variables might be correlated among themselves and that they are probably not necessary.</p>
-<p>Our function also depicts the results in a graphical way for us to see the model itself. It will show the training and test datasets (as <code class="codehilite">Reference Train</code> and <code class="codehilite">Reference Test</code> respectively), and the prediction results. The mean and absolute confidence intervals for 95% confidence are also shown:</p>
+<p>Our function also depicts the results in a graphical way for us to see the model itself. It will show the training and test datasets (as <code class="codehilite"><span class="n">Reference</span> <span class="n">Train</span></code> and <code class="codehilite"><span class="n">Reference</span> <span class="n">Test</span></code> respectively), and the prediction results. The mean and absolute confidence intervals for 95% confidence are also shown:</p>
 <p><img alt="" src="https://i.imgur.com/M9TBeBT.png" /></p>
 <p>Now we can look at some other model quality plots. If we run the cell below, we will obtain an adaptation of the summary plots from <strong>R</strong>:</p>
 <div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">linear_regression_utils</span> <span class="kn">import</span> <span class="n">modelRplots</span>
@@ -2870,7 +2908,7 @@ REF = A + A^2 + B + B^2 + C + D + Intercept
 <li>Define Model and fit for training dataset</li>
 <li>Evaluate test dataframe and extract metrics</li>
 </ul>
-<p>Let's go step by step. In order to reframe the data as a supervised learning algorithm, we have created a function called <code class="codehilite">prep_dataframe_ML</code> which is the only one function we'll have to interact with:</p>
+<p>Let's go step by step. In order to reframe the data as a supervised learning algorithm, we have created a function called <code class="codehilite"><span class="n">prep_dataframe_ML</span></code> which is the only one function we'll have to interact with:</p>
 <div class="codehilite"><pre><span></span><span class="c1"># Combine all data in one dataframe</span>
 <span class="kn">from</span> <span class="nn">ml_utils</span> <span class="kn">import</span> <span class="n">prep_dataframe_ML</span>
 
@@ -2901,7 +2939,7 @@ REF = A + A^2 + B + B^2 + C + D + Intercept
 <span class="n">Traning</span> <span class="n">X</span> <span class="n">Shape</span> <span class="p">(</span><span class="mi">1508</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="n">Training</span> <span class="n">Y</span> <span class="n">Shape</span> <span class="p">(</span><span class="mi">1508</span><span class="p">,),</span> <span class="n">Test</span> <span class="n">X</span> <span class="n">Shape</span> <span class="p">(</span><span class="mi">501</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="n">Test</span> <span class="n">Y</span> <span class="n">Shape</span> <span class="p">(</span><span class="mi">501</span><span class="p">,)</span>
 </pre></div>
 
-<p>Now, we can fit our model. The main function is <code class="codehilite">fit_model_ML</code> and currently implements a simple LSTM network. This network can be redefined easily by modifying the underlying function.</p>
+<p>Now, we can fit our model. The main function is <code class="codehilite"><span class="n">fit_model_ML</span></code> and currently implements a simple LSTM network. This network can be redefined easily by modifying the underlying function.</p>
 <div class="codehilite"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">fit_model_ML</span><span class="p">(</span><span class="n">train_X</span><span class="p">,</span> <span class="n">train_y</span><span class="p">,</span> <span class="n">test_X</span><span class="p">,</span> <span class="n">test_y</span><span class="p">,</span> <span class="n">epochs</span> <span class="o">=</span> <span class="mi">50</span><span class="p">,</span> <span class="n">batch_size</span> <span class="o">=</span> <span class="mi">72</span><span class="p">,</span> <span class="n">verbose</span> <span class="o">=</span> <span class="mi">2</span><span class="p">)</span>
 </pre></div>
 
@@ -3118,7 +3156,7 @@ M_{R1} = min(RMSD*') = \sqrt {1+R1^2-2R1^2}
 <h2 id="export-the-models">Export the models<a class="headerlink" href="#export-the-models" title="Permanent link">Link</a></h2>
 <p>Let's now assume that we are happy with our models. Depending on the model we have developed (OLS or ML ), we follow different approaches for the export:</p>
 <p><strong><em>Machine Learning Model</em></strong></p>
-<p>We will use <code class="codehilite">joblib</code> to save the model metrics and parameters. The <code class="codehilite">keras</code> model will be saved with the <code class="codehilite">to_json</code> property of the <code class="codehilite">model</code> and the weights in an <code class="codehilite">h5</code> format with the <code class="codehilite">save_weights</code>ght:</p>
+<p>We will use <code class="codehilite"><span class="n">joblib</span></code> to save the model metrics and parameters. The <code class="codehilite"><span class="n">keras</span></code> model will be saved with the <code class="codehilite"><span class="n">to_json</span></code> property of the <code class="codehilite"><span class="n">model</span></code> and the weights in an <code class="codehilite"><span class="n">h5</span></code> format with the <code class="codehilite"><span class="n">save_weights</span></code>ght:</p>
 <div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">os.path</span> <span class="kn">import</span> <span class="n">join</span>
 <span class="kn">from</span> <span class="nn">sklearn.externals</span> <span class="kn">import</span> <span class="n">joblib</span>
 
@@ -3149,7 +3187,7 @@ M_{R1} = min(RMSD*') = \sqrt {1+R1^2-2R1^2}
 </pre></div>
 
 <p><strong><em>OLS model</em></strong></p>
-<p>We will use <code class="codehilite">joblib</code> for all the objects serialisation in this case:</p>
+<p>We will use <code class="codehilite"><span class="n">joblib</span></code> for all the objects serialisation in this case:</p>
 <div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">os.path</span> <span class="kn">import</span> <span class="n">join</span>
 <span class="kn">from</span> <span class="nn">sklearn.externals</span> <span class="kn">import</span> <span class="n">joblib</span>
 
@@ -3178,7 +3216,7 @@ total <span class="m">1928</span>
 <h2 id="load-models-from-disk">Load Models from Disk<a class="headerlink" href="#load-models-from-disk" title="Permanent link">Link</a></h2>
 <p>Now, sometime after having exported our model, let's assume we need to get it back:</p>
 <p><strong><em>Machine Learning Model</em></strong></p>
-<p>We will use the symmetric functions from <code class="codehilite">joblib</code> and <code class="codehilite">keras</code>:</p>
+<p>We will use the symmetric functions from <code class="codehilite"><span class="n">joblib</span></code> and <code class="codehilite"><span class="n">keras</span></code>:</p>
 <div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">os.path</span> <span class="kn">import</span> <span class="n">join</span>
 <span class="kn">from</span> <span class="nn">sklearn.externals</span> <span class="kn">import</span> <span class="n">joblib</span>
 <span class="kn">from</span> <span class="nn">keras.models</span> <span class="kn">import</span> <span class="n">model_from_json</span>
@@ -3236,7 +3274,7 @@ total <span class="m">1928</span>
 </pre></div>
 
 <p><strong><em>OLS Model</em></strong></p>
-<p>Similarly, we will use the <code class="codehilite">joblib.load</code> function:</p>
+<p>Similarly, we will use the <code class="codehilite"><span class="n">joblib</span><span class="p">.</span><span class="k">load</span></code> function:</p>
 <div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">os.path</span> <span class="kn">import</span> <span class="n">join</span>
 <span class="kn">from</span> <span class="nn">sklearn.externals</span> <span class="kn">import</span> <span class="n">joblib</span>
 

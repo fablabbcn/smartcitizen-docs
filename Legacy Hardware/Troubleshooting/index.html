@@ -1489,9 +1489,47 @@
 <!-- Main navigation item with nested items -->
 
   <li class="md-nav__item">
-    <a href="../../Components/Urban Sensor Board/Metal Oxide Sensor/Implementation/" title="Implementation"
+    <a href="../../Components/Urban Sensor Board/Metal Oxide Sensor/CCS811/" title="CCS811"
         class="md-nav__link">
-      Implementation
+      CCS811
+    </a>
+  </li>
+
+        
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item">
+    <a href="../../Components/Urban Sensor Board/Metal Oxide Sensor/MICS/" title="MICS"
+        class="md-nav__link">
+      MICS
     </a>
   </li>
 
@@ -2925,8 +2963,8 @@
 </ul>
 <h3 id="instructions">Instructions:<a class="headerlink" href="#instructions" title="Permanent link">Link</a></h3>
 <ul>
-<li>Open the <strong>ArduinoISP</strong> sketch example in menu <code class="codehilite">File &gt; Examples &gt; ArduinoISP</code>.</li>
-<li>Select the correct board and ports in the menu <code class="codehilite">Tools &gt; Board &gt;  Port</code> and <code class="codehilite">Tools &gt; Board &gt;  Port</code> that correspond to the board you are using as the programmer (e.g., Arduino UNO).</li>
+<li>Open the <strong>ArduinoISP</strong> sketch example in menu <code class="codehilite"><span class="n">File</span> <span class="o">&gt;</span> <span class="n">Examples</span> <span class="o">&gt;</span> <span class="n">ArduinoISP</span></code>.</li>
+<li>Select the correct board and ports in the menu <code class="codehilite"><span class="n">Tools</span> <span class="o">&gt;</span> <span class="n">Board</span> <span class="o">&gt;</span>  <span class="n">Port</span></code> and <code class="codehilite"><span class="n">Tools</span> <span class="o">&gt;</span> <span class="n">Board</span> <span class="o">&gt;</span>  <span class="n">Port</span></code> that correspond to the board you are using as the programmer (e.g., Arduino UNO).</li>
 <li>Upload the <strong>ArduinoISP</strong> sketch.</li>
 <li>Wire your Arduino board to the SCK as shown in the diagram below using the Patch cables.</li>
 </ul>
@@ -2934,16 +2972,16 @@
 <p><img alt="Select the board" src="/assets/images/sck_1/arduino-uno-isp.png" /></p>
 <ul>
 <li>
-<p>Select the  board in the <code class="codehilite">Tools &gt; Board menu</code></p>
+<p>Select the  board in the <code class="codehilite"><span class="n">Tools</span> <span class="o">&gt;</span> <span class="n">Board</span> <span class="n">menu</span></code></p>
 <ul>
 <li>For SmartSmart Citizen Kit version 1.0 select <em>Arduino Leonardo</em> (ATmega 32U4 at 16Mhz)</li>
 <li>For SmartSmart Citizen Kit version 1.1 select <em>Arduino LilyPad USB</em> (ATmega 32U4 at 8Mhz)</li>
 </ul>
 </li>
 <li>
-<p>Select in <code class="codehilite">Tools &gt; Programmer &gt; Arduino as ISP</code>.</p>
+<p>Select in <code class="codehilite"><span class="n">Tools</span> <span class="o">&gt;</span> <span class="n">Programmer</span> <span class="o">&gt;</span> <span class="n">Arduino</span> <span class="k">as</span> <span class="n">ISP</span></code>.</p>
 </li>
-<li>Select in <code class="codehilite">Tools &gt; Burn Bootloader</code>. This step can take some minutes.</li>
+<li>Select in <code class="codehilite"><span class="n">Tools</span> <span class="o">&gt;</span> <span class="n">Burn</span> <span class="n">Bootloader</span></code>. This step can take some minutes.</li>
 <li><em>Done!</em> Please, go back to the on-line setup page in order to install the firmware again.</li>
 </ul>
 <p><img alt="Select the board" src="/assets/images/sck_1/arduino_board.png" /></p>
@@ -2968,13 +3006,13 @@
 <p><img alt="Select the board" src="/assets/images/sck_1/atmel-isp.png" /></p>
 <ul>
 <li>Switch on your Smart Smart Citizen Kit, you'll find out a tiny switch in one side.</li>
-<li>Select the  board in the <code class="codehilite">Tools &gt; Board menu</code><ul>
+<li>Select the  board in the <code class="codehilite"><span class="n">Tools</span> <span class="o">&gt;</span> <span class="n">Board</span> <span class="n">menu</span></code><ul>
 <li>For SmartSmart Citizen Kit version 1.0 select <em>Arduino Leonardo</em> (ATmega 32U4 at 16Mhz)</li>
 <li>For SmartSmart Citizen Kit version 1.1 select <em>Arduino LilyPad USB</em> (ATmega 32U4 at 8Mhz)</li>
 </ul>
 </li>
-<li>Select in <code class="codehilite">Tools &gt; Programmer &gt; AVRISP MKII</code>.</li>
-<li>Select in <code class="codehilite">Tools &gt; Burn Bootloader</code>. This step can take some minutes, the led  AVRISP mkII will blink and after go green.</li>
+<li>Select in <code class="codehilite"><span class="n">Tools</span> <span class="o">&gt;</span> <span class="n">Programmer</span> <span class="o">&gt;</span> <span class="n">AVRISP</span> <span class="n">MKII</span></code>.</li>
+<li>Select in <code class="codehilite"><span class="n">Tools</span> <span class="o">&gt;</span> <span class="n">Burn</span> <span class="n">Bootloader</span></code>. This step can take some minutes, the led  AVRISP mkII will blink and after go green.</li>
 <li><em>Done!</em> Please, go back to the on-line setup page in order to install the firmware again.</li>
 </ul>
 <p><em>We know this is not an easy task! For any question contact <a href="mailto:support@smartcitizen.me">support@smartcitizen.me</a> or ask for help in the <a href="http://forum.smartcitizen.me/">forum</a> .</em></p>

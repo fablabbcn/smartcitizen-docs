@@ -1489,9 +1489,47 @@
 <!-- Main navigation item with nested items -->
 
   <li class="md-nav__item">
-    <a href="../../Components/Urban Sensor Board/Metal Oxide Sensor/Implementation/" title="Implementation"
+    <a href="../../Components/Urban Sensor Board/Metal Oxide Sensor/CCS811/" title="CCS811"
         class="md-nav__link">
-      Implementation
+      CCS811
+    </a>
+  </li>
+
+        
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item">
+    <a href="../../Components/Urban Sensor Board/Metal Oxide Sensor/MICS/" title="MICS"
+        class="md-nav__link">
+      MICS
     </a>
   </li>
 
@@ -2833,7 +2871,7 @@
 <p>Go to your Kits profile <a href="https://smartcitizen.me/profile/kits">page</a> select the kit you will like to unlink and go to <strong>Setup</strong>. You don't need to connect your SCK, just scroll down, remove the Mad Address number from the field and click <strong>Save</strong>.</p>
 <p><em>This way your kit will keep all the data on the platform but you will be able to register your SCK again as another kit. You can alway register again your SCK on the same device by following the standard setup process.</em></p>
 <h2 id="is-my-home-wireless-internet-going-to-work-with-the-sck">Is my home wireless internet going to work with the SCK?<a class="headerlink" href="#is-my-home-wireless-internet-going-to-work-with-the-sck" title="Permanent link">Link</a></h2>
-<p>The Smart Smart Citizen Kit is designed to work with most home and office standard Wi-Fi routers and access points. However we do not support network names or passwords longer than <em>19 characters</em> or with a <code class="codehilite">$</code> character.</p>
+<p>The Smart Smart Citizen Kit is designed to work with most home and office standard Wi-Fi routers and access points. However we do not support network names or passwords longer than <em>19 characters</em> or with a <code class="codehilite"><span class="err">$</span></code> character.</p>
 <p>We also do not support <strong>WPA Enterprise</strong> networks or <strong>Captive portal</strong> log in as the ones on some big companies and airports. We suggest you contact your IT support team, they can enable you special access in the network based on your device <strong>Mac Address</strong>.</p>
 <h2 id="how-to-use-the-sd-card">How to use the SD Card?<a class="headerlink" href="#how-to-use-the-sd-card" title="Permanent link">Link</a></h2>
 <ol>
@@ -2859,10 +2897,10 @@
 <p><strong>Boards:</strong></p>
 <ul>
 <li>
-<p>For SmartSmart Citizen Kit version 1.0 select <code class="codehilite">Tools/Boards/Arduino Leonardo</code> on the Arduino IDE (ATmega 32U4 at 16Mhz)</p>
+<p>For SmartSmart Citizen Kit version 1.0 select <code class="codehilite"><span class="n">Tools</span><span class="o">/</span><span class="n">Boards</span><span class="o">/</span><span class="n">Arduino</span> <span class="n">Leonardo</span></code> on the Arduino IDE (ATmega 32U4 at 16Mhz)</p>
 </li>
 <li>
-<p>For SmartSmart Citizen Kit version 1.1 select <code class="codehilite">Tools/Boards/Lylipad Arduino USB</code> on the Arduino IDE (ATmega 32U4 at 8Mhz)</p>
+<p>For SmartSmart Citizen Kit version 1.1 select <code class="codehilite"><span class="n">Tools</span><span class="o">/</span><span class="n">Boards</span><span class="o">/</span><span class="n">Lylipad</span> <span class="n">Arduino</span> <span class="n">USB</span></code> on the Arduino IDE (ATmega 32U4 at 8Mhz)</p>
 </li>
 </ul>
 <p><strong>SD data format</strong></p>
@@ -2909,7 +2947,7 @@
 </table>
 <p><strong>Data Conversions</strong></p>
 <p>The data stored is automatically converted to the proper units in firmware.</p>
-<p>If you prefer to do the conversions manually set <code class="codehilite">DataRaw       false</code> in the <code class="codehilite">Constants.h</code> file and apply the formulas on the following table:</p>
+<p>If you prefer to do the conversions manually set <code class="codehilite"><span class="n">DataRaw</span>       <span class="k">false</span></code> in the <code class="codehilite"><span class="n">Constants</span><span class="p">.</span><span class="n">h</span></code> file and apply the formulas on the following table:</p>
 <table>
 <thead>
 <tr>

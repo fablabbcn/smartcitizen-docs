@@ -1547,9 +1547,47 @@
 <!-- Main navigation item with nested items -->
 
   <li class="md-nav__item">
-    <a href="Urban Sensor Board/Metal Oxide Sensor/Implementation/" title="Implementation"
+    <a href="Urban Sensor Board/Metal Oxide Sensor/CCS811/" title="CCS811"
         class="md-nav__link">
-      Implementation
+      CCS811
+    </a>
+  </li>
+
+        
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item">
+    <a href="Urban Sensor Board/Metal Oxide Sensor/MICS/" title="MICS"
+        class="md-nav__link">
+      MICS
     </a>
   </li>
 
@@ -2589,14 +2627,15 @@
                 
                 
                 <h1 id="components">Components<a class="headerlink" href="#components" title="Permanent link">Link</a></h1>
-<p>The project sensor platform builds on the legacy of previous  Smart Smart Citizen Kit generations to develop a new set of tools especially aimed at providing meaningful data insights on a low budget. That means this report documents new components, developed specifically for the project, but frames them inside the Smart Citizen ecosystem.</p>
+<p>The project sensor platform builds on the legacy of previous Smart Smart Citizen Kit generations to develop a new set of tools especially aimed at providing meaningful data insights on a low budget. The system is designed in a extendable way, with a central data logger with network connectivity to which the different components are branched. The system is based on the principle of reproducibility, also integrating non-hardware components such as a dedicated storage platform and a sensor analysis framework.</p>
 <p><img alt="" src="https://i.imgur.com/qTh4CpB.jpg" /></p>
 <p>We believe building modular and reusable hardware is critical towards optimizing the research and development effort. By increasing the technology readiness levels of existing technologies, we can drastically improve the project exploitation strategy.</p>
-<p>The sensor hardware operates as a platform where new sensor modules can be shipped and deployed by the Living Labs themselves when they are finished enabling faster iterations and upgrades even after the project finishes.</p>
 <h2 id="hardware">Hardware<a class="headerlink" href="#hardware" title="Permanent link">Link</a></h2>
+<p>The core system bases its sensing capabilities in widely reviewed low cost sensors, and aims to provide a solid framework for environmental monitoring activities. Each of the modules is shown in the Figure below:</p>
+<p><img alt="" src="https://i.imgur.com/4lPC9rA.png" /></p>
 <ul>
 <li>
-<p><a href="Data Board"><strong>Data Board:</strong></a> A datalogger on asteroids and the heart of the sensors architecure supporting the <a href="/Smart Citizen Kit">Smart Citizen Kit</a> and the <a href="/Smart Citizen Station">Smart Citizen Stations</a>.</p>
+<p><a href="Data Board"><strong>Data Board:</strong></a> A datalogger at the heart of the sensors architecure supporting the <a href="/Smart Citizen Kit">Smart Citizen Kit</a> and the <a href="/Smart Citizen Station">Smart Citizen Stations</a>.</p>
 <ul>
 <li><a href="Firmware"><strong>Firmware:</strong></a> The software running inside the sensors.</li>
 </ul>
@@ -2605,7 +2644,7 @@
 <p><strong>Sensor Board:</strong> Multiple sensor board have been developed. They can be combined to built the different sensor solutions as the <a href="/Smart Citizen Kit">Smart Citizen Kit</a> and the <a href="/Smart Citizen Station">Smart Citizen Stations</a>.</p>
 <ul>
 <li>
-<p><a href="Urban Sensor Board"><strong>Urban Sensor Board:</strong></a> A selection of low-cost sensors in a board ready to measure the urban environment: temperature, humidity, noise and even PM2.5. Together with the <a href="Data Board">Data Board</a> they create the <a href="/Smart Citizen Kit">Smart Citizen Kit</a>.</p>
+<p><a href="Urban Sensor Board"><strong>Urban Sensor Board:</strong></a> A selection of low-cost sensors in a board ready to measure the urban environment: temperature, humidity, noise, light, and PM2.5, among others. Together with the <a href="Data Board">Data Board</a> they create the <a href="/Smart Citizen Kit">Smart Citizen Kit</a>.</p>
 </li>
 <li>
 <p><a href="PM Sensor Board"><strong>PM Sensor Board:</strong></a> An auxiliary board capable of driving two Particulate Matter sensor as well as other auxiliary sensors required for specific deployments as an external temperature sensor or an anemometer. It is used in the <a href="/Smart Citizen Station">Smart Citizen Stations</a>.</p>

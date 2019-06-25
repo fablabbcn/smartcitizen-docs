@@ -1489,9 +1489,47 @@
 <!-- Main navigation item with nested items -->
 
   <li class="md-nav__item">
-    <a href="../../../Components/Urban Sensor Board/Metal Oxide Sensor/Implementation/" title="Implementation"
+    <a href="../../../Components/Urban Sensor Board/Metal Oxide Sensor/CCS811/" title="CCS811"
         class="md-nav__link">
-      Implementation
+      CCS811
+    </a>
+  </li>
+
+        
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item">
+    <a href="../../../Components/Urban Sensor Board/Metal Oxide Sensor/MICS/" title="MICS"
+        class="md-nav__link">
+      MICS
     </a>
   </li>
 
@@ -2705,7 +2743,7 @@
 <p>Dowload and Install Anaconda for Python 2.7 <a href="https://www.continuum.io/downloads">https://www.continuum.io/downloads</a></p>
 </li>
 <li>
-<p>Visit <a href="https://github.com/fablabbcn/smartcitizen-iscape-data">Github</a> to download the project folder or simply use <code class="codehilite">git</code>.</p>
+<p>Visit <a href="https://github.com/fablabbcn/smartcitizen-iscape-data">Github</a> to download the project folder or simply use <code class="codehilite"><span class="n">git</span></code>.</p>
 </li>
 <li>
 <p>Open the <strong>Anaconda Navigator</strong> app and launch the <strong>Jupyter Notebook</strong>.</p>
@@ -2737,21 +2775,21 @@
 <h2 id="advanced-installation-features">Advanced installation features<a class="headerlink" href="#advanced-installation-features" title="Permanent link">Link</a></h2>
 <h3 id="how-to-run-the-project-isolated-from-your-python-environment">How to run the project isolated from your Python environment<a class="headerlink" href="#how-to-run-the-project-isolated-from-your-python-environment" title="Permanent link">Link</a></h3>
 <p><em>Do you have already a Python environment you use for other work and you are worried about updating some packages?</em></p>
-<p><strong>Conda</strong> can load a dedicated environment for you to run <strong>Python</strong> and <strong>Jupyter</strong> based on the <code class="codehilite">environment.yml</code> configuration file we provide.</p>
-<p>Open your favourite shell on the directory you have your project. <em>(<code class="codehilite">cmd.exe</code> on windows)</em></p>
+<p><strong>Conda</strong> can load a dedicated environment for you to run <strong>Python</strong> and <strong>Jupyter</strong> based on the <code class="codehilite"><span class="n">environment</span><span class="p">.</span><span class="n">yml</span></code> configuration file we provide.</p>
+<p>Open your favourite shell on the directory you have your project. <em>(<code class="codehilite"><span class="n">cmd</span><span class="p">.</span><span class="n">exe</span></code> on windows)</em></p>
 <p>Run the following commands:</p>
 <ul>
 <li>
 <p>This will install and load the Python environment we prepared for iSCAPE</p>
-<p><code class="codehilite">conda env create -f environment.yml</code></p>
+<p><code class="codehilite"><span class="n">conda</span> <span class="n">env</span> <span class="k">create</span> <span class="o">-</span><span class="n">f</span> <span class="n">environment</span><span class="p">.</span><span class="n">yml</span></code></p>
 </li>
 <li>
 <p>Now activate the environment</p>
-<p><code class="codehilite">source activate iscape</code></p>
+<p><code class="codehilite"><span class="k">source</span> <span class="n">activate</span> <span class="n">iscape</span></code></p>
 </li>
 <li>
 <p>Ready, run to run Jupyter</p>
-<p><code class="codehilite">jupyter notebook</code></p>
+<p><code class="codehilite"><span class="n">jupyter</span> <span class="n">notebook</span></code></p>
 </li>
 </ul>
 <h3 id="advanced-users-installation">Advanced users installation<a class="headerlink" href="#advanced-users-installation" title="Permanent link">Link</a></h3>
@@ -2767,14 +2805,14 @@
 <p>Pip is the packet manager Python uses and it comes installed by default. If you have any issues you can download pip <a href="https://pip.pypa.io/en/stable/installing/">here</a>.</p>
 <h4 id="installl-jupyter">Installl Jupyter<a class="headerlink" href="#installl-jupyter" title="Permanent link">Link</a></h4>
 <p>Jupyter Notebooks allows us to quickly learn, develop and improve our tools by providing a common convenient framework and UI.</p>
-<p>Simply run <code class="codehilite">pip install jupyter</code> on your terminal to install it.</p>
+<p>Simply run <code class="codehilite"><span class="n">pip</span> <span class="n">install</span> <span class="n">jupyter</span></code> on your terminal to install it.</p>
 <h4 id="download-the-source">Download the source<a class="headerlink" href="#download-the-source" title="Permanent link">Link</a></h4>
-<p><a href="https://github.com/fablabbcn/smartcitizen-iscape-data">Download</a> from Github or simply use <code class="codehilite">git</code></p>
-<div class="codehilite"><pre><span></span>git clone https://github.com/fablabbcn/smartcitizen-iscape-data.git
+<p><a href="https://github.com/fablabbcn/smartcitizen-iscape-data">Download</a> from Github or simply use <code class="codehilite"><span class="n">git</span></code></p>
+<div class="codehilite"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">fablabbcn</span><span class="o">/</span><span class="n">smartcitizen</span><span class="o">-</span><span class="n">iscape</span><span class="o">-</span><span class="k">data</span><span class="p">.</span><span class="n">git</span>
 </pre></div>
 
 <h4 id="run-the-notebook">Run the notebook<a class="headerlink" href="#run-the-notebook" title="Permanent link">Link</a></h4>
-<p>On your terminal go to the folder where tou downloaded your files and then run <code class="codehilite">jupyter notebook</code> this will open a new webpage and you will be available to run your code there.</p>
+<p>On your terminal go to the folder where tou downloaded your files and then run <code class="codehilite"><span class="n">jupyter</span> <span class="n">notebook</span></code> this will open a new webpage and you will be available to run your code there.</p>
                 
                   
                 

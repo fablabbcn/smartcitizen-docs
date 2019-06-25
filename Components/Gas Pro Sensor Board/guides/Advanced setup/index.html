@@ -1578,9 +1578,47 @@
 <!-- Main navigation item with nested items -->
 
   <li class="md-nav__item">
-    <a href="../../../Urban Sensor Board/Metal Oxide Sensor/Implementation/" title="Implementation"
+    <a href="../../../Urban Sensor Board/Metal Oxide Sensor/CCS811/" title="CCS811"
         class="md-nav__link">
-      Implementation
+      CCS811
+    </a>
+  </li>
+
+        
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item">
+    <a href="../../../Urban Sensor Board/Metal Oxide Sensor/MICS/" title="MICS"
+        class="md-nav__link">
+      MICS
     </a>
   </li>
 
@@ -2654,19 +2692,19 @@
 <p>The tester board should be connected between Electrodes <strong>A</strong> and <strong>W</strong> from the slot you want to test.</p>
 <p><img alt="" src="https://i.imgur.com/5hJTQIw.png" /></p>
 <p><strong>Get the firmware</strong></p>
-<p>You will need the latest version of SCK 2.0 Firmware. To enable tester board in firmware uncomment <code class="codehilite">#define deltaTest</code> in <a href="https://github.com/fablabbcn/smartcitizen-kit-15/blob/master/sam/src/sckAux.h#L10">sckAux.h</a> file compile and upload the firmware.</p>
+<p>You will need the latest version of SCK 2.0 Firmware. To enable tester board in firmware uncomment <code class="codehilite"><span class="o">#</span><span class="n">define</span> <span class="n">deltaTest</span></code> in <a href="https://github.com/fablabbcn/smartcitizen-kit-15/blob/master/sam/src/sckAux.h#L10">sckAux.h</a> file compile and upload the firmware.</p>
 <h3 id="read-the-sensors">Read the sensors<a class="headerlink" href="#read-the-sensors" title="Permanent link">Link</a></h3>
 <p><em>read Alphadelta [wichSensor: temperature, humidity, 1A, 2A, 2A, 2W, 3A, 3W]</em></p>
-<div class="codehilite"><pre><span></span>SCK &gt; read alphadelta 1a
-AlphaDelta 1A: 8.22
+<div class="codehilite"><pre><span></span><span class="n">SCK</span> <span class="o">&gt;</span> <span class="k">read</span> <span class="n">alphadelta</span> <span class="mi">1</span><span class="n">a</span>
+<span class="n">AlphaDelta</span> <span class="mi">1</span><span class="n">A</span><span class="p">:</span> <span class="mi">8</span><span class="p">.</span><span class="mi">22</span>
 </pre></div>
 
 <h3 id="control-digital-potentiometers">Control digital potentiometers<a class="headerlink" href="#control-digital-potentiometers" title="Permanent link">Link</a></h3>
 <p><em>control alphadelta 1A set pot [value: 0-100,000]</em></p>
-<div class="codehilite"><pre><span></span>SCK &gt; control alphadelta 1a set pot 50000
-AlphaDelta 1A: set pot 50000
-Setting pot to: 50000 Ohms
-Actual value: 49803 Ohms
+<div class="codehilite"><pre><span></span><span class="n">SCK</span> <span class="o">&gt;</span> <span class="n">control</span> <span class="n">alphadelta</span> <span class="mi">1</span><span class="n">a</span> <span class="k">set</span> <span class="n">pot</span> <span class="mi">50000</span>
+<span class="n">AlphaDelta</span> <span class="mi">1</span><span class="n">A</span><span class="p">:</span> <span class="k">set</span> <span class="n">pot</span> <span class="mi">50000</span>
+<span class="n">Setting</span> <span class="n">pot</span> <span class="k">to</span><span class="p">:</span> <span class="mi">50000</span> <span class="n">Ohms</span>
+<span class="n">Actual</span> <span class="n">value</span><span class="p">:</span> <span class="mi">49803</span> <span class="n">Ohms</span>
 </pre></div>
 
 <h3 id="run-the-tests">Run the tests<a class="headerlink" href="#run-the-tests" title="Permanent link">Link</a></h3>
@@ -2679,29 +2717,29 @@ Actual value: 49803 Ohms
 <blockquote>
 <p><strong>control alpha test <slot> set <value></strong></p>
 </blockquote>
-<p><div class="codehilite"><pre><span></span>SCK &gt; control alpha test 1 set 500
-AlphaDelta 1A: test 1 set 500
-Setting test current to: 500
-Tester Electrode W: 500
-Alphadelta 1W: 78.87
-Tester Electrode A: 500
-Alphadelta 1A: 78.70
+<p><div class="codehilite"><pre><span></span><span class="n">SCK</span> <span class="o">&gt;</span> <span class="n">control</span> <span class="n">alpha</span> <span class="n">test</span> <span class="mi">1</span> <span class="k">set</span> <span class="mi">500</span>
+<span class="n">AlphaDelta</span> <span class="mi">1</span><span class="n">A</span><span class="p">:</span> <span class="n">test</span> <span class="mi">1</span> <span class="k">set</span> <span class="mi">500</span>
+<span class="n">Setting</span> <span class="n">test</span> <span class="k">current</span> <span class="k">to</span><span class="p">:</span> <span class="mi">500</span>
+<span class="n">Tester</span> <span class="n">Electrode</span> <span class="n">W</span><span class="p">:</span> <span class="mi">500</span>
+<span class="n">Alphadelta</span> <span class="mi">1</span><span class="n">W</span><span class="p">:</span> <span class="mi">78</span><span class="p">.</span><span class="mi">87</span>
+<span class="n">Tester</span> <span class="n">Electrode</span> <span class="n">A</span><span class="p">:</span> <span class="mi">500</span>
+<span class="n">Alphadelta</span> <span class="mi">1</span><span class="n">A</span><span class="p">:</span> <span class="mi">78</span><span class="p">.</span><span class="mi">70</span>
 
-Testing finished!
+<span class="n">Testing</span> <span class="n">finished</span><span class="o">!</span>
 </pre></div>
 or <strong>full</strong> that will ouput a csv formated table with the values for both electrodes of the selected slot from -1400 nA to 1400 nA:</p>
 <blockquote>
 <p><strong>control alpha test 1 full</strong></p>
 </blockquote>
-<div class="codehilite"><pre><span></span>SCK &gt; control alpha test 1 full
-AlphaDelta 1A: test 1 full
-testW,readW,testA,readA
--1400,-220.94,-1400,-220.58
--1399,-220.92,-1399,-220.52
--1398,-220.78,-1398,-220.37
--1397,-220.62,-1397,-220.25
--1396,-220.48,-1396,-220.09
-...
+<div class="codehilite"><pre><span></span><span class="n">SCK</span> <span class="o">&gt;</span> <span class="n">control</span> <span class="n">alpha</span> <span class="n">test</span> <span class="mi">1</span> <span class="k">full</span>
+<span class="n">AlphaDelta</span> <span class="mi">1</span><span class="n">A</span><span class="p">:</span> <span class="n">test</span> <span class="mi">1</span> <span class="k">full</span>
+<span class="n">testW</span><span class="p">,</span><span class="n">readW</span><span class="p">,</span><span class="n">testA</span><span class="p">,</span><span class="n">readA</span>
+<span class="o">-</span><span class="mi">1400</span><span class="p">,</span><span class="o">-</span><span class="mi">220</span><span class="p">.</span><span class="mi">94</span><span class="p">,</span><span class="o">-</span><span class="mi">1400</span><span class="p">,</span><span class="o">-</span><span class="mi">220</span><span class="p">.</span><span class="mi">58</span>
+<span class="o">-</span><span class="mi">1399</span><span class="p">,</span><span class="o">-</span><span class="mi">220</span><span class="p">.</span><span class="mi">92</span><span class="p">,</span><span class="o">-</span><span class="mi">1399</span><span class="p">,</span><span class="o">-</span><span class="mi">220</span><span class="p">.</span><span class="mi">52</span>
+<span class="o">-</span><span class="mi">1398</span><span class="p">,</span><span class="o">-</span><span class="mi">220</span><span class="p">.</span><span class="mi">78</span><span class="p">,</span><span class="o">-</span><span class="mi">1398</span><span class="p">,</span><span class="o">-</span><span class="mi">220</span><span class="p">.</span><span class="mi">37</span>
+<span class="o">-</span><span class="mi">1397</span><span class="p">,</span><span class="o">-</span><span class="mi">220</span><span class="p">.</span><span class="mi">62</span><span class="p">,</span><span class="o">-</span><span class="mi">1397</span><span class="p">,</span><span class="o">-</span><span class="mi">220</span><span class="p">.</span><span class="mi">25</span>
+<span class="o">-</span><span class="mi">1396</span><span class="p">,</span><span class="o">-</span><span class="mi">220</span><span class="p">.</span><span class="mi">48</span><span class="p">,</span><span class="o">-</span><span class="mi">1396</span><span class="p">,</span><span class="o">-</span><span class="mi">220</span><span class="p">.</span><span class="mi">09</span>
+<span class="p">...</span>
 </pre></div>
 
 <h2 id="how-to-run-the-validation">How to run the validation?<a class="headerlink" href="#how-to-run-the-validation" title="Permanent link">Link</a></h2>

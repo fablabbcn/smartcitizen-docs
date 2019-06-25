@@ -1493,9 +1493,47 @@
 <!-- Main navigation item with nested items -->
 
   <li class="md-nav__item">
-    <a href="../Metal Oxide Sensor/Implementation/" title="Implementation"
+    <a href="../Metal Oxide Sensor/CCS811/" title="CCS811"
         class="md-nav__link">
-      Implementation
+      CCS811
+    </a>
+  </li>
+
+        
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item">
+    <a href="../Metal Oxide Sensor/MICS/" title="MICS"
+        class="md-nav__link">
+      MICS
     </a>
   </li>
 
@@ -2826,15 +2864,15 @@ x = {\sqrt{x_1^2+x_2^2+...+x_N^2 \over N}}
 <p><em>Image credit: Smart Citizen</em></p>
 <p>This example shows how our ears are only capable of perceiving the signal in red, but the actual sound components are in blue -- being much higher in the amplitude spectrum. If you want to get into the thick of it, here you have the actual <a href="https://github.com/oscgonfer/AudioI2S_SCK/tree/master/OCTAVE/A_WEIGHTING">implementation in Matlab</a> of the A-weighting function that we'll use in the SCK V2.0.</p>
 <p>And finally, to close, let's take a look at the whole chain of processing, where we will continue in future sections:</p>
-<div class="codehilite"><pre><span></span>st=&gt;start: Signal acquisition
-e=&gt;end: RMS calculation
-op=&gt;operation: Windowing
-op2=&gt;operation: FFT
-op3=&gt;operation: Spectrum Normalisation
-op4=&gt;operation: Equalisation
-op5=&gt;operation: A-weighting
+<div class="codehilite"><pre><span></span><span class="nv">st</span><span class="o">=&gt;</span><span class="nv">start</span>: <span class="nv">Signal</span> <span class="nv">acquisition</span>
+<span class="nv">e</span><span class="o">=&gt;</span><span class="k">end</span>: <span class="nv">RMS</span> <span class="nv">calculation</span>
+<span class="nv">op</span><span class="o">=&gt;</span><span class="nv">operation</span>: <span class="nv">Windowing</span>
+<span class="nv">op2</span><span class="o">=&gt;</span><span class="nv">operation</span>: <span class="nv">FFT</span>
+<span class="nv">op3</span><span class="o">=&gt;</span><span class="nv">operation</span>: <span class="nv">Spectrum</span> <span class="nv">Normalisation</span>
+<span class="nv">op4</span><span class="o">=&gt;</span><span class="nv">operation</span>: <span class="nv">Equalisation</span>
+<span class="nv">op5</span><span class="o">=&gt;</span><span class="nv">operation</span>: <span class="nv">A</span><span class="o">-</span><span class="nv">weighting</span>
 
-st-&gt;op-&gt;op2-&gt;op3-&gt;op4-&gt;op5-&gt;e
+<span class="nv">st</span><span class="o">-&gt;</span><span class="nv">op</span><span class="o">-&gt;</span><span class="nv">op2</span><span class="o">-&gt;</span><span class="nv">op3</span><span class="o">-&gt;</span><span class="nv">op4</span><span class="o">-&gt;</span><span class="nv">op5</span><span class="o">-&gt;</span><span class="nv">e</span>
 </pre></div>
 
 <p><em>Image credit: Smart Citizen</em></p>
@@ -2855,7 +2893,7 @@ st-&gt;op-&gt;op2-&gt;op3-&gt;op4-&gt;op5-&gt;e
 <p>This is due to the <a href="https://en.wikipedia.org/wiki/Nyquist%E2%80%93Shannon_sampling_theorem">Nyquist sampling criterion</a>, which states that <strong>at a minimum, we have to sample at double the maximum frequency we want to analyse</strong>. Since humans hearing has a limited frequency range that goes up to 20kHz in some cases, it is reasonable to use something around 40kHz. With this, the <em>Nyquist criterion</em> solves the so called <strong>aliasing problem</strong>, in which several sinusoid signals could fit the same sampling pattern if the number of samples is too low:</p>
 <p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/AliasingSines.svg/1200px-AliasingSines.svg.png" alt="AliasingSines.svg"></img></p>
 <p><em>Image credit: <a href="https://en.wikipedia.org/wiki/Aliasing">Wikipedia - Aliasing</a></em></p>
-<p>The second of the discrete sampling limitation comes from the <strong>amount of samples we are able to handle at a time</strong>. Normally, this is due to memory limitations in the RAM, although we'll see in the future where to allocate them. Nevertheless, it is not useful to handle buffers that are <em>too long</em>, since at some point, the increase of buffer length does not provide any additional information. Buffer length requirements in our case come from the minimum frequency we want to sample, which is <em>around 20Hz</em>. Doing some quick math, we need 0,05s worth of sample buffer, which at 44,1kHz is roughly <em>2200 samples</em>. This is equally too many samples, considering that each could be allocated as a <code class="codehilite">uint8_t</code>, taking up to 16kB just for the raw buffer!</p>
+<p>The second of the discrete sampling limitation comes from the <strong>amount of samples we are able to handle at a time</strong>. Normally, this is due to memory limitations in the RAM, although we'll see in the future where to allocate them. Nevertheless, it is not useful to handle buffers that are <em>too long</em>, since at some point, the increase of buffer length does not provide any additional information. Buffer length requirements in our case come from the minimum frequency we want to sample, which is <em>around 20Hz</em>. Doing some quick math, we need 0,05s worth of sample buffer, which at 44,1kHz is roughly <em>2200 samples</em>. This is equally too many samples, considering that each could be allocated as a <code class="codehilite"><span class="n">uint8_t</span></code>, taking up to 16kB just for the raw buffer!</p>
 <p>This is where <strong>signal windowing</strong> kicks in. Imagine that we have a very-low-frequency sinusoid and that we are not able to sample completely the whole sine wave, due to buffer limitations. By definition, our system is assuming that the discrete samples we measure are constantly being repeated in the environment, one after the other:</p>
 <div style="text-align:center">
 <img src= "https://i.imgur.com/DOfCeAI.png?1">
@@ -2997,8 +3035,8 @@ st-&gt;op-&gt;op2-&gt;op3-&gt;op4-&gt;op5-&gt;e
 
         <!-- Link to previous page -->
         
-          <a href="../Metal Oxide Sensor/Implementation/"
-              title="Implementation"
+          <a href="../Metal Oxide Sensor/MICS/"
+              title="MICS"
               class="md-flex md-footer-nav__link md-footer-nav__link--prev"
               rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
@@ -3011,7 +3049,7 @@ st-&gt;op-&gt;op2-&gt;op3-&gt;op4-&gt;op5-&gt;e
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Implementation
+                MICS
               </span>
             </div>
           </a>
