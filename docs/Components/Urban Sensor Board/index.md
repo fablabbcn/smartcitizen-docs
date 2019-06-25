@@ -1,82 +1,74 @@
 Urban Sensor Board
 ==================
 
-The Urban Sensor Board contains a selection of sensors for the measuring the urban outdoor environment. The sensor selection is based on the recommendations provided by ISCAPE WP1 among the experience acquired from previous Smart Smart Citizen Kit generations.
+!!! info "We are updating"
+    We are currently updating the documentation and many of the figures are from V2.0. We will move them shortly to a more updated version.
+
+The Urban Sensor Board is a solution that contains a selection of low-cost sensors for environmental monitoring. Its main purpose is to serve as a tool for citizen science and awareness activities, and for that reason, metrics such as temperature, pressure, and humidity, as well as noise levels, ambient light, air quality indicators and PM sensors are included. The Urban Sensor Board has undergone several modifications throughout its development, and its current version is V2.1:
+
+![](https://i.imgur.com/cspcIXx.jpg)
+
+An iteration with a different set of sensors was developed as part of the [iScape Project](https://www.iscapeproject.eu/) and is shown in the figure below:
 
 ![](https://i.imgur.com/Xk2Gkeo.jpg)
 
 <a class="github-button" data-size="large" href="https://github.com/fablabbcn/smartcitizen-kit-20" aria-label="Check the source code">Check the source code</a>
 
-A major effort has been carried out on this design to improve the accuracy of the data provided. The sensors on the board include: Air Temperature, Relative Humidity, Noise Level, Ambient Light and Barometric Pressure. The board also features a section especially focused on Air Quality including a Particles Matter, a Carbon Monoxide and a Nitrogen Dioxide detectors. The sensor density of the board design offers more than ten different environmental metrics at a cost below 50€ and differentiates the design from other existing solutions. The following sections describe in detail each of the sensors available.
+A major effort has been carried out on this design to improve the accuracy of the data provided. The sensors on the board include: Air Temperature, Relative Humidity, Noise Levels and Spectrum, Ambient Light and Barometric Pressure. The board also features a section especially focused on Air Quality including a Particle Matter Sensor, and, in version V2.1, a eCO2 and TVOC sensor. Previously, in version V2.0, a Carbon Monoxide and a Nitrogen Dioxide detectors was included, but with poorer reliability in the data. The sensor density of the board design offers more than ten different environmental metrics at a cost below 50€ and differentiates the design from other existing solutions. The following sections describe in detail each of the sensors available.
 
 !!! info "Board assembly"
     The Urban Sensor Board connect to the Data Board connector named **Sensor Board**
 
     ![](https://i.imgur.com/IqLEbIr.png)
 
+**V2.0 Sensors**
+
 | Measurement                                  | Units                                          | Sensor                |
 |----------------------------------------------|------------------------------------------------|-----------------------|
 | Air Temperature                              | ºC                                             | Sensirion SHT-31      |
 | Relative Humidity                            | % REL                                          | Sensirion SHT-31      |
-| Noise Level                                  | dBA, dBC, dBZ                                  | Invensense ICS-434342 |
+| Noise Level and Spectrum                           | dBA, dBC, dBZ                                  | Invensense ICS-434342 |
 | Ambient Light                                | Lux                                            | Rohm BH1721FVC        |
 | Barometric pressure and AMSL                 | Pa and Meters                                  | NXP MPL3115A26        |
 | Carbon Monoxide                              | ppm (Periodic Baseline Calibration Required) | SGX MICS-4514         |
 | Nitrogen Dioxide                             | ppb (Periodic Baseline Calibration Required) | SGX MICS-4514         |
 | Particulate Matter PM2.5 (external - power req) | µg/m3                                          | PMS 5003              |
 
+**V2.1 Sensors**
 
-## Metal Oxide NO~2~ and CO Sensor
+| Measurement                                  | Units                                          | Sensor                |
+|----------------------------------------------|------------------------------------------------|-----------------------|
+| Air Temperature                              | ºC                                             | Sensirion SHT-31      |
+| Relative Humidity                            | % REL                                          | Sensirion SHT-31      |
+| Noise Level and Spectrum                           | dBA, dBC, dBZ                                  | Invensense ICS-434342 |
+| Ambient Light                                | Lux                                            | Rohm BH1721FVC        |
+| Barometric pressure and AMSL                 | Pa and Meters                                  | NXP MPL3115A26        |
+| eCO2 and TVOC                             | ppm/ppb | AMS CCS811         |
+| Particulate Matter PM1/PM2.5/PM10 | µg/m3                                          | PMS 5003              |
 
-The SGX Sensortech (formerly e2v) MICS 4514 [^2]is a dual, robust MEMS sensor for the detection of pollution from automobile exhausts. It integrates on a single SMD package the more well-known SGX MICS 5525 for Carbon Monoxide detection and the SGX MICS 2710 for Nitrogen Dioxide detection. The sensor includes two sensor chips with independent heaters and sensitive layers. One sensor chip detects Oxidizing gases (OX) primarily NO~2~ in a 0.05-10ppm, and the other sensor detects reducing gases (RED) primarily NO~2~ in a 1-1000ppm.
+## A word about Metal Oxide Sensors
 
-The following characteristics have been considered for the sensor choice:
+Metal Oxide Sensors measure the resistance (R~S~) of a sensitive layer after heating it up with a _heating element_ (normally another resistor). However, this reading cannot be considered as an absolute measurement of the target pollutant concentration, since the resistance varies from sensor to sensor, and it's affected by several conditions, such as temperature, humidity and other non-target pollutant affectations. To mitigate this problem, the output of the sensor is normalized using the baseline resistance (R~A~): R~S~ is divided by R~A~. This baseline resistance is the resistance that the sensor sees in clean air, and the cleaner the air is, the higher the resistance is.
 
-* Combines in the same package both the CO and NO~2~ sensors in a low-cost unit \<15€
+Unfortunately, since R~A~ varies with the deployment conditions, R~A~ cannot be determined by a one-time calibration; and in the case of the AMS CCS811 included in the SCK V2.1, is maintained on-the-fly in software. This process is known as **baseline correction**. 
 
-* Low heating current, especially important since the sensor can be battery-powered.
+Previous versions of the SCK (V1.5, V2.0 and others) included the SGX MICS4514, which was meant to measure CO and NO~2~, and a lot of effort was put in V2.0 to improve the driver for the sensor, aiming to reduce power consumption and improve sensor readings. Unfortunately, this didn't match our expectations in terms of data quality and power consumption, and since individual sensor calibration is not feasible in our case (as some scientific publications have suggested), we decided to focus efforts in simpler, more robust and understandable set of sensors.
 
-* Wide range gas concentration detection.
+That being said, the SCK V2.1 includes the AMS CCS811 for Air Quality indicative measurements for indoor air quality in the Urban Sensor Board, and the PMS5003 for outdoor PM exposure. More complex outdoor set-ups will be also possible, for instance using the [Gas Pro Sensor Board](../Gas Pro Sensor Board) (featuring up to three Alphasense Electrochemical Sensors)[^8][^9][^10]. This board is currently under deployment and will be available soon. 
 
-* Extensive operational temperature range.
+### What to expect from Metal Oxide Sensors
 
-* Robust to vibrations and shocks.
+As said above, this type of sensors is not meant for fine pollution monitoring, but is more oriented for air quality indications and trends detection. Our approach is to use them for indicative measurements, and progressively tend towards a more reliable, fine and robust system, once the technology is capable of providing so. 
 
-The MICS-4514 Carbon Monoxide detection performance was tested by _(Rai et al. 2017; Spinelle et al. 2017)_ under field conditions. They reported good agreement (R2 = 0.76--0.78) between sensor response and reference measurements when it was calibrated by using simple or multiple linear regression models _(Rai et al. 2017)_
+While deploying them, since the air quality is expected to vary in a typical environment, the minimum time over which a baseline correction is applied is 24 hours. The sensor monitors the baseline resistance periodically and if a cleaner air is found, the new baseline resistance is used to calculate the sensor readings (although this is only done for  future readings). This also means that the SCK should not be interrupted with an _ad hoc_ power cut since this could erase the baseline resistance and the sensor could always yield wrong readings since it never sees _clean air_.
 
-The sensor integration on the Urban Sensor Board features an analog front-end different than those used by other products using the same sensor to achieve more precise and stable readings. That includes a dynamic gaining circuit and an adjustable heating system designed from the ground up for this application.
+!!! info "Read more"
+    More on the [MICS working principle and field validation](/Components/Urban Sensor Board/Metal Oxide Sensor)
 
-However, the baseline resistance can vary a lot from sensor to sensor, and according to the measuring conditions, which is why the manufacturer recommends monitoring the sensitivity periodically. That mean re-calibration of the device after a few months might be required because the pairs of metal-oxide on the surface of the captor change their physical properties when exposed to the detectable gases. That is the primary reason the Smart Citizen Station include an extra Gas Sensor Board featuring three pre calibrated EC gas sensors to provide more precise and meaningful air quality data.
+!!! info "What are normal values?"
+    More on the [AMS CCS811, eCO2 and TVOC](/Components/Urban Sensor Board/Metal Oxide Sensor/CCS811/)
 
-!!! tip "Sensor integration"
-    **Main Sensor Interface**
-
-    ![](https://i.imgur.com/iH5WUQ6.png)
-
-    **Filters**
-
-    ![](https://i.imgur.com/MU7zFMC.png)
-
-    **Analog to Digital Converter**
-
-    ![](https://i.imgur.com/BQONoBI.png)
-
-    **Digital Potentiometer for heater control**
-
-    ![](https://i.imgur.com/k1db1nl.png)
-
-    !!! info "Heater design"
-        Check the [MICS implementation document](MICS Driver Implementation) to learn more about the brand new heating stage.
-
-!!! tip "Field validation"
-    The NO~2~ data the sensor post processed with the [Sensor Analysis Framework](Sensor Analysis Framework) compared with the Arpae Emilia-Romagna referenced instrumentation.
-
-    ![](https://i.imgur.com/982qA89.png)
-
-    !!! info "Read more"
-        More on the [MICS working principle and field validation](Metal Oxide Sensors)
-
-## Noise Level Sensor
+## Noise Level Sensor (V2.0 onwards)
 
 The noise sensor is based on the INVENSENSE ICS-43432[^3] high-performance, low power, digital output, omnidirectional MEMS microphone with a bottom port and I2S interface. The sensors are similar to the one found on some high-end smartphones. It delivers the information directly in a digital format to the MCU where a custom library has been developed to provide noise data in dB scales A, C and Z. The raw FFT is also accessible to support characterization of specific noise frequencies. The sensor has been calibrated specifically for the project on an anechoic chamber using standard microphone calibration procedures.
 
@@ -99,7 +91,7 @@ The following characteristics have been considered for the sensor choice
 !!! tip "Sensor integration"
     ![](https://i.imgur.com/KHkyHEX.png)
 
-## Relative Humidity and Air Temperature Sensor
+## Relative Humidity and Air Temperature Sensor (V2.0 onwards)
 
 Relative Humidity and Air Temperature Sensor are provided by a SENSIRION SHT31[^4] module.
 
@@ -121,7 +113,7 @@ The following characteristics have been considered for the sensor choice
 !!! tip "Sensor integration"
     ![](https://i.imgur.com/xoF233L.png)
 
-## Ambient Light Sensor
+## Ambient Light Sensor (V1.5 onwards)
 
 The Ambient Light Sensors is based around the ROHM BH1721FVC[^5] which uses an LDR10 combined with an ADC and the corresponding circuit that allows communicating with the device with the I2C protocol.
 
@@ -131,7 +123,7 @@ The following characteristics have been considered for the sensor choice:
 
 * Measures ambient light data in a wide range from 1lx to 65528 lx a repeatability of 15% and a resolution of 8 lx.
 
-* Possibility to adjust by an I2C command the kind of light that it should measure (visible or infrared). The infrared channel is not used in the current version, but it could be considered in future versions.
+* Possibility to adjust by an I2C command the kind of light that it should measure (visible or infrared).
 
 * Low power consumption.
 
@@ -140,7 +132,7 @@ The following characteristics have been considered for the sensor choice:
 !!! tip "Sensor integration"
     ![](https://i.imgur.com/vYPNdcC.png)
 
-## Barometric Pressure
+## Barometric Pressure (V2.0 onwards)
 
 The Barometric Pressure sensor is based around the NXP MPL3115A2[^6] is
 a compact, piezoresistive, absolute pressure sensor with an I2C digital
@@ -162,7 +154,7 @@ choice:
 !!! tip "Sensor integration"
     ![](https://i.imgur.com/5g64P7r.png)
 
-## Dust Particles Sensor
+## Dust Particles Sensor (V2.0 only)
 
 !!! warning
     The following sensor might be replaced in future iterations as it gets replaced by the **External PM Sensor connector** supporting a Plantowe PMS5003 or PMS7003
@@ -185,7 +177,7 @@ choice:
 !!! tip "Sensor integration"
     ![](https://i.imgur.com/E4FhioM.png)
 
-## External PM Sensor
+## External PM Sensor (V2.0 onwards)
 
 An external connector on the board supports the connection of a Plantower PMS 5003 or PMS 7003[^11]. The device is a digital particle concentration sensor that uses the Laser Scattering principle to obtain the number of suspended particles in the air. The sensor can be fully enable or disable in software to save energy when not in use.
 

@@ -4,33 +4,13 @@ Sometimes (many times actually), our code won't do what we want it to do and we 
 
 ![](https://imgs.xkcd.com/comics/fixing_problems.png)
 
-_Image Credit: [XKCD](https://xkcd.com/)_
-
 To keep it simple: our final target is to be able to **interact** with the SAMD21 (or the chip) **while it's executing the program** and tell it to pause the execution, give us the value of some variables and then continue. We will release a fairly extensive report with documentation on this process, but for those interested in reading an overview on how to debug, this post can be a short introduction.
 
 So, here we go! The first item we need is the [**Open On-Chip Debugger** (OpenOCD)](http://openocd.org/) which provides debugging with the assistance of a **debug adapter**. This adapter is a small hardware module which helps provide the right kind of electrical signaling to the target being debugged. These are required since the debug host, on which OpenOCD runs (i.e. your computer, a Raspberry PI...) won’t usually have native support for such signaling, or the connector needed to hook up to the target.
 
 ![](https://i.imgur.com/qJ2fV3N.jpg)
 
-_Image Credit: Smart Citizen_
-
 These adapters are sometimes packaged as discrete dongles, which may generically be called **hardware interface dongles** (and are quite expensive). Some development boards also integrate them directly, which may let the development board connect directly to the debug host over USB (and sometimes also to power it over USB, like the [Arduino Genuino Zero](https://store.arduino.cc/genuino-zero)). In the case of the **Smart Smart Citizen Kit**, we have a **SWD** Adapter that supports _Serial Wire Debug_ signaling to communicate with the _ARM core_. In our approach, **using a complete open toolchain**, OpenOCD is be running on a Raspberry Pi, and communicating with the SCK's SWD through the GPIO pins of the Pi.
-
-```sequence
-GDB->OpenOCD: Let's debug the SCK
-OpenOCD->GDB: OK!
-OpenOCD->SCK: We are debugging you
-Note right of SCK: SCK thinks
-SCK->OpenOCD: OK!
-GDB->OpenOCD: Load firmware
-GDB->OpenOCD: Set Breakpoints
-OpenOCD->SCK: Do it!
-OpenOCD->SCK: Run!
-Note right of SCK: SCK runs
-Note right of SCK: SCK hits a breakpoint
-SCK->GDB: Temperature sensor reading is 500ºC
-Note left of GDB: Oh, oh...
-```
 
 Finally, to be able to actually **see what is going on inside our firmware while it executes**, we need something that is able to read and understand the machine code and hand it over to a human understandable interface. This is where [**GDB**](https://www.gnu.org/software/gdb/) kicks in and helps us by:
 
@@ -49,7 +29,7 @@ GDB and OpenOCD will be running in a Raspberry Pi hooked up to the SWD interface
 
     Create a file name `wpa_supplicant.conf` on the `/boot` partition of the SD card, the content of this file should looks like this:
 
-    ```shell=
+    ```
     ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
     update_config=1
 
@@ -69,36 +49,39 @@ GDB and OpenOCD will be running in a Raspberry Pi hooked up to the SWD interface
 In order to find a raspberry pi over the network we can use commands like these:
 
 **Linux**
-```shell=
+
+```
 MY_IP_RANGE=$(ip addr | grep 'state UP' -A2 | tail -n1 | awk '{print $2}') && nmap -sn $MY_IP_RANGE && IP=$(arp -na | grep b8:27:eb | grep -Eo '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}') && ssh $IP;
 ```
 
-**Mac** (To be reviewed)
-```shell=
+**Mac** 
+
+```
 MY_RANGE=$(ip addr | grep "UP" -A3 | grep '192' -A0 | awk '{print $2}') && nmap -sn $MY_RANGE && arp -na | grep b8:27:eb
 ```
 
 * SSH login without password:
-    * Si nunca has generado RSA key: `ssh-keygen` sin poner nada en la passphrase.
-    * Copiar la clave a la raspberry: `ssh-copy-id -i ~/.ssh/id_rsa.pub raspi-address`
+    * If you have never generated a RSA key: `ssh-keygen` without passphrase
+    * Copy the key to the Raspberry: `ssh-copy-id -i ~/.ssh/id_rsa.pub raspi-address`
 
-    Ya que esté lista la raspberry con conectarla debe bootear y conectarse sola a la red, el commando que esta arriba (`MY_IP...`) la localiza y hace ssh login.
-
+    Once booted, it will connect to the network. The command above (`MY_IP...`) finds it and logs into it via SSH.
 
 Once you are logged to your raspberry pi and connected to the internet, do a **system upgrade**:
-```shell=
+```
 sudo apt-get install rpi-update
 sudo rpi-update
 sudo apt-get update && sudo apt-get dist-upgrade
 ```
 Install some **dependencies**:
 
-```shell=
+```
 sudo apt-get install git autoconf libtool make pkg-config libusb-1.0-0 libusb-1.0-0-dev telnet sshfs
 ```
 ### Openocd installation
-* Clon **openocd** repository and compile:
-```shell=
+
+* Clone **openocd** repository and compile:
+
+```
 git clone git://git.code.sf.net/p/openocd/code openocd-code
 cd openocd-code
 ./bootstrap
@@ -107,16 +90,11 @@ make
 sudo make install
 ```
 
-La lista de interfaces que puede usar el openocd esta en _/usr/local/share/openocd/scripts/interface_
+The list of interfaces that openOCD can use is under: _/usr/local/share/openocd/scripts/interface_.
 
-Para poder usar la interface [SWD](http://www.arm.com/products/system-ip/debug-trace/coresight-soc-components/serial-wire-debug.php) que tiene el SCK a través de _Bit Banging_ tenemos que conectarla directamente a los GPIOs de la Raspberry Pi:
+In order to use the [SWD connector](http://www.arm.com/products/system-ip/debug-trace/coresight-soc-components/serial-wire-debug.php) that the SCK features, by using _Bit Banging_, we connect it directly to the Raspberry Pi GPIOs:
 
 ![](https://i.imgur.com/qJ2fV3N.jpg)
-
-Target **GND** to **Pi GND**
-Target **SWDIO** to Raspberry **Pi #24**
-Target **SWCLK** to Raspberry **Pi #25**
-Target **Reset** to Raspberry **Pi #18**
 
 ---
 ![](https://i.imgur.com/AEYc8sd.jpg  "Raspberry Pi connected to SCK" =400x)
@@ -125,7 +103,7 @@ Target **Reset** to Raspberry **Pi #18**
 
 Once you are logged into the raspberry Pi you need a openOCD config file to start (ej. _sck.cfg_) with this content:
 
-```shell=
+```
 source [find interface/raspberrypi2-native.cfg]
 transport select swd
 
@@ -139,24 +117,27 @@ init
 targets
 reset halt
 ```
+
 You can store this file in OpenOCD scripts dir so it will auto find it
-```shell=
+
+```
 sudo mv sck.cfg /usr/local/share/openocd/scripts/
 ```
 
 and then run the OpenOCD server with:
-```shell=
+
+```
 sudo openocd -f sck.cfg
 ```
 
 Then you can connect to OpenOCD, if you want to connect from an external computer, replace `127.0.0.1` with your Raspberry Pi IP address.
-```shell=
+```
 telnet 127.0.0.1 4444
 ```
 
 !!! example
     On a ***arduino zero*** go to the directory where the *.cfg is and:
-    ```shell=
+    ```
     openocd -f arduino_zero.cfg
     Open On-Chip Debugger 0.10.0
     Licensed under GNU GPL v2
@@ -180,7 +161,7 @@ telnet 127.0.0.1 4444
 
 We need to give the OpenOCD server access to your project files that are remotely stored. To do this you can mount your working directory remotely on the Raspberry Pi via SSH:
 
-```shell=
+```
 ssh pi@raspi_address
 pi$ mkdir working_dir
 pi$ sshfs user@computer_address:working_path working_dir
@@ -188,7 +169,7 @@ pi$ cd working_dir
 pi$ sudo openocd -f sck.cfg
 ```
 Then you can connect to OpenOCD from your computer with:
-```shell=
+```
 telnet raspi_address 4444
 ```
 
@@ -197,7 +178,7 @@ telnet raspi_address 4444
 * Get the bootloader file [here](https://github.com/arduino/ArduinoCore-samd/tree/master/bootloaders/zero) and build it.
 
 * Connect to OpenOCD server and run:
-```shell=
+```
 reset halt
 at91samd bootloader 0
 at91samd chip-erase
@@ -211,15 +192,16 @@ If you don't see any error youre done!
 
 * Install platformio, download and build SCK firmware
 * Connect to OpenOCD server and run:
-```shell=
+
+```
 reset halt
 flash write_image firmware.bin 8192
 verify_image firmware.bin 8192
 reset run
 reset run
-``
+```
 
-## ![](https://i.imgur.com/0iMkHRt.png)  GDB
+## GDB
 
 ### General description
 
@@ -233,7 +215,8 @@ GDB can do four main kinds of things (plus other things in support of these) to 
 
 ### Debugging session with Raspberry Pi as the OpenOCD server
 Once your raspberry pi is setup with above instructions you can just do:
-```shell=
+
+```
 ssh pi@RaspberryAddress sudo openocd -f sck.cfg &
 cd /platformio_project/path
 arm-none-eabi-gdb ./pioenvs/zeroUSB/firmware.elf
@@ -243,7 +226,6 @@ arm-none-eabi-gdb ./pioenvs/zeroUSB/firmware.elf
 
 If you are using *platformio*, you need to modify the compiling option to avoid optimisation with -0g message to the compiler. In case you are not using *platformio*, activate verbose compiling output at Arduino IDE and find your compiled .elf directory.
 
-
 ```
 [env:zeroUSB]
 platform = atmelsam
@@ -251,13 +233,14 @@ board = zeroUSB
 framework = arduino
 build_flags = -Og
 ```
+
 Now we are all set and ready to go. The debugger is waiting for instructions on the execution, which we detail below.
 
 !!! info
     **Quick handy instructions inside GDB environment**
     1. *(gdb)* appears in every line and you don't have to type it each time
     2. In case you need to exit GDB, just type in `quit`, but remember always killing the process before, should you have a target running
-    ```shell=
+    ```
     (gdb) kill
     (gdb) quit
     ```
@@ -274,7 +257,7 @@ An **extract** of some useful commands are detailed below:
 `continue [ignore-count]`
 
 * Resumes program execution until next breakpoint. `[ignore-count]` argument allows to specify a further number of times to ingore a breakpoint.
-```shell=
+```
 (gdb) continue
 Continuing.
 
@@ -305,7 +288,7 @@ Breakpoint 1, tick () at src/HOLA.cpp:9
 `info breakpoints`
 
 * Retrieve information about breakpoints
-```shell=
+```
 (gdb) info breakpoints
 Num     Type           Disp Enb
 ress    What
@@ -315,11 +298,11 @@ ress    What
 `break`
 
 * Set a breakpoint in a specific function
-```shell=
+```
 (gdb) break loop
 ```
 * Set a breakpoint in a specific line (344)
-```shell=
+```
 (gdb) break main.cpp:344
 ```
 !!! info
@@ -328,7 +311,7 @@ ress    What
 `watchpoint`
 
 * Set a watchpoint [**watchpoint**](https://sourceware.org/gdb/current/onlinedocs/gdb/Set-Watchpoints.html#Set-Watchpoints) to only stop once a variable has a certain value.
-```shell=
+```
 (gdb) watch timer
 ```
 
@@ -339,7 +322,7 @@ ress    What
 `commands`
 
 * Set a **list of actions** related to the breakpoint:
-```shell=
+```
 break main.cpp:50
 commands
 silent
@@ -350,7 +333,7 @@ end
 `delete`
 
 * Delete a breakpoint
-```shell=
+```
 (gdb) delete 1
 (gdb) info breakpoints
 No breakpoints or watchpoints.
@@ -359,7 +342,7 @@ No breakpoints or watchpoints.
 `loop`
 
 * Read what is around a certain function
-```shell=
+```
 (gdb) l loop
 25	  //while (!Serial) {
 26	    //; // wait for serial port to connect. Needed for native USB port only
@@ -375,14 +358,14 @@ No breakpoints or watchpoints.
 `print`
 
 * Retrieve value of a specific variable
-```shell=
+```
 (gdb) print timer
 $12 = 2
 ```
 `set`
 
 * Set variable to a certain value
-```shell=
+```
 (gdb) set timer = 0
 ```
 
@@ -406,7 +389,7 @@ Anytime we make a change in the code, we don't need to reload the debugging sess
     b. Or hit `pio run` in another terminal located in your project root directory
 
 2. In gdb, `load` file. This will reload the file defined at the beginning of your debugging session and upload it to the target
-```shell=
+```
 (gdb) load
 Loading section .text, size 0x2e50 lma 0x2000
 Loading section .ramfunc, size 0x60 lma 0x4e50
