@@ -710,13 +710,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#user-feedback" title="User feedback" class="md-nav__link">
-    User feedback
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#power-consumption" title="Power consumption" class="md-nav__link">
     Power consumption
   </a>
@@ -2694,13 +2687,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#user-feedback" title="User feedback" class="md-nav__link">
-    User feedback
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#power-consumption" title="Power consumption" class="md-nav__link">
     Power consumption
   </a>
@@ -2737,7 +2723,7 @@
                 
                 
                 <h1 id="data-board">Data Board<a class="headerlink" href="#data-board" title="Permanent link">Link</a></h1>
-<p>The data board is a data-logger at the core of the sensors architecture supporting the Smart Citizen Kit and the Smart Citizen Station. This module is powered by an ARM M0+ 32-bits 48Mhz <strong>SAMD21</strong> running the Smart Citizen Firmware( (/Components/Firmware)), combining the low power consumption of the ARM M0 family with the power of a 32-bits processor with 32KB of RAM and 256KB of FLASH memory. This solution offers enough program storage and memory space to support multiple auxiliary sensors. This chip is used by the Arduino Zero and MKR boards, therefore benefiting from the open community built around these boards in particular and the Arduino project in general.</p>
+<p>The data board is a data-logger at the core of the sensors architecture supporting the Smart Citizen Kit and the Smart Citizen Station. This module is powered by an ARM M0+ 32-bits 48Mhz <strong>SAMD21</strong> running the <a href="/Components/Firmware">Smart Citizen Firmware</a>), combining the low power consumption of the ARM M0 family with the power of a 32-bits processor with 32KB of RAM and 256KB of FLASH memory. This solution offers enough program storage and memory space to support multiple auxiliary sensors. This chip is used by the Arduino Zero and MKR boards, therefore benefiting from the open community built around these boards in particular and the Arduino project in general.</p>
 <p><img alt="" src="https://i.imgur.com/V3Uce0x.jpg" /></p>
 <p><a class="github-button" data-size="large" href="https://github.com/fablabbcn/smartcitizen-kit-20" aria-label="Check the source code">Check the source code</a></p>
 <p>The data board also includes a Wi-Fi module, a micro SD card slot, an internal Flash and a battery management solution. In addition, it includes 4MB of extra Flash Memory for offline data storage, in case of network brownouts. The Wi-Fi Module is the well-known <a href="https://www.espressif.com/en/products/hardware/esp8266ex/overview">Espressif ESP8266</a> IEEE 802.11 b/g/n Wi-Fi with 4MB Internal Flash for web content storage:</p>
@@ -2745,16 +2731,6 @@
 <p>The Data Board connects to the sensor board providing power, analog and digital communications (12 bits ADC, GPIO, I2C, I2S, VCC). The data board also includes a Seeed Studio standard Grove connector where off-the-shelf modules from the same manufacturer can be connected. The connector supports an independent I2C bus by default, but by software it can be configured to support other uses (GPIO, I2C and UART). It can supply power up to 750mA, and it can be enabled or disabled by software to save power.</p>
 <p>The board includes a power unit, with a battery management system, capable of handling a variety of Lithium polymer cells. The batteries are connected to a standard JST-2 pin battery connector. The Smart Citizen Kit by default uses a 2000mAh battery, but larger capacities can be used. Under normal conditions, and depending on the sensors enabled, a 2000mAh battery can last between 24 hours (with all sensors enabled, and a 1-minute recording frequency) to more than a week. The board also features a <em>sleep mode</em>, through which drastically lower average consumption are achieved.</p>
 <p>The controller allows the batteries to be easily charged using the boards micro USB connector using any standard USB power adapter like the ones used on Smartphones. On remote areas, it can also be powered using a selection of PV Panels like <a href="https://www.voltaicsystems.com/">Voltaics Systems</a> 6W panel.</p>
-<div class="admonition tips">
-<p class="admonition-title">Light color codes</p>
-<ul>
-<li><strong><font color="#FFF" style="BACKGROUND-COLOR: #FF0015; padding: 4px;">Red soft pulsing</font></strong> &gt;&gt; Apmode</li>
-<li><strong><font color="#FFF" style="BACKGROUND-COLOR: #0099FF; padding: 4px;">Blue soft pulsing</font></strong> &gt;&gt; wifi.</li>
-<li><strong><font color="#FFF" style="BACKGROUND-COLOR: #FF77EF; padding: 4px;">Pink soft pulsing</font></strong> &gt;&gt; sdcard.</li>
-<li><strong>Other color + <font color="#FFF" style="BACKGROUND-COLOR: #FF9100; padding: 4px;">Orange soft pulsing</font></strong> &gt;&gt; on battery.</li>
-<li><strong>Other color + <font color="#FFF" style="BACKGROUND-COLOR: #47D847; padding: 4px;">Green soft pulsing</font></strong> &gt;&gt; battery charging.</li>
-</ul>
-</div>
 <h2 id="firmware">Firmware<a class="headerlink" href="#firmware" title="Permanent link">Link</a></h2>
 <p>The Smart Citizen Kit firmware is comprised of two parts: 1) the primary processing tasks are done by the SAMD21 microcontroller firmware; 2) the tasks related to network communication are run through the ESP8266. The SAMD21 is built on top of the Arduino Zero with a custom variant for the Data Board main MCU. The ESP8266 is also built using the Arduino ESP Core. Both firmwares are built and managed with Platform IO, an open-source IDE for embedded development. Platform IO features built-in dependency management and allows you to compile and upload both processors with a single command. Using the SWD ARM connector you can change the MCU bootloader and debug the firmware using Open Source tools.</p>
 <div class="admonition info">
@@ -2880,28 +2856,11 @@
 <p><img alt="" src="https://i.imgur.com/RRu8MiV.jpg" /></p>
 </div>
 <h2 id="power-management">Power management<a class="headerlink" href="#power-management" title="Permanent link">Link</a></h2>
-<p>The power infrastructure of the Smart Smart Citizen Kit gives us the possibility of running directly from a USB power source with or without lithium battery, it is composed by:
-* <a href="http://www.ti.com/lit/ds/symlink/bq24259.pdf">BQ24259 USB Charger</a> that manages external power regulation, battery fast charging (up to 2Ah) and USB OTG that allow us powering other devices from the SCK.
-* <a href="http://www.ti.com/lit/ds/symlink/bq27426.pdf">BQ27426</a> Battery Fuel Gauge for precise battery level measuring.</p>
-<p>Normaly the SCK uses a 2000 mAh <a href="https://en.wikipedia.org/wiki/Lithium_polymer_battery">Lithium polymer battery</a> but it is possible to take advantage of larger batteries. The charging current is regulated with a manual imposed limit that can be configured, and also auto adjusts to the connected USB charger capacity. The normal time for completely charging the stock battery is between 2 and 3 hours. It is also possible to use solar panel (5v) to charge the SCK.</p>
+<p>The Smart Smart Citizen Kit gives us the possibility of running directly from a USB power source with or without lithium battery, using the <a href="http://www.ti.com/lit/ds/symlink/bq24259.pdf">BQ24259 USB Charger</a>. The charger manages external power regulation, battery fast charging (up to 2Ah) and USB OTG that allow us powering other devices from the SCK (currently not implemented).</p>
+<p>Normaly the SCK uses a 2000 mAh <a href="https://en.wikipedia.org/wiki/Lithium_polymer_battery">Lithium polymer battery</a> but it is possible to take advantage of larger batteries. The charging current is regulated with a manual imposed limit that can be configured, and also auto adjusts to the connected USB charger capacity. It is also possible to use solar panel (5v) to charge the SCK.</p>
 <p>The power consumption of the kit depends on which sensors are enabled and how often they are read/published. Between readings the kit goes to <em>sleep mode</em> turning off almost all the subsystems and reducing the power consumption.</p>
 <p>In previous versions of the kit (V2.0 and before), the most power-hungry sensors were the SGX MICS gas sensors (NO<sub>2</sub> and CO) which need an always-on heater with a permanent consumption of around 50 mAh (35 hours per charge). In V2.0 and V2.1, the PM sensor which needs a fan with a consumption of 35 mAh (50 hours per charge). To improve the power consumption, the PM Sensor works on <em>one-shot mode</em> which turns the sensor off for &frac34;ths of the time, and only taking a reading after the sensor has stabilised.</p>
 <p>The kit will operate normally: read sensors, post, and then go to sleep. Until the battery charge is below 3%. When that threshold is passed it will enter an emergency sleep mode and interrupt all the normal functions until the charge goes over 5%.</p>
-<h3 id="user-feedback">User feedback<a class="headerlink" href="#user-feedback" title="Permanent link">Link</a></h3>
-<p>The charging and battery state information is shown through the led, with small flashes of different color depending on the state:</p>
-<ul>
-<li>USB cable connected<ul>
-<li>Orange flash - the battery <strong>is charging</strong></li>
-<li>Green flash - <strong>charge complete</strong> <em>you can disconnect the kit</em></li>
-</ul>
-</li>
-<li>No USB cable is connected<ul>
-<li>No flash - <strong>charge is over 15%</strong></li>
-<li>Orange flash and normal led Behavior (blue or pink breath) - <strong>charge is under 15%</strong> <em>connect the charger!</em></li>
-<li>3 ultra fast red flashes and NO other color - <strong>charge is under 3%</strong> (emergency sleep) <em>connect the charger!! NO readings are taken!!</em></li>
-</ul>
-</li>
-</ul>
 <h3 id="power-consumption">Power consumption<a class="headerlink" href="#power-consumption" title="Permanent link">Link</a></h3>
 <p>The base power consumption of the device is 16mA (no sensors or wifi connection). While posting data online, the consumption can go up to 75mA accounting for the ESP8266, with an additional 90mA if all the sensors are to be working at the same time (Urban Sensor Board + PM sensor).</p>
 <h2 id="source-files">Source files<a class="headerlink" href="#source-files" title="Permanent link">Link</a></h2>
