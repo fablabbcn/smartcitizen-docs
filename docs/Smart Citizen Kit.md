@@ -17,28 +17,17 @@ Smart Citizen Kit
 
 	:question: **Support: [support@smartcitizen.me](mailto: support@smartcitizen.me)**
 
-
-
-## :gift: The Kit
-
-The Smart Citizen Kit 2.0.
-
-![](https://i.imgur.com/vgt8m3p.jpg)
-
-1. Smart Smart Citizen Kit 2.0 with particle and battery sensor with two mounting brackets.
-2. MicroSD card and microSD adapter to SD.
-3. USB cable and a USB charger to charge the battery.
-
 ## :ear: Measurements
 
-All the Smart Citizen Kit new sensors generation measure at least air temperature, relative humidity, noise level, ambient light, barometric pressure and particulate matter.
+All the Smart Citizen Kit new sensors generation measure **at least** air temperature, relative humidity, noise level, ambient light, barometric pressure and particulate matter (PM).
 
 ### SCK 2.1
 
-!!! info "Important!"
-    Detailed information is currently under development and can be partially found on the previous [SCK 2.0 Urban Sensor Board](/Components/Urban%20Sensor%20Board/) on the [Components](/Components) section.
+The SCK 2.1 components list is below:
 
-    **More information coming soon!**
+1. Smart Citizen Kit 2.1 with Particle Sensor and battery (brackets or rain-proof enclosure currently not included)
+2. MicroSD card and microSD adapter to SD.
+3. USB cable and a USB charger.
 
 | Measurement                    | Units | Sensors               |
 |--------------------------------|-------|-----------------------|
@@ -49,14 +38,19 @@ All the Smart Citizen Kit new sensors generation measure at least air temperatur
 | Barometric pressure            | Pa    | NXP MPL3115A26        |
 | Equivalent Carbon Dioxide      | ppm   | AMS CCS811            |
 | Volatile Organic Compounds     | ppb   | AMS CCS811            |
-| Particulate Matter PM 1 / 2.5 / 10 | µg/m3 | PMS 5003              |
+| Particulate Matter PM 1 / 2.5 / 10 | µg/m3 | Planttower PMS 5003              |
 
 ### SCK 2.0
 
-!!! info "Important!"
-    **SCK 2.0 was the development version for the now commercially available SCK 2.1**
+![](https://i.imgur.com/vgt8m3p.jpg)
 
-    The board also includes a SGX MICS-4514 and a MAXIM MAX3010 but those are not supported by the standard firmware configuration. Fore more information visit the [Urban Sensor Board](Components/Urban%20Sensor%20Board/) on the [Components](Components) section.
+The **non-commercially available** SCK 2.0 components list is below:
+
+1. Smart Citizen Kit 2.0 with Particle Sensor and battery with two mounting brackets.
+2. MicroSD card and microSD adapter to SD.
+3. USB cable and a USB charger.
+
+The measurements of the SCK2.0 are listed below:
 
 | Measurement                    | Units | Sensors               |
 |--------------------------------|-------|-----------------------|
@@ -65,52 +59,76 @@ All the Smart Citizen Kit new sensors generation measure at least air temperatur
 | Noise level                    | dBA   | Invensense ICS-434342 |
 | Ambient light                  | Lux   | Rohm BH1721FVC        |
 | Barometric pressure            | Pa    | NXP MPL3115A26        |
-| Particulate Matter PM 1 / 2.5 / 10 | µg/m3 | PMS 5003              |
+| Particulate Matter PM 1 / 2.5 / 10 | µg/m3 | Planttower PMS 5003              |
 
-## :notebook: Instructions
+!!! info "Important!"
+    **SCK 2.0 was the development version for the now commercially available SCK 2.1**
 
-The sensor comes mounted and almost ready to be used
+    The board also includes a SGX MICS-4514 and a MAXIM MAX3010 but those are not supported by the standard firmware configuration. Fore more information visit the [Urban Sensor Board](Components/Urban%20Sensor%20Board/) on the [Components](Components) section.
+
+
+## :notebook: Installation instructions
+
+The sensor comes mounted and almost ready to be used:
 
 ![](https://i.imgur.com/GfQy84y.jpg)
 
-The only thing we should do is connect the battery. The kit will light in red and we will be able to configure it by following the instructions at [**start.smartcitizen.me**](https://start.smartcitizen.me).
+The first step is to connect the battery. The kit will light in red (configuration mode) and we will be able to configure it by following the instructions at [**start.smartcitizen.me**](https://start.smartcitizen.me).
 
 ![](https://i.imgur.com/5mjUhWr.png)
 
-After the configuration your data will be available on the SmartCitizen platform. You can explore the data there or download it using the `CSV Download` option.
+After the configuration process, data will be available on the SmartCitizen platform. You can explore the data there or download it using the `CSV Download` option (guide [here](/Sensor Platform/guides/Downloading the Data/))
 
 ![](https://i.imgur.com/5NlWx6O.jpg)
 
-## :battery: Autonomy
+## :battery: Power management
 
-The kit has a battery life of 12 hours. For long exposures, we can permanently connect to the USB.
+### Battery duration
 
-When we no longer want to publish or save more data for a few days we can turn off the kit. To do this, press the button for 5 seconds.
+The SCK comes with a 2000mAh LiPo battery. The battery is meant to be a complete power option for short-term measurements and a backup solution when the kit it is used for long periods. For long exposures, we recommend to permanently connect the USB to kit. The battery duration is dependent on which sensors are enabled or disabled:
 
-If the colors of the LED appear orange <span class="led small orange"> </span> indicates that the battery must be charged.
+* All sensors publishing over Wi-Fi: 12 hrs.
+* All sensors publishing on SD card: 13 hrs.
+* Without air quality sensors over Wi-Fi: 10 days
+* Without air quality sensors on SD card: 25 days
 
-The battery takes about 4 hours to fully charge. When the battery is fully charged, change the orange to green <span class="led small green"> </span>.
+Finally, a highly efficient `sleep-mode` is implemented to reduce consumption while on battery operation.
+
+### Battery charging
+
+The SCK has a micro USB port and can be charged like any Smartphone or Tablet using a dedicated adapter or a computer USB port.
+
+We recommend using a tablet power adaptor, instead of a computer USB port, for quicker charging. Autonomy can be extended by using a Power Bank, or a 5V PV Panel.
+
+### User feedback
+
+The LED serves as an indication of the battery status. If the LED is flashing orange <span class="led small orange"> </span> it indicates that the battery must be charged. The battery takes about 4 hours to fully charge. When the battery is fully charged, the LED will change from orange to green <span class="led small green"> </span>.
 
 ![](https://i.imgur.com/RxD960s.jpg)
 
-_Remember that in addition to the colors you will have the state color of the kit: configuration, network and sd._
+_Remember that in addition to these colors you will have the state color of the kit: configuration, network and sd._
 
+!!! info "More details"
+    Find more details under the [data board section](/Components/Data Board/#power-management)
+    
+## :triangular_flag_on_post: User interfaces
 
-## :triangular_flag_on_post: States of the Kit
+The data board features a set of user interfaces which provide feedback to the user, as well as two buttons with different functionalities. The main RGB LED provides general feedback of the data board status. Additionally, two buttons are provided for user action. A hardware reset button, which forces a power cut to the board, and a power button, used to change the device's mode, turn on and off the device, and to perform a factory reset. You can see both buttons below:
 
-## The button
+![](https://i.imgur.com/IA5oUfQ.jpg)
 
-| Function          | Button action                                                                                                                                                                   |
+### The button
+
+| Function          | Button action     |
 |-------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **ON**            | Push the button                                                                                                                                                                 |
-| **OFF**           | Push the button for 5 seconds                                                                                                                                                   |
+| **ON**            | Push the button   |
+| **OFF**           | Push the button for 5 seconds |
 | **CHANGE MODE**   | Push the button multiple times to choose: *Setup* <span class="led small red"></span>  *Wi-Fi* <span class="led small blue"></span> *Pink* <span class="led small pink"></span> |
-| **FACTORY RESET** | Push the button 15 seconds for a full reset                                                                                                                                     |
+| **FACTORY RESET** | Push the button 15 seconds for a full reset |
 
 ![](https://i.imgur.com/fy3rSbc.png)
 
-
-## Operation modes
+### Operation modes
 
 #### <span class="led small red"> </span> Setup mode
 
@@ -122,7 +140,6 @@ In this mode, the Kit is ready to be configured in **network** mode or **SD card
 | <span class="led setup-lowbat"></span>     | :battery: Ready to be setup but battery is low, charge the Kit    |
 | <span class="led setup-chargebat"></span>  | :battery: Ready to be setup, battery charging            |
 | <span class="led setup-fullbat"></span>    | :battery: Ready to be setup, battery charged                |
-
 
 #### <span class="led small blue"> </span> Wi-Fi mode
 
@@ -154,15 +171,30 @@ If we do not have an internet connection we can use the SD mode. In this case th
 | <span class="led sd-fullbat"></span>     | :battery: Collecting data offline, battery charged          |
 
 #### Especial status
+
 | LED color                            |  Kit status                             |
 |------------------------------------------|------------------------------------------- |
 | <span class="led busy"></span>           |  :hourglass_flowing_sand:  Busy, please wait!                 |
 | <span class="led firmware"></span>       | :wrench: Software update going on!
 
-## :umbrella: Build your own enclosure
+## :umbrella: Enclosures
 
-If we want to leave the kit on the outside for a few days you will need to provide it with extra protection.
- 
+If we want to leave the kit on the outside for a few days you will need to provide it with extra protection. Below you can see the well-known 3D printed enclosure (for versions without PM sensor):
+
+![](https://i.imgur.com/ZoRN28m.png)
+
+!!! info "A note about the enclosures"
+    Previous versions of the Smart Citizen Kit, without the PMS5003 sensor, included a 3D printed enclosure that holds the Data Board and Urban Sensor Board, as well as the lithium batteries. The enclosure for the Smart Citizen Kit V2.1 is being developed at the moment. A significant redesign is taking place in order to improve its waterproofness and thermal properties. A temporary solution is shown below (build your own enclosure).
+
+A prototype of the new enclosure:
+
+![](https://i.imgur.com/vWqPpEB.png)
+
+!!! info "Want to contribute?"
+    Visit the [Smart Citizen Enclosures repository](https://github.com/fablabbcn/smartcitizen-enclosures) to download, modify, or add your own!
+
+### Build your own
+
 !!! warning
     Keep in mind that casing is designed for short outdoor deployments. If you want a case for long exhibitions abroad, we will soon have a much more rugged enclosure ready! Also, feel free to explore all our [enclosures repository](https://github.com/fablabbcn/smartcitizen-enclosures) for this and other versions of our hardware.
 
@@ -193,11 +225,15 @@ If we want to leave the kit on the outside for a few days you will need to provi
 
 ![](https://i.imgur.com/0kV6gie.jpg)
 
+## Software Updates
+
+Sofware updates are release frequently in the [Firmware repository](https://github.com/fablabbcn/smartcitizen-kit-20). These updates will need to be applied periodically to the two main components of the SCK: the SAMD21 (main processor) and the ESP8266 (Wi-Fi module). Check the instructions under the [Update the Firmware](Components/Firmware/Guides/Update the firmware) section for more information.
+
 ## :construction_worker: Troubleshooting
 
 ### Before setup
 
-Before configuring the Kit setup make sure the LED is red. If not, press the button multiple times until the LED turns red.
+Before configuring the Kit setup make sure the LED is red. If not, press the button until the LED turns red.
 
 ![](https://i.imgur.com/9iK1ZLl.jpg)
 
@@ -230,94 +266,28 @@ If the kit does not respond or does not work properly you can do two things:
 
 First of all, push the kit button. Maybe it's simply off.
 
-If this does not work, surely the kit has been left without battery. You will have to charge it using the USB charger. Any other mobile charger will also work.
+If this does not work, most likely the kit has been left without battery. You will have to charge it using the USB charger. Any other mobile charger will also work.
 
-We will know that it is charging when the LED emits <span class="led orange blink"></span> orange pulses and once the battery is charged it will emit green <span class = "led green blink"> </ span>
+We will know that it is charging when the LED emits <span class="led orange blink"></span> orange pulses and once the battery is charged it will emit green <span class = "led green blink"> </ span>.
+
+If the kit does not respond at all, it is probably worth trying with another USB cable, in case there is some problem there. If not, drop us an [email](mailto: support@smartcitizen.me) or post on the [:speech_balloon: forum](https://forum.smartcitizen.me)
 
 ### The kit does not store the data on the SD card.
 
-Some SD cards may have problems over time. We can try [formatting it]() but in case it does not work any micro SD card we buy at any mobile or computer store it will work. The size is not important and any micro SD or micro SDHC 512MB card up to 32GB will work.
-
-
-## CSV Upload
-
-Here some instructions on how to upload CSV files to Smartcitizen platform. First be sure to be logged and go to your [profile](https://smartcitizen.me/profile/kits).
-
-On your kits' list, click on the wheel and then on `Upload CSV`.
-
-![](https://i.imgur.com/gyMgl5n.png)
-
-Once on the upload page, you can add some files by clicking on the `Load CSV files` button.
-
-![](https://i.imgur.com/98bcwRj.png)
-
-Select some files as much as you like, to be them ready to upload. Then on the drop-down menu select the `Upload` option
-
-![](https://i.imgur.com/V6LEqrz.png)
-
-Click on the `Apply` button to upload them
-
-![](https://i.imgur.com/gKbq2UB.png)
-
-Congrats! You just uploaded your files CSV files on the Smartcitizen platform.
-
-![](https://i.imgur.com/fw6raGS.png)
-
-## Technical specs
-
-The Smart Citizen Kit, formerly known as the Low-Cost Sensor, is aimed at providing a low-cost environmental sensor solution non-technical users can easily deploy. The design developed for the project is a complete reiteration of the  Smart Smart Citizen Kit, a piece of hardware for citizen sensing already tested in other projects for more than five years. On this iteration, new sensors had been added, and all the electronic design has been redone from the ground up to improve the data accuracy and reduce the manufacturing costs.
-
-### Components
-
-The design is built around two boards the Smart Citizen Data Board and the Smart Citizen Urban Sensor Board. The first board contains the data acquisition, the power management, and the communication unit. The second contains a set of sensors aimed at the outdoor urban environment including: Air Temperature, Relative Humidity, Noise Level, Ambient Light and Barometric Pressure. The board also features a section especially focused on Air Quality including a Air Particles, a Carbon Monoxide, and a Nitrogen Dioxide detectors. This sensor while not capable of offering precise measurements can be used to understand the behavior of different urban locations especially when they are calibrated on the field using certified equipment. Both boards are later described in detail on the Sensor Components section.
-
-!!! info "Smart Citizen Kits Components Setup"
-    ![](https://i.imgur.com/il20Xqa.png)
+Some SD cards may have problems over time. We can try formatting it, but in case it does not work any micro SD card we buy at any mobile or computer store it will work. The size is not important and any micro SD or micro SDHC 512MB card up to 32GB will work.
 
 !!! tip "Learn more"
     Learn more about all the components and the software inside the kit in the [**Components**](/Components) documentation section.
 
-### Software Updates
-The SCK 2.0 has two components that need periodic updates. The SCK 2.0 appears as a USB Storage device and the new firmware can be installed on your kit by simply downloading the new firmware release and then dragging and dropping into the SCK 2.0 device root folder. The Wi-Fi module firmware is updated automatically over-the-air every time the main processor firmware is updated.
-
-!!! info "Firmware updates"
-	[Update the Firmware](Components/Firmware/Guides/Update the firmware)
-
-
-### Dimensions
-
-* Dimensions: 60 x 60 x 20 mm (approx.)
-* Dimensions w/ enclosure: 110 x 110 x 50mm (approx.)
-* Weight: 65 gr.
-* Weight w/ enclosure: 160 gr.
-
-### Power Management
-
-#### Battery lifetime
-The SCK 2.0 comes with a 2000mAh LiPo battery. The battery is meant to be a complete power option for short-term measurements and a backup solution when the kit it is used for long periods. The battery lifetime lifetime is dependent on which sensors are enabled or disabled:
-
-* All sensors publishing over Wi-Fi: 12 hrs.
-* All sensors publishing on SD card: 13 hrs.
-* Without air quality sensors over Wi-Fi: 10 days
-* Without air quality sensors on SD card: 25 days
-
-#### Battery charging
-The SCK 2.0 has a micro USB port and can be charged like any Smartphone or Tablet using a dedicated adapter or a computer USB port.
-We recommend using a tablet power adaptor, instead of a computer USB port, for quicker charging. Autonomy can be extended by using a Power Bank, a 5V PV Panel, or with a through-glass induction charger (currently under development).
-
-
-
 <style>
 .led {
     width: 20px; height: 20px; border-radius:10px; display: inline-block; margin-top: 7px;
-
 }
 
 .small {
     width: 14px; height: 14px; border-radius:7px;
 
 }
-
 
 .orange {
     background: orange;

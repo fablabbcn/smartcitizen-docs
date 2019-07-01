@@ -7,7 +7,7 @@ Frequently asked questions
 Yes. The sensor is designed for both indoors and outdoors use. But if you’re planning to use it outdoors, you will have to consider purchasing also a rainproof enclosure.
 
 ## Can I make my own rainproof enclosure?
-Of course! The manufacturing files for the 3D printed enclosure will be available to download. Throughout the history of the Smart Citizen project, we’ve seen many inventive solutions for placing the sensor outdoors.
+Of course! The manufacturing files for the 3D printed enclosure will be available to download in the [Enclosures repository](https://github.com/fablabbcn/smartcitizen-enclosures). Throughout the history of the Smart Citizen project, we’ve seen many inventive solutions for placing the sensor outdoors.
 
 ## Can I charge the sensors with a solar panel?
 Sure! But note that the sensor requires a 5V solar panel to work properly. Keeping that in mind, you can buy one of the photovoltaic panels that we provide, or run your own tests.
@@ -22,16 +22,16 @@ If the sensor is working in network mode and at any time the network is not avai
 For the moment, the list of supported sensors includes some Atlas Scientific probes, some Seeed Grove sensors, and the Chirp moisture sensor, but the options are almost endless. We will add tutorials to use the additional sensors listed above in our documentation.However, in the short term we will only offer support for them via our custom hardware development services.
 
 ## Will I be able to access the collected data?
-Of course! The data collected by your sensor is available for anyone on the Smart Citizen platform, and you can download it at any time as a CSV file. Besides, you can also use the API to built custom applications to interact with your device.
+Of course! The data collected by your sensor is available for anyone on the [Smart Citizen Platform](https://smartcitizen.me/kits/), and you can download it at any time as a CSV file. Besides, you can also use the API to built custom applications to interact with your device.
 
-## How does the sensors record the data?
+## How does the kit record the data?
 The sensor can work in network and SD card modes. In network mode, the sensor publish data to the SC platform over Wi-Fi every minute. In SD card mode, all the collected data is stored locally in CSV format, and it can be later uploaded manually to the platform using the “Manual Data Upload” option.
 
 ## What networks does it support?
 The SCK supports Wi-Fi WEP, WPA/WPA2 and open networks that are common networks in domestic environments and small businesses. However, like many other embedded devices such as Apple TV® or Chromecast®, it **does not** support networks with captive portals such as those found in Airports and Hotels. Currently, it also **does not** WPA/WPA2 Enterprise networks such as EDUROAM. However, they will be supported in the future after a firmware updated. 
 
-## Is there a mobile phone that lets me view the data?
-Currently, there is an android app available, but we are working to make the website fully mobile device friendly, so that no mobile phone app is required. We would rather focus the time of our small team on the kits themselves instead of maintaining apps. So our final aim is to be app free, but fully mobile friendly.
+## Is there a mobile phone app that lets me view the data?
+Currently there is an android app available, but we are working to make the website fully mobile device friendly, so that no mobile phone app is required. We would rather focus the time of our small team on the kits themselves instead of maintaining apps. So our final aim is to be app free, but fully mobile friendly.
 
 ## How accurate are the measurements?
 Weather, noise, light and PM sensor measurements have been calibrated and validated against reference sensors through both in-house and external validations and they provide accurate data. Chemical gas sensors are to be considered qualitatively rather than quantitatively while calibration algorithms are developed for data accuracy improvement.

@@ -1,7 +1,7 @@
 Data Board
 ==========
 
-The data board is a data-logger at the core of the sensors architecture supporting the Smart Citizen Kit and the Smart Citizen Station. This module is powered by an ARM M0+ 32-bits 48Mhz **SAMD21** running the Smart Citizen Firmware( (/Components/Firmware)), combining the low power consumption of the ARM M0 family with the power of a 32-bits processor with 32KB of RAM and 256KB of FLASH memory. This solution offers enough program storage and memory space to support multiple auxiliary sensors. This chip is used by the Arduino Zero and MKR boards, therefore benefiting from the open community built around these boards in particular and the Arduino project in general.
+The data board is a data-logger at the core of the sensors architecture supporting the Smart Citizen Kit and the Smart Citizen Station. This module is powered by an ARM M0+ 32-bits 48Mhz **SAMD21** running the [Smart Citizen Firmware](/Components/Firmware)), combining the low power consumption of the ARM M0 family with the power of a 32-bits processor with 32KB of RAM and 256KB of FLASH memory. This solution offers enough program storage and memory space to support multiple auxiliary sensors. This chip is used by the Arduino Zero and MKR boards, therefore benefiting from the open community built around these boards in particular and the Arduino project in general.
 
 ![](https://i.imgur.com/V3Uce0x.jpg)
 
@@ -16,13 +16,6 @@ The Data Board connects to the sensor board providing power, analog and digital 
 The board includes a power unit, with a battery management system, capable of handling a variety of Lithium polymer cells. The batteries are connected to a standard JST-2 pin battery connector. The Smart Citizen Kit by default uses a 2000mAh battery, but larger capacities can be used. Under normal conditions, and depending on the sensors enabled, a 2000mAh battery can last between 24 hours (with all sensors enabled, and a 1-minute recording frequency) to more than a week. The board also features a _sleep mode_, through which drastically lower average consumption are achieved.
 
 The controller allows the batteries to be easily charged using the boards micro USB connector using any standard USB power adapter like the ones used on Smartphones. On remote areas, it can also be powered using a selection of PV Panels like [Voltaics Systems](https://www.voltaicsystems.com/) 6W panel.
-
-!!! tips "Light color codes"
-	* **<font color="#FFF" style="BACKGROUND-COLOR: #FF0015; padding: 4px;">Red soft pulsing</font>** >> Apmode
-	* **<font color="#FFF" style="BACKGROUND-COLOR: #0099FF; padding: 4px;">Blue soft pulsing</font>** >> wifi.
-	* **<font color="#FFF" style="BACKGROUND-COLOR: #FF77EF; padding: 4px;">Pink soft pulsing</font>** >> sdcard.
-	* **Other color + <font color="#FFF" style="BACKGROUND-COLOR: #FF9100; padding: 4px;">Orange soft pulsing</font>** >> on battery.
-	* **Other color + <font color="#FFF" style="BACKGROUND-COLOR: #47D847; padding: 4px;">Green soft pulsing</font>** >> battery charging.
 
 ## Firmware
 
@@ -68,29 +61,15 @@ The Data Board features and independent configurable auxiliary bus at 3.3V with 
 
 ## Power management
 
-The power infrastructure of the Smart Smart Citizen Kit gives us the possibility of running directly from a USB power source with or without lithium battery, it is composed by:
-* [BQ24259 USB Charger](http://www.ti.com/lit/ds/symlink/bq24259.pdf) that manages external power regulation, battery fast charging (up to 2Ah) and USB OTG that allow us powering other devices from the SCK.
-* [BQ27426](http://www.ti.com/lit/ds/symlink/bq27426.pdf) Battery Fuel Gauge for precise battery level measuring.
+The Smart Smart Citizen Kit gives us the possibility of running directly from a USB power source with or without lithium battery, using the [BQ24259 USB Charger](http://www.ti.com/lit/ds/symlink/bq24259.pdf). The charger manages external power regulation, battery fast charging (up to 2Ah) and USB OTG that allow us powering other devices from the SCK (currently not implemented).
 
-Normaly the SCK uses a 2000 mAh [Lithium polymer battery](https://en.wikipedia.org/wiki/Lithium_polymer_battery) but it is possible to take advantage of larger batteries. The charging current is regulated with a manual imposed limit that can be configured, and also auto adjusts to the connected USB charger capacity. The normal time for completely charging the stock battery is between 2 and 3 hours. It is also possible to use solar panel (5v) to charge the SCK.
+Normaly the SCK uses a 2000 mAh [Lithium polymer battery](https://en.wikipedia.org/wiki/Lithium_polymer_battery) but it is possible to take advantage of larger batteries. The charging current is regulated with a manual imposed limit that can be configured, and also auto adjusts to the connected USB charger capacity. It is also possible to use solar panel (5v) to charge the SCK.
 
 The power consumption of the kit depends on which sensors are enabled and how often they are read/published. Between readings the kit goes to _sleep mode_ turning off almost all the subsystems and reducing the power consumption.
 
 In previous versions of the kit (V2.0 and before), the most power-hungry sensors were the SGX MICS gas sensors (NO~2~ and CO) which need an always-on heater with a permanent consumption of around 50 mAh (35 hours per charge). In V2.0 and V2.1, the PM sensor which needs a fan with a consumption of 35 mAh (50 hours per charge). To improve the power consumption, the PM Sensor works on _one-shot mode_ which turns the sensor off for 3/4ths of the time, and only taking a reading after the sensor has stabilised.
 
 The kit will operate normally: read sensors, post, and then go to sleep. Until the battery charge is below 3%. When that threshold is passed it will enter an emergency sleep mode and interrupt all the normal functions until the charge goes over 5%.
-
-### User feedback
-
-The charging and battery state information is shown through the led, with small flashes of different color depending on the state:
-
-* USB cable connected
-    * Orange flash - the battery **is charging**
-    * Green flash - **charge complete** _you can disconnect the kit_
-* No USB cable is connected
-    * No flash - **charge is over 15%**
-    * Orange flash and normal led Behavior (blue or pink breath) - **charge is under 15%** _connect the charger!_
-    * 3 ultra fast red flashes and NO other color - **charge is under 3%** (emergency sleep) _connect the charger!! NO readings are taken!!_
 
 ### Power consumption
 

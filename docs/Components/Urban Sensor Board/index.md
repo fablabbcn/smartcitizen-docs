@@ -21,6 +21,19 @@ A major effort has been carried out on this design to improve the accuracy of th
 
     ![](https://i.imgur.com/IqLEbIr.png)
 
+**V2.1 Sensors**
+
+| Measurement                                  | Units                                          | Sensor                |
+|----------------------------------------------|------------------------------------------------|-----------------------|
+| Air Temperature                              | ºC                                             | Sensirion SHT-31      |
+| Relative Humidity                            | % REL                                          | Sensirion SHT-31      |
+| Noise Level and Spectrum                           | dBA, dBC, dBZ                                  | Invensense ICS-434342 |
+| Ambient Light                                | Lux                                            | Rohm BH1721FVC        |
+| Barometric pressure and AMSL                 | Pa and Meters                                  | NXP MPL3115A26        |
+| eCO2 and TVOC                             | ppm/ppb | AMS CCS811         |
+| Particulate Matter PM1/PM2.5/PM10 | µg/m3                                          | PMS 5003              |
+
+
 **V2.0 Sensors**
 
 | Measurement                                  | Units                                          | Sensor                |
@@ -33,18 +46,6 @@ A major effort has been carried out on this design to improve the accuracy of th
 | Carbon Monoxide                              | ppm (Periodic Baseline Calibration Required) | SGX MICS-4514         |
 | Nitrogen Dioxide                             | ppb (Periodic Baseline Calibration Required) | SGX MICS-4514         |
 | Particulate Matter PM2.5 (external - power req) | µg/m3                                          | PMS 5003              |
-
-**V2.1 Sensors**
-
-| Measurement                                  | Units                                          | Sensor                |
-|----------------------------------------------|------------------------------------------------|-----------------------|
-| Air Temperature                              | ºC                                             | Sensirion SHT-31      |
-| Relative Humidity                            | % REL                                          | Sensirion SHT-31      |
-| Noise Level and Spectrum                           | dBA, dBC, dBZ                                  | Invensense ICS-434342 |
-| Ambient Light                                | Lux                                            | Rohm BH1721FVC        |
-| Barometric pressure and AMSL                 | Pa and Meters                                  | NXP MPL3115A26        |
-| eCO2 and TVOC                             | ppm/ppb | AMS CCS811         |
-| Particulate Matter PM1/PM2.5/PM10 | µg/m3                                          | PMS 5003              |
 
 ## A word about Metal Oxide Sensors
 
