@@ -16,6 +16,11 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>https://docs.smartcitizen.me/Troubleshooting/</loc>
+     <lastmod>2019-07-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>https://docs.smartcitizen.me/_FAQ/</loc>
      <lastmod>2019-07-03</lastmod>
      <changefreq>daily</changefreq>
@@ -32,6 +37,11 @@
     </url>
     <url>
      <loc>https://docs.smartcitizen.me/Components/Firmware/</loc>
+     <lastmod>2019-07-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://docs.smartcitizen.me/Components/Firmware/guides/Advanced: Debug the firmware/</loc>
      <lastmod>2019-07-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
