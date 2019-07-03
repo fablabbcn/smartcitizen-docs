@@ -921,44 +921,6 @@
 <!-- Main navigation item with nested items -->
 
   <li class="md-nav__item">
-    <a href="../Firmware/guides/Debug the firmware/" title="Debug the firmware"
-        class="md-nav__link">
-      Debug the firmware
-    </a>
-  </li>
-
-        
-          
-          
-          <!--
-  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to
-  deal in the Software without restriction, including without limitation the
-  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-  sell copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
-
-  The above copyright notice and this permission notice shall be included in
-  all copies or substantial portions of the Software.
-
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-  IN THE SOFTWARE.
--->
-
-<!-- Determine class according to level -->
-
-
-
-<!-- Main navigation item with nested items -->
-
-  <li class="md-nav__item">
     <a href="../Firmware/guides/Edit the Firmware/" title="Edit the Firmware"
         class="md-nav__link">
       Edit the Firmware
@@ -2741,7 +2703,7 @@
 <p class="admonition-title">Software guides</p>
 <p>Check the firmware guides and learn how to update and even modify the software:</p>
 <ul>
-<li><a href="/Components/Firmware/Guides/Debug the firmware">Debug the Firmware</a></li>
+<li><a href="/Components/Firmware/Guides/Advanced: Debug the firmware">Debug the Firmware</a></li>
 <li><a href="/Components/Firmware/Guides/Edit the Firmware">Edit the Firmware</a></li>
 <li><a href="/Components/Firmware/Guides/Update the firmware">Update the Firmware</a></li>
 </ul>
@@ -2859,8 +2821,8 @@
 <p>The Smart Smart Citizen Kit gives us the possibility of running directly from a USB power source with or without lithium battery, using the <a href="http://www.ti.com/lit/ds/symlink/bq24259.pdf">BQ24259 USB Charger</a>. The charger manages external power regulation, battery fast charging (up to 2Ah) and USB OTG that allow us powering other devices from the SCK (currently not implemented).</p>
 <p>Normaly the SCK uses a 2000 mAh <a href="https://en.wikipedia.org/wiki/Lithium_polymer_battery">Lithium polymer battery</a> but it is possible to take advantage of larger batteries. The charging current is regulated with a manual imposed limit that can be configured, and also auto adjusts to the connected USB charger capacity. It is also possible to use solar panel (5v) to charge the SCK.</p>
 <p>The power consumption of the kit depends on which sensors are enabled and how often they are read/published. Between readings the kit goes to <em>sleep mode</em> turning off almost all the subsystems and reducing the power consumption.</p>
-<p>In previous versions of the kit (V2.0 and before), the most power-hungry sensors were the SGX MICS gas sensors (NO<sub>2</sub> and CO) which need an always-on heater with a permanent consumption of around 50 mAh (35 hours per charge). In V2.0 and V2.1, the PM sensor which needs a fan with a consumption of 35 mAh (50 hours per charge). To improve the power consumption, the PM Sensor works on <em>one-shot mode</em> which turns the sensor off for &frac34;ths of the time, and only taking a reading after the sensor has stabilised.</p>
-<p>The kit will operate normally: read sensors, post, and then go to sleep. Until the battery charge is below 3%. When that threshold is passed it will enter an emergency sleep mode and interrupt all the normal functions until the charge goes over 5%.</p>
+<p>In previous versions of the kit (V2.0 and before), the most power-hungry sensors were the SGX MICS gas sensors (NO<sub>2</sub> and CO) which need an always-on heater with a permanent consumption of around 50 mAh (35 hours per charge). In V2.0 and V2.1, the PM sensor needs a fan with a consumption of 35 mAh (50 hours per charge). To improve the power consumption, the PM Sensor works on <em>one-shot mode</em> which turns the sensor off for &frac34;ths of the time, and only taking a reading after the sensor has stabilised.</p>
+<p>The <strong>kit normal operation cycle</strong> on battery is: read sensors, post, and then go to sleep. Until the battery charge is below 3%. When that threshold is passed it will enter an emergency sleep mode and interrupt all the normal functions until the charge goes over 5%.</p>
 <h3 id="power-consumption">Power consumption<a class="headerlink" href="#power-consumption" title="Permanent link">Link</a></h3>
 <p>The base power consumption of the device is 16mA (no sensors or wifi connection). While posting data online, the consumption can go up to 75mA accounting for the ESP8266, with an additional 90mA if all the sensors are to be working at the same time (Urban Sensor Board + PM sensor).</p>
 <h2 id="source-files">Source files<a class="headerlink" href="#source-files" title="Permanent link">Link</a></h2>

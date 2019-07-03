@@ -816,44 +816,6 @@
 <!-- Main navigation item with nested items -->
 
   <li class="md-nav__item">
-    <a href="../Firmware/guides/Debug the firmware/" title="Debug the firmware"
-        class="md-nav__link">
-      Debug the firmware
-    </a>
-  </li>
-
-        
-          
-          
-          <!--
-  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to
-  deal in the Software without restriction, including without limitation the
-  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-  sell copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
-
-  The above copyright notice and this permission notice shall be included in
-  all copies or substantial portions of the Software.
-
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-  IN THE SOFTWARE.
--->
-
-<!-- Determine class according to level -->
-
-
-
-<!-- Main navigation item with nested items -->
-
-  <li class="md-nav__item">
     <a href="../Firmware/guides/Edit the Firmware/" title="Edit the Firmware"
         class="md-nav__link">
       Edit the Firmware
@@ -1402,6 +1364,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#what-is-it" title="What is it?" class="md-nav__link">
+    What is it?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#a-word-about-metal-oxide-sensors" title="A word about Metal Oxide Sensors" class="md-nav__link">
     A word about Metal Oxide Sensors
   </a>
@@ -1445,13 +1414,6 @@
         <li class="md-nav__item">
   <a href="#barometric-pressure-v20-onwards" title="Barometric Pressure (V2.0 onwards)" class="md-nav__link">
     Barometric Pressure (V2.0 onwards)
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dust-particles-sensor-v20-only" title="Dust Particles Sensor (V2.0 only)" class="md-nav__link">
-    Dust Particles Sensor (V2.0 only)
   </a>
   
 </li>
@@ -2653,6 +2615,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#what-is-it" title="What is it?" class="md-nav__link">
+    What is it?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#a-word-about-metal-oxide-sensors" title="A word about Metal Oxide Sensors" class="md-nav__link">
     A word about Metal Oxide Sensors
   </a>
@@ -2701,13 +2670,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#dust-particles-sensor-v20-only" title="Dust Particles Sensor (V2.0 only)" class="md-nav__link">
-    Dust Particles Sensor (V2.0 only)
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#external-pm-sensor-v20-onwards" title="External PM Sensor (V2.0 onwards)" class="md-nav__link">
     External PM Sensor (V2.0 onwards)
   </a>
@@ -2743,12 +2705,13 @@
 <p class="admonition-title">We are updating</p>
 <p>We are currently updating the documentation and many of the figures are from V2.0. We will move them shortly to a more updated version.</p>
 </div>
-<p>The Urban Sensor Board is a solution that contains a selection of low-cost sensors for environmental monitoring. Its main purpose is to serve as a tool for citizen science and awareness activities, and for that reason, metrics such as temperature, pressure, and humidity, as well as noise levels, ambient light, air quality indicators and PM sensors are included. The Urban Sensor Board has undergone several modifications throughout its development, and its current version is V2.1:</p>
-<p><img alt="" src="https://i.imgur.com/cspcIXx.jpg" /></p>
-<p>An iteration with a different set of sensors was developed as part of the <a href="https://www.iscapeproject.eu/">iScape Project</a> and is shown in the figure below:</p>
+<h2 id="what-is-it">What is it?<a class="headerlink" href="#what-is-it" title="Permanent link">Link</a></h2>
+<p>The Urban Sensor Board is a solution that contains a selection of low-cost sensors for environmental monitoring. Its main purpose is to serve as a tool for citizen science and awareness activities, and for that reason, metrics such as temperature, pressure, and humidity, as well as noise levels, ambient light, air quality indicators and PM sensors are included. The Urban Sensor Board has undergone several modifications throughout its development, and its <strong>current version is V2.1</strong>:</p>
+<p><img alt="" src="https://i.imgur.com/SGdx1Q2.jpg" /></p>
+<p>An iteration with a different set of sensors was developed as part of the <a href="https://www.iscapeproject.eu/">iScape Project</a> and is shown in the image below:</p>
 <p><img alt="" src="https://i.imgur.com/Xk2Gkeo.jpg" /></p>
 <p><a class="github-button" data-size="large" href="https://github.com/fablabbcn/smartcitizen-kit-20" aria-label="Check the source code">Check the source code</a></p>
-<p>A major effort has been carried out on this design to improve the accuracy of the data provided. The sensors on the board include: Air Temperature, Relative Humidity, Noise Levels and Spectrum, Ambient Light and Barometric Pressure. The board also features a section especially focused on Air Quality including a Particle Matter Sensor, and, in version V2.1, a eCO2 and TVOC sensor. Previously, in version V2.0, a Carbon Monoxide and a Nitrogen Dioxide detectors was included, but with poorer reliability in the data. The sensor density of the board design offers more than ten different environmental metrics at a cost below 50€ and differentiates the design from other existing solutions. The following sections describe in detail each of the sensors available.</p>
+<p>A major effort has been carried out on this design to improve the accuracy of the data provided. The sensors on the board include: Air Temperature, Relative Humidity, Noise Levels and Spectrum, Ambient Light and Barometric Pressure. The board also features a section especially focused on Air Quality including a Particle Matter Sensor, and, in version V2.1, an eCO2 and TVOC sensor. Previously, in version V2.0, a Carbon Monoxide and a Nitrogen Dioxide sensors was included, but due to the high power consumption and the need of important calibration efforts, these were removed. The sensor density of the board design offers more than ten different environmental metrics at a very low cost and differentiates the design from other existing solutions. The following sections describe in detail each of the sensors available.</p>
 <div class="admonition info">
 <p class="admonition-title">Board assembly</p>
 <p>The Urban Sensor Board connect to the Data Board connector named <strong>Sensor Board</strong></p>
@@ -2857,10 +2820,10 @@
 <p>Metal Oxide Sensors measure the resistance (R<sub>S</sub>) of a sensitive layer after heating it up with a <em>heating element</em> (normally another resistor). However, this reading cannot be considered as an absolute measurement of the target pollutant concentration, since the resistance varies from sensor to sensor, and it's affected by several conditions, such as temperature, humidity and other non-target pollutant affectations. To mitigate this problem, the output of the sensor is normalized using the baseline resistance (R<sub>A</sub>): R<sub>S</sub> is divided by R<sub>A</sub>. This baseline resistance is the resistance that the sensor sees in clean air, and the cleaner the air is, the higher the resistance is.</p>
 <p>Unfortunately, since R<sub>A</sub> varies with the deployment conditions, R<sub>A</sub> cannot be determined by a one-time calibration; and in the case of the AMS CCS811 included in the SCK V2.1, is maintained on-the-fly in software. This process is known as <strong>baseline correction</strong>. </p>
 <p>Previous versions of the SCK (V1.5, V2.0 and others) included the SGX MICS4514, which was meant to measure CO and NO<sub>2</sub>, and a lot of effort was put in V2.0 to improve the driver for the sensor, aiming to reduce power consumption and improve sensor readings. Unfortunately, this didn't match our expectations in terms of data quality and power consumption, and since individual sensor calibration is not feasible in our case (as some scientific publications have suggested), we decided to focus efforts in simpler, more robust and understandable set of sensors.</p>
-<p>That being said, the SCK V2.1 includes the AMS CCS811 for Air Quality indicative measurements for indoor air quality in the Urban Sensor Board, and the PMS5003 for outdoor PM exposure. More complex outdoor set-ups will be also possible, for instance using the <a href="../Gas Pro Sensor Board">Gas Pro Sensor Board</a> (featuring up to three Alphasense Electrochemical Sensors)<sup id="fnref:8"><a class="footnote-ref" href="#fn:8">7</a></sup><sup id="fnref:9"><a class="footnote-ref" href="#fn:9">8</a></sup><sup id="fnref:10"><a class="footnote-ref" href="#fn:10">9</a></sup>. This board is currently under deployment and will be available soon. </p>
+<p>That being said, the SCK V2.1 includes the AMS CCS811 for Air Quality indicative measurements for indoor air quality in the Urban Sensor Board, and the PMS5003 for outdoor PM exposure. More complex outdoor set-ups will be also possible, for instance using the <a href="../Gas Pro Sensor Board">Gas Pro Sensor Board</a> (featuring up to three Alphasense Electrochemical Sensors)<sup id="fnref:8"><a class="footnote-ref" href="#fn:8">7</a></sup><sup id="fnref:9"><a class="footnote-ref" href="#fn:9">8</a></sup><sup id="fnref:10"><a class="footnote-ref" href="#fn:10">9</a></sup>. This board is currently under evaluation and will be available soon. </p>
 <h3 id="what-to-expect-from-metal-oxide-sensors">What to expect from Metal Oxide Sensors<a class="headerlink" href="#what-to-expect-from-metal-oxide-sensors" title="Permanent link">Link</a></h3>
-<p>As said above, this type of sensors is not meant for fine pollution monitoring, but is more oriented for air quality indications and trends detection. Our approach is to use them for indicative measurements, and progressively tend towards a more reliable, fine and robust system, once the technology is capable of providing so. </p>
-<p>While deploying them, since the air quality is expected to vary in a typical environment, the minimum time over which a baseline correction is applied is 24 hours. The sensor monitors the baseline resistance periodically and if a cleaner air is found, the new baseline resistance is used to calculate the sensor readings (although this is only done for  future readings). This also means that the SCK should not be interrupted with an <em>ad hoc</em> power cut since this could erase the baseline resistance and the sensor could always yield wrong readings since it never sees <em>clean air</em>.</p>
+<p>As said above, this type of sensors <strong>is not meant for fine pollution monitoring</strong>, but is more oriented for <strong>air quality indications and trends detection</strong>. Our approach is to use them for indicative measurements, and progressively tend towards a more reliable, fine and robust system, once the technology is capable of providing so. </p>
+<p>While deploying them, since the air quality is expected to vary in a typical environment, the minimum time over which a baseline correction is applied is 24 hours. This means that the sensor output will change with time, until the baseline is roughly stable. Since the sensor monitors the baseline resistance periodically, if a cleaner air is found, the new baseline resistance is used to calculate the sensor readings (although this is only done for  future readings). This also means that the SCK should not be interrupted with an <em>ad hoc</em> power cut since this could erase the baseline resistance and the sensor could always yield wrong readings since it never sees <em>clean air</em>.</p>
 <div class="admonition info">
 <p class="admonition-title">Read more</p>
 <p>More on the <a href="/Components/Urban Sensor Board/Metal Oxide Sensor">MICS working principle and field validation</a></p>
@@ -2976,37 +2939,8 @@ choice:</p>
 <p class="admonition-title">Sensor integration</p>
 <p><img alt="" src="https://i.imgur.com/5g64P7r.png" /></p>
 </div>
-<h2 id="dust-particles-sensor-v20-only">Dust Particles Sensor (V2.0 only)<a class="headerlink" href="#dust-particles-sensor-v20-only" title="Permanent link">Link</a></h2>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>The following sensor might be replaced in future iterations as it gets replaced by the <strong>External PM Sensor connector</strong> supporting a Plantowe PMS5003 or PMS7003</p>
-</div>
-<p>The MAXIM MAX30105<sup id="fnref:7"><a class="footnote-ref" href="#fn:7">6</a></sup> is an integrated particle-sensing module. Is a high Sensitivity Optical Reflective Solution for detection of wide a variety of particle sizes. This sensor is aimed at measuring relative air dust levels. However, an algorithm is being developed to support PM 2.5 or PM 10 measurements. At the time the document is being written no data on the sensor lab tests can be provided.</p>
-<p>The following characteristics have been considered for the sensor
-choice:</p>
-<ul>
-<li>
-<p>No need for external ADC or linearization circuits. The sensor includes an internal MCU capable of dealing with all the light emitting and sensing processing. All the communication is done using the I2C protocol.</p>
-</li>
-<li>
-<p>Robust Motion Artifact Resilience and -40°C to +85°C Operating Temperature</p>
-</li>
-<li>
-<p>Capable of Operating at High Ambient Levels with Excellent Ambient Rejection Capability</p>
-</li>
-<li>
-<p>Includes a temperature sensor for calibrating the temperature dependence of the particle sensing subsystem.</p>
-</li>
-<li>
-<p>Low power consumption</p>
-</li>
-</ul>
-<div class="admonition tip">
-<p class="admonition-title">Sensor integration</p>
-<p><img alt="" src="https://i.imgur.com/E4FhioM.png" /></p>
-</div>
 <h2 id="external-pm-sensor-v20-onwards">External PM Sensor (V2.0 onwards)<a class="headerlink" href="#external-pm-sensor-v20-onwards" title="Permanent link">Link</a></h2>
-<p>An external connector on the board supports the connection of a Plantower PMS 5003 or PMS 7003<sup id="fnref:11"><a class="footnote-ref" href="#fn:11">10</a></sup>. The device is a digital particle concentration sensor that uses the Laser Scattering principle to obtain the number of suspended particles in the air. The sensor can be fully enable or disable in software to save energy when not in use.</p>
+<p>An external connector on the board supports the connection of a Plantower PMS 5003 or PMS 7003<sup id="fnref:11"><a class="footnote-ref" href="#fn:11">10</a></sup>. The device is a digital particle concentration sensor that uses the Laser Scattering principle to obtain the number of suspended particles in the air. The sensor can be fully enabled or disabled in software to save energy when not in use.</p>
 <p>The following characteristics have been considered for the sensor
 choice:</p>
 <ul>
@@ -3014,7 +2948,7 @@ choice:</p>
 <p>Provides PM 2.5 and PM 10 measurements in ug/m³</p>
 </li>
 <li>
-<p>Minimal distinguishable particle diameter of 0.3 am</p>
+<p>Minimal distinguishable particle diameter of 0.3 um</p>
 </li>
 <li>
 <p>No need for external ADC or linearization circuits. The sensor includes an internal MCU capable of dealing with all the light emitting and sensing processing. All the communication is done using the I2C protocol. A dedicated driver has been designed for this.</p>
@@ -3026,8 +2960,6 @@ choice:</p>
 <p>Low Power</p>
 </li>
 </ul>
-<p>The selection is based on the academic references selected above. For a complete Low-Cost Sensors Evaluation see ISCAPE D1.5 Summary of air quality sensors and recommendations for application and the subsequent publication <em>(Rai et al. 2017)</em>.</p>
-<p>Compliance with the NAAQS (US National Ambient Air Quality Standards) is based on 24-h PM mass concentrations [...] Both of the FEM instruments correlate with the 24-h PM2.5 mass measurements with an R2 > 0.99. The PMS PM2.5 concentrations are also well correlated with the 24-h mass average concentration (R2 > 0.88), which is slightly better than the GRIMM research-grade instrument (R2 1⁄4 0.7.). South Coast Air Quality Management District (SCAQMD) recently published preliminary comparisons of the PM2.5 measurements from three PMS 1003s and two FEMs, with high correlations (R2 > 0.9) over a 2-month period. This study demonstrated that the PMS 1003/3003 correlates well with FRMs, FEMs, and research-grade instrumentation under ambient conditions during a series of cold-air pools and in a wind-tunnel environment. Under ambient conditions, this sensor correlates better with an FRM than other low-cost sensors in similar studies. [...] these sensors are a promising tool for identifying relative increases or decreases in PM concentration, complementing sparsely distributed monitoring stations and for assessing and minimizing exposure to PM <em>(Kelly et al. 2017)</em>.</p>
 <div class="admonition tip">
 <p class="admonition-title">Sensor integration</p>
 <p><img alt="" src="https://i.imgur.com/vyLMF07.png" /></p>

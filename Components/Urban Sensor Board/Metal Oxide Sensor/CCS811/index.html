@@ -816,44 +816,6 @@
 <!-- Main navigation item with nested items -->
 
   <li class="md-nav__item">
-    <a href="../../../Firmware/guides/Debug the firmware/" title="Debug the firmware"
-        class="md-nav__link">
-      Debug the firmware
-    </a>
-  </li>
-
-        
-          
-          
-          <!--
-  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to
-  deal in the Software without restriction, including without limitation the
-  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-  sell copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
-
-  The above copyright notice and this permission notice shall be included in
-  all copies or substantial portions of the Software.
-
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-  IN THE SOFTWARE.
--->
-
-<!-- Determine class according to level -->
-
-
-
-<!-- Main navigation item with nested items -->
-
-  <li class="md-nav__item">
     <a href="../../../Firmware/guides/Edit the Firmware/" title="Edit the Firmware"
         class="md-nav__link">
       Edit the Firmware
@@ -1510,12 +1472,75 @@
 
     <!-- Render table of contents, if not empty -->
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        CCS811
+      </label>
+    
     <a href="./" title="CCS811"
         class="md-nav__link md-nav__link--active">
       CCS811
     </a>
 
     <!-- Show table of contents -->
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#measurements" title="Measurements" class="md-nav__link">
+    Measurements
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#working-principle" title="Working principle" class="md-nav__link">
+    Working principle
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sensor-considerations" title="Sensor considerations" class="md-nav__link">
+    Sensor considerations
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#early-life-burn-in" title="Early-Life (Burn-In)" class="md-nav__link">
+    Early-Life (Burn-In)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conditioning-period-run-in" title="Conditioning Period (Run-In)" class="md-nav__link">
+    Conditioning Period (Run-In)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -2560,6 +2585,56 @@
     
   
   
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#measurements" title="Measurements" class="md-nav__link">
+    Measurements
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#working-principle" title="Working principle" class="md-nav__link">
+    Working principle
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sensor-considerations" title="Sensor considerations" class="md-nav__link">
+    Sensor considerations
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#early-life-burn-in" title="Early-Life (Burn-In)" class="md-nav__link">
+    Early-Life (Burn-In)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conditioning-period-run-in" title="Conditioning Period (Run-In)" class="md-nav__link">
+    Conditioning Period (Run-In)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2572,10 +2647,21 @@
                 
                 
                 <h1 id="eco2-and-tvoc-sensor">eCO2 and TVOC sensor<a class="headerlink" href="#eco2-and-tvoc-sensor" title="Permanent link">Link</a></h1>
-<div class="admonition info">
-<p class="admonition-title">Sorry!</p>
-<p>This page is a WIP! </p>
-</div>
+<p>The AMS CCS811 is a Metal Oxyde Sensor with I2C connectivity which is capable of measuring a <em>range of volatile organic compounds</em>. This sensor was introduced in the SCK2.1, in replacement of the SGX MICS4514 from previous designs. As mentioned in other parts of the documentation, this decission was mainly due to the lower power consumption of the CCS811 and the <em>already implemented</em> reading processing provided by the manufacturer.</p>
+<h2 id="measurements">Measurements<a class="headerlink" href="#measurements" title="Permanent link">Link</a></h2>
+<p>eCO2 and eTVOC are two related measurements. The first stands for <em>equivalent CO2</em>, and is an indication of the concentration of CO2 that would cause the same level of radiative forcing as a given type and concentration of greenhouse gas. eCO2 bottomline starts at 400ppm (current background CO2, sadly). On the other hand, eTVOC stands for <em>equivalent total volatile organic compounds</em> and is a measurement of the total amount of any emitted gases coming from toxins and chemicals. They come from a wide range of everyday items including paints and varnishes, wax and cosmetics, cleaning and hobby products, and even cooking. When you have an enclosed space like a home or office, these emitted gases accumulate and pollute our fresh air.</p>
+<h2 id="working-principle">Working principle<a class="headerlink" href="#working-principle" title="Permanent link">Link</a></h2>
+<p>As any metal oxyde sensor, the CCS811 measures the resistance of a sensitive layer, exposed to ambient air. This layer is heated up with a <em>heater element</em> (a resistance) up to several hundred ºC. The characteristics of the sensitive element vary from sensor to sensor, and with time, depending as well on the exposure to different chemical components and ambient conditions. For this reason an individual sensor charactersition is tricky, and an indicative approach is followed, using an internal processing that monitors the baseline resistance of the sensor (i.e., the resistance of the sensitive layer when exposed to clean air).</p>
+<h2 id="sensor-considerations">Sensor considerations<a class="headerlink" href="#sensor-considerations" title="Permanent link">Link</a></h2>
+<p>Sources:</p>
+<ul>
+<li><a href="https://ams.com/documents/20143/36005/CCS811_DS000459_7-00.pdf/3cfdaea5-b602-fe28-1a14-18776b61a35a">Datasheet</a></li>
+<li><a href="https://ams.com/documents/20143/36005/CCS811_AN000370_2-00.pdf/ee95d147-0bca-dbbb-51a6-c6fd32ce4b28">Baseline Restore</a></li>
+</ul>
+<h3 id="early-life-burn-in">Early-Life (Burn-In)<a class="headerlink" href="#early-life-burn-in" title="Permanent link">Link</a></h3>
+<p>The CCS811 performance in terms of resistance levels and sensitivities will change during early life. The change in resistance is greatest over the first 48 hours of operation. CCS811 controls the burn-in period allowing eCO2 and eTVOC readings to be used from first power-on after 60 minutes of operation.</p>
+<h3 id="conditioning-period-run-in">Conditioning Period (Run-In)<a class="headerlink" href="#conditioning-period-run-in" title="Permanent link">Link</a></h3>
+<p>After early-life (Burn-In) the conditioning or run-in period is the time required to achieve good sensor stability before measuring VOCs after long idle period. The sensor will need to run for 20 minutes, before accurate readings are generated.</p>
                 
                   
                 

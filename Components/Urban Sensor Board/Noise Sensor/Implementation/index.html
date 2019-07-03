@@ -816,44 +816,6 @@
 <!-- Main navigation item with nested items -->
 
   <li class="md-nav__item">
-    <a href="../../../Firmware/guides/Debug the firmware/" title="Debug the firmware"
-        class="md-nav__link">
-      Debug the firmware
-    </a>
-  </li>
-
-        
-          
-          
-          <!--
-  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to
-  deal in the Software without restriction, including without limitation the
-  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-  sell copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
-
-  The above copyright notice and this permission notice shall be included in
-  all copies or substantial portions of the Software.
-
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-  IN THE SOFTWARE.
--->
-
-<!-- Determine class according to level -->
-
-
-
-<!-- Main navigation item with nested items -->
-
-  <li class="md-nav__item">
     <a href="../../../Firmware/guides/Edit the Firmware/" title="Edit the Firmware"
         class="md-nav__link">
       Edit the Firmware
@@ -1720,8 +1682,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#smart-citizen-audio-library" title="Smart Citizen Audio Library" class="md-nav__link">
-    Smart Citizen Audio Library
+  <a href="#smart-citizen-firmware" title="Smart Citizen Firmware" class="md-nav__link">
+    Smart Citizen Firmware
   </a>
   
 </li>
@@ -2635,8 +2597,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#smart-citizen-audio-library" title="Smart Citizen Audio Library" class="md-nav__link">
-    Smart Citizen Audio Library
+  <a href="#smart-citizen-firmware" title="Smart Citizen Firmware" class="md-nav__link">
+    Smart Citizen Firmware
   </a>
   
 </li>
@@ -2671,11 +2633,12 @@
                 
                 
                 <h1 id="noise-sensor-implementation">Noise Sensor Implementation<a class="headerlink" href="#noise-sensor-implementation" title="Permanent link">Link</a></h1>
+<h2 id="firmware">Firmware<a class="headerlink" href="#firmware" title="Permanent link">Link</a></h2>
+<h3 id="audio-i2s-library">Audio I2S Library<a class="headerlink" href="#audio-i2s-library" title="Permanent link">Link</a></h3>
+<p>A custom library for audio analysis.</p>
 <div class="admonition warning">
 <p class="admonition-title">Work in progress</p>
 </div>
-<h2 id="firmware">Firmware<a class="headerlink" href="#firmware" title="Permanent link">Link</a></h2>
-<h3 id="audio-i2s-library">Audio I2S Library<a class="headerlink" href="#audio-i2s-library" title="Permanent link">Link</a></h3>
 <p><strong><a href="https://github.com/oscgonfer/AudioI2S">Audio I2S</a></strong>
 Base library, intented to be generic purpose audio analysis library for an I2S Microphone on the SAMD21 with:</p>
 <ul>
@@ -2687,15 +2650,14 @@ Base library, intented to be generic purpose audio analysis library for an I2S M
 <li>Custom equalisation</li>
 <li>Octave auto generation of .h files for coefficients and so on</li>
 </ul>
-<h3 id="smart-citizen-audio-library">Smart Citizen Audio Library<a class="headerlink" href="#smart-citizen-audio-library" title="Permanent link">Link</a></h3>
-<p><strong><a href="https://github.com/fablabbcn/smartcitizen-kit-audio">Smart Citizen Audio</a></strong>
-Library intented for firmware implementation in the SmartSmart Citizen Kit 2.0, with a better usage of memory and SCK related functionalities:</p>
+<h3 id="smart-citizen-firmware">Smart Citizen Firmware<a class="headerlink" href="#smart-citizen-firmware" title="Permanent link">Link</a></h3>
+<p><strong><a href="https://github.com/fablabbcn/smartcitizen-kit-20">Smart Citizen Firmware</a></strong>
+Firmware implementation in the SmartCitizen Kit 2.0 and 2.1, with a better usage of memory and SCK related functionalities:</p>
 <ul>
 <li>FFT analysis</li>
 <li>Selection of A or C weighting through LUT</li>
 <li>Two user cases:<ul>
-<li>General audio analysis (sensorRead) with fixed buffer size and fixed FFT bins size (fs = 44,1kHz)</li>
-<li>Audio Communication with FSK - with information transfer via audio</li>
+<li>General audio analysis with fixed buffer size and fixed FFT bins size (fs = 44,1kHz)</li>
 </ul>
 </li>
 </ul>
