@@ -3,7 +3,7 @@ Firmware
 
 The firmware is OOP and is entirely written in C++. Both processors the core ARM MCU and the ESP8266 WIFI are developed as part of the same framework integrating seemingly by using a set of bridge libraries that provide a unifies the RPC architecture.
 
-The follo software was partially developed by IAAC as part of the Making Sense project under the European Community's H2020 Programme Grant Agreement No. 688620.
+The following software was partially developed by IAAC as part of the Making Sense project under the European Community's H2020 Programme Grant Agreement No. 688620.
 
 ![](https://i.imgur.com/aDfydqU.png)
 

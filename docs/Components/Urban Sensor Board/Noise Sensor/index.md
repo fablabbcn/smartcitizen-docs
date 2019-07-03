@@ -10,7 +10,7 @@ The new Urban Sensor Board SCK 2.0 comes with a digital **MEMs I2S microphone**.
 
 _Image credit: [Invensense ICS43432](https://www.invensense.com/products/digital/ics-43432)_
 
-To begin with, we'll talk about the microphone itself. The **MEMs microphone** comes with a transducer element which converts the sound pressure into electric signals. The sound pressure reaches the transducer through a hole drilled in the package and the transducer's signal is sent to an ADC which provides with a signal which can be pulse density modulated (PDM) or in I2S format. Since the ADC is already in the microphone, we have an all-digital audio capture path to the processor and it’s less likely to pick up interferences from other RF, such as the WiFi, for example. The I2S has the advantage of a decimated output, and since the SAMD21 has an I2S port, this allows us to connect it directly to the microcontroller with no CODEC needed to decode the audio data. Additionally, there is a bandpass filter, which eliminates *DC* and low frequency components (i.e. at fs = 48kHz, the filter has -3dB corner at 3,7Hz) and high frequencies at *0,5·fs* (-3dB cutoff). Both specifications are important to consider when analysing the data and discarding unusable frequencies. The microphone acoustic response has to be considered as well, with subsequent equalisation in the data treatment in order. We will review these points on dedicated sections.
+To begin with, we'll talk about the microphone itself. The **MEMs microphone** comes with a transducer element which converts the sound pressure into electric signals. The sound pressure reaches the transducer through a hole drilled in the package and the transducer's signal is sent to an ADC which provides with a signal which can be pulse density modulated (PDM) or in I2S format. Since the ADC is already in the microphone, we have an all-digital audio capture path to the processor and it’s less likely to pick up interferences from other RF, such as the WiFi, for example. The I2S has the advantage of a decimated output, and since the SAMD21 has an I2S port, this allows us to connect it directly to the microcontroller with no CODEC needed to decode the audio data. Additionally, there is a bandpass filter, which eliminates *DC* and low frequency components (i.e. at fs = 48kHz, the filter has -3dB corner at 3,7Hz) and high frequencies at *0,5·fs* (-3dB cutoff). Both specifications are important to consider when analysing the data and discarding unusable frequencies. The microphone acoustic response has to be considered as well, with subsequent equalisation in the data treatment in order.
 
 <div style="text-align:center">
 <img src ="https://i.imgur.com/cToxGKY.png" alt="ICS43432 Datasheet" class="cover"/>
@@ -19,6 +19,7 @@ To begin with, we'll talk about the microphone itself. The **MEMs microphone** c
 _Image credit: [ICS43432 Datasheet - TDK Invensense](https://www.invensense.com/wp-content/uploads/2015/02/ICS-43432-data-sheet-v1.3.pdf)_
 
 ### I2S Protocol
+
 The **[I2S protocol](https://www.sparkfun.com/datasheets/BreakoutBoards/I2SBUS.pdf)** (*Inter-IC-Sound*) is a serial bus interface which consists of: a bit clock line or Serial Clock (*SCK*), a word clock line or Word Select (*WS*) and a multiplexed Serial Data line (*SD*). The SD is transmitted in two’s complement with MSB first, with a 24-bit word length in the microphone we picked. The *WS* is used to indicate which channel is being transmitted (left or right). In the case of the ICS43432, there is an additional pin which corresponds with the L/R, allowing to use the left or right channel to output the signal and the use of stereo configurations. When set to left, the data follows WS’s falling edge and when set to right, the WS’s rising edge. For the SAMD21 processor, there is a well developed [I2S library](https://github.com/arduino/ArduinoCore-samd/tree/master/libraries/I2S) that will take control of this configuration. 
 
 <div style="text-align:center">
@@ -27,7 +28,7 @@ The **[I2S protocol](https://www.sparkfun.com/datasheets/BreakoutBoards/I2SBUS.p
 
 _Image credit: [I2S bus specification - Philips Semiconductors](https://www.sparkfun.com/datasheets/BreakoutBoards/I2SBUS.pdf)_
 
-To finalise, we would like to highlight that the SD line of the I2S protocol is quite delicate at high frequencies and it is largely affected by noise in the path the line follows. If you want to try this at home (for example with an Arduino Zero and an I2S microphone like [this one](https://www.tindie.com/products/onehorse/ics43432-i2s-digital-microphone/), it is important not to use cables in this line and to connect the output pin directly to the board, to avoid having interfaces throughout the SD line. One interesting way to see this is that every time the line sees a medium change, part of it will be reflected and part will be transmitted, just like any other wave. This means that introducing a cable for the line will provoke at least three medium changes and a potential signal quality loss much higher than a direct connection. Apart from this point, the I2S connection is pretty straight forward and it is reasonably easy to retrieve data from the line and start playing around with some FFT analysis.
+Also, we would like to highlight that the SD line of the I2S protocol is quite delicate at high frequencies and it is largely affected by noise in the path the line follows. If you want to try this at home (for example with an Arduino Zero and an I2S microphone like [this one](https://www.tindie.com/products/onehorse/ics43432-i2s-digital-microphone/), it is important not to use cables in this line and to connect the output pin directly to the board, to avoid having interfaces throughout the SD line. One interesting way to see this is that every time the line sees a medium change, part of it will be reflected and part will be transmitted, just like any other wave. This means that introducing a cable for the line will provoke at least three medium changes and a potential signal quality loss much higher than a direct connection. Apart from this point, the I2S connection is pretty straight forward and it is reasonably easy to retrieve data from the line and start playing around with some FFT analysis.
 
 ## Basics of weighting and human hearing
 
@@ -51,15 +52,13 @@ _Image credit: [A-weighting - Wikipedia](https://en.wikipedia.org/wiki/A-weighti
 
 This means that, even if the are high sound pressure levels floating around in the air, we might not hear them just because of the frequency they are at. Normally humans can hear from something around 20Hz to 20kHz, although most adults might not hear anything in out-of-laboratory conditions above 15kHz. Some animals though, can perceive a [great range of frequencies](https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Animal_hearing_frequency_range.svg/512px-Animal_hearing_frequency_range.svg.png), and for example mouses can hear up to 80kHz! So, now we know what this all is about, the I2S microphone is going to help us understand better how [_beluga whales_ communicate among themselves](http://www.bbc.com/earth/story/20150120-mystery-squeaks-of-beluga-whales)... 
 
-But also! The I2S microphone is interesting in order to **understand sources of urban noise pollution** since it provides us with a raw SPL buffer we can play with. As well, we can obtain dBA levels (SPL with a-weighting correction) by processing this buffer in several ways and calculate the RMS level of the resulting signal. In the **Part II** we will go through the mathematics of the signal processing itself and talk a bit about FFT, signal filtering and some other geeky stuff!
+But also! The I2S microphone is interesting in order to **understand sources of urban noise pollution** since it provides us with a raw SPL buffer we can play with. As well, we can obtain dBA levels (SPL with a-weighting correction) by processing this buffer in several ways and calculate the RMS level of the resulting signal.
 
 ## Signal postprocessing
 
 ### RMS and FFT algorithm simplified
 
-In this paragraph we'll continue with some bits and pieces about _acoustics and signal processing_ we started talking about in section 1.2. We are going to talk about the _mathematics_ behind these applications and how we'll use them in the signal processing for obtaining our _weighting_ for the SCK.
-
-In the previous section we introduced the concept of _weighting_ and our interest on calculating the _sound pressure level_ in different scales. Normally, SPL is expressed in **RMS** levels, or _root mean square_. This is nothing more than a modified arithmetic average, where each term of the expression is added in its square form. Therefore, to keep the same units, we then take the square root of all the average and we have:
+In this paragraph we'll continue with some bits and pieces about _acoustics and signal processing_. In the previous section we introduced the concept of _weighting_ and our interest on calculating the _sound pressure level_ in different scales. Normally, SPL is expressed in **RMS** levels, or _root mean square_. This is nothing more than a modified arithmetic average, where each term of the expression is added in its square form. Therefore, to keep the same units, we then take the square root of all the average and we have:
 
 $$
 x = {\sqrt{x_1^2+x_2^2+...+x_N^2 \over N}}
@@ -85,7 +84,7 @@ _Image credit: Smart Citizen_
 
 In the example above, things in the time domain get a bit messy, but in the frequency domain we can _clearly_ see the composition of two sine waves of the same amplitude of roughly 40Hz and 120Hz. The FFT algorithm hence helps us digest the information contained in a signal in a more visually understandable way.
 
-We will cover more details about the process and it's implementation in future sections. For this introduction, let's move on to what we actually want to do: _the much anticipated weighting_. At this point, our task is fairly easy: we just have to multiply both: our signal in the frequency domain with the weighting function and that's it! If we have a look at the figure below, in the time and frequency domain, the signals look like this:
+For this introduction, let's move on to what we actually want to do: _the much anticipated weighting_. At this point, our task is fairly easy: we just have to multiply both: our signal in the frequency domain with the weighting function and that's it! If we have a look at the figure below, in the time and frequency domain, the signals look like this:
 
 <div style="text-align:center">
 <img src ="https://i.imgur.com/3REv8Ah.png?1" alt ="White noise frequency convertion"> 
@@ -95,31 +94,25 @@ _Image credit: Smart Citizen_
 
 This example shows how our ears are only capable of perceiving the signal in red, but the actual sound components are in blue -- being much higher in the amplitude spectrum. If you want to get into the thick of it, here you have the actual [implementation in Matlab](https://github.com/oscgonfer/AudioI2S_SCK/tree/master/OCTAVE/A_WEIGHTING) of the A-weighting function that we'll use in the SCK V2.0.
 
-
 And finally, to close, let's take a look at the whole chain of processing, where we will continue in future sections:
 
-```flow
-st=>start: Signal acquisition
-e=>end: RMS calculation
-op=>operation: Windowing
-op2=>operation: FFT
-op3=>operation: Spectrum Normalisation
-op4=>operation: Equalisation
-op5=>operation: A-weighting
-
-st->op->op2->op3->op4->op5->e
-```
-
-_Image credit: Smart Citizen_
+1. Signal acquisition
+2. Windowing
+3. FFT
+4. Spectrum Normalisation
+5. Equalisation
+6. A-weighting
+7. RMS calculation
 
 This is the whole signal treatment process we use for the I2S microphone ICS43432. We will have a look at _windowing_ and its use in future sections, as well as its implementation in the SAMD21 Cortex M0+ for our firmware.
 
 $NB$: Being mathematical purist, there is yet another possibility for this procedure using convolution in time domain, which we will cover in future sections.
 
 ### Pre/post processing: signal windowing and equalisation
+
 #### Signal windowing
 
-In this section we are going to describe how we have to pre-post process our signals in order to obtain the results in the manner we are expecting. These are very important steps in our processing chain, since the FFT algorithms -or convolution FIR Filters- won't be able to cope with our system's limitations. These limitations might not be obvious at the beginning, but you really don't want to ignore them while designing your system, since they'll invalidate many of your measurements. If this sounds _greek_ to you, consider reading [Part I](https://forum.smartcitizen.me/t/a-bit-of-acoustics-and-signal-processing-for-audio-part-i/925) and [Part II](https://forum.smartcitizen.me/t/a-bit-of-acoustics-and-signal-processing-for-audio-part-ii/927) in this forum before continuing with this post.
+In this section we are going to describe how we have to pre-post process our signals in order to obtain the results in the manner we are expecting. These are very important steps in our processing chain, since the FFT algorithms -or convolution FIR Filters- won't be able to cope with our system's limitations. These limitations might not be obvious at the beginning, but you really don't want to ignore them while designing your system, since they'll invalidate many of your measurements.
 
 The very first of these limitations, is the fact that our microphone is, in fact, taking **discrete samples** of the ambient noise surrounding it. This means that, from the very beginning, we are missing some pieces of information and we will never be able to process them. But it's OK! For the purpose of our analysis, we don't need to sample continuosly and this situation is easily bypassed. 
 
@@ -216,7 +209,6 @@ Therefore, what we could do is to define a **custom filter function** and apply 
 
 _Image credit: [DSP Guide](http://www.dspguide.com/)_
 
-
 So finally! _How can we avoid using the FFT algorithm to extract the desired frequency content of a signal and recreate the signal without it?_ Sounds complex, but now we know that  we can use a **FIR filter**, with a **custom frequency response** and apply it via convolution to our input buffer. As simple as that. The custom frequency response, with the proper math, can be optained by applying the IFFT algorithm to the desired frequency response (for example, the A-weighting function). You can have a look to [this example](https://github.com/oscgonfer/AudioI2S_SCK/tree/dev_i2s_dbg/OCTAVE) if you want to create a custom filter function in [octave](https://www.gnu.org/software/octave/), with A or C weighting and implement it to a FIR filter in C++.
 
 <div style="text-align:center">
@@ -273,7 +265,7 @@ Finally, if comparing these with the thresholds, in dBA scale [IEC 61672-1](http
 
 ![](https://i.imgur.com/rRMGL7N.png)
 
-Which yields a very good linearity off-the-shelf over the common urban frequency range (below 2000Hz) and needs to be equalised over this value.
+Which yields a very good linearity off-the-shelf over the common urban frequency range (below 2000Hz).
 
 ## Source files
 

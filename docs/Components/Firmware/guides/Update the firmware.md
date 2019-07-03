@@ -11,6 +11,9 @@ When new features are developed or bugs are fixed we will release new versions o
 
 	After updating the firmware follow this same steps to input the token and wifi credentials, after this your kit will be publishing on the same registered device than before.
 
+!!! info "A note about versions"
+	:white_check_mark: The guide below applies to both, SCK 2.0 and SCK2.1.
+
 !!! example "Updating your kit is very simple"
 
 	* **Connect your kit** with a micro USB cable to your computer.

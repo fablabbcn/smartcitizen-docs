@@ -17,13 +17,22 @@ Smart Citizen Kit
 
 	:question: **Support: [support@smartcitizen.me](mailto: support@smartcitizen.me)**
 
+## What is it?
+
+The Smart Citizen Kit is the core of what we call the Smart Citizen System: a complete set of **modular hardware components** aiming to provide tools for **environmental monitoring**, ranging from **citizen science** and **educational activities** to more **advanced scientific research**. The system is designed in a extendable way, with a central data logger (the [Data Board](/Components/Data Board)) with network connectivity to which the different components are branched. The system is based on the principle of reproducibility, also integrating non-hardware components such as a dedicated storage platform (/Sensor Platform) and a sensor analysis framework (/Sensor Analysis Framework).
+
+On top of that, the system is meant to serve as a **base solution for more complex settings**, not only related with air quality monitoring. For that purpose, in addition to the [Urban Board](/Components/Urban Board), the system also provides off-the-shelf support for a wide variety of third party sensors, using the expansion bus as a common port. One example is what we call the [Smart Citizen Station](/Smart Citizen Station): a full solution for low cost air pollution monitoring.
+
+!!! info "The sensors"
+    Have a look a the supported sensors in the [Firmware](https://github.com/fablabbcn/smartcitizen-kit-20/blob/master/lib/Sensors/Sensors.h)!
+
 ## :ear: Measurements
 
 All the Smart Citizen Kit new sensors generation measure **at least** air temperature, relative humidity, noise level, ambient light, barometric pressure and particulate matter (PM).
 
 ### SCK 2.1
 
-The SCK 2.1 components list is below:
+The SCK 2.1 components are listed below:
 
 1. Smart Citizen Kit 2.1 with Particle Sensor and battery (brackets or rain-proof enclosure currently not included)
 2. MicroSD card and microSD adapter to SD.
@@ -44,7 +53,7 @@ The SCK 2.1 components list is below:
 
 ![](https://i.imgur.com/vgt8m3p.jpg)
 
-The **non-commercially available** SCK 2.0 components list is below:
+The **non-commercially available** SCK 2.0 components are listed below:
 
 1. Smart Citizen Kit 2.0 with Particle Sensor and battery with two mounting brackets.
 2. MicroSD card and microSD adapter to SD.
@@ -92,7 +101,7 @@ The SCK comes with a 2000mAh LiPo battery. The battery is meant to be a complete
 * Without air quality sensors over Wi-Fi: 10 days
 * Without air quality sensors on SD card: 25 days
 
-Finally, a highly efficient `sleep-mode` is implemented to reduce consumption while on battery operation.
+You will note that the kit _turns itself off_ while operating on battery. Actually, this is what we call `sleep-mode`, an operation mode implemented to reduce consumption while on battery operation.
 
 ### Battery charging
 
@@ -110,14 +119,16 @@ _Remember that in addition to these colors you will have the state color of the 
 
 !!! info "More details"
     Find more details under the [data board section](/Components/Data Board/#power-management)
-    
+
 ## :triangular_flag_on_post: User interfaces
 
 The data board features a set of user interfaces which provide feedback to the user, as well as two buttons with different functionalities. The main RGB LED provides general feedback of the data board status. Additionally, two buttons are provided for user action. A hardware reset button, which forces a power cut to the board, and a power button, used to change the device's mode, turn on and off the device, and to perform a factory reset. You can see both buttons below:
 
-![](https://i.imgur.com/IA5oUfQ.jpg)
+![](https://i.imgur.com/AmlA8e2.png)
 
 ### The button
+
+The main button interaction is detailed below:
 
 | Function          | Button action     |
 |-------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -126,7 +137,12 @@ The data board features a set of user interfaces which provide feedback to the u
 | **CHANGE MODE**   | Push the button multiple times to choose: *Setup* <span class="led small red"></span>  *Wi-Fi* <span class="led small blue"></span> *Pink* <span class="led small pink"></span> |
 | **FACTORY RESET** | Push the button 15 seconds for a full reset |
 
+An example is shown below:
+
 ![](https://i.imgur.com/fy3rSbc.png)
+
+!!! info "Troubleshooting"
+    Have a look at the [troubleshoothing section](/Troubleshooting) to check how you can use the buttons in case of problems with your SCK!
 
 ### Operation modes
 
@@ -227,57 +243,7 @@ A prototype of the new enclosure:
 
 ## Software Updates
 
-Sofware updates are release frequently in the [Firmware repository](https://github.com/fablabbcn/smartcitizen-kit-20). These updates will need to be applied periodically to the two main components of the SCK: the SAMD21 (main processor) and the ESP8266 (Wi-Fi module). Check the instructions under the [Update the Firmware](Components/Firmware/Guides/Update the firmware) section for more information.
-
-## :construction_worker: Troubleshooting
-
-### Before setup
-
-Before configuring the Kit setup make sure the LED is red. If not, press the button until the LED turns red.
-
-![](https://i.imgur.com/9iK1ZLl.jpg)
-
-### The kit does not respond
-
-If the kit does not respond or does not work properly you can do two things:
-
-!!! info "Reboot your Kit"
-	You can fully reboot your Kit by pressing the reset button located under the sensors board as seen on the picture.
- 	That will not delete any configuration, it will simply restart your device.
- 	Press the `RESET` button for a second. The light will go off and on and the device will start again.
-
- 	![](https://i.imgur.com/tAofJ0g.png)
-
- 	You can also perform a reboot by disconnecting the battery and the USB cable so that the kit is restarted. In this way we will not lose any data and configuration except the time in case of being in **SD mode**.
-
- 	![](https://i.imgur.com/uWJHCyr.jpg)
-
-
-!!! info "Factory reset your Kit"
-
-	You can fully reset the Kit to the default settings so you can register again your device. Press the main button for **15 seconds**.
-
-	![](https://i.imgur.com/9iK1ZLl.jpg)
-
-	After 5 seconds the light will go off and will go on again after 15 seconds. Then you can release the button and your device will be fully resetted as a brand new Kit.
-
-
-### The LED does not turn on and the kit does not work
-
-First of all, push the kit button. Maybe it's simply off.
-
-If this does not work, most likely the kit has been left without battery. You will have to charge it using the USB charger. Any other mobile charger will also work.
-
-We will know that it is charging when the LED emits <span class="led orange blink"></span> orange pulses and once the battery is charged it will emit green <span class = "led green blink"> </ span>.
-
-If the kit does not respond at all, it is probably worth trying with another USB cable, in case there is some problem there. If not, drop us an [email](mailto: support@smartcitizen.me) or post on the [:speech_balloon: forum](https://forum.smartcitizen.me)
-
-### The kit does not store the data on the SD card.
-
-Some SD cards may have problems over time. We can try formatting it, but in case it does not work any micro SD card we buy at any mobile or computer store it will work. The size is not important and any micro SD or micro SDHC 512MB card up to 32GB will work.
-
-!!! tip "Learn more"
-    Learn more about all the components and the software inside the kit in the [**Components**](/Components) documentation section.
+Sofware updates are release frequently in the [Firmware repository](https://github.com/fablabbcn/smartcitizen-kit-20). These updates will need to be applied periodically to the two main components of the SCK: the SAMD21 (main processor) and the ESP8266 (Wi-Fi module). Check the instructions under the [Update the Firmware](/Components/Firmware/Guides/Update the firmware) section for more information.
 
 <style>
 .led {

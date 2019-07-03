@@ -1,7 +1,7 @@
 Sensor Analysis Framework
 =========================
 
-The following section details the framework used for post processing the data in the iScape project.
+The following section details the framework used for post processing the data coming from time-series based sensors, as the Smart Citizen Kit and Station.
 
 ![](https://i.imgur.com/siufqdY.png)
 

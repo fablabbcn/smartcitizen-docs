@@ -1,7 +1,7 @@
 Components
 ==========
 
-The project sensor platform builds on the legacy of previous Smart Smart Citizen Kit generations to develop a new set of tools especially aimed at providing meaningful data insights on a low budget. The system is designed in a extendable way, with a central data logger with network connectivity to which the different components are branched. The system is based on the principle of reproducibility, also integrating non-hardware components such as a dedicated storage platform and a sensor analysis framework.
+The project's sensor platform builds on the legacy of previous Smart Smart Citizen Kit generations to develop a new set of tools especially aimed at providing meaningful data insights on a low budget. The system is designed in a extendable way, with a central data logger with network connectivity to which the different components are branched. The system is based on the principle of reproducibility, also integrating non-hardware components such as a dedicated storage platform and a sensor analysis framework.
 
 ![](https://i.imgur.com/qTh4CpB.jpg)
 

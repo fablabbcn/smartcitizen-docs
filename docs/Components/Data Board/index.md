@@ -28,7 +28,7 @@ The Smart Citizen Kit firmware is comprised of two parts: 1) the primary process
 !!! tips "Software guides"
 	Check the firmware guides and learn how to update and even modify the software:
 
-	* [Debug the Firmware](/Components/Firmware/Guides/Debug the firmware)
+	* [Debug the Firmware](/Components/Firmware/Guides/Advanced: Debug the firmware)
 	* [Edit the Firmware](/Components/Firmware/Guides/Edit the Firmware)
 	* [Update the Firmware](/Components/Firmware/Guides/Update the firmware)
 
@@ -67,9 +67,9 @@ Normaly the SCK uses a 2000 mAh [Lithium polymer battery](https://en.wikipedia.o
 
 The power consumption of the kit depends on which sensors are enabled and how often they are read/published. Between readings the kit goes to _sleep mode_ turning off almost all the subsystems and reducing the power consumption.
 
-In previous versions of the kit (V2.0 and before), the most power-hungry sensors were the SGX MICS gas sensors (NO~2~ and CO) which need an always-on heater with a permanent consumption of around 50 mAh (35 hours per charge). In V2.0 and V2.1, the PM sensor which needs a fan with a consumption of 35 mAh (50 hours per charge). To improve the power consumption, the PM Sensor works on _one-shot mode_ which turns the sensor off for 3/4ths of the time, and only taking a reading after the sensor has stabilised.
+In previous versions of the kit (V2.0 and before), the most power-hungry sensors were the SGX MICS gas sensors (NO~2~ and CO) which need an always-on heater with a permanent consumption of around 50 mAh (35 hours per charge). In V2.0 and V2.1, the PM sensor needs a fan with a consumption of 35 mAh (50 hours per charge). To improve the power consumption, the PM Sensor works on _one-shot mode_ which turns the sensor off for 3/4ths of the time, and only taking a reading after the sensor has stabilised.
 
-The kit will operate normally: read sensors, post, and then go to sleep. Until the battery charge is below 3%. When that threshold is passed it will enter an emergency sleep mode and interrupt all the normal functions until the charge goes over 5%.
+The **kit normal operation cycle** on battery is: read sensors, post, and then go to sleep. Until the battery charge is below 3%. When that threshold is passed it will enter an emergency sleep mode and interrupt all the normal functions until the charge goes over 5%.
 
 ### Power consumption
 

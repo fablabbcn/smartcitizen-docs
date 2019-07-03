@@ -4,17 +4,19 @@ Urban Sensor Board
 !!! info "We are updating"
     We are currently updating the documentation and many of the figures are from V2.0. We will move them shortly to a more updated version.
 
-The Urban Sensor Board is a solution that contains a selection of low-cost sensors for environmental monitoring. Its main purpose is to serve as a tool for citizen science and awareness activities, and for that reason, metrics such as temperature, pressure, and humidity, as well as noise levels, ambient light, air quality indicators and PM sensors are included. The Urban Sensor Board has undergone several modifications throughout its development, and its current version is V2.1:
+## What is it?
 
-![](https://i.imgur.com/cspcIXx.jpg)
+The Urban Sensor Board is a solution that contains a selection of low-cost sensors for environmental monitoring. Its main purpose is to serve as a tool for citizen science and awareness activities, and for that reason, metrics such as temperature, pressure, and humidity, as well as noise levels, ambient light, air quality indicators and PM sensors are included. The Urban Sensor Board has undergone several modifications throughout its development, and its **current version is V2.1**:
 
-An iteration with a different set of sensors was developed as part of the [iScape Project](https://www.iscapeproject.eu/) and is shown in the figure below:
+![](https://i.imgur.com/SGdx1Q2.jpg)
+
+An iteration with a different set of sensors was developed as part of the [iScape Project](https://www.iscapeproject.eu/) and is shown in the image below:
 
 ![](https://i.imgur.com/Xk2Gkeo.jpg)
 
 <a class="github-button" data-size="large" href="https://github.com/fablabbcn/smartcitizen-kit-20" aria-label="Check the source code">Check the source code</a>
 
-A major effort has been carried out on this design to improve the accuracy of the data provided. The sensors on the board include: Air Temperature, Relative Humidity, Noise Levels and Spectrum, Ambient Light and Barometric Pressure. The board also features a section especially focused on Air Quality including a Particle Matter Sensor, and, in version V2.1, a eCO2 and TVOC sensor. Previously, in version V2.0, a Carbon Monoxide and a Nitrogen Dioxide detectors was included, but with poorer reliability in the data. The sensor density of the board design offers more than ten different environmental metrics at a cost below 50€ and differentiates the design from other existing solutions. The following sections describe in detail each of the sensors available.
+A major effort has been carried out on this design to improve the accuracy of the data provided. The sensors on the board include: Air Temperature, Relative Humidity, Noise Levels and Spectrum, Ambient Light and Barometric Pressure. The board also features a section especially focused on Air Quality including a Particle Matter Sensor, and, in version V2.1, an eCO2 and TVOC sensor. Previously, in version V2.0, a Carbon Monoxide and a Nitrogen Dioxide sensors was included, but due to the high power consumption and the need of important calibration efforts, these were removed. The sensor density of the board design offers more than ten different environmental metrics at a very low cost and differentiates the design from other existing solutions. The following sections describe in detail each of the sensors available.
 
 !!! info "Board assembly"
     The Urban Sensor Board connect to the Data Board connector named **Sensor Board**
@@ -55,13 +57,13 @@ Unfortunately, since R~A~ varies with the deployment conditions, R~A~ cannot be 
 
 Previous versions of the SCK (V1.5, V2.0 and others) included the SGX MICS4514, which was meant to measure CO and NO~2~, and a lot of effort was put in V2.0 to improve the driver for the sensor, aiming to reduce power consumption and improve sensor readings. Unfortunately, this didn't match our expectations in terms of data quality and power consumption, and since individual sensor calibration is not feasible in our case (as some scientific publications have suggested), we decided to focus efforts in simpler, more robust and understandable set of sensors.
 
-That being said, the SCK V2.1 includes the AMS CCS811 for Air Quality indicative measurements for indoor air quality in the Urban Sensor Board, and the PMS5003 for outdoor PM exposure. More complex outdoor set-ups will be also possible, for instance using the [Gas Pro Sensor Board](../Gas Pro Sensor Board) (featuring up to three Alphasense Electrochemical Sensors)[^8][^9][^10]. This board is currently under deployment and will be available soon. 
+That being said, the SCK V2.1 includes the AMS CCS811 for Air Quality indicative measurements for indoor air quality in the Urban Sensor Board, and the PMS5003 for outdoor PM exposure. More complex outdoor set-ups will be also possible, for instance using the [Gas Pro Sensor Board](../Gas Pro Sensor Board) (featuring up to three Alphasense Electrochemical Sensors)[^8][^9][^10]. This board is currently under evaluation and will be available soon. 
 
 ### What to expect from Metal Oxide Sensors
 
-As said above, this type of sensors is not meant for fine pollution monitoring, but is more oriented for air quality indications and trends detection. Our approach is to use them for indicative measurements, and progressively tend towards a more reliable, fine and robust system, once the technology is capable of providing so. 
+As said above, this type of sensors **is not meant for fine pollution monitoring**, but is more oriented for **air quality indications and trends detection**. Our approach is to use them for indicative measurements, and progressively tend towards a more reliable, fine and robust system, once the technology is capable of providing so. 
 
-While deploying them, since the air quality is expected to vary in a typical environment, the minimum time over which a baseline correction is applied is 24 hours. The sensor monitors the baseline resistance periodically and if a cleaner air is found, the new baseline resistance is used to calculate the sensor readings (although this is only done for  future readings). This also means that the SCK should not be interrupted with an _ad hoc_ power cut since this could erase the baseline resistance and the sensor could always yield wrong readings since it never sees _clean air_.
+While deploying them, since the air quality is expected to vary in a typical environment, the minimum time over which a baseline correction is applied is 24 hours. This means that the sensor output will change with time, until the baseline is roughly stable. Since the sensor monitors the baseline resistance periodically, if a cleaner air is found, the new baseline resistance is used to calculate the sensor readings (although this is only done for  future readings). This also means that the SCK should not be interrupted with an _ad hoc_ power cut since this could erase the baseline resistance and the sensor could always yield wrong readings since it never sees _clean air_.
 
 !!! info "Read more"
     More on the [MICS working principle and field validation](/Components/Urban Sensor Board/Metal Oxide Sensor)
@@ -155,49 +157,22 @@ choice:
 !!! tip "Sensor integration"
     ![](https://i.imgur.com/5g64P7r.png)
 
-## Dust Particles Sensor (V2.0 only)
-
-!!! warning
-    The following sensor might be replaced in future iterations as it gets replaced by the **External PM Sensor connector** supporting a Plantowe PMS5003 or PMS7003
-
-The MAXIM MAX30105[^7] is an integrated particle-sensing module. Is a high Sensitivity Optical Reflective Solution for detection of wide a variety of particle sizes. This sensor is aimed at measuring relative air dust levels. However, an algorithm is being developed to support PM 2.5 or PM 10 measurements. At the time the document is being written no data on the sensor lab tests can be provided.
-
-The following characteristics have been considered for the sensor
-choice:
-
-* No need for external ADC or linearization circuits. The sensor includes an internal MCU capable of dealing with all the light emitting and sensing processing. All the communication is done using the I2C protocol.
-
-* Robust Motion Artifact Resilience and -40°C to +85°C Operating Temperature
-
-* Capable of Operating at High Ambient Levels with Excellent Ambient Rejection Capability
-
-* Includes a temperature sensor for calibrating the temperature dependence of the particle sensing subsystem.
-
-* Low power consumption
-
-!!! tip "Sensor integration"
-    ![](https://i.imgur.com/E4FhioM.png)
-
 ## External PM Sensor (V2.0 onwards)
 
-An external connector on the board supports the connection of a Plantower PMS 5003 or PMS 7003[^11]. The device is a digital particle concentration sensor that uses the Laser Scattering principle to obtain the number of suspended particles in the air. The sensor can be fully enable or disable in software to save energy when not in use.
+An external connector on the board supports the connection of a Plantower PMS 5003 or PMS 7003[^11]. The device is a digital particle concentration sensor that uses the Laser Scattering principle to obtain the number of suspended particles in the air. The sensor can be fully enabled or disabled in software to save energy when not in use.
 
 The following characteristics have been considered for the sensor
 choice:
 
 * Provides PM 2.5 and PM 10 measurements in ug/m³
 
-* Minimal distinguishable particle diameter of 0.3 am
+* Minimal distinguishable particle diameter of 0.3 um
 
 * No need for external ADC or linearization circuits. The sensor includes an internal MCU capable of dealing with all the light emitting and sensing processing. All the communication is done using the I2C protocol. A dedicated driver has been designed for this.
 
 * Ultra Low Cost when compared to other commercial solutions with similar performance
 
 * Low Power
-
-The selection is based on the academic references selected above. For a complete Low-Cost Sensors Evaluation see ISCAPE D1.5 Summary of air quality sensors and recommendations for application and the subsequent publication _(Rai et al. 2017)_.
-
-Compliance with the NAAQS (US National Ambient Air Quality Standards) is based on 24-h PM mass concentrations \[\...\] Both of the FEM instruments correlate with the 24-h PM2.5 mass measurements with an R2 \> 0.99. The PMS PM2.5 concentrations are also well correlated with the 24-h mass average concentration (R2 \> 0.88), which is slightly better than the GRIMM research-grade instrument (R2 1⁄4 0.7.). South Coast Air Quality Management District (SCAQMD) recently published preliminary comparisons of the PM2.5 measurements from three PMS 1003s and two FEMs, with high correlations (R2 \> 0.9) over a 2-month period. This study demonstrated that the PMS 1003/3003 correlates well with FRMs, FEMs, and research-grade instrumentation under ambient conditions during a series of cold-air pools and in a wind-tunnel environment. Under ambient conditions, this sensor correlates better with an FRM than other low-cost sensors in similar studies. \[\...\] these sensors are a promising tool for identifying relative increases or decreases in PM concentration, complementing sparsely distributed monitoring stations and for assessing and minimizing exposure to PM _(Kelly et al. 2017)_.
 
 !!! tip "Sensor integration"
     ![](https://i.imgur.com/vyLMF07.png)
