@@ -84,7 +84,7 @@ The sensor comes mounted and almost ready to be used:
 
 The first step is to connect the battery. The kit will light in red (configuration mode) and we will be able to configure it by following the instructions at [**start.smartcitizen.me**](https://start.smartcitizen.me).
 
-![](https://i.imgur.com/5mjUhWr.png)
+![](https://i.imgur.com/NhSNXJ8.png)
 
 After the configuration process, data will be available on the SmartCitizen platform. You can explore the data there or download it using the `CSV Download` option (guide [here](/Sensor Platform/guides/Downloading the Data/))
 
