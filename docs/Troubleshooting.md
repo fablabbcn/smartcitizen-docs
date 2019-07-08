@@ -3,9 +3,9 @@
 
 !!! info "The magical reset button"
 
-    Before trying anything else, the data board of your SCK comes with a very functional button that makes a hardware reset on the whole device. This is probably our best first try once the kit has any problem. You can see it here (bottom left):
+    Before trying anything else, the data board of your SCK comes with a very functional button that makes a hardware reset on the whole device. This is probably our best first try once the kit has any problem. You can see it here:
 
-    ![](https://i.imgur.com/AmlA8e2.png)
+    ![](https://i.imgur.com/lnFrnwS.png)
 
     Some issues this might help solving:
 
@@ -27,13 +27,11 @@
 
 Before configuring the Kit, if the `SmartCitizen[...]` network doesn't show up, make sure the LED is red. If not, press the button until the LED turns red.
 
-![](https://i.imgur.com/9iK1ZLl.jpg)
+![](https://i.imgur.com/rrcHIVj.jpg)
 
 ## Factory reset your kit
 
 You can fully reset the Kit to the default settings so you can register again your device. Press the main button for **15 seconds**.
-
-![](https://i.imgur.com/9iK1ZLl.jpg)
 
 After 5 seconds the light will go off and will go on again after 15 seconds. Then you can release the button and your device will be fully resetted as a brand new Kit.
 
@@ -53,6 +51,10 @@ Some SD cards may have problems over time. We can try formatting it, but in case
 
 !!! tip "Learn more"
     Learn more about all the components and the software inside the kit in the [**Components**](/Components) documentation section.
+
+## The kit does not boot with the PMS Sensor
+
+Make sure that you power the Smart Citizen Kit with a _good enough USB cable_ and with an adaptor that can provide at least 1A. We have found some issues when powering the sensor with a thin cable, or from a weak power source, like a screen.
 
 ## Known (fixed) issues
 
