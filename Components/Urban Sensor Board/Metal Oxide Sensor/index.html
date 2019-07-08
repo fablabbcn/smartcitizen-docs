@@ -1275,44 +1275,6 @@
   </li>
 
         
-          
-          
-          <!--
-  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to
-  deal in the Software without restriction, including without limitation the
-  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-  sell copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
-
-  The above copyright notice and this permission notice shall be included in
-  all copies or substantial portions of the Software.
-
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-  IN THE SOFTWARE.
--->
-
-<!-- Determine class according to level -->
-
-
-
-<!-- Main navigation item with nested items -->
-
-  <li class="md-nav__item">
-    <a href="../../PM Sensor Board/Plantower PMS/" title="Plantower PMS"
-        class="md-nav__link">
-      Plantower PMS
-    </a>
-  </li>
-
-        
       </ul>
     </nav>
   </li>
@@ -1512,12 +1474,54 @@
 
     <!-- Render table of contents, if not empty -->
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Index
+      </label>
+    
     <a href="./" title="Index"
         class="md-nav__link md-nav__link--active">
       Index
     </a>
 
     <!-- Show table of contents -->
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#a-word-about-metal-oxide-sensors" title="A word about Metal Oxide Sensors" class="md-nav__link">
+    A word about Metal Oxide Sensors
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-to-expect-from-metal-oxide-sensors" title="What to expect from Metal Oxide Sensors" class="md-nav__link">
+    What to expect from Metal Oxide Sensors
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -2600,6 +2604,35 @@
     
   
   
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#a-word-about-metal-oxide-sensors" title="A word about Metal Oxide Sensors" class="md-nav__link">
+    A word about Metal Oxide Sensors
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-to-expect-from-metal-oxide-sensors" title="What to expect from Metal Oxide Sensors" class="md-nav__link">
+    What to expect from Metal Oxide Sensors
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2619,6 +2652,14 @@
 <li>CO - NO<sub>2</sub> sensor from V2.0 and before? Click <a href="Metal Oxide Sensor/MICS/">here</a></li>
 <li>eCO2 - TVOC sensor from V2.1? Click <a href="/Components/Urban Sensor Board/Metal Oxide Sensor/CCS811/">here</a></li>
 </ul>
+<h2 id="a-word-about-metal-oxide-sensors">A word about Metal Oxide Sensors<a class="headerlink" href="#a-word-about-metal-oxide-sensors" title="Permanent link">Link</a></h2>
+<p>Metal Oxide Sensors measure the resistance (R<sub>S</sub>) of a sensitive layer after heating it up with a <em>heating element</em> (normally another resistor). However, this reading cannot be considered as an absolute measurement of the target pollutant concentration, since the resistance varies from sensor to sensor, and it's affected by several conditions, such as temperature, humidity and other non-target pollutant affectations. To mitigate this problem, the output of the sensor is normalized using the baseline resistance (R<sub>A</sub>): R<sub>S</sub> is divided by R<sub>A</sub>. This baseline resistance is the resistance that the sensor sees in clean air, and the cleaner the air is, the higher the resistance is.</p>
+<p>Unfortunately, since R<sub>A</sub> varies with the deployment conditions, R<sub>A</sub> cannot be determined by a one-time calibration; and in the case of the AMS CCS811 included in the SCK V2.1, is maintained on-the-fly in software. This process is known as <strong>baseline correction</strong>. </p>
+<p>Previous versions of the SCK (V1.5, V2.0 and others) included the SGX MICS4514, which was meant to measure CO and NO<sub>2</sub>, and a lot of effort was put in V2.0 to improve the driver for the sensor, aiming to reduce power consumption and improve sensor readings. Unfortunately, this didn't match our expectations in terms of data quality and power consumption, and since individual sensor calibration is not feasible in our case (as some scientific publications have suggested), we decided to focus efforts in simpler, more robust and understandable set of sensors.</p>
+<p>That being said, the SCK V2.1 includes the AMS CCS811 for Air Quality indicative measurements for indoor air quality in the Urban Sensor Board, and the PMS5003 for outdoor PM exposure. More complex outdoor set-ups will be also possible, for instance using the <a href="../Gas Pro Sensor Board">Gas Pro Sensor Board</a> (featuring up to three Alphasense Electrochemical Sensors)[<sup>8][</sup>9][^10]. This board is currently under evaluation and will be available soon. </p>
+<h3 id="what-to-expect-from-metal-oxide-sensors">What to expect from Metal Oxide Sensors<a class="headerlink" href="#what-to-expect-from-metal-oxide-sensors" title="Permanent link">Link</a></h3>
+<p>As said above, this type of sensors <strong>is not meant for fine pollution monitoring</strong>, but is more oriented for <strong>air quality indications and trends detection</strong>. Our approach is to use them for indicative measurements, and progressively tend towards a more reliable, fine and robust system, once the technology is capable of providing so. </p>
+<p>While deploying them, since the air quality is expected to vary in a typical environment, the minimum time over which a baseline correction is applied is 24 hours. This means that the sensor output will change with time, until the baseline is roughly stable. Since the sensor monitors the baseline resistance periodically, if a cleaner air is found, the new baseline resistance is used to calculate the sensor readings (although this is only done for  future readings). This also means that the SCK should not be interrupted with an <em>ad hoc</em> power cut since this could erase the baseline resistance and the sensor could always yield wrong readings since it never sees <em>clean air</em>.</p>
                 
                   
                 

@@ -1275,44 +1275,6 @@
   </li>
 
         
-          
-          
-          <!--
-  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to
-  deal in the Software without restriction, including without limitation the
-  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-  sell copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
-
-  The above copyright notice and this permission notice shall be included in
-  all copies or substantial portions of the Software.
-
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-  IN THE SOFTWARE.
--->
-
-<!-- Determine class according to level -->
-
-
-
-<!-- Main navigation item with nested items -->
-
-  <li class="md-nav__item">
-    <a href="../../../PM Sensor Board/Plantower PMS/" title="Plantower PMS"
-        class="md-nav__link">
-      Plantower PMS
-    </a>
-  </li>
-
-        
       </ul>
     </nav>
   </li>
@@ -2731,11 +2693,11 @@
 <h2 id="working-principle">Working principle<a class="headerlink" href="#working-principle" title="Permanent link">Link</a></h2>
 <p>As any metal oxyde sensor, the CCS811 measures the resistance of a sensitive layer, exposed to ambient air. This layer is heated up with a <em>heater element</em> (a resistance) up to several hundred ºC. The characteristics of the sensitive element vary from sensor to sensor, and with time, depending as well on the exposure to different chemical components and ambient conditions. For this reason an individual sensor charactersition is tricky, and an indicative approach is followed, using an internal processing that monitors the baseline resistance of the sensor (i.e., the resistance of the sensitive layer when exposed to clean air).</p>
 <h2 id="sensor-considerations">Sensor considerations<a class="headerlink" href="#sensor-considerations" title="Permanent link">Link</a></h2>
-<p>Sources:</p>
-<ul>
-<li><a href="https://ams.com/documents/20143/36005/CCS811_DS000459_7-00.pdf/3cfdaea5-b602-fe28-1a14-18776b61a35a">Datasheet</a></li>
-<li><a href="https://ams.com/documents/20143/36005/CCS811_AN000370_2-00.pdf/ee95d147-0bca-dbbb-51a6-c6fd32ce4b28">Baseline Restore</a></li>
-</ul>
+<div class="admonition info">
+<p class="admonition-title">Sources</p>
+<p>Have a read to the <a href="https://ams.com/documents/20143/36005/CCS811_DS000459_7-00.pdf/3cfdaea5-b602-fe28-1a14-18776b61a35a">Datasheet</a>
+Or some other <a href="https://ams.com/documents/20143/36005/CCS811_AN000370_2-00.pdf/ee95d147-0bca-dbbb-51a6-c6fd32ce4b28">Application notes</a></p>
+</div>
 <h3 id="early-life-burn-in">Early-Life (Burn-In)<a class="headerlink" href="#early-life-burn-in" title="Permanent link">Link</a></h3>
 <p>The CCS811 performance in terms of resistance levels and sensitivities will change during early life. The change in resistance is greatest over the first 48 hours of operation. CCS811 controls the burn-in period allowing eCO2 and eTVOC readings to be used from first power-on after 60 minutes of operation.</p>
 <h3 id="conditioning-period-run-in">Conditioning Period (Run-In)<a class="headerlink" href="#conditioning-period-run-in" title="Permanent link">Link</a></h3>
