@@ -108,15 +108,8 @@ The firmware provides a comprehensive command shell over USB to manage all the k
 
 _Use any Serial console as `screen`, `platformio device monitor`, or the serial monitor on the Arduino IDE_
 
-Example commands:
-
-```
-
-SCK> help
-
-SCK> config -wifi "myWifiName" "myPassword" -token myToken -mode network
-
-```
+!!! info
+    Have a look at the guide for different platforms [here](/Components/Firmware/guides/Using the Shell)
 
 ## Storage
 

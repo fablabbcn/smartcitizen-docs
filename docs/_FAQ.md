@@ -50,3 +50,18 @@ We are working closely with Barcelona’s The Things Network community to develo
 
 ## Can I remove my data from the platform?
 Of course. You are the owner of the data that you collect, and you can download and/or delete all your sensor data at any time.
+
+## How can I retrieve the MAC address from my device?
+
+You can retrieve the MAC address with two methods: either you can use your phone (see below), or follow [this guide](/Components/Firmware/guides/Using the console) if you want to try out the console interface in the kit. 
+
+**Using your phone**
+
+1. Set the SCK in _setup mode_ (press the button once, the LED should turn red).
+2. With your phone, join the Wi-Fi network created by your Kit; it should be SmartCitizen[…].
+3. Once you are on your Kit configuration page, go to the Info section. You will see a page with all the information about your Kit.
+4. Your MAC address is listed as seen below:
+
+![](https://i.imgur.com/WuZ1mpw.jpg)
+
+
