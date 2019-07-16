@@ -25,13 +25,9 @@ The previous requirements led to the decision of building the core platform on t
 
 * Smart Citizen Website: The platform provides a visual website where the project environmental sensors can be accessed in near real time to facilitate the exploration of data with other contextual data (maps, keywords) and processed reports. This is especially important towards citizens engaging at each local site having a sense of ownership over a technology intervention has been associated with sustained community engagement _(Balestrini et al. 2014)_.
 
-* Smart Citizen API: The platform provides a REST interface for all the functionalities available on the Website. That allows applications to be developed on easily on top having access to all the features to create complex and rich tools. Some examples of this tools are: Smart Citizen Android App, ISCAPE Data Analysis Framework and the ISCAPE Virtual Living Lab.
+* Smart Citizen API: The platform provides a REST interface for all the functionalities available on the Website. That allows applications to be developed on easily on top having access to all the features to create complex and rich tools. One examples of this tools is the Sensors Analysis Framework or the iSCAPE Virtual Living Lab (developed during the[iSCAPE project](https://www.iscapeproject.eu/))
 
-* Virtual Living Lab: It is currently being built as part of T8.1 and will provide an online web platform where each Living Lab can share their advances and contact with their local communities. The tools will feature different modules allowing the data from the sensors deployed by a Living Lab to be visualized on the site. It retrieves the data using the Smart Citizen API.
-
-* Onboarding app: It aim to facilitate the process of sensor setup to ensure that users, irrespective of technical expertise, can install the sensors. It guides the user through the process of the setup using simple language and a friendly graphic language. It is built as a separate tool from the core Smart Citizen Webpage in order it can be customized for each deployment. It exchange data with the core platform using the Smart Citizen API.
-
-* Archiving for long term preservation: All the sensor data collected during the project will be later on submitted to the Zenodo platform for long term archiving and digital reference. As a European Commission supported initiative and technically supported by CERN, we believe this is the best way to ensure access to the generated data remains long after the project ends.
+* Onboarding app: It aims to facilitate the process of sensor setup to ensure that users, irrespective of technical expertise, can install the sensors. It guides the user through the process of the setup using simple language and a friendly graphic language. It is built as a separate tool from the core Smart Citizen Webpage in order it can be customized for each deployment. It exchange data with the core platform using the Smart Citizen API.
 
 ## Source files
 
