@@ -32,6 +32,8 @@ All the Smart Citizen Kit new sensors generation measure **at least** air temper
 
 ### SCK 2.1
 
+<a data-flickr-embed="true" title="SCK 2.1 All parts"><img src="https://live.staticflickr.com/65535/47950912168_fcf8fa398c_h.jpg" alt="SCK 2.1 All parts"></a>
+
 The SCK 2.1 components are listed below:
 
 1. Smart Citizen Kit 2.1 with Particle Sensor and battery (brackets or rain-proof enclosure currently not included)
@@ -139,7 +141,7 @@ The main button interaction is detailed below:
 
 An example is shown below:
 
-![](https://i.imgur.com/fy3rSbc.png)
+![](https://i.imgur.com/rrcHIVj.jpg)
 
 !!! info "Troubleshooting"
     Have a look at the [troubleshoothing section](/Troubleshooting) to check how you can use the buttons in case of problems with your SCK!

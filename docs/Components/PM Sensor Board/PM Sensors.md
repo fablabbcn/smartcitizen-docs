@@ -3,7 +3,7 @@ PM Sensors
 
 ## Working principle
 
-![](https://i.imgur.com/kDxIl26.png)
+<a data-flickr-embed="true"  title="SCK 2.1 Particle Sensor"><img src="https://live.staticflickr.com/65535/47950939936_8942068512_h.jpg" alt="SCK 2.1 Particle Sensor"></a>
 
 The PM sensors available in the Smart Citizen Kit (one sensor per Kit) and the Smart Citizen Station (two sensors per Station), are the Plantower PMS5003 sensor. The PMS5003 is a [nephelometer](https://en.wikipedia.org/wiki/Nephelometer), and this type of measures suspended particulates by employing a light beam and a light detector set to one side (often 90°) of the source beam. Particle density is then a function of the light reflected into the detector and the particle mass is a calculation derived from this density, assuming certain properties of the particles, such as shape, color and reflectivity, among others. 
 

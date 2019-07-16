@@ -16,24 +16,23 @@ We could define the `shell` as a text-based interface to access almost any SCK f
 Software-wise, different platforms will have different interfaces. The easiest and most reliable for all of them would be through the [Arduino IDE](https://www.arduino.cc/en/Main/Software).
 
 !!! example "Using the Arduino IDE"
-    Launch the _Arduino IDE_ and select the port under `Tools > Port >`:
+    - Launch the _Arduino IDE_ and select the port under `Tools > Port >`:
     
     ![](https://i.imgur.com/XEZXoyy.png)
 
-    Launch the `Serial Monitor` under 'Tools > Serial Monitor'. Make sure that the dropdowns in the bottom are set as in the image below (`Carriage return` and `115200 baud`)
+    - Launch the `Serial Monitor` under `Tools > Serial Monitor`. Make sure that the dropdowns in the bottom are set as in the image below (`Carriage return` and `115200 baud`)
 
-    Type in `help` to get started.
+    - Type in `help` to get started.
 
     ![](https://i.imgur.com/iSONfFB.png)
 
-More advanced users would probably rather use a more _rugged_ interface. In this case, you could use `screen` in your terminal:
+More advanced users would probably rather use a more _rugged_ interface. In this case, you could use `screen` in your terminal of choice:
 
 ```
 > ls /dev/cu | grep usb
 cu.usbmodem1411
 tty.usbmodem1411
 > screen /dev/cu.usmodem1411
-SCK >
 SCK >
 ...
 ```
@@ -47,7 +46,6 @@ The `help` command outputs a quite intuitive explanation of all the commands:
 
 ```
 SCK > help
-SCK >
 reset:       Resets the SCK
 version:     Shows versions and Hardware ID
 rcause:      Show last reset cause (debug)
@@ -71,14 +69,13 @@ hello:       Sends MQTT hello to platform
 debug:       Toggle debug messages [-sdcard] [-espcom] [-list]
 shell:       Shows or sets shell mode [-on] [-off]
 mqtt:        Publish custom mqtt message ('topic' 'message')
-SCK >
 ```
 
 !!! info "Pro tip"
-    The SCK outputs via serial a lot of information. This can be sometimes confusing while typing commands. You can silent it a bit with this command:
+    The SCK outputs  a lot of information via serial. This can be sometimes confusing while typing commands. You can silent it a bit with this command:
 
     ```
-    shell -on
+    SCK > shell -on
     Shell mode: on
     ```
 
@@ -87,11 +84,11 @@ SCK >
     Remember to turn it off after you are done experimenting!
 
     ```
-    shell -off
+    SCK > shell -off
     Shell mode: off
     ```
 
-### Recording configuration
+### Set the recording configuration
 
 If you want to change your recording mode to, for instance, `sdcard` mode, you could do so by typing:
 
@@ -123,12 +120,12 @@ Publish interval: 60
 Reading interval: 60
 Wifi credentials: not configured
 Token: not configured
-Mac address:  86:0D:8E:A7:7F:CC
+Mac address:  11:22:33:44:55:66
 ```
 
-### Some version data
+### Get version data
 
-Check your **hardware, firmware version** and other data with the command `version`:
+Check your **hardware and firmware version** data with the command `version`:
 
 ```
 SCK > version
@@ -143,7 +140,7 @@ ESP build date: not synced
 
 ### List/modify the active sensors
 
-By typing `sensor`, a **list of enabled and supported sensors** is displayed:
+By typing in `sensor`, a **list of enabled and supported sensors** is displayed:
 
 ```
 SCK > sensor
@@ -191,7 +188,7 @@ Saved configuration on eeprom!!
     SCK > sensor -enable atlas
     Failed enabling Atlas Temperature
     ```
-    
+
 ### Read/Monitor some sensors
 
 If one sensor is enabled, you can `read` it (once) or `monitor` it (as fast as the SCK can):
@@ -252,7 +249,6 @@ Miliseconds     Light
 98      137
 99      137
 108     137
-97      137
 ...
 ```
 
@@ -299,27 +295,27 @@ Time    Miliseconds     Light
 ...
 ```
 
-This can be useful in case you want to log data as fast as possible, with little delay between readings (~100ms).
+This can be useful in case you want to log data as fast as possible, with little delay between readings (~100ms).    
 
 ## Advanced (but cool) example!
 
 !!! example "Making most of the digital microphone"
-    The digital microphone in your SCK uses an FFT algorithm to calculate the final sound pressure level (SPL) in different scales (A, C, Z). The FFT spectrum is also available for user analysis. Let's have a look!
+    - The digital microphone in your SCK uses an FFT algorithm to calculate the final sound pressure level (SPL) in different scales (A, C, Z). The FFT spectrum is also available for user analysis. Let's have a look!
 
-    First, enable it with:
+    - First, enable it with:
 
     ```
     SCK > sensor -enable fft
     Enabling Noise FFT
     ```
 
-    Then, monitor and log it in a file with:
+    - Then, monitor and log it in a file with:
 
     ```
     echo "monitor fft" > /dev/cu.usbmodem1411 && screen -L /dev/cu.usbmodem1411
     ```
 
-    In this file, we will have something like:
+    - In this file, we will have something like:
 
     ```
     12
@@ -334,9 +330,9 @@ This can be useful in case you want to log data as fast as possible, with little
     ...
     ```
 
-    The values between the dates are the actual FFT spectrum. We will now clean the lines with the dates and then plot the data. For this, we will use a `python` code to make things easier. You can download the code [here](/assets/examples/spectrum_example.py).
+    - The values between the dates are the actual FFT spectrum. We will now clean the lines with the dates and then plot the data. For this, we will use a `python` code to make things easier. You can download the code [here](/assets/examples/spectrum_example.py).
 
-    If we run this code in `python3` in the same folder where the screenlog from before is:
+    - If we run this code in `python3` in the same folder where the screenlog from before is:
 
     ```
     > python spectrum_example.py
