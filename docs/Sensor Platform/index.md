@@ -23,11 +23,11 @@ The previous requirements led to the decision of building the core platform on t
 
 ## Software components
 
-* Smart Citizen Website: The platform provides a visual website where the project environmental sensors can be accessed in near real time to facilitate the exploration of data with other contextual data (maps, keywords) and processed reports. This is especially important towards citizens engaging at each local site having a sense of ownership over a technology intervention has been associated with sustained community engagement _(Balestrini et al. 2014)_.
+* **Smart Citizen Website**: It aims to provide a visual website where the project environmental sensors can be accessed in near real time to facilitate the exploration of data with other contextual data (maps, keywords) and processed reports. This is especially important towards citizens engaging at each local site having a sense of ownership over a technology intervention has been associated with sustained community engagement _(Balestrini et al. 2014)_.
 
-* Smart Citizen API: The platform provides a REST interface for all the functionalities available on the Website. That allows applications to be developed on easily on top having access to all the features to create complex and rich tools. One examples of this tools is the Sensors Analysis Framework or the iSCAPE Virtual Living Lab (developed during the[iSCAPE project](https://www.iscapeproject.eu/))
+* **Smart Citizen API**: The platform provides a REST interface for all the functionalities available on the Website. That allows applications to be developed on easily on top having access to all the features to create complex and rich tools. One examples of this tools is the Sensors Analysis Framework or the iSCAPE Virtual Living Lab (developed during the [iSCAPE project](https://www.iscapeproject.eu/))
 
-* Onboarding app: It aims to facilitate the process of sensor setup to ensure that users, irrespective of technical expertise, can install the sensors. It guides the user through the process of the setup using simple language and a friendly graphic language. It is built as a separate tool from the core Smart Citizen Webpage in order it can be customized for each deployment. It exchange data with the core platform using the Smart Citizen API.
+* **Onboarding app**: It aims to facilitate the process of sensor setup to ensure that users, irrespective of technical expertise, can install the sensors. It guides the user through the process of the setup using simple language and a friendly graphic language. It is built as a separate tool from the core Smart Citizen Webpage in order it can be customized for each deployment. It exchange data with the core platform using the Smart Citizen API.
 
 ## Source files
 
