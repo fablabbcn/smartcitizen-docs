@@ -1033,15 +1033,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#recording-configuration" title="Recording configuration" class="md-nav__link">
-    Recording configuration
+  <a href="#set-the-recording-configuration" title="Set the recording configuration" class="md-nav__link">
+    Set the recording configuration
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#some-version-data" title="Some version data" class="md-nav__link">
-    Some version data
+  <a href="#get-version-data" title="Get version data" class="md-nav__link">
+    Get version data
   </a>
   
 </li>
@@ -2748,15 +2748,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#recording-configuration" title="Recording configuration" class="md-nav__link">
-    Recording configuration
+  <a href="#set-the-recording-configuration" title="Set the recording configuration" class="md-nav__link">
+    Set the recording configuration
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#some-version-data" title="Some version data" class="md-nav__link">
-    Some version data
+  <a href="#get-version-data" title="Get version data" class="md-nav__link">
+    Get version data
   </a>
   
 </li>
@@ -2816,18 +2816,25 @@
 <p>Software-wise, different platforms will have different interfaces. The easiest and most reliable for all of them would be through the <a href="https://www.arduino.cc/en/Main/Software">Arduino IDE</a>.</p>
 <div class="admonition example">
 <p class="admonition-title">Using the Arduino IDE</p>
-<p>Launch the <em>Arduino IDE</em> and select the port under <code class="codehilite"><span class="n">Tools</span> <span class="o">&gt;</span> <span class="n">Port</span> <span class="o">&gt;</span></code>:</p>
+<ul>
+<li>Launch the <em>Arduino IDE</em> and select the port under <code class="codehilite"><span class="n">Tools</span> <span class="o">&gt;</span> <span class="n">Port</span> <span class="o">&gt;</span></code>:</li>
+</ul>
 <p><img alt="" src="https://i.imgur.com/XEZXoyy.png" /></p>
-<p>Launch the <code class="codehilite"><span class="nb">Serial</span> <span class="n">Monitor</span></code> under 'Tools &gt; Serial Monitor'. Make sure that the dropdowns in the bottom are set as in the image below (<code class="codehilite"><span class="nv">Carriage</span> <span class="k">return</span></code> and <code class="codehilite"><span class="mi">115200</span> <span class="n">baud</span></code>)</p>
+<ul>
+<li>
+<p>Launch the <code class="codehilite"><span class="nb">Serial</span> <span class="n">Monitor</span></code> under <code class="codehilite"><span class="n">Tools</span> <span class="o">&gt;</span> <span class="nb">Serial</span> <span class="n">Monitor</span></code>. Make sure that the dropdowns in the bottom are set as in the image below (<code class="codehilite"><span class="nv">Carriage</span> <span class="k">return</span></code> and <code class="codehilite"><span class="mi">115200</span> <span class="n">baud</span></code>)</p>
+</li>
+<li>
 <p>Type in <code class="codehilite"><span class="n">help</span></code> to get started.</p>
+</li>
+</ul>
 <p><img alt="" src="https://i.imgur.com/iSONfFB.png" /></p>
 </div>
-<p>More advanced users would probably rather use a more <em>rugged</em> interface. In this case, you could use <code class="codehilite"><span class="n">screen</span></code> in your terminal:</p>
+<p>More advanced users would probably rather use a more <em>rugged</em> interface. In this case, you could use <code class="codehilite"><span class="n">screen</span></code> in your terminal of choice:</p>
 <div class="codehilite"><pre><span></span><span class="o">&gt;</span> <span class="n">ls</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">cu</span> <span class="o">|</span> <span class="n">grep</span> <span class="n">usb</span>
 <span class="n">cu</span><span class="p">.</span><span class="n">usbmodem1411</span>
 <span class="n">tty</span><span class="p">.</span><span class="n">usbmodem1411</span>
 <span class="o">&gt;</span> <span class="n">screen</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">cu</span><span class="p">.</span><span class="n">usmodem1411</span>
-<span class="n">SCK</span> <span class="o">&gt;</span>
 <span class="n">SCK</span> <span class="o">&gt;</span>
 <span class="p">...</span>
 </pre></div>
@@ -2839,7 +2846,6 @@
 <h2 id="some-examples">Some examples!<a class="headerlink" href="#some-examples" title="Permanent link">Link</a></h2>
 <p>The <code class="codehilite"><span class="n">help</span></code> command outputs a quite intuitive explanation of all the commands:</p>
 <div class="codehilite"><pre><span></span><span class="n">SCK</span> <span class="o">&gt;</span> <span class="n">help</span>
-<span class="n">SCK</span> <span class="o">&gt;</span>
 <span class="nl">reset</span><span class="p">:</span>       <span class="n">Resets</span> <span class="n">the</span> <span class="n">SCK</span>
 <span class="nl">version</span><span class="p">:</span>     <span class="n">Shows</span> <span class="n">versions</span> <span class="n">and</span> <span class="n">Hardware</span> <span class="n">ID</span>
 <span class="nl">rcause</span><span class="p">:</span>      <span class="n">Show</span> <span class="n">last</span> <span class="n">reset</span> <span class="n">cause</span> <span class="p">(</span><span class="n">debug</span><span class="p">)</span>
@@ -2863,24 +2869,23 @@
 <span class="nl">debug</span><span class="p">:</span>       <span class="n">Toggle</span> <span class="n">debug</span> <span class="n">messages</span> <span class="p">[</span><span class="o">-</span><span class="n">sdcard</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">espcom</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">list</span><span class="p">]</span>
 <span class="nl">shell</span><span class="p">:</span>       <span class="n">Shows</span> <span class="n">or</span> <span class="n">sets</span> <span class="n">shell</span> <span class="n">mode</span> <span class="p">[</span><span class="o">-</span><span class="n">on</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">off</span><span class="p">]</span>
 <span class="nl">mqtt</span><span class="p">:</span>        <span class="n">Publish</span> <span class="n">custom</span> <span class="n">mqtt</span> <span class="n">message</span> <span class="p">(</span><span class="err">&#39;</span><span class="n">topic</span><span class="sc">&#39; &#39;</span><span class="n">message</span><span class="err">&#39;</span><span class="p">)</span>
-<span class="n">SCK</span> <span class="o">&gt;</span>
 </pre></div>
 
 <div class="admonition info">
 <p class="admonition-title">Pro tip</p>
-<p>The SCK outputs via serial a lot of information. This can be sometimes confusing while typing commands. You can silent it a bit with this command:</p>
-<div class="codehilite"><pre><span></span><span class="n">shell</span> <span class="o">-</span><span class="k">on</span>
+<p>The SCK outputs  a lot of information via serial. This can be sometimes confusing while typing commands. You can silent it a bit with this command:</p>
+<div class="codehilite"><pre><span></span><span class="n">SCK</span> <span class="o">&gt;</span> <span class="n">shell</span> <span class="o">-</span><span class="k">on</span>
 <span class="n">Shell</span> <span class="k">mode</span><span class="p">:</span> <span class="k">on</span>
 </pre></div>
 
 <p>This will turn your LED static yellow, and no output except responses to your commands will be given. </p>
 <p>Remember to turn it off after you are done experimenting!</p>
-<div class="codehilite"><pre><span></span><span class="n">shell</span> <span class="o">-</span><span class="k">off</span>
+<div class="codehilite"><pre><span></span><span class="n">SCK</span> <span class="o">&gt;</span> <span class="n">shell</span> <span class="o">-</span><span class="k">off</span>
 <span class="n">Shell</span> <span class="k">mode</span><span class="p">:</span> <span class="k">off</span>
 </pre></div>
 
 </div>
-<h3 id="recording-configuration">Recording configuration<a class="headerlink" href="#recording-configuration" title="Permanent link">Link</a></h3>
+<h3 id="set-the-recording-configuration">Set the recording configuration<a class="headerlink" href="#set-the-recording-configuration" title="Permanent link">Link</a></h3>
 <p>If you want to change your recording mode to, for instance, <code class="codehilite"><span class="n">sdcard</span></code> mode, you could do so by typing:</p>
 <div class="codehilite"><pre><span></span><span class="n">SCK</span> <span class="o">&gt;</span> <span class="n">config</span> <span class="o">-</span><span class="k">mode</span> <span class="n">sdcard</span>
 </pre></div>
@@ -2904,11 +2909,11 @@
 <span class="n">Reading</span> <span class="nb">interval</span><span class="p">:</span> <span class="mi">60</span>
 <span class="n">Wifi</span> <span class="n">credentials</span><span class="p">:</span> <span class="k">not</span> <span class="n">configured</span>
 <span class="n">Token</span><span class="p">:</span> <span class="k">not</span> <span class="n">configured</span>
-<span class="n">Mac</span> <span class="n">address</span><span class="p">:</span>  <span class="mi">86</span><span class="p">:</span><span class="mi">0</span><span class="n">D</span><span class="p">:</span><span class="mi">8</span><span class="n">E</span><span class="p">:</span><span class="n">A7</span><span class="p">:</span><span class="mi">7</span><span class="n">F</span><span class="p">:</span><span class="n">CC</span>
+<span class="n">Mac</span> <span class="n">address</span><span class="p">:</span>  <span class="mi">11</span><span class="p">:</span><span class="mi">22</span><span class="p">:</span><span class="mi">33</span><span class="p">:</span><span class="mi">44</span><span class="p">:</span><span class="mi">55</span><span class="p">:</span><span class="mi">66</span>
 </pre></div>
 
-<h3 id="some-version-data">Some version data<a class="headerlink" href="#some-version-data" title="Permanent link">Link</a></h3>
-<p>Check your <strong>hardware, firmware version</strong> and other data with the command <code class="codehilite"><span class="k">version</span></code>:</p>
+<h3 id="get-version-data">Get version data<a class="headerlink" href="#get-version-data" title="Permanent link">Link</a></h3>
+<p>Check your <strong>hardware and firmware version</strong> data with the command <code class="codehilite"><span class="k">version</span></code>:</p>
 <div class="codehilite"><pre><span></span><span class="n">SCK</span> <span class="o">&gt;</span> <span class="k">version</span>
 <span class="n">Hardware</span> <span class="k">Version</span><span class="p">:</span> <span class="mi">2</span><span class="p">.</span><span class="mi">1</span>
 <span class="n">SAM</span> <span class="n">Hardware</span> <span class="n">ID</span><span class="p">:</span> <span class="mi">5934</span><span class="n">C4B550515157382E3120FF151210</span>
@@ -2920,7 +2925,7 @@
 </pre></div>
 
 <h3 id="listmodify-the-active-sensors">List/modify the active sensors<a class="headerlink" href="#listmodify-the-active-sensors" title="Permanent link">Link</a></h3>
-<p>By typing <code class="codehilite"><span class="n">sensor</span></code>, a <strong>list of enabled and supported sensors</strong> is displayed:</p>
+<p>By typing in <code class="codehilite"><span class="n">sensor</span></code>, a <strong>list of enabled and supported sensors</strong> is displayed:</p>
 <div class="codehilite"><pre><span></span><span class="n">SCK</span> <span class="o">&gt;</span> <span class="n">sensor</span>
 
 <span class="n">Disabled</span>
@@ -3013,7 +3018,6 @@
 <span class="mi">98</span>      <span class="mi">137</span>
 <span class="mi">99</span>      <span class="mi">137</span>
 <span class="mi">108</span>     <span class="mi">137</span>
-<span class="mi">97</span>      <span class="mi">137</span>
 <span class="p">...</span>
 </pre></div>
 
@@ -3056,21 +3060,31 @@
 <span class="p">...</span>
 </pre></div>
 
-<p>This can be useful in case you want to log data as fast as possible, with little delay between readings (~100ms).</p>
+<p>This can be useful in case you want to log data as fast as possible, with little delay between readings (~100ms).    </p>
 <h2 id="advanced-but-cool-example">Advanced (but cool) example!<a class="headerlink" href="#advanced-but-cool-example" title="Permanent link">Link</a></h2>
 <div class="admonition example">
 <p class="admonition-title">Making most of the digital microphone</p>
+<ul>
+<li>
 <p>The digital microphone in your SCK uses an FFT algorithm to calculate the final sound pressure level (SPL) in different scales (A, C, Z). The FFT spectrum is also available for user analysis. Let's have a look!</p>
+</li>
+<li>
 <p>First, enable it with:</p>
+</li>
+</ul>
 <div class="codehilite"><pre><span></span><span class="n">SCK</span> <span class="o">&gt;</span> <span class="n">sensor</span> <span class="o">-</span><span class="n">enable</span> <span class="n">fft</span>
 <span class="n">Enabling</span> <span class="n">Noise</span> <span class="n">FFT</span>
 </pre></div>
 
-<p>Then, monitor and log it in a file with:</p>
+<ul>
+<li>Then, monitor and log it in a file with:</li>
+</ul>
 <div class="codehilite"><pre><span></span><span class="n">echo</span> <span class="ss">&quot;monitor fft&quot;</span> <span class="o">&gt;</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">cu</span><span class="p">.</span><span class="n">usbmodem1411</span> <span class="o">&amp;&amp;</span> <span class="n">screen</span> <span class="o">-</span><span class="n">L</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">cu</span><span class="p">.</span><span class="n">usbmodem1411</span>
 </pre></div>
 
-<p>In this file, we will have something like:</p>
+<ul>
+<li>In this file, we will have something like:</li>
+</ul>
 <div class="codehilite"><pre><span></span><span class="mi">12</span>
 <span class="mi">15</span>
 <span class="mi">19</span>
@@ -3083,8 +3097,14 @@
 <span class="p">...</span>
 </pre></div>
 
+<ul>
+<li>
 <p>The values between the dates are the actual FFT spectrum. We will now clean the lines with the dates and then plot the data. For this, we will use a <code class="codehilite"><span class="n">python</span></code> code to make things easier. You can download the code <a href="/assets/examples/spectrum_example.py">here</a>.</p>
+</li>
+<li>
 <p>If we run this code in <code class="codehilite"><span class="n">python3</span></code> in the same folder where the screenlog from before is:</p>
+</li>
+</ul>
 <div class="codehilite"><pre><span></span><span class="o">&gt;</span> <span class="n">python</span> <span class="n">spectrum_example</span><span class="p">.</span><span class="n">py</span>
 </pre></div>
 
