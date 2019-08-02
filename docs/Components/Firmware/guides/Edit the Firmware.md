@@ -4,7 +4,7 @@ The data board of your SmartSmart Citizen Kit is has two **two microcontrollers*
 
 The main one is an **Atmel SAMD21**, this chip is in charge of all the normal tasks like reading the sensors, saving data, interacting with the user, etc. For this chip we need two software components the bootloader and the main firmware.
 
-For communications the SCK has an **ESP8266 microcontroler with Wifi capabilities**, this chip receives instructions from the SAMD21 via serial port and takes care of publishing the collected data through the network. This chip needs a main firmware and a filesystem that stores the web pages for the [setup mode](http://placeholder_for_setup_mode_page) server.
+For communications the SCK has an **ESP8266 microcontroler with Wifi capabilities**, this chip receives instructions from the SAMD21 via serial port and takes care of publishing the collected data through the network. This chip needs a main firmware and a filesystem that stores the web pages for the [setup mode](/Smart Citizen Kit/#setup-mode) server.
 
 ## Development enviroment
 

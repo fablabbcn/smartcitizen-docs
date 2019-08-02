@@ -15,9 +15,9 @@ The core system bases its sensing capabilities in widely reviewed low cost senso
 
 * [**Data Board:**](Data Board) A datalogger at the heart of the sensors architecure supporting the [Smart Citizen Kit](/Smart Citizen Kit) and the [Smart Citizen Stations](/Smart Citizen Station).
 
-	* [**Firmware:**](Firmware) The software running inside the sensors.
+* [**Firmware:**](Firmware) The software running inside the sensors.
 
-* **Sensor Board:** Multiple sensor board have been developed. They can be combined to built the different sensor solutions as the [Smart Citizen Kit](/Smart Citizen Kit) and the [Smart Citizen Stations](/Smart Citizen Station).
+* **Sensor Board:** Multiple sensor board have been developed. They can be combined to built the different sensor solutions as the [Smart Citizen Kit](/Smart Citizen Kit) and the [Smart Citizen Stations](/Smart Citizen Station):
 
 	* [**Urban Sensor Board:**](Urban Sensor Board) A selection of low-cost sensors in a board ready to measure the urban environment: temperature, humidity, noise, light, and PM2.5, among others. Together with the [Data Board](Data Board) they create the [Smart Citizen Kit](/Smart Citizen Kit).
 

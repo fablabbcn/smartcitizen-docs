@@ -42,8 +42,8 @@ Yes, it will be maintained just as it has been for the past five years. Also, th
 ## Are there any notable case studies using similar sensors?
 Yes! A particularly interesting case study is the Making Sense project at Plaça del Sol in Barcelona, where a group of 15 technology enthusiasts and environmentalists joined a community of neighbours from a middle-class district that has been suffering from noise issues due to the nightlife in the square. You can find more information about this case study at: www.making-sense.eu
 
-## What happens if i want to move the device or give it to someone else?
-With just one press of a button you can fully reset your sensor and configure it again using your account or a new one. All your previous data will remain available on the platform as it was before the reset.
+## What happens if I want to move the device or give it to someone else?
+Just by pressing the button you can fully reset your sensor and configure it again using your account or a new one. All your previous data will remain available on the platform as it was before the reset.
 
 ## What about using other wireless technologies?
 We are working closely with Barcelona’s The Things Network community to develop a TTN enabled sensor. A LoRA prototype has been tested, but we don’t have dates for the final version yet. BLE, Zigbee, or others are not currently supported, and except for G5, we are not planning to implement them unless there is a custom hardware integration demand.
@@ -53,7 +53,7 @@ Of course. You are the owner of the data that you collect, and you can download 
 
 ## How can I retrieve the MAC address from my device?
 
-You can retrieve the MAC address with two methods: either you can use your phone (see below), or follow [this guide](/Components/Firmware/guides/Using the console) if you want to try out the console interface in the kit. 
+You can retrieve the MAC address with two methods: either you can use your phone (see below), or follow [this guide](/Components/Firmware/guides/Using the Shell) if you want to try out the console interface in the kit. 
 
 **Using your phone**
 

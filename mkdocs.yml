@@ -5,12 +5,60 @@ site_url: https://docs.smartcitizen.me/
 
 # https://www.mkdocs.org/user-guide/writing-your-docs/#configure-pages-and-navigation
 
-# pages:
-#   -  Home: index.md
-
-# nav:
-#     - Home: index.md
-
+nav:
+  - Main: 
+    - Welcome: index.md
+    - Smart Citizen Kit: 
+      - General: Smart Citizen Kit.md
+      - Components:
+        - Data Board: Components/Data Board/index.md
+        - Urban Board:
+          - Description: Components/Urban Sensor Board/index.md
+          - Noise: Components/Urban Sensor Board/Noise Sensor/index.md
+          - Metal Oxide Sensors:
+            - Description: Components/Urban Sensor Board/Metal Oxide Sensor/index.md
+            - eCO2/TVOC: Components/Urban Sensor Board/Metal Oxide Sensor/CCS811.md
+            
+        - PM Sensor: SCK_PM.md
+    - Smart Citizen Station: 
+      - General: Smart Citizen Station.md
+      - Components:
+        - Smart Citizen Kit: SCK_Station.md
+        - Gas Pro Sensor Board: 
+          - Description: Components/Gas Pro Sensor Board/index.md
+          - Electrochemical Sensors: Components/Gas Pro Sensor Board/Electrochemical Sensors.md
+        - PM Board: 
+          - Description: Components/PM Sensor Board/index.md
+          - PM Sensors: Components/PM Sensor Board/PM Sensors.md
+    - Firmware: Components/Firmware/index.md
+    - FAQ: _FAQ.md
+    - Troubleshooting: Troubleshooting.md
+  - Sensor Platform:
+    - Main: Sensor Platform/index.md
+  - Data Analysis:
+    - Main: Data Analysis/index.md
+    - On low-cost sensor calibration: Data Analysis/Low Cost Sensors Calibration.md
+  - Guides:
+    - Main: Guides.md
+    - General:
+      - Onboarding Sensors: Sensor Platform/guides/Onboarding Sensors.md
+      - Using the Shell: Components/Firmware/guides/Using the Shell.md
+      - Downloading platform data: Sensor Platform/guides/Downloading the Data.md
+      - Uploading SD-card data: Sensor Platform/guides/Uploading SD Card Data.md
+    - Firmware:
+      - Update the firmware: Components/Firmware/guides/Update the firmware.md
+      - Edit the firmware: Components/Firmware/guides/Edit the Firmware.md
+      - Debug the firmware: Components/Firmware/guides/Debug the firmware.md
+    - Data Analysis:
+      - Framework Installation: Data Analysis/guides/Install the framework.md
+      - Analyse your sensor data: Data Analysis/guides/Creating Models for Sensors Calibration.md
+  - Legacy Hardware:
+    - Description: Legacy Hardware/index.md
+    - Hardware: Legacy Hardware/Hardware.md
+    - Command Line: Legacy Hardware/Command Line.md
+    - About the CO-NO2 MOs: Components/Urban Sensor Board/Metal Oxide Sensor/MICS.md
+    - FAQ: Legacy Hardware/Faq.md
+    - Troubleshooting: Legacy Hardware/Troubleshooting.md
 theme:
   name: 'material'
   custom_dir: 'custom_theme'
@@ -31,7 +79,7 @@ extra:
       link: 'https://www.facebook.com/smartcitizenBCN/'
   project: 'The Smart Citizen has received funding from the European Community’s H2020 Programme under Grant Agreement No. 689954.'
   footer_logo: '/assets/images/eu-flag.png'
-  license: ''
+  license: 'CC Attribution-NonCommercial-ShareAlike 4.0 International'
   repo_name: smartcitizen-docs
   repo_url: https://github.com/fablabbcn/smartcitizen-docs
 

@@ -1,4 +1,4 @@
-Creating models for the low cost sensors calibration
+Analyse your sensor data
 ====================================================
 
 In this section, we will work on the development of two models for the MOS sensors in the Smart Smart Citizen Kit. In the Sensor Analysis Framework, we have implemented two different approaches for model calibration:

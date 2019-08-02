@@ -49,9 +49,6 @@ If the kit does not respond at all, it is probably worth trying with another USB
 
 Some SD cards may have problems over time. We can try formatting it, but in case it does not work any micro SD card we buy at any mobile or computer store it will work. The size is not important and any micro SD or micro SDHC 512MB card up to 32GB will work.
 
-!!! tip "Learn more"
-    Learn more about all the components and the software inside the kit in the [**Components**](/Components) documentation section.
-
 ## The kit does not boot with the PMS Sensor
 
 Make sure that you power the Smart Citizen Kit with a _good enough USB cable_ and with an adaptor that can provide at least 1A. We have found some issues when powering the sensor with a thin cable, or from a weak power source, like a screen.

@@ -36,14 +36,14 @@ The selection is based on the academic references selected above. For a complete
 
 ## Design
 
-The PM Sensor Board runs a dedicated ARM M0+ 32-bits, the same as the [Data Board](/ComponentsData Board) to provide a unified hardware architecture. The board includes an higly efficient step up to provide 5V to drive the PM sensors and a disable/enable circuit to turn off the sensor by software.
+The PM Sensor Board runs a dedicated ARM M0+ 32-bits, the same as the [Data Board](/Components/Data Board) to provide a unified hardware architecture. The board includes an higly efficient step up to provide 5V to drive the PM sensors and a disable/enable circuit to turn off the sensor by software.
 
 !!! info
 	Visit the [source files](#source-files) section to download the complete schematics.
 
 ## Setup
 
-The board is connected to the [Data Board](/ComponentsData Board) using the AUX connector. Before, the Plantower PMS sensors need to be connected. The board will autodetect the PMS sensors and present them seamlessly to the main [Firmware](/ComponentsFirmware)  running on the Data Board. Multiple sensor board can be daisy-chained as seen on the image.
+The board is connected to the [Data Board](/Components/Data Board) using the AUX connector. Before, the Plantower PMS sensors need to be connected. The board will autodetect the PMS sensors and present them seamlessly to the main [Firmware](/Components/Firmware)  running on the Data Board. Multiple sensor board can be daisy-chained as seen on the image.
 
 ![](https://i.imgur.com/RRu8MiV.jpg)
 

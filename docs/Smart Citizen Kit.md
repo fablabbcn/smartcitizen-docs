@@ -7,7 +7,7 @@ Smart Citizen Kit
     The **SCK 2.0** was the development version for the now commercially available **SCK 2.1** sponsored thanks to the [iSCAPE project](https://www.iscapeproject.eu/) under European Community’s H2020 Programme under Grant Agreement No. [689954](https://cordis.europa.eu/project/rcn/202639/en)
 
 !!! tip "Quick links"
-	:rocket: **Installation: [start.smartcitizen.me](https://start.smartcitizen.me/)**
+	:rocket: **Installation**: [start.smartcitizen.me](https://start.smartcitizen.me/)
 
 	:earth_africa: **Platform: [smartcitizen.me](https://smartcitizen.me)**
 
@@ -19,7 +19,7 @@ Smart Citizen Kit
 
 ## What is it?
 
-The Smart Citizen Kit is the core of what we call the Smart Citizen System: a complete set of **modular hardware components** aiming to provide tools for **environmental monitoring**, ranging from **citizen science** and **educational activities** to more **advanced scientific research**. The system is designed in a extendable way, with a central data logger (the [Data Board](/Components/Data Board)) with network connectivity to which the different components are branched. The system is based on the principle of reproducibility, also integrating non-hardware components such as a dedicated [Storage platform](/Sensor Platform) and a [Sensor analysis framework](/Sensor Analysis Framework).
+The Smart Citizen Kit is the core of what we call the Smart Citizen System: a complete set of **modular hardware components** aiming to provide tools for **environmental monitoring**, ranging from **citizen science** and **educational activities** to more **advanced scientific research**. The system is designed in a extendable way, with a central data logger (the [Data Board](/Components/Data Board)) with network connectivity to which the different components are branched. The system is based on the principle of reproducibility, also integrating non-hardware components such as a dedicated [Storage platform](/Sensor Platform) and a [Sensor analysis framework](/Data Analysis).
 
 On top of that, the system is meant to serve as a **base solution for more complex settings**, not only related with air quality monitoring. For that purpose, in addition to the [Urban Board](/Components/Urban Board), the system also provides off-the-shelf support for a wide variety of third party sensors, using the expansion bus as a common port. One example is what we call the [Smart Citizen Station](/Smart Citizen Station): a full solution for low cost air pollution monitoring.
 
@@ -53,6 +53,9 @@ The SCK 2.1 components are listed below:
 
 ### SCK 2.0
 
+!!! info "Important!"
+    **SCK 2.0 was the development version for the now commercially available SCK 2.1**
+
 ![](https://i.imgur.com/vgt8m3p.jpg)
 
 The **non-commercially available** SCK 2.0 components are listed below:
@@ -72,19 +75,13 @@ The measurements of the SCK2.0 are listed below:
 | Barometric pressure            | Pa    | NXP MPL3115A26        |
 | Particulate Matter PM 1 / 2.5 / 10 | µg/m3 | Planttower PMS 5003              |
 
-!!! info "Important!"
-    **SCK 2.0 was the development version for the now commercially available SCK 2.1**
-
-    The board also includes a SGX MICS-4514 and a MAXIM MAX3010 but those are not supported by the standard firmware configuration. Fore more information visit the [Urban Sensor Board](Components/Urban%20Sensor%20Board/) on the [Components](Components) section.
-
-
 ## :notebook: Installation instructions
 
 The sensor comes mounted and almost ready to be used:
 
 ![](https://i.imgur.com/GfQy84y.jpg)
 
-The first step is to connect the battery. The kit will light in red (configuration mode) and we will be able to configure it by following the instructions at [**start.smartcitizen.me**](https://start.smartcitizen.me).
+The first step is to connect the battery. The kit will light in red (configuration mode) and we will be able to configure it by following the instructions at [start.smartcitizen.me](https://start.smartcitizen.me).
 
 ![](https://i.imgur.com/NhSNXJ8.png)
 
@@ -150,7 +147,7 @@ An example is shown below:
 
 #### <span class="led small red"> </span> Setup mode
 
-In this mode, the Kit is ready to be configured in **network** mode or **SD card** in [**start.smartcitizen.me**](https://start.smartcitizen.me/).
+In this mode, the Kit is ready to be configured in **network** mode or **SD card** in [start.smartcitizen.me](https://start.smartcitizen.me/).
 
 | LED color                            |  Kit status                             |
 |------------------------------------------|------------------------------------------- |
@@ -178,7 +175,7 @@ This is the standard mode for a network that requires a Wi-Fi connection. In thi
 
 #### <span class="led small pink"> </span> SD card mode (offline)
 
-If we do not have an internet connection we can use the SD mode. In this case the device will record the data on the micro SD card. Later we can read the card using a card reader. The data can be visually spaced in a spreadsheet but also published on the [**smartcitizen.me**](https://smartcitizen.me) platform using the **UPLOAD CSV** option.
+If we do not have an internet connection we can use the SD mode. In this case the device will record the data on the micro SD card. Later we can read the card using a card reader. The data can be visually spaced in a spreadsheet but also published on the [smartcitizen.me](https://smartcitizen.me) platform using the **UPLOAD CSV** option.
 
 | LED color                            |  Kit status                             |
 |------------------------------------------|------------------------------------------- |

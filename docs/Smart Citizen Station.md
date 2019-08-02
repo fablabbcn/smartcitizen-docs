@@ -30,9 +30,6 @@ The station operates as a platform where new sensor modules can be shipped and d
 
 ![](https://i.imgur.com/RRu8MiV.jpg)
 
-!!! tip "Learn more"
-    Learn more about all the components and the software inside the station in the [**Components**](/Components) documentation section.
-
 ## Sensors
 
 | Measurement                                  | Units                                          | Sensor                        | Component              |
@@ -58,10 +55,9 @@ The station operates as a platform where new sensor modules can be shipped and d
 
 ![](https://i.imgur.com/zVPlOcz.jpg)
 
-
-* iSCAPE Smart Citizen Station
-    * Urban Board 2.0
-    * Data Board 2.0
+* Smart Citizen Station
+    * Urban Board 2.1
+    * Data Board 2.1
     * PM Board 2.0 + 2 PM sensors
     * Gas Pro Board 2.0 with 3 EC sensors
     * 6Ah Battery
@@ -77,7 +73,7 @@ The station operates as a platform where new sensor modules can be shipped and d
 
 ## Instructions
 
-To start the installation simply visit the setup website [**stations.iscape.smartcitizen.me**](https://stations.iscape.smartcitizen.me)
+To start the installation simply visit the setup website [stations.iscape.smartcitizen.me](https://stations.iscape.smartcitizen.me)
 
 ![](https://i.imgur.com/9slH1Ze.png)
 
@@ -97,7 +93,7 @@ Some helpful and important notes before you start:
 
     You will find inside a `YYYY-MM-DD.CSV`  with all the data. You can follow the [**Manual CSV data upload**](/Sensor Platform/guides/Uploading SD Card Data/) guide to manually upload the data to the platform.
 
-    _:warning: **Data processing** The collected data requires a custom and complex data processing using the **[iScape Sensor Analysis Framework](https://github.com/fablabbcn/smartcitizen-iscape-data)** The process will be fully documented here on the next few weeks._
+    _:warning: **Data processing** The collected data requires a custom and complex data processing using the **[Sensor Analysis Framework](https://github.com/fablabbcn/smartcitizen-iscape-data)**._
 
 ### Outdoor
 
@@ -128,7 +124,7 @@ We have developed an algorithm that ingests the platform data and processes elec
     Currently we will run the algorithm manually for each station. Please, contact us once you finish the installation.
 
 !!! info "Sensor Analysis Framework"
-    Learn more about the sensors calibration on the [Sensor Analysis Framework](/Sensor Analysis Framework) section.
+    Learn more about the sensors calibration on the [Sensor Analysis Framework](/Data Analysis) section.
 
 ## Power
 
@@ -198,7 +194,7 @@ The Station can be directly powered at 220V AC (Consumption MAX 33W).
 
 #### <span class="led small red"> </span> Setup mode
 
-In this mode, the Kit is ready to be configured in **network** mode or **SD card** in [**start.smartcitizen.me**](https://start.smartcitizen.me/).
+In this mode, the Kit is ready to be configured in **network** mode or **SD card** in [start.smartcitizen.me](https://start.smartcitizen.me/).
 
 | LED color                            |  Kit status                             |
 |------------------------------------------|------------------------------------------- |
@@ -227,7 +223,7 @@ This is the standard mode for a network that requires a Wi-Fi connection. In thi
 
 #### <span class="led small pink"> </span> SD card mode (offline)
 
-If we do not have an internet connection we can use the SD mode. In this case the device will record the data on the micro SD card. Later we can read the card using a card reader. The data can be visually spaced in a spreadsheet but also published on the [**smartcitizen.me**](https://smartcitizen.me) platform using the **UPLOAD CSV** option.
+If we do not have an internet connection we can use the SD mode. In this case the device will record the data on the micro SD card. Later we can read the card using a card reader. The data can be visually spaced in a spreadsheet but also published on the [smartcitizen.me](https://smartcitizen.me) platform using the **UPLOAD CSV** option.
 
 | LED color                            |  Kit status                             |
 |------------------------------------------|------------------------------------------- |

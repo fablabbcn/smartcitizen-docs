@@ -5,10 +5,11 @@ The Smart Citizen Kit has been using metal oxide sensors for air quality metrics
 
 In this section, we will compile information available for those using the SCK V2.0 (or before) with the SGX MICS 4514 and the SCK V2.1, with the AMS CCS811.
 
-Check the links below for more information about the specifics of:
+!!! info "Learn More"
+    Check this [link](/Components/Urban Sensor Board/Metal Oxide Sensor/CCS811/) for more information about the specifics of the eCO2 - TVOC sensor
 
-- CO - NO~2~ sensor from V2.0 and before? Click [here](Metal Oxide Sensor/MICS/)
-- eCO2 - TVOC sensor from V2.1? Click [here](/Components/Urban Sensor Board/Metal Oxide Sensor/CCS811/)
+!!! info "Looking for the CO/NO2 MOs?"
+    Check the [Legacy Hardware Section](/Components/Urban Sensor Board/Metal Oxide Sensor/MICS/)!
 
 ## A word about Metal Oxide Sensors
 

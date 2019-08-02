@@ -1,9 +1,6 @@
 Gases Pro Sensor Board
 ======================
 
-!!! info "We are updating"
-    We are currently updating the documentation and many of the figures are from V2.0. We will move them shortly to a more updated version.
-
 The Gases Sensor Board is a custom, ultra-low noise, high-performance, low power, digital output driver for 3 Alphasense Ltd. Electrochemical Series B Gas Sensors specifically designed for the project from the ground up.
 
 ![](https://i.imgur.com/4tNzsdR.jpg)

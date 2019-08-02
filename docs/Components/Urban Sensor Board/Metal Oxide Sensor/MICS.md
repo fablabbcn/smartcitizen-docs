@@ -1,7 +1,7 @@
-Inside the MICS Metal Oxide sensors
+About CO-NO2 Metal Oxide Sensors
 ===================================
 
-The SGX Mics is a Metal Oxyde Resistive sensor capable of reacting to different substances in the atmosphere. In a simplified way, it is comprised of two main elements:
+The SGX Mics is a Metal Oxide Resistive sensor capable of reacting to different substances in the atmosphere. In a simplified way, it is comprised of two main elements:
 
 - A **SnO~2~ substrate** that acts as a sensor element
 - A **heater element** to keep the substrate in an optimal working area

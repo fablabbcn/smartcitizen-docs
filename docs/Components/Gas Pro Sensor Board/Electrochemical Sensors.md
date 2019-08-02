@@ -72,8 +72,8 @@ Where:
 
 With regards to **sensor ranges**, the following are available from the manufacture:
 
-- [**NO~2~**](http://www.alphasense.com/WEB1213/wp-content/uploads/2017/07/NO~2~B43F.pdf): 20ppm
-- [**O3 + NO~2~**](http://www.alphasense.com/WEB1213/wp-content/uploads/2017/07/OX-B431.pdf): 20ppm both
+- [**NO~2~**](http://www.alphasense.com/WEB1213/wp-content/uploads/2018/12/NO2B43F.pdf): 20ppm
+- [**O3 + NO~2~**](http://www.alphasense.com/WEB1213/wp-content/uploads/2018/12/OXB431.pdf): 20ppm both
 - [**CO**](http://www.alphasense.com/WEB1213/wp-content/uploads/2015/04/COB41.pdf): 1000ppm
 
 Finally, toxic gas sensors' sensitivity will **drift downwards with time, typically 0.5% to 2% per month**, depending on the sensor type, relative humidity and gas concentration/temperature conditions.
