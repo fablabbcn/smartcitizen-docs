@@ -13,7 +13,7 @@
         <meta name="description" content="Smart Citizen Documentation">
       
       
-        <link rel="canonical" href="https://docs.smartcitizen.me/Sensor Analysis Framework/Low Cost Sensors Calibration/">
+        <link rel="canonical" href="https://docs.smartcitizen.me/Data Analysis/guides/Install the framework/">
       
       
         <meta name="author" content="Smart Citizen Team">
@@ -37,18 +37,18 @@
       
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
-      <link rel="shortcut icon" href="../../assets/images/favicon.ico">
+      <link rel="shortcut icon" href="../../../assets/images/favicon.ico">
       <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.0">
     
     
       
-        <title>Low Cost Sensors Calibration - Smart Citizen Docs</title>
+        <title>Framework Installation - Smart Citizen Docs</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application.0284f74d.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/application.0284f74d.css">
       
-        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.01803549.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/application-palette.01803549.css">
       
       
         
@@ -57,7 +57,7 @@
       
     
     
-      <script src="../../assets/javascripts/modernizr.74668098.js"></script>
+      <script src="../../../assets/javascripts/modernizr.74668098.js"></script>
     
     
       
@@ -66,7 +66,7 @@
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
-    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    <link rel="stylesheet" href="../../../assets/fonts/material-icons.css">
     
     
     
@@ -89,7 +89,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#low-cost-sensors-calibration" tabindex="1" class="md-skip">
+      <a href="#how-to-install-the-framework" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -129,7 +129,7 @@
             title="Smart Citizen Docs"
             class="md-header-nav__button md-logo">
           
-            <img style="margin-top: -5px;" src="../../assets/images/logo.svg" height="32" />
+            <img style="margin-top: -5px;" src="../../../assets/images/logo.svg" height="32" />
           
         </a>
       </div>
@@ -150,7 +150,7 @@
                 Smart Citizen Docs
               </span>
               <span class="md-header-nav__topic">
-                Low Cost Sensors Calibration
+                Framework Installation
               </span>
             
           
@@ -212,30 +212,12 @@
     <ul class="md-tabs__list">
       
         
-  <li class="md-tabs__item">
-    
-      <a href="../.." title="Home" class="md-tabs__link">
-        Home
-      </a>
-    
-  </li>
-
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
   
   
     <li class="md-tabs__item">
       
-        <a href="../../Components/" title="Components" class="md-tabs__link">
-          Components
+        <a href="../../.." title="Main" class="md-tabs__link">
+          Main
         </a>
       
     </li>
@@ -247,34 +229,47 @@
   
     <li class="md-tabs__item">
       
-        <a href="../../Legacy Hardware/" title="Legacy Hardware" class="md-tabs__link">
-          Legacy Hardware
-        </a>
-      
-    </li>
-  
-
-      
-        
-  
-  
-    <li class="md-tabs__item">
-      
-        <a href="../" title="Sensor Analysis Framework" class="md-tabs__link md-tabs__link--active">
-          Sensor Analysis Framework
-        </a>
-      
-    </li>
-  
-
-      
-        
-  
-  
-    <li class="md-tabs__item">
-      
-        <a href="../../Sensor Platform/" title="Sensor Platform" class="md-tabs__link">
+        <a href="../../../Sensor Platform/" title="Sensor Platform" class="md-tabs__link">
           Sensor Platform
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../" title="Data Analysis" class="md-tabs__link">
+          Data Analysis
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../Guides/" title="Guides" class="md-tabs__link md-tabs__link--active">
+          Guides
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../Legacy Hardware/" title="Legacy Hardware" class="md-tabs__link">
+          Legacy Hardware
         </a>
       
     </li>
@@ -296,7 +291,7 @@
   <label class="md-nav__title md-nav__title--site" for="__drawer">
     <a href="https://docs.smartcitizen.me/" title="Smart Citizen Docs" class="md-nav__button md-logo">
       
-        <img src="../../assets/images/logo.svg" width="48" height="48">
+        <img src="../../../assets/images/logo.svg" width="48" height="48">
       
     </a>
     Smart Citizen Docs
@@ -334,17 +329,31 @@
 
 <!-- Main navigation item with nested items -->
 
-  <li class="md-nav__item">
-    <a href="../.." title="Home"
-        class="md-nav__link">
-      Home
-    </a>
-  </li>
+  <li class="md-nav__item md-nav__item--nested">
 
+    <!-- Active checkbox expands items contained within nested section -->
     
-      
-      
-      <!--
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1"
+          type="checkbox" id="nav-1" />
+    
+
+    <!-- Expand active pages -->
+    <label class="md-nav__link" for="nav-1">
+      Main
+    </label>
+    <nav class="md-nav" data-md-component="collapsible"
+        data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        Main
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+
+        <!-- Render nested item list -->
+        
+        
+          
+          
+          <!--
   Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
 
   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -373,130 +382,16 @@
 <!-- Main navigation item with nested items -->
 
   <li class="md-nav__item">
-    <a href="../../Smart Citizen Kit/" title="Smart Citizen Kit"
+    <a href="../../.." title="Welcome"
         class="md-nav__link">
-      Smart Citizen Kit
+      Welcome
     </a>
   </li>
 
-    
-      
-      
-      <!--
-  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to
-  deal in the Software without restriction, including without limitation the
-  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-  sell copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
-
-  The above copyright notice and this permission notice shall be included in
-  all copies or substantial portions of the Software.
-
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-  IN THE SOFTWARE.
--->
-
-<!-- Determine class according to level -->
-
-
-
-<!-- Main navigation item with nested items -->
-
-  <li class="md-nav__item">
-    <a href="../../Smart Citizen Station/" title="Smart Citizen Station"
-        class="md-nav__link">
-      Smart Citizen Station
-    </a>
-  </li>
-
-    
-      
-      
-      <!--
-  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to
-  deal in the Software without restriction, including without limitation the
-  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-  sell copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
-
-  The above copyright notice and this permission notice shall be included in
-  all copies or substantial portions of the Software.
-
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-  IN THE SOFTWARE.
--->
-
-<!-- Determine class according to level -->
-
-
-
-<!-- Main navigation item with nested items -->
-
-  <li class="md-nav__item">
-    <a href="../../Troubleshooting/" title="Troubleshooting"
-        class="md-nav__link">
-      Troubleshooting
-    </a>
-  </li>
-
-    
-      
-      
-      <!--
-  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to
-  deal in the Software without restriction, including without limitation the
-  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-  sell copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
-
-  The above copyright notice and this permission notice shall be included in
-  all copies or substantial portions of the Software.
-
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-  IN THE SOFTWARE.
--->
-
-<!-- Determine class according to level -->
-
-
-
-<!-- Main navigation item with nested items -->
-
-  <li class="md-nav__item">
-    <a href="../../_FAQ/" title=" FAQ"
-        class="md-nav__link">
-       FAQ
-    </a>
-  </li>
-
-    
-      
-      
-      <!--
+        
+          
+          
+          <!--
   Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
 
   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -528,17 +423,107 @@
 
     <!-- Active checkbox expands items contained within nested section -->
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6"
-          type="checkbox" id="nav-6" />
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-2"
+          type="checkbox" id="nav-1-2" />
     
 
     <!-- Expand active pages -->
-    <label class="md-nav__link" for="nav-6">
+    <label class="md-nav__link" for="nav-1-2">
+      Smart Citizen Kit
+    </label>
+    <nav class="md-nav" data-md-component="collapsible"
+        data-md-level="2">
+      <label class="md-nav__title" for="nav-1-2">
+        Smart Citizen Kit
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+
+        <!-- Render nested item list -->
+        
+        
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item">
+    <a href="../../../Smart Citizen Kit/" title="General"
+        class="md-nav__link">
+      General
+    </a>
+  </li>
+
+        
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item md-nav__item--nested">
+
+    <!-- Active checkbox expands items contained within nested section -->
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-2-2"
+          type="checkbox" id="nav-1-2-2" />
+    
+
+    <!-- Expand active pages -->
+    <label class="md-nav__link" for="nav-1-2-2">
       Components
     </label>
     <nav class="md-nav" data-md-component="collapsible"
-        data-md-level="1">
-      <label class="md-nav__title" for="nav-6">
+        data-md-level="3">
+      <label class="md-nav__title" for="nav-1-2-2">
         Components
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -577,9 +562,9 @@
 <!-- Main navigation item with nested items -->
 
   <li class="md-nav__item">
-    <a href="../../Components/" title="Index"
+    <a href="../../../Components/Data Board/" title="Data Board"
         class="md-nav__link">
-      Index
+      Data Board
     </a>
   </li>
 
@@ -618,18 +603,18 @@
 
     <!-- Active checkbox expands items contained within nested section -->
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-2"
-          type="checkbox" id="nav-6-2" />
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-2-2-2"
+          type="checkbox" id="nav-1-2-2-2" />
     
 
     <!-- Expand active pages -->
-    <label class="md-nav__link" for="nav-6-2">
-      Data Board
+    <label class="md-nav__link" for="nav-1-2-2-2">
+      Urban Board
     </label>
     <nav class="md-nav" data-md-component="collapsible"
-        data-md-level="2">
-      <label class="md-nav__title" for="nav-6-2">
-        Data Board
+        data-md-level="4">
+      <label class="md-nav__title" for="nav-1-2-2-2">
+        Urban Board
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
 
@@ -667,11 +652,236 @@
 <!-- Main navigation item with nested items -->
 
   <li class="md-nav__item">
-    <a href="../../Components/Data Board/" title="Index"
+    <a href="../../../Components/Urban Sensor Board/" title="Description"
         class="md-nav__link">
-      Index
+      Description
     </a>
   </li>
+
+        
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item">
+    <a href="../../../Components/Urban Sensor Board/Noise Sensor/" title="Noise"
+        class="md-nav__link">
+      Noise
+    </a>
+  </li>
+
+        
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item md-nav__item--nested">
+
+    <!-- Active checkbox expands items contained within nested section -->
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-2-2-2-3"
+          type="checkbox" id="nav-1-2-2-2-3" />
+    
+
+    <!-- Expand active pages -->
+    <label class="md-nav__link" for="nav-1-2-2-2-3">
+      Metal Oxide Sensors
+    </label>
+    <nav class="md-nav" data-md-component="collapsible"
+        data-md-level="5">
+      <label class="md-nav__title" for="nav-1-2-2-2-3">
+        Metal Oxide Sensors
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+
+        <!-- Render nested item list -->
+        
+        
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item">
+    <a href="../../../Components/Urban Sensor Board/Metal Oxide Sensor/" title="Description"
+        class="md-nav__link">
+      Description
+    </a>
+  </li>
+
+        
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item">
+    <a href="../../../Components/Urban Sensor Board/Metal Oxide Sensor/CCS811/" title="eCO2/TVOC"
+        class="md-nav__link">
+      eCO2/TVOC
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+<!-- Currently active page -->
+
+        
+      </ul>
+    </nav>
+  </li>
+
+<!-- Currently active page -->
+
+        
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item">
+    <a href="../../../SCK_PM/" title="PM Sensor"
+        class="md-nav__link">
+      PM Sensor
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+<!-- Currently active page -->
 
         
       </ul>
@@ -715,18 +925,18 @@
 
     <!-- Active checkbox expands items contained within nested section -->
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-3"
-          type="checkbox" id="nav-6-3" />
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-3"
+          type="checkbox" id="nav-1-3" />
     
 
     <!-- Expand active pages -->
-    <label class="md-nav__link" for="nav-6-3">
-      Firmware
+    <label class="md-nav__link" for="nav-1-3">
+      Smart Citizen Station
     </label>
     <nav class="md-nav" data-md-component="collapsible"
         data-md-level="2">
-      <label class="md-nav__title" for="nav-6-3">
-        Firmware
+      <label class="md-nav__title" for="nav-1-3">
+        Smart Citizen Station
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
 
@@ -764,9 +974,9 @@
 <!-- Main navigation item with nested items -->
 
   <li class="md-nav__item">
-    <a href="../../Components/Firmware/" title="Index"
+    <a href="../../../Smart Citizen Station/" title="General"
         class="md-nav__link">
-      Index
+      General
     </a>
   </li>
 
@@ -805,18 +1015,18 @@
 
     <!-- Active checkbox expands items contained within nested section -->
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-3-2"
-          type="checkbox" id="nav-6-3-2" />
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-3-2"
+          type="checkbox" id="nav-1-3-2" />
     
 
     <!-- Expand active pages -->
-    <label class="md-nav__link" for="nav-6-3-2">
-      Guides
+    <label class="md-nav__link" for="nav-1-3-2">
+      Components
     </label>
     <nav class="md-nav" data-md-component="collapsible"
         data-md-level="3">
-      <label class="md-nav__title" for="nav-6-3-2">
-        Guides
+      <label class="md-nav__title" for="nav-1-3-2">
+        Components
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
 
@@ -854,139 +1064,11 @@
 <!-- Main navigation item with nested items -->
 
   <li class="md-nav__item">
-    <a href="../../Components/Firmware/guides/Advanced: Debug the firmware/" title="Advanced: Debug the firmware"
+    <a href="../../../SCK_Station/" title="Smart Citizen Kit"
         class="md-nav__link">
-      Advanced: Debug the firmware
+      Smart Citizen Kit
     </a>
   </li>
-
-        
-          
-          
-          <!--
-  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to
-  deal in the Software without restriction, including without limitation the
-  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-  sell copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
-
-  The above copyright notice and this permission notice shall be included in
-  all copies or substantial portions of the Software.
-
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-  IN THE SOFTWARE.
--->
-
-<!-- Determine class according to level -->
-
-
-
-<!-- Main navigation item with nested items -->
-
-  <li class="md-nav__item">
-    <a href="../../Components/Firmware/guides/Edit the Firmware/" title="Edit the Firmware"
-        class="md-nav__link">
-      Edit the Firmware
-    </a>
-  </li>
-
-        
-          
-          
-          <!--
-  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to
-  deal in the Software without restriction, including without limitation the
-  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-  sell copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
-
-  The above copyright notice and this permission notice shall be included in
-  all copies or substantial portions of the Software.
-
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-  IN THE SOFTWARE.
--->
-
-<!-- Determine class according to level -->
-
-
-
-<!-- Main navigation item with nested items -->
-
-  <li class="md-nav__item">
-    <a href="../../Components/Firmware/guides/Update the firmware/" title="Update the firmware"
-        class="md-nav__link">
-      Update the firmware
-    </a>
-  </li>
-
-        
-          
-          
-          <!--
-  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to
-  deal in the Software without restriction, including without limitation the
-  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-  sell copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
-
-  The above copyright notice and this permission notice shall be included in
-  all copies or substantial portions of the Software.
-
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-  IN THE SOFTWARE.
--->
-
-<!-- Determine class according to level -->
-
-
-
-<!-- Main navigation item with nested items -->
-
-  <li class="md-nav__item">
-    <a href="../../Components/Firmware/guides/Using the Shell/" title="Using the Shell"
-        class="md-nav__link">
-      Using the Shell
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-<!-- Currently active page -->
-
-        
-      </ul>
-    </nav>
-  </li>
-
-<!-- Currently active page -->
 
         
           
@@ -1023,17 +1105,17 @@
 
     <!-- Active checkbox expands items contained within nested section -->
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-4"
-          type="checkbox" id="nav-6-4" />
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-3-2-2"
+          type="checkbox" id="nav-1-3-2-2" />
     
 
     <!-- Expand active pages -->
-    <label class="md-nav__link" for="nav-6-4">
+    <label class="md-nav__link" for="nav-1-3-2-2">
       Gas Pro Sensor Board
     </label>
     <nav class="md-nav" data-md-component="collapsible"
-        data-md-level="2">
-      <label class="md-nav__title" for="nav-6-4">
+        data-md-level="4">
+      <label class="md-nav__title" for="nav-1-3-2-2">
         Gas Pro Sensor Board
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1072,9 +1154,9 @@
 <!-- Main navigation item with nested items -->
 
   <li class="md-nav__item">
-    <a href="../../Components/Gas Pro Sensor Board/" title="Index"
+    <a href="../../../Components/Gas Pro Sensor Board/" title="Description"
         class="md-nav__link">
-      Index
+      Description
     </a>
   </li>
 
@@ -1110,7 +1192,7 @@
 <!-- Main navigation item with nested items -->
 
   <li class="md-nav__item">
-    <a href="../../Components/Gas Pro Sensor Board/Electrochemical Sensors/" title="Electrochemical Sensors"
+    <a href="../../../Components/Gas Pro Sensor Board/Electrochemical Sensors/" title="Electrochemical Sensors"
         class="md-nav__link">
       Electrochemical Sensors
     </a>
@@ -1158,18 +1240,18 @@
 
     <!-- Active checkbox expands items contained within nested section -->
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-5"
-          type="checkbox" id="nav-6-5" />
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-3-2-3"
+          type="checkbox" id="nav-1-3-2-3" />
     
 
     <!-- Expand active pages -->
-    <label class="md-nav__link" for="nav-6-5">
-      PM Sensor Board
+    <label class="md-nav__link" for="nav-1-3-2-3">
+      PM Board
     </label>
     <nav class="md-nav" data-md-component="collapsible"
-        data-md-level="2">
-      <label class="md-nav__title" for="nav-6-5">
-        PM Sensor Board
+        data-md-level="4">
+      <label class="md-nav__title" for="nav-1-3-2-3">
+        PM Board
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
 
@@ -1207,9 +1289,9 @@
 <!-- Main navigation item with nested items -->
 
   <li class="md-nav__item">
-    <a href="../../Components/PM Sensor Board/" title="Index"
+    <a href="../../../Components/PM Sensor Board/" title="Description"
         class="md-nav__link">
-      Index
+      Description
     </a>
   </li>
 
@@ -1245,7 +1327,7 @@
 <!-- Main navigation item with nested items -->
 
   <li class="md-nav__item">
-    <a href="../../Components/PM Sensor Board/PM Sensors/" title="PM Sensors"
+    <a href="../../../Components/PM Sensor Board/PM Sensors/" title="PM Sensors"
         class="md-nav__link">
       PM Sensors
     </a>
@@ -1259,397 +1341,6 @@
 <!-- Currently active page -->
 
         
-          
-          
-          <!--
-  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to
-  deal in the Software without restriction, including without limitation the
-  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-  sell copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
-
-  The above copyright notice and this permission notice shall be included in
-  all copies or substantial portions of the Software.
-
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-  IN THE SOFTWARE.
--->
-
-<!-- Determine class according to level -->
-
-
-
-<!-- Main navigation item with nested items -->
-
-  <li class="md-nav__item md-nav__item--nested">
-
-    <!-- Active checkbox expands items contained within nested section -->
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-6"
-          type="checkbox" id="nav-6-6" />
-    
-
-    <!-- Expand active pages -->
-    <label class="md-nav__link" for="nav-6-6">
-      Urban Sensor Board
-    </label>
-    <nav class="md-nav" data-md-component="collapsible"
-        data-md-level="2">
-      <label class="md-nav__title" for="nav-6-6">
-        Urban Sensor Board
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-
-        <!-- Render nested item list -->
-        
-        
-          
-          
-          <!--
-  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to
-  deal in the Software without restriction, including without limitation the
-  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-  sell copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
-
-  The above copyright notice and this permission notice shall be included in
-  all copies or substantial portions of the Software.
-
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-  IN THE SOFTWARE.
--->
-
-<!-- Determine class according to level -->
-
-
-
-<!-- Main navigation item with nested items -->
-
-  <li class="md-nav__item">
-    <a href="../../Components/Urban Sensor Board/" title="Index"
-        class="md-nav__link">
-      Index
-    </a>
-  </li>
-
-        
-          
-          
-          <!--
-  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to
-  deal in the Software without restriction, including without limitation the
-  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-  sell copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
-
-  The above copyright notice and this permission notice shall be included in
-  all copies or substantial portions of the Software.
-
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-  IN THE SOFTWARE.
--->
-
-<!-- Determine class according to level -->
-
-
-
-<!-- Main navigation item with nested items -->
-
-  <li class="md-nav__item md-nav__item--nested">
-
-    <!-- Active checkbox expands items contained within nested section -->
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-6-2"
-          type="checkbox" id="nav-6-6-2" />
-    
-
-    <!-- Expand active pages -->
-    <label class="md-nav__link" for="nav-6-6-2">
-      Metal Oxide Sensor
-    </label>
-    <nav class="md-nav" data-md-component="collapsible"
-        data-md-level="3">
-      <label class="md-nav__title" for="nav-6-6-2">
-        Metal Oxide Sensor
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-
-        <!-- Render nested item list -->
-        
-        
-          
-          
-          <!--
-  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to
-  deal in the Software without restriction, including without limitation the
-  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-  sell copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
-
-  The above copyright notice and this permission notice shall be included in
-  all copies or substantial portions of the Software.
-
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-  IN THE SOFTWARE.
--->
-
-<!-- Determine class according to level -->
-
-
-
-<!-- Main navigation item with nested items -->
-
-  <li class="md-nav__item">
-    <a href="../../Components/Urban Sensor Board/Metal Oxide Sensor/" title="Index"
-        class="md-nav__link">
-      Index
-    </a>
-  </li>
-
-        
-          
-          
-          <!--
-  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to
-  deal in the Software without restriction, including without limitation the
-  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-  sell copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
-
-  The above copyright notice and this permission notice shall be included in
-  all copies or substantial portions of the Software.
-
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-  IN THE SOFTWARE.
--->
-
-<!-- Determine class according to level -->
-
-
-
-<!-- Main navigation item with nested items -->
-
-  <li class="md-nav__item">
-    <a href="../../Components/Urban Sensor Board/Metal Oxide Sensor/CCS811/" title="CCS811"
-        class="md-nav__link">
-      CCS811
-    </a>
-  </li>
-
-        
-          
-          
-          <!--
-  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to
-  deal in the Software without restriction, including without limitation the
-  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-  sell copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
-
-  The above copyright notice and this permission notice shall be included in
-  all copies or substantial portions of the Software.
-
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-  IN THE SOFTWARE.
--->
-
-<!-- Determine class according to level -->
-
-
-
-<!-- Main navigation item with nested items -->
-
-  <li class="md-nav__item">
-    <a href="../../Components/Urban Sensor Board/Metal Oxide Sensor/MICS/" title="MICS"
-        class="md-nav__link">
-      MICS
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-<!-- Currently active page -->
-
-        
-          
-          
-          <!--
-  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to
-  deal in the Software without restriction, including without limitation the
-  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-  sell copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
-
-  The above copyright notice and this permission notice shall be included in
-  all copies or substantial portions of the Software.
-
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-  IN THE SOFTWARE.
--->
-
-<!-- Determine class according to level -->
-
-
-
-<!-- Main navigation item with nested items -->
-
-  <li class="md-nav__item md-nav__item--nested">
-
-    <!-- Active checkbox expands items contained within nested section -->
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-6-3"
-          type="checkbox" id="nav-6-6-3" />
-    
-
-    <!-- Expand active pages -->
-    <label class="md-nav__link" for="nav-6-6-3">
-      Noise Sensor
-    </label>
-    <nav class="md-nav" data-md-component="collapsible"
-        data-md-level="3">
-      <label class="md-nav__title" for="nav-6-6-3">
-        Noise Sensor
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-
-        <!-- Render nested item list -->
-        
-        
-          
-          
-          <!--
-  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to
-  deal in the Software without restriction, including without limitation the
-  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-  sell copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
-
-  The above copyright notice and this permission notice shall be included in
-  all copies or substantial portions of the Software.
-
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-  IN THE SOFTWARE.
--->
-
-<!-- Determine class according to level -->
-
-
-
-<!-- Main navigation item with nested items -->
-
-  <li class="md-nav__item">
-    <a href="../../Components/Urban Sensor Board/Noise Sensor/" title="Index"
-        class="md-nav__link">
-      Index
-    </a>
-  </li>
-
-        
-          
-          
-          <!--
-  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to
-  deal in the Software without restriction, including without limitation the
-  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-  sell copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
-
-  The above copyright notice and this permission notice shall be included in
-  all copies or substantial portions of the Software.
-
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-  IN THE SOFTWARE.
--->
-
-<!-- Determine class according to level -->
-
-
-
-<!-- Main navigation item with nested items -->
-
-  <li class="md-nav__item">
-    <a href="../../Components/Urban Sensor Board/Noise Sensor/Implementation/" title="Implementation"
-        class="md-nav__link">
-      Implementation
-    </a>
-  </li>
-
-        
       </ul>
     </nav>
   </li>
@@ -1662,6 +1353,120 @@
   </li>
 
 <!-- Currently active page -->
+
+        
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item">
+    <a href="../../../Components/Firmware/" title="Firmware"
+        class="md-nav__link">
+      Firmware
+    </a>
+  </li>
+
+        
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item">
+    <a href="../../../_FAQ/" title="FAQ"
+        class="md-nav__link">
+      FAQ
+    </a>
+  </li>
+
+        
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item">
+    <a href="../../../Troubleshooting/" title="Troubleshooting"
+        class="md-nav__link">
+      Troubleshooting
+    </a>
+  </li>
 
         
       </ul>
@@ -1705,18 +1510,18 @@
 
     <!-- Active checkbox expands items contained within nested section -->
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7"
-          type="checkbox" id="nav-7" />
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2"
+          type="checkbox" id="nav-2" />
     
 
     <!-- Expand active pages -->
-    <label class="md-nav__link" for="nav-7">
-      Legacy Hardware
+    <label class="md-nav__link" for="nav-2">
+      Sensor Platform
     </label>
     <nav class="md-nav" data-md-component="collapsible"
         data-md-level="1">
-      <label class="md-nav__title" for="nav-7">
-        Legacy Hardware
+      <label class="md-nav__title" for="nav-2">
+        Sensor Platform
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
 
@@ -1754,9 +1559,106 @@
 <!-- Main navigation item with nested items -->
 
   <li class="md-nav__item">
-    <a href="../../Legacy Hardware/" title="Index"
+    <a href="../../../Sensor Platform/" title="Main"
         class="md-nav__link">
-      Index
+      Main
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+<!-- Currently active page -->
+
+    
+      
+      
+      <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item md-nav__item--nested">
+
+    <!-- Active checkbox expands items contained within nested section -->
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3"
+          type="checkbox" id="nav-3" />
+    
+
+    <!-- Expand active pages -->
+    <label class="md-nav__link" for="nav-3">
+      Data Analysis
+    </label>
+    <nav class="md-nav" data-md-component="collapsible"
+        data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Data Analysis
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+
+        <!-- Render nested item list -->
+        
+        
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item">
+    <a href="../../" title="Main"
+        class="md-nav__link">
+      Main
     </a>
   </li>
 
@@ -1792,123 +1694,9 @@
 <!-- Main navigation item with nested items -->
 
   <li class="md-nav__item">
-    <a href="../../Legacy Hardware/Command Line/" title="Command Line"
+    <a href="../../Low Cost Sensors Calibration/" title="On low-cost sensor calibration"
         class="md-nav__link">
-      Command Line
-    </a>
-  </li>
-
-        
-          
-          
-          <!--
-  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to
-  deal in the Software without restriction, including without limitation the
-  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-  sell copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
-
-  The above copyright notice and this permission notice shall be included in
-  all copies or substantial portions of the Software.
-
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-  IN THE SOFTWARE.
--->
-
-<!-- Determine class according to level -->
-
-
-
-<!-- Main navigation item with nested items -->
-
-  <li class="md-nav__item">
-    <a href="../../Legacy Hardware/Faq/" title="Faq"
-        class="md-nav__link">
-      Faq
-    </a>
-  </li>
-
-        
-          
-          
-          <!--
-  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to
-  deal in the Software without restriction, including without limitation the
-  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-  sell copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
-
-  The above copyright notice and this permission notice shall be included in
-  all copies or substantial portions of the Software.
-
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-  IN THE SOFTWARE.
--->
-
-<!-- Determine class according to level -->
-
-
-
-<!-- Main navigation item with nested items -->
-
-  <li class="md-nav__item">
-    <a href="../../Legacy Hardware/Hardware/" title="Hardware"
-        class="md-nav__link">
-      Hardware
-    </a>
-  </li>
-
-        
-          
-          
-          <!--
-  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to
-  deal in the Software without restriction, including without limitation the
-  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-  sell copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
-
-  The above copyright notice and this permission notice shall be included in
-  all copies or substantial portions of the Software.
-
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-  IN THE SOFTWARE.
--->
-
-<!-- Determine class according to level -->
-
-
-
-<!-- Main navigation item with nested items -->
-
-  <li class="md-nav__item">
-    <a href="../../Legacy Hardware/Troubleshooting/" title="Troubleshooting"
-        class="md-nav__link">
-      Troubleshooting
+      On low-cost sensor calibration
     </a>
   </li>
 
@@ -1956,18 +1744,18 @@
 
     <!-- Active checkbox expands items contained within nested section -->
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8"
-          type="checkbox" id="nav-8" checked />
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4"
+          type="checkbox" id="nav-4" checked />
     
 
     <!-- Expand active pages -->
-    <label class="md-nav__link" for="nav-8">
-      Sensor Analysis Framework
+    <label class="md-nav__link" for="nav-4">
+      Guides
     </label>
     <nav class="md-nav" data-md-component="collapsible"
         data-md-level="1">
-      <label class="md-nav__title" for="nav-8">
-        Sensor Analysis Framework
+      <label class="md-nav__title" for="nav-4">
+        Guides
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
 
@@ -2005,12 +1793,450 @@
 <!-- Main navigation item with nested items -->
 
   <li class="md-nav__item">
-    <a href="../" title="Index"
+    <a href="../../../Guides/" title="Main"
         class="md-nav__link">
-      Index
+      Main
     </a>
   </li>
 
+        
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item md-nav__item--nested">
+
+    <!-- Active checkbox expands items contained within nested section -->
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-2"
+          type="checkbox" id="nav-4-2" />
+    
+
+    <!-- Expand active pages -->
+    <label class="md-nav__link" for="nav-4-2">
+      General
+    </label>
+    <nav class="md-nav" data-md-component="collapsible"
+        data-md-level="2">
+      <label class="md-nav__title" for="nav-4-2">
+        General
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+
+        <!-- Render nested item list -->
+        
+        
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item">
+    <a href="../../../Sensor Platform/guides/Onboarding Sensors/" title="Onboarding Sensors"
+        class="md-nav__link">
+      Onboarding Sensors
+    </a>
+  </li>
+
+        
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item">
+    <a href="../../../Components/Firmware/guides/Using the Shell/" title="Using the Shell"
+        class="md-nav__link">
+      Using the Shell
+    </a>
+  </li>
+
+        
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item">
+    <a href="../../../Sensor Platform/guides/Downloading the Data/" title="Downloading platform data"
+        class="md-nav__link">
+      Downloading platform data
+    </a>
+  </li>
+
+        
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item">
+    <a href="../../../Sensor Platform/guides/Uploading SD Card Data/" title="Uploading SD-card data"
+        class="md-nav__link">
+      Uploading SD-card data
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+<!-- Currently active page -->
+
+        
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item md-nav__item--nested">
+
+    <!-- Active checkbox expands items contained within nested section -->
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-3"
+          type="checkbox" id="nav-4-3" />
+    
+
+    <!-- Expand active pages -->
+    <label class="md-nav__link" for="nav-4-3">
+      Firmware
+    </label>
+    <nav class="md-nav" data-md-component="collapsible"
+        data-md-level="2">
+      <label class="md-nav__title" for="nav-4-3">
+        Firmware
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+
+        <!-- Render nested item list -->
+        
+        
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item">
+    <a href="../../../Components/Firmware/guides/Update the firmware/" title="Update the firmware"
+        class="md-nav__link">
+      Update the firmware
+    </a>
+  </li>
+
+        
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item">
+    <a href="../../../Components/Firmware/guides/Edit the Firmware/" title="Edit the firmware"
+        class="md-nav__link">
+      Edit the firmware
+    </a>
+  </li>
+
+        
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item">
+    <a href="../../../Components/Firmware/guides/Debug the firmware/" title="Debug the firmware"
+        class="md-nav__link">
+      Debug the firmware
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+<!-- Currently active page -->
+
+        
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+  
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+
+    <!-- Active checkbox expands items contained within nested section -->
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-4"
+          type="checkbox" id="nav-4-4" checked />
+    
+
+    <!-- Expand active pages -->
+    <label class="md-nav__link" for="nav-4-4">
+      Data Analysis
+    </label>
+    <nav class="md-nav" data-md-component="collapsible"
+        data-md-level="2">
+      <label class="md-nav__title" for="nav-4-4">
+        Data Analysis
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+
+        <!-- Render nested item list -->
+        
         
           
           
@@ -2059,12 +2285,12 @@
     <!-- Render table of contents, if not empty -->
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        Low Cost Sensors Calibration
+        Framework Installation
       </label>
     
-    <a href="./" title="Low Cost Sensors Calibration"
+    <a href="./" title="Framework Installation"
         class="md-nav__link md-nav__link--active">
-      Low Cost Sensors Calibration
+      Framework Installation
     </a>
 
     <!-- Show table of contents -->
@@ -2080,16 +2306,70 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#smart-citizen-kits" title="Smart Citizen Kits" class="md-nav__link">
-    Smart Citizen Kits
+  <a href="#advanced-installation-features" title="Advanced installation features" class="md-nav__link">
+    Advanced installation features
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-to-run-the-project-isolated-from-your-python-environment" title="How to run the project isolated from your Python environment" class="md-nav__link">
+    How to run the project isolated from your Python environment
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#smart-citizen-stations" title="Smart Citizen Stations" class="md-nav__link">
-    Smart Citizen Stations
+        
+          <li class="md-nav__item">
+  <a href="#advanced-users-installation" title="Advanced users installation" class="md-nav__link">
+    Advanced users installation
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#install-python" title="Install Python" class="md-nav__link">
+    Install Python
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-pip" title="Install Pip" class="md-nav__link">
+    Install Pip
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installl-jupyter" title="Installl Jupyter" class="md-nav__link">
+    Installl Jupyter
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#download-the-source" title="Download the source" class="md-nav__link">
+    Download the source
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-the-notebook" title="Run the notebook" class="md-nav__link">
+    Run the notebook
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2136,138 +2416,10 @@
 
 <!-- Main navigation item with nested items -->
 
-  <li class="md-nav__item md-nav__item--nested">
-
-    <!-- Active checkbox expands items contained within nested section -->
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-3"
-          type="checkbox" id="nav-8-3" />
-    
-
-    <!-- Expand active pages -->
-    <label class="md-nav__link" for="nav-8-3">
-      Guides
-    </label>
-    <nav class="md-nav" data-md-component="collapsible"
-        data-md-level="2">
-      <label class="md-nav__title" for="nav-8-3">
-        Guides
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-
-        <!-- Render nested item list -->
-        
-        
-          
-          
-          <!--
-  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to
-  deal in the Software without restriction, including without limitation the
-  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-  sell copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
-
-  The above copyright notice and this permission notice shall be included in
-  all copies or substantial portions of the Software.
-
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-  IN THE SOFTWARE.
--->
-
-<!-- Determine class according to level -->
-
-
-
-<!-- Main navigation item with nested items -->
-
   <li class="md-nav__item">
-    <a href="../guides/Creating Models for Sensors Calibration/" title="Creating Models for Sensors Calibration"
+    <a href="../Creating Models for Sensors Calibration/" title="Analyse your sensor data"
         class="md-nav__link">
-      Creating Models for Sensors Calibration
-    </a>
-  </li>
-
-        
-          
-          
-          <!--
-  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to
-  deal in the Software without restriction, including without limitation the
-  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-  sell copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
-
-  The above copyright notice and this permission notice shall be included in
-  all copies or substantial portions of the Software.
-
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-  IN THE SOFTWARE.
--->
-
-<!-- Determine class according to level -->
-
-
-
-<!-- Main navigation item with nested items -->
-
-  <li class="md-nav__item">
-    <a href="../guides/Install the framework/" title="Install the framework"
-        class="md-nav__link">
-      Install the framework
-    </a>
-  </li>
-
-        
-          
-          
-          <!--
-  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to
-  deal in the Software without restriction, including without limitation the
-  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-  sell copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
-
-  The above copyright notice and this permission notice shall be included in
-  all copies or substantial portions of the Software.
-
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-  IN THE SOFTWARE.
--->
-
-<!-- Determine class according to level -->
-
-
-
-<!-- Main navigation item with nested items -->
-
-  <li class="md-nav__item">
-    <a href="../guides/Post processing the Stations Data/" title="Post processing the Stations Data"
-        class="md-nav__link">
-      Post processing the Stations Data
+      Analyse your sensor data
     </a>
   </li>
 
@@ -2320,18 +2472,18 @@
 
     <!-- Active checkbox expands items contained within nested section -->
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9"
-          type="checkbox" id="nav-9" />
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5"
+          type="checkbox" id="nav-5" />
     
 
     <!-- Expand active pages -->
-    <label class="md-nav__link" for="nav-9">
-      Sensor Platform
+    <label class="md-nav__link" for="nav-5">
+      Legacy Hardware
     </label>
     <nav class="md-nav" data-md-component="collapsible"
         data-md-level="1">
-      <label class="md-nav__title" for="nav-9">
-        Sensor Platform
+      <label class="md-nav__title" for="nav-5">
+        Legacy Hardware
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
 
@@ -2369,99 +2521,9 @@
 <!-- Main navigation item with nested items -->
 
   <li class="md-nav__item">
-    <a href="../../Sensor Platform/" title="Index"
+    <a href="../../../Legacy Hardware/" title="Description"
         class="md-nav__link">
-      Index
-    </a>
-  </li>
-
-        
-          
-          
-          <!--
-  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to
-  deal in the Software without restriction, including without limitation the
-  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-  sell copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
-
-  The above copyright notice and this permission notice shall be included in
-  all copies or substantial portions of the Software.
-
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-  IN THE SOFTWARE.
--->
-
-<!-- Determine class according to level -->
-
-
-
-<!-- Main navigation item with nested items -->
-
-  <li class="md-nav__item md-nav__item--nested">
-
-    <!-- Active checkbox expands items contained within nested section -->
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-2"
-          type="checkbox" id="nav-9-2" />
-    
-
-    <!-- Expand active pages -->
-    <label class="md-nav__link" for="nav-9-2">
-      Guides
-    </label>
-    <nav class="md-nav" data-md-component="collapsible"
-        data-md-level="2">
-      <label class="md-nav__title" for="nav-9-2">
-        Guides
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-
-        <!-- Render nested item list -->
-        
-        
-          
-          
-          <!--
-  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to
-  deal in the Software without restriction, including without limitation the
-  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-  sell copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
-
-  The above copyright notice and this permission notice shall be included in
-  all copies or substantial portions of the Software.
-
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-  IN THE SOFTWARE.
--->
-
-<!-- Determine class according to level -->
-
-
-
-<!-- Main navigation item with nested items -->
-
-  <li class="md-nav__item">
-    <a href="../../Sensor Platform/guides/Downloading the Data/" title="Downloading the Data"
-        class="md-nav__link">
-      Downloading the Data
+      Description
     </a>
   </li>
 
@@ -2497,56 +2559,11 @@
 <!-- Main navigation item with nested items -->
 
   <li class="md-nav__item">
-    <a href="../../Sensor Platform/guides/Onboarding Sensors/" title="Onboarding Sensors"
+    <a href="../../../Components/Urban Sensor Board/Metal Oxide Sensor/MICS/" title="About the CO-NO2 MOs"
         class="md-nav__link">
-      Onboarding Sensors
+      About the CO-NO2 MOs
     </a>
   </li>
-
-        
-          
-          
-          <!--
-  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to
-  deal in the Software without restriction, including without limitation the
-  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-  sell copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
-
-  The above copyright notice and this permission notice shall be included in
-  all copies or substantial portions of the Software.
-
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-  IN THE SOFTWARE.
--->
-
-<!-- Determine class according to level -->
-
-
-
-<!-- Main navigation item with nested items -->
-
-  <li class="md-nav__item">
-    <a href="../../Sensor Platform/guides/Uploading SD Card Data/" title="Uploading SD Card Data"
-        class="md-nav__link">
-      Uploading SD Card Data
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-<!-- Currently active page -->
 
         
       </ul>
@@ -2577,16 +2594,70 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#smart-citizen-kits" title="Smart Citizen Kits" class="md-nav__link">
-    Smart Citizen Kits
+  <a href="#advanced-installation-features" title="Advanced installation features" class="md-nav__link">
+    Advanced installation features
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-to-run-the-project-isolated-from-your-python-environment" title="How to run the project isolated from your Python environment" class="md-nav__link">
+    How to run the project isolated from your Python environment
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#smart-citizen-stations" title="Smart Citizen Stations" class="md-nav__link">
-    Smart Citizen Stations
+        
+          <li class="md-nav__item">
+  <a href="#advanced-users-installation" title="Advanced users installation" class="md-nav__link">
+    Advanced users installation
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#install-python" title="Install Python" class="md-nav__link">
+    Install Python
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-pip" title="Install Pip" class="md-nav__link">
+    Install Pip
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installl-jupyter" title="Installl Jupyter" class="md-nav__link">
+    Installl Jupyter
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#download-the-source" title="Download the source" class="md-nav__link">
+    Download the source
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-the-notebook" title="Run the notebook" class="md-nav__link">
+    Run the notebook
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2607,62 +2678,83 @@
               
                 
                 
-                <h1 id="low-cost-sensors-calibration">Low Cost Sensors Calibration<a class="headerlink" href="#low-cost-sensors-calibration" title="Permanent link">Link</a></h1>
-<p>Low cost sensor calibration and assessment pose a great challenge for data quality objectives. We follow this <strong>sensor calibration procedure</strong>, which can be split into three stages:</p>
-<div style="text-align:center">
-<image src="https://i.imgur.com/6BZqNrR.png" width="500px"/>
-</div>
-
+                <h1 id="how-to-install-the-framework">How to install the framework<a class="headerlink" href="#how-to-install-the-framework" title="Permanent link">Link</a></h1>
+<p>The following data analysis framework is built on Python 2.7 and Jupyter Notebooks. Here we will show you how to install it:</p>
 <ol>
 <li>
-<p><strong>Behaviour assesment</strong>: in laboratory conditions, serving as base testing for assessing general sensor behaviour.</p>
+<p>Dowload and Install Anaconda for Python 2.7 <a href="https://www.continuum.io/downloads">https://www.continuum.io/downloads</a></p>
 </li>
 <li>
-<p><strong>Characterisation</strong>: also in laboratory conditions, assess generic sensor parameters as sensitivity, zero and span.</p>
+<p>Visit <a href="https://github.com/fablabbcn/smartcitizen-iscape-data">Github</a> to download the project folder or simply use <code class="codehilite"><span class="n">git</span></code>.</p>
 </li>
 <li>
-<p><strong>Modelisation with real world deployment</strong>: including other variables such as environmental factors and sensor cross-sensitivity.</p>
+<p>Open the <strong>Anaconda Navigator</strong> app and launch the <strong>Jupyter Notebook</strong>.</p>
 </li>
 </ol>
-<p>Each of these stages apply differently depending on the type of sensor. For instance the electrochemical sensors present in the <em>Station</em> are already characterised by the manufacturer, while the old SGX MICS4514 Metal Oxyde Sensors in the <em>Urban Board</em> of the <em>Smart Citizen Kit</em> are not. The different characteristics of these sensors make different calibration approaches to be carried out.</p>
-<p><strong>Base calibration parameters</strong> need to be determined in controlled conditions. In this stage, the aim would be to find parameters such as:</p>
-<div style="text-align:center">
-<image src="https://i.imgur.com/FprLD0n.png" width="300px"/>
+<p><img alt="" src="https://i.imgur.com/IBR56I7.png" /></p>
+<p><img alt="" src="https://i.imgur.com/5Hlnmxh.png" /></p>
+<ol>
+<li>Using the <strong>Jupyter Notebook</strong> website browse your computer to find the project folder.</li>
+</ol>
+<p><img alt="" src="https://i.imgur.com/66901MG.png" /></p>
+<div class="admonition note">
+<p class="admonition-title">Ready</p>
+<p>Go and check <a href="/Sensor Analysis Framework">How to use the notebook</a></p>
 </div>
-
+<div class="admonition note">
+<p class="admonition-title">Learn More</p>
+<p>Still wondering what this is? Read this introduction to <a href="http://jupyter-notebook.readthedocs.io/en/latest/examples/Notebook/Notebook%20Basics.html">Jupyter</a></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Advanced Installation</p>
+<p>If you are already familiar with Python and you like to avoid installing <strong>Anaconda</strong> and follow the <a href="#advanced-users-installation">Advanced users installation</a></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Worried about your existing Python?</p>
+<p>Do you have already a Python environment you use for other work and you are worried about updating some packages?</p>
+<p>Learn how to <a href="#how-to-run-the-project-isolated-from-your-python-environment">load a dedicated environment</a></p>
+</div>
+<h2 id="advanced-installation-features">Advanced installation features<a class="headerlink" href="#advanced-installation-features" title="Permanent link">Link</a></h2>
+<h3 id="how-to-run-the-project-isolated-from-your-python-environment">How to run the project isolated from your Python environment<a class="headerlink" href="#how-to-run-the-project-isolated-from-your-python-environment" title="Permanent link">Link</a></h3>
+<p><em>Do you have already a Python environment you use for other work and you are worried about updating some packages?</em></p>
+<p><strong>Conda</strong> can load a dedicated environment for you to run <strong>Python</strong> and <strong>Jupyter</strong> based on the <code class="codehilite"><span class="n">environment</span><span class="p">.</span><span class="n">yml</span></code> configuration file we provide.</p>
+<p>Open your favourite shell on the directory you have your project. <em>(<code class="codehilite"><span class="n">cmd</span><span class="p">.</span><span class="n">exe</span></code> on windows)</em></p>
+<p>Run the following commands:</p>
 <ul>
-<li><strong>Sensor sensitivity</strong>: the sensor response per each ppm of target pollutant in <em>nominal</em> conditions</li>
-<li><strong>Zero</strong>: the sensor reading in zero air (pure air at 25degC).</li>
-<li><strong>Sensor response</strong> (t<sub>90</sub>)</li>
-<li><strong>Sensor range</strong>: maximum and minimum readings for the sensor</li>
+<li>
+<p>This will install and load the Python environment we prepared for iSCAPE</p>
+<p><code class="codehilite"><span class="n">conda</span> <span class="n">env</span> <span class="k">create</span> <span class="o">-</span><span class="n">f</span> <span class="n">environment</span><span class="p">.</span><span class="n">yml</span></code></p>
+</li>
+<li>
+<p>Now activate the environment</p>
+<p><code class="codehilite"><span class="k">source</span> <span class="n">activate</span> <span class="n">iscape</span></code></p>
+</li>
+<li>
+<p>Ready, run to run Jupyter</p>
+<p><code class="codehilite"><span class="n">jupyter</span> <span class="n">notebook</span></code></p>
+</li>
 </ul>
-<p>Finally, after this initial calibration assessment, it is critical to gather as much data as possible from <strong>long term sensor deployments</strong>. These deployments should aim to cover the widest range of sensor exposure conditions, in order to generate robust models. While dealing with low cost sensors this stage is very important, as it is detailed in the sections below.</p>
-<p>These sensor deployments serve for two main purposes: to generate <strong>quantitative classification methods</strong> that can classify the air quality in predefined ranges (i.e. 'poor', 'fair', good'); and to generate <strong>predictive qualitative models</strong> for more accurate values. Either of them need large amounts of data if the models are aimed to be representative. Additionally, by the mere nature of the data and the sensors themselves, these models would need to be:</p>
+<h3 id="advanced-users-installation">Advanced users installation<a class="headerlink" href="#advanced-users-installation" title="Permanent link">Link</a></h3>
+<p>If you do not want to install <strong>Anaconda</strong> you can install all the dependencies manually. Just follow the steps above:</p>
+<h4 id="install-python">Install Python<a class="headerlink" href="#install-python" title="Permanent link">Link</a></h4>
+<p>Python is the main programming language we will use for Data Analysis.</p>
 <ul>
-<li>Robusts to noise</li>
-<li>Capable of learning non-linear relationships</li>
-<li>Handle multivariate inputs</li>
-<li>Capable of learning temporal dependence</li>
+<li>On Windows download and run the <a href="https://www.python.org/downloads/windows/">installer</a> for Python 2.7</li>
+<li>Mac cames directly with python built in. However you can install the latest version using <a href="https://brew.sh/">Hombrew</a> and then run <code class="codehilite">$ brew install python</code></li>
+<li>On Linux simply use your distribution package manager like <code class="codehilite">$ apt</code> in Debian or Ubuntu.</li>
 </ul>
-<p>These needs make <strong>machine learning</strong> methods great canditates for modeling the data. These methods are implemented in the Sensor Analysis Framework, as well as other <em>more traditional</em> linear methods. The combination of these algorithms with large amounts of data gathered during, for instance, the iScape project, offers a great opportunity to demonstrate the use of low cost sensors for air quality monitoring.</p>
-<h3 id="smart-citizen-kits">Smart Citizen Kits<a class="headerlink" href="#smart-citizen-kits" title="Permanent link">Link</a></h3>
-<p>Due to their construction, low-cost metal oxyde sensors suffer from high levels of spread in their baseline resistance and sensitivity. As well, these sensors are generally reactive to other pollutants in the atmosphere, with a low selectivity of the actual target pollutant and drifts in their behaviour can be seen after some weeks of exposure. As well, metal oxyde sensors show short and long term drifts in their calibrations. </p>
-<div style="text-align:center">
-<image src="https://i.imgur.com/JfujXTA.png" width="500px"/>
-</div>
+<h4 id="install-pip">Install Pip<a class="headerlink" href="#install-pip" title="Permanent link">Link</a></h4>
+<p>Pip is the packet manager Python uses and it comes installed by default. If you have any issues you can download pip <a href="https://pip.pypa.io/en/stable/installing/">here</a>.</p>
+<h4 id="installl-jupyter">Installl Jupyter<a class="headerlink" href="#installl-jupyter" title="Permanent link">Link</a></h4>
+<p>Jupyter Notebooks allows us to quickly learn, develop and improve our tools by providing a common convenient framework and UI.</p>
+<p>Simply run <code class="codehilite"><span class="n">pip</span> <span class="n">install</span> <span class="n">jupyter</span></code> on your terminal to install it.</p>
+<h4 id="download-the-source">Download the source<a class="headerlink" href="#download-the-source" title="Permanent link">Link</a></h4>
+<p><a href="https://github.com/fablabbcn/smartcitizen-iscape-data">Download</a> from Github or simply use <code class="codehilite"><span class="n">git</span></code></p>
+<div class="codehilite"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">fablabbcn</span><span class="o">/</span><span class="n">smartcitizen</span><span class="o">-</span><span class="n">iscape</span><span class="o">-</span><span class="k">data</span><span class="p">.</span><span class="n">git</span>
+</pre></div>
 
-<p>Ideally, a <strong>sensor characterisation</strong> in laboratory conditions is needed to assess sensitiviy, baseline resistances sensor-to-sensor spread, aiming to obtain normalising factors for each sensor or group of sensors. Even if possible, the variability of the sensor behaviour during the deployment stage, makes the individual characterisation and calibration of the Metal Oxyde sensors unrealistic. For this reason, indicative measurements are to be expected from this type of low cost sensors. More information about the sensors present in the urban board of the SCK can be found in <a href="/Components/Urban Sensor Board/#a-word-about-metal-oxide-sensors">this section</a>.</p>
-<h3 id="smart-citizen-stations">Smart Citizen Stations<a class="headerlink" href="#smart-citizen-stations" title="Permanent link">Link</a></h3>
-<p><strong>Electrochemical sensors</strong> </p>
-<p>These sensors can achieve significant accuracy, but they require a particular data post-processing that combines the measurement at the sensor electrodes with the sensor characterisation on the factory as well as other environmental parameters as air temperature and relative humidity (i.e. absolute humidity). Luckily the manufacturer of these sensors, Alphasense, provides us with that reference data. However, the complexity of the operations performed can not be done inside the sensing device as it uses advanced operations as well as historical data from the same device. For that reason, the data needs to be post processed using the Sensors Analysis Framework. The algorithm is <strong>in a beta stage</strong> and later it will be applied automatically on the data once it arrives at the platform. More details can be found in the <a href="https://docs.iscape.smartcitizen.me/Components/Gas%20Pro%20Sensor%20Board/Electrochemical%20Sensors/#sensor-calibration"><em>Electrochemical sensor baseline methodology</em> Section</a>.</p>
-<p><img alt="" src="https://i.imgur.com/Mi896Jh.png" /></p>
-<p>This process doesn't require any on-site reference data but requires the data to be processed using the manufacturer calibration reference per sensor as well as other environmental values as temperature and humidity.</p>
-<p><strong>PM sensor</strong></p>
-<p>The selected PM sensor is internally characterised by the manufacturer and, it's readings are currently being evaluated. Preliminarily, the measurements can be as well improved when reference data is available, as some have noted that the PM sensors can be affected by relative humidity. </p>
-<div class="admonition info">
-<p class="admonition-title">Plantower PMS 5003</p>
-<p>Read more on the Plantower PMS 5003 implementation on the <a href="/Components/PM%20Sensor%20Board/"><strong>PM Sensor Board</strong></a>.</p>
-</div>
+<h4 id="run-the-notebook">Run the notebook<a class="headerlink" href="#run-the-notebook" title="Permanent link">Link</a></h4>
+<p>On your terminal go to the folder where tou downloaded your files and then run <code class="codehilite"><span class="n">jupyter</span> <span class="n">notebook</span></code> this will open a new webpage and you will be available to run your code there.</p>
                 
                   
                 
@@ -2711,8 +2803,8 @@
 
         <!-- Link to previous page -->
         
-          <a href="../"
-              title="Index"
+          <a href="../../../Components/Firmware/guides/Debug the firmware/"
+              title="Debug the firmware"
               class="md-flex md-footer-nav__link md-footer-nav__link--prev"
               rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
@@ -2725,7 +2817,7 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Index
+                Debug the firmware
               </span>
             </div>
           </a>
@@ -2733,8 +2825,8 @@
 
         <!-- Link to next page -->
         
-          <a href="../guides/Creating Models for Sensors Calibration/"
-              title="Creating Models for Sensors Calibration"
+          <a href="../Creating Models for Sensors Calibration/"
+              title="Analyse your sensor data"
               class="md-flex md-footer-nav__link md-footer-nav__link--next"
               rel="next">
             <div class="md-flex__cell md-flex__cell--stretch
@@ -2743,7 +2835,7 @@
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Creating Models for Sensors Calibration
+                Analyse your sensor data
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
@@ -2762,6 +2854,7 @@
 
       <!-- Copyright and theme information -->
       <div class="md-footer-copyright">
+            <div class="md-footer-copyright__highlight">CC Attribution-NonCommercial-ShareAlike 4.0 International</div>
 		        <img style="margin-top: 20px" alt="The Smart Citizen has received funding from the European Community’s H2020 Programme under Grant Agreement No. 689954." src="/assets/images/eu-flag.png">
          		<p class="md-footer-copyright__highlight">The Smart Citizen has received funding from the European Community’s H2020 Programme under Grant Agreement No. 689954.</p>
             <p>Except where otherwise noted, content on this site is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
@@ -2772,7 +2865,7 @@
       
         
   <div class="md-footer-social">
-    <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
+    <link rel="stylesheet" href="../../../assets/fonts/font-awesome.css">
     
       <a href="https://twitter.com/smartcitizenkit" class="md-footer-social__link fa fa-twitter"></a>
     
@@ -2787,9 +2880,9 @@
       
     </div>
     
-      <script src="../../assets/javascripts/application.245445c6.js"></script>
+      <script src="../../../assets/javascripts/application.245445c6.js"></script>
       
-      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"1.0.4",url:{base:"../../.."}})</script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       
