@@ -1,7 +1,7 @@
 Welcome!
 ========
 
-![](https://i.imgur.com/cCbOxV6.jpg)
+![](https://i.imgur.com/0U9T29b.jpg)
 
 ## Sections
 
