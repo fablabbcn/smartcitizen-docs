@@ -156,7 +156,27 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>https://docs.smartcitizen.me/Legacy Hardware/Hardware/</loc>
+     <lastmod>2019-08-02</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://docs.smartcitizen.me/Legacy Hardware/Command Line/</loc>
+     <lastmod>2019-08-02</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>https://docs.smartcitizen.me/Components/Urban Sensor Board/Metal Oxide Sensor/MICS/</loc>
+     <lastmod>2019-08-02</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://docs.smartcitizen.me/Legacy Hardware/Faq/</loc>
+     <lastmod>2019-08-02</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://docs.smartcitizen.me/Legacy Hardware/Troubleshooting/</loc>
      <lastmod>2019-08-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
