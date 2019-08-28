@@ -35,9 +35,9 @@ nav:
     - Troubleshooting: Troubleshooting.md
   - Sensor Platform:
     - Main: Sensor Platform/index.md
-  - Data Analysis:
-    - Main: Data Analysis/index.md
-    - On low-cost sensor calibration: Data Analysis/Low Cost Sensors Calibration.md
+  - Sensor Analysis Framework:
+    - Main: Sensor Analysis Framework/index.md
+    - On low-cost sensor calibration: Sensor Analysis Framework/Low Cost Sensors Calibration.md
   - Guides:
     - Main: Guides.md
     - General:
@@ -49,9 +49,11 @@ nav:
       - Update the firmware: Components/Firmware/guides/Update the firmware.md
       - Edit the firmware: Components/Firmware/guides/Edit the Firmware.md
       - Debug the firmware: Components/Firmware/guides/Debug the firmware.md
-    - Data Analysis:
-      - Framework Installation: Data Analysis/guides/Install the framework.md
-      - Analyse your sensor data: Data Analysis/guides/Creating Models for Sensors Calibration.md
+    - Sensor Analysis Framework:
+      - Framework Installation: Sensor Analysis Framework/guides/Install the framework.md
+      - Organise your data: Sensor Analysis Framework/guides/Organise your data.md
+      - Model your sensor data: Sensor Analysis Framework/guides/Creating Models for Sensors Calibration.md
+      - Analyse your data in batch: Sensor Analysis Framework/guides/Analyse your data in batch.md
   - Legacy Hardware:
     - Description: Legacy Hardware/index.md
     - Hardware: Legacy Hardware/Hardware.md
