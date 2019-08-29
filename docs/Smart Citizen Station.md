@@ -124,7 +124,7 @@ We have developed an algorithm that ingests the platform data and processes elec
     Currently we will run the algorithm manually for each station. Please, contact us once you finish the installation.
 
 !!! info "Sensor Analysis Framework"
-    Learn more about the sensors calibration on the [Sensor Analysis Framework](/Data Analysis) section.
+    Learn more about the sensors calibration on the [Sensor Analysis Framework](/Sensor Analysis Framework) section.
 
 ## Power
 

@@ -9,7 +9,7 @@ Welcome!
 
 * **Sensor Platform:** Contains all the documentation on the [**sensors web platform**](Sensor Platform) where data is collected, stored and visualised.
 
-* **Data Analysis:** Contains all the documentation on the [**data post-processing framework**](Data Analysis) to obtain insights from the data calibrated by the sensors.
+* **Sensor Analysis Framework:** Contains all the documentation on the [**data post-processing framework**](Sensor Analysis Framework) to obtain insights from the data calibrated by the sensors.
 
 * **Guides:** Contains step-by-step [guides](**Guides**) guides for different features of the kit, how to get started, use the shell, or make some more advanced analysis of the sensor readings!
 
@@ -52,7 +52,7 @@ The documentation contains multiple guides as step-by-step tutorials to perform 
     * [Uploading SD Card Data](Sensor Platform/guides/Uploading SD Card Data)
     * [Update the Firmware](Components/Firmware/guides/Update the firmware)
     * [Edit the Firmware](Components/Firmware/guides/Edit the Firmware)
-    * [Use Machine Learning to Create Models for Sensors Calibration](/Data Analysis/guides/Creating Models for Sensors Calibration)
+    * [Use Machine Learning to Create Models for Sensors Calibration](/Sensor Analysis Framework/guides/Creating Models for Sensors Calibration)
 
 ## Open Source
 

@@ -1,12 +1,14 @@
 How to install the framework
 ============================
 
-The following data analysis framework is built on Python 3.7 and it can be used with [Jupyter Notebooks](https://jupyter.org/) or [Jupyter Lab](https://jupyterlab.readthedocs.io/en/stable/), although it is not mandatory. 
+The following data analysis framework is a set of tools built on Python 3.7 to help you analyse your data. It can be used with [Jupyter Notebooks](https://jupyter.org/) or [Jupyter Lab](https://jupyterlab.readthedocs.io/en/stable/), although it is not mandatory. 
 
 ## Prerequisites
 
+We recommend you use these two tools for managing the different versions of the framework and keep it updated.
+
 1. Download and install `git` from [here](https://git-scm.com/)
-2. Download and install Anaconda for Python 3.7 from [here](https://www.anaconda.com/distribution/)
+2. Download and install `Anaconda` for Python 3.7 from [here](https://www.anaconda.com/distribution/)
 
 ## Installation
 
@@ -24,7 +26,7 @@ Make a directory and `clone` the repository in it:
 ```
 
 !!! warning "Want to stay up-to-date?"
-    The framework is very frequently updated and the only version that will always be up-to-date is in the [master branch of the github repository](https://github.com/fablabbcn/smartcitizen-iscape-data). We do not recommend to download the repository but to clone it with `git`. If you want to learn more about `git` and why it can help you in your projects, check [here](https://www.quora.com/What-is-Git-and-why-should-I-use-it)
+    The framework is being constantly updated and the only version that will always be up-to-date is in the [master branch of the github repository](https://github.com/fablabbcn/smartcitizen-iscape-data). We do not recommend to simply download the repository but to clone it with `git`. If you want to learn more about `git` and why it can help you in your projects, check [here](https://www.quora.com/What-is-Git-and-why-should-I-use-it)
 
 ### Create the environment
 

@@ -1,131 +1,98 @@
-Analyse your sensor data
+Model your sensor data
 ====================================================
 
-In this section, we will work on the development of two models for the MOS sensors in the Smart Smart Citizen Kit. In the Sensor Analysis Framework, we have implemented two different approaches for model calibration:
+In this section, we will detail how to develop models for our sensors. We will try two different approaches for model calibration:
 
-- **Ordinary Least Squares (OLS)**: based on the [statsmodels package](http://www.statsmodels.org/stable), the model is able to input whichever expression referring to the kit's available data and perform OLS regression over the defined training and test data
-- **Machine Learning (MLP or LSTM)**: based on the [keras package](https://keras.io/) using [tensorflow](https://www.tensorflow.org/) in the backend. This framework can be used to train larger collections of data, where we want to be, among others:
+- **Ordinary Least Squares (OLS)**: based on the [statsmodels package](http://www.statsmodels.org/stable), the model is able to ingest an expression referring to the kit's available data and perform OLS regression over the defined training and test data
+- **Machine Learning (LSTM)**: based on the [keras package](https://keras.io/) using [tensorflow](https://www.tensorflow.org/) in the backend. This framework can be used to train larger collections of data, among others:
 	- Robust to noise
 	- Learn non-linear relationships
 	- Aware of temporal dependence
+   
+!!! info "Load some data first"
+    We will need to load the data first, for this, check the guides to [organise the data](/Sensor Analysis Framework/guides/Organise your data) and to [load it](/Sensor Analysis Framework/guides/Organise your data/#load-the-data)
 
 ## Ordinary Least Squares example
 
-Let's delve first into an OLS example. The framework comes with a very simple interface to develop and interact with the models. By running these two cells we will generate the preliminary tweaks for the dataframes:
+Let's delve first into an OLS example. Assuming we have some data loaded, we can define our OLS model as:
 
+```
+from src.models.model_tools import model_wrapper
 
-```python
-from test_utils import combine_data
+# Input model description
+model_description = {"model_name": "OLS_UCD",
+                    "model_type": "OLS",
+                    "model_target": "ALPHASENSE",
+                    "data": {"train": {"2019-03_EXT_UCD_URBAN_BACKGROUND_API": "5262"},
+                            "reference_device" : "CITY_COUNCIL",
+                            "features":  {"REF": "NO2_REF",
+                                            "A": "GB_2W",
+                                            "B": "GB_2A",
+                                            "C": "HUM"},
+                            "options": {"target_raster": '1Min',
+                                        "clean_na": True,
+                                        "clean_na_method": "fill",
+                                        "min_date": None,
+                                        "max_date": '2019-01-15'},
+                            "expression" : 'REF ~ A + np.log(B)'
+                            },
+                    "hyperparameters": {"ratio_train": 0.75},
+                    "options": {"session_active_model": True,
+                                "show_plots": True,
+                                "export_model": False,
+                                "export_model_file": False,
+                                "extract_metrics": True}
+                    }
 
-name_combined_data = 'COMBINED_DEVICES'
+# --- 
+# Init OLS model
+ols_model = model_wrapper(model_description, verbose = True)
 
-for reading in readings:
-    ## Since we don't know if there are more or less channels than last time
-    ## (and tbh, I don't feel like checking), remove the key
-    readings[reading]['devices'].pop('COMBINED_DEVICES', None)
-    ## And then add it again
-    dataframe = combine_data(readings[reading]['devices'], True)
-    readings[reading]['devices'][name_combined_data] = dict()
-    readings[reading]['devices'][name_combined_data]['data'] = dict()
-    readings[reading]['devices'][name_combined_data]['data'] = dataframe
+# Prepare dataframe for modeling
+records.prepare_dataframe_model(ols_model)
+                    
+# Train Model based on training dataset
+train_dataset = list(ols_model.data['train'].keys())[0]
+ols_model.training(records.readings[train_dataset]['models'][ols_model.name])
+
+# Get prediction for dataset
+device = ols_model.data['train'][train_dataset]
+prediction_name = device + '_' + model_name
+prediction = ols_model.predict_channels(records.readings[train_dataset]['devices'][device]['data'], prediction_name)
+
+# Combine it in readings
+records.readings[train_dataset]['devices'][device]['data'].combine_first(prediction)
 ```
 
-Output:
+!!! info "More info"
+    Check the guide on [batch analysis](/Sensor Analysis Framework/guides/Analyse your data in batch/#model) for a definition of each parameter.
 
-```python
-Dataframe has been combined for model preparation
+We have to keep at least the key `REF` within the `"features"`, but the rest can be renamed at will. We can also input whichever `formula_expression` for the model regression in the following format:
+
 ```
-
-Here we can list all the available channels for our test:
-
-```python
-test_linear_regression = '2018-08_INT_STATION_TEST_SUMMER_HOLIDAYS'
-
-for channel in readings[test_linear_regression]['devices'][name_combined_data]['data'].columns:
-    print channel
-```
-
-Output:
-
-```python
-BATT_4748
-CO_AD_BASE_4748
-CO_AD_BASE_filter_4748
-CO_MICS_RAW_4748
-EXT_HUM_4748
-EXT_TEMP_4748
-GB_1A_4748
-GB_1W_4748
-(...)
-PM_1_4748
-PM_10_4748
-PM_25_4748
-PM_DALLAS_TEMP_4748
-PRESS_4748
-TEMP_4748
-O3_AD_BASE_filter_4748
-```
-
-And now, it's time to set up our model. In the cell below we can define the channel and features for the regression. 
-
-```python
-from linear_regression_utils import prepData, fit_model
-
-## Select data
-# Always have an item called 'REF', the rest can be anything
-tuple_features = (['REF', 'CO_AD_BASE_4748'],
-                 ['A', 'CO_MICS_RAW_4748'],
-                 ['B', 'TEMP_4748'],
-                 ['C', 'HUM_4748'],
-                 ['D', 'PM_25_4748'])
-
-formula_expression = 'REF ~ A + np.power(A,2) + B + np.power(B,2) + C + D'
-
-min_date = '2018-08-31 00:00:00'
-max_date = '2018-09-06 00:00:00'
-
-ratio_train = 2./3 # Important that this is a float, don't forget the .
-
-filter_data = True
-alpha_filter = 0.1
-
-dataframeModel = readings[test_linear_regression]['devices'][name_combined_data]['data']
-
-dataTrain, dataTest = prepData(dataframeModel, tuple_features, min_date, max_date, ratio_train, filter_data, alpha_filter)
-model, train_rmse, test_rmse = fit_model(formula_expression, dataTrain, dataTest
-```
-
-We have to keep at least the key `'REF '` within the `tuple_features`, but the rest can be renamed at will. We can also input whichever `formula_expression` for the model regression in the following format:
-
-```python
-formula_expression = 'REF ~ A + np.power(A,2) + B + np.power(B,2) + C + D'
+"expression" : 'REF ~ A + np.log(B)'
 ```
 
 Which converts to:
 
 $$
-REF = A + A^2 + B + B^2 + C + D + Intercept
+REF = A + log(B)
 $$
 
 We can also define the ratio between the train and test dataset and the minimum dates to use within the datasets (globally):
 
-```python
+```
+
 min_date = '2018-08-31 00:00:00'
 max_date = '2018-09-06 00:00:00'
 
-ratio_train = 2./3 # Important that this is a float, don't forget the .
-```
-
-Finally, if our data is too noisy, we can apply an `exponential smoothing` function, by setting `filter_data = True` and the alpha coefficient (0.1, 0.2 is already very filtered:
-
-```python
-filter_data = True
-alpha_filter = 0.1
+# Important that this is a float, don't forget the .
+"hyperparameters": {"ratio_train": 0.75} 
 ```
 
 If we run this cell, we will perform model calibration, with the following output:
 
-```python
+```
                             OLS Regression Results                            
 ==============================================================================
 Dep. Variable:                    REF   R-squared:                       0.676
@@ -142,11 +109,8 @@ Covariance Type:            nonrobust
 ----------------------------------------------------------------------------------
 Intercept         -3.7042      0.406     -9.133      0.000      -4.501      -2.908
 A                  0.0011      0.000      2.953      0.003       0.000       0.002
-np.power(A, 2) -3.863e-05   7.03e-06     -5.496      0.000   -5.24e-05   -2.48e-05
-B                  0.2336      0.024      9.863      0.000       0.187       0.280
-np.power(B, 2)    -0.0032      0.000     -9.267      0.000      -0.004      -0.003
-C                 -0.0014      0.001     -2.755      0.006      -0.002      -0.000
-D                  0.0127      0.001     24.378      0.000       0.012       0.014
+np.log(B) -3.863e-05   7.03e-06     -5.496      0.000   -5.24e-05   -2.48e-05
+
 ==============================================================================
 Omnibus:                        7.316   Durbin-Watson:                   0.026
 Prob(Omnibus):                  0.026   Jarque-Bera (JB):               10.245
@@ -177,7 +141,7 @@ Our function also depicts the results in a graphical way for us to see the model
 
 Now we can look at some other model quality plots. If we run the cell below, we will obtain an adaptation of the summary plots from **R**:
 
-```python
+```
 from linear_regression_utils import modelRplots
 %matplotlib inline
 
@@ -186,7 +150,7 @@ modelRplots(model, dataTrain, dataTest)
 
 Let's review the output step by step:
 
-- **Residual vs Fitted** and **Scale Location plot**: these plots represents the model [heteroscedasticity ](https://en.wikipedia.org/wiki/Heteroscedasticity), which is a representation of the residuals versus the fitted values. This polot is helpful to check if the errors are distributed homogeneously and that we are not penalising high, low, or other values. There is also a red line which represents the average trend of this distribution which, we want it to be horizontal. For more information visit [here](https://stats.stackexchange.com/questions/76226/interpreting-the-residuals-vs-fitted-values-plot-for-verifying-the-assumptions) and [here](https://stats.stackexchange.com/questions/52089/what-does-having-constant-variance-in-a-linear-regression-model-mean/52107#52107). Clearly, in this model we are missing something:
+- **Residual vs Fitted** and **Scale Location plot**: these plots represents the model [heteroscedasticity ](https://en.wikipedia.org/wiki/Heteroscedasticity), which is a representation of the residuals versus the fitted values. This plot is helpful to check if the errors are distributed homogeneously and that we are not penalising high, low, or other values. There is also a red line which represents the average trend of this distribution which, we want it to be horizontal. For more information visit [here](https://stats.stackexchange.com/questions/76226/interpreting-the-residuals-vs-fitted-values-plot-for-verifying-the-assumptions) and [here](https://stats.stackexchange.com/questions/52089/what-does-having-constant-variance-in-a-linear-regression-model-mean/52107#52107). Clearly, in this model we are missing something:
 
 ![](https://i.imgur.com/QR2Ya4r.png)
 
@@ -218,9 +182,27 @@ In this case, we see that our model has some points with higher leverage but low
 <img src ="https://i.imgur.com/NQLA4lw.png" alt="Cook Distance Plot" class="cover"/>
 </div>
 
+Finally, we can export our model and generate some metrics with:
+
+```
+# Archive model
+if ols_model.options['session_active_model']:
+    dataFrameExport = ols_model.dataFrameTrain.copy()
+    dataFrameExport = dataFrameExport.combine_first(ols_model.dataFrameTest)
+    records.archive_model(train_dataset, ols_model, dataFrameExport)
+
+# Print metrics
+print ('Metrics Summary:')
+print ("{:<23} {:<7} {:<5}".format('Metric','Train','Test'))
+if ols_model.options['extract_metrics']:
+    metrics_model = ols_model.extract_metrics()
+    for metric in metrics_model['train'].keys():
+        print ("{:<20}".format(metric) +"\t" +"{:0.3f}".format(metrics_model['train'][metric]) +"\t"+ "{:0.3f}".format(metrics_model['test'][metric]))
+```
+
 ## Machine learning example
 
-As we have seen in the [the calibration section](https://docs.iscape.smartcitizen.me/Sensor%20Analysis%20Framework/Low%20Cost%20Sensors%20Calibration/), machine learning algorithms promise a better representation of the sensor's data, being able to learn robust non-linear models and sequential dependencies. For that reason, we have implemented an easy to use interface based on [keras](https://keras.io/) with [Tensorflow](https://www.tensorflow.org/) backend, in order to train sequential models [^third].
+As we have seen in the [the calibration section](https://docs.smartcitizen.me/Sensor%20Analysis%20Framework/Low%20Cost%20Sensors%20Calibration/), machine learning algorithms promise a better representation of the sensor's data, being able to learn robust non-linear models and sequential dependencies. For that reason, we have implemented toolset based on [keras](https://keras.io/) with [Tensorflow](https://www.tensorflow.org/) backend, in order to train sequential models [^third].
 
 The workflow for a supervised learning algorithm reads as follows:
 
@@ -228,128 +210,152 @@ The workflow for a supervised learning algorithm reads as follows:
 - Define Model and fit for training dataset
 - Evaluate test dataframe and extract metrics
 
-Let's go step by step. In order to reframe the data as a supervised learning algorithm, we have created a function called `prep_dataframe_ML` which is the only one function we'll have to interact with:
+```
+from src.models.model_tools import model_wrapper
 
-```python
-# Combine all data in one dataframe
-from ml_utils import prep_dataframe_ML
+# Input model description
+model_description = {"model_name": "RF_UCD",
+                    "model_type": "RF",
+                    "model_target": "ALPHASENSE",
+                    "data": {"train": {"2019-03_EXT_UCD_URBAN_BACKGROUND_API": "5262"},
+                            "reference_device" : "CITY_COUNCIL",
+                            "features":  {"REF": "NO2_REF",
+                                            "A": "GB_2W",
+                                            "B": "GB_2A",
+                                            "C": "HUM"},
+                            "options": {"target_raster": '1Min',
+                                        "clean_na": True,
+                                        "clean_na_method": "fill",
+                                        "min_date": None,
+                                        "max_date": '2019-01-15'},
+                            },
+                    "hyperparameters": {"ratio_train": 0.75, 
+                                       "n_estimators": 100,
+                                        "shuffle_split": True},
+                    "options": {"session_active_model": True,
+                                "show_plots": True,
+                                "export_model": False,
+                                "export_model_file": False,
+                                "extract_metrics": True}
+                    }
 
-# Always have an item called 'REF', the rest can be anything
-tuple_features = (['REF', 'CO_AD_BASE_STATION_CASE'],
-                 ['A', 'CO_MICS_RAW_STATION_CASE'],
-                 ['B', 'TEMP_STATION_CASE'],
-                 ['C', 'HUM_STATION_CASE'],
-                 ['D', 'PM_25_STATION_CASE'])
+# --- 
+# Init rf model
+rf_model = model_wrapper(model_description, verbose = True)
 
-model_name = 'LSTM NO2'
+# Prepare dataframe for modeling
+records.prepare_dataframe_model(rf_model)
+                    
+# Train Model based on training dataset
+train_dataset = list(rf_model.data['train'].keys())[0]
+rf_model.training(records.readings[train_dataset]['models'][rf_model.name])
 
-ratio_train = 3./4 # Important that this is a float, don't forget the .
-alpha_filter = 0.9 # 1 means no filtering
+# Get prediction for dataset
+device = rf_model.data['train'][train_dataset]
+prediction_name = device + '_' + rf_model.name
+prediction = rf_model.predict_channels(records.readings[train_dataset]['devices'][device]['data'], prediction_name)
 
-# Number of lags for the model
-n_lags = 1
-
-dataframeModel = readings[test_model]['devices'][name_combined_data]['data']
-
-index, train_X, train_y, test_X, test_y, scaler, n_train_periods = prep_dataframe_ML(dataframeModel, min_date, max_date, tuple_features, n_lags, ratio_train, alpha_filter)
+# Combine it in readings
+records.readings[train_dataset]['devices'][device]['data'].combine_first(prediction)
 ```
 
 Output:
 
-```python
-DataFrame has been reframed and prepared for supervised learning
-Reference is: CO_AD_BASE_STATION_CASE
-Features are: ['CO_MICS_RAW_STATION_CASE', 'TEMP_STATION_CASE', 'HUM_STATION_CASE', 'PM_25_STATION_CASE']
-Traning X Shape (1508, 1, 4), Training Y Shape (1508,), Test X Shape (501, 1, 4), Test Y Shape (501,)
+```
+Using TensorFlow backend.
+
+Beginning Model RF_UCD
+Model type RF
+Preparing dataframe model for test 2019-03_EXT_UCD_URBAN_BACKGROUND_API
+Data combined successfully
+Creating models session in recordings
+Dataframe model generated successfully
+Training Model RF_UCD...
+Training done
+Variable: HUM_5262 Importance: 0.4
+Variable: GB_2W_5262 Importance: 0.31
+Variable: GB_2A_5262 Importance: 0.3
+Calculating Metrics...
+Metrics Summary:
+Metric                  Train   Test 
+avg_ref                 16.648  15.861
+avg_est                 16.666  16.000
+sig_ref                 11.438  10.584
+sig_est                 9.493   9.404
+bias                    0.019   0.139
+normalised_bias         0.002   0.013
+sigma_norm              0.830   0.888
+sign_sigma              -1.000  -1.000
+rsquared                0.799   0.879
+RMSD                    5.124   3.677
+RMSD_norm_unb           0.453   0.351
+No specifics for RF type
+Preparing devices from prediction
+Channel 5262_RF_UCD prediction finished
 ```
 
-Now, we can fit our model. The main function is `fit_model_ML` and currently implements a simple LSTM network. This network can be redefined easily by modifying the underlying function.
+This will also output some nice plots for visually checking our model performance:
 
-```python
-model = fit_model_ML(train_X, train_y, test_X, test_y, epochs = 50, batch_size = 72, verbose = 2)
+![](https://i.imgur.com/xEuVJVC.png)
+
+And some extras about variable importance:
+
+![](https://i.imgur.com/wyRi9dp.png)
+
+Finally, we can archive the model and print some metrics:
+
+```
+# Archive model
+if rf_model.options['session_active_model']:
+    dataFrameExport = rf_model.dataFrameTrain.copy()
+    dataFrameExport = dataFrameExport.combine_first(rf_model.dataFrameTest)
+    records.archive_model(train_dataset, rf_model, dataFrameExport)
+
+# Print metrics
+print ('Metrics Summary:')
+print ("{:<23} {:<7} {:<5}".format('Metric','Train','Test'))
+if rf_model.options['extract_metrics']:
+    metrics_model = rf_model.extract_metrics()
+    for metric in metrics_model['train'].keys():
+        print ("{:<20}".format(metric) +"\t" +"{:0.3f}".format(metrics_model['train'][metric]) +"\t"+ "{:0.3f}".format(metrics_model['test'][metric]))
 ```
 
-```python
-def fit_model_ML(train_X, train_y, test_X, test_y, epochs = 50, batch_size = 72, verbose = 2):
-    
-    model = Sequential()
-    layers = [50, 100, 1]
-    model.add(LSTM(layers[0], return_sequences=True, input_shape=(train_X.shape[1], train_X.shape[2])))
-    model.add(Dropout(0.2))
-    model.add(LSTM(layers[1], return_sequences=False))
-    model.add(Dropout(0.2))
-    model.add(Dense(output_dim=layers[2]))
-    model.add(Activation("linear"))
-    model.compile(loss='mse', optimizer='rmsprop')
+Output:
 
-    # fit network
-    history = model.fit(train_X, train_y, epochs=epochs, batch_size=batch_size, validation_data=(test_X, test_y), verbose=verbose, shuffle=False)
-    # plot history
-    fig = plot.figure(figsize=(10,8))
-    plot.plot(history.history['loss'], label='train')
-    plot.plot(history.history['val_loss'], label='test')
-    plot.xlabel('Epochs (-)')
-    plot.ylabel('Loss (-)')
-    plot.title('Model Convergence')
-    plot.legend(loc='best')
-    plot.show()
-    
-    return model
 ```
-
-This function will return the model and it's learning outcomes:
-
-```python
-Train on 1508 samples, validate on 501 samples
-Epoch 1/50
- - 1s - loss: 0.0500 - val_loss: 0.0051
-Epoch 2/50
- - 0s - loss: 0.0200 - val_loss: 0.0058
-Epoch 3/50
- - 0s - loss: 0.0158 - val_loss: 0.0052
-...
+Model archived correctly
+Metrics Summary:
+Metric                  Train   Test 
+Calculating Metrics...
+Metrics Summary:
+Metric                  Train   Test 
+avg_ref                 16.648  15.861
+avg_est                 16.666  16.000
+sig_ref                 11.438  10.584
+sig_est                 9.493   9.404
+bias                    0.019   0.139
+normalised_bias         0.002   0.013
+sigma_norm              0.830   0.888
+sign_sigma              -1.000  -1.000
+rsquared                0.799   0.879
+RMSD                    5.124   3.677
+RMSD_norm_unb           0.453   0.351
+avg_ref                 16.648  15.861
+avg_est                 16.666  16.000
+sig_ref                 11.438  10.584
+sig_est                 9.493   9.404
+bias                    0.019   0.139
+normalised_bias         0.002   0.013
+sigma_norm              0.830   0.888
+sign_sigma              -1.000  -1.000
+rsquared                0.799   0.879
+RMSD                    5.124   3.677
+RMSD_norm_unb           0.453   0.351
 ```
-
-![](https://i.imgur.com/5QoPq3n.png)
-
-Then, we can evaluate the model and plot it's results:
-
-```python
-from ml_utils import predict_ML
-from signal_utils import metrics
-import matplotlib.pyplot as plot
-%matplotlib inline
-
-inv_y_train, inv_yhat_train = predict_ML(model, train_X, train_y, n_lags, scaler)
-inv_y_test, inv_yhat_test = predict_ML(model, test_X, test_y, n_lags, scaler)
-```
-
-![](https://i.imgur.com/v1drQ74.png)
 
 ## Model comparison
 
 Here is a visual comparison of both models:
-
-```python
-fig = plot.figure(figsize=(15,10))
-# Actual data
-plot.plot(index[:n_train_periods], inv_y_train,'r', label = 'Reference Train', alpha = 0.3)
-plot.plot(index[n_train_periods+n_lags:], inv_y_test, 'b', label = 'Reference Test', alpha = 0.3)
-
-# Fitted Values for Training
-plot.plot(index[:n_train_periods], inv_yhat_train, 'r', label = 'ML Prediction Train')
-plot.plot(index[n_train_periods+n_lags:], inv_yhat_test, 'b', label = 'ML Prediction Test')
-
-# OLS
-plot.plot(dataTrain['index'], predictionTrain, 'g', label = 'OLS Prediction Train')
-plot.plot(dataTest['index'], predictionTest, 'k', label = 'OLS Prediction Test')
-
-plot.legend(loc = 'best')
-plot.ylabel('CO (ppm)')
-plot.xlabel('Date (-)')
-```
-
-Output:
 
 ![](https://i.imgur.com/56eVx5P.png)
 
@@ -403,7 +409,6 @@ $$
 RMSD'^2 = \sigma_r^2 + \sigma_m^2 - 2\sigma_r\sigma_mR
 $$
 
-
 **Normalized and unbiased RMSD**
 If we recast in standard deviation normalized units (indicated by the asterisk) it becomes:
 
@@ -447,39 +452,23 @@ $$
 
 ## Results
 
-Let's now compare both models. If we execute this line, we will retrieve all model metrics:
+Let's now compare both models with the target diagram:
 
-```python
-metrics_model_train = metrics(inv_y_train, inv_yhat_train)
-metrics_model_test = metrics(inv_y_test, inv_yhat_test)
-
-## Metrics Train
-print('\t\t Train \t\t Test')
-for item in metrics_model_train.keys():
-    print ('% s: \t %.5f \t %.5f ' % (item, metrics_model_train[item], metrics_model_test[item]))
 ```
+from src.visualization.visualization import targetDiagram
+%matplotlib inline
 
-Output:
+models = dict()
+for model in records.readings[test_model]['models']:
 
-```python
-		  	 Train 		 Test
-avg_ref: 	  	 0.65426 	 0.53583 
-sig_est: 	  	 0.08412 	 0.03160 
-RMSD: 	  	  	 0.08439 	 0.05511 
-avg_est: 	  	 0.61639 	 0.53135 
-sigma_norm: 	  	 0.67749 	 0.50032 
-sign_sigma: 	  	 -1.00000 	 -1.00000 
-sig_ref: 	  	 0.12416 	 0.06317 
-bias: 	  	  	 -0.03787 	 -0.00448 
-RMSD_norm_unb: 	  	 0.68200 	 0.87258 
-rsquared: 	  	 0.53801 	 0.23874 
-normalised_bias: 	 -0.30502 	 -0.07093
-```
-
-And finally, we can compare both models, training and test dataframe with the function:
-
-```python
-targetDiagram(_dataframe, _plot_train)
+        print ('\nModel Name: {}'.format(model))
+        print ("{:<23} {:<7} {:<5}".format('Metric','Train','Test'))
+        metrics_model = records.readings[test_model]['models'][model]['model_object'].extract_metrics()
+        models[model] = metrics_model
+        for metric in metrics_model['train'].keys():
+            print ("{:<20}".format(metric) +"\t" +"{:0.3f}".format(metrics_model['train'][metric]) +"\t"+ "{:0.3f}".format(metrics_model['test'][metric]))
+        
+targetDiagram(models, True)
 ```
 
 Output:
@@ -490,204 +479,66 @@ Here, every point that falls inside the yellow circle, will have an R<sup>2</sup
 
 ## Export the models
 
-Let's now assume that we are happy with our models. Depending on the model we have developed (OLS or ML ), we follow different approaches for the export:
+Let's now assume that we are happy with our models. We can now export them:
 
-***Machine Learning Model***
-
-We will use `joblib` to save the model metrics and parameters. The `keras` model will be saved with the `to_json` property of the `model` and the weights in an `h5` format with the `save_weights`ght:
-
-```python
-from os.path import join
-from sklearn.externals import joblib
-
-modelDirML = '/path/to/modelDir'
-filenameML = join(modelDirML, model_name_ML)
-
-# Save everything
-joblib.dump(dictModel[model_name_ML]['metrics'], filenameML + '_metrics.sav')
-joblib.dump(dictModel[model_name_ML]['parameters'], filenameML + '_parameters.sav')
-model_json = model.to_json()
-with open(filenameML + "_model.json", "w") as json_file:
-    json_file.write(model_json)
-    
-model.save_weights(filenameML + "_model.h5")
-print("Model " + model_name_ML + " saved in: " + modelDir)
+```
+ols_model.export('directory')
+rf_model.export('directory')
 ```
 
 Output:
 
-```python
-Model LSTM CO 200 epochs Filter 0.9 saved in: /path/to/modelDir
+```
+Saving metrics
+Saving hyperparameters
+Saving features
+Model included in summary
 ```
 
 And in our directory:
 
-```shell
+```
 ➜  models ls -l
--rw-r--r-- Sep 11 12:54 LSTM CO 200 epochs Filter 0.9_metrics.sav
--rw-r--r-- Sep 11 12:54 LSTM CO 200 epochs Filter 0.9_model.h5
--rw-r--r-- Sep 11 12:54 LSTM CO 200 epochs Filter 0.9_model.json
--rw-r--r-- Sep 11 12:54 LSTM CO 200 epochs Filter 0.9_parameters.sav
+RF_UCD_features.sav
+RF_UCD_hyperparameters.sav
+RF_UCD_metrics.sav
 ```
 
-***OLS model***
-
-We will use `joblib` for all the objects serialisation in this case:
-
-```python
-from os.path import join
-from sklearn.externals import joblib
-
-modelDir_OLS = '/path/to/model'
-filename_OLS = join(modelDir_OLS, model_name_OLS)
-
-# Save everything
-joblib.dump(dictModel[model_name_OLS]['metrics'], filename_OLS + '_metrics.sav')
-joblib.dump(dictModel[model_name_OLS]['parameters'], filename_OLS + '_parameters.sav')
-joblib.dump(dictModel[model_name_OLS]['model'], filename_OLS + '_model.sav')
-print("Model saved in: " + modelDir_OLS)
-```
-
-Output:
-
-```python
-Model saved in: /path/to/model
-```
-
-And in the terminal:
-
-```shell
-➜  models ls -l
-total 1928
--rw-r--r-- Sep 11 12:53 CO_MICS + Log(CO_MICS) + Poly(T) + PM25_metrics.sav
--rw-r--r-- Sep 11 12:53 CO_MICS + Log(CO_MICS) + Poly(T) + PM25_model.sav
--rw-r--r-- Sep 11 12:53 CO_MICS + Log(CO_MICS) + Poly(T) + PM25_parameters.sav
-```
+!!!warning "Save the model file"
+    If you want to save the model file into the disk, change the option `"export_model": False,` to `True`! Be careful though, it can take quite a lot of space. If you just want to keep the model to test in the current session, it is best to just use `"session_active_model": True,`.
 
 ## Load Models from Disk
 
-Now, sometime after having exported our model, let's assume we need to get it back:
+Now, sometime after having exported our model, let's assume we need to get it back. We can load it by running a dedicated notebook:
 
-***Machine Learning Model***
-
-We will use the symmetric functions from `joblib` and `keras`:
-
-```python
-from os.path import join
-from sklearn.externals import joblib
-from keras.models import model_from_json
-
-modelDirML = '/path/to/model'
-filenameML = join(modelDirML, model_name_ML)
-
-# Load Model and weights
-json_file = open(filenameML + "_model.json", "r")
-loaded_model_json = json_file.read()
-json_file.close()
-loaded_model = model_from_json(loaded_model_json)
-loaded_model.load_weights(filenameML + "_model.h5")
-print("Loaded " + model_name_ML + " from disk")
-
-# Load params and metrics
-loaded_params = joblib.load(filenameML + '_parameters.sav')
-loaded_metrics = joblib.load(filenameML + '_metrics.sav')
-
-display(loaded_params)
-display(loaded_metrics)
+```
+%run src_ipynb/apply_model.ipynb
 ```
 
-Output:
+Which outputs an interface that allows us to select, load and apply models to existing tests:
 
-```python
-Loaded LSTM CO 200 epochs Filter 0.9 from disk
+![](https://i.imgur.com/yrWpClg.png)
 
-{'features': (['REF', 'CO_AD_BASE_STATION_CASE'],
-  ['A', 'CO_MICS_RAW_STATION_CASE'],
-  ['B', 'TEMP_STATION_CASE'],
-  ['C', 'HUM_STATION_CASE'],
-  ['D', 'PM_25_STATION_CASE'])}
+!!! info "Session vs Disk"
+    The session model does not need to be archived in the disk, if we are not sure yet about it's quality. For this reason, you can see two models in the list, but they are the same.
 
-{'test': {'RMSD': 0.055340715974325445,
-  'RMSD_norm_unb': 0.8761932784857427,
-  'avg_est': 0.5344016428091338,
-  'avg_ref': 0.5358268506805136,
-  'bias': -0.0014252078713797856,
-  'normalised_bias': -0.022562028100955915,
-  'rsquared': 0.23248054249786632,
-  'sig_est': 0.03133999875370688,
-  'sig_ref': 0.06316842905267908,
-  'sigma_norm': 0.4961338951071746,
-  'sign_sigma': -1.0},
- 'train': {'RMSD': 0.08111001248781997,
-  'RMSD_norm_unb': 0.6549199203336652,
-  'avg_est': 0.6204429297293235,
-  'avg_ref': 0.6542569775479774,
-  'bias': -0.033814047818653936,
-  'normalised_bias': -0.27234526337748927,
-  'rsquared': 0.573229625070228,
-  'sig_est': 0.08824634698454116,
-  'sig_ref': 0.12415875128250474,
-  'sigma_norm': 0.7107541439729025,
-  'sign_sigma': -1.0}}
+And that's it! Now it is time to iterate and compare our models!
+
 ```
+Model Load
 
-***OLS Model***
+Loaded RF_UCD
+Model Type (loaded_model):
+RandomForestRegressor(bootstrap=True, criterion='mse', max_depth=None,
+                      max_features='auto', max_leaf_nodes=None,
+                      min_impurity_decrease=0.0, min_impurity_split=None,
+                      min_samples_leaf=1, min_samples_split=2,
+                      min_weight_fraction_leaf=0.0, n_estimators=100,
+                      n_jobs=None, oob_score=False, random_state=42, verbose=0,
+                      warm_start=False)
+...
 
-Similarly, we will use the `joblib.load` function:
-
-```python
-from os.path import join
-from sklearn.externals import joblib
-
-modelDir_OLS = '/path/to/model'
-filename_OLS = join(modelDir_OLS, model_name_OLS)
-
-# Load everything
-loaded_metrics = joblib.load(filename_OLS + '_metrics.sav')
-loaded_params = joblib.load(filename_OLS + '_parameters.sav')
-loaded_model = joblib.load(filename_OLS + '_model.sav')
-print("Loaded " + model_name_OLS + " from disk")
-
-display(loaded_params)
-display(loaded_metrics)
 ```
-
-Output:
-```python
-Loaded CO_MICS + Log(CO_MICS) + Poly(T) + PM25 from disk
-
-{'features': (['REF', 'CO_AD_BASE_STATION_CASE'],
-  ['A', 'CO_MICS_RAW_STATION_CASE'],
-  ['B', 'TEMP_STATION_CASE'],
-  ['C', 'HUM_STATION_CASE'],
-  ['D', 'PM_25_STATION_CASE']),
- 'formula': 'REF ~ np.log10(A) + A + B + np.power(B,2) + D'}
-
-{'test': {'RMSD': 0.0440714230263565,
-  'RMSD_norm_unb': 0.8723428704290845,
-  'avg_est': 0.550690169722107,
-  'avg_ref': 0.5351888829750784,
-  'bias': 0.015501286747028664,
-  'normalised_bias': 0.30432821283315176,
-  'rsquared': 0.2513771504173782,
-  'sig_est': 0.031200761981503004,
-  'sig_ref': 0.05093608181350988,
-  'sigma_norm': 0.6125473509277183,
-  'sign_sigma': -1.0},
- 'train': {'RMSD': 0.062207196964372664,
-  'RMSD_norm_unb': 0.5279216759963998,
-  'avg_est': 0.6559505800446772,
-  'avg_ref': 0.6559505800448995,
-  'bias': -2.2226664952995634e-13,
-  'normalised_bias': -1.8862669894154184e-12,
-  'rsquared': 0.721298704013152,
-  'sig_est': 0.10007571794915669,
-  'sig_ref': 0.11783414054170561,
-  'sigma_norm': 0.849293061324077,
-  'sign_sigma': -1.0}}
-```
-
-And that's it! Now it is time to iterate and compare our models.
 
 ## References
 

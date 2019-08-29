@@ -46,7 +46,7 @@ Have a look at the features within the framework:
 !!! tip "Step by step guides"
 	* [Install the framework](/Sensor%20Analysis%20Framework/guides/Install%20the%20framework/)
 	* [Use Machine Learning to Create Models for Sensors Calibration](/Sensor%20Analysis%20Framework/guides/Creating%20Models%20for%20Sensors%20Calibration/)
-	* [Post process the stations data](/Sensor%20Analysis%20Framework/guides/Post%20processing%20the%20Stations%20Data/)
+	* [Organise your data](/Sensor Analysis Framework/guides/Organise your data/)
     * [Batch analysis of your data](/Sensor%20Analysis%20Framework/guides/Analyse%20your%20data%20in%20batch)
 
 #### Loading and managing the data
