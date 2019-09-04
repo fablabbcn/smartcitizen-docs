@@ -50,7 +50,17 @@ Tests can also have different sources. They could be csv files, xls files or dat
 
 ### Pre-process the sd card data
 
-We can concatenate all the sd card data from a device with the `concat_script.py` in the `data/scripts` folder.
+In order to make our files usable, we will need to have them in a format like `YY-MM-DD.CSV`. However, if the kit has some sensors connected, we can find some files like: `YY-MM-DD.01`, `YY-MM-DD.02` and they should be something like `YY-MM-DD_01.CSV`, `YY-MM-DD_02.CSV`...
+
+!!! info "Pro-tip"
+  We can rename them manually, but if we have many of them, we can use this one-liner (works in oh-my-zsh):
+
+  ```
+  autoload -Uz zmv
+  zmv '(*).(0*)' '$1_$2.CSV'
+  ```
+
+We can now concatenate all the sd card data from a device with the `concat_script.py` in the `data/scripts` folder.
 
 We can access the script's help by typing in the terminal:
 

@@ -79,7 +79,7 @@ The measurements of the SCK2.0 are listed below:
 
 The sensor comes mounted and almost ready to be used:
 
-![](https://i.imgur.com/GfQy84y.jpg)
+<img src="https://live.staticflickr.com/65535/47950999751_13e6e00f49_b.jpg" alt="SCK 2.1 How to start?">
 
 The first step is to connect the battery. The kit will light in red (configuration mode) and we will be able to configure it by following the instructions at [start.smartcitizen.me](https://start.smartcitizen.me).
 
@@ -112,7 +112,8 @@ We recommend using a tablet power adaptor, instead of a computer USB port, for q
 
 The LED serves as an indication of the battery status. If the LED is flashing orange <span class="led small orange"> </span> it indicates that the battery must be charged. The battery takes about 4 hours to fully charge. When the battery is fully charged, the LED will change from orange to green <span class="led small green"> </span>.
 
-![](https://i.imgur.com/RxD960s.jpg)
+<div style="text-align: center">
+<img src="https://i.imgur.com/ABSXX4w.jpg" alt="SCK 2.1" width="400px"></div>
 
 _Remember that in addition to these colors you will have the state color of the kit: configuration, network and sd._
 
@@ -123,7 +124,8 @@ _Remember that in addition to these colors you will have the state color of the 
 
 The data board features a set of user interfaces which provide feedback to the user, as well as two buttons with different functionalities. The main RGB LED provides general feedback of the data board status. Additionally, two buttons are provided for user action. A hardware reset button, which forces a power cut to the board, and a power button, used to change the device's mode, turn on and off the device, and to perform a factory reset. You can see both buttons below:
 
-![](https://i.imgur.com/AmlA8e2.png)
+<div style="text-align: center">
+<img src="https://i.imgur.com/AmlA8e2.png" alt="SCK 2.1" width="400px"></div>
 
 ### The button
 
@@ -138,7 +140,7 @@ The main button interaction is detailed below:
 
 An example is shown below:
 
-![](https://i.imgur.com/rrcHIVj.jpg)
+<img src="https://live.staticflickr.com/65535/48439505516_d210ce2c8a_h.jpg" alt="SCK 2.1">
 
 !!! info "Troubleshooting"
     Have a look at the [troubleshoothing section](/Troubleshooting) to check how you can use the buttons in case of problems with your SCK!
@@ -203,7 +205,8 @@ If we want to leave the kit on the outside for a few days you will need to provi
 
 A prototype of the new enclosure:
 
-![](https://i.imgur.com/vWqPpEB.png)
+<div style="text-align: center">
+<img src="https://i.imgur.com/vWqPpEB.png" alt="SCK 2.1" width="400px"></div>
 
 !!! info "Want to contribute?"
     Visit the [Smart Citizen Enclosures repository](https://github.com/fablabbcn/smartcitizen-enclosures) to download, modify, or add your own!
@@ -236,13 +239,13 @@ A prototype of the new enclosure:
 
     ![](https://i.imgur.com/IhGxV67.jpg)
 
-**You can now install the sensor outdoors!**
+    **You can now install the sensor outdoors!**
 
-![](https://i.imgur.com/0kV6gie.jpg)
+    ![](https://i.imgur.com/0kV6gie.jpg)
 
 ## Software Updates
 
-Sofware updates are release frequently in the [Firmware repository](https://github.com/fablabbcn/smartcitizen-kit-20). These updates will need to be applied periodically to the two main components of the SCK: the SAMD21 (main processor) and the ESP8266 (Wi-Fi module). Check the instructions under the [Update the Firmware](/Components/Firmware/Guides/Update the firmware) section for more information.
+Sofware updates are release frequently in the [Firmware repository](https://github.com/fablabbcn/smartcitizen-kit-21). These updates will need to be applied periodically to the two main components of the SCK: the SAMD21 (main processor) and the ESP8266 (Wi-Fi module). Check the instructions under the [Update the Firmware](/Components/Firmware/Guides/Update the firmware) section for more information.
 
 <style>
 .led {
