@@ -54,6 +54,7 @@ nav:
       - Organise your data: Sensor Analysis Framework/guides/Organise your data.md
       - Model your sensor data: Sensor Analysis Framework/guides/Creating Models for Sensors Calibration.md
       - Analyse your data in batch: Sensor Analysis Framework/guides/Analyse your data in batch.md
+      - Make reports of your data: Sensor Analysis Framework/guides/Make exports from your data.md
   - Legacy Hardware:
     - Description: Legacy Hardware/index.md
     - Hardware: Legacy Hardware/Hardware.md

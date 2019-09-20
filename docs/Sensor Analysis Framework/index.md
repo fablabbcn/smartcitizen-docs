@@ -48,6 +48,7 @@ Have a look at the features within the framework:
 	* [Use Machine Learning to Create Models for Sensors Calibration](/Sensor%20Analysis%20Framework/guides/Creating%20Models%20for%20Sensors%20Calibration/)
 	* [Organise your data](/Sensor Analysis Framework/guides/Organise your data/)
     * [Batch analysis of your data](/Sensor%20Analysis%20Framework/guides/Analyse%20your%20data%20in%20batch)
+    * [Make exports from your data analysis](/Sensor%20Analysis%20Framework/guides/Make%20exports%20from%20your%20data)
 
 #### Loading and managing the data
 
