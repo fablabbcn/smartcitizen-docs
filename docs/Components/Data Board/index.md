@@ -47,7 +47,7 @@ The Kit features a modular architecture where sensors can be updated independent
 | GND         | GND              | GND      | 14           | 13           | GND      | GND              | GND         |
 | PA11        | 0                | I2S_FS   | 12           | 11           | TX       | A5               | PB2         |
 | PA7         | 9                | I2S_SD   | 10           | 9            | RX       | 25               | PB3         |
-| PA10        | 1                | I2S_SCK  | 8            | 7            | VBAT     | VBAT             | VBAT        |
+| PA10        | 1                | I2S_SCK  | 8            | 7            | 5V       | 5V               | 5V          |
 | PA22        | 20               | SDA      | 6            | 5            | PWM_CO   | 13               | PA9         |
 | PA23        | 21               | SCL      | 4            | 3            | PWM_NOX  | 14               | PA8         |
 | VCC         | VCC              | VCC      | 2            | 1            | VCC      | VCC              | VCC         |
