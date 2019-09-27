@@ -18,8 +18,8 @@ nav:
           - Metal Oxide Sensors:
             - Description: Components/Urban Sensor Board/Metal Oxide Sensor/index.md
             - eCO2/TVOC: Components/Urban Sensor Board/Metal Oxide Sensor/CCS811.md
-            
         - PM Sensor: SCK_PM.md
+      - Auxiliary connector: Components/Auxiliary/index.md
     - Smart Citizen Station: 
       - General: Smart Citizen Station.md
       - Components:

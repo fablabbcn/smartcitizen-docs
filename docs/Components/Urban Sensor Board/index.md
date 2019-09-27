@@ -1,9 +1,6 @@
 Urban Sensor Board
 ==================
 
-!!! info "We are updating"
-    We are currently updating the documentation and many of the figures are from V2.0. We will move them shortly to a more updated version.
-
 ## What is it?
 
 The Urban Sensor Board is a solution that contains a selection of low-cost sensors for environmental monitoring. Its main purpose is to serve as a tool for citizen science and awareness activities, and for that reason, metrics such as temperature, pressure, and humidity, as well as noise levels, ambient light, air quality indicators and PM sensors are included. The Urban Sensor Board has undergone several modifications throughout its development, and its **current version is V2.1**:
@@ -147,7 +144,7 @@ choice:
 
 ## External PM Sensor (V2.0 onwards)
 
-An external connector on the board supports the connection of a Plantower PMS 5003 or PMS 7003[^11]. The device is a digital particle concentration sensor that uses the Laser Scattering principle to obtain the number of suspended particles in the air. The sensor can be fully enabled or disabled in software to save energy when not in use.
+An external connector on the board supports the connection of a Plantower PMS 5003 or PMS 7003[^8]. The device is a digital particle concentration sensor that uses the Laser Scattering principle to obtain the number of suspended particles in the air. The sensor can be fully enabled or disabled in software to save energy when not in use.
 
 The following characteristics have been considered for the sensor
 choice:
@@ -196,16 +193,4 @@ choice:
 
     [https://datasheets.maximintegrated.com/en/ds/MAX30105.pdf](https://datasheets.maximintegrated.com/en/ds/MAX30105.pdf)
 
-[^8]: ALPHASENSE NO2-B43F Technical Datasheet
-
-    [http://www.alphasense.com/WEB1213/wp-content/uploads/2017/07/NO~2~B43F.pdf](http://www.alphasense.com/WEB1213/wp-content/uploads/2017/07/NO2B43F.pdf)
-
-[^9]: ALPHASENSE OX-B431 Technical Datasheet
-
-    [http://www.alphasense.com/WEB1213/wp-content/uploads/2017/07/OX-B431.pdf](http://www.alphasense.com/WEB1213/wp-content/uploads/2017/07/OX-B431.pdf)
-
-[^10]: ALPHASENSE CO-B4 B Technical Datasheet
-
-    [http://www.alphasense.com/WEB1213/wp-content/uploads/2015/04/COB41.pdf](http://www.alphasense.com/WEB1213/wp-content/uploads/2015/04/COB41.pdf)
-
-[^11]: PLANTOWER PMS5003 Technical Datasheet [https://aqicn.org/air/view/sensor/spec/pms5003.pdf](https://aqicn.org/air/view/sensor/spec/pms5003.pdf)
+[^8]: PLANTOWER PMS5003 Technical Datasheet [https://aqicn.org/air/view/sensor/spec/pms5003.pdf](https://aqicn.org/air/view/sensor/spec/pms5003.pdf)
