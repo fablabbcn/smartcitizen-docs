@@ -176,6 +176,31 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>https://docs.smartcitizen.me/Use Cases/</loc>
+     <lastmod>2019-10-02</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://docs.smartcitizen.me/Toolkit/</loc>
+     <lastmod>2019-10-02</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://docs.smartcitizen.me/Components/Auxiliary/guides/thirdparty/</loc>
+     <lastmod>2019-10-02</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://docs.smartcitizen.me/Toolkit/guides/creating_interfaces/</loc>
+     <lastmod>2019-10-02</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://docs.smartcitizen.me/Toolkit/guides/soil/</loc>
+     <lastmod>2019-10-02</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>https://docs.smartcitizen.me/Legacy Hardware/</loc>
      <lastmod>2019-10-02</lastmod>
      <changefreq>daily</changefreq>
