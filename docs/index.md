@@ -1,6 +1,10 @@
 Welcome!
 ========
 
+!!! info "A note about versions"
+
+    The [**SCK 2.0**](/Legacy Hardware/sck) was the development version for the now commercially available **SCK 2.1** sponsored thanks to the [iSCAPE project](https://www.iscapeproject.eu/) under European Community’s H2020 Programme under Grant Agreement No. [689954](https://cordis.europa.eu/project/rcn/202639/en)
+
 ![](https://i.imgur.com/0U9T29b.jpg)
 
 ## Sections

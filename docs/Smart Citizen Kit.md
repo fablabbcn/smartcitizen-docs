@@ -2,9 +2,8 @@ Smart Citizen Kit
 ===========
 
 !!! info "A note about versions"
-    **The following section contains information about the SCK 2.0 and the SCK 2.1.**
 
-    The **SCK 2.0** was the development version for the now commercially available **SCK 2.1** sponsored thanks to the [iSCAPE project](https://www.iscapeproject.eu/) under European Community’s H2020 Programme under Grant Agreement No. [689954](https://cordis.europa.eu/project/rcn/202639/en)
+    The [**SCK 2.0**](/Legacy Hardware/sck) was the development version for the now commercially available **SCK 2.1** sponsored thanks to the [iSCAPE project](https://www.iscapeproject.eu/) under European Community’s H2020 Programme under Grant Agreement No. [689954](https://cordis.europa.eu/project/rcn/202639/en)
 
 !!! tip "Quick links"
 	:rocket: **Installation**: [start.smartcitizen.me](https://start.smartcitizen.me/)
@@ -49,30 +48,6 @@ The SCK 2.1 components are listed below:
 | Barometric pressure            | Pa    | NXP MPL3115A26        |
 | Equivalent Carbon Dioxide      | ppm   | AMS CCS811            |
 | Volatile Organic Compounds     | ppb   | AMS CCS811            |
-| Particulate Matter PM 1 / 2.5 / 10 | µg/m3 | Planttower PMS 5003              |
-
-### SCK 2.0
-
-!!! info "Important!"
-    **SCK 2.0 was the development version for the now commercially available SCK 2.1**
-
-![](https://i.imgur.com/vgt8m3p.jpg)
-
-The **non-commercially available** SCK 2.0 components are listed below:
-
-1. Smart Citizen Kit 2.0 with Particle Sensor and battery with two mounting brackets.
-2. MicroSD card and microSD adapter to SD.
-3. USB cable and a USB charger.
-
-The measurements of the SCK2.0 are listed below:
-
-| Measurement                    | Units | Sensors               |
-|--------------------------------|-------|-----------------------|
-| Air temperature                | ºC    | Sensirion SHT-31      |
-| Relative Humidity              | % REL | Sensirion SHT-31      |
-| Noise level                    | dBA   | Invensense ICS-434342 |
-| Ambient light                  | Lux   | Rohm BH1721FVC        |
-| Barometric pressure            | Pa    | NXP MPL3115A26        |
 | Particulate Matter PM 1 / 2.5 / 10 | µg/m3 | Planttower PMS 5003              |
 
 ## :notebook: Installation instructions
