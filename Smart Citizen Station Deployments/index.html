@@ -13,7 +13,7 @@
         <meta name="description" content="Smart Citizen Documentation">
       
       
-        <link rel="canonical" href="https://docs.smartcitizen.me/_FAQ/">
+        <link rel="canonical" href="https://docs.smartcitizen.me/Smart Citizen Station Deployments/">
       
       
         <meta name="author" content="Smart Citizen Team">
@@ -42,7 +42,7 @@
     
     
       
-        <title>FAQ - Smart Citizen Docs</title>
+        <title>Deployment Considerations - Smart Citizen Docs</title>
       
     
     
@@ -89,7 +89,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#frequently-asked-questions" tabindex="1" class="md-skip">
+      <a href="#living-lab-station-v2" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -150,7 +150,7 @@
                 Smart Citizen Docs
               </span>
               <span class="md-header-nav__topic">
-                FAQ
+                Deployment Considerations
               </span>
             
           
@@ -964,15 +964,17 @@
 <!-- Determine class according to level -->
 
 
+  
+
 
 <!-- Main navigation item with nested items -->
 
-  <li class="md-nav__item md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
 
     <!-- Active checkbox expands items contained within nested section -->
     
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-3"
-          type="checkbox" id="nav-1-3" />
+          type="checkbox" id="nav-1-3" checked />
     
 
     <!-- Expand active pages -->
@@ -1421,15 +1423,229 @@
 <!-- Determine class according to level -->
 
 
+  
+
 
 <!-- Main navigation item with nested items -->
 
-  <li class="md-nav__item">
-    <a href="../Smart Citizen Station Deployments/" title="Deployment Considerations"
-        class="md-nav__link">
+  <li class="md-nav__item md-nav__item--active">
+    
+
+    <!-- Active checkbox expands items contained within nested section -->
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc"
+        type="checkbox" id="__toc" />
+
+    <!-- Hack: see partials/toc.html for more information -->
+    
+
+    <!-- Render table of contents, if not empty -->
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Deployment Considerations
+      </label>
+    
+    <a href="./" title="Deployment Considerations"
+        class="md-nav__link md-nav__link--active">
       Deployment Considerations
     </a>
+
+    <!-- Show table of contents -->
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#living-lab-station-v2" class="md-nav__link">
+    Living Lab Station V2
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iscape-living-lab-station-v1" class="md-nav__link">
+    iScape Living Lab Station V1
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-pack" class="md-nav__link">
+    The Pack
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instructions" class="md-nav__link">
+    Instructions
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#on-boarding" class="md-nav__link">
+    On boarding
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-data-from-the-sd-card" class="md-nav__link">
+    Get data from the SD card
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#outdoor-installation" class="md-nav__link">
+    Outdoor installation
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#umbrella-cover-installation" class="md-nav__link">
+    Umbrella cover installation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#power-supply" class="md-nav__link">
+    Power supply
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#changing-power-supplies" class="md-nav__link">
+    Changing power supplies
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dimensions" class="md-nav__link">
+    Dimensions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    Troubleshooting
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#before-setup" class="md-nav__link">
+    Before setup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-station-does-not-respond" class="md-nav__link">
+    The station does not respond
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-led-does-not-turn-on-and-the-station-does-not-work" class="md-nav__link">
+    The LED does not turn on and the station does not work
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-station-does-not-store-the-data-on-the-sd-card" class="md-nav__link">
+    The station does not store the data on the SD card.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sensor-evaluation-campaign" class="md-nav__link">
+    Sensor Evaluation Campaign
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#test" class="md-nav__link">
+    Test
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sensor-installation" class="md-nav__link">
+    Sensor Installation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    References
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
+
+<!-- Main navigation item -->
 
         
       </ul>
@@ -1504,176 +1720,15 @@
 <!-- Determine class according to level -->
 
 
-  
-
 
 <!-- Main navigation item with nested items -->
 
-  <li class="md-nav__item md-nav__item--active">
-    
-
-    <!-- Active checkbox expands items contained within nested section -->
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc"
-        type="checkbox" id="__toc" />
-
-    <!-- Hack: see partials/toc.html for more information -->
-    
-      
-    
-
-    <!-- Render table of contents, if not empty -->
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        FAQ
-      </label>
-    
-    <a href="./" title="FAQ"
-        class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../_FAQ/" title="FAQ"
+        class="md-nav__link">
       FAQ
     </a>
-
-    <!-- Show table of contents -->
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#can-the-sensors-be-placed-outdoors" class="md-nav__link">
-    Can the sensors be placed outdoors?
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#can-i-make-my-own-rainproof-enclosure" class="md-nav__link">
-    Can I make my own rainproof enclosure?
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#can-i-charge-the-sensors-with-a-solar-panel" class="md-nav__link">
-    Can I charge the sensors with a solar panel?
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#can-i-add-external-sensors-to-the-system" class="md-nav__link">
-    Can I add external sensors to the system?
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#what-happens-if-there-is-a-loss-of-network-connectivity" class="md-nav__link">
-    What happens if there is a loss of network connectivity?
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#which-external-sensors-can-be-added" class="md-nav__link">
-    Which external sensors can be added?
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#will-i-be-able-to-access-the-collected-data" class="md-nav__link">
-    Will I be able to access the collected data?
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-does-the-kit-record-the-data" class="md-nav__link">
-    How does the kit record the data?
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#what-networks-does-it-support" class="md-nav__link">
-    What networks does it support?
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#is-there-a-mobile-phone-app-that-lets-me-view-the-data" class="md-nav__link">
-    Is there a mobile phone app that lets me view the data?
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-accurate-are-the-measurements" class="md-nav__link">
-    How accurate are the measurements?
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#will-the-global-platform-be-maintained-after-the-project-finishes-release" class="md-nav__link">
-    Will the global platform be maintained after the project finishes release?
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#are-there-any-notable-case-studies-using-similar-sensors" class="md-nav__link">
-    Are there any notable case studies using similar sensors?
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#what-happens-if-i-want-to-move-the-device-or-give-it-to-someone-else" class="md-nav__link">
-    What happens if I want to move the device or give it to someone else?
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#what-about-using-other-wireless-technologies" class="md-nav__link">
-    What about using other wireless technologies?
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#can-i-remove-my-data-from-the-platform" class="md-nav__link">
-    Can I remove my data from the platform?
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-can-i-retrieve-the-mac-address-from-my-device" class="md-nav__link">
-    How can I retrieve the MAC address from my device?
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
-
-<!-- Main navigation item -->
 
         
           
@@ -3140,128 +3195,183 @@
 <nav class="md-nav md-nav--secondary">
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#can-the-sensors-be-placed-outdoors" class="md-nav__link">
-    Can the sensors be placed outdoors?
+  <a href="#living-lab-station-v2" class="md-nav__link">
+    Living Lab Station V2
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#can-i-make-my-own-rainproof-enclosure" class="md-nav__link">
-    Can I make my own rainproof enclosure?
+  <a href="#iscape-living-lab-station-v1" class="md-nav__link">
+    iScape Living Lab Station V1
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-pack" class="md-nav__link">
+    The Pack
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#can-i-charge-the-sensors-with-a-solar-panel" class="md-nav__link">
-    Can I charge the sensors with a solar panel?
+        
+          <li class="md-nav__item">
+  <a href="#instructions" class="md-nav__link">
+    Instructions
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#on-boarding" class="md-nav__link">
+    On boarding
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#can-i-add-external-sensors-to-the-system" class="md-nav__link">
-    Can I add external sensors to the system?
+        
+          <li class="md-nav__item">
+  <a href="#get-data-from-the-sd-card" class="md-nav__link">
+    Get data from the SD card
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#what-happens-if-there-is-a-loss-of-network-connectivity" class="md-nav__link">
-    What happens if there is a loss of network connectivity?
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#outdoor-installation" class="md-nav__link">
+    Outdoor installation
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#umbrella-cover-installation" class="md-nav__link">
+    Umbrella cover installation
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#which-external-sensors-can-be-added" class="md-nav__link">
-    Which external sensors can be added?
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#power-supply" class="md-nav__link">
+    Power supply
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#changing-power-supplies" class="md-nav__link">
+    Changing power supplies
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#will-i-be-able-to-access-the-collected-data" class="md-nav__link">
-    Will I be able to access the collected data?
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dimensions" class="md-nav__link">
+    Dimensions
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#how-does-the-kit-record-the-data" class="md-nav__link">
-    How does the kit record the data?
+        
+          <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    Troubleshooting
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#before-setup" class="md-nav__link">
+    Before setup
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#what-networks-does-it-support" class="md-nav__link">
-    What networks does it support?
+        
+          <li class="md-nav__item">
+  <a href="#the-station-does-not-respond" class="md-nav__link">
+    The station does not respond
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#is-there-a-mobile-phone-app-that-lets-me-view-the-data" class="md-nav__link">
-    Is there a mobile phone app that lets me view the data?
+        
+          <li class="md-nav__item">
+  <a href="#the-led-does-not-turn-on-and-the-station-does-not-work" class="md-nav__link">
+    The LED does not turn on and the station does not work
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#how-accurate-are-the-measurements" class="md-nav__link">
-    How accurate are the measurements?
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-station-does-not-store-the-data-on-the-sd-card" class="md-nav__link">
+    The station does not store the data on the SD card.
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#will-the-global-platform-be-maintained-after-the-project-finishes-release" class="md-nav__link">
-    Will the global platform be maintained after the project finishes release?
+        
+          <li class="md-nav__item">
+  <a href="#sensor-evaluation-campaign" class="md-nav__link">
+    Sensor Evaluation Campaign
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#test" class="md-nav__link">
+    Test
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#are-there-any-notable-case-studies-using-similar-sensors" class="md-nav__link">
-    Are there any notable case studies using similar sensors?
+        
+          <li class="md-nav__item">
+  <a href="#sensor-installation" class="md-nav__link">
+    Sensor Installation
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#what-happens-if-i-want-to-move-the-device-or-give-it-to-someone-else" class="md-nav__link">
-    What happens if I want to move the device or give it to someone else?
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    References
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#what-about-using-other-wireless-technologies" class="md-nav__link">
-    What about using other wireless technologies?
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#can-i-remove-my-data-from-the-platform" class="md-nav__link">
-    Can I remove my data from the platform?
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-can-i-retrieve-the-mac-address-from-my-device" class="md-nav__link">
-    How can I retrieve the MAC address from my device?
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -3282,50 +3392,437 @@
               
                 
                 
-                <h1 id="frequently-asked-questions">Frequently asked questions<a class="headerlink" href="#frequently-asked-questions" title="Permanent link">Link</a></h1>
-<p><img alt="" src="https://i.imgur.com/iI3Bu6F.jpg" /></p>
-<h2 id="can-the-sensors-be-placed-outdoors">Can the sensors be placed outdoors?<a class="headerlink" href="#can-the-sensors-be-placed-outdoors" title="Permanent link">Link</a></h2>
-<p>Yes. The sensor is designed for both indoors and outdoors use. But if you’re planning to use it outdoors, you will have to consider purchasing also a rainproof enclosure.</p>
-<h2 id="can-i-make-my-own-rainproof-enclosure">Can I make my own rainproof enclosure?<a class="headerlink" href="#can-i-make-my-own-rainproof-enclosure" title="Permanent link">Link</a></h2>
-<p>Of course! The manufacturing files for the 3D printed enclosure will be available to download in the <a href="https://github.com/fablabbcn/smartcitizen-enclosures">Enclosures repository</a>. Throughout the history of the Smart Citizen project, we’ve seen many inventive solutions for placing the sensor outdoors.</p>
-<h2 id="can-i-charge-the-sensors-with-a-solar-panel">Can I charge the sensors with a solar panel?<a class="headerlink" href="#can-i-charge-the-sensors-with-a-solar-panel" title="Permanent link">Link</a></h2>
-<p>Sure! But note that the sensor requires a 5V solar panel to work properly. Keeping that in mind, you can buy one of the photovoltaic panels that we provide, or run your own tests.</p>
-<h2 id="can-i-add-external-sensors-to-the-system">Can I add external sensors to the system?<a class="headerlink" href="#can-i-add-external-sensors-to-the-system" title="Permanent link">Link</a></h2>
-<p>Yes. The sensor has an independently configurable auxiliary bus at 3.3V with a SEEED Grove connector. The Bus has native support for I2C, but it can also be setup on firmware as a GPIO or UART. It can supply power up to 750mA, and it can be enabled or disabled by software.</p>
-<h2 id="what-happens-if-there-is-a-loss-of-network-connectivity">What happens if there is a loss of network connectivity?<a class="headerlink" href="#what-happens-if-there-is-a-loss-of-network-connectivity" title="Permanent link">Link</a></h2>
-<p>If the sensor is working in network mode and at any time the network is not available, it will store the data on its internal memory and publish all the collected data as soon as the network is available again.</p>
-<h2 id="which-external-sensors-can-be-added">Which external sensors can be added?<a class="headerlink" href="#which-external-sensors-can-be-added" title="Permanent link">Link</a></h2>
-<p>For the moment, the list of supported sensors includes some Atlas Scientific probes, some Seeed Grove sensors, and the Chirp moisture sensor, but the options are almost endless. We will add tutorials to use the additional sensors listed above in our documentation.However, in the short term we will only offer support for them via our custom hardware development services.</p>
-<h2 id="will-i-be-able-to-access-the-collected-data">Will I be able to access the collected data?<a class="headerlink" href="#will-i-be-able-to-access-the-collected-data" title="Permanent link">Link</a></h2>
-<p>Of course! The data collected by your sensor is available for anyone on the <a href="https://smartcitizen.me/kits/">Smart Citizen Platform</a>, and you can download it at any time as a CSV file. Besides, you can also use the API to built custom applications to interact with your device.</p>
-<h2 id="how-does-the-kit-record-the-data">How does the kit record the data?<a class="headerlink" href="#how-does-the-kit-record-the-data" title="Permanent link">Link</a></h2>
-<p>The sensor can work in network and SD card modes. In network mode, the sensor publish data to the SC platform over Wi-Fi every minute. In SD card mode, all the collected data is stored locally in CSV format, and it can be later uploaded manually to the platform using the “Manual Data Upload” option.</p>
-<h2 id="what-networks-does-it-support">What networks does it support?<a class="headerlink" href="#what-networks-does-it-support" title="Permanent link">Link</a></h2>
-<p>The SCK supports Wi-Fi WEP, WPA/WPA2 and open networks that are common networks in domestic environments and small businesses. However, like many other embedded devices such as Apple TV® or Chromecast®, it <strong>does not</strong> support networks with captive portals such as those found in Airports and Hotels. Currently, it also <strong>does not</strong> WPA/WPA2 Enterprise networks such as EDUROAM. However, they will be supported in the future after a firmware updated. </p>
-<h2 id="is-there-a-mobile-phone-app-that-lets-me-view-the-data">Is there a mobile phone app that lets me view the data?<a class="headerlink" href="#is-there-a-mobile-phone-app-that-lets-me-view-the-data" title="Permanent link">Link</a></h2>
-<p>Currently there is an android app available, but we are working to make the website fully mobile device friendly, so that no mobile phone app is required. We would rather focus the time of our small team on the kits themselves instead of maintaining apps. So our final aim is to be app free, but fully mobile friendly.</p>
-<h2 id="how-accurate-are-the-measurements">How accurate are the measurements?<a class="headerlink" href="#how-accurate-are-the-measurements" title="Permanent link">Link</a></h2>
-<p>Weather, noise, light and PM sensor measurements have been calibrated and validated against reference sensors through both in-house and external validations and they provide accurate data. Chemical gas sensors are to be considered qualitatively rather than quantitatively while calibration algorithms are developed for data accuracy improvement.</p>
-<h2 id="will-the-global-platform-be-maintained-after-the-project-finishes-release">Will the global platform be maintained after the project finishes release?<a class="headerlink" href="#will-the-global-platform-be-maintained-after-the-project-finishes-release" title="Permanent link">Link</a></h2>
-<p>Yes, it will be maintained just as it has been for the past five years. Also, the platform is fully open source so the community can take over the maintenance if at some point the Smart Citizen core team can no longer run it.</p>
-<h2 id="are-there-any-notable-case-studies-using-similar-sensors">Are there any notable case studies using similar sensors?<a class="headerlink" href="#are-there-any-notable-case-studies-using-similar-sensors" title="Permanent link">Link</a></h2>
-<p>Yes! A particularly interesting case study is the Making Sense project at Plaça del Sol in Barcelona, where a group of 15 technology enthusiasts and environmentalists joined a community of neighbours from a middle-class district that has been suffering from noise issues due to the nightlife in the square. You can find more information about this case study at: <a href="http://www.making-sense.eu">www.making-sense.eu</a></p>
-<h2 id="what-happens-if-i-want-to-move-the-device-or-give-it-to-someone-else">What happens if I want to move the device or give it to someone else?<a class="headerlink" href="#what-happens-if-i-want-to-move-the-device-or-give-it-to-someone-else" title="Permanent link">Link</a></h2>
-<p>Just by pressing the button you can fully reset your sensor and configure it again using your account or a new one. All your previous data will remain available on the platform as it was before the reset.</p>
-<h2 id="what-about-using-other-wireless-technologies">What about using other wireless technologies?<a class="headerlink" href="#what-about-using-other-wireless-technologies" title="Permanent link">Link</a></h2>
-<p>We are working closely with Barcelona’s The Things Network community to develop a TTN enabled sensor. A LoRA prototype has been tested, but we don’t have dates for the final version yet. BLE, Zigbee, or others are not currently supported, and except for G5, we are not planning to implement them unless there is a custom hardware integration demand.</p>
-<h2 id="can-i-remove-my-data-from-the-platform">Can I remove my data from the platform?<a class="headerlink" href="#can-i-remove-my-data-from-the-platform" title="Permanent link">Link</a></h2>
-<p>Of course. You are the owner of the data that you collect, and you can download and/or delete all your sensor data at any time.</p>
-<h2 id="how-can-i-retrieve-the-mac-address-from-my-device">How can I retrieve the MAC address from my device?<a class="headerlink" href="#how-can-i-retrieve-the-mac-address-from-my-device" title="Permanent link">Link</a></h2>
-<p>You can retrieve the MAC address with two methods: either you can use your phone (see below), or follow <a href="/Components/Firmware/guides/Using the Shell">this guide</a> if you want to try out the console interface in the kit. </p>
-<p><strong>Using your phone</strong></p>
+                  <h1>Deployment Considerations</h1>
+                
+                <p>This page is a compilation of information regarding the operation in the field of the Smart Citizen Station. Since there are different versions, please, refer to their section accordingly.</p>
+<h2 id="living-lab-station-v2">Living Lab Station V2<a class="headerlink" href="#living-lab-station-v2" title="Permanent link">Link</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">WIP</p>
+<p>This version is in production stage and no information is currently available.</p>
+</div>
+<h2 id="iscape-living-lab-station-v1">iScape Living Lab Station V1<a class="headerlink" href="#iscape-living-lab-station-v1" title="Permanent link">Link</a></h2>
+<h3 id="the-pack">The Pack<a class="headerlink" href="#the-pack" title="Permanent link">Link</a></h3>
+<p><img alt="" src="https://i.imgur.com/zVPlOcz.jpg" /></p>
+<ul>
+<li>
+<p>iSCAPE Living Lab Station</p>
+<ul>
+<li>Urban Board 2.0</li>
+<li>Data Board 2.0</li>
+<li>PM Board 2.0 + 2 PM sensors</li>
+<li>Gas Pro Board 2.0 with 3 EC sensors</li>
+<li>6Ah Battery</li>
+</ul>
+</li>
+<li>
+<p>Accessories</p>
+<ul>
+<li>MicroSD card 512MB</li>
+<li>USB Charger</li>
+<li>MicroSD to SD card adapter</li>
+<li>USB Power Supply</li>
+<li>2m 3 Wire 220V cable</li>
+<li>Mounting brackets and screws</li>
+<li>Mounting tools (1x Wrench + 2 Allen Keys)</li>
+</ul>
+</li>
+</ul>
+<h3 id="instructions">Instructions<a class="headerlink" href="#instructions" title="Permanent link">Link</a></h3>
+<h4 id="on-boarding">On boarding<a class="headerlink" href="#on-boarding" title="Permanent link">Link</a></h4>
+<p>To start the installation simply visit the setup website <a href="https://stations.iscape.smartcitizen.me"><strong>stations.iscape.smartcitizen.me</strong></a>.</p>
+<p><img alt="" src="https://i.imgur.com/9slH1Ze.png" /></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><img alt="⚠" class="emojione" src="https://cdn.jsdelivr.net/emojione/assets/svg/26a0.svg" title=":warning:" /> We will need you to send us the following information once you are done with the setup: the <em>device ID</em>, which appears in the URL of your device <a href="https://smartcitizen.me/kits/">https://smartcitizen.me/kits/</a><em>XXXX</em> and the physical station ID that corresponds to that <em>device ID</em>, which can be found in a sticker underneath.</p>
+<p><img alt="" src="https://i.imgur.com/ARC6V42.jpg" /></p>
+</div>
+<h4 id="get-data-from-the-sd-card">Get data from the SD card<a class="headerlink" href="#get-data-from-the-sd-card" title="Permanent link">Link</a></h4>
+<p>You will need to access the Kit in order to get the SD card. For this, first unscrew the <strong>two white layers at the top of the station</strong> with the keys provided in the Pack:</p>
+<p><img alt="" src="https://i.imgur.com/WPb3tnr.jpg" /></p>
+<p>Then turn off your Kit by pressing the button for <strong>5 seconds</strong> and remove the micro SD card. You can plug the card on your computer using a Micro SD card reader.</p>
+<p><img alt="" src="https://i.imgur.com/DfRiI4s.jpg" /></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Handle the SD card with care! It might drop inside the station</p>
+</div>
+<p>You will find inside a <code class="codehilite"><span class="n">YYYY</span><span class="o">-</span><span class="n">MM</span><span class="o">-</span><span class="n">DD</span><span class="p">.</span><span class="n">CSV</span></code> with all the data. You can follow the <a href="/Sensor%20Platform/guides/Uploading%20SD%20Card%20Data/"><strong>Manual CSV data upload</strong></a> guide to manually upload the data to the platform.</p>
+<div class="admonition info">
+<p class="admonition-title">Power it back on!</p>
+<p>Once you are done uploading the data and you want to keep on logging, put the SD card back in with the Kit OFF and press the button. It will come back to life!</p>
+</div>
+<h3 id="outdoor-installation">Outdoor installation<a class="headerlink" href="#outdoor-installation" title="Permanent link">Link</a></h3>
+<p>Use the perforated steel tape and the M6 provided to mount the Station on any street light or pole. The Pack also includes the required wrench:</p>
+<p><img alt="" src="https://i.imgur.com/36El7ds.jpg" /></p>
+<p>Also, a temperature probe needs to be extracted from the bottom of the station:</p>
+<p><img alt="" src="https://i.imgur.com/HIwz1yG.jpg" /></p>
+<p>And it should look like this:</p>
+<p><img alt="" src="https://i.imgur.com/hXtS4Gq.jpg" /></p>
+<h4 id="umbrella-cover-installation">Umbrella cover installation<a class="headerlink" href="#umbrella-cover-installation" title="Permanent link">Link</a></h4>
+<p>Due to some issues with the waterproofness of the Living Lab Station, we have developed a solution to protect it from the rain. This solution is shown in the pictures below, and it's meant to solve these problems for the current version of the LLS. The newer version of the LLS has a simpler setup, already including such cover to protect it from the rain or sun radiation.</p>
+<p><img alt="" src="https://i.imgur.com/abJOKRa.jpg" /></p>
+<div class="admonition warning">
+<p class="admonition-title">Beware of collisions</p>
+<p>As you can see, the cover is a rugged piece and it's only meant for the current version of the station. Please, be careful and do not fit it in places where people could bump into it.</p>
+</div>
+<p>This is what you get in the package (except the wrench):</p>
+<p><img alt="" src="https://i.imgur.com/ftZRoT6.jpg" /></p>
+<div class="admonition example">
+<p class="admonition-title">Step by step</p>
+<ul>
+<li>
+<p>If you have the 3D printed cover on the Smart Citizen Kit, it's time to remove it. </p>
+</li>
+<li>
+<p>There is no need to remove the two top white layers (in the pictures we did it without them)</p>
+<p><img alt="" src="https://i.imgur.com/4BRDnQO.jpg" /></p>
+</li>
+<li>
+<p>Insert the threads in the already mounted t-slots. The distance between them is ~50mm</p>
+<p><img alt="" src="https://i.imgur.com/zRh2JJI.jpg" /></p>
+<p><img alt="" src="https://i.imgur.com/44Y2WjZ.jpg" /></p>
+<p><img alt="" src="https://i.imgur.com/jn8XnVD.jpg" /></p>
+</li>
+<li>
+<p>Insert the 4x flat spacer in the threads</p>
+<p><img alt="" src="https://i.imgur.com/a4NRjmz.jpg" /></p>
+</li>
+<li>
+<p>Place the cover on the station</p>
+<p><img alt="" src="https://i.imgur.com/v2CKMtr.jpg" /></p>
+<p><img alt="" src="https://i.imgur.com/EqZDdzy.jpg" /></p>
+</li>
+<li>
+<p>Place the serrated spacers, with the serrated side on the outer part (they help to hold the station in place)</p>
+<p><img alt="" src="https://i.imgur.com/EOG8UvW.jpg" /></p>
+</li>
+<li>
+<p>Place the perforated steel stripe in one of the sides. Don't tight it too much, so that you have room to place it in the pole</p>
+<p><img alt="" src="https://i.imgur.com/EOG8UvW.jpg" /></p>
+<p><img alt="" src="https://i.imgur.com/JJmuU7d.jpg" /></p>
+</li>
+<li>
+<p>Put the station in it's final location, and tighten it with the perforated steel stripes. Play with both sides, so that the stripes are tight on the pole</p>
+<p><img alt="" src="https://i.imgur.com/IKfu75D.jpg" /></p>
+<p><img alt="" src="https://i.imgur.com/lkWg556.jpg" /></p>
+</li>
+<li>
+<p>You are done!</p>
+</li>
+</ul>
+</div>
+<h3 id="power-supply">Power supply<a class="headerlink" href="#power-supply" title="Permanent link">Link</a></h3>
+<p>The Station can be directly powered at 220-240V AC (Max. consumption with the AC supply is 5W). It can also be powered via USB, with a normal phone charger (5V and 750mA max). However, there is a bit to do in order to change it. Let's see how!</p>
+<p><img alt="" src="https://i.imgur.com/S8cVo9z.jpg" /></p>
+<div class="admonition warning">
+<p class="admonition-title">Batteries</p>
+<p>The Living Lab Station has a higher consumption, mostly due to the fans on the two PM sensors.</p>
+<p>That means the internal battery last just for 20h, and it is only aimed at providing backup power.</p>
+<p><em>For example, we can connect the station on the street light electric line, so the Station gets charged during the night when the lights are on.</em></p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Solar Panel</p>
+<p>Unfortunately, we are having some problems with the PV Solar Panel system to power the Station independently. The system is currently under tests, and it will be available in the next few months.</p>
+<p><img alt="" src="https://i.imgur.com/vfp6nB5.jpg" /></p>
+</div>
+<h4 id="changing-power-supplies">Changing power supplies<a class="headerlink" href="#changing-power-supplies" title="Permanent link">Link</a></h4>
+<p>Before we start, some tools that will be helpful during the process:</p>
+<p><img alt="" src="https://i.imgur.com/GiZkuwe.jpg" /></p>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>Unplug the station before starting this process from any type of external supply</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Step by step</p>
+<ul>
+<li>
+<p>Remove the two covers using the allen keys as explained on the setup instructions.</p>
+<p><img alt="" src="https://i.imgur.com/4BRDnQO.jpg" /></p>
+</li>
+<li>
+<p>Remove the layer which contains the kit. The kit is attached to the layers below, as seen in the image</p>
+<p><img alt="" src="https://i.imgur.com/nP9aqsk.jpg" /></p>
+</li>
+<li>
+<p>Unplug the different connectors in the kit: I2C, battery and USB</p>
+<p><img alt="" src="https://i.imgur.com/pXTL3ku.jpg" /></p>
+</li>
+<li>
+<p>You can use nose pliers for the USB and the battery</p>
+<p><img alt="" src="https://i.imgur.com/9j6GznE.jpg" /></p>
+<p><img alt="" src="https://i.imgur.com/2STYawe.jpg" /></p>
+</li>
+<li>
+<p>Time to get to the power layer, this time, two blue layers will come off</p>
+<p><img alt="" src="https://i.imgur.com/X4RlUqr.jpg" /></p>
+</li>
+<li>
+<p>Unscrew the cover for the power area</p>
+<p><img alt="" src="https://i.imgur.com/4cfxCZv.jpg" /></p>
+</li>
+<li>
+<p>Make sure there is no energy left in the power supply by checking that there is no LED on in it. Then, remove the cables from the power supply and the white brackets</p>
+<p><img alt="" src="https://i.imgur.com/h9iufVc.jpg" /></p>
+<p><img alt="" src="https://i.imgur.com/1yulbbU.jpg" /></p>
+</li>
+<li>
+<p>Extract the cable from the base's cable gland</p>
+<p><img alt="" src="https://i.imgur.com/jJF9VbJ.jpg" /></p>
+</li>
+<li>
+<p>Cover the cable gland again and remove the square cable gland on the other side</p>
+<p><img alt="" src="https://i.imgur.com/P3m4q7Q.jpg" /></p>
+</li>
+<li>
+<p>Exchange the rubber in the cable gland with the one provided with a hole</p>
+<p><img alt="" src="https://i.imgur.com/NiUeiJ5.jpg" /></p>
+<p><img alt="" src="https://i.imgur.com/IXMLkM4.jpg" /></p>
+<p><img alt="" src="https://i.imgur.com/OrNZRyT.jpg" /></p>
+</li>
+<li>
+<p>Put the cable in and fix the gland in place. Leave sufficient overhead in the cable to be able to connect it to the kit</p>
+<p><img alt="" src="https://i.imgur.com/28wLcXA.jpg" /></p>
+<p><img alt="" src="https://i.imgur.com/STZ0Yu8.jpg" /></p>
+</li>
+<li>
+<p>Put the power cover back on</p>
+<p><img alt="" src="https://i.imgur.com/2GTVg90.jpg" /></p>
+</li>
+<li>
+<p>Put the kit's layer back on and pass the cables through</p>
+<p><img alt="" src="https://i.imgur.com/UO5OmbK.jpg" /></p>
+</li>
+<li>
+<p>Connect everything in this order: first, the I2C connector, second, the battery, third, the USB</p>
+<p><img alt="" src="https://i.imgur.com/pXTL3ku.jpg" /></p>
+</li>
+<li>
+<p>Put the kit's layer on again. Verify that the o-ring fit's in properly. Close everything and put both layers back on on</p>
+<p><img alt="" src="https://i.imgur.com/yeh1enO.jpg" /></p>
+<p><img alt="" src="https://i.imgur.com/4BRDnQO.jpg" /></p>
+</li>
+<li>
+<p>Now, you can use the USB power supply or the battery pack!</p>
+<p><img alt="" src="https://i.imgur.com/9iIflcg.jpg" /></p>
+<p><img alt="" src="https://i.imgur.com/ZPzbFI9.jpg" /></p>
+</li>
+</ul>
+</div>
+<h3 id="dimensions">Dimensions<a class="headerlink" href="#dimensions" title="Permanent link">Link</a></h3>
+<p><img alt="" src="https://i.imgur.com/udiYnTe.png" /></p>
+<h3 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">Link</a></h3>
+<h4 id="before-setup">Before setup<a class="headerlink" href="#before-setup" title="Permanent link">Link</a></h4>
+<p>Before configuring the Station setup make sure the LED is red. If not, press the button multiple times until the LED turns red.</p>
+<p><img alt="" src="https://i.imgur.com/uJ0JJIb.jpg" /></p>
+<h4 id="the-station-does-not-respond">The station does not respond<a class="headerlink" href="#the-station-does-not-respond" title="Permanent link">Link</a></h4>
+<p>If the station does not respond or does not work properly you can do two things:</p>
+<div class="admonition info">
+<p class="admonition-title">Reboot your Station</p>
+<p>You can fully reboot your Station by pressing the reset button located under the sensors board as seen on the picture.
+That will not delete any configuration, it will simply restart your device.
+Press the <code class="codehilite"><span class="k">RESET</span></code> button for a second. The light will go off and on and the device will start again.</p>
+<p><img alt="" src="https://i.imgur.com/tAofJ0g.png" /></p>
+<p>You can also perform a reboot by disconnecting the battery and the USB cable so that the station is restarted. In this way we will not lose any data and configuration except the time in case of being in <strong>SD mode</strong>.</p>
+<p><img alt="" src="https://i.imgur.com/uJ0JJIb.jpg" /></p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Factory reset your Station</p>
+<p>You can fully reset the Station to the default settings so you can register again your device. Press the main button for <strong>15 seconds</strong>.</p>
+<p><img alt="" src="https://i.imgur.com/uJ0JJIb.jpg" /></p>
+<p>After 5 seconds the light will go off and will go on again after 15 seconds. Then you can release the button and your device will be fully resetted as a brand new Station.</p>
+</div>
+<h4 id="the-led-does-not-turn-on-and-the-station-does-not-work">The LED does not turn on and the station does not work<a class="headerlink" href="#the-led-does-not-turn-on-and-the-station-does-not-work" title="Permanent link">Link</a></h4>
+<p>First of all, push the station button. Maybe it's simply off.</p>
+<p>If this does not work, surely the station has been left without battery. You will have to charge it using the USB charger. Any other mobile charger will also work.</p>
+<p>We will know that it is charging when the LED emits <span class="led orange blink"></span> orange pulses and once the battery is charged it will emit green <span class = "led green blink"> </ span></p>
+<h3 id="the-station-does-not-store-the-data-on-the-sd-card">The station does not store the data on the SD card.<a class="headerlink" href="#the-station-does-not-store-the-data-on-the-sd-card" title="Permanent link">Link</a></h3>
+<p>Some SD cards may have problems over time. We can try <a href="">formatting it</a> but in case it does not work any micro SD card we buy at any mobile or computer store it will work. The size is not important and any micro SD or micro SDHC 512MB card up to 32GB will work.</p>
+<p><img alt="" src="https://i.imgur.com/h2db2Ch.jpg" /></p>
+<h3 id="sensor-evaluation-campaign">Sensor Evaluation Campaign<a class="headerlink" href="#sensor-evaluation-campaign" title="Permanent link">Link</a></h3>
+<p>Prior to sensor deployment for the intervention monitoring, some of the Living Lab Stations will be evaluated and compared against reference measurement under different conditions. They will be deployed in several cities among the iScape partners in order to <em>1.</em> develop models for sensor calibration under different climatic and pollutant exposure conditions and <em>2.</em> assess data quality. This campaign intends to evaluate the Living Lab Station before it's deployment, and trying to prevent concerns raised about data quality that other low-cost sensor platforms <sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup> <sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup> <sup id="fnref:4"><a class="footnote-ref" href="#fn:4">4</a></sup>. </p>
+<p>This evaluation will focus on the <strong>real-world conditions calibration</strong>, under wide range of exposure and climatic conditions, rather than developing tests in controlled conditions, as prior studies show discrepancies in the accuracy resulting from evaluation in laboratory conditions, versus that of outdoor conditions <sup id="fnref2:2"><a class="footnote-ref" href="#fn:2">2</a></sup> <sup id="fnref:5"><a class="footnote-ref" href="#fn:5">5</a></sup> <sup id="fnref:6"><a class="footnote-ref" href="#fn:6">6</a></sup>. The tests will be conducted by co-location of at least two stations per site with high-end sensors under the conditions indicated in <a href="/Living%20Lab%20Station/#test">the test section</a> below.</p>
+<p>The duration of the tests will be of 2,5 months, with two location changes. This is a compromise between the indications given in <sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> for at least 3-months campaign and the availability of high-end sensors for the evaluation. Nevertheless, this campaign intends to cover a range of conditions by the deployment of the Living Lab Station in diverse conditions, not only climatic but also exposure-wise. The location changes will also intend to evaluate how well the sensors are able to adapt to these exposure and climatic changes <sup id="fnref:10"><a class="footnote-ref" href="#fn:10">10</a></sup>. The data will be uploaded to the <a href="http://www.smartcitizen.me">SmartCitizen Platform</a> and will be analysed using the <a href="/Sensor%20Analysis%20Framework">Sensor Analysis Framework</a>. The results of this evaluation in terms of models will be uploaded to a dedicated <a href="https://github.com/fablabbcn/smartcitizen-iscape-models">repository</a> and will be implemented on the SmartCitizen Platform for on-the-fly sensor data processing. This processing aims to provide an open platform for sensor analysis using data analysis techniques, need which has been highlighted by <sup id="fnref3:2"><a class="footnote-ref" href="#fn:2">2</a></sup> <sup id="fnref2:5"><a class="footnote-ref" href="#fn:5">5</a></sup> <sup id="fnref2:6"><a class="footnote-ref" href="#fn:6">6</a></sup> <sup id="fnref:9"><a class="footnote-ref" href="#fn:9">9</a></sup>.</p>
+<p>As well, as stated in <sup id="fnref4:2"><a class="footnote-ref" href="#fn:2">2</a></sup> <sup id="fnref2:10"><a class="footnote-ref" href="#fn:10">10</a></sup> <sup id="fnref:11"><a class="footnote-ref" href="#fn:11">11</a></sup>, it is necessary to perform individual field calibration for low-cost sensors if measurements comparable to those of high-end solutions are targeted. However, this calibration might not always be feasible in a wide range of conditions, leading to non-generalised models which can perform badly out of the training datasets. This test campaign also aims to study this concern, with an evaluation for a cross calibration methodology, in which results from a limited subset of observations are applied to the complete dataset <sup id="fnref:7"><a class="footnote-ref" href="#fn:7">7</a></sup>. If successful, this would be set ground for the development of calibration strategies where the sensors are co-located with a high-end sensor and posteriorly deployed for citizen-science activities, or long term monitoring of the iScape Living Labs interventions, where high end sensors might not be available. This co-location could be performed in a recurrent manner, performing sequences of calibration-deployment-calibration, using merging calibrations as suggested in <sup id="fnref2:11"><a class="footnote-ref" href="#fn:11">11</a></sup>.</p>
+<p>As a summary, this field campaign aims to cover the following points:</p>
+<ul>
+<li>Assess data quality levels and positioning with respect to the DQO set by the European Air Quality Directive</li>
+<li>Stablish match scores for the different range of sensors available in the Living Lab Station</li>
+<li>Validation and assessment of  <a href="/Components/Gas%20Pro%20Sensor%20Board/Electrochemical%20Sensors/#sensor-calibration">EC sensor methodology</a> for NO2 and O3 compounds in urban conditions (urban background and traffic) in various sites</li>
+<li>Validation of PMS PM raw data accuracy and effect of climatic conditions</li>
+<li>Calibration of Alphasense’s EC sensors and PMS PM sensors for model quality improvement accounting for climatic conditions</li>
+<li>Feasibility assessment for the calibration of metal oxide sensor models with the use of reference data and/or Living Lab station data</li>
+<li>Validation of climatic sensors of the station itself (temperature, humidity, pressure)</li>
+<li>Drifts and stability:<ul>
+<li>Drifts and possible root causes for EC sensor sensitivities variations over time</li>
+<li>Calibration stability for SGX MOS sensors</li>
+<li>Sensor decay and recoverability of PMS sensors due to dust accumulation or others</li>
+</ul>
+</li>
+</ul>
+<h4 id="test">Test<a class="headerlink" href="#test" title="Permanent link">Link</a></h4>
+<p>The table below shows a description of the proposed test campaign:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Stage</th>
+<th align="center">Duration</th>
+<th align="center">Exposure</th>
+<th align="center">Reference equipment</th>
+<th align="center">Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Pre-test</td>
+<td align="center">2 weeks</td>
+<td align="center">Urban Background</td>
+<td align="center">No</td>
+<td align="center">Stabilise electrochemical sensors to urban background on site.  and verify overall functioning</td>
+</tr>
+<tr>
+<td align="left">Low Exposure test</td>
+<td align="center">1 month</td>
+<td align="center">Urban Background</td>
+<td align="center">Yes</td>
+<td align="center">Evaluate response in low transient areas and evaluate repeatability of urban background measurements in higher exposure testing phases</td>
+</tr>
+<tr>
+<td align="left">High Exposure test</td>
+<td align="center">1 month</td>
+<td align="center">Urban with traffic (canyon or junction)</td>
+<td align="center">Yes</td>
+<td align="center">Evaluate response in high transient / high concentration areas and validate current model and post-processing approach. Propose further models with more variables</td>
+</tr>
+</tbody>
+</table>
+<p>The sites at which these calibration deployments are planned are:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Site</th>
+<th align="center">Season</th>
+<th align="center">Reference equipment</th>
+<th align="center">Duration</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Bologna (Italy)</td>
+<td align="center">Summer</td>
+<td align="center">YES</td>
+<td align="center">1 month</td>
+</tr>
+<tr>
+<td align="left">Guildford (England)</td>
+<td align="center">Autumn</td>
+<td align="center">YES</td>
+<td align="center">2.5 months</td>
+</tr>
+<tr>
+<td align="left">Dublin (Ireland)</td>
+<td align="center">Autumn</td>
+<td align="center">YES</td>
+<td align="center">2.5 months</td>
+</tr>
+<tr>
+<td align="left">Bottrop (Germany)</td>
+<td align="center">Autumn</td>
+<td align="center">YES</td>
+<td align="center">2.5 months</td>
+</tr>
+<tr>
+<td align="left">Barcelona (Spain)</td>
+<td align="center">Spring</td>
+<td align="center">YES</td>
+<td align="center">&gt;3 months</td>
+</tr>
+</tbody>
+</table>
+<h4 id="sensor-installation">Sensor Installation<a class="headerlink" href="#sensor-installation" title="Permanent link">Link</a></h4>
+<p>Guidelines for representativeness of the results are given below:</p>
+<p><strong>Height</strong></p>
+<p>Between 2,5 and 3,5m. Not reachable by hand.</p>
+<p><strong>Reference equipment position</strong></p>
+<p>Within &lt;2m and with similar exposure, air flow (both either on wall, or lamppost) <sup id="fnref2:7"><a class="footnote-ref" href="#fn:7">7</a></sup></p>
+<p><strong>Desirable measurements</strong></p>
+<ul>
+<li>
+<p>Chemical compounds (higher priority above): </p>
+<ul>
+<li>NO2</li>
+<li>CO, O3</li>
+<li>NOx, NO</li>
+<li>NMHC</li>
+</ul>
+</li>
+<li>
+<p>Particulate Matter (higher priority above)</p>
+<ul>
+<li>PM 2.5</li>
+<li>PM 1.0, PM 10</li>
+</ul>
+</li>
+<li>
+<p>Climatic conditions (higher priority above)</p>
+<ul>
+<li>Temperature and relative humidity</li>
+<li>Wind speed and direction</li>
+</ul>
+</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Important Guidelines</p>
+<p>Please, refer to the <a href="/Living%20Lab%20Station/#sensor-considerations">sensor considerations section</a> for general information about the sensors. As well, take into account the following:</p>
+<ul>
+<li>
+<p>Avoid direct exposure to intense sunlight for long periods of time, since this can severely affect the measurements (direct sun or intense transients).</p>
+</li>
+<li>
+<p>Avoid locations where high temperature or humidity transients are present since the sensor response is affected by these rapid changes.</p>
+</li>
+<li>
+<p>Avoid locations with low air flow or with direct exposure to air conditioning exhausts.</p>
+</li>
+</ul>
+</div>
+<h3 id="references">References<a class="headerlink" href="#references" title="Permanent link">Link</a></h3>
+<div class="footnote">
+<hr />
 <ol>
-<li>Set the SCK in <em>setup mode</em> (press the button once, the LED should turn red).</li>
-<li>With your phone, join the Wi-Fi network created by your Kit; it should be SmartCitizen[…].</li>
-<li>Once you are on your Kit configuration page, go to the Info section. You will see a page with all the information about your Kit.</li>
-<li>Your MAC address is listed as seen below:</li>
+<li id="fn:1">
+<p><a href="" title="http://refhub.elsevier.com/S0160-4120(16)30998-9/rf0225"><strong>Spinelle L., Aleixandre M., Gerboles M.</strong> - 2013: Protocol of Evaluation and Calibration of Low-cost Gas Sensors for the Monitoring of Air Pollution. Joint Research Centre (Report EUR 26112 EN)</a>&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p><a href="https://www.sciencedirect.com/science/article/pii/S0160412016309989"><strong>Nuria Castell, Franck R. Dauge, Philipp Schneider, Matthias  Vogt, Uri Lerner, Barak Fishbain, David Broday, Alena Bartonova</strong> - 2018: Can commercial low-cost sensor platforms contribute to air quality monitoring and exposure estimates?</a>&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:3">
+<p><a href="" title="http://refhub.elsevier.com/S0160-4120(16)30998-9/rf0210"><strong>Snyder E., Watkins T., Solomon P., Thoma E.,Williams R., Hagler G., Shelow D., Hindin D., Kilaru V., Preuss P.</strong> - 2013: The changing paradigm of air pollution monitoring. Environ. Sci. Technol. 47, 11369–11377</a>&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:4">
+<p><a href="https://www.nature.com/news/validate-personal-air-pollution-sensors-1.20195"><strong>Lewis A., Edwards P.</strong> - 2016: Validate personal air-pollution sensors</a>&#160;<a class="footnote-backref" href="#fnref:4" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+<li id="fn:5">
+<p><a href="https://www.sciencedirect.com/science/article/pii/S092540051500355X"><strong>Spinelle L., Gerboles M., Villani M.G., Aleixandre M., Bonavitacola F.</strong> - 2015: Field calibration of a cluster of low-cost available sensors for air quality monitoring: Part A: Ozone and nitrogen dioxide</a>&#160;<a class="footnote-backref" href="#fnref:5" title="Jump back to footnote 5 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:5" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+</li>
+<li id="fn:6">
+<p><a href="https://www.sciencedirect.com/science/article/pii/S092540051631070X#"><strong>Spinelle L., Gerboles M., Villani M.G., Aleixandre M., Bonavitacola F.</strong> - 2015: Field calibration of a cluster of low-cost available sensors for air quality monitoring: Part B: NO, CO and CO2</a>&#160;<a class="footnote-backref" href="#fnref:6" title="Jump back to footnote 6 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:6" title="Jump back to footnote 6 in the text">&#8617;</a></p>
+</li>
+<li id="fn:7">
+<p><a href="https://www.atmos-meas-tech.net/11/315/2018/"><strong>David H. Hagan, Gabriel Isaacman-VanWertz, Jonathan P. Franklin, Lisa M. M. Wallace, Benjamin D. Kocar, Colette L. Heald, Jesse H. Kroll</strong> - 2018: Calibration and assessment of electrochemical air quality sensors by co-location with regulatory-grade instruments</a>&#160;<a class="footnote-backref" href="#fnref:7" title="Jump back to footnote 7 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:7" title="Jump back to footnote 7 in the text">&#8617;</a></p>
+</li>
+<li id="fn:8">
+<p><a href="https://www.sciencedirect.com/science/article/pii/S1352231016308317?via%3Dihub"><strong>Olalekan A.M.Popoola, Gregor B.Stewart, Mohammed I.Mead, Roderic L.Jones</strong> - 2016: Development of a baseline-temperature correction methodology forelectrochemical sensors and its implications for long-term stability</a>&#160;<a class="footnote-backref" href="#fnref:8" title="Jump back to footnote 8 in the text">&#8617;</a></p>
+</li>
+<li id="fn:9">
+<p><a href="http://refhub.elsevier.com/S0160-4120(16)30998-9/rf0140"><strong>Sun L., ChunWong K., Wei P., Ye S., Huang H., Yang F.,Westerdahl D., Louie P.K.K., Luk C.W.Y., Ning Z.</strong> - 2016. Development and application of a next generation air sensor network for the Hong Kong Marathon 2015. Air quality monitoring. Sensors 16, 211–229</a>&#160;<a class="footnote-backref" href="#fnref:9" title="Jump back to footnote 9 in the text">&#8617;</a></p>
+</li>
+<li id="fn:10">
+<p><a href="https://doi.org/10.1016/j.scitotenv.2018.09.257"><strong>A. Ripoll , M. Viana, M. Padrosa, X. Querol, A.Minutolo, K.M. Houc, J.M. Barcelo-Ordinas, J. Garcia-Vidal</strong> - 2018: Testing the performance of sensors for ozone pollution monitoring in a citizen science approach</a>&#160;<a class="footnote-backref" href="#fnref:10" title="Jump back to footnote 10 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:10" title="Jump back to footnote 10 in the text">&#8617;</a></p>
+</li>
+<li id="fn:11">
+<p><a href="http://www.mdpi.com/1424-8220/17/7/1653"><strong>Philip J. D. Peterson, Amrita Aujla, Kirsty H. Grant, Alex G. Brundle, Martin R. Thompson, Josh Vande Hey and Roland J. Leigh</strong> - 2017: Practical Use of Metal Oxide Semiconductor Gas Sensors for Measuring Nitrogen Dioxide and Ozone in Urban Environments, Sensors 2017, 17, 1653</a>&#160;<a class="footnote-backref" href="#fnref:11" title="Jump back to footnote 11 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:11" title="Jump back to footnote 11 in the text">&#8617;</a></p>
+</li>
 </ol>
-<p><img alt="" src="https://i.imgur.com/WuZ1mpw.jpg" /></p>
+</div>
                 
                   
                 
@@ -3374,8 +3871,8 @@
 
         <!-- Link to previous page -->
         
-          <a href="../Components/Firmware/"
-              title="Firmware"
+          <a href="../Components/PM Sensor Board/PM Sensors/"
+              title="PM Sensors"
               class="md-flex md-footer-nav__link md-footer-nav__link--prev"
               rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
@@ -3388,7 +3885,7 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Firmware
+                PM Sensors
               </span>
             </div>
           </a>
@@ -3396,8 +3893,8 @@
 
         <!-- Link to next page -->
         
-          <a href="../Troubleshooting/"
-              title="Troubleshooting"
+          <a href="../Components/Firmware/"
+              title="Firmware"
               class="md-flex md-footer-nav__link md-footer-nav__link--next"
               rel="next">
             <div class="md-flex__cell md-flex__cell--stretch
@@ -3406,7 +3903,7 @@
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Troubleshooting
+                Firmware
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
