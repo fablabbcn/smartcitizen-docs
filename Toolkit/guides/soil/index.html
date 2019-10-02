@@ -2871,8 +2871,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#diy-tensiometer" class="md-nav__link">
-    DIY tensiometer
+  <a href="#tensiometer" class="md-nav__link">
+    Tensiometer
   </a>
   
 </li>
@@ -3380,8 +3380,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#diy-tensiometer" class="md-nav__link">
-    DIY tensiometer
+  <a href="#tensiometer" class="md-nav__link">
+    Tensiometer
   </a>
   
 </li>
@@ -3410,10 +3410,6 @@
 <h2 id="moisture-sensor">Moisture Sensor<a class="headerlink" href="#moisture-sensor" title="Permanent link">Link</a></h2>
 <p>The Chirp Sensor is low cost a moisture and temperature sensor developed by WeMakeThings: a hackers and engineers collective based in Vilnius, Lithuania. Their hardware and software are fully open-source, and it can be easily integrated but also replicated and customized for new projects. </p>
 <p><img alt="Chirp" src="/assets/images/chirp.png" /></p>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>This is a digest of the <a href="">GROW DELIVERABLE 5.3</a> and used in the <a href="">GROW Workshop</a> with a custom <a href="https://github.com/fablabbcn/smartcitizen-enclosures/tree/master/SmartCitizen%20Outdoor%20Cases%20V2.0-2.1/Mixed%20Solution">enclosure</a></p>
-</div>
 <p>The sensor uses capacitive sensing to measure soil's moisture. A 1MHz square wave is output from the chip through a resistor into a big pad that, together with the surrounding ground plane, forms a parasitic capacitor. The resistor and the capacitor create a low pass filter whose cut-off frequency changes with changing capacitance. The soil around the sensor acts as an electrolyte whose dielectric constant changes depending on the amount of moisture in it, so the capacitance of our makeshift capacitor changes too. The filtered square wave is then fed into a peak detector formed of out a diode and a capacitor. An ADC measures this voltage in the microcontroller. The sensor also includes a temperature sensor with a calculated absolute measurement accuracy around 2%.</p>
 <p>There are different versions of the Chirp sensor, for this example we chose the Chirp I2C sensor. The sensor has been integrated on to the SCK's firmware, and it is automatically recognized by the board once it is plugged into the SCK using the Aux sensor connector. A Grove 4 pin Female Jumper to Grove will need to be soldered to the sensor to connect it to the SCK. The original Chirp sensors come coated with PRF202 - a moisture resistant varnish for electronics. It's ok for playing around in a flower pot but not robust enough for outdoor use. You must add additional protection to the whole sensor after soldering cable. We suggest polyester or epoxy resin. However, you must note that sensitivity of the sensor will decrease depending on how thick the layer you are going to apply and might need to be recalibrated. We also recommend covering the electronics with heat shrink to fully waterproof the sensor. Some versions already include a pre-ruggedized sensor, which is a recommended solution for a faster use.</p>
 <div class="admonition example">
@@ -3520,22 +3516,14 @@
 <p class="admonition-title">More information</p>
 <p>Check the project source code <a href="https://github.com/fablabbcn/smartcitizen-grow/tree/master/soil-water-probes">files</a></p>
 </div>
-<h2 id="diy-tensiometer">DIY tensiometer<a class="headerlink" href="#diy-tensiometer" title="Permanent link">Link</a></h2>
+<h2 id="tensiometer">Tensiometer<a class="headerlink" href="#tensiometer" title="Permanent link">Link</a></h2>
 <div class="admonition danger">
 <p class="admonition-title">WIP</p>
 <p>This version is a WIP but is not fully functional with the SCK 2.1. It is shown here as a demosntrator of the project's capabilities. Have a look at the forum or drop us an email to discuss this.</p>
 </div>
 <p>Soil Moisture data as the one provided by the Chirp Moisture Sensor is interesting for research, but when it comes to crops irrigation management, we usually like to know the soil water tension (SWT). That is because Soil Moisture in water is not directly related to the water plants roots might be able to extract because it is deeply affected by the soil composition. Even soil irrigation can be inferred from soil moisture when the soil type is known we think a soil tensiometer. Also when it is a simple solution, it is a useful tool for crops management.</p>
 <p><img alt="Watermark Tensionmeter Demo" src="/assets/images/watermark.png" /></p>
-<p>The design is entirely open source and it is deeply inspired by the work of Reinier Van der Lee from the <a href="http://vanderleevineyard.com/vineyard-blog.html">Vinduino project</a>. The sensor design is straightforward and it consists of two stainless steel screws that work as electrodes cast inside a piece of plaster and covered by a plastic mesh to prevent erosion. As water is added more electrons can pass between the electrodes of the probe reducing the amount of resistance between them. By using this range of values, you can determine the amount of water that exists in your soil. To avoid interferences and degradation of the electrodes the design only applies voltage for a very short time and uses alternating electric polarities. For the sensor to work, we need a minimal circuit that uses two resistors and two diodes. The resistors work together with the electrodes to build a voltage divider. We can calculate the resistance value between the two electrodes by knowing the value of the resistors and the voltage. However to be able to alternate the electric current we need to duplicate the circuit and add two diodes. In total, we need 4 Pins to be connected to a microcontroller like the Arduino or the Smart Citizen Kit. On pin 8 we will read the voltage while the other pin is providing power and then it will flip to the other two to keep reversing the current flow. The circuit can be simply built using basic electronic components on a stripboard PCB (printed circuit board).</p>
-<div style="text-align:center">
-<img src="https://raw.githubusercontent.com/fablabbcn/smartcitizen-grow/master/soil-water-tension/TensiometerKitSchematic.png" alt="Stripboard">
-</div>
-
-<p>By default, the sensor is not calibrated, but we can still relatively use the values to understand when to water our plants however to obtain the soil tension we will need to calibrate them using a commercial tensiometer. To avoid this problem, we can use an already calibrated commercial probe like the Watermark 200SS9 using the same driving circuit for the SCK as the DIY version.</p>
-<div style="text-align:center">
-<img src="ttps://i.imgur.com/h6Q2nbi.png" alt="Watermark Tensionmeter">
-</div>
+<p>The design is entirely open source and it is deeply inspired by the work of Reinier Van der Lee from the <a href="http://vanderleevineyard.com/vineyard-blog.html">Vinduino project</a>, using an already calibrated commercial probe like the <strong>Watermark 200SS9</strong>. The sensor itself is straightforward and it consists of two stainless steel screws that work as electrodes cast inside a piece of plaster and covered by a plastic mesh to prevent erosion. As water is added more electrons can pass between the electrodes of the probe reducing the amount of resistance between them. By using this range of values, you can determine the amount of water that exists in your soil. To avoid interferences and degradation of the electrodes the design only applies voltage for a very short time and uses alternating electric polarities. For the sensor to work, we need a minimal circuit that uses two resistors and two diodes. The resistors work together with the electrodes to build a voltage divider. We can calculate the resistance value between the two electrodes by knowing the value of the resistors and the voltage. However to be able to alternate the electric current we need to duplicate the circuit and add two diodes. In total, we need 4 Pins to be connected to a microcontroller like the Arduino or the Smart Citizen Kit.</p>
                 
                   
                 
