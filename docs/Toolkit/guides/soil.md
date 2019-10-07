@@ -12,15 +12,17 @@ The sensor uses capacitive sensing to measure soil's moisture. A 1MHz square wav
 
 There are different versions of the Chirp sensor, for this example we chose the Chirp I2C sensor. The sensor has been integrated on to the SCK's firmware, and it is automatically recognized by the board once it is plugged into the SCK using the Aux sensor connector. A Grove 4 pin Female Jumper to Grove will need to be soldered to the sensor to connect it to the SCK. The original Chirp sensors come coated with PRF202 - a moisture resistant varnish for electronics. It's ok for playing around in a flower pot but not robust enough for outdoor use. You must add additional protection to the whole sensor after soldering cable. We suggest polyester or epoxy resin. However, you must note that sensitivity of the sensor will decrease depending on how thick the layer you are going to apply and might need to be recalibrated. We also recommend covering the electronics with heat shrink to fully waterproof the sensor. Some versions already include a pre-ruggedized sensor, which is a recommended solution for a faster use.
 
+### Sensor calibration
+
 !!! example "Calibrate your sensor"
 	The sensor needs to be calibrated in dry and humid conditions. For that, **we will use**:
 
-		- A laptop with [Arduino installed](https://www.arduino.cc/en/Main/Software)
-		- Our sensor
-		- A cup filled up with water
-		- A napkin!
+	- A laptop with [Arduino installed](https://www.arduino.cc/en/Main/Software)
+	- Our sensor
+	- A cup filled up with water
+	- A napkin!
 
-    The sensor can be calibrated [using the shell](/Components/Firmware/guides/Using the Shell/). The process reads as follows:
+    The sensor can be calibrated [using the shell interface](/Components/Firmware/guides/Using the Shell/). The process reads as follows:
 
     1. Connect your kit to a computer and open the terminal for the SCK. If you use the Arduino IDE, go to Tools > Serial Monitor and select `115200 baud` at the bottom right corner
     ![](https://i.imgur.com/hs5Ny7Q.png)

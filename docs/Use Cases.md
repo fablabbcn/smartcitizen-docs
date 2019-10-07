@@ -36,7 +36,8 @@ By providing meaningful examples of novel appropriations and uses we seek to  sp
 
 - [Making Sense D.23 Smart Citizen Toolkit report](http://making-sense.eu/wp-content/uploads/2016/08/Making-Sense-D23-Smart-Citizen-Toolkit.pdf)
 - [Making Sense D.24 Smart Citizen Toolkit report updates](http://making-sense.eu/wp-content/uploads/2017/09/Making-Sense-D2.4-Documentation-on-Toolkit-add-ons.pdf)
-- [iScape Studies Compilation](https://www.iscapeproject.eu/newsletter-archive/)
+- [iScape Studies Compilation](https://www.iscapeproject.eu/scientific-reports/)
+- [iScape News](https://www.iscapeproject.eu/category/news/)
 
 ### Academic Publications
 
