@@ -38,7 +38,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../../assets/images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.2">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.3">
     
     
       
@@ -2861,6 +2861,19 @@
     Moisture Sensor
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sensor-calibration" class="md-nav__link">
+    Sensor calibration
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -3370,6 +3383,19 @@
     Moisture Sensor
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sensor-calibration" class="md-nav__link">
+    Sensor calibration
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -3412,17 +3438,17 @@
 <p><img alt="Chirp" src="/assets/images/chirp.png" /></p>
 <p>The sensor uses capacitive sensing to measure soil's moisture. A 1MHz square wave is output from the chip through a resistor into a big pad that, together with the surrounding ground plane, forms a parasitic capacitor. The resistor and the capacitor create a low pass filter whose cut-off frequency changes with changing capacitance. The soil around the sensor acts as an electrolyte whose dielectric constant changes depending on the amount of moisture in it, so the capacitance of our makeshift capacitor changes too. The filtered square wave is then fed into a peak detector formed of out a diode and a capacitor. An ADC measures this voltage in the microcontroller. The sensor also includes a temperature sensor with a calculated absolute measurement accuracy around 2%.</p>
 <p>There are different versions of the Chirp sensor, for this example we chose the Chirp I2C sensor. The sensor has been integrated on to the SCK's firmware, and it is automatically recognized by the board once it is plugged into the SCK using the Aux sensor connector. A Grove 4 pin Female Jumper to Grove will need to be soldered to the sensor to connect it to the SCK. The original Chirp sensors come coated with PRF202 - a moisture resistant varnish for electronics. It's ok for playing around in a flower pot but not robust enough for outdoor use. You must add additional protection to the whole sensor after soldering cable. We suggest polyester or epoxy resin. However, you must note that sensitivity of the sensor will decrease depending on how thick the layer you are going to apply and might need to be recalibrated. We also recommend covering the electronics with heat shrink to fully waterproof the sensor. Some versions already include a pre-ruggedized sensor, which is a recommended solution for a faster use.</p>
+<h3 id="sensor-calibration">Sensor calibration<a class="headerlink" href="#sensor-calibration" title="Permanent link">Link</a></h3>
 <div class="admonition example">
 <p class="admonition-title">Calibrate your sensor</p>
 <p>The sensor needs to be calibrated in dry and humid conditions. For that, <strong>we will use</strong>:</p>
-<div class="codehilite"><pre><span></span><span class="p">-</span> <span class="nf">A</span> <span class="n">laptop</span> <span class="n">with</span> <span class="p">[</span><span class="n">Arduino</span> <span class="n">installed</span><span class="p">](</span><span class="nl">https</span><span class="p">:</span><span class="c1">//www.arduino.cc/en/Main/Software)</span>
-<span class="o">-</span> <span class="n">Our</span> <span class="n">sensor</span>
-<span class="o">-</span> <span class="n">A</span> <span class="n">cup</span> <span class="n">filled</span> <span class="n">up</span> <span class="n">with</span> <span class="n">water</span>
-<span class="o">-</span> <span class="n">A</span> <span class="n">napkin</span><span class="o">!</span>
-</pre></div>
-
-
-<p>The sensor can be calibrated <a href="/Components/Firmware/guides/Using the Shell/">using the shell</a>. The process reads as follows:</p>
+<ul>
+<li>A laptop with <a href="https://www.arduino.cc/en/Main/Software">Arduino installed</a></li>
+<li>Our sensor</li>
+<li>A cup filled up with water</li>
+<li>A napkin!</li>
+</ul>
+<p>The sensor can be calibrated <a href="/Components/Firmware/guides/Using the Shell/">using the shell interface</a>. The process reads as follows:</p>
 <ol>
 <li>Connect your kit to a computer and open the terminal for the SCK. If you use the Arduino IDE, go to Tools &gt; Serial Monitor and select <code class="codehilite"><span class="mi">115200</span> <span class="n">baud</span></code> at the bottom right corner
 <img alt="" src="https://i.imgur.com/hs5Ny7Q.png" />
@@ -3649,7 +3675,7 @@
       
     </div>
     
-      <script src="../../../assets/javascripts/application.c648116f.js"></script>
+      <script src="../../../assets/javascripts/application.ac79c3b0.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:"../../.."}})</script>
       
