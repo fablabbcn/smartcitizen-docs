@@ -15,7 +15,7 @@ Welcome!
 
 * **Sensor Analysis Framework:** Contains all the documentation on the [**data post-processing framework**](Sensor Analysis Framework) to obtain insights from the data calibrated by the sensors.
 
-* **Guides:** Contains step-by-step [guides](**Guides**) guides for different features of the kit, how to get started, use the shell, or make some more advanced analysis of the sensor readings!
+* **Guides:** Contains step-by-step [**Guides**](Guides) for different features of the kit, how to get started, use the shell, or make some more advanced analysis of the sensor readings!
 
 * **Legacy Hardware:** Are you a pioneer of participatory sensing looking for the original SCK 1.0 and SCK 1.1 documentation? Check the [**Legacy Hardware**](Legacy Hardware) section!
 
