@@ -62,7 +62,7 @@ nav:
       - Main: Toolkit/index.md
       - Using third party sensors: Components/Auxiliary/guides/thirdparty.md
       - Creating interfaces: Toolkit/guides/creating_interfaces.md
-      - DIY Sensors for soil and water: Toolkit/guides/soil.md
+      - Sensors for soil and water: Toolkit/guides/soil.md
   - Legacy Hardware:
     - Smart Citizen 1.1:
       - Main: Legacy Hardware/index.md
