@@ -56,12 +56,14 @@ _Image Source: [Edaphic Scientific](https://www.edaphic.com.au/soil-water-compen
 
 ### Sensor validation
 
-!!! warning "WIP"
-    Results coming very soon!
-
-Three Chirp sensors were compared to the [Parrot](https://www.parrot.com/) Flower Power (now discontinued). The Flower Power can measure several metrics, such as light, temperature, fertilizer and soil moisture. In this test, we compared the soil moisture readings for three Flower Parrot sensors, compared to three Chirp sensors.
-
 ![](/assets/images/chirp_02.jpg)
+
+Three Chirp sensors were compared to the [Parrot](https://www.parrot.com/) Flower Power (now discontinued). The Flower Power can measure several metrics, such as light, temperature, fertilizer and soil moisture. In this test, we compared the soil moisture readings for three Flower Parrot sensors, compared to three Chirp sensors. Both sensors show a good behaviour and the values can be correlated with good R2 scores. The approach for this low-cost sensors, in general, should be more qualitative than quantitative (analyse the trends rather than the absolute values), since their values appear to differ between sensors, even when normalised. In the particular case of the Chirp sensor, the sensor seems to be fairly normalised with simply a two calibration values (water and air) as a first approach.
+
+![](/assets/images/chirp_test.png)
+
+!!! info "Full analysis here"
+    Find the full analysis [here](https://github.com/fablabbcn/smartcitizen-iscape-data/raw/master/reports/development/1910_moisture_sensor_analysis.pdf)!
 
 ## Calibrated soil and water probes
 
