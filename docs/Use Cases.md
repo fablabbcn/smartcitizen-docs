@@ -9,7 +9,7 @@ The Smart Citizen project has had the chance to be part of fantastic projects th
 This page is a summary of these projects that might inspire you in future actions. To mention some of the most important ones, the team has been involved in projects such as the following:
 
 <div style="text-align: center">
-<img src="https://docs.smartcitizen.me/assets/images/eu-flag.png" width="200" alt="">
+<img src="https://docs.smartcitizen.me/assets/images/eu-flag.png" width="80" alt="">
 </div>
 
 - [**Making Sense**](https://making-sense.eu): advances and experiments in participatory sensing. _(Grant agreement Nº: 688620)_. Making Sense explored how open source software, open source hardware, digital maker practices and open design can be effectively used by local communities to fabricate their own sensing tools, make sense of their environments and address pressing environmental problems in air, water, soil and sound pollution.
