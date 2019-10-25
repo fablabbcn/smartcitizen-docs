@@ -3,7 +3,11 @@ Firmware
 
 The firmware is OOP and is entirely written in C++. Both processors the core ARM MCU and the ESP8266 WIFI are developed as part of the same framework integrating seemingly by using a set of bridge libraries that provide a unifies the RPC architecture.
 
-The following software was partially developed by IAAC as part of the Making Sense project under the European Community's H2020 Programme Grant Agreement No. 688620.
+!!! info "A note about versions"
+
+    The first version of the software was initially developed for the Making Sense project under European Community’s H2020 Programme under Grant Agreement No. [688620](https://cordis.europa.eu/project/rcn/199877/en).
+
+    The current version has been funded by the [iSCAPE project](https://www.iscapeproject.eu/) project under European Community’s H2020 Programme under Grant Agreement No. [689954](https://cordis.europa.eu/project/rcn/202639/en).
 
 ![](https://i.imgur.com/aDfydqU.png)
 
