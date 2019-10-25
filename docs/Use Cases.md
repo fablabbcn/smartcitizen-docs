@@ -8,6 +8,10 @@ The Smart Citizen project has had the chance to be part of fantastic projects th
 
 This page is a summary of these projects that might inspire you in future actions. To mention some of the most important ones, the team has been involved in projects such as the following:
 
+<div style="text-align: center">
+<img src="https://docs.smartcitizen.me/assets/images/eu-flag.png" width="200" alt="">
+</div>
+
 - [**Making Sense**](https://making-sense.eu): advances and experiments in participatory sensing. _(Grant agreement Nº: 688620)_. Making Sense explored how open source software, open source hardware, digital maker practices and open design can be effectively used by local communities to fabricate their own sensing tools, make sense of their environments and address pressing environmental problems in air, water, soil and sound pollution.
 - [**iScape**](https://www.iscapeproject.eu/):  Improving the Smart Control of Air Pollution in Europe _(Grant agreement Nº: 689954)_. iScape works on integrating and advancing the control of air quality and carbon emissions in European cities in the context of climate change through the development of sustainable and passive air pollution remediation strategies, policy interventions and behavioural change initiatives.
 - [**GROW Observatory**](https://growobservatory.org/): _(Grant agreement Nº: 690199)_. A citizens' observatory for growers, researchers and decision makers, aiming to build better soil through Citizen Science. 
