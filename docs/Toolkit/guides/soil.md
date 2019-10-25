@@ -1,5 +1,9 @@
 This page compiles examples of sensors for soil and water monitoring, developed during the [GROW](https://growobservatory.org) project.
 
+!!! info "A note about versions"
+
+    The following research has been funded by the [Grow Observatory](https://growobservatory.org/) project under European Community’s H2020 Programme under Grant Agreement No. [690199](https://cordis.europa.eu/project/rcn/203271/en).
+
 ![Soil](/assets/images/soil.jpg)
 
 ## Moisture Sensor
