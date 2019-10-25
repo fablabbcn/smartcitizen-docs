@@ -92,7 +92,7 @@ extra:
       link: 'https://twitter.com/smartcitizenkit'
     - type: 'facebook'
       link: 'https://www.facebook.com/smartcitizenBCN/'
-  project: 'The Smart Citizen has received funding from the European Community’s H2020 Programme under Grant Agreement No. 689954.'
+  project: 'The Smart Citizen as part of the iSCAPE project has received funding from the European Community’s H2020 Programme under Grant Agreement No. 689954.'
   footer_logo: '/assets/images/eu-flag.png'
   license: 'CC Attribution-NonCommercial-ShareAlike 4.0 International'
   repo_name: smartcitizen-docs
