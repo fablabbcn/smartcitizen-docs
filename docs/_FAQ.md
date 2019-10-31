@@ -64,4 +64,12 @@ You can retrieve the MAC address with two methods: either you can use your phone
 
 ![](https://i.imgur.com/WuZ1mpw.jpg)
 
+## What batteries are shipped with the kits?
+
+The default SCK 2.1 Kits come with a 2000mAh LiPo battery model PL804050 (see [datasheet](/assets/datasheets/batteries/PL804050_2000mAh/PL804050_2000mAh_Datasheet.pdf) and [material safety data sheets](/assets/datasheets/batteries/PL804050_2000mAh/PL804050_2000mAh_Safety_Datasheet.pdf)).
+
+For custom projects we also offer a bigger 6000mAh LiPo battery model DTP605068 (see [datasheet](/assets/datasheets/batteries/DTP605068_6000mAh/DTP605068_6000mAh_Datasheet.pdf) and [material safety data sheets](/assets/datasheets/batteries/DTP605068_6000mAh/DTP605068_6000mAh_Safety_Datasheet.pdf)).
+
+We are working on a new dynamic battery calculator. Currently, you can find some approximate data [here](/Smart Citizen Kit/#battery-duration) for the SCK 2.1.
+
 
