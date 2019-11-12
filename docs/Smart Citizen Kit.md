@@ -220,7 +220,7 @@ A prototype of the new enclosure:
 
 ## Software Updates
 
-Sofware updates are release frequently in the [Firmware repository](https://github.com/fablabbcn/smartcitizen-kit-21). These updates will need to be applied periodically to the two main components of the SCK: the SAMD21 (main processor) and the ESP8266 (Wi-Fi module). Check the instructions under the [Update the Firmware](/Components/Firmware/Guides/Update the firmware) section for more information.
+Sofware updates are release frequently in the [Firmware repository](https://github.com/fablabbcn/smartcitizen-kit-21). These updates will need to be applied periodically to the two main components of the SCK: the SAMD21 (main processor) and the ESP8266 (Wi-Fi module). Check the instructions under the [Update the Firmware](/Components/Firmware/guides/Update the firmware/) section for more information.
 
 <style>
 .led {
