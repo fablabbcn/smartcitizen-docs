@@ -38,7 +38,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../../../assets/images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.3">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.5.0">
     
     
       
@@ -46,7 +46,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/application.30686662.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/application.1b62728e.css">
       
         <link rel="stylesheet" href="../../../../assets/stylesheets/application-palette.a8b3c06d.css">
       
@@ -57,7 +57,7 @@
       
     
     
-      <script src="../../../../assets/javascripts/modernizr.74668098.js"></script>
+      <script src="../../../../assets/javascripts/modernizr.268332fc.js"></script>
     
     
       
@@ -3492,12 +3492,12 @@
 <p>The main one is an <strong>Atmel SAMD21</strong>, this chip is in charge of all the normal tasks like reading the sensors, saving data, interacting with the user, etc. For this chip we need two software components the bootloader and the main firmware.</p>
 <p>For communications the SCK has an <strong>ESP8266 microcontroler with Wifi capabilities</strong>, this chip receives instructions from the SAMD21 via serial port and takes care of publishing the collected data through the network. This chip needs a main firmware and a filesystem that stores the web pages for the <a href="/Smart Citizen Kit/#setup-mode">setup mode</a> server.</p>
 <h2 id="development-enviroment">Development enviroment<a class="headerlink" href="#development-enviroment" title="Permanent link">Link</a></h2>
-<p>The SmartSmart Citizen Kit Firmware is on our <a href="https://github.com/fablabbcn/smartcitizen-kit-20">repository on github</a> so you will need <a href="https://mirrors.edge.kernel.org/pub/software/scm/git/">git</a> software <a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">installed</a>.</p>
+<p>The SmartSmart Citizen Kit Firmware is on our <a href="https://github.com/fablabbcn/smartcitizen-kit-21">repository on github</a> so you will need <a href="https://mirrors.edge.kernel.org/pub/software/scm/git/">git</a> software <a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">installed</a>.</p>
 <p>To build the SmartSmart Citizen Kit firmware you need a linux computer with <a href="https://platformio.org/">platformio</a> installed, you don't need the full IDE installation (Atom). You can follow <a href="http://docs.platformio.org/en/latest/installation.html#super-quick-mac-linux">this instructions</a> to install only the console version.</p>
 <p>For bootloader upload you also need <a href="http://openocd.org/">OpenOCD</a> somewhere in your PATH. You can use platformIO provided binary, normally it is located in <code class="codehilite"><span class="o">~/</span><span class="p">.</span><span class="n">platformio</span><span class="o">/</span><span class="n">packages</span><span class="o">/</span><span class="n">tool</span><span class="o">-</span><span class="n">openocd</span></code>.</p>
 <h2 id="getting-the-firmware">Getting the firmware<a class="headerlink" href="#getting-the-firmware" title="Permanent link">Link</a></h2>
 <p>To get the firmware just run:</p>
-<div class="codehilite"><pre><span></span>git clone --recursive https://github.com/fablabbcn/smartcitizen-kit-20
+<div class="codehilite"><pre><span></span>git clone --recursive https://github.com/fablabbcn/smartcitizen-kit-21
 </pre></div>
 
 <p>The bootloader repository is a <a href="https://git-scm.com/book/en/v2/Git-Tools-Submodules">submodule</a> of the main firmware so you must do a <code class="codehilite"><span class="c1">--recursive</span></code> clone to get it.</p>
@@ -3559,7 +3559,7 @@ Now <strong>double-click the reset button of your kit</strong> open your favorit
 </pre></div>
 As before, if this is the first time you do it, it will take a while on downloading dependecies and building the firmware.</p>
 <p>In this case the upload process is different, since the ESP8266 chip is not connected to the USB interface the data must be uploadded through the SAMD21 chip.
-Our <a href="https://github.com/fablabbcn/smartcitizen-kit-20/blob/master/esp/uploadESP.py">upload script</a> takes care of searching for a SCK on the USB bus, sending a command to the kit so it put's himself in what we call <em>bridge mode</em> (white led) and uploading the firmware. This is the expected output:</p>
+Our <a href="https://github.com/fablabbcn/smartcitizen-kit-21/blob/master/esp/uploadESP.py">upload script</a> takes care of searching for a SCK on the USB bus, sending a command to the kit so it put's himself in what we call <em>bridge mode</em> (white led) and uploading the firmware. This is the expected output:</p>
 <p><img alt="" src="https://i.imgur.com/dT1QTJa.png" /></p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
@@ -3695,7 +3695,7 @@ Our <a href="https://github.com/fablabbcn/smartcitizen-kit-20/blob/master/esp/up
       
     </div>
     
-      <script src="../../../../assets/javascripts/application.ac79c3b0.js"></script>
+      <script src="../../../../assets/javascripts/application.a8b5e56f.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:"../../../.."}})</script>
       
