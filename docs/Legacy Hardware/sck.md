@@ -43,3 +43,6 @@ The measurements of the SCK2.0 are listed below:
 
 !!! info "Find out more"
     Except for the sensors, most information about the SCK2.0 is the same as the one for SCK2.1. More information about the metal oxyde sensors can be found [here](/Components/Urban%20Sensor%20Board/Metal%20Oxide%20Sensor/MICS/)
+
+    The firmware for the 2.0 is still maintained and can be found in [Github](https://github.com/fablabbcn/smartcitizen-kit-20) 
+

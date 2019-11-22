@@ -32,4 +32,4 @@ The previous requirements led to the decision of building the core platform on t
 
 ## Source files
 
-<a class="github-button" data-size="large" href="https://github.com/fablabbcn/smartcitizen-kit-20" aria-label="Check the source code">Check the source code</a>
+<a class="github-button" data-size="large" href="https://github.com/fablabbcn/smartcitizen-kit-21" aria-label="Check the source code">Check the source code</a>

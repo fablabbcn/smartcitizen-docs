@@ -19,7 +19,7 @@ When new features are developed or bugs are fixed we will release new versions o
 	* **Connect your kit** with a micro USB cable to your computer.
 	* **Double click the reset button** of your SCK, the SCK led should turn green and a new drive called _SCK-20_ should appear on your computer file browser.
 	![](/assets/images/sck_2/reset_button.png)
-	* Inside the _SCK-20_ drive you should see some files, **double click the _INDEX.HTM_** file and our  [github releases page](https://github.com/fablabbcn/smartcitizen-kit-20/releases/latest) will open in your browser. **Download the new firmware** called _SAM_firmware_XXX.uf2_ and save it to your computer.
+	* Inside the _SCK-20_ drive you should see some files, **double click the _INDEX.HTM_** file and our  [github releases page](https://github.com/fablabbcn/smartcitizen-kit-21/releases/latest) will open in your browser. **Download the new firmware** called _SAM_firmware_XXX.uf2_ and save it to your computer.
 	![](/assets/images/sck_2/uf2_index.png)
 
 	!!! tip

@@ -22,7 +22,7 @@ Base library, intented to be generic purpose audio analysis library for an I2S M
 
 ### Smart Citizen Firmware
 
-**[Smart Citizen Firmware](https://github.com/fablabbcn/smartcitizen-kit-20)**
+**[Smart Citizen Firmware](https://github.com/fablabbcn/smartcitizen-kit-21)**
 Firmware implementation in the SmartCitizen Kit 2.0 and 2.1, with a better usage of memory and SCK related functionalities:
 
 - FFT analysis

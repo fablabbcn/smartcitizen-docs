@@ -23,7 +23,7 @@ The Smart Citizen Kit is the core of what we call the Smart Citizen System: a co
 On top of that, the system is meant to serve as a **base solution for more complex settings**, not only related with air quality monitoring. For that purpose, in addition to the [Urban Board](/Components/Urban Board), the system also provides off-the-shelf support for a wide variety of third party sensors, using the expansion bus as a common port. One example is what we call the [Smart Citizen Station](/Smart Citizen Station): a full solution for low cost air pollution monitoring.
 
 !!! info "The sensors"
-    Have a look a the supported sensors in the [Firmware](https://github.com/fablabbcn/smartcitizen-kit-20/blob/master/lib/Sensors/Sensors.h)!
+    Have a look a the supported sensors in the [Firmware](https://github.com/fablabbcn/smartcitizen-kit-21/blob/master/lib/Sensors/Sensors.h)!
 
 ## :ear: Measurements
 

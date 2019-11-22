@@ -8,12 +8,11 @@ For communications the SCK has an **ESP8266 microcontroler with Wifi capabilitie
 
 ## Development enviroment
 
-The SmartSmart Citizen Kit Firmware is on our [repository on github](https://github.com/fablabbcn/smartcitizen-kit-20) so you will need [git](https://mirrors.edge.kernel.org/pub/software/scm/git/) software [installed](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
+The SmartSmart Citizen Kit Firmware is on our [repository on github](https://github.com/fablabbcn/smartcitizen-kit-21) so you will need [git](https://mirrors.edge.kernel.org/pub/software/scm/git/) software [installed](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
 
 To build the SmartSmart Citizen Kit firmware you need a linux computer with [platformio](https://platformio.org/) installed, you don't need the full IDE installation (Atom). You can follow [this instructions](http://docs.platformio.org/en/latest/installation.html#super-quick-mac-linux) to install only the console version.
 
 For bootloader upload you also need [OpenOCD](http://openocd.org/) somewhere in your PATH. You can use platformIO provided binary, normally it is located in `~/.platformio/packages/tool-openocd`.
-
 
 
 ## Getting the firmware
@@ -21,7 +20,7 @@ For bootloader upload you also need [OpenOCD](http://openocd.org/) somewhere in 
 To get the firmware just run:
 
 ```bash
-git clone --recursive https://github.com/fablabbcn/smartcitizen-kit-20
+git clone --recursive https://github.com/fablabbcn/smartcitizen-kit-21
 ```
 
 The bootloader repository is a [submodule](https://git-scm.com/book/en/v2/Git-Tools-Submodules) of the main firmware so you must do a `--recursive` clone to get it.
@@ -116,7 +115,7 @@ Just like the other parts of the process this is also covered by our `build.sh` 
 As before, if this is the first time you do it, it will take a while on downloading dependecies and building the firmware.
 
 In this case the upload process is different, since the ESP8266 chip is not connected to the USB interface the data must be uploadded through the SAMD21 chip.
-Our [upload script](https://github.com/fablabbcn/smartcitizen-kit-20/blob/master/esp/uploadESP.py) takes care of searching for a SCK on the USB bus, sending a command to the kit so it put's himself in what we call _bridge mode_ (white led) and uploading the firmware. This is the expected output:
+Our [upload script](https://github.com/fablabbcn/smartcitizen-kit-21/blob/master/esp/uploadESP.py) takes care of searching for a SCK on the USB bus, sending a command to the kit so it put's himself in what we call _bridge mode_ (white led) and uploading the firmware. This is the expected output:
 
 ![](https://i.imgur.com/dT1QTJa.png)
 

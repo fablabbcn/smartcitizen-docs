@@ -59,4 +59,4 @@ In this section, we will detail some problems you might have found in the early 
 
 ### Light sensor reads 0 and temperature/humidity sensor does not work
 
-The issue is caused due to a firmware bug (light) and a problem with some SHT31 sensors (also fixed by firmware). A full explanation is detailed in the [forum](https://forum.smartcitizen.me/t/the-light-sensor-is-fixed/1172) and the fix was released with [V0.9.4](https://github.com/fablabbcn/smartcitizen-kit-20/releases/tag/0.9.4) of the SAMD firmware.
+The issue is caused due to a firmware bug (light) and a problem with some SHT31 sensors (also fixed by firmware). A full explanation is detailed in the [forum](https://forum.smartcitizen.me/t/the-light-sensor-is-fixed/1172) and the fix was released with [V0.9.4](https://github.com/fablabbcn/smartcitizen-kit-21/releases/tag/0.9.4) of the SAMD firmware.
