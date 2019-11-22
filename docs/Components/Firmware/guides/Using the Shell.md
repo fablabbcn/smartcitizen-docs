@@ -37,6 +37,14 @@ SCK >
 ...
 ```
 
+If you already installed [platformio](https://platformio.org/) to [edit the firmware](/Components/Firmware/guides/Edit%20the%20Firmware/) you can use it here, too
+
+```
+> pio device monitor
+SCK >
+...
+```
+
 !!! warning "Be patient!"
     The port will take a little time to appear in your list of devices. Normally the LED of your SCK will be **static white** during that period.
 
