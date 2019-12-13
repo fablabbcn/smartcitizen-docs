@@ -52,3 +52,22 @@ The oboarding appp guides you through the process of the setup using simple lang
 
 	14. Look at the data!
 	![](https://i.imgur.com/mmrDVFC.png)
+
+
+## Advanced Kit Selection
+
+The feature below is only recommended for advanced users who know how to configure new or customized sensor devices
+
+!!! example "How to choose a custom"
+
+	1. Click the 🛠️ icon in the bottom right corner
+
+	![](https://i.imgur.com/Qy7NpXQ.png)
+
+	1. Choose the blueprint of the device you want to setup
+
+	![](https://i.imgur.com/ERXdPvK.png)
+
+	2. Click save and continue the process as usually
+
+	![](https://i.imgur.com/O6oT13q.png)
