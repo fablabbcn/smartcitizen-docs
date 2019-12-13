@@ -38,7 +38,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../../assets/images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.5.0">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
     
     
       
@@ -62,7 +62,7 @@
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
@@ -3468,30 +3468,30 @@
 <h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">Link</a></h2>
 <p>We recommend you use these two tools for managing the different versions of the framework and keep it updated.</p>
 <ol>
-<li>Download and install <code class="codehilite"><span class="n">git</span></code> from <a href="https://git-scm.com/">here</a></li>
-<li>Download and install <code class="codehilite"><span class="n">Anaconda</span></code> for Python 3.7 from <a href="https://www.anaconda.com/distribution/">here</a></li>
+<li>Download and install <code class="codehilite"><span class="err">git</span></code> from <a href="https://git-scm.com/">here</a></li>
+<li>Download and install <code class="codehilite"><span class="err">Anaconda</span></code> for Python 3.7 from <a href="https://www.anaconda.com/distribution/">here</a></li>
 </ol>
 <h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">Link</a></h2>
-<p>Open your favourite shell on the directory you have your project. <em>(<code class="codehilite"><span class="n">cmd</span><span class="p">.</span><span class="n">exe</span></code> on windows)</em></p>
+<p>Open your favourite shell on the directory you have your project. <em>(<code class="codehilite"><span class="err">cmd.exe</span></code> on windows)</em></p>
 <h3 id="get-the-repo">Get the repo<a class="headerlink" href="#get-the-repo" title="Permanent link">Link</a></h3>
-<p>Make a directory and <code class="codehilite"><span class="n">clone</span></code> the repository in it:</p>
-<div class="codehilite"><pre><span></span><span class="err">➜</span>  <span class="n">mkdir</span> <span class="n">data_analysis</span>
-<span class="err">➜</span>  <span class="n">cd</span> <span class="n">data_analysis</span>
-<span class="err">➜</span>  <span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">fablabbcn</span><span class="o">/</span><span class="n">smartcitizen</span><span class="o">-</span><span class="n">iscape</span><span class="o">-</span><span class="k">data</span><span class="p">.</span><span class="n">git</span>
-<span class="p">...</span>
+<p>Make a directory and <code class="codehilite"><span class="err">clone</span></code> the repository in it:</p>
+<div class="codehilite"><pre><span></span><span class="err">➜  mkdir data_analysis</span>
+<span class="err">➜  cd data_analysis</span>
+<span class="err">➜  git clone https://github.com/fablabbcn/smartcitizen-iscape-data.git</span>
+<span class="err">...</span>
 </pre></div>
 
 <div class="admonition warning">
 <p class="admonition-title">Want to stay up-to-date?</p>
-<p>The framework is being constantly updated and the only version that will always be up-to-date is in the <a href="https://github.com/fablabbcn/smartcitizen-iscape-data">master branch of the github repository</a>. We do not recommend to simply download the repository but to clone it with <code class="codehilite"><span class="n">git</span></code>. If you want to learn more about <code class="codehilite"><span class="n">git</span></code> and why it can help you in your projects, check <a href="https://www.quora.com/What-is-Git-and-why-should-I-use-it">here</a></p>
+<p>The framework is being constantly updated and the only version that will always be up-to-date is in the <a href="https://github.com/fablabbcn/smartcitizen-iscape-data">master branch of the github repository</a>. We do not recommend to simply download the repository but to clone it with <code class="codehilite"><span class="err">git</span></code>. If you want to learn more about <code class="codehilite"><span class="err">git</span></code> and why it can help you in your projects, check <a href="https://www.quora.com/What-is-Git-and-why-should-I-use-it">here</a></p>
 </div>
 <h3 id="create-the-environment">Create the environment<a class="headerlink" href="#create-the-environment" title="Permanent link">Link</a></h3>
 <p>Navigate to the cloned repository and create an environment for anaconda. We provide a 'environment.yml' file to help with the process:</p>
-<div class="codehilite"><pre><span></span><span class="err">➜</span>  <span class="n">cd</span> <span class="n">smartcitizen</span><span class="o">-</span><span class="n">iscape</span><span class="o">-</span><span class="k">data</span>
-<span class="err">➜</span>  <span class="n">smartcitizen</span><span class="o">-</span><span class="n">iscape</span><span class="o">-</span><span class="k">data</span> <span class="n">git</span><span class="p">:(</span><span class="n">master</span><span class="p">)</span> <span class="err">✗</span> <span class="n">conda</span> <span class="n">env</span> <span class="k">create</span> <span class="o">-</span><span class="n">f</span> <span class="n">environment</span><span class="p">.</span><span class="n">yml</span>
+<div class="codehilite"><pre><span></span><span class="err">➜  cd smartcitizen-iscape-data</span>
+<span class="err">➜  smartcitizen-iscape-data git:(master) ✗ conda env create -f environment.yml</span>
 </pre></div>
 
-<p><strong>Alternatively</strong>, you can open Anaconda Navigator and <code class="codehilite"><span class="n">Import</span></code> an environment in the <code class="codehilite"><span class="n">Environment</span> <span class="n">section</span></code>:</p>
+<p><strong>Alternatively</strong>, you can open Anaconda Navigator and <code class="codehilite"><span class="err">Import</span></code> an environment in the <code class="codehilite"><span class="err">Environment section</span></code>:</p>
 <p><img alt="" src="https://i.imgur.com/aAsrDXz.png" /> </p>
 <div class="admonition info">
 <p class="admonition-title">Note about different platforms</p>
@@ -3499,7 +3499,7 @@
 </div>
 <h3 id="finish-it-up">Finish it up<a class="headerlink" href="#finish-it-up" title="Permanent link">Link</a></h3>
 <p>The code in the framework is managed as internal dependencies. To activate this, you can run:</p>
-<div class="codehilite"><pre><span></span><span class="err">➜</span>  <span class="n">pip</span> <span class="n">install</span> <span class="c1">--editable . --verbose</span>
+<div class="codehilite"><pre><span></span><span class="err">➜  pip install --editable . --verbose</span>
 </pre></div>
 
 <p>Additional commands to install jupyter lab extensions are given in the <code class="codehilite"><span class="na">.dotfile</span></code>:</p>
@@ -3514,29 +3514,30 @@
 </pre></div>
 
 <p>You can run it by:</p>
-<div class="codehilite"><pre><span></span><span class="err">➜</span>  <span class="n">chmod</span> <span class="o">+</span><span class="n">x</span> <span class="p">.</span><span class="n">dotfile</span>
-<span class="err">➜</span>  <span class="p">.</span><span class="o">/</span><span class="p">.</span><span class="n">dotfile</span>
+<div class="codehilite"><pre><span></span><span class="err">➜  chmod +x .dotfile</span>
+<span class="err">➜  ./.dotfile</span>
 </pre></div>
 
 <h2 id="run">Run<a class="headerlink" href="#run" title="Permanent link">Link</a></h2>
 <p>You should now be ready to go! You can verify the installation by either running this command:</p>
-<div class="codehilite"><pre><span></span><span class="p">(</span><span class="n">smartcitizen</span><span class="o">-</span><span class="k">data</span><span class="p">)</span> <span class="err">➜</span>  <span class="o">~</span> <span class="n">jupyter</span> <span class="n">lab</span> <span class="c1">--version</span>
-<span class="mi">1</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">2</span>
+<div class="codehilite"><pre><span></span><span class="err">(smartcitizen-data) ➜  ~ jupyter lab --version</span>
+<span class="err">1.0.2</span>
 </pre></div>
 
 <p>Or opening Anaconda Navigator: </p>
 <p><img alt="" src="https://i.imgur.com/THpoxd1.png" /></p>
 <p>To run the framework, in your terminal type:</p>
-<div class="codehilite"><pre><span></span><span class="p">(</span><span class="n">smartcitizen</span><span class="o">-</span><span class="k">data</span><span class="p">)</span> <span class="err">➜</span>  <span class="n">smartcitizen</span><span class="o">-</span><span class="n">iscape</span><span class="o">-</span><span class="k">data</span> <span class="n">git</span><span class="p">:(</span><span class="n">master</span><span class="p">)</span> <span class="err">✗</span> <span class="n">jupyter</span> <span class="n">lab</span>
+<div class="codehilite"><pre><span></span><span class="err">(smartcitizen-data) ➜  smartcitizen-iscape-data git:(master) ✗ jupyter lab</span>
 </pre></div>
 
-<p>This will open a web browser instance (by default <a href="">localhost:8888/lab</a>) which gives access to the tools in the framework. The <code class="codehilite"><span class="n">analysis</span><span class="p">.</span><span class="n">ipynb</span></code> is meant as an example, but any configuration is possible, even without the <code class="codehilite"><span class="n">jupyter</span> <span class="n">lab</span></code> interface (of course).</p>
+<p>This will open a web browser instance (by default <a href="">localhost:8888/lab</a>) which gives access to the tools in the framework. The <code class="codehilite"><span class="err">analysis.ipynb</span></code> is meant as an example, but any configuration is possible, even without the <code class="codehilite"><span class="err">jupyter lab</span></code> interface (of course).</p>
 <div class="admonition note">
 <p class="admonition-title">Learn More</p>
 <p>Still wondering what this is? Read this introduction to <a href="http://jupyter-notebook.readthedocs.io/en/latest/examples/Notebook/Notebook%20Basics.html">Jupyter</a></p>
 </div>
                 
                   
+                
                 
               
               
@@ -3660,7 +3661,7 @@
       
     </div>
     
-      <script src="../../../assets/javascripts/application.a8b5e56f.js"></script>
+      <script src="../../../assets/javascripts/application.808e90bb.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:"../../.."}})</script>
       

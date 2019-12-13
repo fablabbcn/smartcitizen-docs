@@ -38,7 +38,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../../assets/images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.5.0">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
     
     
       
@@ -62,7 +62,7 @@
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
@@ -3533,8 +3533,8 @@
 <p class="admonition-title">More info</p>
 <p>Check the guide on <a href="/Sensor Analysis Framework/guides/Analyse your data in batch/#model">batch analysis</a> for a definition of each parameter.</p>
 </div>
-<p>We have to keep at least the key <code class="codehilite"><span class="k">REF</span></code> within the <code class="codehilite"><span class="ss">&quot;features&quot;</span></code>, but the rest can be renamed at will. We can also input whichever <code class="codehilite"><span class="n">formula_expression</span></code> for the model regression in the following format:</p>
-<div class="codehilite"><pre><span></span><span class="ss">&quot;expression&quot;</span> <span class="p">:</span> <span class="s1">&#39;REF ~ A + np.log(B)&#39;</span>
+<p>We have to keep at least the key <code class="codehilite"><span class="err">REF</span></code> within the <code class="codehilite"><span class="err">&quot;features&quot;</span></code>, but the rest can be renamed at will. We can also input whichever <code class="codehilite"><span class="err">formula_expression</span></code> for the model regression in the following format:</p>
+<div class="codehilite"><pre><span></span><span class="err">&quot;expression&quot; : &#39;REF ~ A + np.log(B)&#39;</span>
 </pre></div>
 
 <p>Which converts to:</p>
@@ -3586,7 +3586,7 @@ Warnings:
 strong multicollinearity or other numerical problems.
 </pre></div>
 
-<p>This output brings a lot of information. First, we find what the dependent variable is, in our case always <code class="codehilite"><span class="s1">&#39;REF&#39;</span></code>. The type of model used and some general information is shown below that.</p>
+<p>This output brings a lot of information. First, we find what the dependent variable is, in our case always <code class="codehilite"><span class="err">&#39;REF&#39;</span></code>. The type of model used and some general information is shown below that.</p>
 <p>More statistically important information is found in the rest of the output. Some key data:</p>
 <ul>
 <li><em>R-squared and adjusted R-squared</em>: this is our classic correlation coefficient or R<sup>2</sup>. The adjusted one aims to correct the model overfitting by the inclusion of too many variables, and for that introduces a penalty on the number of variables included</li>
@@ -3594,7 +3594,7 @@ strong multicollinearity or other numerical problems.
 <li><em>Model quality diagnostics</em> are also indicated. Kurtosis and skewness are metrics for determining the distribution of the residuals. They indicate how the residuals of the model resemble a normal distribution. Below, we will review more on diagnosis plots. The <a href="https://en.wikipedia.org/wiki/Jarque–Bera_test">Jarque Bera test</a> indicates if the residuals are normally distributed (the null hypothesis is a joint hypothesis of the skewness being zero and the excess kurtosis being zero), and a value of zero indicates that the data is normally distributed. If the Jarque Bera test is valid (in the case above it isn't), the Durbin Watson is applicable in order to check for autocorrelation of the residuals (meaning that the residuals of our model are related among themselves and that we haven't captured some characteristics of our data with the tested model).</li>
 </ul>
 <p>Finally, there is a warning at the bottom indicating that the condition number is large. It suggests we might have multicollinearity problems in our model, which means that some of the independent variables might be correlated among themselves and that they are probably not necessary.</p>
-<p>Our function also depicts the results in a graphical way for us to see the model itself. It will show the training and test datasets (as <code class="codehilite"><span class="n">Reference</span> <span class="n">Train</span></code> and <code class="codehilite"><span class="n">Reference</span> <span class="n">Test</span></code> respectively), and the prediction results. The mean and absolute confidence intervals for 95% confidence are also shown:</p>
+<p>Our function also depicts the results in a graphical way for us to see the model itself. It will show the training and test datasets (as <code class="codehilite"><span class="err">Reference Train</span></code> and <code class="codehilite"><span class="err">Reference Test</span></code> respectively), and the prediction results. The mean and absolute confidence intervals for 95% confidence are also shown:</p>
 <p><img alt="" src="https://i.imgur.com/M9TBeBT.png" /></p>
 <p>Now we can look at some other model quality plots. If we run the cell below, we will obtain an adaptation of the summary plots from <strong>R</strong>:</p>
 <div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">linear_regression_utils</span> <span class="kn">import</span> <span class="n">modelRplots</span>
@@ -3644,19 +3644,19 @@ strong multicollinearity or other numerical problems.
 </div>
 
 <p>Finally, we can export our model and generate some metrics with:</p>
-<div class="codehilite"><pre><span></span># <span class="nv">Archive</span> <span class="nv">model</span>
-<span class="k">if</span> <span class="nv">ols_model</span>.<span class="nv">options</span>[<span class="s1">&#39;</span><span class="s">session_active_model</span><span class="s1">&#39;</span>]:
-    <span class="nv">dataFrameExport</span> <span class="o">=</span> <span class="nv">ols_model</span>.<span class="nv">dataFrameTrain</span>.<span class="nv">copy</span><span class="ss">()</span>
-    <span class="nv">dataFrameExport</span> <span class="o">=</span> <span class="nv">dataFrameExport</span>.<span class="nv">combine_first</span><span class="ss">(</span><span class="nv">ols_model</span>.<span class="nv">dataFrameTest</span><span class="ss">)</span>
-    <span class="nv">records</span>.<span class="nv">archive_model</span><span class="ss">(</span><span class="nv">train_dataset</span>, <span class="nv">ols_model</span>, <span class="nv">dataFrameExport</span><span class="ss">)</span>
+<div class="codehilite"><pre><span></span><span class="err">#</span><span class="w"> </span><span class="n">Archive</span><span class="w"> </span><span class="n">model</span><span class="w"></span>
+<span class="k">if</span><span class="w"> </span><span class="n">ols_model</span><span class="p">.</span><span class="n">options</span><span class="o">[</span><span class="n">&#39;session_active_model&#39;</span><span class="o">]</span><span class="err">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">dataFrameExport</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ols_model</span><span class="p">.</span><span class="n">dataFrameTrain</span><span class="p">.</span><span class="n">copy</span><span class="p">()</span><span class="w"></span>
+<span class="w">    </span><span class="n">dataFrameExport</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dataFrameExport</span><span class="p">.</span><span class="n">combine_first</span><span class="p">(</span><span class="n">ols_model</span><span class="p">.</span><span class="n">dataFrameTest</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="n">records</span><span class="p">.</span><span class="n">archive_model</span><span class="p">(</span><span class="n">train_dataset</span><span class="p">,</span><span class="w"> </span><span class="n">ols_model</span><span class="p">,</span><span class="w"> </span><span class="n">dataFrameExport</span><span class="p">)</span><span class="w"></span>
 
-# <span class="nv">Print</span> <span class="nv">metrics</span>
-<span class="nv">print</span> <span class="ss">(</span><span class="s1">&#39;</span><span class="s">Metrics Summary:</span><span class="s1">&#39;</span><span class="ss">)</span>
-<span class="nv">print</span> <span class="ss">(</span><span class="s2">&quot;</span><span class="s">{:&lt;23} {:&lt;7} {:&lt;5}</span><span class="s2">&quot;</span>.<span class="nv">format</span><span class="ss">(</span><span class="s1">&#39;</span><span class="s">Metric</span><span class="s1">&#39;</span>,<span class="s1">&#39;</span><span class="s">Train</span><span class="s1">&#39;</span>,<span class="s1">&#39;</span><span class="s">Test</span><span class="s1">&#39;</span><span class="ss">))</span>
-<span class="k">if</span> <span class="nv">ols_model</span>.<span class="nv">options</span>[<span class="s1">&#39;</span><span class="s">extract_metrics</span><span class="s1">&#39;</span>]:
-    <span class="nv">metrics_model</span> <span class="o">=</span> <span class="nv">ols_model</span>.<span class="nv">extract_metrics</span><span class="ss">()</span>
-    <span class="k">for</span> <span class="nv">metric</span> <span class="nv">in</span> <span class="nv">metrics_model</span>[<span class="s1">&#39;</span><span class="s">train</span><span class="s1">&#39;</span>].<span class="nv">keys</span><span class="ss">()</span>:
-        <span class="nv">print</span> <span class="ss">(</span><span class="s2">&quot;</span><span class="s">{:&lt;20}</span><span class="s2">&quot;</span>.<span class="nv">format</span><span class="ss">(</span><span class="nv">metric</span><span class="ss">)</span> <span class="o">+</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span> <span class="o">+</span><span class="s2">&quot;</span><span class="s">{:0.3f}</span><span class="s2">&quot;</span>.<span class="nv">format</span><span class="ss">(</span><span class="nv">metrics_model</span>[<span class="s1">&#39;</span><span class="s">train</span><span class="s1">&#39;</span>][<span class="nv">metric</span>]<span class="ss">)</span> <span class="o">+</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="o">+</span> <span class="s2">&quot;</span><span class="s">{:0.3f}</span><span class="s2">&quot;</span>.<span class="nv">format</span><span class="ss">(</span><span class="nv">metrics_model</span>[<span class="s1">&#39;</span><span class="s">test</span><span class="s1">&#39;</span>][<span class="nv">metric</span>]<span class="ss">))</span>
+<span class="err">#</span><span class="w"> </span><span class="k">Print</span><span class="w"> </span><span class="n">metrics</span><span class="w"></span>
+<span class="k">print</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;Metrics Summary:&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="k">print</span><span class="w"> </span><span class="p">(</span><span class="ss">&quot;{:&lt;23} {:&lt;7} {:&lt;5}&quot;</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="s1">&#39;Metric&#39;</span><span class="p">,</span><span class="s1">&#39;Train&#39;</span><span class="p">,</span><span class="s1">&#39;Test&#39;</span><span class="p">))</span><span class="w"></span>
+<span class="k">if</span><span class="w"> </span><span class="n">ols_model</span><span class="p">.</span><span class="n">options</span><span class="o">[</span><span class="n">&#39;extract_metrics&#39;</span><span class="o">]</span><span class="err">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">metrics_model</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ols_model</span><span class="p">.</span><span class="n">extract_metrics</span><span class="p">()</span><span class="w"></span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="n">metric</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">metrics_model</span><span class="o">[</span><span class="n">&#39;train&#39;</span><span class="o">]</span><span class="p">.</span><span class="n">keys</span><span class="p">()</span><span class="err">:</span><span class="w"></span>
+<span class="w">        </span><span class="k">print</span><span class="w"> </span><span class="p">(</span><span class="ss">&quot;{:&lt;20}&quot;</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="n">metric</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="ss">&quot;\t&quot;</span><span class="w"> </span><span class="o">+</span><span class="ss">&quot;{:0.3f}&quot;</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="n">metrics_model</span><span class="o">[</span><span class="n">&#39;train&#39;</span><span class="o">][</span><span class="n">metric</span><span class="o">]</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="ss">&quot;\t&quot;</span><span class="o">+</span><span class="w"> </span><span class="ss">&quot;{:0.3f}&quot;</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="n">metrics_model</span><span class="o">[</span><span class="n">&#39;test&#39;</span><span class="o">][</span><span class="n">metric</span><span class="o">]</span><span class="p">))</span><span class="w"></span>
 </pre></div>
 
 <h2 id="machine-learning-example">Machine learning example<a class="headerlink" href="#machine-learning-example" title="Permanent link">Link</a></h2>
@@ -3716,62 +3716,19 @@ strong multicollinearity or other numerical problems.
 </pre></div>
 
 <p>Output:</p>
-<div class="codehilite"><pre><span></span><span class="nv">Using</span> <span class="nv">TensorFlow</span> <span class="nv">backend</span>.
+<div class="codehilite"><pre><span></span><span class="k">Using</span> <span class="n">TensorFlow</span> <span class="n">backend</span><span class="p">.</span>
 
-<span class="nv">Beginning</span> <span class="nv">Model</span> <span class="nv">RF_UCD</span>
-<span class="nv">Model</span> <span class="nv">type</span> <span class="nv">RF</span>
-<span class="nv">Preparing</span> <span class="nv">dataframe</span> <span class="nv">model</span> <span class="k">for</span> <span class="nv">test</span> <span class="mi">2019</span><span class="o">-</span><span class="mi">03</span><span class="nv">_EXT_UCD_URBAN_BACKGROUND_API</span>
-<span class="nv">Data</span> <span class="nv">combined</span> <span class="nv">successfully</span>
-<span class="nv">Creating</span> <span class="nv">models</span> <span class="nv">session</span> <span class="nv">in</span> <span class="nv">recordings</span>
-<span class="nv">Dataframe</span> <span class="nv">model</span> <span class="nv">generated</span> <span class="nv">successfully</span>
-<span class="nv">Training</span> <span class="nv">Model</span> <span class="nv">RF_UCD</span>...
-<span class="nv">Training</span> <span class="nv">done</span>
-<span class="nv">Variable</span>: <span class="nv">HUM_5262</span> <span class="nv">Importance</span>: <span class="mi">0</span>.<span class="mi">4</span>
-<span class="nv">Variable</span>: <span class="nv">GB_2W_5262</span> <span class="nv">Importance</span>: <span class="mi">0</span>.<span class="mi">31</span>
-<span class="nv">Variable</span>: <span class="nv">GB_2A_5262</span> <span class="nv">Importance</span>: <span class="mi">0</span>.<span class="mi">3</span>
-<span class="nv">Calculating</span> <span class="nv">Metrics</span>...
-<span class="nv">Metrics</span> <span class="nv">Summary</span>:
-<span class="nv">Metric</span>                  <span class="nv">Train</span>   <span class="nv">Test</span> 
-<span class="nv">avg_ref</span>                 <span class="mi">16</span>.<span class="mi">648</span>  <span class="mi">15</span>.<span class="mi">861</span>
-<span class="nv">avg_est</span>                 <span class="mi">16</span>.<span class="mi">666</span>  <span class="mi">16</span>.<span class="mi">000</span>
-<span class="nv">sig_ref</span>                 <span class="mi">11</span>.<span class="mi">438</span>  <span class="mi">10</span>.<span class="mi">584</span>
-<span class="nv">sig_est</span>                 <span class="mi">9</span>.<span class="mi">493</span>   <span class="mi">9</span>.<span class="mi">404</span>
-<span class="nv">bias</span>                    <span class="mi">0</span>.<span class="mi">019</span>   <span class="mi">0</span>.<span class="mi">139</span>
-<span class="nv">normalised_bias</span>         <span class="mi">0</span>.<span class="mi">002</span>   <span class="mi">0</span>.<span class="mi">013</span>
-<span class="nv">sigma_norm</span>              <span class="mi">0</span>.<span class="mi">830</span>   <span class="mi">0</span>.<span class="mi">888</span>
-<span class="nv">sign_sigma</span>              <span class="o">-</span><span class="mi">1</span>.<span class="mi">000</span>  <span class="o">-</span><span class="mi">1</span>.<span class="mi">000</span>
-<span class="nv">rsquared</span>                <span class="mi">0</span>.<span class="mi">799</span>   <span class="mi">0</span>.<span class="mi">879</span>
-<span class="nv">RMSD</span>                    <span class="mi">5</span>.<span class="mi">124</span>   <span class="mi">3</span>.<span class="mi">677</span>
-<span class="nv">RMSD_norm_unb</span>           <span class="mi">0</span>.<span class="mi">453</span>   <span class="mi">0</span>.<span class="mi">351</span>
-<span class="nv">No</span> <span class="nv">specifics</span> <span class="k">for</span> <span class="nv">RF</span> <span class="nv">type</span>
-<span class="nv">Preparing</span> <span class="nv">devices</span> <span class="nv">from</span> <span class="nv">prediction</span>
-<span class="nv">Channel</span> <span class="mi">5262</span><span class="nv">_RF_UCD</span> <span class="nv">prediction</span> <span class="nv">finished</span>
-</pre></div>
-
-<p>This will also output some nice plots for visually checking our model performance:</p>
-<p><img alt="" src="https://i.imgur.com/xEuVJVC.png" /></p>
-<p>And some extras about variable importance:</p>
-<p><img alt="" src="https://i.imgur.com/wyRi9dp.png" /></p>
-<p>Finally, we can archive the model and print some metrics:</p>
-<div class="codehilite"><pre><span></span># <span class="nv">Archive</span> <span class="nv">model</span>
-<span class="k">if</span> <span class="nv">rf_model</span>.<span class="nv">options</span>[<span class="s1">&#39;</span><span class="s">session_active_model</span><span class="s1">&#39;</span>]:
-    <span class="nv">dataFrameExport</span> <span class="o">=</span> <span class="nv">rf_model</span>.<span class="nv">dataFrameTrain</span>.<span class="nv">copy</span><span class="ss">()</span>
-    <span class="nv">dataFrameExport</span> <span class="o">=</span> <span class="nv">dataFrameExport</span>.<span class="nv">combine_first</span><span class="ss">(</span><span class="nv">rf_model</span>.<span class="nv">dataFrameTest</span><span class="ss">)</span>
-    <span class="nv">records</span>.<span class="nv">archive_model</span><span class="ss">(</span><span class="nv">train_dataset</span>, <span class="nv">rf_model</span>, <span class="nv">dataFrameExport</span><span class="ss">)</span>
-
-# <span class="nv">Print</span> <span class="nv">metrics</span>
-<span class="nv">print</span> <span class="ss">(</span><span class="s1">&#39;</span><span class="s">Metrics Summary:</span><span class="s1">&#39;</span><span class="ss">)</span>
-<span class="nv">print</span> <span class="ss">(</span><span class="s2">&quot;</span><span class="s">{:&lt;23} {:&lt;7} {:&lt;5}</span><span class="s2">&quot;</span>.<span class="nv">format</span><span class="ss">(</span><span class="s1">&#39;</span><span class="s">Metric</span><span class="s1">&#39;</span>,<span class="s1">&#39;</span><span class="s">Train</span><span class="s1">&#39;</span>,<span class="s1">&#39;</span><span class="s">Test</span><span class="s1">&#39;</span><span class="ss">))</span>
-<span class="k">if</span> <span class="nv">rf_model</span>.<span class="nv">options</span>[<span class="s1">&#39;</span><span class="s">extract_metrics</span><span class="s1">&#39;</span>]:
-    <span class="nv">metrics_model</span> <span class="o">=</span> <span class="nv">rf_model</span>.<span class="nv">extract_metrics</span><span class="ss">()</span>
-    <span class="k">for</span> <span class="nv">metric</span> <span class="nv">in</span> <span class="nv">metrics_model</span>[<span class="s1">&#39;</span><span class="s">train</span><span class="s1">&#39;</span>].<span class="nv">keys</span><span class="ss">()</span>:
-        <span class="nv">print</span> <span class="ss">(</span><span class="s2">&quot;</span><span class="s">{:&lt;20}</span><span class="s2">&quot;</span>.<span class="nv">format</span><span class="ss">(</span><span class="nv">metric</span><span class="ss">)</span> <span class="o">+</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span> <span class="o">+</span><span class="s2">&quot;</span><span class="s">{:0.3f}</span><span class="s2">&quot;</span>.<span class="nv">format</span><span class="ss">(</span><span class="nv">metrics_model</span>[<span class="s1">&#39;</span><span class="s">train</span><span class="s1">&#39;</span>][<span class="nv">metric</span>]<span class="ss">)</span> <span class="o">+</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="o">+</span> <span class="s2">&quot;</span><span class="s">{:0.3f}</span><span class="s2">&quot;</span>.<span class="nv">format</span><span class="ss">(</span><span class="nv">metrics_model</span>[<span class="s1">&#39;</span><span class="s">test</span><span class="s1">&#39;</span>][<span class="nv">metric</span>]<span class="ss">))</span>
-</pre></div>
-
-<p>Output:</p>
-<div class="codehilite"><pre><span></span><span class="n">Model</span> <span class="n">archived</span> <span class="n">correctly</span>
-<span class="n">Metrics</span> <span class="n">Summary</span><span class="p">:</span>
-<span class="n">Metric</span>                  <span class="n">Train</span>   <span class="n">Test</span> 
+<span class="n">Beginning</span> <span class="n">Model</span> <span class="n">RF_UCD</span>
+<span class="n">Model</span> <span class="k">type</span> <span class="n">RF</span>
+<span class="n">Preparing</span> <span class="n">dataframe</span> <span class="n">model</span> <span class="k">for</span> <span class="n">test</span> <span class="mi">2019</span><span class="o">-</span><span class="mi">03</span><span class="n">_EXT_UCD_URBAN_BACKGROUND_API</span>
+<span class="k">Data</span> <span class="n">combined</span> <span class="n">successfully</span>
+<span class="n">Creating</span> <span class="n">models</span> <span class="k">session</span> <span class="k">in</span> <span class="n">recordings</span>
+<span class="n">Dataframe</span> <span class="n">model</span> <span class="k">generated</span> <span class="n">successfully</span>
+<span class="n">Training</span> <span class="n">Model</span> <span class="n">RF_UCD</span><span class="p">...</span>
+<span class="n">Training</span> <span class="n">done</span>
+<span class="k">Variable</span><span class="p">:</span> <span class="n">HUM_5262</span> <span class="n">Importance</span><span class="p">:</span> <span class="mi">0</span><span class="p">.</span><span class="mi">4</span>
+<span class="k">Variable</span><span class="p">:</span> <span class="n">GB_2W_5262</span> <span class="n">Importance</span><span class="p">:</span> <span class="mi">0</span><span class="p">.</span><span class="mi">31</span>
+<span class="k">Variable</span><span class="p">:</span> <span class="n">GB_2A_5262</span> <span class="n">Importance</span><span class="p">:</span> <span class="mi">0</span><span class="p">.</span><span class="mi">3</span>
 <span class="n">Calculating</span> <span class="n">Metrics</span><span class="p">...</span>
 <span class="n">Metrics</span> <span class="n">Summary</span><span class="p">:</span>
 <span class="n">Metric</span>                  <span class="n">Train</span>   <span class="n">Test</span> 
@@ -3786,17 +3743,60 @@ strong multicollinearity or other numerical problems.
 <span class="n">rsquared</span>                <span class="mi">0</span><span class="p">.</span><span class="mi">799</span>   <span class="mi">0</span><span class="p">.</span><span class="mi">879</span>
 <span class="n">RMSD</span>                    <span class="mi">5</span><span class="p">.</span><span class="mi">124</span>   <span class="mi">3</span><span class="p">.</span><span class="mi">677</span>
 <span class="n">RMSD_norm_unb</span>           <span class="mi">0</span><span class="p">.</span><span class="mi">453</span>   <span class="mi">0</span><span class="p">.</span><span class="mi">351</span>
-<span class="n">avg_ref</span>                 <span class="mi">16</span><span class="p">.</span><span class="mi">648</span>  <span class="mi">15</span><span class="p">.</span><span class="mi">861</span>
-<span class="n">avg_est</span>                 <span class="mi">16</span><span class="p">.</span><span class="mi">666</span>  <span class="mi">16</span><span class="p">.</span><span class="mi">000</span>
-<span class="n">sig_ref</span>                 <span class="mi">11</span><span class="p">.</span><span class="mi">438</span>  <span class="mi">10</span><span class="p">.</span><span class="mi">584</span>
-<span class="n">sig_est</span>                 <span class="mi">9</span><span class="p">.</span><span class="mi">493</span>   <span class="mi">9</span><span class="p">.</span><span class="mi">404</span>
-<span class="n">bias</span>                    <span class="mi">0</span><span class="p">.</span><span class="mi">019</span>   <span class="mi">0</span><span class="p">.</span><span class="mi">139</span>
-<span class="n">normalised_bias</span>         <span class="mi">0</span><span class="p">.</span><span class="mi">002</span>   <span class="mi">0</span><span class="p">.</span><span class="mi">013</span>
-<span class="n">sigma_norm</span>              <span class="mi">0</span><span class="p">.</span><span class="mi">830</span>   <span class="mi">0</span><span class="p">.</span><span class="mi">888</span>
-<span class="n">sign_sigma</span>              <span class="o">-</span><span class="mi">1</span><span class="p">.</span><span class="mi">000</span>  <span class="o">-</span><span class="mi">1</span><span class="p">.</span><span class="mi">000</span>
-<span class="n">rsquared</span>                <span class="mi">0</span><span class="p">.</span><span class="mi">799</span>   <span class="mi">0</span><span class="p">.</span><span class="mi">879</span>
-<span class="n">RMSD</span>                    <span class="mi">5</span><span class="p">.</span><span class="mi">124</span>   <span class="mi">3</span><span class="p">.</span><span class="mi">677</span>
-<span class="n">RMSD_norm_unb</span>           <span class="mi">0</span><span class="p">.</span><span class="mi">453</span>   <span class="mi">0</span><span class="p">.</span><span class="mi">351</span>
+<span class="k">No</span> <span class="n">specifics</span> <span class="k">for</span> <span class="n">RF</span> <span class="k">type</span>
+<span class="n">Preparing</span> <span class="n">devices</span> <span class="k">from</span> <span class="n">prediction</span>
+<span class="n">Channel</span> <span class="mi">5262</span><span class="n">_RF_UCD</span> <span class="n">prediction</span> <span class="n">finished</span>
+</pre></div>
+
+<p>This will also output some nice plots for visually checking our model performance:</p>
+<p><img alt="" src="https://i.imgur.com/xEuVJVC.png" /></p>
+<p>And some extras about variable importance:</p>
+<p><img alt="" src="https://i.imgur.com/wyRi9dp.png" /></p>
+<p>Finally, we can archive the model and print some metrics:</p>
+<div class="codehilite"><pre><span></span><span class="err">#</span><span class="w"> </span><span class="n">Archive</span><span class="w"> </span><span class="n">model</span><span class="w"></span>
+<span class="k">if</span><span class="w"> </span><span class="n">rf_model</span><span class="p">.</span><span class="n">options</span><span class="o">[</span><span class="n">&#39;session_active_model&#39;</span><span class="o">]</span><span class="err">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">dataFrameExport</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rf_model</span><span class="p">.</span><span class="n">dataFrameTrain</span><span class="p">.</span><span class="n">copy</span><span class="p">()</span><span class="w"></span>
+<span class="w">    </span><span class="n">dataFrameExport</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dataFrameExport</span><span class="p">.</span><span class="n">combine_first</span><span class="p">(</span><span class="n">rf_model</span><span class="p">.</span><span class="n">dataFrameTest</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="n">records</span><span class="p">.</span><span class="n">archive_model</span><span class="p">(</span><span class="n">train_dataset</span><span class="p">,</span><span class="w"> </span><span class="n">rf_model</span><span class="p">,</span><span class="w"> </span><span class="n">dataFrameExport</span><span class="p">)</span><span class="w"></span>
+
+<span class="err">#</span><span class="w"> </span><span class="k">Print</span><span class="w"> </span><span class="n">metrics</span><span class="w"></span>
+<span class="k">print</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;Metrics Summary:&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="k">print</span><span class="w"> </span><span class="p">(</span><span class="ss">&quot;{:&lt;23} {:&lt;7} {:&lt;5}&quot;</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="s1">&#39;Metric&#39;</span><span class="p">,</span><span class="s1">&#39;Train&#39;</span><span class="p">,</span><span class="s1">&#39;Test&#39;</span><span class="p">))</span><span class="w"></span>
+<span class="k">if</span><span class="w"> </span><span class="n">rf_model</span><span class="p">.</span><span class="n">options</span><span class="o">[</span><span class="n">&#39;extract_metrics&#39;</span><span class="o">]</span><span class="err">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">metrics_model</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rf_model</span><span class="p">.</span><span class="n">extract_metrics</span><span class="p">()</span><span class="w"></span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="n">metric</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">metrics_model</span><span class="o">[</span><span class="n">&#39;train&#39;</span><span class="o">]</span><span class="p">.</span><span class="n">keys</span><span class="p">()</span><span class="err">:</span><span class="w"></span>
+<span class="w">        </span><span class="k">print</span><span class="w"> </span><span class="p">(</span><span class="ss">&quot;{:&lt;20}&quot;</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="n">metric</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="ss">&quot;\t&quot;</span><span class="w"> </span><span class="o">+</span><span class="ss">&quot;{:0.3f}&quot;</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="n">metrics_model</span><span class="o">[</span><span class="n">&#39;train&#39;</span><span class="o">][</span><span class="n">metric</span><span class="o">]</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="ss">&quot;\t&quot;</span><span class="o">+</span><span class="w"> </span><span class="ss">&quot;{:0.3f}&quot;</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="n">metrics_model</span><span class="o">[</span><span class="n">&#39;test&#39;</span><span class="o">][</span><span class="n">metric</span><span class="o">]</span><span class="p">))</span><span class="w"></span>
+</pre></div>
+
+<p>Output:</p>
+<div class="codehilite"><pre><span></span><span class="err">Model archived correctly</span>
+<span class="err">Metrics Summary:</span>
+<span class="err">Metric                  Train   Test </span>
+<span class="err">Calculating Metrics...</span>
+<span class="err">Metrics Summary:</span>
+<span class="err">Metric                  Train   Test </span>
+<span class="err">avg_ref                 16.648  15.861</span>
+<span class="err">avg_est                 16.666  16.000</span>
+<span class="err">sig_ref                 11.438  10.584</span>
+<span class="err">sig_est                 9.493   9.404</span>
+<span class="err">bias                    0.019   0.139</span>
+<span class="err">normalised_bias         0.002   0.013</span>
+<span class="err">sigma_norm              0.830   0.888</span>
+<span class="err">sign_sigma              -1.000  -1.000</span>
+<span class="err">rsquared                0.799   0.879</span>
+<span class="err">RMSD                    5.124   3.677</span>
+<span class="err">RMSD_norm_unb           0.453   0.351</span>
+<span class="err">avg_ref                 16.648  15.861</span>
+<span class="err">avg_est                 16.666  16.000</span>
+<span class="err">sig_ref                 11.438  10.584</span>
+<span class="err">sig_est                 9.493   9.404</span>
+<span class="err">bias                    0.019   0.139</span>
+<span class="err">normalised_bias         0.002   0.013</span>
+<span class="err">sigma_norm              0.830   0.888</span>
+<span class="err">sign_sigma              -1.000  -1.000</span>
+<span class="err">rsquared                0.799   0.879</span>
+<span class="err">RMSD                    5.124   3.677</span>
+<span class="err">RMSD_norm_unb           0.453   0.351</span>
 </pre></div>
 
 <h2 id="model-comparison">Model comparison<a class="headerlink" href="#model-comparison" title="Permanent link">Link</a></h2>
@@ -3930,27 +3930,27 @@ M_{R1} = min(RMSD*') = \sqrt {1+R1^2-2R1^2}
 <p>Here, every point that falls inside the yellow circle, will have an R<sup>2</sup> over 0.7, and so will be the red and green for R<sup>2</sup> over 0.5 and 0.9 respectively. We see that only one of our models performs well in that sense, which is the training dataset of the OLS. However, this dataset performs pretty badly in the test dataset, being the LSTM options much better. This target diagram offers information about how the hyperparameters affect our networks. For instance, increasing the training epochs from 100 to 200 does not affect greatly on model performance, but the effect of filtering the data beforehand to reduce the noise shows a much better model performance in both, training and test dataframe.</p>
 <h2 id="export-the-models">Export the models<a class="headerlink" href="#export-the-models" title="Permanent link">Link</a></h2>
 <p>Let's now assume that we are happy with our models. We can now export them:</p>
-<div class="codehilite"><pre><span></span><span class="n">ols_model</span><span class="p">.</span><span class="n">export</span><span class="p">(</span><span class="s1">&#39;directory&#39;</span><span class="p">)</span>
-<span class="n">rf_model</span><span class="p">.</span><span class="n">export</span><span class="p">(</span><span class="s1">&#39;directory&#39;</span><span class="p">)</span>
+<div class="codehilite"><pre><span></span><span class="err">ols_model.export(&#39;directory&#39;)</span>
+<span class="err">rf_model.export(&#39;directory&#39;)</span>
 </pre></div>
 
 <p>Output:</p>
-<div class="codehilite"><pre><span></span><span class="n">Saving</span> <span class="n">metrics</span>
-<span class="n">Saving</span> <span class="n">hyperparameters</span>
-<span class="n">Saving</span> <span class="n">features</span>
-<span class="n">Model</span> <span class="n">included</span> <span class="k">in</span> <span class="n">summary</span>
+<div class="codehilite"><pre><span></span><span class="err">Saving metrics</span>
+<span class="err">Saving hyperparameters</span>
+<span class="err">Saving features</span>
+<span class="err">Model included in summary</span>
 </pre></div>
 
 <p>And in our directory:</p>
-<div class="codehilite"><pre><span></span><span class="err">➜</span>  <span class="n">models</span> <span class="n">ls</span> <span class="o">-</span><span class="n">l</span>
-<span class="n">RF_UCD_features</span><span class="p">.</span><span class="n">sav</span>
-<span class="n">RF_UCD_hyperparameters</span><span class="p">.</span><span class="n">sav</span>
-<span class="n">RF_UCD_metrics</span><span class="p">.</span><span class="n">sav</span>
+<div class="codehilite"><pre><span></span><span class="err">➜  models ls -l</span>
+<span class="err">RF_UCD_features.sav</span>
+<span class="err">RF_UCD_hyperparameters.sav</span>
+<span class="err">RF_UCD_metrics.sav</span>
 </pre></div>
 
 <div class="admonition warning">
 <p class="admonition-title">Save the model file</p>
-<p>If you want to save the model file into the disk, change the option <code class="codehilite"><span class="ss">&quot;export_model&quot;</span><span class="p">:</span> <span class="k">False</span><span class="p">,</span></code> to <code class="codehilite"><span class="k">True</span></code>! Be careful though, it can take quite a lot of space. If you just want to keep the model to test in the current session, it is best to just use <code class="codehilite"><span class="ss">&quot;session_active_model&quot;</span><span class="p">:</span> <span class="k">True</span><span class="p">,</span></code>.</p>
+<p>If you want to save the model file into the disk, change the option <code class="codehilite"><span class="err">&quot;export_model&quot;: False,</span></code> to <code class="codehilite"><span class="err">True</span></code>! Be careful though, it can take quite a lot of space. If you just want to keep the model to test in the current session, it is best to just use <code class="codehilite"><span class="err">&quot;session_active_model&quot;: True,</span></code>.</p>
 </div>
 <h2 id="load-models-from-disk">Load Models from Disk<a class="headerlink" href="#load-models-from-disk" title="Permanent link">Link</a></h2>
 <p>Now, sometime after having exported our model, let's assume we need to get it back. We can load it by running a dedicated notebook:</p>
@@ -3995,6 +3995,7 @@ M_{R1} = min(RMSD*') = \sqrt {1+R1^2-2R1^2}
 </div>
                 
                   
+                
                 
               
               
@@ -4118,7 +4119,7 @@ M_{R1} = min(RMSD*') = \sqrt {1+R1^2-2R1^2}
       
     </div>
     
-      <script src="../../../assets/javascripts/application.a8b5e56f.js"></script>
+      <script src="../../../assets/javascripts/application.808e90bb.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:"../../.."}})</script>
       

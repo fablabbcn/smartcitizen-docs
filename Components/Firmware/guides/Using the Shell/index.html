@@ -38,7 +38,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../../../assets/images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.5.0">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
     
     
       
@@ -62,7 +62,7 @@
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
@@ -3498,38 +3498,38 @@
 </div>
 <p>The SCK (from V2.0 onwards) has an integrated command shell over USB to manage all the kits functionalities for advanced users. In this guide, we will cover how to access to this functionality in different platforms, and some examples.</p>
 <h2 id="what-is-it">What is it?<a class="headerlink" href="#what-is-it" title="Permanent link">Link</a></h2>
-<p>We could define the <code class="codehilite"><span class="n">shell</span></code> as a text-based interface to access almost any SCK functionality. In terms of hardware, it relies on the <a href="https://en.wikipedia.org/wiki/Serial_communication">serial communication</a> between the SCK and your computer, so any <strong>decent</strong> USB cable connected between them will do.</p>
+<p>We could define the <code class="codehilite"><span class="err">shell</span></code> as a text-based interface to access almost any SCK functionality. In terms of hardware, it relies on the <a href="https://en.wikipedia.org/wiki/Serial_communication">serial communication</a> between the SCK and your computer, so any <strong>decent</strong> USB cable connected between them will do.</p>
 <h2 id="how-to-access-it">How to access it?<a class="headerlink" href="#how-to-access-it" title="Permanent link">Link</a></h2>
 <p>Software-wise, different platforms will have different interfaces. The easiest and most reliable for all of them would be through the <a href="https://www.arduino.cc/en/Main/Software">Arduino IDE</a>.</p>
 <div class="admonition example">
 <p class="admonition-title">Using the Arduino IDE</p>
 <ul>
-<li>Launch the <em>Arduino IDE</em> and select the port under <code class="codehilite"><span class="n">Tools</span> <span class="o">&gt;</span> <span class="n">Port</span> <span class="o">&gt;</span></code>:</li>
+<li>Launch the <em>Arduino IDE</em> and select the port under <code class="codehilite"><span class="err">Tools &gt; Port &gt;</span></code>:</li>
 </ul>
 <p><img alt="" src="https://i.imgur.com/XEZXoyy.png" /></p>
 <ul>
 <li>
-<p>Launch the <code class="codehilite"><span class="nb">Serial</span> <span class="n">Monitor</span></code> under <code class="codehilite"><span class="n">Tools</span> <span class="o">&gt;</span> <span class="nb">Serial</span> <span class="n">Monitor</span></code>. Make sure that the dropdowns in the bottom are set as in the image below (<code class="codehilite"><span class="nv">Carriage</span> <span class="k">return</span></code> and <code class="codehilite"><span class="mi">115200</span> <span class="n">baud</span></code>)</p>
+<p>Launch the <code class="codehilite"><span class="err">Serial Monitor</span></code> under <code class="codehilite"><span class="err">Tools &gt; Serial Monitor</span></code>. Make sure that the dropdowns in the bottom are set as in the image below (<code class="codehilite"><span class="err">Carriage return</span></code> and <code class="codehilite"><span class="err">115200 baud</span></code>)</p>
 </li>
 <li>
-<p>Type in <code class="codehilite"><span class="n">help</span></code> to get started.</p>
+<p>Type in <code class="codehilite"><span class="err">help</span></code> to get started.</p>
 </li>
 </ul>
 <p><img alt="" src="https://i.imgur.com/iSONfFB.png" /></p>
 </div>
-<p>More advanced users would probably rather use a more <em>rugged</em> interface. In this case, you could use <code class="codehilite"><span class="n">screen</span></code> in your terminal of choice:</p>
-<div class="codehilite"><pre><span></span><span class="o">&gt;</span> <span class="n">ls</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">cu</span> <span class="o">|</span> <span class="n">grep</span> <span class="n">usb</span>
-<span class="n">cu</span><span class="p">.</span><span class="n">usbmodem1411</span>
-<span class="n">tty</span><span class="p">.</span><span class="n">usbmodem1411</span>
-<span class="o">&gt;</span> <span class="n">screen</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">cu</span><span class="p">.</span><span class="n">usmodem1411</span>
-<span class="n">SCK</span> <span class="o">&gt;</span>
-<span class="p">...</span>
+<p>More advanced users would probably rather use a more <em>rugged</em> interface. In this case, you could use <code class="codehilite"><span class="err">screen</span></code> in your terminal of choice:</p>
+<div class="codehilite"><pre><span></span><span class="err">&gt; ls /dev/cu | grep usb</span>
+<span class="err">cu.usbmodem1411</span>
+<span class="err">tty.usbmodem1411</span>
+<span class="err">&gt; screen /dev/cu.usmodem1411</span>
+<span class="err">SCK &gt;</span>
+<span class="err">...</span>
 </pre></div>
 
 <p>If you already installed <a href="https://platformio.org/">platformio</a> to <a href="/Components/Firmware/guides/Edit%20the%20Firmware/">edit the firmware</a> you can use it here, too</p>
-<div class="codehilite"><pre><span></span><span class="o">&gt;</span> <span class="n">pio</span> <span class="n">device</span> <span class="n">monitor</span>
-<span class="n">SCK</span> <span class="o">&gt;</span>
-<span class="p">...</span>
+<div class="codehilite"><pre><span></span><span class="err">&gt; pio device monitor</span>
+<span class="err">SCK &gt;</span>
+<span class="err">...</span>
 </pre></div>
 
 <div class="admonition warning">
@@ -3537,7 +3537,7 @@
 <p>The port will take a little time to appear in your list of devices. Normally the LED of your SCK will be <strong>static white</strong> during that period.</p>
 </div>
 <h2 id="some-examples">Some examples!<a class="headerlink" href="#some-examples" title="Permanent link">Link</a></h2>
-<p>The <code class="codehilite"><span class="n">help</span></code> command outputs a quite intuitive explanation of all the commands:</p>
+<p>The <code class="codehilite"><span class="err">help</span></code> command outputs a quite intuitive explanation of all the commands:</p>
 <div class="codehilite"><pre><span></span><span class="n">SCK</span> <span class="o">&gt;</span> <span class="n">help</span>
 <span class="nl">reset</span><span class="p">:</span>       <span class="n">Resets</span> <span class="n">the</span> <span class="n">SCK</span>
 <span class="nl">version</span><span class="p">:</span>     <span class="n">Shows</span> <span class="n">versions</span> <span class="n">and</span> <span class="n">Hardware</span> <span class="n">ID</span>
@@ -3567,24 +3567,24 @@
 <div class="admonition info">
 <p class="admonition-title">Pro tip</p>
 <p>The SCK outputs  a lot of information via serial. This can be sometimes confusing while typing commands. You can silent it a bit with this command:</p>
-<div class="codehilite"><pre><span></span><span class="n">SCK</span> <span class="o">&gt;</span> <span class="n">shell</span> <span class="o">-</span><span class="k">on</span>
-<span class="n">Shell</span> <span class="k">mode</span><span class="p">:</span> <span class="k">on</span>
+<div class="codehilite"><pre><span></span><span class="err">SCK &gt; shell -on</span>
+<span class="err">Shell mode: on</span>
 </pre></div>
 
 <p>This will turn your LED static yellow, and no output except responses to your commands will be given. </p>
 <p>Remember to turn it off after you are done experimenting!</p>
-<div class="codehilite"><pre><span></span><span class="n">SCK</span> <span class="o">&gt;</span> <span class="n">shell</span> <span class="o">-</span><span class="k">off</span>
-<span class="n">Shell</span> <span class="k">mode</span><span class="p">:</span> <span class="k">off</span>
+<div class="codehilite"><pre><span></span><span class="err">SCK &gt; shell -off</span>
+<span class="err">Shell mode: off</span>
 </pre></div>
 
 </div>
 <h3 id="set-the-recording-configuration">Set the recording configuration<a class="headerlink" href="#set-the-recording-configuration" title="Permanent link">Link</a></h3>
-<p>If you want to change your recording mode to, for instance, <code class="codehilite"><span class="n">sdcard</span></code> mode, you could do so by typing:</p>
-<div class="codehilite"><pre><span></span><span class="n">SCK</span> <span class="o">&gt;</span> <span class="n">config</span> <span class="o">-</span><span class="k">mode</span> <span class="n">sdcard</span>
+<p>If you want to change your recording mode to, for instance, <code class="codehilite"><span class="err">sdcard</span></code> mode, you could do so by typing:</p>
+<div class="codehilite"><pre><span></span><span class="err">SCK &gt; config -mode sdcard</span>
 </pre></div>
 
-<p>To set it up in <code class="codehilite"><span class="n">network</span></code> mode:</p>
-<div class="codehilite"><pre><span></span><span class="n">SCK</span> <span class="o">&gt;</span> <span class="n">config</span> <span class="o">-</span><span class="k">mode</span> <span class="n">network</span> <span class="o">-</span><span class="n">wifi</span> <span class="ss">&quot;SSID&quot;</span> <span class="ss">&quot;PASSWORD&quot;</span> <span class="o">-</span><span class="n">token</span> <span class="mi">123456</span>
+<p>To set it up in <code class="codehilite"><span class="err">network</span></code> mode:</p>
+<div class="codehilite"><pre><span></span><span class="err">SCK &gt; config -mode network -wifi &quot;SSID&quot; &quot;PASSWORD&quot; -token 123456</span>
 </pre></div>
 
 <div class="admonition warning">
@@ -3592,33 +3592,33 @@
 <p>Note that the token is not between quotes since it's always 6 digits</p>
 </div>
 <p>To modify your wifi:</p>
-<div class="codehilite"><pre><span></span><span class="n">SCK</span> <span class="o">&gt;</span> <span class="n">config</span> <span class="o">-</span><span class="n">wifi</span> <span class="ss">&quot;NEWSSID&quot;</span> <span class="ss">&quot;NEWPASSWORD&quot;</span>
+<div class="codehilite"><pre><span></span><span class="err">SCK &gt; config -wifi &quot;NEWSSID&quot; &quot;NEWPASSWORD&quot;</span>
 </pre></div>
 
-<p>You can check your current configuration by typing <code class="codehilite"><span class="n">config</span></code>:</p>
-<div class="codehilite"><pre><span></span><span class="n">SCK</span> <span class="o">&gt;</span> <span class="n">config</span>
-<span class="k">Mode</span><span class="p">:</span> <span class="n">sdcard</span>
-<span class="n">Publish</span> <span class="nb">interval</span><span class="p">:</span> <span class="mi">60</span>
-<span class="n">Reading</span> <span class="nb">interval</span><span class="p">:</span> <span class="mi">60</span>
-<span class="n">Wifi</span> <span class="n">credentials</span><span class="p">:</span> <span class="k">not</span> <span class="n">configured</span>
-<span class="n">Token</span><span class="p">:</span> <span class="k">not</span> <span class="n">configured</span>
-<span class="n">Mac</span> <span class="n">address</span><span class="p">:</span>  <span class="mi">11</span><span class="p">:</span><span class="mi">22</span><span class="p">:</span><span class="mi">33</span><span class="p">:</span><span class="mi">44</span><span class="p">:</span><span class="mi">55</span><span class="p">:</span><span class="mi">66</span>
+<p>You can check your current configuration by typing <code class="codehilite"><span class="err">config</span></code>:</p>
+<div class="codehilite"><pre><span></span><span class="err">SCK &gt; config</span>
+<span class="c">Mode: sdcard</span>
+<span class="err">Publish interval: 60</span>
+<span class="err">Reading interval: 60</span>
+<span class="err">Wifi credentials: not configured</span>
+<span class="c">Token: not configured</span>
+<span class="err">Mac address:  11:22:33:44:55:66</span>
 </pre></div>
 
 <h3 id="get-version-data">Get version data<a class="headerlink" href="#get-version-data" title="Permanent link">Link</a></h3>
-<p>Check your <strong>hardware and firmware version</strong> data with the command <code class="codehilite"><span class="k">version</span></code>:</p>
-<div class="codehilite"><pre><span></span><span class="n">SCK</span> <span class="o">&gt;</span> <span class="k">version</span>
-<span class="n">Hardware</span> <span class="k">Version</span><span class="p">:</span> <span class="mi">2</span><span class="p">.</span><span class="mi">1</span>
-<span class="n">SAM</span> <span class="n">Hardware</span> <span class="n">ID</span><span class="p">:</span> <span class="mi">5934</span><span class="n">C4B550515157382E3120FF151210</span>
-<span class="n">SAM</span> <span class="k">version</span><span class="p">:</span> <span class="mi">0</span><span class="p">.</span><span class="mi">9</span><span class="p">.</span><span class="mi">1</span><span class="o">-</span><span class="mi">30</span><span class="n">e1776</span>
-<span class="n">SAM</span> <span class="n">build</span> <span class="nb">date</span><span class="p">:</span> <span class="mi">2019</span><span class="o">-</span><span class="mi">05</span><span class="o">-</span><span class="mi">07</span><span class="n">T02</span><span class="p">:</span><span class="mi">45</span><span class="p">:</span><span class="mi">29</span><span class="n">Z</span>
-<span class="n">ESP</span> <span class="n">MAC</span> <span class="n">address</span><span class="p">:</span> <span class="mi">86</span><span class="p">:</span><span class="mi">0</span><span class="n">D</span><span class="p">:</span><span class="mi">8</span><span class="n">E</span><span class="p">:</span><span class="n">A7</span><span class="p">:</span><span class="mi">7</span><span class="n">F</span><span class="p">:</span><span class="n">CC</span>
-<span class="n">ESP</span> <span class="k">version</span><span class="p">:</span> <span class="k">not</span> <span class="n">synced</span>
-<span class="n">ESP</span> <span class="n">build</span> <span class="nb">date</span><span class="p">:</span> <span class="k">not</span> <span class="n">synced</span>
+<p>Check your <strong>hardware and firmware version</strong> data with the command <code class="codehilite"><span class="err">version</span></code>:</p>
+<div class="codehilite"><pre><span></span><span class="err">SCK &gt; version</span>
+<span class="err">Hardware Version: 2.1</span>
+<span class="err">SAM Hardware ID: 5934C4B550515157382E3120FF151210</span>
+<span class="err">SAM version: 0.9.1-30e1776</span>
+<span class="err">SAM build date: 2019-05-07T02:45:29Z</span>
+<span class="err">ESP MAC address: 86:0D:8E:A7:7F:CC</span>
+<span class="err">ESP version: not synced</span>
+<span class="err">ESP build date: not synced</span>
 </pre></div>
 
 <h3 id="listmodify-the-active-sensors">List/modify the active sensors<a class="headerlink" href="#listmodify-the-active-sensors" title="Permanent link">Link</a></h3>
-<p>By typing in <code class="codehilite"><span class="n">sensor</span></code>, a <strong>list of enabled and supported sensors</strong> is displayed:</p>
+<p>By typing in <code class="codehilite"><span class="err">sensor</span></code>, a <strong>list of enabled and supported sensors</strong> is displayed:</p>
 <div class="codehilite"><pre><span></span><span class="n">SCK</span> <span class="o">&gt;</span> <span class="n">sensor</span>
 
 <span class="n">Disabled</span>
@@ -3642,115 +3642,115 @@
 </pre></div>
 
 <p>To <strong>disable</strong> one sensor, you can type in part of the sensor name:</p>
-<div class="codehilite"><pre><span></span><span class="n">SCK</span> <span class="o">&gt;</span> <span class="n">sensor</span> <span class="o">-</span><span class="n">disable</span> <span class="n">Noise</span>
-<span class="n">Disabling</span> <span class="n">Noise</span> <span class="n">dBA</span>
-<span class="n">Saved</span> <span class="n">configuration</span> <span class="k">on</span> <span class="n">eeprom</span><span class="o">!!</span>
+<div class="codehilite"><pre><span></span><span class="err">SCK &gt; sensor -disable Noise</span>
+<span class="err">Disabling Noise dBA</span>
+<span class="err">Saved configuration on eeprom!!</span>
 </pre></div>
 
 <p>To <strong>enable</strong> it, if it's present:</p>
-<div class="codehilite"><pre><span></span><span class="n">SCK</span> <span class="o">&gt;</span> <span class="n">sensor</span> <span class="o">-</span><span class="n">enable</span> <span class="n">Noise</span>
-<span class="n">Enabling</span> <span class="n">Noise</span> <span class="n">dBA</span>
-<span class="n">Saved</span> <span class="n">configuration</span> <span class="k">on</span> <span class="n">eeprom</span><span class="o">!!</span>
+<div class="codehilite"><pre><span></span><span class="err">SCK &gt; sensor -enable Noise</span>
+<span class="err">Enabling Noise dBA</span>
+<span class="err">Saved configuration on eeprom!!</span>
 </pre></div>
 
 <div class="admonition warning">
 <p class="admonition-title">Only if available!</p>
 <p>If the sensor you are trying to connect is not recognised, the kit will complain:</p>
-<div class="codehilite"><pre><span></span><span class="n">SCK</span> <span class="o">&gt;</span> <span class="n">sensor</span> <span class="o">-</span><span class="n">enable</span> <span class="n">atlas</span>
-<span class="n">Failed</span> <span class="n">enabling</span> <span class="n">Atlas</span> <span class="n">Temperature</span>
+<div class="codehilite"><pre><span></span><span class="err">SCK &gt; sensor -enable atlas</span>
+<span class="err">Failed enabling Atlas Temperature</span>
 </pre></div>
 
 </div>
 <h3 id="readmonitor-some-sensors">Read/Monitor some sensors<a class="headerlink" href="#readmonitor-some-sensors" title="Permanent link">Link</a></h3>
-<p>If one sensor is enabled, you can <code class="codehilite"><span class="k">read</span></code> it (once) or <code class="codehilite"><span class="n">monitor</span></code> it (as fast as the SCK can):</p>
-<div class="codehilite"><pre><span></span><span class="n">SCK</span> <span class="o">&gt;</span> <span class="k">read</span> <span class="n">Noise</span>
-<span class="n">Noise</span> <span class="n">dBA</span><span class="p">:</span> <span class="mi">53</span><span class="p">.</span><span class="mi">85</span> <span class="n">dBA</span>
+<p>If one sensor is enabled, you can <code class="codehilite"><span class="err">read</span></code> it (once) or <code class="codehilite"><span class="err">monitor</span></code> it (as fast as the SCK can):</p>
+<div class="codehilite"><pre><span></span><span class="err">SCK &gt; read Noise</span>
+<span class="err">Noise dBA: 53.85 dBA</span>
 </pre></div>
 
 <p>To monitor <strong>one sensor</strong>:</p>
-<div class="codehilite"><pre><span></span><span class="n">SCK</span> <span class="o">&gt;</span> <span class="n">monitor</span> <span class="n">light</span>
-<span class="n">Time</span>    <span class="n">Miliseconds</span>     <span class="n">Light</span>
-<span class="mi">2019</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">10</span><span class="n">T17</span><span class="p">:</span><span class="mi">58</span><span class="p">:</span><span class="mi">07</span><span class="n">Z</span>    <span class="mi">6</span>       <span class="mi">137</span>
-<span class="mi">2019</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">10</span><span class="n">T17</span><span class="p">:</span><span class="mi">58</span><span class="p">:</span><span class="mi">07</span><span class="n">Z</span>    <span class="mi">98</span>      <span class="mi">137</span>
-<span class="mi">2019</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">10</span><span class="n">T17</span><span class="p">:</span><span class="mi">58</span><span class="p">:</span><span class="mi">07</span><span class="n">Z</span>    <span class="mi">98</span>      <span class="mi">136</span>
-<span class="mi">2019</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">10</span><span class="n">T17</span><span class="p">:</span><span class="mi">58</span><span class="p">:</span><span class="mi">07</span><span class="n">Z</span>    <span class="mi">98</span>      <span class="mi">137</span>
-<span class="mi">2019</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">10</span><span class="n">T17</span><span class="p">:</span><span class="mi">58</span><span class="p">:</span><span class="mi">07</span><span class="n">Z</span>    <span class="mi">108</span>     <span class="mi">137</span>
-<span class="mi">2019</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">10</span><span class="n">T17</span><span class="p">:</span><span class="mi">58</span><span class="p">:</span><span class="mi">07</span><span class="n">Z</span>    <span class="mi">98</span>      <span class="mi">137</span>
-<span class="mi">2019</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">10</span><span class="n">T17</span><span class="p">:</span><span class="mi">58</span><span class="p">:</span><span class="mi">07</span><span class="n">Z</span>    <span class="mi">98</span>      <span class="mi">137</span>
-<span class="mi">2019</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">10</span><span class="n">T17</span><span class="p">:</span><span class="mi">58</span><span class="p">:</span><span class="mi">07</span><span class="n">Z</span>    <span class="mi">108</span>     <span class="mi">137</span>
-<span class="mi">2019</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">10</span><span class="n">T17</span><span class="p">:</span><span class="mi">58</span><span class="p">:</span><span class="mi">07</span><span class="n">Z</span>    <span class="mi">98</span>      <span class="mi">137</span>
-<span class="mi">2019</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">10</span><span class="n">T17</span><span class="p">:</span><span class="mi">58</span><span class="p">:</span><span class="mi">08</span><span class="n">Z</span>    <span class="mi">98</span>      <span class="mi">137</span>
-<span class="mi">2019</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">10</span><span class="n">T17</span><span class="p">:</span><span class="mi">58</span><span class="p">:</span><span class="mi">08</span><span class="n">Z</span>    <span class="mi">108</span>     <span class="mi">137</span>
-<span class="mi">2019</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">10</span><span class="n">T17</span><span class="p">:</span><span class="mi">58</span><span class="p">:</span><span class="mi">08</span><span class="n">Z</span>    <span class="mi">98</span>      <span class="mi">136</span>
-<span class="p">...</span>
+<div class="codehilite"><pre><span></span><span class="err">SCK &gt; monitor light</span>
+<span class="err">Time    Miliseconds     Light</span>
+<span class="c">2019-07-10T17:58:07Z    6       137</span>
+<span class="c">2019-07-10T17:58:07Z    98      137</span>
+<span class="c">2019-07-10T17:58:07Z    98      136</span>
+<span class="c">2019-07-10T17:58:07Z    98      137</span>
+<span class="c">2019-07-10T17:58:07Z    108     137</span>
+<span class="c">2019-07-10T17:58:07Z    98      137</span>
+<span class="c">2019-07-10T17:58:07Z    98      137</span>
+<span class="c">2019-07-10T17:58:07Z    108     137</span>
+<span class="c">2019-07-10T17:58:07Z    98      137</span>
+<span class="c">2019-07-10T17:58:08Z    98      137</span>
+<span class="c">2019-07-10T17:58:08Z    108     137</span>
+<span class="c">2019-07-10T17:58:08Z    98      136</span>
+<span class="err">...</span>
 </pre></div>
 
 <p>Or all of them, with no arguments:</p>
-<div class="codehilite"><pre><span></span><span class="n">SCK</span> <span class="o">&gt;</span> <span class="n">monitor</span>
-<span class="n">Time</span>    <span class="n">Miliseconds</span>     <span class="n">Battery</span> <span class="n">Light</span>   <span class="n">Temperature</span>     <span class="n">Humidity</span>        <span class="n">Noise</span> <span class="n">dBA</span>       <span class="n">Barometric</span> <span class="n">pressure</span>     <span class="n">VOC</span> <span class="n">Gas</span> <span class="n">CCS811</span>  <span class="n">eCO2</span> <span class="n">Gas</span> <span class="n">CCS811</span> <span class="n">PM</span> <span class="mi">1</span><span class="p">.</span><span class="mi">0</span>  <span class="n">PM</span> <span class="mi">2</span><span class="p">.</span><span class="mi">5</span>  <span class="n">PM</span> <span class="mi">10</span><span class="p">.</span><span class="mi">0</span>
-<span class="mi">2019</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">11</span><span class="n">T09</span><span class="p">:</span><span class="mi">13</span><span class="p">:</span><span class="mi">04</span><span class="n">Z</span>    <span class="mi">5</span>       <span class="mi">37</span>      <span class="mi">137</span>     <span class="mi">28</span><span class="p">.</span><span class="mi">75</span>   <span class="mi">57</span><span class="p">.</span><span class="mi">72</span>   <span class="mi">1</span><span class="p">.</span><span class="mi">5</span>    <span class="mi">101</span><span class="p">.</span><span class="mi">29</span>  <span class="mi">1</span><span class="p">.</span><span class="mi">00</span>    <span class="mi">408</span><span class="p">.</span><span class="mi">00</span>  <span class="mi">1</span><span class="p">.</span><span class="mi">5</span>    <span class="mi">1</span><span class="p">.</span><span class="mi">5</span>    <span class="mi">1</span><span class="p">.</span><span class="mi">5</span>
-<span class="mi">2019</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">11</span><span class="n">T09</span><span class="p">:</span><span class="mi">13</span><span class="p">:</span><span class="mi">07</span><span class="n">Z</span>    <span class="mi">3195</span>    <span class="mi">37</span>      <span class="mi">138</span>     <span class="mi">28</span><span class="p">.</span><span class="mi">78</span>   <span class="mi">57</span><span class="p">.</span><span class="mi">65</span>   <span class="mi">1</span><span class="p">.</span><span class="mi">5</span>    <span class="mi">101</span><span class="p">.</span><span class="mi">30</span>  <span class="mi">1</span><span class="p">.</span><span class="mi">00</span>    <span class="mi">408</span><span class="p">.</span><span class="mi">00</span>  <span class="mi">1</span><span class="p">.</span><span class="mi">5</span>    <span class="mi">1</span><span class="p">.</span><span class="mi">5</span>    <span class="mi">1</span><span class="p">.</span><span class="mi">5</span>
-<span class="mi">2019</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">11</span><span class="n">T09</span><span class="p">:</span><span class="mi">13</span><span class="p">:</span><span class="mi">08</span><span class="n">Z</span>    <span class="mi">694</span>     <span class="mi">37</span>      <span class="mi">136</span>     <span class="mi">28</span><span class="p">.</span><span class="mi">77</span>   <span class="mi">57</span><span class="p">.</span><span class="mi">62</span>   <span class="mi">1</span><span class="p">.</span><span class="mi">5</span>    <span class="mi">101</span><span class="p">.</span><span class="mi">29</span>  <span class="mi">1</span><span class="p">.</span><span class="mi">00</span>    <span class="mi">408</span><span class="p">.</span><span class="mi">00</span>  <span class="mi">1</span><span class="p">.</span><span class="mi">5</span>    <span class="mi">1</span><span class="p">.</span><span class="mi">5</span>    <span class="mi">1</span><span class="p">.</span><span class="mi">5</span>
+<div class="codehilite"><pre><span></span><span class="err">SCK &gt; monitor</span>
+<span class="err">Time    Miliseconds     Battery Light   Temperature     Humidity        Noise dBA       Barometric pressure     VOC Gas CCS811  eCO2 Gas CCS811 PM 1.0  PM 2.5  PM 10.0</span>
+<span class="c">2019-07-11T09:13:04Z    5       37      137     28.75   57.72   1.5    101.29  1.00    408.00  1.5    1.5    1.5</span>
+<span class="c">2019-07-11T09:13:07Z    3195    37      138     28.78   57.65   1.5    101.30  1.00    408.00  1.5    1.5    1.5</span>
+<span class="c">2019-07-11T09:13:08Z    694     37      136     28.77   57.62   1.5    101.29  1.00    408.00  1.5    1.5    1.5</span>
 </pre></div>
 
-<p>If you don't need to output the <code class="codehilite"><span class="n">miliseconds</span></code> column (the time since last reading) or the <code class="codehilite"><span class="k">timestamp</span></code>, you can do so by:</p>
-<div class="codehilite"><pre><span></span><span class="n">SCK</span> <span class="o">&gt;</span> <span class="n">monitor</span> <span class="o">-</span><span class="n">noms</span> <span class="n">light</span>
-<span class="n">Time</span>    <span class="n">Light</span>
-<span class="mi">2019</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">10</span><span class="n">T17</span><span class="p">:</span><span class="mi">58</span><span class="p">:</span><span class="mi">58</span><span class="n">Z</span>    <span class="mi">136</span>
-<span class="mi">2019</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">10</span><span class="n">T17</span><span class="p">:</span><span class="mi">58</span><span class="p">:</span><span class="mi">58</span><span class="n">Z</span>    <span class="mi">136</span>
-<span class="mi">2019</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">10</span><span class="n">T17</span><span class="p">:</span><span class="mi">58</span><span class="p">:</span><span class="mi">58</span><span class="n">Z</span>    <span class="mi">137</span>
-<span class="mi">2019</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">10</span><span class="n">T17</span><span class="p">:</span><span class="mi">58</span><span class="p">:</span><span class="mi">58</span><span class="n">Z</span>    <span class="mi">137</span>
-<span class="mi">2019</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">10</span><span class="n">T17</span><span class="p">:</span><span class="mi">58</span><span class="p">:</span><span class="mi">59</span><span class="n">Z</span>    <span class="mi">136</span>
-<span class="p">...</span>
+<p>If you don't need to output the <code class="codehilite"><span class="err">miliseconds</span></code> column (the time since last reading) or the <code class="codehilite"><span class="err">timestamp</span></code>, you can do so by:</p>
+<div class="codehilite"><pre><span></span><span class="err">SCK &gt; monitor -noms light</span>
+<span class="err">Time    Light</span>
+<span class="c">2019-07-10T17:58:58Z    136</span>
+<span class="c">2019-07-10T17:58:58Z    136</span>
+<span class="c">2019-07-10T17:58:58Z    137</span>
+<span class="c">2019-07-10T17:58:58Z    137</span>
+<span class="c">2019-07-10T17:58:59Z    136</span>
+<span class="err">...</span>
 </pre></div>
 
-<div class="codehilite"><pre><span></span><span class="n">SCK</span> <span class="o">&gt;</span> <span class="n">monitor</span> <span class="o">-</span><span class="n">notime</span> <span class="n">light</span>
-<span class="n">Miliseconds</span>     <span class="n">Light</span>
-<span class="mi">6</span>       <span class="mi">137</span>
-<span class="mi">98</span>      <span class="mi">137</span>
-<span class="mi">98</span>      <span class="mi">137</span>
-<span class="mi">99</span>      <span class="mi">137</span>
-<span class="mi">108</span>     <span class="mi">137</span>
-<span class="p">...</span>
+<div class="codehilite"><pre><span></span><span class="err">SCK &gt; monitor -notime light</span>
+<span class="err">Miliseconds     Light</span>
+<span class="err">6       137</span>
+<span class="err">98      137</span>
+<span class="err">98      137</span>
+<span class="err">99      137</span>
+<span class="err">108     137</span>
+<span class="err">...</span>
 </pre></div>
 
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>If your kit has no time configured (the LED should be flashing), the output would look like:</p>
-<div class="codehilite"><pre><span></span><span class="n">SCK</span> <span class="o">&gt;</span> <span class="n">monitor</span> <span class="n">Noise</span>
-<span class="n">Time</span>    <span class="n">Miliseconds</span>     <span class="n">Noise</span> <span class="n">dBA</span>
-<span class="mi">0</span>       <span class="mi">1</span>       <span class="mi">52</span><span class="p">.</span><span class="mi">83</span>
-<span class="mi">0</span>       <span class="mi">187</span>     <span class="mi">50</span><span class="p">.</span><span class="mi">36</span>
-<span class="mi">0</span>       <span class="mi">187</span>     <span class="mi">52</span><span class="p">.</span><span class="mi">05</span>
-<span class="mi">0</span>       <span class="mi">187</span>     <span class="mi">51</span><span class="p">.</span><span class="mi">95</span>
-<span class="mi">0</span>       <span class="mi">187</span>     <span class="mi">48</span><span class="p">.</span><span class="mi">28</span>
-<span class="mi">0</span>       <span class="mi">187</span>     <span class="mi">48</span><span class="p">.</span><span class="mi">72</span>
-<span class="mi">0</span>       <span class="mi">187</span>     <span class="mi">50</span><span class="p">.</span><span class="mi">81</span>
-<span class="p">...</span>
+<div class="codehilite"><pre><span></span><span class="err">SCK &gt; monitor Noise</span>
+<span class="err">Time    Miliseconds     Noise dBA</span>
+<span class="err">0       1       52.83</span>
+<span class="err">0       187     50.36</span>
+<span class="err">0       187     52.05</span>
+<span class="err">0       187     51.95</span>
+<span class="err">0       187     48.28</span>
+<span class="err">0       187     48.72</span>
+<span class="err">0       187     50.81</span>
+<span class="err">...</span>
 </pre></div>
 
 </div>
-<p>Something cool to do with the <code class="codehilite"><span class="n">monitor</span></code>, is to log the sensor output into a file for later analysis. For instance, in your terminal you could do:</p>
-<div class="codehilite"><pre><span></span><span class="o">&gt;</span> <span class="n">echo</span> <span class="ss">&quot;monitor pm light&quot;</span> <span class="o">&gt;</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">cu</span><span class="p">.</span><span class="n">usbmodem1411</span> <span class="o">&amp;&amp;</span> <span class="n">screen</span> <span class="o">-</span><span class="n">L</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">cu</span><span class="p">.</span><span class="n">usbmodem1411</span>
+<p>Something cool to do with the <code class="codehilite"><span class="err">monitor</span></code>, is to log the sensor output into a file for later analysis. For instance, in your terminal you could do:</p>
+<div class="codehilite"><pre><span></span><span class="err">&gt; echo &quot;monitor pm light&quot; &gt; /dev/cu.usbmodem1411 &amp;&amp; screen -L /dev/cu.usbmodem1411</span>
 </pre></div>
 
-<p>Then, if we check the contents of the file (normally something like <code class="codehilite"><span class="n">screenlog</span><span class="p">.</span><span class="n">X</span></code>:</p>
-<div class="codehilite"><pre><span></span><span class="n">monitor</span> <span class="n">light</span>
-<span class="n">Time</span>    <span class="n">Miliseconds</span>     <span class="n">Light</span>
-<span class="mi">2019</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">11</span><span class="n">T09</span><span class="p">:</span><span class="mi">10</span><span class="p">:</span><span class="mi">05</span><span class="n">Z</span>    <span class="mi">6</span>       <span class="mi">141</span>
-<span class="mi">2019</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">11</span><span class="n">T09</span><span class="p">:</span><span class="mi">10</span><span class="p">:</span><span class="mi">05</span><span class="n">Z</span>    <span class="mi">98</span>      <span class="mi">141</span>
-<span class="mi">2019</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">11</span><span class="n">T09</span><span class="p">:</span><span class="mi">10</span><span class="p">:</span><span class="mi">05</span><span class="n">Z</span>    <span class="mi">99</span>      <span class="mi">141</span>
-<span class="mi">2019</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">11</span><span class="n">T09</span><span class="p">:</span><span class="mi">10</span><span class="p">:</span><span class="mi">05</span><span class="n">Z</span>    <span class="mi">98</span>      <span class="mi">141</span>
-<span class="mi">2019</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">11</span><span class="n">T09</span><span class="p">:</span><span class="mi">10</span><span class="p">:</span><span class="mi">05</span><span class="n">Z</span>    <span class="mi">108</span>     <span class="mi">141</span>
-<span class="mi">2019</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">11</span><span class="n">T09</span><span class="p">:</span><span class="mi">10</span><span class="p">:</span><span class="mi">05</span><span class="n">Z</span>    <span class="mi">98</span>      <span class="mi">141</span>
-<span class="mi">2019</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">11</span><span class="n">T09</span><span class="p">:</span><span class="mi">10</span><span class="p">:</span><span class="mi">05</span><span class="n">Z</span>    <span class="mi">98</span>      <span class="mi">141</span>
-<span class="mi">2019</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">11</span><span class="n">T09</span><span class="p">:</span><span class="mi">10</span><span class="p">:</span><span class="mi">05</span><span class="n">Z</span>    <span class="mi">98</span>      <span class="mi">141</span>
-<span class="mi">2019</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">11</span><span class="n">T09</span><span class="p">:</span><span class="mi">10</span><span class="p">:</span><span class="mi">06</span><span class="n">Z</span>    <span class="mi">98</span>      <span class="mi">141</span>
-<span class="mi">2019</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">11</span><span class="n">T09</span><span class="p">:</span><span class="mi">10</span><span class="p">:</span><span class="mi">06</span><span class="n">Z</span>    <span class="mi">98</span>      <span class="mi">141</span>
-<span class="mi">2019</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">11</span><span class="n">T09</span><span class="p">:</span><span class="mi">10</span><span class="p">:</span><span class="mi">06</span><span class="n">Z</span>    <span class="mi">108</span>     <span class="mi">141</span>
-<span class="mi">2019</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">11</span><span class="n">T09</span><span class="p">:</span><span class="mi">10</span><span class="p">:</span><span class="mi">06</span><span class="n">Z</span>    <span class="mi">98</span>      <span class="mi">141</span>
-<span class="mi">2019</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">11</span><span class="n">T09</span><span class="p">:</span><span class="mi">10</span><span class="p">:</span><span class="mi">06</span><span class="n">Z</span>    <span class="mi">98</span>      <span class="mi">141</span>
-<span class="p">...</span>
+<p>Then, if we check the contents of the file (normally something like <code class="codehilite"><span class="err">screenlog.X</span></code>:</p>
+<div class="codehilite"><pre><span></span><span class="err">monitor light</span>
+<span class="err">Time    Miliseconds     Light</span>
+<span class="c">2019-07-11T09:10:05Z    6       141</span>
+<span class="c">2019-07-11T09:10:05Z    98      141</span>
+<span class="c">2019-07-11T09:10:05Z    99      141</span>
+<span class="c">2019-07-11T09:10:05Z    98      141</span>
+<span class="c">2019-07-11T09:10:05Z    108     141</span>
+<span class="c">2019-07-11T09:10:05Z    98      141</span>
+<span class="c">2019-07-11T09:10:05Z    98      141</span>
+<span class="c">2019-07-11T09:10:05Z    98      141</span>
+<span class="c">2019-07-11T09:10:06Z    98      141</span>
+<span class="c">2019-07-11T09:10:06Z    98      141</span>
+<span class="c">2019-07-11T09:10:06Z    108     141</span>
+<span class="c">2019-07-11T09:10:06Z    98      141</span>
+<span class="c">2019-07-11T09:10:06Z    98      141</span>
+<span class="err">...</span>
 </pre></div>
 
 <p>This can be useful in case you want to log data as fast as possible, with little delay between readings (~100ms).    </p>
@@ -3765,48 +3765,49 @@
 <p>First, enable it with:</p>
 </li>
 </ul>
-<div class="codehilite"><pre><span></span><span class="n">SCK</span> <span class="o">&gt;</span> <span class="n">sensor</span> <span class="o">-</span><span class="n">enable</span> <span class="n">fft</span>
-<span class="n">Enabling</span> <span class="n">Noise</span> <span class="n">FFT</span>
+<div class="codehilite"><pre><span></span><span class="err">SCK &gt; sensor -enable fft</span>
+<span class="err">Enabling Noise FFT</span>
 </pre></div>
 
 <ul>
 <li>Then, monitor and log it in a file with:</li>
 </ul>
-<div class="codehilite"><pre><span></span><span class="n">echo</span> <span class="ss">&quot;monitor fft&quot;</span> <span class="o">&gt;</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">cu</span><span class="p">.</span><span class="n">usbmodem1411</span> <span class="o">&amp;&amp;</span> <span class="n">screen</span> <span class="o">-</span><span class="n">L</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">cu</span><span class="p">.</span><span class="n">usbmodem1411</span>
+<div class="codehilite"><pre><span></span><span class="err">echo &quot;monitor fft&quot; &gt; /dev/cu.usbmodem1411 &amp;&amp; screen -L /dev/cu.usbmodem1411</span>
 </pre></div>
 
 <ul>
 <li>In this file, we will have something like:</li>
 </ul>
-<div class="codehilite"><pre><span></span><span class="mi">12</span>
-<span class="mi">15</span>
-<span class="mi">19</span>
-<span class="mi">20</span>
-<span class="mi">0</span>
-<span class="p">...</span>
-<span class="mi">12</span>
-<span class="mi">23</span>
-<span class="mi">2019</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">11</span><span class="n">T09</span><span class="p">:</span><span class="mi">30</span><span class="p">:</span><span class="mi">01</span><span class="n">Z</span>    <span class="mi">5</span>   <span class="k">null</span>
-<span class="p">...</span>
+<div class="codehilite"><pre><span></span><span class="err">12</span>
+<span class="err">15</span>
+<span class="err">19</span>
+<span class="err">20</span>
+<span class="err">0</span>
+<span class="err">...</span>
+<span class="err">12</span>
+<span class="err">23</span>
+<span class="c">2019-07-11T09:30:01Z    5   null</span>
+<span class="err">...</span>
 </pre></div>
 
 <ul>
 <li>
-<p>The values between the dates are the actual FFT spectrum. We will now clean the lines with the dates and then plot the data. For this, we will use a <code class="codehilite"><span class="n">python</span></code> code to make things easier. You can download the code <a href="/assets/examples/spectrum_example.py">here</a>.</p>
+<p>The values between the dates are the actual FFT spectrum. We will now clean the lines with the dates and then plot the data. For this, we will use a <code class="codehilite"><span class="err">python</span></code> code to make things easier. You can download the code <a href="/assets/examples/spectrum_example.py">here</a>.</p>
 </li>
 <li>
-<p>If we run this code in <code class="codehilite"><span class="n">python3</span></code> in the same folder where the screenlog from before is:</p>
+<p>If we run this code in <code class="codehilite"><span class="err">python3</span></code> in the same folder where the screenlog from before is:</p>
 </li>
 </ul>
-<div class="codehilite"><pre><span></span><span class="o">&gt;</span> <span class="n">python</span> <span class="n">spectrum_example</span><span class="p">.</span><span class="n">py</span>
+<div class="codehilite"><pre><span></span><span class="err">&gt; python spectrum_example.py</span>
 </pre></div>
 
-<p>We will have two outputs: a <code class="codehilite"><span class="n">csv</span></code> file with the spectrums in rows, and a png image that looks like this!</p>
+<p>We will have two outputs: a <code class="codehilite"><span class="err">csv</span></code> file with the spectrums in rows, and a png image that looks like this!</p>
 <p><img alt="" src="https://i.imgur.com/KZfFDam.png" /></p>
 <p>You can see that we were playing with a <a href="http://onlinetonegenerator.com/">tone generator</a> to make some high pitch noises at 10kHz and 20kHz. </p>
 </div>
                 
                   
+                
                 
               
               
@@ -3930,7 +3931,7 @@
       
     </div>
     
-      <script src="../../../../assets/javascripts/application.a8b5e56f.js"></script>
+      <script src="../../../../assets/javascripts/application.808e90bb.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:"../../../.."}})</script>
       

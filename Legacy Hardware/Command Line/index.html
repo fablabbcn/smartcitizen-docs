@@ -38,7 +38,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.5.0">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
     
     
       
@@ -62,7 +62,7 @@
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
@@ -3407,36 +3407,37 @@
 <h3 id="sck-wifly-commands">SCK Wifly commands<a class="headerlink" href="#sck-wifly-commands" title="Permanent link">Link</a></h3>
 <ul>
 <li><code class="codehilite"><span class="err">$$$</span></code> (Wake up the module and activate the Wi-Fi)</li>
-<li><code class="codehilite"><span class="k">set</span> <span class="n">wlan</span> <span class="n">ssid</span> <span class="n">XXX</span></code> (Add a new SSID to memory9)</li>
-<li><code class="codehilite"><span class="k">set</span> <span class="n">wlan</span> <span class="n">phrase</span> <span class="n">XXX</span></code> (Add a new phrase to memory)</li>
-<li><code class="codehilite"><span class="k">set</span> <span class="n">wlan</span> <span class="k">key</span> <span class="n">XXX</span></code> (Add a new key to memory)</li>
-<li><code class="codehilite"><span class="k">set</span> <span class="n">wlan</span> <span class="n">auth</span> <span class="n">XXX</span></code> (Add an authentication method into memory)</li>
-<li><code class="codehilite"><span class="k">set</span> <span class="n">wlan</span> <span class="n">ext_antenna</span> <span class="n">XXX</span></code> (Add an antenna type into memory)</li>
-<li><code class="codehilite"><span class="k">exit</span></code> (Go back to normal operational mode)</li>
+<li><code class="codehilite"><span class="err">set wlan ssid XXX</span></code> (Add a new SSID to memory9)</li>
+<li><code class="codehilite"><span class="err">set wlan phrase XXX</span></code> (Add a new phrase to memory)</li>
+<li><code class="codehilite"><span class="err">set wlan key XXX</span></code> (Add a new key to memory)</li>
+<li><code class="codehilite"><span class="err">set wlan auth XXX</span></code> (Add an authentication method into memory)</li>
+<li><code class="codehilite"><span class="err">set wlan ext_antenna XXX</span></code> (Add an antenna type into memory)</li>
+<li><code class="codehilite"><span class="err">exit</span></code> (Go back to normal operational mode)</li>
 </ul>
 <p>If you want to know more about wifly commands look at the <a href="http://ww1.microchip.com/downloads/en/DeviceDoc/50002230A.pdf">WiFly Command Reference</a></p>
 <h3 id="sck-commands">SCK commands<a class="headerlink" href="#sck-commands" title="Permanent link">Link</a></h3>
 <ul>
-<li><code class="codehilite"><span class="o">###</span></code> (Wake up the module and enter SCK commands mode)</li>
-<li><code class="codehilite"><span class="k">get</span> <span class="n">mac</span></code> (Get the MAC address of the kit)</li>
-<li><code class="codehilite"><span class="k">get</span> <span class="n">time</span> <span class="k">update</span></code> (Retrieve the sensor update interval)</li>
-<li><code class="codehilite"><span class="k">set</span> <span class="n">time</span> <span class="k">update</span> <span class="n">XXX</span></code> (Update the sensor update interval, <em>10-3600 sec</em>)</li>
-<li><code class="codehilite"><span class="k">get</span> <span class="nb">number</span> <span class="n">updates</span></code> (Retrieve the max number of bulk updates)</li>
-<li><code class="codehilite"><span class="k">set</span> <span class="nb">number</span> <span class="n">updates</span> <span class="n">XXX</span></code> (Update the max number of bulk updates, <em>1-20 updates</em>)</li>
-<li><code class="codehilite"><span class="k">get</span> <span class="n">apikey</span></code> (Retrieve the kit APIKEY)</li>
-<li><code class="codehilite"><span class="k">set</span> <span class="n">apikey</span> <span class="n">XXX</span></code> (Update the kit APIKEY)</li>
-<li><code class="codehilite"><span class="k">get</span> <span class="n">wlan</span> <span class="n">ssid</span></code> (Retrieve the SSID saved on the kit)</li>
-<li><code class="codehilite"><span class="k">get</span> <span class="n">wlan</span> <span class="n">phrase</span></code> (Retrieve the phrase and KEY saved on the kit)</li>
-<li><code class="codehilite"><span class="k">get</span> <span class="n">wlan</span> <span class="n">auth</span></code> (Retrieve the authentication method saved on the kit)</li>
-<li><code class="codehilite"><span class="k">get</span> <span class="n">wlan</span> <span class="n">ext_antenna</span></code> (Retrieve the antenna type saved on the kit)</li>
-<li><code class="codehilite"><span class="n">clear</span> <span class="n">nets</span></code> (Remove all saved Wi-Fi configuration information)</li>
-<li><code class="codehilite"><span class="n">clear</span> <span class="n">memory</span></code> (Reset to defaults all configuration information)</li>
-<li><code class="codehilite"><span class="k">get</span> <span class="k">all</span></code> (Retrieve all settings saved on the kit in a single line: <em>|version|MAC|ssid,phrase,auth,ext_antenna|hardcodedNets|timeUpdate|numUpdate|</em>)</li>
-<li><code class="codehilite"><span class="k">data</span></code> (Retrieves sensor readings stored in memory)</li>
-<li><code class="codehilite"><span class="k">exit</span></code> (Goes back to normal operational mode)</li>
+<li><code class="codehilite"><span class="err">###</span></code> (Wake up the module and enter SCK commands mode)</li>
+<li><code class="codehilite"><span class="err">get mac</span></code> (Get the MAC address of the kit)</li>
+<li><code class="codehilite"><span class="err">get time update</span></code> (Retrieve the sensor update interval)</li>
+<li><code class="codehilite"><span class="err">set time update XXX</span></code> (Update the sensor update interval, <em>10-3600 sec</em>)</li>
+<li><code class="codehilite"><span class="err">get number updates</span></code> (Retrieve the max number of bulk updates)</li>
+<li><code class="codehilite"><span class="err">set number updates XXX</span></code> (Update the max number of bulk updates, <em>1-20 updates</em>)</li>
+<li><code class="codehilite"><span class="err">get apikey</span></code> (Retrieve the kit APIKEY)</li>
+<li><code class="codehilite"><span class="err">set apikey XXX</span></code> (Update the kit APIKEY)</li>
+<li><code class="codehilite"><span class="err">get wlan ssid</span></code> (Retrieve the SSID saved on the kit)</li>
+<li><code class="codehilite"><span class="err">get wlan phrase</span></code> (Retrieve the phrase and KEY saved on the kit)</li>
+<li><code class="codehilite"><span class="err">get wlan auth</span></code> (Retrieve the authentication method saved on the kit)</li>
+<li><code class="codehilite"><span class="err">get wlan ext_antenna</span></code> (Retrieve the antenna type saved on the kit)</li>
+<li><code class="codehilite"><span class="err">clear nets</span></code> (Remove all saved Wi-Fi configuration information)</li>
+<li><code class="codehilite"><span class="err">clear memory</span></code> (Reset to defaults all configuration information)</li>
+<li><code class="codehilite"><span class="err">get all</span></code> (Retrieve all settings saved on the kit in a single line: <em>|version|MAC|ssid,phrase,auth,ext_antenna|hardcodedNets|timeUpdate|numUpdate|</em>)</li>
+<li><code class="codehilite"><span class="err">data</span></code> (Retrieves sensor readings stored in memory)</li>
+<li><code class="codehilite"><span class="err">exit</span></code> (Goes back to normal operational mode)</li>
 </ul>
                 
                   
+                
                 
               
               
@@ -3560,7 +3561,7 @@
       
     </div>
     
-      <script src="../../assets/javascripts/application.a8b5e56f.js"></script>
+      <script src="../../assets/javascripts/application.808e90bb.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
       

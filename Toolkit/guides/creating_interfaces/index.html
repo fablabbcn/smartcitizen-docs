@@ -38,7 +38,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../../assets/images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.5.0">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
     
     
       
@@ -62,7 +62,7 @@
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
@@ -3536,8 +3536,8 @@ may easily blend in the background of users’ attention. To bring the sensed da
 </pre></div>
 
 <p>Finally, open the Terminal app and run:</p>
-<div class="codehilite"><pre><span></span><span class="nf">pi</span><span class="nv">@raspberrypi</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="err">$</span><span class="w"> </span><span class="n">cd</span><span class="w"> </span><span class="n">Desktop</span><span class="w"></span>
-<span class="nf">pi</span><span class="nv">@raspberrypi</span><span class="w"> </span><span class="n">Desktop</span><span class="w"> </span><span class="err">$</span><span class="w"> </span><span class="n">sudo</span><span class="w"> </span><span class="n">python</span><span class="w"> </span><span class="n">smartcitizen</span><span class="o">-</span><span class="n">led</span><span class="p">.</span><span class="n">py</span><span class="w"></span>
+<div class="codehilite"><pre><span></span><span class="err">pi@raspberrypi ~ $ cd Desktop</span>
+<span class="err">pi@raspberrypi Desktop $ sudo python smartcitizen-led.py</span>
 </pre></div>
 
 </div>
@@ -3553,8 +3553,8 @@ the installation was built from the ground up to be replicable ad easy to built 
 <div class="admonition example">
 <p class="admonition-title">Step-by-step</p>
 <p>Visit the <a href="https://github.com/fablabbcn/smartcitizen-toolkit/tree/master/public-displays">public displays repository</a> and download the directory.</p>
-<p>The <code class="codehilite"><span class="o">/</span><span class="n">built</span></code> folder contains the files for building the installation: NoiseBox.blend the whole installation design in blender, CableClip.stl and Hinge.stl 3D printed parts for the cable clips and hinges used, Acrylic.dxf the acrylic cover lasercut file and noiseBoxSchematic.fzz the wiring diagram for the installation.</p>
-<p>The <code class="codehilite"><span class="o">/</span><span class="n">code</span></code> folder contains the Arduino files to drive the installation. The Arduino sketch reads sensor data from an SCK 1.5 over the I2C bus when a user presses the button display the result on a WS2811 addressable LED strip. This code was originally created to display reading from the noise sensor in dB but it can quickly be changed to support any other sensor. It runs on an Arduino UNO but any compatible board can be used.</p>
+<p>The <code class="codehilite"><span class="err">/built</span></code> folder contains the files for building the installation: NoiseBox.blend the whole installation design in blender, CableClip.stl and Hinge.stl 3D printed parts for the cable clips and hinges used, Acrylic.dxf the acrylic cover lasercut file and noiseBoxSchematic.fzz the wiring diagram for the installation.</p>
+<p>The <code class="codehilite"><span class="err">/code</span></code> folder contains the Arduino files to drive the installation. The Arduino sketch reads sensor data from an SCK 1.5 over the I2C bus when a user presses the button display the result on a WS2811 addressable LED strip. This code was originally created to display reading from the noise sensor in dB but it can quickly be changed to support any other sensor. It runs on an Arduino UNO but any compatible board can be used.</p>
 <p><img alt="" src="/assets/images/noise_box.png" /></p>
 </div>
 <div class="admonition warning">
@@ -3562,6 +3562,7 @@ the installation was built from the ground up to be replicable ad easy to built 
 </div>
                 
                   
+                
                 
               
               
@@ -3685,7 +3686,7 @@ the installation was built from the ground up to be replicable ad easy to built 
       
     </div>
     
-      <script src="../../../assets/javascripts/application.a8b5e56f.js"></script>
+      <script src="../../../assets/javascripts/application.808e90bb.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:"../../.."}})</script>
       

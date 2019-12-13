@@ -38,7 +38,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../../assets/images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.5.0">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
     
     
       
@@ -62,7 +62,7 @@
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
@@ -3613,37 +3613,37 @@
                 
                 <h1 id="organise-your-data">Organise your data<a class="headerlink" href="#organise-your-data" title="Permanent link">Link</a></h1>
 <p>When downloading the framework, the following folder structure is copied:</p>
-<div class="codehilite"><pre><span></span><span class="err">├──</span> <span class="n">environment</span><span class="p">.</span><span class="n">yml</span>
-<span class="err">├──</span> <span class="n">LICENSE</span>
-<span class="err">├──</span> <span class="n">README</span><span class="p">.</span><span class="n">md</span>
-<span class="err">├──</span> <span class="n">requirements</span><span class="p">.</span><span class="n">txt</span>
-<span class="err">├──</span> <span class="n">setup</span><span class="p">.</span><span class="n">py</span>
-<span class="err">├──</span> <span class="n">src</span><span class="p">.</span><span class="n">egg</span><span class="o">-</span><span class="n">info</span>
-<span class="err">├──</span> <span class="n">test_environment</span><span class="p">.</span><span class="n">py</span>
-<span class="err">├──</span> <span class="n">tox</span><span class="p">.</span><span class="n">ini</span>
-<span class="err">└──</span> <span class="n">urls</span><span class="p">.</span><span class="n">txt</span>
-<span class="err">├──</span> <span class="k">data</span>
-<span class="err">│</span>   <span class="err">├──</span> <span class="n">export</span>
-<span class="err">│</span>   <span class="err">├──</span> <span class="n">interim</span>
-<span class="err">│</span>   <span class="err">├──</span> <span class="n">processed</span>
-<span class="err">│</span>   <span class="err">├──</span> <span class="n">raw</span>
-<span class="err">│</span>   <span class="err">└──</span> <span class="n">scripts</span>
-<span class="err">├──</span> <span class="n">docs</span>
-<span class="err">├──</span> <span class="n">models</span>
-<span class="err">├──</span> <span class="n">notebooks</span>
-<span class="err">├──</span> <span class="k">references</span>
-<span class="err">├──</span> <span class="n">reports</span>
-<span class="err">├──</span> <span class="n">src</span>
-<span class="err">├──</span> <span class="n">tasks</span>
+<div class="codehilite"><pre><span></span><span class="err">├── environment.yml</span>
+<span class="err">├── LICENSE</span>
+<span class="err">├── README.md</span>
+<span class="err">├── requirements.txt</span>
+<span class="err">├── setup.py</span>
+<span class="err">├── src.egg-info</span>
+<span class="err">├── test_environment.py</span>
+<span class="err">├── tox.ini</span>
+<span class="err">└── urls.txt</span>
+<span class="err">├── data</span>
+<span class="err">│   ├── export</span>
+<span class="err">│   ├── interim</span>
+<span class="err">│   ├── processed</span>
+<span class="err">│   ├── raw</span>
+<span class="err">│   └── scripts</span>
+<span class="err">├── docs</span>
+<span class="err">├── models</span>
+<span class="err">├── notebooks</span>
+<span class="err">├── references</span>
+<span class="err">├── reports</span>
+<span class="err">├── src</span>
+<span class="err">├── tasks</span>
 </pre></div>
 
-<p>The <code class="codehilite"><span class="k">data</span></code> directory will be the place where we will organise our data. Each of the sub-directories is explained below:</p>
+<p>The <code class="codehilite"><span class="err">data</span></code> directory will be the place where we will organise our data. Each of the sub-directories is explained below:</p>
 <ul>
-<li><code class="codehilite"><span class="n">export</span></code>: we will export processed data or images here</li>
-<li><code class="codehilite"><span class="n">interim</span></code>: we will place files used internally for the framework, such as sensor calibration data</li>
-<li><code class="codehilite"><span class="n">processed</span></code>: the most important folder of our data directory. This will contain a hierarchy with the different tests after loading into our database. The tests in this folder will have an unified format to easily navigate them. It's the folder we will load our data from, once we have <a href="#Create a test">created a test</a>.</li>
-<li><code class="codehilite"><span class="n">raw</span></code>: raw sdcard data can be placed here. It will feed our test creation script below</li>
-<li><code class="codehilite"><span class="n">scripts</span></code>: a compilation of handy scripts to parse excel files, concatenate csvs and more</li>
+<li><code class="codehilite"><span class="err">export</span></code>: we will export processed data or images here</li>
+<li><code class="codehilite"><span class="err">interim</span></code>: we will place files used internally for the framework, such as sensor calibration data</li>
+<li><code class="codehilite"><span class="k">proc</span><span class="nb">es</span><span class="nv">sed</span></code>: the most important folder of our data directory. This will contain a hierarchy with the different tests after loading into our database. The tests in this folder will have an unified format to easily navigate them. It's the folder we will load our data from, once we have <a href="#Create a test">created a test</a>.</li>
+<li><code class="codehilite"><span class="err">raw</span></code>: raw sdcard data can be placed here. It will feed our test creation script below</li>
+<li><code class="codehilite"><span class="err">scripts</span></code>: a compilation of handy scripts to parse excel files, concatenate csvs and more</li>
 </ul>
 <h2 id="the-test">The test<a class="headerlink" href="#the-test" title="Permanent link">Link</a></h2>
 <p>We have mentioned several times that we will organise our data in tests. The concept is very simple. A test is a collection of devices (SCKs or not), that have a common purpose. They can be located in the same spot (co-location) or not, and the main idea is that we centralise the data in a common instance for easy analysis.</p>
@@ -3651,221 +3651,221 @@
 <image src="https://i.imgur.com/CSi5tL4.png" width="500px"/>
 </div>
 
-<p>Tests have dates, authors, can have comments (for us to remember what we did), a report attached and can be in different conditions (outdoor, indoor)... We will put all this metadata in a <code class="codehilite"><span class="n">yaml</span></code> file to help use look for the tests later on. </p>
-<p>Tests can also have different sources. They could be csv files, xls files or data from the Smart Citizen API. For the local files, we will first pre-process them with the scripts in the <code class="codehilite"><span class="k">data</span><span class="o">/</span><span class="n">scripts</span></code> folder and then place them in the <code class="codehilite"><span class="k">data</span><span class="o">/</span><span class="n">raw</span></code> folder, in csv format. We use this format because it's a common usable format and, although it is not the most efficient way of archiving the data, it can be easily explored by other common applications.</p>
+<p>Tests have dates, authors, can have comments (for us to remember what we did), a report attached and can be in different conditions (outdoor, indoor)... We will put all this metadata in a <code class="codehilite"><span class="err">yaml</span></code> file to help use look for the tests later on. </p>
+<p>Tests can also have different sources. They could be csv files, xls files or data from the Smart Citizen API. For the local files, we will first pre-process them with the scripts in the <code class="codehilite"><span class="err">data/scripts</span></code> folder and then place them in the <code class="codehilite"><span class="err">data/raw</span></code> folder, in csv format. We use this format because it's a common usable format and, although it is not the most efficient way of archiving the data, it can be easily explored by other common applications.</p>
 <h3 id="pre-process-the-sd-card-data">Pre-process the sd card data<a class="headerlink" href="#pre-process-the-sd-card-data" title="Permanent link">Link</a></h3>
-<p>In order to make our files usable, we will need to have them in a format like <code class="codehilite"><span class="n">YY</span><span class="o">-</span><span class="n">MM</span><span class="o">-</span><span class="n">DD</span><span class="p">.</span><span class="n">CSV</span></code>. However, if the kit has some sensors connected, we can find some files like: <code class="codehilite"><span class="n">YY</span><span class="o">-</span><span class="n">MM</span><span class="o">-</span><span class="n">DD</span><span class="p">.</span><span class="mi">01</span></code>, <code class="codehilite"><span class="n">YY</span><span class="o">-</span><span class="n">MM</span><span class="o">-</span><span class="n">DD</span><span class="p">.</span><span class="mi">02</span></code> and they should be something like <code class="codehilite"><span class="n">YY</span><span class="o">-</span><span class="n">MM</span><span class="o">-</span><span class="n">DD_01</span><span class="p">.</span><span class="n">CSV</span></code>, <code class="codehilite"><span class="n">YY</span><span class="o">-</span><span class="n">MM</span><span class="o">-</span><span class="n">DD_02</span><span class="p">.</span><span class="n">CSV</span></code>...</p>
+<p>In order to make our files usable, we will need to have them in a format like <code class="codehilite"><span class="err">YY-MM-DD.CSV</span></code>. However, if the kit has some sensors connected, we can find some files like: <code class="codehilite"><span class="err">YY-MM-DD.01</span></code>, <code class="codehilite"><span class="err">YY-MM-DD.02</span></code> and they should be something like <code class="codehilite"><span class="err">YY-MM-DD_01.CSV</span></code>, <code class="codehilite"><span class="err">YY-MM-DD_02.CSV</span></code>...</p>
 <div class="admonition info">
 <p class="admonition-title">Pro-tip</p>
 <p>We can rename them manually, but if we have many of them, we can use this one-liner (works in oh-my-zsh):</p>
-<div class="codehilite"><pre><span></span><span class="n">autoload</span> <span class="o">-</span><span class="n">Uz</span> <span class="n">zmv</span>
-<span class="n">zmv</span> <span class="s1">&#39;(*).(0*)&#39;</span> <span class="s1">&#39;$1_$2.CSV&#39;</span>
+<div class="codehilite"><pre><span></span><span class="err">autoload -Uz zmv</span>
+<span class="err">zmv &#39;(*).(0*)&#39; &#39;$1_$2.CSV&#39;</span>
 </pre></div>
 
 </div>
-<p>We can now concatenate all the sd card data from a device with the <code class="codehilite"><span class="n">concat_script</span><span class="p">.</span><span class="n">py</span></code> in the <code class="codehilite"><span class="k">data</span><span class="o">/</span><span class="n">scripts</span></code> folder.</p>
+<p>We can now concatenate all the sd card data from a device with the <code class="codehilite"><span class="err">concat_script.py</span></code> in the <code class="codehilite"><span class="err">data/scripts</span></code> folder.</p>
 <p>We can access the script's help by typing in the terminal:</p>
-<div class="codehilite"><pre><span></span><span class="ss">(</span><span class="nv">smartcitizen</span><span class="o">-</span><span class="nv">data</span><span class="ss">)</span> ➜  <span class="nv">scripts</span> <span class="nv">git</span>:<span class="ss">(</span><span class="nv">master</span><span class="ss">)</span> ✗ <span class="nv">python</span> <span class="nv">concat_script</span>.<span class="nv">py</span> <span class="o">-</span><span class="nv">h</span>
-<span class="nv">usage</span>: <span class="nv">concat_script</span>.<span class="nv">py</span> [<span class="o">-</span><span class="nv">h</span>] [<span class="o">--</span><span class="nv">output</span> <span class="nv">OUTPUT</span>] [<span class="o">--</span><span class="nv">index</span> <span class="nv">INDEX</span>] [<span class="o">--</span><span class="nv">keep</span>]
-                        [<span class="o">--</span><span class="nv">ignore</span> <span class="nv">IGNORE</span>] [<span class="o">--</span><span class="nv">directory</span> <span class="nv">DIRECTORY</span>]
+<div class="codehilite"><pre><span></span><span class="p">(</span><span class="n">smartcitizen</span><span class="o">-</span><span class="k">data</span><span class="p">)</span> <span class="err">➜</span>  <span class="n">scripts</span> <span class="n">git</span><span class="p">:(</span><span class="n">master</span><span class="p">)</span> <span class="err">✗</span> <span class="n">python</span> <span class="n">concat_script</span><span class="p">.</span><span class="n">py</span> <span class="o">-</span><span class="n">h</span>
+<span class="k">usage</span><span class="p">:</span> <span class="n">concat_script</span><span class="p">.</span><span class="n">py</span> <span class="p">[</span><span class="o">-</span><span class="n">h</span><span class="p">]</span> <span class="p">[</span><span class="c1">--output OUTPUT] [--index INDEX] [--keep]</span>
+                        <span class="p">[</span><span class="c1">--ignore IGNORE] [--directory DIRECTORY]</span>
 
-<span class="nv">optional</span> <span class="nv">arguments</span>:
-  <span class="o">-</span><span class="nv">h</span>, <span class="o">--</span><span class="nv">help</span>            <span class="k">show</span> <span class="nv">this</span> <span class="nv">help</span> <span class="nv">message</span> <span class="nv">and</span> <span class="k">exit</span>
-  <span class="o">--</span><span class="nv">output</span> <span class="nv">OUTPUT</span>, <span class="o">-</span><span class="nv">o</span> <span class="nv">OUTPUT</span>
-                        <span class="nv">Output</span> <span class="nv">file</span> <span class="nv">name</span>, <span class="nv">including</span> <span class="nv">extension</span>
-  <span class="o">--</span><span class="nv">index</span> <span class="nv">INDEX</span>, <span class="o">-</span><span class="nv">i</span> <span class="nv">INDEX</span>
-                        <span class="nv">Final</span> <span class="nv">name</span> <span class="nv">of</span> <span class="nv">time</span> <span class="nv">index</span>
-  <span class="o">--</span><span class="nv">keep</span>, <span class="o">-</span><span class="nv">k</span>            <span class="nv">Keep</span> <span class="nv">full</span> <span class="nv">CSV</span> <span class="nv">header</span>
-  <span class="o">--</span><span class="nv">ignore</span> <span class="nv">IGNORE</span>, <span class="o">-</span><span class="nv">ig</span> <span class="nv">IGNORE</span>
-                        <span class="nv">Ignore</span> <span class="nv">files</span> <span class="nv">in</span> <span class="nv">concatenation</span>
-  <span class="o">--</span><span class="nv">directory</span> <span class="nv">DIRECTORY</span>, <span class="o">-</span><span class="nv">d</span> <span class="nv">DIRECTORY</span>
-                        <span class="nv">Directory</span> <span class="k">for</span> <span class="nv">csv</span> <span class="nv">files</span> <span class="nv">to</span> <span class="nv">concatenate</span>
+<span class="n">optional</span> <span class="n">arguments</span><span class="p">:</span>
+  <span class="o">-</span><span class="n">h</span><span class="p">,</span> <span class="c1">--help            show this help message and exit</span>
+  <span class="c1">--output OUTPUT, -o OUTPUT</span>
+                        <span class="k">Output</span> <span class="n">file</span> <span class="n">name</span><span class="p">,</span> <span class="k">including</span> <span class="n">extension</span>
+  <span class="c1">--index INDEX, -i INDEX</span>
+                        <span class="k">Final</span> <span class="n">name</span> <span class="k">of</span> <span class="n">time</span> <span class="k">index</span>
+  <span class="c1">--keep, -k            Keep full CSV header</span>
+  <span class="c1">--ignore IGNORE, -ig IGNORE</span>
+                        <span class="k">Ignore</span> <span class="n">files</span> <span class="k">in</span> <span class="n">concatenation</span>
+  <span class="c1">--directory DIRECTORY, -d DIRECTORY</span>
+                        <span class="n">Directory</span> <span class="k">for</span> <span class="n">csv</span> <span class="n">files</span> <span class="k">to</span> <span class="n">concatenate</span>
 </pre></div>
 
-<p>Create a directory (<code class="codehilite"><span class="n">FILES</span></code>) and put the sd card data of one device in it. Then, run the script with:</p>
-<div class="codehilite"><pre><span></span><span class="p">(</span><span class="n">smartcitizen</span><span class="o">-</span><span class="k">data</span><span class="p">)</span> <span class="err">➜</span>  <span class="n">scripts</span> <span class="n">git</span><span class="p">:(</span><span class="n">master</span><span class="p">)</span> <span class="err">✗</span> <span class="n">python</span> <span class="n">concat_script</span><span class="p">.</span><span class="n">py</span> <span class="o">-</span><span class="n">k</span> <span class="o">-</span><span class="n">d</span> <span class="n">FILES</span>
-<span class="k">Using</span> <span class="n">files</span> <span class="k">in</span> <span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">macoscar</span><span class="o">/</span><span class="n">Documents</span><span class="o">/</span><span class="mi">04</span><span class="n">_Projects</span><span class="o">/</span><span class="mi">02</span><span class="n">_FabLab</span><span class="o">/</span><span class="mi">01</span><span class="n">_SmartCitizen</span><span class="o">/</span><span class="mi">01</span><span class="n">_Repositories</span><span class="o">/</span><span class="n">DataAnalysis</span><span class="o">/</span><span class="n">smartcitizen</span><span class="o">-</span><span class="n">iscape</span><span class="o">-</span><span class="k">data</span><span class="o">/</span><span class="k">data</span><span class="o">/</span><span class="n">scripts</span><span class="o">/</span><span class="n">FILES</span>
-<span class="n">Files</span> <span class="k">to</span> <span class="n">concat</span><span class="p">:</span>
-<span class="mi">18</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">08</span><span class="p">.</span><span class="n">CSV</span>
-<span class="mi">18</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">09</span><span class="p">.</span><span class="n">CSV</span>
-<span class="mi">18</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">13</span><span class="p">.</span><span class="n">CSV</span>
-<span class="mi">18</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">14</span><span class="p">.</span><span class="n">CSV</span>
-<span class="mi">18</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">15</span><span class="p">.</span><span class="n">CSV</span>
-<span class="mi">18</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">16</span><span class="p">.</span><span class="n">CSV</span>
-<span class="mi">18</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">17</span><span class="p">.</span><span class="n">CSV</span>
-<span class="mi">18</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">18</span><span class="p">.</span><span class="n">CSV</span>
-<span class="n">Updating</span> <span class="n">header</span>
-<span class="n">Saving</span> <span class="n">file</span> <span class="k">to</span><span class="p">:</span> <span class="n">Log_Concat</span><span class="p">.</span><span class="n">csv</span>
+<p>Create a directory (<code class="codehilite"><span class="err">FILES</span></code>) and put the sd card data of one device in it. Then, run the script with:</p>
+<div class="codehilite"><pre><span></span><span class="err">(smartcitizen-data) ➜  scripts git:(master) ✗ python concat_script.py -k -d FILES</span>
+<span class="err">Using files in /Users/macoscar/Documents/04_Projects/02_FabLab/01_SmartCitizen/01_Repositories/DataAnalysis/smartcitizen-iscape-data/data/scripts/FILES</span>
+<span class="err">Files to concat:</span>
+<span class="err">18-11-08.CSV</span>
+<span class="err">18-11-09.CSV</span>
+<span class="err">18-11-13.CSV</span>
+<span class="err">18-11-14.CSV</span>
+<span class="err">18-11-15.CSV</span>
+<span class="err">18-11-16.CSV</span>
+<span class="err">18-11-17.CSV</span>
+<span class="err">18-11-18.CSV</span>
+<span class="err">Updating header</span>
+<span class="err">Saving file to: Log_Concat.csv</span>
 </pre></div>
 
-<p>And if we now navigate to the <code class="codehilite"><span class="n">FILES</span></code> directory:</p>
-<div class="codehilite"><pre><span></span><span class="p">(</span><span class="n">smartcitizen</span><span class="o">-</span><span class="k">data</span><span class="p">)</span> <span class="err">➜</span>  <span class="n">FILES</span> <span class="n">git</span><span class="p">:(</span><span class="n">master</span><span class="p">)</span> <span class="err">✗</span> <span class="n">ls</span>
-<span class="mi">18</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">08</span><span class="p">.</span><span class="n">CSV</span>   <span class="mi">18</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">13</span><span class="p">.</span><span class="n">CSV</span>   <span class="mi">18</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">15</span><span class="p">.</span><span class="n">CSV</span>   <span class="mi">18</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">17</span><span class="p">.</span><span class="n">CSV</span>   <span class="n">Log_Concat</span><span class="p">.</span><span class="n">csv</span>
-<span class="mi">18</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">09</span><span class="p">.</span><span class="n">CSV</span>   <span class="mi">18</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">14</span><span class="p">.</span><span class="n">CSV</span>   <span class="mi">18</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">16</span><span class="p">.</span><span class="n">CSV</span>   <span class="mi">18</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">18</span><span class="p">.</span><span class="n">CSV</span>
+<p>And if we now navigate to the <code class="codehilite"><span class="err">FILES</span></code> directory:</p>
+<div class="codehilite"><pre><span></span><span class="err">(smartcitizen-data) ➜  FILES git:(master) ✗ ls</span>
+<span class="err">18-11-08.CSV   18-11-13.CSV   18-11-15.CSV   18-11-17.CSV   Log_Concat.csv</span>
+<span class="err">18-11-09.CSV   18-11-14.CSV   18-11-16.CSV   18-11-18.CSV</span>
 </pre></div>
 
 <p>We can find our concatenated file!</p>
 <h3 id="create-a-test">Create a test<a class="headerlink" href="#create-a-test" title="Permanent link">Link</a></h3>
-<p>Once we have all our concatenated files, we can proceed to create our test. For this, you can launch <code class="codehilite"><span class="n">jupyter</span> <span class="n">lab</span></code> and open the <code class="codehilite"><span class="n">notebooks</span><span class="o">/</span><span class="n">test_creation</span><span class="p">.</span><span class="n">ipynb</span></code> notebook.</p>
+<p>Once we have all our concatenated files, we can proceed to create our test. For this, you can launch <code class="codehilite"><span class="err">jupyter lab</span></code> and open the <code class="codehilite"><span class="err">notebooks/test_creation.ipynb</span></code> notebook.</p>
 <p>In it, we can follow the instructions in the notebook by filling up the input data. </p>
 <div class="admonition info">
 <p class="admonition-title">A note about the timestamps</p>
 <p>To synchronise our tests, we will <strong>always</strong> need to specify the location. This means that all our tests will be in 'UTC'.</p>
 </div>
 <h4 id="test-information">Test information<a class="headerlink" href="#test-information" title="Permanent link">Link</a></h4>
-<div class="codehilite"><pre><span></span># <span class="nv">Is</span> <span class="nv">you</span> <span class="nv">are</span> <span class="nv">creating</span> <span class="nv">a</span> <span class="nv">new</span> <span class="nv">test</span> <span class="ss">(</span><span class="nv">True</span><span class="ss">)</span> <span class="nv">or</span> <span class="k">if</span> <span class="nv">the</span> <span class="nv">test</span> <span class="nv">is</span> <span class="nv">going</span> <span class="nv">to</span> <span class="nv">be</span> <span class="nv">updated</span> <span class="ss">(</span><span class="nv">False</span><span class="ss">)</span>
-<span class="nv">isnewtest</span> <span class="o">=</span> <span class="nv">True</span>
+<div class="codehilite"><pre><span></span><span class="o">#</span> <span class="k">Is</span> <span class="n">you</span> <span class="k">are</span> <span class="n">creating</span> <span class="n">a</span> <span class="k">new</span> <span class="n">test</span> <span class="p">(</span><span class="k">True</span><span class="p">)</span> <span class="k">or</span> <span class="k">if</span> <span class="n">the</span> <span class="n">test</span> <span class="k">is</span> <span class="n">going</span> <span class="k">to</span> <span class="n">be</span> <span class="n">updated</span> <span class="p">(</span><span class="k">False</span><span class="p">)</span>
+<span class="n">isnewtest</span> <span class="o">=</span> <span class="k">True</span>
 
-# <span class="nv">Date</span> <span class="nv">when</span> <span class="nv">you</span> <span class="nv">performed</span> <span class="nv">the</span> <span class="nv">test</span> <span class="nv">in</span> <span class="s1">&#39;</span><span class="s">YYYY-MM-DD</span><span class="s1">&#39;</span> <span class="nv">format</span>
-<span class="nv">date</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="s">2019-06-19</span><span class="s1">&#39;</span>
+<span class="o">#</span> <span class="nb">Date</span> <span class="k">when</span> <span class="n">you</span> <span class="n">performed</span> <span class="n">the</span> <span class="n">test</span> <span class="k">in</span> <span class="s1">&#39;YYYY-MM-DD&#39;</span> <span class="n">format</span>
+<span class="nb">date</span> <span class="o">=</span> <span class="s1">&#39;2019-06-19&#39;</span>
 
-# <span class="nv">INTernal</span> <span class="nv">or</span> <span class="nv">EXTernal</span> <span class="nv">test</span> <span class="ss">(</span><span class="nv">made</span> <span class="nv">by</span> <span class="nv">your</span> <span class="nv">organisation</span> <span class="nv">or</span> <span class="nv">others</span><span class="ss">)</span>
-<span class="nv">who</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="s">INT</span><span class="s1">&#39;</span> 
+<span class="o">#</span> <span class="n">INTernal</span> <span class="k">or</span> <span class="k">EXTernal</span> <span class="n">test</span> <span class="p">(</span><span class="n">made</span> <span class="k">by</span> <span class="n">your</span> <span class="n">organisation</span> <span class="k">or</span> <span class="n">others</span><span class="p">)</span>
+<span class="n">who</span> <span class="o">=</span> <span class="s1">&#39;INT&#39;</span> 
 
-# <span class="nv">Short</span> <span class="nv">title</span> <span class="k">for</span> <span class="nv">the</span> <span class="nv">test</span>
-<span class="nv">short_name</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="s">DISPERSION_EVALUATION</span><span class="s1">&#39;</span>
+<span class="o">#</span> <span class="n">Short</span> <span class="n">title</span> <span class="k">for</span> <span class="n">the</span> <span class="n">test</span>
+<span class="n">short_name</span> <span class="o">=</span> <span class="s1">&#39;DISPERSION_EVALUATION&#39;</span>
 
-# <span class="nv">Comment</span> <span class="k">for</span> <span class="nv">your</span> <span class="nv">test</span>. <span class="nv">Make</span> <span class="nv">this</span> <span class="nv">as</span> <span class="nv">long</span> <span class="nv">as</span> <span class="nv">you</span> <span class="nv">need</span> <span class="nv">to</span> <span class="nv">describe</span> <span class="nv">fully</span> <span class="nv">the</span> <span class="nv">purpose</span> <span class="nv">of</span> <span class="nv">this</span> <span class="nv">test</span>
-<span class="nv">comment</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39;</span><span class="s">Evaluation of 20 kits for dispersion analysis. Performed in Fablab BCN during June 2019. During this test, we also checked the effect of CCS811 burn in</span><span class="s1">&#39;&#39;&#39;</span>
+<span class="o">#</span> <span class="k">Comment</span> <span class="k">for</span> <span class="n">your</span> <span class="n">test</span><span class="p">.</span> <span class="n">Make</span> <span class="n">this</span> <span class="k">as</span> <span class="n">long</span> <span class="k">as</span> <span class="n">you</span> <span class="n">need</span> <span class="k">to</span> <span class="k">describe</span> <span class="n">fully</span> <span class="n">the</span> <span class="n">purpose</span> <span class="k">of</span> <span class="n">this</span> <span class="n">test</span>
+<span class="k">comment</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39;Evaluation of 20 kits for dispersion analysis. Performed in Fablab BCN during June 2019. During this test, we also checked the effect of CCS811 burn in&#39;&#39;&#39;</span>
 
-# <span class="nv">Project</span>
-<span class="nv">project</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="s">SmartCitizen</span><span class="s1">&#39;</span>
+<span class="o">#</span> <span class="n">Project</span>
+<span class="n">project</span> <span class="o">=</span> <span class="s1">&#39;SmartCitizen&#39;</span>
 
-# <span class="nv">Firmware</span> <span class="nv">version</span>
-<span class="nv">commit</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="s">0.9.5</span><span class="s1">&#39;</span>
+<span class="o">#</span> <span class="n">Firmware</span> <span class="k">version</span>
+<span class="k">commit</span> <span class="o">=</span> <span class="s1">&#39;0.9.5&#39;</span>
 
-# <span class="nv">Who</span> <span class="nv">made</span> <span class="nv">the</span> <span class="nv">test</span>
-<span class="nv">author</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="s">Oscar</span><span class="s1">&#39;</span>
+<span class="o">#</span> <span class="n">Who</span> <span class="n">made</span> <span class="n">the</span> <span class="n">test</span>
+<span class="n">author</span> <span class="o">=</span> <span class="s1">&#39;Oscar&#39;</span>
 
-# <span class="nv">Test</span> <span class="nv">type</span> <span class="ss">(</span><span class="nv">indoor</span>, <span class="nv">outdoor</span>, <span class="nv">anything</span> <span class="nv">that</span> <span class="nv">helps</span> <span class="nv">you</span> <span class="nv">organise</span> <span class="nv">later</span> <span class="nv">on</span><span class="ss">)</span>
-<span class="nv">type_test</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="s">outdoor</span><span class="s1">&#39;</span>
+<span class="o">#</span> <span class="n">Test</span> <span class="k">type</span> <span class="p">(</span><span class="n">indoor</span><span class="p">,</span> <span class="n">outdoor</span><span class="p">,</span> <span class="n">anything</span> <span class="n">that</span> <span class="n">helps</span> <span class="n">you</span> <span class="n">organise</span> <span class="n">later</span> <span class="k">on</span><span class="p">)</span>
+<span class="n">type_test</span> <span class="o">=</span> <span class="s1">&#39;outdoor&#39;</span>
 
-# <span class="k">If</span> <span class="nv">you</span> <span class="nv">are</span> <span class="nv">going</span> <span class="nv">to</span> <span class="nv">document</span> <span class="nv">the</span> <span class="nv">results</span> <span class="nv">somewhere</span>, <span class="nv">you</span> <span class="nv">can</span> <span class="nv">put</span> <span class="nv">a</span> <span class="nv">link</span> <span class="nv">below</span>
-<span class="nv">report</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+<span class="o">#</span> <span class="k">If</span> <span class="n">you</span> <span class="k">are</span> <span class="n">going</span> <span class="k">to</span> <span class="n">document</span> <span class="n">the</span> <span class="n">results</span> <span class="n">somewhere</span><span class="p">,</span> <span class="n">you</span> <span class="n">can</span> <span class="n">put</span> <span class="n">a</span> <span class="n">link</span> <span class="n">below</span>
+<span class="n">report</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 </pre></div>
 
 <h4 id="add-device-information">Add device information<a class="headerlink" href="#add-device-information" title="Permanent link">Link</a></h4>
 <p>An example for each type of device is given below. A test can contain as many devices you need, each with an unique identifier.</p>
 <ul>
-<li>Data of a simple SC <code class="codehilite"><span class="n">KIT</span></code> from the API, downloading all the available data, with a frequency of 1Min:</li>
+<li>Data of a simple SC <code class="codehilite"><span class="err">KIT</span></code> from the API, downloading all the available data, with a frequency of 1Min:</li>
 </ul>
-<div class="codehilite"><pre><span></span><span class="n">newtest</span><span class="p">.</span><span class="n">add_device</span><span class="p">(</span><span class="s1">&#39;8739&#39;</span><span class="p">,</span>
-                   <span class="n">device_type</span> <span class="o">=</span> <span class="s1">&#39;KIT&#39;</span><span class="p">,</span>
-                   <span class="k">location</span> <span class="o">=</span> <span class="s1">&#39;Europe/Madrid&#39;</span><span class="p">,</span>
-                   <span class="n">pm_sensor</span> <span class="o">=</span> <span class="s1">&#39;PMS5003&#39;</span><span class="p">,</span>
-                   <span class="n">device_files</span> <span class="o">=</span> <span class="err">{</span><span class="s1">&#39;device_id&#39;</span><span class="p">:</span> <span class="s1">&#39;8739&#39;</span><span class="p">,</span> 
-                                   <span class="s1">&#39;frequency&#39;</span><span class="p">:</span> <span class="s1">&#39;1Min&#39;</span><span class="p">,</span>
-                                   <span class="s1">&#39;source&#39;</span><span class="p">:</span> <span class="s1">&#39;api&#39;</span><span class="p">,</span>
-                                   <span class="s1">&#39;min_date&#39;</span><span class="p">:</span> <span class="k">None</span><span class="p">,</span>
-                                   <span class="s1">&#39;max_date&#39;</span><span class="p">:</span> <span class="k">None</span><span class="err">}</span><span class="p">)</span>
+<div class="codehilite"><pre><span></span><span class="err">newtest.add_device(&#39;8739&#39;,</span>
+<span class="err">                   device_type = &#39;KIT&#39;,</span>
+<span class="err">                   location = &#39;Europe/Madrid&#39;,</span>
+<span class="err">                   pm_sensor = &#39;PMS5003&#39;,</span>
+<span class="err">                   device_files = {&#39;device_id&#39;: &#39;8739&#39;, </span>
+<span class="err">                                   &#39;frequency&#39;: &#39;1Min&#39;,</span>
+<span class="err">                                   &#39;source&#39;: &#39;api&#39;,</span>
+<span class="err">                                   &#39;min_date&#39;: None,</span>
+<span class="err">                                   &#39;max_date&#39;: None})</span>
 </pre></div>
 
 <ul>
-<li>Data of a simple SC <code class="codehilite"><span class="n">KIT</span></code> from the API, downloading the data from a certain date, up to the last available data: </li>
+<li>Data of a simple SC <code class="codehilite"><span class="err">KIT</span></code> from the API, downloading the data from a certain date, up to the last available data: </li>
 </ul>
-<div class="codehilite"><pre><span></span><span class="n">newtest</span><span class="p">.</span><span class="n">add_device</span><span class="p">(</span><span class="s1">&#39;8739&#39;</span><span class="p">,</span>
-                   <span class="n">device_type</span> <span class="o">=</span> <span class="s1">&#39;KIT&#39;</span><span class="p">,</span>
-                   <span class="k">location</span> <span class="o">=</span> <span class="s1">&#39;Europe/Madrid&#39;</span><span class="p">,</span>
-                   <span class="n">pm_sensor</span> <span class="o">=</span> <span class="s1">&#39;PMS5003&#39;</span><span class="p">,</span>
-                   <span class="n">device_files</span> <span class="o">=</span> <span class="err">{</span><span class="s1">&#39;device_id&#39;</span><span class="p">:</span> <span class="s1">&#39;8739&#39;</span><span class="p">,</span> 
-                                   <span class="s1">&#39;frequency&#39;</span><span class="p">:</span> <span class="s1">&#39;1Min&#39;</span><span class="p">,</span>
-                                   <span class="s1">&#39;source&#39;</span><span class="p">:</span> <span class="s1">&#39;api&#39;</span><span class="p">,</span>
-                                   <span class="s1">&#39;min_date&#39;</span><span class="p">:</span> <span class="s1">&#39;2019-07-12&#39;</span><span class="p">,</span>
-                                   <span class="s1">&#39;max_date&#39;</span><span class="p">:</span> <span class="k">None</span><span class="err">}</span><span class="p">)</span>
+<div class="codehilite"><pre><span></span><span class="err">newtest.add_device(&#39;8739&#39;,</span>
+<span class="err">                   device_type = &#39;KIT&#39;,</span>
+<span class="err">                   location = &#39;Europe/Madrid&#39;,</span>
+<span class="err">                   pm_sensor = &#39;PMS5003&#39;,</span>
+<span class="err">                   device_files = {&#39;device_id&#39;: &#39;8739&#39;, </span>
+<span class="err">                                   &#39;frequency&#39;: &#39;1Min&#39;,</span>
+<span class="err">                                   &#39;source&#39;: &#39;api&#39;,</span>
+<span class="err">                                   &#39;min_date&#39;: &#39;2019-07-12&#39;,</span>
+<span class="err">                                   &#39;max_date&#39;: None})</span>
 </pre></div>
 
 <ul>
-<li>Data of a SC <code class="codehilite"><span class="n">STATION</span></code> from the local csv data, located in London. The csv file is in <code class="codehilite"><span class="k">data</span><span class="o">/</span><span class="n">raw</span><span class="o">/</span><span class="mi">5527</span><span class="p">.</span><span class="n">csv</span></code>. Also, the device is archived in the device history calibration described in <a href="#Devices calibration">this section</a>:</li>
+<li>Data of a SC <code class="codehilite"><span class="err">STATION</span></code> from the local csv data, located in London. The csv file is in <code class="codehilite"><span class="err">data/raw/5527.csv</span></code>. Also, the device is archived in the device history calibration described in <a href="#Devices calibration">this section</a>:</li>
 </ul>
-<div class="codehilite"><pre><span></span><span class="n">newtest</span><span class="p">.</span><span class="n">add_device</span><span class="p">(</span><span class="s1">&#39;5527&#39;</span><span class="p">,</span> 
-                <span class="n">device_type</span> <span class="o">=</span> <span class="s1">&#39;STATION&#39;</span><span class="p">,</span> 
-                <span class="n">sck_version</span> <span class="o">=</span> <span class="s1">&#39;2.0&#39;</span><span class="p">,</span> 
-                <span class="n">pm_sensor</span> <span class="o">=</span> <span class="s1">&#39;PMS5003&#39;</span><span class="p">,</span> 
-                <span class="n">device_history</span> <span class="o">=</span> <span class="s1">&#39;5527&#39;</span><span class="p">,</span>
-                <span class="k">location</span> <span class="o">=</span> <span class="s1">&#39;Europe/London&#39;</span><span class="p">,</span>
-                <span class="n">device_files</span> <span class="o">=</span> <span class="err">{</span><span class="s1">&#39;fileNameRaw&#39;</span><span class="p">:</span> <span class="s1">&#39;5527.csv&#39;</span><span class="p">,</span> 
-                                  <span class="s1">&#39;fileNameInfo&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> 
-                                  <span class="s1">&#39;frequency&#39;</span><span class="p">:</span> <span class="s1">&#39;1Min&#39;</span><span class="p">,</span>
-                                  <span class="s1">&#39;source&#39;</span><span class="p">:</span> <span class="s1">&#39;csv_new&#39;</span><span class="err">}</span><span class="p">)</span>
+<div class="codehilite"><pre><span></span><span class="err">newtest.add_device(&#39;5527&#39;, </span>
+<span class="err">                device_type = &#39;STATION&#39;, </span>
+<span class="err">                sck_version = &#39;2.0&#39;, </span>
+<span class="err">                pm_sensor = &#39;PMS5003&#39;, </span>
+<span class="err">                device_history = &#39;5527&#39;,</span>
+<span class="err">                location = &#39;Europe/London&#39;,</span>
+<span class="err">                device_files = {&#39;fileNameRaw&#39;: &#39;5527.csv&#39;, </span>
+<span class="err">                                  &#39;fileNameInfo&#39;: &#39;&#39;, </span>
+<span class="err">                                  &#39;frequency&#39;: &#39;1Min&#39;,</span>
+<span class="err">                                  &#39;source&#39;: &#39;csv_new&#39;})</span>
 </pre></div>
 
 <ul>
-<li>Data of a SC <code class="codehilite"><span class="n">STATION</span></code> from the API, located in London. The device is archived in the device history calibration:</li>
+<li>Data of a SC <code class="codehilite"><span class="err">STATION</span></code> from the API, located in London. The device is archived in the device history calibration:</li>
 </ul>
-<div class="codehilite"><pre><span></span><span class="n">newtest</span><span class="p">.</span><span class="n">add_device</span><span class="p">(</span><span class="s1">&#39;8739&#39;</span><span class="p">,</span>
-                   <span class="n">device_type</span> <span class="o">=</span> <span class="s1">&#39;STATION&#39;</span><span class="p">,</span>
-                   <span class="k">location</span> <span class="o">=</span> <span class="s1">&#39;Europe/London&#39;</span><span class="p">,</span>
-                   <span class="n">pm_sensor</span> <span class="o">=</span> <span class="s1">&#39;PMS5003&#39;</span><span class="p">,</span>
-                   <span class="n">device_history</span> <span class="o">=</span> <span class="s1">&#39;8739&#39;</span><span class="p">,</span>
-                   <span class="n">device_files</span> <span class="o">=</span> <span class="err">{</span><span class="s1">&#39;device_id&#39;</span><span class="p">:</span> <span class="s1">&#39;8739&#39;</span><span class="p">,</span> 
-                                   <span class="s1">&#39;frequency&#39;</span><span class="p">:</span> <span class="s1">&#39;1Min&#39;</span><span class="p">,</span>
-                                   <span class="s1">&#39;source&#39;</span><span class="p">:</span> <span class="s1">&#39;api&#39;</span><span class="p">,</span>
-                                   <span class="s1">&#39;min_date&#39;</span><span class="p">:</span> <span class="s1">&#39;2019-06-18&#39;</span><span class="p">,</span>
-                                   <span class="s1">&#39;max_date&#39;</span><span class="p">:</span> <span class="k">None</span><span class="err">}</span><span class="p">)</span>
+<div class="codehilite"><pre><span></span><span class="err">newtest.add_device(&#39;8739&#39;,</span>
+<span class="err">                   device_type = &#39;STATION&#39;,</span>
+<span class="err">                   location = &#39;Europe/London&#39;,</span>
+<span class="err">                   pm_sensor = &#39;PMS5003&#39;,</span>
+<span class="err">                   device_history = &#39;8739&#39;,</span>
+<span class="err">                   device_files = {&#39;device_id&#39;: &#39;8739&#39;, </span>
+<span class="err">                                   &#39;frequency&#39;: &#39;1Min&#39;,</span>
+<span class="err">                                   &#39;source&#39;: &#39;api&#39;,</span>
+<span class="err">                                   &#39;min_date&#39;: &#39;2019-06-18&#39;,</span>
+<span class="err">                                   &#39;max_date&#39;: None})</span>
 </pre></div>
 
 <ul>
 <li>Data of another device (reference equipment in this case), with local csv file, with frequency of 15Min. Extra information has to be given so that we can process the units of the different channels, the time index format and the location.</li>
 </ul>
-<div class="codehilite"><pre><span></span><span class="n">newtest</span><span class="p">.</span><span class="n">add_reference</span><span class="p">(</span><span class="s1">&#39;CITY_COUNCIL&#39;</span><span class="p">,</span> 
-                  <span class="n">fileNameRaw</span> <span class="o">=</span> <span class="s1">&#39;CITY_COUNCIL.csv&#39;</span><span class="p">,</span> 
-                  <span class="k">index</span> <span class="o">=</span> <span class="err">{</span><span class="s1">&#39;name&#39;</span> <span class="p">:</span> <span class="s1">&#39;Time&#39;</span><span class="p">,</span>
-                           <span class="s1">&#39;format&#39;</span> <span class="p">:</span> <span class="s1">&#39;%Y-%m-%d %H:%M:%S&#39;</span><span class="p">,</span>
-                           <span class="s1">&#39;frequency&#39;</span> <span class="p">:</span> <span class="s1">&#39;15Min&#39;</span><span class="err">}</span><span class="p">,</span> 
-                  <span class="n">channels</span> <span class="o">=</span> <span class="err">{</span><span class="s1">&#39;pollutants&#39;</span> <span class="p">:</span> <span class="p">(</span><span class="s1">&#39;CO&#39;</span><span class="p">,</span> <span class="s1">&#39;SO2&#39;</span><span class="p">,</span> <span class="s1">&#39;NO2&#39;</span><span class="p">,</span> <span class="s1">&#39;NO&#39;</span><span class="p">,</span> <span class="s1">&#39;NOX&#39;</span><span class="p">),</span> 
-                              <span class="s1">&#39;units&#39;</span> <span class="p">:</span> <span class="p">(</span><span class="s1">&#39;ppm&#39;</span><span class="p">,</span> <span class="s1">&#39;ppb&#39;</span><span class="p">,</span> <span class="s1">&#39;ppb&#39;</span><span class="p">,</span> <span class="s1">&#39;ppb&#39;</span><span class="p">,</span> <span class="s1">&#39;ppb&#39;</span><span class="p">),</span>
-                              <span class="s1">&#39;names&#39;</span> <span class="p">:</span> <span class="p">(</span><span class="s1">&#39;CO_ppm&#39;</span><span class="p">,</span> <span class="s1">&#39;SO2_ppb&#39;</span><span class="p">,</span> <span class="s1">&#39;NO2_ppb&#39;</span><span class="p">,</span> <span class="s1">&#39;NO_ppb&#39;</span><span class="p">,</span> <span class="s1">&#39;NOx_ppb&#39;</span><span class="p">)</span>
-                             <span class="err">}</span><span class="p">,</span>
-                  <span class="k">location</span> <span class="o">=</span> <span class="s1">&#39;Europe/Dublin&#39;</span><span class="p">)</span>
+<div class="codehilite"><pre><span></span><span class="err">newtest.add_reference(&#39;CITY_COUNCIL&#39;, </span>
+<span class="err">                  fileNameRaw = &#39;CITY_COUNCIL.csv&#39;, </span>
+<span class="err">                  index = {&#39;name&#39; : &#39;Time&#39;,</span>
+<span class="err">                           &#39;format&#39; : &#39;%Y-%m-%d %H:%M:%S&#39;,</span>
+<span class="err">                           &#39;frequency&#39; : &#39;15Min&#39;}, </span>
+<span class="err">                  channels = {&#39;pollutants&#39; : (&#39;CO&#39;, &#39;SO2&#39;, &#39;NO2&#39;, &#39;NO&#39;, &#39;NOX&#39;), </span>
+<span class="err">                              &#39;units&#39; : (&#39;ppm&#39;, &#39;ppb&#39;, &#39;ppb&#39;, &#39;ppb&#39;, &#39;ppb&#39;),</span>
+<span class="err">                              &#39;names&#39; : (&#39;CO_ppm&#39;, &#39;SO2_ppb&#39;, &#39;NO2_ppb&#39;, &#39;NO_ppb&#39;, &#39;NOx_ppb&#39;)</span>
+<span class="err">                             },</span>
+<span class="err">                  location = &#39;Europe/Dublin&#39;)</span>
 </pre></div>
 
 <ul>
 <li>Data of another device (reference equipment in this case), with local csv file, with frequency of 1 day.</li>
 </ul>
-<div class="codehilite"><pre><span></span><span class="n">newtest</span><span class="p">.</span><span class="n">add_reference</span><span class="p">(</span><span class="s1">&#39;CITY_COUNCIL_DAY&#39;</span><span class="p">,</span> 
-                  <span class="n">fileNameRaw</span> <span class="o">=</span> <span class="s1">&#39;CITY_COUNCIL_DAY.csv&#39;</span><span class="p">,</span> 
-                  <span class="k">index</span> <span class="o">=</span> <span class="err">{</span><span class="s1">&#39;name&#39;</span> <span class="p">:</span> <span class="s1">&#39;Time&#39;</span><span class="p">,</span>
-                           <span class="s1">&#39;format&#39;</span> <span class="p">:</span> <span class="s1">&#39;%d/%m/%Y&#39;</span><span class="p">,</span>
-                           <span class="s1">&#39;frequency&#39;</span> <span class="p">:</span> <span class="s1">&#39;1D&#39;</span><span class="err">}</span><span class="p">,</span> 
-                  <span class="n">channels</span> <span class="o">=</span> <span class="err">{</span><span class="s1">&#39;pollutants&#39;</span> <span class="p">:</span> <span class="p">[</span><span class="s1">&#39;PM10&#39;</span><span class="p">],</span> 
-                              <span class="s1">&#39;units&#39;</span> <span class="p">:</span> <span class="p">[</span><span class="s1">&#39;ugm3&#39;</span><span class="p">],</span>
-                              <span class="s1">&#39;names&#39;</span> <span class="p">:</span> <span class="p">[</span><span class="s1">&#39;PM10&#39;</span><span class="p">]</span>
-                             <span class="err">}</span><span class="p">,</span>
-                  <span class="k">location</span> <span class="o">=</span> <span class="s1">&#39;Europe/Dublin&#39;</span><span class="p">)</span>
+<div class="codehilite"><pre><span></span><span class="err">newtest.add_reference(&#39;CITY_COUNCIL_DAY&#39;, </span>
+<span class="err">                  fileNameRaw = &#39;CITY_COUNCIL_DAY.csv&#39;, </span>
+<span class="err">                  index = {&#39;name&#39; : &#39;Time&#39;,</span>
+<span class="err">                           &#39;format&#39; : &#39;%d/%m/%Y&#39;,</span>
+<span class="err">                           &#39;frequency&#39; : &#39;1D&#39;}, </span>
+<span class="err">                  channels = {&#39;pollutants&#39; : [&#39;PM10&#39;], </span>
+<span class="err">                              &#39;units&#39; : [&#39;ugm3&#39;],</span>
+<span class="err">                              &#39;names&#39; : [&#39;PM10&#39;]</span>
+<span class="err">                             },</span>
+<span class="err">                  location = &#39;Europe/Dublin&#39;)</span>
 </pre></div>
 
 <h4 id="process-everything">Process everything<a class="headerlink" href="#process-everything" title="Permanent link">Link</a></h4>
 <p>Once we have all the information, we can then process the files:</p>
-<div class="codehilite"><pre><span></span><span class="n">newtest</span><span class="p">.</span><span class="n">process_files</span><span class="p">()</span>
+<div class="codehilite"><pre><span></span><span class="err">newtest.process_files()</span>
 </pre></div>
 
 <h2 id="devices-history-and-calibration">Devices history and calibration<a class="headerlink" href="#devices-history-and-calibration" title="Permanent link">Link</a></h2>
-<p>Each device can have different sensors throughout it's life and, for each sensor, we can have different calibration parameters. These two sets of information are stored in <code class="codehilite"><span class="k">data</span><span class="o">/</span><span class="n">interim</span></code>. </p>
+<p>Each device can have different sensors throughout it's life and, for each sensor, we can have different calibration parameters. These two sets of information are stored in <code class="codehilite"><span class="err">data/interim</span></code>. </p>
 <h3 id="devices-history">Devices History<a class="headerlink" href="#devices-history" title="Permanent link">Link</a></h3>
-<p>Stored in <code class="codehilite"><span class="k">data</span><span class="o">/</span><span class="n">interim</span><span class="o">/</span><span class="n">sensorData</span><span class="p">.</span><span class="n">yaml</span></code>, it's a file to be manually filled with all the devices ID's you want to manage. It contains basic references of the internal sensors that can be later on used in the different calibration files. An example of a Smart Citizen Station is shown below. Since the device can have different sensors at different times, the dates are also important. The ID (below <code class="codehilite"><span class="mi">4773</span></code>), should be the same as in the test defined above in the field <code class="codehilite"><span class="n">device_history</span></code>:</p>
-<div class="codehilite"><pre><span></span><span class="s1">&#39;4773&#39;</span><span class="p">:</span>
-  <span class="n">hardware_id</span><span class="p">:</span> <span class="s1">&#39;8ce207d2-504e4b4b-372e314a-ff03180c&#39;</span>
-  <span class="n">sck_id</span><span class="p">:</span> <span class="s1">&#39;SCK2118080014&#39;</span>
-  <span class="n">id</span><span class="p">:</span> <span class="s1">&#39;SCS21001&#39;</span>
-  <span class="k">type</span><span class="p">:</span> <span class="s1">&#39;station&#39;</span>
-  <span class="n">mac</span><span class="p">:</span> <span class="s1">&#39;07D7&#39;</span>
-  <span class="n">internal_ref</span><span class="p">:</span> <span class="s1">&#39;DEMO&#39;</span>
-  <span class="n">date_from</span><span class="p">:</span> <span class="s1">&#39;2018-09-17&#39;</span>
-  <span class="n">date_to</span><span class="p">:</span> <span class="s1">&#39;2018-09-21&#39;</span>
-  <span class="n">gas_pro_board</span><span class="p">:</span> 
-    <span class="n">CO</span><span class="p">:</span> <span class="mi">162581720</span>
-    <span class="n">NO2</span><span class="p">:</span> <span class="mi">202160405</span>
-    <span class="n">O3</span><span class="p">:</span> <span class="mi">204160159</span>
-    <span class="n">slots</span><span class="p">:</span> <span class="o">!!</span><span class="n">python</span><span class="o">/</span><span class="n">tuple</span> <span class="p">[</span><span class="n">CO</span><span class="p">,</span> <span class="n">NO2</span><span class="p">,</span> <span class="n">O3</span><span class="p">]</span>
-  <span class="n">pm_board</span><span class="p">:</span>
-    <span class="n">PMS5003_1</span><span class="p">:</span> <span class="mi">2017123000701</span>
-    <span class="n">PMS5003_2</span><span class="p">:</span> <span class="mi">2017123000703</span>
+<p>Stored in <code class="codehilite"><span class="err">data/interim/sensorData.yaml</span></code>, it's a file to be manually filled with all the devices ID's you want to manage. It contains basic references of the internal sensors that can be later on used in the different calibration files. An example of a Smart Citizen Station is shown below. Since the device can have different sensors at different times, the dates are also important. The ID (below <code class="codehilite"><span class="err">4773</span></code>), should be the same as in the test defined above in the field <code class="codehilite"><span class="err">device_history</span></code>:</p>
+<div class="codehilite"><pre><span></span><span class="err">&#39;4773&#39;:</span>
+<span class="err">  hardware_id: &#39;8ce207d2-504e4b4b-372e314a-ff03180c&#39;</span>
+<span class="err">  sck_id: &#39;SCK2118080014&#39;</span>
+<span class="err">  id: &#39;SCS21001&#39;</span>
+<span class="err">  type: &#39;station&#39;</span>
+<span class="err">  mac: &#39;07D7&#39;</span>
+<span class="err">  internal_ref: &#39;DEMO&#39;</span>
+<span class="err">  date_from: &#39;2018-09-17&#39;</span>
+<span class="err">  date_to: &#39;2018-09-21&#39;</span>
+<span class="err">  gas_pro_board: </span>
+<span class="err">    CO: 162581720</span>
+<span class="err">    NO2: 202160405</span>
+<span class="err">    O3: 204160159</span>
+<span class="err">    slots: !!python/tuple [CO, NO2, O3]</span>
+<span class="err">  pm_board:</span>
+<span class="err">    PMS5003_1: 2017123000701</span>
+<span class="err">    PMS5003_2: 2017123000703</span>
 </pre></div>
 
 <h3 id="devices-calibration">Devices calibration<a class="headerlink" href="#devices-calibration" title="Permanent link">Link</a></h3>
-<p>Stored in <code class="codehilite"><span class="k">data</span><span class="o">/</span><span class="n">interim</span><span class="o">/</span><span class="n">CalibrationData</span><span class="o">/</span></code>, each json file contains a descriptor file for each sensor calibration data. An example for Alphasense's Electrochemical sensors is shown below:</p>
-<div class="codehilite"><pre><span></span><span class="err">{</span><span class="ss">&quot;Serial No&quot;</span><span class="p">:</span> <span class="ss">&quot;162031254&quot;</span><span class="p">,</span> <span class="ss">&quot;Target 2&quot;</span><span class="p">:</span> <span class="ss">&quot;na&quot;</span><span class="p">,</span> <span class="ss">&quot;Target 1&quot;</span><span class="p">:</span> <span class="ss">&quot;CO&quot;</span><span class="p">,</span> <span class="p">,</span> <span class="ss">&quot;Sensitivity 1&quot;</span><span class="p">:</span> <span class="ss">&quot;568.3&quot;</span><span class="p">,</span> <span class="ss">&quot;Sensitivity 2&quot;</span><span class="p">:</span> <span class="ss">&quot;0&quot;</span><span class="p">,</span> <span class="ss">&quot;Zero Current&quot;</span><span class="p">:</span> <span class="ss">&quot;-34&quot;</span><span class="p">,</span> <span class="ss">&quot;Aux Zero Current&quot;</span><span class="p">:</span> <span class="ss">&quot;-20.8&quot;</span><span class="err">}</span>
-<span class="err">{</span><span class="ss">&quot;Serial No&quot;</span><span class="p">:</span> <span class="ss">&quot;162031257&quot;</span><span class="p">,</span> <span class="ss">&quot;Target 2&quot;</span><span class="p">:</span> <span class="ss">&quot;na&quot;</span><span class="p">,</span> <span class="ss">&quot;Target 1&quot;</span><span class="p">:</span> <span class="ss">&quot;CO&quot;</span><span class="p">,</span> <span class="p">,</span> <span class="ss">&quot;Sensitivity 1&quot;</span><span class="p">:</span> <span class="ss">&quot;493.1&quot;</span><span class="p">,</span> <span class="ss">&quot;Sensitivity 2&quot;</span><span class="p">:</span> <span class="ss">&quot;0&quot;</span><span class="p">,</span> <span class="ss">&quot;Zero Current&quot;</span><span class="p">:</span> <span class="ss">&quot;-69.4&quot;</span><span class="p">,</span> <span class="ss">&quot;Aux Zero Current&quot;</span><span class="p">:</span> <span class="ss">&quot;-18.6&quot;</span><span class="err">}</span>
+<p>Stored in <code class="codehilite"><span class="err">data/interim/CalibrationData/</span></code>, each json file contains a descriptor file for each sensor calibration data. An example for Alphasense's Electrochemical sensors is shown below:</p>
+<div class="codehilite"><pre><span></span><span class="err">{&quot;Serial No&quot;: &quot;162031254&quot;, &quot;Target 2&quot;: &quot;na&quot;, &quot;Target 1&quot;: &quot;CO&quot;, , &quot;Sensitivity 1&quot;: &quot;568.3&quot;, &quot;Sensitivity 2&quot;: &quot;0&quot;, &quot;Zero Current&quot;: &quot;-34&quot;, &quot;Aux Zero Current&quot;: &quot;-20.8&quot;}</span>
+<span class="err">{&quot;Serial No&quot;: &quot;162031257&quot;, &quot;Target 2&quot;: &quot;na&quot;, &quot;Target 1&quot;: &quot;CO&quot;, , &quot;Sensitivity 1&quot;: &quot;493.1&quot;, &quot;Sensitivity 2&quot;: &quot;0&quot;, &quot;Zero Current&quot;: &quot;-69.4&quot;, &quot;Aux Zero Current&quot;: &quot;-18.6&quot;}</span>
 </pre></div>
 
 <div class="admonition info">
@@ -3873,7 +3873,7 @@
 <p>Currently, we store unique calibrations only for Alphasense sensors. This calibration is provided by the manufacturer directly and stored in this file.</p>
 </div>
 <h2 id="load-the-data">Load the data<a class="headerlink" href="#load-the-data" title="Permanent link">Link</a></h2>
-<p>We have two main methods to load data into the framework: a test (coming from sd card data or API), and the API, directly. Run the following piece of code in your <code class="codehilite"><span class="n">notebook</span></code>:</p>
+<p>We have two main methods to load data into the framework: a test (coming from sd card data or API), and the API, directly. Run the following piece of code in your <code class="codehilite"><span class="err">notebook</span></code>:</p>
 <div class="codehilite"><pre><span></span><span class="nf">%run</span> <span class="n">src_ipynb</span><span class="o">/</span><span class="n">init</span><span class="p">.</span><span class="n">ipynb</span>
 </pre></div>
 
@@ -3884,7 +3884,7 @@
 <p>This will open an interface to load data from either source, explained below.</p>
 <h3 id="loading-data-from-a-test">Loading data from a test<a class="headerlink" href="#loading-data-from-a-test" title="Permanent link">Link</a></h3>
 <p><img alt="" src="https://i.imgur.com/ymKMWMu.png" /></p>
-<p>If you have local tests created as defined <a href="/Sensor Analysis Framework/guides/Organise your data/#create-a-test">here</a>, the tests will appear in the selection box. You can select as many as you want, and select the <code class="codehilite"><span class="n">target</span> <span class="n">frequency</span></code> and what to do with <code class="codehilite"><span class="n">NaN</span></code> values.</p>
+<p>If you have local tests created as defined <a href="/Sensor Analysis Framework/guides/Organise your data/#create-a-test">here</a>, the tests will appear in the selection box. You can select as many as you want, and select the <code class="codehilite"><span class="err">target frequency</span></code> and what to do with <code class="codehilite"><span class="err">NaN</span></code> values.</p>
 <div class="admonition warning">
 <p class="admonition-title">Decide this now</p>
 <p>It is better to decide this now and not when we create the test. Better to have the information available always and process it each time on load than vice-versa.</p>
@@ -3901,58 +3901,58 @@
 <p>Save API data: will try to cache this data in the disk for later use.</p>
 </li>
 </ul>
-<p>Then we can click on <code class="codehilite"><span class="k">Load</span></code> and it will proceed to load your test. A normal output is shown below:</p>
-<div class="codehilite"><pre><span></span><span class="n">Test</span> <span class="k">Load</span>
-<span class="n">Loading</span> <span class="n">test</span> <span class="mi">2018</span><span class="o">-</span><span class="mi">01</span><span class="n">_INT_BOLOGNA_RELEASE</span>
-<span class="k">Comment</span><span class="p">:</span> <span class="n">Pre</span> <span class="n">Bologna</span> <span class="n">release</span> <span class="n">validation</span> <span class="k">with</span> <span class="mi">6</span> <span class="n">sensors</span> <span class="p">(</span><span class="mi">4</span> <span class="n">kits</span> <span class="k">and</span> <span class="mi">2</span> <span class="n">alphasenses</span><span class="p">)</span>
-<span class="n">Device</span> <span class="n">ID</span> <span class="n">SCK73FD</span>
-<span class="k">No</span> <span class="n">metadata</span> <span class="k">found</span> <span class="o">-</span> <span class="n">skipping</span>
-<span class="n">Kit</span> <span class="n">SCK73FD</span> <span class="n">located</span> <span class="n">Europe</span><span class="o">/</span><span class="n">Madrid</span>
-<span class="n">Kit</span> <span class="n">SCK73FD</span> <span class="n">has</span> <span class="n">been</span> <span class="n">loaded</span>
-<span class="p">...</span>
+<p>Then we can click on <code class="codehilite"><span class="err">Load</span></code> and it will proceed to load your test. A normal output is shown below:</p>
+<div class="codehilite"><pre><span></span><span class="err">Test Load</span>
+<span class="err">Loading test 2018-01_INT_BOLOGNA_RELEASE</span>
+<span class="c">Comment: Pre Bologna release validation with 6 sensors (4 kits and 2 alphasenses)</span>
+<span class="err">Device ID SCK73FD</span>
+<span class="err">No metadata found - skipping</span>
+<span class="err">Kit SCK73FD located Europe/Madrid</span>
+<span class="err">Kit SCK73FD has been loaded</span>
+<span class="err">...</span>
 </pre></div>
 
 <div class="admonition info">
 <p class="admonition-title">Pro-tip</p>
-<p>If you have a lot of tests, you can click on <code class="codehilite"><span class="n">Preview</span></code> with one test selected and you can preview it's comment.</p>
-<div class="codehilite"><pre><span></span><span class="n">Test</span> <span class="n">Preview</span>
-<span class="n">Loading</span> <span class="n">test</span> <span class="mi">2018</span><span class="o">-</span><span class="mi">02</span><span class="n">_EXT_BOLOGNA_TESTS_MA</span>
-<span class="k">Comment</span><span class="p">:</span> <span class="k">First</span> <span class="n">iteration</span> <span class="k">of</span> <span class="n">iScape</span> <span class="n">Station</span> <span class="k">in</span> <span class="n">Feb</span><span class="o">-</span><span class="mi">2018</span> <span class="k">in</span> <span class="n">Bologna</span><span class="p">.</span> <span class="n">Two</span> <span class="n">stations</span> <span class="k">and</span> <span class="n">two</span> <span class="n">kits</span> <span class="k">with</span> <span class="n">chimney</span> <span class="n">styled</span> <span class="n">casing</span><span class="p">.</span>
+<p>If you have a lot of tests, you can click on <code class="codehilite"><span class="err">Preview</span></code> with one test selected and you can preview it's comment.</p>
+<div class="codehilite"><pre><span></span><span class="err">Test Preview</span>
+<span class="err">Loading test 2018-02_EXT_BOLOGNA_TESTS_MA</span>
+<span class="c">Comment: First iteration of iScape Station in Feb-2018 in Bologna. Two stations and two kits with chimney styled casing.</span>
 </pre></div>
 
 </div>
 <h3 id="loading-data-from-the-api">Loading data from the API<a class="headerlink" href="#loading-data-from-the-api" title="Permanent link">Link</a></h3>
-<p>In this case, we can input a comma-separated list of devices in the <code class="codehilite"><span class="n">Kit</span> <span class="n">List</span></code> field. The devices are the devices IDs from: <code class="codehilite"><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">smartcitizen</span><span class="p">.</span><span class="n">me</span><span class="o">/</span><span class="n">kits</span><span class="o">/</span><span class="mi">1234</span></code>. An example is shown below:</p>
+<p>In this case, we can input a comma-separated list of devices in the <code class="codehilite"><span class="err">Kit List</span></code> field. The devices are the devices IDs from: <code class="codehilite"><span class="c">https://smartcitizen.me/kits/1234</span></code>. An example is shown below:</p>
 <p><img alt="" src="https://i.imgur.com/d0azsMs.png" /></p>
-<p>You will need to input a name for the test (note that this is only creating it for the session, but it won't save it), and select the frequency, <code class="codehilite"><span class="n">NaN</span></code> processing and date range. When you click load, you should see something like this:</p>
-<div class="codehilite"><pre><span></span><span class="n">HELLO_WORLD</span>
-<span class="n">Loading</span> <span class="n">device</span> <span class="mi">5261</span> <span class="k">from</span> <span class="n">API</span>
-<span class="n">Kit</span> <span class="n">ID</span> <span class="mi">19</span>
-    <span class="k">From</span> <span class="nb">Date</span> <span class="mi">2019</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">01</span> <span class="k">to</span> <span class="nb">Date</span> <span class="mi">2019</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">10</span>
-    <span class="n">Device</span> <span class="n">located</span> <span class="k">in</span> <span class="n">Europe</span><span class="o">/</span><span class="n">Dublin</span>
-    <span class="n">Sensor</span> <span class="n">IDs</span>
-    <span class="p">[</span><span class="mi">14</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">65</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">96</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">79</span><span class="p">,</span> <span class="mi">53</span><span class="p">,</span> <span class="mi">58</span><span class="p">,</span> <span class="mi">62</span><span class="p">,</span> <span class="mi">61</span><span class="p">,</span> <span class="mi">68</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span> <span class="mi">73</span><span class="p">,</span> <span class="mi">72</span><span class="p">,</span> <span class="mi">71</span><span class="p">,</span> <span class="mi">89</span><span class="p">,</span> <span class="mi">88</span><span class="p">,</span> <span class="mi">87</span><span class="p">,</span> <span class="mi">99</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">101</span><span class="p">,</span> <span class="mi">104</span><span class="p">,</span> <span class="mi">102</span><span class="p">,</span> <span class="mi">103</span><span class="p">,</span> <span class="mi">77</span><span class="p">,</span> <span class="mi">76</span><span class="p">,</span> <span class="mi">75</span><span class="p">,</span> <span class="mi">105</span><span class="p">,</span> <span class="mi">106</span><span class="p">,</span> <span class="mi">107</span><span class="p">,</span> <span class="mi">110</span><span class="p">,</span> <span class="mi">108</span><span class="p">,</span> <span class="mi">109</span><span class="p">,</span> <span class="mi">56</span><span class="p">,</span> <span class="mi">55</span><span class="p">]</span>
-    <span class="n">Device</span> <span class="n">ID</span> <span class="n">says</span> <span class="n">it</span> <span class="n">had</span> <span class="n">alphasense</span> <span class="n">sensors</span><span class="p">,</span> <span class="n">loading</span> <span class="n">them</span><span class="p">...</span>
-    <span class="n">Loading</span> <span class="n">Sensor</span> <span class="n">Done</span>
-    <span class="p">...</span>
+<p>You will need to input a name for the test (note that this is only creating it for the session, but it won't save it), and select the frequency, <code class="codehilite"><span class="err">NaN</span></code> processing and date range. When you click load, you should see something like this:</p>
+<div class="codehilite"><pre><span></span><span class="err">HELLO_WORLD</span>
+<span class="err">Loading device 5261 from API</span>
+<span class="err">Kit ID 19</span>
+<span class="err">    From Date 2019-08-01 to Date 2019-08-10</span>
+<span class="err">    Device located in Europe/Dublin</span>
+<span class="err">    Sensor IDs</span>
+<span class="err">    [14, 10, 65, 64, 96, 80, 79, 53, 58, 62, 61, 68, 67, 73, 72, 71, 89, 88, 87, 99, 100, 101, 104, 102, 103, 77, 76, 75, 105, 106, 107, 110, 108, 109, 56, 55]</span>
+<span class="err">    Device ID says it had alphasense sensors, loading them...</span>
+<span class="err">    Loading Sensor Done</span>
+<span class="err">    ...</span>
 </pre></div>
 
 <p>Note that if the device ID is in the <a href="/Sensor Analysis Framework/guides/Organise your data/#devices-history">devices history</a>, it will also load the calibration data for you.</p>
 <div class="admonition info">
 <p class="admonition-title">Pro-tip</p>
-<p>If you want to include your API devices in a test that you created, you can select it in the <code class="codehilite"><span class="n">Merge</span> <span class="k">with</span><span class="p">...</span></code> drop-down. Remember that this won't update the test.</p>
+<p>If you want to include your API devices in a test that you created, you can select it in the <code class="codehilite"><span class="err">Merge with...</span></code> drop-down. Remember that this won't update the test.</p>
 </div>
 <h2 id="modify-data">Modify data<a class="headerlink" href="#modify-data" title="Permanent link">Link</a></h2>
 <p>The data structure is based on a python dictionary, which contains a lot of information regarding the devices. The devices in a test can be accesed with:</p>
-<div class="codehilite"><pre><span></span><span class="n">print</span> <span class="p">(</span><span class="n">records</span><span class="p">.</span><span class="n">readings</span><span class="p">[</span><span class="s1">&#39;TEST_NAME&#39;</span><span class="p">][</span><span class="s1">&#39;devices&#39;</span><span class="p">].</span><span class="n">keys</span><span class="p">())</span>
+<div class="codehilite"><pre><span></span><span class="err">print (records.readings[&#39;TEST_NAME&#39;][&#39;devices&#39;].keys())</span>
 </pre></div>
 
 <p>The data for a particular device can be accessed like:</p>
-<div class="codehilite"><pre><span></span><span class="n">print</span> <span class="p">(</span><span class="n">records</span><span class="p">.</span><span class="n">readings</span><span class="p">[</span><span class="s1">&#39;TEST_NAME&#39;</span><span class="p">][</span><span class="s1">&#39;devices&#39;</span><span class="p">][</span><span class="s1">&#39;DEVICE_NAME&#39;</span><span class="p">][</span><span class="s1">&#39;data&#39;</span><span class="p">])</span>
+<div class="codehilite"><pre><span></span><span class="err">print (records.readings[&#39;TEST_NAME&#39;][&#39;devices&#39;][&#39;DEVICE_NAME&#39;][&#39;data&#39;])</span>
 </pre></div>
 
 <p>In it, we have a <a href="http://www.pandas.org">pandas</a> dataframe. We can check the columns in it by:</p>
-<div class="codehilite"><pre><span></span><span class="n">print</span> <span class="p">(</span><span class="n">records</span><span class="p">.</span><span class="n">readings</span><span class="p">[</span><span class="s1">&#39;TEST_NAME&#39;</span><span class="p">][</span><span class="s1">&#39;devices&#39;</span><span class="p">][</span><span class="s1">&#39;DEVICE_NAME&#39;</span><span class="p">][</span><span class="s1">&#39;data&#39;</span><span class="p">].</span><span class="n">columns</span><span class="p">)</span>
+<div class="codehilite"><pre><span></span><span class="err">print (records.readings[&#39;TEST_NAME&#39;][&#39;devices&#39;][&#39;DEVICE_NAME&#39;][&#39;data&#39;].columns)</span>
 </pre></div>
 
 <p>We can manipulate the dataframe at will. However, we have added a handy calculator:</p>
@@ -3961,22 +3961,22 @@
 
 <p>Here you should see something like:</p>
 <p><img alt="" src="https://i.imgur.com/6C5OShB.png" /></p>
-<p>When you select a test, the devices will show in the selection box. If you select multiple devices, the common channels will be selectable in the drop down below. You can select each term (up to 4) and create a formula in the bottom-right text box. This accepts common expressions, as well as numpy expressions. An example is shown in the image above. When you hit <code class="codehilite"><span class="n">Calculate</span></code>, you should see:</p>
-<div class="codehilite"><pre><span></span><span class="n">Formula</span> <span class="n">New_Channel</span> <span class="n">Added</span> <span class="k">in</span> <span class="n">test</span> <span class="mi">2018</span><span class="o">-</span><span class="mi">01</span><span class="n">_INT_BOLOGNA_RELEASE</span><span class="p">,</span> <span class="n">device</span> <span class="n">SCK73FD</span>
+<p>When you select a test, the devices will show in the selection box. If you select multiple devices, the common channels will be selectable in the drop down below. You can select each term (up to 4) and create a formula in the bottom-right text box. This accepts common expressions, as well as numpy expressions. An example is shown in the image above. When you hit <code class="codehilite"><span class="err">Calculate</span></code>, you should see:</p>
+<div class="codehilite"><pre><span></span><span class="err">Formula New_Channel Added in test 2018-01_INT_BOLOGNA_RELEASE, device SCK73FD</span>
 </pre></div>
 
 <p>And if we list the columns in the device, we should see:</p>
-<div class="codehilite"><pre><span></span><span class="k">Index</span><span class="p">([</span><span class="s1">&#39;Battery-%&#39;</span><span class="p">,</span> <span class="s1">&#39;Input voltage-V&#39;</span><span class="p">,</span> <span class="s1">&#39;Noise-dBc&#39;</span><span class="p">,</span> <span class="s1">&#39;Humidity-%&#39;</span><span class="p">,</span>
-       <span class="s1">&#39;Temperature-C&#39;</span><span class="p">,</span> <span class="s1">&#39;Light-Lux&#39;</span><span class="p">,</span> <span class="s1">&#39;Carbon monoxide-kOhm/ppm&#39;</span><span class="p">,</span>
-       <span class="s1">&#39;Carbon monoxide heat current-mA&#39;</span><span class="p">,</span>
-       <span class="s1">&#39;Carbon monoxide heat supply voltage-mV&#39;</span><span class="p">,</span>
-       <span class="s1">&#39;Carbon monoxide heat drop voltage-mV&#39;</span><span class="p">,</span>
-       <span class="s1">&#39;Carbon monoxide load resistance-Ohms&#39;</span><span class="p">,</span> <span class="s1">&#39;Nitrogen dioxide-kOhm/ppm&#39;</span><span class="p">,</span>
-       <span class="s1">&#39;Nitrogen dioxide heat current-mA&#39;</span><span class="p">,</span>
-       <span class="s1">&#39;Nitrogen dioxide heat supply voltage-mV&#39;</span><span class="p">,</span>
-       <span class="s1">&#39;Nitrogen dioxide heat drop voltage-mV&#39;</span><span class="p">,</span>
-       <span class="s1">&#39;Nitrogen dioxide load resistance-Ohms&#39;</span><span class="p">,</span> <span class="s1">&#39;New_Channel&#39;</span><span class="p">],</span>
-      <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;object&#39;</span><span class="p">)</span>
+<div class="codehilite"><pre><span></span><span class="err">Index([&#39;Battery-%&#39;, &#39;Input voltage-V&#39;, &#39;Noise-dBc&#39;, &#39;Humidity-%&#39;,</span>
+<span class="err">       &#39;Temperature-C&#39;, &#39;Light-Lux&#39;, &#39;Carbon monoxide-kOhm/ppm&#39;,</span>
+<span class="err">       &#39;Carbon monoxide heat current-mA&#39;,</span>
+<span class="err">       &#39;Carbon monoxide heat supply voltage-mV&#39;,</span>
+<span class="err">       &#39;Carbon monoxide heat drop voltage-mV&#39;,</span>
+<span class="err">       &#39;Carbon monoxide load resistance-Ohms&#39;, &#39;Nitrogen dioxide-kOhm/ppm&#39;,</span>
+<span class="err">       &#39;Nitrogen dioxide heat current-mA&#39;,</span>
+<span class="err">       &#39;Nitrogen dioxide heat supply voltage-mV&#39;,</span>
+<span class="err">       &#39;Nitrogen dioxide heat drop voltage-mV&#39;,</span>
+<span class="err">       &#39;Nitrogen dioxide load resistance-Ohms&#39;, &#39;New_Channel&#39;],</span>
+<span class="err">      dtype=&#39;object&#39;)</span>
 </pre></div>
 
 <h2 id="export-data">Export data<a class="headerlink" href="#export-data" title="Permanent link">Link</a></h2>
@@ -3986,25 +3986,26 @@
 
 <p>You should see something like this:</p>
 <p><img alt="" src="https://i.imgur.com/ahniTGT.png" /></p>
-<p>In the drop down you can select the desired test. Below, you can select one or many devices, and we will create a CSV file for each. Input a path below and hit <code class="codehilite"><span class="n">Export</span> <span class="n">file</span></code> to generate them.</p>
+<p>In the drop down you can select the desired test. Below, you can select one or many devices, and we will create a CSV file for each. Input a path below and hit <code class="codehilite"><span class="err">Export file</span></code> to generate them.</p>
 <p>Some options are available:</p>
 <ul>
-<li>Copy to test folder: it will export the csv to the <code class="codehilite"><span class="o">/</span><span class="n">processed</span></code> folder in the test</li>
-<li>Include All / Raw / Processed: Options to include all the channels in your test, or only the ones tagged as <code class="codehilite"><span class="n">raw</span></code> or <code class="codehilite"><span class="n">processed</span></code> from the descriptor file in: <code class="codehilite"><span class="k">data</span><span class="o">/</span><span class="n">interim</span><span class="o">/</span><span class="n">sensorNamesExport</span><span class="p">.</span><span class="n">json</span></code></li>
+<li>Copy to test folder: it will export the csv to the <code class="codehilite"><span class="err">/processed</span></code> folder in the test</li>
+<li>Include All / Raw / Processed: Options to include all the channels in your test, or only the ones tagged as <code class="codehilite"><span class="err">raw</span></code> or <code class="codehilite"><span class="k">proc</span><span class="nb">es</span><span class="nv">sed</span></code> from the descriptor file in: <code class="codehilite"><span class="err">data/interim/sensorNamesExport.json</span></code></li>
 <li>Rename channels: if you want to rename channels with the descriptor file mentioned above</li>
 </ul>
 <div class="admonition example">
 <p class="admonition-title">Step by step</p>
 <p>If you want to download a lot of devices from the API, you can do this:</p>
 <ol>
-<li>Input the URLs in the <code class="codehilite"><span class="n">Kit</span> <span class="n">List</span></code> Box in the <code class="codehilite"><span class="k">Data</span> <span class="n">Import</span> <span class="n">section</span></code></li>
-<li>Input a <code class="codehilite"><span class="n">test</span> <span class="n">name</span></code></li>
+<li>Input the URLs in the <code class="codehilite"><span class="err">Kit List</span></code> Box in the <code class="codehilite"><span class="err">Data Import section</span></code></li>
+<li>Input a <code class="codehilite"><span class="err">test name</span></code></li>
 <li>Go to the export section and export the data for all the devices. Leave All channels marked</li>
 <li>That's it!</li>
 </ol>
 </div>
                 
                   
+                
                 
               
               
@@ -4128,7 +4129,7 @@
       
     </div>
     
-      <script src="../../../assets/javascripts/application.a8b5e56f.js"></script>
+      <script src="../../../assets/javascripts/application.808e90bb.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:"../../.."}})</script>
       

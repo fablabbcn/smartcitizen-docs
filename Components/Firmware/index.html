@@ -38,7 +38,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.5.0">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
     
     
       
@@ -62,7 +62,7 @@
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
@@ -3743,38 +3743,38 @@
 <p>The board is capable of storing the recorded data offline on its internal dedicated flash memory of 8MB and later publish this over Wi-Fi connectivity provided by an Espressif ESP8266. Data is published using MQTT messages to the Smart Citizen Platform. NTP is used for syncing the built-in RTC. For long term offline storage, the board provides a standard microSD socket where card in the orders of GB can be employed. That ensures extended periods of data in the order of decades can be stored.</p>
 <h3 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">Link</a></h3>
 <p>The board firmware is fully customizable without requiring any changes to the core software. That includes enabling or disabling sensors, the sampling frequency of the sensors or the operation mode. There different configuration options: via the Serial Shell available when the board is connected over USB, editing the config.txt file when using a microSD card.</p>
-<div class="codehilite"><pre><span></span><span class="nv">Detecting</span>: <span class="nv">AlphaDelta</span> <span class="mi">1</span><span class="nv">A</span>... <span class="nv">found</span>, <span class="nv">Enabling</span> <span class="nv">AlphaDelta</span> <span class="mi">1</span><span class="nv">A</span>
-<span class="nv">Detecting</span>: <span class="nv">AlphaDelta</span> <span class="mi">1</span><span class="nv">W</span>... <span class="nv">found</span>, <span class="nv">already</span> <span class="nv">enabled</span><span class="o">!!!</span>
-<span class="nv">Detecting</span>: <span class="nv">AlphaDelta</span> <span class="mi">2</span><span class="nv">A</span>... <span class="nv">found</span>, <span class="nv">already</span> <span class="nv">enabled</span><span class="o">!!!</span>
-<span class="nv">Detecting</span>: <span class="nv">AlphaDelta</span> <span class="mi">2</span><span class="nv">W</span>... <span class="nv">found</span>, <span class="nv">already</span> <span class="nv">enabled</span><span class="o">!!!</span>
-<span class="nv">Detecting</span>: <span class="nv">AlphaDelta</span> <span class="mi">3</span><span class="nv">A</span>... <span class="nv">found</span>, <span class="nv">already</span> <span class="nv">enabled</span><span class="o">!!!</span>
-<span class="nv">Detecting</span>: <span class="nv">AlphaDelta</span> <span class="mi">3</span><span class="nv">W</span>... <span class="nv">found</span>, <span class="nv">already</span> <span class="nv">enabled</span><span class="o">!!!</span>
-<span class="nv">Detecting</span>: <span class="nv">AlphaDelta</span> <span class="nv">Temperature</span>... <span class="nv">found</span>, <span class="nv">already</span> <span class="nv">enabled</span><span class="o">!!!</span>
-<span class="nv">Detecting</span>: <span class="nv">AlphaDelta</span> <span class="nv">Humidity</span>... <span class="nv">found</span>, <span class="nv">already</span> <span class="nv">enabled</span><span class="o">!!!</span>
-<span class="nv">Detecting</span>: <span class="nv">Groove</span> <span class="nv">ADC</span>... <span class="nv">nothing</span><span class="o">!</span>
-<span class="nv">Detecting</span>: <span class="nv">INA219</span> <span class="nv">Bus</span> <span class="nv">voltage</span>... <span class="nv">nothing</span><span class="o">!</span>
-<span class="nv">Detecting</span>: <span class="nv">INA219</span> <span class="nv">Shunt</span> <span class="nv">voltage</span>... <span class="nv">nothing</span><span class="o">!</span>
-<span class="nv">Detecting</span>: <span class="nv">INA219</span> <span class="nv">Current</span>... <span class="nv">nothing</span><span class="o">!</span>
-<span class="nv">Detecting</span>: <span class="nv">INA219</span> <span class="nv">Load</span> <span class="nv">voltage</span>... <span class="nv">nothing</span><span class="o">!</span>
-<span class="nv">Detecting</span>: <span class="nv">DS18B20</span> <span class="nv">Water</span> <span class="nv">temperature</span>... <span class="nv">nothing</span><span class="o">!</span>
-<span class="nv">Detecting</span>: <span class="nv">Atlas</span> <span class="nv">PH</span>... <span class="nv">nothing</span><span class="o">!</span>
-<span class="nv">Detecting</span>: <span class="nv">Atlas</span> <span class="nv">Conductivity</span>... <span class="nv">nothing</span><span class="o">!</span>
-<span class="nv">Detecting</span>: <span class="nv">Atlas</span> <span class="nv">Specific</span> <span class="nv">gravity</span>... <span class="nv">nothing</span><span class="o">!</span>
-<span class="nv">Detecting</span>: <span class="nv">Atlas</span> <span class="nv">Dissolved</span> <span class="nv">Oxygen</span>... <span class="nv">nothing</span><span class="o">!</span>
-<span class="nv">Detecting</span>: <span class="nv">Atlas</span> <span class="k">DO</span> <span class="nv">Saturation</span>... <span class="nv">nothing</span><span class="o">!</span>
-<span class="nv">Detecting</span>: <span class="nv">Groove</span> <span class="nv">OLED</span>... <span class="nv">nothing</span><span class="o">!</span>
+<div class="codehilite"><pre><span></span><span class="n">Detecting</span><span class="o">:</span> <span class="n">AlphaDelta</span> <span class="mi">1</span><span class="n">A</span><span class="o">...</span> <span class="n">found</span><span class="o">,</span> <span class="n">Enabling</span> <span class="n">AlphaDelta</span> <span class="mi">1</span><span class="n">A</span>
+<span class="n">Detecting</span><span class="o">:</span> <span class="n">AlphaDelta</span> <span class="mi">1</span><span class="n">W</span><span class="o">...</span> <span class="n">found</span><span class="o">,</span> <span class="n">already</span> <span class="n">enabled</span><span class="o">!!!</span>
+<span class="n">Detecting</span><span class="o">:</span> <span class="n">AlphaDelta</span> <span class="mi">2</span><span class="n">A</span><span class="o">...</span> <span class="n">found</span><span class="o">,</span> <span class="n">already</span> <span class="n">enabled</span><span class="o">!!!</span>
+<span class="n">Detecting</span><span class="o">:</span> <span class="n">AlphaDelta</span> <span class="mi">2</span><span class="n">W</span><span class="o">...</span> <span class="n">found</span><span class="o">,</span> <span class="n">already</span> <span class="n">enabled</span><span class="o">!!!</span>
+<span class="n">Detecting</span><span class="o">:</span> <span class="n">AlphaDelta</span> <span class="mi">3</span><span class="n">A</span><span class="o">...</span> <span class="n">found</span><span class="o">,</span> <span class="n">already</span> <span class="n">enabled</span><span class="o">!!!</span>
+<span class="n">Detecting</span><span class="o">:</span> <span class="n">AlphaDelta</span> <span class="mi">3</span><span class="n">W</span><span class="o">...</span> <span class="n">found</span><span class="o">,</span> <span class="n">already</span> <span class="n">enabled</span><span class="o">!!!</span>
+<span class="n">Detecting</span><span class="o">:</span> <span class="n">AlphaDelta</span> <span class="n">Temperature</span><span class="o">...</span> <span class="n">found</span><span class="o">,</span> <span class="n">already</span> <span class="n">enabled</span><span class="o">!!!</span>
+<span class="n">Detecting</span><span class="o">:</span> <span class="n">AlphaDelta</span> <span class="n">Humidity</span><span class="o">...</span> <span class="n">found</span><span class="o">,</span> <span class="n">already</span> <span class="n">enabled</span><span class="o">!!!</span>
+<span class="n">Detecting</span><span class="o">:</span> <span class="n">Groove</span> <span class="n">ADC</span><span class="o">...</span> <span class="n">nothing</span><span class="o">!</span>
+<span class="n">Detecting</span><span class="o">:</span> <span class="n">INA219</span> <span class="n">Bus</span> <span class="n">voltage</span><span class="o">...</span> <span class="n">nothing</span><span class="o">!</span>
+<span class="n">Detecting</span><span class="o">:</span> <span class="n">INA219</span> <span class="n">Shunt</span> <span class="n">voltage</span><span class="o">...</span> <span class="n">nothing</span><span class="o">!</span>
+<span class="n">Detecting</span><span class="o">:</span> <span class="n">INA219</span> <span class="n">Current</span><span class="o">...</span> <span class="n">nothing</span><span class="o">!</span>
+<span class="n">Detecting</span><span class="o">:</span> <span class="n">INA219</span> <span class="n">Load</span> <span class="n">voltage</span><span class="o">...</span> <span class="n">nothing</span><span class="o">!</span>
+<span class="n">Detecting</span><span class="o">:</span> <span class="n">DS18B20</span> <span class="n">Water</span> <span class="n">temperature</span><span class="o">...</span> <span class="n">nothing</span><span class="o">!</span>
+<span class="n">Detecting</span><span class="o">:</span> <span class="n">Atlas</span> <span class="n">PH</span><span class="o">...</span> <span class="n">nothing</span><span class="o">!</span>
+<span class="n">Detecting</span><span class="o">:</span> <span class="n">Atlas</span> <span class="n">Conductivity</span><span class="o">...</span> <span class="n">nothing</span><span class="o">!</span>
+<span class="n">Detecting</span><span class="o">:</span> <span class="n">Atlas</span> <span class="n">Specific</span> <span class="n">gravity</span><span class="o">...</span> <span class="n">nothing</span><span class="o">!</span>
+<span class="n">Detecting</span><span class="o">:</span> <span class="n">Atlas</span> <span class="n">Dissolved</span> <span class="n">Oxygen</span><span class="o">...</span> <span class="n">nothing</span><span class="o">!</span>
+<span class="n">Detecting</span><span class="o">:</span> <span class="n">Atlas</span> <span class="n">DO</span> <span class="n">Saturation</span><span class="o">...</span> <span class="n">nothing</span><span class="o">!</span>
+<span class="n">Detecting</span><span class="o">:</span> <span class="n">Groove</span> <span class="n">OLED</span><span class="o">...</span> <span class="n">nothing</span><span class="o">!</span>
 </pre></div>
 
 <h2 id="shell">Shell<a class="headerlink" href="#shell" title="Permanent link">Link</a></h2>
 <p>The firmware provides a comprehensive command shell over USB to manage all the kits functionalities for advanced users. </p>
-<p><em>Use any Serial console as <code class="codehilite"><span class="n">screen</span></code>, <code class="codehilite"><span class="n">platformio</span> <span class="n">device</span> <span class="n">monitor</span></code>, or the serial monitor on the Arduino IDE</em></p>
+<p><em>Use any Serial console as <code class="codehilite"><span class="err">screen</span></code>, <code class="codehilite"><span class="err">platformio device monitor</span></code>, or the serial monitor on the Arduino IDE</em></p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>Have a look at the guide for different platforms <a href="/Components/Firmware/guides/Using the Shell">here</a></p>
 </div>
 <h2 id="storage">Storage<a class="headerlink" href="#storage" title="Permanent link">Link</a></h2>
 <h3 id="configuration-file-configtxt">Configuration file <strong>CONFIG.TXT</strong><a class="headerlink" href="#configuration-file-configtxt" title="Permanent link">Link</a></h3>
-<p>If this file doesn't exist it is generated by the kit with the factory defaults and after that it can be modified by both the user and the kit. <code class="codehilite"><span class="nt">SckBase</span><span class="p">::</span><span class="nd">resetConfigFile</span><span class="o">();</span></code></p>
+<p>If this file doesn't exist it is generated by the kit with the factory defaults and after that it can be modified by both the user and the kit. <code class="codehilite"><span class="c">SckBase::resetConfigFile();</span></code></p>
 <p>If the modification comes from the kit (sound, platform, etc) it should be saved to the flash and then to the SD.</p>
 <p>When the file is read from the SD if it is valid and different from the flash version the flash version should be updated. There is a problem in this approach: if the user insert and old scard with an old config without erasing it he can mess an newly configured kit. To solve this there is the possibility of having a first entry in the config file that is called something like <em>user_modified</em> and the user should modify this so the new config is loaded. If this flag is not true the sdcard config would be overwritten with the one in the flash.</p>
 <div class="admonition warning">
@@ -3801,6 +3801,7 @@
 <p><a class="github-button" data-size="large" href="https://github.com/fablabbcn/smartcitizen-kit-21" aria-label="Check the source code">Check the source code</a></p>
                 
                   
+                
                 
               
               
@@ -3924,7 +3925,7 @@
       
     </div>
     
-      <script src="../../assets/javascripts/application.a8b5e56f.js"></script>
+      <script src="../../assets/javascripts/application.808e90bb.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
       

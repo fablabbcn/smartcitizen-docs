@@ -38,7 +38,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../../assets/images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.5.0">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
     
     
       
@@ -62,7 +62,7 @@
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
@@ -3317,24 +3317,24 @@
                 
                   <h1>Make reports of your data</h1>
                 
-                <p>Tools are provided to generate test or analysis reports, with a custom template. These are generated with the <code class="codehilite"><span class="n">jupyter</span> <span class="n">nbconvert</span></code> using the preprocessor and tools in the <code class="codehilite"><span class="n">notebooks</span></code> and <code class="codehilite"><span class="k">template</span></code> folder. To generate a report, follow the steps:</p>
+                <p>Tools are provided to generate test or analysis reports, with a custom template. These are generated with the <code class="codehilite"><span class="err">jupyter nbconvert</span></code> using the preprocessor and tools in the <code class="codehilite"><span class="err">notebooks</span></code> and <code class="codehilite"><span class="err">template</span></code> folder. To generate a report, follow the steps:</p>
 <ol>
-<li>Tag the cells in your notebook. You can use the <a href="https://github.com/jupyterlab/jupyterlab-celltags">Jupyter Lab Celltags</a> extension. Don't tag the cells you want to hide, and tag the ones you want to show with <code class="codehilite"><span class="n">show_only_output</span></code>. This can be changed and add more tags, but we keep it this way for simplicity</li>
+<li>Tag the cells in your notebook. You can use the <a href="https://github.com/jupyterlab/jupyterlab-celltags">Jupyter Lab Celltags</a> extension. Don't tag the cells you want to hide, and tag the ones you want to show with <code class="codehilite"><span class="err">show_only_output</span></code>. This can be changed and add more tags, but we keep it this way for simplicity</li>
 <li>Go to the notebooks folder:
-<div class="codehilite"><pre><span></span><span class="n">cd</span> <span class="n">notebooks</span>
+<div class="codehilite"><pre><span></span><span class="err">cd notebooks</span>
 </pre></div></li>
 <li>Type the command:
-<div class="codehilite"><pre><span></span><span class="n">jupyter</span> <span class="n">nbconvert</span> <span class="c1">--config sc_nbconvert_config.py notebook.ipynb --sc_Preprocessor.expression=&quot;show_only_output&quot; --to html --TemplateExporter.template_file=./templates/full_sc --output-dir=../reports --output=OUTPUT_NAME</span>
+<div class="codehilite"><pre><span></span><span class="err">jupyter nbconvert --config sc_nbconvert_config.py notebook.ipynb --sc_Preprocessor.expression=&quot;show_only_output&quot; --to html --TemplateExporter.template_file=./templates/full_sc --output-dir=../reports --output=OUTPUT_NAME</span>
 </pre></div></li>
 </ol>
 <p>Where:</p>
 <ul>
-<li><code class="codehilite"><span class="n">sc_nbconvert_config</span><span class="p">.</span><span class="n">py</span></code> is the config</li>
-<li><code class="codehilite"><span class="n">notebook</span><span class="p">.</span><span class="n">ipynb</span></code> is the notebook you want</li>
-<li><code class="codehilite"><span class="ss">&quot;show_only_output&quot;</span></code> is a boolean expression that is evaluated for each of the cells. If true, the cell is shown</li>
-<li><code class="codehilite"><span class="p">.</span><span class="o">/</span><span class="n">templates</span><span class="o">/</span><span class="n">full_sc</span></code> is the default template we have created</li>
-<li><code class="codehilite"><span class="cp">../reports</span></code> is the directory where we will put the <code class="codehilite"><span class="n">html</span></code> report</li>
-<li><code class="codehilite"><span class="n">OUTPUT_NAME</span></code> is the name for the export</li>
+<li><code class="codehilite"><span class="err">sc_nbconvert_config.py</span></code> is the config</li>
+<li><code class="codehilite"><span class="err">notebook.ipynb</span></code> is the notebook you want</li>
+<li><code class="codehilite"><span class="err">&quot;show_only_output&quot;</span></code> is a boolean expression that is evaluated for each of the cells. If true, the cell is shown</li>
+<li><code class="codehilite"><span class="err">./templates/full_sc</span></code> is the default template we have created</li>
+<li><code class="codehilite"><span class="cp">../reports</span></code> is the directory where we will put the <code class="codehilite"><span class="err">html</span></code> report</li>
+<li><code class="codehilite"><span class="err">OUTPUT_NAME</span></code> is the name for the export</li>
 </ul>
 <p>This generates an html export containing only the mkdown or code cell outputs, without any code. Examples can be found in <a href="https://github.com/fablabbcn/smartcitizen-iscape-data/tree/master/reports">the source code repository</a>.</p>
 <div class="admonition info">
@@ -3345,6 +3345,7 @@
 <p><img alt="" src="https://i.imgur.com/XNBnRUr.png" /></p>
                 
                   
+                
                 
               
               
@@ -3468,7 +3469,7 @@
       
     </div>
     
-      <script src="../../../assets/javascripts/application.a8b5e56f.js"></script>
+      <script src="../../../assets/javascripts/application.808e90bb.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:"../../.."}})</script>
       

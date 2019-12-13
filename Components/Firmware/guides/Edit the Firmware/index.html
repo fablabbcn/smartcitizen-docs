@@ -38,7 +38,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../../../assets/images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.5.0">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
     
     
       
@@ -62,7 +62,7 @@
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
@@ -3494,13 +3494,13 @@
 <h2 id="development-enviroment">Development enviroment<a class="headerlink" href="#development-enviroment" title="Permanent link">Link</a></h2>
 <p>The SmartSmart Citizen Kit Firmware is on our <a href="https://github.com/fablabbcn/smartcitizen-kit-21">repository on github</a> so you will need <a href="https://mirrors.edge.kernel.org/pub/software/scm/git/">git</a> software <a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">installed</a>.</p>
 <p>To build the SmartSmart Citizen Kit firmware you need a linux computer with <a href="https://platformio.org/">platformio</a> installed, you don't need the full IDE installation (Atom). You can follow <a href="http://docs.platformio.org/en/latest/installation.html#super-quick-mac-linux">this instructions</a> to install only the console version.</p>
-<p>For bootloader upload you also need <a href="http://openocd.org/">OpenOCD</a> somewhere in your PATH. You can use platformIO provided binary, normally it is located in <code class="codehilite"><span class="o">~/</span><span class="p">.</span><span class="n">platformio</span><span class="o">/</span><span class="n">packages</span><span class="o">/</span><span class="n">tool</span><span class="o">-</span><span class="n">openocd</span></code>.</p>
+<p>For bootloader upload you also need <a href="http://openocd.org/">OpenOCD</a> somewhere in your PATH. You can use platformIO provided binary, normally it is located in <code class="codehilite"><span class="err">~/.platformio/packages/tool-openocd</span></code>.</p>
 <h2 id="getting-the-firmware">Getting the firmware<a class="headerlink" href="#getting-the-firmware" title="Permanent link">Link</a></h2>
 <p>To get the firmware just run:</p>
 <div class="codehilite"><pre><span></span>git clone --recursive https://github.com/fablabbcn/smartcitizen-kit-21
 </pre></div>
 
-<p>The bootloader repository is a <a href="https://git-scm.com/book/en/v2/Git-Tools-Submodules">submodule</a> of the main firmware so you must do a <code class="codehilite"><span class="c1">--recursive</span></code> clone to get it.</p>
+<p>The bootloader repository is a <a href="https://git-scm.com/book/en/v2/Git-Tools-Submodules">submodule</a> of the main firmware so you must do a <code class="codehilite"><span class="err">--recursive</span></code> clone to get it.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>I you download manually (with the <em>clone or download</em> button on github) you will <strong>not</strong> get the bootloader code, but you can get it from <a href="https://github.com/fablabbcn/uf2-samdx1/tree/88aa54c1afab2647904aaccbe1a6b960c02fdb24">here</a>.</p>
@@ -3522,7 +3522,7 @@
 <p>The bootloader we just flashed allows a very simple way of uploading the SCK firmware based on the <a href="https://github.com/Microsoft/uf2">UF2</a> format, when you <strong>double-click the reset button</strong> of your kit it will expose a <a href="https://en.wikipedia.org/wiki/USB_mass_storage_device_class">MSD</a> interface to your computer and a new drive will popup where you can just drag the compiled firmware file (converted to UF2 format).</p>
 <p><img alt="" src="https://i.imgur.com/tAofJ0g.png" /></p>
 <h3 id="build-script">Build script<a class="headerlink" href="#build-script" title="Permanent link">Link</a></h3>
-<p>You can use the same script used to flash the bootloader (<code class="codehilite"><span class="n">build</span><span class="p">.</span><span class="n">sh</span></code>) that will do everything for you: compile the firmware, convert the binary to UF2 format and upload it to the kit:</p>
+<p>You can use the same script used to flash the bootloader (<code class="codehilite"><span class="err">build.sh</span></code>) that will do everything for you: compile the firmware, convert the binary to UF2 format and upload it to the kit:</p>
 <div class="codehilite"><pre><span></span>./build.sh sam
 </pre></div>
 
@@ -3554,7 +3554,7 @@ Now <strong>double-click the reset button of your kit</strong> open your favorit
 <p>Keep in mind that if your computer is not configured to automount new drives you will need to mount your sck manually (<a href="https://linuxconfig.org/howto-mount-usb-drive-in-linux">as any other USB drive</a>).</p>
 </div>
 <h2 id="esp8266-firmware">ESP8266 firmware<a class="headerlink" href="#esp8266-firmware" title="Permanent link">Link</a></h2>
-<p>Just like the other parts of the process this is also covered by our <code class="codehilite"><span class="n">build</span><span class="p">.</span><span class="n">sh</span></code> script. So you can just do:</p>
+<p>Just like the other parts of the process this is also covered by our <code class="codehilite"><span class="err">build.sh</span></code> script. So you can just do:</p>
 <p><div class="codehilite"><pre><span></span>./build.sh esp
 </pre></div>
 As before, if this is the first time you do it, it will take a while on downloading dependecies and building the firmware.</p>
@@ -3572,6 +3572,7 @@ Our <a href="https://github.com/fablabbcn/smartcitizen-kit-21/blob/master/esp/up
 <img alt="" src="https://i.imgur.com/z3BjMJw.png" /></p>
                 
                   
+                
                 
               
               
@@ -3695,7 +3696,7 @@ Our <a href="https://github.com/fablabbcn/smartcitizen-kit-21/blob/master/esp/up
       
     </div>
     
-      <script src="../../../../assets/javascripts/application.a8b5e56f.js"></script>
+      <script src="../../../../assets/javascripts/application.808e90bb.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:"../../../.."}})</script>
       
