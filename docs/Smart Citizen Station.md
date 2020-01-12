@@ -41,8 +41,6 @@ The Station is a modular system based on different sensor board that connected t
 | Noise Level                                  | dBA                                            | Invensense ICS-434342         | Urban Sensor Board     |
 | Ambient Light                                | Lux                                            | Rohm BH1721FVC                | Urban Sensor Board     |
 | Barometric pressure and AMSL                 | Pa and Meters                                  | NXP MPL3115A26                | Urban Sensor Board     |
-| Carbon Monoxide                              | µg/m3 (Periodic Baseline Calibration Required) | SGX MICS-4514                 | Urban Sensor Board     |
-| Nitrogen Dioxide                             | µg/m3 (Periodic Baseline Calibration Required) | SGX MICS-4514                 | Urban Sensor Board     |
 | Carbon Monoxide                              | ppm                                            | Alphasense CO-B4              | Gas Sensor Pro Board   |
 | Nitrogen Dioxide                             | ppb                                            | Alphasense NO2-B43F           | Gas Sensor Pro Board   |
 | Ozone                                        | ppb                                            | Alphasense OX-B431            | Gas Sensor Pro Board   |

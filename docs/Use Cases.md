@@ -27,7 +27,7 @@ This page is a summary of these projects that might inspire you in future action
 <img src="https://live.staticflickr.com/65535/47957156716_6354656db3_k.jpg" width="800" alt="SCK Grow Observatory Protoype">
 </div>
 
-## Documentation and references
+## Documentation and further references
 
 The examples shown above are fully referenced in the documentation compiled below. They show the vast amount of possibilities offered by the Smart Citizen tools as key enablers of participatory sensing pilots and experiments.
 By providing meaningful examples of novel appropriations and uses we seek to  spire communities to conduct their own experiments and, hopefully, even their  own custom tools:
@@ -40,15 +40,19 @@ By providing meaningful examples of novel appropriations and uses we seek to  sp
 
 - [Making Sense D.23 Smart Citizen Toolkit report](http://making-sense.eu/wp-content/uploads/2016/08/Making-Sense-D23-Smart-Citizen-Toolkit.pdf)
 - [Making Sense D.24 Smart Citizen Toolkit report updates](http://making-sense.eu/wp-content/uploads/2017/09/Making-Sense-D2.4-Documentation-on-Toolkit-add-ons.pdf)
-- [iScape Studies Compilation](https://www.iscapeproject.eu/scientific-reports/)
-- [iScape News](https://www.iscapeproject.eu/category/news/)
+- [iScape Results (iScape site)](https://www.iscapeproject.eu/scientific-reports/)
+- [iScape Results (cordis site)](https://cordis.europa.eu/project/id/689954/results)
 
 ### Academic Publications
+
+Find below some of our own publications, or others' that have used the Smart Citizen hardware and software:
 
 - [Special Issue on Open tools for environmental monitoring: Hardware X - 2019](https://www.sciencedirect.com/science/article/pii/S2468067219300203)
 - [A citizen science approach for enhancing public understanding of air pollution](https://www.sciencedirect.com/science/article/pii/S2210670719317020?via%3Dihub)
 - [Citizen Sensing: A Toolkit](https://eprints.whiterose.ac.uk/148521/)
 - [Onboarding Communities to the IoT](https://link.springer.com/chapter/10.1007/978-3-319-70284-1_2)
+- [Laboratory  evaluation  of  particle  size-selectivity  of  optical  low-cost particulate matter sensors](https://www.atmos-meas-tech-discuss.net/amt-2019-422/amt-2019-422.pdf): study lead by the [Finnish Meteorological Institute](https://en.ilmatieteenlaitos.fi/), as part of the [iScape project](https://www.iscapeproject.eu/)
+- [The influence of the vegetation cycle on the mitigation of air pollution by a deciduous roadside hedge - Thor-Bjørn Ottosen, Prashant Kumar](https://www.sciencedirect.com/science/article/pii/S2210670719329567?via%3Dihub): study lead by the [University of Surrey](https://www.surrey.ac.uk/), as part of the [iScape project](https://www.iscapeproject.eu/)
 
 ### Presentations
 
