@@ -1,1 +1,0 @@
-Smart Citizen Kit.md

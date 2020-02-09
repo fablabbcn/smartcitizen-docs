@@ -54,7 +54,7 @@ The Station is a modular system based on different sensor board that connected t
 ## The Pack
 
 !!! warning "Versions"
-    Below the detailed list of components for the Smart Citizen Station V2.0. You can find more information regarding the iScape Living Lab Station V1.0, visit [here](//Smart Citizen Station Deployments/#iscape-living-lab-station-v1).
+    Below the detailed list of components for the Smart Citizen Station V2.0. You can find more information regarding the iScape Living Lab Station V1.0, visit [here](/Components/Deployments/#iscape-living-lab-station-v1).
 
 * Smart Citizen Station
     * Urban Board 2.1
@@ -102,13 +102,6 @@ Humidity and temperature extremes will require of further sensor adaptation, in 
 
 The particle sensors measurements are delivered as averages of the two sensors with periodic validity checks. We are currently developing one-shot strategies for battery life improvement, but in the meantime, please make sure the sensor has reliable energy supply if you will use these sensors permanently.
 
-### Sensor data processing
-
-We have developed an algorithm that ingests the platform data and processes electrochemical sensor sensor data. This algorithm is **in validation stage** and will be included in the online platform flow from Smart Citizen once validated.
-
-!!! info "Sensor Analysis Framework"
-    Learn more about the sensors calibration on the [Sensor Analysis Framework](/Sensor Analysis Framework) section.
-
 ## Power
 
 The kit has a battery life of 12 hours as is intended as a backup solution only. That's why a power supply needs to be installed as decribed below.
@@ -138,7 +131,7 @@ The Station can be directly powered at 220V AC (max consumption 5W).
     ![](https://i.imgur.com/vfp6nB5.jpg)
 
 !!! info "Changing power supplies"
-    If you need to change power supplies (iScape Living Lab Station V1.0), please visit [here](/Smart Citizen Station Deployments/#changing-power-supplies)
+    If you need to change power supplies (iScape Living Lab Station V1.0), please visit [here](/Components/Deployments/#changing-power-supplies)
 
 <style>
 .led {

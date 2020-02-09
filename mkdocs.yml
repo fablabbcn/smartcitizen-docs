@@ -8,61 +8,61 @@ site_url: https://docs.smartcitizen.me/
 nav:
   - Main: 
     - Welcome: index.md
-    - Smart Citizen Kit: 
-      - General: Smart Citizen Kit.md
-      - Components:
-        - Data Board: Components/Data Board/index.md
-        - Urban Board:
-          - Description: Components/Urban Sensor Board/index.md
-          - Noise: Components/Urban Sensor Board/Noise Sensor/index.md
-          - Metal Oxide Sensors:
-            - Description: Components/Urban Sensor Board/Metal Oxide Sensor/index.md
-            - eCO2/TVOC: Components/Urban Sensor Board/Metal Oxide Sensor/CCS811.md
-        - PM Sensor: SCK_PM.md
-      - Auxiliary connector: Components/Auxiliary/index.md
-    - Smart Citizen Station: 
-      - General: Smart Citizen Station.md
-      - Components:
-        - Smart Citizen Kit: SCK_Station.md
-        - Gas Pro Sensor Board: 
-          - Description: Components/Gas Pro Sensor Board/index.md
-          - Electrochemical Sensors: Components/Gas Pro Sensor Board/Electrochemical Sensors.md
-        - PM Board: 
-          - Description: Components/PM Sensor Board/index.md
-          - PM Sensors: Components/PM Sensor Board/PM Sensors.md
-      - Deployment Considerations: Smart Citizen Station Deployments.md
-    - Firmware: Components/Firmware/index.md
+    - Hardware: 
+      - Smart Citizen Kit: 
+        - Description: Smart Citizen Kit.md
+        - Components:
+          - Data Board: Components/Data Board.md
+          - Urban Board: Components/Urban Board.md
+        - Expanding the SCK: 
+          - Auxiliary Connector: Components/Auxiliary Connector.md
+          - Soil Sensors: Components/Soil.md
+        - Enclosures: Components/Enclosures.md
+      - Smart Citizen Station: 
+        - Description: Smart Citizen Station.md
+        - Components:
+          - Gas Pro Sensor Board: Components/Gases Pro Board.md
+          - PM Board: Components/PM Board.md
+      - Sensor Knowledge:
+        - Deploying sensors: Components/Deployments.md
+        - Particulate Matter: Components/sensors/PM Sensors.md
+        - Noise: Components/sensors/Noise.md
+        - Metal Oxide Sensors:
+          - What to expect: Components/sensors/Metal Oxide.md
+          - eCO2/TVOC: Components/sensors/CCS811.md
+        - Electrochemical Sensors: Components/sensors/Electrochemical Sensors.md    
+    - Firmware: Components/Firmware.md
     - FAQ: _FAQ.md
     - Troubleshooting: Troubleshooting.md
-  - Sensor Platform:
-    - Main: Sensor Platform/index.md
-  - Sensor Analysis Framework:
-    - Main: Sensor Analysis Framework/index.md
-    - On low-cost sensor calibration: Sensor Analysis Framework/Low Cost Sensors Calibration.md
+  - Platform:
+    - Main: Sensor Platform.md
+    - Smart Citizen API: Sensor Platform/Smart Citizen API.md
+  - Data Analysis:
+    - Main: Data Analysis.md
+  - Use cases:
+    - Main: Use cases.md
+    - European Projects: Use cases/European Projects.md
+    - Academic publications: Use cases/Academic Publications.md
+    - Additional material: Use cases/Presentations.md
   - Guides:
     - Main: Guides.md
-    - General:
-      - Onboarding Sensors: Sensor Platform/guides/Onboarding Sensors.md
-      - Using the Shell: Components/Firmware/guides/Using the Shell.md
-      - Downloading platform data: Sensor Platform/guides/Downloading the Data.md
-      - Uploading SD-card data: Sensor Platform/guides/Uploading SD Card Data.md
+    - Getting started:
+      - Onboarding Sensors: Guides/Onboarding Sensors.md
+      - Downloading platform data: Guides/Downloading the Data.md
+      - Uploading SD-card data: Guides/Uploading SD Card Data.md
+      - Using the Shell: Guides/Using the Shell.md
     - Firmware:
-      - Update the firmware: Components/Firmware/guides/Update the firmware.md
-      - Edit the firmware: Components/Firmware/guides/Edit the Firmware.md
-      - Debug the firmware: Components/Firmware/guides/Debug the firmware.md
-    - Sensor Analysis Framework:
-      - Framework Installation: Sensor Analysis Framework/guides/Install the framework.md
-      - Organise your data: Sensor Analysis Framework/guides/Organise your data.md
-      - Model your sensor data: Sensor Analysis Framework/guides/Creating Models for Sensors Calibration.md
-      - Analyse your data in batch: Sensor Analysis Framework/guides/Analyse your data in batch.md
-      - Make reports of your data: Sensor Analysis Framework/guides/Make exports from your data.md
-  - Use cases:
-    - Main: Use Cases.md
-    - Toolkit: 
-      - Main: Toolkit/index.md
-      - Using third party sensors: Components/Auxiliary/guides/thirdparty.md
-      - Creating interfaces: Toolkit/guides/creating_interfaces.md
-      - Sensors for soil and water: Toolkit/guides/soil.md
+      - Update the firmware: Guides/Update the firmware.md
+      - Edit the firmware: Guides/Edit the Firmware.md
+      - Debug the firmware: Guides/Debug the firmware.md
+    - Data Analysis:
+      - Framework Installation: Guides/Install the framework.md
+      - Organise your data: Guides/Organise your data.md
+      - Model your sensor data: Guides/Creating Models for Sensors Calibration.md
+      - Analyse your data in batch: Guides/Analyse your data in batch.md
+      - Make reports of your data: Guides/Make reports of your data.md
+      - Uploading data to zenodo: Guides/Upload data to zenodo.md
+      - Creating interfaces: Guides/Creating Interfaces.md
   - Legacy Hardware:
     - Smart Citizen 1.1:
       - Main: Legacy Hardware/index.md
@@ -72,15 +72,14 @@ nav:
       - Troubleshooting: Legacy Hardware/Troubleshooting.md
     - Smart Citizen 2.0:
       - Main: Legacy Hardware/sck.md
-      - About the CO-NO2 MOs: Components/Urban Sensor Board/Metal Oxide Sensor/MICS.md
+      - About the CO-NO2 MOs: Components/sensors/SGX MICS.md
 
 theme:
   name: 'material'
   custom_dir: 'custom_theme'
   palette:
     primary: 'blue'
-    #primary: 'indigo'
-    accent: 'yelllow'
+    accent: 'blue'
   logo: 'assets/images/logo.svg'
   favicon: 'assets/images/favicon.ico'
   feature:

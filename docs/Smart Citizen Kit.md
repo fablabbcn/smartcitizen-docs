@@ -18,7 +18,7 @@ Smart Citizen Kit
 
 ## What is it?
 
-The Smart Citizen Kit is the core of what we call the Smart Citizen System: a complete set of **modular hardware components** aiming to provide tools for **environmental monitoring**, ranging from **citizen science** and **educational activities** to more **advanced scientific research**. The system is designed in a extendable way, with a central data logger (the [Data Board](/Components/Data Board)) with network connectivity to which the different components are branched. The system is based on the principle of reproducibility, also integrating non-hardware components such as a dedicated [Storage platform](/Sensor Platform) and a [Sensor analysis framework](/Sensor Analysis Framework).
+The Smart Citizen Kit is the core of what we call the Smart Citizen System: a complete set of **modular hardware components** aiming to provide tools for **environmental monitoring**, ranging from **citizen science** and **educational activities** to more **advanced scientific research**. The system is designed in a extendable way, with a central data logger (the [Data Board](/Components/Data Board)) with network connectivity to which the different components are branched. The system is based on the principle of reproducibility, also integrating non-hardware components such as a dedicated [Storage platform](/Sensor Platform) and a [Sensor analysis framework](/Data Analysis).
 
 On top of that, the system is meant to serve as a **base solution for more complex settings**, not only related with air quality monitoring. For that purpose, in addition to the [Urban Board](/Components/Urban Board), the system also provides off-the-shelf support for a wide variety of third party sensors, using the expansion bus as a common port. One example is what we call the [Smart Citizen Station](/Smart Citizen Station): a full solution for low cost air pollution monitoring.
 
@@ -60,7 +60,7 @@ The first step is to connect the battery. The kit will light in red (configurati
 
 ![](https://i.imgur.com/NhSNXJ8.png)
 
-After the configuration process, data will be available on the SmartCitizen platform. You can explore the data there or download it using the `CSV Download` option (guide [here](/Sensor Platform/guides/Downloading the Data/))
+After the configuration process, data will be available on the SmartCitizen platform. You can explore the data there or download it using the `CSV Download` option (guide [here](/Guides/Downloading the Data/))
 
 ![](https://i.imgur.com/5NlWx6O.jpg)
 
@@ -168,55 +168,6 @@ If we do not have an internet connection we can use the SD mode. In this case th
 |------------------------------------------|------------------------------------------- |
 | <span class="led busy"></span>           |  :hourglass_flowing_sand:  Busy, please wait!                 |
 | <span class="led firmware"></span>       | :wrench: Software update going on!
-
-## :umbrella: Enclosures
-
-If we want to leave the kit on the outside for a few days you will need to provide it with extra protection. Below you can see the well-known 3D printed enclosure (for versions without PM sensor):
-
-![](https://i.imgur.com/ZoRN28m.png)
-
-!!! info "A note about the enclosures"
-    Previous versions of the Smart Citizen Kit, without the PMS5003 sensor, included a 3D printed enclosure that holds the Data Board and Urban Sensor Board, as well as the lithium batteries. The enclosure for the Smart Citizen Kit V2.1 is being developed at the moment. A significant redesign is taking place in order to improve its waterproofness and thermal properties. A temporary solution is shown below (build your own enclosure).
-
-A prototype of the new enclosure:
-
-<div style="text-align: center">
-<img src="https://i.imgur.com/vWqPpEB.png" alt="SCK 2.1" width="400px"></div>
-
-!!! info "Want to contribute?"
-    Visit the [Smart Citizen Enclosures repository](https://github.com/fablabbcn/smartcitizen-enclosures) to download, modify, or add your own!
-
-### Build your own
-
-!!! warning
-    Keep in mind that casing is designed for short outdoor deployments. If you want a case for long exhibitions abroad, we will soon have a much more rugged enclosure ready! Also, feel free to explore all our [enclosures repository](https://github.com/fablabbcn/smartcitizen-enclosures) for this and other versions of our hardware.
-
-!!! example "Step by step"
-
-    **First, you will need the two 3D printed clips. You can [download the STL](https://github.com/fablabbcn/smartcitizen-enclosures/blob/master/SmartCitizen%20DIY%20Clips%20V2.0-2.1/3D%20Print%20Clips.stl) file and print them easily on any RepRap or similar FDM printer. If you don't know how to find a 3D printer, you can look for your nearest [Fab Lab](https://www.fablabs.io/labs) or use [3D Hubs](https://www.3dhubs.com/3dprint).**
-
-    <script src="https://embed.github.com/view/3d/fablabbcn/smartcitizen-enclosures/master/SmartCitizen%20DIY%20Clips%20V2.0-2.1/3D%20Print%20Clips.stl"></script>
-
-
-    1.Use scissors to cut an empty plastic bottle at about 12 cm from the top
-
-    ![](https://i.imgur.com/heo8cwW.jpg)
-
-    2.Use the rubber band to fix it using the bottle cap
-
-    ![](https://i.imgur.com/CjKDBBl.jpg)
-
-    3.Place the Kit inside and use the rubber band to hold it
-
-    ![](https://i.imgur.com/8KzbAqV.jpg)
-
-    4.You have now a simple enclosure to use your Kit outdoors for short measurement periods!
-
-    ![](https://i.imgur.com/IhGxV67.jpg)
-
-    **You can now install the sensor outdoors!**
-
-    ![](https://i.imgur.com/0kV6gie.jpg)
 
 ## Software Updates
 
