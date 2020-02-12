@@ -1,7 +1,7 @@
 Frequently asked questions
 ==========================
 
-![](https://i.imgur.com/iI3Bu6F.jpg)
+![](https://i.imgur.com/feS0bZ8.jpg)
 
 ## Can the sensors be placed outdoors?
 Yes. The sensor is designed for both indoors and outdoors use. But if you’re planning to use it outdoors, you will have to consider purchasing also a rainproof enclosure.

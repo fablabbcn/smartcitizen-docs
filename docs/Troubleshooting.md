@@ -1,6 +1,8 @@
 :construction_worker: Troubleshooting
 ==========================
 
+![](https://i.imgur.com/iI3Bu6F.jpg)
+
 !!! info "The magical reset button"
 
     Before trying anything else, the data board of your SCK comes with a very functional button that makes a hardware reset on the whole device. This is probably our best first try once the kit has any problem. You can see it here:

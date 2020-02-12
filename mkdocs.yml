@@ -30,8 +30,9 @@ nav:
         - Metal Oxide Sensors:
           - What to expect: Components/sensors/Metal Oxide.md
           - eCO2/TVOC: Components/sensors/CCS811.md
-        - Electrochemical Sensors: Components/sensors/Electrochemical Sensors.md    
-    - Firmware: Components/Firmware.md
+        - Electrochemical Sensors: Components/sensors/Electrochemical Sensors.md
+      - Firmware: Components/Firmware.md
+      - Architecture: Components/index.md
     - FAQ: _FAQ.md
     - Troubleshooting: Troubleshooting.md
   - Platform:
@@ -41,6 +42,7 @@ nav:
     - Main: Data Analysis.md
   - Use cases:
     - Main: Use cases.md
+    - Citizen Sensing Toolkit: Use cases/Citizen Sensing Toolkit.md
     - European Projects: Use cases/European Projects.md
     - Academic publications: Use cases/Academic Publications.md
     - Additional material: Use cases/Presentations.md

@@ -1,4 +1,4 @@
-# A modular hardware for citizen action
+# A modular tool for citizen action
 
 The guides in this section are aimed at creating a set of tools and resources around the SCK. This allows communities to develop their own sensing frameworks and strategies for participatory sensing. Find here guides that will help with making the best use of the Smart Citizen Kit, from a step-by-step guide on how to [set up your kit](/Guides/Onboarding Sensors) to more advanced features like [data analysis](/Guides/Creating Models for Sensors Calibration/) or using the [SCK's shell](/Guides/Using the Shell).
 

@@ -14,7 +14,9 @@ This is a _live_ compilation of results in what we call _European Projects_.
 <img src="https://live.staticflickr.com/65535/48145200041_792ae80801_k.jpg" width="800" alt="iSCAPE Station at Hasselt University">
 </div>
 
+- [Making Sense Citizen Sensing A Toolkit book](http://making-sense.eu/wp-content/uploads/2018/01/Citizen-Sensing-A-Toolkit.pdf)
 - [Making Sense D.23 Smart Citizen Toolkit report](http://making-sense.eu/wp-content/uploads/2016/08/Making-Sense-D23-Smart-Citizen-Toolkit.pdf)
 - [Making Sense D.24 Smart Citizen Toolkit report updates](http://making-sense.eu/wp-content/uploads/2017/09/Making-Sense-D2.4-Documentation-on-Toolkit-add-ons.pdf)
 - [iScape Results (iScape site)](https://www.iscapeproject.eu/scientific-reports/)
 - [iScape Results (cordis site)](https://cordis.europa.eu/project/id/689954/results)
+- [ISCAPE D7.8 Sensor monitoring experiences and technological innovations](/assets/publications/iSCAPE_D78.pdf)

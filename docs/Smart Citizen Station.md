@@ -1,7 +1,7 @@
 Smart Citizen Station
 ==================
 
-![](https://i.imgur.com/p9lDxiv.jpg)
+![](https://i.imgur.com/CiFikz8.jpg)
 
 The Smart Citizen Station was born with the idea to provide the iScape Living Labs with a system for monitoring the performance of their interventions. The Station aims at providing a solution that can be used by the Living Labs not just from a scientific point of view but also as a tool to engage local communities on air pollution related issues.
 
@@ -9,7 +9,7 @@ The Smart Citizen Station was born with the idea to provide the iScape Living La
 
 The station is designed with a modular principle where sensors can be added easily added expanding the capabilities of the installation or replaced when they are damaged or the sensors lifetime is over. From a costs perspective while being more expensive than the Smart Citizen Kit it is also conceived as a low-cost solution.
 
-![](https://i.imgur.com/HUq7Anz.jpg)
+![](https://i.imgur.com/p9lDxiv.jpg)
 
 The design builds on top of the Smart Citizen Kit adding an extra set of more accurate sensors especially aimed at measuring air pollutants. The sensors include the Gas Sensor Board, featuring EC Carbon Monoxide, Nitrogen Dioxide and Ozone sensors and the PM Sensor Board, featuring a PM 2.5 / PM 10 sensor.
 
