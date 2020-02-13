@@ -5,8 +5,6 @@ Hardware Architecture
 
 The project's sensor platform builds on the legacy of previous Smart Citizen Kit generations to develop a new set of tools especially aimed at providing meaningful data insights on a low budget. The system is designed in a extendable way, with a central data logger with network connectivity to which the different components are branched and aims to give support to a various activities ranging from education to more advanced scientific research.
 
-![](https://i.imgur.com/4lPC9rA.png)
-
 We believe building modular and reusable hardware is critical towards optimizing the research and development effort. By increasing the technology readiness levels of existing technologies, we can drastically improve the project exploitation strategy.
 
 ## Hardware

@@ -34,11 +34,11 @@ The documentation contains multiple [guides](/Guides) as step-by-step tutorials 
     * [Installing the Smart Citizen Kit](Smart Citizen Kit/#how-to-install)
     * [Installing the Smart Citizen Station](Smart Citizen Station/#how-to-install)
     * [Installing the Smart Citizen Kit 1.0 / 1.1](/Legacy Hardware)
-    * [Onboarding new Sensors](Sensor Platform/guides/Onboarding Sensors)
-    * [Uploading SD Card Data](Sensor Platform/guides/Uploading SD Card Data)
-    * [Update the Firmware](Components/Firmware/guides/Update the firmware)
-    * [Edit the Firmware](Components/Firmware/guides/Edit the Firmware)
-    * [Use Machine Learning to Create Models for Sensors Calibration](/Sensor Analysis Framework/guides/Creating Models for Sensors Calibration)
+    * [Onboarding new Sensors](Guides/Onboarding Sensors)
+    * [Uploading SD Card Data](Guides/Uploading SD Card Data)
+    * [Update the Firmware](Guides/Update the firmware)
+    * [Edit the Firmware](Guides/Edit the Firmware)
+    * [Use Machine Learning to Create Models for Sensors Calibration](/Guides/Creating Models for Sensors Calibration)
 
 ## Open Source
 
