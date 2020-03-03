@@ -41,11 +41,33 @@ The PM Sensor Board runs a dedicated ARM M0+ 32-bits, the same as the [Data Boar
 !!! info
 	Visit the [source files](#source-files) section to download the complete schematics.
 
+### Pinout
+
+
+![](https://i.imgur.com/DU0hmvx.png)
+
+
+![](https://i.imgur.com/TEPeK3h.png)
+
+#### SERCOM distribution
+
+![](https://i.imgur.com/80ob4cX.png)
+
 ## Setup
 
 The board is connected to the [Data Board](/Components/Data Board) using the AUX connector. Before, the Plantower PMS sensors need to be connected. The board will autodetect the PMS sensors and present them seamlessly to the main [Firmware](/Components/Firmware)  running on the Data Board. Multiple sensor board can be daisy-chained as seen on the image.
 
 ![](https://i.imgur.com/RRu8MiV.jpg)
+
+## Extra sensors
+
+### Dallas OneWire support
+
+![](https://cdn.shopify.com/s/files/1/2396/0755/products/DS18B20_waterproof_temperature_sensor_1m_cable_1000_grande.JPG?v=1506867440 =300x)
+
+_See [datasheet](https://datasheets.maximintegrated.com/en/ds/DS18B20.pdf)_
+
+Support for rugged version of DS18B20 was added in [this commit](https://github.com/fablabbcn/smartcitizen-kit-20/commit/86bb664470cc9d632058f7db17443b5cfc252d39), the sensor is autodetected on boot when connected to the PM board GPIO Grove port.
 
 ## Source files
 
