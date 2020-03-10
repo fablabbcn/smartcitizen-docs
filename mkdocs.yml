@@ -52,6 +52,7 @@ nav:
       - Onboarding Sensors: Guides/Onboarding Sensors.md
       - Downloading platform data: Guides/Downloading the Data.md
       - Uploading SD-card data: Guides/Uploading SD Card Data.md
+      - Updating the Wi-Fi: Guides/Updating the Wi-Fi.md
       - Using the Shell: Guides/Using the Shell.md
     - Firmware:
       - Update the firmware: Guides/Update the firmware.md
