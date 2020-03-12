@@ -17,6 +17,7 @@ nav:
         - Expanding the SCK: 
           - Auxiliary Connector: Components/Auxiliary Connector.md
           - Soil Sensors: Components/Soil.md
+          - Water Sensors: Components/Water.md
         - Enclosures: Components/Enclosures.md
       - Smart Citizen Station: 
         - Description: Smart Citizen Station.md

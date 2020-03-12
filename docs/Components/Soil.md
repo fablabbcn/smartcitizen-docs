@@ -71,46 +71,11 @@ Three Chirp sensors were compared to the [Parrot](https://www.parrot.com/) Flowe
 !!! info "Full analysis here"
     Find the full analysis [here](https://github.com/fablabbcn/smartcitizen-iscape-data/raw/master/reports/development/1910_moisture_sensor_analysis.pdf)!
 
-## Calibrated soil and water probes
-
-Having a robust portfolio of the sensor for measuring soil and water characteristics is a need found by many farming communities, primarily when they are working on new ways of growing crops. In this direction, we include a collection of sensors that despite not being low cost or open source, they are still affordable and well documented when compared to other commercial solution. From a cost perspective, they are not aimed at being massively deployed but instead used individually in a specific site for specific needs.
-
-![](https://live.staticflickr.com/4912/46225599704_bd7d0abec5_k.jpg)
-
-The sensors selected are from Atlas Scientific, a New York-based company that _converts devices that were originally designed to be used by humans into devices that are specifically designed to be used by robots_. As already mentioned the sensors are not entirely open source as the other sensors documented on this section. However, they are modular and exceptionally well documented by the manufacturer. That includes documentation on how to install, calibrate and integrate them with additional existing hardware. In this direction, we developed a full library for the SCK to support the sensors via the Auxiliary sensor connector. We also developed a Python script to simplify the calibration process of the sensors. As the sensors can be configured in different ways, we do not provide a full step-by-step guide. Instead, we refer to the documentation on the [project's repository](https://github.com/fablabbcn/smartcitizen-grow/tree/master/soil-water-probes).
-
-The setup is built out of the following main components: 
-
-- Atlas Scientific Sensor Probe: The physical probe we will insert on to the soil (or water).
-- Atlas Scientific EZO Circuit: The driver that will read the analog signal coming from the Sensor Probe and turn it into a meaningful numeric value by applying the different calibration operations. 
-- Whitebox Labs Tentacle T3: The motherboard that puts everything together and hosts up to 3 Atlas Scientific Probes. It connects to the SCK via the Aux sensor connector. This boards can be chained to support more sensors, but this is not documented at the moment. 
-- SEEED Grove - 4 pin Female Jumper to Grove 4 pin Conversion
-- Cable needs to be used to connect the board to the SCK.
-
-Different sensor probes can be selected for different needs. For example the setup shown above is designed for soil measurements and includes Atlas Scientific temperature, conductivity and PH probes. It also consists of a Chirp Moisture Sensor as described in the [above section](/Toolkit/guides/soil/#moisture-sensor). As an additional example the setup in the figure below is designed for water monitoring on aquaponics systems and includes Atlas Scientific probes for PH, conductivity and dissolved oxygen.
-
-![](https://camo.githubusercontent.com/cff2ce5e83d0d7403dcee85594c1efef65bef573/68747470733a2f2f692e696d6775722e636f6d2f36734d337343592e6a7067)
-
-**Available metrics**
-
-A list of the sensors available is shown below:
-
-| Metric | Usage | Probe | Driver | Calibration Kit |
-| :-: |:-: |:-: |:-: |:-: |
-| Temperature | Soil and water|  PT-100 + PT-1000 | EZO-RTD | Not required |
-| PH | Soil and water|  ENV-40-PH | EZO-PH | CHEM-PH |
-| Specific Gravity |  Soil and water | ENV-40-EC-K | EZO-EC | CHEM-EC |
-| Electrical Conductivity | Soil and water | ENV-40-EC-K | EZO-EC |CHEM-EC |
-| Dissolved Oxygen | Water | ENV-40-DO | EZO-DO | CHEM-DO |
-| Oxygen Saturation| Water | ENV-40-DO | EZO-DO | CHEM-DO |
-
-!!! info "More information"
-	Check the project source code [files](https://github.com/fablabbcn/smartcitizen-grow/tree/master/soil-water-probes)
-
 ## Tensiometer
 
 !!! danger "WIP"
-    This version is a WIP but is not fully functional with the SCK 2.1. It is shown here as a demosntrator of the project's capabilities. Have a look at the forum or drop us an email to discuss this.
+    This version is a WIP but is not fully functional with the SCK 2.1. It is shown here as a showcase of the project's capabilities. Have a look at the forum or drop us an email to discuss this. Check the source [files](https://github.com/fablabbcn/smartcitizen-grow/tree/master/soil-water-tension).
+
 
 Soil Moisture data as the one provided by the Chirp Moisture Sensor is interesting for research, but when it comes to crops irrigation management, we usually like to know the soil water tension (SWT). That is because Soil Moisture in water is not directly related to the water plants roots might be able to extract because it is deeply affected by the soil composition. Even soil irrigation can be inferred from soil moisture when the soil type is known we think a soil tensiometer. Also when it is a simple solution, it is a useful tool for crops management.
 

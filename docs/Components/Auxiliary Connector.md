@@ -31,14 +31,11 @@ The [data board](/Components/Data Board/) features a standard Grove connector wh
 
 ### Water measurements
 
-- [Atlas Scientific Dissolved Oxygen](https://www.atlas-scientific.com/product_pages/kits/do_kit.html) - suports dissolved oxygen and saturation.
-- [DS18B20 Water Temperature](https://www.adafruit.com/product/381) - it's a waterproof sensor, which can be used as well in humid air quality conditions
+  Check the [water measurements](/Components/Water) documentation with examples on sensors such us the [Atlas Scientific Dissolved Oxygen](https://www.atlas-scientific.com/product_pages/kits/do_kit.html) and the [DS18B20 Water Temperature](https://www.adafruit.com/product/381)
 
 ### Soil measurements
 
-- [Chirp Soil Moisture](https://www.tindie.com/products/miceuz/i2c-soil-moisture-sensor/) - supports soil moisture (requires calibration), temperature and ambient light
-- [Atlas Scientific PH](https://www.atlas-scientific.com/product_pages/kits/ph-kit.html) - also usable for water measurements
-- [Atlas Scientific Conductivity](https://www.atlas-scientific.com/product_pages/kits/ec_k1_0_kit.html) - supports reading conductivity and specific gravity
+  Check the [soil measurements](/Components/Soil) documentation with examples on sensors such us the [Chirp Soil Moisture](https://www.tindie.com/products/miceuz/i2c-soil-moisture-sensor/) - supports soil moisture (requires calibration), temperature and ambient light.
 
 ## Other auxiliaries
 
