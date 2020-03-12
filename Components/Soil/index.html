@@ -874,13 +874,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#calibrated-soil-and-water-probes" class="md-nav__link">
-    Calibrated soil and water probes
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#tensiometer" class="md-nav__link">
     Tensiometer
   </a>
@@ -898,6 +891,44 @@
   </li>
 
 <!-- Main navigation item -->
+
+        
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item">
+    <a href="../Water/" title="Water Sensors"
+        class="md-nav__link">
+      Water Sensors
+    </a>
+  </li>
 
         
       </ul>
@@ -3510,13 +3541,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#calibrated-soil-and-water-probes" class="md-nav__link">
-    Calibrated soil and water probes
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#tensiometer" class="md-nav__link">
     Tensiometer
   </a>
@@ -3607,85 +3631,10 @@
 <p class="admonition-title">Full analysis here</p>
 <p>Find the full analysis <a href="https://github.com/fablabbcn/smartcitizen-iscape-data/raw/master/reports/development/1910_moisture_sensor_analysis.pdf">here</a>!</p>
 </div>
-<h2 id="calibrated-soil-and-water-probes">Calibrated soil and water probes<a class="headerlink" href="#calibrated-soil-and-water-probes" title="Permanent link">Link</a></h2>
-<p>Having a robust portfolio of the sensor for measuring soil and water characteristics is a need found by many farming communities, primarily when they are working on new ways of growing crops. In this direction, we include a collection of sensors that despite not being low cost or open source, they are still affordable and well documented when compared to other commercial solution. From a cost perspective, they are not aimed at being massively deployed but instead used individually in a specific site for specific needs.</p>
-<p><img alt="" src="https://live.staticflickr.com/4912/46225599704_bd7d0abec5_k.jpg" /></p>
-<p>The sensors selected are from Atlas Scientific, a New York-based company that <em>converts devices that were originally designed to be used by humans into devices that are specifically designed to be used by robots</em>. As already mentioned the sensors are not entirely open source as the other sensors documented on this section. However, they are modular and exceptionally well documented by the manufacturer. That includes documentation on how to install, calibrate and integrate them with additional existing hardware. In this direction, we developed a full library for the SCK to support the sensors via the Auxiliary sensor connector. We also developed a Python script to simplify the calibration process of the sensors. As the sensors can be configured in different ways, we do not provide a full step-by-step guide. Instead, we refer to the documentation on the <a href="https://github.com/fablabbcn/smartcitizen-grow/tree/master/soil-water-probes">project's repository</a>.</p>
-<p>The setup is built out of the following main components: </p>
-<ul>
-<li>Atlas Scientific Sensor Probe: The physical probe we will insert on to the soil (or water).</li>
-<li>Atlas Scientific EZO Circuit: The driver that will read the analog signal coming from the Sensor Probe and turn it into a meaningful numeric value by applying the different calibration operations. </li>
-<li>Whitebox Labs Tentacle T3: The motherboard that puts everything together and hosts up to 3 Atlas Scientific Probes. It connects to the SCK via the Aux sensor connector. This boards can be chained to support more sensors, but this is not documented at the moment. </li>
-<li>SEEED Grove - 4 pin Female Jumper to Grove 4 pin Conversion</li>
-<li>Cable needs to be used to connect the board to the SCK.</li>
-</ul>
-<p>Different sensor probes can be selected for different needs. For example the setup shown above is designed for soil measurements and includes Atlas Scientific temperature, conductivity and PH probes. It also consists of a Chirp Moisture Sensor as described in the <a href="/Toolkit/guides/soil/#moisture-sensor">above section</a>. As an additional example the setup in the figure below is designed for water monitoring on aquaponics systems and includes Atlas Scientific probes for PH, conductivity and dissolved oxygen.</p>
-<p><img alt="" src="https://camo.githubusercontent.com/cff2ce5e83d0d7403dcee85594c1efef65bef573/68747470733a2f2f692e696d6775722e636f6d2f36734d337343592e6a7067" /></p>
-<p><strong>Available metrics</strong></p>
-<p>A list of the sensors available is shown below:</p>
-<table>
-<thead>
-<tr>
-<th align="center">Metric</th>
-<th align="center">Usage</th>
-<th align="center">Probe</th>
-<th align="center">Driver</th>
-<th align="center">Calibration Kit</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center">Temperature</td>
-<td align="center">Soil and water</td>
-<td align="center">PT-100 + PT-1000</td>
-<td align="center">EZO-RTD</td>
-<td align="center">Not required</td>
-</tr>
-<tr>
-<td align="center">PH</td>
-<td align="center">Soil and water</td>
-<td align="center">ENV-40-PH</td>
-<td align="center">EZO-PH</td>
-<td align="center">CHEM-PH</td>
-</tr>
-<tr>
-<td align="center">Specific Gravity</td>
-<td align="center">Soil and water</td>
-<td align="center">ENV-40-EC-K</td>
-<td align="center">EZO-EC</td>
-<td align="center">CHEM-EC</td>
-</tr>
-<tr>
-<td align="center">Electrical Conductivity</td>
-<td align="center">Soil and water</td>
-<td align="center">ENV-40-EC-K</td>
-<td align="center">EZO-EC</td>
-<td align="center">CHEM-EC</td>
-</tr>
-<tr>
-<td align="center">Dissolved Oxygen</td>
-<td align="center">Water</td>
-<td align="center">ENV-40-DO</td>
-<td align="center">EZO-DO</td>
-<td align="center">CHEM-DO</td>
-</tr>
-<tr>
-<td align="center">Oxygen Saturation</td>
-<td align="center">Water</td>
-<td align="center">ENV-40-DO</td>
-<td align="center">EZO-DO</td>
-<td align="center">CHEM-DO</td>
-</tr>
-</tbody>
-</table>
-<div class="admonition info">
-<p class="admonition-title">More information</p>
-<p>Check the project source code <a href="https://github.com/fablabbcn/smartcitizen-grow/tree/master/soil-water-probes">files</a></p>
-</div>
 <h2 id="tensiometer">Tensiometer<a class="headerlink" href="#tensiometer" title="Permanent link">Link</a></h2>
 <div class="admonition danger">
 <p class="admonition-title">WIP</p>
-<p>This version is a WIP but is not fully functional with the SCK 2.1. It is shown here as a demosntrator of the project's capabilities. Have a look at the forum or drop us an email to discuss this.</p>
+<p>This version is a WIP but is not fully functional with the SCK 2.1. It is shown here as a showcase of the project's capabilities. Have a look at the forum or drop us an email to discuss this. Check the source <a href="https://github.com/fablabbcn/smartcitizen-grow/tree/master/soil-water-tension">files</a>.</p>
 </div>
 <p>Soil Moisture data as the one provided by the Chirp Moisture Sensor is interesting for research, but when it comes to crops irrigation management, we usually like to know the soil water tension (SWT). That is because Soil Moisture in water is not directly related to the water plants roots might be able to extract because it is deeply affected by the soil composition. Even soil irrigation can be inferred from soil moisture when the soil type is known we think a soil tensiometer. Also when it is a simple solution, it is a useful tool for crops management.</p>
 <p><img alt="Watermark Tensionmeter Demo" src="/assets/images/watermark.png" /></p>
@@ -3761,8 +3710,8 @@
 
         <!-- Link to next page -->
         
-          <a href="../Enclosures/"
-              title="Enclosures"
+          <a href="../Water/"
+              title="Water Sensors"
               class="md-flex md-footer-nav__link md-footer-nav__link--next"
               rel="next">
             <div class="md-flex__cell md-flex__cell--stretch
@@ -3771,7 +3720,7 @@
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Enclosures
+                Water Sensors
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
