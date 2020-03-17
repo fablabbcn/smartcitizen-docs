@@ -162,6 +162,14 @@ If we do not have an internet connection we can use the SD mode. In this case th
 | <span class="led sd-chargebat"></span>   | :battery: Collecting data offline,  battery charging              |
 | <span class="led sd-fullbat"></span>     | :battery: Collecting data offline, battery charged          |
 
+!!! warning "Guide"
+    Check the guide on how to upload the sd card data [here](/Guides/Uploading SD Card Data/)
+
+!!! info "Weird files?"
+    The files in the sdcard have the following naming: YYYY-MM-DD.CSV, however, you will find in the some extra files (.01, .02...) These are data files that the sensor creates once there is a reset and, to avoid corruption, it creates a new file in the sd-card, by changing the file-extension. 
+
+    A reset takes place every night at 3-4am with the purpose to avoid data loss because a problem. The SCK then stores the data in a file with a sequential name, and does so by changing the filename to YYYY-MM-DD.01, .02… etc depending on the amount of resets it sees during that day. You can see the data and work with it by changing the name from YYYY-MM-DD.01 to YYYY-MM-DD_01.CSV. [Check the guide on how to organise your data](/Guides/Organise your data/#pre-process-the-sd-card-data) to automatise this.
+
 #### Especial status
 
 | LED color                            |  Kit status                             |
@@ -171,7 +179,7 @@ If we do not have an internet connection we can use the SD mode. In this case th
 
 ## Software Updates
 
-Sofware updates are release frequently in the [Firmware repository](https://github.com/fablabbcn/smartcitizen-kit-21). These updates will need to be applied periodically to the two main components of the SCK: the SAMD21 (main processor) and the ESP8266 (Wi-Fi module). Check the instructions under the [Update the Firmware](/Components/Firmware/guides/Update the firmware/) section for more information.
+Sofware updates are release frequently in the [Firmware repository](https://github.com/fablabbcn/smartcitizen-kit-21). These updates will need to be applied periodically to the two main components of the SCK: the SAMD21 (main processor) and the ESP8266 (Wi-Fi module). Check the instructions under the [Update the Firmware](/Guides/Update the firmware/) section for more information.
 
 <style>
 .led {
