@@ -4019,6 +4019,15 @@
 </tr>
 </tbody>
 </table>
+<div class="admonition warning">
+<p class="admonition-title">Guide</p>
+<p>Check the guide on how to upload the sd card data <a href="/Guides/Uploading SD Card Data/">here</a></p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Weird files?</p>
+<p>The files in the sdcard have the following naming: YYYY-MM-DD.CSV, however, you will find in the some extra files (.01, .02...) These are data files that the sensor creates once there is a reset and, to avoid corruption, it creates a new file in the sd-card, by changing the file-extension. </p>
+<p>A reset takes place every night at 3-4am with the purpose to avoid data loss because a problem. The SCK then stores the data in a file with a sequential name, and does so by changing the filename to YYYY-MM-DD.01, .02… etc depending on the amount of resets it sees during that day. You can see the data and work with it by changing the name from YYYY-MM-DD.01 to YYYY-MM-DD_01.CSV. <a href="/Guides/Organise your data/#pre-process-the-sd-card-data">Check the guide on how to organise your data</a> to automatise this.</p>
+</div>
 <h4 id="especial-status">Especial status<a class="headerlink" href="#especial-status" title="Permanent link">Link</a></h4>
 <table>
 <thead>
@@ -4039,7 +4048,7 @@
 </tbody>
 </table>
 <h2 id="software-updates">Software Updates<a class="headerlink" href="#software-updates" title="Permanent link">Link</a></h2>
-<p>Sofware updates are release frequently in the <a href="https://github.com/fablabbcn/smartcitizen-kit-21">Firmware repository</a>. These updates will need to be applied periodically to the two main components of the SCK: the SAMD21 (main processor) and the ESP8266 (Wi-Fi module). Check the instructions under the <a href="/Components/Firmware/guides/Update the firmware/">Update the Firmware</a> section for more information.</p>
+<p>Sofware updates are release frequently in the <a href="https://github.com/fablabbcn/smartcitizen-kit-21">Firmware repository</a>. These updates will need to be applied periodically to the two main components of the SCK: the SAMD21 (main processor) and the ESP8266 (Wi-Fi module). Check the instructions under the <a href="/Guides/Update the firmware/">Update the Firmware</a> section for more information.</p>
 <style>
 .led {
     width: 20px; height: 20px; border-radius:10px; display: inline-block; margin-top: 7px;
