@@ -36,8 +36,8 @@ Currently there is an android app available, but we are working to make the webs
 ## How accurate are the measurements?
 Weather, noise, light and PM sensor measurements have been calibrated and validated against reference sensors through both in-house and external validations and they provide accurate data. Chemical gas sensors are to be considered qualitatively rather than quantitatively while calibration algorithms are developed for data accuracy improvement.
 
-## Will the global platform be maintained after the project finishes release?
-Yes, it will be maintained just as it has been for the past five years. Also, the platform is fully open source so the community can take over the maintenance if at some point the Smart Citizen core team can no longer run it.
+<!-- ## Will the global platform be maintained after the project finishes release?
+Yes, it will be maintained just as it has been for the past five years. Also, the platform is fully open source so the community can take over the maintenance if at some point the Smart Citizen core team can no longer run it. -->
 
 ## Are there any notable case studies using similar sensors?
 Yes! A particularly interesting case study is the Making Sense project at Plaça del Sol in Barcelona, where a group of 15 technology enthusiasts and environmentalists joined a community of neighbours from a middle-class district that has been suffering from noise issues due to the nightlife in the square. You can find more information about this case study at: www.making-sense.eu
@@ -72,4 +72,10 @@ For custom projects we also offer a bigger 6000mAh LiPo battery model DTP605068 
 
 We are working on a new dynamic battery calculator. Currently, you can find some approximate data [here](/Smart Citizen Kit/#battery-duration) for the SCK 2.1.
 
+## Are the electronics waterproof?
 
+No. They cannot be exposed to water, high humidity, corrosive environments, or moisture. Always use an enclosure when exposed outdoors. Highly humid environments can provoke corrosion in the sensors (symptom of this is blue powder near the sensors in the urban board). To help protect them, we recommend using _transparent nail polish_ in these areas. **Do not obscure the areas in red**:
+
+![](assets/images/nail_polish_areas.png)
+
+If you are using any enclosure from [the repository](https://github.com/fablabbcn/smartcitizen-enclosures/tree/master/SmartCitizen%20Outdoor%20Cases%20V2.0-2.1), we also recommend using a filtration foam (PPI-20/10) like [this one](http://www.infiltro.es/index.php/filtro-de-aire-2/prefiltros/item/foam). More info [here](https://forum.smartcitizen.me/t/rain-tests-for-the-sck/1300)
