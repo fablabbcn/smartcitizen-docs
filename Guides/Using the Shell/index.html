@@ -3629,38 +3629,38 @@
 </div>
 <p>The SCK (from V2.0 onwards) has an integrated command shell over USB to manage all the kits functionalities for advanced users. In this guide, we will cover how to access to this functionality in different platforms, and some examples.</p>
 <h2 id="what-is-it">What is it?<a class="headerlink" href="#what-is-it" title="Permanent link">Link</a></h2>
-<p>We could define the <code class="codehilite"><span class="err">shell</span></code> as a text-based interface to access almost any SCK functionality. In terms of hardware, it relies on the <a href="https://en.wikipedia.org/wiki/Serial_communication">serial communication</a> between the SCK and your computer, so any <strong>decent</strong> USB cable connected between them will do.</p>
+<p>We could define the <code>shell</code> as a text-based interface to access almost any SCK functionality. In terms of hardware, it relies on the <a href="https://en.wikipedia.org/wiki/Serial_communication">serial communication</a> between the SCK and your computer, so any <strong>decent</strong> USB cable connected between them will do.</p>
 <h2 id="how-to-access-it">How to access it?<a class="headerlink" href="#how-to-access-it" title="Permanent link">Link</a></h2>
 <p>Software-wise, different platforms will have different interfaces. The easiest and most reliable for all of them would be through the <a href="https://www.arduino.cc/en/Main/Software">Arduino IDE</a>.</p>
 <div class="admonition example">
 <p class="admonition-title">Using the Arduino IDE</p>
 <ul>
-<li>Launch the <em>Arduino IDE</em> and select the port under <code class="codehilite"><span class="err">Tools &gt; Port &gt;</span></code>:</li>
+<li>Launch the <em>Arduino IDE</em> and select the port under <code>Tools &gt; Port &gt;</code>:</li>
 </ul>
 <p><img alt="" src="https://i.imgur.com/XEZXoyy.png" /></p>
 <ul>
 <li>
-<p>Launch the <code class="codehilite"><span class="err">Serial Monitor</span></code> under <code class="codehilite"><span class="err">Tools &gt; Serial Monitor</span></code>. Make sure that the dropdowns in the bottom are set as in the image below (<code class="codehilite"><span class="err">Carriage return</span></code> and <code class="codehilite"><span class="err">115200 baud</span></code>)</p>
+<p>Launch the <code>Serial Monitor</code> under <code>Tools &gt; Serial Monitor</code>. Make sure that the dropdowns in the bottom are set as in the image below (<code>Carriage return</code> and <code>115200 baud</code>)</p>
 </li>
 <li>
-<p>Type in <code class="codehilite"><span class="err">help</span></code> to get started.</p>
+<p>Type in <code>help</code> to get started.</p>
 </li>
 </ul>
 <p><img alt="" src="https://i.imgur.com/iSONfFB.png" /></p>
 </div>
-<p>More advanced users would probably rather use a more <em>rugged</em> interface. In this case, you could use <code class="codehilite"><span class="err">screen</span></code> in your terminal of choice:</p>
-<div class="codehilite"><pre><span></span><code><span class="err">&gt; ls /dev/cu | grep usb</span>
-<span class="err">cu.usbmodem1411</span>
-<span class="err">tty.usbmodem1411</span>
-<span class="err">&gt; screen /dev/cu.usmodem1411</span>
-<span class="err">SCK &gt;</span>
-<span class="err">...</span>
+<p>More advanced users would probably rather use a more <em>rugged</em> interface. In this case, you could use <code>screen</code> in your terminal of choice:</p>
+<div class="highlight"><pre><span></span><code>&gt; ls /dev/cu | grep usb
+cu.usbmodem1411
+tty.usbmodem1411
+&gt; screen /dev/cu.usmodem1411
+SCK &gt;
+...
 </code></pre></div>
 
 <p>If you already installed <a href="https://platformio.org/">platformio</a> to <a href="/Guides/Edit%20the%20Firmware/">edit the firmware</a> you can use it here, too</p>
-<div class="codehilite"><pre><span></span><code><span class="err">&gt; pio device monitor</span>
-<span class="err">SCK &gt;</span>
-<span class="err">...</span>
+<div class="highlight"><pre><span></span><code>&gt; pio device monitor
+SCK &gt;
+...
 </code></pre></div>
 
 <div class="admonition warning">
@@ -3668,54 +3668,54 @@
 <p>The port will take a little time to appear in your list of devices. Normally the LED of your SCK will be <strong>static white</strong> during that period.</p>
 </div>
 <h2 id="some-examples">Some examples!<a class="headerlink" href="#some-examples" title="Permanent link">Link</a></h2>
-<p>The <code class="codehilite"><span class="err">help</span></code> command outputs a quite intuitive explanation of all the commands:</p>
-<div class="codehilite"><pre><span></span><code><span class="n">SCK</span> <span class="o">&gt;</span> <span class="n">help</span>
-<span class="nl">reset</span><span class="p">:</span>       <span class="n">Resets</span> <span class="n">the</span> <span class="n">SCK</span>
-<span class="nl">version</span><span class="p">:</span>     <span class="n">Shows</span> <span class="n">versions</span> <span class="n">and</span> <span class="n">Hardware</span> <span class="n">ID</span>
-<span class="nl">rcause</span><span class="p">:</span>      <span class="n">Show</span> <span class="n">last</span> <span class="n">reset</span> <span class="n">cause</span> <span class="p">(</span><span class="n">debug</span><span class="p">)</span>
-<span class="nl">outlevel</span><span class="p">:</span>    <span class="n">Shows</span><span class="o">/</span><span class="n">sets</span> <span class="n">outlevel</span> <span class="p">[</span><span class="mi">0</span><span class="o">:</span><span class="n">silent</span><span class="p">,</span> <span class="mi">1</span><span class="o">:</span><span class="n">normal</span><span class="p">,</span> <span class="mi">2</span><span class="o">:</span><span class="n">verbose</span><span class="p">]</span>
-<span class="nl">help</span><span class="p">:</span>        <span class="n">Duhhhh</span><span class="o">!!</span>
-<span class="nl">pinmux</span><span class="p">:</span>      <span class="n">Shows</span> <span class="n">SAMD</span> <span class="n">pin</span> <span class="n">mapping</span> <span class="n">status</span>
-<span class="nl">sensor</span><span class="p">:</span>      <span class="n">Shows</span><span class="o">/</span><span class="n">sets</span> <span class="n">enabled</span><span class="o">/</span><span class="n">disabled</span> <span class="n">sensor</span> <span class="p">[</span><span class="o">-</span><span class="n">enable</span> <span class="n">or</span> <span class="o">-</span><span class="n">disable</span> <span class="n">sensor</span><span class="o">-</span><span class="n">name</span><span class="p">]</span> <span class="n">or</span> <span class="p">[</span><span class="o">-</span><span class="n">interval</span> <span class="n">sensor</span><span class="o">-</span><span class="n">name</span> <span class="n">interval</span><span class="p">(</span><span class="n">seconds</span><span class="p">)]</span>
-<span class="nl">read</span><span class="p">:</span>        <span class="n">Reads</span> <span class="n">sensor</span> <span class="p">[</span><span class="n">sensorName</span><span class="p">]</span>
-<span class="nl">control</span><span class="p">:</span>     <span class="n">Control</span> <span class="n">sensor</span> <span class="p">[</span><span class="n">sensorName</span><span class="p">]</span> <span class="p">[</span><span class="n">command</span><span class="p">]</span>
-<span class="nl">monitor</span><span class="p">:</span>     <span class="n">Continously</span> <span class="n">read</span> <span class="n">sensor</span> <span class="p">[</span><span class="o">-</span><span class="n">sd</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">notime</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">noms</span><span class="p">]</span> <span class="p">[</span><span class="n">sensorName</span><span class="p">[,</span><span class="n">sensorNameN</span><span class="p">]]</span>
-<span class="nl">saved</span><span class="p">:</span>       <span class="n">Shows</span> <span class="n">locally</span> <span class="n">stored</span> <span class="n">sensor</span> <span class="n">readings</span> <span class="p">[</span><span class="o">-</span><span class="n">details</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">publish</span><span class="p">]</span>
-<span class="nl">free</span><span class="p">:</span>        <span class="n">Shows</span> <span class="n">the</span> <span class="n">amount</span> <span class="n">of</span> <span class="n">free</span> <span class="n">RAM</span> <span class="n">memory</span>
-<span class="nl">i2c</span><span class="p">:</span>         <span class="n">Search</span> <span class="n">the</span> <span class="n">I2C</span> <span class="n">bus</span> <span class="k">for</span> <span class="n">devices</span>
-<span class="nl">charger</span><span class="p">:</span>     <span class="n">Controls</span> <span class="n">or</span> <span class="n">shows</span> <span class="n">charger</span> <span class="n">configuration</span> <span class="p">[</span><span class="o">-</span><span class="n">otg</span> <span class="n">on</span><span class="o">/</span><span class="n">off</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">charge</span> <span class="n">on</span><span class="o">/</span><span class="n">off</span><span class="p">]</span>
-<span class="nl">config</span><span class="p">:</span>      <span class="n">Shows</span><span class="o">/</span><span class="n">sets</span> <span class="n">configuration</span> <span class="p">[</span><span class="o">-</span><span class="n">defaults</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">mode</span> <span class="n">sdcard</span><span class="o">/</span><span class="n">network</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">pubint</span> <span class="n">seconds</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">readint</span> <span class="n">seconds</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">wifi</span> <span class="s">&quot;ssid&quot;</span> <span class="p">[</span><span class="s">&quot;pass&quot;</span><span class="p">]]</span> <span class="p">[</span><span class="o">-</span><span class="n">token</span> <span class="n">token</span><span class="p">]</span>
-<span class="nl">esp</span><span class="p">:</span>         <span class="n">Controls</span> <span class="n">or</span> <span class="n">shows</span> <span class="n">info</span> <span class="n">from</span> <span class="n">ESP</span> <span class="p">[</span><span class="o">-</span><span class="n">on</span> <span class="o">-</span><span class="n">off</span> <span class="o">-</span><span class="n">sleep</span> <span class="o">-</span><span class="n">wake</span> <span class="o">-</span><span class="n">reboot</span> <span class="o">-</span><span class="n">flash</span><span class="p">]</span>
-<span class="nl">netinfo</span><span class="p">:</span>     <span class="n">Shows</span> <span class="n">network</span> <span class="n">information</span>
-<span class="nl">time</span><span class="p">:</span>        <span class="n">Shows</span><span class="o">/</span><span class="n">sets</span> <span class="n">time</span> <span class="p">[</span><span class="n">epoch</span> <span class="n">time</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">sync</span><span class="p">]</span>
-<span class="nl">state</span><span class="p">:</span>       <span class="n">Shows</span> <span class="n">state</span> <span class="n">flags</span>
-<span class="nl">hello</span><span class="p">:</span>       <span class="n">Sends</span> <span class="n">MQTT</span> <span class="n">hello</span> <span class="n">to</span> <span class="n">platform</span>
-<span class="nl">debug</span><span class="p">:</span>       <span class="n">Toggle</span> <span class="n">debug</span> <span class="n">messages</span> <span class="p">[</span><span class="o">-</span><span class="n">sdcard</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">espcom</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">list</span><span class="p">]</span>
-<span class="nl">shell</span><span class="p">:</span>       <span class="n">Shows</span> <span class="n">or</span> <span class="n">sets</span> <span class="n">shell</span> <span class="n">mode</span> <span class="p">[</span><span class="o">-</span><span class="n">on</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">off</span><span class="p">]</span>
-<span class="nl">mqtt</span><span class="p">:</span>        <span class="n">Publish</span> <span class="n">custom</span> <span class="n">mqtt</span> <span class="n">message</span> <span class="p">(</span><span class="err">&#39;</span><span class="n">topic</span><span class="sc">&#39; &#39;</span><span class="n">message</span><span class="err">&#39;</span><span class="p">)</span>
+<p>The <code>help</code> command outputs a quite intuitive explanation of all the commands:</p>
+<div class="highlight"><pre><span></span><code>SCK &gt; help
+reset:       Resets the SCK
+version:     Shows versions and Hardware ID
+rcause:      Show last reset cause (debug)
+outlevel:    Shows/sets outlevel [0:silent, 1:normal, 2:verbose]
+help:        Duhhhh!!
+pinmux:      Shows SAMD pin mapping status
+sensor:      Shows/sets enabled/disabled sensor [-enable or -disable sensor-name] or [-interval sensor-name interval(seconds)]
+read:        Reads sensor [sensorName]
+control:     Control sensor [sensorName] [command]
+monitor:     Continously read sensor [-sd] [-notime] [-noms] [sensorName[,sensorNameN]]
+saved:       Shows locally stored sensor readings [-details] [-publish]
+free:        Shows the amount of free RAM memory
+i2c:         Search the I2C bus for devices
+charger:     Controls or shows charger configuration [-otg on/off] [-charge on/off]
+config:      Shows/sets configuration [-defaults] [-mode sdcard/network] [-pubint seconds] [-readint seconds] [-wifi &quot;ssid&quot; [&quot;pass&quot;]] [-token token]
+esp:         Controls or shows info from ESP [-on -off -sleep -wake -reboot -flash]
+netinfo:     Shows network information
+time:        Shows/sets time [epoch time] [-sync]
+state:       Shows state flags
+hello:       Sends MQTT hello to platform
+debug:       Toggle debug messages [-sdcard] [-espcom] [-list]
+shell:       Shows or sets shell mode [-on] [-off]
+mqtt:        Publish custom mqtt message (&#39;topic&#39; &#39;message&#39;)
 </code></pre></div>
 
 <div class="admonition info">
 <p class="admonition-title">Pro tip</p>
 <p>The SCK outputs  a lot of information via serial. This can be sometimes confusing while typing commands. You can silent it a bit with this command:</p>
-<div class="codehilite"><pre><span></span><code><span class="err">SCK &gt; shell -on</span>
-<span class="err">Shell mode: on</span>
+<div class="highlight"><pre><span></span><code>SCK &gt; shell -on
+Shell mode: on
 </code></pre></div>
 
 <p>This will turn your LED static yellow, and no output except responses to your commands will be given. </p>
 <p>Remember to turn it off after you are done experimenting!</p>
-<div class="codehilite"><pre><span></span><code><span class="err">SCK &gt; shell -off</span>
-<span class="err">Shell mode: off</span>
+<div class="highlight"><pre><span></span><code>SCK &gt; shell -off
+Shell mode: off
 </code></pre></div>
 
 </div>
 <h3 id="set-the-recording-configuration">Set the recording configuration<a class="headerlink" href="#set-the-recording-configuration" title="Permanent link">Link</a></h3>
-<p>If you want to change your recording mode to, for instance, <code class="codehilite"><span class="err">sdcard</span></code> mode, you could do so by typing:</p>
-<div class="codehilite"><pre><span></span><code><span class="err">SCK &gt; config -mode sdcard</span>
+<p>If you want to change your recording mode to, for instance, <code>sdcard</code> mode, you could do so by typing:</p>
+<div class="highlight"><pre><span></span><code>SCK &gt; config -mode sdcard
 </code></pre></div>
 
-<p>To set it up in <code class="codehilite"><span class="err">network</span></code> mode:</p>
-<div class="codehilite"><pre><span></span><code><span class="err">SCK &gt; config -mode network -wifi &quot;SSID&quot; &quot;PASSWORD&quot; -token 123456</span>
+<p>To set it up in <code>network</code> mode:</p>
+<div class="highlight"><pre><span></span><code>SCK &gt; config -mode network -wifi &quot;SSID&quot; &quot;PASSWORD&quot; -token 123456
 </code></pre></div>
 
 <div class="admonition warning">
@@ -3723,165 +3723,165 @@
 <p>Note that the token is not between quotes since it's always 6 digits</p>
 </div>
 <p>To modify your wifi:</p>
-<div class="codehilite"><pre><span></span><code><span class="err">SCK &gt; config -wifi &quot;NEWSSID&quot; &quot;NEWPASSWORD&quot;</span>
+<div class="highlight"><pre><span></span><code>SCK &gt; config -wifi &quot;NEWSSID&quot; &quot;NEWPASSWORD&quot;
 </code></pre></div>
 
-<p>You can check your current configuration by typing <code class="codehilite"><span class="err">config</span></code>:</p>
-<div class="codehilite"><pre><span></span><code><span class="err">SCK &gt; config</span>
-<span class="c">Mode: sdcard</span>
-<span class="err">Publish interval: 60</span>
-<span class="err">Reading interval: 60</span>
-<span class="err">Wifi credentials: not configured</span>
-<span class="c">Token: not configured</span>
-<span class="err">Mac address:  11:22:33:44:55:66</span>
+<p>You can check your current configuration by typing <code>config</code>:</p>
+<div class="highlight"><pre><span></span><code>SCK &gt; config
+Mode: sdcard
+Publish interval: 60
+Reading interval: 60
+Wifi credentials: not configured
+Token: not configured
+Mac address:  11:22:33:44:55:66
 </code></pre></div>
 
 <h3 id="get-version-data">Get version data<a class="headerlink" href="#get-version-data" title="Permanent link">Link</a></h3>
-<p>Check your <strong>hardware and firmware version</strong> data with the command <code class="codehilite"><span class="err">version</span></code>:</p>
-<div class="codehilite"><pre><span></span><code><span class="err">SCK &gt; version</span>
-<span class="err">Hardware Version: 2.1</span>
-<span class="err">SAM Hardware ID: 5934C4B550515157382E3120FF151210</span>
-<span class="err">SAM version: 0.9.1-30e1776</span>
-<span class="err">SAM build date: 2019-05-07T02:45:29Z</span>
-<span class="err">ESP MAC address: 86:0D:8E:A7:7F:CC</span>
-<span class="err">ESP version: not synced</span>
-<span class="err">ESP build date: not synced</span>
+<p>Check your <strong>hardware and firmware version</strong> data with the command <code>version</code>:</p>
+<div class="highlight"><pre><span></span><code>SCK &gt; version
+Hardware Version: 2.1
+SAM Hardware ID: 5934C4B550515157382E3120FF151210
+SAM version: 0.9.1-30e1776
+SAM build date: 2019-05-07T02:45:29Z
+ESP MAC address: 86:0D:8E:A7:7F:CC
+ESP version: not synced
+ESP build date: not synced
 </code></pre></div>
 
 <h3 id="listmodify-the-active-sensors">List/modify the active sensors<a class="headerlink" href="#listmodify-the-active-sensors" title="Permanent link">Link</a></h3>
-<p>By typing in <code class="codehilite"><span class="err">sensor</span></code>, a <strong>list of enabled and supported sensors</strong> is displayed:</p>
-<div class="codehilite"><pre><span></span><code><span class="n">SCK</span> <span class="o">&gt;</span> <span class="n">sensor</span>
+<p>By typing in <code>sensor</code>, a <strong>list of enabled and supported sensors</strong> is displayed:</p>
+<div class="highlight"><pre><span></span><code>SCK &gt; sensor
 
-<span class="n">Disabled</span>
-<span class="c1">----------</span>
-<span class="n">PM</span> <span class="n">board</span> <span class="n">Dallas</span> <span class="n">Temperature</span>
-<span class="p">[...]</span>
+Disabled
+----------
+PM board Dallas Temperature
+[...]
 
-<span class="n">Enabled</span>
-<span class="c1">----------</span>
-<span class="n">Temperature</span> <span class="p">(</span><span class="mi">60</span> <span class="n">sec</span><span class="p">)</span>
-<span class="n">Humidity</span> <span class="p">(</span><span class="mi">60</span> <span class="n">sec</span><span class="p">)</span>
-<span class="n">Battery</span> <span class="p">(</span><span class="mi">60</span> <span class="n">sec</span><span class="p">)</span>
-<span class="n">Light</span> <span class="p">(</span><span class="mi">60</span> <span class="n">sec</span><span class="p">)</span>
-<span class="n">Noise</span> <span class="n">dBA</span> <span class="p">(</span><span class="mi">60</span> <span class="n">sec</span><span class="p">)</span>
-<span class="n">Barometric</span> <span class="n">pressure</span> <span class="p">(</span><span class="mi">60</span> <span class="n">sec</span><span class="p">)</span>
-<span class="n">VOC</span> <span class="n">Gas</span> <span class="n">CCS811</span> <span class="p">(</span><span class="mi">60</span> <span class="n">sec</span><span class="p">)</span>
-<span class="n">eCO2</span> <span class="n">Gas</span> <span class="n">CCS811</span> <span class="p">(</span><span class="mi">60</span> <span class="n">sec</span><span class="p">)</span>
-<span class="n">PM</span> <span class="mi">1</span><span class="p">.</span><span class="mi">0</span> <span class="p">(</span><span class="mi">60</span> <span class="n">sec</span><span class="p">)</span>
-<span class="n">PM</span> <span class="mi">2</span><span class="p">.</span><span class="mi">5</span> <span class="p">(</span><span class="mi">60</span> <span class="n">sec</span><span class="p">)</span>
-<span class="n">PM</span> <span class="mi">10</span><span class="p">.</span><span class="mi">0</span> <span class="p">(</span><span class="mi">60</span> <span class="n">sec</span><span class="p">)</span>
+Enabled
+----------
+Temperature (60 sec)
+Humidity (60 sec)
+Battery (60 sec)
+Light (60 sec)
+Noise dBA (60 sec)
+Barometric pressure (60 sec)
+VOC Gas CCS811 (60 sec)
+eCO2 Gas CCS811 (60 sec)
+PM 1.0 (60 sec)
+PM 2.5 (60 sec)
+PM 10.0 (60 sec)
 </code></pre></div>
 
 <p>To <strong>disable</strong> one sensor, you can type in part of the sensor name:</p>
-<div class="codehilite"><pre><span></span><code><span class="err">SCK &gt; sensor -disable Noise</span>
-<span class="err">Disabling Noise dBA</span>
-<span class="err">Saved configuration on eeprom!!</span>
+<div class="highlight"><pre><span></span><code>SCK &gt; sensor -disable Noise
+Disabling Noise dBA
+Saved configuration on eeprom!!
 </code></pre></div>
 
 <p>To <strong>enable</strong> it, if it's present:</p>
-<div class="codehilite"><pre><span></span><code><span class="err">SCK &gt; sensor -enable Noise</span>
-<span class="err">Enabling Noise dBA</span>
-<span class="err">Saved configuration on eeprom!!</span>
+<div class="highlight"><pre><span></span><code>SCK &gt; sensor -enable Noise
+Enabling Noise dBA
+Saved configuration on eeprom!!
 </code></pre></div>
 
 <div class="admonition warning">
 <p class="admonition-title">Only if available!</p>
 <p>If the sensor you are trying to connect is not recognised, the kit will complain:</p>
-<div class="codehilite"><pre><span></span><code><span class="err">SCK &gt; sensor -enable atlas</span>
-<span class="err">Failed enabling Atlas Temperature</span>
+<div class="highlight"><pre><span></span><code>SCK &gt; sensor -enable atlas
+Failed enabling Atlas Temperature
 </code></pre></div>
 
 </div>
 <h3 id="readmonitor-some-sensors">Read/Monitor some sensors<a class="headerlink" href="#readmonitor-some-sensors" title="Permanent link">Link</a></h3>
-<p>If one sensor is enabled, you can <code class="codehilite"><span class="err">read</span></code> it (once) or <code class="codehilite"><span class="err">monitor</span></code> it (as fast as the SCK can):</p>
-<div class="codehilite"><pre><span></span><code><span class="err">SCK &gt; read Noise</span>
-<span class="err">Noise dBA: 53.85 dBA</span>
+<p>If one sensor is enabled, you can <code>read</code> it (once) or <code>monitor</code> it (as fast as the SCK can):</p>
+<div class="highlight"><pre><span></span><code>SCK &gt; read Noise
+Noise dBA: 53.85 dBA
 </code></pre></div>
 
 <p>To monitor <strong>one sensor</strong>:</p>
-<div class="codehilite"><pre><span></span><code><span class="err">SCK &gt; monitor light</span>
-<span class="err">Time    Miliseconds     Light</span>
-<span class="c">2019-07-10T17:58:07Z    6       137</span>
-<span class="c">2019-07-10T17:58:07Z    98      137</span>
-<span class="c">2019-07-10T17:58:07Z    98      136</span>
-<span class="c">2019-07-10T17:58:07Z    98      137</span>
-<span class="c">2019-07-10T17:58:07Z    108     137</span>
-<span class="c">2019-07-10T17:58:07Z    98      137</span>
-<span class="c">2019-07-10T17:58:07Z    98      137</span>
-<span class="c">2019-07-10T17:58:07Z    108     137</span>
-<span class="c">2019-07-10T17:58:07Z    98      137</span>
-<span class="c">2019-07-10T17:58:08Z    98      137</span>
-<span class="c">2019-07-10T17:58:08Z    108     137</span>
-<span class="c">2019-07-10T17:58:08Z    98      136</span>
-<span class="err">...</span>
+<div class="highlight"><pre><span></span><code>SCK &gt; monitor light
+Time    Miliseconds     Light
+2019-07-10T17:58:07Z    6       137
+2019-07-10T17:58:07Z    98      137
+2019-07-10T17:58:07Z    98      136
+2019-07-10T17:58:07Z    98      137
+2019-07-10T17:58:07Z    108     137
+2019-07-10T17:58:07Z    98      137
+2019-07-10T17:58:07Z    98      137
+2019-07-10T17:58:07Z    108     137
+2019-07-10T17:58:07Z    98      137
+2019-07-10T17:58:08Z    98      137
+2019-07-10T17:58:08Z    108     137
+2019-07-10T17:58:08Z    98      136
+...
 </code></pre></div>
 
 <p>Or all of them, with no arguments:</p>
-<div class="codehilite"><pre><span></span><code><span class="err">SCK &gt; monitor</span>
-<span class="err">Time    Miliseconds     Battery Light   Temperature     Humidity        Noise dBA       Barometric pressure     VOC Gas CCS811  eCO2 Gas CCS811 PM 1.0  PM 2.5  PM 10.0</span>
-<span class="c">2019-07-11T09:13:04Z    5       37      137     28.75   57.72   1.5    101.29  1.00    408.00  1.5    1.5    1.5</span>
-<span class="c">2019-07-11T09:13:07Z    3195    37      138     28.78   57.65   1.5    101.30  1.00    408.00  1.5    1.5    1.5</span>
-<span class="c">2019-07-11T09:13:08Z    694     37      136     28.77   57.62   1.5    101.29  1.00    408.00  1.5    1.5    1.5</span>
+<div class="highlight"><pre><span></span><code>SCK &gt; monitor
+Time    Miliseconds     Battery Light   Temperature     Humidity        Noise dBA       Barometric pressure     VOC Gas CCS811  eCO2 Gas CCS811 PM 1.0  PM 2.5  PM 10.0
+2019-07-11T09:13:04Z    5       37      137     28.75   57.72   1.5    101.29  1.00    408.00  1.5    1.5    1.5
+2019-07-11T09:13:07Z    3195    37      138     28.78   57.65   1.5    101.30  1.00    408.00  1.5    1.5    1.5
+2019-07-11T09:13:08Z    694     37      136     28.77   57.62   1.5    101.29  1.00    408.00  1.5    1.5    1.5
 </code></pre></div>
 
-<p>If you don't need to output the <code class="codehilite"><span class="err">miliseconds</span></code> column (the time since last reading) or the <code class="codehilite"><span class="err">timestamp</span></code>, you can do so by:</p>
-<div class="codehilite"><pre><span></span><code><span class="err">SCK &gt; monitor -noms light</span>
-<span class="err">Time    Light</span>
-<span class="c">2019-07-10T17:58:58Z    136</span>
-<span class="c">2019-07-10T17:58:58Z    136</span>
-<span class="c">2019-07-10T17:58:58Z    137</span>
-<span class="c">2019-07-10T17:58:58Z    137</span>
-<span class="c">2019-07-10T17:58:59Z    136</span>
-<span class="err">...</span>
+<p>If you don't need to output the <code>miliseconds</code> column (the time since last reading) or the <code>timestamp</code>, you can do so by:</p>
+<div class="highlight"><pre><span></span><code>SCK &gt; monitor -noms light
+Time    Light
+2019-07-10T17:58:58Z    136
+2019-07-10T17:58:58Z    136
+2019-07-10T17:58:58Z    137
+2019-07-10T17:58:58Z    137
+2019-07-10T17:58:59Z    136
+...
 </code></pre></div>
 
-<div class="codehilite"><pre><span></span><code><span class="err">SCK &gt; monitor -notime light</span>
-<span class="err">Miliseconds     Light</span>
-<span class="err">6       137</span>
-<span class="err">98      137</span>
-<span class="err">98      137</span>
-<span class="err">99      137</span>
-<span class="err">108     137</span>
-<span class="err">...</span>
+<div class="highlight"><pre><span></span><code>SCK &gt; monitor -notime light
+Miliseconds     Light
+6       137
+98      137
+98      137
+99      137
+108     137
+...
 </code></pre></div>
 
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>If your kit has no time configured (the LED should be flashing), the output would look like:</p>
-<div class="codehilite"><pre><span></span><code><span class="err">SCK &gt; monitor Noise</span>
-<span class="err">Time    Miliseconds     Noise dBA</span>
-<span class="err">0       1       52.83</span>
-<span class="err">0       187     50.36</span>
-<span class="err">0       187     52.05</span>
-<span class="err">0       187     51.95</span>
-<span class="err">0       187     48.28</span>
-<span class="err">0       187     48.72</span>
-<span class="err">0       187     50.81</span>
-<span class="err">...</span>
+<div class="highlight"><pre><span></span><code>SCK &gt; monitor Noise
+Time    Miliseconds     Noise dBA
+0       1       52.83
+0       187     50.36
+0       187     52.05
+0       187     51.95
+0       187     48.28
+0       187     48.72
+0       187     50.81
+...
 </code></pre></div>
 
 </div>
-<p>Something cool to do with the <code class="codehilite"><span class="err">monitor</span></code>, is to log the sensor output into a file for later analysis. For instance, in your terminal you could do:</p>
-<div class="codehilite"><pre><span></span><code><span class="err">&gt; echo &quot;monitor pm light&quot; &gt; /dev/cu.usbmodem1411 &amp;&amp; screen -L /dev/cu.usbmodem1411</span>
+<p>Something cool to do with the <code>monitor</code>, is to log the sensor output into a file for later analysis. For instance, in your terminal you could do:</p>
+<div class="highlight"><pre><span></span><code>&gt; echo &quot;monitor pm light&quot; &gt; /dev/cu.usbmodem1411 &amp;&amp; screen -L /dev/cu.usbmodem1411
 </code></pre></div>
 
-<p>Then, if we check the contents of the file (normally something like <code class="codehilite"><span class="err">screenlog.X</span></code>:</p>
-<div class="codehilite"><pre><span></span><code><span class="err">monitor light</span>
-<span class="err">Time    Miliseconds     Light</span>
-<span class="c">2019-07-11T09:10:05Z    6       141</span>
-<span class="c">2019-07-11T09:10:05Z    98      141</span>
-<span class="c">2019-07-11T09:10:05Z    99      141</span>
-<span class="c">2019-07-11T09:10:05Z    98      141</span>
-<span class="c">2019-07-11T09:10:05Z    108     141</span>
-<span class="c">2019-07-11T09:10:05Z    98      141</span>
-<span class="c">2019-07-11T09:10:05Z    98      141</span>
-<span class="c">2019-07-11T09:10:05Z    98      141</span>
-<span class="c">2019-07-11T09:10:06Z    98      141</span>
-<span class="c">2019-07-11T09:10:06Z    98      141</span>
-<span class="c">2019-07-11T09:10:06Z    108     141</span>
-<span class="c">2019-07-11T09:10:06Z    98      141</span>
-<span class="c">2019-07-11T09:10:06Z    98      141</span>
-<span class="err">...</span>
+<p>Then, if we check the contents of the file (normally something like <code>screenlog.X</code>:</p>
+<div class="highlight"><pre><span></span><code>monitor light
+Time    Miliseconds     Light
+2019-07-11T09:10:05Z    6       141
+2019-07-11T09:10:05Z    98      141
+2019-07-11T09:10:05Z    99      141
+2019-07-11T09:10:05Z    98      141
+2019-07-11T09:10:05Z    108     141
+2019-07-11T09:10:05Z    98      141
+2019-07-11T09:10:05Z    98      141
+2019-07-11T09:10:05Z    98      141
+2019-07-11T09:10:06Z    98      141
+2019-07-11T09:10:06Z    98      141
+2019-07-11T09:10:06Z    108     141
+2019-07-11T09:10:06Z    98      141
+2019-07-11T09:10:06Z    98      141
+...
 </code></pre></div>
 
 <p>This can be useful in case you want to log data as fast as possible, with little delay between readings (~100ms).    </p>
@@ -3896,43 +3896,43 @@
 <p>First, enable it with:</p>
 </li>
 </ul>
-<div class="codehilite"><pre><span></span><code><span class="err">SCK &gt; sensor -enable fft</span>
-<span class="err">Enabling Noise FFT</span>
+<div class="highlight"><pre><span></span><code>SCK &gt; sensor -enable fft
+Enabling Noise FFT
 </code></pre></div>
 
 <ul>
 <li>Then, monitor and log it in a file with:</li>
 </ul>
-<div class="codehilite"><pre><span></span><code><span class="err">echo &quot;monitor fft&quot; &gt; /dev/cu.usbmodem1411 &amp;&amp; screen -L /dev/cu.usbmodem1411</span>
+<div class="highlight"><pre><span></span><code>echo &quot;monitor fft&quot; &gt; /dev/cu.usbmodem1411 &amp;&amp; screen -L /dev/cu.usbmodem1411
 </code></pre></div>
 
 <ul>
 <li>In this file, we will have something like:</li>
 </ul>
-<div class="codehilite"><pre><span></span><code><span class="err">12</span>
-<span class="err">15</span>
-<span class="err">19</span>
-<span class="err">20</span>
-<span class="err">0</span>
-<span class="err">...</span>
-<span class="err">12</span>
-<span class="err">23</span>
-<span class="c">2019-07-11T09:30:01Z    5   null</span>
-<span class="err">...</span>
+<div class="highlight"><pre><span></span><code>12
+15
+19
+20
+0
+...
+12
+23
+2019-07-11T09:30:01Z    5   null
+...
 </code></pre></div>
 
 <ul>
 <li>
-<p>The values between the dates are the actual FFT spectrum. We will now clean the lines with the dates and then plot the data. For this, we will use a <code class="codehilite"><span class="err">python</span></code> code to make things easier. You can download the code <a href="/assets/examples/spectrum_example.py">here</a>.</p>
+<p>The values between the dates are the actual FFT spectrum. We will now clean the lines with the dates and then plot the data. For this, we will use a <code>python</code> code to make things easier. You can download the code <a href="/assets/examples/spectrum_example.py">here</a>.</p>
 </li>
 <li>
-<p>If we run this code in <code class="codehilite"><span class="err">python3</span></code> in the same folder where the screenlog from before is:</p>
+<p>If we run this code in <code>python3</code> in the same folder where the screenlog from before is:</p>
 </li>
 </ul>
-<div class="codehilite"><pre><span></span><code><span class="err">&gt; python spectrum_example.py</span>
+<div class="highlight"><pre><span></span><code>&gt; python spectrum_example.py
 </code></pre></div>
 
-<p>We will have two outputs: a <code class="codehilite"><span class="err">csv</span></code> file with the spectrums in rows, and a png image that looks like this!</p>
+<p>We will have two outputs: a <code>csv</code> file with the spectrums in rows, and a png image that looks like this!</p>
 <p><img alt="" src="https://i.imgur.com/KZfFDam.png" /></p>
 <p>You can see that we were playing with a <a href="http://onlinetonegenerator.com/">tone generator</a> to make some high pitch noises at 10kHz and 20kHz. </p>
 </div>

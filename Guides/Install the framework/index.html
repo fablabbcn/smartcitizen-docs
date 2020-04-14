@@ -3599,66 +3599,66 @@
 <h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">Link</a></h2>
 <p>We recommend you use these two tools for managing the different versions of the framework and keep it updated.</p>
 <ol>
-<li>Download and install <code class="codehilite"><span class="err">git</span></code> from <a href="https://git-scm.com/">here</a></li>
-<li>Download and install <code class="codehilite"><span class="err">Anaconda</span></code> for Python 3.7 from <a href="https://www.anaconda.com/distribution/">here</a></li>
+<li>Download and install <code>git</code> from <a href="https://git-scm.com/">here</a></li>
+<li>Download and install <code>Anaconda</code> for Python 3.7 from <a href="https://www.anaconda.com/distribution/">here</a></li>
 </ol>
 <h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">Link</a></h2>
-<p>Open your favourite shell on the directory you have your project. <em>(<code class="codehilite"><span class="err">cmd.exe</span></code> on windows)</em></p>
+<p>Open your favourite shell on the directory you have your project. <em>(<code>cmd.exe</code> on windows)</em></p>
 <h3 id="get-the-repo">Get the repo<a class="headerlink" href="#get-the-repo" title="Permanent link">Link</a></h3>
-<p>Make a directory and <code class="codehilite"><span class="err">clone</span></code> the repository in it:</p>
-<div class="codehilite"><pre><span></span><code><span class="err">➜  mkdir data_analysis</span>
-<span class="err">➜  cd data_analysis</span>
-<span class="err">➜  git clone https://github.com/fablabbcn/smartcitizen-iscape-data.git</span>
-<span class="err">...</span>
+<p>Make a directory and <code>clone</code> the repository in it:</p>
+<div class="highlight"><pre><span></span><code>➜  mkdir data_analysis
+➜  cd data_analysis
+➜  git clone https://github.com/fablabbcn/smartcitizen-iscape-data.git
+...
 </code></pre></div>
 
 <div class="admonition warning">
 <p class="admonition-title">Want to stay up-to-date?</p>
-<p>The framework is being constantly updated and the only version that will always be up-to-date is in the <a href="https://github.com/fablabbcn/smartcitizen-iscape-data">master branch of the github repository</a>. We do not recommend to simply download the repository but to clone it with <code class="codehilite"><span class="err">git</span></code>. If you want to learn more about <code class="codehilite"><span class="err">git</span></code> and why it can help you in your projects, check <a href="https://www.quora.com/What-is-Git-and-why-should-I-use-it">here</a></p>
+<p>The framework is being constantly updated and the only version that will always be up-to-date is in the <a href="https://github.com/fablabbcn/smartcitizen-iscape-data">master branch of the github repository</a>. We do not recommend to simply download the repository but to clone it with <code>git</code>. If you want to learn more about <code>git</code> and why it can help you in your projects, check <a href="https://www.quora.com/What-is-Git-and-why-should-I-use-it">here</a></p>
 </div>
 <h3 id="create-the-environment">Create the environment<a class="headerlink" href="#create-the-environment" title="Permanent link">Link</a></h3>
-<p>Navigate to the cloned repository and create an environment for anaconda. We provide an <code class="codehilite"><span class="err">environment.yml</span></code> file to help with the process:</p>
-<div class="codehilite"><pre><span></span><code><span class="err">➜  cd smartcitizen-iscape-data</span>
-<span class="err">➜  smartcitizen-iscape-data git:(master) ✗ conda env create -f environment.yml</span>
+<p>Navigate to the cloned repository and create an environment for anaconda. We provide an <code>environment.yml</code> file to help with the process:</p>
+<div class="highlight"><pre><span></span><code>➜  cd smartcitizen-iscape-data
+➜  smartcitizen-iscape-data git:(master) ✗ conda env create -f environment.yml
 </code></pre></div>
 
-<p><strong>Alternatively</strong>, you can open Anaconda Navigator and <code class="codehilite"><span class="err">Import</span></code> an environment in the <code class="codehilite"><span class="err">Environment section</span></code>:</p>
+<p><strong>Alternatively</strong>, you can open Anaconda Navigator and <code>Import</code> an environment in the <code>Environment section</code>:</p>
 <p><img alt="" src="https://i.imgur.com/aAsrDXz.png" /> </p>
 <div class="admonition info">
 <p class="admonition-title">Note about different platforms</p>
-<p>Different platforms (Windows, Mac, Linux...) may have different dependencies for each package. We have tried to make the environment as clean as possible, but there might be still some <code class="codehilite"><span class="n">ModuleNotFound</span> <span class="n">Errors</span></code>. Please, use the <a href="https://github.com/fablabbcn/smartcitizen-iscape-data/issues">issue tracker</a> in the project to help us improve!</p>
+<p>Different platforms (Windows, Mac, Linux...) may have different dependencies for each package. We have tried to make the environment as clean as possible, but there might be still some <code>ModuleNotFound Errors</code>. Please, use the <a href="https://github.com/fablabbcn/smartcitizen-iscape-data/issues">issue tracker</a> in the project to help us improve!</p>
 </div>
 <h3 id="finish-it-up">Finish it up<a class="headerlink" href="#finish-it-up" title="Permanent link">Link</a></h3>
 <p>The code in the framework is managed as internal dependencies. To activate this, you can run:</p>
-<div class="codehilite"><pre><span></span><code><span class="err">➜  pip install --editable . --verbose</span>
+<div class="highlight"><pre><span></span><code>➜  pip install --editable . --verbose
 </code></pre></div>
 
-<p>Additional commands to install jupyter lab extensions are given in the <code class="codehilite"><span class="na">.dotfile</span></code>:</p>
-<div class="codehilite"><pre><span></span><code><span class="n">jupyter</span> <span class="n">labextension</span> <span class="n">install</span> <span class="p">@</span><span class="n">jupyter</span><span class="o">-</span><span class="n">widgets</span><span class="o">/</span><span class="n">jupyterlab</span><span class="o">-</span><span class="n">manager</span><span class="mf">@1.0</span>
-<span class="n">jupyter</span> <span class="n">labextension</span> <span class="n">install</span> <span class="p">@</span><span class="n">jupyterlab</span><span class="o">/</span><span class="n">toc</span>
-<span class="n">jupyter</span> <span class="n">labextension</span> <span class="n">install</span> <span class="n">jupyterlab</span><span class="o">-</span><span class="n">plotly</span><span class="mf">@1.0.0</span>
-<span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span> <span class="n">jupyter_nbextensions_configurator</span>
+<p>Additional commands to install jupyter lab extensions are given in the <code>.dotfile</code>:</p>
+<div class="highlight"><pre><span></span><code>jupyter labextension install @jupyter-widgets/jupyterlab-manager@1.0
+jupyter labextension install @jupyterlab/toc
+jupyter labextension install jupyterlab-plotly@1.0.0
+conda install -c conda-forge jupyter_nbextensions_configurator
 </code></pre></div>
 
 <p>With an optional one for plotly chart studio:</p>
-<div class="codehilite"><pre><span></span><code><span class="n">jupyter</span> <span class="n">labextension</span> <span class="n">install</span> <span class="n">jupyterlab</span><span class="o">-</span><span class="n">chart</span><span class="o">-</span><span class="n">editor</span><span class="mf">@1.2</span>
+<div class="highlight"><pre><span></span><code>jupyter labextension install jupyterlab-chart-editor@1.2
 </code></pre></div>
 
 <p>You can run it by:</p>
-<div class="codehilite"><pre><span></span><code><span class="err">➜  chmod +x .dotfile</span>
-<span class="err">➜  ./.dotfile</span>
+<div class="highlight"><pre><span></span><code>➜  chmod +x .dotfile
+➜  ./.dotfile
 </code></pre></div>
 
 <h2 id="run">Run<a class="headerlink" href="#run" title="Permanent link">Link</a></h2>
 <p>You should now be ready to go! You can verify the installation by either running this command:</p>
-<div class="codehilite"><pre><span></span><code><span class="err">(smartcitizen-data) ➜  ~ jupyter lab --version</span>
-<span class="err">1.0.2</span>
+<div class="highlight"><pre><span></span><code>(smartcitizen-data) ➜  ~ jupyter lab --version
+1.0.2
 </code></pre></div>
 
 <p>Or opening Anaconda Navigator: </p>
 <p><img alt="" src="https://i.imgur.com/THpoxd1.png" /></p>
 <p>To run the framework, in your terminal type:</p>
-<div class="codehilite"><pre><span></span><code><span class="err">(smartcitizen-data) ➜  smartcitizen-iscape-data git:(master) ✗ jupyter lab</span>
+<div class="highlight"><pre><span></span><code>(smartcitizen-data) ➜  smartcitizen-iscape-data git:(master) ✗ jupyter lab
 </code></pre></div>
 
 <p>This will open a web browser instance (by default <a href="">localhost:8888/lab</a>) which gives access to the tools in the framework.</p>

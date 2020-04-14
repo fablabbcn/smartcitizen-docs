@@ -3451,31 +3451,31 @@
                 <p>Uploading results to <a href="https://zenodo.org/">Zenodo</a> is also possible using the data analysis framework.</p>
 <p><img alt="" src="https://about.zenodo.org/static/img/logos/zenodo-black-1000.png" /></p>
 <p>Once you have your data organised in a test, you can upload it directly to Zenodo and share it with others. An example of this is provided in the <a href="https://github.com/fablabbcn/smartcitizen-iscape-data/blob/master/examples/upload_to_zenodo.ipynb">example notebook</a>.</p>
-<p>For this to work, we need to have a <a href="https://zenodo.org/account/settings/applications/">token</a>. Put this in a secrets.py file in the <code class="codehilite"><span class="err">src</span></code> directory:</p>
-<div class="codehilite"><pre><span></span><code><span class="err">&gt; cd src</span>
-<span class="err">&gt; ls -la</span>
-<span class="err">    .</span>
-<span class="err">    ..</span>
-<span class="err">    __init__.py</span>
-<span class="err">    __pycache__</span>
-<span class="err">    config.yaml</span>
-<span class="err">    data</span>
-<span class="err">    models</span>
-<span class="err">    saf.py</span>
-<span class="err">    secrets.py</span>
-<span class="err">    src.egg-info</span>
-<span class="err">    tools</span>
-<span class="err">    visualization</span>
+<p>For this to work, we need to have a <a href="https://zenodo.org/account/settings/applications/">token</a>. Put this in a secrets.py file in the <code>src</code> directory:</p>
+<div class="highlight"><pre><span></span><code>&gt; cd src
+&gt; ls -la
+    .
+    ..
+    __init__.py
+    __pycache__
+    config.yaml
+    data
+    models
+    saf.py
+    secrets.py
+    src.egg-info
+    tools
+    visualization
 </code></pre></div>
 
 <p>In this file, include your token as below:</p>
-<div class="codehilite"><pre><span></span><code><span class="err">zenodo_token=&#39;yourtokenhere&#39;</span>
+<div class="highlight"><pre><span></span><code>zenodo_token=&#39;yourtokenhere&#39;
 </code></pre></div>
 
-<p>Next, you can define a <code class="codehilite"><span class="err">upload.yaml</span></code> file to describe the upload (see one example <a href="https://github.com/fablabbcn/smartcitizen-iscape-data/blob/master/data/uploads/example_zenodo_upload.yaml">here</a>:</p>
-<div class="codehilite"><pre><span></span><code>example_upload_1.json: 
+<p>Next, you can define a <code>upload.yaml</code> file to describe the upload (see one example <a href="https://github.com/fablabbcn/smartcitizen-iscape-data/blob/master/data/uploads/example_zenodo_upload.yaml">here</a>:</p>
+<div class="highlight"><pre><span></span><code>example_upload_1.json: 
   title: &#39;Example Data 1&#39;
-  description: &#39;This field accepts <span class="nt">&lt;strong&gt;</span>HTML<span class="nt">&lt;/strong&gt;</span>&#39;
+  description: &#39;This field accepts &lt;strong&gt;HTML&lt;/strong&gt;&#39;
   upload_type: &#39;dataset&#39;
   keywords: [&#39;Low-Cost Sensors&#39;, &#39;Air Quality&#39;, &#39;Citizen Science&#39;]
   creators: [{&#39;name&#39;: &#39;Author 1&#39;, &#39;affiliation&#39;: &#39;Affiliation 1&#39;, &#39;orcid&#39;: &#39;0000-0000-0000-0001&#39;}, 
@@ -3490,7 +3490,7 @@
   report: [&#39;report.pdf&#39;]
 example_upload_2.json: 
   title: &#39;Example Data 2&#39;
-  description: &#39;This field accepts <span class="nt">&lt;strong&gt;</span>HTML<span class="nt">&lt;/strong&gt;</span>&#39;
+  description: &#39;This field accepts &lt;strong&gt;HTML&lt;/strong&gt;&#39;
   upload_type: &#39;dataset&#39;
   keywords: [&#39;Low-Cost Sensors&#39;, &#39;Air Quality&#39;, &#39;Citizen Science&#39;]
   creators: [{&#39;name&#39;: &#39;Author 1&#39;, &#39;affiliation&#39;: &#39;Affiliation 1&#39;, &#39;orcid&#39;: &#39;0000-0000-0000-0001&#39;}, 
@@ -3509,37 +3509,37 @@ example_upload_2.json:
 <p class="admonition-title">Info</p>
 <p>All the keys below are linked to the <a href="https://developers.zenodo.org/">zenodo documentation</a></p>
 </div>
-<p>Different uploads can be defined by each main key: <code class="codehilite"><span class="err">example_upload_1.json</span></code> and <code class="codehilite"><span class="err">example_upload_2.json</span></code>. Each of them contains the following information (all of them can be later modified or added in the web interface in <a href="https://zenodo.org">zenodo.org</a>)</p>
+<p>Different uploads can be defined by each main key: <code>example_upload_1.json</code> and <code>example_upload_2.json</code>. Each of them contains the following information (all of them can be later modified or added in the web interface in <a href="https://zenodo.org">zenodo.org</a>)</p>
 <p><strong>Metadata for Zenodo</strong></p>
 <ul>
-<li><code class="codehilite"><span class="err">title</span></code>: Name for the dataset</li>
-<li><code class="codehilite"><span class="err">description</span></code>: dataset description (mandatory). This field accepts HTML</li>
-<li><code class="codehilite"><span class="err">upload_type</span></code>: 'dataset' (mandatory - always, for now)</li>
-<li><code class="codehilite"><span class="err">keywords</span></code>: list of keywords, such as <code class="codehilite"><span class="err">[&#39;Low-Cost Sensors&#39;, &#39;Air Quality&#39;, &#39;Citizen Science&#39;]</span></code></li>
-<li><code class="codehilite"><span class="err">creators</span></code>: dictionary containing the authors. Can contain the name, the affiliation and an <a href="https://orcid.org/">orcid</a></li>
-<li><code class="codehilite"><span class="err">access_right</span></code>: 'open' (other options in the <a href="https://developers.zenodo.org/">zenodo documentation</a>)</li>
-<li><code class="codehilite"><span class="err">communities</span></code>: id for the zenodo data community</li>
-<li><code class="codehilite"><span class="err">grants</span></code>: grant id</li>
+<li><code>title</code>: Name for the dataset</li>
+<li><code>description</code>: dataset description (mandatory). This field accepts HTML</li>
+<li><code>upload_type</code>: 'dataset' (mandatory - always, for now)</li>
+<li><code>keywords</code>: list of keywords, such as <code>['Low-Cost Sensors', 'Air Quality', 'Citizen Science']</code></li>
+<li><code>creators</code>: dictionary containing the authors. Can contain the name, the affiliation and an <a href="https://orcid.org/">orcid</a></li>
+<li><code>access_right</code>: 'open' (other options in the <a href="https://developers.zenodo.org/">zenodo documentation</a>)</li>
+<li><code>communities</code>: id for the zenodo data community</li>
+<li><code>grants</code>: grant id</li>
 </ul>
 <p><strong>Upload</strong></p>
 <ul>
-<li><code class="codehilite"><span class="err">tests</span></code>: <code class="codehilite"><span class="err">[&#39;TEST_1&#39;, &#39;TEST_2&#39;]</span></code></li>
-<li><code class="codehilite"><span class="err">options</span></code>: <ul>
-<li><code class="codehilite"><span class="err">include_processed_data</span></code>: true or false. Whether or not to include the processed data from the <em>processed</em> folder in the test directory</li>
-<li><code class="codehilite"><span class="err">include_footer_doi</span></code>: true. If there is a report attached, add a nice footer to it with the DOI</li>
+<li><code>tests</code>: <code>['TEST_1', 'TEST_2']</code></li>
+<li><code>options</code>: <ul>
+<li><code>include_processed_data</code>: true or false. Whether or not to include the processed data from the <em>processed</em> folder in the test directory</li>
+<li><code>include_footer_doi</code>: true. If there is a report attached, add a nice footer to it with the DOI</li>
 </ul>
 </li>
-<li><code class="codehilite"><span class="err">report</span></code>: list of reports to attach. Must be also in the <code class="codehilite"><span class="err">data/uploads</span></code> folder</li>
+<li><code>report</code>: list of reports to attach. Must be also in the <code>data/uploads</code> folder</li>
 </ul>
-<p>To upload the datasets, we can use the zenodo sandbox and a dry_run, to check everything is running well. Then, make these defaults to <code class="codehilite"><span class="err">False</span></code> to actually upload it:</p>
-<div class="codehilite"><pre><span></span><code><span class="err"># You can use the sandbox.zenodo.org for tests, as well as a dry_run. When you are happy with your upload, set these variables to False</span>
-<span class="err"># Then go to uploads in the zenodo section and publish whenever you are ready</span>
-<span class="err">data.upload_to_zenodo(&#39;example_zenodo_upload&#39;, sandbox = False, dry_run = True)</span>
+<p>To upload the datasets, we can use the zenodo sandbox and a dry_run, to check everything is running well. Then, make these defaults to <code>False</code> to actually upload it:</p>
+<div class="highlight"><pre><span></span><code># You can use the sandbox.zenodo.org for tests, as well as a dry_run. When you are happy with your upload, set these variables to False
+# Then go to uploads in the zenodo section and publish whenever you are ready
+data.upload_to_zenodo(&#39;example_zenodo_upload&#39;, sandbox = False, dry_run = True)
 </code></pre></div>
 
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Note that a .json file will be created in the data/uploads folder containing the metadata necessary for the upload (as liked by zenodo API). You can securely delete this file once you are done. Note that, in case <code class="codehilite"><span class="err">include_footer_doi=true</span></code>, the actual pdf to upload will be <code class="codehilite"><span class="err">report_doi.pdf</span></code></p>
+<p>Note that a .json file will be created in the data/uploads folder containing the metadata necessary for the upload (as liked by zenodo API). You can securely delete this file once you are done. Note that, in case <code>include_footer_doi=true</code>, the actual pdf to upload will be <code>report_doi.pdf</code></p>
 </div>
 <p>Finally, <strong>to actually deploy the dataset</strong>, you need to visit the <a href="https://zenodo.org/deposit">deposit section</a> and aprove it manually.</p>
 <div class="admonition info">

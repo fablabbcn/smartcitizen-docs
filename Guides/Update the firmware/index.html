@@ -3451,11 +3451,11 @@
                 <p>When new features are developed or bugs are fixed we will release new versions of the SCK firmware.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>If you already configured your kit on the smartcitizen platform <strong>you will need the token that the platform gave you during the onboarding process</strong>, to recover it from your kit:  </p>
+<p>If you already configured your kit on the smartcitizen platform <strong>you will need the token that the platform gave you during the onboarding process</strong>, to recover it from your kit:</p>
 <ol>
-<li><strong>Click your kit button</strong> until the kit is in <a href="../../../../Smart%20Citizen%20Kit/#setup-mode">setup mode</a>, the led should be red.  </li>
-<li><strong>Connecto to the kit</strong> with your mobile device as you did during the onboarding process.  </li>
-<li><strong>Write down the token</strong> of your kit.  </li>
+<li><strong>Click your kit button</strong> until the kit is in <a href="../../../../Smart%20Citizen%20Kit/#setup-mode">setup mode</a>, the led should be red.</li>
+<li><strong>Connecto to the kit</strong> with your mobile device as you did during the onboarding process.</li>
+<li><strong>Write down the token</strong> of your kit.</li>
 </ol>
 <p><img alt="" src="/assets/images/sck_2/ap_token.png" /></p>
 <p>After updating the firmware follow this same steps to input the token and wifi credentials, after this your kit will be publishing on the same registered device than before.</p>
@@ -3482,8 +3482,29 @@
 </ul>
 <p><img alt="" src="/assets/images/sck_2/uf2_drag.png" /></p>
 <ul>
+<li>If your <strong>Wi-Fi module needs a firmware update</strong> when you connect to your kit to setup the network you will see a screen that will ask for the new file. You can find it in our <a href="https://github.com/fablabbcn/smartcitizen-kit-21/releases/latest">github releases page</a>, look for the file called <code>ESP_firmware_XXX.bin</code>. If you don't see it, check in a <a href="https://github.com/fablabbcn/smartcitizen-kit-21/releases">previous release</a> (some releases don't include Wi-Fi firmware).</li>
+</ul>
+<p><img alt="" src="/assets/images/sck_2/esp_update.png" /></p>
+<ul>
 <li>After the update you just done, you can configure your kit as a new device following the <a href="https:start.smartcitizen.me">onboarding</a> process or use your previous token as explained before.</li>
 </ul>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Obtain your firmware version remotely (advanced)</p>
+<p>If you are an advance user managing a big deployment of devices you can obtain remotely the version of all the kits you have registered by looking at the <code>hardware_info</code> property of each of your devices using the platform API <code>/v0/devices/</code></p>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;hardware_info&quot;</span><span class="err">:</span> <span class="p">{</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;DFD098A750515157382E3120FF101D12&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;mac&quot;</span><span class="p">:</span> <span class="s2">&quot;B6:E6:2D:66:47:6D&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;time&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-04-14T03:00:24Z&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;esp_bd&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;hw_ver&quot;</span><span class="p">:</span> <span class="s2">&quot;2.1&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;sam_bd&quot;</span><span class="p">:</span> <span class="s2">&quot;2019-11-27T12:49:13Z&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;esp_ver&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;sam_ver&quot;</span><span class="p">:</span> <span class="s2">&quot;0.9.6-4e90c77&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p><a href="https://developer.smartcitizen.me/#devices">More info</a> in the platform API documentation.</p>
 </div>
                 
                   

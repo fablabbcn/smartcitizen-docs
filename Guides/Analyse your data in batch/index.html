@@ -3656,15 +3656,15 @@
                 
                   <h1>Analyse your data in batch</h1>
                 
-                <p>Sometimes we have a lot of devices to process, and the interfaces for analysis in <a href="https://smartcitizen.me">smartcitizen.me</a> or in the <code class="codehilite"><span class="err">jupyter notebook</span></code> might not be the most efficient way to do it. For this reason, we have developed a functionality to process the data in batches, defining the tasks to perform in a <code class="codehilite"><span class="err">json</span></code> descriptor file.</p>
-<p>The descriptor file can be placed in the <code class="codehilite"><span class="err">src/tasks</span></code> directory (or any, actually). An example of how to run it is shown in <a href="https://github.com/fablabbcn/smartcitizen-iscape-data/blob/master/examples/batch_analysis.ipynb"><code class="codehilite"><span class="err">examples/batch_analysis.ipynb</span></code></a>:</p>
-<div class="codehilite"><pre><span></span><code><span class="c1"># Load the object</span>
-<span class="kn">from</span> <span class="nn">src.models.batch</span> <span class="kn">import</span> <span class="n">batch_analysis</span><span class="s2">&quot;,</span>
-<span class="n">tasks_file</span> <span class="o">=</span> <span class="s1">&#39;../tasks/batch.json&#39;</span><span class="s2">&quot;,</span>
-<span class="n">batch_session</span> <span class="o">=</span> <span class="n">batch_analysis</span><span class="p">(</span><span class="n">tasks_file</span><span class="p">,</span> <span class="n">verbose</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span>
+                <p>Sometimes we have a lot of devices to process, and the interfaces for analysis in <a href="https://smartcitizen.me">smartcitizen.me</a> or in the <code>jupyter notebook</code> might not be the most efficient way to do it. For this reason, we have developed a functionality to process the data in batches, defining the tasks to perform in a <code>json</code> descriptor file.</p>
+<p>The descriptor file can be placed in the <code>src/tasks</code> directory (or any, actually). An example of how to run it is shown in <a href="https://github.com/fablabbcn/smartcitizen-iscape-data/blob/master/examples/batch_analysis.ipynb"><code>examples/batch_analysis.ipynb</code></a>:</p>
+<div class="highlight"><pre><span></span><code># Load the object
+from src.models.batch import batch_analysis&quot;,
+tasks_file = &#39;../tasks/batch.json&#39;&quot;,
+batch_session = batch_analysis(tasks_file, verbose = True)
 
-<span class="c1"># Run the analysis</span>
-<span class="n">batch_session</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+# Run the analysis
+batch_session.run()
 </code></pre></div>
 
 <h2 id="functionality">Functionality<a class="headerlink" href="#functionality" title="Permanent link">Link</a></h2>
@@ -3677,79 +3677,79 @@
 <h2 id="workflow">Workflow<a class="headerlink" href="#workflow" title="Permanent link">Link</a></h2>
 <p><img alt="" src="https://i.imgur.com/eDBftEx.png" /></p>
 <h2 id="json-task-description">Json task description<a class="headerlink" href="#json-task-description" title="Permanent link">Link</a></h2>
-<p>The descriptor file loaded is a <code class="codehilite"><span class="err">json</span></code> containing keys for each task to be run. Several tasks can be included and will be run consecutively:</p>
-<div class="codehilite"><pre><span></span><code><span class="err">{</span>
-<span class="err">    &quot;TASK_1&quot;:{...},</span>
-<span class="err">    &quot;TASK_2&quot;:{...},</span>
-<span class="err">    &quot;TASK_3&quot;:{...}</span>
-<span class="err">}</span>
+<p>The descriptor file loaded is a <code>json</code> containing keys for each task to be run. Several tasks can be included and will be run consecutively:</p>
+<div class="highlight"><pre><span></span><code>{
+    &quot;TASK_1&quot;:{...},
+    &quot;TASK_2&quot;:{...},
+    &quot;TASK_3&quot;:{...}
+}
 </code></pre></div>
 
-<p>Each of the <code class="codehilite"><span class="err">tasks</span></code> contains different fields, depending on what the process is.</p>
+<p>Each of the <code>tasks</code> contains different fields, depending on what the process is.</p>
 <h3 id="define-data">Define data<a class="headerlink" href="#define-data" title="Permanent link">Link</a></h3>
 <p>In case <strong>no model needs to be calculated</strong>, the data can be specified directly in the task:</p>
-<div class="codehilite"><pre><span></span><code><span class="err">{</span>
-<span class="err">    &quot;TASK_1&quot;:{</span>
-<span class="err">        &quot;data&quot;:{</span>
-<span class="err">            &quot;datasets&quot;: {</span>
-<span class="err">                &quot;TEST_1&quot;: [&quot;DEVICE_11&quot;,&quot;DEVICE_12&quot;],</span>
-<span class="err">                &quot;TEST_2&quot;: [&quot;DEVICE_21&quot;, &quot;DEVICE_22&quot;, &quot;DEVICE_23&quot;],</span>
-<span class="err">                ...</span>
-<span class="err">                        },</span>
-<span class="err">            &quot;data_options&quot;: {&quot;avoid_processed&quot;: true,</span>
-<span class="err">                            &quot;frequency&quot;: &quot;1Min&quot;,</span>
-<span class="err">                            &quot;clean_na&quot;: true,</span>
-<span class="err">                            &quot;use_cache&quot;: true,</span>
-<span class="err">                            &quot;clean_na_method&quot;: &quot;drop&quot;,</span>
-<span class="err">                            &quot;min_date&quot;: null,</span>
-<span class="err">                            &quot;max_date&quot;: null,</span>
-<span class="err">                            &quot;export_data&quot;: null,</span>
-<span class="err">                            &quot;rename_export_data&quot;: false}</span>
-<span class="err">                    }</span>
-<span class="err">}</span>
+<div class="highlight"><pre><span></span><code>{
+    &quot;TASK_1&quot;:{
+        &quot;data&quot;:{
+            &quot;datasets&quot;: {
+                &quot;TEST_1&quot;: [&quot;DEVICE_11&quot;,&quot;DEVICE_12&quot;],
+                &quot;TEST_2&quot;: [&quot;DEVICE_21&quot;, &quot;DEVICE_22&quot;, &quot;DEVICE_23&quot;],
+                ...
+                        },
+            &quot;data_options&quot;: {&quot;avoid_processed&quot;: true,
+                            &quot;frequency&quot;: &quot;1Min&quot;,
+                            &quot;clean_na&quot;: true,
+                            &quot;use_cache&quot;: true,
+                            &quot;clean_na_method&quot;: &quot;drop&quot;,
+                            &quot;min_date&quot;: null,
+                            &quot;max_date&quot;: null,
+                            &quot;export_data&quot;: null,
+                            &quot;rename_export_data&quot;: false}
+                    }
+}
 </code></pre></div>
 
 <p>If a model is to be calculated, the data is defined within the model key as seen below. </p>
 <h4 id="data-loading-options">Data loading options<a class="headerlink" href="#data-loading-options" title="Permanent link">Link</a></h4>
 <ul>
-<li><code class="codehilite"><span class="err">frequency</span></code>: frequency at which load the data (as defined in <code class="codehilite"><span class="err">pandas</span></code> <a href="https://stackoverflow.com/questions/35339139/where-is-the-documentation-on-pandas-freq-tags">here</a>)</li>
-<li><code class="codehilite"><span class="err">clean_na</span></code>: clean or not NaN</li>
-<li><code class="codehilite"><span class="err">clean_na_method</span></code>: <code class="codehilite"><span class="err">drop</span></code> or <code class="codehilite"><span class="err">fill</span></code> with back-forward filling</li>
-<li><code class="codehilite"><span class="err">use_cache</span></code>: whether or not to use file chaching for the analysis. This adds a <code class="codehilite"><span class="err">cached</span></code> folder in the corresponding <code class="codehilite"><span class="err">test</span></code> directory, which allows faster download from the <code class="codehilite"><span class="err">API</span></code>. It is implemented so that the only data to be downloaded is the one that is not cached</li>
-<li><code class="codehilite"><span class="err">min_date</span></code>, <code class="codehilite"><span class="err">max_date</span></code>: for limitting the amount of data to be loaded</li>
-<li><code class="codehilite"><span class="err">export_data</span></code>: if the processed data (after pre-processing and modeling) has to be exported. It will be saved in the corresponding <code class="codehilite"><span class="err">test</span></code> folder, under <code class="codehilite"><span class="k">proc</span><span class="nb">es</span><span class="nv">sed</span></code>. Options are:<ul>
-<li><code class="codehilite"><span class="err">None</span></code>: don't export anything</li>
-<li><code class="codehilite"><span class="err">All</span></code>: all channels in the <code class="codehilite"><span class="err">pandas dataframe</span></code></li>
-<li><code class="codehilite"><span class="err">Only Generic</span></code>: Export only channels that are under the <code class="codehilite"><span class="err">data/interim/sensorNamesExport.json</span></code></li>
-<li><code class="codehilite"><span class="err">Only Processed</span></code>: Export only channels that are tagged as <code class="codehilite"><span class="k">proc</span><span class="nb">es</span><span class="nv">sed</span></code> under the <code class="codehilite"><span class="err">data/interim/sensorNamesExport.json</span></code></li>
+<li><code>frequency</code>: frequency at which load the data (as defined in <code>pandas</code> <a href="https://stackoverflow.com/questions/35339139/where-is-the-documentation-on-pandas-freq-tags">here</a>)</li>
+<li><code>clean_na</code>: clean or not NaN</li>
+<li><code>clean_na_method</code>: <code>drop</code> or <code>fill</code> with back-forward filling</li>
+<li><code>use_cache</code>: whether or not to use file chaching for the analysis. This adds a <code>cached</code> folder in the corresponding <code>test</code> directory, which allows faster download from the <code>API</code>. It is implemented so that the only data to be downloaded is the one that is not cached</li>
+<li><code>min_date</code>, <code>max_date</code>: for limitting the amount of data to be loaded</li>
+<li><code>export_data</code>: if the processed data (after pre-processing and modeling) has to be exported. It will be saved in the corresponding <code>test</code> folder, under <code>processed</code>. Options are:<ul>
+<li><code>None</code>: don't export anything</li>
+<li><code>All</code>: all channels in the <code>pandas dataframe</code></li>
+<li><code>Only Generic</code>: Export only channels that are under the <code>data/interim/sensorNamesExport.json</code></li>
+<li><code>Only Processed</code>: Export only channels that are tagged as <code>processed</code> under the <code>data/interim/sensorNamesExport.json</code></li>
 </ul>
 </li>
-<li><code class="codehilite"><span class="err">rename_export_data</span></code>: Rename the exported channels for better readability using the file <code class="codehilite"><span class="err">data/interim/sensorNamesExport.json</span></code></li>
+<li><code>rename_export_data</code>: Rename the exported channels for better readability using the file <code>data/interim/sensorNamesExport.json</code></li>
 </ul>
 <div class="admonition info">
 <p class="admonition-title">None?</p>
-<p>In <code class="codehilite"><span class="err">json</span></code>, we specify the <code class="codehilite"><span class="err">python</span></code> <code class="codehilite"><span class="err">None</span></code> as <code class="codehilite"><span class="err">null</span></code>.</p>
+<p>In <code>json</code>, we specify the <code>python</code> <code>None</code> as <code>null</code>.</p>
 </div>
 <div class="admonition tip">
 <p class="admonition-title">Want to save time?</p>
-<p>Enable <code class="codehilite"><span class="err">use_cache</span></code> and we will save some time by checking if the data we have downloaded previously from the API can be used. This also applies for pre-processing functions.</p>
+<p>Enable <code>use_cache</code> and we will save some time by checking if the data we have downloaded previously from the API can be used. This also applies for pre-processing functions.</p>
 </div>
 <!-- ### Pre-process data
 
 Different preprocessing options can be defined. The most common one, for the sensors in the _Smart Citizen Project_ are the analysis of the _electrochemical sensors_ but others can be used and implemented, for later call from `/src/models/batch.py`.
 
-<div class="codehilite"><pre><span></span><code><span class="err">    &quot;TASK_1&quot;: {</span>
-<span class="err">        &quot;pre-processing&quot;: {</span>
-<span class="err">                &quot;alphasense&quot;: {&quot;baseline_method&quot;: &quot;deltas&quot;,</span>
-<span class="err">                                &quot;parameters&quot;: [30, 45, 5],</span>
-<span class="err">                                &quot;methods&quot;: {&quot;CO&quot;: [&quot;classic&quot;, &quot;na&quot;],</span>
-<span class="err">                                            &quot;NO2&quot;: [&quot;baseline&quot;, &quot;single_aux&quot;],</span>
-<span class="err">                                            &quot;O3&quot;: [&quot;baseline&quot;, &quot;single_aux&quot;]</span>
-<span class="err">                                            },</span>
-<span class="err">                                &quot;overlapHours&quot;: 0</span>
-<span class="err">                            }</span>
-<span class="err">            },</span>
-<span class="err">    }</span>
+<div class="highlight"><pre><span></span><code>    &quot;TASK_1&quot;: {
+        &quot;pre-processing&quot;: {
+                &quot;alphasense&quot;: {&quot;baseline_method&quot;: &quot;deltas&quot;,
+                                &quot;parameters&quot;: [30, 45, 5],
+                                &quot;methods&quot;: {&quot;CO&quot;: [&quot;classic&quot;, &quot;na&quot;],
+                                            &quot;NO2&quot;: [&quot;baseline&quot;, &quot;single_aux&quot;],
+                                            &quot;O3&quot;: [&quot;baseline&quot;, &quot;single_aux&quot;]
+                                            },
+                                &quot;overlapHours&quot;: 0
+                            }
+            },
+    }
 </code></pre></div>
 
 **Note**: this section is currently project specific for electrochemical sensors defined [here](https://docs.smartcitizen.me/Components/Gas%20Pro%20Sensor%20Board/Electrochemical%20Sensors)
@@ -3765,67 +3765,67 @@ Different preprocessing options can be defined. The most common one, for the sen
 <p class="admonition-title">Recommended to just get in touch<p>This can be overwhelming at first. Just <a href="mailto:support@smartcitizen.me">get in touch</a></p>
 </p>
 </div>
-<p>In the <code class="codehilite"><span class="err">model</span></code> sub-task, currently three possibilities are implemented:</p>
+<p>In the <code>model</code> sub-task, currently three possibilities are implemented:</p>
 <ul>
-<li>Linear methods: <code class="codehilite"><span class="err">OLS</span></code> or <code class="codehilite"><span class="err">RLM</span></code> regression</li>
-<li>Random Forest (<code class="codehilite"><span class="err">RF</span></code>) or Support Vector Regressor <code class="codehilite"><span class="err">SVR</span></code></li>
+<li>Linear methods: <code>OLS</code> or <code>RLM</code> regression</li>
+<li>Random Forest (<code>RF</code>) or Support Vector Regressor <code>SVR</code></li>
 <li>XGBoost</li>
 </ul>
-<p>In the case of having a <code class="codehilite"><span class="err">model</span></code> task, the <code class="codehilite"><span class="err">data</span></code> defined above is ignored, and only the one under <code class="codehilite"><span class="c">model: {&quot;data&quot;:{}}</span></code> is used. </p>
+<p>In the case of having a <code>model</code> task, the <code>data</code> defined above is ignored, and only the one under <code>model: {"data":{}}</code> is used. </p>
 <div class="admonition warning">
 <p class="admonition-title">One model per task</p>
 <p>It is better to generate only one model per task, since the memory used by the models can be very large.</p>
 </div>
 <p>An example is shown below:</p>
-<div class="codehilite"><pre><span></span><code><span class="err">&quot;model&quot;: {</span>
-<span class="err">        &quot;model_name&quot;: &quot;Random_Forest_100&quot;,</span>
-<span class="err">        &quot;model_type&quot;: &quot;RF&quot;,</span>
-<span class="err">        &quot;model_target&quot;: &quot;ALPHASENSE&quot;,</span>
-<span class="err">                    &quot;data&quot;: {&quot;train&quot;: {&quot;TEST_1&quot;: {&quot;devices&quot;: [&quot;DEVICE_1&quot;],</span>
-<span class="err">                                                 &quot;reference_device&quot;:&quot;REF_DEVICE_1&quot;}},</span>
-<span class="err">                            &quot;test&quot;: {&quot;TEST_1&quot;: {&quot;devices&quot;: [&quot;DEVICE_1&quot;, &quot;DEVICE_2&quot;],</span>
-<span class="err">                                                 &quot;reference_device&quot;:&quot;REF_DEVICE_2&quot;},</span>
-<span class="err">                                     &quot;TEST_2&quot;: {&quot;devices&quot;: [&quot;DEVICE_3&quot;],</span>
-<span class="err">                                                &quot;reference_device&quot;: &quot;REF_DEVICE_3&quot;},</span>
-<span class="err">                                     &quot;TEST_3&quot;: {&quot;devices&quot;: [&quot;DEVICE_4&quot;],</span>
-<span class="err">                                                &quot;reference_device&quot;: &quot;REF_DEVICE_4&quot;},</span>
-<span class="err">                                     &quot;TEST_2&quot;: {&quot;devices&quot;: [&quot;DEVICE_5&quot;],</span>
-<span class="err">                                                &quot;reference_device&quot;: &quot;REF_DEVICE_5&quot;}},</span>
-<span class="err">                &quot;features&quot;: {&quot;REF&quot;: &quot;NO2_REF&quot;,</span>
-<span class="err">                            &quot;A&quot;:  &quot;GB_2W&quot;,</span>
-<span class="err">                            &quot;B&quot;: &quot;GB_2A&quot;,</span>
-<span class="err">                            &quot;C&quot;: &quot;HUM&quot;</span>
-<span class="err">                            }</span>
-<span class="err">                &quot;data_options&quot;: {&quot;export_data&quot;: &quot;All&quot;,</span>
-<span class="err">                            &quot;rename_export_data&quot;: false,</span>
-<span class="err">                            &quot;target_raster&quot;: 1Min&quot;,</span>
-<span class="err">                            &quot;clean_na&quot;: true,</span>
-<span class="err">                            &quot;clean_na_method&quot;: &quot;fill&quot;,</span>
-<span class="err">                            &quot;min_date&quot;: null,</span>
-<span class="err">                            &quot;max_date&quot;: null,</span>
-<span class="err">                            &quot;use_cache&quot;: true}</span>
-<span class="err">                },</span>
-<span class="err">        &quot;hyperparameters&quot;: {&quot;ratio_train&quot;: 0.75,</span>
-<span class="err">                            &quot;n_estimators&quot;: 100,</span>
-<span class="err">                            &quot;shuffle_split&quot;: true</span>
-<span class="err">                            },</span>
-<span class="err">        &quot;model_options&quot;: {&quot;session_active_model&quot;: false,</span>
-<span class="err">                    &quot;export_model&quot;: false,</span>
-<span class="err">                    &quot;export_model_file&quot;: false,</span>
-<span class="err">                    &quot;extract_metrics&quot;: true,</span>
-<span class="err">                    &quot;save_plots&quot;: false,</span>
-<span class="err">                    &quot;show_plots&quot;: false</span>
-<span class="err">                    }</span>
-<span class="err">        },</span>
+<div class="highlight"><pre><span></span><code>&quot;model&quot;: {
+        &quot;model_name&quot;: &quot;Random_Forest_100&quot;,
+        &quot;model_type&quot;: &quot;RF&quot;,
+        &quot;model_target&quot;: &quot;ALPHASENSE&quot;,
+                    &quot;data&quot;: {&quot;train&quot;: {&quot;TEST_1&quot;: {&quot;devices&quot;: [&quot;DEVICE_1&quot;],
+                                                 &quot;reference_device&quot;:&quot;REF_DEVICE_1&quot;}},
+                            &quot;test&quot;: {&quot;TEST_1&quot;: {&quot;devices&quot;: [&quot;DEVICE_1&quot;, &quot;DEVICE_2&quot;],
+                                                 &quot;reference_device&quot;:&quot;REF_DEVICE_2&quot;},
+                                     &quot;TEST_2&quot;: {&quot;devices&quot;: [&quot;DEVICE_3&quot;],
+                                                &quot;reference_device&quot;: &quot;REF_DEVICE_3&quot;},
+                                     &quot;TEST_3&quot;: {&quot;devices&quot;: [&quot;DEVICE_4&quot;],
+                                                &quot;reference_device&quot;: &quot;REF_DEVICE_4&quot;},
+                                     &quot;TEST_2&quot;: {&quot;devices&quot;: [&quot;DEVICE_5&quot;],
+                                                &quot;reference_device&quot;: &quot;REF_DEVICE_5&quot;}},
+                &quot;features&quot;: {&quot;REF&quot;: &quot;NO2_REF&quot;,
+                            &quot;A&quot;:  &quot;GB_2W&quot;,
+                            &quot;B&quot;: &quot;GB_2A&quot;,
+                            &quot;C&quot;: &quot;HUM&quot;
+                            }
+                &quot;data_options&quot;: {&quot;export_data&quot;: &quot;All&quot;,
+                            &quot;rename_export_data&quot;: false,
+                            &quot;target_raster&quot;: 1Min&quot;,
+                            &quot;clean_na&quot;: true,
+                            &quot;clean_na_method&quot;: &quot;fill&quot;,
+                            &quot;min_date&quot;: null,
+                            &quot;max_date&quot;: null,
+                            &quot;use_cache&quot;: true}
+                },
+        &quot;hyperparameters&quot;: {&quot;ratio_train&quot;: 0.75,
+                            &quot;n_estimators&quot;: 100,
+                            &quot;shuffle_split&quot;: true
+                            },
+        &quot;model_options&quot;: {&quot;session_active_model&quot;: false,
+                    &quot;export_model&quot;: false,
+                    &quot;export_model_file&quot;: false,
+                    &quot;extract_metrics&quot;: true,
+                    &quot;save_plots&quot;: false,
+                    &quot;show_plots&quot;: false
+                    }
+        },
 </code></pre></div>
 
 <ul>
-<li><code class="codehilite"><span class="err">model_name</span></code>: model name to be saved</li>
-<li><code class="codehilite"><span class="err">model_type</span></code>: 'RF', 'SVR', 'LSTM' or 'OLS'</li>
-<li><code class="codehilite"><span class="err">model_target</span></code>: if the model is to be stored under a specific category of models under the <code class="codehilite"><span class="err">models/</span></code> folder</li>
-<li><code class="codehilite"><span class="err">data</span></code>: dict containing the data to use for training, and features description. Under <code class="codehilite"><span class="err">train</span></code>, we define which of the tests and devices is to be used for the model definition, with the format <code class="codehilite"><span class="err">{&quot;TEST&quot;: &quot;devices&quot;: [&quot;DEVICE&quot;], &quot;reference_device&quot;: &quot;REF_DEVICE_1&quot;}</span></code>. Under <code class="codehilite"><span class="err">test</span></code>, we define a series of <code class="codehilite"><span class="err">test</span></code> in which we'll evaluate the model extracted from the <code class="codehilite"><span class="err">train</span></code> dataset:<ul>
-<li><code class="codehilite"><span class="err">devices</span></code>: list of devices to use</li>
-<li><code class="codehilite"><span class="err">reference_device</span></code>: <code class="codehilite"><span class="err">device</span></code> that contains the reference data</li>
+<li><code>model_name</code>: model name to be saved</li>
+<li><code>model_type</code>: 'RF', 'SVR', 'LSTM' or 'OLS'</li>
+<li><code>model_target</code>: if the model is to be stored under a specific category of models under the <code>models/</code> folder</li>
+<li><code>data</code>: dict containing the data to use for training, and features description. Under <code>train</code>, we define which of the tests and devices is to be used for the model definition, with the format <code>{"TEST": "devices": ["DEVICE"], "reference_device": "REF_DEVICE_1"}</code>. Under <code>test</code>, we define a series of <code>test</code> in which we'll evaluate the model extracted from the <code>train</code> dataset:<ul>
+<li><code>devices</code>: list of devices to use</li>
+<li><code>reference_device</code>: <code>device</code> that contains the reference data</li>
 </ul>
 </li>
 </ul>
@@ -3834,23 +3834,23 @@ Different preprocessing options can be defined. The most common one, for the sen
 </p>
 </div>
 <p>Additionally:
-    + <code class="codehilite"><span class="err">features</span></code>: dict of <code class="codehilite"><span class="err">devices</span></code> tagged as <code class="codehilite"><span class="err">REF</span></code>, <code class="codehilite"><span class="err">A</span></code>, <code class="codehilite"><span class="err">B</span></code>, <code class="codehilite"><span class="err">C</span></code>... to define the features of the model, being <code class="codehilite"><span class="err">REF</span></code> the reference channel in the <code class="codehilite"><span class="err">reference_device</span></code>
-- <code class="codehilite"><span class="err">hyperparameters</span></code>: dict containing different hyperparameters, depending on the type of model:
+    + <code>features</code>: dict of <code>devices</code> tagged as <code>REF</code>, <code>A</code>, <code>B</code>, <code>C</code>... to define the features of the model, being <code>REF</code> the reference channel in the <code>reference_device</code>
+- <code>hyperparameters</code>: dict containing different hyperparameters, depending on the type of model:
     + For all:
-        *  <code class="codehilite"><span class="err">ratio_train</span></code>: generic, train-test split ratio
+        *  <code>ratio_train</code>: generic, train-test split ratio
     +  OLS:
-        *  <code class="codehilite"><span class="err">formula_expresion</span></code>: stats models formula type, accepting <code class="codehilite"><span class="err">numpy</span></code> expressions This formula has to reference the features described under the <code class="codehilite"><span class="err">data</span></code> section. Example: <code class="codehilite"><span class="err">REF ~ A * B + np.log(C/2)</span></code>
+        *  <code>formula_expresion</code>: stats models formula type, accepting <code>numpy</code> expressions This formula has to reference the features described under the <code>data</code> section. Example: <code>REF ~ A * B + np.log(C/2)</code>
     + Random Forest:
-        * <code class="codehilite"><span class="err">n_estimators</span></code>: only for <code class="codehilite"><span class="err">RF</span></code>. number of forests to use
-        * <code class="codehilite"><span class="err">shuffle_split</span></code>: only for <code class="codehilite"><span class="err">RF</span></code>. whether or not use shuffle split
+        * <code>n_estimators</code>: only for <code>RF</code>. number of forests to use
+        * <code>shuffle_split</code>: only for <code>RF</code>. whether or not use shuffle split
     + LSTM:
-        * <code class="codehilite"><span class="err">n_lags</span></code>: number of lags to account in the LSTM input
-        * <code class="codehilite"><span class="err">epochs</span></code>: number of epochs (100 or more recommended)
-        * <code class="codehilite"><span class="err">batch_size</span></code>: batch size (72 recommended)            <br />
-        * <code class="codehilite"><span class="err">verbose</span></code>: verbose output during training
-        * <code class="codehilite"><span class="err">loss</span></code>: loss function ('mse' or others)
-        * <code class="codehilite"><span class="err">optimizer</span></code>: optimizer to use (<code class="codehilite"><span class="err">adam</span></code> or others)
-        * <code class="codehilite"><span class="err">layers</span></code>: specific layer structure. Example below:</p>
+        * <code>n_lags</code>: number of lags to account in the LSTM input
+        * <code>epochs</code>: number of epochs (100 or more recommended)
+        * <code>batch_size</code>: batch size (72 recommended)            <br />
+        * <code>verbose</code>: verbose output during training
+        * <code>loss</code>: loss function ('mse' or others)
+        * <code>optimizer</code>: optimizer to use (<code>adam</code> or others)
+        * <code>layers</code>: specific layer structure. Example below:</p>
 <div class="codehilite"><pre><span></span><code><span class="err">    ```</span>
 <span class="err">    &quot;layers&quot;: [{&quot;type&quot;: &quot;lstm&quot;,</span>
 <span class="err">                &quot;neurons&quot;: 100,</span>
@@ -3885,263 +3885,263 @@ Different preprocessing options can be defined. The most common one, for the sen
 
 
 <ul>
-<li><code class="codehilite"><span class="err">model_options</span></code>: different options for the model calculated<ul>
-<li><code class="codehilite"><span class="err">session_active_model</span></code>: keep the model active after the task is completed</li>
-<li><code class="codehilite"><span class="err">export_model</span></code>: export the model (parameters, hyperparameters, weights) to the <code class="codehilite"><span class="err">model/model_type</span></code> folder after the task is completed</li>
-<li><code class="codehilite"><span class="err">export_model_file</span></code>: export the model file (not recommended for <code class="codehilite"><span class="err">RF</span></code>) fo the same folder as above</li>
-<li><code class="codehilite"><span class="err">export_metrics</span></code>: export metrics for the model or not</li>
-<li><code class="codehilite"><span class="err">save_plots</span></code>: save model plots or not</li>
-<li><code class="codehilite"><span class="err">show_plots</span></code>: show model plots or not</li>
+<li><code>model_options</code>: different options for the model calculated<ul>
+<li><code>session_active_model</code>: keep the model active after the task is completed</li>
+<li><code>export_model</code>: export the model (parameters, hyperparameters, weights) to the <code>model/model_type</code> folder after the task is completed</li>
+<li><code>export_model_file</code>: export the model file (not recommended for <code>RF</code>) fo the same folder as above</li>
+<li><code>export_metrics</code>: export metrics for the model or not</li>
+<li><code>save_plots</code>: save model plots or not</li>
+<li><code>show_plots</code>: show model plots or not</li>
 </ul>
 </li>
 </ul>
 <h3 id="plots">Plots<a class="headerlink" href="#plots" title="Permanent link">Link</a></h3>
-<p>The plot sub-task accepts two different libraries: <code class="codehilite"><span class="err">matplotlib</span></code> and <code class="codehilite"><span class="err">plotly</span></code>. The first one generates static images, that we can export for nice quality graphs, while <code class="codehilite"><span class="err">plotly</span></code> is more meant for exploratory analysis.</p>
+<p>The plot sub-task accepts two different libraries: <code>matplotlib</code> and <code>plotly</code>. The first one generates static images, that we can export for nice quality graphs, while <code>plotly</code> is more meant for exploratory analysis.</p>
 <div class="admonition info">
 <p class="admonition-title">Many plots? No problem</p>
 <p>In the case of the models, we only wanted one model per task, but it's not the case in the plots.</p>
 </div>
-<div class="codehilite"><pre><span></span><code><span class="err">&quot;plot&quot;: {</span>
-<span class="err">    &quot;2&quot;: {&quot;plot_type&quot;: &quot;timeseries&quot;,</span>
-<span class="err">        &quot;plotting_library&quot;: &quot;matplotlib&quot;,</span>
-<span class="err">        &quot;data&quot;: {&quot;test&quot;: &quot;TEST_1&quot;,</span>
-<span class="err">                &quot;traces&quot;: {&quot;1&quot;: {&quot;device&quot;: &quot;5262&quot;,</span>
-<span class="err">                                &quot;channel&quot; : &quot;EXT_PM_10&quot;,</span>
-<span class="err">                                &quot;subplot&quot;: 1},</span>
-<span class="err">                            &quot;2&quot;: {&quot;device&quot;: &quot;5262&quot;,</span>
-<span class="err">                                &quot;channel&quot; : &quot;EXT_PM_25&quot;,</span>
-<span class="err">                                &quot;subplot&quot;: 2}}},</span>
-<span class="err">        &quot;options&quot;: {&quot;show_plot&quot;: false,</span>
-<span class="err">                    &quot;separate_device_plots&quot;: false,</span>
-<span class="err">                    &quot;target_raster&quot;: &quot;10Min&quot;,</span>
-<span class="err">                    &quot;max_date&quot;: null,</span>
-<span class="err">                    &quot;min_date&quot;: null,</span>
-<span class="err">                    &quot;export_path&quot;: &quot;/Users/mac/Desktop&quot;,</span>
-<span class="err">                    &quot;file_name&quot;: &quot;plot_pm&quot;},</span>
-<span class="err">        &quot;formatting&quot;: {&quot;xlabel&quot;: &quot;Date (-)&quot;,</span>
-<span class="err">                        &quot;ylabel&quot;: {&quot;1&quot;: &quot;Temp degC&quot;,</span>
-<span class="err">                                    &quot;2&quot;: &quot;Hum (%rh)&quot;},</span>
-<span class="err">                        &quot;yrange&quot;: {&quot;1&quot;: [0, 40], </span>
-<span class="err">                                    &quot;2&quot;: [0, 100]},</span>
-<span class="err">                        &quot;title&quot;: &quot;PM&quot;,</span>
-<span class="err">                        &quot;sharex&quot;:true,</span>
-<span class="err">                        &quot;grid&quot;: true,</span>
-<span class="err">                        &quot;height&quot;: 10,</span>
-<span class="err">                        &quot;width&quot;: 12}</span>
-<span class="err">    },</span>
+<div class="highlight"><pre><span></span><code>&quot;plot&quot;: {
+    &quot;2&quot;: {&quot;plot_type&quot;: &quot;timeseries&quot;,
+        &quot;plotting_library&quot;: &quot;matplotlib&quot;,
+        &quot;data&quot;: {&quot;test&quot;: &quot;TEST_1&quot;,
+                &quot;traces&quot;: {&quot;1&quot;: {&quot;device&quot;: &quot;5262&quot;,
+                                &quot;channel&quot; : &quot;EXT_PM_10&quot;,
+                                &quot;subplot&quot;: 1},
+                            &quot;2&quot;: {&quot;device&quot;: &quot;5262&quot;,
+                                &quot;channel&quot; : &quot;EXT_PM_25&quot;,
+                                &quot;subplot&quot;: 2}}},
+        &quot;options&quot;: {&quot;show_plot&quot;: false,
+                    &quot;separate_device_plots&quot;: false,
+                    &quot;target_raster&quot;: &quot;10Min&quot;,
+                    &quot;max_date&quot;: null,
+                    &quot;min_date&quot;: null,
+                    &quot;export_path&quot;: &quot;/Users/mac/Desktop&quot;,
+                    &quot;file_name&quot;: &quot;plot_pm&quot;},
+        &quot;formatting&quot;: {&quot;xlabel&quot;: &quot;Date (-)&quot;,
+                        &quot;ylabel&quot;: {&quot;1&quot;: &quot;Temp degC&quot;,
+                                    &quot;2&quot;: &quot;Hum (%rh)&quot;},
+                        &quot;yrange&quot;: {&quot;1&quot;: [0, 40], 
+                                    &quot;2&quot;: [0, 100]},
+                        &quot;title&quot;: &quot;PM&quot;,
+                        &quot;sharex&quot;:true,
+                        &quot;grid&quot;: true,
+                        &quot;height&quot;: 10,
+                        &quot;width&quot;: 12}
+    },
 </code></pre></div>
 
 <h4 id="general-description">General description<a class="headerlink" href="#general-description" title="Permanent link">Link</a></h4>
 <p>This description is suitable for timeseries plots. Check below for other types:</p>
 <p><img alt="" src="https://i.imgur.com/p6qogrD.png" /></p>
 <ul>
-<li><code class="codehilite"><span class="err">plot_type</span></code>: the plot type to be used. Currently we support <code class="codehilite"><span class="err">timeseries</span></code>, <code class="codehilite"><span class="err">violin</span></code>, <code class="codehilite"><span class="err">scatter_matrix</span></code>, <code class="codehilite"><span class="err">correlation_plot</span></code>, <code class="codehilite"><span class="err">heatmap</span></code>, <code class="codehilite"><span class="err">barplot</span></code>, <code class="codehilite"><span class="err">coherence_plot</span></code></li>
-<li><code class="codehilite"><span class="err">plotting_library</span></code>: <code class="codehilite"><span class="err">matplotlib</span></code> or <code class="codehilite"><span class="err">plotly</span></code></li>
-<li><code class="codehilite"><span class="err">data</span></code>: the data to represent. This data has to be loaded previously. This is only to define the plot:<ul>
-<li><code class="codehilite"><span class="err">test</span></code>: each plot can only represent data from a single <code class="codehilite"><span class="err">test</span></code></li>
-<li><code class="codehilite"><span class="err">traces</span></code>: numbered entries to specify the <code class="codehilite"><span class="err">device</span></code>, <code class="codehilite"><span class="err">channel</span></code> and, if applicable, the subplot (only for timeseries)</li>
+<li><code>plot_type</code>: the plot type to be used. Currently we support <code>timeseries</code>, <code>violin</code>, <code>scatter_matrix</code>, <code>correlation_plot</code>, <code>heatmap</code>, <code>barplot</code>, <code>coherence_plot</code></li>
+<li><code>plotting_library</code>: <code>matplotlib</code> or <code>plotly</code></li>
+<li><code>data</code>: the data to represent. This data has to be loaded previously. This is only to define the plot:<ul>
+<li><code>test</code>: each plot can only represent data from a single <code>test</code></li>
+<li><code>traces</code>: numbered entries to specify the <code>device</code>, <code>channel</code> and, if applicable, the subplot (only for timeseries)</li>
 </ul>
 </li>
 </ul>
 <div class="admonition info">
 <p class="admonition-title">Same plot for many devices?</p>
-<p>Set "<code class="codehilite"><span class="err">device</span></code>: 'all'" and  <code class="codehilite"><span class="err">&quot;separate_device_plots&quot;: true</span></code>, and we will make separate plots for each device.</p>
+<p>Set "<code>device</code>: 'all'" and  <code>"separate_device_plots": true</code>, and we will make separate plots for each device.</p>
 </div>
 <ul>
-<li><code class="codehilite"><span class="err">options</span></code>: <ul>
-<li><code class="codehilite"><span class="err">show_plot</span></code>: whether or not to show the plot. Not recommended for large amounts</li>
-<li><code class="codehilite"><span class="err">separate_device_plots</span></code>: <code class="codehilite"><span class="err">true</span></code> in case we want a single plot for each device in <code class="codehilite"><span class="n">traces</span><span class="o">:</span> <span class="n">devices</span></code>. <code class="codehilite"><span class="err">false</span></code> in case we want to merge all the devices in a single plot (for comparison purposes). Applicable for timeseries</li>
-<li><code class="codehilite"><span class="err">target_raster</span></code>: the frequency of the data to plot. Reduces processing time</li>
-<li><code class="codehilite"><span class="err">min_date</span></code>, <code class="codehilite"><span class="err">max_date</span></code>: if not <code class="codehilite"><span class="err">null</span></code>, they crop the data with those dates</li>
-<li><code class="codehilite"><span class="err">export_path</span></code>: where to put the plot. If <code class="codehilite"><span class="err">null</span></code>, we won't export anything</li>
-<li><code class="codehilite"><span class="err">file_name</span></code>: how to name the plot. We will append the trace name in case <code class="codehilite"><span class="err">separate_device_plots</span></code> is set to <code class="codehilite"><span class="err">true</span></code></li>
+<li><code>options</code>: <ul>
+<li><code>show_plot</code>: whether or not to show the plot. Not recommended for large amounts</li>
+<li><code>separate_device_plots</code>: <code>true</code> in case we want a single plot for each device in <code>traces: devices</code>. <code>false</code> in case we want to merge all the devices in a single plot (for comparison purposes). Applicable for timeseries</li>
+<li><code>target_raster</code>: the frequency of the data to plot. Reduces processing time</li>
+<li><code>min_date</code>, <code>max_date</code>: if not <code>null</code>, they crop the data with those dates</li>
+<li><code>export_path</code>: where to put the plot. If <code>null</code>, we won't export anything</li>
+<li><code>file_name</code>: how to name the plot. We will append the trace name in case <code>separate_device_plots</code> is set to <code>true</code></li>
 </ul>
 </li>
-<li><code class="codehilite"><span class="err">formatting</span></code>: <ul>
-<li><code class="codehilite"><span class="err">xlabel</span></code>: Name to tag the x axis of the plot</li>
-<li><code class="codehilite"><span class="err">ylabel</span></code>: Name to tag the y axis(es) of the plot. It can be more than one value in a <code class="codehilite"><span class="err">json</span></code> style</li>
-<li><code class="codehilite"><span class="err">yrange</span></code>: Range fro the y axis(es). Same as above</li>
-<li><code class="codehilite"><span class="err">title</span></code>: plot title</li>
-<li><code class="codehilite"><span class="err">grid</span></code>: to show the grid or not</li>
-<li><code class="codehilite"><span class="err">height</span></code>, <code class="codehilite"><span class="err">width</span></code>: plot height and width</li>
+<li><code>formatting</code>: <ul>
+<li><code>xlabel</code>: Name to tag the x axis of the plot</li>
+<li><code>ylabel</code>: Name to tag the y axis(es) of the plot. It can be more than one value in a <code>json</code> style</li>
+<li><code>yrange</code>: Range fro the y axis(es). Same as above</li>
+<li><code>title</code>: plot title</li>
+<li><code>grid</code>: to show the grid or not</li>
+<li><code>height</code>, <code>width</code>: plot height and width</li>
 </ul>
 </li>
 </ul>
 <h4 id="plots-specifics">Plots specifics<a class="headerlink" href="#plots-specifics" title="Permanent link">Link</a></h4>
 <p><strong>Heatmap</strong></p>
 <p><img alt="" src="https://i.imgur.com/bKyX7fb.png" /></p>
-<div class="codehilite"><pre><span></span><code><span class="err">&quot;1&quot; : {&quot;plot_type&quot;: &quot;heatmap&quot;,</span>
-<span class="err">        &quot;plotting_library&quot;: &quot;matplotlib&quot;,</span>
-<span class="err">        &quot;data&quot;: {&quot;test&quot;: &quot;TEST_1&quot;,</span>
-<span class="err">                &quot;traces&quot;: {&quot;1&quot;: {&quot;device&quot;: &quot;all&quot;,</span>
-<span class="err">                                &quot;channel&quot; : &quot;NOISE_A&quot;,</span>
-<span class="err">                                &quot;subplot&quot;: 1}}},</span>
-<span class="err">        &quot;options&quot;: {&quot;show_plot&quot;: false,</span>
-<span class="err">                    &quot;separate_device_plots&quot;: true,</span>
-<span class="err">                    &quot;target_raster&quot;: &quot;10Min&quot;,</span>
-<span class="err">                    &quot;min_date&quot;: null,</span>
-<span class="err">                    &quot;max_date&quot;: &quot;2019-01-03&quot;,</span>
-<span class="err">                    &quot;relative&quot;: false,</span>
-<span class="err">                    &quot;export_path&quot;: &quot;/Users/macoscar/Desktop&quot;,</span>
-<span class="err">                    &quot;file_name&quot;: &quot;heatmap_noise&quot;},</span>
-<span class="err">        &quot;formatting&quot;: {&quot;title&quot;: &quot;Magnificent plot&quot;,</span>
-<span class="err">               &quot;grid&quot;: true,</span>
-<span class="err">               &quot;height&quot;: 10,</span>
-<span class="err">               &quot;width&quot;: 15,</span>
-<span class="err">               &quot;frequency_hours&quot;: 6}</span>
-<span class="err">        }</span>
+<div class="highlight"><pre><span></span><code>&quot;1&quot; : {&quot;plot_type&quot;: &quot;heatmap&quot;,
+        &quot;plotting_library&quot;: &quot;matplotlib&quot;,
+        &quot;data&quot;: {&quot;test&quot;: &quot;TEST_1&quot;,
+                &quot;traces&quot;: {&quot;1&quot;: {&quot;device&quot;: &quot;all&quot;,
+                                &quot;channel&quot; : &quot;NOISE_A&quot;,
+                                &quot;subplot&quot;: 1}}},
+        &quot;options&quot;: {&quot;show_plot&quot;: false,
+                    &quot;separate_device_plots&quot;: true,
+                    &quot;target_raster&quot;: &quot;10Min&quot;,
+                    &quot;min_date&quot;: null,
+                    &quot;max_date&quot;: &quot;2019-01-03&quot;,
+                    &quot;relative&quot;: false,
+                    &quot;export_path&quot;: &quot;/Users/macoscar/Desktop&quot;,
+                    &quot;file_name&quot;: &quot;heatmap_noise&quot;},
+        &quot;formatting&quot;: {&quot;title&quot;: &quot;Magnificent plot&quot;,
+               &quot;grid&quot;: true,
+               &quot;height&quot;: 10,
+               &quot;width&quot;: 15,
+               &quot;frequency_hours&quot;: 6}
+        }
 </code></pre></div>
 
 <div class="admonition warning">
-<p>Note that in this case it only makes sense to put one trace. If we define <code class="codehilite"><span class="err">&quot;device&quot;: &quot;all&quot;</span></code>, then <code class="codehilite"><span class="err">&quot;separate_device_plots&quot;: true</span></code></p>
+<p>Note that in this case it only makes sense to put one trace. If we define <code>"device": "all"</code>, then <code>"separate_device_plots": true</code></p>
 </div>
 <ul>
-<li><code class="codehilite"><span class="err">plotting_library</span></code>: recommended library is <code class="codehilite"><span class="err">matplotlib</span></code> (although we actually use seaborn)</li>
-<li><code class="codehilite"><span class="err">formatting</span></code>:<ul>
-<li><code class="codehilite"><span class="err">frequency_hours</span></code>: to choose between 1, 2, ..., 6, 12, 24. Resamples the data to make it fit in bins of that size to create the heatmap</li>
+<li><code>plotting_library</code>: recommended library is <code>matplotlib</code> (although we actually use seaborn)</li>
+<li><code>formatting</code>:<ul>
+<li><code>frequency_hours</code>: to choose between 1, 2, ..., 6, 12, 24. Resamples the data to make it fit in bins of that size to create the heatmap</li>
 </ul>
 </li>
 </ul>
 <p><strong>Correlation plot</strong></p>
 <p><img alt="" src="https://i.imgur.com/ACxGP9n.png" /></p>
-<div class="codehilite"><pre><span></span><code><span class="err">&quot;1&quot; : {&quot;plot_type&quot;: &quot;correlation_plot&quot;,</span>
-<span class="err">       &quot;plotting_library&quot;: &quot;matplotlib&quot;,</span>
-<span class="err">       &quot;data&quot;: {&quot;test&quot;: &quot;TEST_1&quot;,</span>
-<span class="err">                       &quot;traces&quot;: {&quot;1&quot;: {&quot;device&quot;: &quot;5261&quot;,</span>
-<span class="err">                                       &quot;channel&quot; : &quot;NOISE_A&quot;,</span>
-<span class="err">                                       &quot;subplot&quot;: 1},</span>
-<span class="err">                                 &quot;2&quot;: {&quot;device&quot;: &quot;5262&quot;,</span>
-<span class="err">                                      &quot;channel&quot;: &quot;TEMP&quot;,</span>
-<span class="err">                                      &quot;subplot&quot;: 1}}},</span>
-<span class="err">       &quot;options&quot;: {&quot;show_plot&quot;: True,</span>
-<span class="err">                   &quot;separate_device_plots&quot;: false,</span>
-<span class="err">                   &quot;export_path&quot;: &quot;/Users/macoscar/Desktop&quot;, </span>
-<span class="err">                   &quot;file_name&quot;: &quot;plot_corr&quot;,</span>
-<span class="err">                   &quot;target_raster&quot;: &#39;10Min&#39;,</span>
-<span class="err">                   &quot;min_date&quot;: None,</span>
-<span class="err">                   &quot;max_date&quot;: None},</span>
-<span class="err">       &quot;formatting&quot;: {&quot;jpkind&quot;: &#39;scatter&#39;,</span>
-<span class="err">                      &quot;title&quot;: &quot;Magnificent plot&quot;,</span>
-<span class="err">                      &quot;xrange&quot;: [0, 100],</span>
-<span class="err">                      &quot;yrange&quot;: [0, 40],</span>
-<span class="err">                      &quot;grid&quot;: True,</span>
-<span class="err">                      &quot;height&quot;: 10,</span>
-<span class="err">                      &quot;width&quot;: 15}</span>
-<span class="err">       }</span>
+<div class="highlight"><pre><span></span><code>&quot;1&quot; : {&quot;plot_type&quot;: &quot;correlation_plot&quot;,
+       &quot;plotting_library&quot;: &quot;matplotlib&quot;,
+       &quot;data&quot;: {&quot;test&quot;: &quot;TEST_1&quot;,
+                       &quot;traces&quot;: {&quot;1&quot;: {&quot;device&quot;: &quot;5261&quot;,
+                                       &quot;channel&quot; : &quot;NOISE_A&quot;,
+                                       &quot;subplot&quot;: 1},
+                                 &quot;2&quot;: {&quot;device&quot;: &quot;5262&quot;,
+                                      &quot;channel&quot;: &quot;TEMP&quot;,
+                                      &quot;subplot&quot;: 1}}},
+       &quot;options&quot;: {&quot;show_plot&quot;: True,
+                   &quot;separate_device_plots&quot;: false,
+                   &quot;export_path&quot;: &quot;/Users/macoscar/Desktop&quot;, 
+                   &quot;file_name&quot;: &quot;plot_corr&quot;,
+                   &quot;target_raster&quot;: &#39;10Min&#39;,
+                   &quot;min_date&quot;: None,
+                   &quot;max_date&quot;: None},
+       &quot;formatting&quot;: {&quot;jpkind&quot;: &#39;scatter&#39;,
+                      &quot;title&quot;: &quot;Magnificent plot&quot;,
+                      &quot;xrange&quot;: [0, 100],
+                      &quot;yrange&quot;: [0, 40],
+                      &quot;grid&quot;: True,
+                      &quot;height&quot;: 10,
+                      &quot;width&quot;: 15}
+       }
 </code></pre></div>
 
 <p>Note that in this case it only makes sense to put two traces, in the same subplot.</p>
 <ul>
-<li><code class="codehilite"><span class="err">formatting</span></code>: <ul>
-<li><code class="codehilite"><span class="err">jpkind</span></code>: type as defined in <a href="https://seaborn.pydata.org/generated/seaborn.jointplot.html">sns.jointplot documentation</a>, to choose from { “scatter” | “reg” | “resid” | “kde” | “hex” </li>
+<li><code>formatting</code>: <ul>
+<li><code>jpkind</code>: type as defined in <a href="https://seaborn.pydata.org/generated/seaborn.jointplot.html">sns.jointplot documentation</a>, to choose from { “scatter” | “reg” | “resid” | “kde” | “hex” </li>
 </ul>
 </li>
 </ul>
 <p><strong>Scatter plot matrix</strong></p>
-<p>The big brother of the <code class="codehilite"><span class="err">correlation plot</span></code>:</p>
+<p>The big brother of the <code>correlation plot</code>:</p>
 <p><img alt="" src="https://i.imgur.com/IfLLAUg.jpg" /></p>
-<div class="codehilite"><pre><span></span><code><span class="err">&quot;1&quot; : {&quot;plot_type&quot;: &quot;scatter_matrix&quot;,</span>
-<span class="err">        &quot;plotting_library&quot;: &quot;matplotlib&quot;,</span>
-<span class="err">        &quot;data&quot;: {&quot;test&quot;: &quot;TEST_1&quot;,</span>
-<span class="err">                        &quot;traces&quot;: {&quot;1&quot;: {&quot;device&quot;: &quot;5262&quot;,</span>
-<span class="err">                                        &quot;channel&quot; : &quot;GB_2W&quot;,</span>
-<span class="err">                                        &quot;subplot&quot;: 1},</span>
-<span class="err">                                  &quot;2&quot;: {&quot;device&quot;: &quot;5262&quot;,</span>
-<span class="err">                                       &quot;channel&quot;: &quot;TEMP&quot;,</span>
-<span class="err">                                       &quot;subplot&quot;: 1},</span>
-<span class="err">                                  &quot;3&quot;: {&quot;device&quot;: &quot;5262&quot;,</span>
-<span class="err">                                       &quot;channel&quot;: &quot;HUM&quot;,</span>
-<span class="err">                                       &quot;subplot&quot;: 1}}},</span>
-<span class="err">        &quot;options&quot;: {&quot;show_plot&quot;: True,</span>
-<span class="err">                    &quot;separate_device_plots&quot;: False,</span>
-<span class="err">                    &quot;export_path&quot;: &quot;/Users/macoscar/Desktop&quot;, </span>
-<span class="err">                    &quot;file_name&quot;: &quot;plot_scatter&quot;,</span>
-<span class="err">                    &quot;target_raster&quot;: &#39;10Min&#39;,</span>
-<span class="err">                    &quot;min_date&quot;: None,</span>
-<span class="err">                    &quot;max_date&quot;: None},</span>
-<span class="err">        &quot;formatting&quot;: {&quot;title&quot;: &quot;Magnificent plot&quot;,</span>
-<span class="err">                       &quot;grid&quot;: True,</span>
-<span class="err">                       &quot;height&quot;: 4,</span>
-<span class="err">                       &quot;width&quot;: 4}</span>
-<span class="err">        }</span>
+<div class="highlight"><pre><span></span><code>&quot;1&quot; : {&quot;plot_type&quot;: &quot;scatter_matrix&quot;,
+        &quot;plotting_library&quot;: &quot;matplotlib&quot;,
+        &quot;data&quot;: {&quot;test&quot;: &quot;TEST_1&quot;,
+                        &quot;traces&quot;: {&quot;1&quot;: {&quot;device&quot;: &quot;5262&quot;,
+                                        &quot;channel&quot; : &quot;GB_2W&quot;,
+                                        &quot;subplot&quot;: 1},
+                                  &quot;2&quot;: {&quot;device&quot;: &quot;5262&quot;,
+                                       &quot;channel&quot;: &quot;TEMP&quot;,
+                                       &quot;subplot&quot;: 1},
+                                  &quot;3&quot;: {&quot;device&quot;: &quot;5262&quot;,
+                                       &quot;channel&quot;: &quot;HUM&quot;,
+                                       &quot;subplot&quot;: 1}}},
+        &quot;options&quot;: {&quot;show_plot&quot;: True,
+                    &quot;separate_device_plots&quot;: False,
+                    &quot;export_path&quot;: &quot;/Users/macoscar/Desktop&quot;, 
+                    &quot;file_name&quot;: &quot;plot_scatter&quot;,
+                    &quot;target_raster&quot;: &#39;10Min&#39;,
+                    &quot;min_date&quot;: None,
+                    &quot;max_date&quot;: None},
+        &quot;formatting&quot;: {&quot;title&quot;: &quot;Magnificent plot&quot;,
+                       &quot;grid&quot;: True,
+                       &quot;height&quot;: 4,
+                       &quot;width&quot;: 4}
+        }
 </code></pre></div>
 
 <p><strong>Coherence plot</strong></p>
 <p><img alt="" src="https://i.imgur.com/DmvnwBj.png" /></p>
 <p>This plot it's used to plot the coherence between x and y. Coherence is the normalized cross spectral density. More info <a href="https://matplotlib.org/3.1.1/api/_as_gen/matplotlib.pyplot.cohere.html">here</a>:</p>
-<div class="codehilite"><pre><span></span><code><span class="err">&quot;1&quot; : {&quot;plot_type&quot;: &quot;coherence_plot&quot;,</span>
-<span class="err">        &quot;plotting_library&quot;: &quot;matplotlib&quot;,</span>
-<span class="err">        &quot;data&quot;: {&quot;test&quot;: &quot;TEST_1&quot;,</span>
-<span class="err">                        &quot;traces&quot;: {&quot;1&quot;: {&quot;device&quot;: &quot;5262&quot;,</span>
-<span class="err">                                        &quot;channel&quot; : &quot;GB_2W&quot;,</span>
-<span class="err">                                        &quot;subplot&quot;: 1},</span>
-<span class="err">                                  &quot;2&quot;: {&quot;device&quot;: &quot;5262&quot;,</span>
-<span class="err">                                       &quot;channel&quot;: &quot;TEMP&quot;,</span>
-<span class="err">                                       &quot;subplot&quot;: 1}}},</span>
-<span class="err">        &quot;options&quot;: {&quot;show_plot&quot;: True,</span>
-<span class="err">                    &quot;separate_device_plots&quot;: False,</span>
-<span class="err">                    &quot;export_path&quot;: &quot;/Users/macoscar/Desktop&quot;, </span>
-<span class="err">                    &quot;file_name&quot;: &quot;plot_coherence&quot;,</span>
-<span class="err">                    &quot;target_raster&quot;: &#39;10Min&#39;,</span>
-<span class="err">                    &quot;min_date&quot;: None,</span>
-<span class="err">                    &quot;max_date&quot;: None},</span>
-<span class="err">        &quot;formatting&quot;: {&quot;title&quot;: &quot;Magnificent plot&quot;,</span>
-<span class="err">                       &quot;grid&quot;: True,</span>
-<span class="err">                       &quot;height&quot;: 10,</span>
-<span class="err">                       &quot;width&quot;: 15}</span>
-<span class="err">        }</span>
+<div class="highlight"><pre><span></span><code>&quot;1&quot; : {&quot;plot_type&quot;: &quot;coherence_plot&quot;,
+        &quot;plotting_library&quot;: &quot;matplotlib&quot;,
+        &quot;data&quot;: {&quot;test&quot;: &quot;TEST_1&quot;,
+                        &quot;traces&quot;: {&quot;1&quot;: {&quot;device&quot;: &quot;5262&quot;,
+                                        &quot;channel&quot; : &quot;GB_2W&quot;,
+                                        &quot;subplot&quot;: 1},
+                                  &quot;2&quot;: {&quot;device&quot;: &quot;5262&quot;,
+                                       &quot;channel&quot;: &quot;TEMP&quot;,
+                                       &quot;subplot&quot;: 1}}},
+        &quot;options&quot;: {&quot;show_plot&quot;: True,
+                    &quot;separate_device_plots&quot;: False,
+                    &quot;export_path&quot;: &quot;/Users/macoscar/Desktop&quot;, 
+                    &quot;file_name&quot;: &quot;plot_coherence&quot;,
+                    &quot;target_raster&quot;: &#39;10Min&#39;,
+                    &quot;min_date&quot;: None,
+                    &quot;max_date&quot;: None},
+        &quot;formatting&quot;: {&quot;title&quot;: &quot;Magnificent plot&quot;,
+                       &quot;grid&quot;: True,
+                       &quot;height&quot;: 10,
+                       &quot;width&quot;: 15}
+        }
 </code></pre></div>
 
 <p><strong>Violin plot</strong></p>
 <p><img alt="" src="https://i.imgur.com/3d8j0qa.png" /></p>
 <p>This plot shows the signal distribution. </p>
-<div class="codehilite"><pre><span></span><code><span class="err">&quot;1&quot; : {&quot;plot_type&quot;: &quot;violin&quot;,</span>
-<span class="err">        &quot;plotting_library&quot;: &quot;matplotlib&quot;,</span>
-<span class="err">        &quot;data&quot;: {&quot;test&quot;: &quot;TEST_1&quot;,</span>
-<span class="err">                        &quot;traces&quot;: {&quot;1&quot;: {&quot;device&quot;: &quot;5262&quot;,</span>
-<span class="err">                                          &quot;channel&quot; : &quot;DALLAS_TEMP&quot;,</span>
-<span class="err">                                        &quot;subplot&quot;: 1},</span>
-<span class="err">                                    &quot;2&quot;: {&quot;device&quot;: &quot;5262&quot;,</span>
-<span class="err">                                           &quot;channel&quot; : &quot;HUM&quot;,</span>
-<span class="err">                                           &quot;subplot&quot;: 1},</span>
-<span class="err">                                     &quot;3&quot;: {&quot;device&quot;: &quot;5262&quot;,</span>
-<span class="err">                                           &quot;channel&quot; : &quot;TEMP&quot;,</span>
-<span class="err">                                           &quot;subplot&quot;: 1},</span>
-<span class="err">                                     &quot;4&quot;: {&quot;device&quot;: &quot;5262&quot;,</span>
-<span class="err">                                           &quot;channel&quot; : &quot;GB_2W&quot;,</span>
-<span class="err">                                           &quot;subplot&quot;: 1},</span>
-<span class="err">                                     &quot;5&quot;: {&quot;device&quot;: &quot;5262&quot;,</span>
-<span class="err">                                           &quot;channel&quot; : &quot;GB_2A&quot;,</span>
-<span class="err">                                           &quot;subplot&quot;: 1},</span>
-<span class="err">                                     &quot;6&quot;: {&quot;device&quot;: &quot;5262&quot;,</span>
-<span class="err">                                           &quot;channel&quot; : &quot;GB_3W&quot;,</span>
-<span class="err">                                           &quot;subplot&quot;: 1}}},</span>
-<span class="err">        &quot;options&quot;: {&quot;show_plot&quot;: True,</span>
-<span class="err">                    &quot;separate_device_plots&quot;: False,</span>
-<span class="err">                    &quot;export_path&quot;: &quot;/Users/macoscar/Desktop&quot;, </span>
-<span class="err">                    &quot;file_name&quot;: &quot;plot_violin&quot;,</span>
-<span class="err">                    &quot;target_raster&quot;: &#39;10Min&#39;,</span>
-<span class="err">                    &quot;min_date&quot;: None,</span>
-<span class="err">                    &quot;max_date&quot;: &#39;2019-01-03&#39;,</span>
-<span class="err">                    &quot;relative&quot;: False,</span>
-<span class="err">                    &quot;ylabel&quot;: {1: &quot;External temperature&quot;,</span>
-<span class="err">                               2: &quot;Humidity (%RH)&quot;,</span>
-<span class="err">                               3: &quot;Temperature (degC)&quot;,</span>
-<span class="err">                               4: &quot;Wir&quot;,</span>
-<span class="err">                               5: &quot;Wor&quot;,</span>
-<span class="err">                               6: &quot;Wur&quot;},</span>
-<span class="err">                    &quot;yrange&quot;: {1: [0, 90],</span>
-<span class="err">                               2: [300, 2000],</span>
-<span class="err">                               3: [0, 60],</span>
-<span class="err">                               4: [0, 60],</span>
-<span class="err">                               5: [0,60],</span>
-<span class="err">                               6: [0,60]},</span>
-<span class="err">                   },</span>
-<span class="err">        &quot;formatting&quot;: {&quot;title&quot;: &quot;Magnificent plot&quot;,</span>
-<span class="err">                       &quot;grid&quot;: True,</span>
-<span class="err">                       &quot;height&quot;: 10,</span>
-<span class="err">                       &quot;width&quot;: 15}</span>
-<span class="err">        }</span>
+<div class="highlight"><pre><span></span><code>&quot;1&quot; : {&quot;plot_type&quot;: &quot;violin&quot;,
+        &quot;plotting_library&quot;: &quot;matplotlib&quot;,
+        &quot;data&quot;: {&quot;test&quot;: &quot;TEST_1&quot;,
+                        &quot;traces&quot;: {&quot;1&quot;: {&quot;device&quot;: &quot;5262&quot;,
+                                          &quot;channel&quot; : &quot;DALLAS_TEMP&quot;,
+                                        &quot;subplot&quot;: 1},
+                                    &quot;2&quot;: {&quot;device&quot;: &quot;5262&quot;,
+                                           &quot;channel&quot; : &quot;HUM&quot;,
+                                           &quot;subplot&quot;: 1},
+                                     &quot;3&quot;: {&quot;device&quot;: &quot;5262&quot;,
+                                           &quot;channel&quot; : &quot;TEMP&quot;,
+                                           &quot;subplot&quot;: 1},
+                                     &quot;4&quot;: {&quot;device&quot;: &quot;5262&quot;,
+                                           &quot;channel&quot; : &quot;GB_2W&quot;,
+                                           &quot;subplot&quot;: 1},
+                                     &quot;5&quot;: {&quot;device&quot;: &quot;5262&quot;,
+                                           &quot;channel&quot; : &quot;GB_2A&quot;,
+                                           &quot;subplot&quot;: 1},
+                                     &quot;6&quot;: {&quot;device&quot;: &quot;5262&quot;,
+                                           &quot;channel&quot; : &quot;GB_3W&quot;,
+                                           &quot;subplot&quot;: 1}}},
+        &quot;options&quot;: {&quot;show_plot&quot;: True,
+                    &quot;separate_device_plots&quot;: False,
+                    &quot;export_path&quot;: &quot;/Users/macoscar/Desktop&quot;, 
+                    &quot;file_name&quot;: &quot;plot_violin&quot;,
+                    &quot;target_raster&quot;: &#39;10Min&#39;,
+                    &quot;min_date&quot;: None,
+                    &quot;max_date&quot;: &#39;2019-01-03&#39;,
+                    &quot;relative&quot;: False,
+                    &quot;ylabel&quot;: {1: &quot;External temperature&quot;,
+                               2: &quot;Humidity (%RH)&quot;,
+                               3: &quot;Temperature (degC)&quot;,
+                               4: &quot;Wir&quot;,
+                               5: &quot;Wor&quot;,
+                               6: &quot;Wur&quot;},
+                    &quot;yrange&quot;: {1: [0, 90],
+                               2: [300, 2000],
+                               3: [0, 60],
+                               4: [0, 60],
+                               5: [0,60],
+                               6: [0,60]},
+                   },
+        &quot;formatting&quot;: {&quot;title&quot;: &quot;Magnificent plot&quot;,
+                       &quot;grid&quot;: True,
+                       &quot;height&quot;: 10,
+                       &quot;width&quot;: 15}
+        }
 </code></pre></div>
                 
                   

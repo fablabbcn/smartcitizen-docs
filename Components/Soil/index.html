@@ -3606,15 +3606,15 @@
 </ul>
 <p>The sensor can be calibrated <a href="/Components/Firmware/guides/Using the Shell/">using the shell interface</a>. The process is as follows:</p>
 <ol>
-<li>Connect your kit to a computer and open the terminal for the SCK. If you use the Arduino IDE, go to Tools &gt; Serial Monitor and select <code class="codehilite"><span class="err">115200 baud</span></code> at the bottom right corner
+<li>Connect your kit to a computer and open the terminal for the SCK. If you use the Arduino IDE, go to Tools &gt; Serial Monitor and select <code>115200 baud</code> at the bottom right corner
 <img alt="" src="https://i.imgur.com/hs5Ny7Q.png" />
 <br></li>
-<li>If you use the IDE type <code class="codehilite"><span class="err">sensor</span></code> on the top and click <code class="codehilite"><span class="err">Send</span></code></li>
-<li>Check if the output has something like <code class="codehilite"><span class="err">Soil Moisture Raw (60 sec)</span></code> after <code class="codehilite"><span class="err">Enabled</span></code></li>
-<li>If it's <code class="codehilite"><span class="err">Enabled</span></code>, <strong>dry the sensor</strong> and type in: <code class="codehilite"><span class="err">read soil moisture raw</span></code>. Repeat this command 5-10 times until you get an stable output (repeat command with <em>arrow up</em>)</li>
-<li>Put the sensor in a cup of water (until the line). Then read the value again <code class="codehilite"><span class="err">read soil moisture raw</span></code> several times.</li>
-<li>Once you have both values, type in: <code class="codehilite"><span class="err">control moisture cal XXX YYY</span></code> where XXX and YYY are the dry and wet values that you just measured</li>
-<li>Check that the reading is OK by: <code class="codehilite"><span class="err">read soil moisture percent</span></code>. You should receive an answer in rh%</li>
+<li>If you use the IDE type <code>sensor</code> on the top and click <code>Send</code></li>
+<li>Check if the output has something like <code>Soil Moisture Raw (60 sec)</code> after <code>Enabled</code></li>
+<li>If it's <code>Enabled</code>, <strong>dry the sensor</strong> and type in: <code>read soil moisture raw</code>. Repeat this command 5-10 times until you get an stable output (repeat command with <em>arrow up</em>)</li>
+<li>Put the sensor in a cup of water (until the line). Then read the value again <code>read soil moisture raw</code> several times.</li>
+<li>Once you have both values, type in: <code>control moisture cal XXX YYY</code> where XXX and YYY are the dry and wet values that you just measured</li>
+<li>Check that the reading is OK by: <code>read soil moisture percent</code>. You should receive an answer in rh%</li>
 <li>Now you should see the data online (if in network mode):</li>
 </ol>
 <p><img alt="" src="https://i.imgur.com/4Lrv62R.png" /></p>

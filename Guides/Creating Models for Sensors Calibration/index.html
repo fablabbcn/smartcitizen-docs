@@ -3603,42 +3603,42 @@
 <p class="admonition-title">Info<p>You can follow this example using this <a href="https://github.com/fablabbcn/smartcitizen-iscape-data/blob/master/examples/model_creation.ipynb">notebook</a></p>
 </p>
 </div>
-<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">src.models.model</span> <span class="kn">import</span> <span class="n">model_wrapper</span>
+<div class="highlight"><pre><span></span><code>from src.models.model import model_wrapper
 
-<span class="c1"># Input model description</span>
-<span class="n">model_description_ols</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;model_name&quot;</span><span class="p">:</span> <span class="s2">&quot;OLS_UCD&quot;</span><span class="p">,</span>
-                    <span class="s2">&quot;model_type&quot;</span><span class="p">:</span> <span class="s2">&quot;OLS&quot;</span><span class="p">,</span>
-                    <span class="s2">&quot;model_target&quot;</span><span class="p">:</span> <span class="s2">&quot;ALPHASENSE&quot;</span><span class="p">,</span>
-                    <span class="s2">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;train&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;2019-03_EXT_UCD_URBAN_BACKGROUND_API&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;devices&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;5262&quot;</span><span class="p">],</span>
-                                                                               <span class="s2">&quot;reference_device&quot;</span><span class="p">:</span> <span class="s2">&quot;CITY_COUNCIL&quot;</span><span class="p">}},</span>
-                            <span class="s2">&quot;test&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;2019-03_EXT_UCD_URBAN_BACKGROUND_API&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;devices&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;5565&quot;</span><span class="p">],</span>
-                                                                               <span class="s2">&quot;reference_device&quot;</span><span class="p">:</span> <span class="s2">&quot;CITY_COUNCIL&quot;</span><span class="p">}},</span>
-                            <span class="s2">&quot;features&quot;</span><span class="p">:</span>  <span class="p">{</span><span class="s2">&quot;REF&quot;</span><span class="p">:</span> <span class="s2">&quot;NO2_CONV&quot;</span><span class="p">,</span>
-                                            <span class="s2">&quot;A&quot;</span><span class="p">:</span> <span class="s2">&quot;GB_2W&quot;</span><span class="p">,</span>
-                                            <span class="s2">&quot;B&quot;</span><span class="p">:</span> <span class="s2">&quot;GB_2A&quot;</span><span class="p">,</span>
-                                            <span class="s2">&quot;C&quot;</span><span class="p">:</span> <span class="s2">&quot;HUM&quot;</span><span class="p">},</span>
-                            <span class="s2">&quot;data_options&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;frequency&quot;</span><span class="p">:</span> <span class="s1">&#39;1Min&#39;</span><span class="p">,</span>
-                                            <span class="s2">&quot;clean_na&quot;</span><span class="p">:</span> <span class="bp">True</span><span class="p">,</span>
-                                            <span class="s2">&quot;clean_na_method&quot;</span><span class="p">:</span> <span class="s2">&quot;drop&quot;</span><span class="p">,</span>
-                                            <span class="s2">&quot;min_date&quot;</span><span class="p">:</span> <span class="bp">None</span><span class="p">,</span>
-                                            <span class="s2">&quot;frequency&quot;</span><span class="p">:</span> <span class="s2">&quot;1Min&quot;</span><span class="p">,</span>
-                                            <span class="s2">&quot;max_date&quot;</span><span class="p">:</span> <span class="s1">&#39;2019-01-15&#39;</span><span class="p">},</span>
-                            <span class="p">},</span>
-                    <span class="s2">&quot;hyperparameters&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;ratio_train&quot;</span><span class="p">:</span> <span class="mf">0.75</span><span class="p">},</span>
-                    <span class="s2">&quot;model_options&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;session_active_model&quot;</span><span class="p">:</span> <span class="bp">True</span><span class="p">,</span>
-                                <span class="s2">&quot;show_plots&quot;</span><span class="p">:</span> <span class="bp">True</span><span class="p">,</span>
-                                <span class="s2">&quot;export_model&quot;</span><span class="p">:</span> <span class="bp">False</span><span class="p">,</span>
-                                <span class="s2">&quot;export_model_file&quot;</span><span class="p">:</span> <span class="bp">False</span><span class="p">,</span>
-                                <span class="s2">&quot;extract_metrics&quot;</span><span class="p">:</span> <span class="bp">True</span><span class="p">}</span>
-                    <span class="p">}</span>
+# Input model description
+model_description_ols = {&quot;model_name&quot;: &quot;OLS_UCD&quot;,
+                    &quot;model_type&quot;: &quot;OLS&quot;,
+                    &quot;model_target&quot;: &quot;ALPHASENSE&quot;,
+                    &quot;data&quot;: {&quot;train&quot;: {&quot;2019-03_EXT_UCD_URBAN_BACKGROUND_API&quot;: {&quot;devices&quot;: [&quot;5262&quot;],
+                                                                               &quot;reference_device&quot;: &quot;CITY_COUNCIL&quot;}},
+                            &quot;test&quot;: {&quot;2019-03_EXT_UCD_URBAN_BACKGROUND_API&quot;: {&quot;devices&quot;: [&quot;5565&quot;],
+                                                                               &quot;reference_device&quot;: &quot;CITY_COUNCIL&quot;}},
+                            &quot;features&quot;:  {&quot;REF&quot;: &quot;NO2_CONV&quot;,
+                                            &quot;A&quot;: &quot;GB_2W&quot;,
+                                            &quot;B&quot;: &quot;GB_2A&quot;,
+                                            &quot;C&quot;: &quot;HUM&quot;},
+                            &quot;data_options&quot;: {&quot;frequency&quot;: &#39;1Min&#39;,
+                                            &quot;clean_na&quot;: True,
+                                            &quot;clean_na_method&quot;: &quot;drop&quot;,
+                                            &quot;min_date&quot;: None,
+                                            &quot;frequency&quot;: &quot;1Min&quot;,
+                                            &quot;max_date&quot;: &#39;2019-01-15&#39;},
+                            },
+                    &quot;hyperparameters&quot;: {&quot;ratio_train&quot;: 0.75},
+                    &quot;model_options&quot;: {&quot;session_active_model&quot;: True,
+                                &quot;show_plots&quot;: True,
+                                &quot;export_model&quot;: False,
+                                &quot;export_model_file&quot;: False,
+                                &quot;extract_metrics&quot;: True}
+                    }
 </code></pre></div>
 
 <div class="admonition info">
 <p class="admonition-title">More info</p>
 <p>Check the guide on <a href="/Sensor Analysis Framework/guides/Analyse your data in batch/#model">batch analysis</a> for a definition of each parameter.</p>
 </div>
-<p>We have to keep at least the key <code class="codehilite"><span class="err">REF</span></code> within the <code class="codehilite"><span class="err">&quot;features&quot;</span></code>, but the rest can be renamed at will. We can also input whichever <code class="codehilite"><span class="err">formula_expression</span></code> for the model regression in the following format:</p>
-<div class="codehilite"><pre><span></span><code><span class="err">&quot;expression&quot; : &#39;REF ~ A + np.log(B)&#39;</span>
+<p>We have to keep at least the key <code>REF</code> within the <code>"features"</code>, but the rest can be renamed at will. We can also input whichever <code>formula_expression</code> for the model regression in the following format:</p>
+<div class="highlight"><pre><span></span><code>&quot;expression&quot; : &#39;REF ~ A + np.log(B)&#39;
 </code></pre></div>
 
 <p>Which converts to:</p>
@@ -3651,15 +3651,15 @@ REF = A + log(B)
 </script>
 </div>
 <p>We can also define the ratio between the train and test dataset and the minimum dates to use within the datasets (globally):</p>
-<div class="codehilite"><pre><span></span><code><span class="n">min_date</span> <span class="o">=</span> <span class="s1">&#39;2018-08-31 00:00:00&#39;</span>
-<span class="n">max_date</span> <span class="o">=</span> <span class="s1">&#39;2018-09-06 00:00:00&#39;</span>
+<div class="highlight"><pre><span></span><code>min_date = &#39;2018-08-31 00:00:00&#39;
+max_date = &#39;2018-09-06 00:00:00&#39;
 
-<span class="o">#</span> <span class="n">Important</span> <span class="n">that</span> <span class="n">this</span> <span class="k">is</span> <span class="n">a</span> <span class="nb">float</span><span class="p">,</span> <span class="n">don</span><span class="err">&#39;</span><span class="n">t</span> <span class="n">forget</span> <span class="n">the</span> <span class="p">.</span>
-<span class="ss">&quot;hyperparameters&quot;</span><span class="p">:</span> <span class="err">{</span><span class="ss">&quot;ratio_train&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">.</span><span class="mi">75</span><span class="err">}</span> 
+# Important that this is a float, don&#39;t forget the .
+&quot;hyperparameters&quot;: {&quot;ratio_train&quot;: 0.75} 
 </code></pre></div>
 
 <p>If we run this cell, we will perform model calibration, with the following output:</p>
-<div class="codehilite"><pre><span></span><code>                            OLS Regression Results                            
+<div class="highlight"><pre><span></span><code>                            OLS Regression Results                            
 ==============================================================================
 Dep. Variable:                    REF   R-squared:                       0.676
 Model:                            OLS   Adj. R-squared:                  0.673
@@ -3669,8 +3669,8 @@ Time:                        12:25:17   Log-Likelihood:                 1142.9
 No. Observations:                 575   AIC:                            -2272.
 Df Residuals:                     568   BIC:                            -2241.
 Df Model:                           6                                         
-<span class="gh">Covariance Type:            nonrobust                                         </span>
-<span class="gh">==================================================================================</span>
+Covariance Type:            nonrobust                                         
+==================================================================================
                      coef    std err          t      P&gt;|t|      [0.025      0.975]
 ----------------------------------------------------------------------------------
 Intercept         -3.7042      0.406     -9.133      0.000      -4.501      -2.908
@@ -3681,8 +3681,8 @@ np.log(B) -3.863e-05   7.03e-06     -5.496      0.000   -5.24e-05   -2.48e-05
 Omnibus:                        7.316   Durbin-Watson:                   0.026
 Prob(Omnibus):                  0.026   Jarque-Bera (JB):               10.245
 Skew:                          -0.076   Prob(JB):                      0.00596
-<span class="gh">Kurtosis:                       3.636   Cond. No.                     4.29e+05</span>
-<span class="gh">==============================================================================</span>
+Kurtosis:                       3.636   Cond. No.                     4.29e+05
+==============================================================================
 
 Warnings:
 [1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
@@ -3690,7 +3690,7 @@ Warnings:
 strong multicollinearity or other numerical problems.
 </code></pre></div>
 
-<p>This output brings a lot of information. First, we find what the dependent variable is, in our case always <code class="codehilite"><span class="err">&#39;REF&#39;</span></code>. The type of model used and some general information is shown below that.</p>
+<p>This output brings a lot of information. First, we find what the dependent variable is, in our case always <code>'REF'</code>. The type of model used and some general information is shown below that.</p>
 <p>More statistically important information is found in the rest of the output. Some key data:</p>
 <ul>
 <li><em>R-squared and adjusted R-squared</em>: this is our classic correlation coefficient or R<sup>2</sup>. The adjusted one aims to correct the model overfitting by the inclusion of too many variables, and for that introduces a penalty on the number of variables included</li>
@@ -3698,13 +3698,13 @@ strong multicollinearity or other numerical problems.
 <li><em>Model quality diagnostics</em> are also indicated. Kurtosis and skewness are metrics for determining the distribution of the residuals. They indicate how the residuals of the model resemble a normal distribution. Below, we will review more on diagnosis plots. The <a href="https://en.wikipedia.org/wiki/Jarque–Bera_test">Jarque Bera test</a> indicates if the residuals are normally distributed (the null hypothesis is a joint hypothesis of the skewness being zero and the excess kurtosis being zero), and a value of zero indicates that the data is normally distributed. If the Jarque Bera test is valid (in the case above it isn't), the Durbin Watson is applicable in order to check for autocorrelation of the residuals (meaning that the residuals of our model are related among themselves and that we haven't captured some characteristics of our data with the tested model).</li>
 </ul>
 <p>Finally, there is a warning at the bottom indicating that the condition number is large. It suggests we might have multicollinearity problems in our model, which means that some of the independent variables might be correlated among themselves and that they are probably not necessary.</p>
-<p>Our function also depicts the results in a graphical way for us to see the model itself. It will show the training and test datasets (as <code class="codehilite"><span class="err">Reference Train</span></code> and <code class="codehilite"><span class="err">Reference Test</span></code> respectively), and the prediction results. The mean and absolute confidence intervals for 95% confidence are also shown:</p>
+<p>Our function also depicts the results in a graphical way for us to see the model itself. It will show the training and test datasets (as <code>Reference Train</code> and <code>Reference Test</code> respectively), and the prediction results. The mean and absolute confidence intervals for 95% confidence are also shown:</p>
 <p><img alt="" src="https://i.imgur.com/M9TBeBT.png" /></p>
 <p>Now we can look at some other model quality plots. If we run the cell below, we will obtain an adaptation of the summary plots from <strong>R</strong>:</p>
-<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">linear_regression_utils</span> <span class="kn">import</span> <span class="n">modelRplots</span>
-<span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
+<div class="highlight"><pre><span></span><code>from linear_regression_utils import modelRplots
+%matplotlib inline
 
-<span class="n">modelRplots</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">dataTrain</span><span class="p">,</span> <span class="n">dataTest</span><span class="p">)</span>
+modelRplots(model, dataTrain, dataTest)
 </code></pre></div>
 
 <p>Let's review the output step by step:</p>
@@ -3750,68 +3750,68 @@ strong multicollinearity or other numerical problems.
 <p>Finally, we can export our model and generate some metrics to evaluate the results.</p>
 <h2 id="machine-learning-example">Machine learning example<a class="headerlink" href="#machine-learning-example" title="Permanent link">Link</a></h2>
 <p>Machine learning algorithms promise a better representation of the sensor's data, being able to learn robust non-linear models and sequential dependencies. For that reason, we have implemented toolset based on <a href="https://keras.io/">keras</a> with <a href="https://www.tensorflow.org/">Tensorflow</a> backend, in order to train sequential models <sup id="fnref:third"><a class="footnote-ref" href="#fn:third">3</a></sup>.</p>
-<div class="codehilite"><pre><span></span><code><span class="err">model_description_rf = {&quot;model_name&quot;: &quot;RF_UCD&quot;,</span>
-<span class="err">                    &quot;model_type&quot;: &quot;RF&quot;,</span>
-<span class="err">                    &quot;model_target&quot;: &quot;ALPHASENSE&quot;,</span>
-<span class="err">                    &quot;data&quot;: {&quot;train&quot;: {&quot;2019-03_EXT_UCD_URBAN_BACKGROUND_API&quot;: {&quot;devices&quot;: [&quot;5262&quot;],</span>
-<span class="err">                                                                               &quot;reference_device&quot;: &quot;CITY_COUNCIL&quot;}},</span>
-<span class="err">                            &quot;test&quot;: {&quot;2019-03_EXT_UCD_URBAN_BACKGROUND_API&quot;: {&quot;devices&quot;: [&quot;5565&quot;],</span>
-<span class="err">                                                                               &quot;reference_device&quot;: &quot;CITY_COUNCIL&quot;}},</span>
-<span class="err">                            &quot;features&quot;:  {&quot;REF&quot;: &quot;NO2_CONV&quot;,</span>
-<span class="err">                                            &quot;A&quot;: &quot;GB_2W&quot;,</span>
-<span class="err">                                            &quot;B&quot;: &quot;GB_2A&quot;,</span>
-<span class="err">                                            &quot;C&quot;: &quot;HUM&quot;},</span>
-<span class="err">                            &quot;data_options&quot;: {&quot;target_raster&quot;: &#39;1Min&#39;,</span>
-<span class="err">                                            &quot;clean_na&quot;: True,</span>
-<span class="err">                                            &quot;clean_na_method&quot;: &quot;drop&quot;,</span>
-<span class="err">                                            &quot;min_date&quot;: None,</span>
-<span class="err">                                            &quot;frequency&quot;: &quot;1Min&quot;,</span>
-<span class="err">                                            &quot;max_date&quot;: &#39;2019-01-15&#39;},</span>
-<span class="err">                            },</span>
-<span class="err">                    &quot;hyperparameters&quot;: {&quot;ratio_train&quot;: 0.75, </span>
-<span class="err">                                        &quot;min_samples_leaf&quot;: 2,</span>
-<span class="err">                                        &quot;max_features&quot;: None,</span>
-<span class="err">                                       &quot;n_estimators&quot;: 100,</span>
-<span class="err">                                        &quot;shuffle_split&quot;: True},</span>
-<span class="err">                    &quot;model_options&quot;: {&quot;session_active_model&quot;: True,</span>
-<span class="err">                                &quot;show_plots&quot;: True,</span>
-<span class="err">                                &quot;export_model&quot;: False,</span>
-<span class="err">                                &quot;export_model_file&quot;: False,</span>
-<span class="err">                                &quot;extract_metrics&quot;: True}</span>
-<span class="err">                    }</span>
+<div class="highlight"><pre><span></span><code>model_description_rf = {&quot;model_name&quot;: &quot;RF_UCD&quot;,
+                    &quot;model_type&quot;: &quot;RF&quot;,
+                    &quot;model_target&quot;: &quot;ALPHASENSE&quot;,
+                    &quot;data&quot;: {&quot;train&quot;: {&quot;2019-03_EXT_UCD_URBAN_BACKGROUND_API&quot;: {&quot;devices&quot;: [&quot;5262&quot;],
+                                                                               &quot;reference_device&quot;: &quot;CITY_COUNCIL&quot;}},
+                            &quot;test&quot;: {&quot;2019-03_EXT_UCD_URBAN_BACKGROUND_API&quot;: {&quot;devices&quot;: [&quot;5565&quot;],
+                                                                               &quot;reference_device&quot;: &quot;CITY_COUNCIL&quot;}},
+                            &quot;features&quot;:  {&quot;REF&quot;: &quot;NO2_CONV&quot;,
+                                            &quot;A&quot;: &quot;GB_2W&quot;,
+                                            &quot;B&quot;: &quot;GB_2A&quot;,
+                                            &quot;C&quot;: &quot;HUM&quot;},
+                            &quot;data_options&quot;: {&quot;target_raster&quot;: &#39;1Min&#39;,
+                                            &quot;clean_na&quot;: True,
+                                            &quot;clean_na_method&quot;: &quot;drop&quot;,
+                                            &quot;min_date&quot;: None,
+                                            &quot;frequency&quot;: &quot;1Min&quot;,
+                                            &quot;max_date&quot;: &#39;2019-01-15&#39;},
+                            },
+                    &quot;hyperparameters&quot;: {&quot;ratio_train&quot;: 0.75, 
+                                        &quot;min_samples_leaf&quot;: 2,
+                                        &quot;max_features&quot;: None,
+                                       &quot;n_estimators&quot;: 100,
+                                        &quot;shuffle_split&quot;: True},
+                    &quot;model_options&quot;: {&quot;session_active_model&quot;: True,
+                                &quot;show_plots&quot;: True,
+                                &quot;export_model&quot;: False,
+                                &quot;export_model_file&quot;: False,
+                                &quot;extract_metrics&quot;: True}
+                    }
 </code></pre></div>
 
 <p>Output:</p>
-<div class="codehilite"><pre><span></span><code><span class="err">Using TensorFlow backend.</span>
-<span class="err">...</span>
-<span class="err">Beginning Model RF_UCD</span>
-<span class="err">Model type RF</span>
-<span class="err">Preparing dataframe model for test 2019-03_EXT_UCD_URBAN_BACKGROUND_API</span>
-<span class="err">Data combined successfully</span>
-<span class="err">Creating models session in recordings</span>
-<span class="err">Dataframe model generated successfully</span>
-<span class="err">Training Model RF_UCD...</span>
-<span class="err">Training done</span>
-<span class="c">Variable: HUM_5262 Importance: 0.4</span>
-<span class="c">Variable: GB_2W_5262 Importance: 0.31</span>
-<span class="c">Variable: GB_2A_5262 Importance: 0.3</span>
-<span class="err">Calculating Metrics...</span>
-<span class="err">Metrics Summary:</span>
-<span class="err">Metric                  Train   Test </span>
-<span class="err">avg_ref                 16.648  15.861</span>
-<span class="err">avg_est                 16.666  16.000</span>
-<span class="err">sig_ref                 11.438  10.584</span>
-<span class="err">sig_est                 9.493   9.404</span>
-<span class="err">bias                    0.019   0.139</span>
-<span class="err">normalised_bias         0.002   0.013</span>
-<span class="err">sigma_norm              0.830   0.888</span>
-<span class="err">sign_sigma              -1.000  -1.000</span>
-<span class="err">rsquared                0.799   0.879</span>
-<span class="err">RMSD                    5.124   3.677</span>
-<span class="err">RMSD_norm_unb           0.453   0.351</span>
-<span class="err">No specifics for RF type</span>
-<span class="err">Preparing devices from prediction</span>
-<span class="err">Channel 5262_RF_UCD prediction finished</span>
+<div class="highlight"><pre><span></span><code>Using TensorFlow backend.
+...
+Beginning Model RF_UCD
+Model type RF
+Preparing dataframe model for test 2019-03_EXT_UCD_URBAN_BACKGROUND_API
+Data combined successfully
+Creating models session in recordings
+Dataframe model generated successfully
+Training Model RF_UCD...
+Training done
+Variable: HUM_5262 Importance: 0.4
+Variable: GB_2W_5262 Importance: 0.31
+Variable: GB_2A_5262 Importance: 0.3
+Calculating Metrics...
+Metrics Summary:
+Metric                  Train   Test 
+avg_ref                 16.648  15.861
+avg_est                 16.666  16.000
+sig_ref                 11.438  10.584
+sig_est                 9.493   9.404
+bias                    0.019   0.139
+normalised_bias         0.002   0.013
+sigma_norm              0.830   0.888
+sign_sigma              -1.000  -1.000
+rsquared                0.799   0.879
+RMSD                    5.124   3.677
+RMSD_norm_unb           0.453   0.351
+No specifics for RF type
+Preparing devices from prediction
+Channel 5262_RF_UCD prediction finished
 </code></pre></div>
 
 <p>This will also output some nice plots for visually checking our model performance:</p>
@@ -3928,18 +3928,18 @@ M_{R1} = min(RMSD*') = \sqrt {1+R1^2-2R1^2}
 </div>
 <h2 id="results">Results<a class="headerlink" href="#results" title="Permanent link">Link</a></h2>
 <p>Let's now compare both models with the target diagram:</p>
-<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">src.visualization.visualization</span> <span class="kn">import</span> <span class="n">targetDiagram</span>
-<span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
-<span class="n">models</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+<div class="highlight"><pre><span></span><code>from src.visualization.visualization import targetDiagram
+%matplotlib inline
+models = dict()
 
-<span class="n">group</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">for</span> <span class="n">model</span> <span class="ow">in</span> <span class="p">[</span><span class="n">ols_model</span><span class="p">,</span> <span class="n">rf_model</span><span class="p">]:</span>
-    <span class="k">for</span> <span class="n">dataset</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;train&#39;</span><span class="p">,</span> <span class="s1">&#39;validation&#39;</span><span class="p">]:</span>
-        <span class="k">if</span> <span class="n">dataset</span> <span class="ow">in</span> <span class="n">model</span><span class="o">.</span><span class="n">metrics</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span> 
-            <span class="n">models</span><span class="p">[</span><span class="n">model</span><span class="o">.</span><span class="n">name</span> <span class="o">+</span> <span class="s1">&#39;_&#39;</span> <span class="o">+</span> <span class="n">dataset</span><span class="p">]</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">metrics</span><span class="p">[</span><span class="n">dataset</span><span class="p">]</span>
-            <span class="n">models</span><span class="p">[</span><span class="n">model</span><span class="o">.</span><span class="n">name</span> <span class="o">+</span> <span class="s1">&#39;_&#39;</span> <span class="o">+</span> <span class="n">dataset</span><span class="p">][</span><span class="s1">&#39;group&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">group</span>
+group = 0
+for model in [ols_model, rf_model]:
+    for dataset in [&#39;train&#39;, &#39;validation&#39;]:
+        if dataset in model.metrics.keys(): 
+            models[model.name + &#39;_&#39; + dataset] = model.metrics[dataset]
+            models[model.name + &#39;_&#39; + dataset][&#39;group&#39;] = group
 
-<span class="n">targetDiagram</span><span class="p">(</span><span class="n">models</span><span class="p">,</span> <span class="bp">True</span><span class="p">,</span> <span class="s1">&#39;seaborn-talk&#39;</span><span class="p">)</span>
+targetDiagram(models, True, &#39;seaborn-talk&#39;)
 </code></pre></div>
 
 <p>Output:</p>
@@ -3947,27 +3947,27 @@ M_{R1} = min(RMSD*') = \sqrt {1+R1^2-2R1^2}
 <p>Here, every point that falls inside the yellow circle, will have an R<sup>2</sup> over 0.7, and so will be the red and green for R<sup>2</sup> over 0.5 and 0.9 respectively. We see that only one of our models performs well in that sense, which is the training dataset of the OLS. However, this dataset performs pretty badly in the test dataset, being the LSTM options much better. This target diagram offers information about how the hyperparameters affect our networks. For instance, increasing the training epochs from 100 to 200 does not affect greatly on model performance, but the effect of filtering the data beforehand to reduce the noise shows a much better model performance in both, training and test dataframe.</p>
 <h2 id="export-the-models">Export the models<a class="headerlink" href="#export-the-models" title="Permanent link">Link</a></h2>
 <p>Let's now assume that we are happy with our models. We can now export them:</p>
-<div class="codehilite"><pre><span></span><code><span class="err">ols_model.export(&#39;directory&#39;)</span>
-<span class="err">rf_model.export(&#39;directory&#39;)</span>
+<div class="highlight"><pre><span></span><code>ols_model.export(&#39;directory&#39;)
+rf_model.export(&#39;directory&#39;)
 </code></pre></div>
 
 <p>Output:</p>
-<div class="codehilite"><pre><span></span><code><span class="err">Saving metrics</span>
-<span class="err">Saving hyperparameters</span>
-<span class="err">Saving features</span>
-<span class="err">Model included in summary</span>
+<div class="highlight"><pre><span></span><code>Saving metrics
+Saving hyperparameters
+Saving features
+Model included in summary
 </code></pre></div>
 
 <p>And in our directory:</p>
-<div class="codehilite"><pre><span></span><code><span class="err">➜  models ls -l</span>
-<span class="err">RF_UCD_features.sav</span>
-<span class="err">RF_UCD_hyperparameters.sav</span>
-<span class="err">RF_UCD_metrics.sav</span>
+<div class="highlight"><pre><span></span><code>➜  models ls -l
+RF_UCD_features.sav
+RF_UCD_hyperparameters.sav
+RF_UCD_metrics.sav
 </code></pre></div>
 
 <div class="admonition warning">
 <p class="admonition-title">Save the model file</p>
-<p>If you want to save the model file into the disk, change the option <code class="codehilite"><span class="err">&quot;export_model&quot;: False,</span></code> to <code class="codehilite"><span class="err">True</span></code>! Be careful though, it can take quite a lot of space. If you just want to keep the model to test in the current session, it is best to just use <code class="codehilite"><span class="err">&quot;session_active_model&quot;: True,</span></code>.</p>
+<p>If you want to save the model file into the disk, change the option <code>"export_model": False,</code> to <code>True</code>! Be careful though, it can take quite a lot of space. If you just want to keep the model to test in the current session, it is best to just use <code>"session_active_model": True,</code>.</p>
 </div>
 <h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">Link</a></h2>
 <div class="footnote">

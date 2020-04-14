@@ -3862,31 +3862,31 @@
 <p>The board is capable of storing the recorded data offline on its internal dedicated flash memory of 8MB and later publish this over Wi-Fi connectivity provided by an Espressif ESP8266. Data is published using MQTT messages to the Smart Citizen Platform. NTP is used for syncing the built-in RTC. For long term offline storage, the board provides a standard microSD socket where card in the orders of GB can be employed. That ensures extended periods of data in the order of decades can be stored.</p>
 <h3 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">Link</a></h3>
 <p>The board firmware is fully customizable without requiring any changes to the core software. That includes enabling or disabling sensors, the sampling frequency of the sensors or the operation mode. There different configuration options via the Serial Shell available when the board is connected over USB.</p>
-<div class="codehilite"><pre><span></span><code><span class="n">Detecting</span><span class="o">:</span> <span class="n">AlphaDelta</span> <span class="mi">1</span><span class="n">A</span><span class="o">...</span> <span class="n">found</span><span class="o">,</span> <span class="n">Enabling</span> <span class="n">AlphaDelta</span> <span class="mi">1</span><span class="n">A</span>
-<span class="n">Detecting</span><span class="o">:</span> <span class="n">AlphaDelta</span> <span class="mi">1</span><span class="n">W</span><span class="o">...</span> <span class="n">found</span><span class="o">,</span> <span class="n">already</span> <span class="n">enabled</span><span class="o">!!!</span>
-<span class="n">Detecting</span><span class="o">:</span> <span class="n">AlphaDelta</span> <span class="mi">2</span><span class="n">A</span><span class="o">...</span> <span class="n">found</span><span class="o">,</span> <span class="n">already</span> <span class="n">enabled</span><span class="o">!!!</span>
-<span class="n">Detecting</span><span class="o">:</span> <span class="n">AlphaDelta</span> <span class="mi">2</span><span class="n">W</span><span class="o">...</span> <span class="n">found</span><span class="o">,</span> <span class="n">already</span> <span class="n">enabled</span><span class="o">!!!</span>
-<span class="n">Detecting</span><span class="o">:</span> <span class="n">AlphaDelta</span> <span class="mi">3</span><span class="n">A</span><span class="o">...</span> <span class="n">found</span><span class="o">,</span> <span class="n">already</span> <span class="n">enabled</span><span class="o">!!!</span>
-<span class="n">Detecting</span><span class="o">:</span> <span class="n">AlphaDelta</span> <span class="mi">3</span><span class="n">W</span><span class="o">...</span> <span class="n">found</span><span class="o">,</span> <span class="n">already</span> <span class="n">enabled</span><span class="o">!!!</span>
-<span class="n">Detecting</span><span class="o">:</span> <span class="n">AlphaDelta</span> <span class="n">Temperature</span><span class="o">...</span> <span class="n">found</span><span class="o">,</span> <span class="n">already</span> <span class="n">enabled</span><span class="o">!!!</span>
-<span class="n">Detecting</span><span class="o">:</span> <span class="n">AlphaDelta</span> <span class="n">Humidity</span><span class="o">...</span> <span class="n">found</span><span class="o">,</span> <span class="n">already</span> <span class="n">enabled</span><span class="o">!!!</span>
-<span class="n">Detecting</span><span class="o">:</span> <span class="n">Groove</span> <span class="n">ADC</span><span class="o">...</span> <span class="n">nothing</span><span class="o">!</span>
-<span class="n">Detecting</span><span class="o">:</span> <span class="n">INA219</span> <span class="n">Bus</span> <span class="n">voltage</span><span class="o">...</span> <span class="n">nothing</span><span class="o">!</span>
-<span class="n">Detecting</span><span class="o">:</span> <span class="n">INA219</span> <span class="n">Shunt</span> <span class="n">voltage</span><span class="o">...</span> <span class="n">nothing</span><span class="o">!</span>
-<span class="n">Detecting</span><span class="o">:</span> <span class="n">INA219</span> <span class="n">Current</span><span class="o">...</span> <span class="n">nothing</span><span class="o">!</span>
-<span class="n">Detecting</span><span class="o">:</span> <span class="n">INA219</span> <span class="n">Load</span> <span class="n">voltage</span><span class="o">...</span> <span class="n">nothing</span><span class="o">!</span>
-<span class="n">Detecting</span><span class="o">:</span> <span class="n">DS18B20</span> <span class="n">Water</span> <span class="n">temperature</span><span class="o">...</span> <span class="n">nothing</span><span class="o">!</span>
-<span class="n">Detecting</span><span class="o">:</span> <span class="n">Atlas</span> <span class="n">PH</span><span class="o">...</span> <span class="n">nothing</span><span class="o">!</span>
-<span class="n">Detecting</span><span class="o">:</span> <span class="n">Atlas</span> <span class="n">Conductivity</span><span class="o">...</span> <span class="n">nothing</span><span class="o">!</span>
-<span class="n">Detecting</span><span class="o">:</span> <span class="n">Atlas</span> <span class="n">Specific</span> <span class="n">gravity</span><span class="o">...</span> <span class="n">nothing</span><span class="o">!</span>
-<span class="n">Detecting</span><span class="o">:</span> <span class="n">Atlas</span> <span class="n">Dissolved</span> <span class="n">Oxygen</span><span class="o">...</span> <span class="n">nothing</span><span class="o">!</span>
-<span class="n">Detecting</span><span class="o">:</span> <span class="n">Atlas</span> <span class="n">DO</span> <span class="n">Saturation</span><span class="o">...</span> <span class="n">nothing</span><span class="o">!</span>
-<span class="n">Detecting</span><span class="o">:</span> <span class="n">Groove</span> <span class="n">OLED</span><span class="o">...</span> <span class="n">nothing</span><span class="o">!</span>
+<div class="highlight"><pre><span></span><code>Detecting: AlphaDelta 1A... found, Enabling AlphaDelta 1A
+Detecting: AlphaDelta 1W... found, already enabled!!!
+Detecting: AlphaDelta 2A... found, already enabled!!!
+Detecting: AlphaDelta 2W... found, already enabled!!!
+Detecting: AlphaDelta 3A... found, already enabled!!!
+Detecting: AlphaDelta 3W... found, already enabled!!!
+Detecting: AlphaDelta Temperature... found, already enabled!!!
+Detecting: AlphaDelta Humidity... found, already enabled!!!
+Detecting: Groove ADC... nothing!
+Detecting: INA219 Bus voltage... nothing!
+Detecting: INA219 Shunt voltage... nothing!
+Detecting: INA219 Current... nothing!
+Detecting: INA219 Load voltage... nothing!
+Detecting: DS18B20 Water temperature... nothing!
+Detecting: Atlas PH... nothing!
+Detecting: Atlas Conductivity... nothing!
+Detecting: Atlas Specific gravity... nothing!
+Detecting: Atlas Dissolved Oxygen... nothing!
+Detecting: Atlas DO Saturation... nothing!
+Detecting: Groove OLED... nothing!
 </code></pre></div>
 
 <h2 id="shell">Shell<a class="headerlink" href="#shell" title="Permanent link">Link</a></h2>
 <p>The firmware provides a comprehensive command shell over USB to manage all the kits functionalities for advanced users. </p>
-<p><em>Use any Serial console as <code class="codehilite"><span class="err">screen</span></code>, <code class="codehilite"><span class="err">platformio device monitor</span></code>, or the serial monitor on the Arduino IDE</em></p>
+<p><em>Use any Serial console as <code>screen</code>, <code>platformio device monitor</code>, or the serial monitor on the Arduino IDE</em></p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>Have a look at the guide for different platforms <a href="/Guides/Using the Shell">here</a></p>
@@ -3895,15 +3895,15 @@
 <h3 id="readings-files-yyyy-mm-ddcsv">Readings files YYYY-MM-DD.CSV<a class="headerlink" href="#readings-files-yyyy-mm-ddcsv" title="Permanent link">Link</a></h3>
 <p>These files are generated and updated by the kit in a daily manner. When a SD is detected the SCK will automatically save the sensors into it. </p>
 <p>The SCK creates an additional CSV file once there is a hardware reset. A reset takes place every night at 3-4am with the purpose to avoid data loss because a software problem (i.e. blocked software). The SCK then stores the data in a file with a sequential name, and does so by changing the filename to YYYY-MM-DD.01, .02... depending on the amount of resets it sees during a certain day. The latest data is always in the file with .CSV extension. An example of a day with two resets (ad hoc and the programmed one):</p>
-<div class="codehilite"><pre><span></span><code><span class="err">YYYY-MM-DD.01 -&gt; first reset</span>
-<span class="err">YYYY-MM-DD.02 -&gt; second reset</span>
-<span class="err">YYYY-MM-DD.CSV -&gt; latest file</span>
+<div class="highlight"><pre><span></span><code>YYYY-MM-DD.01 -&gt; first reset
+YYYY-MM-DD.02 -&gt; second reset
+YYYY-MM-DD.CSV -&gt; latest file
 </code></pre></div>
 
 <p>The user can safely change the extension of these files back to .CSV and concatenate them:</p>
-<div class="codehilite"><pre><span></span><code><span class="err">YYYY-MM-DD.01 -&gt; YYYY-MM-DD_01.CSV</span>
-<span class="err">YYYY-MM-DD.02 -&gt; YYYY-MM-DD_02.CSV</span>
-<span class="err">YYYY-MM-DD.CSV -&gt; YYYY-MM-DD.CSV</span>
+<div class="highlight"><pre><span></span><code>YYYY-MM-DD.01 -&gt; YYYY-MM-DD_01.CSV
+YYYY-MM-DD.02 -&gt; YYYY-MM-DD_02.CSV
+YYYY-MM-DD.CSV -&gt; YYYY-MM-DD.CSV
 </code></pre></div>
 
 <div class="admonition warning">

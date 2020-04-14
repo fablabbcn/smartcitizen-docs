@@ -3732,7 +3732,7 @@
 <p><strong>Phrase</strong> - This is your Wi-Fi <em>password</em>, you will usually find it written under your router or you can contact your IT team. If your Wi-Fi doesn't have a password just leave it empty and select <em>Open Wi-Fi network</em> on the <em>Encryption</em> dropdown.</p>
 </li>
 </ul>
-<p><em>Take care the SSID and Phrase can't be longer than 19 characters and they can't contain the <code class="codehilite"><span class="err">$</span></code> symbol.</em></p>
+<p><em>Take care the SSID and Phrase can't be longer than 19 characters and they can't contain the <code>$</code> symbol.</em></p>
 <ul>
 <li>
 <p><strong>Encryption</strong> -  <em>Optional</em>  You can leave it to <em>WPA2</em> this is the default for most modern networks.</p>
@@ -3772,7 +3772,7 @@
 <li>Set the options to "115200 baud" and “No line return” (drop-down menu at the bottom-right of the monitor window).</li>
 <li>Wake up the module and activate the Wi-Fi command mode by typing in the serial monitor:</li>
 </ul>
-<p><code class="codehilite"><span class="err">$$$</span></code></p>
+<p><code>$$$</code></p>
 <ul>
 <li>
 <p>Change to “Carriage return” option (drop-down menu at the bottom-right of the monitor window)</p>
@@ -3781,29 +3781,29 @@
 <p>Add a new SSID to memory by typing:</p>
 </li>
 </ul>
-<p><code class="codehilite"><span class="err">set wlan ssid XXX</span></code></p>
+<p><code>set wlan ssid XXX</code></p>
 <p>Note: You have to replace XXX with your ssid name, filling any space with the dollar ($) character. Due to hardware limitations it can't be longer than 32 characters.</p>
 <ul>
 <li>Add a new phrase to memory (optional, password for WPA1 &amp; WPA2):</li>
 </ul>
-<p><code class="codehilite"><span class="err">set wlan phrase XXX</span></code></p>
+<p><code>set wlan phrase XXX</code></p>
 <p>Note: You have to replace XXX with your phrase, filling any space with the dollar ($) character.</p>
 <ul>
 <li>Add a new key to memory  (optional, password for WEP &amp; WEP64):</li>
 </ul>
-<p><code class="codehilite"><span class="err">set wlan key XXX</span></code></p>
+<p><code>set wlan key XXX</code></p>
 <ul>
 <li>Add an authentication method into memory (replace XXX by “0” for Open,  “1” for WEP, “2” for WPA1, “4” for WPA2, “8” for WEP64):</li>
 </ul>
-<p><code class="codehilite"><span class="err">set wlan auth XXX</span></code></p>
+<p><code>set wlan auth XXX</code></p>
 <ul>
 <li>Add an antenna type into memory (replace XXX by “0” to use the internal antenna or “1” if you use an external antenna):</li>
 </ul>
-<p><code class="codehilite"><span class="err">set wlan ext_antenna XXX</span></code></p>
+<p><code>set wlan ext_antenna XXX</code></p>
 <ul>
 <li>Get the MAC address of the kit by typing:</li>
 </ul>
-<p><code class="codehilite"><span class="err">get mac</span></code></p>
+<p><code>get mac</code></p>
 <ul>
 <li>
 <p>Copy/Save the answer for further use.</p>
@@ -3812,11 +3812,11 @@
 <p>Exit and go back to the normal operational mode by typing:</p>
 </li>
 </ul>
-<p><code class="codehilite"><span class="err">exit</span></code></p>
+<p><code>exit</code></p>
 <h3 id="registering-the-kit-in-the-platform">Registering the kit in the platform<a class="headerlink" href="#registering-the-kit-in-the-platform" title="Permanent link">Link</a></h3>
 <p>After you've uploaded your settings, don't forget to register your kit in our database by saving it's mac address. To find the mac address, you can use the serial command "get mac". Or have a look at the wifi module on the board and read the serial number under the bar code (something like "131G0006662116E4" on kit v1.0 or "0006662116E4" on kit v.1.1).</p>
 <p><img alt="Find The Mac Address" src="/assets/images/sck_1/mac_manual_sticker.jpg" /></p>
-<p>The <a href="http://en.wikipedia.org/wiki/MAC_address">mac address</a> is the last 12 digit of this serial, separated by a colon every two number. From a number like <code class="codehilite"><span class="err">0006662116E4</span></code> you would write <code class="codehilite"><span class="mi">00</span><span class="o">:</span><span class="mi">06</span><span class="o">:</span><span class="mi">66</span><span class="o">:</span><span class="mi">21</span><span class="o">:</span><span class="mi">16</span><span class="o">:</span><span class="n">E4</span></code>.</p>
+<p>The <a href="http://en.wikipedia.org/wiki/MAC_address">mac address</a> is the last 12 digit of this serial, separated by a colon every two number. From a number like <code>0006662116E4</code> you would write <code>00:06:66:21:16:E4</code>.</p>
 <p>In both cases, you have to fill the mac address input field in the configuration page of your kit and press the save button.</p>
 <p><img alt="Register The Kit" src="/assets/images/sck_1/mac_2.png" /></p>
 <p>You are now done with the manual configuration of your SCK. Wait for a few minutes to see your data coming on the server and being displayed on the web page. You can also check that everything is ok by looking at the Arduino serial monitor. Debug messages coming from your SCK should look like this:</p>
@@ -3830,10 +3830,10 @@
 <p>You can download the latest firmware on our Github:</p>
 <p><a href="https://github.com/fablabbcn/Smart-Citizen-Kit/releases">https://github.com/fablabbcn/Smart-Citizen-Kit/releases</a></p>
 <p>As you may know, the hardware and software are based on the Arduino project. We will use the Arduino IDE to edit the firmware and upload it to the kit. This tutorial have been tested with Arduino 1.6.8, please download and install the <a href="https://www.arduino.cc/en/Main/Software">Arduino IDE</a>.</p>
-<p>Once installed open the file <code class="codehilite"><span class="err">Smart-Citizen-Kit/sck_beta_v0_9_0/sck_beta_v0_9.ino</span></code></p>
+<p>Once installed open the file <code>Smart-Citizen-Kit/sck_beta_v0_9_0/sck_beta_v0_9.ino</code></p>
 <h3 id="editing-the-code">Editing the code<a class="headerlink" href="#editing-the-code" title="Permanent link">Link</a></h3>
-<p>If you want to set the network configuration manually, you should go to the <code class="codehilite"><span class="err">Constants.h</span></code> tab and modify the lines you see below:</p>
-<div class="codehilite"><pre><span></span><code><span class="cp">#define networks 0</span>
+<p>If you want to set the network configuration manually, you should go to the <code>Constants.h</code> tab and modify the lines you see below:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#define networks 0</span>
 <span class="cp">#if (networks &gt; 0)</span>
 <span class="k">static</span> <span class="kt">char</span><span class="o">*</span> <span class="n">mySSID</span><span class="p">[</span><span class="n">networks</span><span class="p">]</span>      <span class="o">=</span> <span class="p">{</span>
   <span class="s">&quot;SSID1&quot;</span>      <span class="p">,</span> <span class="s">&quot;SSID2&quot;</span>            <span class="p">};</span>
@@ -3846,14 +3846,14 @@
 <span class="cp">#endif</span>
 </code></pre></div>
 
-<p>The easiest way would be to write <code class="codehilite"><span class="err">&quot;#define networks X&quot;</span></code> (where X is the number of WI-FI networks you are going to use) and fill the options for your network:</p>
+<p>The easiest way would be to write <code>"#define networks X"</code> (where X is the number of WI-FI networks you are going to use) and fill the options for your network:</p>
 <ul>
-<li>Add the name of your network in <code class="codehilite"><span class="err">SSIDX</span></code> and the corresponding password in <code class="codehilite"><span class="err">PASSX</span></code>. Due to hardware limitations neither the password or the ssid can't be longer tham 32 characters.</li>
-<li>On <code class="codehilite"><span class="err">wifiEncript</span></code> you could also choose the encryption mode that fits with your network's configuration (<code class="codehilite"><span class="err">OPEN</span></code>, <code class="codehilite"><span class="err">WEP</span></code>, <code class="codehilite"><span class="err">WPA1</span></code>, <code class="codehilite"><span class="err">WPA2</span></code>, <code class="codehilite"><span class="err">WEP64</span></code>).</li>
-<li>On <code class="codehilite"><span class="err">antennaExt</span></code> you can choose the type of antenna you are using (<code class="codehilite"><span class="err">INT_ANT</span></code> for internal antenna (default) or <code class="codehilite"><span class="err">EXT_ANT</span></code> for external antenna).</li>
+<li>Add the name of your network in <code>SSIDX</code> and the corresponding password in <code>PASSX</code>. Due to hardware limitations neither the password or the ssid can't be longer tham 32 characters.</li>
+<li>On <code>wifiEncript</code> you could also choose the encryption mode that fits with your network's configuration (<code>OPEN</code>, <code>WEP</code>, <code>WPA1</code>, <code>WPA2</code>, <code>WEP64</code>).</li>
+<li>On <code>antennaExt</code> you can choose the type of antenna you are using (<code>INT_ANT</code> for internal antenna (default) or <code>EXT_ANT</code> for external antenna).</li>
 </ul>
 <p>If you register only one wifi credential, you should obtain something like this:</p>
-<div class="codehilite"><pre><span></span><code><span class="cp">#define networks 1</span>
+<div class="highlight"><pre><span></span><code><span class="cp">#define networks 1</span>
 <span class="cp">#if (networks &gt; 0)</span>
 <span class="kt">char</span><span class="o">*</span> <span class="n">mySSID</span><span class="p">[</span><span class="n">networks</span><span class="p">]</span>      <span class="o">=</span> <span class="p">{</span> <span class="s">&quot;MyWifiSSID&quot;</span> <span class="p">};</span>
 <span class="kt">char</span><span class="o">*</span> <span class="n">myPassword</span><span class="p">[</span><span class="n">networks</span><span class="p">]</span>  <span class="o">=</span> <span class="p">{</span> <span class="s">&quot;MyPassword&quot;</span> <span class="p">};</span>
@@ -3863,7 +3863,7 @@
 </code></pre></div>
 
 <p><em>Note that if you configure more than one Wi-fi network you have to separate the variables with a comma, for example:</em>
-<div class="codehilite"><pre><span></span><code><span class="kt">char</span><span class="o">*</span> <span class="n">mySSID</span><span class="p">[</span><span class="n">networks</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span> <span class="s">&quot;MyFirstSSID&quot;</span><span class="p">,</span> <span class="s">&quot;MySecondSSID&quot;</span> <span class="p">};</span>
+<div class="highlight"><pre><span></span><code><span class="kt">char</span><span class="o">*</span> <span class="n">mySSID</span><span class="p">[</span><span class="n">networks</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span> <span class="s">&quot;MyFirstSSID&quot;</span><span class="p">,</span> <span class="s">&quot;MySecondSSID&quot;</span> <span class="p">};</span>
 </code></pre></div></p>
 <h2 id="uploading-the-code">Uploading the code<a class="headerlink" href="#uploading-the-code" title="Permanent link">Link</a></h2>
 <p><img alt="Select the board" src="/assets/images/sck_1/arduino_board.png" /></p>
@@ -3883,7 +3883,7 @@
 <h2 id="registering-the-kit-in-the-platform_1">Registering the kit in the platform<a class="headerlink" href="#registering-the-kit-in-the-platform_1" title="Permanent link">Link</a></h2>
 <p>After you’ve uploaded your settings, don’t forget to register your kit in our database by saving it’s mac address. To find the mac address, you can use the serial command “get mac”  by following the section <a href="#/start/manual-set-up-the-serial-way">The Serial Way</a>. Or have a look at the wifi module on the board and read the serial number under the bar code (something like “131G0006662116E4” on kit v1.0 or “0006662116E4” on kit v.1.1).</p>
 <p><img alt="Find The Mac Address" src="/assets/images/sck_1/mac_manual_sticker.jpg" /></p>
-<p>The <a href="http://en.wikipedia.org/wiki/MAC_address">mac address</a> is the last 12 digit of this serial, separated by a colon every two number. From a number like <code class="codehilite"><span class="err">0006662116E4</span></code> you would write <code class="codehilite"><span class="mi">00</span><span class="o">:</span><span class="mi">06</span><span class="o">:</span><span class="mi">66</span><span class="o">:</span><span class="mi">21</span><span class="o">:</span><span class="mi">16</span><span class="o">:</span><span class="n">E4</span></code>.</p>
+<p>The <a href="http://en.wikipedia.org/wiki/MAC_address">mac address</a> is the last 12 digit of this serial, separated by a colon every two number. From a number like <code>0006662116E4</code> you would write <code>00:06:66:21:16:E4</code>.</p>
 <p>In both cases, you have to fill the mac address input field in the configuration page of your kit and press the save button.</p>
 <p><img alt="Register The Kit" src="/assets/images/sck_1/mac_2.png" /></p>
 <p>You are now done with the manual configuration of your SCK. Wait for a few minutes to see your data coming on the server and being displayed on the web page. You can also check that everything is ok by looking the output of your kit via the Arduino serial monitor.</p>

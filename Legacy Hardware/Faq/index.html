@@ -3771,7 +3771,7 @@
 <p>Go to your Kits profile <a href="https://smartcitizen.me/profile/kits">page</a> select the kit you will like to unlink and go to <strong>Setup</strong>. You don't need to connect your SCK, just scroll down, remove the Mad Address number from the field and click <strong>Save</strong>.</p>
 <p><em>This way your kit will keep all the data on the platform but you will be able to register your SCK again as another kit. You can alway register again your SCK on the same device by following the standard setup process.</em></p>
 <h2 id="is-my-home-wireless-internet-going-to-work-with-the-sck">Is my home wireless internet going to work with the SCK?<a class="headerlink" href="#is-my-home-wireless-internet-going-to-work-with-the-sck" title="Permanent link">Link</a></h2>
-<p>The Smart Smart Citizen Kit is designed to work with most home and office standard Wi-Fi routers and access points. However we do not support network names or passwords longer than <em>19 characters</em> or with a <code class="codehilite"><span class="err">$</span></code> character.</p>
+<p>The Smart Smart Citizen Kit is designed to work with most home and office standard Wi-Fi routers and access points. However we do not support network names or passwords longer than <em>19 characters</em> or with a <code>$</code> character.</p>
 <p>We also do not support <strong>WPA Enterprise</strong> networks or <strong>Captive portal</strong> log in as the ones on some big companies and airports. We suggest you contact your IT support team, they can enable you special access in the network based on your device <strong>Mac Address</strong>.</p>
 <h2 id="how-to-use-the-sd-card">How to use the SD Card?<a class="headerlink" href="#how-to-use-the-sd-card" title="Permanent link">Link</a></h2>
 <ol>
@@ -3797,10 +3797,10 @@
 <p><strong>Boards:</strong></p>
 <ul>
 <li>
-<p>For SmartSmart Citizen Kit version 1.0 select <code class="codehilite"><span class="err">Tools/Boards/Arduino Leonardo</span></code> on the Arduino IDE (ATmega 32U4 at 16Mhz)</p>
+<p>For SmartSmart Citizen Kit version 1.0 select <code>Tools/Boards/Arduino Leonardo</code> on the Arduino IDE (ATmega 32U4 at 16Mhz)</p>
 </li>
 <li>
-<p>For SmartSmart Citizen Kit version 1.1 select <code class="codehilite"><span class="err">Tools/Boards/Lylipad Arduino USB</span></code> on the Arduino IDE (ATmega 32U4 at 8Mhz)</p>
+<p>For SmartSmart Citizen Kit version 1.1 select <code>Tools/Boards/Lylipad Arduino USB</code> on the Arduino IDE (ATmega 32U4 at 8Mhz)</p>
 </li>
 </ul>
 <p><strong>SD data format</strong></p>
@@ -3847,7 +3847,7 @@
 </table>
 <p><strong>Data Conversions</strong></p>
 <p>The data stored is automatically converted to the proper units in firmware.</p>
-<p>If you prefer to do the conversions manually set <code class="codehilite"><span class="err">DataRaw       false</span></code> in the <code class="codehilite"><span class="err">Constants.h</span></code> file and apply the formulas on the following table:</p>
+<p>If you prefer to do the conversions manually set <code>DataRaw       false</code> in the <code>Constants.h</code> file and apply the formulas on the following table:</p>
 <table>
 <thead>
 <tr>
@@ -3939,7 +3939,7 @@
 <p><strong>Kit's request</strong></p>
 <p>The Smart Smart Citizen Kit is publishing by default the data as a PUT Http request, the sensor data is encoded as JSON.</p>
 <p>Here you can see how a kit's request will look like <em>(Note the request is not standard as it do not contains a payload)</em>:</p>
-<div class="codehilite"><pre><span></span><code>PUT /add HTTP/1.1
+<div class="highlight"><pre><span></span><code>PUT /add HTTP/1.1
 Host: data.smartcitizen.me
 User-Agent: SmartCitizen
 X-SmartCitizenMacADDR: <span class="m">00</span>:00:00:00:00:00
@@ -3948,7 +3948,7 @@ X-SmartCitizenData: <span class="o">[{</span><span class="s2">&quot;temp&quot;</
 </code></pre></div>
 
 <p>Here you have a kit's request as a  <strong>Curl</strong> for test purposes:</p>
-<div class="codehilite"><pre><span></span><code>$ curl -X PUT -H <span class="s1">&#39;Host: data.smartcitizen.me&#39;</span> -H <span class="s1">&#39;User-Agent: SmartCitizen&#39;</span> -H <span class="s1">&#39;X-SmartCitizenMacADDR: 00:00:00:00:00:00&#39;</span> -H <span class="s1">&#39;X-SmartCitizenVersion: 1.1-0.8.5-A&#39;</span> -H <span class="s1">&#39;X-SmartCitizenData: [{&quot;temp&quot;:&quot;29090.6&quot;, &quot;hum&quot;:&quot;6815.74&quot;, &quot;light&quot;:&quot;30000&quot;, &quot;bat&quot;:&quot;786&quot;, &quot;panel&quot;:&quot;0&quot;, &quot;co&quot;:&quot;112500&quot;, &quot;no2&quot;:&quot;200000&quot;, &quot;noise&quot;:&quot;2&quot;, &quot;nets&quot;:&quot;10&quot;, &quot;timestamp&quot;:&quot;2013-10-28 1:34:26&quot;}]&#39;</span> data.smartcitizen.me/add
+<div class="highlight"><pre><span></span><code>$ curl -X PUT -H <span class="s1">&#39;Host: data.smartcitizen.me&#39;</span> -H <span class="s1">&#39;User-Agent: SmartCitizen&#39;</span> -H <span class="s1">&#39;X-SmartCitizenMacADDR: 00:00:00:00:00:00&#39;</span> -H <span class="s1">&#39;X-SmartCitizenVersion: 1.1-0.8.5-A&#39;</span> -H <span class="s1">&#39;X-SmartCitizenData: [{&quot;temp&quot;:&quot;29090.6&quot;, &quot;hum&quot;:&quot;6815.74&quot;, &quot;light&quot;:&quot;30000&quot;, &quot;bat&quot;:&quot;786&quot;, &quot;panel&quot;:&quot;0&quot;, &quot;co&quot;:&quot;112500&quot;, &quot;no2&quot;:&quot;200000&quot;, &quot;noise&quot;:&quot;2&quot;, &quot;nets&quot;:&quot;10&quot;, &quot;timestamp&quot;:&quot;2013-10-28 1:34:26&quot;}]&#39;</span> data.smartcitizen.me/add
 </code></pre></div>
 
 <p><strong>Data processing</strong></p>
@@ -4038,7 +4038,7 @@ X-SmartCitizenData: <span class="o">[{</span><span class="s2">&quot;temp&quot;</
 </table>
 <p>You can use the <strong><a href="https://github.com/fablabbcn/Smart-Citizen-Kit/blob/master/data/">SCKSensorData</a> php</strong> class to re-scale and calibrate the received data. Check it on <a href="https://github.com/fablabbcn/Smart-Citizen-Kit/blob/master/data/">github</a>.</p>
 <p>Here is an example how to use it to receive a request, converted and store it in a CSV file:</p>
-<div class="codehilite"><pre><span></span><code><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
     <span class="k">include</span><span class="p">(</span><span class="s1">&#39;../sck_sensor_data.php&#39;</span><span class="p">);</span>
 
     <span class="nv">$headers</span> <span class="o">=</span> <span class="nb">getallheaders</span><span class="p">();</span>
@@ -4060,7 +4060,7 @@ X-SmartCitizenData: <span class="o">[{</span><span class="s2">&quot;temp&quot;</
 
 <p>You can find the complete example <a href="https://github.com/fablabbcn/Smart-Citizen-Kit/blob/master/data/examples/add.php">here</a>.</p>
 <p>Each sensor is implemented as a separate function and some general methods are available for simplifying the work. Here is an example:</p>
-<p><div class="codehilite"><pre><span></span><code><span class="cp">&lt;?php</span>
+<p><div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
 
     <span class="sd">/**</span>
 <span class="sd">     * noiseCalibration</span>

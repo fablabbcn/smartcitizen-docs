@@ -3637,38 +3637,38 @@ may easily blend in the background of users’ attention. To bring the sensed da
 <img src="/assets/images/wiring_raspberry.png" width="350">
 </div></p>
 <p>Once we have the Raspberry Pi running and connected to the internet we will need to save the Python script below on the desktop:</p>
-<div class="codehilite"><pre><span></span><code><span class="c1"># Smart Citizen Examples for the Raspberry Pi</span>
-<span class="c1">#</span>
-<span class="c1"># http://smartcitizen.me</span>
-<span class="c1">#</span>
-<span class="c1"># Trigger 2 LEDs depending on the temperature</span>
-<span class="c1"># For more information on the LEDs connection check: https://learn.sparkfun.com/tutorials/raspberry-gpio</span>
-<span class="c1"># For more information on the SmartCitizen API check: http://developer.smartcitizen.me</span>
-<span class="c1">#</span>
-<span class="kn">import</span> <span class="nn">RPi.GPIO</span> <span class="kn">as</span> <span class="nn">GPIO</span>
-<span class="kn">import</span> <span class="nn">json</span><span class="o">,</span> <span class="nn">requests</span><span class="o">,</span> <span class="nn">time</span>
-<span class="n">GPIO</span><span class="o">.</span><span class="n">setup</span><span class="p">(</span><span class="mi">18</span><span class="p">,</span> <span class="n">GPIO</span><span class="o">.</span><span class="n">OUT</span><span class="p">)</span>
-<span class="n">GPIO</span><span class="o">.</span><span class="n">setup</span><span class="p">(</span><span class="mi">23</span><span class="p">,</span> <span class="n">GPIO</span><span class="o">.</span><span class="n">OUT</span><span class="p">)</span>
-<span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
-<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="err">‘</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">api</span><span class="o">.</span><span class="n">smartcitizen</span><span class="o">.</span><span class="n">me</span><span class="o">/</span><span class="n">v0</span><span class="o">/</span><span class="n">devices</span><span class="o">/</span><span class="mi">3292</span><span class="err">’</span><span class="p">)</span>
-<span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">sensor</span> <span class="ow">in</span> <span class="n">data</span><span class="p">[</span><span class="err">‘</span><span class="n">data</span><span class="err">’</span><span class="p">][</span><span class="err">‘</span><span class="n">sensors</span><span class="err">’</span><span class="p">]:</span>
-<span class="k">if</span> <span class="n">sensor</span><span class="p">[</span><span class="err">‘</span><span class="n">description</span><span class="err">’</span><span class="p">]</span> <span class="o">==</span> <span class="err">‘</span><span class="n">Temperature</span><span class="err">’</span><span class="p">:</span> <span class="c1">#CO, NO2...</span>
-<span class="k">print</span> <span class="n">sensor</span><span class="p">[</span><span class="err">‘</span><span class="n">value</span><span class="err">’</span><span class="p">]</span>
-<span class="k">if</span> <span class="n">sensor</span><span class="p">[</span><span class="err">‘</span><span class="n">value</span><span class="err">’</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">25</span><span class="p">:</span>
-<span class="k">print</span> <span class="err">‘</span><span class="n">LED</span> <span class="n">ON</span><span class="err">’</span>
-<span class="n">GPIO</span><span class="o">.</span><span class="n">output</span><span class="p">(</span><span class="mi">18</span><span class="p">,</span> <span class="n">GPIO</span><span class="o">.</span><span class="n">HIGH</span><span class="p">)</span>
-<span class="n">GPIO</span><span class="o">.</span><span class="n">output</span><span class="p">(</span><span class="mi">23</span><span class="p">,</span> <span class="n">GPIO</span><span class="o">.</span><span class="n">LOW</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-<span class="k">print</span> <span class="err">‘</span><span class="n">LED</span> <span class="n">OFF</span><span class="err">’</span>
-<span class="n">GPIO</span><span class="o">.</span><span class="n">output</span><span class="p">(</span><span class="mi">18</span><span class="p">,</span> <span class="n">GPIO</span><span class="o">.</span><span class="n">LOW</span><span class="p">)</span>
-<span class="n">GPIO</span><span class="o">.</span><span class="n">output</span><span class="p">(</span><span class="mi">23</span><span class="p">,</span> <span class="n">GPIO</span><span class="o">.</span><span class="n">HIGH</span><span class="p">)</span>
-<span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span> <span class="c1">#Update every 15 seconds</span>
+<div class="highlight"><pre><span></span><code># Smart Citizen Examples for the Raspberry Pi
+#
+# http://smartcitizen.me
+#
+# Trigger 2 LEDs depending on the temperature
+# For more information on the LEDs connection check: https://learn.sparkfun.com/tutorials/raspberry-gpio
+# For more information on the SmartCitizen API check: http://developer.smartcitizen.me
+#
+import RPi.GPIO as GPIO
+import json, requests, time
+GPIO.setup(18, GPIO.OUT)
+GPIO.setup(23, GPIO.OUT)
+while True:
+r = requests.get(‘https://api.smartcitizen.me/v0/devices/3292’)
+data = json.loads(r.text)
+for sensor in data[‘data’][‘sensors’]:
+if sensor[‘description’] == ‘Temperature’: #CO, NO2...
+print sensor[‘value’]
+if sensor[‘value’] &gt; 25:
+print ‘LED ON’
+GPIO.output(18, GPIO.HIGH)
+GPIO.output(23, GPIO.LOW)
+else:
+print ‘LED OFF’
+GPIO.output(18, GPIO.LOW)
+GPIO.output(23, GPIO.HIGH)
+time.sleep(15) #Update every 15 seconds
 </code></pre></div>
 
 <p>Finally, open the Terminal app and run:</p>
-<div class="codehilite"><pre><span></span><code><span class="err">pi@raspberrypi ~ $ cd Desktop</span>
-<span class="err">pi@raspberrypi Desktop $ sudo python smartcitizen-led.py</span>
+<div class="highlight"><pre><span></span><code>pi@raspberrypi ~ $ cd Desktop
+pi@raspberrypi Desktop $ sudo python smartcitizen-led.py
 </code></pre></div>
 
 </div>
@@ -3684,8 +3684,8 @@ the installation was built from the ground up to be replicable ad easy to built 
 <div class="admonition example">
 <p class="admonition-title">Step-by-step</p>
 <p>Visit the <a href="https://github.com/fablabbcn/smartcitizen-toolkit/tree/master/public-displays">public displays repository</a> and download the directory.</p>
-<p>The <code class="codehilite"><span class="err">/built</span></code> folder contains the files for building the installation: NoiseBox.blend the whole installation design in blender, CableClip.stl and Hinge.stl 3D printed parts for the cable clips and hinges used, Acrylic.dxf the acrylic cover lasercut file and noiseBoxSchematic.fzz the wiring diagram for the installation.</p>
-<p>The <code class="codehilite"><span class="err">/code</span></code> folder contains the Arduino files to drive the installation. The Arduino sketch reads sensor data from an SCK 1.5 over the I2C bus when a user presses the button display the result on a WS2811 addressable LED strip. This code was originally created to display reading from the noise sensor in dB but it can quickly be changed to support any other sensor. It runs on an Arduino UNO but any compatible board can be used.</p>
+<p>The <code>/built</code> folder contains the files for building the installation: NoiseBox.blend the whole installation design in blender, CableClip.stl and Hinge.stl 3D printed parts for the cable clips and hinges used, Acrylic.dxf the acrylic cover lasercut file and noiseBoxSchematic.fzz the wiring diagram for the installation.</p>
+<p>The <code>/code</code> folder contains the Arduino files to drive the installation. The Arduino sketch reads sensor data from an SCK 1.5 over the I2C bus when a user presses the button display the result on a WS2811 addressable LED strip. This code was originally created to display reading from the noise sensor in dB but it can quickly be changed to support any other sensor. It runs on an Arduino UNO but any compatible board can be used.</p>
 <p><img alt="" src="/assets/images/noise_box.png" /></p>
 </div>
 <div class="admonition warning">

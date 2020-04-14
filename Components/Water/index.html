@@ -3889,18 +3889,18 @@
 <p>We have also designed a probe holder if you want to hold your probes on the side of you fish tank : <a href="https://cad.onshape.com/documents/8977ef824f45a910c0b8beaa/w/7ac458735dae629f0a5a73cd/e/be59d435418832bfe5f78afb">The Onshape document of the probes holder</a></p>
 <p><img alt="" src="https://i.imgur.com/6sM3sCY.jpg" /></p>
 <h2 id="firmware-and-setup">Firmware and setup<a class="headerlink" href="#firmware-and-setup" title="Permanent link">Link</a></h2>
-<p>The Smart Citizen firmware has the support for the monitoring board built-in. To enable the sensors you just need to plug you board to the Smart Citizen kit aux port and reboot the Smart Citizen Kit and the sensors will be handled by the board. However, you will need to register your device again using the <a href="/Guides/Onboarding Sensors#Advanced Kit Selection">Advanced Kit Selection</a>. At the moment the closest Kit Blueprint will be <code class="codehilite"><span class="err">#22 BioPV Kit</span></code>. You can request in the <a href="http://forum.smartcitizen.me">forum</a> for a custom blueprint with the specific sensors you are using.</p>
+<p>The Smart Citizen firmware has the support for the monitoring board built-in. To enable the sensors you just need to plug you board to the Smart Citizen kit aux port and reboot the Smart Citizen Kit and the sensors will be handled by the board. However, you will need to register your device again using the <a href="/Guides/Onboarding Sensors#Advanced Kit Selection">Advanced Kit Selection</a>. At the moment the closest Kit Blueprint will be <code>#22 BioPV Kit</code>. You can request in the <a href="http://forum.smartcitizen.me">forum</a> for a custom blueprint with the specific sensors you are using.</p>
 <h2 id="how-to-calibrate-the-sensors">How to calibrate the sensors<a class="headerlink" href="#how-to-calibrate-the-sensors" title="Permanent link">Link</a></h2>
 <p>In order to calibrate the sensors you will need to use the <a href="/Guides/Using the Shell">USB Shell</a>.</p>
 <p><img alt="" src="https://i.imgur.com/wRIfhks.jpg" /></p>
 <h3 id="the-ph-sensor">The pH sensor<a class="headerlink" href="#the-ph-sensor" title="Permanent link">Link</a></h3>
 <p>format of the command line</p>
-<div class="codehilite"><pre><span></span><code><span class="n">control</span><span class="w"> </span><span class="n">atlas</span><span class="w"> </span><span class="n">ph</span><span class="w"> </span><span class="n">com</span><span class="p">,</span><span class="o">[</span><span class="n">point</span><span class="o">]</span><span class="p">,</span><span class="o">[</span><span class="n">pH value at current temperature</span><span class="o">]</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code>control atlas ph com,[point],[pH value at current temperature]
 </code></pre></div>
 
 <p>The pH value at current temperature can be found on the reference table on the calibration solution bottle. If the current temperature is not on it, use the closest value.</p>
 <h4 id="the-3-points-calibration">The 3 points calibration<a class="headerlink" href="#the-3-points-calibration" title="Permanent link">Link</a></h4>
-<p>First start a serial communication with the Smart Citizen Kit with <code class="codehilite"><span class="err">screen</span></code> or <code class="codehilite"><span class="err">pio device monitor</span></code>or even the serial monitor of the Arduino IDE.</p>
+<p>First start a serial communication with the Smart Citizen Kit with <code>screen</code> or <code>pio device monitor</code>or even the serial monitor of the Arduino IDE.</p>
 <p>Order of the calibration : </p>
 <ol>
 <li>mid point</li>
@@ -3912,26 +3912,26 @@
 <ul>
 <li><strong>The mid point calibration :</strong> Put the sensor in the pH 7 calibration solution and run the command below :</li>
 </ul>
-<div class="codehilite"><pre><span></span><code><span class="err">control atlas ph com cal,mid,[value of pH at current temperature]</span>
+<div class="highlight"><pre><span></span><code>control atlas ph com cal,mid,[value of pH at current temperature]
 </code></pre></div>
 
 <p><span style="text-decoration:underline">example at 30°C :</span> </p>
-<div class="codehilite"><pre><span></span><code><span class="err">control atlas ph com cal,mid,6.99 </span>
+<div class="highlight"><pre><span></span><code>control atlas ph com cal,mid,6.99 
 </code></pre></div>
 
 <ul>
 <li><strong>The low point calibration :</strong> Put the sensor in the pH 4 calibration solution and run the command below :</li>
 </ul>
-<div class="codehilite"><pre><span></span><code><span class="err">control atlas ph com cal,low,[value of pH at current temperature]</span>
+<div class="highlight"><pre><span></span><code>control atlas ph com cal,low,[value of pH at current temperature]
 </code></pre></div>
 
 <ul>
 <li><strong>The high point calibration :</strong> Put the sensor in the pH 10 calibration solution and run the command below :</li>
 </ul>
-<div class="codehilite"><pre><span></span><code><span class="err">control atlas ph com cal,high,[value of pH at current temperature]</span>
+<div class="highlight"><pre><span></span><code>control atlas ph com cal,high,[value of pH at current temperature]
 </code></pre></div>
 
-<p><strong><em>Note :</em></strong>  <em>(not tested)</em> If your calibration solutions are not 4, 7 and 10, you can still use them and replace <code class="codehilite"><span class="err">[value of pH at current temperature]</span></code> by your values.</p>
+<p><strong><em>Note :</em></strong>  <em>(not tested)</em> If your calibration solutions are not 4, 7 and 10, you can still use them and replace <code>[value of pH at current temperature]</code> by your values.</p>
 <h3 id="the-ec-sensor">The EC Sensor<a class="headerlink" href="#the-ec-sensor" title="Permanent link">Link</a></h3>
 <h4 id="the-2-points-calibration">The 2 points calibration<a class="headerlink" href="#the-2-points-calibration" title="Permanent link">Link</a></h4>
 <p>Order of the calibration :</p>
@@ -3944,21 +3944,21 @@
 <p><strong>The dry point calibration :</strong> Check that the sensor is dry and run the command below :</p>
 </li>
 </ol>
-<div class="codehilite"><pre><span></span><code><span class="err">control atlas ec com cal,dry</span>
+<div class="highlight"><pre><span></span><code>control atlas ec com cal,dry
 </code></pre></div>
 
 <ul>
 <li><strong>The high point calibration :</strong> Put the sensor in the high point calibration solution (12,880 µS/cm) and run the command below :</li>
 </ul>
-<div class="codehilite"><pre><span></span><code><span class="err">control atlas ec com cal,high,[value of EC at current temperature]</span>
+<div class="highlight"><pre><span></span><code>control atlas ec com cal,high,[value of EC at current temperature]
 </code></pre></div>
 
 <p><span style="text-decoration:underline">example at 30°C :</span> </p>
-<div class="codehilite"><pre><span></span><code><span class="err">control atlas ec set cal,high,14,120 </span>
+<div class="highlight"><pre><span></span><code>control atlas ec set cal,high,14,120 
 </code></pre></div>
 
-<p><strong><em>Important ! :</em></strong> Do not forget the <code class="codehilite"><span class="err">,</span></code> between the hundreds and the thousands or else the calibration will not occur !</p>
-<p><strong><em>Note :</em></strong>  <em>(not tested)</em> If your calibration solution is not 12880 µS/cm, you can use another one and replace <code class="codehilite"><span class="err">[value of pH at current temperature]</span></code> by your value of electroconducivity.</p>
+<p><strong><em>Important ! :</em></strong> Do not forget the <code>,</code> between the hundreds and the thousands or else the calibration will not occur !</p>
+<p><strong><em>Note :</em></strong>  <em>(not tested)</em> If your calibration solution is not 12880 µS/cm, you can use another one and replace <code>[value of pH at current temperature]</code> by your value of electroconducivity.</p>
 <h2 id="the-do-sensor">The DO Sensor<a class="headerlink" href="#the-do-sensor" title="Permanent link">Link</a></h2>
 <h3 id="the-2-points-calibration_1">The 2 points calibration<a class="headerlink" href="#the-2-points-calibration_1" title="Permanent link">Link</a></h3>
 <p>Order of the calibration </p>
@@ -3971,13 +3971,13 @@
 <p><strong>The dry point calibration :</strong> Check that the sensor is dry and run the command below :</p>
 </li>
 </ol>
-<div class="codehilite"><pre><span></span><code><span class="err">control atlas do com cal</span>
+<div class="highlight"><pre><span></span><code>control atlas do com cal
 </code></pre></div>
 
 <ul>
 <li><strong>The 0mg/L point calibration :</strong> Put the sensor in the 0mg/L calibration solution and run the command below :</li>
 </ul>
-<div class="codehilite"><pre><span></span><code><span class="err">control atlas do com cal,0</span>
+<div class="highlight"><pre><span></span><code>control atlas do com cal,0
 </code></pre></div>
 
 <h2 id="deployment">Deployment<a class="headerlink" href="#deployment" title="Permanent link">Link</a></h2>

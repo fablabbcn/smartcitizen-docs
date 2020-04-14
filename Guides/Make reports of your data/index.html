@@ -3448,24 +3448,24 @@
                 
                   <h1>Make reports of your data</h1>
                 
-                <p>Tools are provided to generate test or analysis reports, with a custom template. These are generated with the <code class="codehilite"><span class="err">jupyter nbconvert</span></code> using the preprocessor and tools in the <code class="codehilite"><span class="err">notebooks</span></code> and <code class="codehilite"><span class="err">template</span></code> folder. To generate a report, follow the steps:</p>
+                <p>Tools are provided to generate test or analysis reports, with a custom template. These are generated with the <code>jupyter nbconvert</code> using the preprocessor and tools in the <code>notebooks</code> and <code>template</code> folder. To generate a report, follow the steps:</p>
 <ol>
-<li>Tag the cells in your notebook. You can use the <a href="https://github.com/jupyterlab/jupyterlab-celltags">Jupyter Lab Celltags</a> extension. Don't tag the cells you want to hide, and tag the ones you want to show with <code class="codehilite"><span class="err">show_only_output</span></code>. This can be changed and add more tags, but we keep it this way for simplicity</li>
+<li>Tag the cells in your notebook. You can use the <a href="https://github.com/jupyterlab/jupyterlab-celltags">Jupyter Lab Celltags</a> extension. Don't tag the cells you want to hide, and tag the ones you want to show with <code>show_only_output</code>. This can be changed and add more tags, but we keep it this way for simplicity</li>
 <li>Go to the notebooks folder:
-<div class="codehilite"><pre><span></span><code><span class="err">cd notebooks</span>
+<div class="highlight"><pre><span></span><code>cd notebooks
 </code></pre></div></li>
 <li>Type the command:
-<div class="codehilite"><pre><span></span><code><span class="err">jupyter nbconvert --config sc_nbconvert_config.py notebook.ipynb --sc_Preprocessor.expression=&quot;show_only_output&quot; --to html --TemplateExporter.template_file=./templates/full_sc --output-dir=../reports --output=OUTPUT_NAME</span>
+<div class="highlight"><pre><span></span><code>jupyter nbconvert --config sc_nbconvert_config.py notebook.ipynb --sc_Preprocessor.expression=&quot;show_only_output&quot; --to html --TemplateExporter.template_file=./templates/full_sc --output-dir=../reports --output=OUTPUT_NAME
 </code></pre></div></li>
 </ol>
 <p>Where:</p>
 <ul>
-<li><code class="codehilite"><span class="err">sc_nbconvert_config.py</span></code> is the config</li>
-<li><code class="codehilite"><span class="err">notebook.ipynb</span></code> is the notebook you want</li>
-<li><code class="codehilite"><span class="err">&quot;show_only_output&quot;</span></code> is a boolean expression that is evaluated for each of the cells. If true, the cell is shown</li>
-<li><code class="codehilite"><span class="err">./templates/full_sc</span></code> is the default template we have created</li>
-<li><code class="codehilite"><span class="cp">../reports</span></code> is the directory where we will put the <code class="codehilite"><span class="err">html</span></code> report</li>
-<li><code class="codehilite"><span class="err">OUTPUT_NAME</span></code> is the name for the export</li>
+<li><code>sc_nbconvert_config.py</code> is the config</li>
+<li><code>notebook.ipynb</code> is the notebook you want</li>
+<li><code>"show_only_output"</code> is a boolean expression that is evaluated for each of the cells. If true, the cell is shown</li>
+<li><code>./templates/full_sc</code> is the default template we have created</li>
+<li><code>../reports</code> is the directory where we will put the <code>html</code> report</li>
+<li><code>OUTPUT_NAME</code> is the name for the export</li>
 </ul>
 <p>This generates an html export containing only the mkdown or code cell outputs, without any code. Examples can be found in <a href="https://github.com/fablabbcn/smartcitizen-iscape-data/tree/master/data/reports">the source code repository</a>.</p>
 <div class="admonition info">
