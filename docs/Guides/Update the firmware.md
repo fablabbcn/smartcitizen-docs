@@ -36,7 +36,7 @@ When new features are developed or bugs are fixed we will release new versions o
 	* After the update you just done, you can configure your kit as a new device following the [onboarding](https:start.smartcitizen.me) process or use your previous token as explained before.
 
 !!! tip "Obtain your firmware version remotely (advanced)"
-	If you are an advance user managing a big deployment of devices you can obtain remotely the version of all the kits you have registered by looking at the `hardware_info` property of each of your devices using the platform API `/v0/devices/`
+	If you are an advance user managing a big deployment of devices you can obtain remotely the version of all the Kits you have registered by looking at the `hardware_info` property of each of your devices using the platform API `/v0/devices/`. When your Kit is in Wi-Fi mode, it publishes the information daily.
 
 	```json
 	"hardware_info": {
@@ -51,4 +51,4 @@ When new features are developed or bugs are fixed we will release new versions o
 	}
 	```
 
-	[More info](https://developer.smartcitizen.me/#devices) in the platform API documentation.
+	More info in the platform [API documentation](https://developer.smartcitizen.me/#devices).
