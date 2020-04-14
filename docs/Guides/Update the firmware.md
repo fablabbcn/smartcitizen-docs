@@ -34,3 +34,21 @@ When new features are developed or bugs are fixed we will release new versions o
 	![](/assets/images/sck_2/esp_update.png)
 
 	* After the update you just done, you can configure your kit as a new device following the [onboarding](https:start.smartcitizen.me) process or use your previous token as explained before.
+
+!!! tip "Obtain your firmware version remotely (advanced)"
+	If you are an advance user managing a big deployment of devices you can obtain remotely the version of all the kits you have registered by looking at the `hardware_info` property of each of your devices using the platform API `/v0/devices/`
+
+	```json
+	"hardware_info": {
+		"id": "DFD098A750515157382E3120FF101D12",
+		"mac": "B6:E6:2D:66:47:6D",
+		"time": "2020-04-14T03:00:24Z",
+		"esp_bd": "",
+		"hw_ver": "2.1",
+		"sam_bd": "2019-11-27T12:49:13Z",
+		"esp_ver": "",
+		"sam_ver": "0.9.6-4e90c77"
+	}
+	```
+
+	[More info](https://developer.smartcitizen.me/#devices) in the platform API documentation.
