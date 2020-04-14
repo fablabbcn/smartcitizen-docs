@@ -1,11 +1,11 @@
 When new features are developed or bugs are fixed we will release new versions of the SCK firmware.
 
 !!! info
-	If you already configured your kit on the smartcitizen platform **you will need the token that the platform gave you during the onboarding process**, to recover it from your kit:  
+	If you already configured your kit on the smartcitizen platform **you will need the token that the platform gave you during the onboarding process**, to recover it from your kit:
 
-	1. **Click your kit button** until the kit is in [setup mode](../../../../Smart%20Citizen%20Kit/#setup-mode), the led should be red.  
-	2. **Connecto to the kit** with your mobile device as you did during the onboarding process.  
-	3. **Write down the token** of your kit.  
+	1. **Click your kit button** until the kit is in [setup mode](../../../../Smart%20Citizen%20Kit/#setup-mode), the led should be red.
+	2. **Connecto to the kit** with your mobile device as you did during the onboarding process.
+	3. **Write down the token** of your kit.
 
 	![](/assets/images/sck_2/ap_token.png)
 
@@ -28,5 +28,9 @@ When new features are developed or bugs are fixed we will release new versions o
 	* Simply **drag the firmware file you downloaded over the _SCK-20_ drive**, your kit led will blink in green and after some seconds it will reset and start with the new version.
 
 	![](/assets/images/sck_2/uf2_drag.png)
+
+	*  If your **Wi-Fi module needs a firmware update** when you connect to your kit to setup the network you will see a screen that will ask for the new file. You can find it in our [github releases page](https://github.com/fablabbcn/smartcitizen-kit-21/releases/latest), look for the file called `ESP_firmware_XXX.bin`. If you don't see it, check in a [previous release](https://github.com/fablabbcn/smartcitizen-kit-21/releases) (some releases don't include Wi-Fi firmware).
+
+	![](/assets/images/sck_2/esp_update.png)
 
 	* After the update you just done, you can configure your kit as a new device following the [onboarding](https:start.smartcitizen.me) process or use your previous token as explained before.
