@@ -6,10 +6,12 @@ Smart Citizen Kit
     The [**SCK 2.0**](/Legacy Hardware/sck) was the development version for the now commercially available **SCK 2.1** sponsored thanks to the [iSCAPE project](https://www.iscapeproject.eu/) under European Community’s H2020 Programme under Grant Agreement No. [689954](https://cordis.europa.eu/project/rcn/202639/en)
 
 !!! tip "Quick links"
-	:rocket: **Installation**: [start.smartcitizen.me](https://start.smartcitizen.me/)
+
+    :gift: **Buy: [seeedstudio.com](https://www.seeedstudio.com/Smart-Citizen-Starter-Kit-p-2865.html)**
+
+	:rocket: **Installation: [start.smartcitizen.me](https://start.smartcitizen.me/)**
 
 	:earth_africa: **Platform: [smartcitizen.me](https://smartcitizen.me)**
-
 
     :speech_balloon: **Discuss: [forum.smartcitizen.me](https://forum.smartcitizen.me)**
 
