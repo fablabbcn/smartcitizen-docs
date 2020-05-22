@@ -26,9 +26,9 @@ A major effort has been carried out on this design to improve the accuracy of th
 |----------------------------------------------|------------------------------------------------|-----------------------|
 | Air Temperature                              | ºC                                             | Sensirion SHT-31      |
 | Relative Humidity                            | % REL                                          | Sensirion SHT-31      |
-| Noise Level and Spectrum                           | dBA, dBC, dBZ                                  | Invensense ICS-434342 |
+| Noise Level and Spectrum                           | dBA, dBC, dBZ                                  | Invensense ICS-43432 |
 | Ambient Light                                | Lux                                            | Rohm BH1721FVC        |
-| Barometric pressure and AMSL                 | Pa and Meters                                  | NXP MPL3115A26        |
+| Barometric pressure and AMSL                 | Pa and Meters                                  | NXP MPL3115A2        |
 | eCO2 and TVOC                             | ppm/ppb | AMS CCS811         |
 | Particulate Matter PM1/PM2.5/PM10 | µg/m3                                          | PMS 5003              |
 
@@ -39,9 +39,9 @@ A major effort has been carried out on this design to improve the accuracy of th
 |----------------------------------------------|------------------------------------------------|-----------------------|
 | Air Temperature                              | ºC                                             | Sensirion SHT-31      |
 | Relative Humidity                            | % REL                                          | Sensirion SHT-31      |
-| Noise Level and Spectrum                           | dBA, dBC, dBZ                                  | Invensense ICS-434342 |
+| Noise Level and Spectrum                           | dBA, dBC, dBZ                                  | Invensense ICS-43432 |
 | Ambient Light                                | Lux                                            | Rohm BH1721FVC        |
-| Barometric pressure and AMSL                 | Pa and Meters                                  | NXP MPL3115A26        |
+| Barometric pressure and AMSL                 | Pa and Meters                                  | NXP MPL3115A2        |
 | Carbon Monoxide                              | ppm (Periodic Baseline Calibration Required) | SGX MICS-4514         |
 | Nitrogen Dioxide                             | ppb (Periodic Baseline Calibration Required) | SGX MICS-4514         |
 | Particulate Matter PM2.5 (external - power req) | µg/m3                                          | PMS 5003              |
@@ -149,7 +149,7 @@ An external connector on the board supports the connection of a Plantower PMS 50
 The following characteristics have been considered for the sensor
 choice:
 
-* Provides PM 2.5 and PM 10 measurements in ug/m³
+* Provides PM1, PM 2.5 and PM10 measurements in ug/m³
 
 * Minimal distinguishable particle diameter of 0.3 um
 
