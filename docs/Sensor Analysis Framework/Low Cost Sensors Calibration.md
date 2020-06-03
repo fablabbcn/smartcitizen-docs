@@ -1,7 +1,7 @@
 Low Cost Sensors Calibration
 ============================
 
-Low cost sensor calibration and assessment pose a great challenge for data quality objectives. We follow this **sensor calibration procedure**, which can be split into three stages:
+Low cost sensor calibration and assessment poses a great challenge for data quality objectives. We follow this **sensor calibration procedure**, which can be split into three stages:
 
 <div style="text-align:center">
 <image src="https://i.imgur.com/6BZqNrR.png" width="500px"/>
