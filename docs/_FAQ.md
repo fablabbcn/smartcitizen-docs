@@ -30,6 +30,17 @@ The sensor can work in network and SD card modes. In network mode, the sensor pu
 ## What networks does it support?
 The SCK supports Wi-Fi WEP, WPA/WPA2 and open networks that are common networks in domestic environments and small businesses. However, like many other embedded devices such as Apple TV® or Chromecast®, it **does not** support networks with captive portals such as those found in Airports and Hotels. Currently, it also **does not** WPA/WPA2 Enterprise networks such as EDUROAM. However, they will be supported in the future after a firmware updated. 
 
+## I have a firewall. What do I need to know?
+
+Here are the ports and protocols used by the Kit to communicate with the platform:
+
+| Service | Function  | Protocol | Port   | Address                                              |
+| ------- | --------- | -------- | ------ | ---------------------------------------------------- |
+| MQTT    | Send Data | TCP      | 80/443 | mqtt.smartcitizen.me |
+| NTP     | Sync Time | UDP      | 80     | ntp.smartcitizen.me  |
+
+_Notice we use custom ports already to avoid some firewall restrictions_
+
 ## Is there a mobile phone app that lets me view the data?
 Currently there is an android app available, but we are working to make the website fully mobile device friendly, so that no mobile phone app is required. We would rather focus the time of our small team on the kits themselves instead of maintaining apps. So our final aim is to be app free, but fully mobile friendly.
 
