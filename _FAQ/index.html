@@ -1697,6 +1697,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#i-have-a-firewall-what-do-i-need-to-know" class="md-nav__link">
+    I have a firewall. What do I need to know?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#is-there-a-mobile-phone-app-that-lets-me-view-the-data" class="md-nav__link">
     Is there a mobile phone app that lets me view the data?
   </a>
@@ -3669,6 +3676,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#i-have-a-firewall-what-do-i-need-to-know" class="md-nav__link">
+    I have a firewall. What do I need to know?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#is-there-a-mobile-phone-app-that-lets-me-view-the-data" class="md-nav__link">
     Is there a mobile phone app that lets me view the data?
   </a>
@@ -3768,6 +3782,36 @@
 <p>The sensor can work in network and SD card modes. In network mode, the sensor publish data to the SC platform over Wi-Fi every minute. In SD card mode, all the collected data is stored locally in CSV format, and it can be later uploaded manually to the platform using the “Manual Data Upload” option.</p>
 <h2 id="what-networks-does-it-support">What networks does it support?<a class="headerlink" href="#what-networks-does-it-support" title="Permanent link">Link</a></h2>
 <p>The SCK supports Wi-Fi WEP, WPA/WPA2 and open networks that are common networks in domestic environments and small businesses. However, like many other embedded devices such as Apple TV® or Chromecast®, it <strong>does not</strong> support networks with captive portals such as those found in Airports and Hotels. Currently, it also <strong>does not</strong> WPA/WPA2 Enterprise networks such as EDUROAM. However, they will be supported in the future after a firmware updated. </p>
+<h2 id="i-have-a-firewall-what-do-i-need-to-know">I have a firewall. What do I need to know?<a class="headerlink" href="#i-have-a-firewall-what-do-i-need-to-know" title="Permanent link">Link</a></h2>
+<p>Here are the ports and protocols used by the Kit to communicate with the platform:</p>
+<table>
+<thead>
+<tr>
+<th>Service</th>
+<th>Function</th>
+<th>Protocol</th>
+<th>Port</th>
+<th>Address</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MQTT</td>
+<td>Send Data</td>
+<td>TCP</td>
+<td>80/443</td>
+<td>mqtt.smartcitizen.me</td>
+</tr>
+<tr>
+<td>NTP</td>
+<td>Sync Time</td>
+<td>UDP</td>
+<td>80</td>
+<td>ntp.smartcitizen.me</td>
+</tr>
+</tbody>
+</table>
+<p><em>Notice we use custom ports already to avoid some firewall restrictions</em></p>
 <h2 id="is-there-a-mobile-phone-app-that-lets-me-view-the-data">Is there a mobile phone app that lets me view the data?<a class="headerlink" href="#is-there-a-mobile-phone-app-that-lets-me-view-the-data" title="Permanent link">Link</a></h2>
 <p>Currently there is an android app available, but we are working to make the website fully mobile device friendly, so that no mobile phone app is required. We would rather focus the time of our small team on the kits themselves instead of maintaining apps. So our final aim is to be app free, but fully mobile friendly.</p>
 <h2 id="how-accurate-are-the-measurements">How accurate are the measurements?<a class="headerlink" href="#how-accurate-are-the-measurements" title="Permanent link">Link</a></h2>
