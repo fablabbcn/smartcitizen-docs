@@ -15,12 +15,17 @@ Smart Citizen Kit
 
     :speech_balloon: **Discuss: [forum.smartcitizen.me](https://forum.smartcitizen.me)**
 
-
 	:question: **Support: [support@smartcitizen.me](mailto: support@smartcitizen.me)**
 
 ## What is it?
 
-The Smart Citizen Kit is the core of what we call the Smart Citizen System: a complete set of **modular hardware components** aiming to provide tools for **environmental monitoring**, ranging from **citizen science** and **educational activities** to more **advanced scientific research**. The system is designed in a extendable way, with a central data logger (the [Data Board](/Components/Data Board)) with network connectivity to which the different components are branched. The system is based on the principle of reproducibility, also integrating non-hardware components such as a dedicated [Storage platform](/Sensor Platform) and a [Sensor analysis framework](/Data Analysis).
+The Smart Citizen Kit is the core of what we call the Smart Citizen System: a complete set of **modular hardware components** aiming to provide tools for **environmental monitoring**, ranging from **citizen science** and **educational activities** to more **advanced scientific research**.
+
+<a data-flickr-embed="true" title="SCK 2.1 All parts"><img src="https://live.staticflickr.com/65535/47950912168_fcf8fa398c_h.jpg" alt="SCK 2.1 All parts"></a>
+
+The system is designed in a extendable way, with a central data logger (the [Data Board](/Components/Data Board)) with network connectivity to which the different components are branched. The system is based on the principle of reproducibility, also integrating non-hardware components such as a dedicated [Storage platform](/Sensor Platform) and a [Sensor analysis framework](/Data Analysis).
+
+<img src="https://i.imgur.com/i2qzNVl.jpg" alt="SCK 2.1 Enclosure">
 
 On top of that, the system is meant to serve as a **base solution for more complex settings**, not only related with air quality monitoring. For that purpose, in addition to the [Urban Board](/Components/Urban Board), the system also provides off-the-shelf support for a wide variety of third party sensors, using the expansion bus as a common port. One example is what we call the [Smart Citizen Station](/Smart Citizen Station): a full solution for low cost air pollution monitoring.
 
@@ -33,13 +38,8 @@ All the Smart Citizen Kit new sensors generation measure **at least** air temper
 
 ### SCK 2.1
 
-<a data-flickr-embed="true" title="SCK 2.1 All parts"><img src="https://live.staticflickr.com/65535/47950912168_fcf8fa398c_h.jpg" alt="SCK 2.1 All parts"></a>
+<img src="https://i.imgur.com/4UEoDoW.png" alt="SCK 2.1 What does it measure?">
 
-The SCK 2.1 components are listed below:
-
-1. Smart Citizen Kit 2.1 with Particle Sensor and battery (brackets or rain-proof enclosure currently not included)
-2. MicroSD card and microSD adapter to SD.
-3. USB cable and a USB charger.
 
 | Measurement                    | Units | Sensors               |
 |--------------------------------|-------|-----------------------|
