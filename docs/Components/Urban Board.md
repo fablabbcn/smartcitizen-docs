@@ -48,13 +48,10 @@ A major effort has been carried out on this design to improve the accuracy of th
 
 ## Metal Oxyde Sensors (all versions)
 
-The metal oxyde sensors section is so extense, that we decided to dedicate a full section to them. Have a look at it [here](/Components/Urban Sensor Board/Metal Oxide Sensor)!
-
-!!! info "Read more"
-    More on the [MICS working principle and field validation](/Components/Urban Sensor Board/Metal Oxide Sensor/MICS/)
+The metal oxyde sensors section is so extense, that we decided to dedicate a full section to them. Have a look at it [here](/Components/sensors/Metal%20Oxide/)!
 
 !!! info "What are normal values?"
-    More on the [AMS CCS811, eCO2 and TVOC](/Components/Urban Sensor Board/Metal Oxide Sensor/CCS811/)
+    More on the [AMS CCS811, eCO2 and TVOC](/Components/sensors/CCS811/)
 
 ## Noise Level Sensor (V2.0 onwards)
 
