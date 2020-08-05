@@ -131,6 +131,62 @@ Token: not configured
 Mac address:  11:22:33:44:55:66
 ```
 
+### Set recording and publication intervals
+
+In order to understand the reading and publication intervals, it is important to understand how the structure of the measurements is done:
+
+1. Overall reading interval: base period for the SCK to take a measurement
+2. Individual sensor reading interval: period for each sensor to take a measurement. It is defined as N times the _Overall reading interval_
+3. Publication interval: time for the SCK to publish to the Smart Citizen Platform, independent of the reading interval.
+
+Each of the sensors can be configured independently, with a reading interval N times the _overall reading interval_. For instance, after the `SAM firmware V0.9.7`, all the sensors are read every 60s except the PMS5003, which is read every 5 minutes or 5 times the reading interval. 
+
+In the case of the publication interval to the Smart Citizen Platform, the  default is 3 minutes. 
+
+All this can be configured using the shell interface. For instance, to set the publication interval to every 10 minutes, we could do:
+
+```
+config -pubint 600
+```
+
+Or to set the reading interval to every 3 minutes:
+
+```
+config -readint 180
+```
+
+Or both at 10 minutes:
+
+```
+config -pubint 600 -readint 600
+```
+
+If we want to configure one specific sensor, we can do so by typing the following, only remember, that it's rounded to the closest integer multiplier of the overall reading interval:
+
+```
+SCK > sensor temp -interval 360
+The sensor read interval is calculated as a multiple of general read interval (360)
+Changing interval of Temperature to 360
+Saved configuration on eeprom!!
+```
+
+For instance, if we try to do 1.5 times the reading interval of the temperature sensor, we will get:
+
+```
+SCK > sensor temp -interval 90 
+The sensor read interval is calculated as a multiple of general read interval (60)
+Changing interval of Temperature to 60
+Saved configuration on eeprom!!
+```
+
+Some **limitations** apply though:
+
+1. The minimum reading and publication interval is 30s
+2. THe maximum reading interval is one day
+3. The maximum publication interval is one hour
+
+For more customisation, please visit [email](mailto: support@smartcitizen.me) or post on the [forum](https://forum.smartcitizen.me).
+
 ### Get version data
 
 Check your **hardware and firmware version** data with the command `version`:
