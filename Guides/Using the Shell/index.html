@@ -2523,6 +2523,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#set-recording-and-publication-intervals" class="md-nav__link">
+    Set recording and publication intervals
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#get-version-data" class="md-nav__link">
     Get version data
   </a>
@@ -3573,6 +3580,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#set-recording-and-publication-intervals" class="md-nav__link">
+    Set recording and publication intervals
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#get-version-data" class="md-nav__link">
     Get version data
   </a>
@@ -3736,6 +3750,48 @@ Token: not configured
 Mac address:  11:22:33:44:55:66
 </code></pre></div>
 
+<h3 id="set-recording-and-publication-intervals">Set recording and publication intervals<a class="headerlink" href="#set-recording-and-publication-intervals" title="Permanent link">Link</a></h3>
+<p>In order to understand the reading and publication intervals, it is important to understand how the structure of the measurements is done:</p>
+<ol>
+<li>Overall reading interval: base period for the SCK to take a measurement</li>
+<li>Individual sensor reading interval: period for each sensor to take a measurement. It is defined as N times the <em>Overall reading interval</em></li>
+<li>Publication interval: time for the SCK to publish to the Smart Citizen Platform, independent of the reading interval.</li>
+</ol>
+<p>Each of the sensors can be configured independently, with a reading interval N times the <em>overall reading interval</em>. For instance, after the <code>SAM firmware V0.9.7</code>, all the sensors are read every 60s except the PMS5003, which is read every 5 minutes or 5 times the reading interval. </p>
+<p>In the case of the publication interval to the Smart Citizen Platform, the  default is 3 minutes. </p>
+<p>All this can be configured using the shell interface. For instance, to set the publication interval to every 10 minutes, we could do:</p>
+<div class="highlight"><pre><span></span><code>config -pubint 600
+</code></pre></div>
+
+<p>Or to set the reading interval to every 3 minutes:</p>
+<div class="highlight"><pre><span></span><code>config -readint 180
+</code></pre></div>
+
+<p>Or both at 10 minutes:</p>
+<div class="highlight"><pre><span></span><code>config -pubint 600 -readint 600
+</code></pre></div>
+
+<p>If we want to configure one specific sensor, we can do so by typing the following, only remember, that it's rounded to the closest integer multiplier of the overall reading interval:</p>
+<div class="highlight"><pre><span></span><code>SCK &gt; sensor temp -interval 360
+The sensor read interval is calculated as a multiple of general read interval (360)
+Changing interval of Temperature to 360
+Saved configuration on eeprom!!
+</code></pre></div>
+
+<p>For instance, if we try to do 1.5 times the reading interval of the temperature sensor, we will get:</p>
+<div class="highlight"><pre><span></span><code>SCK &gt; sensor temp -interval 90 
+The sensor read interval is calculated as a multiple of general read interval (60)
+Changing interval of Temperature to 60
+Saved configuration on eeprom!!
+</code></pre></div>
+
+<p>Some <strong>limitations</strong> apply though:</p>
+<ol>
+<li>The minimum reading and publication interval is 30s</li>
+<li>THe maximum reading interval is one day</li>
+<li>The maximum publication interval is one hour</li>
+</ol>
+<p>For more customisation, please visit <a href="mailto: support@smartcitizen.me">email</a> or post on the <a href="https://forum.smartcitizen.me">forum</a>.</p>
 <h3 id="get-version-data">Get version data<a class="headerlink" href="#get-version-data" title="Permanent link">Link</a></h3>
 <p>Check your <strong>hardware and firmware version</strong> data with the command <code>version</code>:</p>
 <div class="highlight"><pre><span></span><code>SCK &gt; version
