@@ -57,26 +57,26 @@ SCK > help
 reset:       Resets the SCK
 version:     Shows versions and Hardware ID
 rcause:      Show last reset cause (debug)
-outlevel:    Shows/sets outlevel [0:silent, 1:normal, 2:verbose]
+outlevel:    Shows/sets output level: outlevel [0:silent, 1:normal, 2:verbose]
 help:        Duhhhh!!
 pinmux:      Shows SAMD pin mapping status
-sensor:      Shows/sets enabled/disabled sensor [-enable or -disable sensor-name] or [-interval sensor-name interval(seconds)]
-read:        Reads sensor [sensorName]
-control:     Control sensor [sensorName] [command]
-monitor:     Continously read sensor [-sd] [-notime] [-noms] [sensorName[,sensorNameN]]
-saved:       Shows locally stored sensor readings [-details] [-publish]
+sensor:      Shows/sets sensor state or interval: sensor sensor-name [-enable or -disable] or [-interval interval(seconds)]
+read:        Reads sensor: read [sensorName]
+control:     Control sensor: control [sensorName] [command]
+monitor:     Continously read sensor: monitor [-sd] [-notime] [-noms] [sensorName[,sensorNameN]]
+saved:       Shows locally stored sensor readings: saved [-details] [-publish]
 free:        Shows the amount of free RAM memory
 i2c:         Search the I2C bus for devices
-charger:     Controls or shows charger configuration [-otg on/off] [-charge on/off]
-config:      Shows/sets configuration [-defaults] [-mode sdcard/network] [-pubint seconds] [-readint seconds] [-wifi "ssid" ["pass"]] [-token token]
-esp:         Controls or shows info from ESP [-on -off -sleep -wake -reboot -flash]
+power:       Controls/shows power config: power [-info (extra info)] [-batcap mAh] [-otg on/off] [-charge on/off] [-sleep min (0-disable)]
+config:      Shows/sets configuration: config [-defaults] [-mode sdcard/network] [-pubint seconds] [-readint seconds] [-wifi "ssid" ["pass"]] [-token token]
+esp:         Controls or shows info from ESP: esp [-on -off -sleep -wake -reboot -flash]
 netinfo:     Shows network information
-time:        Shows/sets time [epoch time] [-sync]
+time:        Shows/sets date and time: time [epoch time] [-sync]
 state:       Shows state flags
 hello:       Sends MQTT hello to platform
-debug:       Toggle debug messages [-sdcard] [-espcom] [-list]
-shell:       Shows or sets shell mode [-on] [-off]
-mqtt:        Publish custom mqtt message ('topic' 'message')
+debug:       Toggle debug messages: debug [-sdcard] [-espcom] [-list]
+shell:       Shows or sets shell mode: shell [-on] [-off]
+mqtt:        Publish custom mqtt message: mqtt ["topic" "message"]
 ```
 
 !!! info "Pro tip"
@@ -133,11 +133,11 @@ Mac address:  11:22:33:44:55:66
 
 ### Set recording and publication intervals
 
-In order to understand the reading and publication intervals, it is important to understand how the structure of the measurements is done:
+In order to understand the reading and publication intervals, it is important to describe how the structure of the measurements is done:
 
-1. Overall reading interval: base period for the SCK to take a measurement
-2. Individual sensor reading interval: period for each sensor to take a measurement. It is defined as N times the _Overall reading interval_
-3. Publication interval: time for the SCK to publish to the Smart Citizen Platform, independent of the reading interval.
+1. **Overall reading interval**: base period for the SCK to take a measurement
+2. **Individual sensor reading interval**: period for each sensor to take a measurement. It is defined as N times the _Overall reading interval_
+3. **Publication interval**: time for the SCK to publish to the Smart Citizen Platform, independent of the reading interval.
 
 Each of the sensors can be configured independently, with a reading interval N times the _overall reading interval_. For instance, after the `SAM firmware V0.9.7`, all the sensors are read every 60s except the PMS5003, which is read every 5 minutes or 5 times the reading interval. 
 
@@ -161,7 +161,7 @@ Or both at 10 minutes:
 config -pubint 600 -readint 600
 ```
 
-If we want to configure one specific sensor, we can do so by typing the following, only remember, that it's rounded to the closest integer multiplier of the overall reading interval:
+If we want to configure one specific sensor, we can do so by typing the following, only remember, that it's rounded to the closest integer multiplier of the _overall reading interval_:
 
 ```
 SCK > sensor temp -interval 360
@@ -182,10 +182,10 @@ Saved configuration on eeprom!!
 Some **limitations** apply though:
 
 1. The minimum reading and publication interval is 30s
-2. THe maximum reading interval is one day
+2. The maximum reading interval is one day
 3. The maximum publication interval is one hour
 
-For more customisation, please visit [email](mailto: support@smartcitizen.me) or post on the [forum](https://forum.smartcitizen.me).
+For more customisation, please [email](mailto: support@smartcitizen.me) or post on the [forum](https://forum.smartcitizen.me).
 
 ### Get version data
 
