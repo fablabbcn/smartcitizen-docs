@@ -3751,11 +3751,11 @@ Mac address:  11:22:33:44:55:66
 </code></pre></div>
 
 <h3 id="set-recording-and-publication-intervals">Set recording and publication intervals<a class="headerlink" href="#set-recording-and-publication-intervals" title="Permanent link">Link</a></h3>
-<p>In order to understand the reading and publication intervals, it is important to understand how the structure of the measurements is done:</p>
+<p>In order to understand the reading and publication intervals, it is important to describe how the structure of the measurements is done:</p>
 <ol>
-<li>Overall reading interval: base period for the SCK to take a measurement</li>
-<li>Individual sensor reading interval: period for each sensor to take a measurement. It is defined as N times the <em>Overall reading interval</em></li>
-<li>Publication interval: time for the SCK to publish to the Smart Citizen Platform, independent of the reading interval.</li>
+<li><strong>Overall reading interval</strong>: base period for the SCK to take a measurement</li>
+<li><strong>Individual sensor reading interval</strong>: period for each sensor to take a measurement. It is defined as N times the <em>Overall reading interval</em></li>
+<li><strong>Publication interval</strong>: time for the SCK to publish to the Smart Citizen Platform, independent of the reading interval.</li>
 </ol>
 <p>Each of the sensors can be configured independently, with a reading interval N times the <em>overall reading interval</em>. For instance, after the <code>SAM firmware V0.9.7</code>, all the sensors are read every 60s except the PMS5003, which is read every 5 minutes or 5 times the reading interval. </p>
 <p>In the case of the publication interval to the Smart Citizen Platform, the  default is 3 minutes. </p>
@@ -3771,7 +3771,7 @@ Mac address:  11:22:33:44:55:66
 <div class="highlight"><pre><span></span><code>config -pubint 600 -readint 600
 </code></pre></div>
 
-<p>If we want to configure one specific sensor, we can do so by typing the following, only remember, that it's rounded to the closest integer multiplier of the overall reading interval:</p>
+<p>If we want to configure one specific sensor, we can do so by typing the following, only remember, that it's rounded to the closest integer multiplier of the <em>overall reading interval</em>:</p>
 <div class="highlight"><pre><span></span><code>SCK &gt; sensor temp -interval 360
 The sensor read interval is calculated as a multiple of general read interval (360)
 Changing interval of Temperature to 360
