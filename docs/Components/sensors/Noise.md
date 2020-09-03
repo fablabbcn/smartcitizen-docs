@@ -125,6 +125,9 @@ This is the whole signal treatment process we use for the I2S microphone ICS4343
 !!! info "Calculations"
     A note with the calculations on the microphone can be [found here](/assets/notes/noise-dsp.pdf)
 
+!!! info "About sampling periods"
+    A note with the sampling periods on the microphone can be [found here](/assets/notes/noise-sampling.pdf)
+
 !!! warning "For the purists"
     Being mathematical purist, there is yet another possibility for this procedure using convolution in time domain, which is covered below, although not implemented.
 
