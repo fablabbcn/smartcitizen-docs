@@ -26,16 +26,6 @@ nav:
         - Auxiliary Connector: Components/Auxiliary Connector.md
         - Soil Sensors: Components/Soil.md
         - Water Sensors: Components/Water.md
-      - Legacy Hardware:
-        - Smart Citizen 1.1:
-          - Main: Legacy Hardware/index.md
-          - Hardware: Legacy Hardware/Hardware.md
-          - Command Line: Legacy Hardware/Command Line.md
-          - FAQ: Legacy Hardware/Faq.md
-          - Troubleshooting: Legacy Hardware/Troubleshooting.md
-        - Smart Citizen 2.0:
-          - Main: Legacy Hardware/sck.md
-          - About the CO-NO2 MOs: Components/sensors/SGX MICS.md
     - Firmware: Components/Firmware.md      
     - Sensor Knowledge:
       - Deploying sensors: Components/Deployments.md
@@ -76,7 +66,16 @@ nav:
       - Make reports of your data: Guides/Make reports of your data.md
       - Uploading data to zenodo: Guides/Upload data to zenodo.md
       - Creating interfaces: Guides/Creating Interfaces.md
-  
+    - Legacy Hardware:
+      - Smart Citizen 1.1:
+        - Main: Legacy Hardware/index.md
+        - Hardware: Legacy Hardware/Hardware.md
+        - Command Line: Legacy Hardware/Command Line.md
+        - FAQ: Legacy Hardware/Faq.md
+        - Troubleshooting: Legacy Hardware/Troubleshooting.md
+      - Smart Citizen 2.0:
+        - Main: Legacy Hardware/sck.md
+        - About the CO-NO2 MOs: Components/sensors/SGX MICS.md
 theme:
   name: 'material'
   custom_dir: 'custom_theme'
