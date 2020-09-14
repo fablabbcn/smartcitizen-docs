@@ -34,6 +34,9 @@ Relative humidity affects this type of sensor, since particles can absorb water 
 
 Make sure that you power the Smart Citizen Kit with a _good enough USB cable_ and with an adaptor that can provide at least 1A. We have found some issues when powering the sensor with a thin cable, or from a weak power source, like a screen.
 
+!!! info "About one-shot mode"
+    The sensor is only operated for 15s every time it takes a measurement in order to save battery. An study of this was carried out to validate the measurements and can be found [here](/assets/notes/one-shot-pmsx003-analysis.pdf)
+
 
 
 
