@@ -21,7 +21,7 @@ Or the 3D printed one:
 !!! info "Want to contribute?"
     Visit the [Smart Citizen Enclosures repository](https://github.com/fablabbcn/smartcitizen-enclosures) to download, modify, or add your own!
 
-### Build your own
+### A _very_ DIY enclosure
 
 !!! warning
     Keep in mind that casing is designed for short outdoor deployments. If you want a case for long exhibitions abroad, we will soon have a much more rugged enclosure ready! Also, feel free to explore all our [enclosures repository](https://github.com/fablabbcn/smartcitizen-enclosures) for this and other versions of our hardware.

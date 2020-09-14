@@ -1,15 +1,13 @@
 Sensor Platform
 ===============
 
+The platform is a front and backend solution for ingesting, storing and interacting with public data with a particular focus on crowd sensing applications.
+
 ![](https://i.imgur.com/qiDKL0r.jpg)
-
-The Smart Citizen platform supports the core features of the platform. That means this report documents new components, developed specifically for the project, but also existing components that already existed and made possible the platform.
-
-![](https://i.imgur.com/loUgFJv.png)
 
 We believe building modular and reusable software and using existing platforms is critical towards optimizing the research and development effort. By increasing the technology readiness levels of existing technologies, we can drastically improve the project exploitation strategy.
 
-The previous requirements led to the decision of building the core platform on top of the existing Smart Citizen Platform. The platform is a front and backend solution for ingesting, storing and interacting with public data with a particular focus on crowd sensing applications.
+![](https://i.imgur.com/loUgFJv.png)
 
 !!! tip "Check the guides"
 	We prepared a series of guides to help you on the most common features you will use
