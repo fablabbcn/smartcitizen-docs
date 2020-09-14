@@ -13,9 +13,10 @@ Welcome!
 
 * **Main:** Contains the [**Smart Citizen Kit**](Smart Citizen Kit) and [**Smart Citizen Station**](Smart Citizen Station) documentation to help you use them.
 
-* **Platform:** Contains all the documentation on the [**online platform**](Sensor Platform) where data is collected, stored and visualised.
+* **Data:** Contains all the documentation on data, from collection, storage to analysis and calibration:
+    * **Platform:** Contains all the documentation on the [**online platform**](Sensor Platform) where data is collected, stored and visualised.
 
-* **Data Analysis:** Contains all the documentation on the [**data post-processing framework**](Sensor Analysis Framework) to obtain insights from the data calibrated by the sensors.
+    * **Data Analysis:** Contains all the documentation on the [**data post-processing framework**](Sensor Analysis Framework) to obtain insights from the data calibrated by the sensors.
 
 * **Use cases:** Contains documentation and [**use cases**](Use Cases) examples how to use our tools with your local community.
 
