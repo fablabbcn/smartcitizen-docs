@@ -10,7 +10,7 @@ This section is a summary of these projects that might inspire you in future act
 
 [![](https://i.imgur.com/md5MEp0.jpg)](Use cases/Citizen Sensing Toolkit)
 
-By providing meaningful examples of novel appropriations and uses we seek to  spire communities to conduct their own experiments and, hopefully, even their  own custom tools.
+By providing meaningful examples of novel appropriations and uses we seek to  inspire communities to conduct their own experiments and, hopefully, even their  own custom tools.
 
 <iframe width="800" height="425" src="https://www.youtube-nocookie.com/embed/hvn5LyACUYw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
