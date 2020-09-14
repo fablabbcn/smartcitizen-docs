@@ -4,6 +4,10 @@
      <lastmod>2020-09-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
+     <loc>https://docs.smartcitizen.me/Components/</loc>
+     <lastmod>2020-09-14</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
      <loc>https://docs.smartcitizen.me/Smart%20Citizen%20Kit/</loc>
      <lastmod>2020-09-14</lastmod>
      <changefreq>daily</changefreq>
@@ -13,18 +17,6 @@
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.smartcitizen.me/Components/Urban%20Board/</loc>
-     <lastmod>2020-09-14</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://docs.smartcitizen.me/Components/Auxiliary%20Connector/</loc>
-     <lastmod>2020-09-14</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://docs.smartcitizen.me/Components/Soil/</loc>
-     <lastmod>2020-09-14</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://docs.smartcitizen.me/Components/Water/</loc>
      <lastmod>2020-09-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
@@ -41,6 +33,26 @@
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.smartcitizen.me/Components/PM%20Board/</loc>
+     <lastmod>2020-09-14</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://docs.smartcitizen.me/Components/Analog%20Sensor%20Board/</loc>
+     <lastmod>2020-09-14</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://docs.smartcitizen.me/Components/Auxiliary%20Connector/</loc>
+     <lastmod>2020-09-14</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://docs.smartcitizen.me/Components/Soil/</loc>
+     <lastmod>2020-09-14</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://docs.smartcitizen.me/Components/Water/</loc>
+     <lastmod>2020-09-14</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://docs.smartcitizen.me/Components/Firmware/</loc>
      <lastmod>2020-09-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
@@ -65,14 +77,6 @@
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.smartcitizen.me/Components/sensors/Electrochemical%20Sensors/</loc>
-     <lastmod>2020-09-14</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://docs.smartcitizen.me/Components/Firmware/</loc>
-     <lastmod>2020-09-14</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://docs.smartcitizen.me/Components/</loc>
      <lastmod>2020-09-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
@@ -104,11 +108,7 @@
      <lastmod>2020-09-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://docs.smartcitizen.me/Use%20cases/European%20Projects/</loc>
-     <lastmod>2020-09-14</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://docs.smartcitizen.me/Use%20cases/Academic%20Publications/</loc>
+     <loc>https://docs.smartcitizen.me/Use%20cases/Research/</loc>
      <lastmod>2020-09-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
