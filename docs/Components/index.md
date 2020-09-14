@@ -23,7 +23,9 @@ The core system bases its sensing capabilities in widely reviewed low cost senso
 
 	* [**PM Sensor Board:**](PM Sensor Board) An auxiliary board capable of driving two Particulate Matter sensor as well as other auxiliary sensors required for specific deployments as an external temperature sensor or an anemometer. It is used in the [Smart Citizen Stations](/Smart Citizen Station).
 
-	* [**Gas Pro Sensor Board:**](Gas Pro Sensor Board) An auxiliary board driving 3 Alphasense Ltd. Electrochemical Series B Gas Sensors designed for ultra-low noise, high-performance and low power operation. It is used in the [Smart Citizen Stations](/Smart Citizen Station).
+	* [**Gas Pro Sensor Board:**](Gas Pro Sensor Board) An auxiliary board driving 3 Alphasense Ltd. Electrochemical Series B Gas Sensors designed for ultra-low noise, high-performance and low power operation. It is used in the [Smart Citizen Stations](/Smart Citizen Station) for sensors with no offset voltage compensation, i.e. it's not valid for NO, NO2 or OX sensors
+   
+    * [**Analog Sensors Board**](Analog Sensors Board) An auxiliary board using a high-resolution ADC capable of reading 4 or 8 analog channels at 16bit resolution. It is used in the [Smart Citizen Stations](/Smart Citizen Station) for the Analog front-end by Alphasense Ltd. which interface with any type of Electrochemical Series B Gas Sensors (NO, NO2 or OX sensors as well)
 
 ## Open Source
 

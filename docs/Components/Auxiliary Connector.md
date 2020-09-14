@@ -14,11 +14,13 @@ The [data board](/Components/Data Board/) features a standard Grove connector wh
 - [Seeed Groove ADC](http://wiki.seeedstudio.com/Grove-I2C_ADC/) - 12 bit ADC from Seeed Studio
 - [Adafruit INA219](https://www.adafruit.com/product/904) - Supports Bus voltage, shunt voltage, current and load voltage
 - [SparkFun ToF Range Finder Sensor - VL6180](https://www.sparkfun.com/products/12785) - supports distance and light. Can be used for water level measurements
+- [ADS1X15](https://www.adafruit.com/product/1085) - 16 bit ADC from Texas instruments also found in Adafruit development boards
 
 ### Environmental and air quality
 
 - [Seeed Grove SHT31 Temperature/Humidity](https://www.seeedstudio.com/Grove-Temperature-Humidity-Sensor-SHT31.html)
-- [Adafruit BME680](https://www.adafruit.com/product/3660) - supports temperature, humidity, barometric pressure and VOC gas
+- [Adafruit dev kit for Bosch BME680](https://www.adafruit.com/product/3660) - supports temperature, humidity, barometric pressure and VOC gas
+- [Sparkfun dev kit for AMS CCS811](https://www.adafruit.com/product/3660) - supports temperature, humidity, barometric pressure and VOC gas
 - [Atlas Scientific Temperature](https://www.atlas-scientific.com/product_pages/kits/temp_kit.html) - can be used with any PT-100 or PT-1000 temperature probes
 
 !!! info "Smart Citizen Station"
@@ -26,7 +28,8 @@ The [data board](/Components/Data Board/) features a standard Grove connector wh
 
     - [Smart Citizen Gases Pro Board](/Components/Gases Pro Board): supports 3 electrochemical alphasense sensors, temperature and humidity 
     - [Smart Citizen PM Board](/Components/PM Board): supports 2 Plantower PMS5003 sensors, I2C extension, 4 ADC pins, 2 GPIO and a UART Serial port
-
+    - [Smart Citizen Analog Sensor Board](/Components/Analog Sensor Board): supports 4 or 8 analog channels at 16bit resolution.
+    
     ![](https://i.imgur.com/RRu8MiV.jpg)
 
 ### Water measurements
