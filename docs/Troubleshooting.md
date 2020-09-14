@@ -62,3 +62,7 @@ In this section, we will detail some problems you might have found in the early 
 ### Light sensor reads 0 and temperature/humidity sensor does not work
 
 The issue is caused due to a firmware bug (light) and a problem with some SHT31 sensors (also fixed by firmware). A full explanation is detailed in the [forum](https://forum.smartcitizen.me/t/the-light-sensor-is-fixed/1172) and the fix was released with [V0.9.4](https://github.com/fablabbcn/smartcitizen-kit-21/releases/tag/0.9.4) of the SAMD firmware.
+
+### Noise readings don't go below 45dBA
+
+This issue is caused due to a firmware bug that initialized badly the I2S microphone in SCK2.0 and SCK2.1 sensors. A full explanation is detailed in the [forum](https://forum.smartcitizen.me/t/origin-of-the-noise-db-a-code/1391/12) and and the fix was released with a pre-releasue [V0.9.8](https://github.com/fablabbcn/smartcitizen-kit-21/releases/tag/0.9.8) of the SAMD firmware.
