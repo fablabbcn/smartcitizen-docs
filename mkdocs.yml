@@ -11,13 +11,13 @@ nav:
     - Hardware: 
       - Hardware architecture: Components/index.md
       - Smart Citizen Kit: 
-        - Description: Smart Citizen Kit.md
+        - What is it?: Smart Citizen Kit.md
         - Components:
           - Data Board: Components/Data Board.md
           - Urban Board: Components/Urban Board.md
         - Enclosures: Components/Enclosures.md
       - Smart Citizen Station: 
-        - Description: Smart Citizen Station.md
+        - What is it?: Smart Citizen Station.md
         - Components:
           - Gas Pro Sensor Board: Components/Gases Pro Board.md
           - PM Board: Components/PM Board.md
@@ -28,7 +28,6 @@ nav:
         - Water Sensors: Components/Water.md
     - Firmware: Components/Firmware.md      
     - Sensor Knowledge:
-      - Deploying sensors: Components/Deployments.md
       - Particulate Matter: Components/sensors/PM Sensors.md
       - Noise: Components/sensors/Noise.md
       - Metal Oxide Sensors:
@@ -60,12 +59,16 @@ nav:
       - Debug the firmware: Guides/Debug the firmware.md
     - Data Analysis:
       - Framework Installation: Guides/Install the framework.md
-      - Organise your data: Guides/Organise your data.md
-      - Model your sensor data: Guides/Creating Models for Sensors Calibration.md
-      - Analyse your data in batch: Guides/Analyse your data in batch.md
       - Make reports of your data: Guides/Make reports of your data.md
-      - Uploading data to zenodo: Guides/Upload data to zenodo.md
-      - Creating interfaces: Guides/Creating Interfaces.md
+      - Creating interfaces: Guides/Creating Interfaces.md      
+      # - Organise your data: Guides/Organise your data.md
+      # - Model your sensor data: Guides/Creating Models for Sensors Calibration.md
+      # - Analyse your data in batch: Guides/Analyse your data in batch.md
+      # - Uploading data to zenodo: Guides/Upload data to zenodo.md
+    - Deploying sensors: 
+      - Deploying the SCK: Guides/Deploying SCK.md
+      - iSCAPE Station V1: Guides/Deploying iSCAPE Station V1.md
+      - iSCAPE Station V2: Guides/Deploying iSCAPE Station V2.md
     - Legacy Hardware:
       - Smart Citizen 1.1:
         - Main: Legacy Hardware/index.md
@@ -76,6 +79,7 @@ nav:
       - Smart Citizen 2.0:
         - Main: Legacy Hardware/sck.md
         - About the CO-NO2 MOs: Components/sensors/SGX MICS.md
+
 theme:
   name: 'material'
   custom_dir: 'custom_theme'

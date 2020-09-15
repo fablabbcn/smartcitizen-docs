@@ -20,6 +20,7 @@ This is a _live_ compilation of results in what we call _European Projects_.
 - [iScape Results (iScape site)](https://www.iscapeproject.eu/scientific-reports/)
 - [iScape Results (cordis site)](https://cordis.europa.eu/project/id/689954/results)
 - [ISCAPE D7.8 Sensor monitoring experiences and technological innovations](/assets/publications/iSCAPE_D78.pdf)
+
 Find below some of our own publications, or others' that have used the Smart Citizen hardware and software.
 
 ## Academic publications
