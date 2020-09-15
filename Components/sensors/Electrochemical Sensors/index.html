@@ -89,7 +89,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#inside-the-electrochemical-sensors" tabindex="0" class="md-skip">
+      <a href="#working-principle" tabindex="0" class="md-skip">
         Skip to content
       </a>
     
@@ -551,9 +551,9 @@
 <!-- Main navigation item with nested items -->
 
   <li class="md-nav__item">
-    <a href="../../../Smart%20Citizen%20Kit/" title="Description"
+    <a href="../../../Smart%20Citizen%20Kit/" title="What is it?"
         class="md-nav__link">
-      Description
+      What is it?
     </a>
   </li>
 
@@ -821,9 +821,9 @@
 <!-- Main navigation item with nested items -->
 
   <li class="md-nav__item">
-    <a href="../../../Smart%20Citizen%20Station/" title="Description"
+    <a href="../../../Smart%20Citizen%20Station/" title="What is it?"
         class="md-nav__link">
-      Description
+      What is it?
     </a>
   </li>
 
@@ -1311,44 +1311,6 @@
 <!-- Main navigation item with nested items -->
 
   <li class="md-nav__item">
-    <a href="../../Deployments/" title="Deploying sensors"
-        class="md-nav__link">
-      Deploying sensors
-    </a>
-  </li>
-
-        
-          
-          
-          <!--
-  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to
-  deal in the Software without restriction, including without limitation the
-  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-  sell copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
-
-  The above copyright notice and this permission notice shall be included in
-  all copies or substantial portions of the Software.
-
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-  IN THE SOFTWARE.
--->
-
-<!-- Determine class according to level -->
-
-
-
-<!-- Main navigation item with nested items -->
-
-  <li class="md-nav__item">
     <a href="../PM%20Sensors/" title="Particulate Matter"
         class="md-nav__link">
       Particulate Matter
@@ -1428,17 +1390,17 @@
 
     <!-- Active checkbox expands items contained within nested section -->
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4-4"
-          type="checkbox" id="nav-1-4-4" />
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4-3"
+          type="checkbox" id="nav-1-4-3" />
     
 
     <!-- Expand active pages -->
-    <label class="md-nav__link" for="nav-1-4-4">
+    <label class="md-nav__link" for="nav-1-4-3">
       Metal Oxide Sensors
     </label>
     <nav class="md-nav" data-md-component="collapsible"
         data-md-level="3">
-      <label class="md-nav__title" for="nav-1-4-4">
+      <label class="md-nav__title" for="nav-1-4-3">
         Metal Oxide Sensors
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1570,8 +1532,6 @@
 
     <!-- Hack: see partials/toc.html for more information -->
     
-      
-    
 
     <!-- Render table of contents, if not empty -->
     
@@ -1590,26 +1550,17 @@
 <nav class="md-nav md-nav--secondary">
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#sensor-working-principle" class="md-nav__link">
-    Sensor working principle
+  <a href="#working-principle" class="md-nav__link">
+    Working principle
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#manufacturer-data" class="md-nav__link">
-    Manufacturer data
-  </a>
-  
-</li>
         
           <li class="md-nav__item">
   <a href="#reduction-vs-oxidation-electrochemical-sensor" class="md-nav__link">
@@ -1624,24 +1575,23 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#sensor-calibration" class="md-nav__link">
-    Sensor Calibration
+  <a href="#usage-and-considerations" class="md-nav__link">
+    Usage and considerations
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#baseline-correction-based-on-temperature" class="md-nav__link">
-    Baseline correction based on temperature
+  <a href="#stabilisation" class="md-nav__link">
+    Stabilisation
   </a>
   
-    <nav class="md-nav">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
-  <a href="#application-on-4-electrode-sensors" class="md-nav__link">
-    Application on 4-electrode sensors
+  <a href="#open-questions" class="md-nav__link">
+    Open questions
   </a>
   
 </li>
@@ -1650,16 +1600,11 @@
     </nav>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#baseline-correction-based-on-auxiliary-electrode" class="md-nav__link">
-    Baseline correction based on auxiliary electrode
+      
+        <li class="md-nav__item">
+  <a href="#results" class="md-nav__link">
+    Results
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -2790,161 +2735,9 @@
 <!-- Main navigation item with nested items -->
 
   <li class="md-nav__item">
-    <a href="../../../Guides/Organise%20your%20data/" title="Organise your data"
-        class="md-nav__link">
-      Organise your data
-    </a>
-  </li>
-
-        
-          
-          
-          <!--
-  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to
-  deal in the Software without restriction, including without limitation the
-  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-  sell copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
-
-  The above copyright notice and this permission notice shall be included in
-  all copies or substantial portions of the Software.
-
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-  IN THE SOFTWARE.
--->
-
-<!-- Determine class according to level -->
-
-
-
-<!-- Main navigation item with nested items -->
-
-  <li class="md-nav__item">
-    <a href="../../../Guides/Creating%20Models%20for%20Sensors%20Calibration/" title="Model your sensor data"
-        class="md-nav__link">
-      Model your sensor data
-    </a>
-  </li>
-
-        
-          
-          
-          <!--
-  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to
-  deal in the Software without restriction, including without limitation the
-  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-  sell copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
-
-  The above copyright notice and this permission notice shall be included in
-  all copies or substantial portions of the Software.
-
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-  IN THE SOFTWARE.
--->
-
-<!-- Determine class according to level -->
-
-
-
-<!-- Main navigation item with nested items -->
-
-  <li class="md-nav__item">
-    <a href="../../../Guides/Analyse%20your%20data%20in%20batch/" title="Analyse your data in batch"
-        class="md-nav__link">
-      Analyse your data in batch
-    </a>
-  </li>
-
-        
-          
-          
-          <!--
-  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to
-  deal in the Software without restriction, including without limitation the
-  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-  sell copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
-
-  The above copyright notice and this permission notice shall be included in
-  all copies or substantial portions of the Software.
-
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-  IN THE SOFTWARE.
--->
-
-<!-- Determine class according to level -->
-
-
-
-<!-- Main navigation item with nested items -->
-
-  <li class="md-nav__item">
     <a href="../../../Guides/Make%20reports%20of%20your%20data/" title="Make reports of your data"
         class="md-nav__link">
       Make reports of your data
-    </a>
-  </li>
-
-        
-          
-          
-          <!--
-  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to
-  deal in the Software without restriction, including without limitation the
-  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-  sell copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
-
-  The above copyright notice and this permission notice shall be included in
-  all copies or substantial portions of the Software.
-
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-  IN THE SOFTWARE.
--->
-
-<!-- Determine class according to level -->
-
-
-
-<!-- Main navigation item with nested items -->
-
-  <li class="md-nav__item">
-    <a href="../../../Guides/Upload%20data%20to%20zenodo/" title="Uploading data to zenodo"
-        class="md-nav__link">
-      Uploading data to zenodo
     </a>
   </li>
 
@@ -3034,11 +2827,184 @@
 
     <!-- Expand active pages -->
     <label class="md-nav__link" for="nav-4-5">
-      Legacy Hardware
+      Deploying sensors
     </label>
     <nav class="md-nav" data-md-component="collapsible"
         data-md-level="2">
       <label class="md-nav__title" for="nav-4-5">
+        Deploying sensors
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+
+        <!-- Render nested item list -->
+        
+        
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item">
+    <a href="../../../Guides/Deploying%20SCK/" title="Deploying the SCK"
+        class="md-nav__link">
+      Deploying the SCK
+    </a>
+  </li>
+
+        
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item">
+    <a href="../../../Guides/Deploying%20iSCAPE%20Station%20V1/" title="iSCAPE Station V1"
+        class="md-nav__link">
+      iSCAPE Station V1
+    </a>
+  </li>
+
+        
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item">
+    <a href="../../../Guides/Deploying%20iSCAPE%20Station%20V2/" title="iSCAPE Station V2"
+        class="md-nav__link">
+      iSCAPE Station V2
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+<!-- Currently active page -->
+
+        
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item md-nav__item--nested">
+
+    <!-- Active checkbox expands items contained within nested section -->
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-6"
+          type="checkbox" id="nav-4-6" />
+    
+
+    <!-- Expand active pages -->
+    <label class="md-nav__link" for="nav-4-6">
+      Legacy Hardware
+    </label>
+    <nav class="md-nav" data-md-component="collapsible"
+        data-md-level="2">
+      <label class="md-nav__title" for="nav-4-6">
         Legacy Hardware
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -3080,17 +3046,17 @@
 
     <!-- Active checkbox expands items contained within nested section -->
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-5-1"
-          type="checkbox" id="nav-4-5-1" />
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-6-1"
+          type="checkbox" id="nav-4-6-1" />
     
 
     <!-- Expand active pages -->
-    <label class="md-nav__link" for="nav-4-5-1">
+    <label class="md-nav__link" for="nav-4-6-1">
       Smart Citizen 1.1
     </label>
     <nav class="md-nav" data-md-component="collapsible"
         data-md-level="3">
-      <label class="md-nav__title" for="nav-4-5-1">
+      <label class="md-nav__title" for="nav-4-6-1">
         Smart Citizen 1.1
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -3329,17 +3295,17 @@
 
     <!-- Active checkbox expands items contained within nested section -->
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-5-2"
-          type="checkbox" id="nav-4-5-2" />
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-6-2"
+          type="checkbox" id="nav-4-6-2" />
     
 
     <!-- Expand active pages -->
-    <label class="md-nav__link" for="nav-4-5-2">
+    <label class="md-nav__link" for="nav-4-6-2">
       Smart Citizen 2.0
     </label>
     <nav class="md-nav" data-md-component="collapsible"
         data-md-level="3">
-      <label class="md-nav__title" for="nav-4-5-2">
+      <label class="md-nav__title" for="nav-4-6-2">
         Smart Citizen 2.0
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -3458,26 +3424,17 @@
 <nav class="md-nav md-nav--secondary">
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#sensor-working-principle" class="md-nav__link">
-    Sensor working principle
+  <a href="#working-principle" class="md-nav__link">
+    Working principle
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#manufacturer-data" class="md-nav__link">
-    Manufacturer data
-  </a>
-  
-</li>
         
           <li class="md-nav__item">
   <a href="#reduction-vs-oxidation-electrochemical-sensor" class="md-nav__link">
@@ -3492,24 +3449,23 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#sensor-calibration" class="md-nav__link">
-    Sensor Calibration
+  <a href="#usage-and-considerations" class="md-nav__link">
+    Usage and considerations
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#baseline-correction-based-on-temperature" class="md-nav__link">
-    Baseline correction based on temperature
+  <a href="#stabilisation" class="md-nav__link">
+    Stabilisation
   </a>
   
-    <nav class="md-nav">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
-  <a href="#application-on-4-electrode-sensors" class="md-nav__link">
-    Application on 4-electrode sensors
+  <a href="#open-questions" class="md-nav__link">
+    Open questions
   </a>
   
 </li>
@@ -3518,16 +3474,11 @@
     </nav>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#baseline-correction-based-on-auxiliary-electrode" class="md-nav__link">
-    Baseline correction based on auxiliary electrode
+      
+        <li class="md-nav__item">
+  <a href="#results" class="md-nav__link">
+    Results
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -3555,9 +3506,10 @@
               
                 
                 
-                <h1 id="inside-the-electrochemical-sensors">Inside the Electrochemical Sensors<a class="headerlink" href="#inside-the-electrochemical-sensors" title="Permanent link">Link</a></h1>
-<h2 id="sensor-working-principle">Sensor working principle<a class="headerlink" href="#sensor-working-principle" title="Permanent link">Link</a></h2>
-<p>The electrochemical cells used are toxic gas sensors from alphasense that operate in an amperometric mode. That is, they generate a current that is linearly proportional to the fractional volume of the toxic gas in the environment:</p>
+                  <h1>Electrochemical Sensors</h1>
+                
+                <h2 id="working-principle">Working principle<a class="headerlink" href="#working-principle" title="Permanent link">Link</a></h2>
+<p>The electrochemical cells used are toxic gas sensors from Alphasense Ltd. that operate in an amperometric mode. That is, they generate a current that is linearly proportional to the fractional volume of the toxic gas in the environment:</p>
 <p><img alt="" src="https://i.imgur.com/K0yeMN0.png" /></p>
 <p><em>Image Source: Alphasense Ltd.</em></p>
 <p>These electrochemical sensors are comprised of four electrodes:</p>
@@ -3571,66 +3523,7 @@
 <p>The <strong>auxiliary electrode</strong> is an electrode of the same characteristics to those of the working electrode, but it is buried inside an electrolite and, hence, it is not in contact with the target gas. Since it is isolated from external conditions that could affect the <strong>working electrode</strong>, it serves as a reference to the measurements provided by the latter.</p>
 <p>The <strong>counter electrode</strong> balances the reaction of the working electrode – if the working electrode oxidises the gas, then the counter electrode must reduce some other molecule to generate an equivalent current, in the opposite sense. For example, where carbon monoxide will be oxidised on the working electrode, oxygen will be reduced on the counter electrode.</p>
 <p>The <strong>reference electrode</strong> anchors the working electrode potential to ensure that it is always working in the right conditions. It is important that the reference electrode has a stable potential, keeping the working electrode at the right electrochemical potential to maintain a constant sensitivity, good linearity and minimum sensitivity to interfering gases.</p>
-<p>Therefore, while the sensor response is exposed to the target gas, it creates a current flowing from the working to the counter electrode or viceversa (depending on the oxidative or reductive nature of the target gas). This relationship can be characterised and follows a curve such as:</p>
-<p><img alt="" src="https://i.imgur.com/nIgeTRr.png" />
-<em>Image source: Alphasense Ltd.</em></p>
-<p>When operating in the so called <em>transport limited current plateau</em> the measured current (IL) should be linearly dependent on the concentration or fractional volume of the toxic gas (CT) in the external environment:</p>
-<div>
-<div class="MathJax_Preview">
-I_L = k C_T
-</div>
-<script type="math/tex; mode=display">
-I_L = k C_T
-</script>
-</div>
-<p>where k is a proportionality constant. This constant is provided by the manufacturer as Sensitivity and is explained below.</p>
-<div class="admonition warning">
-<p class="admonition-title">Electronics design considerations</p>
-<p>A potentiostat circuit is built in order to ensure that the counter electrode is provided with as much current as it needs, also maintaining the working electrode at a fixed potential, irrespective of how hard it is working.</p>
-</div>
-<h3 id="manufacturer-data">Manufacturer data<a class="headerlink" href="#manufacturer-data" title="Permanent link">Link</a></h3>
-<p>The manufacturer provides the calibration data in laboratory conditions for each of the electrochemical cells used. This data is listed below:
-- <strong>Sensor sensitivity</strong>: the sensor response in nA per each ppm of target pollutant in <em>nominal</em> conditions
-- <strong>Electrode zero current</strong>: the electrode reading in nA to zero air (pure air at 25degC). This is provided for both, working and auxiliary electrodes, in the case of 4-electrode sensors
-- <strong>Sensor response</strong> (<span><span class="MathJax_Preview">t_{90}</span><script type="math/tex">t_{90}</script></span>)
-- <strong>Sensor range</strong></p>
-<p>The manufacturer suggests using the following equation in order to determine the sensor's corrected reading in the presence of target gas:</p>
-<div>
-<div class="MathJax_Preview">
-Concentration \ [ppm] = {I_{WE}-n(I_{AE}) \ [nA] \over Sensitivity \ [nA/ ppm]}
-</div>
-<script type="math/tex; mode=display">
-Concentration \ [ppm] = {I_{WE}-n(I_{AE}) \ [nA] \over Sensitivity \ [nA/ ppm]}
-</script>
-</div>
-<p>Where:</p>
-<div>
-<div class="MathJax_Preview">
-I_{WE} (nA) = K (nA/mV) V_{WE} (mV)
-</div>
-<script type="math/tex; mode=display">
-I_{WE} (nA) = K (nA/mV) V_{WE} (mV)
-</script>
-</div>
-<div>
-<div class="MathJax_Preview">
-I_{AE} (nA) = K (nA/mV) V_{AE} (mV)
-</div>
-<script type="math/tex; mode=display">
-I_{AE} (nA) = K (nA/mV) V_{AE} (mV)
-</script>
-</div>
-<p>Where:
-* <span><span class="MathJax_Preview">I_{PCBWE}</span><script type="math/tex">I_{PCBWE}</script></span> and <span><span class="MathJax_Preview">I_{PCBAE}</span><script type="math/tex">I_{PCBAE}</script></span> are the electronic offsets for each electrode
-* <span><span class="MathJax_Preview">n  = {I_{0WE} \over I_{0AE}}</span><script type="math/tex">n  = {I_{0WE} \over I_{0AE}}</script></span>, the ratio between alphasense's zero currents
-* k is a <strong>constant convertion factor</strong> (<em>~ 6.36</em> in the case of the SCK Gas Pro Board electronics)</p>
-<p>With regards to <strong>sensor ranges</strong>, the following are available from the manufacture:</p>
-<ul>
-<li><a href="http://www.alphasense.com/WEB1213/wp-content/uploads/2018/12/NO2B43F.pdf"><strong>NO<sub>2</sub></strong></a>: 20ppm</li>
-<li><a href="http://www.alphasense.com/WEB1213/wp-content/uploads/2018/12/OXB431.pdf"><strong>O3 + NO<sub>2</sub></strong></a>: 20ppm both</li>
-<li><a href="http://www.alphasense.com/WEB1213/wp-content/uploads/2015/04/COB41.pdf"><strong>CO</strong></a>: 1000ppm</li>
-</ul>
-<p>Finally, toxic gas sensors' sensitivity will <strong>drift downwards with time, typically 0.5% to 2% per month</strong>, depending on the sensor type, relative humidity and gas concentration/temperature conditions.</p>
+<p>Therefore, while the sensor response is exposed to the target gas, it creates a current flowing from the working to the counter electrode or viceversa (depending on the oxidative or reductive nature of the target gas). This current has been found to be nicely responsive to target gas and therefore subject to characterisation and calibration.</p>
 <h3 id="reduction-vs-oxidation-electrochemical-sensor">Reduction vs Oxidation Electrochemical Sensor<a class="headerlink" href="#reduction-vs-oxidation-electrochemical-sensor" title="Permanent link">Link</a></h3>
 <p>As mentioned above, the <strong>counter electrode</strong> is meant to balance the reaction of the working electrode. This determines the current direction within the board: whether it <em>goes from the working electrode to the counter electrode</em> or viceversa.</p>
 <ul>
@@ -3641,158 +3534,31 @@ I_{AE} (nA) = K (nA/mV) V_{AE} (mV)
 <p>Reduction sensors, such as NO<sub>2</sub>, provoke a negative current, i.e: <strong>going into the sensor</strong> and the larger the amount of NO<sub>2</sub> present, the larger (negative) is this current</p>
 </li>
 </ul>
-<p>As an example, this is reflected in the different signs of the sensor sensitivity:</p>
+<h2 id="usage-and-considerations">Usage and considerations<a class="headerlink" href="#usage-and-considerations" title="Permanent link">Link</a></h2>
+<p>Alphasense Ltd. provides the calibration data in laboratory conditions for each of the electrochemical cells used. This data can be used to calculate pollutant concentration and to correct for <em>known effects</em> by temperature deviations. </p>
+<div class="admonition info">
+<p class="admonition-title">More on this</p>
+<p>Alphasense Ltd. provides very useful application notes for the sensor usage.</p>
+</div>
+<p>Pollutant calculation based on calibration data in laboratory conditions, can be insightful enough for certain applications, but it might not suffice for some conditions in which the sensors are exposed to other pollutants or in harsh environments. For this reason, two different approaches build on top of the laboratory calibration data:</p>
 <ul>
-<li>NO2-B43F Average Batch Sensitivity: -347nA/ppm</li>
-<li>CO-B4F Average Batch Sensitivity: 588nA/ppm</li>
+<li>Usage of more advanced physical models as detailed in <sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></li>
+<li>Usage of site-specific calibration models with short-term deployments in co-location with reference measurement equipment and generalised calibration models derived from the junction of these <sup id="fnref2:4"><a class="footnote-ref" href="#fn:4">4</a></sup>.</li>
 </ul>
-<p>Although this is in principle directly related with the sensor itself, there are further signal transformations to be taken into account.  For instance, the currents seen in the electrodes, if comparing between CO and NO<sub>2</sub>, should be different in sign, however, for both, CO and NO<sub>2</sub> sensors, we see positive currents which grow positively with higher CO and NO<sub>2</sub> concentrations:</p>
-<p><img alt="" src="https://i.imgur.com/DSpt0p4.png" /></p>
-<p>Hence, the sensor senstivity provided by the manufacturer should be considered in absolute terms (<span><span class="MathJax_Preview">abs(Sensitvity)</span><script type="math/tex">abs(Sensitvity)</script></span>) for the calculations to yield always positive results in pollutant fractional volumes.</p>
-<h2 id="sensor-calibration">Sensor Calibration<a class="headerlink" href="#sensor-calibration" title="Permanent link">Link</a></h2>
-<p>The model described in the following section is based on the findings of <sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>. This study uses alphasense's 3-electrode sensors, and here it is further extended to the case of 4-electrode sensors, taking into account the auxiliary electrode.</p>
-<h3 id="baseline-correction-based-on-temperature">Baseline correction based on temperature<a class="headerlink" href="#baseline-correction-based-on-temperature" title="Permanent link">Link</a></h3>
-<p>The mentioned work described the  correction method based on temperature using a baseline correction algorithm which is described in <sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup>. This is summarised below:</p>
-<ol>
-<li>For each day of gas working electrode readings, and for each point in the time series (i), the minimum value of the working electrode value that is contained within the interval (i-<span><span class="MathJax_Preview">\delta</span><script type="math/tex">\delta</script></span> &lt; i &lt; i+<span><span class="MathJax_Preview">\delta</span><script type="math/tex">\delta</script></span>) is determined, where <span><span class="MathJax_Preview">\delta</span><script type="math/tex">\delta</script></span> is an interval ranging from 0 to a day length. The outcome of this procedure is an array where each column is a vector of minimum working electrode values calculated for each <span><span class="MathJax_Preview">\delta_i</span><script type="math/tex">\delta_i</script></span> value (this is, from now on, <span><span class="MathJax_Preview">baseline_{\delta_i}</span><script type="math/tex">baseline_{\delta_i}</script></span>).</li>
-<li>The correlation between each <span><span class="MathJax_Preview">baseline_{\delta_i}</span><script type="math/tex">baseline_{\delta_i}</script></span> and the temperature is calculated. Relative humidity is not considered in this study since it's generaly inversely correlated with the temperature.</li>
-<li>The correlation coefficients for each correlation (<span><span class="MathJax_Preview">R^2_{\delta_i}</span><script type="math/tex">R^2_{\delta_i}</script></span>) are calculated. The maximum <span><span class="MathJax_Preview">R^2</span><script type="math/tex">R^2</script></span> whith this array is obtained.</li>
-<li>For the equation at which the maximum <span><span class="MathJax_Preview">R^2_{\delta_i}</span><script type="math/tex">R^2_{\delta_i}</script></span> is found, the temperature reading is used to calculate the corrected baseline.</li>
-<li>The corrected baseline is substracted from the actual working electrode reading</li>
-<li>The final pollutant concentration is calculated based on the corrected working electrode reading and the manufacturer's data.</li>
-</ol>
-<p>The readings are treated in a day-to-day basis in order to avoid non-stationary temperature trends over several days, but still to account for temperature variations within each day.</p>
-<p>Finally, a background pollutant concentration is assumed from <sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup> which is also summarised below for each pollutant. This background concentration is added to the final result.</p>
-<p><img alt="" src="https://i.imgur.com/qDp2cED.png" />
-<strong>Background concentrations</strong>. <em>Source <sup id="fnref2:3"><a class="footnote-ref" href="#fn:3">3</a></sup></em></p>
-<h4 id="application-on-4-electrode-sensors">Application on 4-electrode sensors<a class="headerlink" href="#application-on-4-electrode-sensors" title="Permanent link">Link</a></h4>
-<p>This algorithm can be used to correct temperature effects on the working electrode based on the temperature in 4-electrode sensors. The results are discussed below for tests validation campaigns performed  within the iScape project. These tests are summarized below:</p>
-<ul>
-<li><em>University of Bologna</em>: data collected from 23/January to 13/February. The measured pollutants with reference equipments were CO, NO<sub>2</sub>, NO, NOx and O3. Two prototype Smart Citizen Stations were deployed in two different sites, with two Smart Citizen Kits.</li>
-<li><em>University College Dublin</em>: data collected from 27/March to 17/April. The measured pollutants with reference equipments were NO, NO<sub>2</sub> and NOX. One prototype Smart Citizen Station was deployed with two Smart Citizen Kits.</li>
-</ul>
-<p>The results found with this methodology in the reduction sensors (NO<sub>2</sub>, O3) are significant in a daily basis. Two examples of the variation of the correlation coefficient with respect to the delta used to calculate the baseline are shown below:</p>
-<p><img alt="" src="https://i.imgur.com/PhA3UVN.png" /></p>
-<p><img alt="" src="https://i.imgur.com/XL7OPTx.png" /></p>
-<p>The algorithm is set to apply the best performing correlation function from either a linear or an exponential fit, basing this decission on the one that yields better correlation coefficient. NO<sub>2</sub> and O3 at high concentrations yield better results with an exponential fit, whilst lower concentrations reflect a linear trend:</p>
-<p><img alt="" src="https://i.imgur.com/yRUrTZJ.jpg" /></p>
-<p>Furthermore, the study from which this methodology is drawn from states that oxidation sensors do not yield a proper baseline correlation methodology and so is validated. The result is indeed far better correlated with the reference measurement if using the manufacturer's methodology:</p>
-<p><img alt="" src="https://i.imgur.com/F4uAY8y.jpg" /></p>
-<p>This methodology reads as follows:</p>
-<div>
-<div class="MathJax_Preview">
-Concentration \ [ppm] = {I_{WE}-n(I_{AE}) \ [nA] \over Sensitivity \ [nA/ ppm]}
+<h3 id="stabilisation">Stabilisation<a class="headerlink" href="#stabilisation" title="Permanent link">Link</a></h3>
+<p>The electrochemical sensors <strong>need stabilisation time under the testing conditions</strong> they will be at. It is important to set and power the sensors with sufficient time (1-2 days) on the test environment for them to adapt. The newer the sensor, the more stabilisation time it requires. For this deployment, you will be receiving brand new sensors.</p>
+<p>Humidity and temperature extremes will require of further sensor adaptation, in order to dry out or absorb the necessary humidity for their proper functioning.</p>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>Do not extract/attach the sensor capsule from the base board while powered, this could irreversibly damage the sensor.</p>
 </div>
-<script type="math/tex; mode=display">
-Concentration \ [ppm] = {I_{WE}-n(I_{AE}) \ [nA] \over Sensitivity \ [nA/ ppm]}
-</script>
-</div>
-<p>Where:</p>
-<div>
-<div class="MathJax_Preview">
-I_{WE} (nA) = K (nA/mV) V_{WE} (mV)
-</div>
-<script type="math/tex; mode=display">
-I_{WE} (nA) = K (nA/mV) V_{WE} (mV)
-</script>
-</div>
-<div>
-<div class="MathJax_Preview">
-I_{AE} (nA) = K (nA/mV) V_{AE} (mV)
-</div>
-<script type="math/tex; mode=display">
-I_{AE} (nA) = K (nA/mV) V_{AE} (mV)
-</script>
-</div>
-<p>Where:
-* <span><span class="MathJax_Preview">I_{PCBWE}</span><script type="math/tex">I_{PCBWE}</script></span> and <span><span class="MathJax_Preview">I_{PCBAE}</span><script type="math/tex">I_{PCBAE}</script></span> are the electronic offsets for each electrode
-* <span><span class="MathJax_Preview">n  = {I_{0WE} \over I_{0AE}}</span><script type="math/tex">n  = {I_{0WE} \over I_{0AE}}</script></span>, the ratio between alphasense's zero currents
-* k is a <strong>constant convertion factor</strong> (<em>~ 6.36</em> in the case of the SCK Gas Pro Board electronics)</p>
-<p>In the case of NO<sub>2</sub>, the results provided by this baseline correction algorithm yield better results:
-<img alt="" src="https://i.imgur.com/jW7qSaB.jpg" /></p>
-<p>Both, CO and NO<sub>2</sub> pollutants, using the best method for each calculation, are shown below:</p>
-<p><img alt="" src="https://i.imgur.com/lripMLT.jpg" /></p>
-<p>Finally, a comparison between the reference measurement results from both methods is detailed below:</p>
-<table>
-<thead>
-<tr>
-<th align="left"></th>
-<th align="center">Manufacturer Method</th>
-<th align="center">Baseline Method</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left"><strong>Pollutant</strong></td>
-<td align="center"><em>RMSE / R2</em></td>
-<td align="center"><em>RMSE / R2</em></td>
-</tr>
-<tr>
-<td align="left"><strong>CO (ppm)</strong></td>
-<td align="center"><strong>0.2-0.3 / 0.3-0.5</strong></td>
-<td align="center">&gt;2 / &lt;0.01</td>
-</tr>
-<tr>
-<td align="left"><strong>NO<sub>2</sub> (ppb)</strong></td>
-<td align="center">21-24 / 0.3-0.5</td>
-<td align="center"><strong>6 - 12 / 0.4 - 0.6</strong></td>
-</tr>
-<tr>
-<td align="left"><strong>O3 (ppb)</strong></td>
-<td align="center">20-40 / 0.1-0.3</td>
-<td align="center"><strong>4-9 / 0.1 - 0.3</strong></td>
-</tr>
-</tbody>
-</table>
-<p>As seen above, the NO<sub>2</sub> correlation with both methods yields significant results for non-corrected signals, whilst the RMSE values are higher in the case of the manufacturer's proposal. Therefore, for this pollutant, the selected methodology will be the baseline method. On the contrary, the CO measurements are highly uncorrelated with the baseline method, whilst the original manufacturer's proposal yields decent results. Finally, the O3 correlation levels are lower than the CO and NO<sub>2</sub> measurements. This is possibly due to the O3 reference measurement equipment used in the Bologna campaing, since it shows an inverse relationship with NO<sub>2</sub> which suggests a biased pollutant calculation in the reference equipment:</p>
-<p><img alt="" src="https://i.imgur.com/258Gec6.jpg" /></p>
-<p>As well, the results from UCD that are used as a reference for NO<sub>2</sub>, suggest a poor zero/span calibration of the equipment as it yields negative results that could spoil the NO<sub>2</sub> correlation/model errors from those tests:</p>
-<p><img alt="" src="https://i.imgur.com/DbCuX0g.jpg" /></p>
-<h3 id="baseline-correction-based-on-auxiliary-electrode">Baseline correction based on auxiliary electrode<a class="headerlink" href="#baseline-correction-based-on-auxiliary-electrode" title="Permanent link">Link</a></h3>
-<p>As seen above, the results from applying this methodology to a low concentration, urban environment measurement with 4-electrode sensors yield significantly correlated results in the case of the reductive sensors. It was also seen that oxidation measurements are significantly correlated with the reference measurements while using the manufacturer's suggested method.</p>
-<p>However, as detailed in the following section, the use of the auxiliary electrode as the source of the correction yields better results due to:</p>
-<ul>
-<li>The auxiliary electrode is accounting for both, temperature and absolute humidity. The latter could be discarded if the relative humidity is not considered.</li>
-<li>Since data is treated in a day to day basis, variations of mean temperatures during different days could provoke significant correlations to be found at different timelapses. This provokes gaps in the prediction during night hours that are reduced by the use of the auxiliary electrode.</li>
-<li>Finally, it is preferrably to use data contained in a single sensor (such as the auxiliary electrode for the EC sensor) rather than including additional sensors in the algorithm.</li>
-</ul>
-<p>A comparison between the results using this proposed method and the reference measurement from both test campaigns is seen below:</p>
-<table>
-<thead>
-<tr>
-<th align="left"></th>
-<th align="center">Manufacturer Method</th>
-<th align="center">Baseline Method With Temperature</th>
-<th align="center">Baseline Method With Auxiliary Electrode</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left"><strong>Pollutant</strong></td>
-<td align="center"><em>RMSE / R2</em></td>
-<td align="center"><em>RMSE / R2</em></td>
-<td align="center"><em>RMSE / R2</em></td>
-</tr>
-<tr>
-<td align="left"><strong>CO (ppm)</strong></td>
-<td align="center"><strong>0.2-0.3 / 0.3-0.5</strong></td>
-<td align="center">&gt;2 / &lt;0.1</td>
-<td align="center">&gt;2 / &lt;0.01</td>
-</tr>
-<tr>
-<td align="left"><strong>NO<sub>2</sub> (ppb)</strong></td>
-<td align="center">21-24 / 0.3-0.5</td>
-<td align="center">6-12/0.1-0.4</td>
-<td align="center"><strong>6 - 12 / 0.4 - 0.6</strong></td>
-</tr>
-<tr>
-<td align="left"><strong>O3 (ppb)</strong></td>
-<td align="center">20-40 / 0.1-0.3</td>
-<td align="center">4-12 / &lt;0.2</td>
-<td align="center"><strong>4-9 / 0.1 - 0.3</strong></td>
-</tr>
-</tbody>
-</table>
+<h3 id="open-questions">Open questions<a class="headerlink" href="#open-questions" title="Permanent link">Link</a></h3>
+<p>These methods, however, are still open to discussion and more research is necessary to address all use cases. For this reason, the use of these sensors in the Smart Citizen Station is tailored to each use and adapted to the calibration needs of the deployment. </p>
+<p>Characterisation techniques based on manufacturer data and physical models (i.e. classical linear regression using sensor sensitivity, span and zero) require a big development effort in order to characterise the sensor behaviour that, in the case of low-cost sensors, is affected by a wide variety of external factors such as temperature, humidity and pollutant cross-sensitivity, each of which imply a larger characterisation effort and that can’t be fully represented in a controlled setting. On the other hand, statistical models are able to generate models that describe the sensor behaviour in a mathematical way, but they need to be properly adjusted with large amounts of test data, preferably in the actual deployment site. This approach can be applied per sensor, or to a batch of sensors, assuming that the inter-sensor variation is low or that they can be normalised.</p>
+<p>In the case of deploying the sensors in different locations, the conditions of these sites should be sufficiently similar to those when the model was generated, since many models won’t be able to extrapolate well, or account for effects they have not seen (i.e. temperature gradients, specific pollutants, etc). How much is ​sufficiently similar​, depends on the type of model and it is not easy to determine and, since this is not often assessed easily, researchers suggest (<sup id="fnref:5"><a class="footnote-ref" href="#fn:5">5</a></sup>, <sup id="fnref:6"><a class="footnote-ref" href="#fn:6">6</a></sup>) that a co-location prior to and post data acquisition with reference sensors should be carried out. In any case, the development of these models highly depends on the amount and quality of the data obtained from both: sensor data and reference data. In the case of reference data <sup id="fnref2:6"><a class="footnote-ref" href="#fn:6">6</a></sup> have pointed out that reference stations can deviate up to 15% from the actual pollutant concentration, but this has not been taken into account in this study.</p>
+<p>Since co-location possibilities could be limited, two options are compared for the calibration of these sensors: a specific on-site calibration with sensor co-location, aiming to calibrate the sensors with the data from that period; and a general model approach, in which all the co-location tests from the different sensors deployed are input into a statistical model that aims to describe the global behaviour. Whether these methods are able to generalise or not, it's yet to be answered, and it's probably to be defined for each use case in particular.</p>
+<h2 id="results">Results<a class="headerlink" href="#results" title="Permanent link">Link</a></h2>
+<p>A whole section of the electrochemical sensors validation is available in the iSCAPE D7.8 report on <em>Sensor monitoring experiences and technological innovations</em> <sup id="fnref:4"><a class="footnote-ref" href="#fn:4">4</a></sup>.</p>
 <h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">Link</a></h2>
 <div class="footnote">
 <hr />
@@ -3807,7 +3573,16 @@ electrochemical sensors and its implications for long-term stability - <em>Olale
 </li>
 <li id="fn:3">
 <p><a href="https://rmets.onlinelibrary.wiley.com/doi/full/10.1002/wea.781">Modelling atmospheric composition
-in urban street canyons - <em>Vivien Bright, William Bloss and Xiaoming Cai</em></a>&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+in urban street canyons - <em>Vivien Bright, William Bloss and Xiaoming Cai</em></a>&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:4">
+<p><a href="/assets/publications/iSCAPE_D78.pdf">ISCAPE D7.8 Sensor monitoring experiences and technological innovations</a>]&#160;<a class="footnote-backref" href="#fnref:4" title="Jump back to footnote 4 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:4" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+<li id="fn:5">
+<p><a href="https://doi.org/10.1016/j.envpol.2017.09.042">Kizel et al - Node-to-node field calibration of wireless distributed air pollution sensor network. In: Environmental pollution (2017)</a>&#160;<a class="footnote-backref" href="#fnref:5" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+</li>
+<li id="fn:6">
+<p><a href="https://doi.org/10.1016/j.atmosenv.2019.06.028">Dušan et al - In search of an optimal in-field calibration method of low-cost gas sensors for ambient air pollutants: comparison of linear, multilinear and artificial neural network approaches. In: Atmospheric Environment (2018)</a>&#160;<a class="footnote-backref" href="#fnref:6" title="Jump back to footnote 6 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:6" title="Jump back to footnote 6 in the text">&#8617;</a></p>
 </li>
 </ol>
 </div>
