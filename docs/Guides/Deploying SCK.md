@@ -44,15 +44,23 @@ The general tips from above also apply, as well as:
 The SCK can be powered through:
 
 - LiPo 3.7V Battery: default 2000mAh - large 6000mAh
-- Mains power, through an USB adaptor (not recommended) or a [custom power supply](https://github.com/fablabbcn/smartcitizen-enclosures/tree/master/SmartCitizen%20PowerSupply)
-- [Solar panel](https://github.com/fablabbcn/smartcitizen-enclosures/tree/master/SmartCitizen%20PowerSupply#solar-power-controller-optional)
+- Mains power, through an USB adaptor (not recommended) or a [custom power supply](https://github.com/fablabbcn/smartcitizen-enclosures/tree/master/SmartCitizen%20PowerSupply) in [this enclosure](https://uk.rs-online.com/web/p/junction-boxes/2663120/)
+- [Solar panel](https://github.com/fablabbcn/smartcitizen-enclosures/tree/master/SmartCitizen%20PowerSupply#solar-power-controller-optional): we use the [Solar Panel 6W 6V from Voltaic Systems](https://voltaicsystems.com/6-watt-panel/) with the [MPTT DF Robot DFR0559](https://wiki.dfrobot.com/Solar_Power_Manager_5V_SKU__DFR0559) and an additional LiPo Battery, all in [this enclosure](https://uk.rs-online.com/web/p/junction-boxes/2663120/)
 
 #### Using the custom power supply
 
 The power supply is very simple to operate. If you have purchased one, normally, everything should be connected and ready to go. In some cases, the AC cable (left screw connector) is not connected, and it can be simply connected through the cable gland into the terminals. No ground is required.
 
-When connecting the plug to the wall socket, the red LED should turn on indicating 5V output. The input is protected with a 1A Fuse and the pack should be enclosed in a waterproof enclosure as detailed [here](https://github.com/fablabbcn/smartcitizen-enclosures/tree/master/SmartCitizen%20PowerSupply)
+![](https://i.imgur.com/5vjmOdX.jpg)
+
+When connecting the plug to the wall socket, the red LED should turn on indicating 5V output. The input is protected with a 1A Fuse and the pack should be enclosed in a waterproof enclosure as detailed [here](https://github.com/fablabbcn/smartcitizen-enclosures/tree/master/SmartCitizen%20PowerSupply).
+
+![](https://i.imgur.com/rVHeuyY.jpg)
 
 ### Connectivity
 
-The sensors can log data in sd card or remote post data to the Smart Citizen Platform. In the case of remote logging and outdoor deployments, a _connectivity unit_ can be used with a SIM Card. Please, email us at [info@smartcitizen](mailto:info@smartcitizen.me) for more information.
+The sensors can log data in sd card or remote post data to the Smart Citizen Platform. In the case of remote logging and outdoor deployments, a _connectivity unit_ can be used with a SIM Card (not provided). These units are enclosed in a waterproof box and can be powered from 230VAC 3m cable (or more), deploying a network to which several SCKs can be connected in an outdoor deployment. 
+
+You can check the BOM and installation/building [here](https://github.com/fablabbcn/smartcitizen-enclosures/tree/master/SmartCitizen%20Connectivity%20Unit) and you can email us at [info@smartcitizen](mailto:info@smartcitizen.me) for more information.
+
+![](https://i.imgur.com/y9ap4LK.jpg)
