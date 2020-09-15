@@ -49,8 +49,10 @@ The SCK can be powered through:
 
 #### Using the custom power supply
 
-The power supply is very simple to operate. If you have purchased one, normally, everything should be connected and ready to go. In some cases, the AC cable (left screw connector) is not connected, and it can be simply connected through the cable gland into the terminals. No ground is required. When connecting the plug to the wall socket, the red LED should turn on indicating 5V output. The input is protected with a 1A Fuse and the pack should be enclosed in a waterproof enclosure as detailed [here](https://github.com/fablabbcn/smartcitizen-enclosures/tree/master/SmartCitizen%20PowerSupply)
+The power supply is very simple to operate. If you have purchased one, normally, everything should be connected and ready to go. In some cases, the AC cable (left screw connector) is not connected, and it can be simply connected through the cable gland into the terminals. No ground is required.
+
+When connecting the plug to the wall socket, the red LED should turn on indicating 5V output. The input is protected with a 1A Fuse and the pack should be enclosed in a waterproof enclosure as detailed [here](https://github.com/fablabbcn/smartcitizen-enclosures/tree/master/SmartCitizen%20PowerSupply)
 
 ### Connectivity
 
-The sensors can log data in sd card or remote post data to the Smart Citizen Platform. In the case of remote logging and outdoor deployments, a _connectivity unit_ can be used with a SIM Card. Please, email us at [info@smartcitizen](mailto:info@smartcitizen.me] for more information.
+The sensors can log data in sd card or remote post data to the Smart Citizen Platform. In the case of remote logging and outdoor deployments, a _connectivity unit_ can be used with a SIM Card. Please, email us at [info@smartcitizen](mailto:info@smartcitizen.me) for more information.
