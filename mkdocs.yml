@@ -69,6 +69,7 @@ nav:
       - Deploying the SCK: Guides/Deploying SCK.md
       - iSCAPE Station V1: Guides/Deploying iSCAPE Station V1.md
       - iSCAPE Station V2: Guides/Deploying iSCAPE Station V2.md
+      - Installing the Connectivity Units: Guides/Installing Connectivity Units.md
     - Legacy Hardware:
       - Smart Citizen 1.1:
         - Main: Legacy Hardware/index.md

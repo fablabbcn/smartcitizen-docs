@@ -59,8 +59,11 @@ When connecting the plug to the wall socket, the red LED should turn on indicati
 
 ### Connectivity
 
-The sensors can log data in sd card or remote post data to the Smart Citizen Platform. In the case of remote logging and outdoor deployments, a _connectivity unit_ can be used with a SIM Card (not provided). These units are enclosed in a waterproof box and can be powered from 230VAC 3m cable (or more), deploying a network to which several SCKs can be connected in an outdoor deployment. 
+The sensors can log data in sd card or remote post data to the Smart Citizen Platform. In the case of remote logging and outdoor deployments, a _connectivity unit_ can be used with a SIM Card data plan. These units are enclosed in a waterproof box and can be powered from 230VAC 3m cable (or more), deploying a network to which several SCKs can be connected in an outdoor deployment. 
 
 You can check the BOM and installation/building [here](https://github.com/fablabbcn/smartcitizen-enclosures/tree/master/SmartCitizen%20Connectivity%20Unit) and you can email us at [info@smartcitizen](mailto:info@smartcitizen.me) for more information.
 
 ![](https://i.imgur.com/y9ap4LK.jpg)
+
+!!! info "Got one?"
+    Check this [installation guide to get started](/Guides/Installing Connectivity Units)
