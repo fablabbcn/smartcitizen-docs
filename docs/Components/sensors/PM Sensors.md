@@ -47,8 +47,3 @@ From the long term deployment point of view, the one-shot mode has not been foun
 ### Powering the sensor
 
 Make sure that you power the Smart Citizen Kit with a _good enough USB cable_ and with an adaptor that can provide at least 1A. We have found some issues when powering the sensor with a thin cable, or from a weak power source, like a screen.
-
-
-
-
-
