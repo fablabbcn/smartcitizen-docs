@@ -1992,6 +1992,141 @@
   </li>
 
         
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item md-nav__item--nested">
+
+    <!-- Active checkbox expands items contained within nested section -->
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5"
+          type="checkbox" id="nav-3-5" />
+    
+
+    <!-- Expand active pages -->
+    <label class="md-nav__link" for="nav-3-5">
+      Almabike
+    </label>
+    <nav class="md-nav" data-md-component="collapsible"
+        data-md-level="2">
+      <label class="md-nav__title" for="nav-3-5">
+        Almabike
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+
+        <!-- Render nested item list -->
+        
+        
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item">
+    <a href="../../Use%20cases/Almabike/User%20Manual/" title="User Manual"
+        class="md-nav__link">
+      User Manual
+    </a>
+  </li>
+
+        
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item">
+    <a href="../../Use%20cases/Almabike/Test%20Results/" title="Test Results"
+        class="md-nav__link">
+      Test Results
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+<!-- Currently active page -->
+
+        
       </ul>
     </nav>
   </li>
@@ -3863,11 +3998,9 @@ Replacing wifi_ssid and wifi_password with your actual wifi network     informat
 <p><strong>Linux</strong></p>
 <div class="highlight"><pre><span></span><code>MY_IP_RANGE=$(ip addr | grep &#39;state UP&#39; -A2 | tail -n1 | awk &#39;{print $2}&#39;) &amp;&amp; nmap -sn $MY_IP_RANGE &amp;&amp; IP=$(arp -na | grep b8:27:eb | grep -Eo &#39;[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}&#39;) &amp;&amp; ssh $IP;
 </code></pre></div>
-
 <p><strong>Mac</strong> </p>
 <div class="highlight"><pre><span></span><code>MY_RANGE=$(ip addr | grep &quot;UP&quot; -A3 | grep &#39;192&#39; -A0 | awk &#39;{print $2}&#39;) &amp;&amp; nmap -sn $MY_RANGE &amp;&amp; arp -na | grep b8:27:eb
 </code></pre></div>
-
 <ul>
 <li>
 <p>SSH login without password:</p>
@@ -3886,7 +4019,6 @@ sudo apt-get update &amp;&amp; sudo apt-get dist-upgrade
 Install some <strong>dependencies</strong>:</p>
 <div class="highlight"><pre><span></span><code>sudo apt-get install git autoconf libtool make pkg-config libusb-1.0-0 libusb-1.0-0-dev telnet sshfs
 </code></pre></div>
-
 <h3 id="openocd-installation">Openocd installation<a class="headerlink" href="#openocd-installation" title="Permanent link">Link</a></h3>
 <ul>
 <li>Clone <strong>openocd</strong> repository and compile:</li>
@@ -3898,7 +4030,6 @@ cd openocd-code
 make
 sudo make install
 </code></pre></div>
-
 <p>The list of interfaces that openOCD can use is under: <em>/usr/local/share/openocd/scripts/interface</em>.</p>
 <p>In order to use the <a href="http://www.arm.com/products/system-ip/debug-trace/coresight-soc-components/serial-wire-debug.php">SWD connector</a> that the SCK features, by using <em>Bit Banging</em>, we connect it directly to the Raspberry Pi GPIOs:</p>
 <p><img alt="" src="https://i.imgur.com/qJ2fV3N.jpg" /></p>
@@ -3919,15 +4050,12 @@ init
 targets
 reset halt
 </code></pre></div>
-
 <p>You can store this file in OpenOCD scripts dir so it will auto find it</p>
 <div class="highlight"><pre><span></span><code>sudo mv sck.cfg /usr/local/share/openocd/scripts/
 </code></pre></div>
-
 <p>and then run the OpenOCD server with:</p>
 <div class="highlight"><pre><span></span><code>sudo openocd -f sck.cfg
 </code></pre></div>
-
 <p>Then you can connect to OpenOCD, if you want to connect from an external computer, replace <code>127.0.0.1</code> with your Raspberry Pi IP address.
 <div class="highlight"><pre><span></span><code>telnet 127.0.0.1 4444
 </code></pre></div></p>
@@ -3992,7 +4120,6 @@ verify_image firmware.bin 8192
 reset run
 reset run
 </code></pre></div>
-
 <h2 id="gdb">GDB<a class="headerlink" href="#gdb" title="Permanent link">Link</a></h2>
 <h3 id="general-description">General description<a class="headerlink" href="#general-description" title="Permanent link">Link</a></h3>
 <p>The purpose of a debugger such as GDB is to allow you to see what is going on “inside” another program while it executes—or what another program was doing at the moment it crashed.</p>
@@ -4009,7 +4136,6 @@ arm-none-eabi-gdb ./pioenvs/zeroUSB/firmware.elf
 (gdb) target remote RaspberryAddress:3333
 (gdb) monitor reset run
 </code></pre></div>
-
 <p>If you are using <em>platformio</em>, you need to modify the compiling option to avoid optimisation with -0g message to the compiler. In case you are not using <em>platformio</em>, activate verbose compiling output at Arduino IDE and find your compiled .elf directory.</p>
 <div class="highlight"><pre><span></span><code>[env:zeroUSB]
 platform = atmelsam
@@ -4017,7 +4143,6 @@ board = zeroUSB
 framework = arduino
 build_flags = -Og
 </code></pre></div>
-
 <p>Now we are all set and ready to go. The debugger is waiting for instructions on the execution, which we detail below.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
@@ -4155,7 +4280,6 @@ $12 = 2
     a. Define Shell build in Sublime Text and configure a build sytem with:</p>
 <div class="highlight"><pre><span></span><code>&quot;shell_cmd&quot;: &quot;cd .. &amp;&amp; pio run&quot;
 </code></pre></div>
-
 <p>Then, everytime you hit Ctrl+B (Cmd+B) and you use your custom build system, it will automatically use this option.</p>
 <p>b. Or hit <code>pio run</code> in another terminal located in your project root directory</p>
 </li>

@@ -1992,6 +1992,141 @@
   </li>
 
         
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item md-nav__item--nested">
+
+    <!-- Active checkbox expands items contained within nested section -->
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5"
+          type="checkbox" id="nav-3-5" />
+    
+
+    <!-- Expand active pages -->
+    <label class="md-nav__link" for="nav-3-5">
+      Almabike
+    </label>
+    <nav class="md-nav" data-md-component="collapsible"
+        data-md-level="2">
+      <label class="md-nav__title" for="nav-3-5">
+        Almabike
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+
+        <!-- Render nested item list -->
+        
+        
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item">
+    <a href="../../Use%20cases/Almabike/User%20Manual/" title="User Manual"
+        class="md-nav__link">
+      User Manual
+    </a>
+  </li>
+
+        
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item">
+    <a href="../../Use%20cases/Almabike/Test%20Results/" title="Test Results"
+        class="md-nav__link">
+      Test Results
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+<!-- Currently active page -->
+
+        
       </ul>
     </nav>
   </li>
@@ -3600,13 +3735,11 @@ tty.usbmodem1411
 SCK &gt;
 ...
 </code></pre></div>
-
 <p>If you already installed <a href="https://platformio.org/">platformio</a> to <a href="/Guides/Edit%20the%20Firmware/">edit the firmware</a> you can use it here, too</p>
 <div class="highlight"><pre><span></span><code>&gt; pio device monitor
 SCK &gt;
 ...
 </code></pre></div>
-
 <div class="admonition warning">
 <p class="admonition-title">Be patient!</p>
 <p>The port will take a little time to appear in your list of devices. Normally the LED of your SCK will be <strong>static white</strong> during that period.</p>
@@ -3638,30 +3771,25 @@ debug:       Toggle debug messages: debug [-sdcard] [-espcom] [-list]
 shell:       Shows or sets shell mode: shell [-on] [-off]
 mqtt:        Publish custom mqtt message: mqtt [&quot;topic&quot; &quot;message&quot;]
 </code></pre></div>
-
 <div class="admonition info">
 <p class="admonition-title">Pro tip</p>
 <p>The SCK outputs  a lot of information via serial. This can be sometimes confusing while typing commands. You can silent it a bit with this command:</p>
 <div class="highlight"><pre><span></span><code>SCK &gt; shell -on
 Shell mode: on
 </code></pre></div>
-
 <p>This will turn your LED static yellow, and no output except responses to your commands will be given. </p>
 <p>Remember to turn it off after you are done experimenting!</p>
 <div class="highlight"><pre><span></span><code>SCK &gt; shell -off
 Shell mode: off
 </code></pre></div>
-
 </div>
 <h3 id="set-the-recording-configuration">Set the recording configuration<a class="headerlink" href="#set-the-recording-configuration" title="Permanent link">Link</a></h3>
 <p>If you want to change your recording mode to, for instance, <code>sdcard</code> mode, you could do so by typing:</p>
 <div class="highlight"><pre><span></span><code>SCK &gt; config -mode sdcard
 </code></pre></div>
-
 <p>To set it up in <code>network</code> mode:</p>
 <div class="highlight"><pre><span></span><code>SCK &gt; config -mode network -wifi &quot;SSID&quot; &quot;PASSWORD&quot; -token 123456
 </code></pre></div>
-
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Note that the token is not between quotes since it's always 6 digits</p>
@@ -3669,7 +3797,6 @@ Shell mode: off
 <p>To modify your wifi:</p>
 <div class="highlight"><pre><span></span><code>SCK &gt; config -wifi &quot;NEWSSID&quot; &quot;NEWPASSWORD&quot;
 </code></pre></div>
-
 <p>You can check your current configuration by typing <code>config</code>:</p>
 <div class="highlight"><pre><span></span><code>SCK &gt; config
 Mode: sdcard
@@ -3679,7 +3806,6 @@ Wifi credentials: not configured
 Token: not configured
 Mac address:  11:22:33:44:55:66
 </code></pre></div>
-
 <h3 id="set-recording-and-publication-intervals">Set recording and publication intervals<a class="headerlink" href="#set-recording-and-publication-intervals" title="Permanent link">Link</a></h3>
 <p>In order to understand the reading and publication intervals, it is important to describe how the structure of the measurements is done:</p>
 <ol>
@@ -3692,29 +3818,24 @@ Mac address:  11:22:33:44:55:66
 <p>All this can be configured using the shell interface. For instance, to set the publication interval to every 10 minutes, we could do:</p>
 <div class="highlight"><pre><span></span><code>config -pubint 600
 </code></pre></div>
-
 <p>Or to set the reading interval to every 3 minutes:</p>
 <div class="highlight"><pre><span></span><code>config -readint 180
 </code></pre></div>
-
 <p>Or both at 10 minutes:</p>
 <div class="highlight"><pre><span></span><code>config -pubint 600 -readint 600
 </code></pre></div>
-
 <p>If we want to configure one specific sensor, we can do so by typing the following, only remember, that it's rounded to the closest integer multiplier of the <em>overall reading interval</em>:</p>
 <div class="highlight"><pre><span></span><code>SCK &gt; sensor temp -interval 360
 The sensor read interval is calculated as a multiple of general read interval (360)
 Changing interval of Temperature to 360
 Saved configuration on eeprom!!
 </code></pre></div>
-
 <p>For instance, if we try to do 1.5 times the reading interval of the temperature sensor, we will get:</p>
 <div class="highlight"><pre><span></span><code>SCK &gt; sensor temp -interval 90 
 The sensor read interval is calculated as a multiple of general read interval (60)
 Changing interval of Temperature to 60
 Saved configuration on eeprom!!
 </code></pre></div>
-
 <p>Some <strong>limitations</strong> apply though:</p>
 <ol>
 <li>The minimum reading and publication interval is 30s</li>
@@ -3733,7 +3854,6 @@ ESP MAC address: 86:0D:8E:A7:7F:CC
 ESP version: not synced
 ESP build date: not synced
 </code></pre></div>
-
 <h3 id="listmodify-the-active-sensors">List/modify the active sensors<a class="headerlink" href="#listmodify-the-active-sensors" title="Permanent link">Link</a></h3>
 <p>By typing in <code>sensor</code>, a <strong>list of enabled and supported sensors</strong> is displayed:</p>
 <div class="highlight"><pre><span></span><code>SCK &gt; sensor
@@ -3757,33 +3877,28 @@ PM 1.0 (60 sec)
 PM 2.5 (60 sec)
 PM 10.0 (60 sec)
 </code></pre></div>
-
 <p>To <strong>disable</strong> one sensor, you can type in part of the sensor name:</p>
 <div class="highlight"><pre><span></span><code>SCK &gt; sensor -disable Noise
 Disabling Noise dBA
 Saved configuration on eeprom!!
 </code></pre></div>
-
 <p>To <strong>enable</strong> it, if it's present:</p>
 <div class="highlight"><pre><span></span><code>SCK &gt; sensor -enable Noise
 Enabling Noise dBA
 Saved configuration on eeprom!!
 </code></pre></div>
-
 <div class="admonition warning">
 <p class="admonition-title">Only if available!</p>
 <p>If the sensor you are trying to connect is not recognised, the kit will complain:</p>
 <div class="highlight"><pre><span></span><code>SCK &gt; sensor -enable atlas
 Failed enabling Atlas Temperature
 </code></pre></div>
-
 </div>
 <h3 id="readmonitor-some-sensors">Read/Monitor some sensors<a class="headerlink" href="#readmonitor-some-sensors" title="Permanent link">Link</a></h3>
 <p>If one sensor is enabled, you can <code>read</code> it (once) or <code>monitor</code> it (as fast as the SCK can):</p>
 <div class="highlight"><pre><span></span><code>SCK &gt; read Noise
 Noise dBA: 53.85 dBA
 </code></pre></div>
-
 <p>To monitor <strong>one sensor</strong>:</p>
 <div class="highlight"><pre><span></span><code>SCK &gt; monitor light
 Time    Miliseconds     Light
@@ -3801,7 +3916,6 @@ Time    Miliseconds     Light
 2019-07-10T17:58:08Z    98      136
 ...
 </code></pre></div>
-
 <p>Or all of them, with no arguments:</p>
 <div class="highlight"><pre><span></span><code>SCK &gt; monitor
 Time    Miliseconds     Battery Light   Temperature     Humidity        Noise dBA       Barometric pressure     VOC Gas CCS811  eCO2 Gas CCS811 PM 1.0  PM 2.5  PM 10.0
@@ -3809,7 +3923,6 @@ Time    Miliseconds     Battery Light   Temperature     Humidity        Noise dB
 2019-07-11T09:13:07Z    3195    37      138     28.78   57.65   1.5    101.30  1.00    408.00  1.5    1.5    1.5
 2019-07-11T09:13:08Z    694     37      136     28.77   57.62   1.5    101.29  1.00    408.00  1.5    1.5    1.5
 </code></pre></div>
-
 <p>If you don't need to output the <code>miliseconds</code> column (the time since last reading) or the <code>timestamp</code>, you can do so by:</p>
 <div class="highlight"><pre><span></span><code>SCK &gt; monitor -noms light
 Time    Light
@@ -3820,7 +3933,6 @@ Time    Light
 2019-07-10T17:58:59Z    136
 ...
 </code></pre></div>
-
 <div class="highlight"><pre><span></span><code>SCK &gt; monitor -notime light
 Miliseconds     Light
 6       137
@@ -3830,7 +3942,6 @@ Miliseconds     Light
 108     137
 ...
 </code></pre></div>
-
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>If your kit has no time configured (the LED should be flashing), the output would look like:</p>
@@ -3845,12 +3956,10 @@ Time    Miliseconds     Noise dBA
 0       187     50.81
 ...
 </code></pre></div>
-
 </div>
 <p>Something cool to do with the <code>monitor</code>, is to log the sensor output into a file for later analysis. For instance, in your terminal you could do:</p>
 <div class="highlight"><pre><span></span><code>&gt; echo &quot;monitor pm light&quot; &gt; /dev/cu.usbmodem1411 &amp;&amp; screen -L /dev/cu.usbmodem1411
 </code></pre></div>
-
 <p>Then, if we check the contents of the file (normally something like <code>screenlog.X</code>:</p>
 <div class="highlight"><pre><span></span><code>monitor light
 Time    Miliseconds     Light
@@ -3869,7 +3978,6 @@ Time    Miliseconds     Light
 2019-07-11T09:10:06Z    98      141
 ...
 </code></pre></div>
-
 <p>This can be useful in case you want to log data as fast as possible, with little delay between readings (~100ms).    </p>
 <h2 id="advanced-but-cool-example">Advanced (but cool) example!<a class="headerlink" href="#advanced-but-cool-example" title="Permanent link">Link</a></h2>
 <div class="admonition example">
@@ -3885,13 +3993,11 @@ Time    Miliseconds     Light
 <div class="highlight"><pre><span></span><code>SCK &gt; sensor -enable fft
 Enabling Noise FFT
 </code></pre></div>
-
 <ul>
 <li>Then, monitor and log it in a file with:</li>
 </ul>
 <div class="highlight"><pre><span></span><code>echo &quot;monitor fft&quot; &gt; /dev/cu.usbmodem1411 &amp;&amp; screen -L /dev/cu.usbmodem1411
 </code></pre></div>
-
 <ul>
 <li>In this file, we will have something like:</li>
 </ul>
@@ -3906,7 +4012,6 @@ Enabling Noise FFT
 2019-07-11T09:30:01Z    5   null
 ...
 </code></pre></div>
-
 <ul>
 <li>
 <p>The values between the dates are the actual FFT spectrum. We will now clean the lines with the dates and then plot the data. For this, we will use a <code>python</code> code to make things easier. You can download the code <a href="/assets/examples/spectrum_example.py">here</a>.</p>
@@ -3917,7 +4022,6 @@ Enabling Noise FFT
 </ul>
 <div class="highlight"><pre><span></span><code>&gt; python spectrum_example.py
 </code></pre></div>
-
 <p>We will have two outputs: a <code>csv</code> file with the spectrums in rows, and a png image that looks like this!</p>
 <p><img alt="" src="https://i.imgur.com/KZfFDam.png" /></p>
 <p>You can see that we were playing with a <a href="http://onlinetonegenerator.com/">tone generator</a> to make some high pitch noises at 10kHz and 20kHz. </p>

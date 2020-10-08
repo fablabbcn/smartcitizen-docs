@@ -1990,6 +1990,141 @@
   </li>
 
         
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item md-nav__item--nested">
+
+    <!-- Active checkbox expands items contained within nested section -->
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5"
+          type="checkbox" id="nav-3-5" />
+    
+
+    <!-- Expand active pages -->
+    <label class="md-nav__link" for="nav-3-5">
+      Almabike
+    </label>
+    <nav class="md-nav" data-md-component="collapsible"
+        data-md-level="2">
+      <label class="md-nav__title" for="nav-3-5">
+        Almabike
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+
+        <!-- Render nested item list -->
+        
+        
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item">
+    <a href="../../Use%20cases/Almabike/User%20Manual/" title="User Manual"
+        class="md-nav__link">
+      User Manual
+    </a>
+  </li>
+
+        
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item">
+    <a href="../../Use%20cases/Almabike/Test%20Results/" title="Test Results"
+        class="md-nav__link">
+      Test Results
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+<!-- Currently active page -->
+
+        
       </ul>
     </nav>
   </li>
@@ -3526,7 +3661,6 @@
 ├── src
 ├── tasks
 </code></pre></div>
-
 <p>The <code>data</code> directory will be the place where we will organise our data. Each of the sub-directories is explained below:</p>
 <ul>
 <li><code>export</code>: we will export processed data or images here</li>
@@ -3551,7 +3685,6 @@
 <div class="highlight"><pre><span></span><code>autoload -Uz zmv
 zmv &#39;(*).(0*)&#39; &#39;$1_$2.CSV&#39;
 </code></pre></div>
-
 </div>
 <p>We can now concatenate all the sd card data from a device with the <code>concat_script.py</code> in the <code>data/scripts</code> folder.</p>
 <p>We can access the script's help by typing in the terminal:</p>
@@ -3571,7 +3704,6 @@ optional arguments:
   --directory DIRECTORY, -d DIRECTORY
                         Directory for csv files to concatenate
 </code></pre></div>
-
 <p>Create a directory (<code>FILES</code>) and put the sd card data of one device in it. Then, run the script with:</p>
 <div class="highlight"><pre><span></span><code>(smartcitizen-data) ➜  scripts git:(master) ✗ python concat_script.py -k -d FILES
 Using files in /Users/macoscar/Documents/04_Projects/02_FabLab/01_SmartCitizen/01_Repositories/DataAnalysis/smartcitizen-iscape-data/data/scripts/FILES
@@ -3587,13 +3719,11 @@ Files to concat:
 Updating header
 Saving file to: Log_Concat.csv
 </code></pre></div>
-
 <p>And if we now navigate to the <code>FILES</code> directory:</p>
 <div class="highlight"><pre><span></span><code>(smartcitizen-data) ➜  FILES git:(master) ✗ ls
 18-11-08.CSV   18-11-13.CSV   18-11-15.CSV   18-11-17.CSV   Log_Concat.csv
 18-11-09.CSV   18-11-14.CSV   18-11-16.CSV   18-11-18.CSV
 </code></pre></div>
-
 <p>We can find our concatenated file!</p>
 <h3 id="create-a-test">Create a test<a class="headerlink" href="#create-a-test" title="Permanent link">Link</a></h3>
 <p>Once we have all our concatenated files, we can proceed to create our test. For this, you can launch <code>jupyter lab</code> and open the <a href="https://github.com/fablabbcn/smartcitizen-iscape-data/blob/master/examples/test_creation.ipynb">examples/test_creation.ipynb</a> notebook.</p>
@@ -3628,7 +3758,6 @@ report = &#39;&#39;
 notes = &#39;&#39;
 #----
 </code></pre></div>
-
 <h4 id="add-device-information">Add device information<a class="headerlink" href="#add-device-information" title="Permanent link">Link</a></h4>
 <p>An example for each type of device is given below. A test can contain as many devices you need, each with an unique identifier.</p>
 <ul>
@@ -3642,7 +3771,6 @@ notes = &#39;&#39;
                 &#39;frequency&#39;: &#39;1Min&#39;,
                 &#39;source&#39;: &#39;api&#39;})
 </code></pre></div>
-
 <ul>
 <li>Data of a simple SC <code>KIT</code> from the API, downloading the data from a certain date, up to the last available data: </li>
 </ul>
@@ -3656,7 +3784,6 @@ notes = &#39;&#39;
                 &#39;min_date&#39;: &#39;2019-07-12&#39;,
                 &#39;max_date&#39;: None})
 </code></pre></div>
-
 <ul>
 <li>Data of a SC <code>STATION</code> from the local csv data, located in London. The csv file is in <code>data/raw/5527.csv</code>. Also, the device is archived in the device history calibration described in <a href="#Devices calibration">this section</a>:</li>
 </ul>
@@ -3671,7 +3798,6 @@ notes = &#39;&#39;
                 &#39;fileNameRaw&#39;: device_name + &#39;.csv&#39;, 
                 &#39;fileNameInfo&#39;: &#39;&#39;})
 </code></pre></div>
-
 <ul>
 <li>Data of a SC <code>STATION</code> from the API, located in London. The device is archived in the device history calibration:</li>
 </ul>
@@ -3684,7 +3810,6 @@ notes = &#39;&#39;
                 &#39;frequency&#39;: &#39;1Min&#39;,
                 &#39;source&#39;: &#39;api&#39;})
 </code></pre></div>
-
 <ul>
 <li>Data of another device (reference equipment in this case), with local csv file, with frequency of 15Min. Extra information has to be given so that we can process the units of the different channels, the time index format and the location. The framework will conver the names from the <code>source_channel_names</code> to <code>target_channel_names</code>, and convert the <code>units</code>, in case they are available.</li>
 </ul>
@@ -3702,13 +3827,11 @@ notes = &#39;&#39;
                               },
                 &#39;location&#39;: &#39;Europe/Madrid&#39;})
 </code></pre></div>
-
 <h4 id="process-everything">Process everything<a class="headerlink" href="#process-everything" title="Permanent link">Link</a></h4>
 <p>Once we have all the information, we can then process the files:</p>
 <div class="highlight"><pre><span></span><code>list_devices = [device_1, device_2, device_3, device_4, device_5]
 newtest.create(details, list_devices)
 </code></pre></div>
-
 <h2 id="devices-history-and-calibration">Devices history and calibration<a class="headerlink" href="#devices-history-and-calibration" title="Permanent link">Link</a></h2>
 <p>Each device can have different sensors throughout it's life and, for each sensor, we can have different calibration parameters. These two sets of information are stored in <code>data/interim</code>. </p>
 <h3 id="devices-history">Devices History<a class="headerlink" href="#devices-history" title="Permanent link">Link</a></h3>
@@ -3731,13 +3854,11 @@ newtest.create(details, list_devices)
     PMS5003_1: 2017123000701
     PMS5003_2: 2017123000703
 </code></pre></div>
-
 <h3 id="devices-calibration">Devices calibration<a class="headerlink" href="#devices-calibration" title="Permanent link">Link</a></h3>
 <p>Stored in <code>data/interim/CalibrationData/</code>, each json file contains a descriptor file for each sensor calibration data. An example for Alphasense's Electrochemical sensors is shown below:</p>
 <div class="highlight"><pre><span></span><code>{&quot;Serial No&quot;: &quot;162031254&quot;, &quot;Target 2&quot;: &quot;na&quot;, &quot;Target 1&quot;: &quot;CO&quot;, , &quot;Sensitivity 1&quot;: &quot;568.3&quot;, &quot;Sensitivity 2&quot;: &quot;0&quot;, &quot;Zero Current&quot;: &quot;-34&quot;, &quot;Aux Zero Current&quot;: &quot;-20.8&quot;}
 {&quot;Serial No&quot;: &quot;162031257&quot;, &quot;Target 2&quot;: &quot;na&quot;, &quot;Target 1&quot;: &quot;CO&quot;, , &quot;Sensitivity 1&quot;: &quot;493.1&quot;, &quot;Sensitivity 2&quot;: &quot;0&quot;, &quot;Zero Current&quot;: &quot;-69.4&quot;, &quot;Aux Zero Current&quot;: &quot;-18.6&quot;}
 </code></pre></div>
-
 <div class="admonition info">
 <p class="admonition-title">Calibration data</p>
 <p>Currently, we store unique calibrations only for Alphasense sensors. This calibration is provided by the manufacturer directly and stored in this file.</p>
@@ -3752,7 +3873,6 @@ newtest.create(details, list_devices)
 <p>If you have local tests created as defined <a href="/Guides/Organise your data/#create-a-test">here</a>, the tests will be accessible when you do:</p>
 <div class="highlight"><pre><span></span><code>[print (test) for test in data.get_tests(data.dataDirectory).keys()]
 </code></pre></div>
-
 <p>You can load as many as you want, and select the <code>frequency</code> and what to do with <code>NaN</code> values.</p>
 <div class="admonition warning">
 <p class="admonition-title">Decide this now</p>
@@ -3761,7 +3881,6 @@ newtest.create(details, list_devices)
 <p>The set of options below will try to: </p>
 <div class="highlight"><pre><span></span><code>options = {&#39;clean_na&#39;: True, &#39;clean_na_method&#39;: &#39;drop&#39;, &#39;frequency&#39;: &#39;3Min&#39;, &#39;load_cached_API&#39;: True, &#39;store_cached_API&#39;: True}
 </code></pre></div>
-
 <ul>
 <li>Clean NaNs and how (<code>drop</code> or <code>fill</code>)</li>
 <li>Frequency for the data (<code>frequency</code>)</li>
@@ -3778,19 +3897,16 @@ Kit SCK73FD located Europe/Madrid
 Kit SCK73FD has been loaded
 ...
 </code></pre></div>
-
 <h3 id="loading-data-from-the-api">Loading data from the API<a class="headerlink" href="#loading-data-from-the-api" title="Permanent link">Link</a></h3>
 <p>The devices are the devices IDs from: <code>https://smartcitizen.me/kits/1234</code>. An example is shown below:</p>
 <div class="highlight"><pre><span></span><code>device = api_device(&#39;1234&#39;, verbose = True)
 device.get_device_data(start_date = None, end_date = None, frequency = &#39;1Min&#39;, clean_na = False, clean_na_method = None);
 </code></pre></div>
-
 <p>You should see something like this:</p>
 <div class="highlight"><pre><span></span><code>Loading device 1234 from API
 Kit ID 19
 ...
 </code></pre></div>
-
 <p>Note that if the device ID is in the <a href="/Guides/Organise your data/#devices-history">devices history</a>, it will also load the calibration data for you.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
@@ -3801,18 +3917,15 @@ Kit ID 19
 <div class="highlight"><pre><span></span><code># Tests
 data.tests.keys()
 </code></pre></div>
-
 <p>Devices within a test.
 <div class="highlight"><pre><span></span><code>data.tests[testname].devices.keys()
 </code></pre></div></p>
 <p>Data inside the device:</p>
 <div class="highlight"><pre><span></span><code>data.tests[testname].devices[device_name].readings
 </code></pre></div>
-
 <p>We can check the columns in it by:</p>
 <div class="highlight"><pre><span></span><code>data.tests[testname].devices[device_name].readings.columns
 </code></pre></div>
-
 <h2 id="export-data">Export data<a class="headerlink" href="#export-data" title="Permanent link">Link</a></h2>
 <p>Once we have concluded our analysis, we can export the process data. </p>
 <div class="highlight"><pre><span></span><code># Test name where the device is
@@ -3824,7 +3937,6 @@ devicename = devices[0]
 # Export it
 data.export_data(testname, devicename, export_path = &#39;/path/to/folder&#39;, all_channels = True, forced_overwrite = True)s
 </code></pre></div>
-
 <p>Some options are available:</p>
 <ul>
 <li>Copy to test folder: it will export the csv to the <code>/processed</code> folder in the test</li>

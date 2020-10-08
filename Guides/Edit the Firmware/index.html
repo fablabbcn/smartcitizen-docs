@@ -1992,6 +1992,141 @@
   </li>
 
         
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item md-nav__item--nested">
+
+    <!-- Active checkbox expands items contained within nested section -->
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5"
+          type="checkbox" id="nav-3-5" />
+    
+
+    <!-- Expand active pages -->
+    <label class="md-nav__link" for="nav-3-5">
+      Almabike
+    </label>
+    <nav class="md-nav" data-md-component="collapsible"
+        data-md-level="2">
+      <label class="md-nav__title" for="nav-3-5">
+        Almabike
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+
+        <!-- Render nested item list -->
+        
+        
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item">
+    <a href="../../Use%20cases/Almabike/User%20Manual/" title="User Manual"
+        class="md-nav__link">
+      User Manual
+    </a>
+  </li>
+
+        
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item">
+    <a href="../../Use%20cases/Almabike/Test%20Results/" title="Test Results"
+        class="md-nav__link">
+      Test Results
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+<!-- Currently active page -->
+
+        
       </ul>
     </nav>
   </li>
@@ -3545,7 +3680,6 @@
 <p>To get the firmware just run:</p>
 <div class="highlight"><pre><span></span><code>git clone --recursive https://github.com/fablabbcn/smartcitizen-kit-21
 </code></pre></div>
-
 <p>The <em>bootloader</em> and <em>tools</em> repositories are <a href="https://git-scm.com/book/en/v2/Git-Tools-Submodules">submodules</a> of the main firmware so <strong>you must do a <code>--recursive</code> clone</strong> to get them.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
@@ -3559,7 +3693,6 @@
 <div class="highlight"><pre><span></span><code><span class="nb">cd</span> smartcitizen-kit-21
 ./make.py boot
 </code></pre></div>
-
 <p>You will see a lot of output when compiling, the led on the SCK should <em>breath</em> in <strong>green</strong> and you should see an output similar to this:</p>
 <p><img alt="" src="../../assets/images/sck_2/flashing_bootloader.png" /></p>
 <p>You are ready for the next step, just remember to disconnect the Atmel-ICE programmer and connect the SCK to your computer with a USB cable.</p>
@@ -3571,7 +3704,6 @@
 <p>You can use the same script used to flash the bootloader (<code>make.py</code>) that will do everything for you: compile the firmware, convert the binary to UF2 format and upload it to the kit:</p>
 <div class="highlight"><pre><span></span><code>python3 make.py build flash sam
 </code></pre></div>
-
 <p>If this is your first time building the software, platformio will take a while installing all the needed dependencies, be patient. If there are no errors you should see an output similar to this:</p>
 <p><img alt="" src="../../assets/images/sck_2/flashing_firmware.png" /></p>
 <p>A copy of the compiled software in UF2 format called <em>SAM_firmware.uf2</em> will remain in the <em>bin</em> folder. You can use this file to reflash your kit without compiling it again. </p>
@@ -3584,14 +3716,12 @@
 <div class="highlight"><pre><span></span><code><span class="nb">cd</span> sam
 pio run
 </code></pre></div>
-
 <p>After a lot of compilation messages you should see an output similar to this:</p>
 <p><img alt="" src="../../assets/images/sck_2/pio_run.png" /></p>
 <p>then to convert the binary firmware to UF2 format do:</p>
 <div class="highlight"><pre><span></span><code><span class="nb">cd</span> ..
 ./tools/uf2conv.py -o SAM_firmware.uf2 sam/.pio/build/sck2/firmware.bin
 </code></pre></div>
-
 <p>you should see something like this:</p>
 <p><img alt="" src="../../assets/images/sck_2/uf2_conv.png" /></p>
 <p>Now <strong>double-click the reset button of your kit</strong> open your favorite file browser and drag the file you just created to the <em>SCK-2.0</em> drive. The kit will reset and run the new firmware.</p>

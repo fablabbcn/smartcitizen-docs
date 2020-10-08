@@ -2157,6 +2157,141 @@
   </li>
 
         
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item md-nav__item--nested">
+
+    <!-- Active checkbox expands items contained within nested section -->
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5"
+          type="checkbox" id="nav-3-5" />
+    
+
+    <!-- Expand active pages -->
+    <label class="md-nav__link" for="nav-3-5">
+      Almabike
+    </label>
+    <nav class="md-nav" data-md-component="collapsible"
+        data-md-level="2">
+      <label class="md-nav__title" for="nav-3-5">
+        Almabike
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+
+        <!-- Render nested item list -->
+        
+        
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item">
+    <a href="../../Use%20cases/Almabike/User%20Manual/" title="User Manual"
+        class="md-nav__link">
+      User Manual
+    </a>
+  </li>
+
+        
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item">
+    <a href="../../Use%20cases/Almabike/Test%20Results/" title="Test Results"
+        class="md-nav__link">
+      Test Results
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+<!-- Currently active page -->
+
+        
       </ul>
     </nav>
   </li>
@@ -3825,7 +3960,6 @@
 <p>format of the command line</p>
 <div class="highlight"><pre><span></span><code>control atlas ph com,[point],[pH value at current temperature]
 </code></pre></div>
-
 <p>The pH value at current temperature can be found on the reference table on the calibration solution bottle. If the current temperature is not on it, use the closest value.</p>
 <h4 id="the-3-points-calibration">The 3 points calibration<a class="headerlink" href="#the-3-points-calibration" title="Permanent link">Link</a></h4>
 <p>First start a serial communication with the Smart Citizen Kit with <code>screen</code> or <code>pio device monitor</code>or even the serial monitor of the Arduino IDE.</p>
@@ -3842,23 +3976,19 @@
 </ul>
 <div class="highlight"><pre><span></span><code>control atlas ph com cal,mid,[value of pH at current temperature]
 </code></pre></div>
-
 <p><span style="text-decoration:underline">example at 30°C :</span> </p>
 <div class="highlight"><pre><span></span><code>control atlas ph com cal,mid,6.99 
 </code></pre></div>
-
 <ul>
 <li><strong>The low point calibration :</strong> Put the sensor in the pH 4 calibration solution and run the command below :</li>
 </ul>
 <div class="highlight"><pre><span></span><code>control atlas ph com cal,low,[value of pH at current temperature]
 </code></pre></div>
-
 <ul>
 <li><strong>The high point calibration :</strong> Put the sensor in the pH 10 calibration solution and run the command below :</li>
 </ul>
 <div class="highlight"><pre><span></span><code>control atlas ph com cal,high,[value of pH at current temperature]
 </code></pre></div>
-
 <p><strong><em>Note :</em></strong>  <em>(not tested)</em> If your calibration solutions are not 4, 7 and 10, you can still use them and replace <code>[value of pH at current temperature]</code> by your values.</p>
 <h3 id="the-ec-sensor">The EC Sensor<a class="headerlink" href="#the-ec-sensor" title="Permanent link">Link</a></h3>
 <h4 id="the-2-points-calibration">The 2 points calibration<a class="headerlink" href="#the-2-points-calibration" title="Permanent link">Link</a></h4>
@@ -3874,17 +4004,14 @@
 </ol>
 <div class="highlight"><pre><span></span><code>control atlas ec com cal,dry
 </code></pre></div>
-
 <ul>
 <li><strong>The high point calibration :</strong> Put the sensor in the high point calibration solution (12,880 µS/cm) and run the command below :</li>
 </ul>
 <div class="highlight"><pre><span></span><code>control atlas ec com cal,high,[value of EC at current temperature]
 </code></pre></div>
-
 <p><span style="text-decoration:underline">example at 30°C :</span> </p>
 <div class="highlight"><pre><span></span><code>control atlas ec set cal,high,14,120 
 </code></pre></div>
-
 <p><strong><em>Important ! :</em></strong> Do not forget the <code>,</code> between the hundreds and the thousands or else the calibration will not occur !</p>
 <p><strong><em>Note :</em></strong>  <em>(not tested)</em> If your calibration solution is not 12880 µS/cm, you can use another one and replace <code>[value of pH at current temperature]</code> by your value of electroconducivity.</p>
 <h2 id="the-do-sensor">The DO Sensor<a class="headerlink" href="#the-do-sensor" title="Permanent link">Link</a></h2>
@@ -3901,13 +4028,11 @@
 </ol>
 <div class="highlight"><pre><span></span><code>control atlas do com cal
 </code></pre></div>
-
 <ul>
 <li><strong>The 0mg/L point calibration :</strong> Put the sensor in the 0mg/L calibration solution and run the command below :</li>
 </ul>
 <div class="highlight"><pre><span></span><code>control atlas do com cal,0
 </code></pre></div>
-
 <h2 id="deployment">Deployment<a class="headerlink" href="#deployment" title="Permanent link">Link</a></h2>
 <p><img alt="" src="https://i.imgur.com/2EwPJJc.jpg" />
 <img alt="" src="https://i.imgur.com/2IHsDWq.jpg" />

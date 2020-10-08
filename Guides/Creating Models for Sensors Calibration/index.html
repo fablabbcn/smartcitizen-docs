@@ -1990,6 +1990,141 @@
   </li>
 
         
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item md-nav__item--nested">
+
+    <!-- Active checkbox expands items contained within nested section -->
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5"
+          type="checkbox" id="nav-3-5" />
+    
+
+    <!-- Expand active pages -->
+    <label class="md-nav__link" for="nav-3-5">
+      Almabike
+    </label>
+    <nav class="md-nav" data-md-component="collapsible"
+        data-md-level="2">
+      <label class="md-nav__title" for="nav-3-5">
+        Almabike
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+
+        <!-- Render nested item list -->
+        
+        
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item">
+    <a href="../../Use%20cases/Almabike/User%20Manual/" title="User Manual"
+        class="md-nav__link">
+      User Manual
+    </a>
+  </li>
+
+        
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item">
+    <a href="../../Use%20cases/Almabike/Test%20Results/" title="Test Results"
+        class="md-nav__link">
+      Test Results
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+<!-- Currently active page -->
+
+        
       </ul>
     </nav>
   </li>
@@ -3472,7 +3607,6 @@ model_description_ols = {&quot;model_name&quot;: &quot;OLS_UCD&quot;,
                                 &quot;extract_metrics&quot;: True}
                     }
 </code></pre></div>
-
 <div class="admonition info">
 <p class="admonition-title">More info</p>
 <p>Check the guide on <a href="/Sensor Analysis Framework/guides/Analyse your data in batch/#model">batch analysis</a> for a definition of each parameter.</p>
@@ -3480,7 +3614,6 @@ model_description_ols = {&quot;model_name&quot;: &quot;OLS_UCD&quot;,
 <p>We have to keep at least the key <code>REF</code> within the <code>"features"</code>, but the rest can be renamed at will. We can also input whichever <code>formula_expression</code> for the model regression in the following format:</p>
 <div class="highlight"><pre><span></span><code>&quot;expression&quot; : &#39;REF ~ A + np.log(B)&#39;
 </code></pre></div>
-
 <p>Which converts to:</p>
 <div>
 <div class="MathJax_Preview">
@@ -3497,7 +3630,6 @@ max_date = &#39;2018-09-06 00:00:00&#39;
 # Important that this is a float, don&#39;t forget the .
 &quot;hyperparameters&quot;: {&quot;ratio_train&quot;: 0.75} 
 </code></pre></div>
-
 <p>If we run this cell, we will perform model calibration, with the following output:</p>
 <div class="highlight"><pre><span></span><code>                            OLS Regression Results                            
 ==============================================================================
@@ -3529,7 +3661,6 @@ Warnings:
 [2] The condition number is large, 4.29e+05. This might indicate that there are
 strong multicollinearity or other numerical problems.
 </code></pre></div>
-
 <p>This output brings a lot of information. First, we find what the dependent variable is, in our case always <code>'REF'</code>. The type of model used and some general information is shown below that.</p>
 <p>More statistically important information is found in the rest of the output. Some key data:</p>
 <ul>
@@ -3546,7 +3677,6 @@ strong multicollinearity or other numerical problems.
 
 modelRplots(model, dataTrain, dataTest)
 </code></pre></div>
-
 <p>Let's review the output step by step:</p>
 <ul>
 <li><strong>Residual vs Fitted</strong> and <strong>Scale Location plot</strong>: these plots represents the model <a href="https://en.wikipedia.org/wiki/Heteroscedasticity">heteroscedasticity </a>, which is a representation of the residuals versus the fitted values. This plot is helpful to check if the errors are distributed homogeneously and that we are not penalising high, low, or other values. There is also a red line which represents the average trend of this distribution which, we want it to be horizontal. For more information visit <a href="https://stats.stackexchange.com/questions/76226/interpreting-the-residuals-vs-fitted-values-plot-for-verifying-the-assumptions">here</a> and <a href="https://stats.stackexchange.com/questions/52089/what-does-having-constant-variance-in-a-linear-regression-model-mean/52107#52107">here</a>. Clearly, in this model we are missing something:</li>
@@ -3620,7 +3750,6 @@ modelRplots(model, dataTrain, dataTest)
                                 &quot;extract_metrics&quot;: True}
                     }
 </code></pre></div>
-
 <p>Output:</p>
 <div class="highlight"><pre><span></span><code>Using TensorFlow backend.
 ...
@@ -3653,7 +3782,6 @@ No specifics for RF type
 Preparing devices from prediction
 Channel 5262_RF_UCD prediction finished
 </code></pre></div>
-
 <p>This will also output some nice plots for visually checking our model performance:</p>
 <p><img alt="" src="https://i.imgur.com/xEuVJVC.png" /></p>
 <p>And some extras about variable importance:</p>
@@ -3781,7 +3909,6 @@ for model in [ols_model, rf_model]:
 
 targetDiagram(models, True, &#39;seaborn-talk&#39;)
 </code></pre></div>
-
 <p>Output:</p>
 <p><img alt="" src="https://i.imgur.com/PBuBOpw.png" /></p>
 <p>Here, every point that falls inside the yellow circle, will have an R<sup>2</sup> over 0.7, and so will be the red and green for R<sup>2</sup> over 0.5 and 0.9 respectively. We see that only one of our models performs well in that sense, which is the training dataset of the OLS. However, this dataset performs pretty badly in the test dataset, being the LSTM options much better. This target diagram offers information about how the hyperparameters affect our networks. For instance, increasing the training epochs from 100 to 200 does not affect greatly on model performance, but the effect of filtering the data beforehand to reduce the noise shows a much better model performance in both, training and test dataframe.</p>
@@ -3790,21 +3917,18 @@ targetDiagram(models, True, &#39;seaborn-talk&#39;)
 <div class="highlight"><pre><span></span><code>ols_model.export(&#39;directory&#39;)
 rf_model.export(&#39;directory&#39;)
 </code></pre></div>
-
 <p>Output:</p>
 <div class="highlight"><pre><span></span><code>Saving metrics
 Saving hyperparameters
 Saving features
 Model included in summary
 </code></pre></div>
-
 <p>And in our directory:</p>
 <div class="highlight"><pre><span></span><code>➜  models ls -l
 RF_UCD_features.sav
 RF_UCD_hyperparameters.sav
 RF_UCD_metrics.sav
 </code></pre></div>
-
 <div class="admonition warning">
 <p class="admonition-title">Save the model file</p>
 <p>If you want to save the model file into the disk, change the option <code>"export_model": False,</code> to <code>True</code>! Be careful though, it can take quite a lot of space. If you just want to keep the model to test in the current session, it is best to just use <code>"session_active_model": True,</code>.</p>

@@ -1990,6 +1990,141 @@
   </li>
 
         
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item md-nav__item--nested">
+
+    <!-- Active checkbox expands items contained within nested section -->
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5"
+          type="checkbox" id="nav-3-5" />
+    
+
+    <!-- Expand active pages -->
+    <label class="md-nav__link" for="nav-3-5">
+      Almabike
+    </label>
+    <nav class="md-nav" data-md-component="collapsible"
+        data-md-level="2">
+      <label class="md-nav__title" for="nav-3-5">
+        Almabike
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+
+        <!-- Render nested item list -->
+        
+        
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item">
+    <a href="../../Use%20cases/Almabike/User%20Manual/" title="User Manual"
+        class="md-nav__link">
+      User Manual
+    </a>
+  </li>
+
+        
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item">
+    <a href="../../Use%20cases/Almabike/Test%20Results/" title="Test Results"
+        class="md-nav__link">
+      Test Results
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+<!-- Currently active page -->
+
+        
       </ul>
     </nav>
   </li>
@@ -3471,7 +3606,6 @@ batch_session = batch_analysis(tasks_file, verbose = True)
 # Run the analysis
 batch_session.run()
 </code></pre></div>
-
 <h2 id="functionality">Functionality<a class="headerlink" href="#functionality" title="Permanent link">Link</a></h2>
 <p>These tasks are intended to automatise data analysis tasks as the following:</p>
 <ul>
@@ -3489,7 +3623,6 @@ batch_session.run()
     &quot;TASK_3&quot;:{...}
 }
 </code></pre></div>
-
 <p>Each of the <code>tasks</code> contains different fields, depending on what the process is.</p>
 <h3 id="define-data">Define data<a class="headerlink" href="#define-data" title="Permanent link">Link</a></h3>
 <p>In case <strong>no model needs to be calculated</strong>, the data can be specified directly in the task:</p>
@@ -3513,7 +3646,6 @@ batch_session.run()
                     }
 }
 </code></pre></div>
-
 <p>If a model is to be calculated, the data is defined within the model key as seen below. </p>
 <h4 id="data-loading-options">Data loading options<a class="headerlink" href="#data-loading-options" title="Permanent link">Link</a></h4>
 <ul>
@@ -3623,7 +3755,6 @@ Different preprocessing options can be defined. The most common one, for the sen
                     }
         },
 </code></pre></div>
-
 <ul>
 <li><code>model_name</code>: model name to be saved</li>
 <li><code>model_type</code>: 'RF', 'SVR', 'LSTM' or 'OLS'</li>
@@ -3688,7 +3819,6 @@ Different preprocessing options can be defined. The most common one, for the sen
 <span class="err">    ```</span>
 </code></pre></div>
 
-
 <ul>
 <li><code>model_options</code>: different options for the model calculated<ul>
 <li><code>session_active_model</code>: keep the model active after the task is completed</li>
@@ -3735,7 +3865,6 @@ Different preprocessing options can be defined. The most common one, for the sen
                         &quot;width&quot;: 12}
     },
 </code></pre></div>
-
 <h4 id="general-description">General description<a class="headerlink" href="#general-description" title="Permanent link">Link</a></h4>
 <p>This description is suitable for timeseries plots. Check below for other types:</p>
 <p><img alt="" src="https://i.imgur.com/p6qogrD.png" /></p>
@@ -3796,7 +3925,6 @@ Different preprocessing options can be defined. The most common one, for the sen
                &quot;frequency_hours&quot;: 6}
         }
 </code></pre></div>
-
 <div class="admonition warning">
 <p>Note that in this case it only makes sense to put one trace. If we define <code>"device": "all"</code>, then <code>"separate_device_plots": true</code></p>
 </div>
@@ -3834,7 +3962,6 @@ Different preprocessing options can be defined. The most common one, for the sen
                       &quot;width&quot;: 15}
        }
 </code></pre></div>
-
 <p>Note that in this case it only makes sense to put two traces, in the same subplot.</p>
 <ul>
 <li><code>formatting</code>: <ul>
@@ -3870,7 +3997,6 @@ Different preprocessing options can be defined. The most common one, for the sen
                        &quot;width&quot;: 4}
         }
 </code></pre></div>
-
 <p><strong>Coherence plot</strong></p>
 <p><img alt="" src="https://i.imgur.com/DmvnwBj.png" /></p>
 <p>This plot it's used to plot the coherence between x and y. Coherence is the normalized cross spectral density. More info <a href="https://matplotlib.org/3.1.1/api/_as_gen/matplotlib.pyplot.cohere.html">here</a>:</p>
@@ -3896,7 +4022,6 @@ Different preprocessing options can be defined. The most common one, for the sen
                        &quot;width&quot;: 15}
         }
 </code></pre></div>
-
 <p><strong>Violin plot</strong></p>
 <p><img alt="" src="https://i.imgur.com/3d8j0qa.png" /></p>
 <p>This plot shows the signal distribution. </p>
