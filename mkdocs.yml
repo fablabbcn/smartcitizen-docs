@@ -2,7 +2,8 @@ site_name: Smart Citizen Docs
 site_description: Smart Citizen Documentation
 site_author: Smart Citizen Team
 site_url: https://docs.smartcitizen.me/
-
+repo_name: smartcitizen-docs
+repo_url: https://github.com/fablabbcn/smartcitizen-docs
 # https://www.mkdocs.org/user-guide/writing-your-docs/#configure-pages-and-navigation
 
 nav:
@@ -86,6 +87,10 @@ nav:
 
 theme:
   name: 'material'
+  features:
+    - instant
+    - navigation.expand
+    - tabs
   custom_dir: 'custom_theme'
   palette:
     primary: 'blue'
@@ -94,25 +99,30 @@ theme:
   favicon: 'assets/images/favicon.ico'
   feature:
     tabs: true
+  icon:
+    repo: fontawesome/brands/git-alt
+
+extra_css:
+  - stylesheets/extra.css
 
 extra:
   social:
-    - type: 'twitter'
+    - icon: fontawesome/brands/twitter
       link: 'https://twitter.com/smartcitizenkit'
-    - type: 'facebook'
-      link: 'https://www.facebook.com/smartcitizenBCN/'
+    - icon: fontawesome/brands/instagram
+      link: 'https://www.instagram.com/smartcitizenkit/'
+    - icon: fontawesome/brands/github
+      link: 'https://www.instagram.com/smartcitizenkit/'
   project: 'The Smart Citizen as part of the iSCAPE project has received funding from the European Community’s H2020 Programme under Grant Agreement No. 689954.'
   footer_logo: '/assets/images/eu-flag.png'
   license: 'CC Attribution-NonCommercial-ShareAlike 4.0 International'
-  repo_name: smartcitizen-docs
-  repo_url: https://github.com/fablabbcn/smartcitizen-docs
 
 markdown_extensions:
   - admonition
   - codehilite
   - footnotes
   - toc:
-      permalink: Link
+      permalink: true
   - pymdownx.arithmatex
   - pymdownx.betterem:
       smart_enable: all
