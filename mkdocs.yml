@@ -88,9 +88,9 @@ theme:
     - navigation.expand
     - tabs
   custom_dir: 'custom_theme'
-  # palette:
-  #   primary: 'black'
-  #   accent: 'yellow'
+  palette:
+    primary: 'blue'
+    accent: 'blue'
   logo: 'assets/images/logo.svg'
   favicon: 'assets/images/favicon.ico'
   feature:
