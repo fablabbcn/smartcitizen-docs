@@ -45,9 +45,9 @@ nav:
     - Citizen Sensing Toolkit: Use cases/Citizen Sensing Toolkit.md
     - Research Projects: Use cases/Research.md
     - Additional material: Use cases/Presentations.md
-    - Almabike:
-        - User Manual: Use cases/Almabike/User Manual.md
-        - Test Results: Use cases/Almabike/Test Results.md
+    # - Almabike:
+    #     - User Manual: Use cases/Almabike/User Manual.md
+    #     - Test Results: Use cases/Almabike/Test Results.md
   - Guides:
     - Main: Guides.md
     - Getting started:
