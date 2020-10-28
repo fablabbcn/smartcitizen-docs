@@ -2,15 +2,13 @@
 
 The purpose of these tests is to assess the best solution for measuring particulate matter and environmental conditions with two different enclosures and hence exposure methods. The tests performed are:
 
-- Indoor smoke tests
+- Indoor particulate tests
 - Outdoor dynamic vs. static comparison
 - Outdoor dynamic comparison
 
-### Indoor Smoke tests
+### Indoor particulate tests
 
 These tests were conducted indoor using a Marlin Smoke Machine in order to assess the difference between each enclosure.
-
-![](https://i.imgur.com/8TqUkqL.png)
 
 **Free air comparison**
 
@@ -59,12 +57,19 @@ The direct exposure vs reference comparison shows an inferior sensitivity, alrea
 
 ### Outdoor tests
 
-These tests are aimed at comparing outdoor measurements with sensor trips.
+These tests are aimed at comparing outdoor measurements with sensor trips. These measurements use the same sensor as the ones mounted on the bicycle. A script is used to post-process the data based on location and derive a comparison between both measurements.
 
-![](assets/map.jpg)
+**Comparison bike front vs. bike back**
 
-An example of a trip is shown above, with various static measurements in place for a comparison with the dynamic data. These measurements use the same sensor as the ones mounted on the bicycle. A script is used to post-process the data bases on location and derive a comparison between both measurements.
+This comparison shows the difference between the different metrics when measuring gas using the same enclosure in the front (black) and in the back (green):
 
-### Conclusions
+![](assets/plot-6.png)
 
-WIP
+After a short stabilisation period, this test shows that PM2.5 measurements are equally correlated between both positions. In the case of the temperature sensor, a difference of up to 2ºC was seen (higher in the saddle’s position), with better sensitivity in the case of the front-sensor, due to a lower confinement and larger surface area:
+
+![](assets/plot-7.png)
+
+!!! info ""
+    Due to project guidelines, the saddle position of the sensor is considered sufficient for the purpose of monitoring air quality. However, it’s worth mentioning that this sensor location requires attention for the sensors to never be covered by the rider’s clothing. Furthermore, the front position shows a better response for the sensor temperature representativity and sensitivity as seen above, with a potential better GPS fix quality. This latter issue is compensated with the usage of an active patch antenna with higher gain.
+
+Further tests are currently being conducted in order to assess the performance of the sensors when compared to static ones.

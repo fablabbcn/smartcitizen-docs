@@ -2,17 +2,11 @@
 
 Welcome to the Almabike Project User Manual. This page includes all necessary information to get started with the sensor kit.
 
-!!! tip "Quick links"
+In addition, further information and graphic material is available in the Annexes of this manual.
 
-    :earth_africa: **Platform: [smartcitizen.me](https://smartcitizen.me)**
-
-    :speech_balloon: **Discuss: [forum.smartcitizen.me](https://forum.smartcitizen.me)**
-
-    :question: **Support: [support@smartcitizen.me](mailto: support@smartcitizen.me)**
-
-!!! info "WIP :computer:"
+!!! info "WIP"
     
-    Some items in this manual are a _work-in-progress_. You will find a banner in the sections with a _WIP_ :computer: marker and a summary of all [Known issues](#Known issues) which will be fixed in future firmware versions.
+    Some items in this user manual are a _work-in-progress_. You will find a banner in the sections with a _WIP_ marker and a summary of all [Known issues](#Known issues) which will be fixed in future firmware versions.
 
 ## Hardware
 
@@ -33,7 +27,12 @@ The enclosure is made out of a modified saddle bag. Find more details in [enclos
 
 ![](assets/enclosure.jpg)
 
+!!! info "Licenses"
+    All the software used in this (product/prototype/design), unless otherwise stated, is released under GNU GPL v3.0. Likewise, the hardware design files for the Smart Citizen Kit are released under CERN OHL v1.2. Please refer to the corresponding license for details regarding permissions, limitations, and conditions of use. This paragraph only applies to this section and the enclosure customization, and not to the rest of components such as the GPS or antenna.
+
 ### Sensors
+
+The sensors are based on the Smart Citizen Kit, with the following components.
 
 ![](assets/sensors.jpg)
 
@@ -56,30 +55,17 @@ The selected NEO-M8U GPS Breakout from Sparkfun is a high quality GPS board. The
 
 Compared to other GPS modules, this breakout maximizes position accuracy in dense cities or covered areas. Even under poor signal conditions, continuous positioning is provided in urban environments and is also available during complete signal loss (e.g. short tunnels and parking garages). Lock time is further reduced with on-board rechargeable battery; there is a backup power enabling the GPS to get a hot lock within seconds.
 
-The SparkFun NEO-M8U GPS Breakout is also equipped with an on-board rechargeable battery that provides power to the RTC on the NEO-M8U. This reduces the time-to-first fix from a cold start (~26s) to a hot start (~1.5s). The battery will maintain RTC and GNSS orbit data without being connected to power for plenty of time.
-
-!!! info "More information"
-    This information is a summary from [this link](https://www.sparkfun.com/products/16329).
+The SparkFun NEO-M8U GPS Breakout[^1] is also equipped with an on-board rechargeable battery that provides power to the RTC on the NEO-M8U. This reduces the time-to-first fix from a cold start (~26s) to a hot start (~1.5s). The battery will maintain RTC and GNSS orbit data without being connected to power for plenty of time.
 
 ![](assets/GPS-Diagram.png)
 
-> [name=oscgonfer]Confirm!!
+The GPS uses a **ceramic patch** antenna[^2] with the following features:
 
-The GPS uses a **flexible** loop antenna with the following features:
-
-- Cable length: 150mm
-- Connector: U.FL
-- Polarization: Linear
-- Mounting Style: Adhesive
-
-!!! info "More information"
-    This information is a summary from [this link](https://www.sparkfun.com/products/15958).
-
-![](assets/antenna.png)
+![](assets/antenna.png){: style="width:400px"}
 
 The U.FL antenna connector **does not need to be unplugged** from the board, specially never when the board is being powered in order to avoid damaging the circuitry:
 
-![](assets/UFL.png)
+![](assets/UFL.png){: style="width:400px"}
 
 > GPS and Antenna images by [Sparkfun](https://www.sparkfun.com) (License [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/)) and edited by Smart Citizen.
 
@@ -87,7 +73,7 @@ The U.FL antenna connector **does not need to be unplugged** from the board, spe
 
 The enclosure is made out of a modified generic Saddle Bag from [Vaude](https://www.vaude.com/) - (Vaude Race Light L). 
 
-![](assets/vaude.jpg)
+![](assets/vaude.jpg){: style="width:400px"}
 
 > Enclosure images by [Vaude](https://www.vaude.com/)
 
@@ -101,29 +87,16 @@ The sensors are internally suspended by a polypropilene folding and the air inta
 
 ![](assets/ppe.jpg)
 
-**Pictures**
-
-![](assets/full-side-photo.jpg)
-
-![](assets/side-photo.jpg)
-
-**Design renders**
-
-![](assets/render-1.png)
-
-![](assets/render-2.png)
-
-![](assets/render-3.png)
-
-![](assets/render-4.png)
-
 **Measurement principle**
 
-The sensors are enclosed in the saddle bag in order to avoid dirt and water spills. As the placement of the sensors might not be ideal for avoiding turbulence in the air flow, tests were carried out comparing two types of exposure (see [Test section](Test Results)). 
+The sensors are enclosed in the saddle bag in order to avoid dirt and water spills. The measurement method in the enclosure ensures there is: 1. sufficient air flow parallel to the sensor's surface, 2. a limited gas speed across the sensors and minimum gas residence time to ensure sensitivity. The placement of the sensors was tested and compared with different options. Results are shown in the [Test section](Test Results). The images below show the measurement principle and a functional diagram for the sensor’s enclosure. 
 
 ![](assets/bottom-view-anotated.png)
 
 ![](assets/side-view-anotated.png)
+
+!!! warning ""
+    Please, ensure both intakes and exhaust are not covered and that air can flow freely between both.
 
 ## Power management
 
@@ -136,15 +109,13 @@ You will note that the kit _turns itself off_ while operating on battery. Actual
 
 ### Battery charging
 
-The SCK has a micro USB port and can be charged like any Smartphone or Tablet using a dedicated adapter or a computer USB port.
+The SCK has a micro USB port and can be charged like any Smartphone or Tablet using a dedicated adapter or a computer USB port. A cable is provided and does not need to be disconnected from the device. The cable can be stored in the saddle’s bag back compartment.
 
-We recommend using a tablet power adaptor, instead of a computer USB port, for quicker charging.
+![](assets/pocket-cable.jpg)
 
 ### User feedback
 
 The LED serves as an indication of the battery status. If the LED is flashing orange <span class="led small orange"> </span> it indicates that the battery must be charged. The battery takes about 4 hours to fully charge. When the battery is fully charged, the LED will change from orange to green <span class="led small green"> </span>.
-
-![](assets/buttons.png)
 
 _Remember that in addition to these colors you will have the state color of the kit: configuration, network and sd._
 
@@ -340,8 +311,8 @@ Before starting to pedal, make sure that this checklist is all fine:
 
 1. The kit is either in [SD card](#sd-card-mode-offline) or [network mode](#wi-fi-mode)
 2. The kit has enough battery (check the [status of the LED](#user-feedback))
-3. The GPS has a fix in outdoor space ([GPS Blue LED is blinking](#gps)). If the GPS Blue LED is not blinking, make sure it's powered and extract the package from the saddle bag and let it get a valid fix in a clear sky view
-4. The kit is well placed inside the enclosure
+3. The GPS is being powered. The GPS might take some time to retrieve a valid location. This can be assessed by checking that the [GPS Blue LED is blinking](#gps). If you want to make sure the complete trip is recorded, make sure the GPS can receive a clear view of the sky
+4. The kit is well placed inside the enclosure and the cable does not obstruct the exhaust
 
 ![](assets/enclosure-space.jpg)
 
@@ -360,6 +331,25 @@ Below, there is a list of known issues with the `0.9.8` version of the Firmware.
 
 !!! info "Updating the firmware"
     Once there is a firmware release with these updates, refer to [this guide](/Guides/Update the firmware/) for instructions on how to update it in your kit
+
+## Additional graphic material
+
+![](assets/full-side-photo.jpg)
+
+![](assets/side-photo.jpg)
+
+![](assets/render-1.png)
+
+![](assets/render-2.png)
+
+![](assets/render-3.png)
+
+![](assets/render-4.png)
+
+## References
+
+[^1]: GPS NEO-M8U Specification: https://cdn.sparkfun.com/assets/6/d/7/c/6/NEO-M8U_DataSheet__UBX-15015679_.pdf
+[^2]: Ceramic Patch Antenna Specification: https://www.molex.com/pdm_docs/as/2066400001-AS.pdf
 
 <style>
 
