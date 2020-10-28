@@ -1,0 +1,4 @@
+mkdocs
+mkdocs-material<5.5.12
+mkdocs-material-extensions
+#mkdocs-with-pdf
