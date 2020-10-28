@@ -65,6 +65,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#make-a-back-up-of-your-info" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -1023,9 +1028,63 @@
     <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Update the firmware
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
     <a href="./" title="Update the firmware" class="md-nav__link md-nav__link--active">
       Update the firmware
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#make-a-back-up-of-your-info" class="md-nav__link">
+    Make a back-up of your info
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#upgrading-the-sam-firmware" class="md-nav__link">
+    Upgrading the SAM firmware
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#upgrading-the-esp-firmware" class="md-nav__link">
+    Upgrading the ESP firmware
+  </a>
+  
+    <nav class="md-nav" aria-label="Upgrading the ESP firmware">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#force-esp-upload" class="md-nav__link">
+    Force ESP upload
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -1369,6 +1428,61 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#make-a-back-up-of-your-info" class="md-nav__link">
+    Make a back-up of your info
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#upgrading-the-sam-firmware" class="md-nav__link">
+    Upgrading the SAM firmware
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#upgrading-the-esp-firmware" class="md-nav__link">
+    Upgrading the ESP firmware
+  </a>
+  
+    <nav class="md-nav" aria-label="Upgrading the ESP firmware">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#force-esp-upload" class="md-nav__link">
+    Force ESP upload
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
@@ -1385,13 +1499,18 @@
                   <h1>Update the firmware</h1>
                 
                 <p>When new features are developed or bugs are fixed we will release new versions of the SCK firmware.</p>
+<h2 id="make-a-back-up-of-your-info">Make a back-up of your info<a class="headerlink" href="#make-a-back-up-of-your-info" title="Permanent link">&para;</a></h2>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>If you already configured your kit on the smartcitizen platform <strong>you will need the token that the platform gave you during the onboarding process</strong>, to recover it from your kit:</p>
 <ol>
 <li><strong>Click your kit button</strong> until the kit is in <a href="../../../../Smart%20Citizen%20Kit/#setup-mode">setup mode</a>, the led should be red.</li>
-<li><strong>Connecto to the kit</strong> with your mobile device as you did during the onboarding process.</li>
-<li><strong>Write down the token</strong> of your kit.</li>
+<li>
+<p><strong>Connect to the kit</strong> with your mobile device as you did during the onboarding process.</p>
+</li>
+<li>
+<p><strong>Write down the token</strong> of your kit.</p>
+</li>
 </ol>
 <p><img alt="" src="/assets/images/sck_2/ap_token.png" /></p>
 <p>After updating the firmware follow this same steps to input the token and wifi credentials, after this your kit will be publishing on the same registered device than before.</p>
@@ -1400,15 +1519,24 @@
 <p class="admonition-title">A note about versions</p>
 <p><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2705.svg" title=":white_check_mark:" /> The guide below applies to both, SCK 2.0 and SCK2.1.</p>
 </div>
+<h2 id="upgrading-the-sam-firmware">Upgrading the SAM firmware<a class="headerlink" href="#upgrading-the-sam-firmware" title="Permanent link">&para;</a></h2>
+<p>The SAMD21 (SAM for short) chip manages the main part of the firmware. This firmware is frequently updated with latest improvements in the official <a href="https://github.com/fablabbcn/smartcitizen-kit-21/tree/master/sam">firmware repository</a>. Check the <a href="https://github.com/fablabbcn/smartcitizen-kit-21/releases">releases pages</a> for more info.</p>
 <div class="admonition example">
 <p class="admonition-title">Updating your kit is very simple</p>
 <ul>
-<li><strong>Connect your kit</strong> with a micro USB cable to your computer.</li>
-<li><strong>Double click the reset button</strong> of your SCK, the SCK led should turn green and a new drive called <em>SCK-20</em> should appear on your computer file browser.
-<img alt="" src="/assets/images/sck_2/reset_button.png" /></li>
-<li>Inside the <em>SCK-20</em> drive you should see some files, <strong>double click the <em>INDEX.HTM</em></strong> file and our  <a href="https://github.com/fablabbcn/smartcitizen-kit-21/releases/latest">github releases page</a> will open in your browser. <strong>Download the new firmware</strong> called <em>SAM_firmware_XXX.uf2</em> and save it to your computer.
-<img alt="" src="/assets/images/sck_2/uf2_index.png" /></li>
+<li>
+<p><strong>Connect your kit</strong> with a micro USB cable to your computer</p>
+</li>
+<li>
+<p><strong>Double click the reset button</strong> of your SCK, the SCK led should turn green and a new drive called <em>SCK-20</em> should appear on your computer file browser</p>
+</li>
 </ul>
+<p><img alt="" src="/assets/images/sck_2/reset_button.png" /></p>
+<ul>
+<li>Inside the <em>SCK-20</em> drive you should see some files, <strong>double click the <em>INDEX.HTM</em></strong> file and our  <a href="https://github.com/fablabbcn/smartcitizen-kit-21/releases/latest">github releases page</a> will open in your browser 
+<strong>Download the new firmware</strong> called <em>SAM_firmware_XXX.uf2</em> and save it to your computer</li>
+</ul>
+<p><img alt="" src="/assets/images/sck_2/uf2_index.png" /></p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>You can backup your current firmware version just saving the file called <em>CURRENT.UF2</em>.</p>
@@ -1417,15 +1545,22 @@
 <li>Simply <strong>drag the firmware file you downloaded over the <em>SCK-20</em> drive</strong>, your kit led will blink in green and after some seconds it will reset and start with the new version.</li>
 </ul>
 <p><img alt="" src="/assets/images/sck_2/uf2_drag.png" /></p>
+</div>
+<h2 id="upgrading-the-esp-firmware">Upgrading the ESP firmware<a class="headerlink" href="#upgrading-the-esp-firmware" title="Permanent link">&para;</a></h2>
+<p>The ESP8266 (ESP for short) chip sometimes also needs upgrade to match the lattest version of the SAM firmware. The ESP chip manages all the communications of the SCK with the outer world. The firmware can be found <a href="https://github.com/fablabbcn/smartcitizen-kit-21/tree/master/esp">here</a>.</p>
+<div class="admonition example">
+<p class="admonition-title">Updating your kit is very simple</p>
 <ul>
-<li>If your <strong>Wi-Fi module needs a firmware update</strong> when you connect to your kit to setup the network you will see a screen that will ask for the new file. You can find it in our <a href="https://github.com/fablabbcn/smartcitizen-kit-21/releases/latest">github releases page</a>, look for the file called <code>ESP_firmware_XXX.bin</code>. If you don't see it, check in a <a href="https://github.com/fablabbcn/smartcitizen-kit-21/releases">previous release</a> (some releases don't include Wi-Fi firmware).</li>
+<li>If your <strong>Wi-Fi module needs a firmware update</strong> when you connect to your kit to setup the network you will see a screen that will ask for the new file. You can find it in our <a href="https://github.com/fablabbcn/smartcitizen-kit-21/releases/latest">github releases page</a>, look for the file called <code>ESP_firmware_XXX.bin</code>. If you don't see it, check in a <a href="https://github.com/fablabbcn/smartcitizen-kit-21/releases">previous release</a> (some releases don't include Wi-Fi firmware)</li>
 </ul>
 <p><img alt="" src="/assets/images/sck_2/esp_update.png" /></p>
 <ul>
-<li>After the update you just done, you can configure your kit as a new device following the <a href="https:start.smartcitizen.me">onboarding</a> process or use your previous token as explained before.</li>
+<li>After the update you just done, you can configure your kit as a new device following the <a href="https:start.smartcitizen.me">onboarding</a> process or use your previous token as explained before</li>
 </ul>
 </div>
-<div class="admonition warning">
+<h3 id="force-esp-upload">Force ESP upload<a class="headerlink" href="#force-esp-upload" title="Permanent link">&para;</a></h3>
+<p>If you want to force the ESP to upload, please, follow the steps below.</p>
+<div class="admonition example">
 <p class="admonition-title">Force ESP upload</p>
 <p>If you already have the latest version but for some reason you still want to upload the firmware, you can <strong>force by clicking the info button</strong> (top right) on the setup screen that you find when conected to your kit in setup mode:</p>
 <p><img alt="" src="https://i.imgur.com/GTl6pgE.png" /></p>

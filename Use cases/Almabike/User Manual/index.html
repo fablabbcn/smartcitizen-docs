@@ -1580,6 +1580,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#additional-graphic-material" class="md-nav__link">
+    Additional graphic material
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    References
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1602,15 +1616,10 @@
                 
                 <h1 id="almabike-sensors-user-manual">Almabike Sensors User Manual<a class="headerlink" href="#almabike-sensors-user-manual" title="Permanent link">&para;</a></h1>
 <p>Welcome to the Almabike Project User Manual. This page includes all necessary information to get started with the sensor kit.</p>
-<div class="admonition tip">
-<p class="admonition-title">Quick links</p>
-<p><img alt="🌍" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f30d.svg" title=":earth_africa:" /> <strong>Platform: <a href="https://smartcitizen.me">smartcitizen.me</a></strong></p>
-<p><img alt="💬" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f4ac.svg" title=":speech_balloon:" /> <strong>Discuss: <a href="https://forum.smartcitizen.me">forum.smartcitizen.me</a></strong></p>
-<p><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2753.svg" title=":question:" /> <strong>Support: <a href="mailto: support@smartcitizen.me">support@smartcitizen.me</a></strong></p>
-</div>
+<p>In addition, further information and graphic material is available in the Annexes of this manual.</p>
 <div class="admonition info">
-<p class="admonition-title">WIP <img alt="💻" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f4bb.svg" title=":computer:" /></p>
-<p>Some items in this manual are a <em>work-in-progress</em>. You will find a banner in the sections with a <em>WIP</em> <img alt="💻" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f4bb.svg" title=":computer:" /> marker and a summary of all <a href="#Known issues">Known issues</a> which will be fixed in future firmware versions.</p>
+<p class="admonition-title">WIP</p>
+<p>Some items in this user manual are a <em>work-in-progress</em>. You will find a banner in the sections with a <em>WIP</em> marker and a summary of all <a href="#Known issues">Known issues</a> which will be fixed in future firmware versions.</p>
 </div>
 <h2 id="hardware">Hardware<a class="headerlink" href="#hardware" title="Permanent link">&para;</a></h2>
 <h3 id="pack">Pack<a class="headerlink" href="#pack" title="Permanent link">&para;</a></h3>
@@ -1625,7 +1634,12 @@
 <p><img alt="" src="../assets/clipassembly.jpg" /></p>
 <p>The enclosure is made out of a modified saddle bag. Find more details in <a href="#enclosure">enclosure</a>:</p>
 <p><img alt="" src="../assets/enclosure.jpg" /></p>
+<div class="admonition info">
+<p class="admonition-title">Licenses</p>
+<p>All the software used in this (product/prototype/design), unless otherwise stated, is released under GNU GPL v3.0. Likewise, the hardware design files for the Smart Citizen Kit are released under CERN OHL v1.2. Please refer to the corresponding license for details regarding permissions, limitations, and conditions of use. This paragraph only applies to this section and the enclosure customization, and not to the rest of components such as the GPS or antenna.</p>
+</div>
 <h3 id="sensors">Sensors<a class="headerlink" href="#sensors" title="Permanent link">&para;</a></h3>
+<p>The sensors are based on the Smart Citizen Kit, with the following components.</p>
 <p><img alt="" src="../assets/sensors.jpg" /></p>
 <p><em>Measurements</em></p>
 <table>
@@ -1682,35 +1696,18 @@
 <h3 id="gps">GPS<a class="headerlink" href="#gps" title="Permanent link">&para;</a></h3>
 <p>The selected NEO-M8U GPS Breakout from Sparkfun is a high quality GPS board. The NEO-M8U takes advantage of u-blox's Untethered Dead Reckoning (UDR) technology. The NEO-M8U module is a 72-channel u-blox M8 engine GNSS receiver, meaning it can receive signals from the GPS, GLONASS, Galileo, and BeiDou constellations with <strong>~2.5 meter accuracy</strong>. The module supports concurrent reception of three GNSS systems. The combination of GNSS and integrated 3D sensor measurements on the NEO-M8U provide accurate, real-time positioning rates of up to 30Hz.</p>
 <p>Compared to other GPS modules, this breakout maximizes position accuracy in dense cities or covered areas. Even under poor signal conditions, continuous positioning is provided in urban environments and is also available during complete signal loss (e.g. short tunnels and parking garages). Lock time is further reduced with on-board rechargeable battery; there is a backup power enabling the GPS to get a hot lock within seconds.</p>
-<p>The SparkFun NEO-M8U GPS Breakout is also equipped with an on-board rechargeable battery that provides power to the RTC on the NEO-M8U. This reduces the time-to-first fix from a cold start (~26s) to a hot start (~1.5s). The battery will maintain RTC and GNSS orbit data without being connected to power for plenty of time.</p>
-<div class="admonition info">
-<p class="admonition-title">More information</p>
-<p>This information is a summary from <a href="https://www.sparkfun.com/products/16329">this link</a>.</p>
-</div>
+<p>The SparkFun NEO-M8U GPS Breakout<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> is also equipped with an on-board rechargeable battery that provides power to the RTC on the NEO-M8U. This reduces the time-to-first fix from a cold start (~26s) to a hot start (~1.5s). The battery will maintain RTC and GNSS orbit data without being connected to power for plenty of time.</p>
 <p><img alt="" src="../assets/GPS-Diagram.png" /></p>
-<blockquote>
-<p>[name=oscgonfer]Confirm!!</p>
-</blockquote>
-<p>The GPS uses a <strong>flexible</strong> loop antenna with the following features:</p>
-<ul>
-<li>Cable length: 150mm</li>
-<li>Connector: U.FL</li>
-<li>Polarization: Linear</li>
-<li>Mounting Style: Adhesive</li>
-</ul>
-<div class="admonition info">
-<p class="admonition-title">More information</p>
-<p>This information is a summary from <a href="https://www.sparkfun.com/products/15958">this link</a>.</p>
-</div>
-<p><img alt="" src="../assets/antenna.png" /></p>
+<p>The GPS uses a <strong>ceramic patch</strong> antenna<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup> with the following features:</p>
+<p><img alt="" src="../assets/antenna.png" style="width:400px" /></p>
 <p>The U.FL antenna connector <strong>does not need to be unplugged</strong> from the board, specially never when the board is being powered in order to avoid damaging the circuitry:</p>
-<p><img alt="" src="../assets/UFL.png" /></p>
+<p><img alt="" src="../assets/UFL.png" style="width:400px" /></p>
 <blockquote>
 <p>GPS and Antenna images by <a href="https://www.sparkfun.com">Sparkfun</a> (License <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>) and edited by Smart Citizen.</p>
 </blockquote>
 <h3 id="enclosure">Enclosure<a class="headerlink" href="#enclosure" title="Permanent link">&para;</a></h3>
 <p>The enclosure is made out of a modified generic Saddle Bag from <a href="https://www.vaude.com/">Vaude</a> - (Vaude Race Light L). </p>
-<p><img alt="" src="../assets/vaude.jpg" /></p>
+<p><img alt="" src="../assets/vaude.jpg" style="width:400px" /></p>
 <blockquote>
 <p>Enclosure images by <a href="https://www.vaude.com/">Vaude</a></p>
 </blockquote>
@@ -1722,18 +1719,13 @@
 </ul>
 <p>The sensors are internally suspended by a polypropilene folding and the air intakes are made out of PLA in a 3D printer.</p>
 <p><img alt="" src="../assets/ppe.jpg" /></p>
-<p><strong>Pictures</strong></p>
-<p><img alt="" src="../assets/full-side-photo.jpg" /></p>
-<p><img alt="" src="../assets/side-photo.jpg" /></p>
-<p><strong>Design renders</strong></p>
-<p><img alt="" src="../assets/render-1.png" /></p>
-<p><img alt="" src="../assets/render-2.png" /></p>
-<p><img alt="" src="../assets/render-3.png" /></p>
-<p><img alt="" src="../assets/render-4.png" /></p>
 <p><strong>Measurement principle</strong></p>
-<p>The sensors are enclosed in the saddle bag in order to avoid dirt and water spills. As the placement of the sensors might not be ideal for avoiding turbulence in the air flow, tests were carried out comparing two types of exposure (see <a href="Test Results">Test section</a>). </p>
+<p>The sensors are enclosed in the saddle bag in order to avoid dirt and water spills. The measurement method in the enclosure ensures there is: 1. sufficient air flow parallel to the sensor's surface, 2. a limited gas speed across the sensors and minimum gas residence time to ensure sensitivity. The placement of the sensors was tested and compared with different options. Results are shown in the <a href="Test Results">Test section</a>. The images below show the measurement principle and a functional diagram for the sensor’s enclosure. </p>
 <p><img alt="" src="../assets/bottom-view-anotated.png" /></p>
 <p><img alt="" src="../assets/side-view-anotated.png" /></p>
+<div class="admonition warning">
+<p>Please, ensure both intakes and exhaust are not covered and that air can flow freely between both.</p>
+</div>
 <h2 id="power-management">Power management<a class="headerlink" href="#power-management" title="Permanent link">&para;</a></h2>
 <div class="admonition warning">
 <p class="admonition-title">WIP <img alt="💻" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f4bb.svg" title=":computer:" /></p>
@@ -1742,11 +1734,10 @@
 <p>The SCK comes with a 2000mAh LiPo battery to provide autonomy while measuring in the city. The battery is meant to be a complete power option for short-term measurements (approximatively 1-2 days). The battery duration is dependent on which sensors are enabled or disabled, and the amount of time the dynamic measurement interval is active.</p>
 <p>You will note that the kit <em>turns itself off</em> while operating on battery. Actually, this is what we call <code>sleep-mode</code>, an operation mode implemented to reduce consumption while on battery operation.</p>
 <h3 id="battery-charging">Battery charging<a class="headerlink" href="#battery-charging" title="Permanent link">&para;</a></h3>
-<p>The SCK has a micro USB port and can be charged like any Smartphone or Tablet using a dedicated adapter or a computer USB port.</p>
-<p>We recommend using a tablet power adaptor, instead of a computer USB port, for quicker charging.</p>
+<p>The SCK has a micro USB port and can be charged like any Smartphone or Tablet using a dedicated adapter or a computer USB port. A cable is provided and does not need to be disconnected from the device. The cable can be stored in the saddle’s bag back compartment.</p>
+<p><img alt="" src="../assets/pocket-cable.jpg" /></p>
 <h3 id="user-feedback">User feedback<a class="headerlink" href="#user-feedback" title="Permanent link">&para;</a></h3>
 <p>The LED serves as an indication of the battery status. If the LED is flashing orange <span class="led small orange"> </span> it indicates that the battery must be charged. The battery takes about 4 hours to fully charge. When the battery is fully charged, the LED will change from orange to green <span class="led small green"> </span>.</p>
-<p><img alt="" src="../assets/buttons.png" /></p>
 <p><em>Remember that in addition to these colors you will have the state color of the kit: configuration, network and sd.</em></p>
 <div class="admonition info">
 <p class="admonition-title">More details</p>
@@ -2083,8 +2074,8 @@
 <ol>
 <li>The kit is either in <a href="#sd-card-mode-offline">SD card</a> or <a href="#wi-fi-mode">network mode</a></li>
 <li>The kit has enough battery (check the <a href="#user-feedback">status of the LED</a>)</li>
-<li>The GPS has a fix in outdoor space (<a href="#gps">GPS Blue LED is blinking</a>). If the GPS Blue LED is not blinking, make sure it's powered and extract the package from the saddle bag and let it get a valid fix in a clear sky view</li>
-<li>The kit is well placed inside the enclosure</li>
+<li>The GPS is being powered. The GPS might take some time to retrieve a valid location. This can be assessed by checking that the <a href="#gps">GPS Blue LED is blinking</a>. If you want to make sure the complete trip is recorded, make sure the GPS can receive a clear view of the sky</li>
+<li>The kit is well placed inside the enclosure and the cable does not obstruct the exhaust</li>
 </ol>
 <p><img alt="" src="../assets/enclosure-space.jpg" /></p>
 <div class="admonition info">
@@ -2108,6 +2099,14 @@
 <p class="admonition-title">Updating the firmware</p>
 <p>Once there is a firmware release with these updates, refer to <a href="/Guides/Update the firmware/">this guide</a> for instructions on how to update it in your kit</p>
 </div>
+<h2 id="additional-graphic-material">Additional graphic material<a class="headerlink" href="#additional-graphic-material" title="Permanent link">&para;</a></h2>
+<p><img alt="" src="../assets/full-side-photo.jpg" /></p>
+<p><img alt="" src="../assets/side-photo.jpg" /></p>
+<p><img alt="" src="../assets/render-1.png" /></p>
+<p><img alt="" src="../assets/render-2.png" /></p>
+<p><img alt="" src="../assets/render-3.png" /></p>
+<p><img alt="" src="../assets/render-4.png" /></p>
+<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
 <style>
 
 #img {
@@ -2309,6 +2308,18 @@
 }
 
 </style>
+
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>GPS NEO-M8U Specification: <a href="https://cdn.sparkfun.com/assets/6/d/7/c/6/NEO-M8U_DataSheet__UBX-15015679_.pdf">https://cdn.sparkfun.com/assets/6/d/7/c/6/NEO-M8U_DataSheet__UBX-15015679_.pdf</a>&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p>Ceramic Patch Antenna Specification: <a href="https://www.molex.com/pdm_docs/as/2066400001-AS.pdf">https://www.molex.com/pdm_docs/as/2066400001-AS.pdf</a>&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
                 
               
               
