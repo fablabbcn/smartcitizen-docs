@@ -117,6 +117,40 @@ extra:
   footer_logo: '/assets/images/eu-flag.png'
   license: 'CC Attribution-NonCommercial-ShareAlike 4.0 International'
 
+# plugins:
+#     - with-pdf:
+#         author: Smart Citizen
+#         copyright: 'CC Attribution-NonCommercial-ShareAlike 4.0 International'
+#         cover: true
+#         cover_title: Smart Citizen Sensors Documentation
+#         cover_subtitle: Smart Citizen - Oct 2020
+#         toc_title: Table of contents
+#         heading_shift: false
+#         toc_level: 3
+#         ordered_chapter_level: 2
+#         excludes_children:
+#            - 'release-notes/:upgrading'
+#            - 'release-notes/:changelog'
+#         exclude_pages:
+#            - 'Components/'
+#            - 'Guides/'
+#            - 'Legacy Hardware/'
+#            - 'Sensors Analysis Framework/'
+#            - 'Sensor Platform/'
+#         convert_iframe:
+#            - src: IFRAME SRC
+#              img: POSTER IMAGE URL
+#              text: ALTERNATE TEXT
+#            - src: ...
+#         two_columns_level: 3
+#         render_js: true
+#         headless_chrome_path: headless-chromium
+#         output_path: ..
+#         enabled_if_env: ENABLE_PDF_EXPORT
+#         debug_html: true
+#         show_anchors: true
+#         verbose: true
+
 markdown_extensions:
   - admonition
   - codehilite
