@@ -30,7 +30,7 @@ This is probably the most common use case: exploring data in a visual way. The f
 
 ![](/assets/images/saf_schema_basic.png)
 
-!!! info "examples"
+!!! info "Examples"
     Check [the examples](https://github.com/fablabbcn/smartcitizen-data/tree/master/examples) in the Github Repo!
 
 **Organise your data in tests**
@@ -51,9 +51,6 @@ A brief schema of the test structure is specified below:
 <div style="text-align:center">
 <image src="https://i.imgur.com/CSi5tL4.png" width="600px"/>
 </div>
-
-!!! info "examples"
-    Follow the guide to [organize your data in tests](/Guides/Organise your data).
 
 **Clean sensor data**
 
