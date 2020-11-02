@@ -31,7 +31,7 @@ This is probably the most common use case: exploring data in a visual way. The f
 ![](/assets/images/saf_schema_basic.png)
 
 !!! info "examples"
-    Check the example on how to [load data from the API](https://github.com/fablabbcn/smartcitizen-iscape-data/blob/master/examples/load_device_API.ipynb), and to [make plots from it](https://github.com/fablabbcn/smartcitizen-iscape-data/blob/master/examples/load_test_data.ipynb). Check [here](https://github.com/fablabbcn/smartcitizen-iscape-data/blob/master/notebooks/report.ipynb) for an example about **reports** and it's [result](https://github.com/fablabbcn/smartcitizen-iscape-data/blob/master/data/reports/EXAMPLE_REPORT.html).
+    Check [the examples](https://github.com/fablabbcn/smartcitizen-data/tree/master/examples) in the Github Repo!
 
 **Organise your data in tests**
 
@@ -68,7 +68,7 @@ Low cost sensor data needs calibration, with more or less complex regression alg
 ![](/assets/images/saf_schema_models.png)
 
 !!! info "Guidelines on sensor development"
-    Check our [guidelines](/Components/Deployments) on sensor deployment to see why this is important in some cases.
+    Check our [guidelines](/Guides) on sensor deployment to see why this is important in some cases.
 
 **Batch analysis**
 
@@ -80,19 +80,11 @@ Automatisation of all this tools can be very handy at times, since we want to sp
 
 ![](/assets/images/saf_schema_batch.png)
 
-!!! info "Check the guides"
-    Visit [here](/Sensor%20Analysis%20Framework/guides/Analyse%20your%20data%20in%20batch)!
-
 **Share data**
 
 One important aspect of our research is to share the data so that others can work on it, and build on top of our results, validate the conclusions or simply disseminate the work done. For this, integration with [zenodo](https://zenodo.org) is provided to share datasets and reports:
 
 ![](/assets/images/saf_schema_zenodo.png)
-
-!!! info
-    Check one example [in this notebook](https://github.com/fablabbcn/smartcitizen-iscape-data/blob/master/examples/upload_to_zenodo.ipynb) and this [guide](/Guides/Upload data to zenodo)
-
-<!-- ### A deeper look
 
 Have a look at the features within the framework: 
 
@@ -102,13 +94,6 @@ Have a look at the features within the framework:
 - A **sensor model calibration toolset** with classical statistical methods such as linear regression, ARIMA, SARIMA-X, as well as more modern Machine Learning techniques with the use of LSTM networks, RF (Random Forest), SVR (Support Vector Regression) models for sequential data prediction and forecasting
 - Methods to statistically validate and study the performance of these models, export and store them
 - As a bonus, an interface to convert the python objects into the statistical analysis language R
-
-!!! tip "Step by step guides"
-	* [Install the framework](/Sensor%20Analysis%20Framework/guides/Install%20the%20framework/)
-	* [Use Machine Learning to Create Models for Sensors Calibration](/Sensor%20Analysis%20Framework/guides/Creating%20Models%20for%20Sensors%20Calibration/)
-	* [Organise your data](/Sensor Analysis Framework/guides/Organise your data/)
-    * [Batch analysis of your data](/Sensor%20Analysis%20Framework/guides/Analyse%20your%20data%20in%20batch)
-    * [Make exports from your data analysis](/Sensor%20Analysis%20Framework/guides/Make%20exports%20from%20your%20data)
 
 #### Loading and managing the data
 
@@ -126,9 +111,6 @@ A brief schema of the test structure is specified below:
 </div>
 
 All this structure is filled up at the test creation with a dedicated script, saving future time to understand mismatching reading units, timestamps formats and so on.
-
-!!! info "Create your tests"
-    Visit the guide on [organising your data](/Sensor%20Analysis%20Framework/guides/Organise%20your%20data) 
 
 #### Exploratory data analysis
 
@@ -153,7 +135,7 @@ The data models section includes tools to prepare, train and evaluate models com
 - Data study and analysis for **multicollinearity** and **autocorrelation** in order to determine significant variables and avoid model overfit with non-significant exogenous variables
 - **Trend decomposition** and **seasonality** analysis
 
-**Model stage:**
+**Model stage**
 
 - **Baseline model** estimations in order to assess minimum targets for model quality (using naive regression models)
 - **Ordinary Linear Regression** techniques for univariate and multivariate linear and non-linear independent variables
@@ -170,7 +152,7 @@ Depending on the model selected, different validation techniques are implemented
 
 #### Model import/export and storage
 
-Once the model is analysed and validated, it can be saved and exported. This allows using the model in the future with the same variables in other sensor studies. The model objects are serialised with [joblib](https://github.com/joblib/joblib) and can be uploaded to the [Models Github Repository](https://github.com/fablabbcn/smartcitizen-iscape-models) for later use. -->
+Once the model is analysed and validated, it can be saved and exported. This allows using the model in the future with the same variables in other sensor studies. The model objects are serialised with [joblib](https://github.com/joblib/joblib) and can be uploaded to a Model Repository.
 
 ## Source files
 
