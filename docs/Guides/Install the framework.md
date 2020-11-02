@@ -1,7 +1,7 @@
 How to install the framework
 ============================
 
-The following data analysis framework is a set of tools built on Python 3.7 to help you analyse your data. It can be used with [Jupyter Notebooks](https://jupyter.org/) or [Jupyter Lab](https://jupyterlab.readthedocs.io/en/stable/), although it is not mandatory. 
+The following data analysis framework is a set of tools built on Python 3.7 to help you analyse your data. It can be used with [Jupyter Notebooks](https://jupyter.org/) or [Jupyter Lab](https://jupyterlab.readthedocs.io/en/stable/), although it is not mandatory.
 
 ## Prerequisites
 
@@ -14,21 +14,27 @@ We recommend you use these two tools for managing the different versions of the 
 
 Open your favourite shell on the directory you have your project. _(`cmd.exe` on windows)_
 
-### Get the repo
+```
+pip install scdata
+```
+
+### Dev instructions
+
+1. Get the repo
 
 Make a directory and `clone` the repository in it:
 
 ```
 ➜  mkdir smartcitizen-data
 ➜  cd smartcitizen-data
-➜  git clone https://github.com/fablabbcn/smartcitizen-data-framework.git
+➜  git clone https://github.com/fablabbcn/smartcitizen-data.git
 ...
 ```
 
 !!! warning "Want to stay up-to-date?"
-    The framework is being constantly updated and the only version that will always be up-to-date is in the [master branch of the github repository](https://github.com/fablabbcn/smartcitizen-data-framework). We do not recommend to simply download the repository but to clone it with `git`. If you want to learn more about `git` and why it can help you in your projects, check [here](https://www.quora.com/What-is-Git-and-why-should-I-use-it)
+    The framework is being constantly updated and the only version that will always be up-to-date is in the [master branch of the github repository](https://github.com/fablabbcn/smartcitizen-data). We do not recommend to simply download the repository but to clone it with `git`. If you want to learn more about `git` and why it can help you in your projects, check [here](https://www.quora.com/What-is-Git-and-why-should-I-use-it)
 
-### Finish it up
+2. Finish it up
 
 The code in the framework is managed as internal dependencies. To activate this, you can run:
 
@@ -42,7 +48,6 @@ You should now be ready to go! You can verify the installation by either running
 
 ```
 jupyter lab --version
-1.0.2
 ```
 
 To run `jupyter lab`, in your terminal type:
