@@ -2,7 +2,7 @@ Uploading results to [Zenodo](https://zenodo.org/) is also possible using the da
 
 ![](https://about.zenodo.org/static/img/logos/zenodo-black-1000.png)
 
-Once you have your data organised in a test, you can upload it directly to Zenodo and share it with others. An example of this is provided in the [example notebook](https://github.com/fablabbcn/smartcitizen-iscape-data/blob/master/examples/upload_to_zenodo.ipynb).
+Once you have your data organised in a test, you can upload it directly to Zenodo and share it with others. An example of this is provided in the [example notebook](https://github.com/fablabbcn/smartcitizen-data/blob/master/examples/notebooks/todo/upload_to_zenodo.ipynb).
 
 For this to work, we need to have a [token](https://zenodo.org/account/settings/applications/). Put this in a secrets.py file in the `src` directory:
 
