@@ -13,13 +13,11 @@ The Smart Citizen Station aims at providing a solution that can be used by Citiz
 ![](https://i.imgur.com/QB5P4r9.jpg)
 _Middle iSCAPE Station version (iSCAPE-V1.0)_
 
-The station is designed with a modular principle where sensors can be added easily added expanding the capabilities of the installation or replaced when they are damaged or the sensors lifetime is over. From a costs perspective while being more expensive than the Smart Citizen Kit it is also conceived as a low-cost solution.
-
-![](https://i.imgur.com/p9lDxiv.jpg)
-
 ## Measurements
 
-The design builds on top of the Smart Citizen Kit adding an extra set of more accurate sensors especially aimed at measuring air pollutants. The sensors can include **some, or all of**:
+The station is designed with a modular principle where sensors can be added easily added expanding the capabilities of the installation or replaced when they are damaged or the sensors lifetime is over. From a costs perspective while being more expensive than the Smart Citizen Kit it is also conceived as a low-cost solution. The design builds on top of the Smart Citizen Kit adding an extra set of more accurate sensors especially aimed at measuring air pollutants. 
+
+The sensors can include **some, or all of**:
 
 - **Gas sensors** for gases such as B4 or A4 sensors from [Alphasense Ltd.](http://www.alphasense.com/index.php/air/) such as: CO, NO2, NO, O3, SO2, H2S. These are normally in configurations of 2, 4, or 6 sensors (normally O3 needs NO2 to compensate for cross-sensitivity)
 - **CO2 NDIR Sensor** with a [sensirion SCD30](https://www.sensirion.com/en/environmental-sensors/carbon-dioxide-sensors/carbon-dioxide-sensors-co2/)
