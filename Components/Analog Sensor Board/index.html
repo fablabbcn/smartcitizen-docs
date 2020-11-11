@@ -516,9 +516,65 @@
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Analog Sensor Board
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
     <a href="./" title="Analog Sensor Board" class="md-nav__link md-nav__link--active">
       Analog Sensor Board
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#characteristics" class="md-nav__link">
+    Characteristics
+  </a>
+  
+    <nav class="md-nav" aria-label="Characteristics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#operating-voltage" class="md-nav__link">
+    Operating voltage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connectivity" class="md-nav__link">
+    Connectivity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inputs" class="md-nav__link">
+    Inputs
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -586,6 +642,18 @@
   <li class="md-nav__item">
     <a href="../Water/" title="Water Sensors" class="md-nav__link">
       Water Sensors
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Power%20Supply/" title="Power Supply" class="md-nav__link">
+      Power Supply
     </a>
   </li>
 
@@ -1390,6 +1458,48 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#characteristics" class="md-nav__link">
+    Characteristics
+  </a>
+  
+    <nav class="md-nav" aria-label="Characteristics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#operating-voltage" class="md-nav__link">
+    Operating voltage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connectivity" class="md-nav__link">
+    Connectivity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inputs" class="md-nav__link">
+    Inputs
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1409,11 +1519,20 @@
                 
                 
                 <h1 id="analog-sensor-board">Analog Sensor Board<a class="headerlink" href="#analog-sensor-board" title="Permanent link">&para;</a></h1>
-<div class="admonition warning">
-<p class="admonition-title">WIP</p>
-<p>This page is a WIP, you can find more info at: <a href="https://github.com/fablabbcn/smartcitizen-analog-sensor-board">https://github.com/fablabbcn/smartcitizen-analog-sensor-board</a></p>
-</div>
+<p><img alt="" src="/assets/images/asb4ch.jpg" /></p>
 <p>The SmartCitizen ASB is an expansion board for the Smart Citizen Kit that provides connectivity to analog sensors with a high precission ADS1115 via I2C, with four configurable addresses. It also gives the possibility to directly hook up this ADC by Adafruit.</p>
+<p>We use it to measure low power sensors such as the Alphasense Ltd. electrochemical sensors.</p>
+<h2 id="characteristics">Characteristics<a class="headerlink" href="#characteristics" title="Permanent link">&para;</a></h2>
+<h3 id="operating-voltage">Operating voltage<a class="headerlink" href="#operating-voltage" title="Permanent link">&para;</a></h3>
+<p>Natively operates at 3.3V, but can use also up to 5.5V in EXT-V, and with a selectable jumper. It integrates a level-shifter from the GROVE connector's voltage to EXT-V.</p>
+<h3 id="connectivity">Connectivity<a class="headerlink" href="#connectivity" title="Permanent link">&para;</a></h3>
+<p>I2C, from 3.3V up to 5.5V.</p>
+<h3 id="inputs">Inputs<a class="headerlink" href="#inputs" title="Permanent link">&para;</a></h3>
+<ul>
+<li>4 channels in the 4-channel version. Daisy chainable up to 4 boards - with a total of 16 analog channels!</li>
+<li>8 channels in the 8-channel version.</li>
+</ul>
+<p><a class="github-button" data-size="large" href="https://github.com/fablabbcn/smartcitizen-analog-sensor-board" aria-label="Check the source code">Check the source</a></p>
                 
               
               
