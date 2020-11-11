@@ -1,3 +1,5 @@
+![](/assets/images/clip-front.jpg)
+
 If we want to leave the kit on the outside for a few days you will need to provide it with extra protection. Below you can see the well-known 3D printed enclosure (for versions without PM sensor):
 
 ![](https://i.imgur.com/ZoRN28m.png)

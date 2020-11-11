@@ -27,6 +27,7 @@ nav:
         - Auxiliary Connector: Components/Auxiliary Connector.md
         - Soil Sensors: Components/Soil.md
         - Water Sensors: Components/Water.md
+        - Power Supply: Components/Power Supply.md
     - Firmware: Components/Firmware.md      
     - Sensor Knowledge:
       - Particulate Matter: Components/sensors/PM Sensors.md
