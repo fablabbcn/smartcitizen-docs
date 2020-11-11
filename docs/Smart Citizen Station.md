@@ -3,7 +3,7 @@ Smart Citizen Station
 
 ![](/assets/images/station30bottom.jpg)
 
-The Smart Citizen Station is designed with a modular principle where sensors can be added easily added expanding the capabilities of the installation or replaced when they are damaged or the sensors lifetime is over. From a costs perspective while being more expensive than the Smart Citizen Kit it is also conceived as a low-cost solution. The design builds on top of the Smart Citizen Kit adding an extra set of more accurate sensors especially aimed at measuring air pollutants. 
+The Smart Citizen Station is designed with a modular principle where sensors can be added easily added expanding the capabilities of the installation or replaced when they are damaged or the sensors lifetime is over. From a costs perspective while being more expensive than the Smart Citizen Kit it is also conceived as a low-cost solution. The design builds on top of the Smart Citizen Kit adding an extra set of more accurate sensors especially aimed at measuring air pollutants. It aims at providing a solution that can be used by Citizens and Researchers to gather _advanced air pollution data_ not only from a scientific point of view but also as a tool to engage local communities on air pollution related issues.
 
 The sensors can include **some, or all of**:
 
@@ -36,8 +36,6 @@ Currently, the Smart Citizen Station is only available with an external power su
 
 ![](https://i.imgur.com/CiFikz8.jpg)
 _Final iSCAPE Station version (iSCAPE-V2.0)_
-
-The Smart Citizen Station aims at providing a solution that can be used by Citizens and Researchers to gather _advanced air pollution data_ not only from a scientific point of view but also as a tool to engage local communities on air pollution related issues.
 
 !!! info "A note about versions"
 
