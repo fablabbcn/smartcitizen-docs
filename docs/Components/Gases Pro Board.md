@@ -9,8 +9,7 @@ The Gases Sensor Board is a custom, ultra-low noise, high-performance, low power
 
 ## Sensor measurements
 
-The Gases Pro Board is capable of interfacing with Alphasense Ltd. B4 series sensors without offset voltage compensarion, i.e. it can't interface with NO, NO2 or OX sensors, but it can be used for CO, SO2 and H2S. For measuring NO, NO2 or OX, please refer to the [Analog Sensor Board](/Components/Analog Sensor Board.md)
-
+The Gases Pro Board is capable of interfacing with Alphasense Ltd. B4 series sensors without offset voltage compensarion, i.e. it can't interface with NO, NO2 or OX sensors, but it can be used for CO, SO2 and H2S. For measuring NO, NO2 or OX, please refer to the [Analog Sensor Board](/Components/Analog%20Sensor%20Board/)
 ## Design
 
 Each of the three drivers for Alphasense Ltd. Series B Sensors is built around the same design. They include a three stage adjustable amplifier design for the working electrode and and another simetrical design for the auxiliary electrode. Both signals are then feed to a high accuracy delta-sigma A/D converter with differential inputs 18 bits of resolution. All the parameters are digitally adjustable via I2C from the **Data Board**. Each board also include a unique identifier chip allowing the firmware on the **Data Board** to identify the board and apply the corresponding calibration values and a humidity and temperature sensor. 
