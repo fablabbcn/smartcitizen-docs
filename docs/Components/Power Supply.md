@@ -3,7 +3,7 @@ Smart Citizen Power Supply
 
 ![](/assets/images/powersupply.jpg)
 
-The Smart Citizen Power Supply is a simple power supply to power the SCK and the Smart Citizen Station with 230AC input and 5VDC, including a 1.6A input fuse protection.
+The Smart Citizen Power Supply is a simple power supply to power the SCK and the Smart Citizen Station with 110-230 AC mains power, including a 1.6A input fuse protection and a 5VDC regulated output.
 
 ![](https://i.imgur.com/50JsH5A.jpg)
 
