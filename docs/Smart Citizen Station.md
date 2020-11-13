@@ -3,7 +3,7 @@ Smart Citizen Station
 
 ![](/assets/images/station30bottom.jpg)
 
-The Smart Citizen Station is designed with a modular principle where sensors can be added easily added expanding the capabilities of the installation or replaced when they are damaged or the sensors lifetime is over. From a costs perspective while being more expensive than the Smart Citizen Kit it is also conceived as a low-cost solution. The design builds on top of the Smart Citizen Kit adding an extra set of more accurate sensors especially aimed at measuring air pollutants. It aims at providing a solution that can be used by Citizens and Researchers to gather _advanced air pollution data_ not only from a scientific point of view but also as a tool to engage local communities on air pollution related issues.
+The Smart Citizen Station is a modular environmental monitoring system. Multiple sensors can be added easily added, expanding the capabilities of the installation or replaced when they are damaged or the sensors lifetime is over. From a costs perspective, while being more expensive than the Smart Citizen Kit, it is also conceived as a low-cost solution. The design builds on top of the Smart Citizen Kit, adding an extra set of more accurate sensors, primarily aimed at measuring air pollutants. It aims at providing a solution that can be used by Citizens and Researchers to gather _advanced air pollution data_ not only from a scientific point of view but also as a tool to engage local communities on air pollution-related issues.
 
 The sensors can include **some, or all of**:
 
@@ -31,6 +31,13 @@ _Passive exposure example_
 ## Power
 
 Currently, the Smart Citizen Station is only available with an external power supply (230VAC to 5V). Find more info in the [power supply section](/Components/Power Supply).
+
+## Connectivity
+
+Currently, the Smart Citizen Station requires a Wi-Fi connection to report data to the [online platform](Sensor Platform) and it can also store data offline locally. Read more about the [operation modes](https://docs.smartcitizen.me/Smart%20Citizen%20Kit/#operation-modes) and the supported networks.
+
+!!! tip "Connectivity Units"
+	We tested customized connectivity units capable of deploying a local Wi-Fi network where multiple Smart Citizen Station can connect, data can be relied over GSM (3/4/5G) or other IoT connectivity standards.
 
 ## Development versions
 
