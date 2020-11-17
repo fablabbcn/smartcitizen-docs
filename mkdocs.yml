@@ -34,7 +34,7 @@ nav:
         - Metal Oxide Sensors:
           - What to expect: Components/sensors/air/Metal Oxide.md
           - eCO2/TVOC: Components/sensors/air/CCS811.md
-          - Electrochemical Sensors: Components/sensors/air/Electrochemical Sensors.md
+        - Electrochemical Sensors: Components/sensors/air/Electrochemical Sensors.md
         # - Air Mobile sensors: Components/sensors/air/mobile.md
       - Soil and Water:
         - Soil Moisture Sensors: Components/sensors/soil/Soil Moisture Sensors.md
