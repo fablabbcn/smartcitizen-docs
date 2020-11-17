@@ -1,0 +1,2197 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Smart Citizen Documentation">
+      
+      
+        <link rel="canonical" href="https://docs.smartcitizen.me/Components/sensors/air/Noise/">
+      
+      
+        <meta name="author" content="Smart Citizen Team">
+      
+      <link rel="shortcut icon" href="../../../../assets/images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.5.11">
+    
+    
+      
+        <title>Noise - Smart Citizen Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.860688db.min.css">
+      
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.943997b5.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#2094f3">
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="blue" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#noise-readings" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="https://docs.smartcitizen.me/" title="Smart Citizen Docs" class="md-header-nav__button md-logo" aria-label="Smart Citizen Docs">
+      
+  <img src="../../../../assets/images/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Smart Citizen Docs
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Noise
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header-nav__source">
+        
+<a href="https://github.com/fablabbcn/smartcitizen-docs/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    smartcitizen-docs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+          
+
+  
+
+<nav class="md-tabs md-tabs--active" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../.." class="md-tabs__link md-tabs__link--active">
+          Main
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../../Data/Sensor%20Platform/" class="md-tabs__link">
+          Data
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../../Use%20cases/" class="md-tabs__link">
+          Use cases
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../../Guides/" class="md-tabs__link">
+          Guides
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://docs.smartcitizen.me/" title="Smart Citizen Docs" class="md-nav__button md-logo" aria-label="Smart Citizen Docs">
+      
+  <img src="../../../../assets/images/logo.svg" alt="logo">
+
+    </a>
+    Smart Citizen Docs
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/fablabbcn/smartcitizen-docs/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    smartcitizen-docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" checked>
+    
+    <label class="md-nav__link" for="nav-1">
+      Main
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Main" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        <span class="md-nav__icon md-icon"></span>
+        Main
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../.." title="Welcome" class="md-nav__link">
+      Welcome
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-2" type="checkbox" id="nav-1-2">
+    
+    <label class="md-nav__link" for="nav-1-2">
+      Hardware
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Hardware" data-md-level="2">
+      <label class="md-nav__title" for="nav-1-2">
+        <span class="md-nav__icon md-icon"></span>
+        Hardware
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../" title="Hardware Ecosystem" class="md-nav__link">
+      Hardware Ecosystem
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-2-2" type="checkbox" id="nav-1-2-2">
+    
+    <label class="md-nav__link" for="nav-1-2-2">
+      Smart Citizen Kit
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Smart Citizen Kit" data-md-level="3">
+      <label class="md-nav__title" for="nav-1-2-2">
+        <span class="md-nav__icon md-icon"></span>
+        Smart Citizen Kit
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../Smart%20Citizen%20Kit/" title="What is it?" class="md-nav__link">
+      What is it?
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-2-2-2" type="checkbox" id="nav-1-2-2-2">
+    
+    <label class="md-nav__link" for="nav-1-2-2-2">
+      Components
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Components" data-md-level="4">
+      <label class="md-nav__title" for="nav-1-2-2-2">
+        <span class="md-nav__icon md-icon"></span>
+        Components
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../boards/Data%20Board/" title="Data Board" class="md-nav__link">
+      Data Board
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../boards/Urban%20Board/" title="Urban Board" class="md-nav__link">
+      Urban Board
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../enclosures/Enclosures/" title="Enclosures" class="md-nav__link">
+      Enclosures
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-2-3" type="checkbox" id="nav-1-2-3">
+    
+    <label class="md-nav__link" for="nav-1-2-3">
+      Smart Citizen Station
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Smart Citizen Station" data-md-level="3">
+      <label class="md-nav__title" for="nav-1-2-3">
+        <span class="md-nav__icon md-icon"></span>
+        Smart Citizen Station
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../Smart%20Citizen%20Station/" title="What is it?" class="md-nav__link">
+      What is it?
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-2-3-2" type="checkbox" id="nav-1-2-3-2">
+    
+    <label class="md-nav__link" for="nav-1-2-3-2">
+      Components
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Components" data-md-level="4">
+      <label class="md-nav__title" for="nav-1-2-3-2">
+        <span class="md-nav__icon md-icon"></span>
+        Components
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../boards/Gases%20Pro%20Board/" title="Gas Pro Sensor Board" class="md-nav__link">
+      Gas Pro Sensor Board
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../boards/PM%20Board/" title="PM Board" class="md-nav__link">
+      PM Board
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../boards/Analog%20Sensor%20Board/" title="Analog Sensor Board" class="md-nav__link">
+      Analog Sensor Board
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Soil%20and%20water/" title="Soil and Water" class="md-nav__link">
+      Soil and Water
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Auxiliary%20Connector/" title="Supported sensors" class="md-nav__link">
+      Supported sensors
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../boards/Power%20Supply/" title="Power Supply" class="md-nav__link">
+      Power Supply
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Firmware/" title="Firmware" class="md-nav__link">
+      Firmware
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-4" type="checkbox" id="nav-1-4" checked>
+    
+    <label class="md-nav__link" for="nav-1-4">
+      Sensor Knowledge
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Sensor Knowledge" data-md-level="2">
+      <label class="md-nav__title" for="nav-1-4">
+        <span class="md-nav__icon md-icon"></span>
+        Sensor Knowledge
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-4-1" type="checkbox" id="nav-1-4-1" checked>
+    
+    <label class="md-nav__link" for="nav-1-4-1">
+      Air
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Air" data-md-level="3">
+      <label class="md-nav__title" for="nav-1-4-1">
+        <span class="md-nav__icon md-icon"></span>
+        Air
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../PM%20Sensors/" title="Particulate Matter" class="md-nav__link">
+      Particulate Matter
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Noise
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" title="Noise" class="md-nav__link md-nav__link--active">
+      Noise
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#hardware" class="md-nav__link">
+    Hardware
+  </a>
+  
+    <nav class="md-nav" aria-label="Hardware">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#i2s-protocol" class="md-nav__link">
+    I2S Protocol
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manufacturer-specifications" class="md-nav__link">
+    Manufacturer specifications
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evaluation" class="md-nav__link">
+    Evaluation
+  </a>
+  
+    <nav class="md-nav" aria-label="Evaluation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#test-setup" class="md-nav__link">
+    Test setup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#noise-floor" class="md-nav__link">
+    Noise floor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spectrum-response" class="md-nav__link">
+    Spectrum response
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sensor-considerations" class="md-nav__link">
+    Sensor Considerations
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#noise-measurement-basic-knowledge" class="md-nav__link">
+    Noise measurement basic knowledge
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#signal-processing" class="md-nav__link">
+    Signal processing
+  </a>
+  
+    <nav class="md-nav" aria-label="Signal processing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rms-and-fft-algorithm-simplified" class="md-nav__link">
+    RMS and FFT algorithm simplified
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#signal-windowing" class="md-nav__link">
+    Signal windowing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#signal-equalisation" class="md-nav__link">
+    Signal Equalisation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extra-ball-filtering-and-convolution" class="md-nav__link">
+    Extra ball: Filtering and convolution
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#source-files" class="md-nav__link">
+    Source files
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-4-1-3" type="checkbox" id="nav-1-4-1-3">
+    
+    <label class="md-nav__link" for="nav-1-4-1-3">
+      Metal Oxide Sensors
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Metal Oxide Sensors" data-md-level="4">
+      <label class="md-nav__title" for="nav-1-4-1-3">
+        <span class="md-nav__icon md-icon"></span>
+        Metal Oxide Sensors
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Metal%20Oxide/" title="What to expect" class="md-nav__link">
+      What to expect
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../CCS811/" title="eCO2/TVOC" class="md-nav__link">
+      eCO2/TVOC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Electrochemical%20Sensors/" title="Electrochemical Sensors" class="md-nav__link">
+      Electrochemical Sensors
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-4-2" type="checkbox" id="nav-1-4-2">
+    
+    <label class="md-nav__link" for="nav-1-4-2">
+      Soil and Water
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Soil and Water" data-md-level="3">
+      <label class="md-nav__title" for="nav-1-4-2">
+        <span class="md-nav__icon md-icon"></span>
+        Soil and Water
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../soil/Soil%20Moisture%20Sensors/" title="Soil Moisture Sensors" class="md-nav__link">
+      Soil Moisture Sensors
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../soil/Tensiometer/" title="Tensionmenter" class="md-nav__link">
+      Tensionmenter
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../_FAQ/" title="FAQ" class="md-nav__link">
+      FAQ
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../Troubleshooting/" title="Troubleshooting" class="md-nav__link">
+      Troubleshooting
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Data
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Data" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon"></span>
+        Data
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../Data/Sensor%20Platform/" title="Sensor Platform" class="md-nav__link">
+      Sensor Platform
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../Data/Smart%20Citizen%20API/" title="Smart Citizen API" class="md-nav__link">
+      Smart Citizen API
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../Data/Data%20Analysis/" title="Data Analysis" class="md-nav__link">
+      Data Analysis
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Use cases
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Use cases" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon"></span>
+        Use cases
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../Use%20cases/" title="Main" class="md-nav__link">
+      Main
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../Use%20cases/Citizen%20Sensing%20Toolkit/" title="Citizen Sensing Toolkit" class="md-nav__link">
+      Citizen Sensing Toolkit
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../Use%20cases/Research/" title="Research Projects" class="md-nav__link">
+      Research Projects
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../Use%20cases/Presentations/" title="Additional material" class="md-nav__link">
+      Additional material
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../Use%20cases/Friends/" title="Friend projects" class="md-nav__link">
+      Friend projects
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Guides
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Guides" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon"></span>
+        Guides
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../Guides/" title="Main" class="md-nav__link">
+      Main
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2">
+    
+    <label class="md-nav__link" for="nav-4-2">
+      Getting started
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Getting started" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-2">
+        <span class="md-nav__icon md-icon"></span>
+        Getting started
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../Guides/getting%20started/Onboarding%20Sensors/" title="Onboarding Sensors" class="md-nav__link">
+      Onboarding Sensors
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../Guides/getting%20started/Downloading%20the%20Data/" title="Downloading platform data" class="md-nav__link">
+      Downloading platform data
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../Guides/getting%20started/Uploading%20SD%20Card%20Data/" title="Uploading SD-card data" class="md-nav__link">
+      Uploading SD-card data
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../Guides/getting%20started/Updating%20the%20Wi-Fi/" title="Updating the Wi-Fi" class="md-nav__link">
+      Updating the Wi-Fi
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../Guides/getting%20started/Using%20the%20Shell/" title="Using the Shell" class="md-nav__link">
+      Using the Shell
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-3" type="checkbox" id="nav-4-3">
+    
+    <label class="md-nav__link" for="nav-4-3">
+      Firmware
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Firmware" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-3">
+        <span class="md-nav__icon md-icon"></span>
+        Firmware
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../Guides/firmware/Update%20the%20firmware/" title="Update the firmware" class="md-nav__link">
+      Update the firmware
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../Guides/firmware/Edit%20the%20Firmware/" title="Edit the firmware" class="md-nav__link">
+      Edit the firmware
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../Guides/firmware/Debug%20the%20firmware/" title="Debug the firmware" class="md-nav__link">
+      Debug the firmware
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-4" type="checkbox" id="nav-4-4">
+    
+    <label class="md-nav__link" for="nav-4-4">
+      Data Analysis
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Data Analysis" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-4">
+        <span class="md-nav__icon md-icon"></span>
+        Data Analysis
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../Guides/data/Install%20the%20framework/" title="Framework Installation" class="md-nav__link">
+      Framework Installation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../Guides/data/Make%20reports%20of%20your%20data/" title="Make reports of your data" class="md-nav__link">
+      Make reports of your data
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../Guides/data/Creating%20Interfaces/" title="Creating interfaces" class="md-nav__link">
+      Creating interfaces
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../Guides/data/Organise%20your%20data/" title="Organise your data" class="md-nav__link">
+      Organise your data
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../Guides/data/Upload%20data%20to%20zenodo/" title="Uploading data to zenodo" class="md-nav__link">
+      Uploading data to zenodo
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-5" type="checkbox" id="nav-4-5">
+    
+    <label class="md-nav__link" for="nav-4-5">
+      Deploying sensors
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Deploying sensors" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-5">
+        <span class="md-nav__icon md-icon"></span>
+        Deploying sensors
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../Guides/deployments/Deploying%20SCK/" title="SCK" class="md-nav__link">
+      SCK
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../Guides/deployments/Deploying%20iSCAPE%20Station%20V1/" title="iSCAPE Station V1" class="md-nav__link">
+      iSCAPE Station V1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../Guides/deployments/Deploying%20iSCAPE%20Station%20V2/" title="iSCAPE Station V2" class="md-nav__link">
+      iSCAPE Station V2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../Guides/deployments/Deploying%20Smart%20Citizen%20Station/" title="Smart Citizen Station" class="md-nav__link">
+      Smart Citizen Station
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../Guides/deployments/Installing%20Connectivity%20Units/" title="Smart Citizen Connectivity Units" class="md-nav__link">
+      Smart Citizen Connectivity Units
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../Guides/deployments/Soil%20and%20water%20sensors/" title="Soil and water sensors" class="md-nav__link">
+      Soil and water sensors
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../Guides/deployments/Almabike%20sensors/" title="SCK Almabike sensors" class="md-nav__link">
+      SCK Almabike sensors
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-6" type="checkbox" id="nav-4-6">
+    
+    <label class="md-nav__link" for="nav-4-6">
+      Enclosures
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Enclosures" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-6">
+        <span class="md-nav__icon md-icon"></span>
+        Enclosures
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../Guides/enclosures/Making%20your%20own%20enclosures/" title="Making your own enclosures" class="md-nav__link">
+      Making your own enclosures
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-7" type="checkbox" id="nav-4-7">
+    
+    <label class="md-nav__link" for="nav-4-7">
+      Legacy Hardware
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Legacy Hardware" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-7">
+        <span class="md-nav__icon md-icon"></span>
+        Legacy Hardware
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-7-1" type="checkbox" id="nav-4-7-1">
+    
+    <label class="md-nav__link" for="nav-4-7-1">
+      Smart Citizen 1.1
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Smart Citizen 1.1" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-7-1">
+        <span class="md-nav__icon md-icon"></span>
+        Smart Citizen 1.1
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../legacy/" title="Main" class="md-nav__link">
+      Main
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../legacy/Hardware/" title="Hardware" class="md-nav__link">
+      Hardware
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../legacy/Command%20Line/" title="Command Line" class="md-nav__link">
+      Command Line
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../legacy/Faq/" title="FAQ" class="md-nav__link">
+      FAQ
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../legacy/Troubleshooting/" title="Troubleshooting" class="md-nav__link">
+      Troubleshooting
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-7-2" type="checkbox" id="nav-4-7-2">
+    
+    <label class="md-nav__link" for="nav-4-7-2">
+      Smart Citizen 2.0
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Smart Citizen 2.0" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-7-2">
+        <span class="md-nav__icon md-icon"></span>
+        Smart Citizen 2.0
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../legacy/sck/" title="Main" class="md-nav__link">
+      Main
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../SGX%20MICS/" title="About the CO-NO2 MOs" class="md-nav__link">
+      About the CO-NO2 MOs
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#hardware" class="md-nav__link">
+    Hardware
+  </a>
+  
+    <nav class="md-nav" aria-label="Hardware">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#i2s-protocol" class="md-nav__link">
+    I2S Protocol
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manufacturer-specifications" class="md-nav__link">
+    Manufacturer specifications
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evaluation" class="md-nav__link">
+    Evaluation
+  </a>
+  
+    <nav class="md-nav" aria-label="Evaluation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#test-setup" class="md-nav__link">
+    Test setup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#noise-floor" class="md-nav__link">
+    Noise floor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spectrum-response" class="md-nav__link">
+    Spectrum response
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sensor-considerations" class="md-nav__link">
+    Sensor Considerations
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#noise-measurement-basic-knowledge" class="md-nav__link">
+    Noise measurement basic knowledge
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#signal-processing" class="md-nav__link">
+    Signal processing
+  </a>
+  
+    <nav class="md-nav" aria-label="Signal processing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rms-and-fft-algorithm-simplified" class="md-nav__link">
+    RMS and FFT algorithm simplified
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#signal-windowing" class="md-nav__link">
+    Signal windowing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#signal-equalisation" class="md-nav__link">
+    Signal Equalisation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extra-ball-filtering-and-convolution" class="md-nav__link">
+    Extra ball: Filtering and convolution
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#source-files" class="md-nav__link">
+    Source files
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/fablabbcn/smartcitizen-docs/edit/master/docs/Components/sensors/air/Noise.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                  
+                
+                
+                <h1 id="noise-readings">Noise readings<a class="headerlink" href="#noise-readings" title="Permanent link">&para;</a></h1>
+<p>The new Urban Sensor Board SCK 2.0 (and onwards) comes with a digital <strong>MEMs I2S microphone</strong>. There is a wide range of possibilities in the market, and our pick was the INVENSENSE (now TDK) <a href="https://www.invensense.com/products/digital/ics-43432/">ICS43432</a>: a tiny digital MEMs microphone with I2S output. There is an extensive documentation at TDK's website coming from the former and we would recommend to review the nicely put documents for those interested in the topic.</p>
+<p><img alt="" src="https://i.imgur.com/ZbkN4aj.png" /></p>
+<p><em>Image credit: <a href="https://www.invensense.com/products/digital/ics-43432">Invensense ICS43432</a></em></p>
+<h2 id="hardware">Hardware<a class="headerlink" href="#hardware" title="Permanent link">&para;</a></h2>
+<p>The <strong>MEMs microphone</strong> comes with a transducer element which converts the sound pressure into electric signals. The sound pressure reaches the transducer through a hole drilled in the package and the transducer's signal is sent to an ADC which provides with a signal which can be pulse density modulated (PDM) or in I2S format. Since the ADC is already in the microphone, we have an all-digital audio capture path to the processor and it’s less likely to pick up interferences from other RF, such as the WiFi, for example. The I2S has the advantage of a decimated output, and since the SAMD21 has an I2S port, this allows us to connect it directly to the microcontroller with no CODEC needed to decode the audio data. Additionally, there is a bandpass filter, which eliminates <em>DC</em> and low frequency components (i.e. at fs = 48kHz, the filter has -3dB corner at 3,7Hz) and high frequencies at <em>0,5·fs</em> (-3dB cutoff). Both specifications are important to consider when analysing the data and discarding unusable frequencies. The microphone acoustic response has to be considered as well, with subsequent equalisation in the data treatment in order.</p>
+<p><img alt="" src="https://i.imgur.com/cToxGKY.png" /></p>
+<p><em>Image credit: <a href="https://www.invensense.com/wp-content/uploads/2015/02/ICS-43432-data-sheet-v1.3.pdf">ICS43432 Datasheet - TDK Invensense</a></em></p>
+<h3 id="i2s-protocol">I2S Protocol<a class="headerlink" href="#i2s-protocol" title="Permanent link">&para;</a></h3>
+<p>The <strong><a href="https://www.sparkfun.com/datasheets/BreakoutBoards/I2SBUS.pdf">I2S protocol</a></strong> (<em>Inter-IC-Sound</em>) is a serial bus interface which consists of: a bit clock line or Serial Clock (<em>SCK</em>), a word clock line or Word Select (<em>WS</em>) and a multiplexed Serial Data line (<em>SD</em>). The SD is transmitted in two’s complement with MSB first, with a 24-bit word length in the microphone we picked. The <em>WS</em> is used to indicate which channel is being transmitted (left or right). In the case of the ICS43432, there is an additional pin which corresponds with the L/R, allowing to use the left or right channel to output the signal and the use of stereo configurations. When set to left, the data follows WS’s falling edge and when set to right, the WS’s rising edge. For the SAMD21 processor, there is a well developed <a href="https://github.com/arduino/ArduinoCore-samd/tree/master/libraries/I2S">I2S library</a> that will take control of this configuration. </p>
+<p><img alt="" src="https://i.imgur.com/Z6TdV9h.png" /></p>
+<p><em>Image credit: <a href="https://www.sparkfun.com/datasheets/BreakoutBoards/I2SBUS.pdf">I2S bus specification - Philips Semiconductors</a></em></p>
+<p>The SD line of the I2S protocol is quite delicate at high frequencies and it is largely affected by noise in the path the line follows. If you want to try this at home (for example with an Arduino Zero and an I2S microphone like <a href="https://www.tindie.com/products/onehorse/ics43432-i2s-digital-microphone/">this one</a>, it is important not to use cables in this line and to connect the output pin directly to the board, to avoid having interfaces throughout the SD line. One interesting way to see this is that every time the line sees a medium change, part of it will be reflected and part will be transmitted, just like any other wave. This means that introducing a cable for the line will provoke at least three medium changes and a potential signal quality loss much higher than a direct connection. Apart from this point, the I2S connection is pretty straight forward and it is reasonably easy to retrieve data from the line and start playing around with some FFT analysis.</p>
+<h3 id="manufacturer-specifications">Manufacturer specifications<a class="headerlink" href="#manufacturer-specifications" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th align="center">Parameter</th>
+<th align="center">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">EIN (dB) - Equivalent input noise</td>
+<td align="center">29</td>
+</tr>
+<tr>
+<td align="center">Acoustic Dynamic Range (dB)</td>
+<td align="center">87</td>
+</tr>
+<tr>
+<td align="center">AOP - Acoustic overload point (dB)</td>
+<td align="center">116</td>
+</tr>
+<tr>
+<td align="center">Full Scale digital (dB SPL)</td>
+<td align="center">120</td>
+</tr>
+<tr>
+<td align="center">BIT length (-)</td>
+<td align="center">24</td>
+</tr>
+<tr>
+<td align="center">Sensitivity at 94 dBSPL 1kHz (dBFS)</td>
+<td align="center">-26</td>
+</tr>
+</tbody>
+</table>
+<h2 id="evaluation">Evaluation<a class="headerlink" href="#evaluation" title="Permanent link">&para;</a></h2>
+<p>The sensor is calibrated in an anechoic chamber with a reference microphone to obtain sensor characteristics. The ICS43432 has a clear non-linear response, which is specified in it's datasheet and is characterised in an anechoic chamber:</p>
+<p><img alt="" src="https://i.imgur.com/FYxxWxB.jpg" /></p>
+<p><em>Image credit: <a href="https://www.invensense.com/products/digital/ics-43432">Invensense ICS43432</a></em></p>
+<h3 id="test-setup">Test setup<a class="headerlink" href="#test-setup" title="Permanent link">&para;</a></h3>
+<p><em>SCK side</em></p>
+<ul>
+<li>1 x microphone installed in Arduino Zero (alternating Invensense and Knowles), at h = 1,2m</li>
+</ul>
+<p><em>Instrumentation side</em></p>
+<ul>
+<li>1 x Speaker at 4m distance from the microphone at h = 1,2m 1 x Microphone</li>
+<li>1 x Class I sonometer for double point test</li>
+</ul>
+<h3 id="noise-floor">Noise floor<a class="headerlink" href="#noise-floor" title="Permanent link">&para;</a></h3>
+<p>The noise floor of the microphone in this test setup is of <strong>35,5 dB / 30,1 dBA</strong></p>
+<h3 id="spectrum-response">Spectrum response<a class="headerlink" href="#spectrum-response" title="Permanent link">&para;</a></h3>
+<p>The results for this characterisation, for different SPLs are shown below:</p>
+<p><img alt="" src="https://i.imgur.com/P3co21a.png" /></p>
+<p>The microphone's spectrum response is not dependent on the SPL, but only on the frequency. The above response is corrected in the Smart Citizen Kit on real time. A double point validation is performed on both microphones, from the SCK1.5 and the SCK2.0 (onwards), yielding the following results (<strong>the results below do not show any equalisation</strong>):</p>
+<p><img alt="" src="https://i.imgur.com/wf7ZWzg.png" /></p>
+<p>Finally, if comparing these with the thresholds, in dBA scale <a href="https://webstore.iec.ch/preview/info_iec61672-1{ed1.0}en_d.pdf">IEC 61672-1</a>, without accounting for the previous equalisation:</p>
+<p><img alt="" src="https://i.imgur.com/rRMGL7N.png" /></p>
+<p>Which yields a very good linearity off-the-shelf over the common urban frequency range (below 2000Hz).</p>
+<h3 id="sensor-considerations">Sensor Considerations<a class="headerlink" href="#sensor-considerations" title="Permanent link">&para;</a></h3>
+<p>There are some known limitations that need to be taken into account when performing noise measurements with the SCK:</p>
+<ol>
+<li>The microphone is not isolated in any way from humidity, dust or particles. These can affect the readings and provoke clipping in the readings (absurdly high readings).</li>
+<li>Up to version 0.9.7 of the firmware, there was a problem in the equalisation tables that provoked low frequencies to be amplified.</li>
+<li>The fact that the microphone is surface mounted on a PCB can make that certain frequencies resonate on the board and get amplified.</li>
+</ol>
+<h2 id="noise-measurement-basic-knowledge">Noise measurement basic knowledge<a class="headerlink" href="#noise-measurement-basic-knowledge" title="Permanent link">&para;</a></h2>
+<p>Real-world sound pressure levels (SPL) travelling around in the air are not fully perceived by our ears. </p>
+<p><img alt="" src="http://www.dspguide.com/graphics/F_22_1.gif" /></p>
+<p><em>Image credit: <a href="http://www.dspguide.com/ch22/1.htm">Human hearing - DSP Guide</a></em></p>
+<p>There are several studies and models of what we actually perceive which yield several types of the so called <strong>weighting functions</strong>. Some of them have been standarised for the purpose of SPL measurement, finding different types like <strong><a href="https://en.wikipedia.org/wiki/A-weighting#Deficiencies_of_A-weighting">A-weighting</a></strong> (the most common one), B-weighting, D (both in disuse) and others. In the frequency domain, they look like this:</p>
+<p><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Acoustic_weighting_curves_%281%29.svg/400px-Acoustic_weighting_curves_%281%29.svg.png&quot; alt=&quot;Weighting table" /></p>
+<p><em>Image credit: <a href="https://en.wikipedia.org/wiki/A-weighting#Deficiencies_of_A-weighting">A-weighting - Wikipedia</a></em></p>
+<p>Even if the are high sound pressure levels floating around in the air, we might not hear them just because of the frequency they are at. Normally humans can hear from something around 20Hz to 20kHz, although most adults might not hear anything in out-of-laboratory conditions above 15kHz. Some animals though, can perceive a <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Animal_hearing_frequency_range.svg/512px-Animal_hearing_frequency_range.svg.png">great range of frequencies</a>, and for example mouses can hear up to 80kHz.</p>
+<p>Because of all this, the very first thing we would like to do is to be able to perform <strong>weighting</strong> on the samples we measure. The I2S microphone is interesting in order to <strong>understand sources of urban noise pollution</strong> since it provides us with a raw SPL buffer we can play with. As well, we can obtain dBA levels (SPL with a-weighting correction) by processing this buffer in several ways and calculate the RMS level of the resulting signal.</p>
+<h2 id="signal-processing">Signal processing<a class="headerlink" href="#signal-processing" title="Permanent link">&para;</a></h2>
+<p>This is the whole signal treatment process we use for the I2S microphone ICS43432. We will have a look at <em>windowing</em> and its use in future sections, as well as its implementation in the SAMD21 Cortex M0+ for our firmware.</p>
+<ol>
+<li>Signal acquisition</li>
+<li>Windowing</li>
+<li>FFT</li>
+<li>Spectrum Normalisation</li>
+<li>Equalisation</li>
+<li>A-weighting</li>
+<li>RMS calculation</li>
+</ol>
+<div class="admonition info">
+<p class="admonition-title">Calculations</p>
+<p>A note with the calculations on the microphone can be <a href="/assets/notes/noise-dsp.pdf">found here</a></p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">About sampling periods</p>
+<p>A note with the sampling periods on the microphone can be <a href="/assets/notes/noise-sampling.pdf">found here</a></p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">For the purists</p>
+<p>Being mathematical purist, there is yet another possibility for this procedure using convolution in time domain, which is covered below, although not implemented.</p>
+</div>
+<h3 id="rms-and-fft-algorithm-simplified">RMS and FFT algorithm simplified<a class="headerlink" href="#rms-and-fft-algorithm-simplified" title="Permanent link">&para;</a></h3>
+<p>In the previous section we introduced the concept of <em>weighting</em> and our interest on calculating the <em>sound pressure level</em> in different scales. Normally, SPL is expressed in <strong>RMS</strong> levels, or <em>root mean square</em>. This is nothing more than a modified arithmetic average, where each term of the expression is added in its square form. We then take the square root of all the average:</p>
+<div>
+<div class="MathJax_Preview">
+x = {\sqrt{x_1^2+x_2^2+...+x_N^2 \over N}}
+</div>
+<script type="math/tex; mode=display">
+x = {\sqrt{x_1^2+x_2^2+...+x_N^2 \over N}}
+</script>
+</div>
+<p>The interesting thing about the RMS level, is that it expresses an average signal level throughout the signal, and it actually relates to the peak level of sinusoid wave by √2. Therefore, it is a very interesting way to express average levels for signals and for that reason, it's the common standard used.</p>
+<p><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Sine_wave_voltages.svg/400px-Sine_wave_voltages.svg.png" /></p>
+<p><em>Image credit: <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Sine_wave_voltages.svg/400px-Sine_wave_voltages.svg.png">Sine wave parameters- Wikipedia</a></em></p>
+<p>Now that we know how to calculate the RMS level of our signal, let's go into something more interesting: <em>how do we actually perform the weighting?</em> Well, if you recall the previous section, when we talked about hearing, we were talking about the different hearing capabilities in terms of <strong>frequencies</strong> (in humans, mouses, beluga whales... ). Therefore, something interesting to know about our signal is its <strong>frequency content</strong>,  so that we are able to perform the weighting. For this purpose, we have the <strong>FFT algorithm</strong>.</p>
+<p><em>FFT</em> stands for <strong>Fast Fourier Transform</strong>, and it's an algorithm capable of performing a Fourier Transform in a simplified and efficient way (that's where the <em>fast</em> comes in). What it does in a detailed mathematical way is something quite complicated with the details; but being practical, it is basically a convertion between the signal in time domain and its frequency domain components. Interestingly, this process is reversible and the other way around it is called <strong>IFFT</strong> (<em>I</em> for <em>Inverse</em>).</p>
+<p><img alt="" src="https://i.imgur.com/1B1MZSF.png" /></p>
+<p><em>Image credit: Smart Citizen</em></p>
+<p>In the example above, things in the time domain get a bit messy, but in the frequency domain we can <em>clearly</em> see the composition of two sine waves of the same amplitude of roughly 40Hz and 120Hz. The FFT algorithm hence helps us digest the information contained in a signal in a more visually understandable way.</p>
+<p>For this introduction, let's move on to what we actually want to do: <em>the much anticipated weighting</em>. At this point, our task is fairly easy: we just have to multiply both: our signal in the frequency domain with the weighting function and that's it! If we have a look at the figure below, in the time and frequency domain, the signals look like this:</p>
+<p><img alt="" src="https://i.imgur.com/3REv8Ah.png" /></p>
+<p><em>Image credit: Smart Citizen</em></p>
+<p>This example shows how our ears are only capable of perceiving the signal in red, but the actual sound components are in blue -- being much higher in the amplitude spectrum. If you want to get into the thick of it, here you have the actual <a href="https://github.com/oscgonfer/AudioI2S_SCK/tree/master/OCTAVE/A_WEIGHTING">implementation in Matlab/Octave</a> of the A-weighting function that we'll use in the SCK V2.0.</p>
+<h3 id="signal-windowing">Signal windowing<a class="headerlink" href="#signal-windowing" title="Permanent link">&para;</a></h3>
+<p>In this section we are going to describe how we have to pre process our signals in order to obtain the results in the manner we are expecting. These are very important steps in our processing chain, since the FFT algorithms -or convolution FIR Filters- won't be able to cope with our system's limitations. These limitations might not be obvious at the beginning, but you really don't want to ignore them while designing your system, since they'll invalidate many of your measurements.</p>
+<p>The very first of these limitations, is the fact that our microphone is, in fact, taking <strong>discrete samples</strong> of the ambient noise surrounding it. This means that, from the very beginning, we are missing some pieces of information and we will never be able to process them. For the purpose of our analysis, we don't need to sample continuosly and this situation is easily bypassed. </p>
+<p><img alt="Discrete sampling" src="https://i.imgur.com/3Iz2tE0.png" /></p>
+<p><em>Image credit: <a href="https://www.nutaq.com/blog/analog-digital-%E2%80%93-part-2-conversion-process">NUTAQ - Signal processing</a></em></p>
+<p>Discrete sampling has two main consequences for us: the first one is that we are taking samples once every <span><span class="MathJax_Preview">1/f_s</span><script type="math/tex">1/f_s</script></span>, where <span><span class="MathJax_Preview">f_s</span><script type="math/tex">f_s</script></span> is the sampling frequency. Normal audio systems sample at 44,1kHz, but this number might vary depending on the application. If you remember <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Animal_hearing_frequency_range.svg/512px-Animal_hearing_frequency_range.svg.png">this chart</a>, you might be wondering why we have to sample at such a high frequency. </p>
+<p><img alt="" src="https://www.adinstruments.com/sites/default/files/wysiwyg-resources/images/data-quality-digital-sampling_0.gif" /></p>
+<p><em>Image credit: <a href="https://www.adinstruments.com/">Signal acquisition - Adinstruments</a></em></p>
+<p><a href="https://en.wikipedia.org/wiki/Nyquist%E2%80%93Shannon_sampling_theorem">Nyquist sampling criterion</a> states that <strong>at a minimum, we have to sample at double the maximum frequency we want to analyse</strong>. Since humans hearing has a limited frequency range that goes up to 20kHz in some cases, it is reasonable to use something around 40kHz. With this, the <em>Nyquist criterion</em> solves the so called <strong>aliasing problem</strong>, in which several sinusoid signals could fit the same sampling pattern if the number of samples is too low:</p>
+<p><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/AliasingSines.svg/1200px-AliasingSines.svg.png" /></p>
+<p><em>Image credit: <a href="https://en.wikipedia.org/wiki/Aliasing">Wikipedia - Aliasing</a></em></p>
+<p>The second of the discrete sampling limitation comes from the <strong>amount of samples we are able to handle at a time</strong>. Normally, this is due to memory limitations in the RAM. Nevertheless, it is not useful to handle buffers that are <em>too long</em>, since at some point, the increase of buffer length does not provide any additional information. Buffer length requirements in our case come from the minimum frequency we want to sample, which is <em>around 20Hz</em>. Doing some quick math, we need 0,05s worth of sample buffer, which at 44,1kHz is roughly <em>2200 samples</em>. This is equally too many samples, considering that each could be allocated as a <code>uint8_t</code>, taking up to 16kB just for the raw buffer!</p>
+<p>This is where <strong>signal windowing</strong> kicks in. Imagine that we have a very-low-frequency sinusoid and that we are not able to sample completely the whole sine wave, due to buffer limitations. By definition, our system is assuming that the discrete samples we measure are constantly being repeated in the environment, one after the other:</p>
+<p><img alt="" src="https://i.imgur.com/DOfCeAI.png" /></p>
+<p><em>Image credit: Smart Citizen</em></p>
+<p>When we take the FFT of this signal, we see undesired frequencies that make our frequency spectrum invalid. This is called <strong>spectral leakage</strong> and it's mitigated by the use of <a href="https://en.wikipedia.org/wiki/Window_function"><em>windows</em></a> (math funcions, not the OS). These windows operate by <strong>smoothing the edges</strong> of our measurement and preventing the <em>jumps</em> in the signal helping the FFT algorithm to properly analyse the signals.</p>
+<p><img alt="" src="ttps://i.imgur.com/1BSCYdu.png" /></p>
+<p><em>Image credit: Smart Citizen</em></p>
+<p>With the use of <em>signal windowing</em>, more specifically with the use of the <em>hamming window</em>, we are then able to reduce the amount of samples needed to roughly 1000 samples. Now we are down to <strong>50% of the memory allocation needed without windowing</strong>. You can see the effect on the <em>RMS relative errors</em> in the image below, where the trend of the Hann (another common window) and the Hamming treated buffers, with respect to the frequency tends to stabilise <em>much more quickly</em> than the <em>raw</em> buffers.</p>
+<p><img alt="" src="https://i.imgur.com/rlmh9jf.png" /></p>
+<p><em>Image credit: Smart Citizen</em></p>
+<p>There is a wide range of functions to use and the decision depends on your application. For audio applications, the most common ones are the Hann, Hamming, and Blackmann. We chose the Hamming because it's trend is to stabilise a bit more quickly than the rest, although the differencies are minimal. For reference, there is a very interesting description of all these phenomena in this <a href="http://www.ni.com/white-paper/4278/en/">article</a>, where you'll find a more mathematical approach.</p>
+<h3 id="signal-equalisation">Signal Equalisation<a class="headerlink" href="#signal-equalisation" title="Permanent link">&para;</a></h3>
+<p>The equalisation process basically tries to correct the microphone response and make it linear. This is because the microphone responds by amplifying some frequencies more than other and we compensate this. To do so, we performed tests in an <a href="https://en.wikipedia.org/wiki/Anechoic_chamber">anechoic chamber</a> and we extracted [this equalisation table](<a href="https://github.com/fablabbcn/smartcitizen-kit-21/blob/master/sam/src/SckSoundTables.h#L18-L21">https://github.com/fablabbcn/smartcitizen-kit-21/blob/master/sam/src/SckSoundTables.h#L18-L21</a>. This table matches roughly the response of the microphone, but also some other resonances from the urban board.</p>
+<p><img alt="" src="https://forum.smartcitizen.me/uploads/default/optimized/1X/8e6cb3e1476ca1b107891ec9c2d73521f94e5535_2_690x472.png" /></p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>This multiplicative factor goes very much in line with the ICS43432 datasheet, although with additional noise components.</p>
+</div>
+<h3 id="extra-ball-filtering-and-convolution">Extra ball: Filtering and convolution<a class="headerlink" href="#extra-ball-filtering-and-convolution" title="Permanent link">&para;</a></h3>
+<p><em>What if</em> we don't like the FFT algorithm and we only want to obtain a dBA or dBC results? There is a fairly simple solution to this problem, and it's called <strong>filtering</strong>.</p>
+<p>Filtering is a very common technique in signal acquisition that eliminates some frequency components of the raw signal. Examples of filters you very likely have heard of are <em>low-pass, high-pass  and band-pass filters</em>. These only <em>let pass</em> the low, high or a defined interval range of frequencies, mostly cancelling out the rest. In the frequency domain, they basicly multiply the spectrum of our signal with its filter spectrum. Exactly what we have done with the weighting.</p>
+<p><img alt="" src="https://www.norwegiancreations.com/wp-content/uploads/2016/03/filters.png" /></p>
+<p><em>Image credit: Norwegian Creations</em></p>
+<p>First, it is important to get a glimpse of the math behind the filters and why they do their magic. And for this, the most important thing we need to know is called <strong>convolution</strong>.</p>
+<p><img alt="" src="http://colah.github.io/posts/2014-07-Understanding-Convolutions/img/RiverTrain-ImageConvDiagram.png" /></p>
+<p><em>Image credit: <a href="http://intellabs.github.io/RiverTrail/tutorial/">River Trail</a></em></p>
+<p>For the purpose of <strong>audio analysis</strong>, let's consider we have an input vector, a filter kernel and an output vector. Our input vector can be the raw audio signal we have captured, being the output signal the result of the convolution operation. The filter kernel is the characteristic of the filter and will be, for this example, a one dimension array. What the convolution operation is going to do, in a <em>very very very simplified way</em>, is to <strong>sweep through the input sample</strong> and multiply each component with it's corresponding filter kernel component, then sum the results and put them in the corresponding output sample. If we put some math notation and call <em>x[n]</em> to the input vector, <em>h[n]</em> to the filter kernel and <em>y[n]</em> to the output vector, it all ends up looking like this:</p>
+<p><img alt="" src="http://www.dspguide.com/graphics/F_6_8.gif" /></p>
+<p><em>Image credit: <a href="http://www.dspguide.com/">DSP Guide</a></em></p>
+<p>Now, the most interesting thing of all this theory is that <strong>convolution and multiplication are equivalent operations when we jump from the time to the frequency domain</strong>. This means that multiplication in time domain equals to convolution in frequency domain, and more importantly for us, <strong>convolution in the time domain, equals to multiplication in the frequency domain</strong>. To sum up, the relationship between both domains would look like:</p>
+<p><img alt="" src="https://i.imgur.com/3Bhyqt3.png" /></p>
+<p><em>Image credit: SmartCitizen</em></p>
+<p>Therefore, what we could do is to define a <strong>custom filter function</strong> and apply it via convolution to our input buffer. This is basically a <strong>FIR filter</strong>, where <em>FIR</em> stands for <em>Finite Impulse Response</em>. There is another type of filters called <strong>IIR</strong>, where <em>IIR</em> stands for <em>Infinite impulse response</em>. The difference between them is that <em>FIR uses convolution</em> and <em>IIR uses recursion</em>. The concept of <strong>recursion</strong> is very simple and it's nothing else than a simplification of the convolution, given that in the convolution algorithm, there are many <em>recursive</em> operations that we repeat over an over and we can implement into a smarter algorithm. Normally, IIR filters are <em>more efficient in terms of speed and memory</em>, but we need to specify a series of coefficients, and it's tricky, if not impossible, to create a custom filter response.</p>
+<p><img alt="" src="http://www.dspguide.com/graphics/F_19_1.gif" /></p>
+<p><em>Image credit: <a href="http://www.dspguide.com/">DSP Guide</a></em></p>
+<p>So finally! <em>How can we avoid using the FFT algorithm to extract the desired frequency content of a signal and recreate the signal without it?</em> Sounds complex, but now we know that  we can use a <strong>FIR filter</strong>, with a <strong>custom frequency response</strong> and apply it via convolution to our input buffer. As simple as that. The custom frequency response, with the proper math, can be optained by applying the IFFT algorithm to the desired frequency response (for example, the A-weighting function). You can have a look to <a href="https://github.com/oscgonfer/AudioI2S_SCK/tree/dev_i2s_dbg/OCTAVE">this example</a> if you want to create a custom filter function in <a href="https://www.gnu.org/software/octave/">octave</a>, with A or C weighting and implement it to a FIR filter in C++.</p>
+<p><img alt="" src="https://i.imgur.com/MDJgGeH.png" /></p>
+<p><em>Image credit: SmartCitizen</em></p>
+<p>Also, if you are really into it, you can read more about convolution and other DSP topics, we would recommended to go through <a href="http://www.dspguide.com/ch6.htm">this fantastic guide</a>.</p>
+<h2 id="source-files">Source files<a class="headerlink" href="#source-files" title="Permanent link">&para;</a></h2>
+<p><a class="github-button" data-size="large" href="https://github.com/fablabbcn/smartcitizen-kit-audio/archive/master.zip" data-icon="octicon-cloud-download" aria-label="Download from GitHub">Download</a></p>
+<p><a class="github-button" data-size="large" href="https://github.com/fablabbcn/smartcitizen-kit-audio" aria-label="Check the source code">Check the source code</a></p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+
+
+<!-- Application footer -->
+<footer class="md-footer">
+
+  <!-- Link to previous and/or next page -->
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+
+        <!-- Link to previous page -->
+        
+          <a href="../PM%20Sensors/"
+              title="Particulate Matter"
+              class="md-flex md-footer-nav__link md-footer-nav__link--prev"
+              rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back
+                    md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch
+                  md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Particulate Matter
+              </span>
+            </div>
+          </a>
+        
+
+        <!-- Link to next page -->
+        
+          <a href="../Metal%20Oxide/"
+              title="What to expect"
+              class="md-flex md-footer-nav__link md-footer-nav__link--next"
+              rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch
+                  md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                What to expect
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward
+                    md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+
+  <!-- Further information -->
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+
+      <!-- Copyright and theme information -->
+      <div class="md-footer-copyright">
+        <!-- -->
+            <!-- <div class="md-footer-copyright__highlight">CC Attribution-NonCommercial-ShareAlike 4.0 International</div> -->
+        <!-- -->
+		        <img style="margin-top: 20px" alt="The Smart Citizen as part of the iSCAPE project has received funding from the European Community’s H2020 Programme under Grant Agreement No. 689954." src="/assets/images/eu-flag.png">
+            <p class="md-footer-copyright__highlight">The Smart Citizen as part of the iSCAPE project has received funding from the European Community’s H2020 Programme under Grant Agreement No. 689954.</p>
+            <p>Except where otherwise noted, content on this site is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
+            <p><a rel="license" href="http://smartcitizen.me">Smart Citizen</a> is a project by <a rel="license" href="http://fablabbcn.org">Fab Lab Barcelona</a> at the <a rel="license" href="http://iaac.net">Institute For Advanced Architecture Of Catalonia</a>.</p>
+      </div>
+
+      <!-- Social links -->
+      
+        
+  <div class="md-footer-social">
+    
+      
+      
+        
+        
+      
+      <a href="https://twitter.com/smartcitizenkit" target="_blank" rel="noopener" title="twitter.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+      </a>
+    
+      
+      
+        
+        
+      
+      <a href="https://www.instagram.com/smartcitizenkit/" target="_blank" rel="noopener" title="www.instagram.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+      </a>
+    
+      
+      
+        
+        
+      
+      <a href="https://www.instagram.com/smartcitizenkit/" target="_blank" rel="noopener" title="www.instagram.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+      </a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../../assets/javascripts/vendor.df0def68.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.ba57d267.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../../../..",
+          features: ["instant", "navigation.expand", "tabs"],
+          search: Object.assign({
+            worker: "../../../../assets/javascripts/worker/search.5eca75d3.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+        <script src="https://buttons.github.io/buttons.js"></script>
+      
+    
+  </body>
+</html>

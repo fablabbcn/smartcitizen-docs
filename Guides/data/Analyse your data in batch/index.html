@@ -1,0 +1,2235 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Smart Citizen Documentation">
+      
+      
+        <link rel="canonical" href="https://docs.smartcitizen.me/Guides/data/Analyse%20your%20data%20in%20batch/">
+      
+      
+        <meta name="author" content="Smart Citizen Team">
+      
+      <link rel="shortcut icon" href="../../../assets/images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.5.11">
+    
+    
+      
+        <title>Analyse your data in batch - Smart Citizen Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.860688db.min.css">
+      
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.943997b5.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#2094f3">
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="blue" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#functionality" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="https://docs.smartcitizen.me/" title="Smart Citizen Docs" class="md-header-nav__button md-logo" aria-label="Smart Citizen Docs">
+      
+  <img src="../../../assets/images/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Smart Citizen Docs
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Analyse your data in batch
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header-nav__source">
+        
+<a href="https://github.com/fablabbcn/smartcitizen-docs/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    smartcitizen-docs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+          
+
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../.." class="md-tabs__link">
+          Main
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../Data/Sensor%20Platform/" class="md-tabs__link">
+          Data
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../Use%20cases/" class="md-tabs__link">
+          Use cases
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../" class="md-tabs__link">
+          Guides
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://docs.smartcitizen.me/" title="Smart Citizen Docs" class="md-nav__button md-logo" aria-label="Smart Citizen Docs">
+      
+  <img src="../../../assets/images/logo.svg" alt="logo">
+
+    </a>
+    Smart Citizen Docs
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/fablabbcn/smartcitizen-docs/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    smartcitizen-docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
+    
+    <label class="md-nav__link" for="nav-1">
+      Main
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Main" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        <span class="md-nav__icon md-icon"></span>
+        Main
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../.." title="Welcome" class="md-nav__link">
+      Welcome
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-2" type="checkbox" id="nav-1-2">
+    
+    <label class="md-nav__link" for="nav-1-2">
+      Hardware
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Hardware" data-md-level="2">
+      <label class="md-nav__title" for="nav-1-2">
+        <span class="md-nav__icon md-icon"></span>
+        Hardware
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Components/" title="Hardware Ecosystem" class="md-nav__link">
+      Hardware Ecosystem
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-2-2" type="checkbox" id="nav-1-2-2">
+    
+    <label class="md-nav__link" for="nav-1-2-2">
+      Smart Citizen Kit
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Smart Citizen Kit" data-md-level="3">
+      <label class="md-nav__title" for="nav-1-2-2">
+        <span class="md-nav__icon md-icon"></span>
+        Smart Citizen Kit
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Smart%20Citizen%20Kit/" title="What is it?" class="md-nav__link">
+      What is it?
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-2-2-2" type="checkbox" id="nav-1-2-2-2">
+    
+    <label class="md-nav__link" for="nav-1-2-2-2">
+      Components
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Components" data-md-level="4">
+      <label class="md-nav__title" for="nav-1-2-2-2">
+        <span class="md-nav__icon md-icon"></span>
+        Components
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Components/boards/Data%20Board/" title="Data Board" class="md-nav__link">
+      Data Board
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Components/boards/Urban%20Board/" title="Urban Board" class="md-nav__link">
+      Urban Board
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Components/enclosures/Enclosures/" title="Enclosures" class="md-nav__link">
+      Enclosures
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-2-3" type="checkbox" id="nav-1-2-3">
+    
+    <label class="md-nav__link" for="nav-1-2-3">
+      Smart Citizen Station
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Smart Citizen Station" data-md-level="3">
+      <label class="md-nav__title" for="nav-1-2-3">
+        <span class="md-nav__icon md-icon"></span>
+        Smart Citizen Station
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Smart%20Citizen%20Station/" title="What is it?" class="md-nav__link">
+      What is it?
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-2-3-2" type="checkbox" id="nav-1-2-3-2">
+    
+    <label class="md-nav__link" for="nav-1-2-3-2">
+      Components
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Components" data-md-level="4">
+      <label class="md-nav__title" for="nav-1-2-3-2">
+        <span class="md-nav__icon md-icon"></span>
+        Components
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Components/boards/Gases%20Pro%20Board/" title="Gas Pro Sensor Board" class="md-nav__link">
+      Gas Pro Sensor Board
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Components/boards/PM%20Board/" title="PM Board" class="md-nav__link">
+      PM Board
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Components/boards/Analog%20Sensor%20Board/" title="Analog Sensor Board" class="md-nav__link">
+      Analog Sensor Board
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Components/Soil%20and%20water/" title="Soil and Water" class="md-nav__link">
+      Soil and Water
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Components/Auxiliary%20Connector/" title="Supported sensors" class="md-nav__link">
+      Supported sensors
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Components/boards/Power%20Supply/" title="Power Supply" class="md-nav__link">
+      Power Supply
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Components/Firmware/" title="Firmware" class="md-nav__link">
+      Firmware
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-4" type="checkbox" id="nav-1-4">
+    
+    <label class="md-nav__link" for="nav-1-4">
+      Sensor Knowledge
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Sensor Knowledge" data-md-level="2">
+      <label class="md-nav__title" for="nav-1-4">
+        <span class="md-nav__icon md-icon"></span>
+        Sensor Knowledge
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-4-1" type="checkbox" id="nav-1-4-1">
+    
+    <label class="md-nav__link" for="nav-1-4-1">
+      Air
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Air" data-md-level="3">
+      <label class="md-nav__title" for="nav-1-4-1">
+        <span class="md-nav__icon md-icon"></span>
+        Air
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Components/sensors/air/PM%20Sensors/" title="Particulate Matter" class="md-nav__link">
+      Particulate Matter
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Components/sensors/air/Noise/" title="Noise" class="md-nav__link">
+      Noise
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-4-1-3" type="checkbox" id="nav-1-4-1-3">
+    
+    <label class="md-nav__link" for="nav-1-4-1-3">
+      Metal Oxide Sensors
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Metal Oxide Sensors" data-md-level="4">
+      <label class="md-nav__title" for="nav-1-4-1-3">
+        <span class="md-nav__icon md-icon"></span>
+        Metal Oxide Sensors
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Components/sensors/air/Metal%20Oxide/" title="What to expect" class="md-nav__link">
+      What to expect
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Components/sensors/air/CCS811/" title="eCO2/TVOC" class="md-nav__link">
+      eCO2/TVOC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Components/sensors/air/Electrochemical%20Sensors/" title="Electrochemical Sensors" class="md-nav__link">
+      Electrochemical Sensors
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-4-2" type="checkbox" id="nav-1-4-2">
+    
+    <label class="md-nav__link" for="nav-1-4-2">
+      Soil and Water
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Soil and Water" data-md-level="3">
+      <label class="md-nav__title" for="nav-1-4-2">
+        <span class="md-nav__icon md-icon"></span>
+        Soil and Water
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Components/sensors/soil/Soil%20Moisture%20Sensors/" title="Soil Moisture Sensors" class="md-nav__link">
+      Soil Moisture Sensors
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Components/sensors/soil/Tensiometer/" title="Tensionmenter" class="md-nav__link">
+      Tensionmenter
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../_FAQ/" title="FAQ" class="md-nav__link">
+      FAQ
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Troubleshooting/" title="Troubleshooting" class="md-nav__link">
+      Troubleshooting
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Data
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Data" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon"></span>
+        Data
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Data/Sensor%20Platform/" title="Sensor Platform" class="md-nav__link">
+      Sensor Platform
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Data/Smart%20Citizen%20API/" title="Smart Citizen API" class="md-nav__link">
+      Smart Citizen API
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Data/Data%20Analysis/" title="Data Analysis" class="md-nav__link">
+      Data Analysis
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Use cases
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Use cases" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon"></span>
+        Use cases
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Use%20cases/" title="Main" class="md-nav__link">
+      Main
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Use%20cases/Citizen%20Sensing%20Toolkit/" title="Citizen Sensing Toolkit" class="md-nav__link">
+      Citizen Sensing Toolkit
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Use%20cases/Research/" title="Research Projects" class="md-nav__link">
+      Research Projects
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Use%20cases/Presentations/" title="Additional material" class="md-nav__link">
+      Additional material
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Use%20cases/Friends/" title="Friend projects" class="md-nav__link">
+      Friend projects
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Guides
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Guides" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon"></span>
+        Guides
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../" title="Main" class="md-nav__link">
+      Main
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2">
+    
+    <label class="md-nav__link" for="nav-4-2">
+      Getting started
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Getting started" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-2">
+        <span class="md-nav__icon md-icon"></span>
+        Getting started
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../getting%20started/Onboarding%20Sensors/" title="Onboarding Sensors" class="md-nav__link">
+      Onboarding Sensors
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../getting%20started/Downloading%20the%20Data/" title="Downloading platform data" class="md-nav__link">
+      Downloading platform data
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../getting%20started/Uploading%20SD%20Card%20Data/" title="Uploading SD-card data" class="md-nav__link">
+      Uploading SD-card data
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../getting%20started/Updating%20the%20Wi-Fi/" title="Updating the Wi-Fi" class="md-nav__link">
+      Updating the Wi-Fi
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../getting%20started/Using%20the%20Shell/" title="Using the Shell" class="md-nav__link">
+      Using the Shell
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-3" type="checkbox" id="nav-4-3">
+    
+    <label class="md-nav__link" for="nav-4-3">
+      Firmware
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Firmware" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-3">
+        <span class="md-nav__icon md-icon"></span>
+        Firmware
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../firmware/Update%20the%20firmware/" title="Update the firmware" class="md-nav__link">
+      Update the firmware
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../firmware/Edit%20the%20Firmware/" title="Edit the firmware" class="md-nav__link">
+      Edit the firmware
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../firmware/Debug%20the%20firmware/" title="Debug the firmware" class="md-nav__link">
+      Debug the firmware
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-4" type="checkbox" id="nav-4-4">
+    
+    <label class="md-nav__link" for="nav-4-4">
+      Data Analysis
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Data Analysis" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-4">
+        <span class="md-nav__icon md-icon"></span>
+        Data Analysis
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Install%20the%20framework/" title="Framework Installation" class="md-nav__link">
+      Framework Installation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Make%20reports%20of%20your%20data/" title="Make reports of your data" class="md-nav__link">
+      Make reports of your data
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Creating%20Interfaces/" title="Creating interfaces" class="md-nav__link">
+      Creating interfaces
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Organise%20your%20data/" title="Organise your data" class="md-nav__link">
+      Organise your data
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Upload%20data%20to%20zenodo/" title="Uploading data to zenodo" class="md-nav__link">
+      Uploading data to zenodo
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-5" type="checkbox" id="nav-4-5">
+    
+    <label class="md-nav__link" for="nav-4-5">
+      Deploying sensors
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Deploying sensors" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-5">
+        <span class="md-nav__icon md-icon"></span>
+        Deploying sensors
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../deployments/Deploying%20SCK/" title="SCK" class="md-nav__link">
+      SCK
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../deployments/Deploying%20iSCAPE%20Station%20V1/" title="iSCAPE Station V1" class="md-nav__link">
+      iSCAPE Station V1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../deployments/Deploying%20iSCAPE%20Station%20V2/" title="iSCAPE Station V2" class="md-nav__link">
+      iSCAPE Station V2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../deployments/Deploying%20Smart%20Citizen%20Station/" title="Smart Citizen Station" class="md-nav__link">
+      Smart Citizen Station
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../deployments/Installing%20Connectivity%20Units/" title="Smart Citizen Connectivity Units" class="md-nav__link">
+      Smart Citizen Connectivity Units
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../deployments/Soil%20and%20water%20sensors/" title="Soil and water sensors" class="md-nav__link">
+      Soil and water sensors
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../deployments/Almabike%20sensors/" title="SCK Almabike sensors" class="md-nav__link">
+      SCK Almabike sensors
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-6" type="checkbox" id="nav-4-6">
+    
+    <label class="md-nav__link" for="nav-4-6">
+      Enclosures
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Enclosures" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-6">
+        <span class="md-nav__icon md-icon"></span>
+        Enclosures
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../enclosures/Making%20your%20own%20enclosures/" title="Making your own enclosures" class="md-nav__link">
+      Making your own enclosures
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-7" type="checkbox" id="nav-4-7">
+    
+    <label class="md-nav__link" for="nav-4-7">
+      Legacy Hardware
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Legacy Hardware" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-7">
+        <span class="md-nav__icon md-icon"></span>
+        Legacy Hardware
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-7-1" type="checkbox" id="nav-4-7-1">
+    
+    <label class="md-nav__link" for="nav-4-7-1">
+      Smart Citizen 1.1
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Smart Citizen 1.1" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-7-1">
+        <span class="md-nav__icon md-icon"></span>
+        Smart Citizen 1.1
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Components/legacy/" title="Main" class="md-nav__link">
+      Main
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Components/legacy/Hardware/" title="Hardware" class="md-nav__link">
+      Hardware
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Components/legacy/Command%20Line/" title="Command Line" class="md-nav__link">
+      Command Line
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Components/legacy/Faq/" title="FAQ" class="md-nav__link">
+      FAQ
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Components/legacy/Troubleshooting/" title="Troubleshooting" class="md-nav__link">
+      Troubleshooting
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-7-2" type="checkbox" id="nav-4-7-2">
+    
+    <label class="md-nav__link" for="nav-4-7-2">
+      Smart Citizen 2.0
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Smart Citizen 2.0" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-7-2">
+        <span class="md-nav__icon md-icon"></span>
+        Smart Citizen 2.0
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Components/legacy/sck/" title="Main" class="md-nav__link">
+      Main
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Components/sensors/air/SGX%20MICS/" title="About the CO-NO2 MOs" class="md-nav__link">
+      About the CO-NO2 MOs
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#functionality" class="md-nav__link">
+    Functionality
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workflow" class="md-nav__link">
+    Workflow
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#json-task-description" class="md-nav__link">
+    Json task description
+  </a>
+  
+    <nav class="md-nav" aria-label="Json task description">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#define-data" class="md-nav__link">
+    Define data
+  </a>
+  
+    <nav class="md-nav" aria-label="Define data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-loading-options" class="md-nav__link">
+    Data loading options
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#model" class="md-nav__link">
+    Model
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plots" class="md-nav__link">
+    Plots
+  </a>
+  
+    <nav class="md-nav" aria-label="Plots">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#general-description" class="md-nav__link">
+    General description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plots-specifics" class="md-nav__link">
+    Plots specifics
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/fablabbcn/smartcitizen-docs/edit/master/docs/Guides/data/Analyse your data in batch.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                  
+                
+                
+                  <h1>Analyse your data in batch</h1>
+                
+                <p>Sometimes we have a lot of devices to process, and the interfaces for analysis in <a href="https://smartcitizen.me">smartcitizen.me</a> or in the <code>jupyter notebook</code> might not be the most efficient way to do it. For this reason, we have developed a functionality to process the data in batches, defining the tasks to perform in a <code>json</code> descriptor file.</p>
+<p>The descriptor file can be placed in the <code>src/tasks</code> directory (or any, actually). An example of how to run it is shown in <a href="https://github.com/fablabbcn/smartcitizen-iscape-data/blob/master/examples/batch_analysis.ipynb"><code>examples/batch_analysis.ipynb</code></a>:</p>
+<div class="highlight"><pre><span></span><code># Load the object
+from src.models.batch import batch_analysis&quot;,
+tasks_file = &#39;../tasks/batch.json&#39;&quot;,
+batch_session = batch_analysis(tasks_file, verbose = True)
+
+# Run the analysis
+batch_session.run()
+</code></pre></div>
+<h2 id="functionality">Functionality<a class="headerlink" href="#functionality" title="Permanent link">&para;</a></h2>
+<p>These tasks are intended to automatise data analysis tasks as the following:</p>
+<ul>
+<li>Load, process and export processed data</li>
+<li>Generate models and apply them, extracting metrics and comparing if they extrapolate to different set of sensors in different datasets, without having to run extra code</li>
+<li>Make plots for different metrics in an automatic way, and export their renders</li>
+</ul>
+<h2 id="workflow">Workflow<a class="headerlink" href="#workflow" title="Permanent link">&para;</a></h2>
+<p><img alt="" src="https://i.imgur.com/eDBftEx.png" /></p>
+<h2 id="json-task-description">Json task description<a class="headerlink" href="#json-task-description" title="Permanent link">&para;</a></h2>
+<p>The descriptor file loaded is a <code>json</code> containing keys for each task to be run. Several tasks can be included and will be run consecutively:</p>
+<div class="highlight"><pre><span></span><code>{
+    &quot;TASK_1&quot;:{...},
+    &quot;TASK_2&quot;:{...},
+    &quot;TASK_3&quot;:{...}
+}
+</code></pre></div>
+<p>Each of the <code>tasks</code> contains different fields, depending on what the process is.</p>
+<h3 id="define-data">Define data<a class="headerlink" href="#define-data" title="Permanent link">&para;</a></h3>
+<p>In case <strong>no model needs to be calculated</strong>, the data can be specified directly in the task:</p>
+<div class="highlight"><pre><span></span><code>{
+    &quot;TASK_1&quot;:{
+        &quot;data&quot;:{
+            &quot;datasets&quot;: {
+                &quot;TEST_1&quot;: [&quot;DEVICE_11&quot;,&quot;DEVICE_12&quot;],
+                &quot;TEST_2&quot;: [&quot;DEVICE_21&quot;, &quot;DEVICE_22&quot;, &quot;DEVICE_23&quot;],
+                ...
+                        },
+            &quot;data_options&quot;: {&quot;avoid_processed&quot;: true,
+                            &quot;frequency&quot;: &quot;1Min&quot;,
+                            &quot;clean_na&quot;: true,
+                            &quot;use_cache&quot;: true,
+                            &quot;clean_na_method&quot;: &quot;drop&quot;,
+                            &quot;min_date&quot;: null,
+                            &quot;max_date&quot;: null,
+                            &quot;export_data&quot;: null,
+                            &quot;rename_export_data&quot;: false}
+                    }
+}
+</code></pre></div>
+<p>If a model is to be calculated, the data is defined within the model key as seen below. </p>
+<h4 id="data-loading-options">Data loading options<a class="headerlink" href="#data-loading-options" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>frequency</code>: frequency at which load the data (as defined in <code>pandas</code> <a href="https://stackoverflow.com/questions/35339139/where-is-the-documentation-on-pandas-freq-tags">here</a>)</li>
+<li><code>clean_na</code>: clean or not NaN</li>
+<li><code>clean_na_method</code>: <code>drop</code> or <code>fill</code> with back-forward filling</li>
+<li><code>use_cache</code>: whether or not to use file chaching for the analysis. This adds a <code>cached</code> folder in the corresponding <code>test</code> directory, which allows faster download from the <code>API</code>. It is implemented so that the only data to be downloaded is the one that is not cached</li>
+<li><code>min_date</code>, <code>max_date</code>: for limitting the amount of data to be loaded</li>
+<li><code>export_data</code>: if the processed data (after pre-processing and modeling) has to be exported. It will be saved in the corresponding <code>test</code> folder, under <code>processed</code>. Options are:<ul>
+<li><code>None</code>: don't export anything</li>
+<li><code>All</code>: all channels in the <code>pandas dataframe</code></li>
+<li><code>Only Generic</code>: Export only channels that are under the <code>data/interim/sensorNamesExport.json</code></li>
+<li><code>Only Processed</code>: Export only channels that are tagged as <code>processed</code> under the <code>data/interim/sensorNamesExport.json</code></li>
+</ul>
+</li>
+<li><code>rename_export_data</code>: Rename the exported channels for better readability using the file <code>data/interim/sensorNamesExport.json</code></li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">None?</p>
+<p>In <code>json</code>, we specify the <code>python</code> <code>None</code> as <code>null</code>.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Want to save time?</p>
+<p>Enable <code>use_cache</code> and we will save some time by checking if the data we have downloaded previously from the API can be used. This also applies for pre-processing functions.</p>
+</div>
+<!-- ### Pre-process data
+
+Different preprocessing options can be defined. The most common one, for the sensors in the _Smart Citizen Project_ are the analysis of the _electrochemical sensors_ but others can be used and implemented, for later call from `/src/models/batch.py`.
+
+<div class="highlight"><pre><span></span><code>    &quot;TASK_1&quot;: {
+        &quot;pre-processing&quot;: {
+                &quot;alphasense&quot;: {&quot;baseline_method&quot;: &quot;deltas&quot;,
+                                &quot;parameters&quot;: [30, 45, 5],
+                                &quot;methods&quot;: {&quot;CO&quot;: [&quot;classic&quot;, &quot;na&quot;],
+                                            &quot;NO2&quot;: [&quot;baseline&quot;, &quot;single_aux&quot;],
+                                            &quot;O3&quot;: [&quot;baseline&quot;, &quot;single_aux&quot;]
+                                            },
+                                &quot;overlapHours&quot;: 0
+                            }
+            },
+    }
+</code></pre></div>
+
+**Note**: this section is currently project specific for electrochemical sensors defined [here](https://docs.smartcitizen.me/Components/Gas%20Pro%20Sensor%20Board/Electrochemical%20Sensors)
+
+- `baseline_method`: baseline method used to calculate pollutant concentration, as defined in [the documentation](https://docs.smartcitizen.me/Components/Gas%20Pro%20Sensor%20Board/Electrochemical%20Sensors/#sensor-calibration). It can be `deltas` or `als`, using the methodology described in [here](https://doi.org/10.1016/j.atmosenv.2016.10.024) for `deltas` or [here](https://zanran_storage.s3.amazonaws.com/www.science.uva.nl/ContentPages/443199618.pdf) for the Asymmetric Least Squares Smoothing (ALS). 
+- `parameters`: parameters for the baseline determination:
+    + in case of `deltas` method, is a `list` with [`min_delta`, `max_delta`, `interval`]
+    + in case of `als` method, is another `dict` containing `lambda` and `p` parameters
+- `methods`: a dict containing which method to use for each pollutant calculation (see example above). options for the calculation are `classic` from Alphasense Ltd. recommendations, or `baseline`, using the `baseline_method` specified before. Each of them can use different baselines (`single_aux`, `single_temp` or `single_hum`). -->
+
+<h3 id="model">Model<a class="headerlink" href="#model" title="Permanent link">&para;</a></h3>
+<div class="admonition warning">
+<p class="admonition-title">Recommended to just get in touch<p>This can be overwhelming at first. Just <a href="mailto:support@smartcitizen.me">get in touch</a></p>
+</p>
+</div>
+<p>In the <code>model</code> sub-task, currently three possibilities are implemented:</p>
+<ul>
+<li>Linear methods: <code>OLS</code> or <code>RLM</code> regression</li>
+<li>Random Forest (<code>RF</code>) or Support Vector Regressor <code>SVR</code></li>
+<li>XGBoost</li>
+</ul>
+<p>In the case of having a <code>model</code> task, the <code>data</code> defined above is ignored, and only the one under <code>model: {"data":{}}</code> is used. </p>
+<div class="admonition warning">
+<p class="admonition-title">One model per task</p>
+<p>It is better to generate only one model per task, since the memory used by the models can be very large.</p>
+</div>
+<p>An example is shown below:</p>
+<div class="highlight"><pre><span></span><code>&quot;model&quot;: {
+        &quot;model_name&quot;: &quot;Random_Forest_100&quot;,
+        &quot;model_type&quot;: &quot;RF&quot;,
+        &quot;model_target&quot;: &quot;ALPHASENSE&quot;,
+                    &quot;data&quot;: {&quot;train&quot;: {&quot;TEST_1&quot;: {&quot;devices&quot;: [&quot;DEVICE_1&quot;],
+                                                 &quot;reference_device&quot;:&quot;REF_DEVICE_1&quot;}},
+                            &quot;test&quot;: {&quot;TEST_1&quot;: {&quot;devices&quot;: [&quot;DEVICE_1&quot;, &quot;DEVICE_2&quot;],
+                                                 &quot;reference_device&quot;:&quot;REF_DEVICE_2&quot;},
+                                     &quot;TEST_2&quot;: {&quot;devices&quot;: [&quot;DEVICE_3&quot;],
+                                                &quot;reference_device&quot;: &quot;REF_DEVICE_3&quot;},
+                                     &quot;TEST_3&quot;: {&quot;devices&quot;: [&quot;DEVICE_4&quot;],
+                                                &quot;reference_device&quot;: &quot;REF_DEVICE_4&quot;},
+                                     &quot;TEST_2&quot;: {&quot;devices&quot;: [&quot;DEVICE_5&quot;],
+                                                &quot;reference_device&quot;: &quot;REF_DEVICE_5&quot;}},
+                &quot;features&quot;: {&quot;REF&quot;: &quot;NO2_REF&quot;,
+                            &quot;A&quot;:  &quot;GB_2W&quot;,
+                            &quot;B&quot;: &quot;GB_2A&quot;,
+                            &quot;C&quot;: &quot;HUM&quot;
+                            }
+                &quot;data_options&quot;: {&quot;export_data&quot;: &quot;All&quot;,
+                            &quot;rename_export_data&quot;: false,
+                            &quot;target_raster&quot;: 1Min&quot;,
+                            &quot;clean_na&quot;: true,
+                            &quot;clean_na_method&quot;: &quot;fill&quot;,
+                            &quot;min_date&quot;: null,
+                            &quot;max_date&quot;: null,
+                            &quot;use_cache&quot;: true}
+                },
+        &quot;hyperparameters&quot;: {&quot;ratio_train&quot;: 0.75,
+                            &quot;n_estimators&quot;: 100,
+                            &quot;shuffle_split&quot;: true
+                            },
+        &quot;model_options&quot;: {&quot;session_active_model&quot;: false,
+                    &quot;export_model&quot;: false,
+                    &quot;export_model_file&quot;: false,
+                    &quot;extract_metrics&quot;: true,
+                    &quot;save_plots&quot;: false,
+                    &quot;show_plots&quot;: false
+                    }
+        },
+</code></pre></div>
+<ul>
+<li><code>model_name</code>: model name to be saved</li>
+<li><code>model_type</code>: 'RF', 'SVR', 'LSTM' or 'OLS'</li>
+<li><code>model_target</code>: if the model is to be stored under a specific category of models under the <code>models/</code> folder</li>
+<li><code>data</code>: dict containing the data to use for training, and features description. Under <code>train</code>, we define which of the tests and devices is to be used for the model definition, with the format <code>{"TEST": "devices": ["DEVICE"], "reference_device": "REF_DEVICE_1"}</code>. Under <code>test</code>, we define a series of <code>test</code> in which we'll evaluate the model extracted from the <code>train</code> dataset:<ul>
+<li><code>devices</code>: list of devices to use</li>
+<li><code>reference_device</code>: <code>device</code> that contains the reference data</li>
+</ul>
+</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Info<p>Multiple training datasets are possible as well, by combining them.</p>
+</p>
+</div>
+<p>Additionally:
+    + <code>features</code>: dict of <code>devices</code> tagged as <code>REF</code>, <code>A</code>, <code>B</code>, <code>C</code>... to define the features of the model, being <code>REF</code> the reference channel in the <code>reference_device</code>
+- <code>hyperparameters</code>: dict containing different hyperparameters, depending on the type of model:
+    + For all:
+        *  <code>ratio_train</code>: generic, train-test split ratio
+    +  OLS:
+        *  <code>formula_expresion</code>: stats models formula type, accepting <code>numpy</code> expressions This formula has to reference the features described under the <code>data</code> section. Example: <code>REF ~ A * B + np.log(C/2)</code>
+    + Random Forest:
+        * <code>n_estimators</code>: only for <code>RF</code>. number of forests to use
+        * <code>shuffle_split</code>: only for <code>RF</code>. whether or not use shuffle split
+    + LSTM:
+        * <code>n_lags</code>: number of lags to account in the LSTM input
+        * <code>epochs</code>: number of epochs (100 or more recommended)
+        * <code>batch_size</code>: batch size (72 recommended)            <br />
+        * <code>verbose</code>: verbose output during training
+        * <code>loss</code>: loss function ('mse' or others)
+        * <code>optimizer</code>: optimizer to use (<code>adam</code> or others)
+        * <code>layers</code>: specific layer structure. Example below:</p>
+<div class="codehilite"><pre><span></span><code><span class="err">    ```</span>
+<span class="err">    &quot;layers&quot;: [{&quot;type&quot;: &quot;lstm&quot;,</span>
+<span class="err">                &quot;neurons&quot;: 100,</span>
+<span class="err">                &quot;return_seq&quot;: true</span>
+<span class="err">            },</span>
+<span class="err">            {</span>
+<span class="err">                &quot;type&quot;: &quot;dropout&quot;,</span>
+<span class="err">                &quot;rate&quot;: 0.05</span>
+<span class="err">            },</span>
+<span class="err">            {</span>
+<span class="err">                &quot;type&quot;: &quot;lstm&quot;,</span>
+<span class="err">                &quot;neurons&quot;: 100,</span>
+<span class="err">                &quot;return_seq&quot;: true</span>
+<span class="err">            },</span>
+<span class="err">            {</span>
+<span class="err">                &quot;type&quot;: &quot;lstm&quot;,</span>
+<span class="err">                &quot;neurons&quot;: 50,</span>
+<span class="err">                &quot;return_seq&quot;: false</span>
+<span class="err">            },</span>
+<span class="err">            {</span>
+<span class="err">                &quot;type&quot;: &quot;dropout&quot;,</span>
+<span class="err">                &quot;rate&quot;: 0.05</span>
+<span class="err">            },</span>
+<span class="err">            {</span>
+<span class="err">                &quot;type&quot;: &quot;dense&quot;,</span>
+<span class="err">                &quot;neurons&quot;: 1,</span>
+<span class="err">                &quot;activation&quot;: &quot;linear&quot;</span>
+<span class="err">            }</span>
+<span class="err">        ]},</span>
+<span class="err">    ```</span>
+</code></pre></div>
+
+<ul>
+<li><code>model_options</code>: different options for the model calculated<ul>
+<li><code>session_active_model</code>: keep the model active after the task is completed</li>
+<li><code>export_model</code>: export the model (parameters, hyperparameters, weights) to the <code>model/model_type</code> folder after the task is completed</li>
+<li><code>export_model_file</code>: export the model file (not recommended for <code>RF</code>) fo the same folder as above</li>
+<li><code>export_metrics</code>: export metrics for the model or not</li>
+<li><code>save_plots</code>: save model plots or not</li>
+<li><code>show_plots</code>: show model plots or not</li>
+</ul>
+</li>
+</ul>
+<h3 id="plots">Plots<a class="headerlink" href="#plots" title="Permanent link">&para;</a></h3>
+<p>The plot sub-task accepts two different libraries: <code>matplotlib</code> and <code>plotly</code>. The first one generates static images, that we can export for nice quality graphs, while <code>plotly</code> is more meant for exploratory analysis.</p>
+<div class="admonition info">
+<p class="admonition-title">Many plots? No problem</p>
+<p>In the case of the models, we only wanted one model per task, but it's not the case in the plots.</p>
+</div>
+<div class="highlight"><pre><span></span><code>&quot;plot&quot;: {
+    &quot;2&quot;: {&quot;plot_type&quot;: &quot;timeseries&quot;,
+        &quot;plotting_library&quot;: &quot;matplotlib&quot;,
+        &quot;data&quot;: {&quot;test&quot;: &quot;TEST_1&quot;,
+                &quot;traces&quot;: {&quot;1&quot;: {&quot;device&quot;: &quot;5262&quot;,
+                                &quot;channel&quot; : &quot;EXT_PM_10&quot;,
+                                &quot;subplot&quot;: 1},
+                            &quot;2&quot;: {&quot;device&quot;: &quot;5262&quot;,
+                                &quot;channel&quot; : &quot;EXT_PM_25&quot;,
+                                &quot;subplot&quot;: 2}}},
+        &quot;options&quot;: {&quot;show_plot&quot;: false,
+                    &quot;separate_device_plots&quot;: false,
+                    &quot;target_raster&quot;: &quot;10Min&quot;,
+                    &quot;max_date&quot;: null,
+                    &quot;min_date&quot;: null,
+                    &quot;export_path&quot;: &quot;/Users/mac/Desktop&quot;,
+                    &quot;file_name&quot;: &quot;plot_pm&quot;},
+        &quot;formatting&quot;: {&quot;xlabel&quot;: &quot;Date (-)&quot;,
+                        &quot;ylabel&quot;: {&quot;1&quot;: &quot;Temp degC&quot;,
+                                    &quot;2&quot;: &quot;Hum (%rh)&quot;},
+                        &quot;yrange&quot;: {&quot;1&quot;: [0, 40], 
+                                    &quot;2&quot;: [0, 100]},
+                        &quot;title&quot;: &quot;PM&quot;,
+                        &quot;sharex&quot;:true,
+                        &quot;grid&quot;: true,
+                        &quot;height&quot;: 10,
+                        &quot;width&quot;: 12}
+    },
+</code></pre></div>
+<h4 id="general-description">General description<a class="headerlink" href="#general-description" title="Permanent link">&para;</a></h4>
+<p>This description is suitable for timeseries plots. Check below for other types:</p>
+<p><img alt="" src="https://i.imgur.com/p6qogrD.png" /></p>
+<ul>
+<li><code>plot_type</code>: the plot type to be used. Currently we support <code>timeseries</code>, <code>violin</code>, <code>scatter_matrix</code>, <code>correlation_plot</code>, <code>heatmap</code>, <code>barplot</code>, <code>coherence_plot</code></li>
+<li><code>plotting_library</code>: <code>matplotlib</code> or <code>plotly</code></li>
+<li><code>data</code>: the data to represent. This data has to be loaded previously. This is only to define the plot:<ul>
+<li><code>test</code>: each plot can only represent data from a single <code>test</code></li>
+<li><code>traces</code>: numbered entries to specify the <code>device</code>, <code>channel</code> and, if applicable, the subplot (only for timeseries)</li>
+</ul>
+</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Same plot for many devices?</p>
+<p>Set "<code>device</code>: 'all'" and  <code>"separate_device_plots": true</code>, and we will make separate plots for each device.</p>
+</div>
+<ul>
+<li><code>options</code>: <ul>
+<li><code>show_plot</code>: whether or not to show the plot. Not recommended for large amounts</li>
+<li><code>separate_device_plots</code>: <code>true</code> in case we want a single plot for each device in <code>traces: devices</code>. <code>false</code> in case we want to merge all the devices in a single plot (for comparison purposes). Applicable for timeseries</li>
+<li><code>target_raster</code>: the frequency of the data to plot. Reduces processing time</li>
+<li><code>min_date</code>, <code>max_date</code>: if not <code>null</code>, they crop the data with those dates</li>
+<li><code>export_path</code>: where to put the plot. If <code>null</code>, we won't export anything</li>
+<li><code>file_name</code>: how to name the plot. We will append the trace name in case <code>separate_device_plots</code> is set to <code>true</code></li>
+</ul>
+</li>
+<li><code>formatting</code>: <ul>
+<li><code>xlabel</code>: Name to tag the x axis of the plot</li>
+<li><code>ylabel</code>: Name to tag the y axis(es) of the plot. It can be more than one value in a <code>json</code> style</li>
+<li><code>yrange</code>: Range fro the y axis(es). Same as above</li>
+<li><code>title</code>: plot title</li>
+<li><code>grid</code>: to show the grid or not</li>
+<li><code>height</code>, <code>width</code>: plot height and width</li>
+</ul>
+</li>
+</ul>
+<h4 id="plots-specifics">Plots specifics<a class="headerlink" href="#plots-specifics" title="Permanent link">&para;</a></h4>
+<p><strong>Heatmap</strong></p>
+<p><img alt="" src="https://i.imgur.com/bKyX7fb.png" /></p>
+<div class="highlight"><pre><span></span><code>&quot;1&quot; : {&quot;plot_type&quot;: &quot;heatmap&quot;,
+        &quot;plotting_library&quot;: &quot;matplotlib&quot;,
+        &quot;data&quot;: {&quot;test&quot;: &quot;TEST_1&quot;,
+                &quot;traces&quot;: {&quot;1&quot;: {&quot;device&quot;: &quot;all&quot;,
+                                &quot;channel&quot; : &quot;NOISE_A&quot;,
+                                &quot;subplot&quot;: 1}}},
+        &quot;options&quot;: {&quot;show_plot&quot;: false,
+                    &quot;separate_device_plots&quot;: true,
+                    &quot;target_raster&quot;: &quot;10Min&quot;,
+                    &quot;min_date&quot;: null,
+                    &quot;max_date&quot;: &quot;2019-01-03&quot;,
+                    &quot;relative&quot;: false,
+                    &quot;export_path&quot;: &quot;/Users/macoscar/Desktop&quot;,
+                    &quot;file_name&quot;: &quot;heatmap_noise&quot;},
+        &quot;formatting&quot;: {&quot;title&quot;: &quot;Magnificent plot&quot;,
+               &quot;grid&quot;: true,
+               &quot;height&quot;: 10,
+               &quot;width&quot;: 15,
+               &quot;frequency_hours&quot;: 6}
+        }
+</code></pre></div>
+<div class="admonition warning">
+<p>Note that in this case it only makes sense to put one trace. If we define <code>"device": "all"</code>, then <code>"separate_device_plots": true</code></p>
+</div>
+<ul>
+<li><code>plotting_library</code>: recommended library is <code>matplotlib</code> (although we actually use seaborn)</li>
+<li><code>formatting</code>:<ul>
+<li><code>frequency_hours</code>: to choose between 1, 2, ..., 6, 12, 24. Resamples the data to make it fit in bins of that size to create the heatmap</li>
+</ul>
+</li>
+</ul>
+<p><strong>Correlation plot</strong></p>
+<p><img alt="" src="https://i.imgur.com/ACxGP9n.png" /></p>
+<div class="highlight"><pre><span></span><code>&quot;1&quot; : {&quot;plot_type&quot;: &quot;correlation_plot&quot;,
+       &quot;plotting_library&quot;: &quot;matplotlib&quot;,
+       &quot;data&quot;: {&quot;test&quot;: &quot;TEST_1&quot;,
+                       &quot;traces&quot;: {&quot;1&quot;: {&quot;device&quot;: &quot;5261&quot;,
+                                       &quot;channel&quot; : &quot;NOISE_A&quot;,
+                                       &quot;subplot&quot;: 1},
+                                 &quot;2&quot;: {&quot;device&quot;: &quot;5262&quot;,
+                                      &quot;channel&quot;: &quot;TEMP&quot;,
+                                      &quot;subplot&quot;: 1}}},
+       &quot;options&quot;: {&quot;show_plot&quot;: True,
+                   &quot;separate_device_plots&quot;: false,
+                   &quot;export_path&quot;: &quot;/Users/macoscar/Desktop&quot;, 
+                   &quot;file_name&quot;: &quot;plot_corr&quot;,
+                   &quot;target_raster&quot;: &#39;10Min&#39;,
+                   &quot;min_date&quot;: None,
+                   &quot;max_date&quot;: None},
+       &quot;formatting&quot;: {&quot;jpkind&quot;: &#39;scatter&#39;,
+                      &quot;title&quot;: &quot;Magnificent plot&quot;,
+                      &quot;xrange&quot;: [0, 100],
+                      &quot;yrange&quot;: [0, 40],
+                      &quot;grid&quot;: True,
+                      &quot;height&quot;: 10,
+                      &quot;width&quot;: 15}
+       }
+</code></pre></div>
+<p>Note that in this case it only makes sense to put two traces, in the same subplot.</p>
+<ul>
+<li><code>formatting</code>: <ul>
+<li><code>jpkind</code>: type as defined in <a href="https://seaborn.pydata.org/generated/seaborn.jointplot.html">sns.jointplot documentation</a>, to choose from { “scatter” | “reg” | “resid” | “kde” | “hex” </li>
+</ul>
+</li>
+</ul>
+<p><strong>Scatter plot matrix</strong></p>
+<p>The big brother of the <code>correlation plot</code>:</p>
+<p><img alt="" src="https://i.imgur.com/IfLLAUg.jpg" /></p>
+<div class="highlight"><pre><span></span><code>&quot;1&quot; : {&quot;plot_type&quot;: &quot;scatter_matrix&quot;,
+        &quot;plotting_library&quot;: &quot;matplotlib&quot;,
+        &quot;data&quot;: {&quot;test&quot;: &quot;TEST_1&quot;,
+                        &quot;traces&quot;: {&quot;1&quot;: {&quot;device&quot;: &quot;5262&quot;,
+                                        &quot;channel&quot; : &quot;GB_2W&quot;,
+                                        &quot;subplot&quot;: 1},
+                                  &quot;2&quot;: {&quot;device&quot;: &quot;5262&quot;,
+                                       &quot;channel&quot;: &quot;TEMP&quot;,
+                                       &quot;subplot&quot;: 1},
+                                  &quot;3&quot;: {&quot;device&quot;: &quot;5262&quot;,
+                                       &quot;channel&quot;: &quot;HUM&quot;,
+                                       &quot;subplot&quot;: 1}}},
+        &quot;options&quot;: {&quot;show_plot&quot;: True,
+                    &quot;separate_device_plots&quot;: False,
+                    &quot;export_path&quot;: &quot;/Users/macoscar/Desktop&quot;, 
+                    &quot;file_name&quot;: &quot;plot_scatter&quot;,
+                    &quot;target_raster&quot;: &#39;10Min&#39;,
+                    &quot;min_date&quot;: None,
+                    &quot;max_date&quot;: None},
+        &quot;formatting&quot;: {&quot;title&quot;: &quot;Magnificent plot&quot;,
+                       &quot;grid&quot;: True,
+                       &quot;height&quot;: 4,
+                       &quot;width&quot;: 4}
+        }
+</code></pre></div>
+<p><strong>Coherence plot</strong></p>
+<p><img alt="" src="https://i.imgur.com/DmvnwBj.png" /></p>
+<p>This plot it's used to plot the coherence between x and y. Coherence is the normalized cross spectral density. More info <a href="https://matplotlib.org/3.1.1/api/_as_gen/matplotlib.pyplot.cohere.html">here</a>:</p>
+<div class="highlight"><pre><span></span><code>&quot;1&quot; : {&quot;plot_type&quot;: &quot;coherence_plot&quot;,
+        &quot;plotting_library&quot;: &quot;matplotlib&quot;,
+        &quot;data&quot;: {&quot;test&quot;: &quot;TEST_1&quot;,
+                        &quot;traces&quot;: {&quot;1&quot;: {&quot;device&quot;: &quot;5262&quot;,
+                                        &quot;channel&quot; : &quot;GB_2W&quot;,
+                                        &quot;subplot&quot;: 1},
+                                  &quot;2&quot;: {&quot;device&quot;: &quot;5262&quot;,
+                                       &quot;channel&quot;: &quot;TEMP&quot;,
+                                       &quot;subplot&quot;: 1}}},
+        &quot;options&quot;: {&quot;show_plot&quot;: True,
+                    &quot;separate_device_plots&quot;: False,
+                    &quot;export_path&quot;: &quot;/Users/macoscar/Desktop&quot;, 
+                    &quot;file_name&quot;: &quot;plot_coherence&quot;,
+                    &quot;target_raster&quot;: &#39;10Min&#39;,
+                    &quot;min_date&quot;: None,
+                    &quot;max_date&quot;: None},
+        &quot;formatting&quot;: {&quot;title&quot;: &quot;Magnificent plot&quot;,
+                       &quot;grid&quot;: True,
+                       &quot;height&quot;: 10,
+                       &quot;width&quot;: 15}
+        }
+</code></pre></div>
+<p><strong>Violin plot</strong></p>
+<p><img alt="" src="https://i.imgur.com/3d8j0qa.png" /></p>
+<p>This plot shows the signal distribution. </p>
+<div class="highlight"><pre><span></span><code>&quot;1&quot; : {&quot;plot_type&quot;: &quot;violin&quot;,
+        &quot;plotting_library&quot;: &quot;matplotlib&quot;,
+        &quot;data&quot;: {&quot;test&quot;: &quot;TEST_1&quot;,
+                        &quot;traces&quot;: {&quot;1&quot;: {&quot;device&quot;: &quot;5262&quot;,
+                                          &quot;channel&quot; : &quot;DALLAS_TEMP&quot;,
+                                        &quot;subplot&quot;: 1},
+                                    &quot;2&quot;: {&quot;device&quot;: &quot;5262&quot;,
+                                           &quot;channel&quot; : &quot;HUM&quot;,
+                                           &quot;subplot&quot;: 1},
+                                     &quot;3&quot;: {&quot;device&quot;: &quot;5262&quot;,
+                                           &quot;channel&quot; : &quot;TEMP&quot;,
+                                           &quot;subplot&quot;: 1},
+                                     &quot;4&quot;: {&quot;device&quot;: &quot;5262&quot;,
+                                           &quot;channel&quot; : &quot;GB_2W&quot;,
+                                           &quot;subplot&quot;: 1},
+                                     &quot;5&quot;: {&quot;device&quot;: &quot;5262&quot;,
+                                           &quot;channel&quot; : &quot;GB_2A&quot;,
+                                           &quot;subplot&quot;: 1},
+                                     &quot;6&quot;: {&quot;device&quot;: &quot;5262&quot;,
+                                           &quot;channel&quot; : &quot;GB_3W&quot;,
+                                           &quot;subplot&quot;: 1}}},
+        &quot;options&quot;: {&quot;show_plot&quot;: True,
+                    &quot;separate_device_plots&quot;: False,
+                    &quot;export_path&quot;: &quot;/Users/macoscar/Desktop&quot;, 
+                    &quot;file_name&quot;: &quot;plot_violin&quot;,
+                    &quot;target_raster&quot;: &#39;10Min&#39;,
+                    &quot;min_date&quot;: None,
+                    &quot;max_date&quot;: &#39;2019-01-03&#39;,
+                    &quot;relative&quot;: False,
+                    &quot;ylabel&quot;: {1: &quot;External temperature&quot;,
+                               2: &quot;Humidity (%RH)&quot;,
+                               3: &quot;Temperature (degC)&quot;,
+                               4: &quot;Wir&quot;,
+                               5: &quot;Wor&quot;,
+                               6: &quot;Wur&quot;},
+                    &quot;yrange&quot;: {1: [0, 90],
+                               2: [300, 2000],
+                               3: [0, 60],
+                               4: [0, 60],
+                               5: [0,60],
+                               6: [0,60]},
+                   },
+        &quot;formatting&quot;: {&quot;title&quot;: &quot;Magnificent plot&quot;,
+                       &quot;grid&quot;: True,
+                       &quot;height&quot;: 10,
+                       &quot;width&quot;: 15}
+        }
+</code></pre></div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+
+
+<!-- Application footer -->
+<footer class="md-footer">
+
+  <!-- Link to previous and/or next page -->
+  
+
+  <!-- Further information -->
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+
+      <!-- Copyright and theme information -->
+      <div class="md-footer-copyright">
+        <!-- -->
+            <!-- <div class="md-footer-copyright__highlight">CC Attribution-NonCommercial-ShareAlike 4.0 International</div> -->
+        <!-- -->
+		        <img style="margin-top: 20px" alt="The Smart Citizen as part of the iSCAPE project has received funding from the European Community’s H2020 Programme under Grant Agreement No. 689954." src="/assets/images/eu-flag.png">
+            <p class="md-footer-copyright__highlight">The Smart Citizen as part of the iSCAPE project has received funding from the European Community’s H2020 Programme under Grant Agreement No. 689954.</p>
+            <p>Except where otherwise noted, content on this site is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
+            <p><a rel="license" href="http://smartcitizen.me">Smart Citizen</a> is a project by <a rel="license" href="http://fablabbcn.org">Fab Lab Barcelona</a> at the <a rel="license" href="http://iaac.net">Institute For Advanced Architecture Of Catalonia</a>.</p>
+      </div>
+
+      <!-- Social links -->
+      
+        
+  <div class="md-footer-social">
+    
+      
+      
+        
+        
+      
+      <a href="https://twitter.com/smartcitizenkit" target="_blank" rel="noopener" title="twitter.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+      </a>
+    
+      
+      
+        
+        
+      
+      <a href="https://www.instagram.com/smartcitizenkit/" target="_blank" rel="noopener" title="www.instagram.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+      </a>
+    
+      
+      
+        
+        
+      
+      <a href="https://www.instagram.com/smartcitizenkit/" target="_blank" rel="noopener" title="www.instagram.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+      </a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/vendor.df0def68.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.ba57d267.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../../..",
+          features: ["instant", "navigation.expand", "tabs"],
+          search: Object.assign({
+            worker: "../../../assets/javascripts/worker/search.5eca75d3.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+        <script src="https://buttons.github.io/buttons.js"></script>
+      
+    
+  </body>
+</html>
