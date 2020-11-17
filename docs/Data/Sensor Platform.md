@@ -5,7 +5,7 @@ The platform is a front and backend solution for ingesting, storing and interact
 
 ![](https://i.imgur.com/qiDKL0r.jpg)
 
-We believe building modular and reusable software and using existing platforms is critical towards optimizing the research and development effort. By increasing the technology readiness levels of existing technologies, we can drastically improve the project exploitation strategy.
+We believe building modular and reusable software and using existing platforms is critical towards optimizing the research and development effort.
 
 ![](https://i.imgur.com/loUgFJv.png)
 

@@ -7,84 +7,91 @@ repo_url: https://github.com/fablabbcn/smartcitizen-docs
 # https://www.mkdocs.org/user-guide/writing-your-docs/#configure-pages-and-navigation
 
 nav:
-  - Main: 
+  - Main:
     - Welcome: index.md
-    - Hardware: 
-      - Hardware architecture: Components/index.md
-      - Smart Citizen Kit: 
+    - Hardware:
+      - Hardware Ecosystem: Components/index.md
+      - Smart Citizen Kit:
         - What is it?: Smart Citizen Kit.md
         - Components:
-          - Data Board: Components/Data Board.md
-          - Urban Board: Components/Urban Board.md
-        - Enclosures: Components/Enclosures.md
-      - Smart Citizen Station: 
+          - Data Board: Components/boards/Data Board.md
+          - Urban Board: Components/boards/Urban Board.md
+        - Enclosures: Components/enclosures/Enclosures.md
+      - Smart Citizen Station:
         - What is it?: Smart Citizen Station.md
         - Components:
-          - Gas Pro Sensor Board: Components/Gases Pro Board.md
-          - PM Board: Components/PM Board.md
-          - Analog Sensor Board: Components/Analog Sensor Board.md
-      - Expanding the SCK:
-        - Auxiliary Connector: Components/Auxiliary Connector.md
-        - Soil Sensors: Components/Soil.md
-        - Water Sensors: Components/Water.md
-        - Power Supply: Components/Power Supply.md
-    - Firmware: Components/Firmware.md      
+          - Gas Pro Sensor Board: Components/boards/Gases Pro Board.md
+          - PM Board: Components/boards/PM Board.md
+          - Analog Sensor Board: Components/boards/Analog Sensor Board.md
+      - Soil and Water: Components/Soil and water.md
+      - Supported sensors: Components/Auxiliary Connector.md
+      - Power Supply: Components/boards/Power Supply.md
+    - Firmware: Components/Firmware.md
     - Sensor Knowledge:
-      - Particulate Matter: Components/sensors/PM Sensors.md
-      - Noise: Components/sensors/Noise.md
-      - Metal Oxide Sensors:
-        - What to expect: Components/sensors/Metal Oxide.md
-        - eCO2/TVOC: Components/sensors/CCS811.md
-      - Electrochemical Sensors: Components/sensors/Electrochemical Sensors.md
+      - Air:
+        - Particulate Matter: Components/sensors/air/PM Sensors.md
+        - Noise: Components/sensors/air/Noise.md
+        - Metal Oxide Sensors:
+          - What to expect: Components/sensors/air/Metal Oxide.md
+          - eCO2/TVOC: Components/sensors/air/CCS811.md
+          - Electrochemical Sensors: Components/sensors/air/Electrochemical Sensors.md
+        # - Air Mobile sensors: Components/sensors/air/mobile.md
+      - Soil and Water:
+        - Soil Moisture Sensors: Components/sensors/soil/Soil Moisture Sensors.md
+        - Tensionmenter: Components/sensors/soil/Tensiometer.md
+        # - Water Mobile Sensors: Components/sensors/water/mobile.md
     - FAQ: _FAQ.md
-    - Troubleshooting: Troubleshooting.md
+    - Troubleshooting: Troubleshooting.md    
   - Data:
-    - Platform: Sensor Platform.md
-    - Smart Citizen API: Sensor Platform/Smart Citizen API.md
-    - Data Analysis: Data Analysis.md
+    - Sensor Platform: Data/Sensor Platform.md
+    - Smart Citizen API: Data/Smart Citizen API.md
+    - Data Analysis: Data/Data Analysis.md   
   - Use cases:
-    - Main: Use cases.md
+    - Main: Use cases/index.md
     - Citizen Sensing Toolkit: Use cases/Citizen Sensing Toolkit.md
     - Research Projects: Use cases/Research.md
     - Additional material: Use cases/Presentations.md
-    # - Almabike:
-    #     - User Manual: Use cases/Almabike/User Manual.md
-    #     - Test Results: Use cases/Almabike/Test Results.md
+    - Friend projects: Use cases/Friends.md
   - Guides:
-    - Main: Guides.md
+    - Main: Guides/index.md
     - Getting started:
-      - Onboarding Sensors: Guides/Onboarding Sensors.md
-      - Downloading platform data: Guides/Downloading the Data.md
-      - Uploading SD-card data: Guides/Uploading SD Card Data.md
-      - Updating the Wi-Fi: Guides/Updating the Wi-Fi.md
-      - Using the Shell: Guides/Using the Shell.md
+      - Onboarding Sensors: Guides/getting started/Onboarding Sensors.md
+      - Downloading platform data: Guides/getting started/Downloading the Data.md
+      - Uploading SD-card data: Guides/getting started/Uploading SD Card Data.md
+      - Updating the Wi-Fi: Guides/getting started/Updating the Wi-Fi.md
+      - Using the Shell: Guides/getting started/Using the Shell.md
     - Firmware:
-      - Update the firmware: Guides/Update the firmware.md
-      - Edit the firmware: Guides/Edit the Firmware.md
-      - Debug the firmware: Guides/Debug the firmware.md
+      - Update the firmware: Guides/firmware/Update the firmware.md
+      - Edit the firmware: Guides/firmware/Edit the Firmware.md
+      - Debug the firmware: Guides/firmware/Debug the firmware.md
     - Data Analysis:
-      - Framework Installation: Guides/Install the framework.md
-      - Make reports of your data: Guides/Make reports of your data.md
-      - Creating interfaces: Guides/Creating Interfaces.md      
-      # - Organise your data: Guides/Organise your data.md
+      - Framework Installation: Guides/data/Install the framework.md
+      - Make reports of your data: Guides/data/Make reports of your data.md
+      - Creating interfaces: Guides/data/Creating Interfaces.md      
+      - Organise your data: Guides/data/Organise your data.md
       # - Model your sensor data: Guides/Creating Models for Sensors Calibration.md
       # - Analyse your data in batch: Guides/Analyse your data in batch.md
-      # - Uploading data to zenodo: Guides/Upload data to zenodo.md
+      - Uploading data to zenodo: Guides/data/Upload data to zenodo.md
     - Deploying sensors: 
-      - Deploying the SCK: Guides/Deploying SCK.md
-      - iSCAPE Station V1: Guides/Deploying iSCAPE Station V1.md
-      - iSCAPE Station V2: Guides/Deploying iSCAPE Station V2.md
-      - Installing the Connectivity Units: Guides/Installing Connectivity Units.md
+      - SCK: Guides/deployments/Deploying SCK.md
+      - iSCAPE Station V1: Guides/deployments/Deploying iSCAPE Station V1.md
+      - iSCAPE Station V2: Guides/deployments/Deploying iSCAPE Station V2.md
+      - Smart Citizen Station: Guides/deployments/Deploying Smart Citizen Station.md
+      - Smart Citizen Connectivity Units: Guides/deployments/Installing Connectivity Units.md
+      - Soil and water sensors: Guides/deployments/Soil and water sensors.md
+      - SCK Almabike sensors: Guides/deployments/Almabike sensors.md      
+    - Enclosures:
+      - Making your own enclosures: Guides/enclosures/Making your own enclosures.md
     - Legacy Hardware:
       - Smart Citizen 1.1:
-        - Main: Legacy Hardware/index.md
-        - Hardware: Legacy Hardware/Hardware.md
-        - Command Line: Legacy Hardware/Command Line.md
-        - FAQ: Legacy Hardware/Faq.md
-        - Troubleshooting: Legacy Hardware/Troubleshooting.md
+        - Main: Components/legacy/index.md
+        - Hardware: Components/legacy/Hardware.md
+        - Command Line: Components/legacy/Command Line.md
+        - FAQ: Components/legacy/Faq.md
+        - Troubleshooting: Components/legacy/Troubleshooting.md
       - Smart Citizen 2.0:
-        - Main: Legacy Hardware/sck.md
-        - About the CO-NO2 MOs: Components/sensors/SGX MICS.md
+        - Main: Components/legacy/sck.md
+        - About the CO-NO2 MOs: Components/sensors/air/SGX MICS.md
 
 theme:
   name: 'material'

@@ -5,3 +5,209 @@
   --md-primary-fg-color--light: #0019FF;
   --md-primary-fg-color--dark:  #FFC100;
 }
+
+.md-typeset__scrollwrap{
+	text-align: center;
+}
+
+.md-typeset:not(.emojione) img:not(.emojione),
+.md-typeset:not(.emojione) svg:not(.emojione){
+	display: flex;
+	justify-content: center;
+	margin: auto !important;
+	max-width: 95% !important;
+}
+
+.led {
+    width: 20px; height: 20px; border-radius:10px; display: inline-block; margin-top: 7px;
+}
+
+.small {
+    width: 14px; height: 14px; border-radius:7px;
+
+}
+
+.orange {
+    background: orange;
+}
+
+.green {
+    background: lime;
+}
+
+.red {
+    background: red;
+}
+
+.blue {
+    background: blue;
+}
+
+.pink {
+    background: magenta;
+}
+
+.blink {
+    animation:1s blinker linear infinite;
+}
+
+.net {
+    animation:2s net ease infinite;
+}
+
+.net-error {
+    animation:0.4s net linear infinite;
+}
+
+.net-lowbat {
+    animation:1s net-lowbat ease infinite;
+}
+
+.net-chargebat {
+    animation:2s net-chargebat ease infinite;
+}
+
+.net-fullbat {
+    animation:2s net-fullbat ease infinite;
+}
+
+.sd {
+    animation:2s sd ease infinite;
+}
+
+.sd-error {
+    animation:0.4s sd linear infinite;
+}
+
+.sd-lowbat {
+    animation:1s sd-lowbat ease infinite;
+}
+
+.sd-chargebat {
+    animation:2s sd-chargebat ease infinite;
+}
+
+.sd-fullbat {
+    animation:2s sd-fullbat ease infinite;
+}
+
+.setup {
+    animation:2s setup ease infinite;
+}
+
+.setup-error {
+    animation:0.4s setup linear infinite;
+}
+
+.setup-lowbat {
+    animation:1s setup-lowbat ease infinite;
+}
+
+.setup-chargebat {
+    animation:2s setup-chargebat ease infinite;
+}
+
+.setup-fullbat {
+    animation:2s setup-fullbat ease infinite;
+}
+
+.busy {
+    animation:2s busy ease infinite;
+}
+
+.firmware {
+    animation:2s firmware ease infinite;
+}
+
+@keyframes blinker {
+     0% { opacity: 1.0; }
+     50% { opacity: 0.0; }
+     100% { opacity: 1.0; }
+}
+
+@keyframes setup {
+     0% { background: white;}
+     50% { background: red;}
+     100% { background: white;}
+}
+
+@keyframes setup-lowbat {
+     0% { background: orange; }
+     15% { background: red; }
+     85% { background: red; }
+     100% { background: orange; }
+}
+
+@keyframes setup-chargebat {
+     0% { background: orange; }
+     50% { background: red; }
+     100% { background: orange; }
+}
+
+@keyframes setup-fullbat {
+     0% { background: lime; }
+     50% { background: red; }
+     100% { background: lime; }
+}
+
+@keyframes firmware {
+     0% { background: white;}
+     50% { background: lime;}
+     100% { background: white;}
+}
+
+@keyframes net {
+     0% { background: white; }
+     50% { background: blue; }
+     100% { background: white; }
+}
+
+@keyframes net-lowbat {
+     0% { background: orange; }
+     15% { background: blue; }
+     85% { background: blue; }
+     100% { background: orange; }
+}
+
+@keyframes net-chargebat {
+     0% { background: orange; }
+     50% { background: blue; }
+     100% { background: orange; }
+}
+
+@keyframes net-fullbat {
+     0% { background: lime; }
+     50% { background: blue; }
+     100% { background: lime; }
+}
+
+@keyframes sd {
+     0% { background: white; }
+     50% { background: magenta; }
+     100% { background: white; }
+}
+
+@keyframes sd-lowbat {
+     0% { background: orange; }
+     15% { background: magenta; }
+     85% { background: magenta; }
+     100% { background: orange; }
+}
+
+@keyframes sd-chargebat {
+     0% { background: orange; }
+     50% { background: magenta; }
+     100% { background: orange; }
+}
+
+@keyframes sd-fullbat {
+     0% { background: lime; }
+     50% { background: magenta; }
+     100% { background: lime; }
+}
+
+@keyframes busy {
+     0% { background: white; }
+     50% { background: black; }
+     100% { background: white; }
+}

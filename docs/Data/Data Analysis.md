@@ -1,7 +1,12 @@
 Sensor Analysis Framework
 =========================
 
-[![DOI](https://zenodo.org/badge/97752018.svg)](https://zenodo.org/badge/latestdoi/97752018)
+[![DOI](https://zenodo.org/badge/97752018.svg){: align=left !important}](https://zenodo.org/badge/latestdoi/97752018)
+<br>
+[![Binder](https://mybinder.org/badge_logo.svg){: align=left !important}](https://mybinder.org/v2/gh/fablabbcn/smartcitizen-data-framework/master?filepath=%2Fexamples%2Fnotebooks)
+<br>
+[![PyPI version](https://badge.fury.io/py/scdata.svg){: align=left !important}](https://badge.fury.io/py/scdata)
+<br>
 
 When dealing with sensor data, specially with low cost sensors, a great part of the **effort needs to be dedicated to data analysis**. After a careful data collection, this stage of our experiments is fundamental to extract meaningful conclusions and prepare reports from them. For this reason, we have developed a data analysis framework that we call the **Sensor Analysis Framework**. In this section, we will detail how this framework is built, how to install it, and make most use of it.
 
@@ -31,9 +36,9 @@ This is probably the most common use case: exploring data in a visual way. The f
 ![](/assets/images/saf_schema_basic.png)
 
 !!! info "Examples"
-    Check [the examples](https://github.com/fablabbcn/smartcitizen-data/tree/master/examples) in the Github Repo!
+    Check [the examples](https://github.com/fablabbcn/smartcitizen-data/tree/master/examples) in the Github Repository
 
-**Organise your data in tests**
+**Organise your data**
 
 Handling a lot of different sensors can be at times difficult to organise and have traceability. For this, we created the concept of _test_, which groups a set of devices, potentially from various sources. This is convenient since metadata can be addeed to the test instance describing, for instance, what was done, the calibration data for the device, necessary preprocessing for the data, etc. This test can be later loaded in a separate analysis session, modified or expanded, keeping all the data findable.
 
@@ -48,9 +53,10 @@ Some example metadata that can be stored would be:
 
 A brief schema of the test structure is specified below:
 
-<div style="text-align:center">
-<image src="https://i.imgur.com/CSi5tL4.png" width="600px"/>
-</div>
+![](https://i.imgur.com/CSi5tL4.png)
+
+!!! info "Check the guide"
+    Check the guide on how to [organise sensor data](/Guides/data/Organise your data/)
 
 **Clean sensor data**
 
@@ -65,7 +71,7 @@ Low cost sensor data needs calibration, with more or less complex regression alg
 ![](/assets/images/saf_schema_models.png)
 
 !!! info "Guidelines on sensor development"
-    Check our [guidelines](/Guides) on sensor deployment to see why this is important in some cases.
+    Check our [guidelines](/Guides/deployments/) on sensor deployment to see why this is important in some cases.
 
 **Batch analysis**
 
@@ -92,6 +98,9 @@ Have a look at the features within the framework:
 - Methods to statistically validate and study the performance of these models, export and store them
 - As a bonus, an interface to convert the python objects into the statistical analysis language R
 
+!!! info
+    Check the guide on how to set it up [here](/Guides/data/Upload data to zenodo/)
+
 #### Loading and managing the data
 
 Data can be downloaded from the SmartCitizen API with the KIT IDs or using csv. In order to tidy up the data, the recordings are organised around the concept of **test**, an entity containing all the kits' references, sensors and general information regarding the conditions at which the measurements were carried out:
@@ -103,9 +112,7 @@ Data can be downloaded from the SmartCitizen API with the KIT IDs or using csv. 
 
 A brief schema of the test structure is specified below:
 
-<div style="text-align:center">
-<image src="https://i.imgur.com/CSi5tL4.png" width="500px"/>
-</div>
+![](https://i.imgur.com/CSi5tL4.png)
 
 All this structure is filled up at the test creation with a dedicated script, saving future time to understand mismatching reading units, timestamps formats and so on.
 
@@ -153,6 +160,6 @@ Once the model is analysed and validated, it can be saved and exported. This all
 
 ## Source files
 
-<a class="github-button" data-size="large" href="https://github.com/fablabbcn/smartcitizen-iscape-data/archive/master.zip" data-icon="octicon-cloud-download" aria-label="Download from GitHub">Download</a>
+<a class="github-button" data-size="large" href="https://github.com/fablabbcn/smartcitizen-data/archive/master.zip" data-icon="octicon-cloud-download" aria-label="Download from GitHub">Download</a>
 
-<a class="github-button" data-size="large" href="https://github.com/fablabbcn/smartcitizen-iscape-data" aria-label="Check the source code">Check the source code</a>
+<a class="github-button" data-size="large" href="https://github.com/fablabbcn/smartcitizen-data" aria-label="Check the source code">Check the source code</a>

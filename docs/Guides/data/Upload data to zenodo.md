@@ -2,32 +2,38 @@ Uploading results to [Zenodo](https://zenodo.org/) is also possible using the da
 
 ![](https://about.zenodo.org/static/img/logos/zenodo-black-1000.png)
 
-Once you have your data organised in a test, you can upload it directly to Zenodo and share it with others. An example of this is provided in the [example notebook](https://github.com/fablabbcn/smartcitizen-data/blob/master/examples/notebooks/todo/upload_to_zenodo.ipynb).
+Once you have your data organised in a test, you can upload it directly to Zenodo and share it with others. An example of this is provided in the [example notebook](https://github.com/fablabbcn/smartcitizen-data/blob/master/examples/notebooks/06_upload_to_zenodo.ipynb).
 
-For this to work, we need to have a [token](https://zenodo.org/account/settings/applications/). Put this in a secrets.py file in the `src` directory:
+## Set it up
 
-```
-> cd src
-> ls -la
-    .
-    ..
-    __init__.py
-    __pycache__
-    config.yaml
-    data
-    models
-    saf.py
-    secrets.py
-    src.egg-info
-    tools
-    visualization
-```
-
-In this file, include your token as below:
+For this to work, we need to have a [token](https://zenodo.org/account/settings/applications/) in an environment variable called `ZENODO_TOKEN`. Once you have it, open up a terminal and add it to your environment like:
 
 ```
-zenodo_token='yourtokenhere'
+export ZENODO_TOKEN=fake-zenodo-token
 ```
+
+In the same terminal, check it's there:
+
+```
+echo $ZENODO_TOKEN
+fake-zenodo-token
+```
+
+Then launch `jupyter-lab` or start using your python scripts.
+
+Alternatively, you can store a `.env` file in a place of your liking with your token:
+
+```
+ZENODO_TOKEN='yourtokenhere'
+```
+
+And then load it like:
+
+```
+export $(grep -v '^#' .env | xargs -0)
+```
+
+## Prepare the data
 
 Next, you can define a `upload.yaml` file to describe the upload (see one example [here](https://github.com/fablabbcn/smartcitizen-iscape-data/blob/master/data/uploads/example_zenodo_upload.yaml):
 
@@ -97,7 +103,7 @@ data.upload_to_zenodo('example_zenodo_upload', sandbox = False, dry_run = True)
 ```
 
 !!! warning
-    Note that a .json file will be created in the data/uploads folder containing the metadata necessary for the upload (as liked by zenodo API). You can securely delete this file once you are done. Note that, in case `include_footer_doi=true`, the actual pdf to upload will be `report_doi.pdf`
+    Note that a `.json` file will be created in the data/uploads folder containing the metadata necessary for the upload (as liked by zenodo API). You can securely delete this file once you are done. Note that, in case `include_footer_doi=true`, the actual pdf to upload will be `report_doi.pdf`
 
 Finally, **to actually deploy the dataset**, you need to visit the [deposit section](https://zenodo.org/deposit) and aprove it manually.
 

@@ -14,6 +14,9 @@ The power supply can be one of two options:
 
 Check the datasheets for other available input convertions and limits.
 
+!!! tips 
+    Have a look at the guides for more detailed information [on how to operate the power supply](/Guides/deployments/Deploying SCK/#using-the-custom-power-supply).
+    
 ## Enclosure
 
 The PCB has the footprint to fit inside a [Bopla Ref. 38102200](https://octopart.com/search?q=bopla+38102200) IP65 Enclosure with two built-in cable glands. 

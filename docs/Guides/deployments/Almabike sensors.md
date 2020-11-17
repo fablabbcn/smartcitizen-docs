@@ -21,11 +21,11 @@ The delivered sensor pack is comprised of these components:
 
 The SCK and GPS are assembled with a 3D-printed Clip:
 
-![](assets/clipassembly.jpg)
+![](assets/almabike_clipassembly.jpg)
 
 The enclosure is made out of a modified saddle bag. Find more details in [enclosure](#enclosure):
 
-![](assets/enclosure.jpg)
+![](assets/almabike_enclosure.jpg)
 
 !!! info "Licenses"
     All the software used in this (product/prototype/design), unless otherwise stated, is released under GNU GPL v3.0. Likewise, the hardware design files for the Smart Citizen Kit are released under CERN OHL v1.2. Please refer to the corresponding license for details regarding permissions, limitations, and conditions of use. This paragraph only applies to this section and the enclosure customization, and not to the rest of components such as the GPS or antenna.
@@ -34,7 +34,7 @@ The enclosure is made out of a modified saddle bag. Find more details in [enclos
 
 The sensors are based on the Smart Citizen Kit, with the following components.
 
-![](assets/sensors.jpg)
+![](assets/almabike_sensors.jpg)
 
 *Measurements*
 
@@ -57,15 +57,15 @@ Compared to other GPS modules, this breakout maximizes position accuracy in dens
 
 The SparkFun NEO-M8U GPS Breakout[^1] is also equipped with an on-board rechargeable battery that provides power to the RTC on the NEO-M8U. This reduces the time-to-first fix from a cold start (~26s) to a hot start (~1.5s). The battery will maintain RTC and GNSS orbit data without being connected to power for plenty of time.
 
-![](assets/GPS-Diagram.png)
+![](assets/almabike_GPS-Diagram.png)
 
 The GPS uses a **ceramic patch** antenna[^2] with the following features:
 
-![](assets/antenna.png){: style="width:400px"}
+![](assets/almabike_antenna.png){: style="width:400px"}
 
 The U.FL antenna connector **does not need to be unplugged** from the board, specially never when the board is being powered in order to avoid damaging the circuitry:
 
-![](assets/UFL.png){: style="width:400px"}
+![](assets/almabike_UFL.png){: style="width:400px"}
 
 > GPS and Antenna images by [Sparkfun](https://www.sparkfun.com) (License [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/)) and edited by Smart Citizen.
 
@@ -73,7 +73,7 @@ The U.FL antenna connector **does not need to be unplugged** from the board, spe
 
 The enclosure is made out of a modified generic Saddle Bag from [Vaude](https://www.vaude.com/) - (Vaude Race Light L). 
 
-![](assets/vaude.jpg){: style="width:400px"}
+![](assets/almabike_vaude.jpg){: style="width:400px"}
 
 > Enclosure images by [Vaude](https://www.vaude.com/)
 
@@ -85,15 +85,15 @@ The enclosure was specifically chosen because:
 
 The sensors are internally suspended by a polypropilene folding and the air intakes are made out of PLA in a 3D printer.
 
-![](assets/ppe.jpg)
+![](assets/almabike_ppe.jpg)
 
 **Measurement principle**
 
 The sensors are enclosed in the saddle bag in order to avoid dirt and water spills. The measurement method in the enclosure ensures there is: 1. sufficient air flow parallel to the sensor's surface, 2. a limited gas speed across the sensors and minimum gas residence time to ensure sensitivity. The placement of the sensors was tested and compared with different options. Results are shown in the [Test section](Test Results). The images below show the measurement principle and a functional diagram for the sensor’s enclosure. 
 
-![](assets/bottom-view-anotated.png)
+![](assets/almabike_bottom-view-anotated.png)
 
-![](assets/side-view-anotated.png)
+![](assets/almabike_side-view-anotated.png)
 
 !!! warning ""
     Please, ensure both intakes and exhaust are not covered and that air can flow freely between both.
@@ -111,7 +111,7 @@ You will note that the kit _turns itself off_ while operating on battery. Actual
 
 The SCK has a micro USB port and can be charged like any Smartphone or Tablet using a dedicated adapter or a computer USB port. A cable is provided and does not need to be disconnected from the device. The cable can be stored in the saddle’s bag back compartment.
 
-![](assets/pocket-cable.jpg)
+![](assets/almabike_pocket-cable.jpg)
 
 ### User feedback
 
@@ -140,17 +140,17 @@ In order to understand the reading and publication intervals, it is important to
 
 Each of the sensors can be configured independently, with a reading interval N times the _overall reading interval_. For the Almabike project, all the sensors are read every 60s if the sensors are static. When a GPS movement is detected, the reading interval goes down to 5s.
 
-![](assets/interval.png)
+![](assets/almabike_interval.png)
 
 In the case of **the Almabike project**, the sensors store data internally in the Flash memory during the bicycle trips and publish it in batch when the configured WiFi network is visible. Data is also stored in the SD card for later use in CSV file format.
 
-![](assets/trip.jpg)
+![](assets/almabike_trip.jpg)
 
 ## User interfaces
 
 The data board features a set of user interfaces which provide feedback to the user, as well as two buttons with different functionalities. The main RGB LED provides general feedback of the data board status. Additionally, two buttons are provided for user action. A hardware reset button, which forces a power cut to the board, and a power button, used to change the device's mode, turn on and off the device, and to perform a factory reset. You can see both buttons below:
 
-![](assets/interfaces.png)
+![](assets/almabike_interfaces.png)
 
 ### The button
 
@@ -277,11 +277,11 @@ The sensor comes mounted and almost ready to be used.
 
 The first step is to connect the battery. The kit will light in red (configuration mode) and we will be able to configure it by following the instructions at [start.smartcitizen.me](https://start.smartcitizen.me).
 
-![](assets/start.png)
+![](assets/almabike_start.png)
 
 After the configuration process, data will be available on the SmartCitizen platform. You can explore the data there or download it using the `CSV Download` option (guide [here](https://docs.smartcitizen.me/Guides/Downloading%20the%20Data/))
 
-![](assets/csv.png)
+![](assets/almabike_csv.png)
 
 !!! info "Make sure data is recorded"
 
@@ -289,21 +289,21 @@ After the configuration process, data will be available on the SmartCitizen plat
 
     1. Click the 🛠️ icon in the bottom right corner
 
-        ![](assets/icon.png)
+        ![](assets/almabike_icon.png)
 
     2. Choose the blueprint of the device you want to setup, in this case: `sck_21_gps`
 
-        ![](assets/sck_21_gps.png)
+        ![](assets/almabike_sck_21_gps.png)
 
     3. Click save and continue the process as usually
 
-        ![](assets/save.png)
+        ![](assets/almabike_save.png)
 
 Due to privacy concerns, all geolocated data for the Almabike project will remain private unless the user choses to release it. When you set up your user profile, please, contact "support@smartcitizen.me" to request your if your user can be upgraded from `citizen` to `researcher`.
 
 This will allow to visit any of your devices and select the option "Make private" under the "Open Data" settings:
 
-![](assets/opendata.png)
+![](assets/almabike_opendata.png)
 
 ### Before going on a trip
 
@@ -314,7 +314,7 @@ Before starting to pedal, make sure that this checklist is all fine:
 3. The GPS is being powered. The GPS might take some time to retrieve a valid location. This can be assessed by checking that the [GPS Blue LED is blinking](#gps). If you want to make sure the complete trip is recorded, make sure the GPS can receive a clear view of the sky
 4. The kit is well placed inside the enclosure and the cable does not obstruct the exhaust
 
-![](assets/enclosure-space.jpg)
+![](assets/almabike_enclosure-space.jpg)
 
 !!! info "What is the GPS fix?"
     The GPS fix is the term used for describing whether or not the GPS has successfully received a valid location
@@ -334,221 +334,95 @@ Below, there is a list of known issues with the `0.9.8` version of the Firmware.
 
 ## Additional graphic material
 
-![](assets/full-side-photo.jpg)
+![](assets/almabike_full-side-photo.jpg)
 
-![](assets/side-photo.jpg)
+![](assets/almabike_side-photo.jpg)
 
-![](assets/render-1.png)
+![](assets/almabike_render-1.png)
 
-![](assets/render-2.png)
+![](assets/almabike_render-2.png)
 
-![](assets/render-3.png)
+![](assets/almabike_render-3.png)
 
-![](assets/render-4.png)
+![](assets/almabike_render-4.png)
+
+## Test results
+
+The purpose of these tests is to assess the best solution for measuring particulate matter and environmental conditions with two different enclosures and hence exposure methods. The tests performed are:
+
+- Indoor particulate tests
+- Outdoor dynamic vs. static comparison
+- Outdoor dynamic comparison
+
+### Indoor particulate tests
+
+These tests were conducted indoor using a Marlin Smoke Machine in order to assess the difference between each enclosure.
+
+**Free air comparison**
+
+An initial comparison between both sensors in open air is done in order to assess the difference between each sensor measuring in open air with smoke injection up to 4000ug/m3. In the figure, two distinct phases need to be highlighted:
+
+![](assets/almabike_plot-1.png)
+
+![](assets/almabike_plot-1-5.png)
+
+In the figure, two distinct phases need to be highlighted: injection (when there is smoke being injected in the room), and dispersion, when the injected smoke is being dispersed with a fan. 
+
+Both sensors correlate well in the injection phase and dispersion phases, but they do have an offset in the dispersion phase that is not identified, and that could be simply due to the sensor's position, although they are less than 10cm apart. This maximum offset is 700-1000ug/m3 in an evironment of very large particle concentration numbers 3000ug/m3.
+
+Temperature and humidity offsets in this case are found to be less than 0.5degC in temperature and negligible for relative humidity.
+
+**Enclosure comparisons**
+
+The purpose of this comparison is to determine which measurement principle of the following is the best:
+
+- Directly exposing the sensors to the air flow by the bicycle's movement
+- Expose them inside a "chamber" in which air flow is contained and briefly _slowed down_
+
+![](assets/almabike_enclosure-comparison.png)
+
+The following graph shows the comparison of both enclosures mounted on the bike, and a rider on the bike.
+
+![](assets/almabike_plot-2.png)
+
+The comparison shows that the direct sensor exposure (ORTLIEB in the graph) is not as sensitive to particulate in the air as the chamber exposure is (VAUDE in the graph). This offset is not justified by the offset seen in dispersion phase in the _free air_ test as it is also reduced in the injection phase. On the other hand, the chamber exposure shows a longer tail in the dispersion phase, as the particles can remain in the chamber and not be fully evacuated, although reactivity to larger quantities remains as seen in the graph below.
+
+It also shows that the VAUDE enclosure evacuates better heat generated by the electronics, as the temperature offset between both enclosures is reduced. As seen in the following tests, the offset of each enclosure with respect to real temperature is between 1 to 3degC and it could be compensated by software _a posteriori_, but it can't be avoided as the sensors are _confined_ in the enclosure. This factor is not critical for the exposure assessment and decision, as the material of the enclosure differ, and it's less traspirant in the ORTLIEB option.
+
+**Chamber vs. Reference test**
+
+The comparison of the _best-so-far_ enclosure is shown below, with respect to the reference sensor in free air. This comparison shows how the enclosure effectively slows down the air flow charged with particles, and still correlates properly with the free air sensor in the injection phase, although not in the dispersion phase. This indicates that the accumulation and evacuation process of the particles within the chamber is not fully controlled in this enclosure. Nevertheless, the levels of particles in this setup are not comparable to any actual particulate levels found in actual urban environments.
+
+![](assets/almabike_plot-3.png)
+
+The offset in temperature and humidity is of approximatively 3degC at the end of the test, and follows a normal _heat up_ curve with logarithmic trend, equally for humidity with 7%rh.
+
+**Direct exposure vs. Reference test**
+
+The direct exposure vs reference comparison shows an inferior sensitivity, already seen in the enclosure comparison, of the direct exposure option versus the actual concentration. The measurements also show less reactivity in some instances, smoothing out some peaks in particle concentrations. Temperature trace shows an offset of 3degC at the end of the test, similarly to that of the other enclosure, with an humidity difference of 4-5%rh.
+
+![](assets/almabike_plot-4.png)
+
+### Outdoor tests
+
+These tests are aimed at comparing outdoor measurements with sensor trips. These measurements use the same sensor as the ones mounted on the bicycle. A script is used to post-process the data based on location and derive a comparison between both measurements.
+
+**Comparison bike front vs. bike back**
+
+This comparison shows the difference between the different metrics when measuring gas using the same enclosure in the front (black) and in the back (green):
+
+![](assets/almabike_plot-6.png)
+
+After a short stabilisation period, this test shows that PM2.5 measurements are equally correlated between both positions. In the case of the temperature sensor, a difference of up to 2ºC was seen (higher in the saddle’s position), with better sensitivity in the case of the front-sensor, due to a lower confinement and larger surface area:
+
+![](assets/almabike_plot-7.png)
+
+!!! info ""
+    Due to project guidelines, the saddle position of the sensor is considered sufficient for the purpose of monitoring air quality. However, it’s worth mentioning that this sensor location requires attention for the sensors to never be covered by the rider’s clothing. Furthermore, the front position shows a better response for the sensor temperature representativity and sensitivity as seen above, with a potential better GPS fix quality. This latter issue is compensated with the usage of an active patch antenna with higher gain.
+
+Further tests are currently being conducted in order to assess the performance of the sensors when compared to static ones.
 
 ## References
 
 [^1]: GPS NEO-M8U Specification: https://cdn.sparkfun.com/assets/6/d/7/c/6/NEO-M8U_DataSheet__UBX-15015679_.pdf
 [^2]: Ceramic Patch Antenna Specification: https://www.molex.com/pdm_docs/as/2066400001-AS.pdf
-
-<style>
-
-#img {
-    text-align:center;
-}
-
-.led {
-    width: 20px; height: 20px; border-radius:10px; display: inline-block; margin-top: 7px;
-}
-
-.small {
-    width: 14px; height: 14px; border-radius:7px;
-
-}
-
-.orange {
-    background: orange;
-}
-
-.green {
-    background: lime;
-}
-
-.red {
-    background: red;
-}
-
-.blue {
-    background: blue;
-}
-
-.pink {
-    background: magenta;
-}
-
-.blink {
-    animation:1s blinker linear infinite;
-}
-
-.net {
-    animation:2s net ease infinite;
-}
-
-.net-error {
-    animation:0.4s net linear infinite;
-}
-
-.net-lowbat {
-    animation:1s net-lowbat ease infinite;
-}
-
-.net-chargebat {
-    animation:2s net-chargebat ease infinite;
-}
-
-.net-fullbat {
-    animation:2s net-fullbat ease infinite;
-}
-
-.sd {
-    animation:2s sd ease infinite;
-}
-
-.sd-error {
-    animation:0.4s sd linear infinite;
-}
-
-.sd-lowbat {
-    animation:1s sd-lowbat ease infinite;
-}
-
-.sd-chargebat {
-    animation:2s sd-chargebat ease infinite;
-}
-
-.sd-fullbat {
-    animation:2s sd-fullbat ease infinite;
-}
-
-.setup {
-    animation:2s setup ease infinite;
-}
-
-.setup-error {
-    animation:0.4s setup linear infinite;
-}
-
-.setup-lowbat {
-    animation:1s setup-lowbat ease infinite;
-}
-
-.setup-chargebat {
-    animation:2s setup-chargebat ease infinite;
-}
-
-.setup-fullbat {
-    animation:2s setup-fullbat ease infinite;
-}
-
-.busy {
-    animation:2s busy ease infinite;
-}
-
-.firmware {
-    animation:2s firmware ease infinite;
-}
-
-@keyframes blinker {
-     0% { opacity: 1.0; }
-     50% { opacity: 0.0; }
-     100% { opacity: 1.0; }
-}
-
-@keyframes setup {
-     0% { background: white;}
-     50% { background: red;}
-     100% { background: white;}
-}
-
-@keyframes setup-lowbat {
-     0% { background: orange; }
-     15% { background: red; }
-     85% { background: red; }
-     100% { background: orange; }
-}
-
-@keyframes setup-chargebat {
-     0% { background: orange; }
-     50% { background: red; }
-     100% { background: orange; }
-}
-
-@keyframes setup-fullbat {
-     0% { background: lime; }
-     50% { background: red; }
-     100% { background: lime; }
-}
-
-@keyframes firmware {
-     0% { background: white;}
-     50% { background: lime;}
-     100% { background: white;}
-}
-
-@keyframes net {
-     0% { background: white; }
-     50% { background: blue; }
-     100% { background: white; }
-}
-
-@keyframes net-lowbat {
-     0% { background: orange; }
-     15% { background: blue; }
-     85% { background: blue; }
-     100% { background: orange; }
-}
-
-@keyframes net-chargebat {
-     0% { background: orange; }
-     50% { background: blue; }
-     100% { background: orange; }
-}
-
-@keyframes net-fullbat {
-     0% { background: lime; }
-     50% { background: blue; }
-     100% { background: lime; }
-}
-
-@keyframes sd {
-     0% { background: white; }
-     50% { background: magenta; }
-     100% { background: white; }
-}
-
-@keyframes sd-lowbat {
-     0% { background: orange; }
-     15% { background: magenta; }
-     85% { background: magenta; }
-     100% { background: orange; }
-}
-
-@keyframes sd-chargebat {
-     0% { background: orange; }
-     50% { background: magenta; }
-     100% { background: orange; }
-}
-
-@keyframes sd-fullbat {
-     0% { background: lime; }
-     50% { background: magenta; }
-     100% { background: lime; }
-}
-
-@keyframes busy {
-     0% { background: white; }
-     50% { background: black; }
-     100% { background: white; }
-}
-
-</style>

@@ -18,7 +18,7 @@
 
     Pressing the reset button will not delete any configuration, it will simply restart your device. The light will go off and on and the device will start again with a white LED.
 
-    This button is also to be used when reflashing the firmware, by double clicking it. Have a look at the guide [here](/Components/Firmware/guides/Update the firmware).
+    This button is also to be used when reflashing the firmware, by double clicking it. Have a look at the guide [here](/Guides/firmware/Update the firmware).
 
     You can also perform a reboot by disconnecting the battery and the USB cable so that the kit is restarted. In this way we will not lose any data or configuration. However, if we are in `SD card mode`, the kit won't know _what time it is_ and we will need to give to him. For doing so:
 

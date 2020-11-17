@@ -1,8 +1,6 @@
 The [data board](/Components/Data Board/) features a standard Grove connector where off-the-shelf modules from the same manufacturer can be connected. The connector supports an independent I2C bus by default, but by software it can be configured to support other uses (GPIO, I2C and UART). It can supply power up to 750mA, and it can be enabled or disabled by software to save power.
 
-<div style="text-align: center">
-    <img src="https://i.imgur.com/5nEc922.jpg" width="350px">
-</div>
+![](https://i.imgur.com/5nEc922.jpg){: style="max-width:400px !important"}
 
 !!!info "There is a lot more to it!"
     The Smart Citizen Kit is designed with a modular approach in mind. This means that the [Urban Board](/Components/Urban%20Sensor%20Board/) is only a selection of low cost sensors for air quality, but the hardware itself can be expanded for other use cases such as a more advanced air quality monitoring setup, soil monitoring, or water quality. Make sure you check our [guide on how to use them](/Guides/Third party sensors).
@@ -16,7 +14,7 @@ The [data board](/Components/Data Board/) features a standard Grove connector wh
 - [SparkFun ToF Range Finder Sensor - VL6180](https://www.sparkfun.com/products/12785) - supports distance and light. Can be used for water level measurements
 - [ADS1X15](https://www.adafruit.com/product/1085) - 16 bit ADC from Texas instruments also found in Adafruit development boards
 
-### Environmental and air quality
+### Air
 
 - [Seeed Grove SHT31 Temperature/Humidity](https://www.seeedstudio.com/Grove-Temperature-Humidity-Sensor-SHT31.html)
 - [Adafruit dev kit for Bosch BME680](https://www.adafruit.com/product/3660) - supports temperature, humidity, barometric pressure and VOC gas
@@ -32,13 +30,9 @@ The [data board](/Components/Data Board/) features a standard Grove connector wh
     
     ![](https://i.imgur.com/RRu8MiV.jpg)
 
-### Water measurements
+### Soil and Water
 
-  Check the [water measurements](/Components/Water) documentation with examples on sensors such us the [Atlas Scientific Dissolved Oxygen](https://www.atlas-scientific.com/product_pages/kits/do_kit.html) and the [DS18B20 Water Temperature](https://www.adafruit.com/product/381)
-
-### Soil measurements
-
-  Check the [soil measurements](/Components/Soil) documentation with examples on sensors such us the [Chirp Soil Moisture](https://www.tindie.com/products/miceuz/i2c-soil-moisture-sensor/) - supports soil moisture (requires calibration), temperature and ambient light.
+Check the [Soil and water measurements](/Soil and water/) documentation with examples on sensors such us the [Atlas Scientific Dissolved Oxygen](https://www.atlas-scientific.com/product_pages/kits/do_kit.html) and the [DS18B20 Water Temperature](https://www.adafruit.com/product/381) for water or the [Chirp Soil Moisture](https://www.tindie.com/products/miceuz/i2c-soil-moisture-sensor/), with support of soil moisture (requires calibration), temperature and ambient light.
 
 ## Other auxiliaries
 

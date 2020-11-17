@@ -2,9 +2,7 @@
 
 The new Urban Sensor Board SCK 2.0 (and onwards) comes with a digital **MEMs I2S microphone**. There is a wide range of possibilities in the market, and our pick was the INVENSENSE (now TDK) [ICS43432](https://www.invensense.com/products/digital/ics-43432/): a tiny digital MEMs microphone with I2S output. There is an extensive documentation at TDK's website coming from the former and we would recommend to review the nicely put documents for those interested in the topic.
 
-<div style="text-align:center">
-<img src ="https://i.imgur.com/ZbkN4aj.png" alt="Invensense ICS43432" class="cover"/>
-</div>
+![](https://i.imgur.com/ZbkN4aj.png)
 
 _Image credit: [Invensense ICS43432](https://www.invensense.com/products/digital/ics-43432)_
 
@@ -12,9 +10,7 @@ _Image credit: [Invensense ICS43432](https://www.invensense.com/products/digital
 
 The **MEMs microphone** comes with a transducer element which converts the sound pressure into electric signals. The sound pressure reaches the transducer through a hole drilled in the package and the transducer's signal is sent to an ADC which provides with a signal which can be pulse density modulated (PDM) or in I2S format. Since the ADC is already in the microphone, we have an all-digital audio capture path to the processor and it’s less likely to pick up interferences from other RF, such as the WiFi, for example. The I2S has the advantage of a decimated output, and since the SAMD21 has an I2S port, this allows us to connect it directly to the microcontroller with no CODEC needed to decode the audio data. Additionally, there is a bandpass filter, which eliminates *DC* and low frequency components (i.e. at fs = 48kHz, the filter has -3dB corner at 3,7Hz) and high frequencies at *0,5·fs* (-3dB cutoff). Both specifications are important to consider when analysing the data and discarding unusable frequencies. The microphone acoustic response has to be considered as well, with subsequent equalisation in the data treatment in order.
 
-<div style="text-align:center">
-<img src ="https://i.imgur.com/cToxGKY.png" alt="ICS43432 Datasheet" class="cover"/>
-</div>
+![](https://i.imgur.com/cToxGKY.png)
 
 _Image credit: [ICS43432 Datasheet - TDK Invensense](https://www.invensense.com/wp-content/uploads/2015/02/ICS-43432-data-sheet-v1.3.pdf)_
 
@@ -22,9 +18,7 @@ _Image credit: [ICS43432 Datasheet - TDK Invensense](https://www.invensense.com/
 
 The **[I2S protocol](https://www.sparkfun.com/datasheets/BreakoutBoards/I2SBUS.pdf)** (*Inter-IC-Sound*) is a serial bus interface which consists of: a bit clock line or Serial Clock (*SCK*), a word clock line or Word Select (*WS*) and a multiplexed Serial Data line (*SD*). The SD is transmitted in two’s complement with MSB first, with a 24-bit word length in the microphone we picked. The *WS* is used to indicate which channel is being transmitted (left or right). In the case of the ICS43432, there is an additional pin which corresponds with the L/R, allowing to use the left or right channel to output the signal and the use of stereo configurations. When set to left, the data follows WS’s falling edge and when set to right, the WS’s rising edge. For the SAMD21 processor, there is a well developed [I2S library](https://github.com/arduino/ArduinoCore-samd/tree/master/libraries/I2S) that will take control of this configuration. 
 
-<div style="text-align:center">
-<img src ="https://i.imgur.com/Z6TdV9h.png" alt="ICS43432 Datasheet" class="cover"/>
-</div>
+![](https://i.imgur.com/Z6TdV9h.png)
 
 _Image credit: [I2S bus specification - Philips Semiconductors](https://www.sparkfun.com/datasheets/BreakoutBoards/I2SBUS.pdf)_
 
@@ -92,17 +86,13 @@ There are some known limitations that need to be taken into account when perform
 
 Real-world sound pressure levels (SPL) travelling around in the air are not fully perceived by our ears. 
 
-<div style="text-align:center">
-<img src ="http://www.dspguide.com/graphics/F_22_1.gif" alt ="Ear model"> 
-</div>
+![](http://www.dspguide.com/graphics/F_22_1.gif)
 
 _Image credit: [Human hearing - DSP Guide](http://www.dspguide.com/ch22/1.htm)_
 
 There are several studies and models of what we actually perceive which yield several types of the so called **weighting functions**. Some of them have been standarised for the purpose of SPL measurement, finding different types like **[A-weighting](https://en.wikipedia.org/wiki/A-weighting#Deficiencies_of_A-weighting)** (the most common one), B-weighting, D (both in disuse) and others. In the frequency domain, they look like this:
 
-<div style="text-align:center">
-<img src ="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Acoustic_weighting_curves_%281%29.svg/400px-Acoustic_weighting_curves_%281%29.svg.png" alt="Weighting table">
-</div>
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Acoustic_weighting_curves_%281%29.svg/400px-Acoustic_weighting_curves_%281%29.svg.png" alt="Weighting table)
 
 _Image credit: [A-weighting - Wikipedia](https://en.wikipedia.org/wiki/A-weighting#Deficiencies_of_A-weighting)_
 
@@ -141,9 +131,7 @@ $$
 
 The interesting thing about the RMS level, is that it expresses an average signal level throughout the signal, and it actually relates to the peak level of sinusoid wave by √2. Therefore, it is a very interesting way to express average levels for signals and for that reason, it's the common standard used.
 
-<div style="text-align:center">
-<img src ="https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Sine_wave_voltages.svg/400px-Sine_wave_voltages.svg.png" alt ="Sine wave parameters"> 
-</div>
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Sine_wave_voltages.svg/400px-Sine_wave_voltages.svg.png)
 
 _Image credit: [Sine wave parameters- Wikipedia](https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Sine_wave_voltages.svg/400px-Sine_wave_voltages.svg.png)_
 
@@ -151,9 +139,7 @@ Now that we know how to calculate the RMS level of our signal, let's go into som
 
 *FFT* stands for **Fast Fourier Transform**, and it's an algorithm capable of performing a Fourier Transform in a simplified and efficient way (that's where the _fast_ comes in). What it does in a detailed mathematical way is something quite complicated with the details; but being practical, it is basically a convertion between the signal in time domain and its frequency domain components. Interestingly, this process is reversible and the other way around it is called **IFFT** (*I* for *Inverse*).
 
-<div style="text-align:center">
-<img src ="https://i.imgur.com/1B1MZSF.png?1" alt ="Sine wave frequency convertion"> 
-</div>
+![](https://i.imgur.com/1B1MZSF.png)
 
 _Image credit: Smart Citizen_
 
@@ -161,9 +147,7 @@ In the example above, things in the time domain get a bit messy, but in the freq
 
 For this introduction, let's move on to what we actually want to do: _the much anticipated weighting_. At this point, our task is fairly easy: we just have to multiply both: our signal in the frequency domain with the weighting function and that's it! If we have a look at the figure below, in the time and frequency domain, the signals look like this:
 
-<div style="text-align:center">
-<img src ="https://i.imgur.com/3REv8Ah.png?1" alt ="White noise frequency convertion"> 
-</div>
+![](https://i.imgur.com/3REv8Ah.png)
 
 _Image credit: Smart Citizen_
 
@@ -181,15 +165,13 @@ _Image credit: [NUTAQ - Signal processing](https://www.nutaq.com/blog/analog-dig
 
 Discrete sampling has two main consequences for us: the first one is that we are taking samples once every $1/f_s$, where $f_s$ is the sampling frequency. Normal audio systems sample at 44,1kHz, but this number might vary depending on the application. If you remember [this chart](https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Animal_hearing_frequency_range.svg/512px-Animal_hearing_frequency_range.svg.png), you might be wondering why we have to sample at such a high frequency. 
 
-<div style="text-align:center">
-<img src ="https://www.adinstruments.com/sites/default/files/wysiwyg-resources/images/data-quality-digital-sampling_0.gif">
-</div>
+![](https://www.adinstruments.com/sites/default/files/wysiwyg-resources/images/data-quality-digital-sampling_0.gif)
 
 _Image credit: [Signal acquisition - Adinstruments](https://www.adinstruments.com/)_
 
 [Nyquist sampling criterion](https://en.wikipedia.org/wiki/Nyquist%E2%80%93Shannon_sampling_theorem) states that **at a minimum, we have to sample at double the maximum frequency we want to analyse**. Since humans hearing has a limited frequency range that goes up to 20kHz in some cases, it is reasonable to use something around 40kHz. With this, the _Nyquist criterion_ solves the so called **aliasing problem**, in which several sinusoid signals could fit the same sampling pattern if the number of samples is too low:
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/AliasingSines.svg/1200px-AliasingSines.svg.png" alt="AliasingSines.svg"></img>
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/AliasingSines.svg/1200px-AliasingSines.svg.png)
 
 _Image credit: [Wikipedia - Aliasing](https://en.wikipedia.org/wiki/Aliasing)_
 
@@ -197,25 +179,20 @@ The second of the discrete sampling limitation comes from the **amount of sample
 
 This is where **signal windowing** kicks in. Imagine that we have a very-low-frequency sinusoid and that we are not able to sample completely the whole sine wave, due to buffer limitations. By definition, our system is assuming that the discrete samples we measure are constantly being repeated in the environment, one after the other:
 
-<div style="text-align:center">
-<img src= "https://i.imgur.com/DOfCeAI.png?1">
-</div>
+![](https://i.imgur.com/DOfCeAI.png)
 
 _Image credit: Smart Citizen_
 
 When we take the FFT of this signal, we see undesired frequencies that make our frequency spectrum invalid. This is called **spectral leakage** and it's mitigated by the use of [_windows_](https://en.wikipedia.org/wiki/Window_function) (math funcions, not the OS). These windows operate by **smoothing the edges** of our measurement and preventing the _jumps_ in the signal helping the FFT algorithm to properly analyse the signals.
 
-<div style="text-align:center">
-<img src= "https://i.imgur.com/1BSCYdu.png">
-</div>
+
+![](ttps://i.imgur.com/1BSCYdu.png)
 
 _Image credit: Smart Citizen_
 
 With the use of _signal windowing_, more specifically with the use of the _hamming window_, we are then able to reduce the amount of samples needed to roughly 1000 samples. Now we are down to **50% of the memory allocation needed without windowing**. You can see the effect on the _RMS relative errors_ in the image below, where the trend of the Hann (another common window) and the Hamming treated buffers, with respect to the frequency tends to stabilise _much more quickly_ than the _raw_ buffers.
 
-<div style="text-align:center">
-<img src= "https://i.imgur.com/rlmh9jf.png">
-</div>
+![](https://i.imgur.com/rlmh9jf.png)
 
 _Image credit: Smart Citizen_
 
@@ -242,43 +219,31 @@ _Image credit: Norwegian Creations_
 
 First, it is important to get a glimpse of the math behind the filters and why they do their magic. And for this, the most important thing we need to know is called **convolution**.
 
-<div style="text-align:center">
-<img src= "http://colah.github.io/posts/2014-07-Understanding-Convolutions/img/RiverTrain-ImageConvDiagram.png">
-</div>
+![](http://colah.github.io/posts/2014-07-Understanding-Convolutions/img/RiverTrain-ImageConvDiagram.png)
 
 _Image credit: [River Trail](http://intellabs.github.io/RiverTrail/tutorial/)_
 
 For the purpose of **audio analysis**, let's consider we have an input vector, a filter kernel and an output vector. Our input vector can be the raw audio signal we have captured, being the output signal the result of the convolution operation. The filter kernel is the characteristic of the filter and will be, for this example, a one dimension array. What the convolution operation is going to do, in a _very very very simplified way_, is to **sweep through the input sample** and multiply each component with it's corresponding filter kernel component, then sum the results and put them in the corresponding output sample. If we put some math notation and call _x[n]_ to the input vector, _h[n]_ to the filter kernel and _y[n]_ to the output vector, it all ends up looking like this:
 
-<div style="text-align:center">
-    <img src = "http://www.dspguide.com/graphics/F_6_8.gif">
-</div>
+![](http://www.dspguide.com/graphics/F_6_8.gif)
 
 _Image credit: [DSP Guide](http://www.dspguide.com/)_
 
 Now, the most interesting thing of all this theory is that **convolution and multiplication are equivalent operations when we jump from the time to the frequency domain**. This means that multiplication in time domain equals to convolution in frequency domain, and more importantly for us, **convolution in the time domain, equals to multiplication in the frequency domain**. To sum up, the relationship between both domains would look like:
 
-<div style="text-align:center">
-    <img src = 
-"https://i.imgur.com/3Bhyqt3.png">
-</div>
+![](https://i.imgur.com/3Bhyqt3.png)
 
 _Image credit: SmartCitizen_
 
 Therefore, what we could do is to define a **custom filter function** and apply it via convolution to our input buffer. This is basically a **FIR filter**, where _FIR_ stands for _Finite Impulse Response_. There is another type of filters called **IIR**, where _IIR_ stands for _Infinite impulse response_. The difference between them is that _FIR uses convolution_ and _IIR uses recursion_. The concept of **recursion** is very simple and it's nothing else than a simplification of the convolution, given that in the convolution algorithm, there are many _recursive_ operations that we repeat over an over and we can implement into a smarter algorithm. Normally, IIR filters are _more efficient in terms of speed and memory_, but we need to specify a series of coefficients, and it's tricky, if not impossible, to create a custom filter response.
 
-<div style="text-align:center">
-    <img src = "http://www.dspguide.com/graphics/F_19_1.gif">
-</div>
+![](http://www.dspguide.com/graphics/F_19_1.gif)
 
 _Image credit: [DSP Guide](http://www.dspguide.com/)_
 
 So finally! _How can we avoid using the FFT algorithm to extract the desired frequency content of a signal and recreate the signal without it?_ Sounds complex, but now we know that  we can use a **FIR filter**, with a **custom frequency response** and apply it via convolution to our input buffer. As simple as that. The custom frequency response, with the proper math, can be optained by applying the IFFT algorithm to the desired frequency response (for example, the A-weighting function). You can have a look to [this example](https://github.com/oscgonfer/AudioI2S_SCK/tree/dev_i2s_dbg/OCTAVE) if you want to create a custom filter function in [octave](https://www.gnu.org/software/octave/), with A or C weighting and implement it to a FIR filter in C++.
 
-<div style="text-align:center">
-    <img src = 
-"https://i.imgur.com/MDJgGeH.png">
-</div>
+![](https://i.imgur.com/MDJgGeH.png)
 
 _Image credit: SmartCitizen_
 

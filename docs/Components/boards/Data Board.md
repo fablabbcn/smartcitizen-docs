@@ -1,7 +1,7 @@
 Data Board
 ==========
 
-The data board is a data-logger at the core of the sensors architecture supporting the Smart Citizen Kit and the Smart Citizen Station. This module is powered by an ARM M0+ 32-bits 48Mhz **SAMD21** running the [Smart Citizen Firmware](/Components/Firmware)), combining the low power consumption of the ARM M0 family with the power of a 32-bits processor with 32KB of RAM and 256KB of FLASH memory. This solution offers enough program storage and memory space to support multiple auxiliary sensors. This chip is used by the Arduino Zero and MKR boards, therefore benefiting from the open community built around these boards in particular and the Arduino project in general.
+The data board is a data-logger at the core of the sensors architecture supporting the Smart Citizen Kit and the Smart Citizen Station. This module is powered by an ARM M0+ 32-bits 48Mhz **SAMD21** running the [Smart Citizen Firmware](/Components/Firmware), combining the low power consumption of the ARM M0 family with the power of a 32-bits processor with 32KB of RAM and 256KB of FLASH memory. This solution offers enough program storage and memory space to support multiple auxiliary sensors. This chip is used by the Arduino Zero and MKR boards, therefore benefiting from the open community built around these boards in particular and the Arduino project in general.
 
 <img src="https://live.staticflickr.com/65535/47950912298_2b132245cb_h.jpg" walt="SCK 2.1 Data Board">
 
@@ -28,9 +28,9 @@ The Smart Citizen Kit firmware is comprised of two parts: 1) the primary process
 !!! tips "Software guides"
 	Check the firmware guides and learn how to update and even modify the software:
 
-	* [Debug the Firmware](/Components/Firmware/Guides/Advanced: Debug the firmware)
-	* [Edit the Firmware](/Components/Firmware/Guides/Edit the Firmware)
-	* [Update the Firmware](/Components/Firmware/Guides/Update the firmware)
+	* [Edit the Firmware](/Guides/firmware/Edit the Firmware)
+	* [Update the Firmware](/Guides/firmware/Update the firmware)
+    * [Debug the Firmware (advanced)](/Guides/firmware/Debug the firmware)
 
 ## Buses
 
@@ -80,6 +80,3 @@ The base power consumption of the device is 16mA (no sensors or wifi connection)
 <a class="github-button" data-size="large" href="https://github.com/fablabbcn/smartcitizen-kit-21/archive/master.zip" data-icon="octicon-cloud-download" aria-label="Download from GitHub">Download</a>
 
 <a class="github-button" data-size="large" href="https://github.com/fablabbcn/smartcitizen-kit-21" aria-label="Check the source code">Check the source code</a>
-
-
-

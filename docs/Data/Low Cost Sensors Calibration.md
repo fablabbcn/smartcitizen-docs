@@ -3,9 +3,7 @@ Low Cost Sensors Calibration
 
 Low cost sensor calibration and assessment poses a great challenge for data quality objectives. We follow this **sensor calibration procedure**, which can be split into three stages:
 
-<div style="text-align:center">
-<image src="https://i.imgur.com/6BZqNrR.png" width="500px"/>
-</div>
+![](https://i.imgur.com/6BZqNrR.png)
 
 1. **Behaviour assesment**: in laboratory conditions, serving as base testing for assessing general sensor behaviour.
 
@@ -17,9 +15,7 @@ Each of these stages apply differently depending on the type of sensor. For inst
 
 **Base calibration parameters** need to be determined in controlled conditions. In this stage, the aim would be to find parameters such as:
 
-<div style="text-align:center">
-<image src="https://i.imgur.com/FprLD0n.png" width="300px"/>
-</div>
+![](https://i.imgur.com/FprLD0n.png)
 
 - **Sensor sensitivity**: the sensor response per each ppm of target pollutant in _nominal_ conditions
 - **Zero**: the sensor reading in zero air (pure air at 25degC).
@@ -41,9 +37,7 @@ These needs make **machine learning** methods great canditates for modeling the 
 
 Due to their construction, low-cost metal oxyde sensors suffer from high levels of spread in their baseline resistance and sensitivity. As well, these sensors are generally reactive to other pollutants in the atmosphere, with a low selectivity of the actual target pollutant and drifts in their behaviour can be seen after some weeks of exposure. As well, metal oxyde sensors show short and long term drifts in their calibrations. 
 
-<div style="text-align:center">
-<image src="https://i.imgur.com/JfujXTA.png" width="500px"/>
-</div>
+![](https://i.imgur.com/JfujXTA.png)
 
 Ideally, a **sensor characterisation** in laboratory conditions is needed to assess sensitiviy, baseline resistances sensor-to-sensor spread, aiming to obtain normalising factors for each sensor or group of sensors. Even if possible, the variability of the sensor behaviour during the deployment stage, makes the individual characterisation and calibration of the Metal Oxyde sensors unrealistic. For this reason, indicative measurements are to be expected from this type of low cost sensors. More information about the sensors present in the urban board of the SCK can be found in [this section](/Components/Urban Sensor Board/#a-word-about-metal-oxide-sensors).
 

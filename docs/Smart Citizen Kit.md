@@ -3,7 +3,7 @@ Smart Citizen Kit
 
 !!! info "A note about versions"
 
-    The [**SCK 2.0**](/Legacy Hardware/sck) was the development version for the now commercially available **SCK 2.1** sponsored thanks to the [iSCAPE project](https://www.iscapeproject.eu/) under European Community’s H2020 Programme under Grant Agreement No. [689954](https://cordis.europa.eu/project/rcn/202639/en)
+    The [**SCK 2.0**](/Components/legacy/sck) was the development version for the now commercially available **SCK 2.1** sponsored thanks to the [iSCAPE project](https://www.iscapeproject.eu/) under European Community’s H2020 Programme under Grant Agreement No. [689954](https://cordis.europa.eu/project/rcn/202639/en)
 
 !!! tip "Quick links"
 
@@ -21,13 +21,13 @@ Smart Citizen Kit
 
 The Smart Citizen Kit is the core of what we call the Smart Citizen System: a complete set of **modular hardware components** aiming to provide tools for **environmental monitoring**, ranging from **citizen science** and **educational activities** to more **advanced scientific research**.
 
-<a data-flickr-embed="true" title="SCK 2.1 All parts"><img src="https://live.staticflickr.com/65535/47950912168_fcf8fa398c_h.jpg" alt="SCK 2.1 All parts"></a>
+<a data-flickr-embed="true" title="SCK 2.1 All parts">![](https://live.staticflickr.com/65535/47950912168_fcf8fa398c_h.jpg)</a>
 
-The system is designed in a extendable way, with a central data logger (the [Data Board](/Components/Data Board)) with network connectivity to which the different components are branched. The system is based on the principle of reproducibility, also integrating non-hardware components such as a dedicated [Storage platform](/Sensor Platform) and a [Sensor analysis framework](/Data Analysis).
+The system is designed in a extendable way, with a central data logger (the [Data Board](/Components/boards/Data Board)) with network connectivity to which the different components are branched. The system is based on the principle of reproducibility, also integrating non-hardware components such as a dedicated [Storage platform](/Data/Sensor Platform) and a [Sensor analysis framework](/Data/Data Analysis).
 
-<img src="https://i.imgur.com/i2qzNVl.jpg" alt="SCK 2.1 Enclosure">
+![](https://i.imgur.com/i2qzNVl.jpg)
 
-On top of that, the system is meant to serve as a **base solution for more complex settings**, not only related with air quality monitoring. For that purpose, in addition to the [Urban Board](/Components/Urban Board), the system also provides off-the-shelf support for a wide variety of third party sensors, using the expansion bus as a common port. One example is what we call the [Smart Citizen Station](/Smart Citizen Station): a full solution for low cost air pollution monitoring.
+On top of that, the system is meant to serve as a **base solution for more complex settings**, not only related with air quality monitoring. For that purpose, in addition to the [Urban Board](/Components/boards/Urban Board), the system also provides off-the-shelf support for a wide variety of third party sensors, using the expansion bus as a common port. One example is what we call the [Smart Citizen Station](/Smart Citizen Station): a full solution for low cost air pollution monitoring.
 
 !!! info "The sensors"
     Have a look a the supported sensors in the [Firmware](https://github.com/fablabbcn/smartcitizen-kit-21/blob/master/lib/Sensors/Sensors.h)!
@@ -38,11 +38,12 @@ All the Smart Citizen Kit new sensors generation measure **at least** air temper
 
 ### SCK 2.1
 
-<img src="https://i.imgur.com/4UEoDoW.png" alt="SCK 2.1 What does it measure?">
+![](https://i.imgur.com/4UEoDoW.png)
 
+Here is the table summarising the sensors:
 
 | Measurement                    | Units | Sensors               |
-|--------------------------------|-------|-----------------------|
+|:--------------------------------|:-------:|:-----------------------:|
 | Air temperature                | ºC    | Sensirion SHT-31      |
 | Relative Humidity              | % REL | Sensirion SHT-31      |
 | Noise level                    | dBA   | Invensense ICS-434342 |
@@ -56,13 +57,13 @@ All the Smart Citizen Kit new sensors generation measure **at least** air temper
 
 The sensor comes mounted and almost ready to be used:
 
-<img src="https://live.staticflickr.com/65535/47950999751_13e6e00f49_b.jpg" alt="SCK 2.1 How to start?">
+![](https://live.staticflickr.com/65535/47950999751_13e6e00f49_b.jpg)
 
 The first step is to connect the battery. The kit will light in red (configuration mode) and we will be able to configure it by following the instructions at [start.smartcitizen.me](https://start.smartcitizen.me).
 
 ![](https://i.imgur.com/NhSNXJ8.png)
 
-After the configuration process, data will be available on the SmartCitizen platform. You can explore the data there or download it using the `CSV Download` option (guide [here](/Guides/Downloading the Data/))
+After the configuration process, data will be available on the SmartCitizen platform. You can explore the data there or download it using the `CSV Download` option (guide [here](/Guides/getting started/Downloading the Data/))
 
 ![](https://i.imgur.com/5NlWx6O.jpg)
 
@@ -87,26 +88,24 @@ We recommend using a tablet power adaptor, instead of a computer USB port, for q
 
 ### Power Supply
 
-The SCK needs 5V input via the micro USB connector. A normal 5V power charger can be used, although for outdoor developments we recommend using a waterproof power supply. Find more info in the [power supply section](/Components/Power Supply).
+The SCK needs 5V input via the micro USB connector. A normal 5V power charger can be used, although for outdoor developments we recommend using a waterproof power supply. Find more info in the [power supply section](/Components/boards/Power Supply).
 
 ### User feedback
 
 The LED serves as an indication of the battery status. If the LED is flashing orange <span class="led small orange"> </span> it indicates that the battery must be charged. The battery takes about 4 hours to fully charge. When the battery is fully charged, the LED will change from orange to green <span class="led small green"> </span>.
 
-<div style="text-align: center">
-<img src="https://i.imgur.com/ABSXX4w.jpg" alt="SCK 2.1" width="400px"></div>
+![](https://i.imgur.com/ABSXX4w.jpg)
 
 _Remember that in addition to these colors you will have the state color of the kit: configuration, network and sd._
 
 !!! info "More details"
-    Find more details under the [data board section](/Components/Data Board/#power-management)
+    Find more details under the [data board section](/Components/boards/Data Board/#power-management)
 
 ## :triangular_flag_on_post: User interfaces
 
 The data board features a set of user interfaces which provide feedback to the user, as well as two buttons with different functionalities. The main RGB LED provides general feedback of the data board status. Additionally, two buttons are provided for user action. A hardware reset button, which forces a power cut to the board, and a power button, used to change the device's mode, turn on and off the device, and to perform a factory reset. You can see both buttons below:
 
-<div style="text-align: center">
-<img src="https://i.imgur.com/AmlA8e2.png" alt="SCK 2.1" width="400px"></div>
+![](https://i.imgur.com/AmlA8e2.png)
 
 ### The button
 
@@ -121,7 +120,7 @@ The main button interaction is detailed below:
 
 An example is shown below:
 
-<img src="https://live.staticflickr.com/65535/48439505516_d210ce2c8a_h.jpg" alt="SCK 2.1">
+![](https://live.staticflickr.com/65535/48439505516_d210ce2c8a_h.jpg)
 
 !!! info "Troubleshooting"
     Have a look at the [troubleshoothing section](/Troubleshooting) to check how you can use the buttons in case of problems with your SCK!
@@ -169,12 +168,12 @@ If we do not have an internet connection we can use the SD mode. In this case th
 | <span class="led sd-fullbat"></span>     | :battery: Collecting data offline, battery charged          |
 
 !!! warning "Guide"
-    Check the guide on how to upload the sd card data [here](/Guides/Uploading SD Card Data/)
+    Check the guide on how to upload the sd card data [here](/Guides/getting started/Uploading SD Card Data/)
 
 !!! info "Weird files?"
     The files in the sdcard have the following naming: YYYY-MM-DD.CSV, however, you will find in the some extra files (.01, .02...) These are data files that the sensor creates once there is a reset and, to avoid corruption, it creates a new file in the sd-card, by changing the file-extension. 
 
-    A reset takes place every night at 3-4am with the purpose to avoid data loss because a problem. The SCK then stores the data in a file with a sequential name, and does so by changing the filename to YYYY-MM-DD.01, .02… etc depending on the amount of resets it sees during that day. You can see the data and work with it by changing the name from YYYY-MM-DD.01 to YYYY-MM-DD_01.CSV. [Check the guide on how to organise your data](/Guides/Organise your data/#pre-process-the-sd-card-data) to automatise this.
+    A reset takes place every night at 3-4am with the purpose to avoid data loss because a problem. The SCK then stores the data in a file with a sequential name, and does so by changing the filename to YYYY-MM-DD.01, .02… etc depending on the amount of resets it sees during that day. You can see the data and work with it by changing the name from YYYY-MM-DD.01 to YYYY-MM-DD_01.CSV. [Check the guide on how to organise your data](/Guides/data/Organise your data/#pre-process-the-sd-card-data) to automatise this.
 
 #### Especial status
 
@@ -185,202 +184,4 @@ If we do not have an internet connection we can use the SD mode. In this case th
 
 ## Software Updates
 
-Sofware updates are release frequently in the [Firmware repository](https://github.com/fablabbcn/smartcitizen-kit-21). These updates will need to be applied periodically to the two main components of the SCK: the SAMD21 (main processor) and the ESP8266 (Wi-Fi module). Check the instructions under the [Update the Firmware](/Guides/Update the firmware/) section for more information.
-
-<style>
-.led {
-    width: 20px; height: 20px; border-radius:10px; display: inline-block; margin-top: 7px;
-}
-
-.small {
-    width: 14px; height: 14px; border-radius:7px;
-
-}
-
-.orange {
-    background: orange;
-}
-
-.green {
-    background: lime;
-}
-
-.red {
-    background: red;
-}
-
-.blue {
-    background: blue;
-}
-
-.pink {
-    background: magenta;
-}
-
-.blink {
-    animation:1s blinker linear infinite;
-}
-
-.net {
-    animation:2s net ease infinite;
-}
-
-.net-error {
-    animation:0.4s net linear infinite;
-}
-
-.net-lowbat {
-    animation:1s net-lowbat ease infinite;
-}
-
-.net-chargebat {
-    animation:2s net-chargebat ease infinite;
-}
-
-.net-fullbat {
-    animation:2s net-fullbat ease infinite;
-}
-
-.sd {
-    animation:2s sd ease infinite;
-}
-
-.sd-error {
-    animation:0.4s sd linear infinite;
-}
-
-.sd-lowbat {
-    animation:1s sd-lowbat ease infinite;
-}
-
-.sd-chargebat {
-    animation:2s sd-chargebat ease infinite;
-}
-
-.sd-fullbat {
-    animation:2s sd-fullbat ease infinite;
-}
-
-.setup {
-    animation:2s setup ease infinite;
-}
-
-.setup-error {
-    animation:0.4s setup linear infinite;
-}
-
-.setup-lowbat {
-    animation:1s setup-lowbat ease infinite;
-}
-
-.setup-chargebat {
-    animation:2s setup-chargebat ease infinite;
-}
-
-.setup-fullbat {
-    animation:2s setup-fullbat ease infinite;
-}
-
-.busy {
-    animation:2s busy ease infinite;
-}
-
-.firmware {
-    animation:2s firmware ease infinite;
-}
-
-@keyframes blinker {
-     0% { opacity: 1.0; }
-     50% { opacity: 0.0; }
-     100% { opacity: 1.0; }
-}
-
-@keyframes setup {
-     0% { background: white;}
-     50% { background: red;}
-     100% { background: white;}
-}
-
-@keyframes setup-lowbat {
-     0% { background: orange; }
-     15% { background: red; }
-     85% { background: red; }
-     100% { background: orange; }
-}
-
-@keyframes setup-chargebat {
-     0% { background: orange; }
-     50% { background: red; }
-     100% { background: orange; }
-}
-
-@keyframes setup-fullbat {
-     0% { background: lime; }
-     50% { background: red; }
-     100% { background: lime; }
-}
-
-@keyframes firmware {
-     0% { background: white;}
-     50% { background: lime;}
-     100% { background: white;}
-}
-
-@keyframes net {
-     0% { background: white; }
-     50% { background: blue; }
-     100% { background: white; }
-}
-
-@keyframes net-lowbat {
-     0% { background: orange; }
-     15% { background: blue; }
-     85% { background: blue; }
-     100% { background: orange; }
-}
-
-@keyframes net-chargebat {
-     0% { background: orange; }
-     50% { background: blue; }
-     100% { background: orange; }
-}
-
-@keyframes net-fullbat {
-     0% { background: lime; }
-     50% { background: blue; }
-     100% { background: lime; }
-}
-
-@keyframes sd {
-     0% { background: white; }
-     50% { background: magenta; }
-     100% { background: white; }
-}
-
-@keyframes sd-lowbat {
-     0% { background: orange; }
-     15% { background: magenta; }
-     85% { background: magenta; }
-     100% { background: orange; }
-}
-
-@keyframes sd-chargebat {
-     0% { background: orange; }
-     50% { background: magenta; }
-     100% { background: orange; }
-}
-
-@keyframes sd-fullbat {
-     0% { background: lime; }
-     50% { background: magenta; }
-     100% { background: lime; }
-}
-
-@keyframes busy {
-     0% { background: white; }
-     50% { background: black; }
-     100% { background: white; }
-}
-
-</style>
-
+Sofware updates are release frequently in the [Firmware repository](https://github.com/fablabbcn/smartcitizen-kit-21). These updates will need to be applied periodically to the two main components of the SCK: the SAMD21 (main processor) and the ESP8266 (Wi-Fi module). Check the instructions under the [Update the Firmware](/Guides/firmware/Update the firmware/) section for more information.

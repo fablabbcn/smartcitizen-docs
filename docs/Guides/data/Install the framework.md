@@ -3,12 +3,9 @@ How to install the framework
 
 The following data analysis framework is a set of tools built on Python 3.7 to help you analyse your data. It can be used with [Jupyter Notebooks](https://jupyter.org/) or [Jupyter Lab](https://jupyterlab.readthedocs.io/en/stable/), although it is not mandatory.
 
-## Prerequisites
+## Before getting started
 
-We recommend you use these two tools for managing the different versions of the framework and keep it updated.
-
-1. Download and install `git` from [here](https://git-scm.com/)
-2. Download and install `python` (V3.6 or more) and a `virtual environment`
+The framework runs in python 3.6 or more. Download and install python following [this guide](https://docs.python-guide.org/starting/installation/) if you don't already have it.
 
 ## Installation
 
@@ -18,17 +15,17 @@ Open your favourite shell on the directory you have your project. _(`cmd.exe` on
 pip install scdata
 ```
 
-### Dev instructions
+### Development instructions (advanced)
 
 1. Get the repo
 
 Make a directory and `clone` the repository in it:
 
 ```
-➜  mkdir smartcitizen-data
-➜  cd smartcitizen-data
-➜  git clone https://github.com/fablabbcn/smartcitizen-data.git
-...
+mkdir smartcitizen-data
+cd smartcitizen-data
+git clone https://github.com/fablabbcn/smartcitizen-data.git
+
 ```
 
 !!! warning "Want to stay up-to-date?"
@@ -39,7 +36,7 @@ Make a directory and `clone` the repository in it:
 The code in the framework is managed as internal dependencies. To activate this, you can run:
 
 ```
-➜  python setup.py install
+python setup.py install
 ```
 
 ## Run

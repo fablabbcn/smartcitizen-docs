@@ -147,9 +147,7 @@ Let's review the output step by step:
     - if the right tail twists counterclockwise and the left tail twists clockwise, we have right skew
     - if the left tail twists counterclockwise and the right tail twists clockwise, we have left skew
 
-<div style="text-align:center">
-<img src ="https://i.imgur.com/4ldXI80.png" alt="QQ-plot" class="cover"/>
-</div>
+![](https://i.imgur.com/4ldXI80.png)
 
 - **Residuals vs Leverage**: this plot is probably the most complex of them all. It shows how much leverage one single point has on the whole regression. It can be interpreted as how the average line that passes through all the data (that we are calculating with the OLS) can be modified by 'far' points in the distribution, for example, outliers. This leverage can be seen as how much a single point is able to pull down or up the average line. One way to think about whether or not the results are driven by a given data point is to calculate how far the predicted values for your data would move if your model were fit without the data point in question. This calculated total distance is called Cook's distance. We can have four cases (more information from source, [here](https://stats.stackexchange.com/questions/58141/interpreting-plot-lm#65864))
 
@@ -158,15 +156,11 @@ Let's review the output step by step:
     - low-leverage, but high-standardized residual point
     - high-leverage, high-standardized residual point (the worst)
 
-<div style="text-align:center">
-<img src ="https://i.imgur.com/BXsS6tE.png" alt="Cook Distance Plot" class="cover"/>
-</div>
+![](https://i.imgur.com/BXsS6tE.png)
 
 In this case, we see that our model has some points with higher leverage but low residuals (probably not too bad) and that the higher residuals are found with low leverage, which means that our model is safe to outliers. If we run this function without the filtering, some outliers will be present and the plot turns into:
 
-<div style="text-align:center">
-<img src ="https://i.imgur.com/NQLA4lw.png" alt="Cook Distance Plot" class="cover"/>
-</div>
+![](https://i.imgur.com/NQLA4lw.png)
 
 Finally, we can export our model and generate some metrics to evaluate the results.
 
@@ -332,9 +326,7 @@ The resulting target diagram then provides information about:
 - whether the $\sigma_m$ is larger or smaller thann the $\sigma_r$
 - whether there is a positive or negative bias
 
-<div style="text-align:center">
-<img src ="https://i.imgur.com/x8NY4kD.png">
-</div>
+![](https://i.imgur.com/x8NY4kD.png)
 
 _Image Source: Jolliff et al. [^first]_
 

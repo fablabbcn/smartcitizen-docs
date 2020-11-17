@@ -7,9 +7,7 @@ PM Sensors
 
 The PM sensors available in the Smart Citizen Kit (one sensor per Kit) and the Smart Citizen Station (two sensors per Station), are the Plantower PMS5003 sensor. The PMS5003 is a [nephelometer](https://en.wikipedia.org/wiki/Nephelometer), and this type of measures suspended particulates by employing a light beam and a light detector set to one side (often 90°) of the source beam. Particle density is then a function of the light reflected into the detector and the particle mass is a calculation derived from this density, assuming certain properties of the particles, such as shape, color and reflectivity, among others. 
 
-<div style="text-align: center;">
-<img src="https://i.imgur.com/aNlzRba.png">
-</div>
+![](https://i.imgur.com/aNlzRba.png)
 
 What the sensor does, is to analyse the readings from the sensing element and count how many particles are there, for different particles sizes, or bins. This means that the sensor will group, for instance, the particles that have a diameter between 1um and 2.5um in one bucket, and count them. Once it has the **particle number** calculated for all the buckets, it **estimates** the **Particle Mass** for PM1 (particles with a diameter below 1um), PM2.5 (particles with a diameter below 2.5um) and PM10 (particles with a diameter below 10um). For estimating this, it makes quite a few assumptions (the internal calculations are unknown to us), such as:
 

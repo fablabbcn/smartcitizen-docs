@@ -18,6 +18,13 @@ The sensors can include **some, or all of**:
 
 ![](/assets/images/station30inside.jpg)
 
+!!! info "From the ground up"
+    The station uses the same core functionality, interface and feedback as the Smart Citizen Kit. Make sure you are familiar with them before jumping into the station!
+
+    - [User feedback](/Smart Citizen Kit/#user-feedback) 
+    - [LED states and operation modes](/Smart Citizen Kit/#operation-modes)
+    - [User interfaces](/Smart Citizen Kit/#user-interfaces)
+
 ### Exposure methods
 
 Two possible options are available:
