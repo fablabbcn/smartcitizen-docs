@@ -29,11 +29,10 @@ This is a _live_ compilation of our participation and results in some research p
 
 Although not H2020 projects, the projects below have allowed us to further our connections with scientific research institutions, and have contributed to the development of the Smart Citizen project. We are proud to have worked with:
 
-- [Institut Salud Global - iSGlobal](): BGG
-- [CSIC - UTM - ICM](): Pati Cientific
-- [University of Bologna](): Almabike project
-- [Fraunhofer institute]()
-- ...
+- [Institut Salud Global - iSGlobal](https://www.isglobal.org/en/): [climate shelters project](https://www.barcelona.cat/barcelona-pel-clima/en/climate-shelters-schools)
+- [CSIC - UTM - ICM](https://www.icm.csic.es/en): [Pati Cientific Project](https://paticientific.org/)
+- [University of Bologna](https://www.unibo.it/en): Almabike project
+- [Fraunhofer institute](https://www.fraunhofer.de/): https://gis-iq.esri.de/fraunhofer-institut-iao-digital-labor-bad-duerrheim/
 
 ## Academic publications
 

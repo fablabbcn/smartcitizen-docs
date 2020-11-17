@@ -104,8 +104,8 @@ Once we have all our concatenated files, we can proceed to create our test. For 
     To synchronise our tests, we will **always** need to specify the location. This means that all our tests will be in 'UTC'.
 
 !!! info "There's a lot more to it"
-  Check the examples in [the repository to](https://github.com/fablabbcn/smartcitizen-data/blob/master/examples/README.md#index-of-examples):
-    - Plot data
-    - Process
-    - Calibrate sensors
-    - Upload it to zenodo
+    Check the examples in [the repository to](https://github.com/fablabbcn/smartcitizen-data/blob/master/examples/README.md#index-of-examples):
+      - Plot data
+      - Process
+      - Calibrate sensors
+      - Upload it to zenodo
