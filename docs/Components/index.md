@@ -10,7 +10,7 @@ The Smart Citizen sensor portfolio aims to **create a boilerplate for individual
 
 ## Core
 
-The core system provides the logging, interface and management features creating a solid while highly configurable framework for environmental monitoring activities. Each of the modules is shown in the Figure below:
+The core system provides the logging, interface and management features creating a solid while highly configurable framework for environmental monitoring activities. It's made out of the two main components listed below:
 
 * [**Data Board**](/Components/boards/Data Board): A datalogger at the heart of the sensors architecure supporting the [Smart Citizen Kit](/Smart Citizen Kit) and the [Smart Citizen Stations](/Smart Citizen Station).
 
