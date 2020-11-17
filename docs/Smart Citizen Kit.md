@@ -94,7 +94,7 @@ The SCK needs 5V input via the micro USB connector. A normal 5V power charger ca
 
 The LED serves as an indication of the battery status. If the LED is flashing orange <span class="led small orange"> </span> it indicates that the battery must be charged. The battery takes about 4 hours to fully charge. When the battery is fully charged, the LED will change from orange to green <span class="led small green"> </span>.
 
-![](https://i.imgur.com/ABSXX4w.jpg)
+![](https://i.imgur.com/ABSXX4w.jpg){: style="max-width:400px !important"}
 
 _Remember that in addition to these colors you will have the state color of the kit: configuration, network and sd._
 
