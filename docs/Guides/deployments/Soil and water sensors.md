@@ -2,7 +2,7 @@
 
 ## Setup
 
-The Smart Citizen firmware has the support for the monitoring board built-in. To enable the sensors you just need to plug you board to the Smart Citizen kit aux port and reboot the Smart Citizen Kit and the sensors will be handled by the board. However, you will need to register your device again using the [Advanced Kit Selection](/Guides/getting started/Onboarding Sensors#Advanced Kit Selection). At the moment the closest Kit Blueprint will be `#22 BioPV Kit`. You can request in the [forum](http://forum.smartcitizen.me) for a custom blueprint with the specific sensors you are using.
+The Smart Citizen firmware has the support for the monitoring board built-in. To enable the sensors you just need to plug you board to the Smart Citizen kit aux port and reboot the Smart Citizen Kit and the sensors will be handled by the board. However, you will need to register your device again using the [Advanced Kit Selection](/Guides/getting started/Onboarding Sensors#Advanced Kit Selection). At the moment the closest Kit Blueprint will be `#22 BioPV Kit` or `#31 SCK 2.1 Sea Water` in case you are using a SCK2.1 with GPS. You can request in the [forum](http://forum.smartcitizen.me) for a custom blueprint with the specific sensors you are using.
 
 ## Sensor calibration
 
