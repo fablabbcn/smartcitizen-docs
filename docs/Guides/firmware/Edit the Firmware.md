@@ -6,13 +6,13 @@ The main one is an **Atmel SAMD21**, this chip is in charge of all the normal ta
 
 For communications the SCK has an **ESP8266 microcontroler with Wifi capabilities**, this chip receives instructions from the SAMD21 via serial port and takes care of publishing the collected data through the network and takes care of serving the web pages for the [setup mode](http://docs.smartcitizen.me/Smart%20Citizen%20Kit/#setup-mode) configuration server.
 
-
 ## Development enviroment
 
-The SmartSmart Citizen Kit Firmware is on our [repository on github](https://github.com/fablabbcn/smartcitizen-kit-21) so you will need [git](https://mirrors.edge.kernel.org/pub/software/scm/git/) software [installed](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git). To build the SmartSmart Citizen Kit firmware you need a computer with [platformio](https://platformio.org/) installed, you don't need the full IDE installation (Atom). You can follow [this instructions](http://docs.platformio.org/en/latest/installation.html#super-quick-mac-linux) to install only the console version.
+The SmartSmart Citizen Kit Firmware is on our [repository on github](https://github.com/fablabbcn/smartcitizen-kit-21) so you will need [git](https://mirrors.edge.kernel.org/pub/software/scm/git/) software [installed](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git). 
 
-For bootloader upload you also need [OpenOCD](http://openocd.org/) somewhere in your PATH. 
+To build the SmartCitizen Kit firmware you need a computer with [platformio](https://platformio.org/) installed. You don't need the full IDE installation (Atom). You can follow [this instructions](http://docs.platformio.org/en/latest/installation.html#super-quick-mac-linux) to install only the console version.
 
+For bootloader upload you also need [OpenOCD](http://openocd.org/) somewhere in your PATH.
 
 ## Getting the firmware
 

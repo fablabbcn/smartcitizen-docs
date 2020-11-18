@@ -17,7 +17,7 @@ When new features are developed or bugs are fixed we will release new versions o
 !!! info "A note about versions"
 	:white_check_mark: The guide below applies to both, SCK 2.0 and SCK2.1.
 
-## Upgrading the SAM firmware
+## Updating the SAM firmware
 
 The SAMD21 (SAM for short) chip manages the main part of the firmware. This firmware is frequently updated with latest improvements in the official [firmware repository](https://github.com/fablabbcn/smartcitizen-kit-21/tree/master/sam). Check the [releases pages](https://github.com/fablabbcn/smartcitizen-kit-21/releases) for more info.
 
@@ -41,17 +41,21 @@ The SAMD21 (SAM for short) chip manages the main part of the firmware. This firm
 
 	![](/assets/images/sck_2/uf2_drag.png)
 
-## Upgrading the ESP firmware
+## Updating the ESP firmware
 
 The ESP8266 (ESP for short) chip sometimes also needs upgrade to match the lattest version of the SAM firmware. The ESP chip manages all the communications of the SCK with the outer world. The firmware can be found [here](https://github.com/fablabbcn/smartcitizen-kit-21/tree/master/esp).
 
-!!! example "Updating your kit is very simple"	
+!!! example	
 
-	*  If your **Wi-Fi module needs a firmware update** when you connect to your kit to setup the network you will see a screen that will ask for the new file. You can find it in our [github releases page](https://github.com/fablabbcn/smartcitizen-kit-21/releases/latest), look for the file called `ESP_firmware_XXX.bin`. If you don't see it, check in a [previous release](https://github.com/fablabbcn/smartcitizen-kit-21/releases) (some releases don't include Wi-Fi firmware)
+	*  If your **WiFi module needs a firmware update** when you connect to your kit to setup the network you will see a screen that will ask for the new file. You can find it in our [github releases page](https://github.com/fablabbcn/smartcitizen-kit-21/releases/latest), look for the file called `ESP_firmware_XXX.bin`. If you don't see it, check in a [previous release](https://github.com/fablabbcn/smartcitizen-kit-21/releases) (some releases don't include Wi-Fi firmware)
 
-	![](/assets/images/sck_2/esp_update.png)
+	* This file needs to be downloaded to the same device (phone or laptop) that is connecting to the _SmartCitizen[...]_ network. If you are using your phone, you will need to download it there
 
-	* After the update you just done, you can configure your kit as a new device following the [onboarding](https:start.smartcitizen.me) process or use your previous token as explained before
+	* Once you have it, you can select the file in the screen below. If it doesn't appear, check the section to [force ESP upload](#force-esp-upload) below
+
+	![](/assets/images/sck_2/esp_update.png)	
+
+	* After the update you just did, you can configure your kit as a new device following the [onboarding](https:start.smartcitizen.me) process or use your previous token as explained before
 
 ### Force ESP upload
 
@@ -61,17 +65,18 @@ If you want to force the ESP to upload, please, follow the steps below.
 
 	If you already have the latest version but for some reason you still want to upload the firmware, you can **force by clicking the info button** (top right) on the setup screen that you find when conected to your kit in setup mode:
 
-	![](https://i.imgur.com/GTl6pgE.png)
+	![](/assets/images/sck_2/esp_force_upload_1.png)
 
 	And activate the _Force allow firmware update_:
 
-	![](https://i.imgur.com/N3EWKHi.png)
+	![](/assets/images/sck_2/esp_force_upload_2.png)
 
 	So you will be asked for the firmware file:
 
-	![](https://i.imgur.com/68Mnigw.png)
+	![](/assets/images/sck_2/esp_force_upload_3.png)
 
 !!! tip "Obtain your firmware version remotely (advanced)"
+
 	If you are an advance user managing a big deployment of devices you can obtain remotely the version of all the Kits you have registered by looking at the `hardware_info` property of each of your devices using the platform API `/v0/devices/`. When your Kit is in Wi-Fi mode, it publishes the information daily.
 
 	```json
