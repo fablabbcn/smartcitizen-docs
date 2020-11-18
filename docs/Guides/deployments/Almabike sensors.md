@@ -291,7 +291,7 @@ After the configuration process, data will be available on the SmartCitizen plat
 
         ![](assets/almabike_icon.png)
 
-    2. Choose the blueprint of the device you want to setup, in this case: `sck_21_gps`
+    2. Choose the blueprint of the device you want to setup, in this case: `#32 SCK 2.1 GPS`
 
         ![](assets/almabike_sck_21_gps.png)
 
