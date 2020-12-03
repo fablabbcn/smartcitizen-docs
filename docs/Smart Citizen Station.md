@@ -25,6 +25,10 @@ The sensors can include **some, or all of**:
     - [LED states and operation modes](/Smart Citizen Kit/#operation-modes)
     - [User interfaces](/Smart Citizen Kit/#user-interfaces)
 
+
+!!! tip "Dimensions"
+    If you are looking at the dimensions and mechanical/electrical information about the Smart Citizen Station, have a look at the [enclosures repository](https://github.com/fablabbcn/smartcitizen-enclosures/tree/master/SmartCitizen%20Station%20V3.0)
+
 ### Exposure methods
 
 Two possible options are available:
