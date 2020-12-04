@@ -13,6 +13,9 @@ An IP65 box containing a 4G WiFi Access point with two external dipole antennas.
 - Ethernet cable
 - User manual
 
+!!! info "How much data is needed"
+    At the maximum data rates (Smart Citizen Station with all sensors - 35 metrics) we estimate 300bytes per payload (approx. without accounting for protocol overhead). It would be then safe to say that, per month and device, at maximum we need around 15MB. This means that with a data plan for 200MB/month you could have around 13 devices! 
+
 !!! example "Step by step"
 
     * Open the box with the safety key provided. You should see this inside
