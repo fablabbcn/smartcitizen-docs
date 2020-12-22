@@ -185,3 +185,6 @@ If we do not have an internet connection we can use the SD mode. In this case th
 ## Software Updates
 
 Sofware updates are release frequently in the [Firmware repository](https://github.com/fablabbcn/smartcitizen-kit-21). These updates will need to be applied periodically to the two main components of the SCK: the SAMD21 (main processor) and the ESP8266 (Wi-Fi module). Check the instructions under the [Update the Firmware](/Guides/firmware/Update the firmware/) section for more information.
+
+!!! info "Test plan"
+    You can find the Test plan, in case you are producing the SCK [here](/assets/notes/SCK_2.1_TESTPLAN.pdf).
