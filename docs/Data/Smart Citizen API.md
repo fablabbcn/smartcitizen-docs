@@ -3,7 +3,7 @@ Smart Citizen API
 
 The cloud-based data engine supporting: data ingestion, aggregation and retrieving. It is entirely independent of any web front-end exposing all the functionalities over a clear REST API. That allows applications to be developed on easily on top having access to all the features to create complex and rich tools. The main instance its available at [api.smartcitizen.me](https://api.smartcitizen.me/). You can explore and contribute to the [source](https://github.com/fablabbcn/smartcitizen-api). One examples of this tools is the [Sensors Analysis Framework](https://github.com/fablabbcn/smartcitizen-iscape-data) or the [iSCAPE Virtual Living Lab](http://https://livinglabs.iscapeproject.eu), both developed during the [iSCAPE project](https://www.iscapeproject.eu/)) This is free software available under GNU Affero General Public License (AGPL).
 
-!!! info "TD;LR"
+!!! info "TL;DR"
 	Check the developers ready [**API Documentation**](https://developer.smartcitizen.me/)
 
 ## Data Ingestion Flow
