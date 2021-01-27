@@ -87,10 +87,12 @@
             <!-- <div class="md-footer-copyright__highlight">{{ config.extra.license }}</div> -->
         <!-- {%- endif %} -->
         {%- if config.extra.project %}
+          <div class="md-footer-iscape">
 	        {%- if config.extra.footer_logo %}
-		        <img style="margin-top: 20px" alt="{{config.extra.project}}" src="{{config.extra.footer_logo}}">
+		        <img style="margin-right: 20px;" class="logo" alt="{{config.extra.project}}" src="{{config.extra.footer_logo}}">
 	        {%- endif %}
             <p class="md-footer-copyright__highlight">{{ config.extra.project }}</p>
+          </div>
             <p>Except where otherwise noted, content on this site is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
             <p><a rel="license" href="http://smartcitizen.me">Smart Citizen</a> is a project by <a rel="license" href="http://fablabbcn.org">Fab Lab Barcelona</a> at the <a rel="license" href="http://iaac.net">Institute For Advanced Architecture Of Catalonia</a>.</p>
         {%- endif %}

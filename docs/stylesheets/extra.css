@@ -10,12 +10,19 @@
 	text-align: center;
 }
 
-.md-typeset:not(.emojione) img:not(.emojione),
-.md-typeset:not(.emojione) svg:not(.emojione){
+.md-typeset:not(.emojione) img:not(.emojione, .logo),
+.md-typeset:not(.emojione) svg:not(.emojione, .logo){
 	display: flex;
 	justify-content: center;
 	margin: auto !important;
 	max-width: 95% !important;
+}
+
+.md-footer-iscape{
+    display:flex;
+    justify-content: justify;
+    align-items: center;
+    max-width: 90%;
 }
 
 .led {
