@@ -45,7 +45,7 @@ nav:
   - Data:
     - Sensor Platform: Data/Sensor Platform.md
     - Smart Citizen API: Data/Smart Citizen API.md
-    - Data Analysis: Data/Data Analysis.md   
+    - Data Analysis: Data/Data Analysis.md
   - Use cases:
     - Main: Use cases/index.md
     - Citizen Sensing Toolkit: Use cases/Citizen Sensing Toolkit.md
@@ -67,19 +67,21 @@ nav:
     - Data Analysis:
       - Framework Installation: Guides/data/Install the framework.md
       - Make reports of your data: Guides/data/Make reports of your data.md
-      - Creating interfaces: Guides/data/Creating Interfaces.md      
+      - Creating interfaces: Guides/data/Creating Interfaces.md
       - Organise your data: Guides/data/Organise your data.md
+      - Custom data processing: Guides/data/Custom data processing.md
       # - Model your sensor data: Guides/Creating Models for Sensors Calibration.md
       # - Analyse your data in batch: Guides/Analyse your data in batch.md
       - Uploading data to zenodo: Guides/data/Upload data to zenodo.md
     - Deploying sensors: 
-      - SCK: Guides/deployments/Deploying SCK.md
+      - Smart Citizen Kit: Guides/deployments/Deploying SCK.md
       - iSCAPE Station V1: Guides/deployments/Deploying iSCAPE Station V1.md
       - iSCAPE Station V2: Guides/deployments/Deploying iSCAPE Station V2.md
-      - Smart Citizen Station: Guides/deployments/Deploying Smart Citizen Station.md
+      - Smart Citizen Station V3: Guides/deployments/Deploying Smart Citizen Station.md
       - Smart Citizen Connectivity Units: Guides/deployments/Installing Connectivity Units.md
-      - Soil and water sensors: Guides/deployments/Soil and water sensors.md
-      - SCK Almabike sensors: Guides/deployments/Almabike sensors.md      
+      - Smart Citizen Soil and water sensors: Guides/deployments/Soil and water sensors.md
+      - Almabike sensors: Guides/deployments/Almabike sensors.md
+      - Smart Citizen Power Supply: Guides/deployments/Using the power supply.md
     - Enclosures:
       - Making your own enclosures: Guides/enclosures/Making your own enclosures.md
     - Legacy Hardware:

@@ -80,6 +80,21 @@ The SCK comes with a 2000mAh LiPo battery. The battery is meant to be a complete
 
 You will note that the kit _turns itself off_ while operating on battery. Actually, this is what we call `sleep-mode`, an operation mode implemented to reduce consumption while on battery operation.
 
+#### Battery calculator
+
+You can use this battery calculator to estimate how much your battery would last:
+
+<iframe id="github-iframe" src="" width="100%" height="40%" frameborder="0" scrolling="no" style="min-height: 570px;"></iframe>
+<script>
+    fetch('https://api.github.com/repos/fablabbcn/smartcitizen-tools/contents/calculator.htm')
+        .then(function(response) {
+            return response.json();
+        }).then(function(data) {
+            var iframe = document.getElementById('github-iframe');
+            iframe.src = 'data:text/html;base64,' + encodeURIComponent(data['content']);
+        });
+</script>
+
 ### Battery charging
 
 The SCK has a micro USB port and can be charged like any Smartphone or Tablet using a dedicated adapter or a computer USB port.
@@ -88,7 +103,7 @@ We recommend using a tablet power adaptor, instead of a computer USB port, for q
 
 ### Power Supply
 
-The SCK needs 5V input via the micro USB connector. A normal 5V power charger can be used, although for outdoor developments we recommend using a waterproof power supply. Find more info in the [power supply section](/Components/boards/Power Supply).
+The SCK needs 5V input via the micro USB connector. A normal 5V power charger can be used, although for outdoor developments we recommend using a waterproof power supply. Find more info in the [power supply section](/Components/boards/Power Supply/).
 
 ### User feedback
 
