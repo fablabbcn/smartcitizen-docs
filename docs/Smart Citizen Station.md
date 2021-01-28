@@ -3,9 +3,12 @@ Smart Citizen Station
 
 ![](/assets/images/station30bottom.jpg)
 
-The Smart Citizen Station is a modular open-source environmental monitoring system. Multiple sensors can be added easily added, expanding the capabilities of the installation or replaced when they are damaged or the sensors lifetime is over. From a costs perspective, while being more expensive than the Smart Citizen Kit, it is also conceived as a low-cost solution. The design builds on top of the Smart Citizen Kit, adding an extra set of more accurate sensors, primarily aimed at measuring air pollutants. It aims at providing a solution that can be used by Citizens and Researchers to gather _advanced air pollution data_ not only from a scientific point of view but also as a tool to engage local communities on air pollution-related issues.
+The Smart Citizen Station is a **modular open-source environmental monitoring system**. Multiple sensors can be added easily added, expanding the capabilities of the installation or replaced when they are damaged or the sensors lifetime is over. From a costs perspective, while being more expensive than the Smart Citizen Kit, it is also conceived as a low-cost solution. The design builds on top of the Smart Citizen Kit, adding an extra set of more accurate sensors, primarily aimed at measuring air pollutants. It aims at providing a solution that can be used by Citizens and Researchers to gather _advanced air pollution data_ not only from a scientific point of view but also as a tool to engage local communities on air pollution-related issues.
 
 <img src="https://live.staticflickr.com/65535/50812574093_2e9493d105_k.jpg" width="2001" height="1334" alt="Smart Citizen Station rev3">
+
+!!! info "Intentionally fabbable"
+    The Smart Citizen Station enclosure, as well as some of the electronics, can be fabricated and assembled in a [Fablab](https://www.fablabs.io/). By doing so, we hope to encourage **fully open environmental systems**, ensuring reproducibility through accessible resources.
 
 The sensors can include **some, or all of**:
 
@@ -18,8 +21,8 @@ The sensors can include **some, or all of**:
 - **Noise levels** and FFT spectrum from the Smart Citizen Kit
 - **Environmental metrics**: temperature, humidity, ambient pressure from the Smart Citizen Kit
 
-![](/assets/images/station30inside.jpg)
-
+<!-- ![](/assets/images/station30inside.jpg)
+ -->
 !!! info "From the ground up"
     The station uses the same core functionality, interface and feedback as the Smart Citizen Kit. Make sure you are familiar with them before jumping into the station!
 
@@ -42,7 +45,10 @@ _Passive exposure example_
 
 ## Power
 
-Currently, the Smart Citizen Station is only available with an external power supply (230VAC to 5V). Find more info in the [power supply section](/Components/Power Supply).
+Currently, the Smart Citizen Station is only available with an external power supply (230VAC to 5V). Find more info in the [power supply section](/Components/boards/Power Supply/). 
+
+!!! warning "Battery operation?"
+    The Smart Citizen Station currently does not support battery operation.
 
 ## Connectivity
 
