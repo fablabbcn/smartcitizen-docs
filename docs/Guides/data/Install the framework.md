@@ -15,45 +15,29 @@ Open your favourite shell on the directory you have your project. _(`cmd.exe` on
 pip install scdata
 ```
 
-### Development instructions (advanced)
-
-1. Get the repo
-
-Make a directory and `clone` the repository in it:
+You can now check if it all works by:
 
 ```
-mkdir smartcitizen-data
-cd smartcitizen-data
-git clone https://github.com/fablabbcn/smartcitizen-data.git
+python
+>>> import scdata as sc
+>>> ...
+```
 
+### Development instructions (advanced)
+
+`clone` the repository in a directory you like:
+
+```
+git clone https://github.com/fablabbcn/smartcitizen-data.git
+...
+cd smartcitizen-data
 ```
 
 !!! warning "Want to stay up-to-date?"
     The framework is being constantly updated and the only version that will always be up-to-date is in the [master branch of the github repository](https://github.com/fablabbcn/smartcitizen-data). We do not recommend to simply download the repository but to clone it with `git`. If you want to learn more about `git` and why it can help you in your projects, check [here](https://www.quora.com/What-is-Git-and-why-should-I-use-it)
 
-2. Finish it up
-
-The code in the framework is managed as internal dependencies. To activate this, you can run:
+To install it, you can simply run the command below. You can use a virtual environment if you like as well.
 
 ```
 python setup.py install
 ```
-
-## Run
-
-You should now be ready to go! You can verify the installation by either running this command:
-
-```
-jupyter lab --version
-```
-
-To run `jupyter lab`, in your terminal type:
-
-```
-jupyter lab
-```
-
-This will open a web browser instance (by default [localhost:8888/lab]()) which gives access to the tools in the framework.
-
-!!! note "Learn More"
-	Still wondering what this is? Read this introduction to [Jupyter](http://jupyter-notebook.readthedocs.io/en/latest/examples/Notebook/Notebook%20Basics.html)
