@@ -1,6 +1,9 @@
 Gases Pro Sensor Board
 ======================
 
+!!! warning "Deprecated"
+    The Gases Pro Sensor Board is the development board used during the iSCAPE Project. For reading electrochemical sensors, please refer to the [Analog Sensor Board section](/Components/boards/Analog Sensor Board.md).
+
 The Gases Sensor Board is a custom, ultra-low noise, high-performance, low power, digital output driver for 3 Alphasense Ltd. Electrochemical Series B Gas Sensors specifically designed for the project from the ground up.
 
 ![](https://i.imgur.com/4tNzsdR.jpg)
@@ -19,7 +22,7 @@ Each of the three drivers for Alphasense Ltd. Series B Sensors is built around t
 
 ## Setup
 
-The board is connected to the [Data Board](/ComponentsData Board) using the AUX connector. Before, the Alphasense sensors need to be in place and properly registered using the board id. The board will be autodetected by the main [Firmware](/ComponentsFirmware) running on the Data Board. Multiple sensor board can be daisy-chained as seen on the image.
+The board is connected to the [Data Board](/Components/Data Board) using the AUX connector. Before, the Alphasense sensors need to be in place and properly registered using the board id. The board will be autodetected by the main [Firmware](/Components/Firmware) running on the Data Board. Multiple sensor board can be daisy-chained as seen on the image.
 
 ![](https://i.imgur.com/RRu8MiV.jpg)
 
