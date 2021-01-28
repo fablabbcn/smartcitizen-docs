@@ -32,11 +32,25 @@ The [data board](/Components/Data Board/) features a standard Grove connector wh
 
 ### Soil and Water
 
-Check the [Soil and water measurements](/Soil and water/) documentation with examples on sensors such us the [Atlas Scientific Dissolved Oxygen](https://www.atlas-scientific.com/product_pages/kits/do_kit.html) and the [DS18B20 Water Temperature](https://www.adafruit.com/product/381) for water or the [Chirp Soil Moisture](https://www.tindie.com/products/miceuz/i2c-soil-moisture-sensor/), with support of soil moisture (requires calibration), temperature and ambient light.
+Check the [Soil and water measurements](/Soil and water/) documentation with examples on sensors such as:
+
+- [Atlas Scientific Dissolved Oxygen](https://www.atlas-scientific.com/product_pages/kits/do_kit.html)
+- [DS18B20 Water Temperature](https://www.adafruit.com/product/381) for water
+- [Chirp Soil Moisture](https://www.tindie.com/products/miceuz/i2c-soil-moisture-sensor/), with support of soil moisture (requires calibration), temperature and ambient light.
 
 ## Other auxiliaries
 
-- [Seeed Groove OLED screen (96x96)](http://wiki.seeedstudio.com/Grove-OLED_Display_1.12inch/) - the screen cycles through sensor readings
+- [Seeed Groove OLED screen (96x96)](http://wiki.seeedstudio.com/Grove-OLED_Display_1.12inch/)
+- [Sparkfun GPS NEO-M8U](https://www.sparkfun.com/products/16329)
+- [SparkFun GPS XA1110](https://www.sparkfun.com/products/14414)
+- [SEEED Grove GPS Module](https://www.seeedstudio.com/Grove-GPS-Module.html)
 
 !!! info "Implement your own"
     [Contact](mailto:support@smartcitizen.me) on how to implement sensors made by others.
+
+## Full list
+
+This is a list of supported sensors. Find also the datasheets for more information regarding accuracies:
+
+
+--8<-- "Components/Supported Sensors.md"
