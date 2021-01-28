@@ -179,6 +179,8 @@ markdown_extensions:
   - pymdownx.magiclink
   - pymdownx.mark
   - pymdownx.smartsymbols
+  - pymdownx.snippets:
+      base_path: 'docs'
   - pymdownx.superfences
   - pymdownx.tasklist:
       custom_checkbox: true
