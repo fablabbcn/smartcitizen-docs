@@ -14,11 +14,16 @@ When dealing with sensor data, specially with low cost sensors, a great part of 
 
 ## We care for open science
 
-The framework is writen in [Python](http://www.python.org), and can be run using [Jupyter Notebooks](http://jupyter.org/) or [Jupyter Lab](https://github.com/jupyterlab/jupyterlab). It is intended to provide an **state-of-the art data analysis environment**, adapted for the uses within the Smart Citizen Project, but that can be easily expanded for other use cases. The ultimate purpose of the framework, is to allow for reproducible research by providing a set of tools that can are replicable, and expandable among researchers and users alike, contributing to [FAIR data principles](https://www.nature.com/articles/sdata201618). 
+The framework is writen in [Python](http://www.python.org), and can be easily installed on any computer with simple `pip install scdata`. It is intended to provide an **state-of-the art data analysis environment**, adapted for the uses within the Smart Citizen Project, but that can be easily expanded for other use cases. The ultimate purpose of the framework, is to allow for reproducible research by providing a set of tools that can are replicable, and expandable among researchers and users alike, contributing to [FAIR data principles](https://www.nature.com/articles/sdata201618). 
 
 <p><a href="https://commons.wikimedia.org/wiki/File:FAIR_data_principles.jpg#/media/File:FAIR_data_principles.jpg"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/FAIR_data_principles.jpg/1200px-FAIR_data_principles.jpg" alt="FAIR data principles.jpg"></a><br>By <a href="//commons.wikimedia.org/w/index.php?title=User:SangyaPundir&amp;action=edit&amp;redlink=1" class="new" title="User:SangyaPundir (page does not exist)">SangyaPundir</a> - <span class="int-own-work" lang="en">Own work</span>, <a href="https://creativecommons.org/licenses/by-sa/4.0" title="Creative Commons Attribution-Share Alike 4.0">CC BY-SA 4.0</a></p>
 
-The framework integrates with the [Smart Citizen API](SensorPlatform/Smart Citizen API) and helps with the analysis of **large amounts of data in an efficient way**. It also integrates functionality to **generate reports** in _html_ or _pdf_ format, and to **publish datasets** and documents to [Zenodo](https://zenodo.org).
+!!! info "Raw and processed data"
+    All the raw sensor data from the devices is sent to the Platform and processed outside of the sensors. **Raw data is never deleted**, and the postprocessing of it can be traced back to it's origin by using the sensor blueprint information. This way, we guarantee openness and accesibility of the data for research purposes.
+
+    Check [this guide](/Guides/data/Custom data processing) to learn more about how we postprocess the data of the sensors and how to make it your own way.
+
+The framework integrates with the [Smart Citizen API](/Data/Smart Citizen API) and helps with the analysis of **large amounts of data in an efficient way**. It also integrates functionality to **generate reports** in _html_ or _pdf_ format, and to **publish datasets** and documents to [Zenodo](https://zenodo.org).
 
 !!! info "More familiar with R?"
     [R](https://www.r-project.org/) users won't be left stranded. [R2PY](https://rpy2.bitbucket.io/) provides functionality to send data from _python_ to _R_ quite easily.
@@ -153,10 +158,6 @@ An example of the model is shown below for the estimation of the SGX4514 CO with
 ![](https://i.imgur.com/Sdy5vWy.png)
 
 Depending on the model selected, different validation techniques are implemented, in order to verify models' assumptions and avoid data misinterpretation (i.e. *Durbin Watson* or *Jacque Bera* test for linear regression). Finally, it is important to follow carefully the instructions as stated in the notebook, in order to avoid low model quality.
-
-#### Model import/export and storage
-
-Once the model is analysed and validated, it can be saved and exported. This allows using the model in the future with the same variables in other sensor studies. The model objects are serialised with [joblib](https://github.com/joblib/joblib) and can be uploaded to a Model Repository.
 
 ## Source files
 
