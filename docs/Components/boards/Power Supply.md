@@ -15,7 +15,7 @@ The power supply can be one of two options:
 Check the datasheets for other available input convertions and limits.
 
 !!! tips 
-    Have a look at the guides for more detailed information [on how to operate the power supply](/Guides/deployments/Deploying SCK/#using-the-custom-power-supply).
+    Have a look at the guides for more detailed information [on how to operate the power supply](/Guides/deployments/Using the power supply/).
     
 ## Enclosure
 
