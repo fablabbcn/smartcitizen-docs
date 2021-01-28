@@ -426,6 +426,19 @@
     Battery duration
   </a>
   
+    <nav class="md-nav" aria-label="Battery duration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#battery-calculator" class="md-nav__link">
+    Battery calculator
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -1370,6 +1383,30 @@
 
 
   <li class="md-nav__item">
+    <a href="../Guides/data/Custom%20data%20processing/" title="Custom data processing" class="md-nav__link">
+      Custom data processing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Guides/data/Handling%20calibration%20data/" title="Handling calibration data" class="md-nav__link">
+      Handling calibration data
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../Guides/data/Upload%20data%20to%20zenodo/" title="Uploading data to zenodo" class="md-nav__link">
       Uploading data to zenodo
     </a>
@@ -1408,8 +1445,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../Guides/deployments/Deploying%20SCK/" title="SCK" class="md-nav__link">
-      SCK
+    <a href="../Guides/deployments/Deploying%20SCK/" title="Smart Citizen Kit" class="md-nav__link">
+      Smart Citizen Kit
     </a>
   </li>
 
@@ -1444,8 +1481,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../Guides/deployments/Deploying%20Smart%20Citizen%20Station/" title="Smart Citizen Station" class="md-nav__link">
-      Smart Citizen Station
+    <a href="../Guides/deployments/Deploying%20Smart%20Citizen%20Station/" title="Smart Citizen Station V3" class="md-nav__link">
+      Smart Citizen Station V3
     </a>
   </li>
 
@@ -1468,8 +1505,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../Guides/deployments/Soil%20and%20water%20sensors/" title="Soil and water sensors" class="md-nav__link">
-      Soil and water sensors
+    <a href="../Guides/deployments/Soil%20and%20water%20sensors/" title="Smart Citizen Soil and water sensors" class="md-nav__link">
+      Smart Citizen Soil and water sensors
     </a>
   </li>
 
@@ -1480,8 +1517,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../Guides/deployments/Almabike%20sensors/" title="SCK Almabike sensors" class="md-nav__link">
-      SCK Almabike sensors
+    <a href="../Guides/deployments/Almabike%20sensors/" title="Almabike sensors" class="md-nav__link">
+      Almabike sensors
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Guides/deployments/Using%20the%20power%20supply/" title="Smart Citizen Power Supply" class="md-nav__link">
+      Smart Citizen Power Supply
     </a>
   </li>
 
@@ -1766,6 +1815,19 @@
     Battery duration
   </a>
   
+    <nav class="md-nav" aria-label="Battery duration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#battery-calculator" class="md-nav__link">
+    Battery calculator
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -1978,11 +2040,24 @@
 <li>Without air quality sensors on SD card: 25 days</li>
 </ul>
 <p>You will note that the kit <em>turns itself off</em> while operating on battery. Actually, this is what we call <code>sleep-mode</code>, an operation mode implemented to reduce consumption while on battery operation.</p>
+<h4 id="battery-calculator">Battery calculator<a class="headerlink" href="#battery-calculator" title="Permanent link">&para;</a></h4>
+<p>You can use this battery calculator to estimate how much your battery would last:</p>
+<iframe id="github-iframe" src="" width="100%" height="40%" frameborder="0" scrolling="no" style="min-height: 570px;"></iframe>
+<script>
+    fetch('https://api.github.com/repos/fablabbcn/smartcitizen-tools/contents/calculator.htm')
+        .then(function(response) {
+            return response.json();
+        }).then(function(data) {
+            var iframe = document.getElementById('github-iframe');
+            iframe.src = 'data:text/html;base64,' + encodeURIComponent(data['content']);
+        });
+</script>
+
 <h3 id="battery-charging">Battery charging<a class="headerlink" href="#battery-charging" title="Permanent link">&para;</a></h3>
 <p>The SCK has a micro USB port and can be charged like any Smartphone or Tablet using a dedicated adapter or a computer USB port.</p>
 <p>We recommend using a tablet power adaptor, instead of a computer USB port, for quicker charging. Autonomy can be extended by using a Power Bank, or a 5V PV Panel.</p>
 <h3 id="power-supply">Power Supply<a class="headerlink" href="#power-supply" title="Permanent link">&para;</a></h3>
-<p>The SCK needs 5V input via the micro USB connector. A normal 5V power charger can be used, although for outdoor developments we recommend using a waterproof power supply. Find more info in the <a href="/Components/boards/Power Supply">power supply section</a>.</p>
+<p>The SCK needs 5V input via the micro USB connector. A normal 5V power charger can be used, although for outdoor developments we recommend using a waterproof power supply. Find more info in the <a href="/Components/boards/Power Supply/">power supply section</a>.</p>
 <h3 id="user-feedback">User feedback<a class="headerlink" href="#user-feedback" title="Permanent link">&para;</a></h3>
 <p>The LED serves as an indication of the battery status. If the LED is flashing orange <span class="led small orange"> </span> it indicates that the battery must be charged. The battery takes about 4 hours to fully charge. When the battery is fully charged, the LED will change from orange to green <span class="led small green"> </span>.</p>
 <p><img alt="" src="https://i.imgur.com/ABSXX4w.jpg" style="max-width:400px !important" /></p>
@@ -2260,8 +2335,10 @@
         <!-- -->
             <!-- <div class="md-footer-copyright__highlight">CC Attribution-NonCommercial-ShareAlike 4.0 International</div> -->
         <!-- -->
-		        <img style="margin-top: 20px" alt="The Smart Citizen as part of the iSCAPE project has received funding from the European Community’s H2020 Programme under Grant Agreement No. 689954." src="/assets/images/eu-flag.png">
+          <div class="md-footer-iscape">
+		        <img style="margin-right: 20px;" class="logo" alt="The Smart Citizen as part of the iSCAPE project has received funding from the European Community’s H2020 Programme under Grant Agreement No. 689954." src="/assets/images/eu-flag.png">
             <p class="md-footer-copyright__highlight">The Smart Citizen as part of the iSCAPE project has received funding from the European Community’s H2020 Programme under Grant Agreement No. 689954.</p>
+          </div>
             <p>Except where otherwise noted, content on this site is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
             <p><a rel="license" href="http://smartcitizen.me">Smart Citizen</a> is a project by <a rel="license" href="http://fablabbcn.org">Fab Lab Barcelona</a> at the <a rel="license" href="http://iaac.net">Institute For Advanced Architecture Of Catalonia</a>.</p>
       </div>

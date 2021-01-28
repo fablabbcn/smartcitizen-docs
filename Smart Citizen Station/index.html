@@ -1255,6 +1255,30 @@
 
 
   <li class="md-nav__item">
+    <a href="../Guides/data/Custom%20data%20processing/" title="Custom data processing" class="md-nav__link">
+      Custom data processing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Guides/data/Handling%20calibration%20data/" title="Handling calibration data" class="md-nav__link">
+      Handling calibration data
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../Guides/data/Upload%20data%20to%20zenodo/" title="Uploading data to zenodo" class="md-nav__link">
       Uploading data to zenodo
     </a>
@@ -1293,8 +1317,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../Guides/deployments/Deploying%20SCK/" title="SCK" class="md-nav__link">
-      SCK
+    <a href="../Guides/deployments/Deploying%20SCK/" title="Smart Citizen Kit" class="md-nav__link">
+      Smart Citizen Kit
     </a>
   </li>
 
@@ -1329,8 +1353,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../Guides/deployments/Deploying%20Smart%20Citizen%20Station/" title="Smart Citizen Station" class="md-nav__link">
-      Smart Citizen Station
+    <a href="../Guides/deployments/Deploying%20Smart%20Citizen%20Station/" title="Smart Citizen Station V3" class="md-nav__link">
+      Smart Citizen Station V3
     </a>
   </li>
 
@@ -1353,8 +1377,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../Guides/deployments/Soil%20and%20water%20sensors/" title="Soil and water sensors" class="md-nav__link">
-      Soil and water sensors
+    <a href="../Guides/deployments/Soil%20and%20water%20sensors/" title="Smart Citizen Soil and water sensors" class="md-nav__link">
+      Smart Citizen Soil and water sensors
     </a>
   </li>
 
@@ -1365,8 +1389,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../Guides/deployments/Almabike%20sensors/" title="SCK Almabike sensors" class="md-nav__link">
-      SCK Almabike sensors
+    <a href="../Guides/deployments/Almabike%20sensors/" title="Almabike sensors" class="md-nav__link">
+      Almabike sensors
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Guides/deployments/Using%20the%20power%20supply/" title="Smart Citizen Power Supply" class="md-nav__link">
+      Smart Citizen Power Supply
     </a>
   </li>
 
@@ -1654,8 +1690,12 @@
                 
                 <h1 id="smart-citizen-station">Smart Citizen Station<a class="headerlink" href="#smart-citizen-station" title="Permanent link">&para;</a></h1>
 <p><img alt="" src="/assets/images/station30bottom.jpg" /></p>
-<p>The Smart Citizen Station is a modular open-source environmental monitoring system. Multiple sensors can be added easily added, expanding the capabilities of the installation or replaced when they are damaged or the sensors lifetime is over. From a costs perspective, while being more expensive than the Smart Citizen Kit, it is also conceived as a low-cost solution. The design builds on top of the Smart Citizen Kit, adding an extra set of more accurate sensors, primarily aimed at measuring air pollutants. It aims at providing a solution that can be used by Citizens and Researchers to gather <em>advanced air pollution data</em> not only from a scientific point of view but also as a tool to engage local communities on air pollution-related issues.</p>
+<p>The Smart Citizen Station is a <strong>modular open-source environmental monitoring system</strong>. Multiple sensors can be added easily added, expanding the capabilities of the installation or replaced when they are damaged or the sensors lifetime is over. From a costs perspective, while being more expensive than the Smart Citizen Kit, it is also conceived as a low-cost solution. The design builds on top of the Smart Citizen Kit, adding an extra set of more accurate sensors, primarily aimed at measuring air pollutants. It aims at providing a solution that can be used by Citizens and Researchers to gather <em>advanced air pollution data</em> not only from a scientific point of view but also as a tool to engage local communities on air pollution-related issues.</p>
 <p><img src="https://live.staticflickr.com/65535/50812574093_2e9493d105_k.jpg" width="2001" height="1334" alt="Smart Citizen Station rev3"></p>
+<div class="admonition info">
+<p class="admonition-title">Intentionally fabbable</p>
+<p>The Smart Citizen Station enclosure, as well as some of the electronics, can be fabricated and assembled in a <a href="https://www.fablabs.io/">Fablab</a>. By doing so, we hope to encourage <strong>fully open environmental systems</strong>, ensuring reproducibility through accessible resources.</p>
+</div>
 <p>The sensors can include <strong>some, or all of</strong>:</p>
 <ul>
 <li><strong>Up to 16 analog sensors!</strong>, some of which can be gas sensors detailed as below</li>
@@ -1667,7 +1707,8 @@
 <li><strong>Noise levels</strong> and FFT spectrum from the Smart Citizen Kit</li>
 <li><strong>Environmental metrics</strong>: temperature, humidity, ambient pressure from the Smart Citizen Kit</li>
 </ul>
-<p><img alt="" src="/assets/images/station30inside.jpg" /></p>
+<!-- ![](/assets/images/station30inside.jpg)
+ -->
 <div class="admonition info">
 <p class="admonition-title">From the ground up</p>
 <p>The station uses the same core functionality, interface and feedback as the Smart Citizen Kit. Make sure you are familiar with them before jumping into the station!</p>
@@ -1690,7 +1731,11 @@
 <p><img alt="" src="/assets/images/station30.jpg" />
 <em>Passive exposure example</em></p>
 <h2 id="power">Power<a class="headerlink" href="#power" title="Permanent link">&para;</a></h2>
-<p>Currently, the Smart Citizen Station is only available with an external power supply (230VAC to 5V). Find more info in the <a href="/Components/Power Supply">power supply section</a>.</p>
+<p>Currently, the Smart Citizen Station is only available with an external power supply (230VAC to 5V). Find more info in the <a href="/Components/boards/Power Supply/">power supply section</a>. </p>
+<div class="admonition warning">
+<p class="admonition-title">Battery operation?</p>
+<p>The Smart Citizen Station currently does not support battery operation.</p>
+</div>
 <h2 id="connectivity">Connectivity<a class="headerlink" href="#connectivity" title="Permanent link">&para;</a></h2>
 <p>Currently, the Smart Citizen Station requires a Wi-Fi connection to report data to the <a href="Sensor Platform">online platform</a> and it can also store data offline locally. Read more about the <a href="https://docs.smartcitizen.me/Smart%20Citizen%20Kit/#operation-modes">operation modes</a> and the supported networks.</p>
 <div class="admonition tip">
@@ -1806,8 +1851,10 @@
         <!-- -->
             <!-- <div class="md-footer-copyright__highlight">CC Attribution-NonCommercial-ShareAlike 4.0 International</div> -->
         <!-- -->
-		        <img style="margin-top: 20px" alt="The Smart Citizen as part of the iSCAPE project has received funding from the European Community’s H2020 Programme under Grant Agreement No. 689954." src="/assets/images/eu-flag.png">
+          <div class="md-footer-iscape">
+		        <img style="margin-right: 20px;" class="logo" alt="The Smart Citizen as part of the iSCAPE project has received funding from the European Community’s H2020 Programme under Grant Agreement No. 689954." src="/assets/images/eu-flag.png">
             <p class="md-footer-copyright__highlight">The Smart Citizen as part of the iSCAPE project has received funding from the European Community’s H2020 Programme under Grant Agreement No. 689954.</p>
+          </div>
             <p>Except where otherwise noted, content on this site is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
             <p><a rel="license" href="http://smartcitizen.me">Smart Citizen</a> is a project by <a rel="license" href="http://fablabbcn.org">Fab Lab Barcelona</a> at the <a rel="license" href="http://iaac.net">Institute For Advanced Architecture Of Catalonia</a>.</p>
       </div>

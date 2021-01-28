@@ -1203,13 +1203,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#run" class="md-nav__link">
-    Run
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -1259,6 +1252,30 @@
 
 
   <li class="md-nav__item">
+    <a href="../Custom%20data%20processing/" title="Custom data processing" class="md-nav__link">
+      Custom data processing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Handling%20calibration%20data/" title="Handling calibration data" class="md-nav__link">
+      Handling calibration data
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../Upload%20data%20to%20zenodo/" title="Uploading data to zenodo" class="md-nav__link">
       Uploading data to zenodo
     </a>
@@ -1297,8 +1314,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../deployments/Deploying%20SCK/" title="SCK" class="md-nav__link">
-      SCK
+    <a href="../../deployments/Deploying%20SCK/" title="Smart Citizen Kit" class="md-nav__link">
+      Smart Citizen Kit
     </a>
   </li>
 
@@ -1333,8 +1350,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../deployments/Deploying%20Smart%20Citizen%20Station/" title="Smart Citizen Station" class="md-nav__link">
-      Smart Citizen Station
+    <a href="../../deployments/Deploying%20Smart%20Citizen%20Station/" title="Smart Citizen Station V3" class="md-nav__link">
+      Smart Citizen Station V3
     </a>
   </li>
 
@@ -1357,8 +1374,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../deployments/Soil%20and%20water%20sensors/" title="Soil and water sensors" class="md-nav__link">
-      Soil and water sensors
+    <a href="../../deployments/Soil%20and%20water%20sensors/" title="Smart Citizen Soil and water sensors" class="md-nav__link">
+      Smart Citizen Soil and water sensors
     </a>
   </li>
 
@@ -1369,8 +1386,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../../deployments/Almabike%20sensors/" title="SCK Almabike sensors" class="md-nav__link">
-      SCK Almabike sensors
+    <a href="../../deployments/Almabike%20sensors/" title="Almabike sensors" class="md-nav__link">
+      Almabike sensors
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../deployments/Using%20the%20power%20supply/" title="Smart Citizen Power Supply" class="md-nav__link">
+      Smart Citizen Power Supply
     </a>
   </li>
 
@@ -1635,13 +1664,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#run" class="md-nav__link">
-    Run
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -1670,37 +1692,24 @@
 <p>Open your favourite shell on the directory you have your project. <em>(<code>cmd.exe</code> on windows)</em></p>
 <div class="highlight"><pre><span></span><code>pip install scdata
 </code></pre></div>
+<p>You can now check if it all works by:</p>
+<div class="highlight"><pre><span></span><code>python
+&gt;&gt;&gt; import scdata as sc
+&gt;&gt;&gt; ...
+</code></pre></div>
 <h3 id="development-instructions-advanced">Development instructions (advanced)<a class="headerlink" href="#development-instructions-advanced" title="Permanent link">&para;</a></h3>
-<ol>
-<li>Get the repo</li>
-</ol>
-<p>Make a directory and <code>clone</code> the repository in it:</p>
-<div class="highlight"><pre><span></span><code>mkdir smartcitizen-data
+<p><code>clone</code> the repository in a directory you like:</p>
+<div class="highlight"><pre><span></span><code>git clone https://github.com/fablabbcn/smartcitizen-data.git
+...
 cd smartcitizen-data
-git clone https://github.com/fablabbcn/smartcitizen-data.git
 </code></pre></div>
 <div class="admonition warning">
 <p class="admonition-title">Want to stay up-to-date?</p>
 <p>The framework is being constantly updated and the only version that will always be up-to-date is in the <a href="https://github.com/fablabbcn/smartcitizen-data">master branch of the github repository</a>. We do not recommend to simply download the repository but to clone it with <code>git</code>. If you want to learn more about <code>git</code> and why it can help you in your projects, check <a href="https://www.quora.com/What-is-Git-and-why-should-I-use-it">here</a></p>
 </div>
-<ol>
-<li>Finish it up</li>
-</ol>
-<p>The code in the framework is managed as internal dependencies. To activate this, you can run:</p>
+<p>To install it, you can simply run the command below. You can use a virtual environment if you like as well.</p>
 <div class="highlight"><pre><span></span><code>python setup.py install
 </code></pre></div>
-<h2 id="run">Run<a class="headerlink" href="#run" title="Permanent link">&para;</a></h2>
-<p>You should now be ready to go! You can verify the installation by either running this command:</p>
-<div class="highlight"><pre><span></span><code>jupyter lab --version
-</code></pre></div>
-<p>To run <code>jupyter lab</code>, in your terminal type:</p>
-<div class="highlight"><pre><span></span><code>jupyter lab
-</code></pre></div>
-<p>This will open a web browser instance (by default <a href="">localhost:8888/lab</a>) which gives access to the tools in the framework.</p>
-<div class="admonition note">
-<p class="admonition-title">Learn More</p>
-<p>Still wondering what this is? Read this introduction to <a href="http://jupyter-notebook.readthedocs.io/en/latest/examples/Notebook/Notebook%20Basics.html">Jupyter</a></p>
-</div>
                 
               
               
@@ -1801,8 +1810,10 @@ git clone https://github.com/fablabbcn/smartcitizen-data.git
         <!-- -->
             <!-- <div class="md-footer-copyright__highlight">CC Attribution-NonCommercial-ShareAlike 4.0 International</div> -->
         <!-- -->
-		        <img style="margin-top: 20px" alt="The Smart Citizen as part of the iSCAPE project has received funding from the European Community’s H2020 Programme under Grant Agreement No. 689954." src="/assets/images/eu-flag.png">
+          <div class="md-footer-iscape">
+		        <img style="margin-right: 20px;" class="logo" alt="The Smart Citizen as part of the iSCAPE project has received funding from the European Community’s H2020 Programme under Grant Agreement No. 689954." src="/assets/images/eu-flag.png">
             <p class="md-footer-copyright__highlight">The Smart Citizen as part of the iSCAPE project has received funding from the European Community’s H2020 Programme under Grant Agreement No. 689954.</p>
+          </div>
             <p>Except where otherwise noted, content on this site is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
             <p><a rel="license" href="http://smartcitizen.me">Smart Citizen</a> is a project by <a rel="license" href="http://fablabbcn.org">Fab Lab Barcelona</a> at the <a rel="license" href="http://iaac.net">Institute For Advanced Architecture Of Catalonia</a>.</p>
       </div>

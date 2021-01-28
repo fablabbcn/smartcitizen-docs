@@ -905,13 +905,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#model-importexport-and-storage" class="md-nav__link">
-    Model import/export and storage
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -1278,6 +1271,30 @@
 
 
   <li class="md-nav__item">
+    <a href="../../Guides/data/Custom%20data%20processing/" title="Custom data processing" class="md-nav__link">
+      Custom data processing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Guides/data/Handling%20calibration%20data/" title="Handling calibration data" class="md-nav__link">
+      Handling calibration data
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../Guides/data/Upload%20data%20to%20zenodo/" title="Uploading data to zenodo" class="md-nav__link">
       Uploading data to zenodo
     </a>
@@ -1316,8 +1333,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Guides/deployments/Deploying%20SCK/" title="SCK" class="md-nav__link">
-      SCK
+    <a href="../../Guides/deployments/Deploying%20SCK/" title="Smart Citizen Kit" class="md-nav__link">
+      Smart Citizen Kit
     </a>
   </li>
 
@@ -1352,8 +1369,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Guides/deployments/Deploying%20Smart%20Citizen%20Station/" title="Smart Citizen Station" class="md-nav__link">
-      Smart Citizen Station
+    <a href="../../Guides/deployments/Deploying%20Smart%20Citizen%20Station/" title="Smart Citizen Station V3" class="md-nav__link">
+      Smart Citizen Station V3
     </a>
   </li>
 
@@ -1376,8 +1393,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Guides/deployments/Soil%20and%20water%20sensors/" title="Soil and water sensors" class="md-nav__link">
-      Soil and water sensors
+    <a href="../../Guides/deployments/Soil%20and%20water%20sensors/" title="Smart Citizen Soil and water sensors" class="md-nav__link">
+      Smart Citizen Soil and water sensors
     </a>
   </li>
 
@@ -1388,8 +1405,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Guides/deployments/Almabike%20sensors/" title="SCK Almabike sensors" class="md-nav__link">
-      SCK Almabike sensors
+    <a href="../../Guides/deployments/Almabike%20sensors/" title="Almabike sensors" class="md-nav__link">
+      Almabike sensors
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Guides/deployments/Using%20the%20power%20supply/" title="Smart Citizen Power Supply" class="md-nav__link">
+      Smart Citizen Power Supply
     </a>
   </li>
 
@@ -1663,13 +1692,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#model-importexport-and-storage" class="md-nav__link">
-    Model import/export and storage
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -1712,10 +1734,15 @@
 <p>When dealing with sensor data, specially with low cost sensors, a great part of the <strong>effort needs to be dedicated to data analysis</strong>. After a careful data collection, this stage of our experiments is fundamental to extract meaningful conclusions and prepare reports from them. For this reason, we have developed a data analysis framework that we call the <strong>Sensor Analysis Framework</strong>. In this section, we will detail how this framework is built, how to install it, and make most use of it.</p>
 <p><img alt="" src="/assets/images/saf_schema.png" /></p>
 <h2 id="we-care-for-open-science">We care for open science<a class="headerlink" href="#we-care-for-open-science" title="Permanent link">&para;</a></h2>
-<p>The framework is writen in <a href="http://www.python.org">Python</a>, and can be run using <a href="http://jupyter.org/">Jupyter Notebooks</a> or <a href="https://github.com/jupyterlab/jupyterlab">Jupyter Lab</a>. It is intended to provide an <strong>state-of-the art data analysis environment</strong>, adapted for the uses within the Smart Citizen Project, but that can be easily expanded for other use cases. The ultimate purpose of the framework, is to allow for reproducible research by providing a set of tools that can are replicable, and expandable among researchers and users alike, contributing to <a href="https://www.nature.com/articles/sdata201618">FAIR data principles</a>. </p>
+<p>The framework is writen in <a href="http://www.python.org">Python</a>, and can be easily installed on any computer with simple <code>pip install scdata</code>. It is intended to provide an <strong>state-of-the art data analysis environment</strong>, adapted for the uses within the Smart Citizen Project, but that can be easily expanded for other use cases. The ultimate purpose of the framework, is to allow for reproducible research by providing a set of tools that can are replicable, and expandable among researchers and users alike, contributing to <a href="https://www.nature.com/articles/sdata201618">FAIR data principles</a>. </p>
 <p><a href="https://commons.wikimedia.org/wiki/File:FAIR_data_principles.jpg#/media/File:FAIR_data_principles.jpg"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/FAIR_data_principles.jpg/1200px-FAIR_data_principles.jpg" alt="FAIR data principles.jpg"></a><br>By <a href="//commons.wikimedia.org/w/index.php?title=User:SangyaPundir&amp;action=edit&amp;redlink=1" class="new" title="User:SangyaPundir (page does not exist)">SangyaPundir</a> - <span class="int-own-work" lang="en">Own work</span>, <a href="https://creativecommons.org/licenses/by-sa/4.0" title="Creative Commons Attribution-Share Alike 4.0">CC BY-SA 4.0</a></p>
 
-<p>The framework integrates with the <a href="SensorPlatform/Smart Citizen API">Smart Citizen API</a> and helps with the analysis of <strong>large amounts of data in an efficient way</strong>. It also integrates functionality to <strong>generate reports</strong> in <em>html</em> or <em>pdf</em> format, and to <strong>publish datasets</strong> and documents to <a href="https://zenodo.org">Zenodo</a>.</p>
+<div class="admonition info">
+<p class="admonition-title">Raw and processed data</p>
+<p>All the raw sensor data from the devices is sent to the Platform and processed outside of the sensors. <strong>Raw data is never deleted</strong>, and the postprocessing of it can be traced back to it's origin by using the sensor blueprint information. This way, we guarantee openness and accesibility of the data for research purposes.</p>
+<p>Check <a href="/Guides/data/Custom data processing">this guide</a> to learn more about how we postprocess the data of the sensors and how to make it your own way.</p>
+</div>
+<p>The framework integrates with the <a href="/Data/Smart Citizen API">Smart Citizen API</a> and helps with the analysis of <strong>large amounts of data in an efficient way</strong>. It also integrates functionality to <strong>generate reports</strong> in <em>html</em> or <em>pdf</em> format, and to <strong>publish datasets</strong> and documents to <a href="https://zenodo.org">Zenodo</a>.</p>
 <div class="admonition info">
 <p class="admonition-title">More familiar with R?</p>
 <p><a href="https://www.r-project.org/">R</a> users won't be left stranded. <a href="https://rpy2.bitbucket.io/">R2PY</a> provides functionality to send data from <em>python</em> to <em>R</em> quite easily.</p>
@@ -1824,8 +1851,6 @@
 <p>An example of the model is shown below for the estimation of the SGX4514 CO with the use of the rest of the Kit's available sensor, using a single layer LSTM network only two weeks of training:</p>
 <p><img alt="" src="https://i.imgur.com/Sdy5vWy.png" /></p>
 <p>Depending on the model selected, different validation techniques are implemented, in order to verify models' assumptions and avoid data misinterpretation (i.e. <em>Durbin Watson</em> or <em>Jacque Bera</em> test for linear regression). Finally, it is important to follow carefully the instructions as stated in the notebook, in order to avoid low model quality.</p>
-<h4 id="model-importexport-and-storage">Model import/export and storage<a class="headerlink" href="#model-importexport-and-storage" title="Permanent link">&para;</a></h4>
-<p>Once the model is analysed and validated, it can be saved and exported. This allows using the model in the future with the same variables in other sensor studies. The model objects are serialised with <a href="https://github.com/joblib/joblib">joblib</a> and can be uploaded to a Model Repository.</p>
 <h2 id="source-files">Source files<a class="headerlink" href="#source-files" title="Permanent link">&para;</a></h2>
 <p><a class="github-button" data-size="large" href="https://github.com/fablabbcn/smartcitizen-data/archive/master.zip" data-icon="octicon-cloud-download" aria-label="Download from GitHub">Download</a></p>
 <p><a class="github-button" data-size="large" href="https://github.com/fablabbcn/smartcitizen-data" aria-label="Check the source code">Check the source code</a></p>
@@ -1929,8 +1954,10 @@
         <!-- -->
             <!-- <div class="md-footer-copyright__highlight">CC Attribution-NonCommercial-ShareAlike 4.0 International</div> -->
         <!-- -->
-		        <img style="margin-top: 20px" alt="The Smart Citizen as part of the iSCAPE project has received funding from the European Community’s H2020 Programme under Grant Agreement No. 689954." src="/assets/images/eu-flag.png">
+          <div class="md-footer-iscape">
+		        <img style="margin-right: 20px;" class="logo" alt="The Smart Citizen as part of the iSCAPE project has received funding from the European Community’s H2020 Programme under Grant Agreement No. 689954." src="/assets/images/eu-flag.png">
             <p class="md-footer-copyright__highlight">The Smart Citizen as part of the iSCAPE project has received funding from the European Community’s H2020 Programme under Grant Agreement No. 689954.</p>
+          </div>
             <p>Except where otherwise noted, content on this site is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
             <p><a rel="license" href="http://smartcitizen.me">Smart Citizen</a> is a project by <a rel="license" href="http://fablabbcn.org">Fab Lab Barcelona</a> at the <a rel="license" href="http://iaac.net">Institute For Advanced Architecture Of Catalonia</a>.</p>
       </div>
