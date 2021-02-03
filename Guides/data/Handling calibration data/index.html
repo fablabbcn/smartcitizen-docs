@@ -1192,18 +1192,6 @@
           
           
 
-
-  <li class="md-nav__item">
-    <a href="../Custom%20data%20processing/" title="Custom data processing" class="md-nav__link">
-      Custom data processing
-    </a>
-  </li>
-
-        
-          
-          
-          
-
   
 
 
@@ -1214,10 +1202,64 @@
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Handling calibration data
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
     <a href="./" title="Handling calibration data" class="md-nav__link md-nav__link--active">
       Handling calibration data
     </a>
     
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-store-data" class="md-nav__link">
+    How to store data
+  </a>
+  
+    <nav class="md-nav" aria-label="How to store data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#alternative-method" class="md-nav__link">
+    Alternative method
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Custom%20data%20processing/" title="Custom data processing" class="md-nav__link">
+      Custom data processing
+    </a>
   </li>
 
         
@@ -1582,6 +1624,34 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-store-data" class="md-nav__link">
+    How to store data
+  </a>
+  
+    <nav class="md-nav" aria-label="How to store data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#alternative-method" class="md-nav__link">
+    Alternative method
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1601,9 +1671,30 @@
                 
                 
                 <h1 id="handling-calibration-data">Handling calibration data<a class="headerlink" href="#handling-calibration-data" title="Permanent link">&para;</a></h1>
-<p>The calibration data for is managed by an unique hardware ID, and should be visible in the device itself (on a sticker, normally on the form of <code>SCXSXX000X</code>). This ID can be saved in the platform's device using the <code>postprocessing_info</code> field by a <code>http</code> request. We are working on an implementation to have this in the kit edit view in <a href="https://smartcitize.me">smartcitizen.me</a>, but it's currently not available. Therefore, in order to link this data, you can:
-- either send us the kit ID and it's corresponding hardware ID, and we will do this for you
-- or, if you are familiar with <code>http requests</code> you can <code>post</code> this data as such:</p>
+<p>The calibration data for is managed by an unique hardware ID, and should be visible in the device itself (on a sticker, normally on the form of <code>SCXSXX000X</code>). This ID serves to identify the hardware calibration data, alongside with the processing description we want for that device. All this information can be saved in the platform's device using the <code>postprocessing_info</code> field of the device.</p>
+<h2 id="how-to-store-data">How to store data<a class="headerlink" href="#how-to-store-data" title="Permanent link">&para;</a></h2>
+<p>The easiest way is to go to the kit-edit view of your kit: <a href="https://smartcitizen.me/kits/XXXXX/edit">https://smartcitizen.me/kits/XXXXX/edit</a></p>
+<p><img alt="" src="/assets/images/postprocessing_edit.png" /></p>
+<p>In there, paste a <a href="https://duckduckgo.com/?t=ffab&amp;q=json+validator&amp;ia=answer">Valid JSON</a> containing the following fields:</p>
+<div class="highlight"><pre><span></span><code>{
+    &quot;updated_at&quot;:&quot;2021-01-16T17:45:00&quot;,
+    &quot;hardware_url&quot;:&quot;https://raw.githubusercontent.com/fablabbcn/smartcitizen-data/master/hardware/SCAS21001.json&quot;,
+    &quot;blueprint_url&quot;:&quot;https://raw.githubusercontent.com/fablabbcn/smartcitizen-data/master/blueprints/sc_21_station_module.json&quot;,
+    &quot;latest_postprocessing&quot;:&quot;null&quot;
+}
+</code></pre></div>
+<ul>
+<li><code>updated_at</code>: currently, this has to be done manually including the date at which the JSON is being updated. This will be no longer needed in the shorter future, but as it is a beta feature needs a bit of improvement</li>
+<li><code>hardware_url</code>: this field defines an url for hardware calibration IDs to be loaded from. It virtually can load a valid json from any url, as long as it follows the instructions defined <a href="https://github.com/fablabbcn/smartcitizen-data/blob/master/hardware/README.md">here</a>. The default hardware definitions are in the <a href="https://github.com/fablabbcn/smartcitizen-data/tree/master/hardware">scdata github repository</a> and can be identified per ID. You can just take the corresponding ID and click in the <code>raw</code> button to get the url needed. This field should look something like: <code>https://raw.githubusercontent.com/fablabbcn/smartcitizen-data/master/hardware/SCAS21001.json</code></li>
+<li><code>blueprint_url</code>: this field defines the post-processing to be done in the form of a <code>device-blueprint</code>. It virtually can load a valid json from any url, as long as it follows the instructions defined <a href="https://github.com/fablabbcn/smartcitizen-data/blob/master/examples/notebooks/01_getting_started.ipynb">here</a> and <a href="https://github.com/fablabbcn/smartcitizen-data/blob/master/examples/notebooks/04_processing_data.ipynb">here</a>. If you want to use the base processing select it from the <a href="https://github.com/fablabbcn/smartcitizen-data/tree/master/blueprints">blueprints folder</a>, only selecting the <code>raw</code> json as mentioned above. If you have doubts, please, <a href="mailto:support@smartcitizen.me">contact us</a> to make sure. Finally, other blueprints can be added as defined <a href="/Guides/data/Custom%20data%20processing/">in this guide</a> </li>
+<li><code>latest_postprocessing</code>: this field is to be left as "null"</li>
+</ul>
+<h3 id="alternative-method">Alternative method<a class="headerlink" href="#alternative-method" title="Permanent link">&para;</a></h3>
+<p>Alternatively, in order to post this data, you can follow to other methods:</p>
+<ul>
+<li>either send us the kit ID and it's corresponding hardware ID, and we will do this for you</li>
+<li>or, if you are familiar with <code>http requests</code> you can <code>post</code> this data as such:</li>
+</ul>
 <div class="highlight"><pre><span></span><code>curl &#39;https://api.smartcitizen.me/v0/devices/&lt;DEVICE-ID&gt;&#39; -X PATCH -H &#39;Authorization: Bearer &lt;BEARER-FROM-YOUR-USER-PROFILE&gt;&#39; -H &#39;Content-Type: application/json;charset=UTF-8&#39; --data-binary &#39;{&quot;postprocessing_info&quot;: {&quot;updated_at&quot;: &quot;&lt;DATE IN UTC - FORMAT YYYY-mm-DDTHH:MM:SS&gt;&quot;, &quot;blueprint_url&quot;: &quot;https://raw.githubusercontent.com/fablabbcn/smartcitizen-data/master/blueprints/sc_21_station_module.json&quot;, &quot;hardware_url&quot;: &quot;https://raw.githubusercontent.com/fablabbcn/smartcitizen-data/master/hardware/&lt;HARDWARE_ID&gt;.json&quot;, &quot;latest_postprocessing&quot;: &quot;null&quot;}}&#39; --compressed
 </code></pre></div>
 <p>You can get your authorization token on your user profile page in the OAuth section. Make sure to change the following fields in the command above:</p>
@@ -1613,7 +1704,10 @@
 <li><code>&lt;DATE IN UTC - FORMAT YYYY-mm-DDTHH:MM:SS&gt;</code>, for instance <code>2021-01-14T13:09:23Z</code></li>
 <li><code>&lt;HARDWARE_ID&gt;</code>, for instance <code>SCAS210002</code></li>
 </ul>
+<div class="admonition info">
+<p class="admonition-title">Check it out</p>
 <p>Once this process is done, you should be able to check that the <code>postprocessing_info</code> is safely stored in the Platform by visiting: <code>https://api.smartcitizen.me/v0/devices/&lt;DEVICE-ID&gt;/</code>. After this, we will take care of processing the data in a periodic way.</p>
+</div>
                 
               
               
@@ -1660,8 +1754,8 @@
 
         <!-- Link to previous page -->
         
-          <a href="../Custom%20data%20processing/"
-              title="Custom data processing"
+          <a href="../Organise%20your%20data/"
+              title="Organise your data"
               class="md-flex md-footer-nav__link md-footer-nav__link--prev"
               rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
@@ -1674,7 +1768,7 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Custom data processing
+                Organise your data
               </span>
             </div>
           </a>
@@ -1682,8 +1776,8 @@
 
         <!-- Link to next page -->
         
-          <a href="../Upload%20data%20to%20zenodo/"
-              title="Uploading data to zenodo"
+          <a href="../Custom%20data%20processing/"
+              title="Custom data processing"
               class="md-flex md-footer-nav__link md-footer-nav__link--next"
               rel="next">
             <div class="md-flex__cell md-flex__cell--stretch
@@ -1692,7 +1786,7 @@
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Uploading data to zenodo
+                Custom data processing
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

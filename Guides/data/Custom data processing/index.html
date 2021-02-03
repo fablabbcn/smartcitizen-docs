@@ -1192,6 +1192,18 @@
           
           
 
+
+  <li class="md-nav__item">
+    <a href="../Handling%20calibration%20data/" title="Handling calibration data" class="md-nav__link">
+      Handling calibration data
+    </a>
+  </li>
+
+        
+          
+          
+          
+
   
 
 
@@ -1235,18 +1247,6 @@
   
 </nav>
     
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../Handling%20calibration%20data/" title="Handling calibration data" class="md-nav__link">
-      Handling calibration data
-    </a>
   </li>
 
         
@@ -1645,6 +1645,10 @@
                 
                 
                 <h1 id="custom-data-processing">Custom data processing<a class="headerlink" href="#custom-data-processing" title="Permanent link">&para;</a></h1>
+<div class="admonition warning">
+<p class="admonition-title">WIP</p>
+<p>This is a WIP. More info coming <strong>very</strong> soon.</p>
+</div>
 <p>Data is processed outside of the sensors in a periodic way by <a href="https://github.com/fablabbcn/smartcitizen-data/"><code>scdata</code></a>. There are three ways to have a custom data processing:</p>
 <ol>
 <li><a href="mailto:support@smartcitizen.me">Contact us</a> and request it</li>
@@ -1657,14 +1661,7 @@
 <p class="admonition-title">How to do it?</p>
 <p>Visit <a href="/Guides/data/Handling calibration data/">these instructions</a> to make sure your <code>postprocessing_info</code> is safely stored.</p>
 </div>
-<p>The <code>postprocessing_info</code> is comprised of several fields:</p>
-<ul>
-<li><code>updated_at</code>: normally not needed (internal use only)</li>
-<li><code>blueprint_url</code>: link to a <code>json</code> file defining the device blueprint. More information below</li>
-<li><code>hardware_url</code>: link to a <code>json</code> file containing hardware information. More information <a href="https://github.com/fablabbcn/smartcitizen-data/blob/master/hardware/README.md">here</a></li>
-<li><code>latest_postprocessing</code>: internal use only</li>
-</ul>
-<p>In order to have custom postprocessing workflows, you need to modify the <code>blueprint_url</code> and <em>maybe</em>, the hardware url. The <code>blueprint_url</code> should point to a valid <code>json</code> file following the structure shown in the <a href="https://github.com/fablabbcn/smartcitizen-data/tree/master/examples/notebooks">examples folder in the <code>scdata</code> repository</a>. Inside this blueprint, <code>metrics</code> can be added to be generated according to the <code>device</code>'s available sensors.</p>
+<p>The <code>postprocessing_info</code> is comprised of several fields as defined in the guide above. In order to have custom postprocessing workflows, you need to modify the <code>blueprint_url</code> and <em>maybe</em>, the hardware url. The <code>blueprint_url</code> should point to a valid <code>json</code> file following the structure shown in the <a href="https://github.com/fablabbcn/smartcitizen-data/tree/master/examples/notebooks">examples folder in the <code>scdata</code> repository</a>. Inside this blueprint, <code>metrics</code> can be added to be generated according to the <code>device</code>'s available sensors.</p>
                 
               
               
@@ -1711,8 +1708,8 @@
 
         <!-- Link to previous page -->
         
-          <a href="../Organise%20your%20data/"
-              title="Organise your data"
+          <a href="../Handling%20calibration%20data/"
+              title="Handling calibration data"
               class="md-flex md-footer-nav__link md-footer-nav__link--prev"
               rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
@@ -1725,7 +1722,7 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Organise your data
+                Handling calibration data
               </span>
             </div>
           </a>
@@ -1733,8 +1730,8 @@
 
         <!-- Link to next page -->
         
-          <a href="../Handling%20calibration%20data/"
-              title="Handling calibration data"
+          <a href="../Upload%20data%20to%20zenodo/"
+              title="Uploading data to zenodo"
               class="md-flex md-footer-nav__link md-footer-nav__link--next"
               rel="next">
             <div class="md-flex__cell md-flex__cell--stretch
@@ -1743,7 +1740,7 @@
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Handling calibration data
+                Uploading data to zenodo
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
