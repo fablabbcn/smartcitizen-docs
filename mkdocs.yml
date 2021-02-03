@@ -69,8 +69,8 @@ nav:
       - Make reports of your data: Guides/data/Make reports of your data.md
       - Creating interfaces: Guides/data/Creating Interfaces.md
       - Organise your data: Guides/data/Organise your data.md
-      - Custom data processing: Guides/data/Custom data processing.md
       - Handling calibration data: Guides/data/Handling calibration data.md
+      - Custom data processing: Guides/data/Custom data processing.md
       # - Model your sensor data: Guides/Creating Models for Sensors Calibration.md
       # - Analyse your data in batch: Guides/Analyse your data in batch.md
       - Uploading data to zenodo: Guides/data/Upload data to zenodo.md
