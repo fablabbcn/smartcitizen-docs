@@ -5,8 +5,6 @@
 | :--- | :--- | :---: | :---: | :---: |
 | *Air* | Temperature | ºC | Urban Board | [Sensirion SHT31](https://www.sensirion.com/fileadmin/user_upload/customers/sensirion/Dokumente/2_Humidity_Sensors/) |
 | *Air* | Humidity | %RH |  Urban Board | [Sensirion SHT31](https://www.sensirion.com/fileadmin/user_upload/customers/sensirion/Dokumente/2_Humidity_Sensors/) |
-| Battery | % |  Urban Board | - |
-| Battery Voltage | V |  Urban Board | - |
 | *Air* | Light | lux | Urban Board | [ROHM BH1730](http://rohmfs.rohm.com/en/products/databook/datasheet/ic/sensor/light/bh1721fvc-e.pdf) |
 | *Air* | Noise dBA | na (dBA scale) | Urban Board | [INVENSENSE 43432](https://www.invensense.com/wp-content/uploads/2015/02/ICS-43432-data-sheet-v1.3.pdf) |
 | *Air* | Noise dBC | na (dBC scale) | Urban Board | [INVENSENSE 43432](https://www.invensense.com/wp-content/uploads/2015/02/ICS-43432-data-sheet-v1.3.pdf) |
@@ -71,8 +69,10 @@
 | *Soil* | Soil Temperature | degC | External Sensor | [Chirp Soil Moisture](https://www.tindie.com/products/miceuz/i2c-soil-moisture-sensor/) |
 | *Soil* | Soil Light | - | External Sensor | [Chirp Soil Moisture](https://www.tindie.com/products/miceuz/i2c-soil-moisture-sensor/) |
 | *Air, soil and water* | Atlas Temperature | degC | External Sensor | PT-100 or PT-1000 [Atlas Scientific Temperature](https://www.atlas-scientific.com/product_pages/kits/temp_kit.html) |
-| *Electric* | INA219 Bus voltage | V | External Sensor | [Adafruit INA219](https://www.adafruit.com/product/904) |
-| *Electric* | INA219 Shunt voltage | mV | External Sensor | [Adafruit INA219](https://www.adafruit.com/product/904) |
-| *Electric* | INA219 Current | mA | External Sensor | [Adafruit INA219](https://www.adafruit.com/product/904) |
-| *Electric* | INA219 Load voltage | V | External Sensor | [Adafruit INA219](https://www.adafruit.com/product/904) |
+| *Other* | Battery | % |  Urban Board | - |
+| *Other* | Battery Voltage | V |  Urban Board | - |
+| *Other* | INA219 Bus voltage | V | External Sensor | [Adafruit INA219](https://www.adafruit.com/product/904) |
+| *Other* | INA219 Shunt voltage | mV | External Sensor | [Adafruit INA219](https://www.adafruit.com/product/904) |
+| *Other* | INA219 Current | mA | External Sensor | [Adafruit INA219](https://www.adafruit.com/product/904) |
+| *Other* | INA219 Load voltage | V | External Sensor | [Adafruit INA219](https://www.adafruit.com/product/904) |
 
