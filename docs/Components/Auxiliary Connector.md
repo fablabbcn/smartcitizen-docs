@@ -32,7 +32,7 @@ The [data board](/Components/Data Board/) features a standard Grove connector wh
 
 ### Soil and Water
 
-Check the [Soil and water measurements](/Soil and water/) documentation with examples on sensors such as:
+Check the [Soil and water measurements](/Components/Soil and water/) documentation with examples on sensors such as:
 
 - [Atlas Scientific Dissolved Oxygen](https://www.atlas-scientific.com/product_pages/kits/do_kit.html)
 - [DS18B20 Water Temperature](https://www.adafruit.com/product/381) for water
