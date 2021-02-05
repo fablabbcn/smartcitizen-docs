@@ -1671,23 +1671,14 @@
                 
                 
                 <h1 id="handling-calibration-data">Handling calibration data<a class="headerlink" href="#handling-calibration-data" title="Permanent link">&para;</a></h1>
-<p>The calibration data for is managed by an unique hardware ID, and should be visible in the device itself (on a sticker, normally on the form of <code>SCXSXX000X</code>). This ID serves to identify the hardware calibration data, alongside with the processing description we want for that device. All this information can be saved in the platform's device using the <code>postprocessing_info</code> field of the device.</p>
+<p>The calibration data for is managed by an unique hardware ID, and should be visible in the device itself (on a sticker, normally on the form of <code>SCXSXX000X</code>). This ID serves to identify the hardware calibration data, alongside with the processing description we want for that device. All this information can be saved in the platform's device using the <code>postprocessing</code> field of the device.</p>
 <h2 id="how-to-store-data">How to store data<a class="headerlink" href="#how-to-store-data" title="Permanent link">&para;</a></h2>
 <p>The easiest way is to go to the kit-edit view of your kit: <a href="https://smartcitizen.me/kits/XXXXX/edit">https://smartcitizen.me/kits/XXXXX/edit</a></p>
 <p><img alt="" src="/assets/images/postprocessing_edit.png" /></p>
-<p>In there, paste a <a href="https://duckduckgo.com/?t=ffab&amp;q=json+validator&amp;ia=answer">Valid JSON</a> containing the following fields:</p>
-<div class="highlight"><pre><span></span><code>{
-    &quot;updated_at&quot;:&quot;2021-01-16T17:45:00&quot;,
-    &quot;hardware_url&quot;:&quot;https://raw.githubusercontent.com/fablabbcn/smartcitizen-data/master/hardware/SCAS21001.json&quot;,
-    &quot;blueprint_url&quot;:&quot;https://raw.githubusercontent.com/fablabbcn/smartcitizen-data/master/blueprints/sc_21_station_module.json&quot;,
-    &quot;latest_postprocessing&quot;:&quot;null&quot;
-}
-</code></pre></div>
+<p>In there, you can update the fields for <code>blueprint</code> and <code>hardware</code>:</p>
 <ul>
-<li><code>updated_at</code>: currently, this has to be done manually including the date at which the JSON is being updated. This will be no longer needed in the shorter future, but as it is a beta feature needs a bit of improvement</li>
-<li><code>hardware_url</code>: this field defines an url for hardware calibration IDs to be loaded from. It virtually can load a valid json from any url, as long as it follows the instructions defined <a href="https://github.com/fablabbcn/smartcitizen-data/blob/master/hardware/README.md">here</a>. The default hardware definitions are in the <a href="https://github.com/fablabbcn/smartcitizen-data/tree/master/hardware">scdata github repository</a> and can be identified per ID. You can just take the corresponding ID and click in the <code>raw</code> button to get the url needed. This field should look something like: <code>https://raw.githubusercontent.com/fablabbcn/smartcitizen-data/master/hardware/SCAS21001.json</code></li>
-<li><code>blueprint_url</code>: this field defines the post-processing to be done in the form of a <code>device-blueprint</code>. It virtually can load a valid json from any url, as long as it follows the instructions defined <a href="https://github.com/fablabbcn/smartcitizen-data/blob/master/examples/notebooks/01_getting_started.ipynb">here</a> and <a href="https://github.com/fablabbcn/smartcitizen-data/blob/master/examples/notebooks/04_processing_data.ipynb">here</a>. If you want to use the base processing select it from the <a href="https://github.com/fablabbcn/smartcitizen-data/tree/master/blueprints">blueprints folder</a>, only selecting the <code>raw</code> json as mentioned above. If you have doubts, please, <a href="mailto:support@smartcitizen.me">contact us</a> to make sure. Finally, other blueprints can be added as defined <a href="/Guides/data/Custom%20data%20processing/">in this guide</a> </li>
-<li><code>latest_postprocessing</code>: this field is to be left as "null"</li>
+<li><code>hardware_url</code>: this field defines an url for hardware calibration IDs to be loaded from. It virtually can load a <strong>valid json</strong> from any url, as long as it follows the instructions defined <a href="https://github.com/fablabbcn/smartcitizen-data/blob/master/hardware/README.md">here</a>. The default hardware definitions are in the <a href="https://github.com/fablabbcn/smartcitizen-data/tree/master/hardware">scdata github repository</a> and can be identified per ID. You can just take the corresponding ID and click in the <code>raw</code> button to get the url needed. This field should look something like: <code>https://raw.githubusercontent.com/fablabbcn/smartcitizen-data/master/hardware/SCAS21001.json</code></li>
+<li><code>blueprint_url</code>: this field defines the post-processing to be done in the form of a <code>device-blueprint</code>. It virtually can load a valid json from any url, as long as it follows the instructions defined <a href="https://github.com/fablabbcn/smartcitizen-data/blob/master/examples/notebooks/01_getting_started.ipynb">here</a> and <a href="https://github.com/fablabbcn/smartcitizen-data/blob/master/examples/notebooks/04_processing_data.ipynb">here</a>. If you want to use the base processing select it from the <a href="https://github.com/fablabbcn/smartcitizen-data/tree/master/blueprints">blueprints folder</a>, only selecting the <code>raw</code> json as mentioned above. If you have doubts, please, <a href="mailto:support@smartcitizen.me">contact us</a> to make sure. Finally, other blueprints can be added as defined <a href="/Guides/data/Custom%20data%20processing/">in this guide</a></li>
 </ul>
 <h3 id="alternative-method">Alternative method<a class="headerlink" href="#alternative-method" title="Permanent link">&para;</a></h3>
 <p>Alternatively, in order to post this data, you can follow to other methods:</p>
@@ -1695,18 +1686,18 @@
 <li>either send us the kit ID and it's corresponding hardware ID, and we will do this for you</li>
 <li>or, if you are familiar with <code>http requests</code> you can <code>post</code> this data as such:</li>
 </ul>
-<div class="highlight"><pre><span></span><code>curl &#39;https://api.smartcitizen.me/v0/devices/&lt;DEVICE-ID&gt;&#39; -X PATCH -H &#39;Authorization: Bearer &lt;BEARER-FROM-YOUR-USER-PROFILE&gt;&#39; -H &#39;Content-Type: application/json;charset=UTF-8&#39; --data-binary &#39;{&quot;postprocessing_info&quot;: {&quot;updated_at&quot;: &quot;&lt;DATE IN UTC - FORMAT YYYY-mm-DDTHH:MM:SS&gt;&quot;, &quot;blueprint_url&quot;: &quot;https://raw.githubusercontent.com/fablabbcn/smartcitizen-data/master/blueprints/sc_21_station_module.json&quot;, &quot;hardware_url&quot;: &quot;https://raw.githubusercontent.com/fablabbcn/smartcitizen-data/master/hardware/&lt;HARDWARE_ID&gt;.json&quot;, &quot;latest_postprocessing&quot;: &quot;null&quot;}}&#39; --compressed
+<div class="highlight"><pre><span></span><code>curl &#39;https://api.smartcitizen.me/v0/devices/&lt;DEVICE-ID&gt;&#39; -X PATCH -H &#39;Authorization: Bearer &lt;BEARER-FROM-YOUR-USER-PROFILE&gt;&#39; -H &#39;Content-Type: application/json;charset=UTF-8&#39; --data-binary &#39;{&quot;postprocessing_attributes&quot;: {&quot;blueprint_url&quot;: &quot;https://raw.githubusercontent.com/fablabbcn/smartcitizen-data/master/blueprints/&lt;BLUEPRINT_ID&gt;.json&quot;, &quot;hardware_url&quot;: &quot;https://raw.githubusercontent.com/fablabbcn/smartcitizen-data/master/hardware/&lt;HARDWARE_ID&gt;.json&quot;}}&#39; --compressed
 </code></pre></div>
 <p>You can get your authorization token on your user profile page in the OAuth section. Make sure to change the following fields in the command above:</p>
 <ul>
 <li><code>&lt;DEVICE-ID&gt;</code></li>
 <li><code>&lt;BEARER-FROM-YOUR-USER-PROFILE&gt;</code></li>
-<li><code>&lt;DATE IN UTC - FORMAT YYYY-mm-DDTHH:MM:SS&gt;</code>, for instance <code>2021-01-14T13:09:23Z</code></li>
 <li><code>&lt;HARDWARE_ID&gt;</code>, for instance <code>SCAS210002</code></li>
+<li><code>&lt;BLUEPRINT_ID&gt;</code>, for instance <code>sc_21_station_module</code> for Smart Citizen Stations</li>
 </ul>
 <div class="admonition info">
 <p class="admonition-title">Check it out</p>
-<p>Once this process is done, you should be able to check that the <code>postprocessing_info</code> is safely stored in the Platform by visiting: <code>https://api.smartcitizen.me/v0/devices/&lt;DEVICE-ID&gt;/</code>. After this, we will take care of processing the data in a periodic way.</p>
+<p>Once this process is done, you should be able to check that the <code>postprocessing</code> is safely stored in the Platform by visiting: <code>https://api.smartcitizen.me/v0/devices/&lt;DEVICE-ID&gt;/</code>. After this, we will take care of processing the data in a periodic way.</p>
 </div>
                 
               

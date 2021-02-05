@@ -1656,12 +1656,12 @@
 <li>Follow the guide below for automatic processing</li>
 </ol>
 <h2 id="automatic-data-processing">Automatic data processing<a class="headerlink" href="#automatic-data-processing" title="Permanent link">&para;</a></h2>
-<p>Data is processed in a recurrent manner whenever there is <code>postprocessing_info</code> in the device. You can check it by visiting <code>https://api.smartcitizen.me/v0/devices/&lt;device-id&gt;</code> where <code>&lt;device-id&gt;</code> is the number that follows in the url <code>https://smartcitizen.me/kits/XXXXXX</code>.</p>
+<p>Data is processed in a recurrent manner whenever there is <code>postprocessing</code> in the device. You can check it by visiting <code>https://api.smartcitizen.me/v0/devices/&lt;device-id&gt;</code> where <code>&lt;device-id&gt;</code> is the number that follows in the url <code>https://smartcitizen.me/kits/XXXXXX</code>.</p>
 <div class="admonition info">
 <p class="admonition-title">How to do it?</p>
-<p>Visit <a href="/Guides/data/Handling calibration data/">these instructions</a> to make sure your <code>postprocessing_info</code> is safely stored.</p>
+<p>Visit <a href="/Guides/data/Handling calibration data/">these instructions</a> to make sure your <code>postprocessing</code> is safely stored.</p>
 </div>
-<p>The <code>postprocessing_info</code> is comprised of several fields as defined in the guide above. In order to have custom postprocessing workflows, you need to modify the <code>blueprint_url</code> and <em>maybe</em>, the hardware url. The <code>blueprint_url</code> should point to a valid <code>json</code> file following the structure shown in the <a href="https://github.com/fablabbcn/smartcitizen-data/tree/master/examples/notebooks">examples folder in the <code>scdata</code> repository</a>. Inside this blueprint, <code>metrics</code> can be added to be generated according to the <code>device</code>'s available sensors.</p>
+<p>The <code>postprocessing</code> is comprised of several fields as defined in the guide above. In order to have custom postprocessing workflows, you need to modify the <code>blueprint_url</code> and <em>maybe</em>, the hardware url. The <code>blueprint_url</code> should point to a valid <code>json</code> file following the structure shown in the <a href="https://github.com/fablabbcn/smartcitizen-data/tree/master/examples/notebooks">examples folder in the <code>scdata</code> repository</a>. Inside this blueprint, <code>metrics</code> can be added to be generated according to the <code>device</code>'s available sensors.</p>
                 
               
               
