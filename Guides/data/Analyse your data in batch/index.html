@@ -1058,6 +1058,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../getting%20started/Debugging%20your%20sensors/" title="Debugging your sensors" class="md-nav__link">
+      Debugging your sensors
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -1877,36 +1889,36 @@ Different preprocessing options can be defined. The most common one, for the sen
         * <code>loss</code>: loss function ('mse' or others)
         * <code>optimizer</code>: optimizer to use (<code>adam</code> or others)
         * <code>layers</code>: specific layer structure. Example below:</p>
-<div class="codehilite"><pre><span></span><code><span class="err">    ```</span>
-<span class="err">    &quot;layers&quot;: [{&quot;type&quot;: &quot;lstm&quot;,</span>
-<span class="err">                &quot;neurons&quot;: 100,</span>
-<span class="err">                &quot;return_seq&quot;: true</span>
-<span class="err">            },</span>
-<span class="err">            {</span>
-<span class="err">                &quot;type&quot;: &quot;dropout&quot;,</span>
-<span class="err">                &quot;rate&quot;: 0.05</span>
-<span class="err">            },</span>
-<span class="err">            {</span>
-<span class="err">                &quot;type&quot;: &quot;lstm&quot;,</span>
-<span class="err">                &quot;neurons&quot;: 100,</span>
-<span class="err">                &quot;return_seq&quot;: true</span>
-<span class="err">            },</span>
-<span class="err">            {</span>
-<span class="err">                &quot;type&quot;: &quot;lstm&quot;,</span>
-<span class="err">                &quot;neurons&quot;: 50,</span>
-<span class="err">                &quot;return_seq&quot;: false</span>
-<span class="err">            },</span>
-<span class="err">            {</span>
-<span class="err">                &quot;type&quot;: &quot;dropout&quot;,</span>
-<span class="err">                &quot;rate&quot;: 0.05</span>
-<span class="err">            },</span>
-<span class="err">            {</span>
-<span class="err">                &quot;type&quot;: &quot;dense&quot;,</span>
-<span class="err">                &quot;neurons&quot;: 1,</span>
-<span class="err">                &quot;activation&quot;: &quot;linear&quot;</span>
-<span class="err">            }</span>
-<span class="err">        ]},</span>
-<span class="err">    ```</span>
+<div class="codehilite"><pre><span></span><code>    ```
+    &quot;layers&quot;: [{&quot;type&quot;: &quot;lstm&quot;,
+                &quot;neurons&quot;: 100,
+                &quot;return_seq&quot;: true
+            },
+            {
+                &quot;type&quot;: &quot;dropout&quot;,
+                &quot;rate&quot;: 0.05
+            },
+            {
+                &quot;type&quot;: &quot;lstm&quot;,
+                &quot;neurons&quot;: 100,
+                &quot;return_seq&quot;: true
+            },
+            {
+                &quot;type&quot;: &quot;lstm&quot;,
+                &quot;neurons&quot;: 50,
+                &quot;return_seq&quot;: false
+            },
+            {
+                &quot;type&quot;: &quot;dropout&quot;,
+                &quot;rate&quot;: 0.05
+            },
+            {
+                &quot;type&quot;: &quot;dense&quot;,
+                &quot;neurons&quot;: 1,
+                &quot;activation&quot;: &quot;linear&quot;
+            }
+        ]},
+    ```
 </code></pre></div>
 
 <ul>
