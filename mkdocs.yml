@@ -61,6 +61,7 @@ nav:
       - Uploading SD-card data: Guides/getting started/Uploading SD Card Data.md
       - Updating the Wi-Fi: Guides/getting started/Updating the Wi-Fi.md
       - Using the Shell: Guides/getting started/Using the Shell.md
+      - Debugging your sensors: Guides/getting started/Debugging your sensors.md
     - Firmware:
       - Update the firmware: Guides/firmware/Update the firmware.md
       - Edit the firmware: Guides/firmware/Edit the Firmware.md
