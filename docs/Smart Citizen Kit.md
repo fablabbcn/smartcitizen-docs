@@ -201,5 +201,7 @@ If we do not have an internet connection we can use the SD mode. In this case th
 
 Sofware updates are release frequently in the [Firmware repository](https://github.com/fablabbcn/smartcitizen-kit-21). These updates will need to be applied periodically to the two main components of the SCK: the SAMD21 (main processor) and the ESP8266 (Wi-Fi module). Check the instructions under the [Update the Firmware](/Guides/firmware/Update the firmware/) section for more information.
 
+<img src="https://live.staticflickr.com/65535/50976345583_1099828518_k.jpg" width="2000" height="1333" alt="Smart Citizen Kits being tested at Fab Lab Barcelona">
+
 !!! info "Test plan"
     You can find the Test plan, in case you are producing the SCK [here](/assets/notes/SCK_2.1_TESTPLAN.pdf).

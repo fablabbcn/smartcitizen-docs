@@ -97,7 +97,7 @@ In order to use the [SWD connector](http://www.arm.com/products/system-ip/debug-
 ![](https://i.imgur.com/qJ2fV3N.jpg)
 
 ---
-![](https://i.imgur.com/AEYc8sd.jpg  "Raspberry Pi connected to SCK" =400x)
+![](https://i.imgur.com/AEYc8sd.jpg)
 
 ###  Running OpenOCD on the raspberry pi
 
@@ -322,6 +322,7 @@ ress    What
 `commands`
 
 * Set a **list of actions** related to the breakpoint:
+
 ```
 break main.cpp:50
 commands
@@ -330,6 +331,7 @@ printf "count is %d\n",count
 cont
 end
 ```
+
 `delete`
 
 * Delete a breakpoint
@@ -342,6 +344,7 @@ No breakpoints or watchpoints.
 `loop`
 
 * Read what is around a certain function
+
 ```
 (gdb) l loop
 25	  //while (!Serial) {
@@ -358,6 +361,7 @@ No breakpoints or watchpoints.
 `print`
 
 * Retrieve value of a specific variable
+
 ```
 (gdb) print timer
 $12 = 2
@@ -365,6 +369,7 @@ $12 = 2
 `set`
 
 * Set variable to a certain value
+
 ```
 (gdb) set timer = 0
 ```
@@ -389,6 +394,7 @@ Anytime we make a change in the code, we don't need to reload the debugging sess
     b. Or hit `pio run` in another terminal located in your project root directory
 
 2. In gdb, `load` file. This will reload the file defined at the beginning of your debugging session and upload it to the target
+
 ```
 (gdb) load
 Loading section .text, size 0x2e50 lma 0x2000

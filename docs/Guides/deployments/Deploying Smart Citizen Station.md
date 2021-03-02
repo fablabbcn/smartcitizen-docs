@@ -2,7 +2,7 @@
 
 This guide will summarise how to install the Smart Citizen Station and set it all up for successful readings.
 
-![](/assets/images/station30.jpg)
+<img src="https://live.staticflickr.com/65535/50977149247_ae7186e67e_k.jpg" width="2000" height="1333" alt="Smart Citizen Station v3">
 
 ## Hardware
 
@@ -28,6 +28,8 @@ The Station measurements are shown in the image below:
 ![](/assets/images/station-v3-mounting.png)
 
 The enclosure holds the sensors in place and protects them against weather. A rain and sun radiation **cover** for protection made out of white [sandwich panel or dibond](https://en.wikipedia.org/wiki/Sandwich_panel). This element carries out the structural support of the station and protects the unit against rain, wind or heat.
+
+<img src="https://live.staticflickr.com/65535/50977149367_922fc1c478_k.jpg" width="2000" height="1333" alt="Smart Citizen Station v3">
 
 The **sensors module** which contains the electronics and sensors, is attached to the cover and can be removed without having to uninstall the rain cover.
 
@@ -59,7 +61,9 @@ The Station is powered through it's USB input. It can be reset by either:
 
 ### Power supply
 
-The Smart Citizen Station uses the [Smart Citizen Power Supply](/Components/boards/Power Supply.md) for power. The input of the station is the connector shown in the image above as _USB input_.
+The Smart Citizen Station uses the [Smart Citizen Power Supply](/Components/boards/Power Supply.md) for power. The input of the station is the connector shown in the image below.
+
+<img src="https://live.staticflickr.com/65535/50977149542_eedda4d383_k.jpg" width="2000" height="1327" alt="Smart Citizen Station v3">
 
 Inside the station, power is distributed accross the different units. Data and power goes through the input, in order to connect to the [Data Board](/Components/boards/Data Board.md) and be able to use the [Shell](/Guides/getting started/Using the Shell.md). All voltage levels inside the station are below 5V.
 
@@ -167,7 +171,7 @@ This is an example of the sensor list in a normal _4-electrochemical sensors_ St
 
 The enclosure can be installed using the _mounting holes_ seen below. There is sufficient space to pass zip ties. If you want to use drills, we recommend at least 6mm screws (or 8mm) and to dissasemble the plastic cover from the sandwich pannel for safer installation.
 
-![](/assets/images/station-v3-mounting.png)
+<img src="https://live.staticflickr.com/65535/50977039026_8b679d3ef6_k.jpg" width="2000" height="1333" alt="Smart Citizen Station v3">
 
 Below are some general guidelines for the installation of the device:
 
@@ -180,6 +184,8 @@ Below are some general guidelines for the installation of the device:
 - A good height for installing the sensors is somewhere between 2-3m, but it all depends on the case study and available support structures.
 
 ## Configuration
+
+<img src="https://live.staticflickr.com/65535/50976345368_c109c935a7_k.jpg" width="2000" height="1333" alt="Smart Citizen Station v3">
 
 The process to register the Smart Citizen Station and send data to the platform is the same as the one from the Smart Citizen Kit ([start.smartcitizen.me](https://start.smartcitizen.me)):
 
@@ -224,3 +230,5 @@ All the data is sent in raw to the Smart Citizen Platform and it's then processe
 ## Troubleshooting
 
 The first step in case anything goes wrong, is to reset the unit by pressing the RESET button. If this doesn't work, make sure that your problem is not already listed in the [FAQs](/_FAQ), and if not, contact us for more support.
+
+<img src="https://live.staticflickr.com/65535/50977149967_0bae638c6d_k.jpg" width="2000" height="1333" alt="Smart Citizen Station v3">

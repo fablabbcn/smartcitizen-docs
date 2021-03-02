@@ -1,11 +1,11 @@
 Smart Citizen Station
 ==================
 
-![](/assets/images/station30bottom.jpg)
+<img src="https://live.staticflickr.com/65535/50976345233_cae6391c94_k.jpg" width="2000" height="1333" alt="Smart Citizen Station v3">
 
 The Smart Citizen Station is a **modular open-source environmental monitoring system**. Multiple sensors can be added easily added, expanding the capabilities of the installation or replaced when they are damaged or the sensors lifetime is over. From a costs perspective, while being more expensive than the Smart Citizen Kit, it is also conceived as a low-cost solution. The design builds on top of the Smart Citizen Kit, adding an extra set of more accurate sensors, primarily aimed at measuring air pollutants. It aims at providing a solution that can be used by Citizens and Researchers to gather _advanced air pollution data_ not only from a scientific point of view but also as a tool to engage local communities on air pollution-related issues.
 
-<img src="https://live.staticflickr.com/65535/50812574093_2e9493d105_k.jpg" width="2001" height="1334" alt="Smart Citizen Station rev3">
+<img src="https://live.staticflickr.com/65535/50977039556_541c4727a6_k.jpg" width="2000" height="1333" alt="Smart Citizen Station v3">
 
 !!! info "Intentionally fabbable"
     The Smart Citizen Station enclosure, as well as some of the electronics, can be fabricated and assembled in a [Fablab](https://www.fablabs.io/). By doing so, we hope to encourage **fully open environmental systems**, ensuring reproducibility through accessible resources.
@@ -21,14 +21,16 @@ The sensors can include **some, or all of**:
 - **Noise levels** and FFT spectrum from the Smart Citizen Kit
 - **Environmental metrics**: temperature, humidity, ambient pressure from the Smart Citizen Kit
 
-<!-- ![](/assets/images/station30inside.jpg)
- -->
+<img src="https://live.staticflickr.com/65535/50812574093_2e9493d105_k.jpg" width="2001" height="1334" alt="Smart Citizen Station rev3">
+
 !!! info "From the ground up"
     The station uses the same core functionality, interface and feedback as the Smart Citizen Kit. Make sure you are familiar with them before jumping into the station!
 
     - [User feedback](/Smart Citizen Kit/#user-feedback) 
     - [LED states and operation modes](/Smart Citizen Kit/#operation-modes)
     - [User interfaces](/Smart Citizen Kit/#user-interfaces)
+
+![](/assets/images/station30bottom.jpg)
 
 !!! tip "Dimensions"
     If you are looking at the dimensions and mechanical/electrical information about the Smart Citizen Station, have a look at the [enclosures repository](https://github.com/fablabbcn/smartcitizen-enclosures/tree/master/SmartCitizen%20Station%20V3.0)
