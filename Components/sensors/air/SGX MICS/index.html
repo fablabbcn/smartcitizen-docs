@@ -1881,18 +1881,18 @@
 <li><em>University College Dublin</em>: data collected from 27/March to 17/April. The measured pollutants with reference equipments were NO, NO<sub>2</sub> and NOX. One prototype Smart Citizen Station was deployed with two Smart Citizen Kits</li>
 </ul>
 <p>For both results shown below, we used an LSTM with 200 epochs training and the following structure:</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">keras.models</span> <span class="kn">import</span> <span class="n">Sequential</span>
-<span class="kn">from</span> <span class="nn">keras.layers</span> <span class="kn">import</span> <span class="n">Dense</span><span class="p">,</span> <span class="n">Activation</span><span class="p">,</span> <span class="n">LSTM</span><span class="p">,</span> <span class="n">Dropout</span>
+<div class="highlight"><pre><span></span><code>from keras.models import Sequential
+from keras.layers import Dense, Activation, LSTM, Dropout
 
-<span class="n">model</span> <span class="o">=</span> <span class="n">Sequential</span><span class="p">()</span>
-<span class="n">layers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">50</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
-<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">LSTM</span><span class="p">(</span><span class="n">layers</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">return_sequences</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">input_shape</span><span class="o">=</span><span class="p">(</span><span class="n">train_X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">train_X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">2</span><span class="p">])))</span>
-<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Dropout</span><span class="p">(</span><span class="mf">0.2</span><span class="p">))</span>
-<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">LSTM</span><span class="p">(</span><span class="n">layers</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">return_sequences</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
-<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Dropout</span><span class="p">(</span><span class="mf">0.2</span><span class="p">))</span>
-<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Dense</span><span class="p">(</span><span class="n">output_dim</span><span class="o">=</span><span class="n">layers</span><span class="p">[</span><span class="mi">2</span><span class="p">]))</span>
-<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Activation</span><span class="p">(</span><span class="s2">&quot;linear&quot;</span><span class="p">))</span>
-<span class="n">model</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">loss</span><span class="o">=</span><span class="s1">&#39;mse&#39;</span><span class="p">,</span> <span class="n">optimizer</span><span class="o">=</span><span class="s1">&#39;rmsprop&#39;</span><span class="p">)</span>
+model = Sequential()
+layers = [50, 100, 1]
+model.add(LSTM(layers[0], return_sequences=True, input_shape=(train_X.shape[1], train_X.shape[2])))
+model.add(Dropout(0.2))
+model.add(LSTM(layers[1], return_sequences=False))
+model.add(Dropout(0.2))
+model.add(Dense(output_dim=layers[2]))
+model.add(Activation(&quot;linear&quot;))
+model.compile(loss=&#39;mse&#39;, optimizer=&#39;rmsprop&#39;)
 </code></pre></div>
 <h3 id="carbon-monoxide">Carbon Monoxide<a class="headerlink" href="#carbon-monoxide" title="Permanent link">&para;</a></h3>
 <p>The CO model included the following features: <span><span class="MathJax_Preview">CO_{R}^{-1}</span><script type="math/tex">CO_{R}^{-1}</script></span>, <span><span class="MathJax_Preview">CO_R^{-2}</span><script type="math/tex">CO_R^{-2}</script></span>, <span><span class="MathJax_Preview">Temp</span><script type="math/tex">Temp</script></span> and <span><span class="MathJax_Preview">Temperature^2</span><script type="math/tex">Temperature^2</script></span>. The results can be seen below:</p>

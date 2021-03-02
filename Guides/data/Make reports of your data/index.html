@@ -1606,14 +1606,20 @@
                 
                 <p>Tools are provided to generate test or analysis reports, with a custom template. These are generated with the <code>jupyter nbconvert</code> using the preprocessor and tools in the <code>notebooks</code> and <code>template</code> folder. To generate a report, follow the steps:</p>
 <ol>
-<li>Tag the cells in your notebook. You can use the <a href="https://github.com/jupyterlab/jupyterlab-celltags">Jupyter Lab Celltags</a> extension. Don't tag the cells you want to hide, and tag the ones you want to show with <code>show_only_output</code>. This can be changed and add more tags, but we keep it this way for simplicity</li>
-<li>Go to the notebooks folder:
-<div class="highlight"><pre><span></span><code>cd notebooks
-</code></pre></div></li>
-<li>Type the command:
-<div class="highlight"><pre><span></span><code>jupyter nbconvert --config sc_nbconvert_config.py notebook.ipynb --sc_Preprocessor.expression=&quot;show_only_output&quot; --to html --TemplateExporter.template_file=./templates/full_sc --output-dir=../reports --output=OUTPUT_NAME
-</code></pre></div></li>
+<li>
+<p>Tag the cells in your notebook. You can use the <a href="https://github.com/jupyterlab/jupyterlab-celltags">Jupyter Lab Celltags</a> extension. Don't tag the cells you want to hide, and tag the ones you want to show with <code>show_only_output</code>. This can be changed and add more tags, but we keep it this way for simplicity</p>
+</li>
+<li>
+<p>Go to the notebooks folder:</p>
+</li>
 </ol>
+<div class="highlight"><pre><span></span><code>cd notebooks
+</code></pre></div>
+<ol>
+<li>Type the command:</li>
+</ol>
+<div class="highlight"><pre><span></span><code>jupyter nbconvert --config sc_nbconvert_config.py notebook.ipynb --sc_Preprocessor.expression=&quot;show_only_output&quot; --to html --TemplateExporter.template_file=./templates/full_sc --output-dir=../reports --output=OUTPUT_NAME
+</code></pre></div>
 <p>Where:</p>
 <ul>
 <li><code>sc_nbconvert_config.py</code> is the config</li>

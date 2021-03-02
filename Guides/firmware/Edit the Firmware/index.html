@@ -1782,7 +1782,7 @@
 <p><img alt="" src="/assets/images/sck_2/SCK21_data_connectors.png" /></p>
 <p>Connect the Atmel-ICE programmer to the 10 pin SWD connector and to your computer. Power the SCK via USB, you can use any USB charger or even your computer.</p>
 <p>Open a terminal, go to the folder where you cloned the firmware repository and run:</p>
-<div class="highlight"><pre><span></span><code><span class="nb">cd</span> smartcitizen-kit-21
+<div class="highlight"><pre><span></span><code>cd smartcitizen-kit-21
 ./make.py boot
 </code></pre></div>
 <p>You will see a lot of output when compiling, the led on the SCK should <em>breath</em> in <strong>green</strong> and you should see an output similar to this:</p>
@@ -1805,13 +1805,13 @@
 </div>
 <h3 id="manual-install">Manual install<a class="headerlink" href="#manual-install" title="Permanent link">&para;</a></h3>
 <p>If you want to install the firmware manually (or you had some problem with the build script) just follow this steps:</p>
-<div class="highlight"><pre><span></span><code><span class="nb">cd</span> sam
+<div class="highlight"><pre><span></span><code>cd sam
 pio run
 </code></pre></div>
 <p>After a lot of compilation messages you should see an output similar to this:</p>
 <p><img alt="" src="/assets/images/sck_2/pio_run.png" /></p>
 <p>then to convert the binary firmware to UF2 format do:</p>
-<div class="highlight"><pre><span></span><code><span class="nb">cd</span> ..
+<div class="highlight"><pre><span></span><code>cd ..
 ./tools/uf2conv.py -o SAM_firmware.uf2 sam/.pio/build/sck2/firmware.bin
 </code></pre></div>
 <p>you should see something like this:</p>

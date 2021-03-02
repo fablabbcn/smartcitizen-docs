@@ -2125,7 +2125,7 @@ sudo make install
 <p>In order to use the <a href="http://www.arm.com/products/system-ip/debug-trace/coresight-soc-components/serial-wire-debug.php">SWD connector</a> that the SCK features, by using <em>Bit Banging</em>, we connect it directly to the Raspberry Pi GPIOs:</p>
 <p><img alt="" src="https://i.imgur.com/qJ2fV3N.jpg" /></p>
 <hr />
-<p><img alt="" src="https://i.imgur.com/AEYc8sd.jpg  &quot;Raspberry Pi connected to SCK&quot; =400x" /></p>
+<p><img alt="" src="https://i.imgur.com/AEYc8sd.jpg" /></p>
 <h3 id="running-openocd-on-the-raspberry-pi">Running OpenOCD on the raspberry pi<a class="headerlink" href="#running-openocd-on-the-raspberry-pi" title="Permanent link">&para;</a></h3>
 <p>Once you are logged into the raspberry Pi you need a openOCD config file to start (ej. <em>sck.cfg</em>) with this content:</p>
 <div class="highlight"><pre><span></span><code>source [find interface/raspberrypi2-native.cfg]
@@ -2282,14 +2282,24 @@ Breakpoint 1, tick () at src/HOLA.cpp:9
 <h4 id="breakpoints">Breakpoints<a class="headerlink" href="#breakpoints" title="Permanent link">&para;</a></h4>
 <p><code>info breakpoints</code></p>
 <ul>
-<li>Retrieve information about breakpoints
+<li>
+<p>Retrieve information about breakpoints
 <div class="highlight"><pre><span></span><code>(gdb) info breakpoints
 Num     Type           Disp Enb
 ress    What
 1       breakpoint     keep y   0x00002140 in tick() at src/HOLA.cpp:9
     breakpoint already hit 15 times
 </code></pre></div>
-<code>break</code></li>
+<code>break</code></p>
+</li>
+<li>
+<p>Set a breakpoint in a specific function
+<div class="highlight"><pre><span></span><code>(gdb) break loop
+</code></pre></div></p>
+</li>
+<li>Set a breakpoint in a specific line (344)
+<div class="highlight"><pre><span></span><code>(gdb) break main.cpp:344
+</code></pre></div></li>
 </ul>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
@@ -2307,8 +2317,8 @@ ress    What
 </div>
 <p><code>commands</code></p>
 <ul>
-<li>
-<p>Set a <strong>list of actions</strong> related to the breakpoint:
+<li>Set a <strong>list of actions</strong> related to the breakpoint:</li>
+</ul>
 <div class="highlight"><pre><span></span><code>break main.cpp:50
 commands
 silent
@@ -2316,22 +2326,20 @@ printf &quot;count is %d\n&quot;,count
 cont
 end
 </code></pre></div>
-<code>delete</code></p>
-</li>
-<li>
-<p>Delete a breakpoint
+<p><code>delete</code></p>
+<ul>
+<li>Delete a breakpoint
 <div class="highlight"><pre><span></span><code>(gdb) delete 1
 (gdb) info breakpoints
 No breakpoints or watchpoints.
-</code></pre></div></p>
-</li>
+</code></pre></div></li>
 </ul>
 <h4 id="printing-setting-variables-and-more">Printing / setting variables and more<a class="headerlink" href="#printing-setting-variables-and-more" title="Permanent link">&para;</a></h4>
 <p><code>loop</code></p>
 <ul>
-<li>
-<p>Read what is around a certain function
-<div class="highlight"><pre><span></span><code>(gdb) l loop
+<li>Read what is around a certain function</li>
+</ul>
+<p><div class="highlight"><pre><span></span><code>(gdb) l loop
 25    //while (!Serial) {
 26      //; // wait for serial port to connect. Needed for native USB port only
 27    //}
@@ -2344,20 +2352,18 @@ No breakpoints or watchpoints.
 34    Serial.println(millis());
 </code></pre></div>
 <code>print</code></p>
-</li>
-<li>
-<p>Retrieve value of a specific variable
-<div class="highlight"><pre><span></span><code>(gdb) print timer
+<ul>
+<li>Retrieve value of a specific variable</li>
+</ul>
+<p><div class="highlight"><pre><span></span><code>(gdb) print timer
 $12 = 2
 </code></pre></div>
 <code>set</code></p>
-</li>
-<li>
-<p>Set variable to a certain value
-<div class="highlight"><pre><span></span><code>(gdb) set timer = 0
-</code></pre></div></p>
-</li>
+<ul>
+<li>Set variable to a certain value</li>
 </ul>
+<div class="highlight"><pre><span></span><code>(gdb) set timer = 0
+</code></pre></div>
 <h4 id="target-commands-load">Target commands (load)<a class="headerlink" href="#target-commands-load" title="Permanent link">&para;</a></h4>
 <p><code>load filename offset</code></p>
 <ul>
@@ -2375,15 +2381,17 @@ $12 = 2
 <p>b. Or hit <code>pio run</code> in another terminal located in your project root directory</p>
 </li>
 <li>
-<p>In gdb, <code>load</code> file. This will reload the file defined at the beginning of your debugging session and upload it to the target
+<p>In gdb, <code>load</code> file. This will reload the file defined at the beginning of your debugging session and upload it to the target</p>
+</li>
+</ol>
 <div class="highlight"><pre><span></span><code>(gdb) load
 Loading section .text, size 0x2e50 lma 0x2000
 Loading section .ramfunc, size 0x60 lma 0x4e50
 Loading section .data, size 0x110 lma 0x4eb0
 Start address 0x2910, load size 12224
 Transfer rate: 3 KB/sec, 4074 bytes/write.
-</code></pre></div></p>
-</li>
+</code></pre></div>
+<ol>
 <li>Keep debugging</li>
 </ol>
 <h3 id="gdb-console">GDB Console<a class="headerlink" href="#gdb-console" title="Permanent link">&para;</a></h3>

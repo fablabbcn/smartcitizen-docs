@@ -1991,17 +1991,17 @@
 <p>Once installed open the file <code>Smart-Citizen-Kit/sck_beta_v0_9_0/sck_beta_v0_9.ino</code></p>
 <h3 id="editing-the-code">Editing the code<a class="headerlink" href="#editing-the-code" title="Permanent link">&para;</a></h3>
 <p>If you want to set the network configuration manually, you should go to the <code>Constants.h</code> tab and modify the lines you see below:</p>
-<div class="highlight"><pre><span></span><code><span class="cp">#define networks 0</span>
-<span class="cp">#if (networks &gt; 0)</span>
-<span class="k">static</span> <span class="kt">char</span><span class="o">*</span> <span class="n">mySSID</span><span class="p">[</span><span class="n">networks</span><span class="p">]</span>      <span class="o">=</span> <span class="p">{</span>
-  <span class="s">&quot;SSID1&quot;</span>      <span class="p">,</span> <span class="s">&quot;SSID2&quot;</span>            <span class="p">};</span>
-<span class="k">static</span> <span class="kt">char</span><span class="o">*</span> <span class="n">myPassword</span><span class="p">[</span><span class="n">networks</span><span class="p">]</span>  <span class="o">=</span> <span class="p">{</span>
-  <span class="s">&quot;PASS1&quot;</span>      <span class="p">,</span> <span class="s">&quot;PASS2&quot;</span>            <span class="p">};</span>
-<span class="k">static</span> <span class="kt">char</span><span class="o">*</span> <span class="n">wifiEncript</span><span class="p">[</span><span class="n">networks</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="n">WPA2</span>         <span class="p">,</span> <span class="n">WPA2</span>               <span class="p">};</span>
-<span class="k">static</span> <span class="kt">char</span><span class="o">*</span> <span class="n">antennaExt</span><span class="p">[</span><span class="n">networks</span><span class="p">]</span>  <span class="o">=</span> <span class="p">{</span>
-  <span class="n">INT_ANT</span>      <span class="p">,</span> <span class="n">INT_ANT</span>            <span class="p">};</span>
-<span class="cp">#endif</span>
+<div class="highlight"><pre><span></span><code>#define networks 0
+#if (networks &gt; 0)
+static char* mySSID[networks]      = {
+  &quot;SSID1&quot;      , &quot;SSID2&quot;            };
+static char* myPassword[networks]  = {
+  &quot;PASS1&quot;      , &quot;PASS2&quot;            };
+static char* wifiEncript[networks] = {
+  WPA2         , WPA2               };
+static char* antennaExt[networks]  = {
+  INT_ANT      , INT_ANT            };
+#endif
 </code></pre></div>
 <p>The easiest way would be to write <code>"#define networks X"</code> (where X is the number of WI-FI networks you are going to use) and fill the options for your network:</p>
 <ul>
@@ -2010,17 +2010,17 @@
 <li>On <code>antennaExt</code> you can choose the type of antenna you are using (<code>INT_ANT</code> for internal antenna (default) or <code>EXT_ANT</code> for external antenna).</li>
 </ul>
 <p>If you register only one wifi credential, you should obtain something like this:</p>
-<div class="highlight"><pre><span></span><code><span class="cp">#define networks 1</span>
-<span class="cp">#if (networks &gt; 0)</span>
-<span class="kt">char</span><span class="o">*</span> <span class="n">mySSID</span><span class="p">[</span><span class="n">networks</span><span class="p">]</span>      <span class="o">=</span> <span class="p">{</span> <span class="s">&quot;MyWifiSSID&quot;</span> <span class="p">};</span>
-<span class="kt">char</span><span class="o">*</span> <span class="n">myPassword</span><span class="p">[</span><span class="n">networks</span><span class="p">]</span>  <span class="o">=</span> <span class="p">{</span> <span class="s">&quot;MyPassword&quot;</span> <span class="p">};</span>
-<span class="kt">char</span><span class="o">*</span> <span class="n">wifiEncript</span><span class="p">[</span><span class="n">networks</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span> <span class="n">WPA2</span> <span class="p">};</span>
-<span class="kt">char</span><span class="o">*</span> <span class="n">antennaExt</span><span class="p">[</span><span class="n">networks</span><span class="p">]</span>  <span class="o">=</span> <span class="p">{</span> <span class="n">INT_ANT</span> <span class="p">};</span>
-<span class="cp">#endif</span>
+<div class="highlight"><pre><span></span><code>#define networks 1
+#if (networks &gt; 0)
+char* mySSID[networks]      = { &quot;MyWifiSSID&quot; };
+char* myPassword[networks]  = { &quot;MyPassword&quot; };
+char* wifiEncript[networks] = { WPA2 };
+char* antennaExt[networks]  = { INT_ANT };
+#endif
 </code></pre></div>
-<p><em>Note that if you configure more than one Wi-fi network you have to separate the variables with a comma, for example:</em>
-<div class="highlight"><pre><span></span><code><span class="kt">char</span><span class="o">*</span> <span class="n">mySSID</span><span class="p">[</span><span class="n">networks</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span> <span class="s">&quot;MyFirstSSID&quot;</span><span class="p">,</span> <span class="s">&quot;MySecondSSID&quot;</span> <span class="p">};</span>
-</code></pre></div></p>
+<p><em>Note that if you configure more than one Wi-fi network you have to separate the variables with a comma, for example:</em></p>
+<div class="highlight"><pre><span></span><code>char* mySSID[networks] = { &quot;MyFirstSSID&quot;, &quot;MySecondSSID&quot; };
+</code></pre></div>
 <h2 id="uploading-the-code">Uploading the code<a class="headerlink" href="#uploading-the-code" title="Permanent link">&para;</a></h2>
 <p><img alt="Select the board" src="/assets/images/sck_1/arduino_board.png" /></p>
 <p>On the Arduino IDE <em>Tools</em> menu you should select the right <strong>Board</strong> in the <em>Boards</em> menu:</p>
