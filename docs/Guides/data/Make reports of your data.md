@@ -1,11 +1,15 @@
 Tools are provided to generate test or analysis reports, with a custom template. These are generated with the `jupyter nbconvert` using the preprocessor and tools in the `notebooks` and `template` folder. To generate a report, follow the steps:
 
 1. Tag the cells in your notebook. You can use the [Jupyter Lab Celltags](https://github.com/jupyterlab/jupyterlab-celltags) extension. Don't tag the cells you want to hide, and tag the ones you want to show with `show_only_output`. This can be changed and add more tags, but we keep it this way for simplicity
+
 2. Go to the notebooks folder:
+
 ```
 cd notebooks
 ```
+
 3. Type the command:
+
 ```
 jupyter nbconvert --config sc_nbconvert_config.py notebook.ipynb --sc_Preprocessor.expression="show_only_output" --to html --TemplateExporter.template_file=./templates/full_sc --output-dir=../reports --output=OUTPUT_NAME
 ```

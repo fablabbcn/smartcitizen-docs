@@ -79,7 +79,7 @@ If you want to force the ESP to upload, please, follow the steps below.
 
 	If you are an advance user managing a big deployment of devices you can obtain remotely the version of all the Kits you have registered by looking at the `hardware_info` property of each of your devices using the platform API `/v0/devices/`. When your Kit is in Wi-Fi mode, it publishes the information daily.
 
-	```json
+	```
 	"hardware_info": {
 		"id": "DFD098A750515157382E3120FF101D12",
 		"mac": "B6:E6:2D:66:47:6D",

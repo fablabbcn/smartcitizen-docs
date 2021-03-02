@@ -403,6 +403,7 @@ Loading section .data, size 0x110 lma 0x4eb0
 Start address 0x2910, load size 12224
 Transfer rate: 3 KB/sec, 4074 bytes/write.
 ```
+
 3. Keep debugging
 
 ### GDB Console

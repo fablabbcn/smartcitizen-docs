@@ -18,7 +18,7 @@ For bootloader upload you also need [OpenOCD](http://openocd.org/) somewhere in 
 
 To get the firmware just run:
 
-```bash
+```
 git clone --recursive https://github.com/fablabbcn/smartcitizen-kit-21
 ```
 
@@ -37,7 +37,7 @@ Connect the Atmel-ICE programmer to the 10 pin SWD connector and to your compute
 
 Open a terminal, go to the folder where you cloned the firmware repository and run:
 
-```bash
+```
 cd smartcitizen-kit-21
 ./make.py boot
 ```
@@ -60,7 +60,7 @@ The bootloader we just flashed allows a very simple way of uploading the SCK fir
 
 You can use the same script used to flash the bootloader (`make.py`) that will do everything for you: compile the firmware, convert the binary to UF2 format and upload it to the kit:
 
-```bash
+```
 python3 make.py build flash sam
 ```
 
@@ -77,7 +77,7 @@ A copy of the compiled software in UF2 format called _SAM_firmware.uf2_ will rem
 
 If you want to install the firmware manually (or you had some problem with the build script) just follow this steps:
 
-```bash
+```
 cd sam
 pio run
 ```
@@ -88,7 +88,7 @@ After a lot of compilation messages you should see an output similar to this:
 
 then to convert the binary firmware to UF2 format do:
 
-```bash
+```
 cd ..
 ./tools/uf2conv.py -o SAM_firmware.uf2 sam/.pio/build/sck2/firmware.bin
 ```
@@ -108,7 +108,7 @@ Now **double-click the reset button of your kit** open your favorite file browse
 
 Just like the other parts of the process this is also covered by our `make.py` script. So you can just do:
 
-```bash
+```
 python3 make.py build flash esp
 ```
 As before, if this is the first time you do it, it will take a while on downloading dependecies and building the firmware.
@@ -120,5 +120,3 @@ Our [upload script](https://github.com/fablabbcn/smartcitizen-kit-21/blob/master
 
 !!! info
 	Sometimes the ESP8266 and the uploader software don't get synced and the upload fails. Normally if you try again it will work. After first try you don't need to rebuild, you can just do `python3 make.py flash esp`.
-
-

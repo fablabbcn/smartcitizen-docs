@@ -63,7 +63,7 @@ In this section, we will detail some of the MOS related results obtained during 
 
 For both results shown below, we used an LSTM with 200 epochs training and the following structure:
 
-```python
+```
 
 from keras.models import Sequential
 from keras.layers import Dense, Activation, LSTM, Dropout

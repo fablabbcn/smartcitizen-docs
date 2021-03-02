@@ -131,6 +131,7 @@ extra:
   license: 'CC Attribution-NonCommercial-ShareAlike 4.0 International'
 
 # plugins:
+  # - tags
 #     - with-pdf:
 #         author: Smart Citizen
 #         copyright: 'CC Attribution-NonCommercial-ShareAlike 4.0 International'

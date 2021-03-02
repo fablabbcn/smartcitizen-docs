@@ -217,7 +217,7 @@ Once installed open the file `Smart-Citizen-Kit/sck_beta_v0_9_0/sck_beta_v0_9.in
 
 If you want to set the network configuration manually, you should go to the `Constants.h` tab and modify the lines you see below:
 
-```	cpp
+```
 #define networks 0
 #if (networks > 0)
 static char* mySSID[networks]      = {
@@ -239,7 +239,7 @@ The easiest way would be to write `"#define networks X"` (where X is the number 
 
 If you register only one wifi credential, you should obtain something like this:
 
-```	cpp
+```
 #define networks 1
 #if (networks > 0)
 char* mySSID[networks]      = { "MyWifiSSID" };
@@ -250,7 +250,8 @@ char* antennaExt[networks]  = { INT_ANT };
 ```
 
 *Note that if you configure more than one Wi-fi network you have to separate the variables with a comma, for example:*
-```cpp
+
+```
 char* mySSID[networks] = { "MyFirstSSID", "MySecondSSID" };
 ```
 
@@ -275,9 +276,7 @@ In case you have any issue please check the [Arduino Troubleshooting](https://ww
 
 ## Registering the kit in the platform
 
-
 After you’ve uploaded your settings, don’t forget to register your kit in our database by saving it’s mac address. To find the mac address, you can use the serial command “get mac”  by following the section [The Serial Way](#/start/manual-set-up-the-serial-way). Or have a look at the wifi module on the board and read the serial number under the bar code (something like “131G0006662116E4” on kit v1.0 or “0006662116E4” on kit v.1.1).
-
 
 ![Find The Mac Address](/assets/images/sck_1/mac_manual_sticker.jpg)
 
@@ -301,8 +300,3 @@ In both versions, yo have to attach the plus of solar panel to the plus pad of t
 
 ![Solar Panel](/assets/images/sck_1/v1.0/main_board_solar_panel.jpg)
 ![Solar Panel](/assets/images/sck_1/main_board_solar_panel.jpg)
-
-
-
-
-
