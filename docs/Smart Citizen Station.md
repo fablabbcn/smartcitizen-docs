@@ -5,6 +5,9 @@ Smart Citizen Station
 
 The Smart Citizen Station is a **modular open-source environmental monitoring system**. Multiple sensors can be added easily added, expanding the capabilities of the installation or replaced when they are damaged or the sensors lifetime is over. From a costs perspective, while being more expensive than the Smart Citizen Kit, it is also conceived as a low-cost solution. The design builds on top of the Smart Citizen Kit, adding an extra set of more accurate sensors, primarily aimed at measuring air pollutants. It aims at providing a solution that can be used by Citizens and Researchers to gather _advanced air pollution data_ not only from a scientific point of view but also as a tool to engage local communities on air pollution-related issues.
 
+!!! tip "Questions?"
+    How can we collaborate for my next research project? How much will it cost to make one? Is it hard to install? Contact our team at [info@smartcitizen.me](mailto: info@smartcitizen.me)
+
 <img src="https://live.staticflickr.com/65535/50977039556_541c4727a6_k.jpg" width="2000" height="1333" alt="Smart Citizen Station v3">
 
 !!! info "Intentionally fabbable"
