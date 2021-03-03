@@ -84,9 +84,16 @@ You will note that the kit _turns itself off_ while operating on battery. Actual
 
 #### Battery calculator
 
-You can use this battery calculator to estimate how much your battery would last:
+You can use the battery calculator to estimate how much your battery would last
 
-<iframe id="github-iframe" src="" width="100%" height="40%" frameborder="0" scrolling="no" style="min-height: 570px;"></iframe>
+!!! tip "SCK Battery Calculator"
+
+    <iframe id="github-iframe" src="" width="100%" height="40%" frameborder="0" scrolling="no" style="min-height: 570px;"></iframe>
+
+    !!! info "What's the SCK's Shell?"
+        Learn how to use the powerful SCK Shell. Check the [guide](/Guides/getting%20started/Using%20the%20Shell/).
+    
+
 <script>
     fetch('https://api.github.com/repos/fablabbcn/smartcitizen-tools/contents/calculator.htm')
         .then(function(response) {
