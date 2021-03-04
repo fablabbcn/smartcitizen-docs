@@ -61,14 +61,14 @@ The Station is powered through it's USB input. It can be reset by either:
 
 ### Power supply
 
-The Smart Citizen Station uses the [Smart Citizen Power Supply](/Components/boards/Power Supply.md) for power. The input of the station is the connector shown in the image below.
+The Smart Citizen Station uses the [Smart Citizen Power Supply](/Components/boards/Power Supply/) for power. The input of the station is the connector shown in the image below.
 
 <img src="https://live.staticflickr.com/65535/50977149542_eedda4d383_k.jpg" width="2000" height="1327" alt="Smart Citizen Station v3">
 
-Inside the station, power is distributed accross the different units. Data and power goes through the input, in order to connect to the [Data Board](/Components/boards/Data Board.md) and be able to use the [Shell](/Guides/getting started/Using the Shell.md). All voltage levels inside the station are below 5V.
+Inside the station, power is distributed accross the different units. Data and power goes through the input, in order to connect to the [Data Board](/Components/boards/Data Board/) and be able to use the [Shell](/Guides/getting started/Using the Shell/). All voltage levels inside the station are below 5V.
 
 !!! tip "Using the power supply"
-    For more information about how to handle the Smart Citizen Power Supply, have a look at [this guide](/Guides/deployments/Using the power supply.md) for safety instructions.
+    For more information about how to handle the Smart Citizen Power Supply, have a look at [this guide](/Guides/deployments/Using the power supply/) for safety instructions.
 
 ## Installation
 
@@ -222,7 +222,7 @@ SCAS2100XX
 
 This number is important to relate to the actual calibration values of the sensors, stored in the [data repository](https://github.com/fablabbcn/smartcitizen-data/tree/master/hardware). In order to postprocess the data and calculate pollutants, make sure that the `Hardware ID` is safely stored in the platform's device, by posting this data to `postprocessing_info` field of the device. You can follow [these instructions](/Guides/data/Handling calibration data/) to store the `postprocessing_info` of your device.
 
-All the data is sent in raw to the Smart Citizen Platform and it's then processed outside of the sensors themselves. Both raw, and processed data are kept on the platform and can be accessed at any time. Data can be published to other APIs or to [Zenodo](/Guides/data/Upload data to zenodo.md) as well, in case of research projects that seek contribution to Open Science Datasets.
+All the data is sent in raw to the Smart Citizen Platform and it's then processed outside of the sensors themselves. Both raw, and processed data are kept on the platform and can be accessed at any time. Data can be published to other APIs or to [Zenodo](/Guides/data/Upload data to zenodo/) as well, in case of research projects that seek contribution to Open Science Datasets.
 
 !!! tip "More on the processing of the data"
     Check [this guide](/Guides/data/Custom data processing/) to learn more about how to postprocess the data of the sensors your own way.

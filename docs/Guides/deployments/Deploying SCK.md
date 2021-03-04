@@ -45,10 +45,10 @@ The SCK can be powered through:
 
 - LiPo 3.7V Battery: default 2000mAh - large 6000mAh
 - Mains power, through an USB adaptor (not recommended) or a [custom power supply](https://github.com/fablabbcn/smartcitizen-enclosures/tree/master/SmartCitizen%20PowerSupply) in [this enclosure](https://uk.rs-online.com/web/p/junction-boxes/2663120/)
-- [Solar panel](https://github.com/fablabbcn/smartcitizen-enclosures/tree/master/SmartCitizen%20PowerSupply#solar-power-controller-optional): we use the [Solar Panel 6W 6V from Voltaic Systems](https://voltaicsystems.com/6-watt-panel/) with the [MPTT DF Robot DFR0559](https://wiki.dfrobot.com/Solar_Power_Manager_5V_SKU__DFR0559) and an additional LiPo Battery, all in [this enclosure](https://uk.rs-online.com/web/p/junction-boxes/2663120/)
+- [Solar panel](https://github.com/fablabbcn/smartcitizen-enclosures/tree/master/Power%20options#solar-panel): we use the [Solar Panel 6W 6V from Voltaic Systems](https://voltaicsystems.com/6-watt-panel/) with the [MPTT DF Robot DFR0559](https://wiki.dfrobot.com/Solar_Power_Manager_5V_SKU__DFR0559) and an additional LiPo Battery, all in [this enclosure](https://uk.rs-online.com/web/p/junction-boxes/2663120/)
 
 !!! tip "Using the power supply"
-    If you are using the Smart Citizen Power Supply, have a look at [this guide](/Guides/deployments/Using the power supply.md) for safety instructions.
+    If you are using the Smart Citizen Power Supply, have a look at [this guide](/Guides/deployments/Using%20the%20power%20supply) for safety instructions.
 
 ### Connectivity
 
