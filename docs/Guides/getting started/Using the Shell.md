@@ -137,7 +137,10 @@ In order to understand the reading and publication intervals, it is important to
 
 Each of the sensors can be configured independently, with a reading interval N times the _overall reading interval_. For instance, after the `SAM firmware V0.9.7`, all the sensors are read every 60s except the PMS5003, which is read every 5 minutes or 5 times the reading interval. 
 
-In the case of the publication interval to the Smart Citizen Platform, the  default is 3 minutes. 
+In the case of the publication interval to the Smart Citizen Platform, the  default is 3 minutes.
+
+!!! info "Battery calculator"
+    This configuration option is very interesting to be used for battery saving. Make sure you check the [battery calculator](/Smart%20Citizen%20Kit/#battery-calculator/)
 
 All this can be configured using the shell interface. For instance, to set the publication interval to every 10 minutes, we could do:
 
@@ -161,7 +164,7 @@ If we want to configure one specific sensor, we can do so by typing the followin
 
 ```
 SCK > sensor temp -interval 360
-The sensor read interval is calculated as a multiple of general read interval (360)
+The sensor read interval is calculated as a multiple of general read interval (180)
 Changing interval of Temperature to 360
 Saved configuration on eeprom!!
 ```
@@ -169,19 +172,27 @@ Saved configuration on eeprom!!
 For instance, if we try to do 1.5 times the reading interval of the temperature sensor, we will get:
 
 ```
-SCK > sensor temp -interval 90 
-The sensor read interval is calculated as a multiple of general read interval (60)
-Changing interval of Temperature to 60
+SCK > sensor temp -interval 240 
+The sensor read interval is calculated as a multiple of general read interval (180)
+Changing interval of Temperature to 180
 Saved configuration on eeprom!!
 ```
 
 Some **limitations** apply though:
 
-1. The minimum reading and publication interval is 30s
-2. The maximum reading interval is one day
-3. The maximum publication interval is one hour
+1. The minimum reading and publish interval is 5s
+2. The maximum reading interval is one hour
+3. The maximum publish interval is one hour
 
 For more customisation, please [email](mailto: support@smartcitizen.me) or post on the [forum](https://forum.smartcitizen.me).
+
+!!! warning "Default configuration"
+    At the moment there is no command to return to the default configuration. You should use:
+    ```
+    config -pubint 300 -readint 60
+    ...
+    sensor pm -interval 300
+    ```
 
 ### Get version data
 
