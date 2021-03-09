@@ -11,7 +11,7 @@
         <meta name="description" content="Smart Citizen Documentation">
       
       
-        <link rel="canonical" href="https://docs.smartcitizen.me/Guides/firmware/Debug%20the%20firmware/">
+        <link rel="canonical" href="https://docs.smartcitizen.me/Guides/calibration/Water%20sensors/">
       
       
         <meta name="author" content="Smart Citizen Team">
@@ -21,7 +21,7 @@
     
     
       
-        <title>Debug the firmware - Smart Citizen Docs</title>
+        <title>Water sensors - Smart Citizen Docs</title>
       
     
     
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#introduction" class="md-skip">
+        <a href="#water-sensors-calibration" class="md-skip">
           Skip to content
         </a>
       
@@ -93,7 +93,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Debug the firmware
+              Water sensors
             
           </span>
         </div>
@@ -1095,12 +1095,10 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-3" type="checkbox" id="nav-4-3" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-3" type="checkbox" id="nav-4-3">
     
     <label class="md-nav__link" for="nav-4-3">
       Firmware
@@ -1120,7 +1118,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Update%20the%20firmware/" title="Update the firmware" class="md-nav__link">
+    <a href="../../firmware/Update%20the%20firmware/" title="Update the firmware" class="md-nav__link">
       Update the firmware
     </a>
   </li>
@@ -1132,7 +1130,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Edit%20the%20Firmware/" title="Edit the firmware" class="md-nav__link">
+    <a href="../../firmware/Edit%20the%20Firmware/" title="Edit the firmware" class="md-nav__link">
       Edit the firmware
     </a>
   </li>
@@ -1142,235 +1140,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Debug the firmware
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-    
-    <a href="./" title="Debug the firmware" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../../firmware/Debug%20the%20firmware/" title="Debug the firmware" class="md-nav__link">
       Debug the firmware
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#introduction" class="md-nav__link">
-    Introduction
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#debugger-setup-using-a-raspberry-pi" class="md-nav__link">
-    Debugger setup using a Raspberry Pi
-  </a>
-  
-    <nav class="md-nav" aria-label="Debugger setup using a Raspberry Pi">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#openocd-installation" class="md-nav__link">
-    Openocd installation
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#running-openocd-on-the-raspberry-pi" class="md-nav__link">
-    Running OpenOCD on the raspberry pi
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#using-openocd-remotely-from-other-computer" class="md-nav__link">
-    Using OpenOCD remotely from other computer
-  </a>
-  
-    <nav class="md-nav" aria-label="Using OpenOCD remotely from other computer">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#uploading-arduino-original-bootloader" class="md-nav__link">
-    Uploading Arduino original bootloader
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#uploading-sck-firmware" class="md-nav__link">
-    Uploading SCK Firmware
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#gdb" class="md-nav__link">
-    GDB
-  </a>
-  
-    <nav class="md-nav" aria-label="GDB">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#general-description" class="md-nav__link">
-    General description
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#debugging-session-with-raspberry-pi-as-the-openocd-server" class="md-nav__link">
-    Debugging session with Raspberry Pi as the OpenOCD server
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#gdb-commands" class="md-nav__link">
-    GDB commands
-  </a>
-  
-    <nav class="md-nav" aria-label="GDB commands">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#continuing-and-stepping" class="md-nav__link">
-    Continuing and stepping
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#breakpoints" class="md-nav__link">
-    Breakpoints
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#printing-setting-variables-and-more" class="md-nav__link">
-    Printing / setting variables and more
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#target-commands-load" class="md-nav__link">
-    Target commands (load)
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#making-changes-in-the-code" class="md-nav__link">
-    Making changes in the code
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#gdb-console" class="md-nav__link">
-    GDB Console
-  </a>
-  
-    <nav class="md-nav" aria-label="GDB Console">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#tui" class="md-nav__link">
-    TUI
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#gdb-init-file" class="md-nav__link">
-    GDB init file
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#gdb-from-sublime-text" class="md-nav__link">
-    GDB from Sublime Text
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#reference" class="md-nav__link">
-    Reference
-  </a>
-  
-    <nav class="md-nav" aria-label="Reference">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#general-gdb-references-and-examples" class="md-nav__link">
-    General GDB references and examples
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#additional-notes-from-platformio-configuration" class="md-nav__link">
-    Additional notes from Platformio configuration
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -1383,10 +1157,12 @@
           
           
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-4" type="checkbox" id="nav-4-4">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-4" type="checkbox" id="nav-4-4" checked>
     
     <label class="md-nav__link" for="nav-4-4">
       Calibration
@@ -1404,11 +1180,183 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../calibration/Water%20sensors/" title="Water sensors" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Water sensors
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" title="Water sensors" class="md-nav__link md-nav__link--active">
       Water sensors
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#calibration-on-the-smart-citizen-kit" class="md-nav__link">
+    Calibration on the Smart Citizen Kit
+  </a>
+  
+    <nav class="md-nav" aria-label="Calibration on the Smart Citizen Kit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#atlas-ph" class="md-nav__link">
+    Atlas PH
+  </a>
+  
+    <nav class="md-nav" aria-label="Atlas PH">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#3-point-calibration" class="md-nav__link">
+    3-point calibration
+  </a>
+  
+    <nav class="md-nav" aria-label="3-point calibration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mid-point-calibration" class="md-nav__link">
+    Mid point calibration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#low-point-calibration" class="md-nav__link">
+    Low Point Calibration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#high-point-calibration" class="md-nav__link">
+    High Point Calibration
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atlas-ec" class="md-nav__link">
+    Atlas EC
+  </a>
+  
+    <nav class="md-nav" aria-label="Atlas EC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#2-point-calibration" class="md-nav__link">
+    2-point calibration
+  </a>
+  
+    <nav class="md-nav" aria-label="2-point calibration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#set-probe-type" class="md-nav__link">
+    Set probe type
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dry-calibration" class="md-nav__link">
+    Dry calibration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#low-point-calibration_1" class="md-nav__link">
+    Low point calibration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#high-point-calibration_1" class="md-nav__link">
+    High point calibration
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atlas-do" class="md-nav__link">
+    Atlas DO
+  </a>
+  
+    <nav class="md-nav" aria-label="Atlas DO">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#option-a-single-point-calibration" class="md-nav__link">
+    OPTION A: Single point calibration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-b-2-point-calibration" class="md-nav__link">
+    OPTION B: 2-point calibration
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -1418,7 +1366,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../calibration/Soil%20moisture%20sensors/" title="Soil sensors" class="md-nav__link">
+    <a href="../Soil%20moisture%20sensors/" title="Soil sensors" class="md-nav__link">
       Soil sensors
     </a>
   </li>
@@ -1880,6 +1828,8 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1888,120 +1838,46 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#introduction" class="md-nav__link">
-    Introduction
+  <a href="#calibration-on-the-smart-citizen-kit" class="md-nav__link">
+    Calibration on the Smart Citizen Kit
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#debugger-setup-using-a-raspberry-pi" class="md-nav__link">
-    Debugger setup using a Raspberry Pi
-  </a>
-  
-    <nav class="md-nav" aria-label="Debugger setup using a Raspberry Pi">
+    <nav class="md-nav" aria-label="Calibration on the Smart Citizen Kit">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#openocd-installation" class="md-nav__link">
-    Openocd installation
+  <a href="#atlas-ph" class="md-nav__link">
+    Atlas PH
   </a>
   
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#running-openocd-on-the-raspberry-pi" class="md-nav__link">
-    Running OpenOCD on the raspberry pi
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#using-openocd-remotely-from-other-computer" class="md-nav__link">
-    Using OpenOCD remotely from other computer
-  </a>
-  
-    <nav class="md-nav" aria-label="Using OpenOCD remotely from other computer">
+    <nav class="md-nav" aria-label="Atlas PH">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#uploading-arduino-original-bootloader" class="md-nav__link">
-    Uploading Arduino original bootloader
+  <a href="#3-point-calibration" class="md-nav__link">
+    3-point calibration
   </a>
   
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#uploading-sck-firmware" class="md-nav__link">
-    Uploading SCK Firmware
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#gdb" class="md-nav__link">
-    GDB
-  </a>
-  
-    <nav class="md-nav" aria-label="GDB">
+    <nav class="md-nav" aria-label="3-point calibration">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#general-description" class="md-nav__link">
-    General description
+  <a href="#mid-point-calibration" class="md-nav__link">
+    Mid point calibration
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#debugging-session-with-raspberry-pi-as-the-openocd-server" class="md-nav__link">
-    Debugging session with Raspberry Pi as the OpenOCD server
+  <a href="#low-point-calibration" class="md-nav__link">
+    Low Point Calibration
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#gdb-commands" class="md-nav__link">
-    GDB commands
-  </a>
-  
-    <nav class="md-nav" aria-label="GDB commands">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#continuing-and-stepping" class="md-nav__link">
-    Continuing and stepping
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#breakpoints" class="md-nav__link">
-    Breakpoints
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#printing-setting-variables-and-more" class="md-nav__link">
-    Printing / setting variables and more
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#target-commands-load" class="md-nav__link">
-    Target commands (load)
+  <a href="#high-point-calibration" class="md-nav__link">
+    High Point Calibration
   </a>
   
 </li>
@@ -2011,31 +1887,51 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#making-changes-in-the-code" class="md-nav__link">
-    Making changes in the code
-  </a>
+      </ul>
+    </nav>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#gdb-console" class="md-nav__link">
-    GDB Console
+  <a href="#atlas-ec" class="md-nav__link">
+    Atlas EC
   </a>
   
-    <nav class="md-nav" aria-label="GDB Console">
+    <nav class="md-nav" aria-label="Atlas EC">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#tui" class="md-nav__link">
-    TUI
+  <a href="#2-point-calibration" class="md-nav__link">
+    2-point calibration
+  </a>
+  
+    <nav class="md-nav" aria-label="2-point calibration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#set-probe-type" class="md-nav__link">
+    Set probe type
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#gdb-init-file" class="md-nav__link">
-    GDB init file
+  <a href="#dry-calibration" class="md-nav__link">
+    Dry calibration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#low-point-calibration_1" class="md-nav__link">
+    Low point calibration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#high-point-calibration_1" class="md-nav__link">
+    High point calibration
   </a>
   
 </li>
@@ -2045,37 +1941,35 @@
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+        
           <li class="md-nav__item">
-  <a href="#gdb-from-sublime-text" class="md-nav__link">
-    GDB from Sublime Text
+  <a href="#atlas-do" class="md-nav__link">
+    Atlas DO
+  </a>
+  
+    <nav class="md-nav" aria-label="Atlas DO">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#option-a-single-point-calibration" class="md-nav__link">
+    OPTION A: Single point calibration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-b-2-point-calibration" class="md-nav__link">
+    OPTION B: 2-point calibration
   </a>
   
 </li>
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#reference" class="md-nav__link">
-    Reference
-  </a>
-  
-    <nav class="md-nav" aria-label="Reference">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#general-gdb-references-and-examples" class="md-nav__link">
-    General GDB references and examples
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#additional-notes-from-platformio-configuration" class="md-nav__link">
-    Additional notes from Platformio configuration
-  </a>
   
 </li>
         
@@ -2096,7 +1990,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/fablabbcn/smartcitizen-docs/edit/master/docs/Guides/firmware/Debug the firmware.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/fablabbcn/smartcitizen-docs/edit/master/docs/Guides/calibration/Water sensors.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
@@ -2104,384 +1998,230 @@
                   
                 
                 
-                  <h1>Debug the firmware</h1>
-                
-                <h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
-<p>Sometimes (many times actually), our code won't do what we want it to do and we need to take a look at what it's doing. By using a <strong>debugger</strong> we will be able to see what is going on <em>inside</em> another program while it executes or even crashes. This is fairly straight forward when you code for a modern day computer, since most IDEs have a proper interface integrated for it. However, debugging a chip like the <em>SAMD21</em> can sometimes be tricky and here is where it's interesting to use a debugging kit.</p>
-<p><img alt="" src="https://imgs.xkcd.com/comics/fixing_problems.png" /></p>
-<p>To keep it simple: our final target is to be able to <strong>interact</strong> with the SAMD21 (or the chip) <strong>while it's executing the program</strong> and tell it to pause the execution, give us the value of some variables and then continue. We will release a fairly extensive report with documentation on this process, but for those interested in reading an overview on how to debug, this post can be a short introduction.</p>
-<p>So, here we go! The first item we need is the <a href="http://openocd.org/"><strong>Open On-Chip Debugger</strong> (OpenOCD)</a> which provides debugging with the assistance of a <strong>debug adapter</strong>. This adapter is a small hardware module which helps provide the right kind of electrical signaling to the target being debugged. These are required since the debug host, on which OpenOCD runs (i.e. your computer, a Raspberry PI...) won’t usually have native support for such signaling, or the connector needed to hook up to the target.</p>
-<p><img alt="" src="https://i.imgur.com/qJ2fV3N.jpg" /></p>
-<p>These adapters are sometimes packaged as discrete dongles, which may generically be called <strong>hardware interface dongles</strong> (and are quite expensive). Some development boards also integrate them directly, which may let the development board connect directly to the debug host over USB (and sometimes also to power it over USB, like the <a href="https://store.arduino.cc/genuino-zero">Arduino Genuino Zero</a>). In the case of the <strong>Smart Smart Citizen Kit</strong>, we have a <strong>SWD</strong> Adapter that supports <em>Serial Wire Debug</em> signaling to communicate with the <em>ARM core</em>. In our approach, <strong>using a complete open toolchain</strong>, OpenOCD is be running on a Raspberry Pi, and communicating with the SCK's SWD through the GPIO pins of the Pi.</p>
-<p>Finally, to be able to actually <strong>see what is going on inside our firmware while it executes</strong>, we need something that is able to read and understand the machine code and hand it over to a human understandable interface. This is where <a href="https://www.gnu.org/software/gdb/"><strong>GDB</strong></a> kicks in and helps us by:</p>
+                <h1 id="water-sensors-calibration">Water Sensors Calibration<a class="headerlink" href="#water-sensors-calibration" title="Permanent link">&para;</a></h1>
+<p><img alt="" src="https://i.imgur.com/wRIfhks.jpg" /></p>
+<h2 id="calibration-on-the-smart-citizen-kit">Calibration on the Smart Citizen Kit<a class="headerlink" href="#calibration-on-the-smart-citizen-kit" title="Permanent link">&para;</a></h2>
+<p>The Smart Citizen firmware has built-in support for the calibration of the sensors. In order to calibrate the sensors you will need to use the <a href="/Guides/getting started/Using the Shell/">SCK Shell</a>.</p>
+<p>To enable the sensors you just need to plug you board to the Smart Citizen kit aux port and reboot the Smart Citizen Kit and the sensors will be handled by the board.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>When calibrating <strong>don't use the normal <code>read sensor</code> command</strong>, this command applies temperature/salinity compensation, calibration should be done without any compensation. Instead you should use <code>control sensorName com r</code> and that will return the raw metrics that sensor can provide. On the documentation of each sensor calibration procedure we describe the format of this metrics.</p>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>After finishing the calibration process <strong>restart your SCK</strong> to start from a clean state.</p>
+</div>
+<h3 id="atlas-ph">Atlas PH<a class="headerlink" href="#atlas-ph" title="Permanent link">&para;</a></h3>
+<p>The pH value at current temperature can be found on the reference table on the calibration solution bottle. If the current temperature is not on it, use the closest value.</p>
+<div class="admonition info">
+<p class="admonition-title">Datasheet</p>
+<p><a href="https://www.atlas-scientific.com/files/pH_EZO_Datasheet.pdf">Datasheet</a> (calibration theory on page 11, and commands on page 52)</p>
+</div>
+<p><strong>Example commands</strong></p>
+<div class="highlight"><pre><span></span><code>control ph com r
+control ph com cal,[mid,low,high],value
+control ph com cal,clear
+control ph com cal,?
+</code></pre></div>
+<h4 id="3-point-calibration">3-point calibration<a class="headerlink" href="#3-point-calibration" title="Permanent link">&para;</a></h4>
+<p>First start a serial communication with the Smart Citizen Kit with <code>screen</code> or <code>pio device monitor</code>or even the serial monitor of the Arduino IDE.</p>
+<p>Order of the calibration : </p>
+<ol>
+<li>mid point</li>
+<li>low point</li>
+<li>high point</li>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Always calibrate the mid point first because it calibration erase all the previous calibration done.</p>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p><strong>Always clean the probe with distilled water between each calibration</strong></p>
+</div>
+<h5 id="mid-point-calibration">Mid point calibration<a class="headerlink" href="#mid-point-calibration" title="Permanent link">&para;</a></h5>
+<p>Put the sensor in the pH 7 calibration solution. </p>
+<p><img alt="" src="https://i.imgur.com/WhpJiN2.png" /></p>
 <ul>
-<li>Starting our program, specifying anything that might affect its behavior.</li>
-<li>Make our program stop on specified conditions.</li>
-<li>Examine what has happened when our program has stopped.</li>
-<li>Change things in our program, so we can experiment with correcting the effects of one bug and go on to learn about another.</li>
+<li>Read the sensor multiple times until the reading is stable:</li>
 </ul>
-<p>GDB and OpenOCD will be running in a Raspberry Pi hooked up to the SWD interface of the SCK, and we will see what's going on in them from our computer's terminal via SSH. Fairly <em>simple</em>, right? Now, we can make some changes to our code, make GDB flash it to the SCK and keep debugging in a completely open toolchain!</p>
-<h2 id="debugger-setup-using-a-raspberry-pi">Debugger setup using a Raspberry Pi<a class="headerlink" href="#debugger-setup-using-a-raspberry-pi" title="Permanent link">&para;</a></h2>
-<ul>
-<li>
-<p>First download and copy <a href="https://www.raspberrypi.org/downloads/raspbian/">Raspbian Lite</a> to your SDcard, here are the installation <a href="https://www.raspberrypi.org/documentation/installation/installing-images/README.md">docs</a>.</p>
-</li>
-<li>
-<p>Add wifi configuration</p>
-<p>Create a file name <code>wpa_supplicant.conf</code> on the <code>/boot</code> partition of the SD card, the content of this file should looks like this:</p>
-<p><div class="highlight"><pre><span></span><code>ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
-update_config=1
-
-network={
-    ssid=&quot;wifi_ssid&quot;
-    psk=&quot;wifi_password&quot;
-}
-</code></pre></div>
-Replacing wifi_ssid and wifi_password with your actual wifi network     information. The wpa_supplicant.conf file will be copied to /etc/wpa_supplicant/ directory automatically once the Raspberry Pi is booted up.</p>
-</li>
-<li>
-<p>Enable SSH server.</p>
-<p>SSH access is disabled as default for security reasons. To enable the SSH server when Raspberry Pi is booted up for the first time: create a file called <code>ssh</code> with no file extension and no contents, and copy it to the <code>/boot</code> partition on the SD card.</p>
-</li>
-<li>
-<p>Find your raspberry on the network</p>
-</li>
-</ul>
-<p>In order to find a raspberry pi over the network we can use commands like these:</p>
-<p><strong>Linux</strong></p>
-<div class="highlight"><pre><span></span><code>MY_IP_RANGE=$(ip addr | grep &#39;state UP&#39; -A2 | tail -n1 | awk &#39;{print $2}&#39;) &amp;&amp; nmap -sn $MY_IP_RANGE &amp;&amp; IP=$(arp -na | grep b8:27:eb | grep -Eo &#39;[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}&#39;) &amp;&amp; ssh $IP;
-</code></pre></div>
-<p><strong>Mac</strong> </p>
-<div class="highlight"><pre><span></span><code>MY_RANGE=$(ip addr | grep &quot;UP&quot; -A3 | grep &#39;192&#39; -A0 | awk &#39;{print $2}&#39;) &amp;&amp; nmap -sn $MY_RANGE &amp;&amp; arp -na | grep b8:27:eb
+<div class="highlight"><pre><span></span><code>control ph com r
+6.48
+control ph com r
+6.45
+...
 </code></pre></div>
 <ul>
-<li>
-<p>SSH login without password:</p>
-<ul>
-<li>If you have never generated a RSA key: <code>ssh-keygen</code> without passphrase</li>
-<li>Copy the key to the Raspberry: <code>ssh-copy-id -i ~/.ssh/id_rsa.pub raspi-address</code></li>
+<li>Issue the midpoint calibration command:
+<div class="highlight"><pre><span></span><code>control atlas ph com cal,mid,[value of pH at current temperature]
+</code></pre></div></li>
 </ul>
-<p>Once booted, it will connect to the network. The command above (<code>MY_IP...</code>) finds it and logs into it via SSH.</p>
-</li>
-</ul>
-<p>Once you are logged to your raspberry pi and connected to the internet, do a <strong>system upgrade</strong>:
-<div class="highlight"><pre><span></span><code>sudo apt-get install rpi-update
-sudo rpi-update
-sudo apt-get update &amp;&amp; sudo apt-get dist-upgrade
+<p><span style="text-decoration:underline">example at 30°C :</span> </p>
+<div class="highlight"><pre><span></span><code>control atlas ph com cal,mid,6.99 
 </code></pre></div>
-Install some <strong>dependencies</strong>:</p>
-<div class="highlight"><pre><span></span><code>sudo apt-get install git autoconf libtool make pkg-config libusb-1.0-0 libusb-1.0-0-dev telnet sshfs
-</code></pre></div>
-<h3 id="openocd-installation">Openocd installation<a class="headerlink" href="#openocd-installation" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Clone <strong>openocd</strong> repository and compile:</li>
-</ul>
-<div class="highlight"><pre><span></span><code>git clone git://git.code.sf.net/p/openocd/code openocd-code
-cd openocd-code
-./bootstrap
-./configure --enable-sysfsgpio --enable-bcm2835gpio
-make
-sudo make install
-</code></pre></div>
-<p>The list of interfaces that openOCD can use is under: <em>/usr/local/share/openocd/scripts/interface</em>.</p>
-<p>In order to use the <a href="http://www.arm.com/products/system-ip/debug-trace/coresight-soc-components/serial-wire-debug.php">SWD connector</a> that the SCK features, by using <em>Bit Banging</em>, we connect it directly to the Raspberry Pi GPIOs:</p>
-<p><img alt="" src="https://i.imgur.com/qJ2fV3N.jpg" /></p>
+<p>After this command if you take a PH reading the result should be 7.00 (or very close to it)</p>
+<h5 id="low-point-calibration">Low Point Calibration<a class="headerlink" href="#low-point-calibration" title="Permanent link">&para;</a></h5>
+<p>Repeat the procedure with the <strong>Low point</strong> 4.00 solution (the red one).</p>
+<h5 id="high-point-calibration">High Point Calibration<a class="headerlink" href="#high-point-calibration" title="Permanent link">&para;</a></h5>
+<p>The same step with <strong>High point</strong> 10.00 calibration solution (blue).</p>
 <hr />
-<p><img alt="" src="https://i.imgur.com/AEYc8sd.jpg" /></p>
-<h3 id="running-openocd-on-the-raspberry-pi">Running OpenOCD on the raspberry pi<a class="headerlink" href="#running-openocd-on-the-raspberry-pi" title="Permanent link">&para;</a></h3>
-<p>Once you are logged into the raspberry Pi you need a openOCD config file to start (ej. <em>sck.cfg</em>) with this content:</p>
-<div class="highlight"><pre><span></span><code>source [find interface/raspberrypi2-native.cfg]
-transport select swd
-
-set CHIPNAME at91samd21g18
-source [find target/at91samdXX.cfg]
-
-adapter_nsrst_delay 100
-adapter_nsrst_assert_width 100
-
-init
-targets
-reset halt
-</code></pre></div>
-<p>You can store this file in OpenOCD scripts dir so it will auto find it</p>
-<div class="highlight"><pre><span></span><code>sudo mv sck.cfg /usr/local/share/openocd/scripts/
-</code></pre></div>
-<p>and then run the OpenOCD server with:</p>
-<div class="highlight"><pre><span></span><code>sudo openocd -f sck.cfg
-</code></pre></div>
-<p>Then you can connect to OpenOCD, if you want to connect from an external computer, replace <code>127.0.0.1</code> with your Raspberry Pi IP address.
-<div class="highlight"><pre><span></span><code>telnet 127.0.0.1 4444
-</code></pre></div></p>
-<div class="admonition example">
-<p class="admonition-title">Example</p>
-<p>On a <strong><em>arduino zero</em></strong> go to the directory where the *.cfg is and:
-<div class="highlight"><pre><span></span><code>openocd -f arduino_zero.cfg
-Open On-Chip Debugger 0.10.0
-Licensed under GNU GPL v2
-For bug reports, read
-    http://openocd.org/doc/doxygen/bugs.html
-Info : auto-selecting first available session transport &quot;swd&quot;. To override use &#39;transport select &lt;transport&gt;&#39;.
-none separate
-adapter speed: 400 kHz
-cortex_m reset_config sysresetreq
-Info : CMSIS-DAP: SWD  Supported
-Info : CMSIS-DAP: Interface Initialised (SWD)
-Info : CMSIS-DAP: FW Version = 02.01.0157
-Info : SWCLK/TCK = 1 SWDIO/TMS = 1 TDI = 1 TDO = 1 nTRST = 0 nRESET = 1
-Info : CMSIS-DAP: Interface ready
-Info : clock speed 400 kHz
-Info : SWD DPIDR 0x0bc11477
-Info : at91samd21g18.cpu: hardware has 4 breakpoints, 2 watchpoints
-</code></pre></div></p>
-</div>
-<h2 id="using-openocd-remotely-from-other-computer">Using OpenOCD remotely from other computer<a class="headerlink" href="#using-openocd-remotely-from-other-computer" title="Permanent link">&para;</a></h2>
-<p>We need to give the OpenOCD server access to your project files that are remotely stored. To do this you can mount your working directory remotely on the Raspberry Pi via SSH:</p>
-<p><div class="highlight"><pre><span></span><code>ssh pi@raspi_address
-pi$ mkdir working_dir
-pi$ sshfs user@computer_address:working_path working_dir
-pi$ cd working_dir
-pi$ sudo openocd -f sck.cfg
-</code></pre></div>
-Then you can connect to OpenOCD from your computer with:
-<div class="highlight"><pre><span></span><code>telnet raspi_address 4444
-</code></pre></div></p>
-<h3 id="uploading-arduino-original-bootloader">Uploading Arduino original bootloader<a class="headerlink" href="#uploading-arduino-original-bootloader" title="Permanent link">&para;</a></h3>
-<ul>
-<li>
-<p>Get the bootloader file <a href="https://github.com/arduino/ArduinoCore-samd/tree/master/bootloaders/zero">here</a> and build it.</p>
-</li>
-<li>
-<p>Connect to OpenOCD server and run:
-<div class="highlight"><pre><span></span><code>reset halt
-at91samd bootloader 0
-at91samd chip-erase
-program samd21_sam_ba.bin verify
-at91samd bootloader 8192
-reset run
-</code></pre></div>
-If you don't see any error youre done!</p>
-</li>
-</ul>
-<h3 id="uploading-sck-firmware">Uploading SCK Firmware<a class="headerlink" href="#uploading-sck-firmware" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Install platformio, download and build SCK firmware</li>
-<li>Connect to OpenOCD server and run:</li>
-</ul>
-<div class="highlight"><pre><span></span><code>reset halt
-flash write_image firmware.bin 8192
-verify_image firmware.bin 8192
-reset run
-reset run
-</code></pre></div>
-<h2 id="gdb">GDB<a class="headerlink" href="#gdb" title="Permanent link">&para;</a></h2>
-<h3 id="general-description">General description<a class="headerlink" href="#general-description" title="Permanent link">&para;</a></h3>
-<p>The purpose of a debugger such as GDB is to allow you to see what is going on “inside” another program while it executes—or what another program was doing at the moment it crashed.</p>
-<p>GDB can do four main kinds of things (plus other things in support of these) to help you catch bugs in the act:
-* Start your program, specifying anything that might affect its behavior.
-* Make your program stop on specified conditions.
-* Examine what has happened, when your program has stopped.
-* Change things in your program, so you can experiment with correcting the effects of one bug and go on to learn about another.</p>
-<h3 id="debugging-session-with-raspberry-pi-as-the-openocd-server">Debugging session with Raspberry Pi as the OpenOCD server<a class="headerlink" href="#debugging-session-with-raspberry-pi-as-the-openocd-server" title="Permanent link">&para;</a></h3>
-<p>Once your raspberry pi is setup with above instructions you can just do:</p>
-<div class="highlight"><pre><span></span><code>ssh pi@RaspberryAddress sudo openocd -f sck.cfg &amp;
-cd /platformio_project/path
-arm-none-eabi-gdb ./pioenvs/zeroUSB/firmware.elf
-(gdb) target remote RaspberryAddress:3333
-(gdb) monitor reset run
-</code></pre></div>
-<p>If you are using <em>platformio</em>, you need to modify the compiling option to avoid optimisation with -0g message to the compiler. In case you are not using <em>platformio</em>, activate verbose compiling output at Arduino IDE and find your compiled .elf directory.</p>
-<div class="highlight"><pre><span></span><code>[env:zeroUSB]
-platform = atmelsam
-board = zeroUSB
-framework = arduino
-build_flags = -Og
-</code></pre></div>
-<p>Now we are all set and ready to go. The debugger is waiting for instructions on the execution, which we detail below.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p><strong>Quick handy instructions inside GDB environment</strong>
-1. <em>(gdb)</em> appears in every line and you don't have to type it each time
-2. In case you need to exit GDB, just type in <code>quit</code>, but remember always killing the process before, should you have a target running
-<div class="highlight"><pre><span></span><code>(gdb) kill
-(gdb) quit
-</code></pre></div>
-3. <code>RET</code> repeats the previous command</p>
+<p><em>(not tested)</em> If your calibration solutions are not 4, 7 and 10, you can still use them and replace <code>[value of pH at current temperature]</code> by your values.</p>
 </div>
-<h3 id="gdb-commands">GDB commands<a class="headerlink" href="#gdb-commands" title="Permanent link">&para;</a></h3>
-<p>All commands in gdb during debugging are detailed in the GDB guide, chapter <a href="https://sourceware.org/gdb/onlinedocs/gdb/Continuing-and-Stepping.html">GDB commands in detail (continue and stepping)</a></p>
-<p>An <strong>extract</strong> of some useful commands are detailed below:</p>
-<h4 id="continuing-and-stepping">Continuing and stepping<a class="headerlink" href="#continuing-and-stepping" title="Permanent link">&para;</a></h4>
-<p><code>continue [ignore-count]</code></p>
-<ul>
-<li>Resumes program execution until next breakpoint. <code>[ignore-count]</code> argument allows to specify a further number of times to ingore a breakpoint.
-<div class="highlight"><pre><span></span><code>(gdb) continue
-Continuing.
-
-Breakpoint 1, tick () at src/HOLA.cpp:9
-9   void tick() {
-</code></pre></div></li>
-</ul>
-<p><code>step count</code></p>
-<ul>
-<li>Continues running your program until control reaches a <strong>different source line</strong>, only availabe for source lines and functions compiled with debugging information. <code>count</code> is optional and states the number of steps to be performed before stopping, if no breakpoint arrives earlier.</li>
-</ul>
-<p><code>next [count]</code></p>
-<ul>
-<li>Continue to the next source line <strong>without going into functions</strong>. It has the same functionality as step, but it stays in the same stack frame. <code>count</code> works as in <code>step count</code>. As well, it understands jumps calls as in the end of <code>for</code> loops and return to the beginning of the loop.</li>
-</ul>
 <div class="admonition info">
-<p class="admonition-title">Info</p>
-<p><code>set step-mode on/off</code> sets the behaviour of <code>(gdb)</code> when stepping into a function with no debugging information. In the case of <code>step-mode on</code>, it inspects the first line of code of the function, whereas on <code>step-mode off</code> it skips the function completely.</p>
+<p>The command <code>control com cal,?</code> can be used to check the calibration status as explained on datasheet page 52. The answers can be:</p>
+<ul>
+<li><strong><code>?CAL,0</code></strong> → No calibration done</li>
+<li><strong><code>?CAL,1</code></strong> → One point calibration done</li>
+<li><strong><code>?CAL,2</code></strong> → Two point calibration done</li>
+<li><strong><code>?CAL,3</code></strong> → Three point calibration done</li>
+</ul>
 </div>
-<p><code>finish</code></p>
-<ul>
-<li>Continue running until <strong>just after function in the selected stack frame returns</strong>.</li>
-</ul>
-<p><code>until</code></p>
-<ul>
-<li>Has the same behaviour as <code>step</code>, but it <strong>ignores the jumps between lines due to loops</strong> (for, whiles, etc), continuing to the next source code with incremental line number.</li>
-</ul>
-<h4 id="breakpoints">Breakpoints<a class="headerlink" href="#breakpoints" title="Permanent link">&para;</a></h4>
-<p><code>info breakpoints</code></p>
-<ul>
-<li>
-<p>Retrieve information about breakpoints
-<div class="highlight"><pre><span></span><code>(gdb) info breakpoints
-Num     Type           Disp Enb
-ress    What
-1       breakpoint     keep y   0x00002140 in tick() at src/HOLA.cpp:9
-    breakpoint already hit 15 times
-</code></pre></div>
-<code>break</code></p>
-</li>
-<li>
-<p>Set a breakpoint in a specific function
-<div class="highlight"><pre><span></span><code>(gdb) break loop
-</code></pre></div></p>
-</li>
-<li>Set a breakpoint in a specific line (344)
-<div class="highlight"><pre><span></span><code>(gdb) break main.cpp:344
-</code></pre></div></li>
-</ul>
+<h3 id="atlas-ec">Atlas EC<a class="headerlink" href="#atlas-ec" title="Permanent link">&para;</a></h3>
 <div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>Use the <strong>tbreak</strong> command instead of break if you want to stop the program once, and then remove the breakpoint. More <strong>breakpoint condition</strong> options can be found <a href="https://sourceware.org/gdb/current/onlinedocs/gdb/Conditions.html#Conditions"><strong>here</strong></a> you can find </p>
+<p><a href="https://www.atlas-scientific.com/_files/_datasheets/_circuit/EC_EZO_Datasheet.pdf">Datasheet</a>
+- Calibration info on page 12.
+- Calibration commands on page 55.</p>
 </div>
-<p><code>watchpoint</code></p>
-<ul>
-<li>Set a watchpoint <a href="https://sourceware.org/gdb/current/onlinedocs/gdb/Set-Watchpoints.html#Set-Watchpoints"><strong>watchpoint</strong></a> to only stop once a variable has a certain value.
-<div class="highlight"><pre><span></span><code>(gdb) watch timer
-</code></pre></div></li>
-</ul>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>Type in <code>info watchpoints</code> to get information about watchpoints.</p>
-</div>
-<p><code>commands</code></p>
-<ul>
-<li>Set a <strong>list of actions</strong> related to the breakpoint:</li>
-</ul>
-<div class="highlight"><pre><span></span><code>break main.cpp:50
-commands
-silent
-printf &quot;count is %d\n&quot;,count
-cont
-end
+<p><strong>Example commands</strong></p>
+<div class="highlight"><pre><span></span><code>control conductivity com r
+control conductivity com K,[probeType]
+control conductivity com K,?
+control conductivity com cal,[dry,clear,84]
+control conductivity com cal,low,1413
+control conductivity com cal,high,12,880
+control conductivity com cal,?
 </code></pre></div>
-<p><code>delete</code></p>
-<ul>
-<li>Delete a breakpoint
-<div class="highlight"><pre><span></span><code>(gdb) delete 1
-(gdb) info breakpoints
-No breakpoints or watchpoints.
-</code></pre></div></li>
-</ul>
-<h4 id="printing-setting-variables-and-more">Printing / setting variables and more<a class="headerlink" href="#printing-setting-variables-and-more" title="Permanent link">&para;</a></h4>
-<p><code>loop</code></p>
-<ul>
-<li>Read what is around a certain function</li>
-</ul>
-<p><div class="highlight"><pre><span></span><code>(gdb) l loop
-25    //while (!Serial) {
-26      //; // wait for serial port to connect. Needed for native USB port only
-27    //}
-28  }
-29
-30  void loop() {
-31    // put your main code here, to run repeatedly:
-32    Serial.println(&quot;HOLA&quot;);
-33    tick();
-34    Serial.println(millis());
-</code></pre></div>
-<code>print</code></p>
-<ul>
-<li>Retrieve value of a specific variable</li>
-</ul>
-<p><div class="highlight"><pre><span></span><code>(gdb) print timer
-$12 = 2
-</code></pre></div>
-<code>set</code></p>
-<ul>
-<li>Set variable to a certain value</li>
-</ul>
-<div class="highlight"><pre><span></span><code>(gdb) set timer = 0
-</code></pre></div>
-<h4 id="target-commands-load">Target commands (load)<a class="headerlink" href="#target-commands-load" title="Permanent link">&para;</a></h4>
-<p><code>load filename offset</code></p>
-<ul>
-<li><code>Load</code> it is meant to make filename (an executable) available for debugging on the remote system—by downloading it. <code>load</code> also records the filename symbol table in GDB, like the add-symbol-file command. The file is loaded at whatever address is specified in the executable, also into flash memory.</li>
-</ul>
-<h3 id="making-changes-in-the-code">Making changes in the code<a class="headerlink" href="#making-changes-in-the-code" title="Permanent link">&para;</a></h3>
-<p>Anytime we make a change in the code, we don't need to reload the debugging session. We can easily do so by:</p>
+<h4 id="2-point-calibration">2-point calibration<a class="headerlink" href="#2-point-calibration" title="Permanent link">&para;</a></h4>
+<p>Order of the calibration :</p>
 <ol>
-<li>
-<p>Compile the code:
-    a. Define Shell build in Sublime Text and configure a build sytem with:</p>
-<div class="highlight"><pre><span></span><code>&quot;shell_cmd&quot;: &quot;cd .. &amp;&amp; pio run&quot;
-</code></pre></div>
-<p>Then, everytime you hit Ctrl+B (Cmd+B) and you use your custom build system, it will automatically use this option.</p>
-<p>b. Or hit <code>pio run</code> in another terminal located in your project root directory</p>
-</li>
-<li>
-<p>In gdb, <code>load</code> file. This will reload the file defined at the beginning of your debugging session and upload it to the target</p>
-</li>
+<li>set probe type</li>
+<li>dry point</li>
+<li>two-point calibration</li>
 </ol>
-<div class="highlight"><pre><span></span><code>(gdb) load
-Loading section .text, size 0x2e50 lma 0x2000
-Loading section .ramfunc, size 0x60 lma 0x4e50
-Loading section .data, size 0x110 lma 0x4eb0
-Start address 0x2910, load size 12224
-Transfer rate: 3 KB/sec, 4074 bytes/write.
+<hr />
+<h5 id="set-probe-type">Set probe type<a class="headerlink" href="#set-probe-type" title="Permanent link">&para;</a></h5>
+<p>Depending on which probe you have (check drawing for reference) you should set the probe type to K 0.1, 1.0 or 10 (new drivers have K1.0 as default).</p>
+<p><img alt="" src="https://i.imgur.com/MWFjbYw.png" /></p>
+<p>To set the correct probe type:</p>
+<div class="highlight"><pre><span></span><code>control conductivity com K,1.0
 </code></pre></div>
-<ol>
-<li>Keep debugging</li>
-</ol>
-<h3 id="gdb-console">GDB Console<a class="headerlink" href="#gdb-console" title="Permanent link">&para;</a></h3>
-<h4 id="tui">TUI<a class="headerlink" href="#tui" title="Permanent link">&para;</a></h4>
-<p>GDB has a console GUI option available with the command line option <strong>--tui</strong>
-In the upper frame you can see the code that's being executed.</p>
-<p><img alt="" src="http://www.yolinux.com/TUTORIALS/images/GDB-tui.png" /></p>
-<h4 id="gdb-init-file">GDB init file<a class="headerlink" href="#gdb-init-file" title="Permanent link">&para;</a></h4>
-<p>From this <a href="https://github.com/cyrus-and/gdb-dashboard">example dashboard</a> we can generate a custom .gdbinit file for the SCK which will be placed in the HOME directory... (ON GOING)</p>
+<p>and check which type is set:</p>
+<div class="highlight"><pre><span></span><code>control conductivity com K,?
+?K,1.0
+</code></pre></div>
 <div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>Would be interesting to generate a custom option for production validation and one for internal debugging purposes</p>
+<p>The <strong>Electrical Conductivity</strong> sensor provides four different metrics:</p>
+<ul>
+<li>Electrical Conductivity → EC</li>
+<li>Total Dissolved Solids → TDS</li>
+<li>Salinity → S</li>
+<li>Specific Gravity → SG</li>
+</ul>
+<p>The data is presented in order and comma separated <strong>EC,TDS,S,SG</strong> ej. <strong>0.00,0,0.00,1.000</strong></p>
 </div>
-<p>For references about where to locate the .gdbinit and more custom behaviour for gdb in general see <a href="http://www.dirac.org/linux/gdb/03-Initialization,_Listing,_And_Running.php">here</a>.</p>
-<h3 id="gdb-from-sublime-text">GDB from Sublime Text<a class="headerlink" href="#gdb-from-sublime-text" title="Permanent link">&para;</a></h3>
-<p><a href="http://docs.platformio.org/en/latest/ide/sublimetext.html">Setup Platformio project with sublime Text</a>
-<a href="http://developers-club.com/posts/270789/">Setup sublimeGDB</a></p>
-<h2 id="reference">Reference<a class="headerlink" href="#reference" title="Permanent link">&para;</a></h2>
-<h3 id="general-gdb-references-and-examples">General GDB references and examples<a class="headerlink" href="#general-gdb-references-and-examples" title="Permanent link">&para;</a></h3>
-<p><a href="https://sourceware.org/gdb/current/onlinedocs/gdb/Summary.html#Summary">Debugging with GDB - Book</a></p>
-<p><a href="http://openocd.org/doc-release/html/GDB-and-OpenOCD.html#GDB-and-OpenOCD">Debugging example from GDB and OpenOCD</a></p>
-<p><a href="http://starter-kit.nettigo.eu/2015/debug-sketch-on-arduino-zero-pro-with-gdb-and-openocd/">Arduino zero example</a></p>
-<h3 id="additional-notes-from-platformio-configuration">Additional notes from Platformio configuration<a class="headerlink" href="#additional-notes-from-platformio-configuration" title="Permanent link">&para;</a></h3>
+<h5 id="dry-calibration">Dry calibration<a class="headerlink" href="#dry-calibration" title="Permanent link">&para;</a></h5>
+<p>Follow the steps below with the dry sensor before introducing it to the calibration solutions. You need to do this step even if the readings in dry state are 0.</p>
+<ul>
+<li>Read the sensor multiple times until the reading is stable:</li>
+</ul>
+<div class="highlight"><pre><span></span><code>control conductivity com r
+0.00,0,0.00,1.000
+control conductivity com r
+0.00,0,0.00,1.000
+...
+</code></pre></div>
+<ul>
+<li>Issue the dry calibration command:</li>
+</ul>
+<div class="highlight"><pre><span></span><code>control conductivity com cal,dry
+</code></pre></div>
+<h5 id="low-point-calibration_1">Low point calibration<a class="headerlink" href="#low-point-calibration_1" title="Permanent link">&para;</a></h5>
+<p>You can check the recommended calibration solutions for each probe on the <em>Probetypes</em> drawing (ej. for K1.0 probe → 12,880uS and 80,000uS is recomended)</p>
+<p><img alt="" src="https://i.imgur.com/nendSkI.png" /></p>
+<ul>
+<li>Read the sensor multiple times until the reading is stable:</li>
+</ul>
+<div class="highlight"><pre><span></span><code>control conductivity com r
+13470,7278,7.76,1.0
+control conductivity com r
+13230,7144,7.61,1.0
+...
+</code></pre></div>
+<ul>
+<li>Issue the low point calibration command:</li>
+</ul>
+<div class="highlight"><pre><span></span><code>control conductivity com cal,low,12880
+</code></pre></div>
+<p>After this command readings will <strong>not change</strong></p>
+<h5 id="high-point-calibration_1">High point calibration<a class="headerlink" href="#high-point-calibration_1" title="Permanent link">&para;</a></h5>
+<p>Repeat this steps with <strong>high point</strong> calibration solution and when the readings stabilize issue the command:</p>
+<div class="highlight"><pre><span></span><code>control conductivity com,cal,high,80000
+</code></pre></div>
+<p>After this steps the <strong>two point calibration is complete</strong> and the readings will change.</p>
+<h3 id="atlas-do">Atlas DO<a class="headerlink" href="#atlas-do" title="Permanent link">&para;</a></h3>
+<p>Order of the calibration:</p>
 <ol>
-<li>How to set other <a href="http://docs.platformio.org/en/latest/projectconf/section_env_debug.html#projectconf-debug-server">DEBUG FLAGS</a></li>
-<li>About project configuration with <a href="http://docs.platformio.org/en/latest/projectconf.html">Platformio init</a></li>
-<li>Check <a href="https://community.platformio.org/t/confusion-surrounding-preprocessor-build-flags-ifdefs-with-cmake-and-clion/2119"><strong>here</strong></a> for building an *.ini file with custom build target for debugging and production.</li>
+<li>dry point</li>
+<li>0 mg/L point (optional)</li>
+<li>The dry point calibration</li>
+<li>The 0mg/L point calibration</li>
 </ol>
+<div class="admonition info">
+<p class="admonition-title">Datasheet</p>
+<p><a href="https://www.atlas-scientific.com/_files/_datasheets/_circuit/DO_EZO_Datasheet.pdf">Datasheet</a> (calibration info on page 9, calibration commands on page 52)</p>
+</div>
+<div class="highlight"><pre><span></span><code>com dissolved r
+com dissolved cal
+com dissolved cal,0
+com dissolved cal,clear
+com dissolved cal,?
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Pressure compensation</p>
+<p>If the sensor is going to be used at more than 10 meters deep into the water <strong>Pressure compensation</strong> should be set with:</p>
+<div class="highlight"><pre><span></span><code>control dissolved com P,kPaValue
+</code></pre></div>
+<p>More information on <a href="https://www.atlas-scientific.com/_files/_datasheets/_circuit/DO_EZO_Datasheet.pdf">datasheet</a> page 57</p>
+</div>
+<h4 id="option-a-single-point-calibration">OPTION A: Single point calibration<a class="headerlink" href="#option-a-single-point-calibration" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Read the sensor multiple times until the reading is stable:</li>
+</ul>
+<div class="highlight"><pre><span></span><code>control dissolved com r
+13.95,50%
+control dissolved com r
+13.76,49%
+...
+</code></pre></div>
+<ul>
+<li>Issue the calibration command, after this the readings will change.</li>
+</ul>
+<div class="highlight"><pre><span></span><code>control dissolved com cal
+</code></pre></div>
+<h4 id="option-b-2-point-calibration">OPTION B: 2-point calibration<a class="headerlink" href="#option-b-2-point-calibration" title="Permanent link">&para;</a></h4>
+<p>Two point calibration is recommended if you require accurate readings below 1.0 mg/L. After completing the single point calibration procedure put the probe in the calibration solution.</p>
+<p><img alt="" src="https://i.imgur.com/icxCaOZ.png" /></p>
+<ul>
+<li>Read the sensor multiple times until the reading is stable:</li>
+</ul>
+<div class="highlight"><pre><span></span><code>control dissolved com r
+13.95,50%
+control dissolved com r
+13.76,49%
+...
+</code></pre></div>
+<ul>
+<li>Issue the calibration command.</li>
+</ul>
+<div class="highlight"><pre><span></span><code>control dissolved com cal,0
+</code></pre></div>
+<p>Reset your SCK and you are ready.</p>
+<div class="admonition success">
+<p class="admonition-title">Ready to go?</p>
+<p>If you want to send the data to the platform, you will need to  <a href="/Guides/getting started/Onboarding Sensors/#advanced-kit-selection/">Advanced Kit Selection</a>. At the moment the closest Kit Blueprint will be <code>#22 BioPV Kit</code> or <code>#31 SCK 2.1 Sea Water</code> in case you are using a SCK2.1 with GPS. You can request in the <a href="http://forum.smartcitizen.me">forum</a> for a custom blueprint with the specific sensors you are using. </p>
+</div>
                 
               
               
@@ -2528,8 +2268,8 @@ In the upper frame you can see the code that's being executed.</p>
 
         <!-- Link to previous page -->
         
-          <a href="../Edit%20the%20Firmware/"
-              title="Edit the firmware"
+          <a href="../../firmware/Debug%20the%20firmware/"
+              title="Debug the firmware"
               class="md-flex md-footer-nav__link md-footer-nav__link--prev"
               rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
@@ -2542,7 +2282,7 @@ In the upper frame you can see the code that's being executed.</p>
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Edit the firmware
+                Debug the firmware
               </span>
             </div>
           </a>
@@ -2550,8 +2290,8 @@ In the upper frame you can see the code that's being executed.</p>
 
         <!-- Link to next page -->
         
-          <a href="../../calibration/Water%20sensors/"
-              title="Water sensors"
+          <a href="../Soil%20moisture%20sensors/"
+              title="Soil sensors"
               class="md-flex md-footer-nav__link md-footer-nav__link--next"
               rel="next">
             <div class="md-flex__cell md-flex__cell--stretch
@@ -2560,7 +2300,7 @@ In the upper frame you can see the code that's being executed.</p>
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Water sensors
+                Soil sensors
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
