@@ -21,6 +21,7 @@ When you first run `scdata`, it will create a `scdata` folder in your `~/.cache`
 ## Data structure
 
 Two main ways to access and organise the data:
+
 - device: single device holding information from different sources. Learn how to use it [in the examples](https://github.com/fablabbcn/smartcitizen-data/tree/master/examples)
 - test: intended for experimentation with the data and posterior reproducibility. See [below](#test).
 
@@ -28,13 +29,14 @@ Two main ways to access and organise the data:
 
 The concept is very simple. A test is a collection of devices (SCKs or not), that have a common purpose. They can be located in the same spot (co-location) or not, and the main idea is that we centralise the data in a common instance for easy analysis.
 
-![](https://i.imgur.com/CSi5tL4.png)
-
 Tests have dates, authors, can have comments (for us to remember what we did), a report attached and can be in different conditions (outdoor, indoor)... We will put all this metadata in a `yaml` file to help use look for the tests later on. 
 
 Tests can also have different sources. They could be csv files, xls files or data from the Smart Citizen API. For the local files, we will first pre-process them with the scripts in the `data/scripts` folder and then place them in the `data/raw` folder, in csv format. We use this format because it's a common usable format and, although it is not the most efficient way of archiving the data, it can be easily explored by other common applications.
 
 ### Pre-process the sd card data
+
+!!! warning "Direct upload also available"
+    You can directly upload SD card data following the example [here](https://github.com/fablabbcn/smartcitizen-data/blob/master/examples/notebooks/09_load_and_post.ipynb)
 
 In order to make our files usable, we will need to have them in a format like `YY-MM-DD.CSV`. However, if the kit has been reset, we can find some files like: `YY-MM-DD.01`, `YY-MM-DD.02` and they should be something like `YY-MM-DD_01.CSV`, `YY-MM-DD_02.CSV`...
 
@@ -105,6 +107,7 @@ Once we have all our concatenated files, we can proceed to create our test. For 
 
 !!! info "There's a lot more to it"
     Check the examples in [the repository to](https://github.com/fablabbcn/smartcitizen-data/blob/master/examples/README.md#index-of-examples):
+    
       - Plot data
       - Process
       - Calibrate sensors
