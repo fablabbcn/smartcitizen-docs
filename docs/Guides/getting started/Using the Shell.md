@@ -1,10 +1,6 @@
 Using the Shell
 ==========
 
-!!! warning
-    This guide is a work in progress!
-
-
 The SCK (from V2.0 onwards) has an integrated command shell over USB to manage all the kits functionalities for advanced users. In this guide, we will cover how to access to this functionality in different platforms, and some examples.
 
 ## What is it?

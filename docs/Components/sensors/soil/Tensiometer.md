@@ -3,7 +3,6 @@
 !!! danger "WIP"
     This version is a WIP but is not fully functional with the SCK 2.1. It is shown here as a showcase of the project's capabilities. Have a look at the forum or drop us an email to discuss this. Check the source [files](https://github.com/fablabbcn/smartcitizen-grow/tree/master/soil-water-tension).
 
-
 Soil Moisture data as the one provided by the Chirp Moisture Sensor is interesting for research, but when it comes to crops irrigation management, we usually like to know the soil water tension (SWT). That is because Soil Moisture in water is not directly related to the water plants roots might be able to extract because it is deeply affected by the soil composition. Even soil irrigation can be inferred from soil moisture when the soil type is known we think a soil tensiometer. Also when it is a simple solution, it is a useful tool for crops management.
 
 ![Watermark Tensionmeter Demo](/assets/images/watermark.png)

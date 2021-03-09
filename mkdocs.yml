@@ -36,10 +36,9 @@ nav:
           - eCO2/TVOC: Components/sensors/air/CCS811.md
         - Electrochemical Sensors: Components/sensors/air/Electrochemical Sensors.md
         # - Air Mobile sensors: Components/sensors/air/mobile.md
-      - Soil and Water:
+      - Soil:
         - Soil Moisture Sensors: Components/sensors/soil/Soil Moisture Sensors.md
         - Tensionmenter: Components/sensors/soil/Tensiometer.md
-        # - Water Mobile Sensors: Components/sensors/water/mobile.md
     - FAQ: _FAQ.md
     - Troubleshooting: Troubleshooting.md    
   - Data:
@@ -67,6 +66,10 @@ nav:
       - Update the firmware: Guides/firmware/Update the firmware.md
       - Edit the firmware: Guides/firmware/Edit the Firmware.md
       - Debug the firmware: Guides/firmware/Debug the firmware.md
+    - Calibration:
+      # - Air sensors: Guides/calibration/Air sensors.md
+      - Water sensors: Guides/calibration/Water sensors.md
+      - Soil sensors: Guides/calibration/Soil moisture sensors.md
     - Data Analysis:
       - Framework Installation: Guides/data/Install the framework.md
       - Make reports of your data: Guides/data/Make reports of your data.md
@@ -83,9 +86,9 @@ nav:
       - iSCAPE Station V2: Guides/deployments/Deploying iSCAPE Station V2.md
       - Smart Citizen Station V3: Guides/deployments/Deploying Smart Citizen Station.md
       - Smart Citizen Connectivity Units: Guides/deployments/Installing Connectivity Units.md
-      - Smart Citizen Soil and water sensors: Guides/deployments/Soil and water sensors.md
       - Almabike sensors: Guides/deployments/Almabike sensors.md
       - Smart Citizen Power Supply: Guides/deployments/Using the power supply.md
+      - Set up water sensors: Guides/deployments/Water sensors.md
     - Enclosures:
       - Making your own enclosures: Guides/enclosures/Making your own enclosures.md
     - Legacy Hardware:
