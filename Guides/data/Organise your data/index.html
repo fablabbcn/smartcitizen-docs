@@ -1805,15 +1805,20 @@
 <p>An additional <code>scdata</code> folder with a <code>config.yaml</code> file is created in your <code>~/.config</code> directory. 
   Visit the <a href="https://github.com/fablabbcn/smartcitizen-data#tokens-and-config">readme in the github repository</a> for more information about configuring this.</p>
 <h2 id="data-structure">Data structure<a class="headerlink" href="#data-structure" title="Permanent link">&para;</a></h2>
-<p>Two main ways to access and organise the data:
-- device: single device holding information from different sources. Learn how to use it <a href="https://github.com/fablabbcn/smartcitizen-data/tree/master/examples">in the examples</a>
-- test: intended for experimentation with the data and posterior reproducibility. See <a href="#test">below</a>.</p>
+<p>Two main ways to access and organise the data:</p>
+<ul>
+<li>device: single device holding information from different sources. Learn how to use it <a href="https://github.com/fablabbcn/smartcitizen-data/tree/master/examples">in the examples</a></li>
+<li>test: intended for experimentation with the data and posterior reproducibility. See <a href="#test">below</a>.</li>
+</ul>
 <h3 id="test">Test<a class="headerlink" href="#test" title="Permanent link">&para;</a></h3>
 <p>The concept is very simple. A test is a collection of devices (SCKs or not), that have a common purpose. They can be located in the same spot (co-location) or not, and the main idea is that we centralise the data in a common instance for easy analysis.</p>
-<p><img alt="" src="https://i.imgur.com/CSi5tL4.png" /></p>
 <p>Tests have dates, authors, can have comments (for us to remember what we did), a report attached and can be in different conditions (outdoor, indoor)... We will put all this metadata in a <code>yaml</code> file to help use look for the tests later on. </p>
 <p>Tests can also have different sources. They could be csv files, xls files or data from the Smart Citizen API. For the local files, we will first pre-process them with the scripts in the <code>data/scripts</code> folder and then place them in the <code>data/raw</code> folder, in csv format. We use this format because it's a common usable format and, although it is not the most efficient way of archiving the data, it can be easily explored by other common applications.</p>
 <h3 id="pre-process-the-sd-card-data">Pre-process the sd card data<a class="headerlink" href="#pre-process-the-sd-card-data" title="Permanent link">&para;</a></h3>
+<div class="admonition warning">
+<p class="admonition-title">Direct upload also available</p>
+<p>You can directly upload SD card data following the example <a href="https://github.com/fablabbcn/smartcitizen-data/blob/master/examples/notebooks/09_load_and_post.ipynb">here</a></p>
+</div>
 <p>In order to make our files usable, we will need to have them in a format like <code>YY-MM-DD.CSV</code>. However, if the kit has been reset, we can find some files like: <code>YY-MM-DD.01</code>, <code>YY-MM-DD.02</code> and they should be something like <code>YY-MM-DD_01.CSV</code>, <code>YY-MM-DD_02.CSV</code>...</p>
 <div class="admonition info">
 <p class="admonition-title">Pro-tip</p>
@@ -1869,11 +1874,13 @@ Saving file to: Log_Concat.csv
 </div>
 <div class="admonition info">
 <p class="admonition-title">There's a lot more to it</p>
-<p>Check the examples in <a href="https://github.com/fablabbcn/smartcitizen-data/blob/master/examples/README.md#index-of-examples">the repository to</a>:
-  - Plot data
-  - Process
-  - Calibrate sensors
-  - Upload it to zenodo</p>
+<p>Check the examples in <a href="https://github.com/fablabbcn/smartcitizen-data/blob/master/examples/README.md#index-of-examples">the repository to</a>:</p>
+<ul>
+<li>Plot data</li>
+<li>Process</li>
+<li>Calibrate sensors</li>
+<li>Upload it to zenodo</li>
+</ul>
 </div>
                 
               
