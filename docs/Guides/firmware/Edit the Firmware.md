@@ -120,3 +120,71 @@ Our [upload script](https://github.com/fablabbcn/smartcitizen-kit-21/blob/master
 
 !!! info
 	Sometimes the ESP8266 and the uploader software don't get synced and the upload fails. Normally if you try again it will work. After first try you don't need to rebuild, you can just do `python3 make.py flash esp`.
+
+### Manual update
+
+You can perform a manual update if you only want/or can have a small python installation:
+
+#### Preparation
+
+1. Make sure you have python installed:
+
+```
+which python
+/usr/bin/python
+```
+
+2. Install `pip` if you don't have it:
+
+```
+# For python 3
+curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+# For python 2.7 (for base macOS installation for instance)
+curl https://bootstrap.pypa.io/2.7/get-pip.py -o get-pip.py
+# Then install it
+python get-pip.py
+```
+
+3. Add `pip` to the `PATH` (depending on where it was installed - macOS example below). Make sure to replace `<username>` by your actual username
+
+```
+PATH=$PATH:/Users/<username>/Library/Python/2.7/bin
+```
+
+4. Install `pyserial`
+
+```
+pip install pyserial
+```
+
+5. Get `esptool.py`:
+
+```
+wget https://raw.githubusercontent.com/fablabbcn/smartcitizen-tools/master/esptool.py
+```
+
+6. Get the latest firmware from https://github.com/fablabbcn/smartcitizen-kit-21/releases or ask us at [support](mailto:support@smartcitizen.me)
+
+#### Flashing
+
+1. Get your usb-port id:
+
+```
+# macOS
+ls /dev/* | grep usb
+# Linux
+ls /dev/* | grep tty
+...
+```
+
+2. Put the SAM in bridge mode (replace `/dev/cu...` with the portname from above)
+
+```
+echo 'esp -flash 115200' > </dev/cu...>
+```
+
+3. Flash the esp using `esptool.py` from before. Make sure the `ESP_firmware.bin` is also there:
+
+```
+python esptool.py --port </dev/cu...> --baud 115200 write_flash 0x000000 ESP_firmware.bin
+```
