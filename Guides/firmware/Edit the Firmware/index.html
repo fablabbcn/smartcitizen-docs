@@ -1211,6 +1211,39 @@
     ESP8266 firmware
   </a>
   
+    <nav class="md-nav" aria-label="ESP8266 firmware">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#manual-update" class="md-nav__link">
+    Manual update
+  </a>
+  
+    <nav class="md-nav" aria-label="Manual update">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#preparation" class="md-nav__link">
+    Preparation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flashing" class="md-nav__link">
+    Flashing
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -1798,6 +1831,39 @@
     ESP8266 firmware
   </a>
   
+    <nav class="md-nav" aria-label="ESP8266 firmware">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#manual-update" class="md-nav__link">
+    Manual update
+  </a>
+  
+    <nav class="md-nav" aria-label="Manual update">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#preparation" class="md-nav__link">
+    Preparation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flashing" class="md-nav__link">
+    Flashing
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -1896,6 +1962,63 @@ Our <a href="https://github.com/fablabbcn/smartcitizen-kit-21/blob/master/make.p
 <p class="admonition-title">Info</p>
 <p>Sometimes the ESP8266 and the uploader software don't get synced and the upload fails. Normally if you try again it will work. After first try you don't need to rebuild, you can just do <code>python3 make.py flash esp</code>.</p>
 </div>
+<h3 id="manual-update">Manual update<a class="headerlink" href="#manual-update" title="Permanent link">&para;</a></h3>
+<p>You can perform a manual update if you only want/or can have a small python installation:</p>
+<h4 id="preparation">Preparation<a class="headerlink" href="#preparation" title="Permanent link">&para;</a></h4>
+<ol>
+<li>Make sure you have python installed:</li>
+</ol>
+<div class="highlight"><pre><span></span><code>which python
+/usr/bin/python
+</code></pre></div>
+<ol>
+<li>Install <code>pip</code> if you don't have it:</li>
+</ol>
+<div class="highlight"><pre><span></span><code># For python 3
+curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+# For python 2.7 (for base macOS installation for instance)
+curl https://bootstrap.pypa.io/2.7/get-pip.py -o get-pip.py
+# Then install it
+python get-pip.py
+</code></pre></div>
+<ol>
+<li>Add <code>pip</code> to the <code>PATH</code> (depending on where it was installed - macOS example below). Make sure to replace <code>&lt;username&gt;</code> by your actual username</li>
+</ol>
+<div class="highlight"><pre><span></span><code>PATH=$PATH:/Users/&lt;username&gt;/Library/Python/2.7/bin
+</code></pre></div>
+<ol>
+<li>Install <code>pyserial</code></li>
+</ol>
+<div class="highlight"><pre><span></span><code>pip install pyserial
+</code></pre></div>
+<ol>
+<li>Get <code>esptool.py</code>:</li>
+</ol>
+<div class="highlight"><pre><span></span><code>wget https://raw.githubusercontent.com/fablabbcn/smartcitizen-tools/master/esptool.py
+</code></pre></div>
+<ol>
+<li>Get the latest firmware from <a href="https://github.com/fablabbcn/smartcitizen-kit-21/releases">https://github.com/fablabbcn/smartcitizen-kit-21/releases</a> or ask us at <a href="mailto:support@smartcitizen.me">support</a></li>
+</ol>
+<h4 id="flashing">Flashing<a class="headerlink" href="#flashing" title="Permanent link">&para;</a></h4>
+<ol>
+<li>Get your usb-port id:</li>
+</ol>
+<div class="highlight"><pre><span></span><code># macOS
+ls /dev/* | grep usb
+# Linux
+ls /dev/* | grep tty
+...
+</code></pre></div>
+<ol>
+<li>Put the SAM in bridge mode (replace <code>/dev/cu...</code> with the portname from above)</li>
+</ol>
+<div class="highlight"><pre><span></span><code>echo &#39;esp -flash 115200&#39; &gt; &lt;/dev/cu...&gt;
+</code></pre></div>
+<ol>
+<li>Flash the esp using <code>esptool.py</code> from before. Make sure the <code>ESP_firmware.bin</code> is also there:</li>
+</ol>
+<div class="highlight"><pre><span></span><code>python esptool.py --port &lt;/dev/cu...&gt; --baud 115200 write_flash 0x000000 ESP_firmware.bin
+</code></pre></div>
                 
               
               
