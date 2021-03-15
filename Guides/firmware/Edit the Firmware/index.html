@@ -1965,15 +1965,15 @@ Our <a href="https://github.com/fablabbcn/smartcitizen-kit-21/blob/master/make.p
 <h3 id="manual-update">Manual update<a class="headerlink" href="#manual-update" title="Permanent link">&para;</a></h3>
 <p>You can perform a manual update if you only want/or can have a small python installation:</p>
 <h4 id="preparation">Preparation<a class="headerlink" href="#preparation" title="Permanent link">&para;</a></h4>
-<ol>
+<ul>
 <li>Make sure you have python installed:</li>
-</ol>
+</ul>
 <div class="highlight"><pre><span></span><code>which python
 /usr/bin/python
 </code></pre></div>
-<ol>
+<ul>
 <li>Install <code>pip</code> if you don't have it:</li>
-</ol>
+</ul>
 <div class="highlight"><pre><span></span><code># For python 3
 curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 # For python 2.7 (for base macOS installation for instance)
@@ -1981,42 +1981,42 @@ curl https://bootstrap.pypa.io/2.7/get-pip.py -o get-pip.py
 # Then install it
 python get-pip.py
 </code></pre></div>
-<ol>
+<ul>
 <li>Add <code>pip</code> to the <code>PATH</code> (depending on where it was installed - macOS example below). Make sure to replace <code>&lt;username&gt;</code> by your actual username</li>
-</ol>
+</ul>
 <div class="highlight"><pre><span></span><code>PATH=$PATH:/Users/&lt;username&gt;/Library/Python/2.7/bin
 </code></pre></div>
-<ol>
+<ul>
 <li>Install <code>pyserial</code></li>
-</ol>
+</ul>
 <div class="highlight"><pre><span></span><code>pip install pyserial
 </code></pre></div>
-<ol>
+<ul>
 <li>Get <code>esptool.py</code>:</li>
-</ol>
+</ul>
 <div class="highlight"><pre><span></span><code>wget https://raw.githubusercontent.com/fablabbcn/smartcitizen-tools/master/esptool.py
 </code></pre></div>
-<ol>
+<ul>
 <li>Get the latest firmware from <a href="https://github.com/fablabbcn/smartcitizen-kit-21/releases">https://github.com/fablabbcn/smartcitizen-kit-21/releases</a> or ask us at <a href="mailto:support@smartcitizen.me">support</a></li>
-</ol>
+</ul>
 <h4 id="flashing">Flashing<a class="headerlink" href="#flashing" title="Permanent link">&para;</a></h4>
-<ol>
+<ul>
 <li>Get your usb-port id:</li>
-</ol>
+</ul>
 <div class="highlight"><pre><span></span><code># macOS
 ls /dev/* | grep usb
 # Linux
 ls /dev/* | grep tty
 ...
 </code></pre></div>
-<ol>
+<ul>
 <li>Put the SAM in bridge mode (replace <code>/dev/cu...</code> with the portname from above)</li>
-</ol>
+</ul>
 <div class="highlight"><pre><span></span><code>echo &#39;esp -flash 115200&#39; &gt; &lt;/dev/cu...&gt;
 </code></pre></div>
-<ol>
+<ul>
 <li>Flash the esp using <code>esptool.py</code> from before. Make sure the <code>ESP_firmware.bin</code> is also there:</li>
-</ol>
+</ul>
 <div class="highlight"><pre><span></span><code>python esptool.py --port &lt;/dev/cu...&gt; --baud 115200 write_flash 0x000000 ESP_firmware.bin
 </code></pre></div>
                 
