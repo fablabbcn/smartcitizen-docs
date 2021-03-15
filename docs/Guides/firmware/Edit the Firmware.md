@@ -127,14 +127,14 @@ You can perform a manual update if you only want/or can have a small python inst
 
 #### Preparation
 
-1. Make sure you have python installed:
+* Make sure you have python installed:
 
 ```
 which python
 /usr/bin/python
 ```
 
-2. Install `pip` if you don't have it:
+* Install `pip` if you don't have it:
 
 ```
 # For python 3
@@ -145,29 +145,29 @@ curl https://bootstrap.pypa.io/2.7/get-pip.py -o get-pip.py
 python get-pip.py
 ```
 
-3. Add `pip` to the `PATH` (depending on where it was installed - macOS example below). Make sure to replace `<username>` by your actual username
+* Add `pip` to the `PATH` (depending on where it was installed - macOS example below). Make sure to replace `<username>` by your actual username
 
 ```
 PATH=$PATH:/Users/<username>/Library/Python/2.7/bin
 ```
 
-4. Install `pyserial`
+* Install `pyserial`
 
 ```
 pip install pyserial
 ```
 
-5. Get `esptool.py`:
+* Get `esptool.py`:
 
 ```
 wget https://raw.githubusercontent.com/fablabbcn/smartcitizen-tools/master/esptool.py
 ```
 
-6. Get the latest firmware from https://github.com/fablabbcn/smartcitizen-kit-21/releases or ask us at [support](mailto:support@smartcitizen.me)
+* Get the latest firmware from https://github.com/fablabbcn/smartcitizen-kit-21/releases or ask us at [support](mailto:support@smartcitizen.me)
 
 #### Flashing
 
-1. Get your usb-port id:
+* Get your usb-port id:
 
 ```
 # macOS
@@ -177,13 +177,13 @@ ls /dev/* | grep tty
 ...
 ```
 
-2. Put the SAM in bridge mode (replace `/dev/cu...` with the portname from above)
+* Put the SAM in bridge mode (replace `/dev/cu...` with the portname from above)
 
 ```
 echo 'esp -flash 115200' > </dev/cu...>
 ```
 
-3. Flash the esp using `esptool.py` from before. Make sure the `ESP_firmware.bin` is also there:
+* Flash the esp using `esptool.py` from before. Make sure the `ESP_firmware.bin` is also there:
 
 ```
 python esptool.py --port </dev/cu...> --baud 115200 write_flash 0x000000 ESP_firmware.bin
