@@ -1,6 +1,7 @@
 # Water sensors
 
-This guide describes the setup procedure of the Atlas Scientific probes.
+!!! warning "Only if you bought them separately"
+    This guide describes the setup procedure of the Atlas Scientific probes in case you bought them separately. If you have purchased a [Water Station](/Components/Soil and water/#water-station), you don't need to do this.
 
 ## Setup
 
