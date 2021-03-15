@@ -74,7 +74,10 @@ If you want to force the ESP to upload, please, follow the steps below.
 	So you will be asked for the firmware file:
 
 	![](/assets/images/sck_2/esp_force_upload_3.png)
-
+	
+!!! danger "Doesn't work?"
+	Sometimes in the phone the firmware selection screen will not pop up. You can always try to do the _developer-way_ with [check this guide here](/Guides/firmware/Edit the Firmware/#manual-update)
+	
 !!! tip "Obtain your firmware version remotely (advanced)"
 
 	If you are an advance user managing a big deployment of devices you can obtain remotely the version of all the Kits you have registered by looking at the `hardware_info` property of each of your devices using the platform API `/v0/devices/`. When your Kit is in Wi-Fi mode, it publishes the information daily.
