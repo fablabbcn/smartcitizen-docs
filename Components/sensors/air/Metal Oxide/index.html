@@ -610,19 +610,31 @@
           
           
 
+
+  <li class="md-nav__item">
+    <a href="../../performance/" title="Performance summary" class="md-nav__link">
+      Performance summary
+    </a>
+  </li>
+
+        
+          
+          
+          
+
   
 
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-4-1" type="checkbox" id="nav-1-4-1" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-4-2" type="checkbox" id="nav-1-4-2" checked>
     
-    <label class="md-nav__link" for="nav-1-4-1">
+    <label class="md-nav__link" for="nav-1-4-2">
       Air
       <span class="md-nav__icon md-icon"></span>
     </label>
     <nav class="md-nav" aria-label="Air" data-md-level="3">
-      <label class="md-nav__title" for="nav-1-4-1">
+      <label class="md-nav__title" for="nav-1-4-2">
         <span class="md-nav__icon md-icon"></span>
         Air
       </label>
@@ -662,14 +674,14 @@
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-4-1-3" type="checkbox" id="nav-1-4-1-3" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-4-2-3" type="checkbox" id="nav-1-4-2-3" checked>
     
-    <label class="md-nav__link" for="nav-1-4-1-3">
+    <label class="md-nav__link" for="nav-1-4-2-3">
       Metal Oxide Sensors
       <span class="md-nav__icon md-icon"></span>
     </label>
     <nav class="md-nav" aria-label="Metal Oxide Sensors" data-md-level="4">
-      <label class="md-nav__title" for="nav-1-4-1-3">
+      <label class="md-nav__title" for="nav-1-4-2-3">
         <span class="md-nav__icon md-icon"></span>
         Metal Oxide Sensors
       </label>
@@ -780,14 +792,14 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-4-2" type="checkbox" id="nav-1-4-2">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-4-3" type="checkbox" id="nav-1-4-3">
     
-    <label class="md-nav__link" for="nav-1-4-2">
+    <label class="md-nav__link" for="nav-1-4-3">
       Soil
       <span class="md-nav__icon md-icon"></span>
     </label>
     <nav class="md-nav" aria-label="Soil" data-md-level="3">
-      <label class="md-nav__title" for="nav-1-4-2">
+      <label class="md-nav__title" for="nav-1-4-3">
         <span class="md-nav__icon md-icon"></span>
         Soil
       </label>
@@ -1776,7 +1788,7 @@
 <p>The Smart Citizen Kit has been using metal oxide sensors for air quality metrics for a long time, and we thought that it would be interesting to dedicate a section for them!</p>
 <div class="admonition info">
 <p class="admonition-title">Learn More</p>
-<p>Check this <a href="/Components/Urban Sensor Board/Metal Oxide Sensor/CCS811/">link</a> for more information about the specifics of the eCO2 - TVOC sensor</p>
+<p>Check this <a href="/Components/sensors/air/CCS811/">link</a> for more information about the specifics of the eCO2 - TVOC sensor</p>
 </div>
 <div class="admonition info">
 <p class="admonition-title">Looking for the CO/NO2 MOs?</p>
@@ -1786,7 +1798,7 @@
 <p>Metal Oxide Sensors measure the resistance (R<sub>S</sub>) of a sensitive layer after heating it up with a <em>heating element</em> (normally another resistor). However, this reading cannot be considered as an absolute measurement of the target pollutant concentration, since the resistance varies from sensor to sensor, and it's affected by several conditions, such as temperature, humidity and other non-target pollutant affectations. To mitigate this problem, the output of the sensor is normalized using the baseline resistance (R<sub>A</sub>): R<sub>S</sub> is divided by R<sub>A</sub>. This baseline resistance is the resistance that the sensor sees in clean air, and the cleaner the air is, the higher the resistance is.</p>
 <p>Unfortunately, since R<sub>A</sub> varies with the deployment conditions, R<sub>A</sub> cannot be determined by a one-time calibration; and in the case of the AMS CCS811 included in the SCK V2.1, is maintained on-the-fly in software. This process is known as <strong>baseline correction</strong>. </p>
 <p>Previous versions of the SCK (V1.5, V2.0 and others) included the SGX MICS4514, which was meant to measure CO and NO<sub>2</sub>, and a lot of effort was put in V2.0 to improve the driver for the sensor, aiming to reduce power consumption and improve sensor readings. Unfortunately, this didn't match our expectations in terms of data quality and power consumption, and since individual sensor calibration is not feasible in our case (as some scientific publications have suggested), we decided to focus efforts in simpler, more robust and understandable set of sensors.</p>
-<p>That being said, the SCK V2.1 includes the AMS CCS811 for Air Quality indicative measurements for indoor air quality in the Urban Sensor Board, and the PMS5003 for outdoor PM exposure. More complex outdoor set-ups will be also possible, for instance using the <a href="../Gas Pro Sensor Board">Gas Pro Sensor Board</a> (featuring up to three Alphasense Electrochemical Sensors)[<sup>8][</sup>9][^10]. This board is currently under evaluation and will be available soon. </p>
+<p>That being said, the SCK V2.1 includes the AMS CCS811 for Air Quality indicative measurements for indoor air quality in the Urban Sensor Board, and the PMS5003 for outdoor PM exposure. More complex outdoor set-ups will be also possible, for instance using the <a href="/Components/boards/Analog Sensor Board/">Analog Sensor Board</a>.</p>
 <h3 id="what-to-expect-from-metal-oxide-sensors">What to expect from Metal Oxide Sensors<a class="headerlink" href="#what-to-expect-from-metal-oxide-sensors" title="Permanent link">&para;</a></h3>
 <p>As said above, this type of sensors <strong>is not meant for fine pollution monitoring</strong>, but is more oriented for <strong>air quality indications and trends detection</strong>. Our approach is to use them for indicative measurements, and progressively tend towards a more reliable, fine and robust system, once the technology is capable of providing so. </p>
 <p>While deploying them, since the air quality is expected to vary in a typical environment, the minimum time over which a baseline correction is applied is 24 hours. This means that the sensor output will change with time, until the baseline is roughly stable. Since the sensor monitors the baseline resistance periodically, if a cleaner air is found, the new baseline resistance is used to calculate the sensor readings (although this is only done for  future readings). This also means that the SCK should not be interrupted with an <em>ad hoc</em> power cut since this could erase the baseline resistance and the sensor could always yield wrong readings since it never sees <em>clean air</em>.</p>

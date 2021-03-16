@@ -527,20 +527,6 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#sensor-measurements" class="md-nav__link">
-    Sensor measurements
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#sensors-selection" class="md-nav__link">
-    Sensors selection
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#design" class="md-nav__link">
     Design
   </a>
@@ -577,26 +563,6 @@
   <a href="#setup" class="md-nav__link">
     Setup
   </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#extra-sensors" class="md-nav__link">
-    Extra sensors
-  </a>
-  
-    <nav class="md-nav" aria-label="Extra sensors">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#dallas-onewire-support" class="md-nav__link">
-    Dallas OneWire support
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -727,16 +693,28 @@
           
 
 
+  <li class="md-nav__item">
+    <a href="../../sensors/performance/" title="Performance summary" class="md-nav__link">
+      Performance summary
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-4-1" type="checkbox" id="nav-1-4-1">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-4-2" type="checkbox" id="nav-1-4-2">
     
-    <label class="md-nav__link" for="nav-1-4-1">
+    <label class="md-nav__link" for="nav-1-4-2">
       Air
       <span class="md-nav__icon md-icon"></span>
     </label>
     <nav class="md-nav" aria-label="Air" data-md-level="3">
-      <label class="md-nav__title" for="nav-1-4-1">
+      <label class="md-nav__title" for="nav-1-4-2">
         <span class="md-nav__icon md-icon"></span>
         Air
       </label>
@@ -774,14 +752,14 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-4-1-3" type="checkbox" id="nav-1-4-1-3">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-4-2-3" type="checkbox" id="nav-1-4-2-3">
     
-    <label class="md-nav__link" for="nav-1-4-1-3">
+    <label class="md-nav__link" for="nav-1-4-2-3">
       Metal Oxide Sensors
       <span class="md-nav__icon md-icon"></span>
     </label>
     <nav class="md-nav" aria-label="Metal Oxide Sensors" data-md-level="4">
-      <label class="md-nav__title" for="nav-1-4-1-3">
+      <label class="md-nav__title" for="nav-1-4-2-3">
         <span class="md-nav__icon md-icon"></span>
         Metal Oxide Sensors
       </label>
@@ -841,14 +819,14 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-4-2" type="checkbox" id="nav-1-4-2">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-4-3" type="checkbox" id="nav-1-4-3">
     
-    <label class="md-nav__link" for="nav-1-4-2">
+    <label class="md-nav__link" for="nav-1-4-3">
       Soil
       <span class="md-nav__icon md-icon"></span>
     </label>
     <nav class="md-nav" aria-label="Soil" data-md-level="3">
-      <label class="md-nav__title" for="nav-1-4-2">
+      <label class="md-nav__title" for="nav-1-4-3">
         <span class="md-nav__icon md-icon"></span>
         Soil
       </label>
@@ -1794,20 +1772,6 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#sensor-measurements" class="md-nav__link">
-    Sensor measurements
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#sensors-selection" class="md-nav__link">
-    Sensors selection
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#design" class="md-nav__link">
     Design
   </a>
@@ -1848,26 +1812,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#extra-sensors" class="md-nav__link">
-    Extra sensors
-  </a>
-  
-    <nav class="md-nav" aria-label="Extra sensors">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#dallas-onewire-support" class="md-nav__link">
-    Dallas OneWire support
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#source-files" class="md-nav__link">
     Source files
   </a>
@@ -1895,57 +1839,9 @@
                 
                 
                 <h1 id="pm-sensor-board">PM Sensor Board<a class="headerlink" href="#pm-sensor-board" title="Permanent link">&para;</a></h1>
-<p>The PM Sensor Board is based around Plantower PMS 5003<sup id="fnref:11"><a class="footnote-ref" href="#fn:11">1</a></sup> a digital particle concentration sensor that uses the Laser Scattering principle to obtain the number of suspended particles in the air. This includes a custom designed PCB with an MCU to provide I2C connectivity with the Data Board.  </p>
+<p>The PM Sensor Board is an expansion board which can provide additional measurements, such as two extra Plantower PMS 5003, one wire temperature sensors and extra GPIO and ADC support. This is done with a custom designed PCB with an MCU to provide I2C connectivity with the Data Board.</p>
 <p><img alt="" src="https://i.imgur.com/Hqt1dXh.jpg" /></p>
 <p><a class="github-button" data-size="large" href="https://github.com/fablabbcn/smartcitizen-kit-pm-board" aria-label="Check the source code">Check the source code</a></p>
-<h2 id="sensor-measurements">Sensor measurements<a class="headerlink" href="#sensor-measurements" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th>Measurement</th>
-<th>Units</th>
-<th>Sensor</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>PM 1</td>
-<td>µg/m3</td>
-<td>Plantower PMS5003 Dual System</td>
-</tr>
-<tr>
-<td>PM 2.5</td>
-<td>µg/m3</td>
-<td>Plantower PMS5003 Dual System</td>
-</tr>
-<tr>
-<td>PM 10</td>
-<td>µg/m3</td>
-<td>Plantower PMS5003 Dual System</td>
-</tr>
-</tbody>
-</table>
-<h2 id="sensors-selection">Sensors selection<a class="headerlink" href="#sensors-selection" title="Permanent link">&para;</a></h2>
-<p>The following characteristics have been considered for the sensor
-choice:</p>
-<ul>
-<li>
-<p>Provides PM 2.5 and PM 10 measurements in ug/m³</p>
-</li>
-<li>
-<p>Minimal distinguishable particle diameter of 0.3 am</p>
-</li>
-<li>
-<p>No need for external ADC or linearization circuits. The sensor includes an internal MCU capable of dealing with all the light emitting and sensing processing. All the communication is done using the I2C protocol. A dedicated driver has been designed for this.</p>
-</li>
-<li>
-<p>Ultra Low Cost when compared to other commercial solutions with similar performance</p>
-</li>
-<li>
-<p>Low Power</p>
-</li>
-</ul>
-<p>The selection is based on the academic references selected above. For a complete Low-Cost Sensors Evaluation see recommendations for application and the subsequent publication <em>(Rai et al. 2017)</em>.</p>
 <h2 id="design">Design<a class="headerlink" href="#design" title="Permanent link">&para;</a></h2>
 <p>The PM Sensor Board runs a dedicated ARM M0+ 32-bits, the same as the <a href="/Components/Data Board">Data Board</a> to provide a unified hardware architecture. The board includes an higly efficient step up to provide 5V to drive the PM sensors and a disable/enable circuit to turn off the sensor by software.</p>
 <div class="admonition info">
@@ -1960,22 +1856,9 @@ choice:</p>
 <h2 id="setup">Setup<a class="headerlink" href="#setup" title="Permanent link">&para;</a></h2>
 <p>The board is connected to the <a href="/Components/Data Board">Data Board</a> using the AUX connector. Before, the Plantower PMS sensors need to be connected. The board will autodetect the PMS sensors and present them seamlessly to the main <a href="/Components/Firmware">Firmware</a>  running on the Data Board. Multiple sensor board can be daisy-chained as seen on the image.</p>
 <p><img alt="" src="https://i.imgur.com/RRu8MiV.jpg" /></p>
-<h2 id="extra-sensors">Extra sensors<a class="headerlink" href="#extra-sensors" title="Permanent link">&para;</a></h2>
-<h3 id="dallas-onewire-support">Dallas OneWire support<a class="headerlink" href="#dallas-onewire-support" title="Permanent link">&para;</a></h3>
-<p><img alt="" src="https://cdn.shopify.com/s/files/1/2396/0755/products/DS18B20_waterproof_temperature_sensor_1m_cable_1000_grande.JPG?v=1506867440 =300x" /></p>
-<p><em>See <a href="https://datasheets.maximintegrated.com/en/ds/DS18B20.pdf">datasheet</a></em></p>
-<p>Support for rugged version of DS18B20 was added in <a href="https://github.com/fablabbcn/smartcitizen-kit-20/commit/86bb664470cc9d632058f7db17443b5cfc252d39">this commit</a>, the sensor is autodetected on boot when connected to the PM board GPIO Grove port.</p>
 <h2 id="source-files">Source files<a class="headerlink" href="#source-files" title="Permanent link">&para;</a></h2>
 <p><a class="github-button" data-size="large" href="https://github.com/fablabbcn/smartcitizen-kit-pm-board/archive/master.zip" data-icon="octicon-cloud-download" aria-label="Download from GitHub">Download</a></p>
 <p><a class="github-button" data-size="large" href="https://github.com/fablabbcn/smartcitizen-kit-pm-board" aria-label="Check the source code">Check the source code</a></p>
-<div class="footnote">
-<hr />
-<ol>
-<li id="fn:11">
-<p>PLANTOWER PMS5003 Technical Datasheet <a href="https://aqicn.org/air/view/sensor/spec/pms5003.pdf">https://aqicn.org/air/view/sensor/spec/pms5003.pdf</a>&#160;<a class="footnote-backref" href="#fnref:11" title="Jump back to footnote 1 in the text">&#8617;</a></p>
-</li>
-</ol>
-</div>
                 
               
               
