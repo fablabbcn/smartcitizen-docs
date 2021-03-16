@@ -55,6 +55,9 @@ Here is the table summarising the sensors:
 | Volatile Organic Compounds     | ppb   | AMS CCS811            |
 | Particulate Matter PM 1 / 2.5 / 10 | µg/m3 | Planttower PMS 5003              |
 
+!!! info "Sensor performance"
+    Make sure you visit the [sensor performance page](/Components/sensors/performance/) for further information about the sensors.
+
 ## :notebook: Installation instructions
 
 The sensor comes mounted and almost ready to be used:

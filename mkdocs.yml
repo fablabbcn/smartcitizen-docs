@@ -29,6 +29,7 @@ nav:
       - Solar Panel: Components/Solar Panel.md
     - Firmware: Components/Firmware.md
     - Sensor Knowledge:
+      - Performance summary: Components/sensors/performance.md
       - Air:
         - Particulate Matter: Components/sensors/air/PM Sensors.md
         - Noise: Components/sensors/air/Noise.md

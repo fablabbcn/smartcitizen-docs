@@ -4,7 +4,7 @@ Metal Oxide sensors
 The Smart Citizen Kit has been using metal oxide sensors for air quality metrics for a long time, and we thought that it would be interesting to dedicate a section for them!
 
 !!! info "Learn More"
-    Check this [link](/Components/Urban Sensor Board/Metal Oxide Sensor/CCS811/) for more information about the specifics of the eCO2 - TVOC sensor
+    Check this [link](/Components/sensors/air/CCS811/) for more information about the specifics of the eCO2 - TVOC sensor
 
 !!! info "Looking for the CO/NO2 MOs?"
     Check the [Legacy Hardware Section](/Components/Urban Sensor Board/Metal Oxide Sensor/MICS/)!
@@ -17,7 +17,7 @@ Unfortunately, since R~A~ varies with the deployment conditions, R~A~ cannot be 
 
 Previous versions of the SCK (V1.5, V2.0 and others) included the SGX MICS4514, which was meant to measure CO and NO~2~, and a lot of effort was put in V2.0 to improve the driver for the sensor, aiming to reduce power consumption and improve sensor readings. Unfortunately, this didn't match our expectations in terms of data quality and power consumption, and since individual sensor calibration is not feasible in our case (as some scientific publications have suggested), we decided to focus efforts in simpler, more robust and understandable set of sensors.
 
-That being said, the SCK V2.1 includes the AMS CCS811 for Air Quality indicative measurements for indoor air quality in the Urban Sensor Board, and the PMS5003 for outdoor PM exposure. More complex outdoor set-ups will be also possible, for instance using the [Gas Pro Sensor Board](../Gas Pro Sensor Board) (featuring up to three Alphasense Electrochemical Sensors)[^8][^9][^10]. This board is currently under evaluation and will be available soon. 
+That being said, the SCK V2.1 includes the AMS CCS811 for Air Quality indicative measurements for indoor air quality in the Urban Sensor Board, and the PMS5003 for outdoor PM exposure. More complex outdoor set-ups will be also possible, for instance using the [Analog Sensor Board](/Components/boards/Analog Sensor Board/).
 
 ### What to expect from Metal Oxide Sensors
 
