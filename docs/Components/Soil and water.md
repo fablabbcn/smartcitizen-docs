@@ -78,5 +78,5 @@ _Image credit: Pati Scientific_
 - Dissolved Oxygen
 - GPS location
 
-!!! info "Source files"
-	[Water Enclosure](https://github.com/fablabbcn/smartcitizen-enclosures/tree/master/Smart%20Citizen%20Water%20Station) files and BOM.
+!!! info "BOM"
+	[Water Enclosure](/assets/bom/Water Station PATI_BOM.ods) BOM.
