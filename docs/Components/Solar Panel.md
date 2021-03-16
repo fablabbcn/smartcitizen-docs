@@ -2,6 +2,9 @@
 
 We recommend a Solar Panel from [Voltaic Systems](https://voltaicsystems.com/), either the [6W 6V option](https://voltaicsystems.com/6-watt-panel/) or the [5W 6V version](https://voltaicsystems.com/__socialshop/5-watt-panel-etfe/).
 
+!!! warning "What is this for?"
+    Currently, this option is only usable for the Smart Citizen Kit 2.1 with small accessories, like a CO2 sensor or some electrochemical sensors, but it's not suitable for a larger options like the Smart Citizen Station. For this, we recommend a larger solar panel with a lead-acid battery instead as back-up.
+
 ![](https://cdn11.bigcommerce.com/s-6ubn8z08et/images/stencil/500x659/products/185/1049/Bracket_Pole_Mount-6_Watt_Panel__96828.1583444808.jpg)
 _Image credit: [Voltaic System](https://voltaicsystems.com/6-watt-panel/)_
 
