@@ -140,7 +140,7 @@ which python
 # For python 3
 curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 # For python 2.7 (for base macOS installation for instance)
-curl https://bootstrap.pypa.io/2.7/get-pip.py -o get-pip.py
+curl https://bootstrap.pypa.io/pip/2.7/get-pip.py -o get-pip.py
 # Then install it
 python get-pip.py
 ```
