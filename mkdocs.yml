@@ -26,6 +26,7 @@ nav:
       - Soil and Water: Components/Soil and water.md
       - Supported sensors: Components/Auxiliary Connector.md
       - Power Supply: Components/boards/Power Supply.md
+      - Solar Panel: Components/Solar Panel.md
     - Firmware: Components/Firmware.md
     - Sensor Knowledge:
       - Air:
