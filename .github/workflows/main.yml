@@ -29,7 +29,8 @@ jobs:
         mkdocs --version
         mkdocs build --verbose --clean --strict
 
-    - name: Deploy
+    - name: Deploy if master
+      if: github.ref == 'refs/heads/master'
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
