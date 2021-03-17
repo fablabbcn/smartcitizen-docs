@@ -1,7 +1,7 @@
 Welcome!
 ========
 
-Welcome to the Smart Citizen project documentation! Check the different [sections](#sections) or get started with our [guides](#guides).
+Welcome to the Smart Citizen project documentation! Check the different [sections](#sections) or get started with our [guides](#guides)
 
 !!! info "A note about versions"
 
