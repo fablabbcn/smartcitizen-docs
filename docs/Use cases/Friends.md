@@ -9,3 +9,6 @@ Below there's a list of similar projects in either philosophy, sensors and ideas
 - [hackAIR](https://www.hackair.eu/)
 - [VAQUUMS](https://vaquums.eu/)
 - [Fiduceo](https://www.fiduceo.eu/)
+
+!!! info "School project in Barcelona?"
+  You can have a look [here](https://agora.xtec.cat/cesire/cesire/servei-de-prestec-i-cambra-de-cria/sensors-i-consoles/) to find some sensors and SCKs for a period of time.
