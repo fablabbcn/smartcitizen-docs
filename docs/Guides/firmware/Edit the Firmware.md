@@ -1,4 +1,4 @@
-The data board of your SmartSmart Citizen Kit is has two **two microcontrollers**:
+The data board of your Smart Citizen Kit is has two **two microcontrollers**:
 
 ![](/assets/images/sck_2/SCK21_Microcontrollers.png)
 
@@ -12,14 +12,70 @@ The SmartSmart Citizen Kit Firmware is on our [repository on github](https://git
 
 To build the SmartCitizen Kit firmware you need a computer with [platformio](https://platformio.org/) installed. You don't need the full IDE installation (Atom). You can follow [this instructions](http://docs.platformio.org/en/latest/installation.html#super-quick-mac-linux) to install only the console version.
 
-For bootloader upload you also need [OpenOCD](http://openocd.org/) somewhere in your PATH.
+For bootloader upload you also need [OpenOCD](http://openocd.org/) somewhere in your PATH (more advanced).
+
+### Python
+
+This guide makes use of `python` scripts. You need to have at least `python=3.6`installed. If not, follow [this guide](https://docs.python-guide.org/starting/installation/). This guide will asume you use either `python`, `python3` for running scripts, or `pip` and `pip3` for installing things.
+
+* You can check if you have python installed:
+
+```
+> which python
+/usr/bin/python
+```
+
+* Install `pip` if you don't have it:
+
+=== "Python 3"
+    ```
+    > curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+    > python get-pip.py
+    ```
+
+=== "Python 2.7"
+    ```
+    > curl https://bootstrap.pypa.io/pip/2.7/get-pip.py -o get-pip.py
+    > python get-pip.py
+    ```
+
+* Add `pip` to the `PATH` (depending on where it was installed - macOS example below). Make sure to replace `<username>` by your actual username
+
+```
+> PATH=$PATH:/Users/<username>/Library/Python/2.7/bin
+```
+
+Also, you will need to install `pyserial`:
+
+=== "pip"
+    ```
+    > pip install pyserial
+    ```
+
+=== "pip3"
+    ```
+    > pip3 install pyserial
+    ```
+
+Once this is running, you can do:
+
+=== "Windows/macOS/linux"
+    ```
+    > cd smartcitizen-kit-21
+    > python make.py -h
+    ```
+=== "linux/macOS"
+    ```
+    > cd smartcitizen-kit-21
+    > ./make.py -h
+    ```
 
 ## Getting the firmware
 
 To get the firmware just run:
 
 ```
-git clone --recursive https://github.com/fablabbcn/smartcitizen-kit-21
+> git clone --recursive https://github.com/fablabbcn/smartcitizen-kit-21
 ```
 
 The _bootloader_ and _tools_ repositories are [submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules) of the main firmware so **you must do a `--recursive` clone** to get them.
@@ -28,6 +84,9 @@ The _bootloader_ and _tools_ repositories are [submodules](https://git-scm.com/b
 	I you download the code manually (with the _clone or download_ button on github) you will **not** get the [bootloader](https://github.com/fablabbcn/uf2-samdx1/tree/88aa54c1afab2647904aaccbe1a6b960c02fdb24) and [tools](https://github.com/fablabbcn/smartcitizen-tools) submodules code. To be able to compile the firmware you need to download the _tools_ submodule and place it in the proper folder.
 
 ## SAMD21 bootloader
+
+!!! danger "Make sure you need to do this"
+    This instructions only are needed if your kit doesn't have the bootloader already flashed. If you don't know what you are doing here, skip to [the flashing section](#samd21-firmware)
 
 If your kit doesn't have the bootloader already flashed (all the kits that we ship come with it) you will need an [ATMEL-ICE](https://www.digikey.es/en/product-highlight/a/atmel/atmel-ice-programmer-debugger) programmer. This process can also be done with a Raspberry Pi computer and the proper [connector](https://www.adafruit.com/product/2094) and cables, in [this guide](https://docs.smartcitizen.me/Guides/Debug%20the%20firmware/) you will find informtaion on how to do this.
 
@@ -38,8 +97,8 @@ Connect the Atmel-ICE programmer to the 10 pin SWD connector and to your compute
 Open a terminal, go to the folder where you cloned the firmware repository and run:
 
 ```
-cd smartcitizen-kit-21
-./make.py boot
+> cd smartcitizen-kit-21
+> ./make.py boot
 ```
 
 You will see a lot of output when compiling, the led on the SCK should _breath_ in **green** and you should see an output similar to this:
@@ -56,19 +115,74 @@ The bootloader we just flashed allows a very simple way of uploading the SCK fir
 
 ### Build script
 
-![](/assets/images/sck_2/build_script_usage.png)
+=== "Windows/macOS/linux"
+    ```
+    > python make.py
+
+    You need to specify at least one action!!!
+
+    USAGE:
+
+    build.py [options] action[s] target[s] -p port -f
+
+    options: -v: verbose -k: keep configuration
+    actions: boot (only for sam), build, flash
+    targets: sam, esp [-p port [-f]]
+    -p port [-f]: specify a port instead of scanning
+    -f: option ignores serial device description (must contain Smartcitizen otherwise)
+    ```
+
+=== "linux/macOS"
+    ```
+    > ./make.py
+
+    You need to specify at least one action!!!
+
+    USAGE:
+
+    build.py [options] action[s] target[s] -p port -f
+
+    options: -v: verbose -k: keep configuration
+    actions: boot (only for sam), build, flash
+    targets: sam, esp [-p port [-f]]
+    -p port [-f]: specify a port instead of scanning
+    -f: option ignores serial device description (must contain Smartcitizen otherwise)
+    ```
 
 You can use the same script used to flash the bootloader (`make.py`) that will do everything for you: compile the firmware, convert the binary to UF2 format and upload it to the kit:
 
-```
-python3 make.py build flash sam
-```
+=== "Windows/macOS/linux"
+    ```
+    > python make.py build flash sam
+    ```
+
+=== "linux/macOS"
+    ```
+    > ./make.py build flash sam
+    ```
+
+You can specify the port as well:
+
+=== "Windows/macOS/linux"
+    ```
+    > python make.py build flash sam -p /dev/ttyACM0
+    ```
+
+=== "linux/macOS"
+    ```
+    > ./make.py build flash sam -p /dev/ttyACM0
+    ```
 
 If this is your first time building the software, platformio will take a while installing all the needed dependencies, be patient. If there are no errors you should see an output similar to this:
 
-![](/assets/images/sck_2/flashing_firmware.png)
+```
+> python make.py build flash sam
+[0] Smartcitizen Kit S/N: 6E9FE7335150364852202020FF180E30
+Building SAM firmware... OK
+Flashing SAM firmware... OK
+```
 
-A copy of the compiled software in UF2 format called _SAM_firmware.uf2_ will remain in the _bin_ folder. You can use this file to reflash your kit without compiling it again. 
+A copy of the compiled software in UF2 format called `SAM_firmware.uf2` will remain in the _bin_ folder. You can use this file to reflash your kit without compiling it again. 
 
 !!!info
 	If you have any problem you can enable verbose output by calling _build.py_ script with the `-v` flag. There is a **known issue** that causes first compilation to fail, if this happens please just try again.
@@ -78,24 +192,36 @@ A copy of the compiled software in UF2 format called _SAM_firmware.uf2_ will rem
 If you want to install the firmware manually (or you had some problem with the build script) just follow this steps:
 
 ```
-cd sam
-pio run
+> cd sam
+> pio run
 ```
 
 After a lot of compilation messages you should see an output similar to this:
 
-![](/assets/images/sck_2/pio_run.png)
+```
+Indexing .pio/build/sck2/libFrameworkArduino.a
+Linking .pio/build/sck2/firmware.elf
+Checking size .pio/build/sck2/firmware.elf
+Building .pio/build/sck2/firmware.bin
+Advanced Memory Usage is available via "PlatformIO Home > Project Inspect"
+RAM:   [=======   ]  73.3% (used 24004 bytes from 32768 bytes)
+Flash: [========  ]  80.7% (used 211548 bytes from 262144 bytes)
+====================== [SUCCESS] Took 43.41 seconds ======================
+```
 
 then to convert the binary firmware to UF2 format do:
 
 ```
-cd ..
-./tools/uf2conv.py -o SAM_firmware.uf2 sam/.pio/build/sck2/firmware.bin
+> cd ..
+> ./tools/uf2conv.py -o SAM_firmware.uf2 sam/.pio/build/sck2/firmware.bin
 ```
 
-you should see something like this:
+And you should see something like this:
 
-![](/assets/images/sck_2/uf2_conv.png)
+```
+Converting to uf2, output size: 423424, start address: 0x2000
+Wrote 423424 bytes to SAM_firmware.uf2.
+```
 
 Now **double-click the reset button of your kit** open your favorite file browser and drag the file you just created to the _SCK-2.0_ drive. The kit will reset and run the new firmware.
 
@@ -109,14 +235,20 @@ Now **double-click the reset button of your kit** open your favorite file browse
 Just like the other parts of the process this is also covered by our `make.py` script. So you can just do:
 
 ```
-python3 make.py build flash esp
+> python make.py build flash esp
 ```
+
 As before, if this is the first time you do it, it will take a while on downloading dependecies and building the firmware.
 
 In this case the upload process is different, since the ESP8266 chip is not connected to the USB interface the data must be uploadded through the SAMD21 chip.
 Our [upload script](https://github.com/fablabbcn/smartcitizen-kit-21/blob/master/make.py) takes care of searching for a SCK on the USB bus, sending a command to the kit so it put's himself in what we call _bridge mode_ (white led) and uploading the firmware. This is the expected output:
 
-![](/assets/images/sck_2/flashing_ESP_firmware.png)
+```
+> python make.py build flash esp
+[0] Smartcitizen Kit S/N: 6E9FE7335150364852202020FF180E30
+Building ESP firmware... OK
+Flashing ESP firmware... OK
+```
 
 !!! info
 	Sometimes the ESP8266 and the uploader software don't get synced and the upload fails. Normally if you try again it will work. After first try you don't need to rebuild, you can just do `python3 make.py flash esp`.
@@ -127,40 +259,10 @@ You can perform a manual update if you only want/or can have a small python inst
 
 #### Preparation
 
-* Make sure you have python installed:
-
-```
-which python
-/usr/bin/python
-```
-
-* Install `pip` if you don't have it:
-
-```
-# For python 3
-curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
-# For python 2.7 (for base macOS installation for instance)
-curl https://bootstrap.pypa.io/pip/2.7/get-pip.py -o get-pip.py
-# Then install it
-python get-pip.py
-```
-
-* Add `pip` to the `PATH` (depending on where it was installed - macOS example below). Make sure to replace `<username>` by your actual username
-
-```
-PATH=$PATH:/Users/<username>/Library/Python/2.7/bin
-```
-
-* Install `pyserial`
-
-```
-pip install pyserial
-```
-
 * Get `esptool.py`:
 
 ```
-wget https://raw.githubusercontent.com/fablabbcn/smartcitizen-tools/master/esptool.py
+> wget https://raw.githubusercontent.com/fablabbcn/smartcitizen-tools/master/esptool.py
 ```
 
 * Get the latest firmware from https://github.com/fablabbcn/smartcitizen-kit-21/releases or ask us at [support](mailto:support@smartcitizen.me)
@@ -169,22 +271,24 @@ wget https://raw.githubusercontent.com/fablabbcn/smartcitizen-tools/master/espto
 
 * Get your usb-port id:
 
-```
-# macOS
-ls /dev/* | grep usb
-# Linux
-ls /dev/* | grep tty
-...
-```
+=== "macOS"
+    ```
+    > ls /dev/* | grep usb
+    ```
+
+=== "linux"
+    ```
+    > ls /dev/* | grep tty
+    ```
 
 * Put the SAM in bridge mode (replace `/dev/cu...` with the portname from above)
 
 ```
-echo 'esp -flash 115200' > </dev/cu...>
+> echo 'esp -flash 115200' > </dev/cu...>
 ```
 
 * Flash the esp using `esptool.py` from before. Make sure the `ESP_firmware.bin` is also there:
 
 ```
-python esptool.py --port </dev/cu...> --baud 115200 write_flash 0x000000 ESP_firmware.bin
+> python esptool.py --port </dev/cu...> --baud 115200 write_flash 0x000000 ESP_firmware.bin
 ```
