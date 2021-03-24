@@ -1,5 +1,8 @@
 # Smart Citizen and Education
 
+!!! info "School project in Barcelona?"
+  You can have a look [here](https://agora.xtec.cat/cesire/cesire/servei-de-prestec-i-cambra-de-cria/sensors-i-consoles/) to borrow sensors and SCKs for a period of time with pedagogical guide included.
+
 Here there is a compilation of projects that we have done around education, directly or indirectly with other partners:
 
 ![](/assets/images/doit.png)
