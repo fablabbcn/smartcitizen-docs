@@ -8,10 +8,35 @@ The easiest way is to go to the kit-edit view of your kit: https://smartcitizen.
 
 ![](/assets/images/postprocessing_edit.png)
 
-In there, you can update the fields for `blueprint` and `hardware`:
+In there, you can update the field `hardware_id`. This field defines an url for hardware calibration IDs to be loaded from, as well as some additional information. It virtually can load a **valid json** from any url, as long as it follows the instructions defined [here](https://github.com/fablabbcn/smartcitizen-data/blob/master/hardware/README.md). The default hardware definitions are in the [scdata github repository](https://github.com/fablabbcn/smartcitizen-data/tree/master/hardware) and can be found per `ID.json`. You can just take the corresponding ID and click in the `raw` button to get the url needed. This field should look something like: `https://raw.githubusercontent.com/fablabbcn/smartcitizen-data/master/hardware/SCAS21001.json`. This json file needs to follow the instructions below to successfully represent a valid postprocessing:
 
-- `hardware_url`: this field defines an url for hardware calibration IDs to be loaded from. It virtually can load a **valid json** from any url, as long as it follows the instructions defined [here](https://github.com/fablabbcn/smartcitizen-data/blob/master/hardware/README.md). The default hardware definitions are in the [scdata github repository](https://github.com/fablabbcn/smartcitizen-data/tree/master/hardware) and can be identified per ID. You can just take the corresponding ID and click in the `raw` button to get the url needed. This field should look something like: `https://raw.githubusercontent.com/fablabbcn/smartcitizen-data/master/hardware/SCAS21001.json`
-- `blueprint_url`: this field defines the post-processing to be done in the form of a `device-blueprint`. It virtually can load a valid json from any url, as long as it follows the instructions defined [here](https://github.com/fablabbcn/smartcitizen-data/blob/master/examples/notebooks/01_getting_started.ipynb) and [here](https://github.com/fablabbcn/smartcitizen-data/blob/master/examples/notebooks/04_processing_data.ipynb). If you want to use the base processing select it from the [blueprints folder](https://github.com/fablabbcn/smartcitizen-data/tree/master/blueprints), only selecting the `raw` json as mentioned above. If you have doubts, please, [contact us](mailto:support@smartcitizen.me) to make sure. Finally, other blueprints can be added as defined [in this guide](/Guides/data/Custom%20data%20processing/)
+```
+{
+  "blueprint_url": "https://raw.githubusercontent.com/fablabbcn/smartcitizen-data/master/blueprints/sck_21.json",
+  "description": "Smart Citizen Kit 2.1 With PMS5003",
+  "versions": [],
+  "forwarding": "nilu"
+}
+```
+
+- `blueprint_url`: this field defines the post-processing to be done in the form of a `device-blueprint`. It virtually can load a valid json from any url, as long as it follows the instructions defined [here](https://github.com/fablabbcn/smartcitizen-data/blob/master/examples/notebooks/01_getting_started.ipynb) and [here](https://github.com/fablabbcn/smartcitizen-data/blob/master/examples/notebooks/04_processing_data.ipynb). If you want to use the base processing select it from the [blueprints folder](https://github.com/fablabbcn/smartcitizen-data/tree/master/blueprints), only selecting the `raw` json as mentioned above. If you have doubts, please, [contact us](mailto:support@smartcitizen.me) to make sure everything will run smoothly. Finally, other blueprints can be added as defined [in this guide](/Guides/data/Custom%20data%20processing/)
+- `description`: brief description of the hardware
+- `versions`: list containing hardware versions (in case sensors where replaced, but kept in the same physical unit).     
+    ```
+      "versions": [
+        {
+          "ids": {
+            "AS_48_01": "162581715",
+            "AS_48_23": "202365014",
+            "AS_4A_01": "164200218",
+            "AS_4A_23": "204440527"
+          },
+          "from": "2020-11-30",
+          "to": null
+        }
+      ]
+    ```
+- `forwarding`: if this device needs to be forwarded to another data platform. Current supported platforms are specified in [the connectors](https://github.com/fablabbcn/smartcitizen-data/tree/master/connectors) folder
 
 ### Alternative method
 
