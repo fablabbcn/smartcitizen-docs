@@ -1330,6 +1330,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#finding-the-port" class="md-nav__link">
+    Finding the port
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2010,6 +2017,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#finding-the-port" class="md-nav__link">
+    Finding the port
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2050,7 +2064,7 @@
 <p>For bootloader upload you also need <a href="http://openocd.org/">OpenOCD</a> somewhere in your PATH (more advanced).</p>
 </div>
 <h3 id="installing-python">Installing Python<a class="headerlink" href="#installing-python" title="Permanent link">&para;</a></h3>
-<p>Platformio is written in python, and this guide makes use of a lot of <code>python</code> scripts. You need to have at least <code>python=3.6</code>installed. If not, follow <a href="https://docs.python-guide.org/starting/installation/">this guide</a>. This guide will asume you use either <code>python</code>, <code>python3</code> for running scripts, or <code>pip</code> and <code>pip3</code> for installing things, we will just detail instructions run by <code>python</code> and packages installed by <code>pip</code>, but you should know what it's installed on your computer.</p>
+<p>Platformio is written in <code>python</code>, and this guide makes use of a lot of <code>python</code> scripts. You need to have at least <code>python=3.6</code>installed. If not, follow <a href="https://docs.python-guide.org/starting/installation/">this guide</a>. This guide will asume you use either <code>python</code>, <code>python3</code> for running scripts, or <code>pip</code> and <code>pip3</code> for installing things, we will just detail instructions run by <code>python</code> and packages installed by <code>pip</code>, but you should know what it's installed on your computer.</p>
 <div class="admonition danger">
 <p class="admonition-title">Windows users</p>
 <p>We recommend:</p>
@@ -2105,12 +2119,17 @@
 <p>If you download the code manually (with the <em>clone or download</em> button on github) you will <strong>not</strong> get the <a href="https://github.com/fablabbcn/uf2-samdx1/tree/88aa54c1afab2647904aaccbe1a6b960c02fdb24">bootloader</a> and <a href="https://github.com/fablabbcn/smartcitizen-tools">tools</a> submodules code. To be able to compile the firmware you need to download the <em>tools</em> submodule and place it in the proper folder.</p>
 </div>
 <h3 id="getting-latest-changes">Getting latest changes<a class="headerlink" href="#getting-latest-changes" title="Permanent link">&para;</a></h3>
-<p>If you want to update firmware, you can do so since the repository is connected with our Github repository via git. You can do so by:</p>
+<p>If you want to update firmware, you can do so since the repository is connected with our Github repository via <code>git</code>. You can do so by:</p>
 <div class="highlight"><pre><span></span><code>cd smartcitizen-kit-21
 git pull
 ...
 cd tools
 git pull origin master
+...
+</code></pre></div>
+<p>Or simply:</p>
+<div class="highlight"><pre><span></span><code>cd smartcitizen-kit-21
+git pull --recurse-submodules
 ...
 </code></pre></div>
 <h2 id="samd21-bootloader">SAMD21 bootloader<a class="headerlink" href="#samd21-bootloader" title="Permanent link">&para;</a></h2>
@@ -2163,10 +2182,13 @@ targets: sam, esp [-p port [-f]]
 </code></pre></div>
 </div>
 </div>
-<p>You can specify the port as well:</p>
-<div class="highlight"><pre><span></span><code>&gt; python make.py flash sam -p /dev/ttyACM0 -v
+<div class="admonition warning">
+<p class="admonition-title">SCK not found</p>
+<p>In some platforms, the SCK doesn't show up as "Smartcitizen" in the USB Device Description. This might make the script to fail and not detect it. This can be bypassed by specifying the port in which the SCK is connected. To find out which port it is, <a href="#finding-the-port">check here</a>. Then, run the command below, where <PORT> is to be replaced:</p>
+<div class="highlight"><pre><span></span><code>&gt; python make.py flash sam -p &lt;PORT&gt; -v
 </code></pre></div>
-<p>If this is your first time building the software, platformio will take a while installing all the needed dependencies, be patient. If there are no errors you should see an output similar to this:</p>
+</div>
+<p>If this is your first time building the software, <code>platformio</code> will take a while installing all the needed dependencies, be patient. If there are no errors you should see an output similar to this:</p>
 <div class="highlight"><pre><span></span><code>&gt; python make.py build flash sam
 [0] Smartcitizen Kit S/N: 6E9FE7335150364852202020FF180E30
 Building SAM firmware... OK
@@ -2247,19 +2269,12 @@ Flashing ESP firmware... OK
 </ul>
 <h5 id="flashing">Flashing<a class="headerlink" href="#flashing" title="Permanent link">&para;</a></h5>
 <ul>
-<li>Get your usb-port id:</li>
-</ul>
-<div class="tabbed-set" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><label for="__tabbed_4_1">macOS</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code>&gt; ls /dev/* | grep usb
-</code></pre></div>
-</div>
-<input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><label for="__tabbed_4_2">linux</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code>&gt; ls /dev/* | grep tty
-</code></pre></div>
-</div>
-</div>
-<ul>
-<li>Put the SAM in bridge mode (replace <code>&lt;PORT&gt;</code> with the portname from above).</li>
+<li>
+<p>Get your usb-port id (check <a href="#finding-the-port">here</a>):</p>
+</li>
+<li>
+<p>Put the SAM in bridge mode (replace <code>&lt;PORT&gt;</code> with the portname from above).</p>
+</li>
 </ul>
 <div class="highlight"><pre><span></span><code>&gt; echo &#39;esp -flash 115200&#39; &gt; &lt;PORT&gt;
 </code></pre></div>
@@ -2290,6 +2305,24 @@ Flashing ESP firmware... OK
 &gt; &lt;PROJECT_PACKAGES_DIR&gt;/tool-esptool/esptool -cp &lt;PORT&gt; -cb 115200 -ca 0x000000 -cf bin/ESP_firmware.bin
 </code></pre></div>
 <p>Remember you can put the SAMD21 in bridge mode (white LED) by using Arduino IDE, sending <code>esp -flash 115200</code> using the <code>Serial Monitor</code> and then closing the <code>Serial Monitor</code> window.</p>
+<h2 id="finding-the-port">Finding the port<a class="headerlink" href="#finding-the-port" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>For Windows, <a href="https://support.microsoft.com/en-us/windows/open-device-manager-a7f2db46-faaf-24f0-8b7b-9e4a6032fc8c">open the device manager</a> and find the SCK in <code>Ports (COM &amp; LPT)</code>. Use that port (normally <code>COM...</code>).</p>
+</li>
+<li>
+<p>For macOS and linux, normally <code>/dev/*</code>:</p>
+</li>
+</ul>
+<div class="tabbed-set" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><label for="__tabbed_4_1">macOS</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>&gt; ls /dev/* | grep usb
+</code></pre></div>
+</div>
+<input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><label for="__tabbed_4_2">linux</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>&gt; ls /dev/* | grep tty
+</code></pre></div>
+</div>
+</div>
                 
               
               
