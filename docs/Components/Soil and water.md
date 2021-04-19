@@ -1,6 +1,6 @@
 # Soil and water sensors
 
-![](https://live.staticflickr.com/4912/46225599704_bd7d0abec5_k.jpg)
+<img src="https://live.staticflickr.com/65535/51124639732_90241111a9_k.jpg" alt="Water Station - Patí Científic">
 
 Although most of the time we have been working with air quality sensors and air metrics, we also like to keep an eye on soil and water sensors. This page details our integration of water and soil sensors, often interchangeable in some cases.
 
@@ -42,8 +42,12 @@ We recommend using [Whitebox Labs Tentacle T3](https://www.whiteboxes.ch/shop/te
 
 ### Enclosures
 
-!!! warning "wip"
-	Adding photos soon!
+A normal IP enclosure can be used for this setup. More information about the BOM and design files can be found [in the enclosures repository](https://github.com/fablabbcn/smartcitizen-enclosures/tree/master/Smart%20Citizen%20Water%20Station).
+
+<img src="https://live.staticflickr.com/65535/51125200496_67b06e79bd_k.jpg" alt="Water Station - Patí Científic">
+
+!!! info "Thanks!"
+    This enclosure and development has been done in collaboration with Developed in collaboration with [ICM-CSIC](https://www.icm.csic.es/en) and the [Club Pati Vela de Barcelona](https://pativelabarcelona.com/). Thanks!
 
 #### Legacy enclosures
 

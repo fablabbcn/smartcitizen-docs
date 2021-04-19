@@ -27,11 +27,14 @@ This is a _live_ compilation of our participation and results in some research p
 
 ## More projects
 
+![](https://paticientific.org/wp-content/uploads/2020/10/pativela2.jpg)
+_Source: Pati Scientific_
+
 Although not H2020 projects, the projects below have allowed us to further our connections with scientific research institutions, and have contributed to the development of the Smart Citizen project. We are proud to have worked with:
 
 - [Institut Salud Global - iSGlobal](https://www.isglobal.org/en/): [climate shelters project](https://www.barcelona.cat/barcelona-pel-clima/en/climate-shelters-schools)
 - [CSIC - UTM - ICM](https://www.icm.csic.es/en): [Pati Cientific Project](https://paticientific.org/)
-- [University of Bologna](https://www.unibo.it/en): Almabike project
+- [University of Bologna](https://www.unibo.it/en): [Almabike project](https://site.unibo.it/multicampus-sostenibile/en/mobility/almabike)
 - [Fraunhofer institute](https://www.fraunhofer.de/): https://gis-iq.esri.de/fraunhofer-institut-iao-digital-labor-bad-duerrheim/
 
 ## Academic publications
