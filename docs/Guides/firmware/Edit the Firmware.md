@@ -24,7 +24,7 @@ To build the SmartCitizen Kit firmware you need a computer with [platformio](htt
 
 ### Installing Python
 
-Platformio is written in python, and this guide makes use of a lot of `python` scripts. You need to have at least `python=3.6`installed. If not, follow [this guide](https://docs.python-guide.org/starting/installation/). This guide will asume you use either `python`, `python3` for running scripts, or `pip` and `pip3` for installing things, we will just detail instructions run by `python` and packages installed by `pip`, but you should know what it's installed on your computer.
+Platformio is written in `python`, and this guide makes use of a lot of `python` scripts. You need to have at least `python=3.6`installed. If not, follow [this guide](https://docs.python-guide.org/starting/installation/). This guide will asume you use either `python`, `python3` for running scripts, or `pip` and `pip3` for installing things, we will just detail instructions run by `python` and packages installed by `pip`, but you should know what it's installed on your computer.
 
 !!! danger "Windows users"
     We recommend:
@@ -90,7 +90,7 @@ The _bootloader_ and _tools_ repositories are [submodules](https://git-scm.com/b
 
 ### Getting latest changes
 
-If you want to update firmware, you can do so since the repository is connected with our Github repository via git. You can do so by:
+If you want to update firmware, you can do so since the repository is connected with our Github repository via `git`. You can do so by:
 
 ```
 cd smartcitizen-kit-21
@@ -98,6 +98,14 @@ git pull
 ...
 cd tools
 git pull origin master
+...
+```
+
+Or simply:
+
+```
+cd smartcitizen-kit-21
+git pull --recurse-submodules
 ...
 ```
 
@@ -170,13 +178,14 @@ You can make each action separate:
     > python make.py build flash sam -v
     ```
 
-You can specify the port as well:
+!!! warning "SCK not found"
+	In some platforms, the SCK doesn't show up as "Smartcitizen" in the USB Device Description. This might make the script to fail and not detect it. This can be bypassed by specifying the port in which the SCK is connected. To find out which port it is, [check here](#finding-the-port). Then, run the command below, where <PORT> is to be replaced:
+	
+	```
+	> python make.py flash sam -p <PORT> -v
+	```
 
-```
-> python make.py flash sam -p /dev/ttyACM0 -v
-```
-
-If this is your first time building the software, platformio will take a while installing all the needed dependencies, be patient. If there are no errors you should see an output similar to this:
+If this is your first time building the software, `platformio` will take a while installing all the needed dependencies, be patient. If there are no errors you should see an output similar to this:
 
 ```
 > python make.py build flash sam
@@ -283,17 +292,7 @@ You can perform a manual update if you only want or can have a small `python`ins
 
 ##### Flashing
 
-* Get your usb-port id:
-
-=== "macOS"
-    ```
-    > ls /dev/* | grep usb
-    ```
-
-=== "linux"
-    ```
-    > ls /dev/* | grep tty
-    ```
+* Get your usb-port id (check [here](#finding-the-port)):
 
 * Put the SAM in bridge mode (replace `<PORT>` with the portname from above).
 
@@ -339,3 +338,19 @@ There you should find a binary file for `esptool`. Now you should be able to run
 ```
 
 Remember you can put the SAMD21 in bridge mode (white LED) by using Arduino IDE, sending `esp -flash 115200` using the `Serial Monitor` and then closing the `Serial Monitor` window.
+
+## Finding the port
+
+* For Windows, [open the device manager](https://support.microsoft.com/en-us/windows/open-device-manager-a7f2db46-faaf-24f0-8b7b-9e4a6032fc8c) and find the SCK in `Ports (COM & LPT)`. Use that port (normally `COM...`).
+
+* For macOS and linux, normally `/dev/*`:
+
+=== "macOS"
+    ```
+    > ls /dev/* | grep usb
+    ```
+
+=== "linux"
+    ```
+    > ls /dev/* | grep tty
+    ```
