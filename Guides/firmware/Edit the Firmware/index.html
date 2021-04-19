@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#development-enviroment" class="md-skip">
+        <a href="#prerequisites" class="md-skip">
           Skip to content
         </a>
       
@@ -1183,16 +1183,30 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#development-enviroment" class="md-nav__link">
-    Development enviroment
+  <a href="#prerequisites" class="md-nav__link">
+    Prerequisites
   </a>
   
-    <nav class="md-nav" aria-label="Development enviroment">
+    <nav class="md-nav" aria-label="Prerequisites">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#python" class="md-nav__link">
-    Python
+  <a href="#getting-the-firmware" class="md-nav__link">
+    Getting the firmware
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#building-the-firmware" class="md-nav__link">
+    Building the firmware
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-python" class="md-nav__link">
+    Installing Python
   </a>
   
 </li>
@@ -1203,9 +1217,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#getting-the-firmware" class="md-nav__link">
+  <a href="#getting-the-firmware_1" class="md-nav__link">
     Getting the firmware
   </a>
+  
+    <nav class="md-nav" aria-label="Getting the firmware">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#getting-latest-changes" class="md-nav__link">
+    Getting latest changes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1232,8 +1259,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#manual-install" class="md-nav__link">
-    Manual install
+  <a href="#manual-process" class="md-nav__link">
+    Manual process
   </a>
   
 </li>
@@ -1260,6 +1287,14 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#using-esptoolpy" class="md-nav__link">
+    Using esptool.py
+  </a>
+  
+    <nav class="md-nav" aria-label="Using esptool.py">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#preparation" class="md-nav__link">
     Preparation
   </a>
@@ -1269,6 +1304,18 @@
           <li class="md-nav__item">
   <a href="#flashing" class="md-nav__link">
     Flashing
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-esptool-binaries" class="md-nav__link">
+    Using esptool binaries
   </a>
   
 </li>
@@ -1816,16 +1863,30 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#development-enviroment" class="md-nav__link">
-    Development enviroment
+  <a href="#prerequisites" class="md-nav__link">
+    Prerequisites
   </a>
   
-    <nav class="md-nav" aria-label="Development enviroment">
+    <nav class="md-nav" aria-label="Prerequisites">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#python" class="md-nav__link">
-    Python
+  <a href="#getting-the-firmware" class="md-nav__link">
+    Getting the firmware
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#building-the-firmware" class="md-nav__link">
+    Building the firmware
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-python" class="md-nav__link">
+    Installing Python
   </a>
   
 </li>
@@ -1836,9 +1897,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#getting-the-firmware" class="md-nav__link">
+  <a href="#getting-the-firmware_1" class="md-nav__link">
     Getting the firmware
   </a>
+  
+    <nav class="md-nav" aria-label="Getting the firmware">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#getting-latest-changes" class="md-nav__link">
+    Getting latest changes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1865,8 +1939,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#manual-install" class="md-nav__link">
-    Manual install
+  <a href="#manual-process" class="md-nav__link">
+    Manual process
   </a>
   
 </li>
@@ -1893,6 +1967,14 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#using-esptoolpy" class="md-nav__link">
+    Using esptool.py
+  </a>
+  
+    <nav class="md-nav" aria-label="Using esptool.py">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#preparation" class="md-nav__link">
     Preparation
   </a>
@@ -1902,6 +1984,18 @@
           <li class="md-nav__item">
   <a href="#flashing" class="md-nav__link">
     Flashing
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-esptool-binaries" class="md-nav__link">
+    Using esptool binaries
   </a>
   
 </li>
@@ -1942,20 +2036,44 @@
 <p><img alt="" src="/assets/images/sck_2/SCK21_Microcontrollers.png" /></p>
 <p>The main one is an <strong>Atmel SAMD21</strong>, this chip is in charge of all the normal tasks like reading the sensors, saving data, interacting with the user, etc. For this chip we need two software components the bootloader and the main firmware.</p>
 <p>For communications the SCK has an <strong>ESP8266 microcontroler with Wifi capabilities</strong>, this chip receives instructions from the SAMD21 via serial port and takes care of publishing the collected data through the network and takes care of serving the web pages for the <a href="http://docs.smartcitizen.me/Smart%20Citizen%20Kit/#setup-mode">setup mode</a> configuration server.</p>
-<h2 id="development-enviroment">Development enviroment<a class="headerlink" href="#development-enviroment" title="Permanent link">&para;</a></h2>
-<p>The SmartSmart Citizen Kit Firmware is on our <a href="https://github.com/fablabbcn/smartcitizen-kit-21">repository on github</a> so you will need <a href="https://mirrors.edge.kernel.org/pub/software/scm/git/">git</a> software <a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">installed</a>. </p>
-<p>To build the SmartCitizen Kit firmware you need a computer with <a href="https://platformio.org/">platformio</a> installed. You don't need the full IDE installation (Atom). You can follow <a href="http://docs.platformio.org/en/latest/installation.html#super-quick-mac-linux">this instructions</a> to install only the console version.</p>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
+<h3 id="getting-the-firmware">Getting the firmware<a class="headerlink" href="#getting-the-firmware" title="Permanent link">&para;</a></h3>
+<p>The Smart Citizen Kit Firmware is on our <a href="https://github.com/fablabbcn/smartcitizen-kit-21">repository on github</a> so you will need <a href="https://mirrors.edge.kernel.org/pub/software/scm/git/">git</a> software <a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">installed</a>.</p>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>Do not install anything until reading completely this guide. Specially for <code>Windows</code> users, it can be particularly painful and we don't guarantee everything is going to work. Drop us an email at <a href="mailto:support@smartcitizen.me">support</a> if you need help.</p>
+</div>
+<h3 id="building-the-firmware">Building the firmware<a class="headerlink" href="#building-the-firmware" title="Permanent link">&para;</a></h3>
+<p>To build the SmartCitizen Kit firmware you need a computer with <a href="https://platformio.org/">platformio</a> installed. <strong>You don't need the full IDE</strong> installation (Atom or VSCode). You can follow <a href="http://docs.platformio.org/en/latest/installation.html">this instructions</a> to install only the console version. See below if you don't have python yet (or you don't know it's ok).</p>
+<div class="admonition warning">
+<p class="admonition-title">Advanced</p>
 <p>For bootloader upload you also need <a href="http://openocd.org/">OpenOCD</a> somewhere in your PATH (more advanced).</p>
-<h3 id="python">Python<a class="headerlink" href="#python" title="Permanent link">&para;</a></h3>
-<p>This guide makes use of <code>python</code> scripts. You need to have at least <code>python=3.6</code>installed. If not, follow <a href="https://docs.python-guide.org/starting/installation/">this guide</a>. This guide will asume you use either <code>python</code>, <code>python3</code> for running scripts, or <code>pip</code> and <code>pip3</code> for installing things.</p>
+</div>
+<h3 id="installing-python">Installing Python<a class="headerlink" href="#installing-python" title="Permanent link">&para;</a></h3>
+<p>Platformio is written in python, and this guide makes use of a lot of <code>python</code> scripts. You need to have at least <code>python=3.6</code>installed. If not, follow <a href="https://docs.python-guide.org/starting/installation/">this guide</a>. This guide will asume you use either <code>python</code>, <code>python3</code> for running scripts, or <code>pip</code> and <code>pip3</code> for installing things, we will just detail instructions run by <code>python</code> and packages installed by <code>pip</code>, but you should know what it's installed on your computer.</p>
+<div class="admonition danger">
+<p class="admonition-title">Windows users</p>
+<p>We recommend:</p>
+<ol>
+<li>Using PowerShell (with <a href="https://www.howtogeek.com/194041/how-to-open-the-command-prompt-as-administrator-in-windows-8.1/">admin rights</a>)</li>
+<li>Installing <a href="https://chocolatey.org/install#individual">Chocolatey</a> and then proceeding with:</li>
+</ol>
+<div class="highlight"><pre><span></span><code>choco install python
+</code></pre></div>
+<p>Read <strong>very carefully the output of the installation</strong>.</p>
+</div>
 <ul>
 <li>You can check if you have python installed:</li>
 </ul>
 <div class="highlight"><pre><span></span><code>&gt; which python
 /usr/bin/python
 </code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Windows</p>
+<p>To do this in <code>Windows</code>, you can check the output of <code>python --version</code></p>
+</div>
 <ul>
-<li>Install <code>pip</code> if you don't have it:</li>
+<li>Install <code>pip</code> if you don't have it (check <code>pip</code> before):</li>
 </ul>
 <div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Python 3</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code>&gt; curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
@@ -1969,47 +2087,46 @@
 </div>
 </div>
 <ul>
-<li>Add <code>pip</code> to the <code>PATH</code> (depending on where it was installed - macOS example below). Make sure to replace <code>&lt;username&gt;</code> by your actual username</li>
+<li>Install <code>pyserial</code>:</li>
 </ul>
-<div class="highlight"><pre><span></span><code>&gt; PATH=$PATH:/Users/&lt;username&gt;/Library/Python/2.7/bin
-</code></pre></div>
-<p>Also, you will need to install <code>pyserial</code>:</p>
-<div class="tabbed-set" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">pip</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code>&gt; pip install pyserial
 </code></pre></div>
-</div>
-<input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><label for="__tabbed_2_2">pip3</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code>&gt; pip3 install pyserial
-</code></pre></div>
-</div>
-</div>
-<p>Once this is running, you can do:</p>
-<div class="tabbed-set" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><label for="__tabbed_3_1">Windows/macOS/linux</label><div class="tabbed-content">
+<p>Once this is running, you can do either of the ones below. We will use the generic one throughout the guide:</p>
+<div class="tabbed-set" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">Windows/macOS/linux</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code>&gt; cd smartcitizen-kit-21
 &gt; python make.py -h
 </code></pre></div>
 </div>
-<input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><label for="__tabbed_3_2">linux/macOS</label><div class="tabbed-content">
+<input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><label for="__tabbed_2_2">linux/macOS</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code>&gt; cd smartcitizen-kit-21
 &gt; ./make.py -h
 </code></pre></div>
 </div>
 </div>
-<h2 id="getting-the-firmware">Getting the firmware<a class="headerlink" href="#getting-the-firmware" title="Permanent link">&para;</a></h2>
+<h2 id="getting-the-firmware_1">Getting the firmware<a class="headerlink" href="#getting-the-firmware_1" title="Permanent link">&para;</a></h2>
 <p>To get the firmware just run:</p>
 <div class="highlight"><pre><span></span><code>&gt; git clone --recursive https://github.com/fablabbcn/smartcitizen-kit-21
 </code></pre></div>
 <p>The <em>bootloader</em> and <em>tools</em> repositories are <a href="https://git-scm.com/book/en/v2/Git-Tools-Submodules">submodules</a> of the main firmware so <strong>you must do a <code>--recursive</code> clone</strong> to get them.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>I you download the code manually (with the <em>clone or download</em> button on github) you will <strong>not</strong> get the <a href="https://github.com/fablabbcn/uf2-samdx1/tree/88aa54c1afab2647904aaccbe1a6b960c02fdb24">bootloader</a> and <a href="https://github.com/fablabbcn/smartcitizen-tools">tools</a> submodules code. To be able to compile the firmware you need to download the <em>tools</em> submodule and place it in the proper folder.</p>
+<p>If you download the code manually (with the <em>clone or download</em> button on github) you will <strong>not</strong> get the <a href="https://github.com/fablabbcn/uf2-samdx1/tree/88aa54c1afab2647904aaccbe1a6b960c02fdb24">bootloader</a> and <a href="https://github.com/fablabbcn/smartcitizen-tools">tools</a> submodules code. To be able to compile the firmware you need to download the <em>tools</em> submodule and place it in the proper folder.</p>
 </div>
+<h3 id="getting-latest-changes">Getting latest changes<a class="headerlink" href="#getting-latest-changes" title="Permanent link">&para;</a></h3>
+<p>If you want to update firmware, you can do so since the repository is connected with our Github repository via git. You can do so by:</p>
+<div class="highlight"><pre><span></span><code>cd smartcitizen-kit-21
+git pull
+...
+cd tools
+git pull origin master
+...
+</code></pre></div>
 <h2 id="samd21-bootloader">SAMD21 bootloader<a class="headerlink" href="#samd21-bootloader" title="Permanent link">&para;</a></h2>
 <div class="admonition danger">
 <p class="admonition-title">Make sure you need to do this</p>
-<p>This instructions only are needed if your kit doesn't have the bootloader already flashed. If you don't know what you are doing here, skip to <a href="#samd21-firmware">the flashing section</a></p>
+<p>This instructions only are needed if your kit doesn't have the bootloader already flashed. If you don't know what you are doing here, skip to <a href="#samd21-firmware">the flashing section</a>.</p>
 </div>
-<p>If your kit doesn't have the bootloader already flashed (all the kits that we ship come with it) you will need an <a href="https://www.digikey.es/en/product-highlight/a/atmel/atmel-ice-programmer-debugger">ATMEL-ICE</a> programmer. This process can also be done with a Raspberry Pi computer and the proper <a href="https://www.adafruit.com/product/2094">connector</a> and cables, in <a href="https://docs.smartcitizen.me/Guides/Debug%20the%20firmware/">this guide</a> you will find informtaion on how to do this.</p>
+<p>If your kit doesn't have the bootloader already flashed (all the kits that we ship come with it) you will need an <a href="https://www.digikey.es/en/product-highlight/a/atmel/atmel-ice-programmer-debugger">ATMEL-ICE</a> programmer. This process can also be done with a Raspberry Pi computer and the proper <a href="https://www.adafruit.com/product/2094">connector</a> and cables, in <a href="https://docs.smartcitizen.me/Guides/Debug%20the%20firmware/">this guide</a> you will find information on how to do this.</p>
 <p><img alt="" src="/assets/images/sck_2/SCK21_data_connectors.png" /></p>
 <p>Connect the Atmel-ICE programmer to the 10 pin SWD connector and to your computer. Power the SCK via USB, you can use any USB charger or even your computer.</p>
 <p>Open a terminal, go to the folder where you cloned the firmware repository and run:</p>
@@ -2023,7 +2140,6 @@
 <p>The bootloader we just flashed allows a very simple way of uploading the SCK firmware based on the <a href="https://github.com/Microsoft/uf2">UF2</a> format, when you <strong>double-click the reset button</strong> of your kit it will expose a <a href="https://en.wikipedia.org/wiki/USB_mass_storage_device_class">MSD</a> interface to your computer and a new drive will popup where you can just drag the compiled firmware file (converted to UF2 format).</p>
 <p><img alt="Reset button" src="/assets/images/sck_2/SCK21_Reset.png" /></p>
 <h3 id="build-script">Build script<a class="headerlink" href="#build-script" title="Permanent link">&para;</a></h3>
-<div class="tabbed-set" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><label for="__tabbed_4_1">Windows/macOS/linux</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code>&gt; python make.py
 
 You need to specify at least one action!!!
@@ -2038,44 +2154,26 @@ targets: sam, esp [-p port [-f]]
 -p port [-f]: specify a port instead of scanning
 -f: option ignores serial device description (must contain Smartcitizen otherwise)
 </code></pre></div>
-</div>
-<input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><label for="__tabbed_4_2">linux/macOS</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code>&gt; ./make.py
-
-You need to specify at least one action!!!
-
-USAGE:
-
-build.py [options] action[s] target[s] -p port -f
-
-options: -v: verbose -k: keep configuration
-actions: boot (only for sam), build, flash
-targets: sam, esp [-p port [-f]]
--p port [-f]: specify a port instead of scanning
--f: option ignores serial device description (must contain Smartcitizen otherwise)
-</code></pre></div>
-</div>
-</div>
 <p>You can use the same script used to flash the bootloader (<code>make.py</code>) that will do everything for you: compile the firmware, convert the binary to UF2 format and upload it to the kit:</p>
-<div class="tabbed-set" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><label for="__tabbed_5_1">Windows/macOS/linux</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code>&gt; python make.py build flash sam
+<div class="highlight"><pre><span></span><code>&gt; python make.py build flash sam -v
+</code></pre></div>
+<p>You can make each action separate:</p>
+<div class="tabbed-set" data-tabs="3:3"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><label for="__tabbed_3_1">Build SAMD21</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>&gt; python make.py build sam -v
 </code></pre></div>
 </div>
-<input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><label for="__tabbed_5_2">linux/macOS</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code>&gt; ./make.py build flash sam
+<input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><label for="__tabbed_3_2">Flash SAMD21</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>&gt; python make.py flash sam -v
+</code></pre></div>
+</div>
+<input id="__tabbed_3_3" name="__tabbed_3" type="radio" /><label for="__tabbed_3_3">Both</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>&gt; python make.py build flash sam -v
 </code></pre></div>
 </div>
 </div>
 <p>You can specify the port as well:</p>
-<div class="tabbed-set" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><label for="__tabbed_6_1">Windows/macOS/linux</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code>&gt; python make.py build flash sam -p /dev/ttyACM0
+<div class="highlight"><pre><span></span><code>&gt; python make.py flash sam -p /dev/ttyACM0 -v
 </code></pre></div>
-</div>
-<input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><label for="__tabbed_6_2">linux/macOS</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code>&gt; ./make.py build flash sam -p /dev/ttyACM0
-</code></pre></div>
-</div>
-</div>
 <p>If this is your first time building the software, platformio will take a while installing all the needed dependencies, be patient. If there are no errors you should see an output similar to this:</p>
 <div class="highlight"><pre><span></span><code>&gt; python make.py build flash sam
 [0] Smartcitizen Kit S/N: 6E9FE7335150364852202020FF180E30
@@ -2087,7 +2185,7 @@ Flashing SAM firmware... OK
 <p class="admonition-title">Info</p>
 <p>If you have any problem you can enable verbose output by calling <em>build.py</em> script with the <code>-v</code> flag. There is a <strong>known issue</strong> that causes first compilation to fail, if this happens please just try again.</p>
 </div>
-<h3 id="manual-install">Manual install<a class="headerlink" href="#manual-install" title="Permanent link">&para;</a></h3>
+<h3 id="manual-process">Manual process<a class="headerlink" href="#manual-process" title="Permanent link">&para;</a></h3>
 <p>If you want to install the firmware manually (or you had some problem with the build script) just follow this steps:</p>
 <div class="highlight"><pre><span></span><code>&gt; cd sam
 &gt; pio run
@@ -2118,23 +2216,35 @@ Wrote 423424 bytes to SAM_firmware.uf2.
 </div>
 <h2 id="esp8266-firmware">ESP8266 firmware<a class="headerlink" href="#esp8266-firmware" title="Permanent link">&para;</a></h2>
 <p>Just like the other parts of the process this is also covered by our <code>make.py</code> script. So you can just do:</p>
-<div class="highlight"><pre><span></span><code>&gt; python make.py build flash esp
+<div class="tabbed-set" data-tabs="4:3"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><label for="__tabbed_4_1">Build ESP</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>&gt; python make.py build esp -v
 </code></pre></div>
+</div>
+<input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><label for="__tabbed_4_2">Flash ESP</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>&gt; python make.py flash esp -v
+</code></pre></div>
+</div>
+<input id="__tabbed_4_3" name="__tabbed_4" type="radio" /><label for="__tabbed_4_3">Both</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>&gt; python make.py build flash esp -v
+</code></pre></div>
+</div>
+</div>
 <p>As before, if this is the first time you do it, it will take a while on downloading dependecies and building the firmware.</p>
 <p>In this case the upload process is different, since the ESP8266 chip is not connected to the USB interface the data must be uploadded through the SAMD21 chip.
 Our <a href="https://github.com/fablabbcn/smartcitizen-kit-21/blob/master/make.py">upload script</a> takes care of searching for a SCK on the USB bus, sending a command to the kit so it put's himself in what we call <em>bridge mode</em> (white led) and uploading the firmware. This is the expected output:</p>
-<div class="highlight"><pre><span></span><code>&gt; python make.py build flash esp
+<div class="highlight"><pre><span></span><code>&gt; python make.py build flash esp -v
 [0] Smartcitizen Kit S/N: 6E9FE7335150364852202020FF180E30
 Building ESP firmware... OK
 Flashing ESP firmware... OK
 </code></pre></div>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>Sometimes the ESP8266 and the uploader software don't get synced and the upload fails. Normally if you try again it will work. After first try you don't need to rebuild, you can just do <code>python3 make.py flash esp</code>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Sometimes the ESP8266 and the uploader software don't get synced and the upload fails. Normally if you try again it will work. After first try you don't need to rebuild, you can just do <code>python make.py flash esp</code>.</p>
 </div>
 <h3 id="manual-update">Manual update<a class="headerlink" href="#manual-update" title="Permanent link">&para;</a></h3>
-<p>You can perform a manual update if you only want/or can have a small python installation:</p>
-<h4 id="preparation">Preparation<a class="headerlink" href="#preparation" title="Permanent link">&para;</a></h4>
+<p>You can perform a manual update if you only want or can have a small <code>python</code>installation. Another option is possible if you have <code>platformio</code> and you want to use <code>esptool</code> binaries.</p>
+<h4 id="using-esptoolpy">Using esptool.py<a class="headerlink" href="#using-esptoolpy" title="Permanent link">&para;</a></h4>
+<h5 id="preparation">Preparation<a class="headerlink" href="#preparation" title="Permanent link">&para;</a></h5>
 <ul>
 <li>Get <code>esptool.py</code>:</li>
 </ul>
@@ -2143,29 +2253,51 @@ Flashing ESP firmware... OK
 <ul>
 <li>Get the latest firmware from <a href="https://github.com/fablabbcn/smartcitizen-kit-21/releases">https://github.com/fablabbcn/smartcitizen-kit-21/releases</a> or ask us at <a href="mailto:support@smartcitizen.me">support</a></li>
 </ul>
-<h4 id="flashing">Flashing<a class="headerlink" href="#flashing" title="Permanent link">&para;</a></h4>
+<h5 id="flashing">Flashing<a class="headerlink" href="#flashing" title="Permanent link">&para;</a></h5>
 <ul>
 <li>Get your usb-port id:</li>
 </ul>
-<div class="tabbed-set" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><label for="__tabbed_7_1">macOS</label><div class="tabbed-content">
+<div class="tabbed-set" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><label for="__tabbed_5_1">macOS</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code>&gt; ls /dev/* | grep usb
 </code></pre></div>
 </div>
-<input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><label for="__tabbed_7_2">linux</label><div class="tabbed-content">
+<input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><label for="__tabbed_5_2">linux</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code>&gt; ls /dev/* | grep tty
 </code></pre></div>
 </div>
 </div>
 <ul>
-<li>Put the SAM in bridge mode (replace <code>/dev/cu...</code> with the portname from above)</li>
+<li>Put the SAM in bridge mode (replace <code>/dev/cu...</code> with the portname from above).</li>
 </ul>
-<div class="highlight"><pre><span></span><code>&gt; echo &#39;esp -flash 115200&#39; &gt; &lt;/dev/cu...&gt;
+<div class="highlight"><pre><span></span><code>&gt; echo &#39;esp -flash 115200&#39; &gt; &lt;PORT&gt;
 </code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">echo not working?</p>
+<p>You can do the same in the Arduino IDE, using the <code>Serial Monitor</code> and writing <code>esp -flash 115200</code>. Remember to close the <code>Serial Monitor</code> window after it.</p>
+</div>
+<p>Now you should see the SCK's LED in WHITE.</p>
 <ul>
 <li>Flash the esp using <code>esptool.py</code> from before. Make sure the <code>ESP_firmware.bin</code> is also there:</li>
 </ul>
-<div class="highlight"><pre><span></span><code>&gt; python esptool.py --port &lt;/dev/cu...&gt; --baud 115200 write_flash 0x000000 ESP_firmware.bin
+<div class="highlight"><pre><span></span><code>&gt; python esptool.py --port &lt;PORT&gt; --baud 115200 write_flash 0x000000 ESP_firmware.bin
 </code></pre></div>
+<h4 id="using-esptool-binaries">Using esptool binaries<a class="headerlink" href="#using-esptool-binaries" title="Permanent link">&para;</a></h4>
+<p>Locate esptool binaries:</p>
+<div class="highlight"><pre><span></span><code>&gt; cd smartcitizen-kit-21/sam
+&gt; pio run -t envdump
+...
+</code></pre></div>
+<p>Find <code>PROJECT_PACKAGES_DIR</code> in the output and navigate to:</p>
+<div class="highlight"><pre><span></span><code>&gt; cd &lt;PROJECT_PACKAGES_DIR&gt;/tool-esptool
+&gt; ls
+...
+</code></pre></div>
+<p>There you should find a binary file for <code>esptool</code>. Now you should be able to run:</p>
+<div class="highlight"><pre><span></span><code>&gt; cd smartcitizen-kit-21
+&gt; echo &#39;esp -flash 115200&#39; &gt; &lt;PORT&gt;
+&gt; &lt;PROJECT_PACKAGES_DIR&gt;/tool-esptool/esptool -cp &lt;PORT&gt; -cb &lt;115200&gt; -ca 0x000000 -cf bin/ESP_firmware.bin
+</code></pre></div>
+<p>Remember you can put the SAMD21 in bridge mode (white LED) by using Arduino IDE, sending <code>esp -flash 115200</code> using the <code>Serial Monitor</code> and then closing the <code>Serial Monitor</code> window.</p>
                 
               
               
