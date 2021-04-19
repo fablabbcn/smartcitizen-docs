@@ -50,17 +50,10 @@ Platformio is written in python, and this guide makes use of a lot of `python` s
 
 * Install `pip` if you don't have it (check `pip` before):
 
-=== "Python 3"
-    ```
-    > curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
-    > python get-pip.py
-    ```
-
-=== "Python 2.7"
-    ```
-    > curl https://bootstrap.pypa.io/pip/2.7/get-pip.py -o get-pip.py
-    > python get-pip.py
-    ```
+```
+> curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+> python get-pip.py
+```
 
 * Install `pyserial`:
 
@@ -70,7 +63,7 @@ Platformio is written in python, and this guide makes use of a lot of `python` s
 
 Once this is running, you can do either of the ones below. We will use the generic one throughout the guide:
 
-=== "Windows/macOS/linux"
+=== "Windows/linux/macOS"
     ```
     > cd smartcitizen-kit-21
     > python make.py -h
@@ -263,7 +256,7 @@ In this case the upload process is different, since the ESP8266 chip is not conn
 Our [upload script](https://github.com/fablabbcn/smartcitizen-kit-21/blob/master/make.py) takes care of searching for a SCK on the USB bus, sending a command to the kit so it put's himself in what we call _bridge mode_ (white led) and uploading the firmware. This is the expected output:
 
 ```
-> python make.py build flash esp -v
+> python make.py build flash esp
 [0] Smartcitizen Kit S/N: 6E9FE7335150364852202020FF180E30
 Building ESP firmware... OK
 Flashing ESP firmware... OK
@@ -302,7 +295,7 @@ You can perform a manual update if you only want or can have a small `python`ins
     > ls /dev/* | grep tty
     ```
 
-* Put the SAM in bridge mode (replace `/dev/cu...` with the portname from above).
+* Put the SAM in bridge mode (replace `<PORT>` with the portname from above).
 
 ```
 > echo 'esp -flash 115200' > <PORT>
@@ -313,7 +306,7 @@ You can perform a manual update if you only want or can have a small `python`ins
 
 Now you should see the SCK's LED in WHITE.
 
-* Flash the esp using `esptool.py` from before. Make sure the `ESP_firmware.bin` is also there:
+* Flash the esp using `esptool.py` from before. Make sure the `ESP_firmware.bin` is also there (replace `<PORT>`):
 
 ```
 > python esptool.py --port <PORT> --baud 115200 write_flash 0x000000 ESP_firmware.bin
@@ -329,7 +322,7 @@ Locate esptool binaries:
 ...
 ```
 
-Find `PROJECT_PACKAGES_DIR` in the output and navigate to:
+Find `PROJECT_PACKAGES_DIR` in the output and navigate to (replace `<PROJECT_PACKAGES_DIR>`):
 
 ```
 > cd <PROJECT_PACKAGES_DIR>/tool-esptool
@@ -337,12 +330,12 @@ Find `PROJECT_PACKAGES_DIR` in the output and navigate to:
 ...
 ```
 
-There you should find a binary file for `esptool`. Now you should be able to run:
+There you should find a binary file for `esptool`. Now you should be able to run (replace `<PROJECT_PACKAGES_DIR>` and `<PORT>`):
 
 ```
 > cd smartcitizen-kit-21
 > echo 'esp -flash 115200' > <PORT>
-> <PROJECT_PACKAGES_DIR>/tool-esptool/esptool -cp <PORT> -cb <115200> -ca 0x000000 -cf bin/ESP_firmware.bin
+> <PROJECT_PACKAGES_DIR>/tool-esptool/esptool -cp <PORT> -cb 115200 -ca 0x000000 -cf bin/ESP_firmware.bin
 ```
 
 Remember you can put the SAMD21 in bridge mode (white LED) by using Arduino IDE, sending `esp -flash 115200` using the `Serial Monitor` and then closing the `Serial Monitor` window.
