@@ -2075,29 +2075,21 @@
 <ul>
 <li>Install <code>pip</code> if you don't have it (check <code>pip</code> before):</li>
 </ul>
-<div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Python 3</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code>&gt; curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 &gt; python get-pip.py
 </code></pre></div>
-</div>
-<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">Python 2.7</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code>&gt; curl https://bootstrap.pypa.io/pip/2.7/get-pip.py -o get-pip.py
-&gt; python get-pip.py
-</code></pre></div>
-</div>
-</div>
 <ul>
 <li>Install <code>pyserial</code>:</li>
 </ul>
 <div class="highlight"><pre><span></span><code>&gt; pip install pyserial
 </code></pre></div>
 <p>Once this is running, you can do either of the ones below. We will use the generic one throughout the guide:</p>
-<div class="tabbed-set" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">Windows/macOS/linux</label><div class="tabbed-content">
+<div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Windows/linux/macOS</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code>&gt; cd smartcitizen-kit-21
 &gt; python make.py -h
 </code></pre></div>
 </div>
-<input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><label for="__tabbed_2_2">linux/macOS</label><div class="tabbed-content">
+<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">linux/macOS</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code>&gt; cd smartcitizen-kit-21
 &gt; ./make.py -h
 </code></pre></div>
@@ -2158,15 +2150,15 @@ targets: sam, esp [-p port [-f]]
 <div class="highlight"><pre><span></span><code>&gt; python make.py build flash sam -v
 </code></pre></div>
 <p>You can make each action separate:</p>
-<div class="tabbed-set" data-tabs="3:3"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><label for="__tabbed_3_1">Build SAMD21</label><div class="tabbed-content">
+<div class="tabbed-set" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">Build SAMD21</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code>&gt; python make.py build sam -v
 </code></pre></div>
 </div>
-<input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><label for="__tabbed_3_2">Flash SAMD21</label><div class="tabbed-content">
+<input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><label for="__tabbed_2_2">Flash SAMD21</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code>&gt; python make.py flash sam -v
 </code></pre></div>
 </div>
-<input id="__tabbed_3_3" name="__tabbed_3" type="radio" /><label for="__tabbed_3_3">Both</label><div class="tabbed-content">
+<input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><label for="__tabbed_2_3">Both</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code>&gt; python make.py build flash sam -v
 </code></pre></div>
 </div>
@@ -2216,15 +2208,15 @@ Wrote 423424 bytes to SAM_firmware.uf2.
 </div>
 <h2 id="esp8266-firmware">ESP8266 firmware<a class="headerlink" href="#esp8266-firmware" title="Permanent link">&para;</a></h2>
 <p>Just like the other parts of the process this is also covered by our <code>make.py</code> script. So you can just do:</p>
-<div class="tabbed-set" data-tabs="4:3"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><label for="__tabbed_4_1">Build ESP</label><div class="tabbed-content">
+<div class="tabbed-set" data-tabs="3:3"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><label for="__tabbed_3_1">Build ESP</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code>&gt; python make.py build esp -v
 </code></pre></div>
 </div>
-<input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><label for="__tabbed_4_2">Flash ESP</label><div class="tabbed-content">
+<input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><label for="__tabbed_3_2">Flash ESP</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code>&gt; python make.py flash esp -v
 </code></pre></div>
 </div>
-<input id="__tabbed_4_3" name="__tabbed_4" type="radio" /><label for="__tabbed_4_3">Both</label><div class="tabbed-content">
+<input id="__tabbed_3_3" name="__tabbed_3" type="radio" /><label for="__tabbed_3_3">Both</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code>&gt; python make.py build flash esp -v
 </code></pre></div>
 </div>
@@ -2232,7 +2224,7 @@ Wrote 423424 bytes to SAM_firmware.uf2.
 <p>As before, if this is the first time you do it, it will take a while on downloading dependecies and building the firmware.</p>
 <p>In this case the upload process is different, since the ESP8266 chip is not connected to the USB interface the data must be uploadded through the SAMD21 chip.
 Our <a href="https://github.com/fablabbcn/smartcitizen-kit-21/blob/master/make.py">upload script</a> takes care of searching for a SCK on the USB bus, sending a command to the kit so it put's himself in what we call <em>bridge mode</em> (white led) and uploading the firmware. This is the expected output:</p>
-<div class="highlight"><pre><span></span><code>&gt; python make.py build flash esp -v
+<div class="highlight"><pre><span></span><code>&gt; python make.py build flash esp
 [0] Smartcitizen Kit S/N: 6E9FE7335150364852202020FF180E30
 Building ESP firmware... OK
 Flashing ESP firmware... OK
@@ -2257,17 +2249,17 @@ Flashing ESP firmware... OK
 <ul>
 <li>Get your usb-port id:</li>
 </ul>
-<div class="tabbed-set" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><label for="__tabbed_5_1">macOS</label><div class="tabbed-content">
+<div class="tabbed-set" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><label for="__tabbed_4_1">macOS</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code>&gt; ls /dev/* | grep usb
 </code></pre></div>
 </div>
-<input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><label for="__tabbed_5_2">linux</label><div class="tabbed-content">
+<input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><label for="__tabbed_4_2">linux</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code>&gt; ls /dev/* | grep tty
 </code></pre></div>
 </div>
 </div>
 <ul>
-<li>Put the SAM in bridge mode (replace <code>/dev/cu...</code> with the portname from above).</li>
+<li>Put the SAM in bridge mode (replace <code>&lt;PORT&gt;</code> with the portname from above).</li>
 </ul>
 <div class="highlight"><pre><span></span><code>&gt; echo &#39;esp -flash 115200&#39; &gt; &lt;PORT&gt;
 </code></pre></div>
@@ -2277,7 +2269,7 @@ Flashing ESP firmware... OK
 </div>
 <p>Now you should see the SCK's LED in WHITE.</p>
 <ul>
-<li>Flash the esp using <code>esptool.py</code> from before. Make sure the <code>ESP_firmware.bin</code> is also there:</li>
+<li>Flash the esp using <code>esptool.py</code> from before. Make sure the <code>ESP_firmware.bin</code> is also there (replace <code>&lt;PORT&gt;</code>):</li>
 </ul>
 <div class="highlight"><pre><span></span><code>&gt; python esptool.py --port &lt;PORT&gt; --baud 115200 write_flash 0x000000 ESP_firmware.bin
 </code></pre></div>
@@ -2287,15 +2279,15 @@ Flashing ESP firmware... OK
 &gt; pio run -t envdump
 ...
 </code></pre></div>
-<p>Find <code>PROJECT_PACKAGES_DIR</code> in the output and navigate to:</p>
+<p>Find <code>PROJECT_PACKAGES_DIR</code> in the output and navigate to (replace <code>&lt;PROJECT_PACKAGES_DIR&gt;</code>):</p>
 <div class="highlight"><pre><span></span><code>&gt; cd &lt;PROJECT_PACKAGES_DIR&gt;/tool-esptool
 &gt; ls
 ...
 </code></pre></div>
-<p>There you should find a binary file for <code>esptool</code>. Now you should be able to run:</p>
+<p>There you should find a binary file for <code>esptool</code>. Now you should be able to run (replace <code>&lt;PROJECT_PACKAGES_DIR&gt;</code> and <code>&lt;PORT&gt;</code>):</p>
 <div class="highlight"><pre><span></span><code>&gt; cd smartcitizen-kit-21
 &gt; echo &#39;esp -flash 115200&#39; &gt; &lt;PORT&gt;
-&gt; &lt;PROJECT_PACKAGES_DIR&gt;/tool-esptool/esptool -cp &lt;PORT&gt; -cb &lt;115200&gt; -ca 0x000000 -cf bin/ESP_firmware.bin
+&gt; &lt;PROJECT_PACKAGES_DIR&gt;/tool-esptool/esptool -cp &lt;PORT&gt; -cb 115200 -ca 0x000000 -cf bin/ESP_firmware.bin
 </code></pre></div>
 <p>Remember you can put the SAMD21 in bridge mode (white LED) by using Arduino IDE, sending <code>esp -flash 115200</code> using the <code>Serial Monitor</code> and then closing the <code>Serial Monitor</code> window.</p>
                 
