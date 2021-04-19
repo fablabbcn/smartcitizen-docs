@@ -47,7 +47,7 @@ A normal IP enclosure can be used for this setup. More information about the BOM
 <img src="https://live.staticflickr.com/65535/51125200496_67b06e79bd_k.jpg" alt="Water Station - Patí Científic">
 
 !!! info "Thanks!"
-    This enclosure and development has been done in collaboration with Developed in collaboration with [ICM-CSIC](https://www.icm.csic.es/en) and the [Club Pati Vela de Barcelona](https://pativelabarcelona.com/). Thanks!
+    This enclosure and development has been done in collaboration with [ICM-CSIC](https://www.icm.csic.es/en) and the [Club Pati Vela de Barcelona](https://pativelabarcelona.com/).
 
 #### Legacy enclosures
 
