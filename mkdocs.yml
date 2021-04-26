@@ -91,6 +91,8 @@ nav:
       - Almabike sensors: Guides/deployments/Almabike sensors.md
       - Smart Citizen Power Supply: Guides/deployments/Using the power supply.md
       - Set up water sensors: Guides/deployments/Water sensors.md
+    - Replacements:
+      - Replacing PM Sensors: Guides/replacements/Replacing PM Sensors.md
     - Enclosures:
       - Making your own enclosures: Guides/enclosures/Making your own enclosures.md
     - Legacy Hardware:
