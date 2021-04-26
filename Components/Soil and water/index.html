@@ -1868,81 +1868,102 @@
 <p>Different sensor probes can be selected for different needs. For example the setup shown above is designed for soil measurements and includes <a href="https://www.atlas-scientific.com">Atlas Scientific</a> temperature, conductivity and PH probes. It also consists of a Chirp Moisture Sensor as described in the <a href="/Components/sensors/soil/Soil Moisture Sensors/">above section</a>. As an additional example the setup in the figure below is designed for water monitoring on aquaponics systems and includes Atlas Scientific probes for PH, conductivity and dissolved oxygen.</p>
 <p><img alt="" src="https://i.imgur.com/gQavZqU.png" /></p>
 <p>Some of the sensors selected are from Atlas Scientific, a New York-based company that <em>converts devices that were originally designed to be used by humans into devices that are specifically designed to be used by robots</em>. The sensors are not entirely open source as the other sensors (the Chirp Sensor is a low cost moisture and temperature sensor developed by <a href="https://wemakethings.net/chirp/">WeMakeThings</a>: a hackers and engineers collective based in Vilnius, Lithuania). However, they are modular and exceptionally well documented by the manufacturer. That includes <strong>excellent</strong> documentation on how to install, calibrate and integrate them with additional existing hardware. In this direction, we developed a full library for the SCK to support the sensors via the Auxiliary sensor connector. As the sensors can be configured in different ways, we do not provide a full step-by-step guide. Instead, we refer to the documentation on the <a href="https://github.com/fablabbcn/smartcitizen-grow/tree/master/soil-water-probes">project's repository</a>.</p>
+<div class="admonition info">
+<p class="admonition-title">Use cases</p>
+<p>Check how we have used the water or soil sensors in various projects in the <a href="/Use cases/Research/">Use cases section</a></p>
+</div>
 <h2 id="hardware">Hardware<a class="headerlink" href="#hardware" title="Permanent link">&para;</a></h2>
 <h3 id="available-measurements">Available measurements<a class="headerlink" href="#available-measurements" title="Permanent link">&para;</a></h3>
 <p>The sensors described below are additional to those already supported on the <a href="/Smart Citizen Kit/#sck-21">Smart Citizen Kit base sensors</a>. </p>
 <table>
 <thead>
 <tr>
-<th align="left">Measurement</th>
-<th align="left">Description</th>
-<th align="left">Unit</th>
-<th align="left">Sensor</th>
+<th align="center">Metric</th>
+<th align="center">Usage</th>
+<th align="center">Probe</th>
+<th align="center">Driver</th>
+<th align="center">Calibration</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left">Water temperature</td>
-<td align="left">Submergible Water Temperature sensor</td>
-<td align="left">°C</td>
-<td align="left">DS18B20</td>
+<td align="center">Temperature</td>
+<td align="center">Soil and water</td>
+<td align="center">Atlas PT-100 + PT-1000</td>
+<td align="center">Atlas EZO-RTD</td>
+<td align="center">Not required</td>
 </tr>
 <tr>
-<td align="left">Specific gravity</td>
-<td align="left">Submergible Specific Gravity</td>
-<td align="left">SG</td>
-<td align="left">Atlas Scientific EZO Specific Gravity</td>
+<td align="center">PH</td>
+<td align="center">Water</td>
+<td align="center">Atlas ENV-40-PH or ENV-35-PH</td>
+<td align="center">Atlas EZO-PH</td>
+<td align="center">Atlas CHEM-PH</td>
 </tr>
 <tr>
-<td align="left">Oxygen Saturation</td>
-<td align="left">Submergible Oxygen Saturation</td>
-<td align="left">%</td>
-<td align="left">Atlas Scientific EZO Oxygen Saturation</td>
+<td align="center">PH</td>
+<td align="center">Soil</td>
+<td align="center">Atlas ENV-45-PH</td>
+<td align="center">Atlas EZO-PH</td>
+<td align="center">Atlas CHEM-PH</td>
 </tr>
 <tr>
-<td align="left">pH</td>
-<td align="left">Submergible PH probe</td>
-<td align="left">pH</td>
-<td align="left">Atlas Scientific EZO pH</td>
+<td align="center">Electrical Conductivity</td>
+<td align="center">Soil and water</td>
+<td align="center">Atlas ENV-40-EC-K</td>
+<td align="center">Atlas EZO-EC</td>
+<td align="center">Atlas CHEM-EC</td>
 </tr>
 <tr>
-<td align="left">Dissolved Oxygen</td>
-<td align="left">Submergible PH probe</td>
-<td align="left">mg/L</td>
-<td align="left">Atlas Scientific EZO Dissolved Oxygen</td>
+<td align="center">Total Dissolved Solids</td>
+<td align="center">Soil and water</td>
+<td align="center">Atlas ENV-40-EC-K</td>
+<td align="center">Atlas EZO-EC</td>
+<td align="center">Atlas CHEM-EC</td>
 </tr>
 <tr>
-<td align="left">Electrical Conductivity</td>
-<td align="left">Submergible Electrical Conductivity</td>
-<td align="left">µS/cm</td>
-<td align="left">Atlas Scientific EZO Electrical Conductivity</td>
+<td align="center">Salinity</td>
+<td align="center">Soil and water</td>
+<td align="center">Atlas ENV-40-EC-K</td>
+<td align="center">Atlas Atlas EZO-EC</td>
+<td align="center">Atlas Atlas CHEM-EC</td>
 </tr>
 <tr>
-<td align="left">GPS Location</td>
-<td align="left">GPS lat, long</td>
-<td align="left">º</td>
-<td align="left"><a href="/Components/Auxiliary Connector/#other-auxiliaries">Supported GPS list</a></td>
+<td align="center">Specific Gravity</td>
+<td align="center">Soil and water</td>
+<td align="center">Atlas ENV-40-EC-K</td>
+<td align="center">Atlas EZO-EC</td>
+<td align="center">Atlas CHEM-EC</td>
 </tr>
 <tr>
-<td align="left">GPS Speed</td>
-<td align="left">GPS speed</td>
-<td align="left">m/s</td>
-<td align="left"><a href="/Components/Auxiliary Connector/#other-auxiliaries">Supported GPS list</a></td>
+<td align="center">Dissolved Oxygen</td>
+<td align="center">Water</td>
+<td align="center">Atlas ENV-40-DO</td>
+<td align="center">Atlas EZO-DO</td>
+<td align="center">Atlas CHEM-DO</td>
 </tr>
 <tr>
-<td align="left">GPS Altitude</td>
-<td align="left">GPS Altitude</td>
-<td align="left">m</td>
-<td align="left"><a href="/Components/Auxiliary Connector/#other-auxiliaries">Supported GPS list</a></td>
+<td align="center">Oxygen Saturation</td>
+<td align="center">Water</td>
+<td align="center">Atlas ENV-40-DO</td>
+<td align="center">Atlas EZO-DO</td>
+<td align="center">Atlas CHEM-DO</td>
+</tr>
+<tr>
+<td align="center">Soil Moisture</td>
+<td align="center">Soil</td>
+<td align="center">Catnip Chirp!</td>
+<td align="center">None</td>
+<td align="center">Cup of water</td>
 </tr>
 </tbody>
 </table>
-<div class="admonition info">
-<p class="admonition-title">Use cases</p>
-<p>Check how we have used the water or soil sensors in various projects in the <a href="/Use cases/Research/">Use cases section</a></p>
+<div class="admonition warning">
+<p class="admonition-title">Soil and water</p>
+<p>For probes that can be used in both, soil and water, make sure to <a href="https://atlas-scientific.com/files/ec_soil.pdf">follow this procedure</a>.</p>
 </div>
 <h3 id="atlas-scientific-carrier-board-board">Atlas Scientific Carrier board board<a class="headerlink" href="#atlas-scientific-carrier-board-board" title="Permanent link">&para;</a></h3>
-<p>We recommend using <a href="https://www.whiteboxes.ch/shop/tentacle-t3-for-raspberry-pi/">Whitebox Labs Tentacle T3</a> that hosts up to 3 Atlas Scientific Probes, and can be stacked with several units. It connects to the SCK via the Aux sensor connector. If you want to make your own, before the Tentacle T3 existed we designed a <a href="https://github.com/fablabbcn/monitoring-kit-hardware">custom board</a> in collaboration in with <a href="http://aquapioneers.io">Aquapiooners</a>.</p>
+<p>We recommend using <a href="https://www.whiteboxes.ch/shop/tentacle-t3-for-raspberry-pi/">Whitebox Labs Tentacle T3</a> that hosts up to 3 Atlas Scientific Probes, and can be stacked with several units. It connects to the SCK via the Aux sensor connector, and needs external 5V connection, which means that it can't run on battery directly connected to the SCK without extras. If you want to make your own, before the Tentacle T3 existed we designed a <a href="https://github.com/fablabbcn/monitoring-kit-hardware">custom board</a> in collaboration in with <a href="http://aquapioneers.io">Aquapiooners</a>.</p>
 <p><img alt="" src="https://i.imgur.com/6FysvIl.png" /></p>
 <div class="admonition info">
 <p class="admonition-title">Ready to set it all up</p>
@@ -1963,7 +1984,7 @@
 <p>We have also designed a probe holder if you want to hold your probes on the side of you fish tank. Here you can find the <a href="https://cad.onshape.com/documents/8977ef824f45a910c0b8beaa/w/7ac458735dae629f0a5a73cd/e/be59d435418832bfe5f78afb">Onshape document of the probes holder</a></p>
 <p><img alt="" src="https://i.imgur.com/6sM3sCY.jpg" /></p>
 <h2 id="soil-station">Soil Station<a class="headerlink" href="#soil-station" title="Permanent link">&para;</a></h2>
-<p>Soil sensors can be added as well, not only from Atlas Scientific, but also the <a href="https://wemakethings.net/chirp/">WeMakeThings Chirp</a> sensor for Soil moisture.</p>
+<p>More soil sensors can be added as well, not only Atlas Scientific sensors, or  the <a href="https://wemakethings.net/chirp/">WeMakeThings Chirp</a> sensor for Soil moisture. More developments available upon request.</p>
 <p><img alt="" src="https://i.imgur.com/DT45dpM.jpg" /></p>
 <h2 id="water-station">Water Station<a class="headerlink" href="#water-station" title="Permanent link">&para;</a></h2>
 <p>An specific Water Station was designed as part of the <a href="https://paticientific.org/">Pati Scientific</a> project in colaboration with the <a href="https://www.icm.csic.es/en">Institut de Ciències del Mar</a>. The station currently measures the sensors below, but virtually any <a href="/Components/Auxiliary Connector/#full-list">supported sensor</a> can be added:</p>
@@ -1978,7 +1999,7 @@
 </ul>
 <div class="admonition info">
 <p class="admonition-title">BOM</p>
-<p><a href="/assets/bom/Water Station PATI_BOM.ods">Water Enclosure</a> BOM.</p>
+<p>Check the <a href="/assets/bom/Water Station PATI_BOM.ods">Water Enclosure</a> BOM.</p>
 </div>
                 
               
