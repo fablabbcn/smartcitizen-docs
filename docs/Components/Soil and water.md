@@ -10,30 +10,34 @@ Different sensor probes can be selected for different needs. For example the set
 
 Some of the sensors selected are from Atlas Scientific, a New York-based company that _converts devices that were originally designed to be used by humans into devices that are specifically designed to be used by robots_. The sensors are not entirely open source as the other sensors (the Chirp Sensor is a low cost moisture and temperature sensor developed by [WeMakeThings](https://wemakethings.net/chirp/): a hackers and engineers collective based in Vilnius, Lithuania). However, they are modular and exceptionally well documented by the manufacturer. That includes **excellent** documentation on how to install, calibrate and integrate them with additional existing hardware. In this direction, we developed a full library for the SCK to support the sensors via the Auxiliary sensor connector. As the sensors can be configured in different ways, we do not provide a full step-by-step guide. Instead, we refer to the documentation on the [project's repository](https://github.com/fablabbcn/smartcitizen-grow/tree/master/soil-water-probes).
 
+!!! info "Use cases"
+    Check how we have used the water or soil sensors in various projects in the [Use cases section](/Use cases/Research/)
+
 ## Hardware
 
 ### Available measurements
 
 The sensors described below are additional to those already supported on the [Smart Citizen Kit base sensors](/Smart Citizen Kit/#sck-21). 
 
-| Measurement | Description  |  Unit |  Sensor  |
-|:-------- | :-------------| :---------| :-------------------- | 
-| Water temperature | Submergible Water Temperature sensor | °C | DS18B20 |
-| Specific gravity | Submergible Specific Gravity | SG | Atlas Scientific EZO Specific Gravity |
-| Oxygen Saturation | Submergible Oxygen Saturation | % | Atlas Scientific EZO Oxygen Saturation |
-| pH | Submergible PH probe | pH | Atlas Scientific EZO pH |
-| Dissolved Oxygen | Submergible PH probe | mg/L |  Atlas Scientific EZO Dissolved Oxygen |
-| Electrical Conductivity | Submergible Electrical Conductivity | µS/cm | Atlas Scientific EZO Electrical Conductivity |
-| GPS Location | GPS lat, long | º | [Supported GPS list](/Components/Auxiliary Connector/#other-auxiliaries)|
-| GPS Speed | GPS speed | m/s | [Supported GPS list](/Components/Auxiliary Connector/#other-auxiliaries) |
-| GPS Altitude | GPS Altitude | m | [Supported GPS list](/Components/Auxiliary Connector/#other-auxiliaries) | 
- 
-!!! info "Use cases"
-    Check how we have used the water or soil sensors in various projects in the [Use cases section](/Use cases/Research/)
+| Metric | Usage | Probe | Driver | Calibration |
+| :-: |:-: |:-: |:-: |:-: |
+| Temperature | Soil and water|  Atlas PT-100 + PT-1000 | Atlas EZO-RTD | Not required |
+| PH | Water |  Atlas ENV-40-PH or ENV-35-PH | Atlas EZO-PH | Atlas CHEM-PH |
+| PH | Soil |  Atlas ENV-45-PH | Atlas EZO-PH | Atlas CHEM-PH |
+| Electrical Conductivity | Soil and water | Atlas ENV-40-EC-K | Atlas EZO-EC | Atlas CHEM-EC |
+| Total Dissolved Solids | Soil and water | Atlas ENV-40-EC-K | Atlas EZO-EC | Atlas CHEM-EC |
+| Salinity | Soil and water | Atlas ENV-40-EC-K | Atlas Atlas EZO-EC | Atlas Atlas CHEM-EC |
+| Specific Gravity |  Soil and water | Atlas ENV-40-EC-K | Atlas EZO-EC | Atlas CHEM-EC |
+| Dissolved Oxygen | Water | Atlas ENV-40-DO | Atlas EZO-DO | Atlas CHEM-DO |
+| Oxygen Saturation| Water | Atlas ENV-40-DO | Atlas EZO-DO | Atlas CHEM-DO |
+| Soil Moisture | Soil | Catnip Chirp! | None | Cup of water |
+
+!!! warning "Soil and water"
+    For probes that can be used in both, soil and water, make sure to [follow this procedure](https://atlas-scientific.com/files/ec_soil.pdf).
 
 ### Atlas Scientific Carrier board board 
 
-We recommend using [Whitebox Labs Tentacle T3](https://www.whiteboxes.ch/shop/tentacle-t3-for-raspberry-pi/) that hosts up to 3 Atlas Scientific Probes, and can be stacked with several units. It connects to the SCK via the Aux sensor connector. If you want to make your own, before the Tentacle T3 existed we designed a [custom board](https://github.com/fablabbcn/monitoring-kit-hardware) in collaboration in with [Aquapiooners](http://aquapioneers.io).
+We recommend using [Whitebox Labs Tentacle T3](https://www.whiteboxes.ch/shop/tentacle-t3-for-raspberry-pi/) that hosts up to 3 Atlas Scientific Probes, and can be stacked with several units. It connects to the SCK via the Aux sensor connector, and needs external 5V connection, which means that it can't run on battery directly connected to the SCK without extras. If you want to make your own, before the Tentacle T3 existed we designed a [custom board](https://github.com/fablabbcn/monitoring-kit-hardware) in collaboration in with [Aquapiooners](http://aquapioneers.io).
 
 ![](https://i.imgur.com/6FysvIl.png)
 
@@ -65,7 +69,7 @@ We have also designed a probe holder if you want to hold your probes on the side
 
 ## Soil Station
 
-Soil sensors can be added as well, not only from Atlas Scientific, but also the [WeMakeThings Chirp](https://wemakethings.net/chirp/) sensor for Soil moisture.
+More soil sensors can be added as well, not only Atlas Scientific sensors, or  the [WeMakeThings Chirp](https://wemakethings.net/chirp/) sensor for Soil moisture. More developments available upon request.
 
 ![](https://i.imgur.com/DT45dpM.jpg)
 
@@ -83,4 +87,4 @@ _Image credit: Pati Scientific_
 - GPS location
 
 !!! info "BOM"
-	[Water Enclosure](/assets/bom/Water Station PATI_BOM.ods) BOM.
+	Check the [Water Enclosure](/assets/bom/Water Station PATI_BOM.ods) BOM.
