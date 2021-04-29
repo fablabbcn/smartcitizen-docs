@@ -88,9 +88,10 @@ nav:
       - iSCAPE Station V2: Guides/deployments/Deploying iSCAPE Station V2.md
       - Smart Citizen Station V3: Guides/deployments/Deploying Smart Citizen Station.md
       - Smart Citizen Connectivity Units: Guides/deployments/Installing Connectivity Units.md
-      - Almabike sensors: Guides/deployments/Almabike sensors.md
       - Smart Citizen Power Supply: Guides/deployments/Using the power supply.md
-      - Set up water sensors: Guides/deployments/Water sensors.md
+      - Solar Panel: Guides/deployments/Installing solar panel.md
+      - Almabike sensors: Guides/deployments/Almabike sensors.md
+      - Water sensors: Guides/deployments/Water sensors.md
     - Replacements:
       - Replacing PM Sensors: Guides/replacements/Replacing PM Sensors.md
     - Enclosures:
