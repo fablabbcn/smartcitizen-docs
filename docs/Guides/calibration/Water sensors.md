@@ -67,13 +67,13 @@ control ph com r
 control atlas ph com cal,mid,[value of pH at current temperature]
 ```
 
-<span style="text-decoration:underline">example at 30°C :</span> 
+<span style="text-decoration:underline">example at 30°C:</span> 
 
 ```
 control atlas ph com cal,mid,6.99 
 ```
 
-After this command if you take a PH reading the result should be 7.00 (or very close to it)
+After this command if you take a pH reading the result should be 7.00 (or very close to it)
 
 ##### Low Point Calibration
 
@@ -85,7 +85,7 @@ The same step with **High point** 10.00 calibration solution (blue).
 
 ---
 
-!!! info
+!!! info ""
     *(not tested)* If your calibration solutions are not 4, 7 and 10, you can still use them and replace `[value of pH at current temperature]` by your values.
 
 !!! info ""
@@ -127,7 +127,7 @@ Order of the calibration :
 
 ##### Set probe type
 
-Depending on which probe you have (check drawing for reference) you should set the probe type to K 0.1, 1.0 or 10 (new drivers have K1.0 as default).
+Depending on which probe you have (check drawing for reference) you should set the probe type to K 0.1, 1.0 or 10 (new drivers have K1.0 as default):
 
 ![](https://i.imgur.com/MWFjbYw.png)
 
@@ -152,7 +152,7 @@ control conductivity com K,?
     * Salinity → S
     * Specific Gravity → SG
 
-    The data is presented in order and comma separated **EC,TDS,S,SG** ej. **0.00,0,0.00,1.000**
+    The data is presented in order and comma separated **EC,TDS,S,SG**, for instance **0.00,0,0.00,1.000**
 
 ##### Dry calibration
 
@@ -176,7 +176,7 @@ control conductivity com cal,dry
 
 ##### Low point calibration
 
-You can check the recommended calibration solutions for each probe on the _Probetypes_ drawing (ej. for K1.0 probe → 12,880uS and 80,000uS is recomended)
+You can check the recommended calibration solutions for each probe on the _Probetypes_ drawing (for instance, for K1.0 probe, _12,880uS_ and _80,000uS_ are recomended)
 
 ![](https://i.imgur.com/nendSkI.png)
 
@@ -190,7 +190,7 @@ control conductivity com r
 ...
 ```
 
-* Issue the low point calibration command:
+* Issue the low point calibration command. **The value to input is the one of the calibration solution**, for example _128800_:
 
 ```
 control conductivity com cal,low,12880
@@ -200,10 +200,10 @@ After this command readings will **not change**
 
 ##### High point calibration
 
-Repeat this steps with **high point** calibration solution and when the readings stabilize issue the command:
+Repeat this steps with **high point** calibration solution and when the readings stabilize issue the command. Again, **remember that the value to input here is the one from the calibration solution**, for instance _80000_:
 
 ```
-control conductivity com,cal,high,80000
+control conductivity com cal,high,80000
 ```
 
 After this steps the **two point calibration is complete** and the readings will change.
@@ -214,8 +214,6 @@ Order of the calibration:
 
 1. dry point
 2. 0 mg/L point (optional)
-3. The dry point calibration
-4. The 0mg/L point calibration
 
 !!! info "Datasheet"
     [Datasheet](https://www.atlas-scientific.com/_files/_datasheets/_circuit/DO_EZO_Datasheet.pdf) (calibration info on page 9, calibration commands on page 52)
@@ -235,7 +233,7 @@ com dissolved cal,?
     control dissolved com P,kPaValue
     ```
     
-    More information on [datasheet](https://www.atlas-scientific.com/_files/_datasheets/_circuit/DO_EZO_Datasheet.pdf) page 57
+    More information on [datasheet](https://www.atlas-scientific.com/_files/_datasheets/_circuit/DO_EZO_Datasheet.pdf), page 57
 
 #### OPTION A: Single point calibration
 
@@ -249,7 +247,7 @@ control dissolved com r
 ...
 ```
 
-* Issue the calibration command, after this the readings will change.
+* Issue the calibration command, after this the readings will change. In this case, there is no need to add any value after `cal`. The sensor will take the current reading as the _dry point_.
 
 ```
 control dissolved com cal
@@ -271,7 +269,7 @@ control dissolved com r
 ...
 ```
 
-* Issue the calibration command.
+* Issue the calibration command. In this case, you have to input the value of the calibration solution too, for example _0_:
 
 ```
 control dissolved com cal,0
