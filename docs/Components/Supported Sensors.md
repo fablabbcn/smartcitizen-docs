@@ -1,5 +1,5 @@
 !!! warning "WIP"
-    This list is currently a WIP!
+    This list is _always_ a WIP!
 
 | Field | SCK sensor name | Units | Location | Sensor and datasheet |
 | :--- | :--- | :---: | :---: | :---: |
@@ -13,43 +13,16 @@
 | *Air* | Barometric pressure | kPa | Urban Board | [NXP MPL3115A2](http://www.nxp.com/docs/en/data-sheet/MPL3115A2.pdf)|
 | *Air* | VOC Gas CCS811 | ppb | Urban Board | [AMS CCS811](https://www.sciosense.com/wp-content/uploads/2020/01/SC-001232-DS-2-CCS811B-Datasheet-Revision-2.pdf) |
 | *Air* | eCO2 Gas CCS811 | ppm | Urban Board | [AMS CCS811](https://www.sciosense.com/wp-content/uploads/2020/01/SC-001232-DS-2-CCS811B-Datasheet-Revision-2.pdf) |
-| *Air* | PM 1.0 | ug/m3 | Urban Board | [PLANTOWER PMS5003](https://aqicn.org/air/view/sensor/spec/pms5003.pdf) |
-| *Air* | PM 2.5 | ug/m3 | Urban Board | [PLANTOWER PMS5003](https://aqicn.org/air/view/sensor/spec/pms5003.pdf) |
-| *Air* | PM 10.0 | ug/m3 | Urban Board | [PLANTOWER PMS5003](https://aqicn.org/air/view/sensor/spec/pms5003.pdf) |
-| *Air* | PN 10.0 | ug/m3 | Urban Board | [PLANTOWER PMS5003](https://aqicn.org/air/view/sensor/spec/pms5003.pdf) |
-| *Air* | PN 0.3 | #/0.1l | Urban Board | [PLANTOWER PMS5003](https://aqicn.org/air/view/sensor/spec/pms5003.pdf) |
-| *Air* | PN 0.5 | #/0.1l | Urban Board | [PLANTOWER PMS5003](https://aqicn.org/air/view/sensor/spec/pms5003.pdf) |
-| *Air* | PN 1.0 | #/0.1l | Urban Board | [PLANTOWER PMS5003](https://aqicn.org/air/view/sensor/spec/pms5003.pdf) |
-| *Air* | PN 2.5 | #/0.1l | Urban Board | [PLANTOWER PMS5003](https://aqicn.org/air/view/sensor/spec/pms5003.pdf) |
-| *Air* | PN 5.0 | #/0.1l | Urban Board | [PLANTOWER PMS5003](https://aqicn.org/air/view/sensor/spec/pms5003.pdf) |
-| *Air* | PN 10.0 | #/0.1l | Urban Board | [PLANTOWER PMS5003](https://aqicn.org/air/view/sensor/spec/pms5003.pdf) |
+| *Air* | PM_X (X = [1.0, 2.5, 10]) | ug/m3 | Urban Board | [PLANTOWER PMS5003](https://aqicn.org/air/view/sensor/spec/pms5003.pdf) |
+| *Air* | PN_X (X = [0.3, 0.5, 1.0, 2.5, 5.0, 10]) | #/0.1l | Urban Board | [PLANTOWER PMS5003](https://aqicn.org/air/view/sensor/spec/pms5003.pdf) |
 | *Air, soil and water* | PM board Dallas Temperature | ºC | External Sensor | [MAXIM DS18B20](https://datasheets.maximintegrated.com/en/ds/DS18B20.pdf) |
-| *ADC* | ADS1x15 ADC 0x48 Ch0 | V | External Sensor | [ADS 1115](https://www.ti.com/lit/ds/symlink/ads1115.pdf) |
-| *ADC* | ADS1x15 ADC 0x48 Ch1 | V | External Sensor | [ADS 1115](https://www.ti.com/lit/ds/symlink/ads1115.pdf) |
-| *ADC* | ADS1x15 ADC 0x48 Ch2 | V | External Sensor | [ADS 1115](https://www.ti.com/lit/ds/symlink/ads1115.pdf) |
-| *ADC* | ADS1x15 ADC 0x48 Ch3 | V | External Sensor | [ADS 1115](https://www.ti.com/lit/ds/symlink/ads1115.pdf) |
-| *ADC* | ADS1x15 ADC 0x49 Ch0 | V | External Sensor | [ADS 1115](https://www.ti.com/lit/ds/symlink/ads1115.pdf) |
-| *ADC* | ADS1x15 ADC 0x49 Ch1 | V | External Sensor | [ADS 1115](https://www.ti.com/lit/ds/symlink/ads1115.pdf) |
-| *ADC* | ADS1x15 ADC 0x49 Ch2 | V | External Sensor | [ADS 1115](https://www.ti.com/lit/ds/symlink/ads1115.pdf) |
-| *ADC* | ADS1x15 ADC 0x49 Ch3 | V | External Sensor | [ADS 1115](https://www.ti.com/lit/ds/symlink/ads1115.pdf) |
-| *ADC* | ADS1x15 ADC 0x4A Ch0 | V | External Sensor | [ADS 1115](https://www.ti.com/lit/ds/symlink/ads1115.pdf) |
-| *ADC* | ADS1x15 ADC 0x4A Ch1 | V | External Sensor | [ADS 1115](https://www.ti.com/lit/ds/symlink/ads1115.pdf) |
-| *ADC* | ADS1x15 ADC 0x4A Ch2 | V | External Sensor | [ADS 1115](https://www.ti.com/lit/ds/symlink/ads1115.pdf) |
-| *ADC* | ADS1x15 ADC 0x4A Ch3 | V | External Sensor | [ADS 1115](https://www.ti.com/lit/ds/symlink/ads1115.pdf) |
-| *ADC* | ADS1x15 ADC 0x4B Ch0 | V | External Sensor | [ADS 1115](https://www.ti.com/lit/ds/symlink/ads1115.pdf) |
-| *ADC* | ADS1x15 ADC 0x4B Ch1 | V | External Sensor | [ADS 1115](https://www.ti.com/lit/ds/symlink/ads1115.pdf) |
-| *ADC* | ADS1x15 ADC 0x4B Ch2 | V | External Sensor | [ADS 1115](https://www.ti.com/lit/ds/symlink/ads1115.pdf) |
-| *ADC* | ADS1x15 ADC 0x4B Ch3 | V | External Sensor | [ADS 1115](https://www.ti.com/lit/ds/symlink/ads1115.pdf) |
-| *ADC* | Groove ADC | V | External Sensor | [Seeed Groove ADC](http://wiki.seeedstudio.com/Grove-I2C_ADC/) |
-| *Air* | Ext PM_* 1.0 | ug/m3 | External Sensor | [PLANTOWER PMS5003](https://aqicn.org/air/view/sensor/spec/pms5003.pdf) |
-| *Air* | Ext PM_* 2.5 | ug/m3 | External Sensor | [PLANTOWER PMS5003](https://aqicn.org/air/view/sensor/spec/pms5003.pdf) |
-| *Air* | Ext PM_* 10.0 | ug/m3 | External Sensor | [PLANTOWER PMS5003](https://aqicn.org/air/view/sensor/spec/pms5003.pdf) |
-| *Air* | Ext PN_* 0.3 | #/0.1l | External Sensor | [PLANTOWER PMS5003](https://aqicn.org/air/view/sensor/spec/pms5003.pdf) |
-| *Air* | Ext PN_* 0.5 | #/0.1l | External Sensor | [PLANTOWER PMS5003](https://aqicn.org/air/view/sensor/spec/pms5003.pdf) |
-| *Air* | Ext PN_* 1.0 | #/0.1l | External Sensor | [PLANTOWER PMS5003](https://aqicn.org/air/view/sensor/spec/pms5003.pdf) |
-| *Air* | Ext PN_* 2.5 | #/0.1l | External Sensor | [PLANTOWER PMS5003](https://aqicn.org/air/view/sensor/spec/pms5003.pdf) |
-| *Air* | Ext PN_* 5.0 | #/0.1l | External Sensor | [PLANTOWER PMS5003](https://aqicn.org/air/view/sensor/spec/pms5003.pdf) |
-| *Air* | Ext PN_* 10.0 | #/0.1l | External Sensor | [PLANTOWER PMS5003](https://aqicn.org/air/view/sensor/spec/pms5003.pdf) |
+| *Air* | Ext PM_X (X = [1.0, 2.5, 10]) | ug/m3 | External Sensor | [PLANTOWER PMS5003](https://aqicn.org/air/view/sensor/spec/pms5003.pdf) |
+| *Air* | Ext PN_X (X = [0.3, 0.5, 1.0, 2.5, 5.0, 10]) | #/0.1l | External Sensor | [PLANTOWER PMS5003](https://aqicn.org/air/view/sensor/spec/pms5003.pdf) |
+| *Air* | SCD30_CO2 | ppm | External Sensor | [Sensirion SCD30](https://files.seeedstudio.com/wiki/Grove-CO2-Temperature-Humidity-Sensor-SCD30/res/Sensirion_CO2_Sensors_SCD30_Datasheet.pdf) |
+| *Air* | SCD30_T | ºC | External Sensor | [Sensirion SCD30](https://files.seeedstudio.com/wiki/Grove-CO2-Temperature-Humidity-Sensor-SCD30/res/Sensirion_CO2_Sensors_SCD30_Datasheet.pdf) |
+| *Air* | SCD30_H | %RH | External Sensor | [Sensirion SCD30](https://files.seeedstudio.com/wiki/Grove-CO2-Temperature-Humidity-Sensor-SCD30/res/Sensirion_CO2_Sensors_SCD30_Datasheet.pdf) |
+| *Generic* | ADS1x15 ADC 0x4X ChY (X = [8, 9, A, B)], Y = [0, 1, 2, 3]) | V | External Sensor | [ADS 1115](https://www.ti.com/lit/ds/symlink/ads1115.pdf) |
+| *Generic* | Groove ADC | V | External Sensor | [Seeed Groove ADC](http://wiki.seeedstudio.com/Grove-I2C_ADC/) |
 | *Location* | GPS Fix Quality| na | External Sensor | [Sparkfun GPS NEO-M8U](https://www.sparkfun.com/products/16329), [SparkFun GPS XA1110](https://www.sparkfun.com/products/14414) or [SEEED Grove GPS Module](https://www.seeedstudio.com/Grove-GPS-Module.html) |
 | *Location* | GPS Latitude | Deg | External Sensor | [Sparkfun GPS NEO-M8U](https://www.sparkfun.com/products/16329), [SparkFun GPS XA1110](https://www.sparkfun.com/products/14414) or [SEEED Grove GPS Module](https://www.seeedstudio.com/Grove-GPS-Module.html)  |
 | *Location* | GPS Longitude| Deg | External Sensor | [Sparkfun GPS NEO-M8U](https://www.sparkfun.com/products/16329) , [SparkFun GPS XA1110](https://www.sparkfun.com/products/14414) or [SEEED Grove GPS Module](https://www.seeedstudio.com/Grove-GPS-Module.html)  |
