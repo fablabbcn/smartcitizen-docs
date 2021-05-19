@@ -1960,7 +1960,7 @@ caltemp [newTemp/off]
 pressure
 </code></pre></div>
 <h3 id="reading-interval">Reading interval<a class="headerlink" href="#reading-interval" title="Permanent link">&para;</a></h3>
-<p>The SCD30 can have different internal reading intervals, <strong>independent from the SCK's interval</strong>. A larger reading interval will reduce power consumption, but it will increase response time. By default, the reading interval is 2s. A good reading interval for reducing substantially power consumption is 15s. Below there is a table derived from the manufacturer`s application notes that can guide in the reading interval setup process:</p>
+<p>The SCD30 can have different internal reading intervals, <strong>independent from the SCK's interval</strong>. A larger reading interval will reduce power consumption, but it will increase response time. By default, the reading interval is 2s. A good reading interval for reducing substantially power consumption is 15s. Below there is a table derived from the manufacturer's application notes that can guide in the reading interval setup process:</p>
 <table>
 <thead>
 <tr>
@@ -2000,7 +2000,7 @@ pressure
 <em>Image source: Sensirion</em></p>
 <p>Additionally, there is a possibility to calibrate the temperature readings with an external sensor for correcting the SCD30 internal temperature corrections.</p>
 <h4 id="asc">ASC<a class="headerlink" href="#asc" title="Permanent link">&para;</a></h4>
-<p>Sensor by default is set in ASC mode. In this mode, the sensor looks for a clean environment over a 1-3 weeks period of time, for at <strong>least 1h of clean day per day</strong>. Considerations:</p>
+<p>Sensor by default is set in ASC mode. In this mode, the sensor looks for a clean environment over a 1-3 weeks period of time, for at <strong>least 1h of clean air per day</strong>. Considerations:</p>
 <ul>
 <li>Do not unplug the sensors during the first week period of ASC</li>
 <li>Place it in a place where you know there is going to be a clean air composition during that period. Indoor environments is not always the best for this purpose</li>
@@ -2028,7 +2028,7 @@ pressure
 </code></pre></div>
 <div class="admonition warning">
 <p class="admonition-title">Reference value range</p>
-<p>The reference value needs to be between 400ppm and 2000ppm</p>
+<p>The reference value needs to be between 400ppm and 2000ppm.</p>
 </div>
 <p>After applying this value, ASC will be disabled automatically and readings will be inmediately corrected to the new value.</p>
 <h4 id="temperature-correction">Temperature correction<a class="headerlink" href="#temperature-correction" title="Permanent link">&para;</a></h4>
