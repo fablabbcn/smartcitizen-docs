@@ -72,6 +72,7 @@ nav:
       # - Air sensors: Guides/calibration/Air sensors.md
       - Water sensors: Guides/calibration/Water sensors.md
       - Soil sensors: Guides/calibration/Soil moisture sensors.md
+      - CO2 sensor: Guides/calibration/SCD30 CO2 sensor.md
     - Data Analysis:
       - Framework Installation: Guides/data/Install the framework.md
       - Make reports of your data: Guides/data/Make reports of your data.md
