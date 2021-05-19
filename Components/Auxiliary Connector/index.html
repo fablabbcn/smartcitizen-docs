@@ -1299,6 +1299,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Guides/calibration/SCD30%20CO2%20sensor/" title="CO2 sensor" class="md-nav__link">
+      CO2 sensor
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -1935,7 +1947,7 @@
 <p>This is a list of supported sensors. Find also the datasheets for more information regarding accuracies:</p>
 <div class="admonition warning">
 <p class="admonition-title">WIP</p>
-<p>This list is currently a WIP!</p>
+<p>This list is <em>always</em> a WIP!</p>
 </div>
 <table>
 <thead>
@@ -2020,70 +2032,14 @@
 </tr>
 <tr>
 <td align="left"><em>Air</em></td>
-<td align="left">PM 1.0</td>
+<td align="left">PM_X (X = [1.0, 2.5, 10])</td>
 <td align="center">ug/m3</td>
 <td align="center">Urban Board</td>
 <td align="center"><a href="https://aqicn.org/air/view/sensor/spec/pms5003.pdf">PLANTOWER PMS5003</a></td>
 </tr>
 <tr>
 <td align="left"><em>Air</em></td>
-<td align="left">PM 2.5</td>
-<td align="center">ug/m3</td>
-<td align="center">Urban Board</td>
-<td align="center"><a href="https://aqicn.org/air/view/sensor/spec/pms5003.pdf">PLANTOWER PMS5003</a></td>
-</tr>
-<tr>
-<td align="left"><em>Air</em></td>
-<td align="left">PM 10.0</td>
-<td align="center">ug/m3</td>
-<td align="center">Urban Board</td>
-<td align="center"><a href="https://aqicn.org/air/view/sensor/spec/pms5003.pdf">PLANTOWER PMS5003</a></td>
-</tr>
-<tr>
-<td align="left"><em>Air</em></td>
-<td align="left">PN 10.0</td>
-<td align="center">ug/m3</td>
-<td align="center">Urban Board</td>
-<td align="center"><a href="https://aqicn.org/air/view/sensor/spec/pms5003.pdf">PLANTOWER PMS5003</a></td>
-</tr>
-<tr>
-<td align="left"><em>Air</em></td>
-<td align="left">PN 0.3</td>
-<td align="center">#/0.1l</td>
-<td align="center">Urban Board</td>
-<td align="center"><a href="https://aqicn.org/air/view/sensor/spec/pms5003.pdf">PLANTOWER PMS5003</a></td>
-</tr>
-<tr>
-<td align="left"><em>Air</em></td>
-<td align="left">PN 0.5</td>
-<td align="center">#/0.1l</td>
-<td align="center">Urban Board</td>
-<td align="center"><a href="https://aqicn.org/air/view/sensor/spec/pms5003.pdf">PLANTOWER PMS5003</a></td>
-</tr>
-<tr>
-<td align="left"><em>Air</em></td>
-<td align="left">PN 1.0</td>
-<td align="center">#/0.1l</td>
-<td align="center">Urban Board</td>
-<td align="center"><a href="https://aqicn.org/air/view/sensor/spec/pms5003.pdf">PLANTOWER PMS5003</a></td>
-</tr>
-<tr>
-<td align="left"><em>Air</em></td>
-<td align="left">PN 2.5</td>
-<td align="center">#/0.1l</td>
-<td align="center">Urban Board</td>
-<td align="center"><a href="https://aqicn.org/air/view/sensor/spec/pms5003.pdf">PLANTOWER PMS5003</a></td>
-</tr>
-<tr>
-<td align="left"><em>Air</em></td>
-<td align="left">PN 5.0</td>
-<td align="center">#/0.1l</td>
-<td align="center">Urban Board</td>
-<td align="center"><a href="https://aqicn.org/air/view/sensor/spec/pms5003.pdf">PLANTOWER PMS5003</a></td>
-</tr>
-<tr>
-<td align="left"><em>Air</em></td>
-<td align="left">PN 10.0</td>
+<td align="left">PN_X (X = [0.3, 0.5, 1.0, 2.5, 5.0, 10])</td>
 <td align="center">#/0.1l</td>
 <td align="center">Urban Board</td>
 <td align="center"><a href="https://aqicn.org/air/view/sensor/spec/pms5003.pdf">PLANTOWER PMS5003</a></td>
@@ -2096,186 +2052,53 @@
 <td align="center"><a href="https://datasheets.maximintegrated.com/en/ds/DS18B20.pdf">MAXIM DS18B20</a></td>
 </tr>
 <tr>
-<td align="left"><em>ADC</em></td>
-<td align="left">ADS1x15 ADC 0x48 Ch0</td>
+<td align="left"><em>Air</em></td>
+<td align="left">Ext PM_X (X = [1.0, 2.5, 10])</td>
+<td align="center">ug/m3</td>
+<td align="center">External Sensor</td>
+<td align="center"><a href="https://aqicn.org/air/view/sensor/spec/pms5003.pdf">PLANTOWER PMS5003</a></td>
+</tr>
+<tr>
+<td align="left"><em>Air</em></td>
+<td align="left">Ext PN_X (X = [0.3, 0.5, 1.0, 2.5, 5.0, 10])</td>
+<td align="center">#/0.1l</td>
+<td align="center">External Sensor</td>
+<td align="center"><a href="https://aqicn.org/air/view/sensor/spec/pms5003.pdf">PLANTOWER PMS5003</a></td>
+</tr>
+<tr>
+<td align="left"><em>Air</em></td>
+<td align="left">SCD30_CO2</td>
+<td align="center">ppm</td>
+<td align="center">External Sensor</td>
+<td align="center"><a href="https://files.seeedstudio.com/wiki/Grove-CO2-Temperature-Humidity-Sensor-SCD30/res/Sensirion_CO2_Sensors_SCD30_Datasheet.pdf">Sensirion SCD30</a></td>
+</tr>
+<tr>
+<td align="left"><em>Air</em></td>
+<td align="left">SCD30_T</td>
+<td align="center">ºC</td>
+<td align="center">External Sensor</td>
+<td align="center"><a href="https://files.seeedstudio.com/wiki/Grove-CO2-Temperature-Humidity-Sensor-SCD30/res/Sensirion_CO2_Sensors_SCD30_Datasheet.pdf">Sensirion SCD30</a></td>
+</tr>
+<tr>
+<td align="left"><em>Air</em></td>
+<td align="left">SCD30_H</td>
+<td align="center">%RH</td>
+<td align="center">External Sensor</td>
+<td align="center"><a href="https://files.seeedstudio.com/wiki/Grove-CO2-Temperature-Humidity-Sensor-SCD30/res/Sensirion_CO2_Sensors_SCD30_Datasheet.pdf">Sensirion SCD30</a></td>
+</tr>
+<tr>
+<td align="left"><em>Generic</em></td>
+<td align="left">ADS1x15 ADC 0x4X ChY (X = [8, 9, A, B)], Y = [0, 1, 2, 3])</td>
 <td align="center">V</td>
 <td align="center">External Sensor</td>
 <td align="center"><a href="https://www.ti.com/lit/ds/symlink/ads1115.pdf">ADS 1115</a></td>
 </tr>
 <tr>
-<td align="left"><em>ADC</em></td>
-<td align="left">ADS1x15 ADC 0x48 Ch1</td>
-<td align="center">V</td>
-<td align="center">External Sensor</td>
-<td align="center"><a href="https://www.ti.com/lit/ds/symlink/ads1115.pdf">ADS 1115</a></td>
-</tr>
-<tr>
-<td align="left"><em>ADC</em></td>
-<td align="left">ADS1x15 ADC 0x48 Ch2</td>
-<td align="center">V</td>
-<td align="center">External Sensor</td>
-<td align="center"><a href="https://www.ti.com/lit/ds/symlink/ads1115.pdf">ADS 1115</a></td>
-</tr>
-<tr>
-<td align="left"><em>ADC</em></td>
-<td align="left">ADS1x15 ADC 0x48 Ch3</td>
-<td align="center">V</td>
-<td align="center">External Sensor</td>
-<td align="center"><a href="https://www.ti.com/lit/ds/symlink/ads1115.pdf">ADS 1115</a></td>
-</tr>
-<tr>
-<td align="left"><em>ADC</em></td>
-<td align="left">ADS1x15 ADC 0x49 Ch0</td>
-<td align="center">V</td>
-<td align="center">External Sensor</td>
-<td align="center"><a href="https://www.ti.com/lit/ds/symlink/ads1115.pdf">ADS 1115</a></td>
-</tr>
-<tr>
-<td align="left"><em>ADC</em></td>
-<td align="left">ADS1x15 ADC 0x49 Ch1</td>
-<td align="center">V</td>
-<td align="center">External Sensor</td>
-<td align="center"><a href="https://www.ti.com/lit/ds/symlink/ads1115.pdf">ADS 1115</a></td>
-</tr>
-<tr>
-<td align="left"><em>ADC</em></td>
-<td align="left">ADS1x15 ADC 0x49 Ch2</td>
-<td align="center">V</td>
-<td align="center">External Sensor</td>
-<td align="center"><a href="https://www.ti.com/lit/ds/symlink/ads1115.pdf">ADS 1115</a></td>
-</tr>
-<tr>
-<td align="left"><em>ADC</em></td>
-<td align="left">ADS1x15 ADC 0x49 Ch3</td>
-<td align="center">V</td>
-<td align="center">External Sensor</td>
-<td align="center"><a href="https://www.ti.com/lit/ds/symlink/ads1115.pdf">ADS 1115</a></td>
-</tr>
-<tr>
-<td align="left"><em>ADC</em></td>
-<td align="left">ADS1x15 ADC 0x4A Ch0</td>
-<td align="center">V</td>
-<td align="center">External Sensor</td>
-<td align="center"><a href="https://www.ti.com/lit/ds/symlink/ads1115.pdf">ADS 1115</a></td>
-</tr>
-<tr>
-<td align="left"><em>ADC</em></td>
-<td align="left">ADS1x15 ADC 0x4A Ch1</td>
-<td align="center">V</td>
-<td align="center">External Sensor</td>
-<td align="center"><a href="https://www.ti.com/lit/ds/symlink/ads1115.pdf">ADS 1115</a></td>
-</tr>
-<tr>
-<td align="left"><em>ADC</em></td>
-<td align="left">ADS1x15 ADC 0x4A Ch2</td>
-<td align="center">V</td>
-<td align="center">External Sensor</td>
-<td align="center"><a href="https://www.ti.com/lit/ds/symlink/ads1115.pdf">ADS 1115</a></td>
-</tr>
-<tr>
-<td align="left"><em>ADC</em></td>
-<td align="left">ADS1x15 ADC 0x4A Ch3</td>
-<td align="center">V</td>
-<td align="center">External Sensor</td>
-<td align="center"><a href="https://www.ti.com/lit/ds/symlink/ads1115.pdf">ADS 1115</a></td>
-</tr>
-<tr>
-<td align="left"><em>ADC</em></td>
-<td align="left">ADS1x15 ADC 0x4B Ch0</td>
-<td align="center">V</td>
-<td align="center">External Sensor</td>
-<td align="center"><a href="https://www.ti.com/lit/ds/symlink/ads1115.pdf">ADS 1115</a></td>
-</tr>
-<tr>
-<td align="left"><em>ADC</em></td>
-<td align="left">ADS1x15 ADC 0x4B Ch1</td>
-<td align="center">V</td>
-<td align="center">External Sensor</td>
-<td align="center"><a href="https://www.ti.com/lit/ds/symlink/ads1115.pdf">ADS 1115</a></td>
-</tr>
-<tr>
-<td align="left"><em>ADC</em></td>
-<td align="left">ADS1x15 ADC 0x4B Ch2</td>
-<td align="center">V</td>
-<td align="center">External Sensor</td>
-<td align="center"><a href="https://www.ti.com/lit/ds/symlink/ads1115.pdf">ADS 1115</a></td>
-</tr>
-<tr>
-<td align="left"><em>ADC</em></td>
-<td align="left">ADS1x15 ADC 0x4B Ch3</td>
-<td align="center">V</td>
-<td align="center">External Sensor</td>
-<td align="center"><a href="https://www.ti.com/lit/ds/symlink/ads1115.pdf">ADS 1115</a></td>
-</tr>
-<tr>
-<td align="left"><em>ADC</em></td>
+<td align="left"><em>Generic</em></td>
 <td align="left">Groove ADC</td>
 <td align="center">V</td>
 <td align="center">External Sensor</td>
 <td align="center"><a href="http://wiki.seeedstudio.com/Grove-I2C_ADC/">Seeed Groove ADC</a></td>
-</tr>
-<tr>
-<td align="left"><em>Air</em></td>
-<td align="left">Ext PM_* 1.0</td>
-<td align="center">ug/m3</td>
-<td align="center">External Sensor</td>
-<td align="center"><a href="https://aqicn.org/air/view/sensor/spec/pms5003.pdf">PLANTOWER PMS5003</a></td>
-</tr>
-<tr>
-<td align="left"><em>Air</em></td>
-<td align="left">Ext PM_* 2.5</td>
-<td align="center">ug/m3</td>
-<td align="center">External Sensor</td>
-<td align="center"><a href="https://aqicn.org/air/view/sensor/spec/pms5003.pdf">PLANTOWER PMS5003</a></td>
-</tr>
-<tr>
-<td align="left"><em>Air</em></td>
-<td align="left">Ext PM_* 10.0</td>
-<td align="center">ug/m3</td>
-<td align="center">External Sensor</td>
-<td align="center"><a href="https://aqicn.org/air/view/sensor/spec/pms5003.pdf">PLANTOWER PMS5003</a></td>
-</tr>
-<tr>
-<td align="left"><em>Air</em></td>
-<td align="left">Ext PN_* 0.3</td>
-<td align="center">#/0.1l</td>
-<td align="center">External Sensor</td>
-<td align="center"><a href="https://aqicn.org/air/view/sensor/spec/pms5003.pdf">PLANTOWER PMS5003</a></td>
-</tr>
-<tr>
-<td align="left"><em>Air</em></td>
-<td align="left">Ext PN_* 0.5</td>
-<td align="center">#/0.1l</td>
-<td align="center">External Sensor</td>
-<td align="center"><a href="https://aqicn.org/air/view/sensor/spec/pms5003.pdf">PLANTOWER PMS5003</a></td>
-</tr>
-<tr>
-<td align="left"><em>Air</em></td>
-<td align="left">Ext PN_* 1.0</td>
-<td align="center">#/0.1l</td>
-<td align="center">External Sensor</td>
-<td align="center"><a href="https://aqicn.org/air/view/sensor/spec/pms5003.pdf">PLANTOWER PMS5003</a></td>
-</tr>
-<tr>
-<td align="left"><em>Air</em></td>
-<td align="left">Ext PN_* 2.5</td>
-<td align="center">#/0.1l</td>
-<td align="center">External Sensor</td>
-<td align="center"><a href="https://aqicn.org/air/view/sensor/spec/pms5003.pdf">PLANTOWER PMS5003</a></td>
-</tr>
-<tr>
-<td align="left"><em>Air</em></td>
-<td align="left">Ext PN_* 5.0</td>
-<td align="center">#/0.1l</td>
-<td align="center">External Sensor</td>
-<td align="center"><a href="https://aqicn.org/air/view/sensor/spec/pms5003.pdf">PLANTOWER PMS5003</a></td>
-</tr>
-<tr>
-<td align="left"><em>Air</em></td>
-<td align="left">Ext PN_* 10.0</td>
-<td align="center">#/0.1l</td>
-<td align="center">External Sensor</td>
-<td align="center"><a href="https://aqicn.org/air/view/sensor/spec/pms5003.pdf">PLANTOWER PMS5003</a></td>
 </tr>
 <tr>
 <td align="left"><em>Location</em></td>
