@@ -31,7 +31,7 @@ pressure
 
 ### Reading interval
 
-The SCD30 can have different internal reading intervals, **independent from the SCK's interval**. A larger reading interval will reduce power consumption, but it will increase response time. By default, the reading interval is 2s. A good reading interval for reducing substantially power consumption is 15s. Below there is a table derived from the manufacturer`s application notes that can guide in the reading interval setup process:
+The SCD30 can have different internal reading intervals, **independent from the SCK's interval**. A larger reading interval will reduce power consumption, but it will increase response time. By default, the reading interval is 2s. A good reading interval for reducing substantially power consumption is 15s. Below there is a table derived from the manufacturer's application notes that can guide in the reading interval setup process:
 
 |Interval (s) |Consumption (mA) |Response time (t63 - s)|
 |:- |:-:|:-:|
@@ -64,7 +64,7 @@ Additionally, there is a possibility to calibrate the temperature readings with 
 
 #### ASC
 
-Sensor by default is set in ASC mode. In this mode, the sensor looks for a clean environment over a 1-3 weeks period of time, for at **least 1h of clean day per day**. Considerations:
+Sensor by default is set in ASC mode. In this mode, the sensor looks for a clean environment over a 1-3 weeks period of time, for at **least 1h of clean air per day**. Considerations:
 
 - Do not unplug the sensors during the first week period of ASC
 - Place it in a place where you know there is going to be a clean air composition during that period. Indoor environments is not always the best for this purpose
@@ -105,7 +105,7 @@ control scd30 calfactor 450
 ```
 
 !!! warning "Reference value range"
-    The reference value needs to be between 400ppm and 2000ppm
+    The reference value needs to be between 400ppm and 2000ppm.
 
 After applying this value, ASC will be disabled automatically and readings will be inmediately corrected to the new value.
 
