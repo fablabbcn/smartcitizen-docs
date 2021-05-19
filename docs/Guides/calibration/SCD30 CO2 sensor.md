@@ -31,7 +31,15 @@ pressure
 
 ### Reading interval
 
-The SCD30 can have different internal reading intervals, **independent from the SCK's interval**. A larger reading interval will reduce power consumption, but it will increase response time. By default, the reading interval is 2s. A good reading interval for reducing substantially power consumption is 15s.
+The SCD30 can have different internal reading intervals, **independent from the SCK's interval**. A larger reading interval will reduce power consumption, but it will increase response time. By default, the reading interval is 2s. A good reading interval for reducing substantially power consumption is 15s. Below there is a table derived from the manufacturer`s application notes that can guide in the reading interval setup process:
+
+|Interval (s) |Consumption (mA) |Response time (t63 - s)|
+|:- |:-:|:-:|
+|2|19|20|
+|15|6.5|72|
+|30|6.5|145|
+
+More information can be found in the [low power mode application note](https://www.sensirion.com/fileadmin/user_upload/customers/sensirion/Dokumente/9.5_CO2/Sensirion_CO2_Sensors_SCD30_Low_Power_Mode.pdf).
 
 To control this, and set it up to 15s:
 
@@ -47,7 +55,7 @@ control scd30 interval
 
 ### Calibration
 
-The SCD30 can work in two main modes: ASC (automatic self-calibration) or FRC (forced re-calibration). They are both described in the [Field calibration for SCD30 AN](https://www.sensirion.com/fileadmin/user_upload/customers/sensirion/Dokumente/9.5_CO2/Sensirion_CO2_Sensors_SCD30_Field_Calibration.pdf).
+The SCD30 can work in two main modes: ASC (automatic self-calibration) or FRC (forced re-calibration). They are both described in the [Field calibration for SCD30 AN](https://www.sensirion.com/fileadmin/user_upload/customers/sensirion/Dokumente/9.5_CO2/Sensirion_CO2_Sensors_SCD30_Field_Calibration.pdf). 
 
 ![](/assets/images/scd30_calibration_modes.png)
 _Image source: Sensirion_
@@ -56,9 +64,9 @@ Additionally, there is a possibility to calibrate the temperature readings with 
 
 #### ASC
 
-Sensor by default is set in ASC mode. In this mode, the sensor looks for a clean environment over a 1-3 weeks period of time. Considerations:
+Sensor by default is set in ASC mode. In this mode, the sensor looks for a clean environment over a 1-3 weeks period of time, for at **least 1h of clean day per day**. Considerations:
 
-- Do not unplug the sensors during this period
+- Do not unplug the sensors during the first week period of ASC
 - Place it in a place where you know there is going to be a clean air composition during that period. Indoor environments is not always the best for this purpose
 - Do not trust the initial values, as the self-calibration algorithm might have not found proper values yet
 - There is no way for us to know wether the self-calibration process has satisfactory values. Our understanding is that the internal SCD30 algorithm converges after a period of time, but there is no indication whatsoever of the quality of the readings (see [insights section](#Insights) for more information)
@@ -77,7 +85,10 @@ control scd30 autocal off
 
 #### FRC
 
-To activate FRC mode, we need to provide an external CO2 concentration in ppm. 
+To activate FRC mode, we need to provide an external CO2 concentration in ppm. FRC calibration takes place inmediately, and it can be do multiple times at aribtrary intervals. Before applying it, run the sensor for at least 2 minutes in the desired environment.
+
+!!! warning "Unstable environments"
+    Take into account the response time of the sensor (with 2s it's t63=20s). If the environment in which you are taking readings it's too unstable, do not apply the FRC.
 
 First, make sure both reference and SCD30 sensors are stable:
 
@@ -87,7 +98,7 @@ monitor scd30 co2
 
 To stop the monitor, just press `Enter`.
 
-Secondly, feed the external reading into the sensor. For instance, for a value of 450ppm:
+Secondly, feed the external reading into the sensor. The value needs to be between 400ppm and 2000ppm. For instance, for a value of 450ppm:
 
 ```
 control scd30 calfactor 450
@@ -96,13 +107,19 @@ control scd30 calfactor 450
 !!! warning "Reference value range"
     The reference value needs to be between 400ppm and 2000ppm
 
-After applying this value, ASC will be disabled automatically. The readings will take a bit of time to scale to the new offset.
+After applying this value, ASC will be disabled automatically and readings will be inmediately corrected to the new value.
 
 #### Temperature correction
 
 An external temperature sensor can also be used to compensate the self-heating of the SCD30 board. A temperature correction can be supplied with the `caltemp` command.
 
-To feed an external temperature value (for instance, 15 ºC):
+First, read the temperature from the SCD30, to verify it's lower than the reference sensor.
+
+```
+read scd30 temp
+```
+
+If it is, then feed the external temperature value (for instance, 15 ºC):
 
 ```
 control scd30 caltemp 15
