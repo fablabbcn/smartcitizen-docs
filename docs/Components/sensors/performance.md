@@ -20,7 +20,7 @@ The following characteristics have been considered for the sensor choice
 * Low Power
 
 !!! info
-    Check the [Noise sensor implementation full documentation](/Components/sensors/air/Noise)
+    Check the [Noise sensor implementation full documentation](/Components/sensors/air/Noise) and the performance evaluation in the [ISCAPE 7.8 Deliverable (section 6.1)](/assets/publications/iSCAPE_D78.pdf)
 
 !!! tip "Sensor integration"
     ![](https://i.imgur.com/KHkyHEX.png)
@@ -102,6 +102,9 @@ Done with a CO2 NDIR sensor from Sensirion's SCD30[^9]. The sensor also features
 * Temperature stability: 2.5 ppm / °C (0-50 °C)
 * Response time (t63): 20s
 
+!!! warning "Calibration"
+    Make sure to check the [sensor calibration guide](/Guides/calibration/SCD30 CO2 sensor/) for this sensor.
+
 ## Source files
 
 <a class="github-button" data-size="large" href="https://github.com/fablabbcn/smartcitizen-kit-21/archive/master.zip" data-icon="octicon-cloud-download" aria-label="Download from GitHub">Download</a>
@@ -120,7 +123,7 @@ Done with a CO2 NDIR sensor from Sensirion's SCD30[^9]. The sensor also features
 
 [^4]: SENSIRION SHT31 Technical Datasheet
 
-    [https://www.sensirion.com/fileadmin/user\_upload/customers/sensirion/Dokumente/2\_Humidity\_Sensors/](https://www.sensirion.com/fileadmin/user_upload/customers/sensirion/Dokumente/2_Humidity_Sensors/)
+    [https://www.sensirion.com/fileadmin/user_upload/customers/sensirion/Dokumente/2_Humidity_Sensors/Datasheets/Sensirion_Humidity_Sensors_SHT3x_Datasheet_digital.pdf](https://www.sensirion.com/fileadmin/user_upload/customers/sensirion/Dokumente/2_Humidity_Sensors/Datasheets/Sensirion_Humidity_Sensors_SHT3x_Datasheet_digital.pdf)
 
 [^5]: ROHM BH1730 Technical Datasheet
 

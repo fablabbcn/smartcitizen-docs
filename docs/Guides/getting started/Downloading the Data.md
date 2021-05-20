@@ -5,7 +5,7 @@ Once you've added your SCK to the platform and it's capturing and sending data c
 
 ## Download Data
 
-If you are interested in use the data captured by your sensors, you can download all the data for later use. To do this, go to your device page, at the bottom there is a button called *DOWNLOAD DATA*. You will receive an email with a link to download your data on <a href="https://en.wikipedia.org/wiki/Comma-separated_values" target="_blank">CSV</a> format in less than a minute,
+If you are interested in use the data captured by your sensors, you can download all the data for later use. To do this, go to your device page, at the bottom there is a button called *DOWNLOAD DATA*. You will receive an email with a link to download your data on <a href="https://en.wikipedia.org/wiki/Comma-separated_values" target="_blank">CSV</a> format in less than a minute.
 
 ## API
 
