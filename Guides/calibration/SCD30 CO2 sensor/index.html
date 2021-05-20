@@ -1959,6 +1959,8 @@ calfactor [400-2000 (ppm)]
 caltemp [newTemp/off]
 pressure
 </code></pre></div>
+<p>The procedure for setting up the sensor goes as follows (more information in <a href="https://www.sensirion.com/fileadmin/user_upload/customers/sensirion/Dokumente/9.5_CO2/Sensirion_CO2_Sensors_SCD30_Low_Power_Mode.pdf">Low power mode AN</a>):</p>
+<p><img alt="" src="/assets/images/scd30_calibration_process.png" /></p>
 <h3 id="reading-interval">Reading interval<a class="headerlink" href="#reading-interval" title="Permanent link">&para;</a></h3>
 <p>The SCD30 can have different internal reading intervals, <strong>independent from the SCK's interval</strong>. A larger reading interval will reduce power consumption, but it will increase response time. By default, the reading interval is 2s. A good reading interval for reducing substantially power consumption is 15s. Below there is a table derived from the manufacturer's application notes that can guide in the reading interval setup process:</p>
 <table>
