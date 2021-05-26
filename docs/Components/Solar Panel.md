@@ -10,6 +10,8 @@ _Image credit: [Voltaic System](https://voltaicsystems.com/6-watt-panel/)_
 
 We use an [MPTT Sunflower Solar power manager 5V](https://wiki.dfrobot.com/Solar_Power_Manager_5V_SKU__DFR0559) from DF Robot for managing the solar input with an additional 2Ah battery. It is fitted inside the enclosure with a small laser cut (or 3D printed if not available) flange. This is the [BOM](https://github.com/fablabbcn/smartcitizen-enclosures/blob/master/Power%20options/Solar/SCK_OUTDOOR_PV_BOM.csv) for this option.
 
+![](/assets/images/dfrobot.jpeg)
+
 !!! info "Installation"
     Have a look at the installation guide for [Solar Panel](/Guides/deployments/Installing solar panel/)
 
