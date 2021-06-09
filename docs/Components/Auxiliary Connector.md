@@ -3,7 +3,7 @@ The [data board](/Components/Data Board/) features a standard Grove connector wh
 ![](https://i.imgur.com/5nEc922.jpg){: style="max-width:400px !important"}
 
 !!!info "There is a lot more to it!"
-    The Smart Citizen Kit is designed with a modular approach in mind. This means that the [Urban Board](/Components/Urban%20Sensor%20Board/) is only a selection of low cost sensors for air quality, but the hardware itself can be expanded for other use cases such as a more advanced air quality monitoring setup, soil monitoring, or water quality. Make sure you check our [guide on how to use them](/Guides/Third party sensors).
+    The Smart Citizen Kit is designed with a modular approach in mind. This means that the [Urban Board](/Components/Urban%20Sensor%20Board/) is only a selection of low cost sensors for air quality, but the hardware itself can be expanded for other use cases such as a more advanced air quality monitoring setup, soil monitoring, or water quality. Make sure you check our [guide on how to use them](/Guides/getting%20started/Third%20party%20sensors/).
 
 ## Supported sensors
 
