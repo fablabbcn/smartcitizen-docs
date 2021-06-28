@@ -2,7 +2,7 @@ Gases Pro Sensor Board
 ======================
 
 !!! warning "Deprecated"
-    The Gases Pro Sensor Board is the development board used during the iSCAPE Project. For reading electrochemical sensors, please refer to the [Analog Sensor Board section](/Components/boards/Analog Sensor Board.md).
+    The Gases Pro Sensor Board is the development board used during the iSCAPE Project. For reading electrochemical sensors, please refer to the [Analog Sensor Board section](/Components/boards/Analog%20Sensor%20Board/).
 
 The Gases Sensor Board is a custom, ultra-low noise, high-performance, low power, digital output driver for 3 Alphasense Ltd. Electrochemical Series B Gas Sensors specifically designed for the project from the ground up.
 
