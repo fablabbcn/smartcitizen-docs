@@ -26,7 +26,7 @@ The framework is writen in [Python](http://www.python.org), and can be easily in
 The framework integrates with the [Smart Citizen API](/Data/Smart Citizen API) and helps with the analysis of **large amounts of data in an efficient way**. It also integrates functionality to **generate reports** in _html_ or _pdf_ format, and to **publish datasets** and documents to [Zenodo](https://zenodo.org).
 
 !!! info "More familiar with R?"
-    [R](https://www.r-project.org/) users won't be left stranded. [R2PY](https://rpy2.bitbucket.io/) provides functionality to send data from _python_ to _R_ quite easily.
+    [R](https://www.r-project.org/) users won't be left stranded. [RPY2](https://pypi.org/project/rpy2/) provides functionality to send data from _python_ to _R_ quite easily.
 
 <a class="github-button" data-size="large" href="https://github.com/fablabbcn/smartcitizen-iscape-data" aria-label="Check the source code">Check the source code</a>
 
