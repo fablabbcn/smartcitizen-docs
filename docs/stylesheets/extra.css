@@ -54,12 +54,20 @@
     background: magenta;
 }
 
+.yellow {
+    background: yellow;
+}
+
 .blink {
     animation:1s blinker linear infinite;
 }
 
 .net {
     animation:2s net ease infinite;
+}
+
+.net-warning {
+    animation:0.8s net-warning linear infinite;
 }
 
 .net-error {
@@ -80,6 +88,10 @@
 
 .sd {
     animation:2s sd ease infinite;
+}
+
+.sd-warning{
+    animation:0.8s sd-warning linear infinite;
 }
 
 .sd-error {
@@ -169,6 +181,14 @@
      100% { background: white; }
 }
 
+@keyframes net-warning {
+     0% { background: blue; opacity: 40%;}
+     49% { background: blue; opacity: 40%;}
+     50% { background: blue; opacity: 100%}
+     99% { background: blue; opacity: 100%}
+     100% { background: blue; opacity: 40%}
+}
+
 @keyframes net-lowbat {
      0% { background: orange; }
      15% { background: blue; }
@@ -192,6 +212,14 @@
      0% { background: white; }
      50% { background: magenta; }
      100% { background: white; }
+}
+
+@keyframes sd-warning {
+     0% { background: magenta; opacity: 40%;}
+     49% { background: magenta; opacity: 40%;}
+     50% { background: magenta; opacity: 100%}
+     99% { background: magenta; opacity: 100%}
+     100% { background: magenta; opacity: 40%}
 }
 
 @keyframes sd-lowbat {

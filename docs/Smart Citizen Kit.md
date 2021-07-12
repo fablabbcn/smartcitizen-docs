@@ -154,6 +154,13 @@ An example is shown below:
 
 ### Operation modes
 
+!!! warning "New WARNING feature"
+    After release `0.9.8`, a new warning feature was introduced. In an overall sense, this is the interpretation of each state:
+
+    - **Normal**: no problem! **Slow fading in the LED.**
+    - **Warning**: can take readings, but can't save them in the sdcard or can't send them to the platform (problem with network). Data is stored in the onboard Flash memory and will be saved after the problem is solved - either network comes back or the sdcard is OK. **Partial blink in LED.**
+    - **Error**: can't take readings. Either there is "no time", or there is a big problem that prevents data to be read. **Full fast blink in LED.**
+
 #### <span class="led small red"> </span> Setup mode
 
 In this mode, the Kit is ready to be configured in **network** mode or **SD card** in [start.smartcitizen.me](https://start.smartcitizen.me/).
@@ -167,15 +174,17 @@ In this mode, the Kit is ready to be configured in **network** mode or **SD card
 
 #### <span class="led small blue"> </span> Wi-Fi mode
 
-This is the standard mode for a network that requires a Wi-Fi connection. In this way, the device will publish the data every minute on the [smartcitizen.me](https://smartcitizen.me) platform. If there is an inserted micro SD card, the data will be stored in duplicate.
+This is the standard mode for a network that requires a Wi-Fi connection. In this way, the device will publish the data every minute on the [smartcitizen.me](https://smartcitizen.me) platform. If there is an inserted micro SD card, the data will be stored in it as well.
 
 | LED color                            |  Kit status                             |
 |------------------------------------------|------------------------------------------- |
 | <span class="led net"></span>            | :thumbsup: Collecting data online                 |
-| <span class="led net-error"></span>      | :warning: Error while collecting data         |
+| <span class="led net-warning"></span>    | :warning: Warning. Collecting data but not sending it online         |
+| <span class="led net-error"></span>      | ❌ Error. Not collecting data         |
 | <span class="led net-lowbat"></span>     | :battery: Collecting data online but battery is low, charge the Kit    |
 | <span class="led net-chargebat"></span>  | :battery: Collecting data online, battery charging              |
 | <span class="led net-fullbat"></span>    | :battery: Collecting data online, battery charged               |
+
 
 !!! warning
 	:white_check_mark: The kit supports Wi-Fi WEP, WPA/WPA2 and open networks that are common networks in domestic environments and small businesses.
@@ -189,7 +198,8 @@ If we do not have an internet connection we can use the SD mode. In this case th
 | LED color                            |  Kit status                             |
 |------------------------------------------|------------------------------------------- |
 | <span class="led sd"></span>             | :thumbsup: Collecting data offline              |
-| <span class="led sd-error"></span>       | :warning: Error while collecting data         |
+| <span class="led sd-warning"></span>    | :warning: Warning. Collecting data but not storing it in sdcard       |
+| <span class="led sd-error"></span>       |  ❌ Error. Not collecting data         |
 | <span class="led sd-lowbat"></span>      | :battery: Collecting data offline but battery is low, charge the Kit    |
 | <span class="led sd-chargebat"></span>   | :battery: Collecting data offline,  battery charging              |
 | <span class="led sd-fullbat"></span>     | :battery: Collecting data offline, battery charged          |
@@ -204,10 +214,13 @@ If we do not have an internet connection we can use the SD mode. In this case th
 
 #### Especial status
 
+You will see these colors in special moments, mostly when the kit is booting or being updated.
+
 | LED color                            |  Kit status                             |
 |------------------------------------------|------------------------------------------- |
 | <span class="led busy"></span>           |  :hourglass_flowing_sand:  Busy, please wait!                 |
-| <span class="led firmware"></span>       | :wrench: Software update going on!
+| <span class="led firmware"></span>       | :wrench: Software update going on!                 |
+| <span class="led yellow"></span>          | :computer: Shell mode [more info here](/Guides/getting started/Using the Shell/#shell-mode)                |
 
 ## Software Updates
 
