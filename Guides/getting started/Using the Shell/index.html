@@ -1135,6 +1135,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#shell-mode" class="md-nav__link">
+    Shell Mode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#set-the-recording-configuration" class="md-nav__link">
     Set the recording configuration
   </a>
@@ -1165,6 +1172,20 @@
           <li class="md-nav__item">
   <a href="#readmonitor-some-sensors" class="md-nav__link">
     Read/Monitor some sensors
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changing-mqtt-or-ntp-servers" class="md-nav__link">
+    Changing mqtt or ntp servers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accessing-the-flash-memory" class="md-nav__link">
+    Accessing the flash memory
   </a>
   
 </li>
@@ -1874,6 +1895,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#shell-mode" class="md-nav__link">
+    Shell Mode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#set-the-recording-configuration" class="md-nav__link">
     Set the recording configuration
   </a>
@@ -1904,6 +1932,20 @@
           <li class="md-nav__item">
   <a href="#readmonitor-some-sensors" class="md-nav__link">
     Read/Monitor some sensors
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changing-mqtt-or-ntp-servers" class="md-nav__link">
+    Changing mqtt or ntp servers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accessing-the-flash-memory" class="md-nav__link">
+    Accessing the flash memory
   </a>
   
 </li>
@@ -1988,11 +2030,11 @@ rcause:      Show last reset cause (debug)
 outlevel:    Shows/sets output level: outlevel [0:silent, 1:normal, 2:verbose]
 help:        Duhhhh!!
 pinmux:      Shows SAMD pin mapping status
-sensor:      Shows/sets sensor state or interval: sensor sensor-name [-enable or -disable] or [-interval interval(seconds)]
+flash:       Shows and manage flash memory state [no-param -&gt; info] [-format (be carefull)] [-dump sect-num (0-2040)] [-sector sect-num] [-recover sect-num/all net/sd]
+sensor:      Shows/sets sensor state or interval: sensor sensor-name [-enable or -disable] [-interval interval(seconds)] [-oled]
 read:        Reads sensor: read [sensorName]
 control:     Control sensor: control [sensorName] [command]
-monitor:     Continously read sensor: monitor [-sd] [-notime] [-noms] [sensorName[,sensorNameN]]
-saved:       Shows locally stored sensor readings: saved [-details] [-publish]
+monitor:     Continously read sensor: monitor [-sd] [-notime] [-noms] [-oled] [sensorName[,sensorNameN]]
 free:        Shows the amount of free RAM memory
 i2c:         Search the I2C bus for devices
 power:       Controls/shows power config: power [-info (extra info)] [-batcap mAh] [-otg on/off] [-charge on/off] [-sleep min (0-disable)]
@@ -2000,24 +2042,24 @@ config:      Shows/sets configuration: config [-defaults] [-mode sdcard/network]
 esp:         Controls or shows info from ESP: esp [-on -off -sleep -wake -reboot -flash]
 netinfo:     Shows network information
 time:        Shows/sets date and time: time [epoch time] [-sync]
-state:       Shows state flags
 hello:       Sends MQTT hello to platform
-debug:       Toggle debug messages: debug [-sdcard] [-espcom] [-list]
+debug:       Toggle debug messages: debug [-sdcard] [-esp] [-oled] [-flash] [-telnet] [-speed]
 shell:       Shows or sets shell mode: shell [-on] [-off]
-mqtt:        Publish custom mqtt message: mqtt [&quot;topic&quot; &quot;message&quot;]
+publish:     Publish custom mqtt message: mqtt [&quot;topic&quot; &quot;message&quot;]
+offline:     Configure offline periods and WiFi retry interval: [-retryint seconds] [-period start-hour end-hour (UTC 0-23)]
+mqttsrv:     Configure mqtt server address and port: [-host serverName] [-port portNum]
+ntpsrv:      Configure ntp server address and port: [-host serverName] [-port portNum]
 </code></pre></div>
-<div class="admonition info">
-<p class="admonition-title">Pro tip</p>
+<h3 id="shell-mode">Shell Mode<a class="headerlink" href="#shell-mode" title="Permanent link">&para;</a></h3>
 <p>The SCK outputs  a lot of information via serial. This can be sometimes confusing while typing commands. You can silent it a bit with this command:</p>
 <div class="highlight"><pre><span></span><code>SCK &gt; shell -on
 Shell mode: on
 </code></pre></div>
-<p>This will turn your LED static yellow, and no output except responses to your commands will be given. </p>
+<p>This will turn your <strong>LED static yellow</strong>, and no output except responses to your commands will be given. </p>
 <p>Remember to turn it off after you are done experimenting!</p>
 <div class="highlight"><pre><span></span><code>SCK &gt; shell -off
 Shell mode: off
 </code></pre></div>
-</div>
 <h3 id="set-the-recording-configuration">Set the recording configuration<a class="headerlink" href="#set-the-recording-configuration" title="Permanent link">&para;</a></h3>
 <p>If you want to change your recording mode to, for instance, <code>sdcard</code> mode, you could do so by typing:</p>
 <div class="highlight"><pre><span></span><code>SCK &gt; config -mode sdcard
@@ -2225,7 +2267,58 @@ Time    Miliseconds     Light
 2019-07-11T09:10:06Z    98      141
 ...
 </code></pre></div>
-<p>This can be useful in case you want to log data as fast as possible, with little delay between readings (~100ms).    </p>
+<p>This can be useful in case you want to log data as fast as possible, with little delay between readings (~100ms).</p>
+<h3 id="changing-mqtt-or-ntp-servers">Changing mqtt or ntp servers<a class="headerlink" href="#changing-mqtt-or-ntp-servers" title="Permanent link">&para;</a></h3>
+<p>If you want to send data to your own server, or there is a firewall in your network, you can use these two commands to change them:</p>
+<div class="highlight"><pre><span></span><code>mqttsrv:     Configure mqtt server address and port: [-host serverName] [-port portNum]
+ntpsrv:      Configure ntp server address and port: [-host serverName] [-port portNum]
+</code></pre></div>
+<p>Check the <code>mqttsrv</code>:</p>
+<div class="highlight"><pre><span></span><code>SCK &gt; mqttsrv
+Mqtt Host: mqtt.smartcitizen.me
+Mqtt Port: 1883
+</code></pre></div>
+<p>Check the <code>ntpsrv</code>:</p>
+<div class="highlight"><pre><span></span><code>SCK &gt; ntpsrv
+NTP Host: ntp.smartcitizen.me
+NTP Port: 80
+</code></pre></div>
+<p>Change mqttsrv <code>host</code> and <code>port</code>:</p>
+<div class="highlight"><pre><span></span><code>SCK &gt; mqttsrv -host mqtt.greatcity.me -port 80
+Mqtt Host: mqtt.greatcity.me
+Mqtt Port: 80
+</code></pre></div>
+<h3 id="accessing-the-flash-memory">Accessing the flash memory<a class="headerlink" href="#accessing-the-flash-memory" title="Permanent link">&para;</a></h3>
+<p>This is an advanced feature and helps to explore the data stored in the onboard flash memory for debugging purposes.</p>
+<p>Get a complete map of used sectors in the flash memory:</p>
+<div class="highlight"><pre><span></span><code>SCK &gt; flash
+Scanning Flash memory (it can take a while!)
+
+0 &gt; |u38(_/_)|u36(_/_)|u34(_/_)|u35(_/_)|u35(_/_)|u34(_/_)|u34(_/_)|u35(_/_)|u37(_/_)|u37(_/_)|u37(_/_)|u36(_/_)|u36(_/_)|u36(_/_)|u36(_/_)|u36(_/_)|u36(_/_)|u36(_/_)|u36(_/_)|u36(_/_)|u36(_/_)|u36(_/_)|u36(_/_)|u36(_/_)|u36(_/_)|u36(_/_)|u36(_/_)|u36(_/_)|u36(_/_)|u37(_/_)|u37(_/_)|u37(_/_)|
+32 &gt; |u37(_/_)|u36(_/_)|u36(_/_)|u36(_/_)|u36(_/_)|u37(_/_)|u37(_/_)|u37(_/_)|u37(_/_)|u37(_/_)|u37(_/_)|u37(_/_)|u37(_/_)|u37(_/_)|u37(_/_)|u37(_/_)|u37(_/_)|u37(_/_)|u37(_/_)|u37(_/_)|u37(_/_)|u37(_/_)|u37(_/_)|u37(_/_)|u37(_/_)|u37(_/_)|u37(_/_)|u37(_/_)|u37(_/_)|u37(_/_)|u37(_/_)|u36(_/_)|
+...
+</code></pre></div>
+<p>Format the flash (will take a long time):</p>
+<div class="highlight"><pre><span></span><code>flash -format
+</code></pre></div>
+<p>Check a sector (see what's inside):</p>
+<div class="highlight"><pre><span></span><code>SCK &gt; flash -sector 300
+
+Sector 300 in address 1228800 is: Used
+Sector 300 fully published to network: true
+Sector 300 fully published to sd-card: true
+Net published groups: 37
+Net un-published groups: 0
+Sd saved groups: 37
+Sd not saved groups: 0
+Total groups: 37
+Freespace: 53 bytes
+First group: 2021-07-08T09:04:19Z
+Last group:  2021-07-12T07:34:49Z
+</code></pre></div>
+<p>Recover a sector (send it to the platform or save in sdcard, or both - see <code>help</code> command):</p>
+<div class="highlight"><pre><span></span><code>flash -recover all net
+</code></pre></div>
 <h2 id="advanced-but-cool-example">Advanced (but cool) example!<a class="headerlink" href="#advanced-but-cool-example" title="Permanent link">&para;</a></h2>
 <div class="admonition example">
 <p class="admonition-title">Making most of the digital microphone</p>

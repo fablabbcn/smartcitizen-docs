@@ -502,6 +502,19 @@
       Wi-Fi mode
   </a>
   
+    <nav class="md-nav" aria-label="  Wi-Fi mode">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flash-memory" class="md-nav__link">
+    Flash memory
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -2063,6 +2076,19 @@
       Wi-Fi mode
   </a>
   
+    <nav class="md-nav" aria-label="  Wi-Fi mode">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flash-memory" class="md-nav__link">
+    Flash memory
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -2209,23 +2235,22 @@
 <p><img alt="" src="https://i.imgur.com/5NlWx6O.jpg" /></p>
 <h2 id="power-management"><img alt="🔋" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f50b.svg" title=":battery:" /> Power management<a class="headerlink" href="#power-management" title="Permanent link">&para;</a></h2>
 <h3 id="battery-duration">Battery duration<a class="headerlink" href="#battery-duration" title="Permanent link">&para;</a></h3>
-<p>The SCK comes with a 2000mAh LiPo battery. The battery is meant to be a complete power option for short-term measurements and a backup solution when the kit it is used for long periods. For long exposures, we recommend to permanently connect the USB to kit. The battery duration is dependent on which sensors are enabled or disabled:</p>
-<ul>
-<li>All sensors publishing over Wi-Fi: 12 hrs.</li>
-<li>All sensors publishing on SD card: 13 hrs.</li>
-<li>Without air quality sensors over Wi-Fi: 10 days</li>
-<li>Without air quality sensors on SD card: 25 days</li>
-</ul>
+<p>The SCK comes with a 2000mAh LiPo battery. The battery is meant to be a complete power option for short-term measurements and a backup solution when the kit it is used for long periods. For long exposures, we recommend to permanently connect the USB to kit. The battery duration is dependent on which sensors are enabled or disabled.</p>
 <p>You will note that the kit <em>turns itself off</em> while operating on battery. Actually, this is what we call <code>sleep-mode</code>, an operation mode implemented to reduce consumption while on battery operation.</p>
+<div class="admonition info">
+<p class="admonition-title">PM Sensor management</p>
+<p>If you want to save battery, the <a href="/Guides/getting started/Using the Shell/#set-recording-and-publication-intervals">basic interval</a> for the sensors shouldn't be below 30s. This is due to the minimum stabilisation time the PM sensor requires to take stable readings. For this reason, <strong>the minimum interval available without turning off the PM sensor between readings is 30s</strong>. If a lower interval is required, the PM sensor will be permanently ON and battery will drain faster.</p>
+</div>
 <h4 id="battery-calculator">Battery calculator<a class="headerlink" href="#battery-calculator" title="Permanent link">&para;</a></h4>
-<p>You can use the battery calculator to estimate how much your battery would last</p>
+<p>You can use the battery calculator to estimate how much your battery would last.</p>
 <div class="admonition tip">
 <p class="admonition-title">SCK Battery Calculator</p>
+<p><strong>WIP!</strong></p>
 <p><iframe id="github-iframe" src="" width="100%" height="40%" frameborder="0" scrolling="no" style="min-height: 570px;"></iframe></p>
-<div class="admonition info">
-<p class="admonition-title">What's the SCK's Shell?</p>
-<p>Learn how to use the powerful SCK Shell. Check the <a href="/Guides/getting%20started/Using%20the%20Shell/">guide</a>.</p>
 </div>
+<div class="admonition info">
+<p class="admonition-title">What's the SCK's Shell?<p>Learn how to use the powerful SCK Shell. Check the <a href="/Guides/getting%20started/Using%20the%20Shell/">guide</a>.</p>
+</p>
 </div>
 <script>
     fetch('https://api.github.com/repos/fablabbcn/smartcitizen-tools/contents/calculator.htm')
@@ -2238,8 +2263,8 @@
 </script>
 
 <h3 id="battery-charging">Battery charging<a class="headerlink" href="#battery-charging" title="Permanent link">&para;</a></h3>
-<p>The SCK has a micro USB port and can be charged like any Smartphone or Tablet using a dedicated adapter or a computer USB port.</p>
-<p>We recommend using a tablet power adaptor, instead of a computer USB port, for quicker charging. Autonomy can be extended by using a Power Bank, or a 5V PV Panel.</p>
+<p>The SCK has a micro USB port and can be charged like any smartphone or tablet using a dedicated adapter or a computer USB port.</p>
+<p>We recommend using an external USB power adaptor, instead of a computer USB port, for quicker charging. Autonomy can be extended by using a Power Bank, or a <a href="/Components/Solar Panel/">5V PV Panel</a>.</p>
 <h3 id="power-supply">Power Supply<a class="headerlink" href="#power-supply" title="Permanent link">&para;</a></h3>
 <p>The SCK needs 5V input via the micro USB connector. A normal 5V power charger can be used, although for outdoor developments we recommend using a waterproof power supply. Find more info in the <a href="/Components/boards/Power Supply/">power supply section</a>.</p>
 <h3 id="user-feedback">User feedback<a class="headerlink" href="#user-feedback" title="Permanent link">&para;</a></h3>
@@ -2288,6 +2313,15 @@
 <p>Have a look at the <a href="/Troubleshooting">troubleshoothing section</a> to check how you can use the buttons in case of problems with your SCK!</p>
 </div>
 <h3 id="operation-modes">Operation modes<a class="headerlink" href="#operation-modes" title="Permanent link">&para;</a></h3>
+<div class="admonition warning">
+<p class="admonition-title">New WARNING feature</p>
+<p>After release <code>0.9.8</code>, a new warning feature was introduced. In an overall sense, this is the interpretation of each state:</p>
+<ul>
+<li><strong>Normal</strong>: no problem! <strong>Slow fading in the LED.</strong></li>
+<li><strong>Warning</strong>: can take readings, but can't save them in the sdcard or can't send them to the platform (problem with network). Data is stored in the onboard Flash memory and will be saved after the problem is solved - either network comes back or the sdcard is OK. <strong>Partial blink in LED.</strong></li>
+<li><strong>Error</strong>: can't take readings. Either there is "no time", or there is a big problem that prevents data to be read. <strong>Full fast blink in LED.</strong></li>
+</ul>
+</div>
 <h4 id="setup-mode"><span class="led small red"> </span> Setup mode<a class="headerlink" href="#setup-mode" title="Permanent link">&para;</a></h4>
 <p>In this mode, the Kit is ready to be configured in <strong>network</strong> mode or <strong>SD card</strong> in <a href="https://start.smartcitizen.me/">start.smartcitizen.me</a>.</p>
 <table>
@@ -2317,7 +2351,7 @@
 </tbody>
 </table>
 <h4 id="wi-fi-mode"><span class="led small blue"> </span> Wi-Fi mode<a class="headerlink" href="#wi-fi-mode" title="Permanent link">&para;</a></h4>
-<p>This is the standard mode for a network that requires a Wi-Fi connection. In this way, the device will publish the data every minute on the <a href="https://smartcitizen.me">smartcitizen.me</a> platform. If there is an inserted micro SD card, the data will be stored in duplicate.</p>
+<p>This is the standard mode for a network that requires a Wi-Fi connection. In this way, the device will publish the data every minute on the <a href="https://smartcitizen.me">smartcitizen.me</a> platform. If there is an inserted micro SD card, the data will be stored in it as well.</p>
 <table>
 <thead>
 <tr>
@@ -2331,8 +2365,12 @@
 <td><img alt="👍" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f44d.svg" title=":thumbsup:" /> Collecting data online</td>
 </tr>
 <tr>
+<td><span class="led net-warning"></span></td>
+<td><img alt="⚠️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/26a0.svg" title=":warning:" /> Warning. Collecting data but not sending it online</td>
+</tr>
+<tr>
 <td><span class="led net-error"></span></td>
-<td><img alt="⚠️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/26a0.svg" title=":warning:" /> Error while collecting data</td>
+<td>❌ Error. Not collecting data</td>
 </tr>
 <tr>
 <td><span class="led net-lowbat"></span></td>
@@ -2353,6 +2391,28 @@
 <p><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2705.svg" title=":white_check_mark:" /> The kit supports Wi-Fi WEP, WPA/WPA2 and open networks that are common networks in domestic environments and small businesses.</p>
 <p><img alt="❎" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/274e.svg" title=":negative_squared_cross_mark:" /> But, it <strong>does not</strong> support WPA/WPA2 Enterprise networks such as EDUROAM or networks with captive portals such as those found in Airports and Hotels</p>
 </div>
+<div class="admonition info">
+<p class="admonition-title">Error in network mode</p>
+<p>If you configure the SCK with a network that is not visible at the moment of configuring it, it will raise an error and it will not take data.</p>
+</div>
+<h5 id="flash-memory">Flash memory<a class="headerlink" href="#flash-memory" title="Permanent link">&para;</a></h5>
+<p>After firmware version <code>0.9.8</code>, a new flash memory feature was implemented. This changed completely the arrangement of sensor readings vs publication/storage, and how errors are handled. Data is now always stored in flash memory before storage in sdcard or network publication. This means, that data can be always recovered if there is a problem with the sdcard or the connection to the network, i.e. if we lose connection, the SCK will still store data and publish it in batch once the network is back!</p>
+<div class="admonition info">
+<p class="admonition-title">Flash chip and sizes</p>
+<p>The flash chip <a href="https://www.cypress.com/file/316661/download"><strong>S25FL064L</strong></a> that we use it's a 8MB SPI flash nonvolatile memory. The minimum erasable unit is a 4kb sector, the full memory contains 2,048 sectors with a total of 8,388,608 bytes or 8MB.</p>
+<p>A normal reading group with the default urban board hardware installed is composed by 11 readings, hence we expect each reading to take 7 bytes: an average of 5 bytes for the reading itself plus 2 overhead bytes for SensorType and size. Each group should have a total of 77 bytes of readings, 2 byte of size, 2 bytes of flags and 4 bytes of the time stamp. That means we can expect a normal group to be around 85 bytes. This means we can store almost 100,000 groups of readings or around 70 days of readings with standard sensor hardware. This number can vary a little though.</p>
+<p>About flash memory lifespan, rounding numbers we can say we have enough space to store 2 months (60 days) of readings, according to the Flash memory <a href="https://www.cypress.com/file/316661/download">datasheet</a> we have at least 100,000 erase cycles: 2 months per cycle means 200,000 months so we can expect more than <strong>16k years!!</strong>.</p>
+</div>
+<p>This can be very useful in many situations, for instance, where we cannot use permament network connectivity or we have intermitent network brownouts. Of course, everything has it's limitations, and the flash memory follows a <em><a href="https://en.wikipedia.org/wiki/Circular_buffer">circular buffer</a></em>, that means that when the flash memory is full, it will start overwritting data no matter if it was published or not. In a normal SCK the flash memory will last for some weeks though, but it's better to always be on the safe side and not lose any data.</p>
+<p>When the SCK loses connection, after <strong>three attempts to connect</strong>, it will enter <em>warning mode</em> (see <a href="/Smart Citizen Kit/#operation-modes">here</a>). After this, it will try again after 5 times the publication interval (by default 3'), which means, after WiFi being visible, by default, the <strong>SCK will take at maximum 15' to connect to it</strong> and start pushing data. The data publication is not inmediate and will take some minutes. If you are in a hurry, click the user button twice (net-setup-net mode) or reset the kit and data will start being posted right away.</p>
+<div class="admonition warning">
+<p class="admonition-title">Be careful</p>
+<p>That we have a non permanent WiFi connection, means that we can also risk entering in error mode if the SCK depletes it's battery. Since the only way for the to know the time is to get it from the internet (or we give it to it from the phone in the setup process), if we lose network connection and the SCK runs out of battery, when coming back to life, it will need to receive the time again.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Debugging commands</p>
+<p>Check <a href="/Guides/getting started/Using the Shell/#accessing-the-flash-memory">this guide</a> for more debugging commands.</p>
+</div>
 <h4 id="sd-card-mode-offline"><span class="led small pink"> </span> SD card mode (offline)<a class="headerlink" href="#sd-card-mode-offline" title="Permanent link">&para;</a></h4>
 <p>If we do not have an internet connection we can use the SD mode. In this case the device will record the data on the micro SD card. Later we can read the card using a card reader. The data can be visually spaced in a spreadsheet but also published on the <a href="https://smartcitizen.me">smartcitizen.me</a> platform using the <strong>UPLOAD CSV</strong> option.</p>
 <table>
@@ -2368,8 +2428,12 @@
 <td><img alt="👍" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f44d.svg" title=":thumbsup:" /> Collecting data offline</td>
 </tr>
 <tr>
+<td><span class="led sd-warning"></span></td>
+<td><img alt="⚠️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/26a0.svg" title=":warning:" /> Warning. Collecting data but not storing it in sdcard</td>
+</tr>
+<tr>
 <td><span class="led sd-error"></span></td>
-<td><img alt="⚠️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/26a0.svg" title=":warning:" /> Error while collecting data</td>
+<td>❌ Error. Not collecting data</td>
 </tr>
 <tr>
 <td><span class="led sd-lowbat"></span></td>
@@ -2395,6 +2459,7 @@
 <p>A reset takes place every night at 3-4am with the purpose to avoid data loss because a problem. The SCK then stores the data in a file with a sequential name, and does so by changing the filename to YYYY-MM-DD.01, .02… etc depending on the amount of resets it sees during that day. You can see the data and work with it by changing the name from YYYY-MM-DD.01 to YYYY-MM-DD_01.CSV. <a href="/Guides/data/Organise your data/#pre-process-the-sd-card-data">Check the guide on how to organise your data</a> to automatise this.</p>
 </div>
 <h4 id="especial-status">Especial status<a class="headerlink" href="#especial-status" title="Permanent link">&para;</a></h4>
+<p>You will see these colors in special moments, mostly when the kit is booting or being updated.</p>
 <table>
 <thead>
 <tr>
@@ -2410,6 +2475,10 @@
 <tr>
 <td><span class="led firmware"></span></td>
 <td><img alt="🔧" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f527.svg" title=":wrench:" /> Software update going on!</td>
+</tr>
+<tr>
+<td><span class="led yellow"></span></td>
+<td><img alt="💻" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f4bb.svg" title=":computer:" /> Shell mode <a href="/Guides/getting started/Using the Shell/#shell-mode">more info here</a></td>
 </tr>
 </tbody>
 </table>
