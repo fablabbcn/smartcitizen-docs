@@ -160,6 +160,8 @@ An example is shown below:
     - **Normal**: no problem! **Slow fading in the LED.**
     - **Warning**: can take readings, but can't save them in the sdcard or can't send them to the platform (problem with network). Data is stored in the onboard Flash memory and will be saved after the problem is solved - either network comes back or the sdcard is OK. **Partial blink in LED.**
     - **Error**: can't take readings. Either there is "no time", or there is a big problem that prevents data to be read. **Full fast blink in LED.**
+    
+    :bulb: Remember, you can check your SCK firmware version quickly following this [guide](/Guides/getting%20started/Getting%20firmware%20information/).
 
 #### <span class="led small red"> </span> Setup mode
 
@@ -197,6 +199,9 @@ This is the standard mode for a network that requires a Wi-Fi connection. In thi
 ##### Flash memory
 
 After firmware version `0.9.8`, a new flash memory feature was implemented. That changed completely the arrangement of sensor readings vs publication/storage, and how errors are handled. From there on, data is always stored in flash memory before stored in **SD card** or published over **Wi-Fi**. That means that data can be always recovered if there is a problem with the SD card or the connection to the Internet fails, i.e. if we lose connection, the SCK will still store data and publish it in batch once the network is back!
+
+!!! tip "Check and update your Kit software version"
+	:bulb: Remember, you can check your SCK firmware version quickly following this [guide](/Guides/getting%20started/Getting%20firmware%20information/). Later, learn [here](/Guides/firmware/Update%20the%20firmware/) how to update it.
 
 !!! info "Flash chip and sizes"
     The flash chip [**S25FL064L**](https://www.cypress.com/file/316661/download) that we use is an 8 MB SPI flash nonvolatile memory. The minimum erasable unit is a 4kb sector, the full memory contains 2,048 sectors with a total of 8,388,608 bytes or 8 MB.
