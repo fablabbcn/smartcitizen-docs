@@ -56,11 +56,11 @@ rcause:      Show last reset cause (debug)
 outlevel:    Shows/sets output level: outlevel [0:silent, 1:normal, 2:verbose]
 help:        Duhhhh!!
 pinmux:      Shows SAMD pin mapping status
-sensor:      Shows/sets sensor state or interval: sensor sensor-name [-enable or -disable] or [-interval interval(seconds)]
+flash:       Shows and manage flash memory state [no-param -> info] [-format (be carefull)] [-dump sect-num (0-2040)] [-sector sect-num] [-recover sect-num/all net/sd]
+sensor:      Shows/sets sensor state or interval: sensor sensor-name [-enable or -disable] [-interval interval(seconds)] [-oled]
 read:        Reads sensor: read [sensorName]
 control:     Control sensor: control [sensorName] [command]
-monitor:     Continously read sensor: monitor [-sd] [-notime] [-noms] [sensorName[,sensorNameN]]
-saved:       Shows locally stored sensor readings: saved [-details] [-publish]
+monitor:     Continously read sensor: monitor [-sd] [-notime] [-noms] [-oled] [sensorName[,sensorNameN]]
 free:        Shows the amount of free RAM memory
 i2c:         Search the I2C bus for devices
 power:       Controls/shows power config: power [-info (extra info)] [-batcap mAh] [-otg on/off] [-charge on/off] [-sleep min (0-disable)]
@@ -68,29 +68,32 @@ config:      Shows/sets configuration: config [-defaults] [-mode sdcard/network]
 esp:         Controls or shows info from ESP: esp [-on -off -sleep -wake -reboot -flash]
 netinfo:     Shows network information
 time:        Shows/sets date and time: time [epoch time] [-sync]
-state:       Shows state flags
 hello:       Sends MQTT hello to platform
-debug:       Toggle debug messages: debug [-sdcard] [-espcom] [-list]
+debug:       Toggle debug messages: debug [-sdcard] [-esp] [-oled] [-flash] [-telnet] [-speed]
 shell:       Shows or sets shell mode: shell [-on] [-off]
-mqtt:        Publish custom mqtt message: mqtt ["topic" "message"]
+publish:     Publish custom mqtt message: mqtt ["topic" "message"]
+offline:     Configure offline periods and WiFi retry interval: [-retryint seconds] [-period start-hour end-hour (UTC 0-23)]
+mqttsrv:     Configure mqtt server address and port: [-host serverName] [-port portNum]
+ntpsrv:      Configure ntp server address and port: [-host serverName] [-port portNum]
 ```
 
-!!! info "Pro tip"
-    The SCK outputs  a lot of information via serial. This can be sometimes confusing while typing commands. You can silent it a bit with this command:
+### Shell Mode
 
-    ```
-    SCK > shell -on
-    Shell mode: on
-    ```
+The SCK outputs  a lot of information via serial. This can be sometimes confusing while typing commands. You can silent it a bit with this command:
 
-    This will turn your LED static yellow, and no output except responses to your commands will be given. 
+```
+SCK > shell -on
+Shell mode: on
+```
 
-    Remember to turn it off after you are done experimenting!
+This will turn your **LED static yellow**, and no output except responses to your commands will be given. 
 
-    ```
-    SCK > shell -off
-    Shell mode: off
-    ```
+Remember to turn it off after you are done experimenting!
+
+```
+SCK > shell -off
+Shell mode: off
+```
 
 ### Set the recording configuration
 
