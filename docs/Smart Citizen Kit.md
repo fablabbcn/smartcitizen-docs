@@ -191,6 +191,30 @@ This is the standard mode for a network that requires a Wi-Fi connection. In thi
 
 	:negative_squared_cross_mark: But, it **does not** support WPA/WPA2 Enterprise networks such as EDUROAM or networks with captive portals such as those found in Airports and Hotels
 
+!!! info "Error in network mode"
+    If you configure the SCK with a network that is not visible at the moment of configuring it, it will raise an error and it will not take data.
+
+##### Flash memory
+
+After firmware version `0.9.8`, a new flash memory feature was implemented. This changed completely the arrangement of sensor readings vs publication/storage, and how errors are handled. Data is now always stored in flash memory before storage in sdcard or network publication. This means, that data can be always recovered if there is a problem with the sdcard or the connection to the network, i.e. if we lose connection, the SCK will still store data and publish it in batch once the network is back!
+
+!!! info "Flash chip and sizes"
+    The flash chip [**S25FL064L**](https://www.cypress.com/file/316661/download) that we use it's a 8MB SPI flash nonvolatile memory. The minimum erasable unit is a 4kb sector, the full memory contains 2,048 sectors with a total of 8,388,608 bytes or 8MB.
+
+    A normal reading group with the default urban board hardware installed is composed by 11 readings, hence we expect each reading to take 7 bytes: an average of 5 bytes for the reading itself plus 2 overhead bytes for SensorType and size. Each group should have a total of 77 bytes of readings, 2 byte of size, 2 bytes of flags and 4 bytes of the time stamp. That means we can expect a normal group to be around 85 bytes. This means we can store almost 100,000 groups of readings or around 70 days of readings with standard sensor hardware. This number can vary a little though.
+
+    About flash memory lifespan, rounding numbers we can say we have enough space to store 2 months (60 days) of readings, according to the Flash memory [datasheet](https://www.cypress.com/file/316661/download) we have at least 100,000 erase cycles: 2 months per cycle means 200,000 months so we can expect more than **16k years!!**.
+
+This can be very useful in many situations, for instance, where we cannot use permament network connectivity or we have intermitent network brownouts. Of course, everything has it's limitations, and the flash memory follows a _[circular buffer](https://en.wikipedia.org/wiki/Circular_buffer)_, that means that when the flash memory is full, it will start overwritting data no matter if it was published or not. In a normal SCK the flash memory will last for some weeks though, but it's better to always be on the safe side and not lose any data.
+
+When the SCK loses connection, after **three attempts to connect**, it will enter _warning mode_ (see [here](/Smart Citizen Kit/#operation-modes)). After this, it will try again after 5 times the publication interval (by default 3'), which means, after WiFi being visible, by default, the **SCK will take at maximum 15' to connect to it** and start pushing data. The data publication is not inmediate and will take some minutes. If you are in a hurry, click the user button twice (net-setup-net mode) or reset the kit and data will start being posted right away.
+
+!!! warning "Be careful"
+    That we have a non permanent WiFi connection, means that we can also risk entering in error mode if the SCK depletes it's battery. Since the only way for the to know the time is to get it from the internet (or we give it to it from the phone in the setup process), if we lose network connection and the SCK runs out of battery, when coming back to life, it will need to receive the time again.
+
+!!! info "Debugging commands"
+    Check [this guide](/Guides/getting started/Using the Shell/#accessing-the-flash-memory) for more debugging commands.
+
 #### <span class="led small pink"> </span> SD card mode (offline)
 
 If we do not have an internet connection we can use the SD mode. In this case the device will record the data on the micro SD card. Later we can read the card using a card reader. The data can be visually spaced in a spreadsheet but also published on the [smartcitizen.me](https://smartcitizen.me) platform using the **UPLOAD CSV** option.
