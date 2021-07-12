@@ -2321,6 +2321,7 @@
 <li><strong>Warning</strong>: can take readings, but can't save them in the sdcard or can't send them to the platform (problem with network). Data is stored in the onboard Flash memory and will be saved after the problem is solved - either network comes back or the sdcard is OK. <strong>Partial blink in LED.</strong></li>
 <li><strong>Error</strong>: can't take readings. Either there is "no time", or there is a big problem that prevents data to be read. <strong>Full fast blink in LED.</strong></li>
 </ul>
+<p><img alt="💡" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f4a1.svg" title=":bulb:" /> Remember, you can check your SCK firmware version quickly following this <a href="/Guides/getting%20started/Getting%20firmware%20information/">guide</a>.</p>
 </div>
 <h4 id="setup-mode"><span class="led small red"> </span> Setup mode<a class="headerlink" href="#setup-mode" title="Permanent link">&para;</a></h4>
 <p>In this mode, the Kit is ready to be configured in <strong>network</strong> mode or <strong>SD card</strong> in <a href="https://start.smartcitizen.me/">start.smartcitizen.me</a>.</p>
@@ -2397,6 +2398,10 @@
 </div>
 <h5 id="flash-memory">Flash memory<a class="headerlink" href="#flash-memory" title="Permanent link">&para;</a></h5>
 <p>After firmware version <code>0.9.8</code>, a new flash memory feature was implemented. That changed completely the arrangement of sensor readings vs publication/storage, and how errors are handled. From there on, data is always stored in flash memory before stored in <strong>SD card</strong> or published over <strong>Wi-Fi</strong>. That means that data can be always recovered if there is a problem with the SD card or the connection to the Internet fails, i.e. if we lose connection, the SCK will still store data and publish it in batch once the network is back!</p>
+<div class="admonition tip">
+<p class="admonition-title">Check and update your Kit software version</p>
+<p><img alt="💡" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f4a1.svg" title=":bulb:" /> Remember, you can check your SCK firmware version quickly following this <a href="/Guides/getting%20started/Getting%20firmware%20information/">guide</a>. Later, learn <a href="/Guides/firmware/Update%20the%20firmware/">here</a> how to update it.</p>
+</div>
 <div class="admonition info">
 <p class="admonition-title">Flash chip and sizes</p>
 <p>The flash chip <a href="https://www.cypress.com/file/316661/download"><strong>S25FL064L</strong></a> that we use is an 8 MB SPI flash nonvolatile memory. The minimum erasable unit is a 4kb sector, the full memory contains 2,048 sectors with a total of 8,388,608 bytes or 8 MB.</p>
