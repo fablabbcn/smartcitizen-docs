@@ -369,7 +369,85 @@ Time    Miliseconds     Light
 ...
 ```
 
-This can be useful in case you want to log data as fast as possible, with little delay between readings (~100ms).    
+This can be useful in case you want to log data as fast as possible, with little delay between readings (~100ms).
+
+### Changing mqtt or ntp servers
+
+If you want to send data to your own server, or there is a firewall in your network, you can use these two commands to change them:
+
+```
+mqttsrv:     Configure mqtt server address and port: [-host serverName] [-port portNum]
+ntpsrv:      Configure ntp server address and port: [-host serverName] [-port portNum]
+```
+
+Check the `mqttsrv`:
+
+```
+SCK > mqttsrv
+Mqtt Host: mqtt.smartcitizen.me
+Mqtt Port: 1883
+```
+
+Check the `ntpsrv`:
+
+```
+SCK > ntpsrv
+NTP Host: ntp.smartcitizen.me
+NTP Port: 80
+```
+
+Change mqttsrv `host` and `port`:
+
+```
+SCK > mqttsrv -host mqtt.greatcity.me -port 80
+Mqtt Host: mqtt.greatcity.me
+Mqtt Port: 80
+```
+
+### Accessing the flash memory
+
+This is an advanced feature and helps to explore the data stored in the onboard flash memory for debugging purposes.
+
+Get a complete map of used sectors in the flash memory:
+
+```
+SCK > flash
+Scanning Flash memory (it can take a while!)
+
+0 > |u38(_/_)|u36(_/_)|u34(_/_)|u35(_/_)|u35(_/_)|u34(_/_)|u34(_/_)|u35(_/_)|u37(_/_)|u37(_/_)|u37(_/_)|u36(_/_)|u36(_/_)|u36(_/_)|u36(_/_)|u36(_/_)|u36(_/_)|u36(_/_)|u36(_/_)|u36(_/_)|u36(_/_)|u36(_/_)|u36(_/_)|u36(_/_)|u36(_/_)|u36(_/_)|u36(_/_)|u36(_/_)|u36(_/_)|u37(_/_)|u37(_/_)|u37(_/_)|
+32 > |u37(_/_)|u36(_/_)|u36(_/_)|u36(_/_)|u36(_/_)|u37(_/_)|u37(_/_)|u37(_/_)|u37(_/_)|u37(_/_)|u37(_/_)|u37(_/_)|u37(_/_)|u37(_/_)|u37(_/_)|u37(_/_)|u37(_/_)|u37(_/_)|u37(_/_)|u37(_/_)|u37(_/_)|u37(_/_)|u37(_/_)|u37(_/_)|u37(_/_)|u37(_/_)|u37(_/_)|u37(_/_)|u37(_/_)|u37(_/_)|u37(_/_)|u36(_/_)|
+...
+```
+
+Format the flash (will take a long time):
+
+```
+flash -format
+```
+
+Check a sector (see what's inside):
+
+```
+SCK > flash -sector 300
+
+Sector 300 in address 1228800 is: Used
+Sector 300 fully published to network: true
+Sector 300 fully published to sd-card: true
+Net published groups: 37
+Net un-published groups: 0
+Sd saved groups: 37
+Sd not saved groups: 0
+Total groups: 37
+Freespace: 53 bytes
+First group: 2021-07-08T09:04:19Z
+Last group:  2021-07-12T07:34:49Z
+```
+
+Recover a sector (send it to the platform or save in sdcard, or both - see `help` command):
+
+```
+flash -recover all net
+```
 
 ## Advanced (but cool) example!
 
