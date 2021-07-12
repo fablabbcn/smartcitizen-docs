@@ -76,24 +76,24 @@ After the configuration process, data will be available on the SmartCitizen plat
 
 ### Battery duration
 
-The SCK comes with a 2000mAh LiPo battery. The battery is meant to be a complete power option for short-term measurements and a backup solution when the kit it is used for long periods. For long exposures, we recommend to permanently connect the USB to kit. The battery duration is dependent on which sensors are enabled or disabled:
-
-* All sensors publishing over Wi-Fi: 12 hrs.
-* All sensors publishing on SD card: 13 hrs.
-* Without air quality sensors over Wi-Fi: 10 days
-* Without air quality sensors on SD card: 25 days
+The SCK comes with a 2000mAh LiPo battery. The battery is meant to be a complete power option for short-term measurements and a backup solution when the kit it is used for long periods. For long exposures, we recommend to permanently connect the USB to kit. The battery duration is dependent on which sensors are enabled or disabled.
 
 You will note that the kit _turns itself off_ while operating on battery. Actually, this is what we call `sleep-mode`, an operation mode implemented to reduce consumption while on battery operation.
 
+!!! info "PM Sensor management"
+    If you want to save battery, the [basic interval](/Guides/getting started/Using the Shell/#set-recording-and-publication-intervals) for the sensors shouldn't be below 30s. This is due to the minimum stabilisation time the PM sensor requires to take stable readings. For this reason, **the minimum interval available without turning off the PM sensor between readings is 30s**. If a lower interval is required, the PM sensor will be permanently ON and battery will drain faster.
+
 #### Battery calculator
 
-You can use the battery calculator to estimate how much your battery would last
+You can use the battery calculator to estimate how much your battery would last.
 
 !!! tip "SCK Battery Calculator"
 
+    **WIP!**
+
     <iframe id="github-iframe" src="" width="100%" height="40%" frameborder="0" scrolling="no" style="min-height: 570px;"></iframe>
 
-    !!! info "What's the SCK's Shell?"
+!!! info "What's the SCK's Shell?"
         Learn how to use the powerful SCK Shell. Check the [guide](/Guides/getting%20started/Using%20the%20Shell/).
     
 
@@ -109,9 +109,9 @@ You can use the battery calculator to estimate how much your battery would last
 
 ### Battery charging
 
-The SCK has a micro USB port and can be charged like any Smartphone or Tablet using a dedicated adapter or a computer USB port.
+The SCK has a micro USB port and can be charged like any smartphone or tablet using a dedicated adapter or a computer USB port.
 
-We recommend using a tablet power adaptor, instead of a computer USB port, for quicker charging. Autonomy can be extended by using a Power Bank, or a 5V PV Panel.
+We recommend using an external USB power adaptor, instead of a computer USB port, for quicker charging. Autonomy can be extended by using a Power Bank, or a [5V PV Panel](/Components/Solar Panel/).
 
 ### Power Supply
 
