@@ -1,71 +1,82 @@
 Onboarding Sensors
 =================
 
-The oboarding appp guides you through the process of the setup using simple language and a friendly graphic language. It is built as a separate tool from the core Smart Citizen Webpage in order it can be customized for each deployment.
+The onboarding app guides you through the process of the setup using simple language and a friendly graphic language. It is built as a separate tool from the core Smart Citizen Webpage in order it can be customized for each deployment.
 
 !!! info "Onboarding app"
-	Visit the onboarding app at [start.smartcitizen.me](https://start.smartcitizen.me)
+	Visit the onboarding app at [start.smartcitizen.me](https://start.smartcitizen.me). Before you start make sure you have:
 
-!!! example "Step by step"
+	- A computer to visit the onboarding app
+	- A smartphone (or tablet, or another computer) to connect to the kit and configure it
 
-	1. Welcome page
-	![](https://i.imgur.com/ZuziVwg.png)
 
-	2. Select all the parts you received to ensure you are not missing any part
-	![](https://i.imgur.com/dw5hMOh.png)
-	![](https://i.imgur.com/uuzBG3J.png)
+The welcome page looks like this. For sensors different from the Smart Citizen Kit 2.1, please check the [advanced kit selection](#advanced-kit-selection):
 
-	3. Turn on your Kit
-	![](https://i.imgur.com/EwRK7NY.png)
+![](/assets/images/onboarding_1.png)
 
-	4. Close the cover of your device
-	![](https://i.imgur.com/KReeIh8.png)
+You can then follow the steps by pressing on _Let's go!_. For experienced users, you can press _Skip instructions_ and go to the _Configuration_ page:
 
-	5. Choose the Wi-Fi network you want to connect to
-	![](https://i.imgur.com/9Xr6Vur.png)
+![](/assets/images/onboarding_2.png)
 
-	6. You will reiceive a message when the Kit it is connected
-	![](https://i.imgur.com/Zl6ajaM.png)
+After this, make sure that the SCK is in [Setup Mode](/Smart Citizen Kit/#setup-mode) (LED is red) and **connect with your smartphone** to the `SmartCitizen[...]` network.
 
-	7. Add a name to your sensor
-	![](https://i.imgur.com/xEdLjYF.png)
+![](/assets/images/onboarding_3.png)
 
-	8. Select the location for your sensor
-	![](https://i.imgur.com/dkG5gyI.png)
+Depending on the mode selected (Wi-Fi or SD card), proceed with the steps and make sure the LED changes color: blue for Wi-Fi, purple for SD card. Once this is done, register your kit and add it to your user profile following the steps:
 
-	9. Add your email to register the Kit under your name
-	![](https://i.imgur.com/GAlSNeS.png)
+![](/assets/images/onboarding_4.png)
 
-	10. Add a user name for people to see you on the platform
-	![](https://i.imgur.com/sQ1Ze1w.png)
+You can also mark it's location in the map (this doesn't need to be accurate, it's as accurate as you want it to be):
 
-	11. Add a password to protect your account
-	![](https://i.imgur.com/6jF08gy.png)
+![](/assets/images/onboarding_6.png)
 
-	12. You are done!
-	![](https://i.imgur.com/UDFD55K.png)
+!!! info "Location of the sensor"
+	The sensor location is only defined by the user in the registration process. It can be modified afterwards in the _kit edit page_. The Smart Citizen Kit does not retrieve location unless it has an onboard GPS. In this case, **the GPS location never updates the location in the map**.
 
-	13. Visit the Kit on the platform. Wait one minute till it publishes data
-	![](https://i.imgur.com/xwPTZ06.png)
+You can also add some tags to your sensor:
 
-	14. Look at the data!
-	![](https://i.imgur.com/mmrDVFC.png)
+![](/assets/images/onboarding_5.png)
 
+Finally, add the sensor to your user account (if you don't have one you can register now):
+
+![](/assets/images/onboarding_7.png)
+
+!!! info "What is the email used for?"
+	The user account and email is only used for sensor data emails and sensor notifications (i.e. notification when the battery is almost empty). It is not used for commercial purposes at all, as stated in [our policy](https://smartcitizen.me/policy)
+
+You are done!
+
+![](/assets/images/onboarding_8.png)
+
+Visit the Kit on the platform. **Wait one minute till it publishes data**:
+
+![](/assets/images/onboarding_9.png)
+
+When the data is available, scroll down to make some basic explorations:
+
+![](/assets/images/onboarding_10.png)
+
+!!! info "More on the data"
+	The platform allows you to check the data in a basic way, but if you want to have a deeper look you can:
+
+	- [Download the data in CSV](/Guides/getting started/Downloading the Data/#download-data)
+	- Get it from the [API](/Guides/getting started/Downloading the Data/#api)
+	- Use [python](/Data/Data Analysis/) to analyse it
 
 ## Advanced Kit Selection
 
-The feature below is only recommended for advanced users who know how to configure new or customized sensor devices
+The feature below is for users who want to know how to configure new or customized sensor devices:
 
-!!! example "How to choose a custom"
+!!! example "How to choose a custom kit"
 
-	1. Click the 🛠️ icon in the bottom right corner
+	- Click the 🛠️ icon in the bottom right corner
 
 	![](https://i.imgur.com/Qy7NpXQ.png)
 
-	1. Choose the blueprint of the device you want to setup
+	- Choose the blueprint of the device you want to setup
 
 	![](https://i.imgur.com/ERXdPvK.png)
 
-	2. Click save and continue the process as usually
+	- Click save and continue the process as normal
 
 	![](https://i.imgur.com/O6oT13q.png)
