@@ -9,6 +9,9 @@ We believe building modular and reusable software and using existing platforms i
 
 ![](https://i.imgur.com/loUgFJv.png)
 
+!!! warning "Are all systems operational?"
+	Check the smartcitizen.me instance status in real time in the [uptimerobot.com](https://stats.uptimerobot.com/9Mr4TLWo) dashboard.
+
 !!! tip "Check the guides"
 	We prepared a series of guides to help you on the most common features you will use
 

@@ -19,6 +19,8 @@ Smart Citizen Kit
 
     :sparkles: **Something big?: [info@smartcitizen.me](mailto: info@smartcitizen.me)**
 
+    :rotating_light: **Platform status: [uptimerobot.com](https://stats.uptimerobot.com/9Mr4TLWo)**
+
 ## What is it?
 
 The Smart Citizen Kit is the core of what we call the Smart Citizen System: a complete set of **modular hardware components** aiming to provide tools for **environmental monitoring**, ranging from **citizen science** and **educational activities** to more **advanced scientific research**.
