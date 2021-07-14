@@ -70,7 +70,10 @@ The first step is to connect the battery. The kit will light in red (configurati
 
 ![](https://i.imgur.com/NhSNXJ8.png)
 
-After the configuration process, data will be available on the SmartCitizen platform. You can explore the data there or download it using the `CSV Download` option (guide [here](/Guides/getting started/Downloading the Data/))
+!!! info "Detailed guide"
+    Have a look [at this guide](/Guides/getting started/Onboarding Sensors/) for a step-by-step installation.
+
+After the configuration process, data will be available on the SmartCitizen platform. You can explore the data there or download it using the `CSV Download` option (you can check a more detailed guide [here](/Guides/getting started/Downloading the Data/))
 
 ![](https://i.imgur.com/5NlWx6O.jpg)
 
