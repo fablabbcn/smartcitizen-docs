@@ -2237,7 +2237,7 @@
 <h2 id="power-management"><img alt="🔋" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f50b.svg" title=":battery:" /> Power management<a class="headerlink" href="#power-management" title="Permanent link">&para;</a></h2>
 <h3 id="battery-duration">Battery duration<a class="headerlink" href="#battery-duration" title="Permanent link">&para;</a></h3>
 <p>The SCK comes with a 2000mAh LiPo battery. The battery is meant to be a complete power option for short-term measurements and a backup solution when the kit it is used for long periods. For long exposures, we recommend to permanently connect the USB to kit. The battery duration is dependent on which sensors are enabled or disabled.</p>
-<p>You will note that the kit <em>turns itself off</em> while operating on battery. Actually, this is what we call <code>sleep-mode</code>, an operation mode implemented to reduce consumption while on battery operation.</p>
+<p>You will note that the kit <em>turns itself off</em> while operating on battery. Actually, this is what we call <code>sleep-mode</code>, an operation mode implemented to reduce consumption while on battery operation. Check the <a href="#operation-modes">operation modes section</a> below.</p>
 <div class="admonition info">
 <p class="admonition-title">PM Sensor management</p>
 <p>If you want to save battery, the <a href="/Guides/getting started/Using the Shell/#set-recording-and-publication-intervals">basic interval</a> for the sensors shouldn't be below 30s. This is because the minimum stabilisation time the PM sensor requires to take stable readings is around 15-20s. For this reason, <strong>the minimum interval available without turning off the PM sensor between readings is 30s</strong>. If a lower interval is required, the PM sensor will be permanently ON and battery will drain faster.</p>
@@ -2386,6 +2386,10 @@
 <td><span class="led net-fullbat"></span></td>
 <td><img alt="🔋" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f50b.svg" title=":battery:" /> Collecting data online, battery charged</td>
 </tr>
+<tr>
+<td><span class="led net-sleep"></span></td>
+<td><img alt="🛏️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f6cf.svg" title=":bed:" /> Sleep-mode. Collecting data online and saving battery</td>
+</tr>
 </tbody>
 </table>
 <div class="admonition warning">
@@ -2452,6 +2456,10 @@
 <tr>
 <td><span class="led sd-fullbat"></span></td>
 <td><img alt="🔋" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f50b.svg" title=":battery:" /> Collecting data offline, battery charged</td>
+</tr>
+<tr>
+<td><span class="led sd-sleep"></span></td>
+<td><img alt="🛏️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f6cf.svg" title=":bed:" /> Sleep-mode. Collecting data offline and saving battery</td>
 </tr>
 </tbody>
 </table>

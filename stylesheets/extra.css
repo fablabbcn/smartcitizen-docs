@@ -66,6 +66,10 @@
     animation:2s net ease infinite;
 }
 
+.net-sleep {
+    animation:2s net-sleep ease infinite;
+}
+
 .net-warning {
     animation:0.8s net-warning linear infinite;
 }
@@ -88,6 +92,10 @@
 
 .sd {
     animation:2s sd ease infinite;
+}
+
+.sd-sleep {
+    animation:2s sd-sleep ease infinite;
 }
 
 .sd-warning{
@@ -181,6 +189,12 @@
      100% { background: white; }
 }
 
+@keyframes net-sleep {
+     0% { background: white; }
+     99% { background: white; }
+     100% { background: blue; }
+}
+
 @keyframes net-warning {
      0% { background: blue; opacity: 40%;}
      49% { background: blue; opacity: 40%;}
@@ -212,6 +226,12 @@
      0% { background: white; }
      50% { background: magenta; }
      100% { background: white; }
+}
+
+@keyframes sd-sleep {
+     0% { background: white; }
+     99% { background: white; }
+     100% { background: magenta; }
 }
 
 @keyframes sd-warning {
