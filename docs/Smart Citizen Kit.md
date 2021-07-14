@@ -80,7 +80,7 @@ After the configuration process, data will be available on the SmartCitizen plat
 
 The SCK comes with a 2000mAh LiPo battery. The battery is meant to be a complete power option for short-term measurements and a backup solution when the kit it is used for long periods. For long exposures, we recommend to permanently connect the USB to kit. The battery duration is dependent on which sensors are enabled or disabled.
 
-You will note that the kit _turns itself off_ while operating on battery. Actually, this is what we call `sleep-mode`, an operation mode implemented to reduce consumption while on battery operation.
+You will note that the kit _turns itself off_ while operating on battery. Actually, this is what we call `sleep-mode`, an operation mode implemented to reduce consumption while on battery operation. Check the [operation modes section](#operation-modes) below.
 
 !!! info "PM Sensor management"
     If you want to save battery, the [basic interval](/Guides/getting started/Using the Shell/#set-recording-and-publication-intervals) for the sensors shouldn't be below 30s. This is because the minimum stabilisation time the PM sensor requires to take stable readings is around 15-20s. For this reason, **the minimum interval available without turning off the PM sensor between readings is 30s**. If a lower interval is required, the PM sensor will be permanently ON and battery will drain faster.
@@ -188,7 +188,7 @@ This is the standard mode for a network that requires a Wi-Fi connection. In thi
 | <span class="led net-lowbat"></span>     | :battery: Collecting data online but battery is low, charge the Kit    |
 | <span class="led net-chargebat"></span>  | :battery: Collecting data online, battery charging              |
 | <span class="led net-fullbat"></span>    | :battery: Collecting data online, battery charged               |
-
+| <span class="led net-sleep"></span>    | :bed: Sleep-mode. Collecting data online and saving battery               |
 
 !!! warning
 	:white_check_mark: The kit supports Wi-Fi WEP, WPA/WPA2 and open networks that are common networks in domestic environments and small businesses.
@@ -234,6 +234,7 @@ If we do not have an internet connection we can use the SD mode. In this case th
 | <span class="led sd-lowbat"></span>      | :battery: Collecting data offline but battery is low, charge the Kit    |
 | <span class="led sd-chargebat"></span>   | :battery: Collecting data offline,  battery charging              |
 | <span class="led sd-fullbat"></span>     | :battery: Collecting data offline, battery charged          |
+| <span class="led sd-sleep"></span>    | :bed: Sleep-mode. Collecting data offline and saving battery               |
 
 !!! warning "Guide"
     Check the guide on how to upload the sd card data [here](/Guides/getting started/Uploading SD Card Data/)
