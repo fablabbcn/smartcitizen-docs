@@ -102,16 +102,35 @@ monitor scd30 co2
 
 To stop the monitor, just press `Enter`.
 
-Secondly, feed the external reading into the sensor. The value needs to be between 400ppm and 2000ppm. For instance, for a value of 450ppm:
+Secondly, feed the external reading into the sensor. The value **needs to be between 400ppm and 2000ppm**. For instance, for a value of 450ppm:
 
 ```
-control scd30 calfactor 450
+SCK > control scd30 calfactor 450
+SCD30 CO2: calfactor 450
+Forced Recalibration Factor: 450
 ```
-
-!!! warning "Reference value range"
-    The reference value needs to be between 400ppm and 2000ppm.
 
 After applying this value, ASC will be disabled automatically and readings will be inmediately corrected to the new value.
+
+!!! warning "Resetting the sensor"
+    Take into account that if you ask for the `calfactor` after setting it up:
+    
+    ```
+    SCK > control scd30 calfactor
+    SCD30 CO2: calfactor
+    Forced Recalibration Factor: 450
+    ```
+    
+    However, **if you reset the sensor**, it will return `400ppm`. The FRC will remain active with the set value, but it will only visible through the `autocal` check: 
+    
+    ```
+    SCK > control scd30 calfactor
+    SCD30 CO2: calfactor
+    Forced Recalibration Factor: 400
+    SCK > control scd30 autocal
+    SCD30 CO2: autocal
+    Auto Self Calibration: off
+    ```
 
 #### Temperature correction
 
