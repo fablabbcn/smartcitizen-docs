@@ -17,7 +17,7 @@
         <meta name="author" content="Smart Citizen Team">
       
       <link rel="shortcut icon" href="../../../assets/images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-5.5.11">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-5.5.11">
     
     
       
@@ -2025,14 +2025,28 @@ pressure
 <div class="highlight"><pre><span></span><code>monitor scd30 co2
 </code></pre></div>
 <p>To stop the monitor, just press <code>Enter</code>.</p>
-<p>Secondly, feed the external reading into the sensor. The value needs to be between 400ppm and 2000ppm. For instance, for a value of 450ppm:</p>
-<div class="highlight"><pre><span></span><code>control scd30 calfactor 450
+<p>Secondly, feed the external reading into the sensor. The value <strong>needs to be between 400ppm and 2000ppm</strong>. For instance, for a value of 450ppm:</p>
+<div class="highlight"><pre><span></span><code>SCK &gt; control scd30 calfactor 450
+SCD30 CO2: calfactor 450
+Forced Recalibration Factor: 450
 </code></pre></div>
-<div class="admonition warning">
-<p class="admonition-title">Reference value range</p>
-<p>The reference value needs to be between 400ppm and 2000ppm.</p>
-</div>
 <p>After applying this value, ASC will be disabled automatically and readings will be inmediately corrected to the new value.</p>
+<div class="admonition warning">
+<p class="admonition-title">Resetting the sensor</p>
+<p>Take into account that if you ask for the <code>calfactor</code> after setting it up:</p>
+<div class="highlight"><pre><span></span><code>SCK &gt; control scd30 calfactor
+SCD30 CO2: calfactor
+Forced Recalibration Factor: 450
+</code></pre></div>
+<p>However, <strong>if you reset the sensor</strong>, it will return <code>400ppm</code>. The FRC will remain active with the set value, but it will only visible through the <code>autocal</code> check: </p>
+<div class="highlight"><pre><span></span><code>SCK &gt; control scd30 calfactor
+SCD30 CO2: calfactor
+Forced Recalibration Factor: 400
+SCK &gt; control scd30 autocal
+SCD30 CO2: autocal
+Auto Self Calibration: off
+</code></pre></div>
+</div>
 <h4 id="temperature-correction">Temperature correction<a class="headerlink" href="#temperature-correction" title="Permanent link">&para;</a></h4>
 <p>An external temperature sensor can also be used to compensate the self-heating of the SCD30 board. A temperature correction can be supplied with the <code>caltemp</code> command.</p>
 <p>First, read the temperature from the SCD30, to verify it's lower than the reference sensor.</p>
