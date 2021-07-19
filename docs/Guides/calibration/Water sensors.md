@@ -1,6 +1,6 @@
 # Water Sensors Calibration
 
-![](https://i.imgur.com/wRIfhks.jpg)
+<img src="https://live.staticflickr.com/65535/51230999551_3941affaa5_k.jpg" width="2000" height="1333" alt="Patí Científic Workshop">
 
 ## Calibration on the Smart Citizen Kit
 

@@ -27,8 +27,7 @@ This is a _live_ compilation of our participation and results in some research p
 
 ## More projects
 
-![](https://paticientific.org/wp-content/uploads/2020/10/pativela2.jpg)
-_Source: Pati Scientific_
+<img src="https://live.staticflickr.com/65535/51231210938_eef7360f5e_k.jpg" width="2000" height="1333" alt="Patí Científic Workshop">
 
 Although not H2020 projects, the projects below have allowed us to further our connections with scientific research institutions, and have contributed to the development of the Smart Citizen project. We are proud to have worked with:
 

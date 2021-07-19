@@ -15,6 +15,8 @@ Some of the sensors selected are from Atlas Scientific, a New York-based company
 
 ## Hardware
 
+<img src="https://live.staticflickr.com/65535/51232063715_5e37cfb1a0_k.jpg" width="2000" height="1333" alt="Patí Científic Workshop">
+
 ### Available measurements
 
 The sensors described below are additional to those already supported on the [Smart Citizen Kit base sensors](/Smart Citizen Kit/#sck-21). 
