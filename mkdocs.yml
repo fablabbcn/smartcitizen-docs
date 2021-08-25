@@ -93,6 +93,7 @@ nav:
       - Solar Panel: Guides/deployments/Installing solar panel.md
       - Almabike sensors: Guides/deployments/Almabike sensors.md
       - Water sensors: Guides/deployments/Water sensors.md
+      - OLED display: Guides/deployments/OLED display.md
     - Replacements:
       - Replacing PM Sensors: Guides/replacements/Replacing PM Sensors.md
     - Enclosures:
