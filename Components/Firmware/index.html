@@ -21,7 +21,7 @@
     
     
       
-        <title>Firmware - Smart Citizen Docs</title>
+        <title>Architecture - Smart Citizen Docs</title>
       
     
     
@@ -93,7 +93,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Firmware
+              Architecture
             
           </span>
         </div>
@@ -578,6 +578,29 @@
   
 
 
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-3" type="checkbox" id="nav-1-3" checked>
+    
+    <label class="md-nav__link" for="nav-1-3">
+      Firmware
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Firmware" data-md-level="2">
+      <label class="md-nav__title" for="nav-1-3">
+        <span class="md-nav__icon md-icon"></span>
+        Firmware
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
   <li class="md-nav__item md-nav__item--active">
     
     <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
@@ -586,12 +609,12 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        Firmware
+        Architecture
         <span class="md-nav__icon md-icon"></span>
       </label>
     
-    <a href="./" title="Firmware" class="md-nav__link md-nav__link--active">
-      Firmware
+    <a href="./" title="Architecture" class="md-nav__link md-nav__link--active">
+      Architecture
     </a>
     
       
@@ -726,6 +749,23 @@
   
 </nav>
     
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Flash%20Storage/" title="Flash Storage" class="md-nav__link">
+      Flash Storage
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
         
@@ -2067,11 +2107,7 @@
 </tr>
 <tr>
 <td>Sensors</td>
-<td>Definition for all the sensors supported</td>
-</tr>
-<tr>
-<td>Sensors</td>
-<td>Absracts the sensors on a common interface</td>
+<td>Definition for all the supported sensors</td>
 </tr>
 <tr>
 <td>SckBase</td>
@@ -2082,11 +2118,15 @@
 <td>Manages the sensors connected on the AUX connector</td>
 </tr>
 <tr>
+<td>SckList</td>
+<td>Manages internal Flash memory data storage</td>
+</tr>
+<tr>
 <td>SckUrban</td>
 <td>Manages the sensors on the Urban Sensor Board</td>
 </tr>
 <tr>
-<td>SckCharger</td>
+<td>SckBatt</td>
 <td>Manages the battery charging process</td>
 </tr>
 <tr>
@@ -2101,36 +2141,35 @@
 <td>Commands</td>
 <td>Library to absracts the core features on to a simple shell interface</td>
 </tr>
-<tr>
-<td>ReadLight</td>
-<td>Manages configuration over light</td>
-</tr>
-<tr>
-<td>ReadSound</td>
-<td>Manages configuration over sound</td>
-</tr>
 </tbody>
 </table>
 <h4 id="dependencies">Dependencies<a class="headerlink" href="#dependencies" title="Permanent link">&para;</a></h4>
 <ul>
-<li>Adafruit INA219 Library</li>
-<li>Adafruit MPL3115A2 Library</li>
-<li>Adafruit SHT31 Library</li>
-<li>Arduino Json Library</li>
-<li>Arduino Low Power@ Library</li>
-<li>ArduinoZero PMUX Report Library</li>
-<li>DS2482 Library</li>
-<li>FlashStorage Library</li>
-<li>FlashStorage</li>
-<li>MCP342X Library</li>
-<li>RadioHead Library</li>
-<li>RTCZero Library</li>
-<li>SdFat Library</li>
-<li>SmartSmart Citizen Kit Gases Pro Board Library</li>
-<li>SparkFun BQ27441 Arduino Library</li>
-<li>SparkFun MAX3010x Library</li>
-<li>SPIFlash Library</li>
-<li>U8g2 Library</li>
+<li>SPIMemory <a href="https://github.com/Marzogh/SPIMemory">Library</a></li>
+<li>RTCZero <a href="https://github.com/arduino-libraries/RTCZero">Library</a></li>
+<li>SdFat <a href="https://github.com/greiman/SdFat">Library</a></li>
+<li>Arduino Json <a href="https://github.com/bblanchon/ArduinoJson">Library</a></li>
+<li>Adafruit INA219 <a href="https://github.com/adafruit/Adafruit_INA219">Library</a></li>
+<li>U8g2 <a href="https://github.com/olikraus/U8g2_Arduino">Library</a></li>
+<li>RadioHead <a href="http://www.airspayce.com/mikem/arduino/RadioHead/">Library</a></li>
+<li>FlashStorage <a href="https://github.com/cmaglie/FlashStorage">Library</a></li>
+<li>Dallas Temperature <a href="https://github.com/milesburton/Arduino-Temperature-Control-Library">Library</a></li>
+<li>Sparkfun CCS811 <a href="https://github.com/sparkfun/SparkFun_CCS811_Arduino_Library">Library</a></li>
+<li>Sparkfun MediaTek I2C Interface <a href="https://github.com/sparkfun/SparkFun_I2C_GPS_Arduino_Library">Library</a></li>
+<li>Sparkfun u-blox Arduino GNSS <a href="https://github.com/sparkfun/SparkFun_u-blox_GNSS_Arduino_Library">Library</a></li>
+<li>TinyGPSPlus <a href="https://github.com/mikalhart/TinyGPSPlus">Library</a></li>
+<li>LinkedList <a href="https://github.com/ivanseidel/LinkedList">Library</a></li>
+<li>Adafruit ADS1015 <a href="https://github.com/fablabbcn/Adafruit_ADS1X15">Library</a></li>
+<li>ArduinoZero PMUX Report <a href="https://github.com/WestfW/ArduinoZero-PMUX-report">Library</a></li>
+<li>MCP342X Analog-to-Digital Converter <a href="https://github.com/uChip/MCP342X">Library</a></li>
+<li>DS2482 <a href="https://github.com/paeaetech/paeae">Library</a></li>
+<li>Adafruit MPL3115A2 <a href="https://github.com/adafruit/Adafruit_MPL3115A2_Library">Library</a></li>
+<li>I2C Soil Moisture Sensor <a href="https://github.com/Apollon77/I2CSoilMoistureSensor">Library</a></li>
+<li>SmartSmart Citizen Kit Gases Pro Board <a href="https://github.com/fablabbcn/smartcitizen-kit-gases-pro-board">Library</a></li>
+<li>Sparkfun ToF Range Finder - VL6180 Arduino <a href="https://github.com/sparkfun/SparkFun_ToF_Range_Finder-VL6180_Arduino_Library">Library</a></li>
+<li>Adafruit BME680 <a href="https://github.com/adafruit/Adafruit_BME680">Library</a></li>
+<li>Adafruit Unified Sensor Driver <a href="https://github.com/adafruit/Adafruit_Sensor">Library</a></li>
+<li>Sparkfun SCD30 CO₂ Sensor Library <a href="https://github.com/sparkfun/SparkFun_SCD30_Arduino_Library">Library</a></li>
 </ul>
 <h3 id="wifi-module">WiFi Module<a class="headerlink" href="#wifi-module" title="Permanent link">&para;</a></h3>
 <table>
@@ -2149,13 +2188,12 @@
 </table>
 <h3 id="dependencies_1">Dependencies<a class="headerlink" href="#dependencies_1" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Time Library</li>
-<li>ArduinoJson Library</li>
-<li>RemoteDebug Library</li>
-<li>RemoteDebug Library</li>
-<li>RadioHead Library</li>
-<li>RadioHead Library</li>
-<li>PubSubclient Library</li>
+<li>Time <a href="https://github.com/PaulStoffregen/Time">Library</a></li>
+<li>ArduinoJson <a href="https://github.com/bblanchon/ArduinoJson">Library</a></li>
+<li>RemoteDebug <a href="https://github.com/JoaoLopesF/RemoteDebug">Library</a></li>
+<li>RadioHead <a href="http://www.airspayce.com/mikem/arduino/RadioHead/">Library</a></li>
+<li>PubSubclient <a href="https://github.com/knolleary/pubsubclient">Library</a></li>
+<li>ESPAsyncWebServer <a href="https://github.com/me-no-dev/ESPAsyncWebServer">Library</a></li>
 </ul>
 <h3 id="shared">Shared<a class="headerlink" href="#shared" title="Permanent link">&para;</a></h3>
 <table>
@@ -2173,7 +2211,7 @@
 </tbody>
 </table>
 <h2 id="data-management">Data management<a class="headerlink" href="#data-management" title="Permanent link">&para;</a></h2>
-<p>The board is capable of storing the recorded data offline on its internal dedicated flash memory of 8MB and later publish this over Wi-Fi connectivity provided by an Espressif ESP8266. Data is published using MQTT messages to the Smart Citizen Platform. NTP is used for syncing the built-in RTC. For long term offline storage, the board provides a standard microSD socket where card in the orders of GB can be employed. That ensures extended periods of data in the order of decades can be stored.</p>
+<p>The board is capable of storing the recorded data offline on its internal dedicated <a href="/Components/Flash Storage">flash memory</a> of 8MB and later publish this over Wi-Fi connectivity provided by an Espressif ESP8266. Data is published using MQTT messages to the Smart Citizen Platform. NTP is used for syncing the built-in RTC. For long term offline storage, the board provides a standard microSD socket where card in the orders of GB can be employed. That ensures extended periods of data in the order of decades can be stored.</p>
 <h3 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">&para;</a></h3>
 <p>The board firmware is fully customizable without requiring any changes to the core software. That includes enabling or disabling sensors, the sampling frequency of the sensors or the operation mode. There different configuration options via the Serial Shell available when the board is connected over USB.</p>
 <div class="highlight"><pre><span></span><code>Detecting: AlphaDelta 1A... found, Enabling AlphaDelta 1A
@@ -2202,7 +2240,7 @@ Detecting: Grove OLED... nothing!
 <p><em>Use any Serial console as <code>screen</code>, <code>platformio device monitor</code>, or the serial monitor on the Arduino IDE</em></p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>Have a look at the guide for different platforms <a href="/Guides/Using the Shell">here</a></p>
+<p>Have a look at the guide for different platforms <a href="/Guides/getting started/Using the Shell">here</a></p>
 </div>
 <h2 id="storage">Storage<a class="headerlink" href="#storage" title="Permanent link">&para;</a></h2>
 <h3 id="readings-files-yyyy-mm-ddcsv">Readings files YYYY-MM-DD.CSV<a class="headerlink" href="#readings-files-yyyy-mm-ddcsv" title="Permanent link">&para;</a></h3>
@@ -2295,8 +2333,8 @@ YYYY-MM-DD.CSV -&gt; YYYY-MM-DD.CSV
 
         <!-- Link to next page -->
         
-          <a href="../sensors/performance/"
-              title="Performance summary"
+          <a href="../Flash%20Storage/"
+              title="Flash Storage"
               class="md-flex md-footer-nav__link md-footer-nav__link--next"
               rel="next">
             <div class="md-flex__cell md-flex__cell--stretch
@@ -2305,7 +2343,7 @@ YYYY-MM-DD.CSV -&gt; YYYY-MM-DD.CSV
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Performance summary
+                Flash Storage
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
