@@ -116,7 +116,7 @@ The following examples expand the previous Device Blueprint with the complete da
     Drop an email to support@smartcitizen.me and we will try to help!
 
 !!! info "Using SEEED Studio Grove bricks"
-    You can use off-the-shelf sensors from the extensive Groove open hardware sensor library, removing the need to build our own sensor add-ons from scratch.
+    You can use off-the-shelf sensors from the extensive Grove open hardware sensor library, removing the need to build our own sensor add-ons from scratch.
     Foto seeed sensors
     ![Seeed Grove Bricks](/assets/images/grove_bricks.png)
 

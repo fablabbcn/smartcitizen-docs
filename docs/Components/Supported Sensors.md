@@ -22,7 +22,7 @@
 | *Air* | SCD30_T | ºC | External Sensor | [Sensirion SCD30](https://files.seeedstudio.com/wiki/Grove-CO2-Temperature-Humidity-Sensor-SCD30/res/Sensirion_CO2_Sensors_SCD30_Datasheet.pdf) |
 | *Air* | SCD30_H | %RH | External Sensor | [Sensirion SCD30](https://files.seeedstudio.com/wiki/Grove-CO2-Temperature-Humidity-Sensor-SCD30/res/Sensirion_CO2_Sensors_SCD30_Datasheet.pdf) |
 | *Generic* | ADS1x15 ADC 0x4X ChY (X = [8, 9, A, B)], Y = [0, 1, 2, 3]) | V | External Sensor | [ADS 1115](https://www.ti.com/lit/ds/symlink/ads1115.pdf) |
-| *Generic* | Groove ADC | V | External Sensor | [Seeed Groove ADC](http://wiki.seeedstudio.com/Grove-I2C_ADC/) |
+| *Generic* | Grove ADC | V | External Sensor | [Seeed Grove ADC](http://wiki.seeedstudio.com/Grove-I2C_ADC/) |
 | *Location* | GPS Fix Quality| na | External Sensor | [Sparkfun GPS NEO-M8U](https://www.sparkfun.com/products/16329), [SparkFun GPS XA1110](https://www.sparkfun.com/products/14414) or [SEEED Grove GPS Module](https://www.seeedstudio.com/Grove-GPS-Module.html) |
 | *Location* | GPS Latitude | Deg | External Sensor | [Sparkfun GPS NEO-M8U](https://www.sparkfun.com/products/16329), [SparkFun GPS XA1110](https://www.sparkfun.com/products/14414) or [SEEED Grove GPS Module](https://www.seeedstudio.com/Grove-GPS-Module.html)  |
 | *Location* | GPS Longitude| Deg | External Sensor | [Sparkfun GPS NEO-M8U](https://www.sparkfun.com/products/16329) , [SparkFun GPS XA1110](https://www.sparkfun.com/products/14414) or [SEEED Grove GPS Module](https://www.seeedstudio.com/Grove-GPS-Module.html)  |

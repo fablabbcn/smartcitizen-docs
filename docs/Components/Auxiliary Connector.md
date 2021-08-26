@@ -9,7 +9,7 @@ The [data board](/Components/Data Board/) features a standard Grove connector wh
 
 ### General purpose
 
-- [Seeed Groove ADC](http://wiki.seeedstudio.com/Grove-I2C_ADC/) - 12 bit ADC from Seeed Studio
+- [Seeed Grove ADC](http://wiki.seeedstudio.com/Grove-I2C_ADC/) - 12 bit ADC from Seeed Studio
 - [Adafruit INA219](https://www.adafruit.com/product/904) - Supports Bus voltage, shunt voltage, current and load voltage
 - [SparkFun ToF Range Finder Sensor - VL6180](https://www.sparkfun.com/products/12785) - supports distance and light. Can be used for water level measurements
 - [ADS1X15](https://www.adafruit.com/product/1085) - 16 bit ADC from Texas instruments also found in Adafruit development boards

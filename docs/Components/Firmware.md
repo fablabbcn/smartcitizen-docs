@@ -94,7 +94,7 @@ Detecting: AlphaDelta 3A... found, already enabled!!!
 Detecting: AlphaDelta 3W... found, already enabled!!!
 Detecting: AlphaDelta Temperature... found, already enabled!!!
 Detecting: AlphaDelta Humidity... found, already enabled!!!
-Detecting: Groove ADC... nothing!
+Detecting: Grove ADC... nothing!
 Detecting: INA219 Bus voltage... nothing!
 Detecting: INA219 Shunt voltage... nothing!
 Detecting: INA219 Current... nothing!
@@ -105,7 +105,7 @@ Detecting: Atlas Conductivity... nothing!
 Detecting: Atlas Specific gravity... nothing!
 Detecting: Atlas Dissolved Oxygen... nothing!
 Detecting: Atlas DO Saturation... nothing!
-Detecting: Groove OLED... nothing!
+Detecting: Grove OLED... nothing!
 ```
 
 ## Shell
