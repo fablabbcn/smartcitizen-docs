@@ -18,41 +18,46 @@ Firmware updates are done via the micro USB port using the Platform IO software 
 ### Core Microcontroller
 
 
-| Name       | Functions                                                            |
-|------------|----------------------------------------------------------------------|
-| Pins       | Definition for the MCU pinout                                        |
-| Sensors    | Definition for all the sensors supported                             |
-| Sensors    | Absracts the sensors on a common interface                           |
-| SckBase    | Manages the core operations: power, connectivity, peripherials       |
-| SckAux     | Manages the sensors connected on the AUX connector                   |
-| SckUrban   | Manages the sensors on the Urban Sensor Board                        |
-| SckCharger | Manages the battery charging process                                 |
-| SckButton  | Manages users button interaction actions                             |
-| SckLed     | Manages light status for user feedback                               |
-| Commands   | Library to absracts the core features on to a simple shell interface |
-| ReadLight  | Manages configuration over light                                     |
-| ReadSound  | Manages configuration over sound                                     |
+| Name      | Functions                                                            |
+|-----------|----------------------------------------------------------------------|
+| Pins      | Definition for the MCU pinout                                        |
+| Sensors   | Definition for all the supported sensors                             |
+| SckBase   | Manages the core operations: power, connectivity, peripherials       |
+| SckAux    | Manages the sensors connected on the AUX connector                   |
+| SckList   | Manages internal Flash memory data storage                           |
+| SckUrban  | Manages the sensors on the Urban Sensor Board                        |
+| SckBatt   | Manages the battery charging process                                 |
+| SckButton | Manages users button interaction actions                             |
+| SckLed    | Manages light status for user feedback                               |
+| Commands  | Library to absracts the core features on to a simple shell interface |
 
 #### Dependencies
 
-* Adafruit INA219 Library
-* Adafruit MPL3115A2 Library
-* Adafruit SHT31 Library
-* Arduino Json Library
-* Arduino Low Power@ Library
-* ArduinoZero PMUX Report Library
-* DS2482 Library
-* FlashStorage Library
-* FlashStorage
-* MCP342X Library
-* RadioHead Library
-* RTCZero Library
-* SdFat Library
-* SmartSmart Citizen Kit Gases Pro Board Library
-* SparkFun BQ27441 Arduino Library
-* SparkFun MAX3010x Library
-* SPIFlash Library
-* U8g2 Library
+* SPIMemory [Library](https://github.com/Marzogh/SPIMemory)
+* RTCZero [Library](https://github.com/arduino-libraries/RTCZero)
+* SdFat [Library](https://github.com/greiman/SdFat)
+* Arduino Json [Library](https://github.com/bblanchon/ArduinoJson)
+* Adafruit INA219 [Library](https://github.com/adafruit/Adafruit_INA219)
+* U8g2 [Library](https://github.com/olikraus/U8g2_Arduino)
+* RadioHead [Library](http://www.airspayce.com/mikem/arduino/RadioHead/)
+* FlashStorage [Library](https://github.com/cmaglie/FlashStorage)
+* Dallas Temperature [Library](https://github.com/milesburton/Arduino-Temperature-Control-Library)
+* Sparkfun CCS811 [Library](https://github.com/sparkfun/SparkFun_CCS811_Arduino_Library)
+* Sparkfun MediaTek I2C Interface [Library](https://github.com/sparkfun/SparkFun_I2C_GPS_Arduino_Library)
+* Sparkfun u-blox Arduino GNSS [Library](https://github.com/sparkfun/SparkFun_u-blox_GNSS_Arduino_Library)
+* TinyGPSPlus [Library](https://github.com/mikalhart/TinyGPSPlus)
+* LinkedList [Library](https://github.com/ivanseidel/LinkedList)
+* Adafruit ADS1015 [Library](https://github.com/fablabbcn/Adafruit_ADS1X15)
+* ArduinoZero PMUX Report [Library](https://github.com/WestfW/ArduinoZero-PMUX-report)
+* MCP342X Analog-to-Digital Converter [Library](https://github.com/uChip/MCP342X)
+* DS2482 [Library](https://github.com/paeaetech/paeae)
+* Adafruit MPL3115A2 [Library](https://github.com/adafruit/Adafruit_MPL3115A2_Library)
+* I2C Soil Moisture Sensor [Library](https://github.com/Apollon77/I2CSoilMoistureSensor)
+* SmartSmart Citizen Kit Gases Pro Board [Library](https://github.com/fablabbcn/smartcitizen-kit-gases-pro-board)
+* Sparkfun ToF Range Finder - VL6180 Arduino [Library](https://github.com/sparkfun/SparkFun_ToF_Range_Finder-VL6180_Arduino_Library)
+* Adafruit BME680 [Library](https://github.com/adafruit/Adafruit_BME680)
+* Adafruit Unified Sensor Driver [Library](https://github.com/adafruit/Adafruit_Sensor)
+* Sparkfun SCD30 CO₂ Sensor Library [Library](https://github.com/sparkfun/SparkFun_SCD30_Arduino_Library)
 
 ### WiFi Module
 
@@ -62,13 +67,12 @@ Firmware updates are done via the micro USB port using the Platform IO software 
 
 ### Dependencies
 
-* Time Library
-* ArduinoJson Library
-* RemoteDebug Library
-* RemoteDebug Library
-* RadioHead Library
-* RadioHead Library
-* PubSubclient Library
+* Time [Library](https://github.com/PaulStoffregen/Time)
+* ArduinoJson [Library](https://github.com/bblanchon/ArduinoJson)
+* RemoteDebug [Library](https://github.com/JoaoLopesF/RemoteDebug)
+* RadioHead [Library](http://www.airspayce.com/mikem/arduino/RadioHead/)
+* PubSubclient [Library](https://github.com/knolleary/pubsubclient)
+* ESPAsyncWebServer [Library](https://github.com/me-no-dev/ESPAsyncWebServer)
 
 ### Shared
 
@@ -79,7 +83,7 @@ Firmware updates are done via the micro USB port using the Platform IO software 
 
 ## Data management
 
-The board is capable of storing the recorded data offline on its internal dedicated flash memory of 8MB and later publish this over Wi-Fi connectivity provided by an Espressif ESP8266. Data is published using MQTT messages to the Smart Citizen Platform. NTP is used for syncing the built-in RTC. For long term offline storage, the board provides a standard microSD socket where card in the orders of GB can be employed. That ensures extended periods of data in the order of decades can be stored.
+The board is capable of storing the recorded data offline on its internal dedicated [flash memory](/Components/Flash Storage) of 8MB and later publish this over Wi-Fi connectivity provided by an Espressif ESP8266. Data is published using MQTT messages to the Smart Citizen Platform. NTP is used for syncing the built-in RTC. For long term offline storage, the board provides a standard microSD socket where card in the orders of GB can be employed. That ensures extended periods of data in the order of decades can be stored.
 
 ### Configuration
 
@@ -115,7 +119,7 @@ The firmware provides a comprehensive command shell over USB to manage all the k
 _Use any Serial console as `screen`, `platformio device monitor`, or the serial monitor on the Arduino IDE_
 
 !!! info
-    Have a look at the guide for different platforms [here](/Guides/Using the Shell)
+    Have a look at the guide for different platforms [here](/Guides/getting started/Using the Shell)
 
 ## Storage
 

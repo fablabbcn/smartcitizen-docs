@@ -27,7 +27,9 @@ nav:
       - Supported sensors: Components/Auxiliary Connector.md
       - Power Supply: Components/boards/Power Supply.md
       - Solar Panel: Components/Solar Panel.md
-    - Firmware: Components/Firmware.md
+    - Firmware:
+      - Architecture: Components/Firmware.md
+      - Flash Storage: Components/Flash Storage.md 
     - Sensor Knowledge:
       - Performance summary: Components/sensors/performance.md
       - Air:
