@@ -40,7 +40,7 @@ Check the [Soil and water measurements](/Components/Soil and water/) documentati
 
 ## Other auxiliaries
 
-- [Seeed Groove OLED screen (96x96)](http://wiki.seeedstudio.com/Grove-OLED_Display_1.12inch/)
+- [Seeed Grove OLED screen (128x128)](http://wiki.seeedstudio.com/Grove-OLED_Display_1.12inch/), check the [documentation](https://docs.smartcitizen.me/Guides/deployments/OLED%20display/) for more details. 
 - [Sparkfun GPS NEO-M8U](https://www.sparkfun.com/products/16329)
 - [SparkFun GPS XA1110](https://www.sparkfun.com/products/14414)
 - [SEEED Grove GPS Module](https://www.seeedstudio.com/Grove-GPS-Module.html)
