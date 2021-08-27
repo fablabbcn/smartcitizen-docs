@@ -317,7 +317,7 @@ Locate esptool binaries:
 
 ```
 > cd smartcitizen-kit-21/sam
-> pio run -t envdump
+> pio run -t envdump | grep PROJECT_PACKAGES_DIR
 ...
 ```
 
