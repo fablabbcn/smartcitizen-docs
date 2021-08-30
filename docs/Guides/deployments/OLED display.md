@@ -1,6 +1,6 @@
 # OLED Display
 ![](assets/oled_seeed.png)
-Supported [screens](https://wiki.seeedstudio.com/Grove-OLED_Display_1.12inch/) are 128x128 and use the SH1107 controller, we have tested the code with displays labeled as v2.0 and v2.2. If the screen is connected to the _AUX_ grove connector on the SCK it will be autodetected on boot:
+Supported [screens](https://wiki.seeedstudio.com/Grove-OLED_Display_1.12inch/) are 128x128 and use the SH1107 controller, we have tested the code with displays labeled as v2.0 and v2.1. If the screen is connected to the _AUX_ grove connector on the SCK it will be autodetected on boot:
 
 ![](assets/oled_detected.png)
 
