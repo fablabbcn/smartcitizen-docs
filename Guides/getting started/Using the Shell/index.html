@@ -2217,19 +2217,19 @@ PM 2.5 (60 sec)
 PM 10.0 (60 sec)
 </code></pre></div>
 <p>To <strong>disable</strong> one sensor, you can type in part of the sensor name:</p>
-<div class="highlight"><pre><span></span><code>SCK &gt; sensor -disable Noise
+<div class="highlight"><pre><span></span><code>SCK &gt; sensor Noise -disable
 Disabling Noise dBA
 Saved configuration on eeprom!!
 </code></pre></div>
 <p>To <strong>enable</strong> it, if it's present:</p>
-<div class="highlight"><pre><span></span><code>SCK &gt; sensor -enable Noise
+<div class="highlight"><pre><span></span><code>SCK &gt; sensor Noise -enable
 Enabling Noise dBA
 Saved configuration on eeprom!!
 </code></pre></div>
 <div class="admonition warning">
 <p class="admonition-title">Only if available!</p>
 <p>If the sensor you are trying to connect is not recognised, the kit will complain:</p>
-<div class="highlight"><pre><span></span><code>SCK &gt; sensor -enable atlas
+<div class="highlight"><pre><span></span><code>SCK &gt; sensor atlas -enable
 Failed enabling Atlas Temperature
 </code></pre></div>
 </div>
@@ -2380,7 +2380,7 @@ Last group:  2021-07-12T07:34:49Z
 <p>First, enable it with:</p>
 </li>
 </ul>
-<div class="highlight"><pre><span></span><code>SCK &gt; sensor -enable fft
+<div class="highlight"><pre><span></span><code>SCK &gt; sensor fft -enable
 Enabling Noise FFT
 </code></pre></div>
 <ul>
