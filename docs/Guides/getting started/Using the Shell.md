@@ -242,7 +242,7 @@ PM 10.0 (60 sec)
 To **disable** one sensor, you can type in part of the sensor name:
 
 ```
-SCK > sensor -disable Noise
+SCK > sensor Noise -disable
 Disabling Noise dBA
 Saved configuration on eeprom!!
 ```
@@ -250,7 +250,7 @@ Saved configuration on eeprom!!
 To **enable** it, if it's present:
 
 ```
-SCK > sensor -enable Noise
+SCK > sensor Noise -enable
 Enabling Noise dBA
 Saved configuration on eeprom!!
 ```
@@ -259,7 +259,7 @@ Saved configuration on eeprom!!
     If the sensor you are trying to connect is not recognised, the kit will complain:
 
     ```
-    SCK > sensor -enable atlas
+    SCK > sensor atlas -enable
     Failed enabling Atlas Temperature
     ```
 
@@ -457,7 +457,7 @@ flash -recover all net
     - First, enable it with:
 
     ```
-    SCK > sensor -enable fft
+    SCK > sensor fft -enable
     Enabling Noise FFT
     ```
 
