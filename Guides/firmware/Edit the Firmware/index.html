@@ -2403,7 +2403,7 @@ Flashing ESP firmware... OK
 <h4 id="using-esptool-binaries">Using esptool binaries<a class="headerlink" href="#using-esptool-binaries" title="Permanent link">&para;</a></h4>
 <p>Locate esptool binaries:</p>
 <div class="highlight"><pre><span></span><code>&gt; cd smartcitizen-kit-21/sam
-&gt; pio run -t envdump
+&gt; pio run -t envdump | grep PROJECT_PACKAGES_DIR
 ...
 </code></pre></div>
 <p>Find <code>PROJECT_PACKAGES_DIR</code> in the output and navigate to (replace <code>&lt;PROJECT_PACKAGES_DIR&gt;</code>):</p>
