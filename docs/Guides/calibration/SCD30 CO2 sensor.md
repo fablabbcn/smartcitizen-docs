@@ -11,6 +11,9 @@ Sensirion provides a lot of information in their [applications note website](htt
 
 ## Setup
 
+!!! info "For onboarding SCK2.1 with CO2"
+    If you are onboarding a SCK2.1 with NDIR CO2 sensor (SCD30 or similar), make sure you select this blueprint: `#35 SCK 2.1 CO2` in the [advanced kit selection page](/Guides/getting started/Onboarding Sensors/#advanced-kit-selection).
+
 If you are using the [SEEED Studio breakout](https://www.seeedstudio.com/Grove-CO2-Temperature-Humidity-Sensor-SCD30-p-2911.html), the sensor can be directly connected to the [Auxiliary connector](/Components/Auxiliary Connector) on the data board, using a [4-wire grove cable](https://www.seeedstudio.com/cables-c-949.html). 
 
 ![](/assets/images/scd30_seeed.png)
