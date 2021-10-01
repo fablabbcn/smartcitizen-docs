@@ -1,6 +1,6 @@
 This is a _live_ compilation of our participation and results in some research projects we are/have been involved with:
 
-## H2020
+## European Commission
 
 ![](/assets/images/eu-flag.jpg)
 
@@ -9,10 +9,6 @@ This is a _live_ compilation of our participation and results in some research p
 - [**GROW Observatory**](https://growobservatory.org/): _(Grant agreement Nº: 690199)_. A citizens' observatory for growers, researchers and decision makers, aiming to build better soil through Citizen Science.
 
 ![](https://live.staticflickr.com/65535/47957156716_6354656db3_k.jpg)
-
-!!! info "A note about versions"
-
-    The GROW research was funded by the [Grow Observatory](https://growobservatory.org/) project under European Community’s H2020 Programme under Grant Agreement No. [690199](https://cordis.europa.eu/project/rcn/203271/en).
 
 ### Documents and results
 
