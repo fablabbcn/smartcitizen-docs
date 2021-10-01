@@ -1413,6 +1413,19 @@
     Automatic data processing
   </a>
   
+    <nav class="md-nav" aria-label="Automatic data processing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defining-custom-functions" class="md-nav__link">
+    Defining custom functions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -1856,6 +1869,19 @@
     Automatic data processing
   </a>
   
+    <nav class="md-nav" aria-label="Automatic data processing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defining-custom-functions" class="md-nav__link">
+    Defining custom functions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -1895,7 +1921,9 @@
 <p class="admonition-title">How to do it?</p>
 <p>Visit <a href="/Guides/data/Handling calibration data/">these instructions</a> to make sure your <code>postprocessing</code> is safely stored.</p>
 </div>
-<p>The <code>postprocessing</code> is comprised of several fields as defined in the guide above. In order to have custom postprocessing workflows, you need to modify the <code>blueprint_url</code> and <em>maybe</em>, the hardware url. The <code>blueprint_url</code> should point to a valid <code>json</code> file following the structure shown in the <a href="https://github.com/fablabbcn/smartcitizen-data/tree/master/examples/notebooks">examples folder in the <code>scdata</code> repository</a>. Inside this blueprint, <code>metrics</code> can be added to be generated according to the <code>device</code>'s available sensors.</p>
+<p>The <code>postprocessing</code> is composed of several fields as defined in <a href="/Guides/data/Handling calibration data/">the guide</a>. In order to have custom postprocessing workflows, you need to modify the <code>blueprint_url</code> and <em>maybe</em>, the hardware url. The <code>blueprint_url</code> should point to a valid <code>json</code> file following the structure shown in the <a href="https://github.com/fablabbcn/smartcitizen-data/tree/master/examples/notebooks">examples folder in the <code>scdata</code> repository</a>. Inside this blueprint, <code>metrics</code> can be added to be generated according to the <code>device</code>'s available sensors. The</p>
+<h3 id="defining-custom-functions">Defining custom functions<a class="headerlink" href="#defining-custom-functions" title="Permanent link">&para;</a></h3>
+<p>If you want to define custom processing functions, make a Pull Request to <a href="https://github.com/fablabbcn/smartcitizen-data/pulls">the repository of scdata</a> to integrate your functions. Otherwise, you can make a fork and install the package in <code>editable mode</code>. You can then add the functions in the <a href="https://github.com/fablabbcn/smartcitizen-data/tree/master/scdata/device/process">device processing</a> folder of your own. We are available at <a href="mailto:support@smartcitizen.me">support@smartcitizen.me</a> for more support.</p>
                 
               
               

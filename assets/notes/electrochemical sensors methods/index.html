@@ -1872,10 +1872,10 @@
 <h3 id="baseline-correction-based-on-temperature">Baseline correction based on temperature<a class="headerlink" href="#baseline-correction-based-on-temperature" title="Permanent link">&para;</a></h3>
 <p>The mentioned work described the  correction method based on temperature using a baseline correction algorithm which is described in [^2]. This is summarised below:</p>
 <ol>
-<li>For each day of gas working electrode readings, and for each point in the time series (i), the minimum value of the working electrode value that is contained within the interval (i-<span><span class="MathJax_Preview">\delta</span><script type="math/tex">\delta</script></span> &lt; i &lt; i+<span><span class="MathJax_Preview">\delta</span><script type="math/tex">\delta</script></span>) is determined, where <span><span class="MathJax_Preview">\delta</span><script type="math/tex">\delta</script></span> is an interval ranging from 0 to a day length. The outcome of this procedure is an array where each column is a vector of minimum working electrode values calculated for each <span><span class="MathJax_Preview">\delta_i</span><script type="math/tex">\delta_i</script></span> value (this is, from now on, <span><span class="MathJax_Preview">baseline_{\delta_i}</span><script type="math/tex">baseline_{\delta_i}</script></span>).</li>
-<li>The correlation between each <span><span class="MathJax_Preview">baseline_{\delta_i}</span><script type="math/tex">baseline_{\delta_i}</script></span> and the temperature is calculated. Relative humidity is not considered in this study since it's generaly inversely correlated with the temperature.</li>
-<li>The correlation coefficients for each correlation (<span><span class="MathJax_Preview">R^2_{\delta_i}</span><script type="math/tex">R^2_{\delta_i}</script></span>) are calculated. The maximum <span><span class="MathJax_Preview">R^2</span><script type="math/tex">R^2</script></span> whith this array is obtained.</li>
-<li>For the equation at which the maximum <span><span class="MathJax_Preview">R^2_{\delta_i}</span><script type="math/tex">R^2_{\delta_i}</script></span> is found, the temperature reading is used to calculate the corrected baseline.</li>
+<li>For each day of gas working electrode readings, and for each point in the time series (i), the minimum value of the working electrode value that is contained within the interval (i-<span class="arithmatex"><span class="MathJax_Preview">\delta</span><script type="math/tex">\delta</script></span> &lt; i &lt; i+<span class="arithmatex"><span class="MathJax_Preview">\delta</span><script type="math/tex">\delta</script></span>) is determined, where <span class="arithmatex"><span class="MathJax_Preview">\delta</span><script type="math/tex">\delta</script></span> is an interval ranging from 0 to a day length. The outcome of this procedure is an array where each column is a vector of minimum working electrode values calculated for each <span class="arithmatex"><span class="MathJax_Preview">\delta_i</span><script type="math/tex">\delta_i</script></span> value (this is, from now on, <span class="arithmatex"><span class="MathJax_Preview">baseline_{\delta_i}</span><script type="math/tex">baseline_{\delta_i}</script></span>).</li>
+<li>The correlation between each <span class="arithmatex"><span class="MathJax_Preview">baseline_{\delta_i}</span><script type="math/tex">baseline_{\delta_i}</script></span> and the temperature is calculated. Relative humidity is not considered in this study since it's generaly inversely correlated with the temperature.</li>
+<li>The correlation coefficients for each correlation (<span class="arithmatex"><span class="MathJax_Preview">R^2_{\delta_i}</span><script type="math/tex">R^2_{\delta_i}</script></span>) are calculated. The maximum <span class="arithmatex"><span class="MathJax_Preview">R^2</span><script type="math/tex">R^2</script></span> whith this array is obtained.</li>
+<li>For the equation at which the maximum <span class="arithmatex"><span class="MathJax_Preview">R^2_{\delta_i}</span><script type="math/tex">R^2_{\delta_i}</script></span> is found, the temperature reading is used to calculate the corrected baseline.</li>
 <li>The corrected baseline is substracted from the actual working electrode reading</li>
 <li>The final pollutant concentration is calculated based on the corrected working electrode reading and the manufacturer's data.</li>
 </ol>
@@ -1897,7 +1897,7 @@
 <p>Furthermore, the study from which this methodology is drawn from states that oxidation sensors do not yield a proper baseline correlation methodology and so is validated. The result is indeed far better correlated with the reference measurement if using the manufacturer's methodology:</p>
 <p><img alt="" src="https://i.imgur.com/F4uAY8y.jpg" /></p>
 <p>This methodology reads as follows:</p>
-<div>
+<div class="arithmatex">
 <div class="MathJax_Preview">
 Concentration \ [ppm] = {I_{WE}-n(I_{AE}) \ [nA] \over Sensitivity \ [nA/ ppm]}
 </div>
@@ -1906,7 +1906,7 @@ Concentration \ [ppm] = {I_{WE}-n(I_{AE}) \ [nA] \over Sensitivity \ [nA/ ppm]}
 </script>
 </div>
 <p>Where:</p>
-<div>
+<div class="arithmatex">
 <div class="MathJax_Preview">
 I_{WE} (nA) = K (nA/mV) V_{WE} (mV)
 </div>
@@ -1914,7 +1914,7 @@ I_{WE} (nA) = K (nA/mV) V_{WE} (mV)
 I_{WE} (nA) = K (nA/mV) V_{WE} (mV)
 </script>
 </div>
-<div>
+<div class="arithmatex">
 <div class="MathJax_Preview">
 I_{AE} (nA) = K (nA/mV) V_{AE} (mV)
 </div>
@@ -1923,8 +1923,8 @@ I_{AE} (nA) = K (nA/mV) V_{AE} (mV)
 </script>
 </div>
 <p>Where:
-* <span><span class="MathJax_Preview">I_{PCBWE}</span><script type="math/tex">I_{PCBWE}</script></span> and <span><span class="MathJax_Preview">I_{PCBAE}</span><script type="math/tex">I_{PCBAE}</script></span> are the electronic offsets for each electrode
-* <span><span class="MathJax_Preview">n  = {I_{0WE} \over I_{0AE}}</span><script type="math/tex">n  = {I_{0WE} \over I_{0AE}}</script></span>, the ratio between alphasense's zero currents
+* <span class="arithmatex"><span class="MathJax_Preview">I_{PCBWE}</span><script type="math/tex">I_{PCBWE}</script></span> and <span class="arithmatex"><span class="MathJax_Preview">I_{PCBAE}</span><script type="math/tex">I_{PCBAE}</script></span> are the electronic offsets for each electrode
+* <span class="arithmatex"><span class="MathJax_Preview">n  = {I_{0WE} \over I_{0AE}}</span><script type="math/tex">n  = {I_{0WE} \over I_{0AE}}</script></span>, the ratio between alphasense's zero currents
 * k is a <strong>constant convertion factor</strong> (<em>~ 6.36</em> in the case of the SCK Gas Pro Board electronics)</p>
 <p>In the case of NO<sub>2</sub>, the results provided by this baseline correction algorithm yield better results:
 <img alt="" src="https://i.imgur.com/jW7qSaB.jpg" /></p>

@@ -1927,7 +1927,7 @@ model_description_ols = {&quot;model_name&quot;: &quot;OLS_UCD&quot;,
 <div class="highlight"><pre><span></span><code>&quot;expression&quot; : &#39;REF ~ A + np.log(B)&#39;
 </code></pre></div>
 <p>Which converts to:</p>
-<div>
+<div class="arithmatex">
 <div class="MathJax_Preview">
 REF = A + log(B)
 </div>
@@ -2095,11 +2095,11 @@ Channel 5262_RF_UCD prediction finished
 <p>It is very difficult though, to know which one is performing better. Let's then evaluate and compare our models. In order to evaluate it's metrics, we will be using the following principles<sup id="fnref:first"><a class="footnote-ref" href="#fn:first">1</a></sup><sup id="fnref:second"><a class="footnote-ref" href="#fn:second">2</a></sup>:</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>In all of the expressions below, the letter <em>m</em> indicates the model field, <em>r</em> indicates the reference field. Overbar is average and <span><span class="MathJax_Preview">\sigma</span><script type="math/tex">\sigma</script></span> is the standard deviation.</p>
+<p>In all of the expressions below, the letter <em>m</em> indicates the model field, <em>r</em> indicates the reference field. Overbar is average and <span class="arithmatex"><span class="MathJax_Preview">\sigma</span><script type="math/tex">\sigma</script></span> is the standard deviation.</p>
 </div>
 <p><strong>Linear correlation Coefficient</strong>
 A measure of the agreement between two signals:</p>
-<div>
+<div class="arithmatex">
 <div class="MathJax_Preview">
 R = {{1 \over N} \sum_{i=0}^n (m_n-\overline m)( r_n-\overline r ) \over \sigma_m\sigma_r}
 </div>
@@ -2107,7 +2107,7 @@ R = {{1 \over N} \sum_{i=0}^n (m_n-\overline m)( r_n-\overline r ) \over \sigma_
 R = {{1 \over N} \sum_{i=0}^n (m_n-\overline m)( r_n-\overline r ) \over \sigma_m\sigma_r}
 </script>
 </div>
-<p>The correlation coefficient is bounded by the range <span><span class="MathJax_Preview">-1 \le R \le 1</span><script type="math/tex">-1 \le R \le 1</script></span>. However, it is difficult to discern information about the differences in amplitude between two signals from R alone.</p>
+<p>The correlation coefficient is bounded by the range <span class="arithmatex"><span class="MathJax_Preview">-1 \le R \le 1</span><script type="math/tex">-1 \le R \le 1</script></span>. However, it is difficult to discern information about the differences in amplitude between two signals from R alone.</p>
 <p><strong>Normalized standard deviation</strong>
 A measure of the differences in amplitude between two signals:
 $$
@@ -2115,7 +2115,7 @@ $$
 $$</p>
 <p><strong><em>unbiased</em> Root-Mean-Square Difference</strong>
 A measure of how close the modelled points fall to teach other:</p>
-<div>
+<div class="arithmatex">
 <div class="MathJax_Preview">
 RMSD' = \Bigl( {1 \over N} \sum_{n=1}^N [(m_n - \overline m)-(r_n - \overline r)]^2  \Bigr)^{0.5}
 </div>
@@ -2134,7 +2134,7 @@ $$
 RMSD = \Bigl( {1 \over N} \sum_{n=1}^N (m_n - r_n)^2  \Bigr)^{0.5}
 $$</p>
 <p>In other words, the unbiased RMSD (RMSD') is equal to the total RMSD if there is no bias between the model and the reference fields (i.e. B = 0). The relationship between both reads:</p>
-<div>
+<div class="arithmatex">
 <div class="MathJax_Preview">
 RMSD^2 = B^2 + RMSD'^2
 </div>
@@ -2142,8 +2142,8 @@ RMSD^2 = B^2 + RMSD'^2
 RMSD^2 = B^2 + RMSD'^2
 </script>
 </div>
-<p>In contrast, the unbiased RMSD may be conceptualized as an overall measure of the agreement between the aplitude (<span><span class="MathJax_Preview">\sigma</span><script type="math/tex">\sigma</script></span>) and phase (<span><span class="MathJax_Preview">\phi</span><script type="math/tex">\phi</script></span>) of two temporal patterns. For this reason, the correlation coefficient (<span><span class="MathJax_Preview">R</span><script type="math/tex">R</script></span>), normalised standard deviation (<span><span class="MathJax_Preview">\sigma*</span><script type="math/tex">\sigma*</script></span>), and unbiased RMSD are all referred to as <strong>patern statistics</strong>, related to one another by:</p>
-<div>
+<p>In contrast, the unbiased RMSD may be conceptualized as an overall measure of the agreement between the aplitude (<span class="arithmatex"><span class="MathJax_Preview">\sigma</span><script type="math/tex">\sigma</script></span>) and phase (<span class="arithmatex"><span class="MathJax_Preview">\phi</span><script type="math/tex">\phi</script></span>) of two temporal patterns. For this reason, the correlation coefficient (<span class="arithmatex"><span class="MathJax_Preview">R</span><script type="math/tex">R</script></span>), normalised standard deviation (<span class="arithmatex"><span class="MathJax_Preview">\sigma*</span><script type="math/tex">\sigma*</script></span>), and unbiased RMSD are all referred to as <strong>patern statistics</strong>, related to one another by:</p>
+<div class="arithmatex">
 <div class="MathJax_Preview">
 RMSD'^2 = \sigma_r^2 + \sigma_m^2 - 2\sigma_r\sigma_mR
 </div>
@@ -2153,7 +2153,7 @@ RMSD'^2 = \sigma_r^2 + \sigma_m^2 - 2\sigma_r\sigma_mR
 </div>
 <p><strong>Normalized and unbiased RMSD</strong>
 If we recast in standard deviation normalized units (indicated by the asterisk) it becomes:</p>
-<div>
+<div class="arithmatex">
 <div class="MathJax_Preview">
 RMSD'^* = \sqrt { 1 + \sigma*^2 - 2\sigma*R}
 </div>
@@ -2161,15 +2161,15 @@ RMSD'^* = \sqrt { 1 + \sigma*^2 - 2\sigma*R}
 RMSD'^* = \sqrt { 1 + \sigma*^2 - 2\sigma*R}
 </script>
 </div>
-<p><strong>NB</strong>: the minimum of this function occurrs when <span><span class="MathJax_Preview">\sigma* = R</span><script type="math/tex">\sigma* = R</script></span>.</p>
+<p><strong>NB</strong>: the minimum of this function occurrs when <span class="arithmatex"><span class="MathJax_Preview">\sigma* = R</span><script type="math/tex">\sigma* = R</script></span>.</p>
 <p><strong>Normalized bias</strong>
-Gives information about the mean difference but normalized by the <span><span class="MathJax_Preview">\sigma*</span><script type="math/tex">\sigma*</script></span>
+Gives information about the mean difference but normalized by the <span class="arithmatex"><span class="MathJax_Preview">\sigma*</span><script type="math/tex">\sigma*</script></span>
 $$
 B* = {\overline m - \overline r \over \sigma_r}
 $$</p>
 <p><strong>Target diagrams</strong>
-The target diagram is a plot that provides summary information about the <strong>pattern statistics as well as the bias</strong> thus yielding an overview of their respective contributions to the total RMSD. In a simple Cartesian coordinate system, the unbiased RMSD may serve as the X-axis and the bias may serve as the Y-axis. The distance between the origin and the model versus observation statistics (any point, s, within the X,Y Cartesian space) is then equal to the total RMSD. If all is normalized by the <span><span class="MathJax_Preview">\sigma_r</span><script type="math/tex">\sigma_r</script></span>, the distance from the origin is again the <em>standard deviation normalized total RMSD</em>:<sup id="fnref2:first"><a class="footnote-ref" href="#fn:first">1</a></sup></p>
-<div>
+The target diagram is a plot that provides summary information about the <strong>pattern statistics as well as the bias</strong> thus yielding an overview of their respective contributions to the total RMSD. In a simple Cartesian coordinate system, the unbiased RMSD may serve as the X-axis and the bias may serve as the Y-axis. The distance between the origin and the model versus observation statistics (any point, s, within the X,Y Cartesian space) is then equal to the total RMSD. If all is normalized by the <span class="arithmatex"><span class="MathJax_Preview">\sigma_r</span><script type="math/tex">\sigma_r</script></span>, the distance from the origin is again the <em>standard deviation normalized total RMSD</em>:<sup id="fnref2:first"><a class="footnote-ref" href="#fn:first">1</a></sup></p>
+<div class="arithmatex">
 <div class="MathJax_Preview">
 RMSD^{*2} = B^{*2}+RMSD^{*'2}
 </div>
@@ -2179,14 +2179,14 @@ RMSD^{*2} = B^{*2}+RMSD^{*'2}
 </div>
 <p>The resulting target diagram then provides information about:</p>
 <ul>
-<li>whether the <span><span class="MathJax_Preview">\sigma_m</span><script type="math/tex">\sigma_m</script></span> is larger or smaller thann the <span><span class="MathJax_Preview">\sigma_r</span><script type="math/tex">\sigma_r</script></span></li>
+<li>whether the <span class="arithmatex"><span class="MathJax_Preview">\sigma_m</span><script type="math/tex">\sigma_m</script></span> is larger or smaller thann the <span class="arithmatex"><span class="MathJax_Preview">\sigma_r</span><script type="math/tex">\sigma_r</script></span></li>
 <li>whether there is a positive or negative bias</li>
 </ul>
 <p><img alt="" src="https://i.imgur.com/x8NY4kD.png" /></p>
 <p><em>Image Source: Jolliff et al. <sup id="fnref3:first"><a class="footnote-ref" href="#fn:first">1</a></sup></em></p>
 <p>Any point greater than RMSD*=1 is to be considered a poor performer since it doesn't offer improvement over the time series average.</p>
-<p>Interestingly, the target diagram has no information about the correlation coefficient R, but some can be inferred, knowing that all the points within the RMSD* &lt;1 are positively correlated (R&gt;0), although, in <sup id="fnref4:first"><a class="footnote-ref" href="#fn:first">1</a></sup> it is shown that a circle marker with radius <span><span class="MathJax_Preview">M_{R1}</span><script type="math/tex">M_{R1}</script></span>, means that all the points between that marker and the origin have a R coefficient larger than R1, where:</p>
-<div>
+<p>Interestingly, the target diagram has no information about the correlation coefficient R, but some can be inferred, knowing that all the points within the RMSD* &lt;1 are positively correlated (R&gt;0), although, in <sup id="fnref4:first"><a class="footnote-ref" href="#fn:first">1</a></sup> it is shown that a circle marker with radius <span class="arithmatex"><span class="MathJax_Preview">M_{R1}</span><script type="math/tex">M_{R1}</script></span>, means that all the points between that marker and the origin have a R coefficient larger than R1, where:</p>
+<div class="arithmatex">
 <div class="MathJax_Preview">
 M_{R1} = min(RMSD*') = \sqrt {1+R1^2-2R1^2}
 </div>

@@ -1261,6 +1261,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#installing-requirements" class="md-nav__link">
+    Installing requirements
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2022,6 +2029,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#installing-requirements" class="md-nav__link">
+    Installing requirements
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2182,7 +2196,7 @@
 <p>Do not install anything until reading completely this guide. Specially for <code>Windows</code> users, it can be particularly painful and we don't guarantee everything is going to work. Drop us an email at <a href="mailto:support@smartcitizen.me">support</a> if you need help.</p>
 </div>
 <h3 id="building-the-firmware">Building the firmware<a class="headerlink" href="#building-the-firmware" title="Permanent link">&para;</a></h3>
-<p>To build the SmartCitizen Kit firmware you need a computer with <a href="https://platformio.org/">platformio</a> installed. <strong>You don't need the full IDE</strong> installation (Atom or VSCode). You can follow <a href="http://docs.platformio.org/en/latest/installation.html">this instructions</a> to install only the console version. See below if you don't have python yet (or you don't know it's ok).</p>
+<p>To build the SmartCitizen Kit firmware you need a computer with <a href="https://platformio.org/">platformio</a> installed. <strong>You don't need the full IDE</strong> installation (Atom or VSCode). You can follow <a href="http://docs.platformio.org/en/latest/installation.html">these instructions</a> to install only the console version. See below if you don't have python yet (or you don't know it's ok).</p>
 <div class="admonition warning">
 <p class="admonition-title">Advanced</p>
 <p>For bootloader upload you also need <a href="http://openocd.org/">OpenOCD</a> somewhere in your PATH (more advanced).</p>
@@ -2216,11 +2230,27 @@
 <div class="highlight"><pre><span></span><code>&gt; curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 &gt; python get-pip.py
 </code></pre></div>
+<h3 id="installing-requirements">Installing requirements<a class="headerlink" href="#installing-requirements" title="Permanent link">&para;</a></h3>
+<p>You can use this <a href="https://github.com/fablabbcn/smartcitizen-tools/blob/905d3709103b07834c36c41957e9fa673220ee41/requirements.txt">requirements file</a> to install everything you need to compile the firmware. Alternatively you can follow the steps below or if you want to control each version:</p>
 <ul>
 <li>Install <code>pyserial</code>:</li>
 </ul>
-<div class="highlight"><pre><span></span><code>&gt; pip install pyserial
+<div class="highlight"><pre><span></span><code>&gt; pip install pyserial==3.5
 </code></pre></div>
+<ul>
+<li>Install <code>requests</code>:</li>
+</ul>
+<div class="highlight"><pre><span></span><code>&gt; pip install requests==2.26.0
+</code></pre></div>
+<ul>
+<li>Install <code>platformio</code>:</li>
+</ul>
+<div class="highlight"><pre><span></span><code>&gt; pip install platformio==5.1.1
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Versions</p>
+<p>Versions for these packages are tested to work on OSX and Linux. If you can't find the same version for your platform, try to install something similar to the one provided in order to ensure everything works fine</p>
+</div>
 <p>Once this is running, you can do either of the ones below. We will use the generic one throughout the guide:</p>
 <div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Windows/linux/macOS</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code>&gt; cd smartcitizen-kit-21
