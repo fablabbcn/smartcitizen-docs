@@ -17,7 +17,7 @@ The Smart Citizen Kit Firmware is on our [repository on github](https://github.c
 
 ### Building the firmware
 
-To build the SmartCitizen Kit firmware you need a computer with [platformio](https://platformio.org/) installed. **You don't need the full IDE** installation (Atom or VSCode). You can follow [this instructions](http://docs.platformio.org/en/latest/installation.html) to install only the console version. See below if you don't have python yet (or you don't know it's ok).
+To build the SmartCitizen Kit firmware you need a computer with [platformio](https://platformio.org/) installed. **You don't need the full IDE** installation (Atom or VSCode). You can follow [these instructions](http://docs.platformio.org/en/latest/installation.html) to install only the console version. See below if you don't have python yet (or you don't know it's ok).
 
 !!! warning "Advanced"
     For bootloader upload you also need [OpenOCD](http://openocd.org/) somewhere in your PATH (more advanced).
@@ -55,11 +55,31 @@ Platformio is written in `python`, and this guide makes use of a lot of `python`
 > python get-pip.py
 ```
 
+### Installing requirements
+
+You can use this [requirements file](https://github.com/fablabbcn/smartcitizen-tools/blob/905d3709103b07834c36c41957e9fa673220ee41/requirements.txt) to install everything you need to compile the firmware. Alternatively you can follow the steps below or if you want to control each version:
+
 * Install `pyserial`:
 
 ```
-> pip install pyserial
+> pip install pyserial==3.5
 ```
+
+* Install `requests`:
+
+```
+> pip install requests==2.26.0
+```
+
+
+* Install `platformio`:
+
+```
+> pip install platformio==5.1.1
+```
+
+!!! warning "Versions"
+    Versions for these packages are tested to work on OSX and Linux. If you can't find the same version for your platform, try to install something similar to the one provided in order to ensure everything works fine
 
 Once this is running, you can do either of the ones below. We will use the generic one throughout the guide:
 
