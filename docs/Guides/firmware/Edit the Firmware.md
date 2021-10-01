@@ -22,6 +22,9 @@ To build the SmartCitizen Kit firmware you need a computer with [platformio](htt
 !!! warning "Advanced"
     For bootloader upload you also need [OpenOCD](http://openocd.org/) somewhere in your PATH (more advanced).
 
+!!! warning "Windows users"
+    If you have Windows, the CLI version is available via `PowerShell`. An environment variable (PATH) needs to be set to give access to `pio.exe`. It's given in the [Platformio instructions](https://docs.platformio.org/en/latest/core/installation.html#windows).
+
 ### Installing Python
 
 Platformio is written in `python`, and this guide makes use of a lot of `python` scripts. You need to have at least `python=3.6`installed. If not, follow [this guide](https://docs.python-guide.org/starting/installation/). This guide will asume you use either `python`, `python3` for running scripts, or `pip` and `pip3` for installing things, we will just detail instructions run by `python` and packages installed by `pip`, but you should know what it's installed on your computer.
