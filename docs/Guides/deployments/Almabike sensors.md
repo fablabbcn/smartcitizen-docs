@@ -4,10 +4,6 @@ Welcome to the Almabike Project User Manual. This page includes all necessary in
 
 In addition, further information and graphic material is available in the Annexes of this manual.
 
-!!! info "WIP"
-    
-    Some items in this user manual are a _work-in-progress_. You will find a banner in the sections with a _WIP_ marker and a summary of all [Known issues](#Known issues) which will be fixed in future firmware versions.
-
 ## Hardware
 
 ### Pack
@@ -145,89 +141,6 @@ Each of the sensors can be configured independently, with a reading interval N t
 In the case of **the Almabike project**, the sensors store data internally in the Flash memory during the bicycle trips and publish it in batch when the configured WiFi network is visible. Data is also stored in the SD card for later use in CSV file format.
 
 ![](assets/almabike_trip.jpg)
-
-## User interfaces
-
-The data board features a set of user interfaces which provide feedback to the user, as well as two buttons with different functionalities. The main RGB LED provides general feedback of the data board status. Additionally, two buttons are provided for user action. A hardware reset button, which forces a power cut to the board, and a power button, used to change the device's mode, turn on and off the device, and to perform a factory reset. You can see both buttons below:
-
-![](assets/almabike_interfaces.png)
-
-### The button
-
-The main button interaction is detailed below:
-
-| Function          | Button action     |
-|-------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **ON**            | Push the button   |
-| **OFF**           | Push the button for 5 seconds |
-| **CHANGE MODE**   | Push the button multiple times to choose: *Setup* <span class="led small red"></span>  *Wi-Fi* <span class="led small blue"></span> *Pink* <span class="led small pink"></span> |
-| **FACTORY RESET** | Push the button 15 seconds for a full reset |
-
-![](https://live.staticflickr.com/65535/48439505516_d210ce2c8a_h.jpg)
-
-!!! info "Troubleshooting"
-    Have a look at the [troubleshoothing](https://docs.smartcitizen.me/Troubleshooting/) for more information.
-
-### Operation modes
-
-!!! warning "WIP :computer:"
-    This will be improved with new Firmware Features.
-
-#### <span class="led small red"> </span> Setup mode
-
-In this mode, the Kit is ready to be configured in **network** mode or **SD card** in [start.smartcitizen.me](https://start.smartcitizen.me/).
-
-| LED color                            |  Kit status                             |
-|------------------------------------------|------------------------------------------- |
-| <span class="led setup"></span>            | :thumbsup: Ready to be setup
-| <span class="led setup-lowbat"></span>     | :battery: Ready to be setup but battery is low, charge the Kit    |
-| <span class="led setup-chargebat"></span>  | :battery: Ready to be setup, battery charging            |
-| <span class="led setup-fullbat"></span>    | :battery: Ready to be setup, battery charged                |
-
-#### <span class="led small blue"> </span> Wi-Fi mode
-
-This is the standard mode for a network that requires a Wi-Fi connection. In this way, the device will publish the data every minute on the [smartcitizen.me](https://smartcitizen.me) platform. If there is an inserted micro SD card, the data will be stored in duplicate.
-
-| LED color                            |  Kit status                             |
-|------------------------------------------|------------------------------------------- |
-| <span class="led net"></span>            | :thumbsup: Collecting data online                 |
-| <span class="led net-error"></span>      | :warning: Error while collecting data         |
-| <span class="led net-lowbat"></span>     | :battery: Collecting data online but battery is low, charge the Kit    |
-| <span class="led net-chargebat"></span>  | :battery: Collecting data online, battery charging              |
-| <span class="led net-fullbat"></span>    | :battery: Collecting data online, battery charged               |
-
-!!! warning "Supported networks"
-    :white_check_mark: The kit supports Wi-Fi WEP, WPA/WPA2 and open networks that are common networks in domestic environments and small businesses.
-
-    :negative_squared_cross_mark: But, it **does not** support WPA/WPA2 Enterprise networks such as EDUROAM or networks with captive portals such as those found in Airports and Hotels
-
-#### <span class="led small pink"> </span> SD card mode (offline)
-
-If we do not have an internet connection we can use the SD mode. In this case the device will record the data on the micro SD card. Later we can read the card using a card reader. The data can be visually spaced in a spreadsheet but also published on the [smartcitizen.me](https://smartcitizen.me) platform using the **UPLOAD CSV** option.
-
-| LED color                            |  Kit status                             |
-|------------------------------------------|------------------------------------------- |
-| <span class="led sd"></span>             | :thumbsup: Collecting data offline              |
-| <span class="led sd-error"></span>       | :warning: Error while collecting data         |
-| <span class="led sd-lowbat"></span>      | :battery: Collecting data offline but battery is low, charge the Kit    |
-| <span class="led sd-chargebat"></span>   | :battery: Collecting data offline,  battery charging              |
-| <span class="led sd-fullbat"></span>     | :battery: Collecting data offline, battery charged          |
-
-!!! warning "Guide"
-    Check the guide on how to upload the sd card data [here](https://docs.smartcitizen.me/Guides/Uploading%20SD%20Card%20Data/)
-
-!!! info "Weird files?"
-
-    The files in the sdcard have the following naming: YYYY-MM-DD.CSV, however, you will find in the some extra files (.01, .02...) These are data files that the sensor creates once there is a reset and, to avoid corruption, it creates a new file in the sd-card, by changing the file-extension.
-
-    A **complete reset takes place every night at 3-4am** with the purpose to avoid data loss because a problem. The SCK then stores the data in a file with a sequential name, and does so by changing the filename to YYYY-MM-DD.01, .02… etc depending on the amount of resets it sees during that day. You can see the data and work with it by changing the name from YYYY-MM-DD.01 to YYYY-MM-DD_01.CSV
-
-#### Especial status
-
-| LED color                            |  Kit status                             |
-|------------------------------------------|------------------------------------------- |
-| <span class="led busy"></span>           |  :hourglass_flowing_sand:  Busy, please wait!                 |
-| <span class="led firmware"></span>       | :wrench: Software update going on!
 
 ## Data
 
