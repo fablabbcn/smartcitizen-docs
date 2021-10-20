@@ -139,7 +139,7 @@ extra:
     - icon: fontawesome/brands/instagram
       link: 'https://www.instagram.com/smartcitizenkit/'
     - icon: fontawesome/brands/github
-      link: 'https://www.instagram.com/smartcitizenkit/'
+      link: 'https://www.github.com/fablabbcn/smartcitizen-kit-21'
   project: 'The Smart Citizen as part of the iSCAPE project has received funding from the European Community’s H2020 Programme under Grant Agreement No. 689954.'
   footer_logo: '/assets/images/eu-flag.png'
   license: 'CC Attribution-NonCommercial-ShareAlike 4.0 International'
