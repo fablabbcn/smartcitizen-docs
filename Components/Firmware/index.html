@@ -720,8 +720,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#readings-files-yyyy-mm-ddcsv" class="md-nav__link">
-    Readings files YYYY-MM-DD.CSV
+  <a href="#readings-files-yy-mm-ddcsv" class="md-nav__link">
+    Readings files YY-MM-DD.CSV
   </a>
   
 </li>
@@ -2049,8 +2049,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#readings-files-yyyy-mm-ddcsv" class="md-nav__link">
-    Readings files YYYY-MM-DD.CSV
+  <a href="#readings-files-yy-mm-ddcsv" class="md-nav__link">
+    Readings files YY-MM-DD.CSV
   </a>
   
 </li>
@@ -2255,17 +2255,17 @@ Detecting: Grove OLED... nothing!
 <p>Have a look at the guide for different platforms <a href="/Guides/getting started/Using the Shell">here</a></p>
 </div>
 <h2 id="storage">Storage<a class="headerlink" href="#storage" title="Permanent link">&para;</a></h2>
-<h3 id="readings-files-yyyy-mm-ddcsv">Readings files YYYY-MM-DD.CSV<a class="headerlink" href="#readings-files-yyyy-mm-ddcsv" title="Permanent link">&para;</a></h3>
+<h3 id="readings-files-yy-mm-ddcsv">Readings files YY-MM-DD.CSV<a class="headerlink" href="#readings-files-yy-mm-ddcsv" title="Permanent link">&para;</a></h3>
 <p>These files are generated and updated by the kit in a daily manner. When a SD is detected the SCK will automatically save the sensors into it. </p>
-<p>The SCK creates an additional CSV file once there is a hardware reset. A reset takes place every night at 3-4am with the purpose to avoid data loss because a software problem (i.e. blocked software). The SCK then stores the data in a file with a sequential name, and does so by changing the filename to YYYY-MM-DD.01, .02... depending on the amount of resets it sees during a certain day. The latest data is always in the file with .CSV extension. An example of a day with two resets (ad hoc and the programmed one):</p>
-<div class="highlight"><pre><span></span><code>YYYY-MM-DD.01 -&gt; first reset
-YYYY-MM-DD.02 -&gt; second reset
-YYYY-MM-DD.CSV -&gt; latest file
+<p>The SCK creates an additional CSV file once there is a hardware reset. A reset takes place every night at 3-4am with the purpose to avoid data loss because a software problem (i.e. blocked software). The SCK then stores the data in a file with a sequential name, and does so by changing the filename to YY-MM-DD.01, .02... depending on the amount of resets it sees during a certain day. The latest data is always in the file with .CSV extension. An example of a day with two resets (ad hoc and the programmed one):</p>
+<div class="highlight"><pre><span></span><code>YY-MM-DD.01 -&gt; first reset
+YY-MM-DD.02 -&gt; second reset
+YY-MM-DD.CSV -&gt; latest file
 </code></pre></div>
 <p>The user can safely change the extension of these files back to .CSV and concatenate them:</p>
-<div class="highlight"><pre><span></span><code>YYYY-MM-DD.01 -&gt; YYYY-MM-DD_01.CSV
-YYYY-MM-DD.02 -&gt; YYYY-MM-DD_02.CSV
-YYYY-MM-DD.CSV -&gt; YYYY-MM-DD.CSV
+<div class="highlight"><pre><span></span><code>YY-MM-DD.01 -&gt; YY-MM-DD_01.CSV
+YY-MM-DD.02 -&gt; YY-MM-DD_02.CSV
+YY-MM-DD.CSV -&gt; YY-MM-DD.CSV
 </code></pre></div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
