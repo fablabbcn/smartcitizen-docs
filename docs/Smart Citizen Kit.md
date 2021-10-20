@@ -243,9 +243,9 @@ If we do not have an internet connection we can use the SD mode. In this case th
     Check the guide on how to upload the sd card data [here](/Guides/getting started/Uploading SD Card Data/)
 
 !!! info "Weird files?"
-    The files in the sdcard have the following naming: YYYY-MM-DD.CSV, however, you will find in the some extra files (.01, .02...) These are data files that the sensor creates once there is a reset and, to avoid corruption, it creates a new file in the sd-card, by changing the file-extension. 
+    The files in the sdcard have the following naming: YY-MM-DD.CSV, however, you will find in the some extra files (.01, .02...) These are data files that the sensor creates once there is a reset and, to avoid corruption, it creates a new file in the sd-card, by changing the file-extension. 
 
-    A reset takes place every night at 3-4am with the purpose to avoid data loss because a problem. The SCK then stores the data in a file with a sequential name, and does so by changing the filename to YYYY-MM-DD.01, .02… etc depending on the amount of resets it sees during that day. You can see the data and work with it by changing the name from YYYY-MM-DD.01 to YYYY-MM-DD_01.CSV. [Check the guide on how to organise your data](/Guides/data/Organise your data/#pre-process-the-sd-card-data) to automatise this.
+    A reset takes place every night at 3-4am with the purpose to avoid data loss because a problem. The SCK then stores the data in a file with a sequential name, and does so by changing the filename to YY-MM-DD.01, .02… etc depending on the amount of resets it sees during that day. You can see the data and work with it by changing the name from YY-MM-DD.01 to YY-MM-DD_01.CSV. [Check the guide on how to organise your data](/Guides/data/Organise your data/#pre-process-the-sd-card-data) to automatise this.
 
 #### Especial status
 

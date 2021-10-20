@@ -123,24 +123,24 @@ _Use any Serial console as `screen`, `platformio device monitor`, or the serial 
 
 ## Storage
 
-### Readings files YYYY-MM-DD.CSV
+### Readings files YY-MM-DD.CSV
 
 These files are generated and updated by the kit in a daily manner. When a SD is detected the SCK will automatically save the sensors into it. 
 
-The SCK creates an additional CSV file once there is a hardware reset. A reset takes place every night at 3-4am with the purpose to avoid data loss because a software problem (i.e. blocked software). The SCK then stores the data in a file with a sequential name, and does so by changing the filename to YYYY-MM-DD.01, .02... depending on the amount of resets it sees during a certain day. The latest data is always in the file with .CSV extension. An example of a day with two resets (ad hoc and the programmed one):
+The SCK creates an additional CSV file once there is a hardware reset. A reset takes place every night at 3-4am with the purpose to avoid data loss because a software problem (i.e. blocked software). The SCK then stores the data in a file with a sequential name, and does so by changing the filename to YY-MM-DD.01, .02... depending on the amount of resets it sees during a certain day. The latest data is always in the file with .CSV extension. An example of a day with two resets (ad hoc and the programmed one):
 
 ```
-YYYY-MM-DD.01 -> first reset
-YYYY-MM-DD.02 -> second reset
-YYYY-MM-DD.CSV -> latest file
+YY-MM-DD.01 -> first reset
+YY-MM-DD.02 -> second reset
+YY-MM-DD.CSV -> latest file
 ```
 
 The user can safely change the extension of these files back to .CSV and concatenate them:
 
 ```
-YYYY-MM-DD.01 -> YYYY-MM-DD_01.CSV
-YYYY-MM-DD.02 -> YYYY-MM-DD_02.CSV
-YYYY-MM-DD.CSV -> YYYY-MM-DD.CSV
+YY-MM-DD.01 -> YY-MM-DD_01.CSV
+YY-MM-DD.02 -> YY-MM-DD_02.CSV
+YY-MM-DD.CSV -> YY-MM-DD.CSV
 ```
 
 !!! warning
