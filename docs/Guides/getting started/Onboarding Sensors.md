@@ -22,6 +22,20 @@ After this, make sure that the SCK is in [Setup Mode](/Smart Citizen Kit/#setup-
 
 ![](/assets/images/onboarding_3.png)
 
+In your phone, something like below should pop-up:
+
+![](/assets/images/phone-start.png)
+
+!!! danger "If nothing comes up"
+	In some cases, your phone will be disconected from the WiFi as it doesn't have access to the internet. Stay connected to it!
+	If nothing pop-up in your phone, open your phone's web browser and navigate to [sck.me](http://sck.me)
+
+After this, in case you want to configure your kit in **Network mode**, press **Start**. If you want to set it in **Offline mode**, press **SD Card mode**.
+
+If you go with Network mode, you should see the screen below. In your computer, you should click Next and see a 6 letter token to be input in your phone:
+
+![](/assets/images/token-input.png)
+
 Depending on the mode selected (Wi-Fi or SD card), proceed with the steps and make sure the LED changes color: blue for Wi-Fi, purple for SD card. Once this is done, register your kit and add it to your user profile following the steps:
 
 ![](/assets/images/onboarding_4.png)
