@@ -16,25 +16,26 @@ To enable the sensors you just need to plug you board to the Smart Citizen kit a
 
 ### Atlas PH
 
-The pH value at current temperature can be found on the reference table on the calibration solution bottle. If the current temperature is not on it, use the closest value.
+The pH value at current temperature can be found on the reference table on the calibration solution bottle. If the current temperature is not on it, use the closest value. You need to perform a 3-point calibration with the calibration solutions.
 
 !!! info "Datasheet"
-    [Datasheet](https://www.atlas-scientific.com/files/pH_EZO_Datasheet.pdf) (calibration theory on page 11, and commands on page 52)
+    Here you can find the [datasheet](https://www.atlas-scientific.com/files/pH_EZO_Datasheet.pdf):
 
-**Example commands**
+    - Calibration theory on page 11
+    - Commands on page 52
 
-```
-control ph com r
-control ph com cal,[mid,low,high],value
-control ph com cal,clear
-control ph com cal,?
-```
+    **Example commands**
+
+    ```
+    control ph com r
+    control ph com cal,[mid,low,high],value
+    control ph com cal,clear
+    control ph com cal,?
+    ```
 
 #### 3-point calibration
 
-First start a serial communication with the Smart Citizen Kit with `screen` or `pio device monitor`or even the serial monitor of the Arduino IDE.
-
-Order of the calibration : 
+This is the order of the calibration: 
 
 1. mid point
 2. low point
@@ -48,47 +49,43 @@ Order of the calibration :
 
 ##### Mid point calibration
 
-Put the sensor in the pH 7 calibration solution. 
+* Put the sensor in the pH 7 calibration solution. 
 
 ![](https://i.imgur.com/WhpJiN2.png)
 
 * Read the sensor multiple times until the reading is stable:
 
-```
-control ph com r
-6.48
-control ph com r
-6.45
-...
-```
+    ```
+    control ph com r
+    6.48
+    control ph com r
+    6.45
+    ...
+    ```
 
 * Issue the midpoint calibration command:
-```
-control atlas ph com cal,mid,[value of pH at current temperature]
-```
 
-<span style="text-decoration:underline">example at 30°C:</span> 
+    ```
+    control atlas ph com cal,mid,[value of pH at current temperature]
+    ```
 
-```
-control atlas ph com cal,mid,6.99 
-```
+!!! info "Example at 30°C"
+
+    ```
+    control atlas ph com cal,mid,6.99 
+    ```
 
 After this command if you take a pH reading the result should be 7.00 (or very close to it)
 
 ##### Low Point Calibration
 
-Repeat the procedure with the **Low point** 4.00 solution (the red one).
+* Repeat the procedure with the **Low point** 4.00 solution (the red one).
 
 ##### High Point Calibration
 
-The same step with **High point** 10.00 calibration solution (blue).
+* The same step with **High point** 10.00 calibration solution (blue)
 
----
-
-!!! info ""
-    *(not tested)* If your calibration solutions are not 4, 7 and 10, you can still use them and replace `[value of pH at current temperature]` by your values.
-
-!!! info ""
+!!! info "Extra notes"
     The command `control com cal,?` can be used to check the calibration status as explained on datasheet page 52. The answers can be:
 
     - **`?CAL,0`** → No calibration done
@@ -96,34 +93,37 @@ The same step with **High point** 10.00 calibration solution (blue).
     - **`?CAL,2`** → Two point calibration done
     - **`?CAL,3`** → Three point calibration done
 
+    *(not tested)* If your calibration solutions are not 4, 7 and 10, you can still use them and replace `[value of pH at current temperature]` by your values.
+
 ### Atlas EC
 
-!!! info ""
-    [Datasheet](https://www.atlas-scientific.com/_files/_datasheets/_circuit/EC_EZO_Datasheet.pdf)
-    - Calibration info on page 12.
-    - Calibration commands on page 55.
+You need to perform a 3 step calibration with a dry point and a 2-point calibration with the calibration solutions.
 
-**Example commands**
+!!! info "Datasheet"
+    Here you can find the [datasheet](https://www.atlas-scientific.com/_files/_datasheets/_circuit/EC_EZO_Datasheet.pdf):
 
-```
-control conductivity com r
-control conductivity com K,[probeType]
-control conductivity com K,?
-control conductivity com cal,[dry,clear,84]
-control conductivity com cal,low,1413
-control conductivity com cal,high,12,880
-control conductivity com cal,?
-```
+    - Calibration info on page 12
+    - Calibration commands on page 55
+
+    **Example commands**
+
+    ```
+    control conductivity com r
+    control conductivity com K,[probeType]
+    control conductivity com K,?
+    control conductivity com cal,[dry,clear,84]
+    control conductivity com cal,low,1413
+    control conductivity com cal,high,12,880
+    control conductivity com cal,?
+    ```
 
 #### 2-point calibration
 
-Order of the calibration :
+This is the order of the calibration: 
 
 1. set probe type
 1. dry point
 2. two-point calibration
-
----
 
 ##### Set probe type
 
@@ -144,7 +144,7 @@ control conductivity com K,?
 ?K,1.0
 ```
 
-!!! info ""
+!!! info "About the sensor"
     The **Electrical Conductivity** sensor provides four different metrics:
 
     * Electrical Conductivity → EC
@@ -160,19 +160,19 @@ Follow the steps below with the dry sensor before introducing it to the calibrat
 
 * Read the sensor multiple times until the reading is stable:
 
-```
-control conductivity com r
-0.00,0,0.00,1.000
-control conductivity com r
-0.00,0,0.00,1.000
-...
-```
+    ```
+    control conductivity com r
+    0.00,0,0.00,1.000
+    control conductivity com r
+    0.00,0,0.00,1.000
+    ...
+    ```
 
 * Issue the dry calibration command:
 
-```
-control conductivity com cal,dry
-```
+    ```
+    control conductivity com cal,dry
+    ```
 
 ##### Low point calibration
 
@@ -182,21 +182,21 @@ You can check the recommended calibration solutions for each probe on the _Probe
 
 * Read the sensor multiple times until the reading is stable:
 
-```
-control conductivity com r
-13470,7278,7.76,1.0
-control conductivity com r
-13230,7144,7.61,1.0
-...
-```
+    ```
+    control conductivity com r
+    13470,7278,7.76,1.0
+    control conductivity com r
+    13230,7144,7.61,1.0
+    ...
+    ```
 
 * Issue the low point calibration command. **The value to input is the one of the calibration solution**, for example _128800_:
 
-```
-control conductivity com cal,low,12880
-```
+    ```
+    control conductivity com cal,low,12880
+    ```
 
-After this command readings will **not change**
+After this command readings will **not change**.
 
 ##### High point calibration
 
@@ -206,25 +206,30 @@ Repeat this steps with **high point** calibration solution and when the readings
 control conductivity com cal,high,80000
 ```
 
-After this steps the **two point calibration is complete** and the readings will change.
+After this steps the **two point calibration is complete** and the readings **will change**.
 
 ### Atlas DO
 
-Order of the calibration:
+You have to options for this calibration:
 
-1. dry point
-2. 0 mg/L point (optional)
+1. Single point calibration (dry point)
+2. 2-point calibration (dry point and 0 mg/L point)
 
 !!! info "Datasheet"
-    [Datasheet](https://www.atlas-scientific.com/_files/_datasheets/_circuit/DO_EZO_Datasheet.pdf) (calibration info on page 9, calibration commands on page 52)
+    Here you can find the [datasheet](https://www.atlas-scientific.com/_files/_datasheets/_circuit/DO_EZO_Datasheet.pdf):
 
-```
-com dissolved r
-com dissolved cal
-com dissolved cal,0
-com dissolved cal,clear
-com dissolved cal,?
-```
+    - Calibration info on page 9
+    - Calibration commands on page 52)
+
+    **Example commands**
+
+    ```
+    control dissolved com r
+    control dissolved com cal
+    control dissolved com cal,0
+    control dissolved com cal,clear
+    control dissolved com cal,?
+    ```
 
 !!! warning "Pressure compensation"
     If the sensor is going to be used at more than 10 meters deep into the water **Pressure compensation** should be set with:
@@ -235,25 +240,25 @@ com dissolved cal,?
     
     More information on [datasheet](https://www.atlas-scientific.com/_files/_datasheets/_circuit/DO_EZO_Datasheet.pdf), page 57
 
-#### OPTION A: Single point calibration
+#### OPTION 1: Single point calibration
 
 * Read the sensor multiple times until the reading is stable:
 
-```
-control dissolved com r
-13.95,50%
-control dissolved com r
-13.76,49%
-...
-```
+    ```
+    control dissolved com r
+    13.95,50%
+    control dissolved com r
+    13.76,49%
+    ...
+    ```
 
 * Issue the calibration command, after this the readings will change. In this case, there is no need to add any value after `cal`. The sensor will take the current reading as the _dry point_.
 
-```
-control dissolved com cal
-```
+    ```
+    control dissolved com cal
+    ```
 
-#### OPTION B: 2-point calibration 
+#### OPTION 2: 2-point calibration
 
 Two point calibration is recommended if you require accurate readings below 1.0 mg/L. After completing the single point calibration procedure put the probe in the calibration solution.
 
@@ -261,19 +266,19 @@ Two point calibration is recommended if you require accurate readings below 1.0 
 
 * Read the sensor multiple times until the reading is stable:
 
-```
-control dissolved com r
-13.95,50%
-control dissolved com r
-13.76,49%
-...
-```
+    ```
+    control dissolved com r
+    13.95,50%
+    control dissolved com r
+    13.76,49%
+    ...
+    ```
 
 * Issue the calibration command. In this case, you have to input the value of the calibration solution too, for example _0_:
 
-```
-control dissolved com cal,0
-```
+    ```
+    control dissolved com cal,0
+    ```
 
 Reset your SCK and you are ready.
 
