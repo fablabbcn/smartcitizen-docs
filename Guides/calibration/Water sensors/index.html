@@ -1404,15 +1404,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#option-a-single-point-calibration" class="md-nav__link">
-    OPTION A: Single point calibration
+  <a href="#option-1-single-point-calibration" class="md-nav__link">
+    OPTION 1: Single point calibration
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#option-b-2-point-calibration" class="md-nav__link">
-    OPTION B: 2-point calibration
+  <a href="#option-2-2-point-calibration" class="md-nav__link">
+    OPTION 2: 2-point calibration
   </a>
   
 </li>
@@ -2103,15 +2103,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#option-a-single-point-calibration" class="md-nav__link">
-    OPTION A: Single point calibration
+  <a href="#option-1-single-point-calibration" class="md-nav__link">
+    OPTION 1: Single point calibration
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#option-b-2-point-calibration" class="md-nav__link">
-    OPTION B: 2-point calibration
+  <a href="#option-2-2-point-calibration" class="md-nav__link">
+    OPTION 2: 2-point calibration
   </a>
   
 </li>
@@ -2160,20 +2160,23 @@
 <p>After finishing the calibration process <strong>restart your SCK</strong> to start from a clean state.</p>
 </div>
 <h3 id="atlas-ph">Atlas PH<a class="headerlink" href="#atlas-ph" title="Permanent link">&para;</a></h3>
-<p>The pH value at current temperature can be found on the reference table on the calibration solution bottle. If the current temperature is not on it, use the closest value.</p>
+<p>The pH value at current temperature can be found on the reference table on the calibration solution bottle. If the current temperature is not on it, use the closest value. You need to perform a 3-point calibration with the calibration solutions.</p>
 <div class="admonition info">
 <p class="admonition-title">Datasheet</p>
-<p><a href="https://www.atlas-scientific.com/files/pH_EZO_Datasheet.pdf">Datasheet</a> (calibration theory on page 11, and commands on page 52)</p>
-</div>
+<p>Here you can find the <a href="https://www.atlas-scientific.com/files/pH_EZO_Datasheet.pdf">datasheet</a>:</p>
+<ul>
+<li>Calibration theory on page 11</li>
+<li>Commands on page 52</li>
+</ul>
 <p><strong>Example commands</strong></p>
 <div class="highlight"><pre><span></span><code>control ph com r
 control ph com cal,[mid,low,high],value
 control ph com cal,clear
 control ph com cal,?
 </code></pre></div>
+</div>
 <h4 id="3-point-calibration">3-point calibration<a class="headerlink" href="#3-point-calibration" title="Permanent link">&para;</a></h4>
-<p>First start a serial communication with the Smart Citizen Kit with <code>screen</code> or <code>pio device monitor</code>or even the serial monitor of the Arduino IDE.</p>
-<p>Order of the calibration : </p>
+<p>This is the order of the calibration: </p>
 <ol>
 <li>mid point</li>
 <li>low point</li>
@@ -2188,35 +2191,42 @@ control ph com cal,?
 <p><strong>Always clean the probe with distilled water between each calibration</strong></p>
 </div>
 <h5 id="mid-point-calibration">Mid point calibration<a class="headerlink" href="#mid-point-calibration" title="Permanent link">&para;</a></h5>
-<p>Put the sensor in the pH 7 calibration solution. </p>
+<ul>
+<li>Put the sensor in the pH 7 calibration solution. </li>
+</ul>
 <p><img alt="" src="https://i.imgur.com/WhpJiN2.png" /></p>
 <ul>
-<li>Read the sensor multiple times until the reading is stable:</li>
-</ul>
+<li>
+<p>Read the sensor multiple times until the reading is stable:</p>
 <div class="highlight"><pre><span></span><code>control ph com r
 6.48
 control ph com r
 6.45
 ...
 </code></pre></div>
-<ul>
-<li>Issue the midpoint calibration command:
+</li>
+<li>
+<p>Issue the midpoint calibration command:</p>
 <div class="highlight"><pre><span></span><code>control atlas ph com cal,mid,[value of pH at current temperature]
-</code></pre></div></li>
+</code></pre></div>
+</li>
 </ul>
-<p><span style="text-decoration:underline">example at 30°C:</span> </p>
+<div class="admonition info">
+<p class="admonition-title">Example at 30°C</p>
 <div class="highlight"><pre><span></span><code>control atlas ph com cal,mid,6.99 
 </code></pre></div>
+</div>
 <p>After this command if you take a pH reading the result should be 7.00 (or very close to it)</p>
 <h5 id="low-point-calibration">Low Point Calibration<a class="headerlink" href="#low-point-calibration" title="Permanent link">&para;</a></h5>
-<p>Repeat the procedure with the <strong>Low point</strong> 4.00 solution (the red one).</p>
+<ul>
+<li>Repeat the procedure with the <strong>Low point</strong> 4.00 solution (the red one).</li>
+</ul>
 <h5 id="high-point-calibration">High Point Calibration<a class="headerlink" href="#high-point-calibration" title="Permanent link">&para;</a></h5>
-<p>The same step with <strong>High point</strong> 10.00 calibration solution (blue).</p>
-<hr />
+<ul>
+<li>The same step with <strong>High point</strong> 10.00 calibration solution (blue)</li>
+</ul>
 <div class="admonition info">
-<p><em>(not tested)</em> If your calibration solutions are not 4, 7 and 10, you can still use them and replace <code>[value of pH at current temperature]</code> by your values.</p>
-</div>
-<div class="admonition info">
+<p class="admonition-title">Extra notes</p>
 <p>The command <code>control com cal,?</code> can be used to check the calibration status as explained on datasheet page 52. The answers can be:</p>
 <ul>
 <li><strong><code>?CAL,0</code></strong> → No calibration done</li>
@@ -2224,13 +2234,17 @@ control ph com r
 <li><strong><code>?CAL,2</code></strong> → Two point calibration done</li>
 <li><strong><code>?CAL,3</code></strong> → Three point calibration done</li>
 </ul>
+<p><em>(not tested)</em> If your calibration solutions are not 4, 7 and 10, you can still use them and replace <code>[value of pH at current temperature]</code> by your values.</p>
 </div>
 <h3 id="atlas-ec">Atlas EC<a class="headerlink" href="#atlas-ec" title="Permanent link">&para;</a></h3>
+<p>You need to perform a 3 step calibration with a dry point and a 2-point calibration with the calibration solutions.</p>
 <div class="admonition info">
-<p><a href="https://www.atlas-scientific.com/_files/_datasheets/_circuit/EC_EZO_Datasheet.pdf">Datasheet</a>
-- Calibration info on page 12.
-- Calibration commands on page 55.</p>
-</div>
+<p class="admonition-title">Datasheet</p>
+<p>Here you can find the <a href="https://www.atlas-scientific.com/_files/_datasheets/_circuit/EC_EZO_Datasheet.pdf">datasheet</a>:</p>
+<ul>
+<li>Calibration info on page 12</li>
+<li>Calibration commands on page 55</li>
+</ul>
 <p><strong>Example commands</strong></p>
 <div class="highlight"><pre><span></span><code>control conductivity com r
 control conductivity com K,[probeType]
@@ -2240,14 +2254,14 @@ control conductivity com cal,low,1413
 control conductivity com cal,high,12,880
 control conductivity com cal,?
 </code></pre></div>
+</div>
 <h4 id="2-point-calibration">2-point calibration<a class="headerlink" href="#2-point-calibration" title="Permanent link">&para;</a></h4>
-<p>Order of the calibration :</p>
+<p>This is the order of the calibration: </p>
 <ol>
 <li>set probe type</li>
 <li>dry point</li>
 <li>two-point calibration</li>
 </ol>
-<hr />
 <h5 id="set-probe-type">Set probe type<a class="headerlink" href="#set-probe-type" title="Permanent link">&para;</a></h5>
 <p>Depending on which probe you have (check drawing for reference) you should set the probe type to K 0.1, 1.0 or 10 (new drivers have K1.0 as default):</p>
 <p><img alt="" src="https://i.imgur.com/MWFjbYw.png" /></p>
@@ -2259,6 +2273,7 @@ control conductivity com cal,?
 ?K,1.0
 </code></pre></div>
 <div class="admonition info">
+<p class="admonition-title">About the sensor</p>
 <p>The <strong>Electrical Conductivity</strong> sensor provides four different metrics:</p>
 <ul>
 <li>Electrical Conductivity → EC</li>
@@ -2271,58 +2286,67 @@ control conductivity com cal,?
 <h5 id="dry-calibration">Dry calibration<a class="headerlink" href="#dry-calibration" title="Permanent link">&para;</a></h5>
 <p>Follow the steps below with the dry sensor before introducing it to the calibration solutions. You need to do this step even if the readings in dry state are 0.</p>
 <ul>
-<li>Read the sensor multiple times until the reading is stable:</li>
-</ul>
+<li>
+<p>Read the sensor multiple times until the reading is stable:</p>
 <div class="highlight"><pre><span></span><code>control conductivity com r
 0.00,0,0.00,1.000
 control conductivity com r
 0.00,0,0.00,1.000
 ...
 </code></pre></div>
-<ul>
-<li>Issue the dry calibration command:</li>
-</ul>
+</li>
+<li>
+<p>Issue the dry calibration command:</p>
 <div class="highlight"><pre><span></span><code>control conductivity com cal,dry
 </code></pre></div>
+</li>
+</ul>
 <h5 id="low-point-calibration_1">Low point calibration<a class="headerlink" href="#low-point-calibration_1" title="Permanent link">&para;</a></h5>
 <p>You can check the recommended calibration solutions for each probe on the <em>Probetypes</em> drawing (for instance, for K1.0 probe, <em>12,880uS</em> and <em>80,000uS</em> are recomended)</p>
 <p><img alt="" src="https://i.imgur.com/nendSkI.png" /></p>
 <ul>
-<li>Read the sensor multiple times until the reading is stable:</li>
-</ul>
+<li>
+<p>Read the sensor multiple times until the reading is stable:</p>
 <div class="highlight"><pre><span></span><code>control conductivity com r
 13470,7278,7.76,1.0
 control conductivity com r
 13230,7144,7.61,1.0
 ...
 </code></pre></div>
-<ul>
-<li>Issue the low point calibration command. <strong>The value to input is the one of the calibration solution</strong>, for example <em>128800</em>:</li>
-</ul>
+</li>
+<li>
+<p>Issue the low point calibration command. <strong>The value to input is the one of the calibration solution</strong>, for example <em>128800</em>:</p>
 <div class="highlight"><pre><span></span><code>control conductivity com cal,low,12880
 </code></pre></div>
-<p>After this command readings will <strong>not change</strong></p>
+</li>
+</ul>
+<p>After this command readings will <strong>not change</strong>.</p>
 <h5 id="high-point-calibration_1">High point calibration<a class="headerlink" href="#high-point-calibration_1" title="Permanent link">&para;</a></h5>
 <p>Repeat this steps with <strong>high point</strong> calibration solution and when the readings stabilize issue the command. Again, <strong>remember that the value to input here is the one from the calibration solution</strong>, for instance <em>80000</em>:</p>
 <div class="highlight"><pre><span></span><code>control conductivity com cal,high,80000
 </code></pre></div>
-<p>After this steps the <strong>two point calibration is complete</strong> and the readings will change.</p>
+<p>After this steps the <strong>two point calibration is complete</strong> and the readings <strong>will change</strong>.</p>
 <h3 id="atlas-do">Atlas DO<a class="headerlink" href="#atlas-do" title="Permanent link">&para;</a></h3>
-<p>Order of the calibration:</p>
+<p>You have to options for this calibration:</p>
 <ol>
-<li>dry point</li>
-<li>0 mg/L point (optional)</li>
+<li>Single point calibration (dry point)</li>
+<li>2-point calibration (dry point and 0 mg/L point)</li>
 </ol>
 <div class="admonition info">
 <p class="admonition-title">Datasheet</p>
-<p><a href="https://www.atlas-scientific.com/_files/_datasheets/_circuit/DO_EZO_Datasheet.pdf">Datasheet</a> (calibration info on page 9, calibration commands on page 52)</p>
-</div>
-<div class="highlight"><pre><span></span><code>com dissolved r
-com dissolved cal
-com dissolved cal,0
-com dissolved cal,clear
-com dissolved cal,?
+<p>Here you can find the <a href="https://www.atlas-scientific.com/_files/_datasheets/_circuit/DO_EZO_Datasheet.pdf">datasheet</a>:</p>
+<ul>
+<li>Calibration info on page 9</li>
+<li>Calibration commands on page 52)</li>
+</ul>
+<p><strong>Example commands</strong></p>
+<div class="highlight"><pre><span></span><code>control dissolved com r
+control dissolved com cal
+control dissolved com cal,0
+control dissolved com cal,clear
+control dissolved com cal,?
 </code></pre></div>
+</div>
 <div class="admonition warning">
 <p class="admonition-title">Pressure compensation</p>
 <p>If the sensor is going to be used at more than 10 meters deep into the water <strong>Pressure compensation</strong> should be set with:</p>
@@ -2330,38 +2354,42 @@ com dissolved cal,?
 </code></pre></div>
 <p>More information on <a href="https://www.atlas-scientific.com/_files/_datasheets/_circuit/DO_EZO_Datasheet.pdf">datasheet</a>, page 57</p>
 </div>
-<h4 id="option-a-single-point-calibration">OPTION A: Single point calibration<a class="headerlink" href="#option-a-single-point-calibration" title="Permanent link">&para;</a></h4>
+<h4 id="option-1-single-point-calibration">OPTION 1: Single point calibration<a class="headerlink" href="#option-1-single-point-calibration" title="Permanent link">&para;</a></h4>
 <ul>
-<li>Read the sensor multiple times until the reading is stable:</li>
-</ul>
+<li>
+<p>Read the sensor multiple times until the reading is stable:</p>
 <div class="highlight"><pre><span></span><code>control dissolved com r
 13.95,50%
 control dissolved com r
 13.76,49%
 ...
 </code></pre></div>
-<ul>
-<li>Issue the calibration command, after this the readings will change. In this case, there is no need to add any value after <code>cal</code>. The sensor will take the current reading as the <em>dry point</em>.</li>
-</ul>
+</li>
+<li>
+<p>Issue the calibration command, after this the readings will change. In this case, there is no need to add any value after <code>cal</code>. The sensor will take the current reading as the <em>dry point</em>.</p>
 <div class="highlight"><pre><span></span><code>control dissolved com cal
 </code></pre></div>
-<h4 id="option-b-2-point-calibration">OPTION B: 2-point calibration<a class="headerlink" href="#option-b-2-point-calibration" title="Permanent link">&para;</a></h4>
+</li>
+</ul>
+<h4 id="option-2-2-point-calibration">OPTION 2: 2-point calibration<a class="headerlink" href="#option-2-2-point-calibration" title="Permanent link">&para;</a></h4>
 <p>Two point calibration is recommended if you require accurate readings below 1.0 mg/L. After completing the single point calibration procedure put the probe in the calibration solution.</p>
 <p><img alt="" src="https://i.imgur.com/icxCaOZ.png" /></p>
 <ul>
-<li>Read the sensor multiple times until the reading is stable:</li>
-</ul>
+<li>
+<p>Read the sensor multiple times until the reading is stable:</p>
 <div class="highlight"><pre><span></span><code>control dissolved com r
 13.95,50%
 control dissolved com r
 13.76,49%
 ...
 </code></pre></div>
-<ul>
-<li>Issue the calibration command. In this case, you have to input the value of the calibration solution too, for example <em>0</em>:</li>
-</ul>
+</li>
+<li>
+<p>Issue the calibration command. In this case, you have to input the value of the calibration solution too, for example <em>0</em>:</p>
 <div class="highlight"><pre><span></span><code>control dissolved com cal,0
 </code></pre></div>
+</li>
+</ul>
 <p>Reset your SCK and you are ready.</p>
 <div class="admonition success">
 <p class="admonition-title">Ready to go?</p>
