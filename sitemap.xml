@@ -46,6 +46,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.smartcitizen.me/Components/GPS/</loc>
+         <lastmod>2021-10-29</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.smartcitizen.me/Components/Soil%20and%20water/</loc>
          <lastmod>2021-10-29</lastmod>
          <changefreq>daily</changefreq>
