@@ -210,7 +210,7 @@ After this steps the **two point calibration is complete** and the readings **wi
 
 ### Atlas DO
 
-You have to options for this calibration:
+You have two options for this calibration:
 
 1. Single point calibration (dry point)
 2. 2-point calibration (dry point and 0 mg/L point)
