@@ -32,7 +32,7 @@ Platformio is written in `python`, and this guide makes use of a lot of `python`
 !!! danger "Windows users"
     We recommend:
 
-    1. Using PowerShell (with [admin rights](https://www.howtogeek.com/194041/how-to-open-the-command-prompt-as-administrator-in-windows-8.1/))
+    1. Using PowerShell (with [admin rights](https://www.howtogeek.com/194041/how-to-open-the-command-prompt-as-administrator-in-windows-8.1/)). If you don't have it installed you can follow [these instructions](https://docs.microsoft.com/en-us/powershell/scripting/windows-powershell/install/installing-windows-powershell?view=powershell-7.1)
     2. Installing [Chocolatey](https://chocolatey.org/install#individual) and then proceeding with:
 
     ```
