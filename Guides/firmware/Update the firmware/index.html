@@ -1266,6 +1266,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#using-command-line-tools" class="md-nav__link">
+    Using command-line tools
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1918,6 +1925,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#using-command-line-tools" class="md-nav__link">
+    Using command-line tools
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1973,7 +1987,7 @@
 <p><strong>Double click the reset button</strong> of your SCK, the SCK led should turn green and a new drive called <em>SCK-20</em> should appear on your computer file browser</p>
 </li>
 </ul>
-<p><img alt="" src="/assets/images/sck_2/reset_button.png" /></p>
+<p><img alt="" src="/assets/images/sck_2/SCK21_Reset.png" /></p>
 <ul>
 <li>Inside the <em>SCK-20</em> drive you should see some files, <strong>double click the <em>INDEX.HTM</em></strong> file and our  <a href="https://github.com/fablabbcn/smartcitizen-kit-21/releases/latest">github releases page</a> will open in your browser 
 <strong>Download the new firmware</strong> called <em>SAM_firmware_XXX.uf2</em> and save it to your computer</li>
@@ -2023,6 +2037,34 @@
 <p class="admonition-title">Doesn't work?</p>
 <p>Sometimes in the phone the firmware selection screen will not pop up. You can always try to do the <em>developer-way</em> with <a href="/Guides/firmware/Edit the Firmware/#manual-update">check this guide here</a></p>
 </div>
+<h2 id="using-command-line-tools">Using command-line tools<a class="headerlink" href="#using-command-line-tools" title="Permanent link">&para;</a></h2>
+<p>The steps below are a summary of the steps you will need to update the firmware in case you are handling a lot of sensosr. The process builds on top the tools used in the <a href="/Guides/firmware/Edit%20the%20Firmware">edit the firmware</a>, but simplified as we do not want to compile the firmware (since we are not changing it):</p>
+<ol>
+<li>
+<p>Install python as per the instructions <a href="/Guides/firmware/Edit%20the%20Firmware/#installing-python">here</a></p>
+</li>
+<li>
+<p>Install <a href="/Guides/firmware/Edit%20the%20Firmware/#installing-requirements">python requirements</a></p>
+</li>
+<li>
+<p>Install git following <a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">these instructions </a>. Check that you need to install it first by simply typing <code>git</code> in your terminal. If the output is not <code>command not found</code>, skip to step 4</p>
+</li>
+<li>
+<p>In your terminal, navigate to a folder in which you want to download the firmware in. Then, get the firmware following the <a href="/Guides/firmware/Edit%20the%20Firmware/#getting-the-firmware_1">instructions here</a></p>
+</li>
+<li>
+<p>Navigate to the firmware folder, plug the sensor to your computer and run the command below.</p>
+<p>This will upload the SAM firmware:
+<div class="highlight"><pre><span></span><code>python make.py flash sam -v
+</code></pre></div></p>
+<p>This will also upload the ESP firmware:
+<div class="highlight"><pre><span></span><code>python make.py flash esp -v
+</code></pre></div></p>
+<p>You can upload both at the same time by:
+<div class="highlight"><pre><span></span><code>python make.py flash sam esp -v
+</code></pre></div></p>
+</li>
+</ol>
                 
               
               
