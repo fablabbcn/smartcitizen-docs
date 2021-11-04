@@ -27,7 +27,7 @@ The SAMD21 (SAM for short) chip manages the main part of the firmware. This firm
 
 	* **Double click the reset button** of your SCK, the SCK led should turn green and a new drive called _SCK-20_ should appear on your computer file browser
 
-	![](/assets/images/sck_2/reset_button.png)
+	![](/assets/images/sck_2/SCK21_Reset.png)
 
 	* Inside the _SCK-20_ drive you should see some files, **double click the _INDEX.HTM_** file and our  [github releases page](https://github.com/fablabbcn/smartcitizen-kit-21/releases/latest) will open in your browser 
 	**Download the new firmware** called _SAM_firmware_XXX.uf2_ and save it to your computer
@@ -77,3 +77,32 @@ If you want to force the ESP to upload, please, follow the steps below.
 	
 !!! danger "Doesn't work?"
 	Sometimes in the phone the firmware selection screen will not pop up. You can always try to do the _developer-way_ with [check this guide here](/Guides/firmware/Edit the Firmware/#manual-update)
+
+## Using command-line tools
+
+The steps below are a summary of the steps you will need to update the firmware in case you are handling a lot of sensosr. The process builds on top the tools used in the [edit the firmware](/Guides/firmware/Edit%20the%20Firmware), but simplified as we do not want to compile the firmware (since we are not changing it):
+
+1. Install python as per the instructions [here](/Guides/firmware/Edit%20the%20Firmware/#installing-python)
+
+2. Install [python requirements](/Guides/firmware/Edit%20the%20Firmware/#installing-requirements)
+
+3. Install git following [these instructions ](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git). Check that you need to install it first by simply typing `git` in your terminal. If the output is not `command not found`, skip to step 4
+
+4. In your terminal, navigate to a folder in which you want to download the firmware in. Then, get the firmware following the [instructions here](/Guides/firmware/Edit%20the%20Firmware/#getting-the-firmware_1)
+
+5. Navigate to the firmware folder, plug the sensor to your computer and run the command below.
+
+	This will upload the SAM firmware:
+	```
+	python make.py flash sam -v
+	``` 
+
+	This will also upload the ESP firmware:
+	```
+	python make.py flash esp -v
+	```
+
+	You can upload both at the same time by:
+	```
+	python make.py flash sam esp -v
+	```
