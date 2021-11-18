@@ -81,6 +81,8 @@ The default SCK 2.1 Kits come with a 2000mAh LiPo battery model PL804050 (see [d
 
 For custom projects we also offer a bigger 6000mAh LiPo battery model DTP605068 (see [datasheet](/assets/datasheets/batteries/DTP605068_6000mAh/DTP605068_6000mAh_Datasheet.pdf) and [material safety data sheets](/assets/datasheets/batteries/DTP605068_6000mAh/DTP605068_6000mAh_Safety_Datasheet.pdf)).
 
+The connector is [JST-PHR-2](https://www.digikey.com/en/products/detail/jst-sales-america-inc/PHR-2/608607). When looking at the data board from the top (white side), the positive of the battery (red) should be on the left.
+
 We are working on a new dynamic battery calculator. Currently, you can find some approximate data [here](/Smart Citizen Kit/#battery-duration) for the SCK 2.1.
 
 ## Are the electronics waterproof?
