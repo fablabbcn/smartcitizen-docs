@@ -4,7 +4,7 @@
 
 Although most of the time we have been working with air quality sensors and air metrics, we also like to keep an eye on soil and water sensors. This page details our integration of water and soil sensors, often interchangeable in some cases.
 
-Different sensor probes can be selected for different needs. For example the setup shown above is designed for soil measurements and includes [Atlas Scientific](https://www.atlas-scientific.com) temperature, conductivity and PH probes. It also consists of a Chirp Moisture Sensor as described in the [above section](/Components/sensors/soil/Soil Moisture Sensors/). As an additional example the setup in the figure below is designed for water monitoring on aquaponics systems and includes Atlas Scientific probes for PH, conductivity and dissolved oxygen.
+Different sensor probes can be combined for different configurations. For example the setup shown above is designed for soil measurements and includes [Atlas Scientific](https://www.atlas-scientific.com) temperature, conductivity and PH probes and a GPS. Additional sensors include a Chirp Moisture Sensor as described in the [soil section](/Components/sensors/soil/Soil Moisture Sensors/). Another example is the setup in the figure below is designed for water monitoring on aquaponics systems and includes Atlas Scientific probes for PH, conductivity and dissolved oxygen.
 
 ![](https://i.imgur.com/gQavZqU.png)
 
