@@ -37,7 +37,7 @@ The sensors described below are additional to those already supported on the [Sm
 !!! warning "Soil and water"
     For probes that can be used in both, soil and water, make sure to [follow this procedure](https://atlas-scientific.com/files/ec_soil.pdf).
 
-### Atlas Scientific Carrier board board 
+### Atlas Scientific Carrier board 
 
 We recommend using [Whitebox Labs Tentacle T3](https://www.whiteboxes.ch/shop/tentacle-t3-for-raspberry-pi/) that hosts up to 3 Atlas Scientific Probes, and can be stacked with several units. It connects to the SCK via the Aux sensor connector, and needs external 5V connection, which means that it can't run on battery directly connected to the SCK without extras. If you want to make your own, before the Tentacle T3 existed we designed a [custom board](https://github.com/fablabbcn/monitoring-kit-hardware) in collaboration in with [Aquapiooners](http://aquapioneers.io).
 
