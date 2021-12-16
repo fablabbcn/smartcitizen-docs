@@ -56,10 +56,6 @@ Some example metadata that can be stored would be:
 - Sensor calibration data or reference
 - Availability of reference equipment measurement and type
 
-A brief schema of the test structure is specified below:
-
-![](https://i.imgur.com/CSi5tL4.png)
-
 !!! info "Check the guide"
     Check the guide on how to [organise sensor data](/Guides/data/Organise your data/)
 
@@ -105,59 +101,6 @@ Have a look at the features within the framework:
 
 !!! info
     Check the guide on how to set it up [here](/Guides/data/Upload data to zenodo/)
-
-#### Loading and managing the data
-
-Data can be downloaded from the SmartCitizen API with the KIT IDs or using csv. In order to tidy up the data, the recordings are organised around the concept of **test**, an entity containing all the kits' references, sensors and general information regarding the conditions at which the measurements were carried out:
-
-- Test Location, date and author
-- Kit type and reference
-- Sensor calibration data or reference
-- Availability of reference equipment measurement and type
-
-A brief schema of the test structure is specified below:
-
-![](https://i.imgur.com/CSi5tL4.png)
-
-All this structure is filled up at the test creation with a dedicated script, saving future time to understand mismatching reading units, timestamps formats and so on.
-
-#### Exploratory data analysis
-
-The device's data can be explored visually with different types of plots. It can also be generated in batch with descriptor files, as shown in the [guide](/Sensor%20Analysis%20Framework/guides/Analyse%20your%20data%20in%20batch).
- Some of the functionalities implemented are:
-
-- Time series visualisation
-- Correlation plot and pairs plot
-- Correlogram
-- Heatmaps
-- Violin plots
-
-This section uses interactive plotting frameworks as [Plotly](http://plot.ly) and the well known [matplotlib](http://matplotlib.org/) to serve different exploratory analysis tools.
-
-#### Data models
-
-The data models section includes tools to prepare, train and evaluate models coming from different devices within a test in order to calibrate your sensors. It provides an interface with common statistics and machine learning frameworks such as [sci-kit learn](http://scikit-learn.org/), [tensorflow](https://www.tensorflow.org), [keras](http://keras.io/), and [stats models](http://www.statsmodels.org/dev/tsa.html#module-statsmodels.tsa). These frameworks provide tools to perform:
-
-**Pre-processing stage:**
-
-- **Outliers** detection with Holt-Winters methods (triple exponential smoothing) and XGBoost Regressors
-- Data study and analysis for **multicollinearity** and **autocorrelation** in order to determine significant variables and avoid model overfit with non-significant exogenous variables
-- **Trend decomposition** and **seasonality** analysis
-
-**Model stage**
-
-- **Baseline model** estimations in order to assess minimum targets for model quality (using naive regression models)
-- **Ordinary Linear Regression** techniques for univariate and multivariate linear and non-linear independent variables
-- **ARIMA-X** (Autorregresive, Integrated, Moving Average) models with exogenous variables using Box-Jenkis parameter selection methods
-- **Supervised learning** techiques:
-    - Single and multiple layers **LSTM** (Long-Thort Term Memory) networks with configurable structure
-    - Random Forest and Support Vector methods for regression
-
-An example of the model is shown below for the estimation of the SGX4514 CO with the use of the rest of the Kit's available sensor, using a single layer LSTM network only two weeks of training:
-
-![](https://i.imgur.com/Sdy5vWy.png)
-
-Depending on the model selected, different validation techniques are implemented, in order to verify models' assumptions and avoid data misinterpretation (i.e. *Durbin Watson* or *Jacque Bera* test for linear regression). Finally, it is important to follow carefully the instructions as stated in the notebook, in order to avoid low model quality.
 
 ## Source files
 
