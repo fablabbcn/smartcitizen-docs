@@ -68,3 +68,7 @@ The issue is caused due to a firmware bug (light) and a problem with some SHT31 
 ### Noise readings don't go below 45dBA
 
 This issue is caused due to a firmware bug that initialized badly the I2S microphone in SCK2.0 and SCK2.1 sensors. A full explanation is detailed in the [forum](https://forum.smartcitizen.me/t/origin-of-the-noise-db-a-code/1391/12) and and the fix was released with a pre-releasue [V0.9.8](https://github.com/fablabbcn/smartcitizen-kit-21/releases/tag/0.9.8) of the SAMD firmware.
+
+### PM Sensor always reads 0ug/m3
+
+This issue has been detected after a batch from Plantower PMS5003 sensors during 2021 that yields 0ug/m3. A full explanation is detailed in the [forum](https://forum.smartcitizen.me/t/pm-sensor-always-reading-0-0/1649/21) and the fix was released in a branch in [V0.9.8](https://github.com/fablabbcn/smartcitizen-kit-21/tree/PMfix). The sensor operation is correct, and there is no need for hardware replacement.
