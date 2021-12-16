@@ -66,8 +66,6 @@ Since co-location possibilities could be limited, two options are compared for t
 
 A whole section of the electrochemical sensors validation is available in the iSCAPE D7.8 report on _Sensor monitoring experiences and technological innovations_ [^4].
 
-## References
-
 [^1]: [The use of electrochemical sensors for monitoring urban air quality
 in low-cost, high-density networks - _M.I. Mead, O.A.M. Popoola, G.B. Stewart, P. Landshoff, M. Calleja, M. Hayesb, J.J. Baldovi, M.W. McLeod, T.F. Hodgson, J. Dicks, A. Lewis J. Cohen, R. Baron, J.R. Saffell, R.L. Jones_](https://www.sciencedirect.com/science/article/pii/S1352231012011284?via%3Dihub)
 

@@ -7,6 +7,11 @@ The [data board](/Components/Data Board/) features a standard Grove connector wh
 
 ## Supported sensors
 
+This is a list of supported sensors that you can connect directly to the **auxiliary port**.
+
+!!! info "Looking for datasheets?"
+    Refer to the [Performance section](/Components/sensors/performance) for more information and datasheets.
+
 ### General purpose
 
 - [Seeed Grove ADC](http://wiki.seeedstudio.com/Grove-I2C_ADC/) - 12 bit ADC from Seeed Studio

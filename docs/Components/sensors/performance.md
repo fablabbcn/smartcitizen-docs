@@ -1,13 +1,16 @@
 # Sensor performance summary
 
-## Metal Oxyde Sensors (all versions)
+## Metal Oxyde Sensors
 
 The metal oxyde sensors section is so extense, that we decided to dedicate a full section to them. Have a look at it [here](/Components/sensors/air/Metal%20Oxide/)!
 
 !!! info "What are normal values?"
     More on the [AMS CCS811, eCO2 and TVOC](/Components/sensors/air/CCS811/)
 
-## Noise Level Sensor (V2.0 onwards)
+## Noise Level Sensor
+
+!!! info "Version"
+    This sensor is supported from V2.0 onwards
 
 The noise sensor is based on the INVENSENSE ICS-43432[^3] high-performance, low power, digital output, omnidirectional MEMS microphone with a bottom port and I2S interface. The sensors are similar to the one found on some high-end smartphones. It delivers the information directly in a digital format to the MCU where a custom library has been developed to provide noise data in dB scales A, C and Z. The raw FFT is also accessible to support characterization of specific noise frequencies. The sensor has been calibrated specifically for the project on an anechoic chamber using standard microphone calibration procedures.
 
@@ -25,7 +28,10 @@ The following characteristics have been considered for the sensor choice
 !!! tip "Sensor integration"
     ![](https://i.imgur.com/KHkyHEX.png)
 
-## Relative Humidity and Air Temperature Sensor (V2.0 onwards)
+## Relative Humidity and Air Temperature Sensor
+
+!!! info "Version"
+    This sensor is supported from V2.0 onwards
 
 Relative Humidity and Air Temperature Sensor are provided by a SENSIRION SHT31[^4] module.
 
@@ -43,8 +49,11 @@ The following characteristics have been considered for the sensor choice
 !!! tip "Sensor integration"
     ![](https://i.imgur.com/xoF233L.png)
 
-## Ambient Light Sensor (V1.5 onwards)
+## Ambient Light Sensor
 
+!!! info "Version"
+    This sensor is supported from V1.5 onwards
+    
 The Ambient Light Sensors is based around the ROHM BH1721FVC[^5] which uses an LDR10 combined with an ADC and the corresponding circuit that allows communicating with the device with the I2C protocol.
 
 The following characteristics have been considered for the sensor choice:
@@ -58,7 +67,10 @@ The following characteristics have been considered for the sensor choice:
 !!! tip "Sensor integration"
     ![](https://i.imgur.com/vYPNdcC.png)
 
-## Barometric Pressure (V2.0 onwards)
+## Barometric Pressure
+
+!!! info "Version"
+    This sensor is supported from V2.0 onwards
 
 The Barometric Pressure sensor is based around the NXP MPL3115A2[^6] is
 a compact, piezoresistive, absolute pressure sensor with an I2C digital
@@ -96,6 +108,9 @@ The following characteristics have been considered for the sensor choice (see mo
 
 ## CO2 NDIR Sensor
 
+!!! info "Version"
+    This sensor is supported from V2.1 onwards
+
 Done with a CO2 NDIR sensor from Sensirion's SCD30[^9]. The sensor also features a Sensition SHT31 for T/H measurements and can be connected to the I2C bus via the auxiliary grove port.
 
 * CO2 measurement range: 0 - 40'000 ppm
@@ -112,8 +127,6 @@ Done with a CO2 NDIR sensor from Sensirion's SCD30[^9]. The sensor also features
 <a class="github-button" data-size="large" href="https://github.com/fablabbcn/smartcitizen-kit-21/archive/master.zip" data-icon="octicon-cloud-download" aria-label="Download from GitHub">Download</a>
 
 <a class="github-button" data-size="large" href="https://github.com/fablabbcn/smartcitizen-kit-21" aria-label="Check the source code">Check the source code</a>
-
----
 
 [^2]: SGX MICS 4514 Technical Datasheet
 
@@ -145,4 +158,4 @@ Done with a CO2 NDIR sensor from Sensirion's SCD30[^9]. The sensor also features
 
 [^9]: Sensirion SCD30 Technical Datasheet 
 
-[^9]: Sensirion SCD30 Technical Datasheet [https://files.seeedstudio.com/wiki/Grove-CO2-Temperature-Humidity-Sensor-SCD30/res/Sensirion_CO2_Sensors_SCD30_Datasheet.pdf](https://files.seeedstudio.com/wiki/Grove-CO2-Temperature-Humidity-Sensor-SCD30/res/Sensirion_CO2_Sensors_SCD30_Datasheet.pdf)
+    [https://files.seeedstudio.com/wiki/Grove-CO2-Temperature-Humidity-Sensor-SCD30/res/Sensirion_CO2_Sensors_SCD30_Datasheet.pdf](https://files.seeedstudio.com/wiki/Grove-CO2-Temperature-Humidity-Sensor-SCD30/res/Sensirion_CO2_Sensors_SCD30_Datasheet.pdf)
