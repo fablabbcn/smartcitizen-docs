@@ -76,12 +76,14 @@ choice:
 !!! tip "Sensor integration"
     ![](https://i.imgur.com/5g64P7r.png)
 
-## External PM Sensor (V2.0 onwards)
+## PM Sensor
 
-An external connector on the board supports the connection of a Plantower PMS 5003 or PMS 7003[^8]. The device is a digital particle concentration sensor that uses the Laser Scattering principle to obtain the number of suspended particles in the air. The sensor can be fully enabled or disabled in software to save energy when not in use.
+!!! info "Version"
+    This sensor is supported from V2.0 onwards
 
-The following characteristics have been considered for the sensor
-choice:
+An external connector on the board supports the connection of a Plantower PMS 5003 or PMS 7003[^8]. The device is a digital particle optical counter sensor that uses the _laser scattering_ principle to obtain the number of suspended particles in the air. The sensor can be fully enabled or disabled in software to save energy when not in use.
+
+The following characteristics have been considered for the sensor choice (see more in [sensor considerations](/Components/sensors/air/PM Sensors/#sensor-considerations)):
 
 * Provides PM1, PM 2.5 and PM10 measurements in ug/m³
 * Minimal distinguishable particle diameter of 0.3 um
@@ -137,6 +139,10 @@ Done with a CO2 NDIR sensor from Sensirion's SCD30[^9]. The sensor also features
 
     [https://datasheets.maximintegrated.com/en/ds/MAX30105.pdf](https://datasheets.maximintegrated.com/en/ds/MAX30105.pdf)
 
-[^8]: PLANTOWER PMS5003 Technical Datasheet [https://aqicn.org/air/view/sensor/spec/pms5003.pdf](https://aqicn.org/air/view/sensor/spec/pms5003.pdf)
+[^8]: PLANTOWER PMS5003 [Technical Datasheet](/assets/datasheets/pms5003/PTQ3004-2015 PMS5003 series data manual English_SLT_V1.0K.pdf) 
+
+    [Also in https://aqicn.org/air/view/sensor/spec/pms5003.pdf](https://aqicn.org/air/view/sensor/spec/pms5003.pdf)
+
+[^9]: Sensirion SCD30 Technical Datasheet 
 
 [^9]: Sensirion SCD30 Technical Datasheet [https://files.seeedstudio.com/wiki/Grove-CO2-Temperature-Humidity-Sensor-SCD30/res/Sensirion_CO2_Sensors_SCD30_Datasheet.pdf](https://files.seeedstudio.com/wiki/Grove-CO2-Temperature-Humidity-Sensor-SCD30/res/Sensirion_CO2_Sensors_SCD30_Datasheet.pdf)
