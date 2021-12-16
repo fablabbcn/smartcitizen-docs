@@ -122,6 +122,23 @@ Done with a CO2 NDIR sensor from Sensirion's SCD30[^9]. The sensor also features
 !!! warning "Calibration"
     Make sure to check the [sensor calibration guide](/Guides/calibration/SCD30 CO2 sensor/) for this sensor.
 
+## Electrochemical sensors
+
+!!! info "Version"
+    This sensor is supported from V2.1 onwards
+
+We currently support electrochemical sensors from [Alphasense Ltd.](https://www.alphasense.com/index.php/air/) with a digital interface [Analog Sensor Board](/Components/boards/Analog Sensor Board/) that can operate at 3.3V or 5V. The basic data postprocessing that is specified in [Alphasense Application Note 803_04](/assets/notes/alphasense-an-803-04-zero-offset.pdf) is implemented as a default processing for these sensors and that we can [trigger automatically](/Guides/data/Custom%20data%20processing/#automatic-data-processing).
+
+Other sensors can be used, such as [SPEC Sensors](https://www.spec-sensors.com/), with the same hardware (**note that these sensors operate at 3.3V**). The process is now been worked on in this [thread in our forum](https://forum.smartcitizen.me/t/smart-citizen-station-extended-with-anemometer-rain-gps-4g-radio-and-solar/1622) and will be integrated in the basic data postprocessing as with Alphasense sensors to be triggered automatically.
+
+The sensors that are currently supported are:
+
+- [Alphasense Sensors](https://www.alphasense.com/product_type/air-quality-sensors/): CO, NO2, NO, OX, SO2, H2S, both in A or B-Series. These sensors are affected differently by temperature and humidity (some of them are by both, some of them are not). It is important to consider cross-sensitivity of the sensors in this case, for instance:
+    + OX sensor is affected by NO2 and O3
+    + SO2 is affected by SO2 and O3
+
+- [SPEC Sensors - WIP](https://www.spec-sensors.com/product-category/analog-gas-sensors/): CO, NO2, SO2, O3, H2S
+
 ## Source files
 
 <a class="github-button" data-size="large" href="https://github.com/fablabbcn/smartcitizen-kit-21/archive/master.zip" data-icon="octicon-cloud-download" aria-label="Download from GitHub">Download</a>
