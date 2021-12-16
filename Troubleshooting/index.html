@@ -945,6 +945,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#pm-sensor-always-reads-0ugm3" class="md-nav__link">
+    PM Sensor always reads 0ug/m3
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1987,6 +1994,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#pm-sensor-always-reads-0ugm3" class="md-nav__link">
+    PM Sensor always reads 0ug/m3
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2055,6 +2069,8 @@
 <p>The issue is caused due to a firmware bug (light) and a problem with some SHT31 sensors (also fixed by firmware). A full explanation is detailed in the <a href="https://forum.smartcitizen.me/t/the-light-sensor-is-fixed/1172">forum</a> and the fix was released with <a href="https://github.com/fablabbcn/smartcitizen-kit-21/releases/tag/0.9.4">V0.9.4</a> of the SAMD firmware.</p>
 <h3 id="noise-readings-dont-go-below-45dba">Noise readings don't go below 45dBA<a class="headerlink" href="#noise-readings-dont-go-below-45dba" title="Permanent link">&para;</a></h3>
 <p>This issue is caused due to a firmware bug that initialized badly the I2S microphone in SCK2.0 and SCK2.1 sensors. A full explanation is detailed in the <a href="https://forum.smartcitizen.me/t/origin-of-the-noise-db-a-code/1391/12">forum</a> and and the fix was released with a pre-releasue <a href="https://github.com/fablabbcn/smartcitizen-kit-21/releases/tag/0.9.8">V0.9.8</a> of the SAMD firmware.</p>
+<h3 id="pm-sensor-always-reads-0ugm3">PM Sensor always reads 0ug/m3<a class="headerlink" href="#pm-sensor-always-reads-0ugm3" title="Permanent link">&para;</a></h3>
+<p>This issue has been detected after a batch from Plantower PMS5003 sensors during 2021 that yields 0ug/m3. A full explanation is detailed in the <a href="https://forum.smartcitizen.me/t/pm-sensor-always-reading-0-0/1649/21">forum</a> and the fix was released in a branch in <a href="https://github.com/fablabbcn/smartcitizen-kit-21/tree/PMfix">V0.9.8</a>. The sensor operation is correct, and there is no need for hardware replacement.</p>
                 
               
               

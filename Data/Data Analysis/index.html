@@ -955,33 +955,6 @@
     How we use it
   </a>
   
-    <nav class="md-nav" aria-label="How we use it">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#loading-and-managing-the-data" class="md-nav__link">
-    Loading and managing the data
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#exploratory-data-analysis" class="md-nav__link">
-    Exploratory data analysis
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#data-models" class="md-nav__link">
-    Data models
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -1914,33 +1887,6 @@
     How we use it
   </a>
   
-    <nav class="md-nav" aria-label="How we use it">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#loading-and-managing-the-data" class="md-nav__link">
-    Loading and managing the data
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#exploratory-data-analysis" class="md-nav__link">
-    Exploratory data analysis
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#data-models" class="md-nav__link">
-    Data models
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -2013,8 +1959,6 @@
 <li>Sensor calibration data or reference</li>
 <li>Availability of reference equipment measurement and type</li>
 </ul>
-<p>A brief schema of the test structure is specified below:</p>
-<p><img alt="" src="https://i.imgur.com/CSi5tL4.png" /></p>
 <div class="admonition info">
 <p class="admonition-title">Check the guide</p>
 <p>Check the guide on how to <a href="/Guides/data/Organise your data/">organise sensor data</a></p>
@@ -2053,50 +1997,6 @@
 <p class="admonition-title">Info</p>
 <p>Check the guide on how to set it up <a href="/Guides/data/Upload data to zenodo/">here</a></p>
 </div>
-<h4 id="loading-and-managing-the-data">Loading and managing the data<a class="headerlink" href="#loading-and-managing-the-data" title="Permanent link">&para;</a></h4>
-<p>Data can be downloaded from the SmartCitizen API with the KIT IDs or using csv. In order to tidy up the data, the recordings are organised around the concept of <strong>test</strong>, an entity containing all the kits' references, sensors and general information regarding the conditions at which the measurements were carried out:</p>
-<ul>
-<li>Test Location, date and author</li>
-<li>Kit type and reference</li>
-<li>Sensor calibration data or reference</li>
-<li>Availability of reference equipment measurement and type</li>
-</ul>
-<p>A brief schema of the test structure is specified below:</p>
-<p><img alt="" src="https://i.imgur.com/CSi5tL4.png" /></p>
-<p>All this structure is filled up at the test creation with a dedicated script, saving future time to understand mismatching reading units, timestamps formats and so on.</p>
-<h4 id="exploratory-data-analysis">Exploratory data analysis<a class="headerlink" href="#exploratory-data-analysis" title="Permanent link">&para;</a></h4>
-<p>The device's data can be explored visually with different types of plots. It can also be generated in batch with descriptor files, as shown in the <a href="/Sensor%20Analysis%20Framework/guides/Analyse%20your%20data%20in%20batch">guide</a>.
- Some of the functionalities implemented are:</p>
-<ul>
-<li>Time series visualisation</li>
-<li>Correlation plot and pairs plot</li>
-<li>Correlogram</li>
-<li>Heatmaps</li>
-<li>Violin plots</li>
-</ul>
-<p>This section uses interactive plotting frameworks as <a href="http://plot.ly">Plotly</a> and the well known <a href="http://matplotlib.org/">matplotlib</a> to serve different exploratory analysis tools.</p>
-<h4 id="data-models">Data models<a class="headerlink" href="#data-models" title="Permanent link">&para;</a></h4>
-<p>The data models section includes tools to prepare, train and evaluate models coming from different devices within a test in order to calibrate your sensors. It provides an interface with common statistics and machine learning frameworks such as <a href="http://scikit-learn.org/">sci-kit learn</a>, <a href="https://www.tensorflow.org">tensorflow</a>, <a href="http://keras.io/">keras</a>, and <a href="http://www.statsmodels.org/dev/tsa.html#module-statsmodels.tsa">stats models</a>. These frameworks provide tools to perform:</p>
-<p><strong>Pre-processing stage:</strong></p>
-<ul>
-<li><strong>Outliers</strong> detection with Holt-Winters methods (triple exponential smoothing) and XGBoost Regressors</li>
-<li>Data study and analysis for <strong>multicollinearity</strong> and <strong>autocorrelation</strong> in order to determine significant variables and avoid model overfit with non-significant exogenous variables</li>
-<li><strong>Trend decomposition</strong> and <strong>seasonality</strong> analysis</li>
-</ul>
-<p><strong>Model stage</strong></p>
-<ul>
-<li><strong>Baseline model</strong> estimations in order to assess minimum targets for model quality (using naive regression models)</li>
-<li><strong>Ordinary Linear Regression</strong> techniques for univariate and multivariate linear and non-linear independent variables</li>
-<li><strong>ARIMA-X</strong> (Autorregresive, Integrated, Moving Average) models with exogenous variables using Box-Jenkis parameter selection methods</li>
-<li><strong>Supervised learning</strong> techiques:<ul>
-<li>Single and multiple layers <strong>LSTM</strong> (Long-Thort Term Memory) networks with configurable structure</li>
-<li>Random Forest and Support Vector methods for regression</li>
-</ul>
-</li>
-</ul>
-<p>An example of the model is shown below for the estimation of the SGX4514 CO with the use of the rest of the Kit's available sensor, using a single layer LSTM network only two weeks of training:</p>
-<p><img alt="" src="https://i.imgur.com/Sdy5vWy.png" /></p>
-<p>Depending on the model selected, different validation techniques are implemented, in order to verify models' assumptions and avoid data misinterpretation (i.e. <em>Durbin Watson</em> or <em>Jacque Bera</em> test for linear regression). Finally, it is important to follow carefully the instructions as stated in the notebook, in order to avoid low model quality.</p>
 <h2 id="source-files">Source files<a class="headerlink" href="#source-files" title="Permanent link">&para;</a></h2>
 <p><a class="github-button" data-size="large" href="https://github.com/fablabbcn/smartcitizen-data/archive/master.zip" data-icon="octicon-cloud-download" aria-label="Download from GitHub">Download</a></p>
 <p><a class="github-button" data-size="large" href="https://github.com/fablabbcn/smartcitizen-data" aria-label="Check the source code">Check the source code</a></p>
