@@ -1917,14 +1917,10 @@
                 
                 
                 <h1 id="custom-data-processing">Custom data processing<a class="headerlink" href="#custom-data-processing" title="Permanent link">&para;</a></h1>
-<div class="admonition warning">
-<p class="admonition-title">WIP</p>
-<p>This is a WIP. More info coming <strong>very</strong> soon.</p>
-</div>
 <p>Data is processed outside of the sensors in a periodic way by <a href="https://github.com/fablabbcn/smartcitizen-data/"><code>scdata</code></a>. There are three ways to have a custom data processing:</p>
 <ol>
 <li><a href="mailto:support@smartcitizen.me">Contact us</a> and request it</li>
-<li><a href="/Guides/data/Install the framework/">Set up a development environment</a> and following the example on <a href="https://github.com/fablabbcn/smartcitizen-data/examples/README.md">data processing</a></li>
+<li><a href="/Guides/data/Install the framework/#development-instructions-advanced">Set up a development environment</a> and following the example on <a href="https://github.com/fablabbcn/smartcitizen-data/examples/README.md">data processing</a></li>
 <li>Follow the guide below for automatic processing</li>
 </ol>
 <h2 id="automatic-data-processing">Automatic data processing<a class="headerlink" href="#automatic-data-processing" title="Permanent link">&para;</a></h2>
@@ -1933,7 +1929,22 @@
 <p class="admonition-title">How to do it?</p>
 <p>Visit <a href="/Guides/data/Handling calibration data/">these instructions</a> to make sure your <code>postprocessing</code> is safely stored.</p>
 </div>
-<p>The <code>postprocessing</code> is composed of several fields as defined in <a href="/Guides/data/Handling calibration data/">the guide</a>. In order to have custom postprocessing workflows, you need to modify the <code>blueprint_url</code> and <em>maybe</em>, the hardware url. The <code>blueprint_url</code> should point to a valid <code>json</code> file following the structure shown in the <a href="https://github.com/fablabbcn/smartcitizen-data/tree/master/examples/notebooks">examples folder in the <code>scdata</code> repository</a>. Inside this blueprint, <code>metrics</code> can be added to be generated according to the <code>device</code>'s available sensors. The</p>
+<p>The <code>postprocessing</code> field is composed of several subfields being the most important  one for the automatic data processing the <code>hardware_url</code>.</p>
+<p>The <code>hardware_url</code> should point to a valid json file that contains the necessary information for the data processing. This json file is customisable, but should contain at least the fields defined in <a href="/Guides/data/Handling calibration data/#advanced-setup">the calibration guide</a>. In order to customize how our data is processed, we will need to modify the <code>blueprint_url</code> and, if we have specific calibration needs, the <code>versions</code> field. Once these changes are done, this hardware json should go in the <a href="https://github.com/fablabbcn/smartcitizen-data/tree/master/hardware">hardware folder</a> or any other place that can host it.</p>
+<p>The <code>blueprint_url</code> should point to a json that defines which postprocessing you want to apply for each channel, which functions and parameters it has, and how the new channels are called (don't worry, there are a lot of examples in the <a href="https://github.com/fablabbcn/smartcitizen-data/tree/master/blueprints">blueprints folder</a>). In order for your data to be processed automatically, you will need to provide that blueprint to <code>scdata</code>. For this, you can host it somewhere, or you can simply make a <em>pull request</em> to the <a href="https://github.com/fablabbcn/smartcitizen-data">scdata github repository</a>, having the new json in the <code>blueprints</code> folder. Finally, you will then need to modify <code>hardware</code> json and update the blueprint field of your kit, with the new <code>blueprint_url</code>. See <a href="/Guides/data/Custom data processing/#defining-custom-functions">below</a> to understand how this blueprint works and how to write custom fuctions.</p>
+<p>In case your kit has specific calibration data needs, you will also need to modify the <code>versions</code> field. This field is a list which contains the history of the kit in terms of calibration (calibrations can change with time):</p>
+<div class="highlight"><pre><span></span><code>    {
+      &quot;ids&quot;: {
+        &quot;AS_48_32&quot;: &quot;132070362&quot;,
+        &quot;AS_49_10&quot;: &quot;212070552&quot;,
+        &quot;PT_49_23&quot;: &quot;12-000445&quot;
+      },
+      &quot;from&quot;: &quot;2021-01-21&quot;,
+      &quot;to&quot;: null
+    }
+</code></pre></div>
+<p>Each of the <code>ids</code> field make reference to specific calibration ids for each timespan, where the <code>from</code> and <code>to</code> fields are the dates during which those ids where valid. This method ensures allows to change sensors with time, and also considers that normally sensors that have specific calibrations use a serial number or similar to identify them.</p>
+<p>In the <code>ids</code> field, the keys (<code>AS_48_32</code>, <code>AS_49_10</code>, ... in the example above), define the type of sensor id (<code>AS</code> is an Alphasense sensor, <code>PT</code> is a PT100 temperature probe) and potentially other useful identifiers, such ADC addresses and channels (i.e. <code>AS_48_32</code> defines an Alphasense sensor connected to the ADC in address 0x48 and channel 3 for the <em>working electrode</em> and channel 2 for the <em>auxiliary electrode</em>). Other sensor types would need to defined and we can support in the implementation process. Finally, the actual sensor id, and the calibration data associated with it, is stored in <em>another</em> json, this time in <a href="https://github.com/fablabbcn/smartcitizen-data/tree/master/calibrations">the calibrations folder</a>. Similarly to the blueprints above, a simple <em>pull request</em> would work.</p>
 <h3 id="defining-custom-functions">Defining custom functions<a class="headerlink" href="#defining-custom-functions" title="Permanent link">&para;</a></h3>
 <p>If you want to define custom processing functions, make a Pull Request to <a href="https://github.com/fablabbcn/smartcitizen-data/pulls">the repository of scdata</a> to integrate your functions. Otherwise, you can make a fork and install the package in <code>editable mode</code>. You can then add the functions in the <a href="https://github.com/fablabbcn/smartcitizen-data/tree/master/scdata/device/process">device processing</a> folder of your own. We are available at <a href="mailto:support@smartcitizen.me">support@smartcitizen.me</a> for more support.</p>
                 
