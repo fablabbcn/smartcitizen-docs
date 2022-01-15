@@ -1,15 +1,15 @@
 # Making your own enclosures
 
-This page compiles instructions on how to make your own enclosures. We normally use digital fabrication techniques that can be found in a Fablab  such a 3D printing, laser cut or CNC machines. Have a look at the best option for your possibilities. We also encourage you to modify any of them and contribute it back to the community in the [enclosures repository](https://github.com/fablabbcn/smartcitizen-enclosures/).
+This page compiles instructions on how to make your own enclosures. We normally use digital fabrication techniques that can be found in a Fab Lab such 3D printing, laser cutting or CNC machines. Have a look at the best option for your possibilities. We also encourage you to modify any of them and contribute it back to the community in the [enclosures repository](https://github.com/fablabbcn/smartcitizen-enclosures/).
 
 !!! info "Where to print/cut?"
     Have a look at in [3D Hubs](https://www.3dhubs.com/) or look for a [Fablab near you](https://fablabs.io/labs)!
 
 ## CNC Enclosure
 
-This enclosure is made out of a mix of HDPE, acrylic and 3D printed compontents. All the design files can be find in various formats in the [enclosures repository](https://github.com/fablabbcn/smartcitizen-enclosures/tree/master/SmartCitizen%20Outdoor%20Cases%20V2.0-2.1/Milled%20HDPE).
+This enclosure is made out of a mix of HDPE, acrylic and 3D printed compontents. All the design files can be find in various formats in the [enclosures repository](https://github.com/fablabbcn/smartcitizen-enclosures/tree/master/SmartCitizen%20Outdoor%20Cases%20V2.X/SCK2.1_PMS5003/HDPE%20circle).
 
-![](https://raw.githubusercontent.com/fablabbcn/smartcitizen-enclosures/master/SmartCitizen%20Outdoor%20Cases%20V2.0-2.1/Milled%20HDPE/final_render.png)
+![](https://raw.githubusercontent.com/fablabbcn/smartcitizen-enclosures/master/SmartCitizen%20Outdoor%20Cases%20V2.X/SCK2.1_PMS5003/HDPE%20circle/render_w_clip_foam.png)
 
 ### 3D printing parts
 
@@ -59,43 +59,9 @@ This [plate](https://github.com/fablabbcn/smartcitizen-enclosures/blob/master/Sm
 
 <img src="https://live.staticflickr.com/65535/48439649392_67e981db3b_h.jpg" alt="SCK 2.1 Outdoor enclosure">
 
-## 3D printed Enclosure
+## 3D printed Enclosure(s)
 
-This enclosure is meant to be fully 3D printed in PLA in a normal desktop 3D printed machine. 
-
-!!! info ""
-    This design is not aiming to be the best design in the world, but one that anyone can make and modify such as [our contributors](https://github.com/fablabbcn/smartcitizen-enclosures/tree/master/Contributed%20Enclosures).
-
-![](https://raw.githubusercontent.com/fablabbcn/smartcitizen-enclosures/master/SmartCitizen%20Outdoor%20Cases%20V2.0-2.1/3D%20Printed%20Prototype/case_render.png)
-
-### Printing settings
-
-![](https://raw.githubusercontent.com/fablabbcn/smartcitizen-enclosures/master/SmartCitizen%20Outdoor%20Cases%20V2.0-2.1/3D%20Printed%20Prototype/printing_base.png)
-
-We have tested the 3D printed components with both PLA or ABS. Good results are achieved with a normal 0.4mm nozzle and 0.2 layer height. No raft or brim are needed.
-
-### Components
-
-**Clip**
-
-The SCK and the PMS5003 are held together by a [3D printed clip](https://github.com/fablabbcn/smartcitizen-enclosures/blob/master/SmartCitizen%20Outdoor%20Cases%20V2.0-2.1/3D%20Printed%20Prototype/components/CLIP.step). No support is needed for this part. 
-
-**Base and top covers**
-
-[Base](https://github.com/fablabbcn/smartcitizen-enclosures/blob/master/SmartCitizen%20Outdoor%20Cases%20V2.0-2.1/3D%20Printed%20Prototype/components/BASE.step) and [cover parts](https://github.com/fablabbcn/smartcitizen-enclosures/blob/master/SmartCitizen%20Outdoor%20Cases%20V2.0-2.1/3D%20Printed%20Prototype/components/COVER.step). Support is not needed for these part. A gasket can be added to the joint with adhesive foam. You can increase the top's thickness if you need better isolation, or use the foam provided with the SCK's box as an insulator. Also, tin foil is quite a good reflective material and helps with sun radiation.
-
-!!! info "Enlarged cover"
-    If you want to have some more space in the cover (eg to put a Solar MPPT and an additional battery in it), you can use the File [COVER25.ST](https://github.com/fablabbcn/smartcitizen-enclosures/blob/master/SmartCitizen%20Outdoor%20Cases%20V2.0-2.1/3D%20Printed%20Prototype/components/COVER25.STL)L. This cover gives you an additional height of 2,5cm.
-
-**Locks**
-
-[Flexible locks](https://github.com/fablabbcn/smartcitizen-enclosures/blob/master/SmartCitizen%20Outdoor%20Cases%20V2.0-2.1/3D%20Printed%20Prototype/components/LOCK.step) are also provided for better fixation (2 units per enclosure). No support is needed. 
-
-**Cable gland**
-
-[A small cable gland](https://github.com/fablabbcn/smartcitizen-enclosures/blob/master/SmartCitizen%20Outdoor%20Cases%20V2.0-2.1/3D%20Printed%20Prototype/components/CABLEGLAND.step) is also design to help improve waterproofness and fix the USB cable. It can be stored in the _pocket_ next to the opening.
-
-<img src="https://live.staticflickr.com/65535/48080247068_3acf857e7b_h.jpg" alt="SCK 2.1 Encloure">
+These enclosures are meant to be fully 3D printed in PLA in a normal desktop 3D printed machine. You can find instructions and examples on [the enclosures repository](https://github.com/fablabbcn/smartcitizen-enclosures/tree/master/SmartCitizen%20Outdoor%20Cases%20V2.X). There are recommendations for each enclosure in the README files in each folder.
 
 ## A _very_ DIY enclosure
 

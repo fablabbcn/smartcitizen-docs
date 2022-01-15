@@ -15,9 +15,9 @@ We believe building modular and reusable software and using existing platforms i
 !!! tip "Check the guides"
 	We prepared a series of guides to help you on the most common features you will use
 
-	* [Onboarding Sensors](/Guides/Onboarding Sensors)
-	* [Uploading SD Card Data](/Guides/Uploading SD Card Data)
-	* [Downloading data](/Guides/Downloading the Data)
+	* [Onboarding Sensors](/Guides/getting started/Onboarding Sensors)
+	* [Uploading SD Card Data](/Guides/getting started/Uploading SD Card Data)
+	* [Downloading data](/Guides/getting started/Downloading the Data)
 
 !!! info "Want to learn more?"
 	Check the developers ready [**API Documentation**](https://developer.smartcitizen.me/)
@@ -26,7 +26,7 @@ We believe building modular and reusable software and using existing platforms i
 
 * **Smart Citizen Website**: It aims to provide a visual website where the project environmental sensors can be accessed in near real time to facilitate the exploration of data with other contextual data (maps, keywords) and processed reports. This is especially important towards citizens engaging at each local site having a sense of ownership over a technology intervention has been associated with sustained community engagement _(Balestrini et al. 2014)_. The main instance its available at [smartcitizen.me/kits](https://smartcitizen.me/kits). You can explore and contribute to the [source](https://github.com/fablabbcn/smartcitizen-web). This is free software available under GNU Affero General Public License (AGPL).
 
-* **Smart Citizen API**: The platform provides a REST interface for all the functionalities available on the Website. That allows applications to be developed on easily on top having access to all the features to create complex and rich tools. The main instance its available at [api.smartcitizen.me](https://api.smartcitizen.me/). You can explore and contribute to the [source](https://github.com/fablabbcn/smartcitizen-api). One examples of this tools is the [Sensors Analysis Framework](https://github.com/fablabbcn/smartcitizen-iscape-data) or the [iSCAPE Virtual Living Lab](http://https://livinglabs.iscapeproject.eu), both developed during the [iSCAPE project](https://www.iscapeproject.eu/)) This is free software available under GNU Affero General Public License (AGPL).
+* **Smart Citizen API**: The platform provides a REST interface for all the functionalities available on the Website. That allows applications to be developed on easily on top having access to all the features to create complex and rich tools. The main instance its available at [api.smartcitizen.me](https://api.smartcitizen.me/). You can explore and contribute to the [source](https://github.com/fablabbcn/smartcitizen-api). One examples of this tools is the [Sensors Analysis Framework](https://github.com/fablabbcn/smartcitizen-iscape-data) or the [iSCAPE Virtual Living Lab](https://livinglabs.iscapeproject.eu), both developed during the [iSCAPE project](https://www.iscapeproject.eu/)) This is free software available under GNU Affero General Public License (AGPL).
 
 * **Onboarding app**: It aims to facilitate the process of sensor setup to ensure that users, irrespective of technical expertise, can install the sensors. It guides the user through the process of the setup using simple language and a friendly graphic language. It is built as a separate tool from the core Smart Citizen Webpage in order it can be customized for each deployment. It exchange data with the core platform using the Smart Citizen API. The main instance its available at [start.smartcitizen.me](https://start.smartcitizen.me). There are also customized instances for specific projects such us [onboarding.iscape.smartcitizen.me](https://onboarding.iscape.smartcitizen.me) or [start.decode.smartcitizen.me](https://start.decode.smartcitizen.me). You can explore and contribute to the [source](https://github.com/fablabbcn/smartcitizen-onboarding-app-start). This is free software available under a MIT License.
 

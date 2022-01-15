@@ -1,0 +1,2065 @@
+{
+    "https://www.invensense.com/products/digital/ics-43432/":
+    [
+        "https://docs.smartcitizen.me/Components/sensors/air/Noise/"
+    ],
+    "https://www.invensense.com/products/digital/ics-43432":
+    [
+        "https://docs.smartcitizen.me/Components/sensors/air/Noise/"
+    ],
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Animal_hearing_frequency_range.svg/512px-Animal_hearing_frequency_range.svg.png":
+    [
+        "https://docs.smartcitizen.me/Components/sensors/air/Noise/"
+    ],
+    "https://github.com/oscgonfer/AudioI2S_SCK/tree/master/OCTAVE/A_WEIGHTING":
+    [
+        "https://docs.smartcitizen.me/Components/sensors/air/Noise/"
+    ],
+    "https://www.nutaq.com/blog/analog-digital-%E2%80%93-part-2-conversion-process":
+    [
+        "https://docs.smartcitizen.me/Components/sensors/air/Noise/"
+    ],
+    "https://docs.smartcitizen.me/Components/Urban Sensor Board/Metal Oxide Sensor/MICS/":
+    [
+        "https://docs.smartcitizen.me/Components/sensors/air/Metal Oxide/"
+    ],
+    "https://www.sciencedirect.com/science/article/pii/S1352231012011284?via%3Dihub":
+    [
+        "https://docs.smartcitizen.me/Components/sensors/air/Electrochemical Sensors/"
+    ],
+    "https://www.sciencedirect.com/science/article/pii/S1352231016308317?via%3Dihub":
+    [
+        "https://docs.smartcitizen.me/Components/sensors/air/Electrochemical Sensors/"
+    ],
+    "https://rmets.onlinelibrary.wiley.com/doi/full/10.1002/wea.781":
+    [
+        "https://docs.smartcitizen.me/Components/sensors/air/Electrochemical Sensors/"
+    ],
+    "https://smartcitizen.me/kits/":
+    [
+        "https://docs.smartcitizen.me/_FAQ/",
+        "https://docs.smartcitizen.me/Guides/deployments/Deploying iSCAPE Station V1/"
+    ],
+    "https://docs.smartcitizen.me/Components/Firmware/guides/Using the Shell":
+    [
+        "https://docs.smartcitizen.me/_FAQ/"
+    ],
+    "https://github.com/fablabbcn/smartcitizen-enclosures/tree/master/SmartCitizen%20Outdoor%20Cases%20V2.0-2.1":
+    [
+        "https://docs.smartcitizen.me/_FAQ/"
+    ],
+    "https://github.com/fablabbcn/smartcitizen-kit-21/releases/tag/0.9.4":
+    [
+        "https://docs.smartcitizen.me/Troubleshooting/"
+    ],
+    "https://docs.smartcitizen.me/Guides/deployments/":
+    [
+        "https://docs.smartcitizen.me/Data/Data Analysis/"
+    ],
+    "https://docs.smartcitizen.me/European%20Projects/":
+    [
+        "https://docs.smartcitizen.me/Use cases/Citizen Sensing Toolkit/"
+    ],
+    "https://making-sense.eu":
+    [
+        "https://docs.smartcitizen.me/Use cases/Research/"
+    ],
+    "https://www.iscapeproject.eu/scientific-reports/":
+    [
+        "https://docs.smartcitizen.me/Use cases/Research/"
+    ],
+    "https://www.sciencedirect.com/science/article/pii/S2468067219300203":
+    [
+        "https://docs.smartcitizen.me/Use cases/Research/"
+    ],
+    "https://www.sciencedirect.com/science/article/pii/S2210670719317020?via%3Dihub":
+    [
+        "https://docs.smartcitizen.me/Use cases/Research/"
+    ],
+    "https://www.sciencedirect.com/science/article/pii/S2210670719329567?via%3Dihub":
+    [
+        "https://docs.smartcitizen.me/Use cases/Research/"
+    ],
+    "https://www.sciencedirect.com/science/article/abs/pii/S2210670720300639":
+    [
+        "https://docs.smartcitizen.me/Use cases/Research/"
+    ],
+    "https://doi.org/10.3390/s20113073":
+    [
+        "https://docs.smartcitizen.me/Use cases/Research/"
+    ],
+    "https://www.mdpi.com/journal/sensors/special_issues/PM_AP":
+    [
+        "https://docs.smartcitizen.me/Use cases/Research/"
+    ],
+    "https://www.fiduceo.eu/":
+    [
+        "https://docs.smartcitizen.me/Use cases/Friends/"
+    ],
+    "https://agora.xtec.cat/cesire/cesire/servei-de-prestec-i-cambra-de-cria/sensors-i-consoles/":
+    [
+        "https://docs.smartcitizen.me/Use cases/Friends/"
+    ],
+    "https://smartcitizen.me/policy":
+    [
+        "https://docs.smartcitizen.me/Guides/getting started/Onboarding Sensors/"
+    ],
+    "https://smartcitizen.me/profile/kits":
+    [
+        "https://docs.smartcitizen.me/Guides/getting started/Uploading SD Card Data/",
+        "https://docs.smartcitizen.me/Components/legacy/",
+        "https://docs.smartcitizen.me/Components/legacy/Faq/"
+    ],
+    "http://192.168.1.1":
+    [
+        "https://docs.smartcitizen.me/Guides/getting started/Updating the Wi-Fi/"
+    ],
+    "https://docs.smartcitizen.me/Guides/Edit%20the%20Firmware/":
+    [
+        "https://docs.smartcitizen.me/Guides/getting started/Using the Shell/"
+    ],
+    "https://docs.smartcitizen.me/Components/Auxiliary/":
+    [
+        "https://docs.smartcitizen.me/Guides/getting started/Third party sensors/"
+    ],
+    "https://docs.smartcitizen.me/Components/Firmware/guides/Using the Shell/":
+    [
+        "https://docs.smartcitizen.me/Guides/getting started/Third party sensors/",
+        "https://docs.smartcitizen.me/Guides/calibration/Soil moisture sensors/"
+    ],
+    "https://docs.smartcitizen.me/Guides/Debug%20the%20firmware/":
+    [
+        "https://docs.smartcitizen.me/Guides/firmware/Edit the Firmware/"
+    ],
+    "https://linuxconfig.org/howto-mount-usb-drive-in-linux":
+    [
+        "https://docs.smartcitizen.me/Guides/firmware/Edit the Firmware/"
+    ],
+    "https://github.com/fablabbcn/smartcitizen-iscape-data/tree/master/data/reports":
+    [
+        "https://docs.smartcitizen.me/Guides/data/Make reports of your data/"
+    ],
+    "https://smartcitizen.me/kits/XXXXX/edit":
+    [
+        "https://docs.smartcitizen.me/Guides/data/Handling calibration data/"
+    ],
+    "https://github.com/fablabbcn/smartcitizen-data/examples/README.md":
+    [
+        "https://docs.smartcitizen.me/Guides/data/Custom data processing/"
+    ],
+    "https://github.com/fablabbcn/smartcitizen-iscape-data/blob/master/data/uploads/example_zenodo_upload.yaml":
+    [
+        "https://docs.smartcitizen.me/Guides/data/Upload data to zenodo/"
+    ],
+    "https://github.com/fablabbcn/smartcitizen-enclosures/blob/master/SmartCitizen%20Outdoor%20Cases%20V2.0-2.1/Milled%20HDPE/components/CLIP_NO_ORING.stl":
+    [
+        "https://docs.smartcitizen.me/Guides/deployments/Deploying SCK/"
+    ],
+    "https://docs.smartcitizen.me/Components/sensors/CCS811/#sensor-considerations":
+    [
+        "https://docs.smartcitizen.me/Guides/deployments/Deploying SCK/"
+    ],
+    "https://docs.smartcitizen.me/Components/sensors/Noise/#sensor-considerations":
+    [
+        "https://docs.smartcitizen.me/Guides/deployments/Deploying SCK/"
+    ],
+    "https://docs.smartcitizen.me/Components/sensors/PM Sensors/#sensor-considerations":
+    [
+        "https://docs.smartcitizen.me/Guides/deployments/Deploying SCK/"
+    ],
+    "https://docs.smartcitizen.me/Guides/Installing Connectivity Units":
+    [
+        "https://docs.smartcitizen.me/Guides/deployments/Deploying SCK/"
+    ],
+    "https://docs.smartcitizen.me/Sensor%20Platform/guides/Uploading%20SD%20Card%20Data/":
+    [
+        "https://docs.smartcitizen.me/Guides/deployments/Deploying iSCAPE Station V1/"
+    ],
+    "https://docs.smartcitizen.me/Guides/Deploying iSCAPE Station V1/#sensors":
+    [
+        "https://docs.smartcitizen.me/Guides/deployments/Deploying iSCAPE Station V2/"
+    ],
+    "https://docs.smartcitizen.me/Components/Data%20Board/#power-management":
+    [
+        "https://docs.smartcitizen.me/Guides/deployments/Almabike sensors/"
+    ],
+    "https://docs.smartcitizen.me/Guides/Downloading%20the%20Data/":
+    [
+        "https://docs.smartcitizen.me/Guides/deployments/Almabike sensors/"
+    ],
+    "https://docs.smartcitizen.me/Guides/Update the firmware/":
+    [
+        "https://docs.smartcitizen.me/Guides/deployments/Almabike sensors/"
+    ],
+    "https://github.com/fablabbcn/smartcitizen-enclosures/blob/master/SmartCitizen%20Outdoor%20Cases%20V2.0-2.1/Milled%20HDPE/components/clip_big_batt.stl":
+    [
+        "https://docs.smartcitizen.me/Guides/enclosures/Making your own enclosures/"
+    ],
+    "https://github.com/fablabbcn/smartcitizen-enclosures/blob/master/SmartCitizen%20Outdoor%20Cases%20V2.0-2.1/Milled%20HDPE/components/clip_no_oring.iges":
+    [
+        "https://docs.smartcitizen.me/Guides/enclosures/Making your own enclosures/"
+    ],
+    "https://github.com/fablabbcn/smartcitizen-enclosures/blob/master/SmartCitizen%20Outdoor%20Cases%20V2.0-2.1/Milled%20HDPE/components/CAP1.stl":
+    [
+        "https://docs.smartcitizen.me/Guides/enclosures/Making your own enclosures/"
+    ],
+    "https://github.com/fablabbcn/smartcitizen-enclosures/blob/master/SmartCitizen%20Outdoor%20Cases%20V2.0-2.1/Milled%20HDPE/components/CAP2.stl":
+    [
+        "https://docs.smartcitizen.me/Guides/enclosures/Making your own enclosures/"
+    ],
+    "https://github.com/fablabbcn/smartcitizen-enclosures/tree/master/SmartCitizen%20Outdoor%20Cases%20V2.0-2.1/Milled%20HDPE/components/CLIP-FOAM.stl":
+    [
+        "https://docs.smartcitizen.me/Guides/enclosures/Making your own enclosures/"
+    ],
+    "https://github.com/fablabbcn/smartcitizen-enclosures/blob/master/SmartCitizen%20Outdoor%20Cases%20V2.0-2.1/Milled%20HDPE/components/base.step":
+    [
+        "https://docs.smartcitizen.me/Guides/enclosures/Making your own enclosures/"
+    ],
+    "https://github.com/fablabbcn/smartcitizen-enclosures/blob/master/SmartCitizen%20Outdoor%20Cases%20V2.0-2.1/Milled%20HDPE/components/top.step":
+    [
+        "https://docs.smartcitizen.me/Guides/enclosures/Making your own enclosures/"
+    ],
+    "https://github.com/fablabbcn/smartcitizen-enclosures/blob/master/SmartCitizen%20Outdoor%20Cases%20V2.0-2.1/Milled%20HDPE/drawing_metal_sheet.pdf":
+    [
+        "https://docs.smartcitizen.me/Guides/enclosures/Making your own enclosures/"
+    ],
+    "https://github.com/fablabbcn/smartcitizen-enclosures/tree/master/Contributed%20Enclosures":
+    [
+        "https://docs.smartcitizen.me/Guides/enclosures/Making your own enclosures/"
+    ],
+    "https://github.com/fablabbcn/smartcitizen-enclosures/blob/master/SmartCitizen%20Outdoor%20Cases%20V2.0-2.1/3D%20Printed%20Prototype/components/CLIP.step":
+    [
+        "https://docs.smartcitizen.me/Guides/enclosures/Making your own enclosures/"
+    ],
+    "https://github.com/fablabbcn/smartcitizen-enclosures/blob/master/SmartCitizen%20Outdoor%20Cases%20V2.0-2.1/3D%20Printed%20Prototype/components/BASE.step":
+    [
+        "https://docs.smartcitizen.me/Guides/enclosures/Making your own enclosures/"
+    ],
+    "https://github.com/fablabbcn/smartcitizen-enclosures/blob/master/SmartCitizen%20Outdoor%20Cases%20V2.0-2.1/3D%20Printed%20Prototype/components/COVER.step":
+    [
+        "https://docs.smartcitizen.me/Guides/enclosures/Making your own enclosures/"
+    ],
+    "https://github.com/fablabbcn/smartcitizen-enclosures/blob/master/SmartCitizen%20Outdoor%20Cases%20V2.0-2.1/3D%20Printed%20Prototype/components/COVER25.STL":
+    [
+        "https://docs.smartcitizen.me/Guides/enclosures/Making your own enclosures/"
+    ],
+    "https://github.com/fablabbcn/smartcitizen-enclosures/blob/master/SmartCitizen%20Outdoor%20Cases%20V2.0-2.1/3D%20Printed%20Prototype/components/LOCK.step":
+    [
+        "https://docs.smartcitizen.me/Guides/enclosures/Making your own enclosures/"
+    ],
+    "https://github.com/fablabbcn/smartcitizen-enclosures/blob/master/SmartCitizen%20Outdoor%20Cases%20V2.0-2.1/3D%20Printed%20Prototype/components/CABLEGLAND.step":
+    [
+        "https://docs.smartcitizen.me/Guides/enclosures/Making your own enclosures/"
+    ],
+    "https://github.com/fablabbcn/smartcitizen-enclosures/blob/master/SmartCitizen%20DIY%20Clips%20V2.0-2.1/3D%20Print%20Clips.stl":
+    [
+        "https://docs.smartcitizen.me/Guides/enclosures/Making your own enclosures/"
+    ],
+    "https://smartcitizen.me/privacy":
+    [
+        "https://docs.smartcitizen.me/Components/legacy/"
+    ],
+    "https://smartcitizen.me/profile/users":
+    [
+        "https://docs.smartcitizen.me/Components/legacy/"
+    ],
+    "https://smartcitizen.me/kits/new":
+    [
+        "https://docs.smartcitizen.me/Components/legacy/"
+    ],
+    "https://www.arduino.cc/en/guide/troubleshooting":
+    [
+        "https://docs.smartcitizen.me/Components/legacy/"
+    ],
+    "http://www.e2v.com/shared/content/resources/File/sensors_datasheets/Metal_Oxide/mics-5525.pdf":
+    [
+        "https://docs.smartcitizen.me/Components/legacy/Hardware/"
+    ],
+    "http://industrial.panasonic.com/www-data/pdf/ABA5000/ABA5000CE22.pdf":
+    [
+        "https://docs.smartcitizen.me/Components/legacy/Hardware/"
+    ],
+    "https://github.com/fablabbcn/Smart-Citizen-Kit-1.5/tree/master/hardware/":
+    [
+        "https://docs.smartcitizen.me/Components/legacy/Hardware/"
+    ],
+    "https://www.sensirion.com/fileadmin/user_upload/customers/sensirion/Dokumente/Humidity_Sensors/Sensirion_Humidity_Sensors_SHT21_Datasheet_V4.pdf":
+    [
+        "https://docs.smartcitizen.me/Components/legacy/Hardware/"
+    ],
+    "http://www.kNO²wles.com/eng/content/download/3915/49630/version/7/file/SPU0414HR5H-SB.pdf":
+    [
+        "https://docs.smartcitizen.me/Components/legacy/Hardware/"
+    ],
+    "http://data.smartcitizen.me/debug":
+    [
+        "https://docs.smartcitizen.me/Components/legacy/Faq/"
+    ],
+    "https://store.arduino.cc/product/GBX00066":
+    [
+        "https://docs.smartcitizen.me/Components/legacy/Troubleshooting/"
+    ],
+    "https://www.fablabs.io/map":
+    [
+        "https://docs.smartcitizen.me/Components/legacy/Troubleshooting/"
+    ],
+    "https://docs.smartcitizen.me/Legacy Hardware/sck":
+    [
+        "https://docs.smartcitizen.me/Components/legacy/sck/"
+    ],
+    "https://docs.smartcitizen.me/Components/Urban%20Sensor%20Board/Metal%20Oxide%20Sensor/MICS/":
+    [
+        "https://docs.smartcitizen.me/Components/legacy/sck/"
+    ],
+    "https://docs.iscape.smartcitizen.me/Sensor%20Platform/Sensor%20Platform/":
+    [
+        "https://docs.smartcitizen.me/Components/sensors/air/SGX MICS/"
+    ],
+    "http://www.mdpi.com/1424-8220/17/7/1653":
+    [
+        "https://docs.smartcitizen.me/Components/sensors/air/SGX MICS/"
+    ],
+    "https://docs.smartcitizen.me/Sensor Platform":
+    [
+        "https://docs.smartcitizen.me/Smart Citizen Station/"
+    ],
+    "https://docs.smartcitizen.me/Smart%20Citizen%20API/":
+    [
+        "https://docs.smartcitizen.me/Data/Sensor Platform/",
+        "https://docs.smartcitizen.me/Data/Data Analysis/"
+    ],
+    "https://docs.smartcitizen.me/Data%20Analysis/":
+    [
+        "https://docs.smartcitizen.me/Data/Sensor Platform/",
+        "https://docs.smartcitizen.me/Data/Smart Citizen API/"
+    ],
+    "https://docs.smartcitizen.me/Sensor%20Platform/":
+    [
+        "https://docs.smartcitizen.me/Data/Smart Citizen API/",
+        "https://docs.smartcitizen.me/Data/Data Analysis/"
+    ],
+    "https://docs.smartcitizen.me/firmware/Update%20the%20firmware/":
+    [
+        "https://docs.smartcitizen.me/Guides/",
+        "https://docs.smartcitizen.me/Guides/getting started/Onboarding Sensors/",
+        "https://docs.smartcitizen.me/Guides/getting started/Downloading the Data/",
+        "https://docs.smartcitizen.me/Guides/getting started/Uploading SD Card Data/",
+        "https://docs.smartcitizen.me/Guides/getting started/Updating the Wi-Fi/",
+        "https://docs.smartcitizen.me/Guides/getting started/Using the Shell/",
+        "https://docs.smartcitizen.me/Guides/getting started/Debugging your sensors/",
+        "https://docs.smartcitizen.me/Guides/getting started/Getting firmware information/",
+        "https://docs.smartcitizen.me/Guides/getting started/Third party sensors/",
+        "https://docs.smartcitizen.me/Guides/calibration/Water sensors/",
+        "https://docs.smartcitizen.me/Guides/calibration/Soil moisture sensors/",
+        "https://docs.smartcitizen.me/Guides/calibration/SCD30 CO2 sensor/",
+        "https://docs.smartcitizen.me/Guides/data/Install the framework/",
+        "https://docs.smartcitizen.me/Guides/data/Make reports of your data/",
+        "https://docs.smartcitizen.me/Guides/data/Creating Interfaces/",
+        "https://docs.smartcitizen.me/Guides/data/Organise your data/",
+        "https://docs.smartcitizen.me/Guides/data/Handling calibration data/",
+        "https://docs.smartcitizen.me/Guides/data/Custom data processing/",
+        "https://docs.smartcitizen.me/Guides/data/Upload data to zenodo/",
+        "https://docs.smartcitizen.me/Guides/deployments/Deploying SCK/",
+        "https://docs.smartcitizen.me/Guides/deployments/Deploying iSCAPE Station V1/",
+        "https://docs.smartcitizen.me/Guides/deployments/Deploying iSCAPE Station V2/",
+        "https://docs.smartcitizen.me/Guides/deployments/Deploying Smart Citizen Station/",
+        "https://docs.smartcitizen.me/Guides/deployments/Installing Connectivity Units/",
+        "https://docs.smartcitizen.me/Guides/deployments/Using the power supply/",
+        "https://docs.smartcitizen.me/Guides/deployments/Installing solar panel/",
+        "https://docs.smartcitizen.me/Guides/deployments/Almabike sensors/",
+        "https://docs.smartcitizen.me/Guides/deployments/Water sensors/",
+        "https://docs.smartcitizen.me/Guides/deployments/OLED display/",
+        "https://docs.smartcitizen.me/Guides/replacements/Replacing PM Sensors/",
+        "https://docs.smartcitizen.me/Guides/enclosures/Making your own enclosures/"
+    ],
+    "https://docs.smartcitizen.me/firmware/Edit%20the%20Firmware/":
+    [
+        "https://docs.smartcitizen.me/Guides/",
+        "https://docs.smartcitizen.me/Guides/getting started/Onboarding Sensors/",
+        "https://docs.smartcitizen.me/Guides/getting started/Downloading the Data/",
+        "https://docs.smartcitizen.me/Guides/getting started/Uploading SD Card Data/",
+        "https://docs.smartcitizen.me/Guides/getting started/Updating the Wi-Fi/",
+        "https://docs.smartcitizen.me/Guides/getting started/Using the Shell/",
+        "https://docs.smartcitizen.me/Guides/getting started/Debugging your sensors/",
+        "https://docs.smartcitizen.me/Guides/getting started/Getting firmware information/",
+        "https://docs.smartcitizen.me/Guides/getting started/Third party sensors/",
+        "https://docs.smartcitizen.me/Guides/calibration/Water sensors/",
+        "https://docs.smartcitizen.me/Guides/calibration/Soil moisture sensors/",
+        "https://docs.smartcitizen.me/Guides/calibration/SCD30 CO2 sensor/",
+        "https://docs.smartcitizen.me/Guides/data/Install the framework/",
+        "https://docs.smartcitizen.me/Guides/data/Make reports of your data/",
+        "https://docs.smartcitizen.me/Guides/data/Creating Interfaces/",
+        "https://docs.smartcitizen.me/Guides/data/Organise your data/",
+        "https://docs.smartcitizen.me/Guides/data/Handling calibration data/",
+        "https://docs.smartcitizen.me/Guides/data/Custom data processing/",
+        "https://docs.smartcitizen.me/Guides/data/Upload data to zenodo/",
+        "https://docs.smartcitizen.me/Guides/deployments/Deploying SCK/",
+        "https://docs.smartcitizen.me/Guides/deployments/Deploying iSCAPE Station V1/",
+        "https://docs.smartcitizen.me/Guides/deployments/Deploying iSCAPE Station V2/",
+        "https://docs.smartcitizen.me/Guides/deployments/Deploying Smart Citizen Station/",
+        "https://docs.smartcitizen.me/Guides/deployments/Installing Connectivity Units/",
+        "https://docs.smartcitizen.me/Guides/deployments/Using the power supply/",
+        "https://docs.smartcitizen.me/Guides/deployments/Installing solar panel/",
+        "https://docs.smartcitizen.me/Guides/deployments/Almabike sensors/",
+        "https://docs.smartcitizen.me/Guides/deployments/Water sensors/",
+        "https://docs.smartcitizen.me/Guides/deployments/OLED display/",
+        "https://docs.smartcitizen.me/Guides/replacements/Replacing PM Sensors/",
+        "https://docs.smartcitizen.me/Guides/enclosures/Making your own enclosures/"
+    ],
+    "https://docs.smartcitizen.me/firmware/Debug%20the%20firmware/":
+    [
+        "https://docs.smartcitizen.me/Guides/",
+        "https://docs.smartcitizen.me/Guides/getting started/Onboarding Sensors/",
+        "https://docs.smartcitizen.me/Guides/getting started/Downloading the Data/",
+        "https://docs.smartcitizen.me/Guides/getting started/Uploading SD Card Data/",
+        "https://docs.smartcitizen.me/Guides/getting started/Updating the Wi-Fi/",
+        "https://docs.smartcitizen.me/Guides/getting started/Using the Shell/",
+        "https://docs.smartcitizen.me/Guides/getting started/Debugging your sensors/",
+        "https://docs.smartcitizen.me/Guides/getting started/Getting firmware information/",
+        "https://docs.smartcitizen.me/Guides/getting started/Third party sensors/",
+        "https://docs.smartcitizen.me/Guides/calibration/Water sensors/",
+        "https://docs.smartcitizen.me/Guides/calibration/Soil moisture sensors/",
+        "https://docs.smartcitizen.me/Guides/calibration/SCD30 CO2 sensor/",
+        "https://docs.smartcitizen.me/Guides/data/Install the framework/",
+        "https://docs.smartcitizen.me/Guides/data/Make reports of your data/",
+        "https://docs.smartcitizen.me/Guides/data/Creating Interfaces/",
+        "https://docs.smartcitizen.me/Guides/data/Organise your data/",
+        "https://docs.smartcitizen.me/Guides/data/Handling calibration data/",
+        "https://docs.smartcitizen.me/Guides/data/Custom data processing/",
+        "https://docs.smartcitizen.me/Guides/data/Upload data to zenodo/",
+        "https://docs.smartcitizen.me/Guides/deployments/Deploying SCK/",
+        "https://docs.smartcitizen.me/Guides/deployments/Deploying iSCAPE Station V1/",
+        "https://docs.smartcitizen.me/Guides/deployments/Deploying iSCAPE Station V2/",
+        "https://docs.smartcitizen.me/Guides/deployments/Deploying Smart Citizen Station/",
+        "https://docs.smartcitizen.me/Guides/deployments/Installing Connectivity Units/",
+        "https://docs.smartcitizen.me/Guides/deployments/Using the power supply/",
+        "https://docs.smartcitizen.me/Guides/deployments/Installing solar panel/",
+        "https://docs.smartcitizen.me/Guides/deployments/Almabike sensors/",
+        "https://docs.smartcitizen.me/Guides/deployments/Water sensors/",
+        "https://docs.smartcitizen.me/Guides/deployments/OLED display/",
+        "https://docs.smartcitizen.me/Guides/replacements/Replacing PM Sensors/",
+        "https://docs.smartcitizen.me/Guides/enclosures/Making your own enclosures/"
+    ],
+    "https://docs.smartcitizen.me/calibration/Water%20sensors/":
+    [
+        "https://docs.smartcitizen.me/Guides/",
+        "https://docs.smartcitizen.me/Guides/getting started/Onboarding Sensors/",
+        "https://docs.smartcitizen.me/Guides/getting started/Downloading the Data/",
+        "https://docs.smartcitizen.me/Guides/getting started/Uploading SD Card Data/",
+        "https://docs.smartcitizen.me/Guides/getting started/Updating the Wi-Fi/",
+        "https://docs.smartcitizen.me/Guides/getting started/Using the Shell/",
+        "https://docs.smartcitizen.me/Guides/getting started/Debugging your sensors/",
+        "https://docs.smartcitizen.me/Guides/getting started/Getting firmware information/",
+        "https://docs.smartcitizen.me/Guides/getting started/Third party sensors/",
+        "https://docs.smartcitizen.me/Guides/firmware/Update the firmware/",
+        "https://docs.smartcitizen.me/Guides/firmware/Edit the Firmware/",
+        "https://docs.smartcitizen.me/Guides/firmware/Debug the firmware/",
+        "https://docs.smartcitizen.me/Guides/data/Install the framework/",
+        "https://docs.smartcitizen.me/Guides/data/Make reports of your data/",
+        "https://docs.smartcitizen.me/Guides/data/Creating Interfaces/",
+        "https://docs.smartcitizen.me/Guides/data/Organise your data/",
+        "https://docs.smartcitizen.me/Guides/data/Handling calibration data/",
+        "https://docs.smartcitizen.me/Guides/data/Custom data processing/",
+        "https://docs.smartcitizen.me/Guides/data/Upload data to zenodo/",
+        "https://docs.smartcitizen.me/Guides/deployments/Deploying SCK/",
+        "https://docs.smartcitizen.me/Guides/deployments/Deploying iSCAPE Station V1/",
+        "https://docs.smartcitizen.me/Guides/deployments/Deploying iSCAPE Station V2/",
+        "https://docs.smartcitizen.me/Guides/deployments/Deploying Smart Citizen Station/",
+        "https://docs.smartcitizen.me/Guides/deployments/Installing Connectivity Units/",
+        "https://docs.smartcitizen.me/Guides/deployments/Using the power supply/",
+        "https://docs.smartcitizen.me/Guides/deployments/Installing solar panel/",
+        "https://docs.smartcitizen.me/Guides/deployments/Almabike sensors/",
+        "https://docs.smartcitizen.me/Guides/deployments/Water sensors/",
+        "https://docs.smartcitizen.me/Guides/deployments/OLED display/",
+        "https://docs.smartcitizen.me/Guides/replacements/Replacing PM Sensors/",
+        "https://docs.smartcitizen.me/Guides/enclosures/Making your own enclosures/"
+    ],
+    "https://docs.smartcitizen.me/calibration/Soil%20moisture%20sensors/":
+    [
+        "https://docs.smartcitizen.me/Guides/",
+        "https://docs.smartcitizen.me/Guides/getting started/Onboarding Sensors/",
+        "https://docs.smartcitizen.me/Guides/getting started/Downloading the Data/",
+        "https://docs.smartcitizen.me/Guides/getting started/Uploading SD Card Data/",
+        "https://docs.smartcitizen.me/Guides/getting started/Updating the Wi-Fi/",
+        "https://docs.smartcitizen.me/Guides/getting started/Using the Shell/",
+        "https://docs.smartcitizen.me/Guides/getting started/Debugging your sensors/",
+        "https://docs.smartcitizen.me/Guides/getting started/Getting firmware information/",
+        "https://docs.smartcitizen.me/Guides/getting started/Third party sensors/",
+        "https://docs.smartcitizen.me/Guides/firmware/Update the firmware/",
+        "https://docs.smartcitizen.me/Guides/firmware/Edit the Firmware/",
+        "https://docs.smartcitizen.me/Guides/firmware/Debug the firmware/",
+        "https://docs.smartcitizen.me/Guides/data/Install the framework/",
+        "https://docs.smartcitizen.me/Guides/data/Make reports of your data/",
+        "https://docs.smartcitizen.me/Guides/data/Creating Interfaces/",
+        "https://docs.smartcitizen.me/Guides/data/Organise your data/",
+        "https://docs.smartcitizen.me/Guides/data/Handling calibration data/",
+        "https://docs.smartcitizen.me/Guides/data/Custom data processing/",
+        "https://docs.smartcitizen.me/Guides/data/Upload data to zenodo/",
+        "https://docs.smartcitizen.me/Guides/deployments/Deploying SCK/",
+        "https://docs.smartcitizen.me/Guides/deployments/Deploying iSCAPE Station V1/",
+        "https://docs.smartcitizen.me/Guides/deployments/Deploying iSCAPE Station V2/",
+        "https://docs.smartcitizen.me/Guides/deployments/Deploying Smart Citizen Station/",
+        "https://docs.smartcitizen.me/Guides/deployments/Installing Connectivity Units/",
+        "https://docs.smartcitizen.me/Guides/deployments/Using the power supply/",
+        "https://docs.smartcitizen.me/Guides/deployments/Installing solar panel/",
+        "https://docs.smartcitizen.me/Guides/deployments/Almabike sensors/",
+        "https://docs.smartcitizen.me/Guides/deployments/Water sensors/",
+        "https://docs.smartcitizen.me/Guides/deployments/OLED display/",
+        "https://docs.smartcitizen.me/Guides/replacements/Replacing PM Sensors/",
+        "https://docs.smartcitizen.me/Guides/enclosures/Making your own enclosures/"
+    ],
+    "https://docs.smartcitizen.me/calibration/SCD30%20CO2%20sensor/":
+    [
+        "https://docs.smartcitizen.me/Guides/",
+        "https://docs.smartcitizen.me/Guides/getting started/Onboarding Sensors/",
+        "https://docs.smartcitizen.me/Guides/getting started/Downloading the Data/",
+        "https://docs.smartcitizen.me/Guides/getting started/Uploading SD Card Data/",
+        "https://docs.smartcitizen.me/Guides/getting started/Updating the Wi-Fi/",
+        "https://docs.smartcitizen.me/Guides/getting started/Using the Shell/",
+        "https://docs.smartcitizen.me/Guides/getting started/Debugging your sensors/",
+        "https://docs.smartcitizen.me/Guides/getting started/Getting firmware information/",
+        "https://docs.smartcitizen.me/Guides/getting started/Third party sensors/",
+        "https://docs.smartcitizen.me/Guides/firmware/Update the firmware/",
+        "https://docs.smartcitizen.me/Guides/firmware/Edit the Firmware/",
+        "https://docs.smartcitizen.me/Guides/firmware/Debug the firmware/",
+        "https://docs.smartcitizen.me/Guides/data/Install the framework/",
+        "https://docs.smartcitizen.me/Guides/data/Make reports of your data/",
+        "https://docs.smartcitizen.me/Guides/data/Creating Interfaces/",
+        "https://docs.smartcitizen.me/Guides/data/Organise your data/",
+        "https://docs.smartcitizen.me/Guides/data/Handling calibration data/",
+        "https://docs.smartcitizen.me/Guides/data/Custom data processing/",
+        "https://docs.smartcitizen.me/Guides/data/Upload data to zenodo/",
+        "https://docs.smartcitizen.me/Guides/deployments/Deploying SCK/",
+        "https://docs.smartcitizen.me/Guides/deployments/Deploying iSCAPE Station V1/",
+        "https://docs.smartcitizen.me/Guides/deployments/Deploying iSCAPE Station V2/",
+        "https://docs.smartcitizen.me/Guides/deployments/Deploying Smart Citizen Station/",
+        "https://docs.smartcitizen.me/Guides/deployments/Installing Connectivity Units/",
+        "https://docs.smartcitizen.me/Guides/deployments/Using the power supply/",
+        "https://docs.smartcitizen.me/Guides/deployments/Installing solar panel/",
+        "https://docs.smartcitizen.me/Guides/deployments/Almabike sensors/",
+        "https://docs.smartcitizen.me/Guides/deployments/Water sensors/",
+        "https://docs.smartcitizen.me/Guides/deployments/OLED display/",
+        "https://docs.smartcitizen.me/Guides/replacements/Replacing PM Sensors/",
+        "https://docs.smartcitizen.me/Guides/enclosures/Making your own enclosures/"
+    ],
+    "https://docs.smartcitizen.me/data/Install%20the%20framework/":
+    [
+        "https://docs.smartcitizen.me/Guides/",
+        "https://docs.smartcitizen.me/Guides/getting started/Onboarding Sensors/",
+        "https://docs.smartcitizen.me/Guides/getting started/Downloading the Data/",
+        "https://docs.smartcitizen.me/Guides/getting started/Uploading SD Card Data/",
+        "https://docs.smartcitizen.me/Guides/getting started/Updating the Wi-Fi/",
+        "https://docs.smartcitizen.me/Guides/getting started/Using the Shell/",
+        "https://docs.smartcitizen.me/Guides/getting started/Debugging your sensors/",
+        "https://docs.smartcitizen.me/Guides/getting started/Getting firmware information/",
+        "https://docs.smartcitizen.me/Guides/getting started/Third party sensors/",
+        "https://docs.smartcitizen.me/Guides/firmware/Update the firmware/",
+        "https://docs.smartcitizen.me/Guides/firmware/Edit the Firmware/",
+        "https://docs.smartcitizen.me/Guides/firmware/Debug the firmware/",
+        "https://docs.smartcitizen.me/Guides/calibration/Water sensors/",
+        "https://docs.smartcitizen.me/Guides/calibration/Soil moisture sensors/",
+        "https://docs.smartcitizen.me/Guides/calibration/SCD30 CO2 sensor/",
+        "https://docs.smartcitizen.me/Guides/deployments/Deploying SCK/",
+        "https://docs.smartcitizen.me/Guides/deployments/Deploying iSCAPE Station V1/",
+        "https://docs.smartcitizen.me/Guides/deployments/Deploying iSCAPE Station V2/",
+        "https://docs.smartcitizen.me/Guides/deployments/Deploying Smart Citizen Station/",
+        "https://docs.smartcitizen.me/Guides/deployments/Installing Connectivity Units/",
+        "https://docs.smartcitizen.me/Guides/deployments/Using the power supply/",
+        "https://docs.smartcitizen.me/Guides/deployments/Installing solar panel/",
+        "https://docs.smartcitizen.me/Guides/deployments/Almabike sensors/",
+        "https://docs.smartcitizen.me/Guides/deployments/Water sensors/",
+        "https://docs.smartcitizen.me/Guides/deployments/OLED display/",
+        "https://docs.smartcitizen.me/Guides/replacements/Replacing PM Sensors/",
+        "https://docs.smartcitizen.me/Guides/enclosures/Making your own enclosures/"
+    ],
+    "https://docs.smartcitizen.me/data/Make%20reports%20of%20your%20data/":
+    [
+        "https://docs.smartcitizen.me/Guides/",
+        "https://docs.smartcitizen.me/Guides/getting started/Onboarding Sensors/",
+        "https://docs.smartcitizen.me/Guides/getting started/Downloading the Data/",
+        "https://docs.smartcitizen.me/Guides/getting started/Uploading SD Card Data/",
+        "https://docs.smartcitizen.me/Guides/getting started/Updating the Wi-Fi/",
+        "https://docs.smartcitizen.me/Guides/getting started/Using the Shell/",
+        "https://docs.smartcitizen.me/Guides/getting started/Debugging your sensors/",
+        "https://docs.smartcitizen.me/Guides/getting started/Getting firmware information/",
+        "https://docs.smartcitizen.me/Guides/getting started/Third party sensors/",
+        "https://docs.smartcitizen.me/Guides/firmware/Update the firmware/",
+        "https://docs.smartcitizen.me/Guides/firmware/Edit the Firmware/",
+        "https://docs.smartcitizen.me/Guides/firmware/Debug the firmware/",
+        "https://docs.smartcitizen.me/Guides/calibration/Water sensors/",
+        "https://docs.smartcitizen.me/Guides/calibration/Soil moisture sensors/",
+        "https://docs.smartcitizen.me/Guides/calibration/SCD30 CO2 sensor/",
+        "https://docs.smartcitizen.me/Guides/deployments/Deploying SCK/",
+        "https://docs.smartcitizen.me/Guides/deployments/Deploying iSCAPE Station V1/",
+        "https://docs.smartcitizen.me/Guides/deployments/Deploying iSCAPE Station V2/",
+        "https://docs.smartcitizen.me/Guides/deployments/Deploying Smart Citizen Station/",
+        "https://docs.smartcitizen.me/Guides/deployments/Installing Connectivity Units/",
+        "https://docs.smartcitizen.me/Guides/deployments/Using the power supply/",
+        "https://docs.smartcitizen.me/Guides/deployments/Installing solar panel/",
+        "https://docs.smartcitizen.me/Guides/deployments/Almabike sensors/",
+        "https://docs.smartcitizen.me/Guides/deployments/Water sensors/",
+        "https://docs.smartcitizen.me/Guides/deployments/OLED display/",
+        "https://docs.smartcitizen.me/Guides/replacements/Replacing PM Sensors/",
+        "https://docs.smartcitizen.me/Guides/enclosures/Making your own enclosures/"
+    ],
+    "https://docs.smartcitizen.me/data/Creating%20Interfaces/":
+    [
+        "https://docs.smartcitizen.me/Guides/",
+        "https://docs.smartcitizen.me/Guides/getting started/Onboarding Sensors/",
+        "https://docs.smartcitizen.me/Guides/getting started/Downloading the Data/",
+        "https://docs.smartcitizen.me/Guides/getting started/Uploading SD Card Data/",
+        "https://docs.smartcitizen.me/Guides/getting started/Updating the Wi-Fi/",
+        "https://docs.smartcitizen.me/Guides/getting started/Using the Shell/",
+        "https://docs.smartcitizen.me/Guides/getting started/Debugging your sensors/",
+        "https://docs.smartcitizen.me/Guides/getting started/Getting firmware information/",
+        "https://docs.smartcitizen.me/Guides/getting started/Third party sensors/",
+        "https://docs.smartcitizen.me/Guides/firmware/Update the firmware/",
+        "https://docs.smartcitizen.me/Guides/firmware/Edit the Firmware/",
+        "https://docs.smartcitizen.me/Guides/firmware/Debug the firmware/",
+        "https://docs.smartcitizen.me/Guides/calibration/Water sensors/",
+        "https://docs.smartcitizen.me/Guides/calibration/Soil moisture sensors/",
+        "https://docs.smartcitizen.me/Guides/calibration/SCD30 CO2 sensor/",
+        "https://docs.smartcitizen.me/Guides/deployments/Deploying SCK/",
+        "https://docs.smartcitizen.me/Guides/deployments/Deploying iSCAPE Station V1/",
+        "https://docs.smartcitizen.me/Guides/deployments/Deploying iSCAPE Station V2/",
+        "https://docs.smartcitizen.me/Guides/deployments/Deploying Smart Citizen Station/",
+        "https://docs.smartcitizen.me/Guides/deployments/Installing Connectivity Units/",
+        "https://docs.smartcitizen.me/Guides/deployments/Using the power supply/",
+        "https://docs.smartcitizen.me/Guides/deployments/Installing solar panel/",
+        "https://docs.smartcitizen.me/Guides/deployments/Almabike sensors/",
+        "https://docs.smartcitizen.me/Guides/deployments/Water sensors/",
+        "https://docs.smartcitizen.me/Guides/deployments/OLED display/",
+        "https://docs.smartcitizen.me/Guides/replacements/Replacing PM Sensors/",
+        "https://docs.smartcitizen.me/Guides/enclosures/Making your own enclosures/"
+    ],
+    "https://docs.smartcitizen.me/data/Organise%20your%20data/":
+    [
+        "https://docs.smartcitizen.me/Guides/",
+        "https://docs.smartcitizen.me/Guides/getting started/Onboarding Sensors/",
+        "https://docs.smartcitizen.me/Guides/getting started/Downloading the Data/",
+        "https://docs.smartcitizen.me/Guides/getting started/Uploading SD Card Data/",
+        "https://docs.smartcitizen.me/Guides/getting started/Updating the Wi-Fi/",
+        "https://docs.smartcitizen.me/Guides/getting started/Using the Shell/",
+        "https://docs.smartcitizen.me/Guides/getting started/Debugging your sensors/",
+        "https://docs.smartcitizen.me/Guides/getting started/Getting firmware information/",
+        "https://docs.smartcitizen.me/Guides/getting started/Third party sensors/",
+        "https://docs.smartcitizen.me/Guides/firmware/Update the firmware/",
+        "https://docs.smartcitizen.me/Guides/firmware/Edit the Firmware/",
+        "https://docs.smartcitizen.me/Guides/firmware/Debug the firmware/",
+        "https://docs.smartcitizen.me/Guides/calibration/Water sensors/",
+        "https://docs.smartcitizen.me/Guides/calibration/Soil moisture sensors/",
+        "https://docs.smartcitizen.me/Guides/calibration/SCD30 CO2 sensor/",
+        "https://docs.smartcitizen.me/Guides/deployments/Deploying SCK/",
+        "https://docs.smartcitizen.me/Guides/deployments/Deploying iSCAPE Station V1/",
+        "https://docs.smartcitizen.me/Guides/deployments/Deploying iSCAPE Station V2/",
+        "https://docs.smartcitizen.me/Guides/deployments/Deploying Smart Citizen Station/",
+        "https://docs.smartcitizen.me/Guides/deployments/Installing Connectivity Units/",
+        "https://docs.smartcitizen.me/Guides/deployments/Using the power supply/",
+        "https://docs.smartcitizen.me/Guides/deployments/Installing solar panel/",
+        "https://docs.smartcitizen.me/Guides/deployments/Almabike sensors/",
+        "https://docs.smartcitizen.me/Guides/deployments/Water sensors/",
+        "https://docs.smartcitizen.me/Guides/deployments/OLED display/",
+        "https://docs.smartcitizen.me/Guides/replacements/Replacing PM Sensors/",
+        "https://docs.smartcitizen.me/Guides/enclosures/Making your own enclosures/"
+    ],
+    "https://docs.smartcitizen.me/data/Handling%20calibration%20data/":
+    [
+        "https://docs.smartcitizen.me/Guides/",
+        "https://docs.smartcitizen.me/Guides/getting started/Onboarding Sensors/",
+        "https://docs.smartcitizen.me/Guides/getting started/Downloading the Data/",
+        "https://docs.smartcitizen.me/Guides/getting started/Uploading SD Card Data/",
+        "https://docs.smartcitizen.me/Guides/getting started/Updating the Wi-Fi/",
+        "https://docs.smartcitizen.me/Guides/getting started/Using the Shell/",
+        "https://docs.smartcitizen.me/Guides/getting started/Debugging your sensors/",
+        "https://docs.smartcitizen.me/Guides/getting started/Getting firmware information/",
+        "https://docs.smartcitizen.me/Guides/getting started/Third party sensors/",
+        "https://docs.smartcitizen.me/Guides/firmware/Update the firmware/",
+        "https://docs.smartcitizen.me/Guides/firmware/Edit the Firmware/",
+        "https://docs.smartcitizen.me/Guides/firmware/Debug the firmware/",
+        "https://docs.smartcitizen.me/Guides/calibration/Water sensors/",
+        "https://docs.smartcitizen.me/Guides/calibration/Soil moisture sensors/",
+        "https://docs.smartcitizen.me/Guides/calibration/SCD30 CO2 sensor/",
+        "https://docs.smartcitizen.me/Guides/deployments/Deploying SCK/",
+        "https://docs.smartcitizen.me/Guides/deployments/Deploying iSCAPE Station V1/",
+        "https://docs.smartcitizen.me/Guides/deployments/Deploying iSCAPE Station V2/",
+        "https://docs.smartcitizen.me/Guides/deployments/Deploying Smart Citizen Station/",
+        "https://docs.smartcitizen.me/Guides/deployments/Installing Connectivity Units/",
+        "https://docs.smartcitizen.me/Guides/deployments/Using the power supply/",
+        "https://docs.smartcitizen.me/Guides/deployments/Installing solar panel/",
+        "https://docs.smartcitizen.me/Guides/deployments/Almabike sensors/",
+        "https://docs.smartcitizen.me/Guides/deployments/Water sensors/",
+        "https://docs.smartcitizen.me/Guides/deployments/OLED display/",
+        "https://docs.smartcitizen.me/Guides/replacements/Replacing PM Sensors/",
+        "https://docs.smartcitizen.me/Guides/enclosures/Making your own enclosures/"
+    ],
+    "https://docs.smartcitizen.me/data/Custom%20data%20processing/":
+    [
+        "https://docs.smartcitizen.me/Guides/",
+        "https://docs.smartcitizen.me/Guides/getting started/Onboarding Sensors/",
+        "https://docs.smartcitizen.me/Guides/getting started/Downloading the Data/",
+        "https://docs.smartcitizen.me/Guides/getting started/Uploading SD Card Data/",
+        "https://docs.smartcitizen.me/Guides/getting started/Updating the Wi-Fi/",
+        "https://docs.smartcitizen.me/Guides/getting started/Using the Shell/",
+        "https://docs.smartcitizen.me/Guides/getting started/Debugging your sensors/",
+        "https://docs.smartcitizen.me/Guides/getting started/Getting firmware information/",
+        "https://docs.smartcitizen.me/Guides/getting started/Third party sensors/",
+        "https://docs.smartcitizen.me/Guides/firmware/Update the firmware/",
+        "https://docs.smartcitizen.me/Guides/firmware/Edit the Firmware/",
+        "https://docs.smartcitizen.me/Guides/firmware/Debug the firmware/",
+        "https://docs.smartcitizen.me/Guides/calibration/Water sensors/",
+        "https://docs.smartcitizen.me/Guides/calibration/Soil moisture sensors/",
+        "https://docs.smartcitizen.me/Guides/calibration/SCD30 CO2 sensor/",
+        "https://docs.smartcitizen.me/Guides/deployments/Deploying SCK/",
+        "https://docs.smartcitizen.me/Guides/deployments/Deploying iSCAPE Station V1/",
+        "https://docs.smartcitizen.me/Guides/deployments/Deploying iSCAPE Station V2/",
+        "https://docs.smartcitizen.me/Guides/deployments/Deploying Smart Citizen Station/",
+        "https://docs.smartcitizen.me/Guides/deployments/Installing Connectivity Units/",
+        "https://docs.smartcitizen.me/Guides/deployments/Using the power supply/",
+        "https://docs.smartcitizen.me/Guides/deployments/Installing solar panel/",
+        "https://docs.smartcitizen.me/Guides/deployments/Almabike sensors/",
+        "https://docs.smartcitizen.me/Guides/deployments/Water sensors/",
+        "https://docs.smartcitizen.me/Guides/deployments/OLED display/",
+        "https://docs.smartcitizen.me/Guides/replacements/Replacing PM Sensors/",
+        "https://docs.smartcitizen.me/Guides/enclosures/Making your own enclosures/"
+    ],
+    "https://docs.smartcitizen.me/data/Upload%20data%20to%20zenodo/":
+    [
+        "https://docs.smartcitizen.me/Guides/",
+        "https://docs.smartcitizen.me/Guides/getting started/Onboarding Sensors/",
+        "https://docs.smartcitizen.me/Guides/getting started/Downloading the Data/",
+        "https://docs.smartcitizen.me/Guides/getting started/Uploading SD Card Data/",
+        "https://docs.smartcitizen.me/Guides/getting started/Updating the Wi-Fi/",
+        "https://docs.smartcitizen.me/Guides/getting started/Using the Shell/",
+        "https://docs.smartcitizen.me/Guides/getting started/Debugging your sensors/",
+        "https://docs.smartcitizen.me/Guides/getting started/Getting firmware information/",
+        "https://docs.smartcitizen.me/Guides/getting started/Third party sensors/",
+        "https://docs.smartcitizen.me/Guides/firmware/Update the firmware/",
+        "https://docs.smartcitizen.me/Guides/firmware/Edit the Firmware/",
+        "https://docs.smartcitizen.me/Guides/firmware/Debug the firmware/",
+        "https://docs.smartcitizen.me/Guides/calibration/Water sensors/",
+        "https://docs.smartcitizen.me/Guides/calibration/Soil moisture sensors/",
+        "https://docs.smartcitizen.me/Guides/calibration/SCD30 CO2 sensor/",
+        "https://docs.smartcitizen.me/Guides/deployments/Deploying SCK/",
+        "https://docs.smartcitizen.me/Guides/deployments/Deploying iSCAPE Station V1/",
+        "https://docs.smartcitizen.me/Guides/deployments/Deploying iSCAPE Station V2/",
+        "https://docs.smartcitizen.me/Guides/deployments/Deploying Smart Citizen Station/",
+        "https://docs.smartcitizen.me/Guides/deployments/Installing Connectivity Units/",
+        "https://docs.smartcitizen.me/Guides/deployments/Using the power supply/",
+        "https://docs.smartcitizen.me/Guides/deployments/Installing solar panel/",
+        "https://docs.smartcitizen.me/Guides/deployments/Almabike sensors/",
+        "https://docs.smartcitizen.me/Guides/deployments/Water sensors/",
+        "https://docs.smartcitizen.me/Guides/deployments/OLED display/",
+        "https://docs.smartcitizen.me/Guides/replacements/Replacing PM Sensors/",
+        "https://docs.smartcitizen.me/Guides/enclosures/Making your own enclosures/"
+    ],
+    "https://docs.smartcitizen.me/deployments/Deploying%20SCK/":
+    [
+        "https://docs.smartcitizen.me/Guides/",
+        "https://docs.smartcitizen.me/Guides/getting started/Onboarding Sensors/",
+        "https://docs.smartcitizen.me/Guides/getting started/Downloading the Data/",
+        "https://docs.smartcitizen.me/Guides/getting started/Uploading SD Card Data/",
+        "https://docs.smartcitizen.me/Guides/getting started/Updating the Wi-Fi/",
+        "https://docs.smartcitizen.me/Guides/getting started/Using the Shell/",
+        "https://docs.smartcitizen.me/Guides/getting started/Debugging your sensors/",
+        "https://docs.smartcitizen.me/Guides/getting started/Getting firmware information/",
+        "https://docs.smartcitizen.me/Guides/getting started/Third party sensors/",
+        "https://docs.smartcitizen.me/Guides/firmware/Update the firmware/",
+        "https://docs.smartcitizen.me/Guides/firmware/Edit the Firmware/",
+        "https://docs.smartcitizen.me/Guides/firmware/Debug the firmware/",
+        "https://docs.smartcitizen.me/Guides/calibration/Water sensors/",
+        "https://docs.smartcitizen.me/Guides/calibration/Soil moisture sensors/",
+        "https://docs.smartcitizen.me/Guides/calibration/SCD30 CO2 sensor/",
+        "https://docs.smartcitizen.me/Guides/data/Install the framework/",
+        "https://docs.smartcitizen.me/Guides/data/Make reports of your data/",
+        "https://docs.smartcitizen.me/Guides/data/Creating Interfaces/",
+        "https://docs.smartcitizen.me/Guides/data/Organise your data/",
+        "https://docs.smartcitizen.me/Guides/data/Handling calibration data/",
+        "https://docs.smartcitizen.me/Guides/data/Custom data processing/",
+        "https://docs.smartcitizen.me/Guides/data/Upload data to zenodo/",
+        "https://docs.smartcitizen.me/Guides/replacements/Replacing PM Sensors/",
+        "https://docs.smartcitizen.me/Guides/enclosures/Making your own enclosures/"
+    ],
+    "https://docs.smartcitizen.me/deployments/Deploying%20iSCAPE%20Station%20V1/":
+    [
+        "https://docs.smartcitizen.me/Guides/",
+        "https://docs.smartcitizen.me/Guides/getting started/Onboarding Sensors/",
+        "https://docs.smartcitizen.me/Guides/getting started/Downloading the Data/",
+        "https://docs.smartcitizen.me/Guides/getting started/Uploading SD Card Data/",
+        "https://docs.smartcitizen.me/Guides/getting started/Updating the Wi-Fi/",
+        "https://docs.smartcitizen.me/Guides/getting started/Using the Shell/",
+        "https://docs.smartcitizen.me/Guides/getting started/Debugging your sensors/",
+        "https://docs.smartcitizen.me/Guides/getting started/Getting firmware information/",
+        "https://docs.smartcitizen.me/Guides/getting started/Third party sensors/",
+        "https://docs.smartcitizen.me/Guides/firmware/Update the firmware/",
+        "https://docs.smartcitizen.me/Guides/firmware/Edit the Firmware/",
+        "https://docs.smartcitizen.me/Guides/firmware/Debug the firmware/",
+        "https://docs.smartcitizen.me/Guides/calibration/Water sensors/",
+        "https://docs.smartcitizen.me/Guides/calibration/Soil moisture sensors/",
+        "https://docs.smartcitizen.me/Guides/calibration/SCD30 CO2 sensor/",
+        "https://docs.smartcitizen.me/Guides/data/Install the framework/",
+        "https://docs.smartcitizen.me/Guides/data/Make reports of your data/",
+        "https://docs.smartcitizen.me/Guides/data/Creating Interfaces/",
+        "https://docs.smartcitizen.me/Guides/data/Organise your data/",
+        "https://docs.smartcitizen.me/Guides/data/Handling calibration data/",
+        "https://docs.smartcitizen.me/Guides/data/Custom data processing/",
+        "https://docs.smartcitizen.me/Guides/data/Upload data to zenodo/",
+        "https://docs.smartcitizen.me/Guides/replacements/Replacing PM Sensors/",
+        "https://docs.smartcitizen.me/Guides/enclosures/Making your own enclosures/"
+    ],
+    "https://docs.smartcitizen.me/deployments/Deploying%20iSCAPE%20Station%20V2/":
+    [
+        "https://docs.smartcitizen.me/Guides/",
+        "https://docs.smartcitizen.me/Guides/getting started/Onboarding Sensors/",
+        "https://docs.smartcitizen.me/Guides/getting started/Downloading the Data/",
+        "https://docs.smartcitizen.me/Guides/getting started/Uploading SD Card Data/",
+        "https://docs.smartcitizen.me/Guides/getting started/Updating the Wi-Fi/",
+        "https://docs.smartcitizen.me/Guides/getting started/Using the Shell/",
+        "https://docs.smartcitizen.me/Guides/getting started/Debugging your sensors/",
+        "https://docs.smartcitizen.me/Guides/getting started/Getting firmware information/",
+        "https://docs.smartcitizen.me/Guides/getting started/Third party sensors/",
+        "https://docs.smartcitizen.me/Guides/firmware/Update the firmware/",
+        "https://docs.smartcitizen.me/Guides/firmware/Edit the Firmware/",
+        "https://docs.smartcitizen.me/Guides/firmware/Debug the firmware/",
+        "https://docs.smartcitizen.me/Guides/calibration/Water sensors/",
+        "https://docs.smartcitizen.me/Guides/calibration/Soil moisture sensors/",
+        "https://docs.smartcitizen.me/Guides/calibration/SCD30 CO2 sensor/",
+        "https://docs.smartcitizen.me/Guides/data/Install the framework/",
+        "https://docs.smartcitizen.me/Guides/data/Make reports of your data/",
+        "https://docs.smartcitizen.me/Guides/data/Creating Interfaces/",
+        "https://docs.smartcitizen.me/Guides/data/Organise your data/",
+        "https://docs.smartcitizen.me/Guides/data/Handling calibration data/",
+        "https://docs.smartcitizen.me/Guides/data/Custom data processing/",
+        "https://docs.smartcitizen.me/Guides/data/Upload data to zenodo/",
+        "https://docs.smartcitizen.me/Guides/replacements/Replacing PM Sensors/",
+        "https://docs.smartcitizen.me/Guides/enclosures/Making your own enclosures/"
+    ],
+    "https://docs.smartcitizen.me/deployments/Deploying%20Smart%20Citizen%20Station/":
+    [
+        "https://docs.smartcitizen.me/Guides/",
+        "https://docs.smartcitizen.me/Guides/getting started/Onboarding Sensors/",
+        "https://docs.smartcitizen.me/Guides/getting started/Downloading the Data/",
+        "https://docs.smartcitizen.me/Guides/getting started/Uploading SD Card Data/",
+        "https://docs.smartcitizen.me/Guides/getting started/Updating the Wi-Fi/",
+        "https://docs.smartcitizen.me/Guides/getting started/Using the Shell/",
+        "https://docs.smartcitizen.me/Guides/getting started/Debugging your sensors/",
+        "https://docs.smartcitizen.me/Guides/getting started/Getting firmware information/",
+        "https://docs.smartcitizen.me/Guides/getting started/Third party sensors/",
+        "https://docs.smartcitizen.me/Guides/firmware/Update the firmware/",
+        "https://docs.smartcitizen.me/Guides/firmware/Edit the Firmware/",
+        "https://docs.smartcitizen.me/Guides/firmware/Debug the firmware/",
+        "https://docs.smartcitizen.me/Guides/calibration/Water sensors/",
+        "https://docs.smartcitizen.me/Guides/calibration/Soil moisture sensors/",
+        "https://docs.smartcitizen.me/Guides/calibration/SCD30 CO2 sensor/",
+        "https://docs.smartcitizen.me/Guides/data/Install the framework/",
+        "https://docs.smartcitizen.me/Guides/data/Make reports of your data/",
+        "https://docs.smartcitizen.me/Guides/data/Creating Interfaces/",
+        "https://docs.smartcitizen.me/Guides/data/Organise your data/",
+        "https://docs.smartcitizen.me/Guides/data/Handling calibration data/",
+        "https://docs.smartcitizen.me/Guides/data/Custom data processing/",
+        "https://docs.smartcitizen.me/Guides/data/Upload data to zenodo/",
+        "https://docs.smartcitizen.me/Guides/replacements/Replacing PM Sensors/",
+        "https://docs.smartcitizen.me/Guides/enclosures/Making your own enclosures/"
+    ],
+    "https://docs.smartcitizen.me/deployments/Installing%20Connectivity%20Units/":
+    [
+        "https://docs.smartcitizen.me/Guides/",
+        "https://docs.smartcitizen.me/Guides/getting started/Onboarding Sensors/",
+        "https://docs.smartcitizen.me/Guides/getting started/Downloading the Data/",
+        "https://docs.smartcitizen.me/Guides/getting started/Uploading SD Card Data/",
+        "https://docs.smartcitizen.me/Guides/getting started/Updating the Wi-Fi/",
+        "https://docs.smartcitizen.me/Guides/getting started/Using the Shell/",
+        "https://docs.smartcitizen.me/Guides/getting started/Debugging your sensors/",
+        "https://docs.smartcitizen.me/Guides/getting started/Getting firmware information/",
+        "https://docs.smartcitizen.me/Guides/getting started/Third party sensors/",
+        "https://docs.smartcitizen.me/Guides/firmware/Update the firmware/",
+        "https://docs.smartcitizen.me/Guides/firmware/Edit the Firmware/",
+        "https://docs.smartcitizen.me/Guides/firmware/Debug the firmware/",
+        "https://docs.smartcitizen.me/Guides/calibration/Water sensors/",
+        "https://docs.smartcitizen.me/Guides/calibration/Soil moisture sensors/",
+        "https://docs.smartcitizen.me/Guides/calibration/SCD30 CO2 sensor/",
+        "https://docs.smartcitizen.me/Guides/data/Install the framework/",
+        "https://docs.smartcitizen.me/Guides/data/Make reports of your data/",
+        "https://docs.smartcitizen.me/Guides/data/Creating Interfaces/",
+        "https://docs.smartcitizen.me/Guides/data/Organise your data/",
+        "https://docs.smartcitizen.me/Guides/data/Handling calibration data/",
+        "https://docs.smartcitizen.me/Guides/data/Custom data processing/",
+        "https://docs.smartcitizen.me/Guides/data/Upload data to zenodo/",
+        "https://docs.smartcitizen.me/Guides/replacements/Replacing PM Sensors/",
+        "https://docs.smartcitizen.me/Guides/enclosures/Making your own enclosures/"
+    ],
+    "https://docs.smartcitizen.me/deployments/Using%20the%20power%20supply/":
+    [
+        "https://docs.smartcitizen.me/Guides/",
+        "https://docs.smartcitizen.me/Guides/getting started/Onboarding Sensors/",
+        "https://docs.smartcitizen.me/Guides/getting started/Downloading the Data/",
+        "https://docs.smartcitizen.me/Guides/getting started/Uploading SD Card Data/",
+        "https://docs.smartcitizen.me/Guides/getting started/Updating the Wi-Fi/",
+        "https://docs.smartcitizen.me/Guides/getting started/Using the Shell/",
+        "https://docs.smartcitizen.me/Guides/getting started/Debugging your sensors/",
+        "https://docs.smartcitizen.me/Guides/getting started/Getting firmware information/",
+        "https://docs.smartcitizen.me/Guides/getting started/Third party sensors/",
+        "https://docs.smartcitizen.me/Guides/firmware/Update the firmware/",
+        "https://docs.smartcitizen.me/Guides/firmware/Edit the Firmware/",
+        "https://docs.smartcitizen.me/Guides/firmware/Debug the firmware/",
+        "https://docs.smartcitizen.me/Guides/calibration/Water sensors/",
+        "https://docs.smartcitizen.me/Guides/calibration/Soil moisture sensors/",
+        "https://docs.smartcitizen.me/Guides/calibration/SCD30 CO2 sensor/",
+        "https://docs.smartcitizen.me/Guides/data/Install the framework/",
+        "https://docs.smartcitizen.me/Guides/data/Make reports of your data/",
+        "https://docs.smartcitizen.me/Guides/data/Creating Interfaces/",
+        "https://docs.smartcitizen.me/Guides/data/Organise your data/",
+        "https://docs.smartcitizen.me/Guides/data/Handling calibration data/",
+        "https://docs.smartcitizen.me/Guides/data/Custom data processing/",
+        "https://docs.smartcitizen.me/Guides/data/Upload data to zenodo/",
+        "https://docs.smartcitizen.me/Guides/replacements/Replacing PM Sensors/",
+        "https://docs.smartcitizen.me/Guides/enclosures/Making your own enclosures/"
+    ],
+    "https://docs.smartcitizen.me/deployments/Installing%20solar%20panel/":
+    [
+        "https://docs.smartcitizen.me/Guides/",
+        "https://docs.smartcitizen.me/Guides/getting started/Onboarding Sensors/",
+        "https://docs.smartcitizen.me/Guides/getting started/Downloading the Data/",
+        "https://docs.smartcitizen.me/Guides/getting started/Uploading SD Card Data/",
+        "https://docs.smartcitizen.me/Guides/getting started/Updating the Wi-Fi/",
+        "https://docs.smartcitizen.me/Guides/getting started/Using the Shell/",
+        "https://docs.smartcitizen.me/Guides/getting started/Debugging your sensors/",
+        "https://docs.smartcitizen.me/Guides/getting started/Getting firmware information/",
+        "https://docs.smartcitizen.me/Guides/getting started/Third party sensors/",
+        "https://docs.smartcitizen.me/Guides/firmware/Update the firmware/",
+        "https://docs.smartcitizen.me/Guides/firmware/Edit the Firmware/",
+        "https://docs.smartcitizen.me/Guides/firmware/Debug the firmware/",
+        "https://docs.smartcitizen.me/Guides/calibration/Water sensors/",
+        "https://docs.smartcitizen.me/Guides/calibration/Soil moisture sensors/",
+        "https://docs.smartcitizen.me/Guides/calibration/SCD30 CO2 sensor/",
+        "https://docs.smartcitizen.me/Guides/data/Install the framework/",
+        "https://docs.smartcitizen.me/Guides/data/Make reports of your data/",
+        "https://docs.smartcitizen.me/Guides/data/Creating Interfaces/",
+        "https://docs.smartcitizen.me/Guides/data/Organise your data/",
+        "https://docs.smartcitizen.me/Guides/data/Handling calibration data/",
+        "https://docs.smartcitizen.me/Guides/data/Custom data processing/",
+        "https://docs.smartcitizen.me/Guides/data/Upload data to zenodo/",
+        "https://docs.smartcitizen.me/Guides/replacements/Replacing PM Sensors/",
+        "https://docs.smartcitizen.me/Guides/enclosures/Making your own enclosures/"
+    ],
+    "https://docs.smartcitizen.me/deployments/Almabike%20sensors/":
+    [
+        "https://docs.smartcitizen.me/Guides/",
+        "https://docs.smartcitizen.me/Guides/getting started/Onboarding Sensors/",
+        "https://docs.smartcitizen.me/Guides/getting started/Downloading the Data/",
+        "https://docs.smartcitizen.me/Guides/getting started/Uploading SD Card Data/",
+        "https://docs.smartcitizen.me/Guides/getting started/Updating the Wi-Fi/",
+        "https://docs.smartcitizen.me/Guides/getting started/Using the Shell/",
+        "https://docs.smartcitizen.me/Guides/getting started/Debugging your sensors/",
+        "https://docs.smartcitizen.me/Guides/getting started/Getting firmware information/",
+        "https://docs.smartcitizen.me/Guides/getting started/Third party sensors/",
+        "https://docs.smartcitizen.me/Guides/firmware/Update the firmware/",
+        "https://docs.smartcitizen.me/Guides/firmware/Edit the Firmware/",
+        "https://docs.smartcitizen.me/Guides/firmware/Debug the firmware/",
+        "https://docs.smartcitizen.me/Guides/calibration/Water sensors/",
+        "https://docs.smartcitizen.me/Guides/calibration/Soil moisture sensors/",
+        "https://docs.smartcitizen.me/Guides/calibration/SCD30 CO2 sensor/",
+        "https://docs.smartcitizen.me/Guides/data/Install the framework/",
+        "https://docs.smartcitizen.me/Guides/data/Make reports of your data/",
+        "https://docs.smartcitizen.me/Guides/data/Creating Interfaces/",
+        "https://docs.smartcitizen.me/Guides/data/Organise your data/",
+        "https://docs.smartcitizen.me/Guides/data/Handling calibration data/",
+        "https://docs.smartcitizen.me/Guides/data/Custom data processing/",
+        "https://docs.smartcitizen.me/Guides/data/Upload data to zenodo/",
+        "https://docs.smartcitizen.me/Guides/replacements/Replacing PM Sensors/",
+        "https://docs.smartcitizen.me/Guides/enclosures/Making your own enclosures/"
+    ],
+    "https://docs.smartcitizen.me/deployments/Water%20sensors/":
+    [
+        "https://docs.smartcitizen.me/Guides/",
+        "https://docs.smartcitizen.me/Guides/getting started/Onboarding Sensors/",
+        "https://docs.smartcitizen.me/Guides/getting started/Downloading the Data/",
+        "https://docs.smartcitizen.me/Guides/getting started/Uploading SD Card Data/",
+        "https://docs.smartcitizen.me/Guides/getting started/Updating the Wi-Fi/",
+        "https://docs.smartcitizen.me/Guides/getting started/Using the Shell/",
+        "https://docs.smartcitizen.me/Guides/getting started/Debugging your sensors/",
+        "https://docs.smartcitizen.me/Guides/getting started/Getting firmware information/",
+        "https://docs.smartcitizen.me/Guides/getting started/Third party sensors/",
+        "https://docs.smartcitizen.me/Guides/firmware/Update the firmware/",
+        "https://docs.smartcitizen.me/Guides/firmware/Edit the Firmware/",
+        "https://docs.smartcitizen.me/Guides/firmware/Debug the firmware/",
+        "https://docs.smartcitizen.me/Guides/calibration/Water sensors/",
+        "https://docs.smartcitizen.me/Guides/calibration/Soil moisture sensors/",
+        "https://docs.smartcitizen.me/Guides/calibration/SCD30 CO2 sensor/",
+        "https://docs.smartcitizen.me/Guides/data/Install the framework/",
+        "https://docs.smartcitizen.me/Guides/data/Make reports of your data/",
+        "https://docs.smartcitizen.me/Guides/data/Creating Interfaces/",
+        "https://docs.smartcitizen.me/Guides/data/Organise your data/",
+        "https://docs.smartcitizen.me/Guides/data/Handling calibration data/",
+        "https://docs.smartcitizen.me/Guides/data/Custom data processing/",
+        "https://docs.smartcitizen.me/Guides/data/Upload data to zenodo/",
+        "https://docs.smartcitizen.me/Guides/replacements/Replacing PM Sensors/",
+        "https://docs.smartcitizen.me/Guides/enclosures/Making your own enclosures/"
+    ],
+    "https://docs.smartcitizen.me/deployments/OLED%20display/":
+    [
+        "https://docs.smartcitizen.me/Guides/",
+        "https://docs.smartcitizen.me/Guides/getting started/Onboarding Sensors/",
+        "https://docs.smartcitizen.me/Guides/getting started/Downloading the Data/",
+        "https://docs.smartcitizen.me/Guides/getting started/Uploading SD Card Data/",
+        "https://docs.smartcitizen.me/Guides/getting started/Updating the Wi-Fi/",
+        "https://docs.smartcitizen.me/Guides/getting started/Using the Shell/",
+        "https://docs.smartcitizen.me/Guides/getting started/Debugging your sensors/",
+        "https://docs.smartcitizen.me/Guides/getting started/Getting firmware information/",
+        "https://docs.smartcitizen.me/Guides/getting started/Third party sensors/",
+        "https://docs.smartcitizen.me/Guides/firmware/Update the firmware/",
+        "https://docs.smartcitizen.me/Guides/firmware/Edit the Firmware/",
+        "https://docs.smartcitizen.me/Guides/firmware/Debug the firmware/",
+        "https://docs.smartcitizen.me/Guides/calibration/Water sensors/",
+        "https://docs.smartcitizen.me/Guides/calibration/Soil moisture sensors/",
+        "https://docs.smartcitizen.me/Guides/calibration/SCD30 CO2 sensor/",
+        "https://docs.smartcitizen.me/Guides/data/Install the framework/",
+        "https://docs.smartcitizen.me/Guides/data/Make reports of your data/",
+        "https://docs.smartcitizen.me/Guides/data/Creating Interfaces/",
+        "https://docs.smartcitizen.me/Guides/data/Organise your data/",
+        "https://docs.smartcitizen.me/Guides/data/Handling calibration data/",
+        "https://docs.smartcitizen.me/Guides/data/Custom data processing/",
+        "https://docs.smartcitizen.me/Guides/data/Upload data to zenodo/",
+        "https://docs.smartcitizen.me/Guides/replacements/Replacing PM Sensors/",
+        "https://docs.smartcitizen.me/Guides/enclosures/Making your own enclosures/"
+    ],
+    "https://docs.smartcitizen.me/replacements/Replacing%20PM%20Sensors/":
+    [
+        "https://docs.smartcitizen.me/Guides/",
+        "https://docs.smartcitizen.me/Guides/getting started/Onboarding Sensors/",
+        "https://docs.smartcitizen.me/Guides/getting started/Downloading the Data/",
+        "https://docs.smartcitizen.me/Guides/getting started/Uploading SD Card Data/",
+        "https://docs.smartcitizen.me/Guides/getting started/Updating the Wi-Fi/",
+        "https://docs.smartcitizen.me/Guides/getting started/Using the Shell/",
+        "https://docs.smartcitizen.me/Guides/getting started/Debugging your sensors/",
+        "https://docs.smartcitizen.me/Guides/getting started/Getting firmware information/",
+        "https://docs.smartcitizen.me/Guides/getting started/Third party sensors/",
+        "https://docs.smartcitizen.me/Guides/firmware/Update the firmware/",
+        "https://docs.smartcitizen.me/Guides/firmware/Edit the Firmware/",
+        "https://docs.smartcitizen.me/Guides/firmware/Debug the firmware/",
+        "https://docs.smartcitizen.me/Guides/calibration/Water sensors/",
+        "https://docs.smartcitizen.me/Guides/calibration/Soil moisture sensors/",
+        "https://docs.smartcitizen.me/Guides/calibration/SCD30 CO2 sensor/",
+        "https://docs.smartcitizen.me/Guides/data/Install the framework/",
+        "https://docs.smartcitizen.me/Guides/data/Make reports of your data/",
+        "https://docs.smartcitizen.me/Guides/data/Creating Interfaces/",
+        "https://docs.smartcitizen.me/Guides/data/Organise your data/",
+        "https://docs.smartcitizen.me/Guides/data/Handling calibration data/",
+        "https://docs.smartcitizen.me/Guides/data/Custom data processing/",
+        "https://docs.smartcitizen.me/Guides/data/Upload data to zenodo/",
+        "https://docs.smartcitizen.me/Guides/deployments/Deploying SCK/",
+        "https://docs.smartcitizen.me/Guides/deployments/Deploying iSCAPE Station V1/",
+        "https://docs.smartcitizen.me/Guides/deployments/Deploying iSCAPE Station V2/",
+        "https://docs.smartcitizen.me/Guides/deployments/Deploying Smart Citizen Station/",
+        "https://docs.smartcitizen.me/Guides/deployments/Installing Connectivity Units/",
+        "https://docs.smartcitizen.me/Guides/deployments/Using the power supply/",
+        "https://docs.smartcitizen.me/Guides/deployments/Installing solar panel/",
+        "https://docs.smartcitizen.me/Guides/deployments/Almabike sensors/",
+        "https://docs.smartcitizen.me/Guides/deployments/Water sensors/",
+        "https://docs.smartcitizen.me/Guides/deployments/OLED display/",
+        "https://docs.smartcitizen.me/Guides/enclosures/Making your own enclosures/"
+    ],
+    "https://docs.smartcitizen.me/enclosures/Making%20your%20own%20enclosures/":
+    [
+        "https://docs.smartcitizen.me/Guides/",
+        "https://docs.smartcitizen.me/Guides/getting started/Onboarding Sensors/",
+        "https://docs.smartcitizen.me/Guides/getting started/Downloading the Data/",
+        "https://docs.smartcitizen.me/Guides/getting started/Uploading SD Card Data/",
+        "https://docs.smartcitizen.me/Guides/getting started/Updating the Wi-Fi/",
+        "https://docs.smartcitizen.me/Guides/getting started/Using the Shell/",
+        "https://docs.smartcitizen.me/Guides/getting started/Debugging your sensors/",
+        "https://docs.smartcitizen.me/Guides/getting started/Getting firmware information/",
+        "https://docs.smartcitizen.me/Guides/getting started/Third party sensors/",
+        "https://docs.smartcitizen.me/Guides/firmware/Update the firmware/",
+        "https://docs.smartcitizen.me/Guides/firmware/Edit the Firmware/",
+        "https://docs.smartcitizen.me/Guides/firmware/Debug the firmware/",
+        "https://docs.smartcitizen.me/Guides/calibration/Water sensors/",
+        "https://docs.smartcitizen.me/Guides/calibration/Soil moisture sensors/",
+        "https://docs.smartcitizen.me/Guides/calibration/SCD30 CO2 sensor/",
+        "https://docs.smartcitizen.me/Guides/data/Install the framework/",
+        "https://docs.smartcitizen.me/Guides/data/Make reports of your data/",
+        "https://docs.smartcitizen.me/Guides/data/Creating Interfaces/",
+        "https://docs.smartcitizen.me/Guides/data/Organise your data/",
+        "https://docs.smartcitizen.me/Guides/data/Handling calibration data/",
+        "https://docs.smartcitizen.me/Guides/data/Custom data processing/",
+        "https://docs.smartcitizen.me/Guides/data/Upload data to zenodo/",
+        "https://docs.smartcitizen.me/Guides/deployments/Deploying SCK/",
+        "https://docs.smartcitizen.me/Guides/deployments/Deploying iSCAPE Station V1/",
+        "https://docs.smartcitizen.me/Guides/deployments/Deploying iSCAPE Station V2/",
+        "https://docs.smartcitizen.me/Guides/deployments/Deploying Smart Citizen Station/",
+        "https://docs.smartcitizen.me/Guides/deployments/Installing Connectivity Units/",
+        "https://docs.smartcitizen.me/Guides/deployments/Using the power supply/",
+        "https://docs.smartcitizen.me/Guides/deployments/Installing solar panel/",
+        "https://docs.smartcitizen.me/Guides/deployments/Almabike sensors/",
+        "https://docs.smartcitizen.me/Guides/deployments/Water sensors/",
+        "https://docs.smartcitizen.me/Guides/deployments/OLED display/",
+        "https://docs.smartcitizen.me/Guides/replacements/Replacing PM Sensors/"
+    ],
+    "https://docs.smartcitizen.me/getting%20started/Onboarding%20Sensors/":
+    [
+        "https://docs.smartcitizen.me/Guides/",
+        "https://docs.smartcitizen.me/Guides/firmware/Update the firmware/",
+        "https://docs.smartcitizen.me/Guides/firmware/Edit the Firmware/",
+        "https://docs.smartcitizen.me/Guides/firmware/Debug the firmware/",
+        "https://docs.smartcitizen.me/Guides/calibration/Water sensors/",
+        "https://docs.smartcitizen.me/Guides/calibration/Soil moisture sensors/",
+        "https://docs.smartcitizen.me/Guides/calibration/SCD30 CO2 sensor/",
+        "https://docs.smartcitizen.me/Guides/data/Install the framework/",
+        "https://docs.smartcitizen.me/Guides/data/Make reports of your data/",
+        "https://docs.smartcitizen.me/Guides/data/Creating Interfaces/",
+        "https://docs.smartcitizen.me/Guides/data/Organise your data/",
+        "https://docs.smartcitizen.me/Guides/data/Handling calibration data/",
+        "https://docs.smartcitizen.me/Guides/data/Custom data processing/",
+        "https://docs.smartcitizen.me/Guides/data/Upload data to zenodo/",
+        "https://docs.smartcitizen.me/Guides/deployments/Deploying SCK/",
+        "https://docs.smartcitizen.me/Guides/deployments/Deploying iSCAPE Station V1/",
+        "https://docs.smartcitizen.me/Guides/deployments/Deploying iSCAPE Station V2/",
+        "https://docs.smartcitizen.me/Guides/deployments/Deploying Smart Citizen Station/",
+        "https://docs.smartcitizen.me/Guides/deployments/Installing Connectivity Units/",
+        "https://docs.smartcitizen.me/Guides/deployments/Using the power supply/",
+        "https://docs.smartcitizen.me/Guides/deployments/Installing solar panel/",
+        "https://docs.smartcitizen.me/Guides/deployments/Almabike sensors/",
+        "https://docs.smartcitizen.me/Guides/deployments/Water sensors/",
+        "https://docs.smartcitizen.me/Guides/deployments/OLED display/",
+        "https://docs.smartcitizen.me/Guides/replacements/Replacing PM Sensors/",
+        "https://docs.smartcitizen.me/Guides/enclosures/Making your own enclosures/"
+    ],
+    "https://docs.smartcitizen.me/getting%20started/Downloading%20the%20Data/":
+    [
+        "https://docs.smartcitizen.me/Guides/",
+        "https://docs.smartcitizen.me/Guides/firmware/Update the firmware/",
+        "https://docs.smartcitizen.me/Guides/firmware/Edit the Firmware/",
+        "https://docs.smartcitizen.me/Guides/firmware/Debug the firmware/",
+        "https://docs.smartcitizen.me/Guides/calibration/Water sensors/",
+        "https://docs.smartcitizen.me/Guides/calibration/Soil moisture sensors/",
+        "https://docs.smartcitizen.me/Guides/calibration/SCD30 CO2 sensor/",
+        "https://docs.smartcitizen.me/Guides/data/Install the framework/",
+        "https://docs.smartcitizen.me/Guides/data/Make reports of your data/",
+        "https://docs.smartcitizen.me/Guides/data/Creating Interfaces/",
+        "https://docs.smartcitizen.me/Guides/data/Organise your data/",
+        "https://docs.smartcitizen.me/Guides/data/Handling calibration data/",
+        "https://docs.smartcitizen.me/Guides/data/Custom data processing/",
+        "https://docs.smartcitizen.me/Guides/data/Upload data to zenodo/",
+        "https://docs.smartcitizen.me/Guides/deployments/Deploying SCK/",
+        "https://docs.smartcitizen.me/Guides/deployments/Deploying iSCAPE Station V1/",
+        "https://docs.smartcitizen.me/Guides/deployments/Deploying iSCAPE Station V2/",
+        "https://docs.smartcitizen.me/Guides/deployments/Deploying Smart Citizen Station/",
+        "https://docs.smartcitizen.me/Guides/deployments/Installing Connectivity Units/",
+        "https://docs.smartcitizen.me/Guides/deployments/Using the power supply/",
+        "https://docs.smartcitizen.me/Guides/deployments/Installing solar panel/",
+        "https://docs.smartcitizen.me/Guides/deployments/Almabike sensors/",
+        "https://docs.smartcitizen.me/Guides/deployments/Water sensors/",
+        "https://docs.smartcitizen.me/Guides/deployments/OLED display/",
+        "https://docs.smartcitizen.me/Guides/replacements/Replacing PM Sensors/",
+        "https://docs.smartcitizen.me/Guides/enclosures/Making your own enclosures/"
+    ],
+    "https://docs.smartcitizen.me/getting%20started/Uploading%20SD%20Card%20Data/":
+    [
+        "https://docs.smartcitizen.me/Guides/",
+        "https://docs.smartcitizen.me/Guides/firmware/Update the firmware/",
+        "https://docs.smartcitizen.me/Guides/firmware/Edit the Firmware/",
+        "https://docs.smartcitizen.me/Guides/firmware/Debug the firmware/",
+        "https://docs.smartcitizen.me/Guides/calibration/Water sensors/",
+        "https://docs.smartcitizen.me/Guides/calibration/Soil moisture sensors/",
+        "https://docs.smartcitizen.me/Guides/calibration/SCD30 CO2 sensor/",
+        "https://docs.smartcitizen.me/Guides/data/Install the framework/",
+        "https://docs.smartcitizen.me/Guides/data/Make reports of your data/",
+        "https://docs.smartcitizen.me/Guides/data/Creating Interfaces/",
+        "https://docs.smartcitizen.me/Guides/data/Organise your data/",
+        "https://docs.smartcitizen.me/Guides/data/Handling calibration data/",
+        "https://docs.smartcitizen.me/Guides/data/Custom data processing/",
+        "https://docs.smartcitizen.me/Guides/data/Upload data to zenodo/",
+        "https://docs.smartcitizen.me/Guides/deployments/Deploying SCK/",
+        "https://docs.smartcitizen.me/Guides/deployments/Deploying iSCAPE Station V1/",
+        "https://docs.smartcitizen.me/Guides/deployments/Deploying iSCAPE Station V2/",
+        "https://docs.smartcitizen.me/Guides/deployments/Deploying Smart Citizen Station/",
+        "https://docs.smartcitizen.me/Guides/deployments/Installing Connectivity Units/",
+        "https://docs.smartcitizen.me/Guides/deployments/Using the power supply/",
+        "https://docs.smartcitizen.me/Guides/deployments/Installing solar panel/",
+        "https://docs.smartcitizen.me/Guides/deployments/Almabike sensors/",
+        "https://docs.smartcitizen.me/Guides/deployments/Water sensors/",
+        "https://docs.smartcitizen.me/Guides/deployments/OLED display/",
+        "https://docs.smartcitizen.me/Guides/replacements/Replacing PM Sensors/",
+        "https://docs.smartcitizen.me/Guides/enclosures/Making your own enclosures/"
+    ],
+    "https://docs.smartcitizen.me/getting%20started/Updating%20the%20Wi-Fi/":
+    [
+        "https://docs.smartcitizen.me/Guides/",
+        "https://docs.smartcitizen.me/Guides/firmware/Update the firmware/",
+        "https://docs.smartcitizen.me/Guides/firmware/Edit the Firmware/",
+        "https://docs.smartcitizen.me/Guides/firmware/Debug the firmware/",
+        "https://docs.smartcitizen.me/Guides/calibration/Water sensors/",
+        "https://docs.smartcitizen.me/Guides/calibration/Soil moisture sensors/",
+        "https://docs.smartcitizen.me/Guides/calibration/SCD30 CO2 sensor/",
+        "https://docs.smartcitizen.me/Guides/data/Install the framework/",
+        "https://docs.smartcitizen.me/Guides/data/Make reports of your data/",
+        "https://docs.smartcitizen.me/Guides/data/Creating Interfaces/",
+        "https://docs.smartcitizen.me/Guides/data/Organise your data/",
+        "https://docs.smartcitizen.me/Guides/data/Handling calibration data/",
+        "https://docs.smartcitizen.me/Guides/data/Custom data processing/",
+        "https://docs.smartcitizen.me/Guides/data/Upload data to zenodo/",
+        "https://docs.smartcitizen.me/Guides/deployments/Deploying SCK/",
+        "https://docs.smartcitizen.me/Guides/deployments/Deploying iSCAPE Station V1/",
+        "https://docs.smartcitizen.me/Guides/deployments/Deploying iSCAPE Station V2/",
+        "https://docs.smartcitizen.me/Guides/deployments/Deploying Smart Citizen Station/",
+        "https://docs.smartcitizen.me/Guides/deployments/Installing Connectivity Units/",
+        "https://docs.smartcitizen.me/Guides/deployments/Using the power supply/",
+        "https://docs.smartcitizen.me/Guides/deployments/Installing solar panel/",
+        "https://docs.smartcitizen.me/Guides/deployments/Almabike sensors/",
+        "https://docs.smartcitizen.me/Guides/deployments/Water sensors/",
+        "https://docs.smartcitizen.me/Guides/deployments/OLED display/",
+        "https://docs.smartcitizen.me/Guides/replacements/Replacing PM Sensors/",
+        "https://docs.smartcitizen.me/Guides/enclosures/Making your own enclosures/"
+    ],
+    "https://docs.smartcitizen.me/getting%20started/Using%20the%20Shell/":
+    [
+        "https://docs.smartcitizen.me/Guides/",
+        "https://docs.smartcitizen.me/Guides/firmware/Update the firmware/",
+        "https://docs.smartcitizen.me/Guides/firmware/Edit the Firmware/",
+        "https://docs.smartcitizen.me/Guides/firmware/Debug the firmware/",
+        "https://docs.smartcitizen.me/Guides/calibration/Water sensors/",
+        "https://docs.smartcitizen.me/Guides/calibration/Soil moisture sensors/",
+        "https://docs.smartcitizen.me/Guides/calibration/SCD30 CO2 sensor/",
+        "https://docs.smartcitizen.me/Guides/data/Install the framework/",
+        "https://docs.smartcitizen.me/Guides/data/Make reports of your data/",
+        "https://docs.smartcitizen.me/Guides/data/Creating Interfaces/",
+        "https://docs.smartcitizen.me/Guides/data/Organise your data/",
+        "https://docs.smartcitizen.me/Guides/data/Handling calibration data/",
+        "https://docs.smartcitizen.me/Guides/data/Custom data processing/",
+        "https://docs.smartcitizen.me/Guides/data/Upload data to zenodo/",
+        "https://docs.smartcitizen.me/Guides/deployments/Deploying SCK/",
+        "https://docs.smartcitizen.me/Guides/deployments/Deploying iSCAPE Station V1/",
+        "https://docs.smartcitizen.me/Guides/deployments/Deploying iSCAPE Station V2/",
+        "https://docs.smartcitizen.me/Guides/deployments/Deploying Smart Citizen Station/",
+        "https://docs.smartcitizen.me/Guides/deployments/Installing Connectivity Units/",
+        "https://docs.smartcitizen.me/Guides/deployments/Using the power supply/",
+        "https://docs.smartcitizen.me/Guides/deployments/Installing solar panel/",
+        "https://docs.smartcitizen.me/Guides/deployments/Almabike sensors/",
+        "https://docs.smartcitizen.me/Guides/deployments/Water sensors/",
+        "https://docs.smartcitizen.me/Guides/deployments/OLED display/",
+        "https://docs.smartcitizen.me/Guides/replacements/Replacing PM Sensors/",
+        "https://docs.smartcitizen.me/Guides/enclosures/Making your own enclosures/"
+    ],
+    "https://docs.smartcitizen.me/getting%20started/Debugging%20your%20sensors/":
+    [
+        "https://docs.smartcitizen.me/Guides/",
+        "https://docs.smartcitizen.me/Guides/firmware/Update the firmware/",
+        "https://docs.smartcitizen.me/Guides/firmware/Edit the Firmware/",
+        "https://docs.smartcitizen.me/Guides/firmware/Debug the firmware/",
+        "https://docs.smartcitizen.me/Guides/calibration/Water sensors/",
+        "https://docs.smartcitizen.me/Guides/calibration/Soil moisture sensors/",
+        "https://docs.smartcitizen.me/Guides/calibration/SCD30 CO2 sensor/",
+        "https://docs.smartcitizen.me/Guides/data/Install the framework/",
+        "https://docs.smartcitizen.me/Guides/data/Make reports of your data/",
+        "https://docs.smartcitizen.me/Guides/data/Creating Interfaces/",
+        "https://docs.smartcitizen.me/Guides/data/Organise your data/",
+        "https://docs.smartcitizen.me/Guides/data/Handling calibration data/",
+        "https://docs.smartcitizen.me/Guides/data/Custom data processing/",
+        "https://docs.smartcitizen.me/Guides/data/Upload data to zenodo/",
+        "https://docs.smartcitizen.me/Guides/deployments/Deploying SCK/",
+        "https://docs.smartcitizen.me/Guides/deployments/Deploying iSCAPE Station V1/",
+        "https://docs.smartcitizen.me/Guides/deployments/Deploying iSCAPE Station V2/",
+        "https://docs.smartcitizen.me/Guides/deployments/Deploying Smart Citizen Station/",
+        "https://docs.smartcitizen.me/Guides/deployments/Installing Connectivity Units/",
+        "https://docs.smartcitizen.me/Guides/deployments/Using the power supply/",
+        "https://docs.smartcitizen.me/Guides/deployments/Installing solar panel/",
+        "https://docs.smartcitizen.me/Guides/deployments/Almabike sensors/",
+        "https://docs.smartcitizen.me/Guides/deployments/Water sensors/",
+        "https://docs.smartcitizen.me/Guides/deployments/OLED display/",
+        "https://docs.smartcitizen.me/Guides/replacements/Replacing PM Sensors/",
+        "https://docs.smartcitizen.me/Guides/enclosures/Making your own enclosures/"
+    ],
+    "https://docs.smartcitizen.me/getting%20started/Getting%20firmware%20information/":
+    [
+        "https://docs.smartcitizen.me/Guides/",
+        "https://docs.smartcitizen.me/Guides/firmware/Update the firmware/",
+        "https://docs.smartcitizen.me/Guides/firmware/Edit the Firmware/",
+        "https://docs.smartcitizen.me/Guides/firmware/Debug the firmware/",
+        "https://docs.smartcitizen.me/Guides/calibration/Water sensors/",
+        "https://docs.smartcitizen.me/Guides/calibration/Soil moisture sensors/",
+        "https://docs.smartcitizen.me/Guides/calibration/SCD30 CO2 sensor/",
+        "https://docs.smartcitizen.me/Guides/data/Install the framework/",
+        "https://docs.smartcitizen.me/Guides/data/Make reports of your data/",
+        "https://docs.smartcitizen.me/Guides/data/Creating Interfaces/",
+        "https://docs.smartcitizen.me/Guides/data/Organise your data/",
+        "https://docs.smartcitizen.me/Guides/data/Handling calibration data/",
+        "https://docs.smartcitizen.me/Guides/data/Custom data processing/",
+        "https://docs.smartcitizen.me/Guides/data/Upload data to zenodo/",
+        "https://docs.smartcitizen.me/Guides/deployments/Deploying SCK/",
+        "https://docs.smartcitizen.me/Guides/deployments/Deploying iSCAPE Station V1/",
+        "https://docs.smartcitizen.me/Guides/deployments/Deploying iSCAPE Station V2/",
+        "https://docs.smartcitizen.me/Guides/deployments/Deploying Smart Citizen Station/",
+        "https://docs.smartcitizen.me/Guides/deployments/Installing Connectivity Units/",
+        "https://docs.smartcitizen.me/Guides/deployments/Using the power supply/",
+        "https://docs.smartcitizen.me/Guides/deployments/Installing solar panel/",
+        "https://docs.smartcitizen.me/Guides/deployments/Almabike sensors/",
+        "https://docs.smartcitizen.me/Guides/deployments/Water sensors/",
+        "https://docs.smartcitizen.me/Guides/deployments/OLED display/",
+        "https://docs.smartcitizen.me/Guides/replacements/Replacing PM Sensors/",
+        "https://docs.smartcitizen.me/Guides/enclosures/Making your own enclosures/"
+    ],
+    "https://docs.smartcitizen.me/getting%20started/Third%20party%20sensors/":
+    [
+        "https://docs.smartcitizen.me/Guides/",
+        "https://docs.smartcitizen.me/Guides/firmware/Update the firmware/",
+        "https://docs.smartcitizen.me/Guides/firmware/Edit the Firmware/",
+        "https://docs.smartcitizen.me/Guides/firmware/Debug the firmware/",
+        "https://docs.smartcitizen.me/Guides/calibration/Water sensors/",
+        "https://docs.smartcitizen.me/Guides/calibration/Soil moisture sensors/",
+        "https://docs.smartcitizen.me/Guides/calibration/SCD30 CO2 sensor/",
+        "https://docs.smartcitizen.me/Guides/data/Install the framework/",
+        "https://docs.smartcitizen.me/Guides/data/Make reports of your data/",
+        "https://docs.smartcitizen.me/Guides/data/Creating Interfaces/",
+        "https://docs.smartcitizen.me/Guides/data/Organise your data/",
+        "https://docs.smartcitizen.me/Guides/data/Handling calibration data/",
+        "https://docs.smartcitizen.me/Guides/data/Custom data processing/",
+        "https://docs.smartcitizen.me/Guides/data/Upload data to zenodo/",
+        "https://docs.smartcitizen.me/Guides/deployments/Deploying SCK/",
+        "https://docs.smartcitizen.me/Guides/deployments/Deploying iSCAPE Station V1/",
+        "https://docs.smartcitizen.me/Guides/deployments/Deploying iSCAPE Station V2/",
+        "https://docs.smartcitizen.me/Guides/deployments/Deploying Smart Citizen Station/",
+        "https://docs.smartcitizen.me/Guides/deployments/Installing Connectivity Units/",
+        "https://docs.smartcitizen.me/Guides/deployments/Using the power supply/",
+        "https://docs.smartcitizen.me/Guides/deployments/Installing solar panel/",
+        "https://docs.smartcitizen.me/Guides/deployments/Almabike sensors/",
+        "https://docs.smartcitizen.me/Guides/deployments/Water sensors/",
+        "https://docs.smartcitizen.me/Guides/deployments/OLED display/",
+        "https://docs.smartcitizen.me/Guides/replacements/Replacing PM Sensors/",
+        "https://docs.smartcitizen.me/Guides/enclosures/Making your own enclosures/"
+    ],
+    "https://docs.smartcitizen.me/enclosures/Enclosures/":
+    [
+        "https://docs.smartcitizen.me/Components/",
+        "https://docs.smartcitizen.me/Components/boards/Data Board/",
+        "https://docs.smartcitizen.me/Components/boards/Urban Board/",
+        "https://docs.smartcitizen.me/Components/boards/Gases Pro Board/",
+        "https://docs.smartcitizen.me/Components/boards/PM Board/",
+        "https://docs.smartcitizen.me/Components/boards/Analog Sensor Board/",
+        "https://docs.smartcitizen.me/Components/Soil and water/",
+        "https://docs.smartcitizen.me/Components/Auxiliary Connector/",
+        "https://docs.smartcitizen.me/Components/boards/Power Supply/",
+        "https://docs.smartcitizen.me/Components/Solar Panel/",
+        "https://docs.smartcitizen.me/Components/GPS/",
+        "https://docs.smartcitizen.me/Components/Firmware/",
+        "https://docs.smartcitizen.me/Components/Flash Storage/",
+        "https://docs.smartcitizen.me/Components/sensors/performance/",
+        "https://docs.smartcitizen.me/Components/sensors/air/PM Sensors/",
+        "https://docs.smartcitizen.me/Components/sensors/air/Noise/",
+        "https://docs.smartcitizen.me/Components/sensors/air/Metal Oxide/",
+        "https://docs.smartcitizen.me/Components/sensors/air/CCS811/",
+        "https://docs.smartcitizen.me/Components/sensors/air/Electrochemical Sensors/",
+        "https://docs.smartcitizen.me/Components/sensors/soil/Soil Moisture Sensors/",
+        "https://docs.smartcitizen.me/Components/sensors/soil/Tensiometer/",
+        "https://docs.smartcitizen.me/Components/legacy/",
+        "https://docs.smartcitizen.me/Components/legacy/Hardware/",
+        "https://docs.smartcitizen.me/Components/legacy/Command Line/",
+        "https://docs.smartcitizen.me/Components/legacy/Faq/",
+        "https://docs.smartcitizen.me/Components/legacy/Troubleshooting/",
+        "https://docs.smartcitizen.me/Components/legacy/sck/",
+        "https://docs.smartcitizen.me/Components/sensors/air/SGX MICS/"
+    ],
+    "https://docs.smartcitizen.me/Soil%20and%20water/":
+    [
+        "https://docs.smartcitizen.me/Components/",
+        "https://docs.smartcitizen.me/Components/boards/Data Board/",
+        "https://docs.smartcitizen.me/Components/boards/Urban Board/",
+        "https://docs.smartcitizen.me/Components/enclosures/Enclosures/",
+        "https://docs.smartcitizen.me/Components/boards/Gases Pro Board/",
+        "https://docs.smartcitizen.me/Components/boards/PM Board/",
+        "https://docs.smartcitizen.me/Components/boards/Analog Sensor Board/",
+        "https://docs.smartcitizen.me/Components/Auxiliary Connector/",
+        "https://docs.smartcitizen.me/Components/boards/Power Supply/",
+        "https://docs.smartcitizen.me/Components/Solar Panel/",
+        "https://docs.smartcitizen.me/Components/GPS/",
+        "https://docs.smartcitizen.me/Components/Firmware/",
+        "https://docs.smartcitizen.me/Components/Flash Storage/",
+        "https://docs.smartcitizen.me/Components/sensors/performance/",
+        "https://docs.smartcitizen.me/Components/sensors/air/PM Sensors/",
+        "https://docs.smartcitizen.me/Components/sensors/air/Noise/",
+        "https://docs.smartcitizen.me/Components/sensors/air/Metal Oxide/",
+        "https://docs.smartcitizen.me/Components/sensors/air/CCS811/",
+        "https://docs.smartcitizen.me/Components/sensors/air/Electrochemical Sensors/",
+        "https://docs.smartcitizen.me/Components/sensors/soil/Soil Moisture Sensors/",
+        "https://docs.smartcitizen.me/Components/sensors/soil/Tensiometer/",
+        "https://docs.smartcitizen.me/Components/legacy/",
+        "https://docs.smartcitizen.me/Components/legacy/Hardware/",
+        "https://docs.smartcitizen.me/Components/legacy/Command Line/",
+        "https://docs.smartcitizen.me/Components/legacy/Faq/",
+        "https://docs.smartcitizen.me/Components/legacy/Troubleshooting/",
+        "https://docs.smartcitizen.me/Components/legacy/sck/",
+        "https://docs.smartcitizen.me/Components/sensors/air/SGX MICS/"
+    ],
+    "https://docs.smartcitizen.me/Auxiliary%20Connector/":
+    [
+        "https://docs.smartcitizen.me/Components/",
+        "https://docs.smartcitizen.me/Components/boards/Data Board/",
+        "https://docs.smartcitizen.me/Components/boards/Urban Board/",
+        "https://docs.smartcitizen.me/Components/enclosures/Enclosures/",
+        "https://docs.smartcitizen.me/Components/boards/Gases Pro Board/",
+        "https://docs.smartcitizen.me/Components/boards/PM Board/",
+        "https://docs.smartcitizen.me/Components/boards/Analog Sensor Board/",
+        "https://docs.smartcitizen.me/Components/Soil and water/",
+        "https://docs.smartcitizen.me/Components/boards/Power Supply/",
+        "https://docs.smartcitizen.me/Components/Solar Panel/",
+        "https://docs.smartcitizen.me/Components/GPS/",
+        "https://docs.smartcitizen.me/Components/Firmware/",
+        "https://docs.smartcitizen.me/Components/Flash Storage/",
+        "https://docs.smartcitizen.me/Components/sensors/performance/",
+        "https://docs.smartcitizen.me/Components/sensors/air/PM Sensors/",
+        "https://docs.smartcitizen.me/Components/sensors/air/Noise/",
+        "https://docs.smartcitizen.me/Components/sensors/air/Metal Oxide/",
+        "https://docs.smartcitizen.me/Components/sensors/air/CCS811/",
+        "https://docs.smartcitizen.me/Components/sensors/air/Electrochemical Sensors/",
+        "https://docs.smartcitizen.me/Components/sensors/soil/Soil Moisture Sensors/",
+        "https://docs.smartcitizen.me/Components/sensors/soil/Tensiometer/",
+        "https://docs.smartcitizen.me/Components/legacy/",
+        "https://docs.smartcitizen.me/Components/legacy/Hardware/",
+        "https://docs.smartcitizen.me/Components/legacy/Command Line/",
+        "https://docs.smartcitizen.me/Components/legacy/Faq/",
+        "https://docs.smartcitizen.me/Components/legacy/Troubleshooting/",
+        "https://docs.smartcitizen.me/Components/legacy/sck/",
+        "https://docs.smartcitizen.me/Components/sensors/air/SGX MICS/"
+    ],
+    "https://docs.smartcitizen.me/Solar%20Panel/":
+    [
+        "https://docs.smartcitizen.me/Components/",
+        "https://docs.smartcitizen.me/Components/boards/Data Board/",
+        "https://docs.smartcitizen.me/Components/boards/Urban Board/",
+        "https://docs.smartcitizen.me/Components/enclosures/Enclosures/",
+        "https://docs.smartcitizen.me/Components/boards/Gases Pro Board/",
+        "https://docs.smartcitizen.me/Components/boards/PM Board/",
+        "https://docs.smartcitizen.me/Components/boards/Analog Sensor Board/",
+        "https://docs.smartcitizen.me/Components/Soil and water/",
+        "https://docs.smartcitizen.me/Components/Auxiliary Connector/",
+        "https://docs.smartcitizen.me/Components/boards/Power Supply/",
+        "https://docs.smartcitizen.me/Components/GPS/",
+        "https://docs.smartcitizen.me/Components/Firmware/",
+        "https://docs.smartcitizen.me/Components/Flash Storage/",
+        "https://docs.smartcitizen.me/Components/sensors/performance/",
+        "https://docs.smartcitizen.me/Components/sensors/air/PM Sensors/",
+        "https://docs.smartcitizen.me/Components/sensors/air/Noise/",
+        "https://docs.smartcitizen.me/Components/sensors/air/Metal Oxide/",
+        "https://docs.smartcitizen.me/Components/sensors/air/CCS811/",
+        "https://docs.smartcitizen.me/Components/sensors/air/Electrochemical Sensors/",
+        "https://docs.smartcitizen.me/Components/sensors/soil/Soil Moisture Sensors/",
+        "https://docs.smartcitizen.me/Components/sensors/soil/Tensiometer/",
+        "https://docs.smartcitizen.me/Components/legacy/",
+        "https://docs.smartcitizen.me/Components/legacy/Hardware/",
+        "https://docs.smartcitizen.me/Components/legacy/Command Line/",
+        "https://docs.smartcitizen.me/Components/legacy/Faq/",
+        "https://docs.smartcitizen.me/Components/legacy/Troubleshooting/",
+        "https://docs.smartcitizen.me/Components/legacy/sck/",
+        "https://docs.smartcitizen.me/Components/sensors/air/SGX MICS/"
+    ],
+    "https://docs.smartcitizen.me/GPS/":
+    [
+        "https://docs.smartcitizen.me/Components/",
+        "https://docs.smartcitizen.me/Components/boards/Data Board/",
+        "https://docs.smartcitizen.me/Components/boards/Urban Board/",
+        "https://docs.smartcitizen.me/Components/enclosures/Enclosures/",
+        "https://docs.smartcitizen.me/Components/boards/Gases Pro Board/",
+        "https://docs.smartcitizen.me/Components/boards/PM Board/",
+        "https://docs.smartcitizen.me/Components/boards/Analog Sensor Board/",
+        "https://docs.smartcitizen.me/Components/Soil and water/",
+        "https://docs.smartcitizen.me/Components/Auxiliary Connector/",
+        "https://docs.smartcitizen.me/Components/boards/Power Supply/",
+        "https://docs.smartcitizen.me/Components/Solar Panel/",
+        "https://docs.smartcitizen.me/Components/Firmware/",
+        "https://docs.smartcitizen.me/Components/Flash Storage/",
+        "https://docs.smartcitizen.me/Components/sensors/performance/",
+        "https://docs.smartcitizen.me/Components/sensors/air/PM Sensors/",
+        "https://docs.smartcitizen.me/Components/sensors/air/Noise/",
+        "https://docs.smartcitizen.me/Components/sensors/air/Metal Oxide/",
+        "https://docs.smartcitizen.me/Components/sensors/air/CCS811/",
+        "https://docs.smartcitizen.me/Components/sensors/air/Electrochemical Sensors/",
+        "https://docs.smartcitizen.me/Components/sensors/soil/Soil Moisture Sensors/",
+        "https://docs.smartcitizen.me/Components/sensors/soil/Tensiometer/",
+        "https://docs.smartcitizen.me/Components/legacy/",
+        "https://docs.smartcitizen.me/Components/legacy/Hardware/",
+        "https://docs.smartcitizen.me/Components/legacy/Command Line/",
+        "https://docs.smartcitizen.me/Components/legacy/Faq/",
+        "https://docs.smartcitizen.me/Components/legacy/Troubleshooting/",
+        "https://docs.smartcitizen.me/Components/legacy/sck/",
+        "https://docs.smartcitizen.me/Components/sensors/air/SGX MICS/"
+    ],
+    "https://docs.smartcitizen.me/Firmware/":
+    [
+        "https://docs.smartcitizen.me/Components/",
+        "https://docs.smartcitizen.me/Components/boards/Data Board/",
+        "https://docs.smartcitizen.me/Components/boards/Urban Board/",
+        "https://docs.smartcitizen.me/Components/enclosures/Enclosures/",
+        "https://docs.smartcitizen.me/Components/boards/Gases Pro Board/",
+        "https://docs.smartcitizen.me/Components/boards/PM Board/",
+        "https://docs.smartcitizen.me/Components/boards/Analog Sensor Board/",
+        "https://docs.smartcitizen.me/Components/Soil and water/",
+        "https://docs.smartcitizen.me/Components/Auxiliary Connector/",
+        "https://docs.smartcitizen.me/Components/boards/Power Supply/",
+        "https://docs.smartcitizen.me/Components/Solar Panel/",
+        "https://docs.smartcitizen.me/Components/GPS/",
+        "https://docs.smartcitizen.me/Components/Flash Storage/",
+        "https://docs.smartcitizen.me/Components/sensors/performance/",
+        "https://docs.smartcitizen.me/Components/sensors/air/PM Sensors/",
+        "https://docs.smartcitizen.me/Components/sensors/air/Noise/",
+        "https://docs.smartcitizen.me/Components/sensors/air/Metal Oxide/",
+        "https://docs.smartcitizen.me/Components/sensors/air/CCS811/",
+        "https://docs.smartcitizen.me/Components/sensors/air/Electrochemical Sensors/",
+        "https://docs.smartcitizen.me/Components/sensors/soil/Soil Moisture Sensors/",
+        "https://docs.smartcitizen.me/Components/sensors/soil/Tensiometer/",
+        "https://docs.smartcitizen.me/Components/legacy/",
+        "https://docs.smartcitizen.me/Components/legacy/Hardware/",
+        "https://docs.smartcitizen.me/Components/legacy/Command Line/",
+        "https://docs.smartcitizen.me/Components/legacy/Faq/",
+        "https://docs.smartcitizen.me/Components/legacy/Troubleshooting/",
+        "https://docs.smartcitizen.me/Components/legacy/sck/",
+        "https://docs.smartcitizen.me/Components/sensors/air/SGX MICS/"
+    ],
+    "https://docs.smartcitizen.me/Flash%20Storage/":
+    [
+        "https://docs.smartcitizen.me/Components/",
+        "https://docs.smartcitizen.me/Components/boards/Data Board/",
+        "https://docs.smartcitizen.me/Components/boards/Urban Board/",
+        "https://docs.smartcitizen.me/Components/enclosures/Enclosures/",
+        "https://docs.smartcitizen.me/Components/boards/Gases Pro Board/",
+        "https://docs.smartcitizen.me/Components/boards/PM Board/",
+        "https://docs.smartcitizen.me/Components/boards/Analog Sensor Board/",
+        "https://docs.smartcitizen.me/Components/Soil and water/",
+        "https://docs.smartcitizen.me/Components/Auxiliary Connector/",
+        "https://docs.smartcitizen.me/Components/boards/Power Supply/",
+        "https://docs.smartcitizen.me/Components/Solar Panel/",
+        "https://docs.smartcitizen.me/Components/GPS/",
+        "https://docs.smartcitizen.me/Components/Firmware/",
+        "https://docs.smartcitizen.me/Components/sensors/performance/",
+        "https://docs.smartcitizen.me/Components/sensors/air/PM Sensors/",
+        "https://docs.smartcitizen.me/Components/sensors/air/Noise/",
+        "https://docs.smartcitizen.me/Components/sensors/air/Metal Oxide/",
+        "https://docs.smartcitizen.me/Components/sensors/air/CCS811/",
+        "https://docs.smartcitizen.me/Components/sensors/air/Electrochemical Sensors/",
+        "https://docs.smartcitizen.me/Components/sensors/soil/Soil Moisture Sensors/",
+        "https://docs.smartcitizen.me/Components/sensors/soil/Tensiometer/",
+        "https://docs.smartcitizen.me/Components/legacy/",
+        "https://docs.smartcitizen.me/Components/legacy/Hardware/",
+        "https://docs.smartcitizen.me/Components/legacy/Command Line/",
+        "https://docs.smartcitizen.me/Components/legacy/Faq/",
+        "https://docs.smartcitizen.me/Components/legacy/Troubleshooting/",
+        "https://docs.smartcitizen.me/Components/legacy/sck/",
+        "https://docs.smartcitizen.me/Components/sensors/air/SGX MICS/"
+    ],
+    "https://docs.smartcitizen.me/sensors/performance/":
+    [
+        "https://docs.smartcitizen.me/Components/",
+        "https://docs.smartcitizen.me/Components/boards/Data Board/",
+        "https://docs.smartcitizen.me/Components/boards/Urban Board/",
+        "https://docs.smartcitizen.me/Components/enclosures/Enclosures/",
+        "https://docs.smartcitizen.me/Components/boards/Gases Pro Board/",
+        "https://docs.smartcitizen.me/Components/boards/PM Board/",
+        "https://docs.smartcitizen.me/Components/boards/Analog Sensor Board/",
+        "https://docs.smartcitizen.me/Components/Soil and water/",
+        "https://docs.smartcitizen.me/Components/Auxiliary Connector/",
+        "https://docs.smartcitizen.me/Components/boards/Power Supply/",
+        "https://docs.smartcitizen.me/Components/Solar Panel/",
+        "https://docs.smartcitizen.me/Components/GPS/",
+        "https://docs.smartcitizen.me/Components/Firmware/",
+        "https://docs.smartcitizen.me/Components/Flash Storage/",
+        "https://docs.smartcitizen.me/Components/legacy/",
+        "https://docs.smartcitizen.me/Components/legacy/Hardware/",
+        "https://docs.smartcitizen.me/Components/legacy/Command Line/",
+        "https://docs.smartcitizen.me/Components/legacy/Faq/",
+        "https://docs.smartcitizen.me/Components/legacy/Troubleshooting/",
+        "https://docs.smartcitizen.me/Components/legacy/sck/"
+    ],
+    "https://docs.smartcitizen.me/sensors/air/PM%20Sensors/":
+    [
+        "https://docs.smartcitizen.me/Components/",
+        "https://docs.smartcitizen.me/Components/boards/Data Board/",
+        "https://docs.smartcitizen.me/Components/boards/Urban Board/",
+        "https://docs.smartcitizen.me/Components/enclosures/Enclosures/",
+        "https://docs.smartcitizen.me/Components/boards/Gases Pro Board/",
+        "https://docs.smartcitizen.me/Components/boards/PM Board/",
+        "https://docs.smartcitizen.me/Components/boards/Analog Sensor Board/",
+        "https://docs.smartcitizen.me/Components/Soil and water/",
+        "https://docs.smartcitizen.me/Components/Auxiliary Connector/",
+        "https://docs.smartcitizen.me/Components/boards/Power Supply/",
+        "https://docs.smartcitizen.me/Components/Solar Panel/",
+        "https://docs.smartcitizen.me/Components/GPS/",
+        "https://docs.smartcitizen.me/Components/Firmware/",
+        "https://docs.smartcitizen.me/Components/Flash Storage/",
+        "https://docs.smartcitizen.me/Components/legacy/",
+        "https://docs.smartcitizen.me/Components/legacy/Hardware/",
+        "https://docs.smartcitizen.me/Components/legacy/Command Line/",
+        "https://docs.smartcitizen.me/Components/legacy/Faq/",
+        "https://docs.smartcitizen.me/Components/legacy/Troubleshooting/",
+        "https://docs.smartcitizen.me/Components/legacy/sck/"
+    ],
+    "https://docs.smartcitizen.me/sensors/air/Noise/":
+    [
+        "https://docs.smartcitizen.me/Components/",
+        "https://docs.smartcitizen.me/Components/boards/Data Board/",
+        "https://docs.smartcitizen.me/Components/boards/Urban Board/",
+        "https://docs.smartcitizen.me/Components/enclosures/Enclosures/",
+        "https://docs.smartcitizen.me/Components/boards/Gases Pro Board/",
+        "https://docs.smartcitizen.me/Components/boards/PM Board/",
+        "https://docs.smartcitizen.me/Components/boards/Analog Sensor Board/",
+        "https://docs.smartcitizen.me/Components/Soil and water/",
+        "https://docs.smartcitizen.me/Components/Auxiliary Connector/",
+        "https://docs.smartcitizen.me/Components/boards/Power Supply/",
+        "https://docs.smartcitizen.me/Components/Solar Panel/",
+        "https://docs.smartcitizen.me/Components/GPS/",
+        "https://docs.smartcitizen.me/Components/Firmware/",
+        "https://docs.smartcitizen.me/Components/Flash Storage/",
+        "https://docs.smartcitizen.me/Components/legacy/",
+        "https://docs.smartcitizen.me/Components/legacy/Hardware/",
+        "https://docs.smartcitizen.me/Components/legacy/Command Line/",
+        "https://docs.smartcitizen.me/Components/legacy/Faq/",
+        "https://docs.smartcitizen.me/Components/legacy/Troubleshooting/",
+        "https://docs.smartcitizen.me/Components/legacy/sck/"
+    ],
+    "https://docs.smartcitizen.me/sensors/air/Metal%20Oxide/":
+    [
+        "https://docs.smartcitizen.me/Components/",
+        "https://docs.smartcitizen.me/Components/boards/Data Board/",
+        "https://docs.smartcitizen.me/Components/boards/Urban Board/",
+        "https://docs.smartcitizen.me/Components/enclosures/Enclosures/",
+        "https://docs.smartcitizen.me/Components/boards/Gases Pro Board/",
+        "https://docs.smartcitizen.me/Components/boards/PM Board/",
+        "https://docs.smartcitizen.me/Components/boards/Analog Sensor Board/",
+        "https://docs.smartcitizen.me/Components/Soil and water/",
+        "https://docs.smartcitizen.me/Components/Auxiliary Connector/",
+        "https://docs.smartcitizen.me/Components/boards/Power Supply/",
+        "https://docs.smartcitizen.me/Components/Solar Panel/",
+        "https://docs.smartcitizen.me/Components/GPS/",
+        "https://docs.smartcitizen.me/Components/Firmware/",
+        "https://docs.smartcitizen.me/Components/Flash Storage/",
+        "https://docs.smartcitizen.me/Components/legacy/",
+        "https://docs.smartcitizen.me/Components/legacy/Hardware/",
+        "https://docs.smartcitizen.me/Components/legacy/Command Line/",
+        "https://docs.smartcitizen.me/Components/legacy/Faq/",
+        "https://docs.smartcitizen.me/Components/legacy/Troubleshooting/",
+        "https://docs.smartcitizen.me/Components/legacy/sck/"
+    ],
+    "https://docs.smartcitizen.me/sensors/air/CCS811/":
+    [
+        "https://docs.smartcitizen.me/Components/",
+        "https://docs.smartcitizen.me/Components/boards/Data Board/",
+        "https://docs.smartcitizen.me/Components/boards/Urban Board/",
+        "https://docs.smartcitizen.me/Components/enclosures/Enclosures/",
+        "https://docs.smartcitizen.me/Components/boards/Gases Pro Board/",
+        "https://docs.smartcitizen.me/Components/boards/PM Board/",
+        "https://docs.smartcitizen.me/Components/boards/Analog Sensor Board/",
+        "https://docs.smartcitizen.me/Components/Soil and water/",
+        "https://docs.smartcitizen.me/Components/Auxiliary Connector/",
+        "https://docs.smartcitizen.me/Components/boards/Power Supply/",
+        "https://docs.smartcitizen.me/Components/Solar Panel/",
+        "https://docs.smartcitizen.me/Components/GPS/",
+        "https://docs.smartcitizen.me/Components/Firmware/",
+        "https://docs.smartcitizen.me/Components/Flash Storage/",
+        "https://docs.smartcitizen.me/Components/legacy/",
+        "https://docs.smartcitizen.me/Components/legacy/Hardware/",
+        "https://docs.smartcitizen.me/Components/legacy/Command Line/",
+        "https://docs.smartcitizen.me/Components/legacy/Faq/",
+        "https://docs.smartcitizen.me/Components/legacy/Troubleshooting/",
+        "https://docs.smartcitizen.me/Components/legacy/sck/"
+    ],
+    "https://docs.smartcitizen.me/sensors/air/Electrochemical%20Sensors/":
+    [
+        "https://docs.smartcitizen.me/Components/",
+        "https://docs.smartcitizen.me/Components/boards/Data Board/",
+        "https://docs.smartcitizen.me/Components/boards/Urban Board/",
+        "https://docs.smartcitizen.me/Components/enclosures/Enclosures/",
+        "https://docs.smartcitizen.me/Components/boards/Gases Pro Board/",
+        "https://docs.smartcitizen.me/Components/boards/PM Board/",
+        "https://docs.smartcitizen.me/Components/boards/Analog Sensor Board/",
+        "https://docs.smartcitizen.me/Components/Soil and water/",
+        "https://docs.smartcitizen.me/Components/Auxiliary Connector/",
+        "https://docs.smartcitizen.me/Components/boards/Power Supply/",
+        "https://docs.smartcitizen.me/Components/Solar Panel/",
+        "https://docs.smartcitizen.me/Components/GPS/",
+        "https://docs.smartcitizen.me/Components/Firmware/",
+        "https://docs.smartcitizen.me/Components/Flash Storage/",
+        "https://docs.smartcitizen.me/Components/legacy/",
+        "https://docs.smartcitizen.me/Components/legacy/Hardware/",
+        "https://docs.smartcitizen.me/Components/legacy/Command Line/",
+        "https://docs.smartcitizen.me/Components/legacy/Faq/",
+        "https://docs.smartcitizen.me/Components/legacy/Troubleshooting/",
+        "https://docs.smartcitizen.me/Components/legacy/sck/"
+    ],
+    "https://docs.smartcitizen.me/sensors/soil/Soil%20Moisture%20Sensors/":
+    [
+        "https://docs.smartcitizen.me/Components/",
+        "https://docs.smartcitizen.me/Components/boards/Data Board/",
+        "https://docs.smartcitizen.me/Components/boards/Urban Board/",
+        "https://docs.smartcitizen.me/Components/enclosures/Enclosures/",
+        "https://docs.smartcitizen.me/Components/boards/Gases Pro Board/",
+        "https://docs.smartcitizen.me/Components/boards/PM Board/",
+        "https://docs.smartcitizen.me/Components/boards/Analog Sensor Board/",
+        "https://docs.smartcitizen.me/Components/Soil and water/",
+        "https://docs.smartcitizen.me/Components/Auxiliary Connector/",
+        "https://docs.smartcitizen.me/Components/boards/Power Supply/",
+        "https://docs.smartcitizen.me/Components/Solar Panel/",
+        "https://docs.smartcitizen.me/Components/GPS/",
+        "https://docs.smartcitizen.me/Components/Firmware/",
+        "https://docs.smartcitizen.me/Components/Flash Storage/",
+        "https://docs.smartcitizen.me/Components/legacy/",
+        "https://docs.smartcitizen.me/Components/legacy/Hardware/",
+        "https://docs.smartcitizen.me/Components/legacy/Command Line/",
+        "https://docs.smartcitizen.me/Components/legacy/Faq/",
+        "https://docs.smartcitizen.me/Components/legacy/Troubleshooting/",
+        "https://docs.smartcitizen.me/Components/legacy/sck/"
+    ],
+    "https://docs.smartcitizen.me/sensors/soil/Tensiometer/":
+    [
+        "https://docs.smartcitizen.me/Components/",
+        "https://docs.smartcitizen.me/Components/boards/Data Board/",
+        "https://docs.smartcitizen.me/Components/boards/Urban Board/",
+        "https://docs.smartcitizen.me/Components/enclosures/Enclosures/",
+        "https://docs.smartcitizen.me/Components/boards/Gases Pro Board/",
+        "https://docs.smartcitizen.me/Components/boards/PM Board/",
+        "https://docs.smartcitizen.me/Components/boards/Analog Sensor Board/",
+        "https://docs.smartcitizen.me/Components/Soil and water/",
+        "https://docs.smartcitizen.me/Components/Auxiliary Connector/",
+        "https://docs.smartcitizen.me/Components/boards/Power Supply/",
+        "https://docs.smartcitizen.me/Components/Solar Panel/",
+        "https://docs.smartcitizen.me/Components/GPS/",
+        "https://docs.smartcitizen.me/Components/Firmware/",
+        "https://docs.smartcitizen.me/Components/Flash Storage/",
+        "https://docs.smartcitizen.me/Components/legacy/",
+        "https://docs.smartcitizen.me/Components/legacy/Hardware/",
+        "https://docs.smartcitizen.me/Components/legacy/Command Line/",
+        "https://docs.smartcitizen.me/Components/legacy/Faq/",
+        "https://docs.smartcitizen.me/Components/legacy/Troubleshooting/",
+        "https://docs.smartcitizen.me/Components/legacy/sck/"
+    ],
+    "https://docs.smartcitizen.me/legacy/":
+    [
+        "https://docs.smartcitizen.me/Components/",
+        "https://docs.smartcitizen.me/Components/boards/Data Board/",
+        "https://docs.smartcitizen.me/Components/boards/Urban Board/",
+        "https://docs.smartcitizen.me/Components/enclosures/Enclosures/",
+        "https://docs.smartcitizen.me/Components/boards/Gases Pro Board/",
+        "https://docs.smartcitizen.me/Components/boards/PM Board/",
+        "https://docs.smartcitizen.me/Components/boards/Analog Sensor Board/",
+        "https://docs.smartcitizen.me/Components/Soil and water/",
+        "https://docs.smartcitizen.me/Components/Auxiliary Connector/",
+        "https://docs.smartcitizen.me/Components/boards/Power Supply/",
+        "https://docs.smartcitizen.me/Components/Solar Panel/",
+        "https://docs.smartcitizen.me/Components/GPS/",
+        "https://docs.smartcitizen.me/Components/Firmware/",
+        "https://docs.smartcitizen.me/Components/Flash Storage/",
+        "https://docs.smartcitizen.me/Components/sensors/performance/",
+        "https://docs.smartcitizen.me/Components/sensors/air/PM Sensors/",
+        "https://docs.smartcitizen.me/Components/sensors/air/Noise/",
+        "https://docs.smartcitizen.me/Components/sensors/air/Metal Oxide/",
+        "https://docs.smartcitizen.me/Components/sensors/air/CCS811/",
+        "https://docs.smartcitizen.me/Components/sensors/air/Electrochemical Sensors/",
+        "https://docs.smartcitizen.me/Components/sensors/soil/Soil Moisture Sensors/",
+        "https://docs.smartcitizen.me/Components/sensors/soil/Tensiometer/",
+        "https://docs.smartcitizen.me/Components/sensors/air/SGX MICS/"
+    ],
+    "https://docs.smartcitizen.me/legacy/Hardware/":
+    [
+        "https://docs.smartcitizen.me/Components/",
+        "https://docs.smartcitizen.me/Components/boards/Data Board/",
+        "https://docs.smartcitizen.me/Components/boards/Urban Board/",
+        "https://docs.smartcitizen.me/Components/enclosures/Enclosures/",
+        "https://docs.smartcitizen.me/Components/boards/Gases Pro Board/",
+        "https://docs.smartcitizen.me/Components/boards/PM Board/",
+        "https://docs.smartcitizen.me/Components/boards/Analog Sensor Board/",
+        "https://docs.smartcitizen.me/Components/Soil and water/",
+        "https://docs.smartcitizen.me/Components/Auxiliary Connector/",
+        "https://docs.smartcitizen.me/Components/boards/Power Supply/",
+        "https://docs.smartcitizen.me/Components/Solar Panel/",
+        "https://docs.smartcitizen.me/Components/GPS/",
+        "https://docs.smartcitizen.me/Components/Firmware/",
+        "https://docs.smartcitizen.me/Components/Flash Storage/",
+        "https://docs.smartcitizen.me/Components/sensors/performance/",
+        "https://docs.smartcitizen.me/Components/sensors/air/PM Sensors/",
+        "https://docs.smartcitizen.me/Components/sensors/air/Noise/",
+        "https://docs.smartcitizen.me/Components/sensors/air/Metal Oxide/",
+        "https://docs.smartcitizen.me/Components/sensors/air/CCS811/",
+        "https://docs.smartcitizen.me/Components/sensors/air/Electrochemical Sensors/",
+        "https://docs.smartcitizen.me/Components/sensors/soil/Soil Moisture Sensors/",
+        "https://docs.smartcitizen.me/Components/sensors/soil/Tensiometer/",
+        "https://docs.smartcitizen.me/Components/sensors/air/SGX MICS/"
+    ],
+    "https://docs.smartcitizen.me/legacy/Command%20Line/":
+    [
+        "https://docs.smartcitizen.me/Components/",
+        "https://docs.smartcitizen.me/Components/boards/Data Board/",
+        "https://docs.smartcitizen.me/Components/boards/Urban Board/",
+        "https://docs.smartcitizen.me/Components/enclosures/Enclosures/",
+        "https://docs.smartcitizen.me/Components/boards/Gases Pro Board/",
+        "https://docs.smartcitizen.me/Components/boards/PM Board/",
+        "https://docs.smartcitizen.me/Components/boards/Analog Sensor Board/",
+        "https://docs.smartcitizen.me/Components/Soil and water/",
+        "https://docs.smartcitizen.me/Components/Auxiliary Connector/",
+        "https://docs.smartcitizen.me/Components/boards/Power Supply/",
+        "https://docs.smartcitizen.me/Components/Solar Panel/",
+        "https://docs.smartcitizen.me/Components/GPS/",
+        "https://docs.smartcitizen.me/Components/Firmware/",
+        "https://docs.smartcitizen.me/Components/Flash Storage/",
+        "https://docs.smartcitizen.me/Components/sensors/performance/",
+        "https://docs.smartcitizen.me/Components/sensors/air/PM Sensors/",
+        "https://docs.smartcitizen.me/Components/sensors/air/Noise/",
+        "https://docs.smartcitizen.me/Components/sensors/air/Metal Oxide/",
+        "https://docs.smartcitizen.me/Components/sensors/air/CCS811/",
+        "https://docs.smartcitizen.me/Components/sensors/air/Electrochemical Sensors/",
+        "https://docs.smartcitizen.me/Components/sensors/soil/Soil Moisture Sensors/",
+        "https://docs.smartcitizen.me/Components/sensors/soil/Tensiometer/",
+        "https://docs.smartcitizen.me/Components/sensors/air/SGX MICS/"
+    ],
+    "https://docs.smartcitizen.me/legacy/Faq/":
+    [
+        "https://docs.smartcitizen.me/Components/",
+        "https://docs.smartcitizen.me/Components/boards/Data Board/",
+        "https://docs.smartcitizen.me/Components/boards/Urban Board/",
+        "https://docs.smartcitizen.me/Components/enclosures/Enclosures/",
+        "https://docs.smartcitizen.me/Components/boards/Gases Pro Board/",
+        "https://docs.smartcitizen.me/Components/boards/PM Board/",
+        "https://docs.smartcitizen.me/Components/boards/Analog Sensor Board/",
+        "https://docs.smartcitizen.me/Components/Soil and water/",
+        "https://docs.smartcitizen.me/Components/Auxiliary Connector/",
+        "https://docs.smartcitizen.me/Components/boards/Power Supply/",
+        "https://docs.smartcitizen.me/Components/Solar Panel/",
+        "https://docs.smartcitizen.me/Components/GPS/",
+        "https://docs.smartcitizen.me/Components/Firmware/",
+        "https://docs.smartcitizen.me/Components/Flash Storage/",
+        "https://docs.smartcitizen.me/Components/sensors/performance/",
+        "https://docs.smartcitizen.me/Components/sensors/air/PM Sensors/",
+        "https://docs.smartcitizen.me/Components/sensors/air/Noise/",
+        "https://docs.smartcitizen.me/Components/sensors/air/Metal Oxide/",
+        "https://docs.smartcitizen.me/Components/sensors/air/CCS811/",
+        "https://docs.smartcitizen.me/Components/sensors/air/Electrochemical Sensors/",
+        "https://docs.smartcitizen.me/Components/sensors/soil/Soil Moisture Sensors/",
+        "https://docs.smartcitizen.me/Components/sensors/soil/Tensiometer/",
+        "https://docs.smartcitizen.me/Components/sensors/air/SGX MICS/"
+    ],
+    "https://docs.smartcitizen.me/legacy/Troubleshooting/":
+    [
+        "https://docs.smartcitizen.me/Components/",
+        "https://docs.smartcitizen.me/Components/boards/Data Board/",
+        "https://docs.smartcitizen.me/Components/boards/Urban Board/",
+        "https://docs.smartcitizen.me/Components/enclosures/Enclosures/",
+        "https://docs.smartcitizen.me/Components/boards/Gases Pro Board/",
+        "https://docs.smartcitizen.me/Components/boards/PM Board/",
+        "https://docs.smartcitizen.me/Components/boards/Analog Sensor Board/",
+        "https://docs.smartcitizen.me/Components/Soil and water/",
+        "https://docs.smartcitizen.me/Components/Auxiliary Connector/",
+        "https://docs.smartcitizen.me/Components/boards/Power Supply/",
+        "https://docs.smartcitizen.me/Components/Solar Panel/",
+        "https://docs.smartcitizen.me/Components/GPS/",
+        "https://docs.smartcitizen.me/Components/Firmware/",
+        "https://docs.smartcitizen.me/Components/Flash Storage/",
+        "https://docs.smartcitizen.me/Components/sensors/performance/",
+        "https://docs.smartcitizen.me/Components/sensors/air/PM Sensors/",
+        "https://docs.smartcitizen.me/Components/sensors/air/Noise/",
+        "https://docs.smartcitizen.me/Components/sensors/air/Metal Oxide/",
+        "https://docs.smartcitizen.me/Components/sensors/air/CCS811/",
+        "https://docs.smartcitizen.me/Components/sensors/air/Electrochemical Sensors/",
+        "https://docs.smartcitizen.me/Components/sensors/soil/Soil Moisture Sensors/",
+        "https://docs.smartcitizen.me/Components/sensors/soil/Tensiometer/",
+        "https://docs.smartcitizen.me/Components/sensors/air/SGX MICS/"
+    ],
+    "https://docs.smartcitizen.me/legacy/sck/":
+    [
+        "https://docs.smartcitizen.me/Components/",
+        "https://docs.smartcitizen.me/Components/boards/Data Board/",
+        "https://docs.smartcitizen.me/Components/boards/Urban Board/",
+        "https://docs.smartcitizen.me/Components/enclosures/Enclosures/",
+        "https://docs.smartcitizen.me/Components/boards/Gases Pro Board/",
+        "https://docs.smartcitizen.me/Components/boards/PM Board/",
+        "https://docs.smartcitizen.me/Components/boards/Analog Sensor Board/",
+        "https://docs.smartcitizen.me/Components/Soil and water/",
+        "https://docs.smartcitizen.me/Components/Auxiliary Connector/",
+        "https://docs.smartcitizen.me/Components/boards/Power Supply/",
+        "https://docs.smartcitizen.me/Components/Solar Panel/",
+        "https://docs.smartcitizen.me/Components/GPS/",
+        "https://docs.smartcitizen.me/Components/Firmware/",
+        "https://docs.smartcitizen.me/Components/Flash Storage/",
+        "https://docs.smartcitizen.me/Components/sensors/performance/",
+        "https://docs.smartcitizen.me/Components/sensors/air/PM Sensors/",
+        "https://docs.smartcitizen.me/Components/sensors/air/Noise/",
+        "https://docs.smartcitizen.me/Components/sensors/air/Metal Oxide/",
+        "https://docs.smartcitizen.me/Components/sensors/air/CCS811/",
+        "https://docs.smartcitizen.me/Components/sensors/air/Electrochemical Sensors/",
+        "https://docs.smartcitizen.me/Components/sensors/soil/Soil Moisture Sensors/",
+        "https://docs.smartcitizen.me/Components/sensors/soil/Tensiometer/",
+        "https://docs.smartcitizen.me/Components/sensors/air/SGX MICS/"
+    ],
+    "https://docs.smartcitizen.me/sensors/air/SGX%20MICS/":
+    [
+        "https://docs.smartcitizen.me/Components/",
+        "https://docs.smartcitizen.me/Components/boards/Data Board/",
+        "https://docs.smartcitizen.me/Components/boards/Urban Board/",
+        "https://docs.smartcitizen.me/Components/enclosures/Enclosures/",
+        "https://docs.smartcitizen.me/Components/boards/Gases Pro Board/",
+        "https://docs.smartcitizen.me/Components/boards/PM Board/",
+        "https://docs.smartcitizen.me/Components/boards/Analog Sensor Board/",
+        "https://docs.smartcitizen.me/Components/Soil and water/",
+        "https://docs.smartcitizen.me/Components/Auxiliary Connector/",
+        "https://docs.smartcitizen.me/Components/boards/Power Supply/",
+        "https://docs.smartcitizen.me/Components/Solar Panel/",
+        "https://docs.smartcitizen.me/Components/GPS/",
+        "https://docs.smartcitizen.me/Components/Firmware/",
+        "https://docs.smartcitizen.me/Components/Flash Storage/",
+        "https://docs.smartcitizen.me/Components/legacy/",
+        "https://docs.smartcitizen.me/Components/legacy/Hardware/",
+        "https://docs.smartcitizen.me/Components/legacy/Command Line/",
+        "https://docs.smartcitizen.me/Components/legacy/Faq/",
+        "https://docs.smartcitizen.me/Components/legacy/Troubleshooting/",
+        "https://docs.smartcitizen.me/Components/legacy/sck/"
+    ],
+    "https://docs.smartcitizen.me/boards/Data%20Board/":
+    [
+        "https://docs.smartcitizen.me/Components/",
+        "https://docs.smartcitizen.me/Components/enclosures/Enclosures/",
+        "https://docs.smartcitizen.me/Components/Soil and water/",
+        "https://docs.smartcitizen.me/Components/Auxiliary Connector/",
+        "https://docs.smartcitizen.me/Components/Solar Panel/",
+        "https://docs.smartcitizen.me/Components/GPS/",
+        "https://docs.smartcitizen.me/Components/Firmware/",
+        "https://docs.smartcitizen.me/Components/Flash Storage/",
+        "https://docs.smartcitizen.me/Components/sensors/performance/",
+        "https://docs.smartcitizen.me/Components/sensors/air/PM Sensors/",
+        "https://docs.smartcitizen.me/Components/sensors/air/Noise/",
+        "https://docs.smartcitizen.me/Components/sensors/air/Metal Oxide/",
+        "https://docs.smartcitizen.me/Components/sensors/air/CCS811/",
+        "https://docs.smartcitizen.me/Components/sensors/air/Electrochemical Sensors/",
+        "https://docs.smartcitizen.me/Components/sensors/soil/Soil Moisture Sensors/",
+        "https://docs.smartcitizen.me/Components/sensors/soil/Tensiometer/",
+        "https://docs.smartcitizen.me/Components/legacy/",
+        "https://docs.smartcitizen.me/Components/legacy/Hardware/",
+        "https://docs.smartcitizen.me/Components/legacy/Command Line/",
+        "https://docs.smartcitizen.me/Components/legacy/Faq/",
+        "https://docs.smartcitizen.me/Components/legacy/Troubleshooting/",
+        "https://docs.smartcitizen.me/Components/legacy/sck/",
+        "https://docs.smartcitizen.me/Components/sensors/air/SGX MICS/"
+    ],
+    "https://docs.smartcitizen.me/boards/Urban%20Board/":
+    [
+        "https://docs.smartcitizen.me/Components/",
+        "https://docs.smartcitizen.me/Components/enclosures/Enclosures/",
+        "https://docs.smartcitizen.me/Components/Soil and water/",
+        "https://docs.smartcitizen.me/Components/Auxiliary Connector/",
+        "https://docs.smartcitizen.me/Components/Solar Panel/",
+        "https://docs.smartcitizen.me/Components/GPS/",
+        "https://docs.smartcitizen.me/Components/Firmware/",
+        "https://docs.smartcitizen.me/Components/Flash Storage/",
+        "https://docs.smartcitizen.me/Components/sensors/performance/",
+        "https://docs.smartcitizen.me/Components/sensors/air/PM Sensors/",
+        "https://docs.smartcitizen.me/Components/sensors/air/Noise/",
+        "https://docs.smartcitizen.me/Components/sensors/air/Metal Oxide/",
+        "https://docs.smartcitizen.me/Components/sensors/air/CCS811/",
+        "https://docs.smartcitizen.me/Components/sensors/air/Electrochemical Sensors/",
+        "https://docs.smartcitizen.me/Components/sensors/soil/Soil Moisture Sensors/",
+        "https://docs.smartcitizen.me/Components/sensors/soil/Tensiometer/",
+        "https://docs.smartcitizen.me/Components/legacy/",
+        "https://docs.smartcitizen.me/Components/legacy/Hardware/",
+        "https://docs.smartcitizen.me/Components/legacy/Command Line/",
+        "https://docs.smartcitizen.me/Components/legacy/Faq/",
+        "https://docs.smartcitizen.me/Components/legacy/Troubleshooting/",
+        "https://docs.smartcitizen.me/Components/legacy/sck/",
+        "https://docs.smartcitizen.me/Components/sensors/air/SGX MICS/"
+    ],
+    "https://docs.smartcitizen.me/boards/Gases%20Pro%20Board/":
+    [
+        "https://docs.smartcitizen.me/Components/",
+        "https://docs.smartcitizen.me/Components/enclosures/Enclosures/",
+        "https://docs.smartcitizen.me/Components/Soil and water/",
+        "https://docs.smartcitizen.me/Components/Auxiliary Connector/",
+        "https://docs.smartcitizen.me/Components/Solar Panel/",
+        "https://docs.smartcitizen.me/Components/GPS/",
+        "https://docs.smartcitizen.me/Components/Firmware/",
+        "https://docs.smartcitizen.me/Components/Flash Storage/",
+        "https://docs.smartcitizen.me/Components/sensors/performance/",
+        "https://docs.smartcitizen.me/Components/sensors/air/PM Sensors/",
+        "https://docs.smartcitizen.me/Components/sensors/air/Noise/",
+        "https://docs.smartcitizen.me/Components/sensors/air/Metal Oxide/",
+        "https://docs.smartcitizen.me/Components/sensors/air/CCS811/",
+        "https://docs.smartcitizen.me/Components/sensors/air/Electrochemical Sensors/",
+        "https://docs.smartcitizen.me/Components/sensors/soil/Soil Moisture Sensors/",
+        "https://docs.smartcitizen.me/Components/sensors/soil/Tensiometer/",
+        "https://docs.smartcitizen.me/Components/legacy/",
+        "https://docs.smartcitizen.me/Components/legacy/Hardware/",
+        "https://docs.smartcitizen.me/Components/legacy/Command Line/",
+        "https://docs.smartcitizen.me/Components/legacy/Faq/",
+        "https://docs.smartcitizen.me/Components/legacy/Troubleshooting/",
+        "https://docs.smartcitizen.me/Components/legacy/sck/",
+        "https://docs.smartcitizen.me/Components/sensors/air/SGX MICS/"
+    ],
+    "https://docs.smartcitizen.me/boards/PM%20Board/":
+    [
+        "https://docs.smartcitizen.me/Components/",
+        "https://docs.smartcitizen.me/Components/enclosures/Enclosures/",
+        "https://docs.smartcitizen.me/Components/Soil and water/",
+        "https://docs.smartcitizen.me/Components/Auxiliary Connector/",
+        "https://docs.smartcitizen.me/Components/Solar Panel/",
+        "https://docs.smartcitizen.me/Components/GPS/",
+        "https://docs.smartcitizen.me/Components/Firmware/",
+        "https://docs.smartcitizen.me/Components/Flash Storage/",
+        "https://docs.smartcitizen.me/Components/sensors/performance/",
+        "https://docs.smartcitizen.me/Components/sensors/air/PM Sensors/",
+        "https://docs.smartcitizen.me/Components/sensors/air/Noise/",
+        "https://docs.smartcitizen.me/Components/sensors/air/Metal Oxide/",
+        "https://docs.smartcitizen.me/Components/sensors/air/CCS811/",
+        "https://docs.smartcitizen.me/Components/sensors/air/Electrochemical Sensors/",
+        "https://docs.smartcitizen.me/Components/sensors/soil/Soil Moisture Sensors/",
+        "https://docs.smartcitizen.me/Components/sensors/soil/Tensiometer/",
+        "https://docs.smartcitizen.me/Components/legacy/",
+        "https://docs.smartcitizen.me/Components/legacy/Hardware/",
+        "https://docs.smartcitizen.me/Components/legacy/Command Line/",
+        "https://docs.smartcitizen.me/Components/legacy/Faq/",
+        "https://docs.smartcitizen.me/Components/legacy/Troubleshooting/",
+        "https://docs.smartcitizen.me/Components/legacy/sck/",
+        "https://docs.smartcitizen.me/Components/sensors/air/SGX MICS/"
+    ],
+    "https://docs.smartcitizen.me/boards/Analog%20Sensor%20Board/":
+    [
+        "https://docs.smartcitizen.me/Components/",
+        "https://docs.smartcitizen.me/Components/enclosures/Enclosures/",
+        "https://docs.smartcitizen.me/Components/Soil and water/",
+        "https://docs.smartcitizen.me/Components/Auxiliary Connector/",
+        "https://docs.smartcitizen.me/Components/Solar Panel/",
+        "https://docs.smartcitizen.me/Components/GPS/",
+        "https://docs.smartcitizen.me/Components/Firmware/",
+        "https://docs.smartcitizen.me/Components/Flash Storage/",
+        "https://docs.smartcitizen.me/Components/sensors/performance/",
+        "https://docs.smartcitizen.me/Components/sensors/air/PM Sensors/",
+        "https://docs.smartcitizen.me/Components/sensors/air/Noise/",
+        "https://docs.smartcitizen.me/Components/sensors/air/Metal Oxide/",
+        "https://docs.smartcitizen.me/Components/sensors/air/CCS811/",
+        "https://docs.smartcitizen.me/Components/sensors/air/Electrochemical Sensors/",
+        "https://docs.smartcitizen.me/Components/sensors/soil/Soil Moisture Sensors/",
+        "https://docs.smartcitizen.me/Components/sensors/soil/Tensiometer/",
+        "https://docs.smartcitizen.me/Components/legacy/",
+        "https://docs.smartcitizen.me/Components/legacy/Hardware/",
+        "https://docs.smartcitizen.me/Components/legacy/Command Line/",
+        "https://docs.smartcitizen.me/Components/legacy/Faq/",
+        "https://docs.smartcitizen.me/Components/legacy/Troubleshooting/",
+        "https://docs.smartcitizen.me/Components/legacy/sck/",
+        "https://docs.smartcitizen.me/Components/sensors/air/SGX MICS/"
+    ],
+    "https://docs.smartcitizen.me/boards/Power%20Supply/":
+    [
+        "https://docs.smartcitizen.me/Components/",
+        "https://docs.smartcitizen.me/Components/enclosures/Enclosures/",
+        "https://docs.smartcitizen.me/Components/Soil and water/",
+        "https://docs.smartcitizen.me/Components/Auxiliary Connector/",
+        "https://docs.smartcitizen.me/Components/Solar Panel/",
+        "https://docs.smartcitizen.me/Components/GPS/",
+        "https://docs.smartcitizen.me/Components/Firmware/",
+        "https://docs.smartcitizen.me/Components/Flash Storage/",
+        "https://docs.smartcitizen.me/Components/sensors/performance/",
+        "https://docs.smartcitizen.me/Components/sensors/air/PM Sensors/",
+        "https://docs.smartcitizen.me/Components/sensors/air/Noise/",
+        "https://docs.smartcitizen.me/Components/sensors/air/Metal Oxide/",
+        "https://docs.smartcitizen.me/Components/sensors/air/CCS811/",
+        "https://docs.smartcitizen.me/Components/sensors/air/Electrochemical Sensors/",
+        "https://docs.smartcitizen.me/Components/sensors/soil/Soil Moisture Sensors/",
+        "https://docs.smartcitizen.me/Components/sensors/soil/Tensiometer/",
+        "https://docs.smartcitizen.me/Components/legacy/",
+        "https://docs.smartcitizen.me/Components/legacy/Hardware/",
+        "https://docs.smartcitizen.me/Components/legacy/Command Line/",
+        "https://docs.smartcitizen.me/Components/legacy/Faq/",
+        "https://docs.smartcitizen.me/Components/legacy/Troubleshooting/",
+        "https://docs.smartcitizen.me/Components/legacy/sck/",
+        "https://docs.smartcitizen.me/Components/sensors/air/SGX MICS/"
+    ]
+}

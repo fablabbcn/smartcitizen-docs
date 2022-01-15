@@ -1,9 +1,9 @@
-The [data board](/Components/Data Board/) features a standard Grove connector where off-the-shelf modules from the same manufacturer can be connected. The connector supports an independent I2C bus by default, but by software it can be configured to support other uses (GPIO, I2C and UART). It can supply power up to 750mA, and it can be enabled or disabled by software to save power.
+The [data board](/Components/boards/Data Board/) features a standard Grove connector where off-the-shelf modules from the same manufacturer can be connected. The connector supports an independent I2C bus by default, but by software it can be configured to support other uses (GPIO, I2C and UART). It can supply power up to 750mA, and it can be enabled or disabled by software to save power.
 
 ![](https://i.imgur.com/5nEc922.jpg){: style="max-width:400px !important"}
 
 !!!info "There is a lot more to it!"
-    The Smart Citizen Kit is designed with a modular approach in mind. This means that the [Urban Board](/Components/Urban%20Sensor%20Board/) is only a selection of low cost sensors for air quality, but the hardware itself can be expanded for other use cases such as a more advanced air quality monitoring setup, soil monitoring, or water quality. Make sure you check our [guide on how to use them](/Guides/getting%20started/Third%20party%20sensors/).
+    The Smart Citizen Kit is designed with a modular approach in mind. This means that the [Urban Board](/Components/boards/Urban%20Sensor%20Board/) is only a selection of low cost sensors for air quality, but the hardware itself can be expanded for other use cases such as a more advanced air quality monitoring setup, soil monitoring, or water quality. Make sure you check our [guide on how to use them](/Guides/getting%20started/Third%20party%20sensors/).
 
 ## Supported sensors
 
@@ -29,9 +29,9 @@ This is a list of supported sensors that you can connect directly to the **auxil
 !!! info "Smart Citizen Station"
     Expanding the base air quality solution, the [Smart Citizen Station](/Smart Citizen Station) is a more advanced setup in a more rugged enclosure. The sensors below can be directly plugged in and detected by the SCK:
 
-    - [Smart Citizen Gases Pro Board](/Components/Gases Pro Board): supports 3 electrochemical alphasense sensors, temperature and humidity 
-    - [Smart Citizen PM Board](/Components/PM Board): supports 2 Plantower PMS5003 sensors, I2C extension, 4 ADC pins, 2 GPIO and a UART Serial port
-    - [Smart Citizen Analog Sensor Board](/Components/Analog Sensor Board): supports 4 or 8 analog channels at 16bit resolution.
+    - [Smart Citizen Gases Pro Board](/Components/boards/Gases Pro Board): supports 3 electrochemical alphasense sensors, temperature and humidity 
+    - [Smart Citizen PM Board](/Components/boards/PM Board): supports 2 Plantower PMS5003 sensors, I2C extension, 4 ADC pins, 2 GPIO and a UART Serial port
+    - [Smart Citizen Analog Sensor Board](/Components/boards/Analog Sensor Board): supports 4 or 8 analog channels at 16bit resolution.
     
     ![](https://i.imgur.com/RRu8MiV.jpg)
 

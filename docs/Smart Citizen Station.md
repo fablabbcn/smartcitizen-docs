@@ -17,7 +17,7 @@ The sensors can include **some, or all of**:
 
 - **Up to 16 analog sensors!**, some of which can be gas sensors detailed as below
 - **Gas sensors** for gases such as B4 or A4 sensors from [Alphasense Ltd.](http://www.alphasense.com/index.php/air/) such as: CO, NO2, NO, O3, SO2, H2S. These are normally in configurations of 2, 4, or 6 sensors (normally O3 needs NO2 to compensate for cross-sensitivity)
-- **CO2 NDIR Sensor** with a [sensirion SCD30](https://www.sensirion.com/en/environmental-sensors/carbon-dioxide-sensors/carbon-dioxide-sensors-co2/)
+- **CO2 NDIR Sensor** with a [sensirion SCD30](https://www.sensirion.com/en/environmental-sensors/carbon-dioxide-sensors/carbon-dioxide-sensors-scd30/)
 - **PM sensors** from Plantower or others similar optical particle counters ([OPC](https://en.wikipedia.org/wiki/Particle_counter#Optical_counting))
 - **Temperature probe**: external temperature probe for more reliable air temperature sensing
 - **Ultra-violet** radiation

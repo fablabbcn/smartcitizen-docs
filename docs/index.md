@@ -20,7 +20,7 @@ Welcome to the Smart Citizen project documentation! Check the different [section
     * **API:** the documentation of our RESTFUL API and how to interact with it
     * **Data Analysis:** Contains all the documentation on the [**data post-processing framework**](Data/Data Analysis) to analyse the sensors data
 
-* **Use cases:** Contains documentation and [**use cases**](/Use Cases/) examples how to use our tools with your local community.
+* **Use cases:** Contains documentation and [**use cases**](/Use cases/) examples how to use our tools with your local community.
 
 * **Guides:** Contains step-by-step [**guides**](/Guides/) for different features of the kit, how to get started, use the shell, or make some more advanced analysis of the sensor readings!
 

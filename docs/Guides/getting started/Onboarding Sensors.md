@@ -9,7 +9,6 @@ The onboarding app guides you through the process of the setup using simple lang
 	- A computer to visit the onboarding app
 	- A smartphone (or tablet, or another computer) to connect to the kit and configure it
 
-
 The welcome page looks like this. For sensors different from the Smart Citizen Kit 2.1, please check the [advanced kit selection](#advanced-kit-selection):
 
 ![](/assets/images/onboarding_1.png)
@@ -94,3 +93,7 @@ The feature below is for users who want to know how to configure new or customiz
 	- Click save and continue the process as normal
 
 	![](https://i.imgur.com/O6oT13q.png)
+
+!!! danger "Kits with calibration"
+
+	Some kits will need some specific calibration data to be stored. Make sure you go to the [the handling calibration data guide](/Guides/data/Handling calibration data/) and input the data in the user profile.

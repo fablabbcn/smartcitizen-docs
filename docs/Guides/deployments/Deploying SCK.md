@@ -6,7 +6,7 @@ The Smart Citizen Kit can be used in both, indoor or outdoor setups. This page g
 
 ## Indoor installation
 
-In indoor conditions, the Kit can be installed using this [3D printed clip](https://github.com/fablabbcn/smartcitizen-enclosures/blob/master/SmartCitizen%20Outdoor%20Cases%20V2.0-2.1/Milled%20HDPE/components/CLIP_NO_ORING.stl).
+In indoor conditions, the Kit can be installed using this [3D printed clip](https://github.com/fablabbcn/smartcitizen-enclosures/blob/master/SmartCitizen%20Outdoor%20Cases%20V2.X/SCK2.1_PMS5003/HDPE%20circle/components/CLIP_NO_ORING.stl).
 
 ![](https://live.staticflickr.com/65535/48020070592_ebad902f1d_h.jpg)
 
@@ -44,8 +44,8 @@ The general tips from above also apply, as well as:
 The SCK can be powered through:
 
 - LiPo 3.7V Battery: default 2000mAh - large 6000mAh
-- Mains power, through an USB adaptor (not recommended) or a [custom power supply](https://github.com/fablabbcn/smartcitizen-enclosures/tree/master/SmartCitizen%20PowerSupply) in [this enclosure](https://uk.rs-online.com/web/p/junction-boxes/2663120/)
-- [Solar panel](https://github.com/fablabbcn/smartcitizen-enclosures/tree/master/Power%20options#solar-panel): we use the [Solar Panel 6W 6V from Voltaic Systems](https://voltaicsystems.com/6-watt-panel/) with the [MPTT DF Robot DFR0559](https://wiki.dfrobot.com/Solar_Power_Manager_5V_SKU__DFR0559) and an additional LiPo Battery, all in [this enclosure](https://uk.rs-online.com/web/p/junction-boxes/2663120/)
+- Mains power, through an USB adaptor (not recommended) or a [custom power supply](https://github.com/fablabbcn/smartcitizen-enclosures/tree/master/Power%20options/PowerSupply) in [this enclosure](https://uk.rs-online.com/web/p/junction-boxes/2663120/)
+- [Solar panel](https://github.com/fablabbcn/smartcitizen-enclosures/tree/master/Power%20options/Solar): we use the [Solar Panel 6W 6V from Voltaic Systems](https://voltaicsystems.com/6-watt-panel/) with the [MPTT DF Robot DFR0559](https://wiki.dfrobot.com/Solar_Power_Manager_5V_SKU__DFR0559) and an additional LiPo Battery, all in [this enclosure](https://uk.rs-online.com/web/p/junction-boxes/2663120/)
 
 !!! tip "Using the power supply"
     If you are using the Smart Citizen Power Supply, have a look at [this guide](/Guides/deployments/Using%20the%20power%20supply) for safety instructions.
