@@ -45,7 +45,7 @@ First of all, push the kit button. Maybe it's simply off.
 
 If this does not work, most likely the kit has been left without battery. You will have to charge it using the USB charger. Any other mobile charger will also work.
 
-We will know that it is charging when the LED emits <span class="led orange blink"></span> orange pulses and once the battery is charged it will emit green <span class = "led green blink"> </ span>.
+We will know that it is charging when the LED emits <span class="led orange blink"></span> orange pulses and once the battery is charged it will emit green <span class = "led green blink"> </span>.
 
 If the kit does not respond at all, it is probably worth trying with another USB cable, in case there is some problem there. If not, drop us an [email](mailto: support@smartcitizen.me) or post on the [:speech_balloon: forum](https://forum.smartcitizen.me)
 
