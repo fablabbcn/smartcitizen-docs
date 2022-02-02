@@ -1934,16 +1934,21 @@
                 
                 <h1 id="handling-calibration-data">Handling calibration data<a class="headerlink" href="#handling-calibration-data" title="Permanent link">&para;</a></h1>
 <h2 id="how-to-store-data">How to store data<a class="headerlink" href="#how-to-store-data" title="Permanent link">&para;</a></h2>
-<p>The easiest way is to edit your kit in the <code>/edit</code> page: <code>https://smartcitizen.me/kits/XXXXX/edit</code></p>
-<p><img alt="" src="/assets/images/postprocessing_edit.png" /></p>
-<p>In this field, input the code you will find on the device, <strong>on a yellow sticker</strong>, as seen below:</p>
+<p>The calibration data for is managed by a unique <code>hardware ID</code>, and should be visible on the device itself (on a yellow sticker, normally on the form of <span style="color: black; background: orange;border-radius: 35px;padding:5px;border: solid 1px #C7BEB6;">SCAS21000X</span>) as seen below:</p>
 <p><img alt="" src="/assets/images/postprocessing_id.jpg" /></p>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>This <code>hardware ID</code> is not the same as the <code>kit ID</code>. The <code>kit ID</code> is the number you have after the smartcitizen.me/kits/ url where you see the data of your kit. The <code>hardware ID</code> is the one in the sticker. The hardware ID is meant to never change, while the <code>kit ID</code> can change as you can register your kit many times!</p>
+</div>
+<p>The easiest way to store this ID is to edit your kit in the <code>/edit</code> page: <code>https://smartcitizen.me/kits/kit-id/edit</code>. For instance, if your kit is number <code>13238</code>, simply visit <a href="https://smartcitizen.me/kits/13238/edit">https://smartcitizen.me/kits/13238/edit</a>:</p>
+<p><img alt="" src="/assets/images/postprocessing_edit.png" /></p>
+<p>Then, in <code>hardware URL</code> field, introduce the number in the yellow sticker. Save and you are done!</p>
 <h2 id="advanced-setup">Advanced setup<a class="headerlink" href="#advanced-setup" title="Permanent link">&para;</a></h2>
-<p>The calibration data for is managed by an unique hardware ID, and should be visible in the device itself (on a sticker, normally on the form of <code>SCXSXX000X</code>). This ID serves to identify the hardware calibration data, alongside with the processing description we want for that device. All this information can be saved in the platform's device using the <code>postprocessing</code> field of the device.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Only follow these steps if you are working on the data post-processing of the sensors, or you know what all this means!</p>
 </div>
+<p>This ID serves to identify the hardware calibration data, alongside with the processing description we want for that device. All this information can be saved in the platform's device using the <code>postprocessing</code> field of the device.</p>
 <p>The <code>hardware url</code> field in the kit edit page can contain a simple <code>id</code> as shown above or an URL pointing to a valid <code>json</code>:</p>
 <p><img alt="" src="/assets/images/postprocessing_edit_url.png" /></p>
 <p>This url should point to a <strong>valid json</strong>, and as long as it follows the instructions defined <a href="https://github.com/fablabbcn/smartcitizen-data/blob/master/hardware/README.md">here</a>, it will be picked up for data postprocessing. A simpler way, is that it can simply be one of the <code>HARDWARE-ID</code> from the list of jsons available in <code>https://raw.githubusercontent.com/fablabbcn/smartcitizen-data/master/hardware/&lt;HARDWARE-ID&gt;.json</code>. The default hardware definitions are in the <a href="https://github.com/fablabbcn/smartcitizen-data/tree/master/hardware">scdata github repository</a> and can be found per <code>ID.json</code>. You can just take the corresponding ID and click in the <code>raw</code> button to get the url needed. If you are using this method, and an url from github, this field should look something like: <code>https://raw.githubusercontent.com/fablabbcn/smartcitizen-data/master/hardware/SCAS21001.json</code>.</p>
