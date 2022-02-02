@@ -2,20 +2,25 @@
 
 ## How to store data
 
-The easiest way is to edit your kit in the `/edit` page: `https://smartcitizen.me/kits/XXXXX/edit`
-
-![](/assets/images/postprocessing_edit.png)
-
-In this field, input the code you will find on the device, **on a yellow sticker**, as seen below:
+The calibration data for is managed by a unique `hardware ID`, and should be visible on the device itself (on a yellow sticker, normally on the form of <span style="color: black; background: orange;border-radius: 35px;padding:5px;border: solid 1px #C7BEB6;">SCAS21000X</span>) as seen below:
 
 ![](/assets/images/postprocessing_id.jpg)
 
-## Advanced setup
+!!! danger
+    This `hardware ID` is not the same as the `kit ID`. The `kit ID` is the number you have after the smartcitizen.me/kits/ url where you see the data of your kit. The `hardware ID` is the one in the sticker. The hardware ID is meant to never change, while the `kit ID` can change as you can register your kit many times!
 
-The calibration data for is managed by an unique hardware ID, and should be visible in the device itself (on a sticker, normally on the form of `SCXSXX000X`). This ID serves to identify the hardware calibration data, alongside with the processing description we want for that device. All this information can be saved in the platform's device using the `postprocessing` field of the device.
+The easiest way to store this ID is to edit your kit in the `/edit` page: `https://smartcitizen.me/kits/kit-id/edit`. For instance, if your kit is number `13238`, simply visit [https://smartcitizen.me/kits/13238/edit](https://smartcitizen.me/kits/13238/edit):
+
+![](/assets/images/postprocessing_edit.png)
+
+Then, in `hardware URL` field, introduce the number in the yellow sticker. Save and you are done!
+
+## Advanced setup
 
 !!! warning
     Only follow these steps if you are working on the data post-processing of the sensors, or you know what all this means!
+
+This ID serves to identify the hardware calibration data, alongside with the processing description we want for that device. All this information can be saved in the platform's device using the `postprocessing` field of the device.
 
 The `hardware url` field in the kit edit page can contain a simple `id` as shown above or an URL pointing to a valid `json`:
 
