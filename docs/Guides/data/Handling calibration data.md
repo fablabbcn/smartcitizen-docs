@@ -9,11 +9,14 @@ The calibration data for is managed by a unique `hardware ID`, and should be vis
 !!! danger
     This `hardware ID` is not the same as the `kit ID`. The `kit ID` is the number you have after the [smartcitizen.me/kits/](https://smartcitizen.me/kits/) url where you see the data of your kit. The `hardware ID` is the one in the sticker. The hardware ID is meant to never change, while the `kit ID` can change as you can register your kit many times!
 
-The easiest way to store this ID is to edit your kit in the `/edit` page: `https://smartcitizen.me/kits/kit-id/edit`. For instance, if your kit is number `13238`, simply visit [https://smartcitizen.me/kits/13238/edit](https://smartcitizen.me/kits/13238/edit):
+The easiest way to store this ID is to visit your kit and click on the **EDIT** button:
+
+![](/assets/images/postprocessing_edit_click.png)
+
+Then, in `hardware URL` field, introduce the number in the yellow sticker. Save your work and you are done!
 
 ![](/assets/images/postprocessing_edit.png)
 
-Then, in `hardware URL` field, introduce the number in the yellow sticker. Save your work and you are done!
 
 ## Advanced setup
 
