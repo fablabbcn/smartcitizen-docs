@@ -3,7 +3,7 @@
 ## How to store calibration data
 
 !!! warning
-    Only do this once you have finished [setting up your kit](/Guides/getting started/Onboarding sensors/). Remember that this process is only needed in case your sensors require calibration (air quality sensors such as CO, NOx, SO2, H2S, OX, and sometimes CO2). This is not necessary for water sensors. If you are using water sensors, [follow this guide](/Guides/calibration/Water sensors/).
+    Only do this once you have finished [setting up your kit](/Guides/getting started/Onboarding Sensors/). Remember that this process is only needed in case your sensors require calibration (air quality sensors such as CO, NOx, SO2, H2S, OX, and sometimes CO2). This is not necessary for water sensors. If you are using water sensors, [follow this guide](/Guides/calibration/Water sensors/).
 
 The calibration data for is managed by a unique `hardware ID`, and should be visible on the device itself (on a yellow sticker, normally on the form of <span style="color: black; background: orange;border-radius: 35px;padding:0 7px;border: solid 1px #C7BEB6;font-weight: bold;">SCAS21000X</span>) as seen below:
 
