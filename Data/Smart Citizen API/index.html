@@ -938,33 +938,39 @@
     Data Ingestion Flow
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="Data Ingestion Flow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#ingestion-protocols" class="md-nav__link">
     Ingestion protocols
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#authorisation-and-authentication" class="md-nav__link">
     Authorisation and authentication
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#kits-blueprints" class="md-nav__link">
     Kits blueprints
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#data-storage" class="md-nav__link">
     Data Storage
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1896,33 +1902,39 @@
     Data Ingestion Flow
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="Data Ingestion Flow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#ingestion-protocols" class="md-nav__link">
     Ingestion protocols
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#authorisation-and-authentication" class="md-nav__link">
     Authorisation and authentication
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#kits-blueprints" class="md-nav__link">
     Kits blueprints
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#data-storage" class="md-nav__link">
     Data Storage
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1953,19 +1965,19 @@
 <p>Check the developers ready <a href="https://developer.smartcitizen.me/"><strong>API Documentation</strong></a></p>
 </div>
 <h2 id="data-ingestion-flow">Data Ingestion Flow<a class="headerlink" href="#data-ingestion-flow" title="Permanent link">&para;</a></h2>
-<p>As already described in the Supported Assets sections, above, the Platforms supports multiple sensor types and even data coming from other platforms. On the following section, we describe all the features supported when it comes to sending data to the platform.</p>
-<h2 id="ingestion-protocols">Ingestion protocols<a class="headerlink" href="#ingestion-protocols" title="Permanent link">&para;</a></h2>
+<p>The Platform supports multiple sensor types and even data coming from other platforms. On the following section, we describe all the features supported when it comes to sending data to the platform.</p>
+<h3 id="ingestion-protocols">Ingestion protocols<a class="headerlink" href="#ingestion-protocols" title="Permanent link">&para;</a></h3>
 <p>Two protocols are supported for data to be sent to the platform: MQTT and HTTP</p>
 <ul>
 <li>MQTT is the one used by constrained devices as the Citizen Sensors and the Living Lab Stations. It allows the devices to post data to the platform after they are registered. It also allows them to receive configuration options (i.e. sensors reading interval) and report errors (i.e. sensors are malfunctioning).</li>
 <li>HTTP is aimed at applications publishing data to the platform (i.e. an existing sensors platform that also wants to make all the data available to the platform). This API gives access to all the platform functionalities as it is part of the core Smart Citizen API. Over this API we are not just limited to publish data but to register new devices or even users.</li>
 </ul>
 <p>oth protocols support transport encryption with TLS to ensure secure communication between the client and the server over the Internet.</p>
-<h2 id="authorisation-and-authentication">Authorisation and authentication<a class="headerlink" href="#authorisation-and-authentication" title="Permanent link">&para;</a></h2>
+<h3 id="authorisation-and-authentication">Authorisation and authentication<a class="headerlink" href="#authorisation-and-authentication" title="Permanent link">&para;</a></h3>
 <p>Knowing who posts what is a serious problem when it comes to hundreds of sensor data being published per minute. Constrained hardware devices using the MQTT API use a unique device token given to the device every time is registered on the platform. The token authenticates the devices against the platform, and it can be expired at any time to prevent a device to keep publishing. Instead, the HTTP API supports authentication using an OAuth2 or a private token. Both mechanisms work at a user level allowing a single process to manage all the devices created by a user.</p>
-<h2 id="kits-blueprints">Kits blueprints<a class="headerlink" href="#kits-blueprints" title="Permanent link">&para;</a></h2>
+<h3 id="kits-blueprints">Kits blueprints<a class="headerlink" href="#kits-blueprints" title="Permanent link">&para;</a></h3>
 <p>Each device sensors configuration needs to be previously registered on the platform to ensure each datapoint published is associated with the required metadata. This information is called a Kit blueprint. The minimal blueprint includes all the necessary data that a user might provide to create a Kit. It is composed of Components, and those can reuse existing Sensors and Measurements. Sensors are the hardware or software components that record the data. Measurements are descriptions of what the sensors are recording.</p>
-<h2 id="data-storage">Data Storage<a class="headerlink" href="#data-storage" title="Permanent link">&para;</a></h2>
+<h3 id="data-storage">Data Storage<a class="headerlink" href="#data-storage" title="Permanent link">&para;</a></h3>
 <p>Once the steps above are completed data is stored in a database cluster performing asynchronous masterless replication to ensure data backup and availability. Each datapoint is stored with the following items:</p>
 <ul>
 <li><em>Component</em>: A reference to the component type that generated the datapoint.</li>
