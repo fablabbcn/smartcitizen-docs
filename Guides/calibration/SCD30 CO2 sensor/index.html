@@ -1390,6 +1390,19 @@
     Insights
   </a>
   
+    <nav class="md-nav" aria-label="Insights">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#calibration-process" class="md-nav__link">
+    Calibration process
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -1992,6 +2005,19 @@
     Insights
   </a>
   
+    <nav class="md-nav" aria-label="Insights">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#calibration-process" class="md-nav__link">
+    Calibration process
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -2015,10 +2041,6 @@
                 
                 
                 <h1 id="sensirion-scd30-co2-sensor">Sensirion SCD30 CO2 sensor<a class="headerlink" href="#sensirion-scd30-co2-sensor" title="Permanent link">&para;</a></h1>
-<div class="admonition warning">
-<p class="admonition-title">WIP</p>
-<p>This guide is a WIP.</p>
-</div>
 <p>This guide will show the calibration process and particularities for using the Sensirion SCD30 CO2 sensor with the Smart Citizen Kit.</p>
 <h2 id="manufacturer-information">Manufacturer information<a class="headerlink" href="#manufacturer-information" title="Permanent link">&para;</a></h2>
 <p>Sensirion provides a lot of information in their <a href="https://www.sensirion.com/en/download-center/carbon-dioxide-sensors-co2/co2-sensor-scd30/">applications note website</a> for the SCD30 CO2. The datasheet can be found <a href="https://www.sensirion.com/fileadmin/user_upload/customers/sensirion/Dokumente/9.5_CO2/Sensirion_CO2_Sensors_SCD30_Datasheet.pdf">here</a>.</p>
@@ -2077,17 +2099,27 @@ pressure
 <div class="highlight"><pre><span></span><code>control scd30 interval
 </code></pre></div>
 <h3 id="calibration">Calibration<a class="headerlink" href="#calibration" title="Permanent link">&para;</a></h3>
-<p>The SCD30 can work in two main modes: ASC (automatic self-calibration) or FRC (forced re-calibration). They are both described in the <a href="https://www.sensirion.com/fileadmin/user_upload/customers/sensirion/Dokumente/9.5_CO2/Sensirion_CO2_Sensors_SCD30_Field_Calibration.pdf">Field calibration for SCD30 AN</a>. </p>
+<p>The SCD30 can work in two main modes: ASC (automatic self-calibration) or FRC (forced re-calibration). They are both described in the <a href="https://www.sensirion.com/fileadmin/user_upload/customers/sensirion/Dokumente/9.5_CO2/Sensirion_CO2_Sensors_SCD30_Field_Calibration.pdf">Field calibration for SCD30 AN</a>. Both modes shift the sensor baseline, only that FRC requires an external value, while ASC will adapt over time looking for "clean air" readings.</p>
 <p><img alt="" src="/assets/images/scd30_calibration_modes.png" />
 <em>Image source: Sensirion</em></p>
+<div class="admonition info">
+<p class="admonition-title">Drift</p>
+<p>A typical SDC30 sensor drift per year is 50ppm and 80ppm maximal.</p>
+</div>
 <p>Additionally, there is a possibility to calibrate the temperature readings with an external sensor for correcting the SCD30 internal temperature corrections.</p>
 <h4 id="asc">ASC<a class="headerlink" href="#asc" title="Permanent link">&para;</a></h4>
-<p>Sensor by default is set in ASC mode. In this mode, the sensor looks for a clean environment over a 1-3 weeks period of time, for at <strong>least 1h of clean air per day</strong>. Considerations:</p>
+<p>In SC, the SCD30 sensor by default is set in ASC mode. In this mode, the sensor looks for a clean environment over a 1-3 weeks period of time, for at <strong>least 1h of clean air per day</strong>. </p>
+<div class="admonition info">
+<p class="admonition-title">Manufacturer information</p>
+<p>ASC assumes that the lowest CO2 concentration the SCD30 is exposed to corresponds to 400 ppm. The sensor estimates the most likely reading corresponding to this background level and identifies this as 400ppm. Using this reference value, the very same manipulation is triggered when applying FRC with the reference value of 400 ppm. Generating a reference value not corresponding to 400 ppm induces an erroneous update of the calibration and reduces sensor accuracy. To prevent a faulty self-calibration, ASC employs an internal self-consistency check: the algorithm will store the <strong>seven most recent concentration minima</strong> in volatile memory. Recalibration by the ASC algorithm will only be triggered when those seven successive minima of measured CO2 concentration are within ± 50 ppm. Also, minima need to be separated by at least 18 hours. If the seven successive minima span a range larger than ± 50 ppm, the ASC will not update the calibration. The buffer storing the minima has a depth of seven measurements, the most recent found minima will always replace the oldest minima (first-in first-out). </p>
+</div>
+<p>Some additional considerations:</p>
 <ul>
 <li>Do not unplug the sensors during the first week period of ASC</li>
 <li>Place it in a place where you know there is going to be a clean air composition during that period. Indoor environments is not always the best for this purpose</li>
 <li>Do not trust the initial values, as the self-calibration algorithm might have not found proper values yet</li>
-<li>There is no way for us to know wether the self-calibration process has satisfactory values. Our understanding is that the internal SCD30 algorithm converges after a period of time, but there is no indication whatsoever of the quality of the readings (see <a href="#Insights">insights section</a> for more information)</li>
+<li>The intention of ASC is manly to correct sensor drift due to aging</li>
+<li>There is no way for us to know wether the self-calibration process has satisfactory values. The only indication of the process being satisfactory or not is that there is a "step" in the readings when ASC kicks in (see <a href="#insights">insights</a>)</li>
 </ul>
 <p>To turn it on:</p>
 <div class="highlight"><pre><span></span><code>control scd30 autocal on
@@ -2140,7 +2172,31 @@ Auto Self Calibration: off
 <div class="highlight"><pre><span></span><code>control scd30 caltemp off
 </code></pre></div>
 <h2 id="insights">Insights<a class="headerlink" href="#insights" title="Permanent link">&para;</a></h2>
-<p>This section is WIP.</p>
+<p>Here are some insights:</p>
+<ul>
+<li>It is recommended to use FRC after assembly with reference data</li>
+<li>ASC can be used instead of performing FRC after assembly but leaves the user of the device with sensor outputs that might be out of specification for a prolonged time</li>
+<li>FRC after assembly corrects deviations caused by mechanical stress during handling and assembly. ASC will then take care of sensor drift due to aging. Only exception, applications where ASC conditions can’t be met</li>
+</ul>
+<p>Here is how to identify ASC has kicked in:</p>
+<p><img alt="" src="/assets/images/co2_asc_in.png" /></p>
+<div class="admonition danger">
+<p class="admonition-title">Mechanical stress</p>
+<p>Mechanical stress can lead to output deviations. Make sure to check <a href="https://sensirion.com/media/documents/6E0DB3D9/616534F2/Sensirion_CO2_Sensors_SCD30_Assembly_Guideline.pdf">the assembly guidelines</a>.</p>
+</div>
+<h3 id="calibration-process">Calibration process<a class="headerlink" href="#calibration-process" title="Permanent link">&para;</a></h3>
+<p>Normally, we perform tests of sensors of larger units (we do not have reference sensor data). This allows us to have significantly large sensor data and be able to correct sensor deviations better. In this circumstances, the process is as follows:</p>
+<ul>
+<li>Place sensors in well ventilated environment for at least 2 weeks and <strong>ASC enabled</strong></li>
+<li>Identify sensors with ASC performed and valid</li>
+<li>Identify sensor baselines of all sensors</li>
+<li>Determine most likely sensor value of the population in sensor baseline readings. Use a normal distribution of the sensors after performing ASC</li>
+<li>Feed an offset to all the sensors, ASC corrected and not, by introducing a real value via FRC</li>
+<li>Test if new spread is valid with respect to sensor accuracy (± 30 ppm)</li>
+<li>Enable ASC for it to automatically correct drift</li>
+<li>Mark sensor as calibrated</li>
+</ul>
+<p>For those cases in which there is not a significant amount of sensors to evaluate, or a refencence unit, ASC is recommended, by leaving the sensor in a very well ventilated area (i.e. outdoors). However, <strong>the risk of the sensor never achieving the conditions for ASC to work</strong>, so the recommendation is to post-process the data and extract a baseline, considering this baseline is 400ppm.</p>
                 
               
               
