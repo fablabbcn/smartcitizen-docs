@@ -336,6 +336,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.smartcitizen.me/Guides/getting%20started/Dealing%20with%20sensitive%20sensor%20readings/</loc>
+         <lastmod>2022-03-21</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.smartcitizen.me/Guides/getting%20started/Debugging%20your%20sensors/</loc>
          <lastmod>2022-03-21</lastmod>
          <changefreq>daily</changefreq>
