@@ -3,7 +3,7 @@
 This page compiles instructions on how to make your own enclosures. We normally use digital fabrication techniques that can be found in a Fablab  such a 3D printing, laser cut or CNC machines. Have a look at the best option for your possibilities. We also encourage you to modify any of them and contribute it back to the community in the [enclosures repository](https://github.com/fablabbcn/smartcitizen-enclosures/).
 
 !!! info "Where to print/cut?"
-    Have a look at in [3D Hubs](https://www.hubs.com/) or look for a [Fablab near you](https://fablabs.io/labs)!
+    Have a look at [Hubs](https://www.hubs.com/) or look for a [Fablab near you](https://fablabs.io/labs)!
 
 ## CNC Enclosure
 
