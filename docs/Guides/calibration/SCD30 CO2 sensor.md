@@ -194,4 +194,4 @@ Normally, we perform tests of sensors of larger units (we do not have reference 
 - Enable ASC for it to automatically correct drift
 - Mark sensor as calibrated
 
-For those cases in which there is not a significant amount of sensors to evaluate, or a refencence unit, ASC is recommended, by leaving the sensor in a very well ventilated area (i.e. outdoors). However, **the risk of the sensor never achieving the conditions for ASC to work**, so the recommendation is to post-process the data and extract a baseline, considering this baseline is 400ppm.
+For those cases in which there is not a significant amount of sensors to evaluate, or a refencence unit, **ASC is recommended**, by leaving the sensor in a very well ventilated area (i.e. outdoors). However, **there is a risk for the sensor to never achieve the conditions for ASC to work**. In this case, the recommendation is to post-process the data and extract a baseline, considering this baseline is 400ppm.
