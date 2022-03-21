@@ -30,7 +30,7 @@ nav:
       - GPS: Components/GPS.md
     - Firmware:
       - Architecture: Components/Firmware.md
-      - Flash Storage: Components/Flash Storage.md 
+      - Flash Storage: Components/Flash Storage.md
     - Sensor Knowledge:
       - Performance summary: Components/sensors/performance.md
       - Air:
@@ -45,7 +45,7 @@ nav:
         - Soil Moisture Sensors: Components/sensors/soil/Soil Moisture Sensors.md
         - Tensionmenter: Components/sensors/soil/Tensiometer.md
     - FAQ: _FAQ.md
-    - Troubleshooting: Troubleshooting.md    
+    - Troubleshooting: Troubleshooting.md
   - Data:
     - Sensor Platform: Data/Sensor Platform.md
     - Smart Citizen API: Data/Smart Citizen API.md
@@ -68,6 +68,7 @@ nav:
       - Debugging your sensors: Guides/getting started/Debugging your sensors.md
       - Getting firmware information: Guides/getting started/Getting firmware information.md
       - Third party sensors: Guides/getting started/Third party sensors.md
+      - Dealing with sensitive sensor readings: Guides/getting started/Dealing with sensitive sensor readings.md
     - Firmware:
       - Update the firmware: Guides/firmware/Update the firmware.md
       - Edit the firmware: Guides/firmware/Edit the Firmware.md
@@ -84,10 +85,10 @@ nav:
       - Organise your data: Guides/data/Organise your data.md
       - Handling calibration data: Guides/data/Handling calibration data.md
       - Custom data processing: Guides/data/Custom data processing.md
-      # - Model your sensor data: Guides/Creating Models for Sensors Calibration.md
+      - Model your sensor data: Guides/data/Creating Models for Sensors Calibration.md
       # - Analyse your data in batch: Guides/Analyse your data in batch.md
       - Uploading data to zenodo: Guides/data/Upload data to zenodo.md
-    - Deploying sensors: 
+    - Deploying sensors:
       - Smart Citizen Kit: Guides/deployments/Deploying SCK.md
       - iSCAPE Station V1: Guides/deployments/Deploying iSCAPE Station V1.md
       - iSCAPE Station V2: Guides/deployments/Deploying iSCAPE Station V2.md
@@ -143,7 +144,8 @@ extra:
       link: 'https://www.github.com/fablabbcn/smartcitizen-kit-21'
   project: 'The Smart Citizen as part of the iSCAPE project has received funding from the European Community’s H2020 Programme under Grant Agreement No. 689954.'
   footer_logo: '/assets/images/eu-flag.png'
-  license: 'CC Attribution-NonCommercial-ShareAlike 4.0 International'
+  license: 'GNU Free Documentation License'
+  license_url: 'https://www.gnu.org/licenses/fdl-1.3.html'
 
 # plugins:
   # - tags
@@ -206,7 +208,7 @@ markdown_extensions:
   - pymdownx.tilde
   - attr_list
   - pymdownx.tabbed
-  
+
 extra_javascript:
   - 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'
   - 'https://buttons.github.io/buttons.js'
