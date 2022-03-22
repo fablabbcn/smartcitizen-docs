@@ -3,13 +3,13 @@ Welcome!
 
 Welcome to the Smart Citizen project documentation! Check the different [sections](#sections) or get started with our [guides](#guides).
 
+![](https://i.imgur.com/0U9T29b.jpg)
+
 !!! info "A note about versions"
 
     <a href="https://www.iscapeproject.eu/"><img class="logo" src="https://i.imgur.com/ud8lUOo.png" width="120" alt=""></a>
 
-    The new [**Smart Citizen Kit**](Smart Citizen Kit) and the [**Smart Citizen Station**](Smart Citizen Station) development has been developed as part of the [iSCAPE project](https://www.iscapeproject.eu/) under European Community’s H2020 Programme under Grant Agreement No. [689954](https://cordis.europa.eu/project/rcn/202639/en)
-
-![](https://i.imgur.com/0U9T29b.jpg)
+    The new [**Smart Citizen Kit**](Smart Citizen Kit) and the [**Smart Citizen Station**](Smart Citizen Station) development was possible thanks to the [iSCAPE](https://www.iscapeproject.eu/), a project under European Community’s H2020 Programme (Grant Agreement No. [689954](https://cordis.europa.eu/project/rcn/202639/en))
 
 ## Sections
 
