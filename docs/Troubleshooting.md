@@ -71,4 +71,4 @@ This issue is caused due to a firmware bug that initialized badly the I2S microp
 
 ### PM Sensor always reads 0ug/m3
 
-This issue has been detected after a batch from Plantower PMS5003 sensors during 2021 that yields 0ug/m3. A full explanation is detailed in the [forum](https://forum.smartcitizen.me/t/pm-sensor-always-reading-0-0/1649/21) and the fix was released in a branch in [V0.9.8](https://github.com/fablabbcn/smartcitizen-kit-21/tree/PMfix). The sensor operation is correct, and there is no need for hardware replacement.
+This issue has been detected after a batch from Plantower PMS5003 sensors during 2021 that yields 0ug/m3. A full explanation is detailed [this AN](/assets/notes/2022_01_PM_INTERVALS.html) and in the [forum](https://forum.smartcitizen.me/t/pm-sensor-always-reading-0-0/1649/21) and the fix release is [V0.9.9](https://github.com/fablabbcn/smartcitizen-kit-21/releases/tag/0.9.9). **The sensor operation is correct, and there is no need for hardware replacement.**
