@@ -9,7 +9,7 @@ The data board is a data-logger at the core of the sensors architecture supporti
 
 The data board also includes a Wi-Fi module, a micro SD card slot, an internal Flash and a battery management solution. In addition, it includes 4MB of extra Flash Memory for offline data storage, in case of network brownouts. The Wi-Fi Module is the well-known [Espressif ESP8266](https://www.espressif.com/en/products/hardware/esp8266ex/overview) IEEE 802.11 b/g/n Wi-Fi with 4MB Internal Flash for web content storage:
 
-![](https://i.imgur.com/wYoz4G8.png)
+![](/assets/images/sck_2/SCK21_Microcontrollers.png)
 
 The Data Board connects to the sensor board providing power, analog and digital communications (12 bits ADC, GPIO, I2C, I2S, VCC). The data board also includes a Seeed Studio standard Grove connector where off-the-shelf modules from the same manufacturer can be connected. The connector supports an independent I2C bus by default, but by software it can be configured to support other uses (GPIO, I2C and UART). It can supply power up to 750mA, and it can be enabled or disabled by software to save power.
 
@@ -39,18 +39,12 @@ The Smart Citizen Kit firmware is comprised of two parts: 1) the primary process
 The Kit features a modular architecture where sensors can be updated independently by replacing any individual Sensor Board. The Sensor Boards features GPIO, ADC, I2C, UART and I2S connections at 3.3V. Currently, we only offer the Urban Sensor Board, but more boards are on the way, and you can even design and build a custom one.
 
 !!! info "Example of a Sensor Board"
+	This is the V2.0 Urban Board example.
     ![](https://i.imgur.com/IqLEbIr.png)
 
-| SAMD21 Pins | Arduino Zero Pin | SCK Pins | SCK Conector | SCK Conector | SCK Pins | Arduino Zero Pin | SAMD21 Pins |
-|-------------|------------------|----------|--------------|--------------|----------|------------------|-------------|
-| GND         | GND              | GND      | 16           | 15           | GND      | GND              | GND         |
-| GND         | GND              | GND      | 14           | 13           | GND      | GND              | GND         |
-| PA11        | 0                | I2S_FS   | 12           | 11           | TX       | A5               | PB2         |
-| PA7         | 9                | I2S_SD   | 10           | 9            | RX       | 25               | PB3         |
-| PA10        | 1                | I2S_SCK  | 8            | 7            | 5V       | 5V               | 5V          |
-| PA22        | 20               | SDA      | 6            | 5            | PWM_CO   | 13               | PA9         |
-| PA23        | 21               | SCL      | 4            | 3            | PWM_NOX  | 14               | PA8         |
-| VCC         | VCC              | VCC      | 2            | 1            | VCC      | VCC              | VCC         |
+Here there is a pinout of the data board connector:
+
+![](/assets/images/sck_2/pinout_data.png)
 
 ### Auxiliary connector
 
