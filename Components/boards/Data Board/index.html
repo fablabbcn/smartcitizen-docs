@@ -2033,7 +2033,7 @@
 <p><img src="https://live.staticflickr.com/65535/47950912298_2b132245cb_h.jpg" walt="SCK 2.1 Data Board"></p>
 <p><a class="github-button" data-size="large" href="https://github.com/fablabbcn/smartcitizen-kit-21" aria-label="Check the source code">Check the source code</a></p>
 <p>The data board also includes a Wi-Fi module, a micro SD card slot, an internal Flash and a battery management solution. In addition, it includes 4MB of extra Flash Memory for offline data storage, in case of network brownouts. The Wi-Fi Module is the well-known <a href="https://www.espressif.com/en/products/hardware/esp8266ex/overview">Espressif ESP8266</a> IEEE 802.11 b/g/n Wi-Fi with 4MB Internal Flash for web content storage:</p>
-<p><img alt="" src="https://i.imgur.com/wYoz4G8.png" /></p>
+<p><img alt="" src="/assets/images/sck_2/SCK21_Microcontrollers.png" /></p>
 <p>The Data Board connects to the sensor board providing power, analog and digital communications (12 bits ADC, GPIO, I2C, I2S, VCC). The data board also includes a Seeed Studio standard Grove connector where off-the-shelf modules from the same manufacturer can be connected. The connector supports an independent I2C bus by default, but by software it can be configured to support other uses (GPIO, I2C and UART). It can supply power up to 750mA, and it can be enabled or disabled by software to save power.</p>
 <p>The board includes a power unit, with a battery management system, capable of handling a variety of Lithium polymer cells. The batteries are connected to a standard JST-2 pin battery connector. The Smart Citizen Kit by default uses a 2000mAh battery, but larger capacities can be used. Under normal conditions, and depending on the sensors enabled, a 2000mAh battery can last between 24 hours (with all sensors enabled, and a 1-minute recording frequency) to more than a week. The board also features a <em>sleep mode</em>, through which drastically lower average consumption are achieved.</p>
 <p>The controller allows the batteries to be easily charged using the boards micro USB connector using any standard USB power adapter like the ones used on Smartphones. On remote areas, it can also be powered using a selection of PV Panels like <a href="https://www.voltaicsystems.com/">Voltaics Systems</a> 6W panel.</p>
@@ -2057,104 +2057,11 @@
 <p>The Kit features a modular architecture where sensors can be updated independently by replacing any individual Sensor Board. The Sensor Boards features GPIO, ADC, I2C, UART and I2S connections at 3.3V. Currently, we only offer the Urban Sensor Board, but more boards are on the way, and you can even design and build a custom one.</p>
 <div class="admonition info">
 <p class="admonition-title">Example of a Sensor Board</p>
-<p><img alt="" src="https://i.imgur.com/IqLEbIr.png" /></p>
+<p>This is the V2.0 Urban Board example.
+<img alt="" src="https://i.imgur.com/IqLEbIr.png" /></p>
 </div>
-<table>
-<thead>
-<tr>
-<th>SAMD21 Pins</th>
-<th>Arduino Zero Pin</th>
-<th>SCK Pins</th>
-<th>SCK Conector</th>
-<th>SCK Conector</th>
-<th>SCK Pins</th>
-<th>Arduino Zero Pin</th>
-<th>SAMD21 Pins</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>GND</td>
-<td>GND</td>
-<td>GND</td>
-<td>16</td>
-<td>15</td>
-<td>GND</td>
-<td>GND</td>
-<td>GND</td>
-</tr>
-<tr>
-<td>GND</td>
-<td>GND</td>
-<td>GND</td>
-<td>14</td>
-<td>13</td>
-<td>GND</td>
-<td>GND</td>
-<td>GND</td>
-</tr>
-<tr>
-<td>PA11</td>
-<td>0</td>
-<td>I2S_FS</td>
-<td>12</td>
-<td>11</td>
-<td>TX</td>
-<td>A5</td>
-<td>PB2</td>
-</tr>
-<tr>
-<td>PA7</td>
-<td>9</td>
-<td>I2S_SD</td>
-<td>10</td>
-<td>9</td>
-<td>RX</td>
-<td>25</td>
-<td>PB3</td>
-</tr>
-<tr>
-<td>PA10</td>
-<td>1</td>
-<td>I2S_SCK</td>
-<td>8</td>
-<td>7</td>
-<td>5V</td>
-<td>5V</td>
-<td>5V</td>
-</tr>
-<tr>
-<td>PA22</td>
-<td>20</td>
-<td>SDA</td>
-<td>6</td>
-<td>5</td>
-<td>PWM_CO</td>
-<td>13</td>
-<td>PA9</td>
-</tr>
-<tr>
-<td>PA23</td>
-<td>21</td>
-<td>SCL</td>
-<td>4</td>
-<td>3</td>
-<td>PWM_NOX</td>
-<td>14</td>
-<td>PA8</td>
-</tr>
-<tr>
-<td>VCC</td>
-<td>VCC</td>
-<td>VCC</td>
-<td>2</td>
-<td>1</td>
-<td>VCC</td>
-<td>VCC</td>
-<td>VCC</td>
-</tr>
-</tbody>
-</table>
+<p>Here there is a pinout of the data board connector:</p>
+<p><img alt="" src="/assets/images/sck_2/pinout_data.png" /></p>
 <h3 id="auxiliary-connector">Auxiliary connector<a class="headerlink" href="#auxiliary-connector" title="Permanent link">&para;</a></h3>
 <p>The Data Board features and independent configurable auxiliary bus at 3.3V with a SEEED Studio Grove connector. The Bus has native support for I2C, but it can also be setup on firmware as a GPIO or UART port. It can supply power up to 750mA, and it can be enabled or disabled by software.</p>
 <div class="admonition info">
