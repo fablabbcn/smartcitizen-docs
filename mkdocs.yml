@@ -103,6 +103,7 @@ nav:
       - Replacing PM Sensors: Guides/replacements/Replacing PM Sensors.md
     - Enclosures:
       - Making your own enclosures: Guides/enclosures/Making your own enclosures.md
+      - Assembling Smart Citizen Stations: Guides/enclosures/Assembling Smart Citizen Stations.md
     - Legacy Hardware:
       - Smart Citizen 1.1:
         - Main: Components/legacy/index.md
