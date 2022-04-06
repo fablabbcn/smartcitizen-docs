@@ -1714,6 +1714,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../enclosures/Assembling%20Smart%20Citizen%20Stations/" title="Assembling Smart Citizen Stations" class="md-nav__link">
+      Assembling Smart Citizen Stations
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -1977,7 +1989,7 @@
 <p class="admonition-title">Warning</p>
 <p>Only follow these steps if you are working on the data post-processing of the sensors, or you know what all this means!</p>
 </div>
-<p>This ID serves to identify the hardware calibration data, alongside with the processing description we want for that device. All this information can be saved in the platform's device using the <code>postprocessing</code> field of the device.</p>
+<p>The above mentioned <code>hardware ID</code> serves to identify the hardware calibration data, alongside with the processing description we want for that device. All this information can be saved in the platform's device using the <code>postprocessing</code> field of the device.</p>
 <p>The <code>hardware url</code> field in the kit edit page can contain a simple <code>id</code> as shown above or an URL pointing to a valid <code>json</code>:</p>
 <p><img alt="" src="/assets/images/postprocessing_edit_url.png" /></p>
 <p>This url should point to a <strong>valid json</strong>, and as long as it follows the instructions defined <a href="https://github.com/fablabbcn/smartcitizen-data/blob/master/hardware/README.md">here</a>, it will be picked up for data postprocessing. A simpler way, is that it can simply be one of the <code>HARDWARE-ID</code> from the list of jsons available in <code>https://raw.githubusercontent.com/fablabbcn/smartcitizen-data/master/hardware/&lt;HARDWARE-ID&gt;.json</code>. The default hardware definitions are in the <a href="https://github.com/fablabbcn/smartcitizen-data/tree/master/hardware">scdata github repository</a> and can be found per <code>ID.json</code>. You can just take the corresponding ID and click in the <code>raw</code> button to get the url needed. If you are using this method, and an url from github, this field should look something like: <code>https://raw.githubusercontent.com/fablabbcn/smartcitizen-data/master/hardware/SCAS21001.json</code>.</p>
@@ -1992,7 +2004,8 @@
 <ul>
 <li><code>blueprint_url</code>: this field defines the post-processing to be done in the form of a <code>device-blueprint</code>. It virtually can load a valid json from any url, as long as it follows the instructions defined <a href="https://github.com/fablabbcn/smartcitizen-data/blob/master/examples/notebooks/01_getting_started.ipynb">here</a> and <a href="https://github.com/fablabbcn/smartcitizen-data/blob/master/examples/notebooks/04_processing_data.ipynb">here</a>. If you want to use the base processing select it from the <a href="https://github.com/fablabbcn/smartcitizen-data/tree/master/blueprints">blueprints folder</a>, only selecting the <code>raw</code> json as mentioned above. If you have doubts, please, <a href="mailto:support@smartcitizen.me">contact us</a> to make sure everything will run smoothly. Finally, other blueprints can be added as defined <a href="/Guides/data/Custom%20data%20processing/">in this guide</a></li>
 <li><code>description</code>: brief description of the hardware</li>
-<li><code>versions</code>: list containing hardware versions (in case sensors where replaced, but kept in the same physical unit).
+<li>
+<p><code>versions</code>: list containing hardware versions (in case sensors where replaced, but kept in the same physical unit).
     <div class="highlight"><pre><span></span><code>  &quot;versions&quot;: [
     {
       &quot;ids&quot;: {
@@ -2005,8 +2018,20 @@
       &quot;to&quot;: null
     }
   ]
-</code></pre></div></li>
-<li><code>forwarding</code>: if this device needs to be forwarded to another data platform. Current supported platforms are specified in <a href="https://github.com/fablabbcn/smartcitizen-data/tree/master/connectors">the connectors</a> folder</li>
+</code></pre></div></p>
+<p>In the versions information, data is stored based on the IDs of the sensors and a naming convention to understand were they are connected to or what they are. It is easier to understand the naming convention with an example:</p>
+<ul>
+<li><code>AS_48_01</code>: Alphasense Electrochemical sensor, connected to the ADC with address <code>48</code>, with the Working Electrode connected to the channel 0 of the ADC, and the Auxiliary Electrode connected to the channel 1 of the ADC. The logic is explained below:<ul>
+<li><code>AS</code> refers to Alphasense. This implies that the rest of the name is going to be on the format <code>X_YZ</code></li>
+<li><code>48</code> refers to the ADC (analog to digital converter) I2C address. Since we only store the raw data values from the ADC, we use the ADC I2C address to refer to the needed channels</li>
+<li><code>01</code> are the two channels from the ADC in question that are used for measuring the WE and AE from the Alphasense sensor</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><code>forwarding</code>: if this device needs to be forwarded to another data platform. Current supported platforms are specified in <a href="https://github.com/fablabbcn/smartcitizen-data/tree/master/connectors">the connectors</a> folder</p>
+</li>
 </ul>
 <h3 id="alternative-method">Alternative method<a class="headerlink" href="#alternative-method" title="Permanent link">&para;</a></h3>
 <p>Alternatively, in order to post this data, you can follow to other methods:</p>
