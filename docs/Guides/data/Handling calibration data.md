@@ -26,7 +26,7 @@ Then, in `hardware URL` field, introduce the number in the yellow sticker. Save 
 !!! warning
     Only follow these steps if you are working on the data post-processing of the sensors, or you know what all this means!
 
-This ID serves to identify the hardware calibration data, alongside with the processing description we want for that device. All this information can be saved in the platform's device using the `postprocessing` field of the device.
+The above mentioned `hardware ID` serves to identify the hardware calibration data, alongside with the processing description we want for that device. All this information can be saved in the platform's device using the `postprocessing` field of the device.
 
 The `hardware url` field in the kit edit page can contain a simple `id` as shown above or an URL pointing to a valid `json`:
 
@@ -62,6 +62,14 @@ With either method, url or `HARDWARE-ID`, the json file needs to follow the inst
         }
       ]
     ```
+
+    In the versions information, data is stored based on the IDs of the sensors and a naming convention to understand were they are connected to or what they are. It is easier to understand the naming convention with an example:
+ 
+    - `AS_48_01`: Alphasense Electrochemical sensor, connected to the ADC with address `48`, with the Working Electrode connected to the channel 0 of the ADC, and the Auxiliary Electrode connected to the channel 1 of the ADC. The logic is explained below:
+        - `AS` refers to Alphasense. This implies that the rest of the name is going to be on the format `X_YZ`
+        - `48` refers to the ADC (analog to digital converter) I2C address. Since we only store the raw data values from the ADC, we use the ADC I2C address to refer to the needed channels
+        - `01` are the two channels from the ADC in question that are used for measuring the WE and AE from the Alphasense sensor
+
 - `forwarding`: if this device needs to be forwarded to another data platform. Current supported platforms are specified in [the connectors](https://github.com/fablabbcn/smartcitizen-data/tree/master/connectors) folder
 
 ### Alternative method
