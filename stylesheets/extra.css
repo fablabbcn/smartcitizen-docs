@@ -266,3 +266,16 @@
      50% { background: black; }
      100% { background: white; }
 }
+
+.banner-sensor {
+    height: 120px;
+    background-position: center !important;
+    border-radius: 2px !important;
+}
+
+.banner-title {
+    font-weight: bolder !important;
+    padding: 20px;
+    color: white;
+    text-shadow:1px 1px 1px #101010;
+}
