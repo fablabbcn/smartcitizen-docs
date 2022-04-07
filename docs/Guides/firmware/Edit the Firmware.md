@@ -137,7 +137,7 @@ git pull --recurse-submodules
 !!! danger "Make sure you need to do this"
     This instructions only are needed if your kit doesn't have the bootloader already flashed. If you don't know what you are doing here, skip to [the flashing section](#samd21-firmware).
 
-If your kit doesn't have the bootloader already flashed (all the kits that we ship come with it) you will need an [ATMEL-ICE](https://www.digikey.es/en/product-highlight/a/atmel/atmel-ice-programmer-debugger) programmer. This process can also be done with a Raspberry Pi computer and the proper [connector](https://www.adafruit.com/product/2094) and cables, in [this guide](https://docs.smartcitizen.me/Guides/Debug%20the%20firmware/) you will find information on how to do this.
+If your kit doesn't have the bootloader already flashed (all the kits that we ship come with it) you will need an [ATMEL-ICE](https://www.digikey.es/en/product-highlight/a/atmel/atmel-ice-programmer-debugger) programmer. This process can also be done with a Raspberry Pi computer and the proper [connector](https://www.adafruit.com/product/2094) and cables, in [this guide](/Guides/firmware/Debug the firmware/) you will find information on how to do this.
 
 ![](/assets/images/sck_2/SCK21_data_connectors.png)
 
