@@ -27,7 +27,7 @@ The guides here are meant to help you with many aspects regarding the sensors an
 
 <img src="https://live.staticflickr.com/65535/50977149367_922fc1c478_k.jpg" width="2000" height="1333" alt="Smart Citizen Station v3">
 
-- [ ] If you haven't started yet to collect data, check the [onboarding sensors](/Guides/getting%20started/Onboarding%20Sensors/) guide. In the Stations that measure chemical composition with electrochemical sensors (i.e. CO, NO2, NO, SO2, O3, etc.), you will also need to follow the [handling calibration information](/Guides/data/Handling%20calibration%20data/) guide
+- [ ] If you haven't started yet to collect data, check the [onboarding sensors](/Guides/getting%20started/Onboarding%20Sensors/) guide, and **make sure you select the correct blueprint** as explained in the [advanced kit selection](/Guides/getting started/Onboarding Sensors/#advanced-kit-selection) guide. In the Stations that measure chemical composition with electrochemical sensors (i.e. CO, NO2, NO, SO2, O3, etc.), you will also need to follow the [handling calibration information](/Guides/data/Handling%20calibration%20data/) guide
 - [ ] To place the sensors outdoors, follow the [deploying Smart Citizen Station](/Guides/deployments/Deploying%20Smart%20Citizen%20Station/) guide
 - [ ] Similar to the SCK, check the [updating the firmware](/Guides/firmware/Update%20the%20firmware/), [updating the WiFi](/Guides/getting%20started/Updating%20the%20Wi-Fi/) and [using the Shell](/Guides/getting%20started/Using%20the%20Shell/) guides for keeping your sensor up to date
 - [ ] If you are working with the data: [check how to access to the data](/Guides/getting started/Downloading the Data/).
