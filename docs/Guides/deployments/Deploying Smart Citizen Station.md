@@ -6,7 +6,7 @@ This guide will summarise how to install the Smart Citizen Station and set it al
 
 ## Hardware
 
-The unit should come assembled and ready to use. It consists of various parts:
+The Stations should come assembled and ready to use. It consists of various parts:
 
 - Enclosure and mounting system
 - Sensors module
@@ -14,16 +14,29 @@ The unit should come assembled and ready to use. It consists of various parts:
 
 ![](/assets/images/station-v3-exploded.png)
 
+This is how the _smaller_ version looks like:
+
+![](/assets/images/station-small-exploded.png)
+
 ### Physical measurements
 
-The Station measurements are shown in the image below:
+The _big_ Station measurements are shown in the image below:
 
 ![](/assets/images/station-v3-dimensions.png)
 
 - **Dimensions with cover** (length, height, depth) (approx.):  340mm x 160mm x 230 mm 
 - **Dimensions without cover** (length, height, depth) (approx): 260mm x 120mm x 180mm
 
+The _small_ Station measurements are shown in the image below:
+
+![](/assets/images/station-small-dimensions.png)
+
+- **Dimensions with cover** (length, height, depth) (approx.):  232mm x 92mm x 145 mm 
+- **Dimensions without cover** (length, height, depth) (approx): 150mm x 105 x 45 mm
+
 ### Enclosure and mounting system
+
+The enclosure and mounting system is very similar for both units:
 
 ![](/assets/images/station-v3-mounting.png)
 
@@ -51,10 +64,14 @@ An this is the inside one (will change  with further development):
 
 ![](/assets/images/station-v3-inside-anotated.jpeg)
 
+The _small_ Station looks like this:
+
+![](/assets/images/station-small-bottom-anotated.jpg)
+
 The Station is powered through it's USB input. It can be reset by either:
 
 - disconnecting the power to the mains
-- introducing a thin screw driver or pen through the RESET button hole indicated above
+- introducing a thin screw driver or pen through the **RESET button** hole indicated above
 
 !!! important "Power USB"
     We do not recommend to use any other cable than the supplied one in outdoor conditions.

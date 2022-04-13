@@ -1,14 +1,16 @@
 # Custom data processing
 
-Data is processed outside of the sensors in a periodic way by [`scdata`](https://github.com/fablabbcn/smartcitizen-data/). There are three ways to have a custom data processing:
+Some units require performing data processing after readings are collected, and we provide default algorithms for all the data we collect. Iin the default scenario, for those sensors that need it (i.e. electrochemical sensors), _raw data_ is processed outside of the units in a periodic way by [`scdata`](https://github.com/fablabbcn/smartcitizen-data/). However, you might need to perform _custom_ data processing algorithms on your data. You can do so by simply accessing the data on our [API](https://api.smartcitizen.me/), and then working with it _offline_, or you can set up an automatic data processing workflow. To summarise, there are two ways to have a custom data processing:
 
-1. [Contact us](mailto:support@smartcitizen.me) and request it
-2. [Set up a development environment](/Guides/data/Install the framework/#development-instructions-advanced) and following the example on [data processing](https://github.com/fablabbcn/smartcitizen-data/examples/README.md)
-3. Follow the guide below for automatic processing
+1. [Set up a development environment](/Guides/data/Install the framework/#development-instructions-advanced) and following the example on [data processing](https://github.com/fablabbcn/smartcitizen-data/tree/master/examples)
+2. Follow the guide below for automatic processing
+
+!!!info "Too confusing?"
+    [Contact us](mailto:support@smartcitizen.me) and or open a topic in the [forum](https://forum.smartcitizen.me) and we will try to help!
 
 ## Automatic data processing
 
-Data is processed in a recurrent manner whenever there is `postprocessing` in the device. You can check it by visiting `https://api.smartcitizen.me/v0/devices/<device-id>` where `<device-id>` is the number that follows in the url `https://smartcitizen.me/kits/XXXXXX`.
+Data is processed in a recurrent manner whenever there is `postprocessing` field in the device data tree. You can check it by visiting `https://api.smartcitizen.me/v0/devices/<device-id>` where `<device-id>` is the number that follows in the url `https://smartcitizen.me/kits/XXXXXX`.
 
 !!! info "How to do it?"
     Visit [these instructions](/Guides/data/Handling calibration data/) to make sure your `postprocessing` is safely stored.

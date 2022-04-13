@@ -1,5 +1,17 @@
 # Handling calibration data
 
+This guide will help you manage the calibration data for your units. Some sensors perform the data processing on the sensor itself, but other sensor types need more advanced computation that cannot be done in the Smart Citizen Data Board. The table below summarises when you will need to store this calibration data on our platform for it to be processed automatically:
+
+|Sensor type|Processing data|Calibration data|
+|:-:|:-:|:-:|
+|Basic environmental metrics (T, H, P, Light)|On the sensor|None|
+|Noise|On the sensor|None|
+|tVOC, eCO2|On the sensor|None|
+|Particulate Matter|On the sensor|None|
+|CO2|On the sensor|None|
+|Air Quality electrochemical sensors|On the platform|Based on the _hardware ID_ (see below)|
+|Water Quality sensors|On the sensor|None|
+
 ## How to store calibration data
 
 !!! warning
