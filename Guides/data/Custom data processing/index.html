@@ -1553,8 +1553,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../deployments/Deploying%20Smart%20Citizen%20Station/" title="Smart Citizen Station V3" class="md-nav__link">
-      Smart Citizen Station V3
+    <a href="../../deployments/Deploying%20Smart%20Citizen%20Station/" title="Smart Citizen Station" class="md-nav__link">
+      Smart Citizen Station
     </a>
   </li>
 
@@ -1955,14 +1955,17 @@
                 
                 
                 <h1 id="custom-data-processing">Custom data processing<a class="headerlink" href="#custom-data-processing" title="Permanent link">&para;</a></h1>
-<p>Data is processed outside of the sensors in a periodic way by <a href="https://github.com/fablabbcn/smartcitizen-data/"><code>scdata</code></a>. There are three ways to have a custom data processing:</p>
+<p>Some units require performing data processing after readings are collected, and we provide default algorithms for all the data we collect. Iin the default scenario, for those sensors that need it (i.e. electrochemical sensors), <em>raw data</em> is processed outside of the units in a periodic way by <a href="https://github.com/fablabbcn/smartcitizen-data/"><code>scdata</code></a>. However, you might need to perform <em>custom</em> data processing algorithms on your data. You can do so by simply accessing the data on our <a href="https://api.smartcitizen.me/">API</a>, and then working with it <em>offline</em>, or you can set up an automatic data processing workflow. To summarise, there are two ways to have a custom data processing:</p>
 <ol>
-<li><a href="mailto:support@smartcitizen.me">Contact us</a> and request it</li>
-<li><a href="/Guides/data/Install the framework/#development-instructions-advanced">Set up a development environment</a> and following the example on <a href="https://github.com/fablabbcn/smartcitizen-data/examples/README.md">data processing</a></li>
+<li><a href="/Guides/data/Install the framework/#development-instructions-advanced">Set up a development environment</a> and following the example on <a href="https://github.com/fablabbcn/smartcitizen-data/tree/master/examples">data processing</a></li>
 <li>Follow the guide below for automatic processing</li>
 </ol>
+<div class="admonition info">
+<p class="admonition-title">Too confusing?</p>
+<p><a href="mailto:support@smartcitizen.me">Contact us</a> and or open a topic in the <a href="https://forum.smartcitizen.me">forum</a> and we will try to help!</p>
+</div>
 <h2 id="automatic-data-processing">Automatic data processing<a class="headerlink" href="#automatic-data-processing" title="Permanent link">&para;</a></h2>
-<p>Data is processed in a recurrent manner whenever there is <code>postprocessing</code> in the device. You can check it by visiting <code>https://api.smartcitizen.me/v0/devices/&lt;device-id&gt;</code> where <code>&lt;device-id&gt;</code> is the number that follows in the url <code>https://smartcitizen.me/kits/XXXXXX</code>.</p>
+<p>Data is processed in a recurrent manner whenever there is <code>postprocessing</code> field in the device data tree. You can check it by visiting <code>https://api.smartcitizen.me/v0/devices/&lt;device-id&gt;</code> where <code>&lt;device-id&gt;</code> is the number that follows in the url <code>https://smartcitizen.me/kits/XXXXXX</code>.</p>
 <div class="admonition info">
 <p class="admonition-title">How to do it?</p>
 <p>Visit <a href="/Guides/data/Handling calibration data/">these instructions</a> to make sure your <code>postprocessing</code> is safely stored.</p>
