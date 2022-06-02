@@ -2357,16 +2357,14 @@
 <p><strong>Kit's request</strong></p>
 <p>The Smart Smart Citizen Kit is publishing by default the data as a PUT Http request, the sensor data is encoded as JSON.</p>
 <p>Here you can see how a kit's request will look like <em>(Note the request is not standard as it do not contains a payload)</em>:</p>
-<div class="highlight"><pre><span></span><code>PUT /add HTTP/1.1
+<p><code>PUT /add HTTP/1.1
 Host: data.smartcitizen.me
 User-Agent: SmartCitizen
 X-SmartCitizenMacADDR: 00:00:00:00:00:00
 X-SmartCitizenVersion: 1.1-0.8.5-A
-X-SmartCitizenData: [{&quot;temp&quot;:&quot;29090.6&quot;, &quot;hum&quot;:&quot;6815.74&quot;, &quot;light&quot;:&quot;30000&quot;, &quot;bat&quot;:&quot;786&quot;, &quot;panel&quot;:&quot;0&quot;, &quot;co&quot;:&quot;112500&quot;, &quot;no2&quot;:&quot;200000&quot;, &quot;noise&quot;:&quot;2&quot;, &quot;nets&quot;:&quot;10&quot;, &quot;timestamp&quot;:&quot;2013-10-28 1:34:26&quot;}]
-</code></pre></div>
+X-SmartCitizenData: [{"temp":"29090.6", "hum":"6815.74", "light":"30000", "bat":"786", "panel":"0", "co":"112500", "no2":"200000", "noise":"2", "nets":"10", "timestamp":"2013-10-28 1:34:26"}]</code></p>
 <p>Here you have a kit's request as a  <strong>Curl</strong> for test purposes:</p>
-<div class="highlight"><pre><span></span><code>$ curl -X PUT -H &#39;Host: data.smartcitizen.me&#39; -H &#39;User-Agent: SmartCitizen&#39; -H &#39;X-SmartCitizenMacADDR: 00:00:00:00:00:00&#39; -H &#39;X-SmartCitizenVersion: 1.1-0.8.5-A&#39; -H &#39;X-SmartCitizenData: [{&quot;temp&quot;:&quot;29090.6&quot;, &quot;hum&quot;:&quot;6815.74&quot;, &quot;light&quot;:&quot;30000&quot;, &quot;bat&quot;:&quot;786&quot;, &quot;panel&quot;:&quot;0&quot;, &quot;co&quot;:&quot;112500&quot;, &quot;no2&quot;:&quot;200000&quot;, &quot;noise&quot;:&quot;2&quot;, &quot;nets&quot;:&quot;10&quot;, &quot;timestamp&quot;:&quot;2013-10-28 1:34:26&quot;}]&#39; data.smartcitizen.me/add
-</code></pre></div>
+<p><code>$ curl -X PUT -H 'Host: data.smartcitizen.me' -H 'User-Agent: SmartCitizen' -H 'X-SmartCitizenMacADDR: 00:00:00:00:00:00' -H 'X-SmartCitizenVersion: 1.1-0.8.5-A' -H 'X-SmartCitizenData: [{"temp":"29090.6", "hum":"6815.74", "light":"30000", "bat":"786", "panel":"0", "co":"112500", "no2":"200000", "noise":"2", "nets":"10", "timestamp":"2013-10-28 1:34:26"}]' data.smartcitizen.me/add</code></p>
 <p><strong>Data processing</strong></p>
 <p>Values are send without the proper scaling and some sensors as temperature, humidity and noise are sent in raw and then calibrated in our platform. This are the conversion required for <strong>SCK 1.1</strong> and above.</p>
 <table>
@@ -2454,28 +2452,30 @@ X-SmartCitizenData: [{&quot;temp&quot;:&quot;29090.6&quot;, &quot;hum&quot;:&quo
 </table>
 <p>You can use the <strong><a href="https://github.com/fablabbcn/Smart-Citizen-Kit/blob/master/data/">SCKSensorData</a> php</strong> class to re-scale and calibrate the received data. Check it on <a href="https://github.com/fablabbcn/Smart-Citizen-Kit/blob/master/data/">github</a>.</p>
 <p>Here is an example how to use it to receive a request, converted and store it in a CSV file:</p>
-<div class="highlight"><pre><span></span><code>&lt;?php
-    include(&#39;../sck_sensor_data.php&#39;);
+<p>```</p>
+<?php
+    include('../sck_sensor_data.php');
 
     $headers = getallheaders();
 
-    $data = $headers[&#39;X-SmartCitizenData&#39;];
+    $data = $headers['X-SmartCitizenData'];
 
     $datapoints = json_decode($data, true);
 
     foreach ($datapoints as $datapoint) {
     $datapoint = SCKSensorData::SCK11Convert($datapoint);
-        $csv .= implode(&#39;, &#39;, $datapoint);
+        $csv .= implode(', ', $datapoint);
     }
 
     $csv .= PHP_EOL;
 
-    file_put_contents(&#39;./data.csv&#39;, $csv, FILE_APPEND);
-?&gt;
-</code></pre></div>
+    file_put_contents('./data.csv', $csv, FILE_APPEND);
+?>
+<p>```</p>
 <p>You can find the complete example <a href="https://github.com/fablabbcn/Smart-Citizen-Kit/blob/master/data/examples/add.php">here</a>.</p>
 <p>Each sensor is implemented as a separate function and some general methods are available for simplifying the work. Here is an example:</p>
-<div class="highlight"><pre><span></span><code>&lt;?php
+<p>```</p>
+<?php
 
     /**
      * noiseCalibration
@@ -2492,11 +2492,11 @@ X-SmartCitizenData: [{&quot;temp&quot;:&quot;29090.6&quot;, &quot;hum&quot;:&quo
 
     public function noiseCalibration($rawSound)
     {
-        $dbTable = json_decode(file_get_contents(&quot;db.json&quot;), true);
+        $dbTable = json_decode(file_get_contents("db.json"), true);
         return round(self::tableCalibration($dbTable, $rawSound), 2);
     }
-?&gt;
-</code></pre></div>
+?>
+<p>```</p>
 <p><strong>How to proceed</strong></p>
 <p>Here are the different paths you can take in order to built your own backend:</p>
 <ul>

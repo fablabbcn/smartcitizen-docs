@@ -2034,31 +2034,35 @@ Supported <a href="https://wiki.seeedstudio.com/Grove-OLED_Display_1.12inch/">sc
 <p>Enabled sensors will be shown by default in a three-second loop (except the battery, that's already on the info bar). </p>
 <p><img alt="" src="../assets/oled_readings.png" /></p>
 <p>Using the <a href="https://docs.smartcitizen.me/Guides/getting%20started/Using%20the%20Shell/">command shell</a>, you can manually add/remove sensors from the display loop with the command <code>sensor sensorName -oled</code> that will toggle the state of the selected sensor.</p>
-<p><div class="highlight"><pre><span></span><code>SCK &gt; sensor temperature -oled
+<p><sub>~</sub>
+SCK &gt; sensor temperature -oled
 Temperature will not show on oled display
-</code></pre></div>
+<sub>~</sub>
 And check which sensors are displayed with the command <code>sensor</code>.</p>
-<div class="highlight"><pre><span></span><code>SCK &gt; sensor
+<p><sub>~</sub>
+SCK &gt; sensor
 ...
 Temperature (60 sec)
 Humidity (60 sec) - oled
 Light (60 sec) - oled
 Noise dBA (60 sec) - oled
 ...
-</code></pre></div>
+<sub>~</sub></p>
 <h2 id="error-bar">Error bar<a class="headerlink" href="#error-bar" title="Permanent link">&para;</a></h2>
 <p>Errors related to SD card, time sync, Wi-Fi, missing configuration or general network errors are shown in a pop-up at the bottom of the screen.</p>
 <p><img alt="" src="../assets/oled_error.png" /></p>
 <h2 id="monitor-plot">Monitor plot<a class="headerlink" href="#monitor-plot" title="Permanent link">&para;</a></h2>
 <p>You can plot one sensor in real time directly to the OLED screen, to use this feature you need to issue the command <code>monitor -oled sensorName</code> via the <a href="https://docs.smartcitizen.me/Guides/getting%20started/Using%20the%20Shell/">command shell</a>. During the execution, the kit will stop all other tasks and try to send readings as fast as it can. Update speed depends on which sensor you are plotting.</p>
-<div class="highlight"><pre><span></span><code>SCK &gt; monitor -oled light
-</code></pre></div>
+<p><sub>~</sub>
+SCK &gt; monitor -oled light
+<sub>~</sub></p>
 <p><img alt="" src="../assets/oled_plot.png" /></p>
 <h2 id="debug-log-view">Debug log view<a class="headerlink" href="#debug-log-view" title="Permanent link">&para;</a></h2>
 <p>Debug output to OLED screen is supported, it has to be enabled via the <a href="https://docs.smartcitizen.me/Guides/getting%20started/Using%20the%20Shell/">command shell</a>. You can toggle debug output with the command <code>debug -oled</code>. Everything that is normally printed on the shell will also be redirected to the OLED screen with a very small font!!</p>
-<div class="highlight"><pre><span></span><code>SCK &gt; debug -oled
+<p><sub>~</sub>
+SCK &gt; debug -oled
 Oled display debug: true
-</code></pre></div>
+<sub>~</sub></p>
 <p><img alt="" src="../assets/oled_debug.png" /></p>
 <h2 id="known-issues">Known issues<a class="headerlink" href="#known-issues" title="Permanent link">&para;</a></h2>
 <ul>

@@ -2167,11 +2167,10 @@
 </li>
 <li>
 <p>If you have a laptop available, it is recommended to check with the <a href="/Guides/getting started/Using the Shell/">Shell</a> and request the sensors:</p>
-<div class="highlight"><pre><span></span><code>sensor
-</code></pre></div>
+<p><code>sensor</code></p>
 <p>After this, a list of all the enabled sensors should appear. You can configure the recording interval as well, in case you need less or more data. If all is working fine, you can now proceed to installation of the unit in an outdoor spot. </p>
 <p>This is a list of all the possible sensors in the Station (seen from the hardware side), the actual sensor list will depend on your version:</p>
-<div class="highlight"><pre><span></span><code>Temperature
+<p><code>Temperature
 Humidity
 Battery
 Light
@@ -2201,8 +2200,7 @@ Ext PM_A 2.5
 Ext PM_A 10.0
 Ext PM_B 1.0
 Ext PM_B 2.5
-Ext PM_B 10.0
-</code></pre></div>
+Ext PM_B 10.0</code></p>
 </li>
 </ol>
 <div class="admonition info">
@@ -2272,21 +2270,19 @@ Ext PM_B 10.0
 <div class="admonition info">
 <p class="admonition-title">Advanced tip</p>
 <p>If you are familiar with Shell commands, or you use Arduino IDE to interact with the Station, you can use this <a href="/Guides/getting started/Using the Shell/">Shell Guide</a>, and connect to the device. Then write down the configuration that you get when typing <code>config</code>:</p>
-<div class="highlight"><pre><span></span><code>SCK &gt; config
+<p><code>SCK &gt; config
 Mode: network
 Publish interval: 180
 Reading interval: 60
 Wifi credentials: WIFI-SSID - WIFIPASS
 Token: 123456
-Mac address:  XX:XX:XX:XX:XX
-</code></pre></div>
+Mac address:  XX:XX:XX:XX:XX</code></p>
 <p>Also, if you are using the phone, you can turn the unit to SETUP mode again, using the ON-OFF button (the indication LED should shine in RED) and from there connect to the Station and get it's information:</p>
 <p><img alt="" src="/assets/images/sck_2/esp_force_upload_1.png" /></p>
 </div>
 <h3 id="handling-calibration-data">Handling calibration data<a class="headerlink" href="#handling-calibration-data" title="Permanent link">&para;</a></h3>
 <p>Some components of the Station have individual calibrations such as the Alphasense Electrochemical Sensors. For this reason, it's necessary to store the physical ID (hardware ID) of the Station alonside to the virtual device in the Smart Citizen Platform. The harwdware ID should normally be in a sticker to the enclosure <strong>both inside and outside</strong> and looks like this:</p>
-<div class="highlight"><pre><span></span><code>SCAS2100XX
-</code></pre></div>
+<p><code>SCAS2100XX</code></p>
 <p>This number is important to relate to the actual calibration values of the sensors, stored in the <a href="https://github.com/fablabbcn/smartcitizen-data/tree/master/hardware">data repository</a>. In order to postprocess the data and calculate pollutants, make sure that the <code>Hardware ID</code> is safely stored in the platform's device, by posting this data to <code>postprocessing_info</code> field of the device. You can follow <a href="/Guides/data/Handling calibration data/">these instructions</a> to store the <code>postprocessing_info</code> of your device.</p>
 <p>All the data is sent in raw to the Smart Citizen Platform and it's then processed outside of the sensors themselves. Both raw, and processed data are kept on the platform and can be accessed at any time. Data can be published to other APIs or to <a href="/Guides/data/Upload data to zenodo/">Zenodo</a> as well, in case of research projects that seek contribution to Open Science Datasets.</p>
 <div class="admonition tip">

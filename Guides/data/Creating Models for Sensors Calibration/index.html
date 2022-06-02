@@ -1453,41 +1453,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#machine-learning-example" class="md-nav__link">
-    Machine learning example
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#model-comparison" class="md-nav__link">
-    Model comparison
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#results" class="md-nav__link">
-    Results
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#export-the-models" class="md-nav__link">
-    Export the models
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#references" class="md-nav__link">
-    References
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -1943,41 +1908,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#machine-learning-example" class="md-nav__link">
-    Machine learning example
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#model-comparison" class="md-nav__link">
-    Model comparison
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#results" class="md-nav__link">
-    Results
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#export-the-models" class="md-nav__link">
-    Export the models
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#references" class="md-nav__link">
-    References
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -2019,42 +1949,41 @@
 <p class="admonition-title">Info<p>You can follow this example using this <a href="https://github.com/fablabbcn/smartcitizen-iscape-data/blob/master/examples/model_creation.ipynb">notebook</a></p>
 </p>
 </div>
-<div class="highlight"><pre><span></span><code>from src.models.model import model_wrapper
-
-# Input model description
-model_description_ols = {&quot;model_name&quot;: &quot;OLS_UCD&quot;,
-                    &quot;model_type&quot;: &quot;OLS&quot;,
-                    &quot;model_target&quot;: &quot;ALPHASENSE&quot;,
-                    &quot;data&quot;: {&quot;train&quot;: {&quot;2019-03_EXT_UCD_URBAN_BACKGROUND_API&quot;: {&quot;devices&quot;: [&quot;5262&quot;],
-                                                                               &quot;reference_device&quot;: &quot;CITY_COUNCIL&quot;}},
-                            &quot;test&quot;: {&quot;2019-03_EXT_UCD_URBAN_BACKGROUND_API&quot;: {&quot;devices&quot;: [&quot;5565&quot;],
-                                                                               &quot;reference_device&quot;: &quot;CITY_COUNCIL&quot;}},
-                            &quot;features&quot;:  {&quot;REF&quot;: &quot;NO2_CONV&quot;,
-                                            &quot;A&quot;: &quot;GB_2W&quot;,
-                                            &quot;B&quot;: &quot;GB_2A&quot;,
-                                            &quot;C&quot;: &quot;HUM&quot;},
-                            &quot;data_options&quot;: {&quot;frequency&quot;: &#39;1Min&#39;,
-                                            &quot;clean_na&quot;: True,
-                                            &quot;clean_na_method&quot;: &quot;drop&quot;,
-                                            &quot;min_date&quot;: None,
-                                            &quot;frequency&quot;: &quot;1Min&quot;,
-                                            &quot;max_date&quot;: &#39;2019-01-15&#39;},
+<p>```
+from src.models.model import model_wrapper</p>
+<h1 id="input-model-description">Input model description<a class="headerlink" href="#input-model-description" title="Permanent link">&para;</a></h1>
+<p>model_description_ols = {"model_name": "OLS_UCD",
+                    "model_type": "OLS",
+                    "model_target": "ALPHASENSE",
+                    "data": {"train": {"2019-03_EXT_UCD_URBAN_BACKGROUND_API": {"devices": ["5262"],
+                                                                               "reference_device": "CITY_COUNCIL"}},
+                            "test": {"2019-03_EXT_UCD_URBAN_BACKGROUND_API": {"devices": ["5565"],
+                                                                               "reference_device": "CITY_COUNCIL"}},
+                            "features":  {"REF": "NO2_CONV",
+                                            "A": "GB_2W",
+                                            "B": "GB_2A",
+                                            "C": "HUM"},
+                            "data_options": {"frequency": '1Min',
+                                            "clean_na": True,
+                                            "clean_na_method": "drop",
+                                            "min_date": None,
+                                            "frequency": "1Min",
+                                            "max_date": '2019-01-15'},
                             },
-                    &quot;hyperparameters&quot;: {&quot;ratio_train&quot;: 0.75},
-                    &quot;model_options&quot;: {&quot;session_active_model&quot;: True,
-                                &quot;show_plots&quot;: True,
-                                &quot;export_model&quot;: False,
-                                &quot;export_model_file&quot;: False,
-                                &quot;extract_metrics&quot;: True}
+                    "hyperparameters": {"ratio_train": 0.75},
+                    "model_options": {"session_active_model": True,
+                                "show_plots": True,
+                                "export_model": False,
+                                "export_model_file": False,
+                                "extract_metrics": True}
                     }
-</code></pre></div>
+```</p>
 <div class="admonition info">
 <p class="admonition-title">More info</p>
 <p>Check the guide on <a href="/Sensor Analysis Framework/guides/Analyse your data in batch/#model">batch analysis</a> for a definition of each parameter.</p>
 </div>
 <p>We have to keep at least the key <code>REF</code> within the <code>"features"</code>, but the rest can be renamed at will. We can also input whichever <code>formula_expression</code> for the model regression in the following format:</p>
-<div class="highlight"><pre><span></span><code>&quot;expression&quot; : &#39;REF ~ A + np.log(B)&#39;
-</code></pre></div>
+<p><code>"expression" : 'REF ~ A + np.log(B)'</code></p>
 <p>Which converts to:</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
@@ -2065,14 +1994,15 @@ REF = A + log(B)
 </script>
 </div>
 <p>We can also define the ratio between the train and test dataset and the minimum dates to use within the datasets (globally):</p>
-<div class="highlight"><pre><span></span><code>min_date = &#39;2018-08-31 00:00:00&#39;
-max_date = &#39;2018-09-06 00:00:00&#39;
-
-# Important that this is a float, don&#39;t forget the .
-&quot;hyperparameters&quot;: {&quot;ratio_train&quot;: 0.75} 
-</code></pre></div>
+<p>```</p>
+<p>min_date = '2018-08-31 00:00:00'
+max_date = '2018-09-06 00:00:00'</p>
+<h1 id="important-that-this-is-a-float-dont-forget-the">Important that this is a float, don't forget the .<a class="headerlink" href="#important-that-this-is-a-float-dont-forget-the" title="Permanent link">&para;</a></h1>
+<p>"hyperparameters": {"ratio_train": 0.75} 
+```</p>
 <p>If we run this cell, we will perform model calibration, with the following output:</p>
-<div class="highlight"><pre><span></span><code>                            OLS Regression Results                            
+<p>```
+                            OLS Regression Results                          <br />
 ==============================================================================
 Dep. Variable:                    REF   R-squared:                       0.676
 Model:                            OLS   Adj. R-squared:                  0.673
@@ -2081,27 +2011,25 @@ Date:                Thu, 06 Sep 2018   Prob (F-statistic):          1.87e-135
 Time:                        12:25:17   Log-Likelihood:                 1142.9
 No. Observations:                 575   AIC:                            -2272.
 Df Residuals:                     568   BIC:                            -2241.
-Df Model:                           6                                         
-Covariance Type:            nonrobust                                         
+Df Model:                           6                                       <br />
+Covariance Type:            nonrobust                                       <br />
 ==================================================================================
-                     coef    std err          t      P&gt;|t|      [0.025      0.975]
-----------------------------------------------------------------------------------
-Intercept         -3.7042      0.406     -9.133      0.000      -4.501      -2.908
+                     coef    std err          t      P&gt;|t|      [0.025      0.975]</p>
+<hr />
+<p>Intercept         -3.7042      0.406     -9.133      0.000      -4.501      -2.908
 A                  0.0011      0.000      2.953      0.003       0.000       0.002
-np.log(B) -3.863e-05   7.03e-06     -5.496      0.000   -5.24e-05   -2.48e-05
-
-==============================================================================
+np.log(B) -3.863e-05   7.03e-06     -5.496      0.000   -5.24e-05   -2.48e-05</p>
+<p>==============================================================================
 Omnibus:                        7.316   Durbin-Watson:                   0.026
 Prob(Omnibus):                  0.026   Jarque-Bera (JB):               10.245
 Skew:                          -0.076   Prob(JB):                      0.00596
 Kurtosis:                       3.636   Cond. No.                     4.29e+05
-==============================================================================
-
-Warnings:
+==============================================================================</p>
+<p>Warnings:
 [1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
 [2] The condition number is large, 4.29e+05. This might indicate that there are
-strong multicollinearity or other numerical problems.
-</code></pre></div>
+strong multicollinearity or other numerical problems.</p>
+<p>```</p>
 <p>This output brings a lot of information. First, we find what the dependent variable is, in our case always <code>'REF'</code>. The type of model used and some general information is shown below that.</p>
 <p>More statistically important information is found in the rest of the output. Some key data:</p>
 <ul>
@@ -2113,11 +2041,11 @@ strong multicollinearity or other numerical problems.
 <p>Our function also depicts the results in a graphical way for us to see the model itself. It will show the training and test datasets (as <code>Reference Train</code> and <code>Reference Test</code> respectively), and the prediction results. The mean and absolute confidence intervals for 95% confidence are also shown:</p>
 <p><img alt="" src="https://i.imgur.com/M9TBeBT.png" /></p>
 <p>Now we can look at some other model quality plots. If we run the cell below, we will obtain an adaptation of the summary plots from <strong>R</strong>:</p>
-<div class="highlight"><pre><span></span><code>from linear_regression_utils import modelRplots
-%matplotlib inline
-
-modelRplots(model, dataTrain, dataTest)
-</code></pre></div>
+<p>```
+from linear_regression_utils import modelRplots
+%matplotlib inline</p>
+<p>modelRplots(model, dataTrain, dataTest)
+```</p>
 <p>Let's review the output step by step:</p>
 <ul>
 <li><strong>Residual vs Fitted</strong> and <strong>Scale Location plot</strong>: these plots represents the model <a href="https://en.wikipedia.org/wiki/Heteroscedasticity">heteroscedasticity </a>, which is a representation of the residuals versus the fitted values. This plot is helpful to check if the errors are distributed homogeneously and that we are not penalising high, low, or other values. There is also a red line which represents the average trend of this distribution which, we want it to be horizontal. For more information visit <a href="https://stats.stackexchange.com/questions/76226/interpreting-the-residuals-vs-fitted-values-plot-for-verifying-the-assumptions">here</a> and <a href="https://stats.stackexchange.com/questions/52089/what-does-having-constant-variance-in-a-linear-regression-model-mean/52107#52107">here</a>. Clearly, in this model we are missing something:</li>
@@ -2152,38 +2080,37 @@ modelRplots(model, dataTrain, dataTest)
 <p>Finally, we can export our model and generate some metrics to evaluate the results.</p>
 <h2 id="machine-learning-example">Machine learning example<a class="headerlink" href="#machine-learning-example" title="Permanent link">&para;</a></h2>
 <p>Machine learning algorithms promise a better representation of the sensor's data, being able to learn robust non-linear models and sequential dependencies. For that reason, we have implemented toolset based on <a href="https://keras.io/">keras</a> with <a href="https://www.tensorflow.org/">Tensorflow</a> backend, in order to train sequential models <sup id="fnref:third"><a class="footnote-ref" href="#fn:third">3</a></sup>.</p>
-<div class="highlight"><pre><span></span><code>model_description_rf = {&quot;model_name&quot;: &quot;RF_UCD&quot;,
-                    &quot;model_type&quot;: &quot;RF&quot;,
-                    &quot;model_target&quot;: &quot;ALPHASENSE&quot;,
-                    &quot;data&quot;: {&quot;train&quot;: {&quot;2019-03_EXT_UCD_URBAN_BACKGROUND_API&quot;: {&quot;devices&quot;: [&quot;5262&quot;],
-                                                                               &quot;reference_device&quot;: &quot;CITY_COUNCIL&quot;}},
-                            &quot;test&quot;: {&quot;2019-03_EXT_UCD_URBAN_BACKGROUND_API&quot;: {&quot;devices&quot;: [&quot;5565&quot;],
-                                                                               &quot;reference_device&quot;: &quot;CITY_COUNCIL&quot;}},
-                            &quot;features&quot;:  {&quot;REF&quot;: &quot;NO2_CONV&quot;,
-                                            &quot;A&quot;: &quot;GB_2W&quot;,
-                                            &quot;B&quot;: &quot;GB_2A&quot;,
-                                            &quot;C&quot;: &quot;HUM&quot;},
-                            &quot;data_options&quot;: {&quot;target_raster&quot;: &#39;1Min&#39;,
-                                            &quot;clean_na&quot;: True,
-                                            &quot;clean_na_method&quot;: &quot;drop&quot;,
-                                            &quot;min_date&quot;: None,
-                                            &quot;frequency&quot;: &quot;1Min&quot;,
-                                            &quot;max_date&quot;: &#39;2019-01-15&#39;},
+<p><code>model_description_rf = {"model_name": "RF_UCD",
+                    "model_type": "RF",
+                    "model_target": "ALPHASENSE",
+                    "data": {"train": {"2019-03_EXT_UCD_URBAN_BACKGROUND_API": {"devices": ["5262"],
+                                                                               "reference_device": "CITY_COUNCIL"}},
+                            "test": {"2019-03_EXT_UCD_URBAN_BACKGROUND_API": {"devices": ["5565"],
+                                                                               "reference_device": "CITY_COUNCIL"}},
+                            "features":  {"REF": "NO2_CONV",
+                                            "A": "GB_2W",
+                                            "B": "GB_2A",
+                                            "C": "HUM"},
+                            "data_options": {"target_raster": '1Min',
+                                            "clean_na": True,
+                                            "clean_na_method": "drop",
+                                            "min_date": None,
+                                            "frequency": "1Min",
+                                            "max_date": '2019-01-15'},
                             },
-                    &quot;hyperparameters&quot;: {&quot;ratio_train&quot;: 0.75, 
-                                        &quot;min_samples_leaf&quot;: 2,
-                                        &quot;max_features&quot;: None,
-                                       &quot;n_estimators&quot;: 100,
-                                        &quot;shuffle_split&quot;: True},
-                    &quot;model_options&quot;: {&quot;session_active_model&quot;: True,
-                                &quot;show_plots&quot;: True,
-                                &quot;export_model&quot;: False,
-                                &quot;export_model_file&quot;: False,
-                                &quot;extract_metrics&quot;: True}
-                    }
-</code></pre></div>
+                    "hyperparameters": {"ratio_train": 0.75, 
+                                        "min_samples_leaf": 2,
+                                        "max_features": None,
+                                       "n_estimators": 100,
+                                        "shuffle_split": True},
+                    "model_options": {"session_active_model": True,
+                                "show_plots": True,
+                                "export_model": False,
+                                "export_model_file": False,
+                                "extract_metrics": True}
+                    }</code></p>
 <p>Output:</p>
-<div class="highlight"><pre><span></span><code>Using TensorFlow backend.
+<p><code>Using TensorFlow backend.
 ...
 Beginning Model RF_UCD
 Model type RF
@@ -2212,8 +2139,7 @@ RMSD                    5.124   3.677
 RMSD_norm_unb           0.453   0.351
 No specifics for RF type
 Preparing devices from prediction
-Channel 5262_RF_UCD prediction finished
-</code></pre></div>
+Channel 5262_RF_UCD prediction finished</code></p>
 <p>This will also output some nice plots for visually checking our model performance:</p>
 <p><img alt="" src="https://i.imgur.com/xEuVJVC.png" /></p>
 <p>And some extras about variable importance:</p>
@@ -2325,39 +2251,35 @@ M_{R1} = min(RMSD*') = \sqrt {1+R1^2-2R1^2}
 </div>
 <h2 id="results">Results<a class="headerlink" href="#results" title="Permanent link">&para;</a></h2>
 <p>Let's now compare both models with the target diagram:</p>
-<div class="highlight"><pre><span></span><code>from src.visualization.visualization import targetDiagram
+<p>```
+from src.visualization.visualization import targetDiagram
 %matplotlib inline
-models = dict()
-
-group = 0
+models = dict()</p>
+<p>group = 0
 for model in [ols_model, rf_model]:
-    for dataset in [&#39;train&#39;, &#39;validation&#39;]:
+    for dataset in ['train', 'validation']:
         if dataset in model.metrics.keys(): 
-            models[model.name + &#39;_&#39; + dataset] = model.metrics[dataset]
-            models[model.name + &#39;_&#39; + dataset][&#39;group&#39;] = group
-
-targetDiagram(models, True, &#39;seaborn-talk&#39;)
-</code></pre></div>
+            models[model.name + '<em>' + dataset] = model.metrics[dataset]
+            models[model.name + '</em>' + dataset]['group'] = group</p>
+<p>targetDiagram(models, True, 'seaborn-talk')
+```</p>
 <p>Output:</p>
 <p><img alt="" src="https://i.imgur.com/PBuBOpw.png" /></p>
 <p>Here, every point that falls inside the yellow circle, will have an R<sup>2</sup> over 0.7, and so will be the red and green for R<sup>2</sup> over 0.5 and 0.9 respectively. We see that only one of our models performs well in that sense, which is the training dataset of the OLS. However, this dataset performs pretty badly in the test dataset, being the LSTM options much better. This target diagram offers information about how the hyperparameters affect our networks. For instance, increasing the training epochs from 100 to 200 does not affect greatly on model performance, but the effect of filtering the data beforehand to reduce the noise shows a much better model performance in both, training and test dataframe.</p>
 <h2 id="export-the-models">Export the models<a class="headerlink" href="#export-the-models" title="Permanent link">&para;</a></h2>
 <p>Let's now assume that we are happy with our models. We can now export them:</p>
-<div class="highlight"><pre><span></span><code>ols_model.export(&#39;directory&#39;)
-rf_model.export(&#39;directory&#39;)
-</code></pre></div>
+<p><code>ols_model.export('directory')
+rf_model.export('directory')</code></p>
 <p>Output:</p>
-<div class="highlight"><pre><span></span><code>Saving metrics
+<p><code>Saving metrics
 Saving hyperparameters
 Saving features
-Model included in summary
-</code></pre></div>
+Model included in summary</code></p>
 <p>And in our directory:</p>
-<div class="highlight"><pre><span></span><code>➜  models ls -l
+<p><code>➜  models ls -l
 RF_UCD_features.sav
 RF_UCD_hyperparameters.sav
-RF_UCD_metrics.sav
-</code></pre></div>
+RF_UCD_metrics.sav</code></p>
 <div class="admonition warning">
 <p class="admonition-title">Save the model file</p>
 <p>If you want to save the model file into the disk, change the option <code>"export_model": False,</code> to <code>True</code>! Be careful though, it can take quite a lot of space. If you just want to keep the model to test in the current session, it is best to just use <code>"session_active_model": True,</code>.</p>

@@ -2276,7 +2276,7 @@
 <p>The board is capable of storing the recorded data offline on its internal dedicated <a href="/Components/Flash Storage">flash memory</a> of 8MB and later publish this over Wi-Fi connectivity provided by an Espressif ESP8266. Data is published using MQTT messages to the Smart Citizen Platform. NTP is used for syncing the built-in RTC. For long term offline storage, the board provides a standard microSD socket where card in the orders of GB can be employed. That ensures extended periods of data in the order of decades can be stored.</p>
 <h3 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">&para;</a></h3>
 <p>The board firmware is fully customizable without requiring any changes to the core software. That includes enabling or disabling sensors, the sampling frequency of the sensors or the operation mode. There different configuration options via the Serial Shell available when the board is connected over USB.</p>
-<div class="highlight"><pre><span></span><code>Detecting: AlphaDelta 1A... found, Enabling AlphaDelta 1A
+<p><code>Detecting: AlphaDelta 1A... found, Enabling AlphaDelta 1A
 Detecting: AlphaDelta 1W... found, already enabled!!!
 Detecting: AlphaDelta 2A... found, already enabled!!!
 Detecting: AlphaDelta 2W... found, already enabled!!!
@@ -2295,8 +2295,7 @@ Detecting: Atlas Conductivity... nothing!
 Detecting: Atlas Specific gravity... nothing!
 Detecting: Atlas Dissolved Oxygen... nothing!
 Detecting: Atlas DO Saturation... nothing!
-Detecting: Grove OLED... nothing!
-</code></pre></div>
+Detecting: Grove OLED... nothing!</code></p>
 <h2 id="shell">Shell<a class="headerlink" href="#shell" title="Permanent link">&para;</a></h2>
 <p>The firmware provides a comprehensive command shell over USB to manage all the kits functionalities for advanced users. </p>
 <p><em>Use any Serial console as <code>screen</code>, <code>platformio device monitor</code>, or the serial monitor on the Arduino IDE</em></p>
@@ -2308,15 +2307,13 @@ Detecting: Grove OLED... nothing!
 <h3 id="readings-files-yy-mm-ddcsv">Readings files YY-MM-DD.CSV<a class="headerlink" href="#readings-files-yy-mm-ddcsv" title="Permanent link">&para;</a></h3>
 <p>These files are generated and updated by the kit in a daily manner. When a SD is detected the SCK will automatically save the sensors into it. </p>
 <p>The SCK creates an additional CSV file once there is a hardware reset. A reset takes place every night at 3-4am with the purpose to avoid data loss because a software problem (i.e. blocked software). The SCK then stores the data in a file with a sequential name, and does so by changing the filename to YY-MM-DD.01, .02... depending on the amount of resets it sees during a certain day. The latest data is always in the file with .CSV extension. An example of a day with two resets (ad hoc and the programmed one):</p>
-<div class="highlight"><pre><span></span><code>YY-MM-DD.01 -&gt; first reset
+<p><code>YY-MM-DD.01 -&gt; first reset
 YY-MM-DD.02 -&gt; second reset
-YY-MM-DD.CSV -&gt; latest file
-</code></pre></div>
+YY-MM-DD.CSV -&gt; latest file</code></p>
 <p>The user can safely change the extension of these files back to .CSV and concatenate them:</p>
-<div class="highlight"><pre><span></span><code>YY-MM-DD.01 -&gt; YY-MM-DD_01.CSV
+<p><code>YY-MM-DD.01 -&gt; YY-MM-DD_01.CSV
 YY-MM-DD.02 -&gt; YY-MM-DD_02.CSV
-YY-MM-DD.CSV -&gt; YY-MM-DD.CSV
-</code></pre></div>
+YY-MM-DD.CSV -&gt; YY-MM-DD.CSV</code></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>If there is a problem with the device, sometimes it can be that the SD card contains many files for a single day. These resets might go unnoticed, and the SD card files can be a way of detecting an issue.</p>

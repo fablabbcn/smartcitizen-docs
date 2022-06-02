@@ -68,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#functionality" class="md-skip">
+        <a href="#load-the-object" class="md-skip">
           Skip to content
         </a>
       
@@ -1848,95 +1848,8 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
+    
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#functionality" class="md-nav__link">
-    Functionality
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#workflow" class="md-nav__link">
-    Workflow
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#json-task-description" class="md-nav__link">
-    Json task description
-  </a>
-  
-    <nav class="md-nav" aria-label="Json task description">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#define-data" class="md-nav__link">
-    Define data
-  </a>
-  
-    <nav class="md-nav" aria-label="Define data">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#data-loading-options" class="md-nav__link">
-    Data loading options
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#model" class="md-nav__link">
-    Model
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#plots" class="md-nav__link">
-    Plots
-  </a>
-  
-    <nav class="md-nav" aria-label="Plots">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#general-description" class="md-nav__link">
-    General description
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#plots-specifics" class="md-nav__link">
-    Plots specifics
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
   
 </nav>
                   </div>
@@ -1956,18 +1869,16 @@
                   
                 
                 
-                  <h1>Analyse your data in batch</h1>
-                
                 <p>Sometimes we have a lot of devices to process, and the interfaces for analysis in <a href="https://smartcitizen.me">smartcitizen.me</a> or in the <code>jupyter notebook</code> might not be the most efficient way to do it. For this reason, we have developed a functionality to process the data in batches, defining the tasks to perform in a <code>json</code> descriptor file.</p>
 <p>The descriptor file can be placed in the <code>src/tasks</code> directory (or any, actually). An example of how to run it is shown in <a href="https://github.com/fablabbcn/smartcitizen-iscape-data/blob/master/examples/batch_analysis.ipynb"><code>examples/batch_analysis.ipynb</code></a>:</p>
-<div class="highlight"><pre><span></span><code># Load the object
-from src.models.batch import batch_analysis&quot;,
-tasks_file = &#39;../tasks/batch.json&#39;&quot;,
-batch_session = batch_analysis(tasks_file, verbose = True)
-
-# Run the analysis
-batch_session.run()
-</code></pre></div>
+<p>```</p>
+<h1 id="load-the-object">Load the object<a class="headerlink" href="#load-the-object" title="Permanent link">&para;</a></h1>
+<p>from src.models.batch import batch_analysis",
+tasks_file = '../tasks/batch.json'",
+batch_session = batch_analysis(tasks_file, verbose = True)</p>
+<h1 id="run-the-analysis">Run the analysis<a class="headerlink" href="#run-the-analysis" title="Permanent link">&para;</a></h1>
+<p>batch_session.run()
+```</p>
 <h2 id="functionality">Functionality<a class="headerlink" href="#functionality" title="Permanent link">&para;</a></h2>
 <p>These tasks are intended to automatise data analysis tasks as the following:</p>
 <ul>
@@ -1979,35 +1890,33 @@ batch_session.run()
 <p><img alt="" src="https://i.imgur.com/eDBftEx.png" /></p>
 <h2 id="json-task-description">Json task description<a class="headerlink" href="#json-task-description" title="Permanent link">&para;</a></h2>
 <p>The descriptor file loaded is a <code>json</code> containing keys for each task to be run. Several tasks can be included and will be run consecutively:</p>
-<div class="highlight"><pre><span></span><code>{
-    &quot;TASK_1&quot;:{...},
-    &quot;TASK_2&quot;:{...},
-    &quot;TASK_3&quot;:{...}
-}
-</code></pre></div>
+<p><code>{
+    "TASK_1":{...},
+    "TASK_2":{...},
+    "TASK_3":{...}
+}</code></p>
 <p>Each of the <code>tasks</code> contains different fields, depending on what the process is.</p>
 <h3 id="define-data">Define data<a class="headerlink" href="#define-data" title="Permanent link">&para;</a></h3>
 <p>In case <strong>no model needs to be calculated</strong>, the data can be specified directly in the task:</p>
-<div class="highlight"><pre><span></span><code>{
-    &quot;TASK_1&quot;:{
-        &quot;data&quot;:{
-            &quot;datasets&quot;: {
-                &quot;TEST_1&quot;: [&quot;DEVICE_11&quot;,&quot;DEVICE_12&quot;],
-                &quot;TEST_2&quot;: [&quot;DEVICE_21&quot;, &quot;DEVICE_22&quot;, &quot;DEVICE_23&quot;],
+<p><code>{
+    "TASK_1":{
+        "data":{
+            "datasets": {
+                "TEST_1": ["DEVICE_11","DEVICE_12"],
+                "TEST_2": ["DEVICE_21", "DEVICE_22", "DEVICE_23"],
                 ...
                         },
-            &quot;data_options&quot;: {&quot;avoid_processed&quot;: true,
-                            &quot;frequency&quot;: &quot;1Min&quot;,
-                            &quot;clean_na&quot;: true,
-                            &quot;use_cache&quot;: true,
-                            &quot;clean_na_method&quot;: &quot;drop&quot;,
-                            &quot;min_date&quot;: null,
-                            &quot;max_date&quot;: null,
-                            &quot;export_data&quot;: null,
-                            &quot;rename_export_data&quot;: false}
+            "data_options": {"avoid_processed": true,
+                            "frequency": "1Min",
+                            "clean_na": true,
+                            "use_cache": true,
+                            "clean_na_method": "drop",
+                            "min_date": null,
+                            "max_date": null,
+                            "export_data": null,
+                            "rename_export_data": false}
                     }
-}
-</code></pre></div>
+}</code></p>
 <p>If a model is to be calculated, the data is defined within the model key as seen below. </p>
 <h4 id="data-loading-options">Data loading options<a class="headerlink" href="#data-loading-options" title="Permanent link">&para;</a></h4>
 <ul>
@@ -2037,19 +1946,20 @@ batch_session.run()
 
 Different preprocessing options can be defined. The most common one, for the sensors in the _Smart Citizen Project_ are the analysis of the _electrochemical sensors_ but others can be used and implemented, for later call from `/src/models/batch.py`.
 
-<div class="highlight"><pre><span></span><code>    &quot;TASK_1&quot;: {
-        &quot;pre-processing&quot;: {
-                &quot;alphasense&quot;: {&quot;baseline_method&quot;: &quot;deltas&quot;,
-                                &quot;parameters&quot;: [30, 45, 5],
-                                &quot;methods&quot;: {&quot;CO&quot;: [&quot;classic&quot;, &quot;na&quot;],
-                                            &quot;NO2&quot;: [&quot;baseline&quot;, &quot;single_aux&quot;],
-                                            &quot;O3&quot;: [&quot;baseline&quot;, &quot;single_aux&quot;]
+```
+    "TASK_1": {
+        "pre-processing": {
+                "alphasense": {"baseline_method": "deltas",
+                                "parameters": [30, 45, 5],
+                                "methods": {"CO": ["classic", "na"],
+                                            "NO2": ["baseline", "single_aux"],
+                                            "O3": ["baseline", "single_aux"]
                                             },
-                                &quot;overlapHours&quot;: 0
+                                "overlapHours": 0
                             }
             },
     }
-</code></pre></div>
+```
 
 **Note**: this section is currently project specific for electrochemical sensors defined [here](https://docs.smartcitizen.me/Components/Gas%20Pro%20Sensor%20Board/Electrochemical%20Sensors)
 
@@ -2076,47 +1986,48 @@ Different preprocessing options can be defined. The most common one, for the sen
 <p>It is better to generate only one model per task, since the memory used by the models can be very large.</p>
 </div>
 <p>An example is shown below:</p>
-<div class="highlight"><pre><span></span><code>&quot;model&quot;: {
-        &quot;model_name&quot;: &quot;Random_Forest_100&quot;,
-        &quot;model_type&quot;: &quot;RF&quot;,
-        &quot;model_target&quot;: &quot;ALPHASENSE&quot;,
-                    &quot;data&quot;: {&quot;train&quot;: {&quot;TEST_1&quot;: {&quot;devices&quot;: [&quot;DEVICE_1&quot;],
-                                                 &quot;reference_device&quot;:&quot;REF_DEVICE_1&quot;}},
-                            &quot;test&quot;: {&quot;TEST_1&quot;: {&quot;devices&quot;: [&quot;DEVICE_1&quot;, &quot;DEVICE_2&quot;],
-                                                 &quot;reference_device&quot;:&quot;REF_DEVICE_2&quot;},
-                                     &quot;TEST_2&quot;: {&quot;devices&quot;: [&quot;DEVICE_3&quot;],
-                                                &quot;reference_device&quot;: &quot;REF_DEVICE_3&quot;},
-                                     &quot;TEST_3&quot;: {&quot;devices&quot;: [&quot;DEVICE_4&quot;],
-                                                &quot;reference_device&quot;: &quot;REF_DEVICE_4&quot;},
-                                     &quot;TEST_2&quot;: {&quot;devices&quot;: [&quot;DEVICE_5&quot;],
-                                                &quot;reference_device&quot;: &quot;REF_DEVICE_5&quot;}},
-                &quot;features&quot;: {&quot;REF&quot;: &quot;NO2_REF&quot;,
-                            &quot;A&quot;:  &quot;GB_2W&quot;,
-                            &quot;B&quot;: &quot;GB_2A&quot;,
-                            &quot;C&quot;: &quot;HUM&quot;
+<p>```
+"model": {
+        "model_name": "Random_Forest_100",
+        "model_type": "RF",
+        "model_target": "ALPHASENSE",
+                    "data": {"train": {"TEST_1": {"devices": ["DEVICE_1"],
+                                                 "reference_device":"REF_DEVICE_1"}},
+                            "test": {"TEST_1": {"devices": ["DEVICE_1", "DEVICE_2"],
+                                                 "reference_device":"REF_DEVICE_2"},
+                                     "TEST_2": {"devices": ["DEVICE_3"],
+                                                "reference_device": "REF_DEVICE_3"},
+                                     "TEST_3": {"devices": ["DEVICE_4"],
+                                                "reference_device": "REF_DEVICE_4"},
+                                     "TEST_2": {"devices": ["DEVICE_5"],
+                                                "reference_device": "REF_DEVICE_5"}},
+                "features": {"REF": "NO2_REF",
+                            "A":  "GB_2W",
+                            "B": "GB_2A",
+                            "C": "HUM"
                             }
-                &quot;data_options&quot;: {&quot;export_data&quot;: &quot;All&quot;,
-                            &quot;rename_export_data&quot;: false,
-                            &quot;target_raster&quot;: 1Min&quot;,
-                            &quot;clean_na&quot;: true,
-                            &quot;clean_na_method&quot;: &quot;fill&quot;,
-                            &quot;min_date&quot;: null,
-                            &quot;max_date&quot;: null,
-                            &quot;use_cache&quot;: true}
+                "data_options": {"export_data": "All",
+                            "rename_export_data": false,
+                            "target_raster": 1Min",
+                            "clean_na": true,
+                            "clean_na_method": "fill",
+                            "min_date": null,
+                            "max_date": null,
+                            "use_cache": true}
                 },
-        &quot;hyperparameters&quot;: {&quot;ratio_train&quot;: 0.75,
-                            &quot;n_estimators&quot;: 100,
-                            &quot;shuffle_split&quot;: true
+        "hyperparameters": {"ratio_train": 0.75,
+                            "n_estimators": 100,
+                            "shuffle_split": true
                             },
-        &quot;model_options&quot;: {&quot;session_active_model&quot;: false,
-                    &quot;export_model&quot;: false,
-                    &quot;export_model_file&quot;: false,
-                    &quot;extract_metrics&quot;: true,
-                    &quot;save_plots&quot;: false,
-                    &quot;show_plots&quot;: false
+        "model_options": {"session_active_model": false,
+                    "export_model": false,
+                    "export_model_file": false,
+                    "extract_metrics": true,
+                    "save_plots": false,
+                    "show_plots": false
                     }
-        },
-</code></pre></div>
+        },</p>
+<p>```</p>
 <ul>
 <li><code>model_name</code>: model name to be saved</li>
 <li><code>model_type</code>: 'RF', 'SVR', 'LSTM' or 'OLS'</li>
@@ -2198,35 +2109,34 @@ Different preprocessing options can be defined. The most common one, for the sen
 <p class="admonition-title">Many plots? No problem</p>
 <p>In the case of the models, we only wanted one model per task, but it's not the case in the plots.</p>
 </div>
-<div class="highlight"><pre><span></span><code>&quot;plot&quot;: {
-    &quot;2&quot;: {&quot;plot_type&quot;: &quot;timeseries&quot;,
-        &quot;plotting_library&quot;: &quot;matplotlib&quot;,
-        &quot;data&quot;: {&quot;test&quot;: &quot;TEST_1&quot;,
-                &quot;traces&quot;: {&quot;1&quot;: {&quot;device&quot;: &quot;5262&quot;,
-                                &quot;channel&quot; : &quot;EXT_PM_10&quot;,
-                                &quot;subplot&quot;: 1},
-                            &quot;2&quot;: {&quot;device&quot;: &quot;5262&quot;,
-                                &quot;channel&quot; : &quot;EXT_PM_25&quot;,
-                                &quot;subplot&quot;: 2}}},
-        &quot;options&quot;: {&quot;show_plot&quot;: false,
-                    &quot;separate_device_plots&quot;: false,
-                    &quot;target_raster&quot;: &quot;10Min&quot;,
-                    &quot;max_date&quot;: null,
-                    &quot;min_date&quot;: null,
-                    &quot;export_path&quot;: &quot;/Users/mac/Desktop&quot;,
-                    &quot;file_name&quot;: &quot;plot_pm&quot;},
-        &quot;formatting&quot;: {&quot;xlabel&quot;: &quot;Date (-)&quot;,
-                        &quot;ylabel&quot;: {&quot;1&quot;: &quot;Temp degC&quot;,
-                                    &quot;2&quot;: &quot;Hum (%rh)&quot;},
-                        &quot;yrange&quot;: {&quot;1&quot;: [0, 40], 
-                                    &quot;2&quot;: [0, 100]},
-                        &quot;title&quot;: &quot;PM&quot;,
-                        &quot;sharex&quot;:true,
-                        &quot;grid&quot;: true,
-                        &quot;height&quot;: 10,
-                        &quot;width&quot;: 12}
-    },
-</code></pre></div>
+<p><code>"plot": {
+    "2": {"plot_type": "timeseries",
+        "plotting_library": "matplotlib",
+        "data": {"test": "TEST_1",
+                "traces": {"1": {"device": "5262",
+                                "channel" : "EXT_PM_10",
+                                "subplot": 1},
+                            "2": {"device": "5262",
+                                "channel" : "EXT_PM_25",
+                                "subplot": 2}}},
+        "options": {"show_plot": false,
+                    "separate_device_plots": false,
+                    "target_raster": "10Min",
+                    "max_date": null,
+                    "min_date": null,
+                    "export_path": "/Users/mac/Desktop",
+                    "file_name": "plot_pm"},
+        "formatting": {"xlabel": "Date (-)",
+                        "ylabel": {"1": "Temp degC",
+                                    "2": "Hum (%rh)"},
+                        "yrange": {"1": [0, 40], 
+                                    "2": [0, 100]},
+                        "title": "PM",
+                        "sharex":true,
+                        "grid": true,
+                        "height": 10,
+                        "width": 12}
+    },</code></p>
 <h4 id="general-description">General description<a class="headerlink" href="#general-description" title="Permanent link">&para;</a></h4>
 <p>This description is suitable for timeseries plots. Check below for other types:</p>
 <p><img alt="" src="https://i.imgur.com/p6qogrD.png" /></p>
@@ -2266,27 +2176,26 @@ Different preprocessing options can be defined. The most common one, for the sen
 <h4 id="plots-specifics">Plots specifics<a class="headerlink" href="#plots-specifics" title="Permanent link">&para;</a></h4>
 <p><strong>Heatmap</strong></p>
 <p><img alt="" src="https://i.imgur.com/bKyX7fb.png" /></p>
-<div class="highlight"><pre><span></span><code>&quot;1&quot; : {&quot;plot_type&quot;: &quot;heatmap&quot;,
-        &quot;plotting_library&quot;: &quot;matplotlib&quot;,
-        &quot;data&quot;: {&quot;test&quot;: &quot;TEST_1&quot;,
-                &quot;traces&quot;: {&quot;1&quot;: {&quot;device&quot;: &quot;all&quot;,
-                                &quot;channel&quot; : &quot;NOISE_A&quot;,
-                                &quot;subplot&quot;: 1}}},
-        &quot;options&quot;: {&quot;show_plot&quot;: false,
-                    &quot;separate_device_plots&quot;: true,
-                    &quot;target_raster&quot;: &quot;10Min&quot;,
-                    &quot;min_date&quot;: null,
-                    &quot;max_date&quot;: &quot;2019-01-03&quot;,
-                    &quot;relative&quot;: false,
-                    &quot;export_path&quot;: &quot;/Users/macoscar/Desktop&quot;,
-                    &quot;file_name&quot;: &quot;heatmap_noise&quot;},
-        &quot;formatting&quot;: {&quot;title&quot;: &quot;Magnificent plot&quot;,
-               &quot;grid&quot;: true,
-               &quot;height&quot;: 10,
-               &quot;width&quot;: 15,
-               &quot;frequency_hours&quot;: 6}
-        }
-</code></pre></div>
+<p><code>"1" : {"plot_type": "heatmap",
+        "plotting_library": "matplotlib",
+        "data": {"test": "TEST_1",
+                "traces": {"1": {"device": "all",
+                                "channel" : "NOISE_A",
+                                "subplot": 1}}},
+        "options": {"show_plot": false,
+                    "separate_device_plots": true,
+                    "target_raster": "10Min",
+                    "min_date": null,
+                    "max_date": "2019-01-03",
+                    "relative": false,
+                    "export_path": "/Users/macoscar/Desktop",
+                    "file_name": "heatmap_noise"},
+        "formatting": {"title": "Magnificent plot",
+               "grid": true,
+               "height": 10,
+               "width": 15,
+               "frequency_hours": 6}
+        }</code></p>
 <div class="admonition warning">
 <p>Note that in this case it only makes sense to put one trace. If we define <code>"device": "all"</code>, then <code>"separate_device_plots": true</code></p>
 </div>
@@ -2299,31 +2208,30 @@ Different preprocessing options can be defined. The most common one, for the sen
 </ul>
 <p><strong>Correlation plot</strong></p>
 <p><img alt="" src="https://i.imgur.com/ACxGP9n.png" /></p>
-<div class="highlight"><pre><span></span><code>&quot;1&quot; : {&quot;plot_type&quot;: &quot;correlation_plot&quot;,
-       &quot;plotting_library&quot;: &quot;matplotlib&quot;,
-       &quot;data&quot;: {&quot;test&quot;: &quot;TEST_1&quot;,
-                       &quot;traces&quot;: {&quot;1&quot;: {&quot;device&quot;: &quot;5261&quot;,
-                                       &quot;channel&quot; : &quot;NOISE_A&quot;,
-                                       &quot;subplot&quot;: 1},
-                                 &quot;2&quot;: {&quot;device&quot;: &quot;5262&quot;,
-                                      &quot;channel&quot;: &quot;TEMP&quot;,
-                                      &quot;subplot&quot;: 1}}},
-       &quot;options&quot;: {&quot;show_plot&quot;: True,
-                   &quot;separate_device_plots&quot;: false,
-                   &quot;export_path&quot;: &quot;/Users/macoscar/Desktop&quot;, 
-                   &quot;file_name&quot;: &quot;plot_corr&quot;,
-                   &quot;target_raster&quot;: &#39;10Min&#39;,
-                   &quot;min_date&quot;: None,
-                   &quot;max_date&quot;: None},
-       &quot;formatting&quot;: {&quot;jpkind&quot;: &#39;scatter&#39;,
-                      &quot;title&quot;: &quot;Magnificent plot&quot;,
-                      &quot;xrange&quot;: [0, 100],
-                      &quot;yrange&quot;: [0, 40],
-                      &quot;grid&quot;: True,
-                      &quot;height&quot;: 10,
-                      &quot;width&quot;: 15}
-       }
-</code></pre></div>
+<p><code>"1" : {"plot_type": "correlation_plot",
+       "plotting_library": "matplotlib",
+       "data": {"test": "TEST_1",
+                       "traces": {"1": {"device": "5261",
+                                       "channel" : "NOISE_A",
+                                       "subplot": 1},
+                                 "2": {"device": "5262",
+                                      "channel": "TEMP",
+                                      "subplot": 1}}},
+       "options": {"show_plot": True,
+                   "separate_device_plots": false,
+                   "export_path": "/Users/macoscar/Desktop", 
+                   "file_name": "plot_corr",
+                   "target_raster": '10Min',
+                   "min_date": None,
+                   "max_date": None},
+       "formatting": {"jpkind": 'scatter',
+                      "title": "Magnificent plot",
+                      "xrange": [0, 100],
+                      "yrange": [0, 40],
+                      "grid": True,
+                      "height": 10,
+                      "width": 15}
+       }</code></p>
 <p>Note that in this case it only makes sense to put two traces, in the same subplot.</p>
 <ul>
 <li><code>formatting</code>: <ul>
@@ -2334,107 +2242,104 @@ Different preprocessing options can be defined. The most common one, for the sen
 <p><strong>Scatter plot matrix</strong></p>
 <p>The big brother of the <code>correlation plot</code>:</p>
 <p><img alt="" src="https://i.imgur.com/IfLLAUg.jpg" /></p>
-<div class="highlight"><pre><span></span><code>&quot;1&quot; : {&quot;plot_type&quot;: &quot;scatter_matrix&quot;,
-        &quot;plotting_library&quot;: &quot;matplotlib&quot;,
-        &quot;data&quot;: {&quot;test&quot;: &quot;TEST_1&quot;,
-                        &quot;traces&quot;: {&quot;1&quot;: {&quot;device&quot;: &quot;5262&quot;,
-                                        &quot;channel&quot; : &quot;GB_2W&quot;,
-                                        &quot;subplot&quot;: 1},
-                                  &quot;2&quot;: {&quot;device&quot;: &quot;5262&quot;,
-                                       &quot;channel&quot;: &quot;TEMP&quot;,
-                                       &quot;subplot&quot;: 1},
-                                  &quot;3&quot;: {&quot;device&quot;: &quot;5262&quot;,
-                                       &quot;channel&quot;: &quot;HUM&quot;,
-                                       &quot;subplot&quot;: 1}}},
-        &quot;options&quot;: {&quot;show_plot&quot;: True,
-                    &quot;separate_device_plots&quot;: False,
-                    &quot;export_path&quot;: &quot;/Users/macoscar/Desktop&quot;, 
-                    &quot;file_name&quot;: &quot;plot_scatter&quot;,
-                    &quot;target_raster&quot;: &#39;10Min&#39;,
-                    &quot;min_date&quot;: None,
-                    &quot;max_date&quot;: None},
-        &quot;formatting&quot;: {&quot;title&quot;: &quot;Magnificent plot&quot;,
-                       &quot;grid&quot;: True,
-                       &quot;height&quot;: 4,
-                       &quot;width&quot;: 4}
-        }
-</code></pre></div>
+<p><code>"1" : {"plot_type": "scatter_matrix",
+        "plotting_library": "matplotlib",
+        "data": {"test": "TEST_1",
+                        "traces": {"1": {"device": "5262",
+                                        "channel" : "GB_2W",
+                                        "subplot": 1},
+                                  "2": {"device": "5262",
+                                       "channel": "TEMP",
+                                       "subplot": 1},
+                                  "3": {"device": "5262",
+                                       "channel": "HUM",
+                                       "subplot": 1}}},
+        "options": {"show_plot": True,
+                    "separate_device_plots": False,
+                    "export_path": "/Users/macoscar/Desktop", 
+                    "file_name": "plot_scatter",
+                    "target_raster": '10Min',
+                    "min_date": None,
+                    "max_date": None},
+        "formatting": {"title": "Magnificent plot",
+                       "grid": True,
+                       "height": 4,
+                       "width": 4}
+        }</code></p>
 <p><strong>Coherence plot</strong></p>
 <p><img alt="" src="https://i.imgur.com/DmvnwBj.png" /></p>
 <p>This plot it's used to plot the coherence between x and y. Coherence is the normalized cross spectral density. More info <a href="https://matplotlib.org/3.1.1/api/_as_gen/matplotlib.pyplot.cohere.html">here</a>:</p>
-<div class="highlight"><pre><span></span><code>&quot;1&quot; : {&quot;plot_type&quot;: &quot;coherence_plot&quot;,
-        &quot;plotting_library&quot;: &quot;matplotlib&quot;,
-        &quot;data&quot;: {&quot;test&quot;: &quot;TEST_1&quot;,
-                        &quot;traces&quot;: {&quot;1&quot;: {&quot;device&quot;: &quot;5262&quot;,
-                                        &quot;channel&quot; : &quot;GB_2W&quot;,
-                                        &quot;subplot&quot;: 1},
-                                  &quot;2&quot;: {&quot;device&quot;: &quot;5262&quot;,
-                                       &quot;channel&quot;: &quot;TEMP&quot;,
-                                       &quot;subplot&quot;: 1}}},
-        &quot;options&quot;: {&quot;show_plot&quot;: True,
-                    &quot;separate_device_plots&quot;: False,
-                    &quot;export_path&quot;: &quot;/Users/macoscar/Desktop&quot;, 
-                    &quot;file_name&quot;: &quot;plot_coherence&quot;,
-                    &quot;target_raster&quot;: &#39;10Min&#39;,
-                    &quot;min_date&quot;: None,
-                    &quot;max_date&quot;: None},
-        &quot;formatting&quot;: {&quot;title&quot;: &quot;Magnificent plot&quot;,
-                       &quot;grid&quot;: True,
-                       &quot;height&quot;: 10,
-                       &quot;width&quot;: 15}
-        }
-</code></pre></div>
+<p><code>"1" : {"plot_type": "coherence_plot",
+        "plotting_library": "matplotlib",
+        "data": {"test": "TEST_1",
+                        "traces": {"1": {"device": "5262",
+                                        "channel" : "GB_2W",
+                                        "subplot": 1},
+                                  "2": {"device": "5262",
+                                       "channel": "TEMP",
+                                       "subplot": 1}}},
+        "options": {"show_plot": True,
+                    "separate_device_plots": False,
+                    "export_path": "/Users/macoscar/Desktop", 
+                    "file_name": "plot_coherence",
+                    "target_raster": '10Min',
+                    "min_date": None,
+                    "max_date": None},
+        "formatting": {"title": "Magnificent plot",
+                       "grid": True,
+                       "height": 10,
+                       "width": 15}
+        }</code></p>
 <p><strong>Violin plot</strong></p>
 <p><img alt="" src="https://i.imgur.com/3d8j0qa.png" /></p>
 <p>This plot shows the signal distribution. </p>
-<div class="highlight"><pre><span></span><code>&quot;1&quot; : {&quot;plot_type&quot;: &quot;violin&quot;,
-        &quot;plotting_library&quot;: &quot;matplotlib&quot;,
-        &quot;data&quot;: {&quot;test&quot;: &quot;TEST_1&quot;,
-                        &quot;traces&quot;: {&quot;1&quot;: {&quot;device&quot;: &quot;5262&quot;,
-                                          &quot;channel&quot; : &quot;DALLAS_TEMP&quot;,
-                                        &quot;subplot&quot;: 1},
-                                    &quot;2&quot;: {&quot;device&quot;: &quot;5262&quot;,
-                                           &quot;channel&quot; : &quot;HUM&quot;,
-                                           &quot;subplot&quot;: 1},
-                                     &quot;3&quot;: {&quot;device&quot;: &quot;5262&quot;,
-                                           &quot;channel&quot; : &quot;TEMP&quot;,
-                                           &quot;subplot&quot;: 1},
-                                     &quot;4&quot;: {&quot;device&quot;: &quot;5262&quot;,
-                                           &quot;channel&quot; : &quot;GB_2W&quot;,
-                                           &quot;subplot&quot;: 1},
-                                     &quot;5&quot;: {&quot;device&quot;: &quot;5262&quot;,
-                                           &quot;channel&quot; : &quot;GB_2A&quot;,
-                                           &quot;subplot&quot;: 1},
-                                     &quot;6&quot;: {&quot;device&quot;: &quot;5262&quot;,
-                                           &quot;channel&quot; : &quot;GB_3W&quot;,
-                                           &quot;subplot&quot;: 1}}},
-        &quot;options&quot;: {&quot;show_plot&quot;: True,
-                    &quot;separate_device_plots&quot;: False,
-                    &quot;export_path&quot;: &quot;/Users/macoscar/Desktop&quot;, 
-                    &quot;file_name&quot;: &quot;plot_violin&quot;,
-                    &quot;target_raster&quot;: &#39;10Min&#39;,
-                    &quot;min_date&quot;: None,
-                    &quot;max_date&quot;: &#39;2019-01-03&#39;,
-                    &quot;relative&quot;: False,
-                    &quot;ylabel&quot;: {1: &quot;External temperature&quot;,
-                               2: &quot;Humidity (%RH)&quot;,
-                               3: &quot;Temperature (degC)&quot;,
-                               4: &quot;Wir&quot;,
-                               5: &quot;Wor&quot;,
-                               6: &quot;Wur&quot;},
-                    &quot;yrange&quot;: {1: [0, 90],
+<p><code>"1" : {"plot_type": "violin",
+        "plotting_library": "matplotlib",
+        "data": {"test": "TEST_1",
+                        "traces": {"1": {"device": "5262",
+                                          "channel" : "DALLAS_TEMP",
+                                        "subplot": 1},
+                                    "2": {"device": "5262",
+                                           "channel" : "HUM",
+                                           "subplot": 1},
+                                     "3": {"device": "5262",
+                                           "channel" : "TEMP",
+                                           "subplot": 1},
+                                     "4": {"device": "5262",
+                                           "channel" : "GB_2W",
+                                           "subplot": 1},
+                                     "5": {"device": "5262",
+                                           "channel" : "GB_2A",
+                                           "subplot": 1},
+                                     "6": {"device": "5262",
+                                           "channel" : "GB_3W",
+                                           "subplot": 1}}},
+        "options": {"show_plot": True,
+                    "separate_device_plots": False,
+                    "export_path": "/Users/macoscar/Desktop", 
+                    "file_name": "plot_violin",
+                    "target_raster": '10Min',
+                    "min_date": None,
+                    "max_date": '2019-01-03',
+                    "relative": False,
+                    "ylabel": {1: "External temperature",
+                               2: "Humidity (%RH)",
+                               3: "Temperature (degC)",
+                               4: "Wir",
+                               5: "Wor",
+                               6: "Wur"},
+                    "yrange": {1: [0, 90],
                                2: [300, 2000],
                                3: [0, 60],
                                4: [0, 60],
                                5: [0,60],
                                6: [0,60]},
                    },
-        &quot;formatting&quot;: {&quot;title&quot;: &quot;Magnificent plot&quot;,
-                       &quot;grid&quot;: True,
-                       &quot;height&quot;: 10,
-                       &quot;width&quot;: 15}
-        }
-</code></pre></div>
+        "formatting": {"title": "Magnificent plot",
+                       "grid": True,
+                       "height": 10,
+                       "width": 15}
+        }</code></p>
                 
               
               

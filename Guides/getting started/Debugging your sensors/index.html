@@ -1944,21 +1944,21 @@
                 
                 <h1 id="debugging-your-sensors">Debugging your sensors<a class="headerlink" href="#debugging-your-sensors" title="Permanent link">&para;</a></h1>
 <p><img src="https://live.staticflickr.com/65535/50977039386_c250d3141d_k.jpg" width="2000" height="1333" alt="Smart Citizen Kits being tested at Fab Lab Barcelona"></p>
-<p>This guide will try to summarize the basic steps to debug your sensors whenever there's any problem. Let's be clear, there is no unique reason or point of failure for the sensors to fail, and very likely, if you use them extensively, something will happen, either after 1 month, 1 year, or 5 years. It is key to know how to debug them:</p>
+<p>This guide will try to summarize the basic steps to debug your kits whenever there's any problem. Let's be clear, there is no unique reason or point of failure for the kits to fail, and very likely, if you use them extensively, something will happen, either after 1 month, 1 year, or 5 years. It is key to know how to debug them:</p>
 <ol>
-<li>Reset the sensor using the <strong>hardware reset button</strong>. This is either here:</li>
+<li>Reset the kit using the <strong>hardware reset button</strong>. This is either here:</li>
 </ol>
 <p><img alt="" src="/assets/images/sck_2/SCK21_Reset.png" /></p>
 <p>or here:</p>
 <p><img alt="" src="/assets/images/station-v3-bottom-anotated-reset.jpeg" /></p>
 <ol>
 <li>
-<p>If this doesn't solve the problem, you might want to connect to the sensors <a href="/Guides/getting started/Using the Shell">using the Shell</a>. </p>
+<p>If this doesn't solve the problem, you might want to connect to the kits <a href="/Guides/getting started/Using the Shell">using the Shell</a>. </p>
 </li>
 <li>
-<p>The next steps would depend on what the actual problem of your sensor is. The most common problems are:</p>
+<p>The next steps would depend on what the actual problem of your kits is. The most common problems are:</p>
 <ul>
-<li>Sensors or hardware issues</li>
+<li>Sensor or hardware issues</li>
 <li>Connectivity or configuration issues</li>
 </ul>
 </li>
@@ -1974,29 +1974,26 @@
 </ol>
 </div>
 <h2 id="sensors-or-hardware-issues">Sensors or hardware issues<a class="headerlink" href="#sensors-or-hardware-issues" title="Permanent link">&para;</a></h2>
-<p>As said above, there is no single point of failure for the sensors.</p>
+<p>As said above, there is no single point of failure for the kits.</p>
 <ol>
-<li>If the LED is working normally, but there is one or more sensor that is not responding, connect the <a href="/Guides/getting started/Using the Shell/">Shell</a> and type:</li>
+<li>If the LED is working normally, but there is one or more sensosr that are not responding, connect the <a href="/Guides/getting started/Using the Shell/">Shell</a> and type:</li>
 </ol>
-<div class="highlight"><pre><span></span><code>version
-</code></pre></div>
+<p><code>version</code></p>
 <p>Note this for later. If it's an old version of the firmware, it might help to <a href="/Guides/firmware/Update the firmware/">directly upgrade</a>.</p>
-<div class="highlight"><pre><span></span><code>sensor
-</code></pre></div>
+<p><code>sensor</code></p>
 <p>This should show if all the sensors are being recognised. If one of them is missing from the list, you can try to check the <code>i2c</code> bus (where most of the sensors are connected):</p>
-<div class="highlight"><pre><span></span><code>i2c
-</code></pre></div>
+<p><code>i2c</code></p>
 <p>If one of the sensors is not shown, it means that there is probably a hardware issue with the sensor itself and that the microcontroller is not recognising it. Now, it would be useful to look for <a href="https://forum.smartcitizen.me/t/unit-failure-suffering-from-weather/1262">corrosion signs</a> around the sensors and maybe reflash the firmware in case there is a better detection of the sensors in a firmware update. Otherwise, it is likely that the hardware is no longer functioning and it needs replacement.</p>
 <ol>
 <li>
-<p>If the <a href="https://forum.smartcitizen.me/t/persistent-green-light-during-onboarding/1330/25">LED is static</a>, very likely there is a problem with the detection or electric behaviour of the sensors. For this, it is useful to start disconnecting each component to understand which component fails:</p>
+<p>If the <a href="https://forum.smartcitizen.me/t/persistent-green-light-during-onboarding/1330/25">LED is static</a>, very likely there is a problem with the detection or an electric problem with the sensors. For this, it is useful to start disconnecting each component to understand which component fails:</p>
 </li>
 <li>
-<p>Disconnect the power (USB and battery) and disconnect the PMS5003 sensor. Power again and check</p>
+<p>Disconnect the power (USB and battery) and disconnect the PMS5003 sensor. Power on again and check</p>
 </li>
-<li>Disconnect the power (USB and battery) and disconnect the Urban Board. Power again and check</li>
+<li>Disconnect the power (USB and battery) and disconnect the Urban Board. Power on again and check</li>
 </ol>
-<p>If this doesn't help, try to <a href="/Guides/firmware/Update the firmware/">reflash the firmware</a>, as there might be improvements. If it helps, also update and check if it improves. If the sensors heat up too much, there might be an electric issue.</p>
+<p>If this doesn't help, try to <a href="/Guides/firmware/Update the firmware/">reflash the firmware</a>, as there might be improvements. If it helps, also update and check if it improves. If the sensors heat up too much (it burns to touch), there might be an electric issue.</p>
 <h2 id="connectivity-or-configuration-issues">Connectivity or configuration issues<a class="headerlink" href="#connectivity-or-configuration-issues" title="Permanent link">&para;</a></h2>
 <p>Normally, configuration or connectivity issues can be due to the following reasons:
 - Typo during the setup process
@@ -2008,11 +2005,9 @@
 <ol>
 <li>If using the Shell, you can check the recording configuration by typing:</li>
 </ol>
-<div class="highlight"><pre><span></span><code>config
-</code></pre></div>
+<p><code>config</code></p>
 <p>If you see a problem with the configuration, you can fix each item or the whole thing by typing:</p>
-<div class="highlight"><pre><span></span><code>config -mode network -wifi &quot;SSID&quot; &quot;PASS&quot; -token token
-</code></pre></div>
+<p><code>config -mode network -wifi "SSID" "PASS" -token token</code></p>
 <p>Note that the <code>token</code> does not have quotes around it and that the <code>SSID</code> and <code>PASS</code> have straight quoutes.</p>
 <p>In case there is no problem with the configuration, there problem might get solved by a firmware update.</p>
                 

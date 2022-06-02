@@ -2089,14 +2089,13 @@
 <p><img alt="" src="/assets/images/scd30_seeed.png" /></p>
 <p>Sensor can operate in two modes for finding it's reference value. For both of these modes have customizable reading intervals that affect power consumption and response time. Finally, a temperature correction can be applied for electronics temperature build-up.</p>
 <p>All the commands below are accessed by:</p>
-<div class="highlight"><pre><span></span><code>SCD30 CO2:
+<p><code>SCD30 CO2:
 Options:
 interval [2-1000 (seconds)]
 autocal [on/off]
 calfactor [400-2000 (ppm)]
 caltemp [newTemp/off]
-pressure
-</code></pre></div>
+pressure</code></p>
 <p>The procedure for setting up the sensor goes as follows (more information in <a href="https://www.sensirion.com/fileadmin/user_upload/customers/sensirion/Dokumente/9.5_CO2/Sensirion_CO2_Sensors_SCD30_Low_Power_Mode.pdf">Low power mode AN</a>):</p>
 <p><img alt="" src="/assets/images/scd30_calibration_process.png" /></p>
 <h3 id="reading-interval">Reading interval<a class="headerlink" href="#reading-interval" title="Permanent link">&para;</a></h3>
@@ -2129,11 +2128,9 @@ pressure
 </table>
 <p>More information can be found in the <a href="https://www.sensirion.com/fileadmin/user_upload/customers/sensirion/Dokumente/9.5_CO2/Sensirion_CO2_Sensors_SCD30_Low_Power_Mode.pdf">low power mode application note</a>.</p>
 <p>To control this, and set it up to 15s:</p>
-<div class="highlight"><pre><span></span><code>control scd30 interval 15
-</code></pre></div>
+<p><code>control scd30 interval 15</code></p>
 <p>To check the current interval:</p>
-<div class="highlight"><pre><span></span><code>control scd30 interval
-</code></pre></div>
+<p><code>control scd30 interval</code></p>
 <h3 id="calibration">Calibration<a class="headerlink" href="#calibration" title="Permanent link">&para;</a></h3>
 <p>The SCD30 can work in two main modes: ASC (automatic self-calibration) or FRC (forced re-calibration). They are both described in the <a href="https://www.sensirion.com/fileadmin/user_upload/customers/sensirion/Dokumente/9.5_CO2/Sensirion_CO2_Sensors_SCD30_Field_Calibration.pdf">Field calibration for SCD30 AN</a>. Both modes shift the sensor baseline, only that FRC requires an external value, while ASC will adapt over time looking for "clean air" readings.</p>
 <p><img alt="" src="/assets/images/scd30_calibration_modes.png" />
@@ -2158,11 +2155,9 @@ pressure
 <li>There is no way for us to know wether the self-calibration process has satisfactory values. The only indication of the process being satisfactory or not is that there is a "step" in the readings when ASC kicks in (see <a href="#insights">insights</a>)</li>
 </ul>
 <p>To turn it on:</p>
-<div class="highlight"><pre><span></span><code>control scd30 autocal on
-</code></pre></div>
+<p><code>control scd30 autocal on</code></p>
 <p>Or off:</p>
-<div class="highlight"><pre><span></span><code>control scd30 autocal off
-</code></pre></div>
+<p><code>control scd30 autocal off</code></p>
 <h4 id="frc">FRC<a class="headerlink" href="#frc" title="Permanent link">&para;</a></h4>
 <p>To activate FRC mode, we need to provide an external CO2 concentration in ppm. FRC calibration takes place inmediately, and it can be do multiple times at aribtrary intervals. Before applying it, run the sensor for at least 2 minutes in the desired environment.</p>
 <div class="admonition warning">
@@ -2170,43 +2165,36 @@ pressure
 <p>Take into account the response time of the sensor (with 2s it's t63=20s). If the environment in which you are taking readings it's too unstable, do not apply the FRC.</p>
 </div>
 <p>First, make sure both reference and SCD30 sensors are stable:</p>
-<div class="highlight"><pre><span></span><code>monitor scd30 co2
-</code></pre></div>
+<p><code>monitor scd30 co2</code></p>
 <p>To stop the monitor, just press <code>Enter</code>.</p>
 <p>Secondly, feed the external reading into the sensor. The value <strong>needs to be between 400ppm and 2000ppm</strong>. For instance, for a value of 450ppm:</p>
-<div class="highlight"><pre><span></span><code>SCK &gt; control scd30 calfactor 450
+<p><code>SCK &gt; control scd30 calfactor 450
 SCD30 CO2: calfactor 450
-Forced Recalibration Factor: 450
-</code></pre></div>
+Forced Recalibration Factor: 450</code></p>
 <p>After applying this value, ASC will be disabled automatically and readings will be inmediately corrected to the new value.</p>
 <div class="admonition warning">
 <p class="admonition-title">Resetting the sensor</p>
 <p>Take into account that if you ask for the <code>calfactor</code> after setting it up:</p>
-<div class="highlight"><pre><span></span><code>SCK &gt; control scd30 calfactor
+<p><code>SCK &gt; control scd30 calfactor
 SCD30 CO2: calfactor
-Forced Recalibration Factor: 450
-</code></pre></div>
+Forced Recalibration Factor: 450</code></p>
 <p>However, <strong>if you reset the sensor</strong>, it will return <code>400ppm</code>. The FRC will remain active with the set value, but it will only visible through the <code>autocal</code> check: </p>
-<div class="highlight"><pre><span></span><code>SCK &gt; control scd30 calfactor
+<p><code>SCK &gt; control scd30 calfactor
 SCD30 CO2: calfactor
 Forced Recalibration Factor: 400
 SCK &gt; control scd30 autocal
 SCD30 CO2: autocal
-Auto Self Calibration: off
-</code></pre></div>
+Auto Self Calibration: off</code></p>
 </div>
 <h4 id="temperature-correction">Temperature correction<a class="headerlink" href="#temperature-correction" title="Permanent link">&para;</a></h4>
 <p>An external temperature sensor can also be used to compensate the self-heating of the SCD30 board. A temperature correction can be supplied with the <code>caltemp</code> command.</p>
 <p>First, read the temperature from the SCD30, to verify it's lower than the reference sensor.</p>
-<div class="highlight"><pre><span></span><code>read scd30 temp
-</code></pre></div>
+<p><code>read scd30 temp</code></p>
 <p>If it is, then feed the external temperature value (for instance, 15 ºC):</p>
-<div class="highlight"><pre><span></span><code>control scd30 caltemp 15
-</code></pre></div>
+<p><code>control scd30 caltemp 15</code></p>
 <p>After this, the sensor will stabilise and converge to the new temperature correction reading after a while.</p>
 <p>To turn off the temperature compensation:</p>
-<div class="highlight"><pre><span></span><code>control scd30 caltemp off
-</code></pre></div>
+<p><code>control scd30 caltemp off</code></p>
 <h2 id="insights">Insights<a class="headerlink" href="#insights" title="Permanent link">&para;</a></h2>
 <p>Here are some insights:</p>
 <ul>

@@ -2021,25 +2021,27 @@
 <p><img alt="" src="/assets/images/sck_2/Flash_structure.png" /></p>
 <h3 id="flash-sectors">Flash sectors<a class="headerlink" href="#flash-sectors" title="Permanent link">&para;</a></h3>
 <p>The minimum erasable unit is a sector (4 KB), so we use this as a base for data organization. On the first 3 bytes of each sector we store information about its contents, in this way we can find which ones are empty, currently in use or have valid data.  </p>
-<div class="highlight"><pre><span></span><code><span class="k">enum</span><span class="w"> </span><span class="n">SectorAddr</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">SECTOR_STATE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x00</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="n">SECTOR_NET</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="mh">0x01</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="n">SECTOR_SD</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="mh">0x02</span><span class="w"></span>
-<span class="p">};</span><span class="w"></span>
-</code></pre></div>
+<p><sub>~</sub>c
+enum SectorAddr {
+    SECTOR_STATE = 0x00,
+    SECTOR_NET   = 0x01,
+    SECTOR_SD    = 0x02
+};
+<sub>~</sub></p>
 <p>The first byte of each sector (<code>SECTOR_STATE</code>) describes if the sector is empty or already used. On boot, we scan sector by sector until we find an empty one to store new data.</p>
 <p>The <code>SECTOR_NET</code> and <code>SECTOR_SD</code> bytes of each sector contain the flags related to the publish state of contained data. This bytes are only marked if all the groups of the sector are already published and the sector is full.</p>
 <p>When all flash sectors are marked as used we will erase the oldest data sector and reuse it.</p>
 <h3 id="data-groups">Data Groups<a class="headerlink" href="#data-groups" title="Permanent link">&para;</a></h3>
 <p>Readings are grouped by the time there were taken and saved sequentially inside flash memory sectors. On the beginning of each group, we store information about it.</p>
-<div class="highlight"><pre><span></span><code>enum GroupAddr {
+<p><sub>~</sub>clike
+enum GroupAddr {
     GROUP_SIZE =        0x00,
     GROUP_NET  =        0x02,
     GROUP_SD   =        0x03,
     GROUP_TIME =        0x04,
     GROUP_READINGS =    0x08
 };
-</code></pre></div>
+<sub>~</sub></p>
 <p>In the <code>GROUP_SIZE</code> bytes, we store the size in bytes of the full group with all its contents. This allows us to start reading the sector starting on the first group and jump from group to group very fast.</p>
 <p>The <code>GROUP_NET</code> and <code>GROUP_SD</code> bytes of each group contain the flags related to the publishing state of contained data, as default they are in <code>NOT_PUBLISHED</code> state until we set them to <code>PUBLISHED</code>.</p>
 <p>The time and date of when these readings were taken is stored in the <code>GROUP_TIME</code> bytes in Epoch time format.</p>
@@ -2053,8 +2055,9 @@
 <p>About flash memory lifespan, rounding numbers we can say we have enough space to store 2 months (60 days) of readings, according to the Flash memory <a href="https://www.cypress.com/file/316661/download">datasheet</a> we have at least 100,000 erase cycles: 2 months per cycle means 200,000 months that's more than 16k years!!. </p>
 <h2 id="user-interface">User interface<a class="headerlink" href="#user-interface" title="Permanent link">&para;</a></h2>
 <p>Some aspects of the flash memory can be managed by the user via the SCK <a href="/Guides/getting%20started/Using%20the%20Shell/">shell interface</a>, issuing the <code>help</code> command you can see a brief description of the <code>flash</code> command interface: 
-<div class="highlight"><pre><span></span><code>flash:       Shows and manage flash memory state [no-param -&gt; info] [-format (be carefull)] [-dump sect-num (0-2040)] [-sector sect-num] [-recover sect-num/all net/sd]
-</code></pre></div></p>
+<sub>~</sub>
+flash:       Shows and manage flash memory state [no-param -&gt; info] [-format (be carefull)] [-dump sect-num (0-2040)] [-sector sect-num] [-recover sect-num/all net/sd]
+<sub>~</sub></p>
 <p>Without any parameter, the <code>flash</code> command will scan the memory and print out a table of its contents, showing totals at the end. Be patient, scanning can take a long time if your flash has data.<br />
 The <code>-format</code> option will erase the full flash memory.<br />
 The <code>-dump</code> option will dump (in hexadecimal values) the content of the requested sector.<br />

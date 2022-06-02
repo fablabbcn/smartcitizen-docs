@@ -2006,10 +2006,13 @@
 </tbody>
 </table>
 <p>By connecting any of the <a href="/Components/Auxiliary/">supported sensors</a> to the SCK, it will automatically be detected and data will be logged into the SD-card. You can check the output of the <code>sensor</code> command in the <a href="/Components/Firmware/guides/Using the Shell/">Serial output</a>:</p>
-<div class="highlight"><pre><span></span><code>&gt; sensor
-Enabled
-----------
-Temperature (60 sec)
+<p>```</p>
+<blockquote>
+<p>sensor
+Enabled</p>
+</blockquote>
+<hr />
+<p>Temperature (60 sec)
 Humidity (60 sec)
 Ext Temperature (60 sec)
 Ext Humidity (60 sec)
@@ -2020,7 +2023,7 @@ Barometric pressure (60 sec)
 PM 1.0 (60 sec)
 PM 2.5 (60 sec)
 PM 10.0 (60 sec)
-</code></pre></div>
+```</p>
 <h3 id="publishing-data-using-custom-devices">Publishing data using custom devices<a class="headerlink" href="#publishing-data-using-custom-devices" title="Permanent link">&para;</a></h3>
 <p>The Smart Citizen Platform supports data from any sensor that has a
 <strong>numerical digital output</strong>. The Smart Citizen API supports other devices to publish data to the platform by previously agreeing with the Smart Citizen terms and conditions.</p>
@@ -2031,7 +2034,7 @@ PM 10.0 (60 sec)
 </div>
 <p>The minimal Device Blueprint includes all the necessary data that a user might provide in order to create a <a href="http://developer.smartcitizen.me/#kits">Kit</a>. It is composed of <a href="http://developer.smartcitizen.me/#components">Components</a> and those can reuse existing <a href="http://developer.smartcitizen.me/#sensors">Sensors</a> and <a href="http://developer.smartcitizen.me/#measurements">Measurements</a> definitions. Sensors define the hardware or software component that records the data.  Measurements are descriptions of what sensors are recording. Blueprints can be shared across many devices or can be tailored per device in order to provide dedicated calibration formulas per individual sensor. This is achieved with the <em>Components</em> binding.</p>
 <p>The following example shows a basic Device Blueprint in JSON. This is the minimum of information that a blueprint needs:</p>
-<div class="highlight"><pre><span></span><code>{
+<p><code>{
     “name”: “The Frog”,
     “description”: “Custom Arduino Humidity Sensor”,
     “slug”: “ms:0,5”,
@@ -2048,10 +2051,9 @@ PM 10.0 (60 sec)
             }
         }
     }]
-}
-</code></pre></div>
+}</code></p>
 <p>The following examples expand the previous Device Blueprint with the complete data model:</p>
-<div class="highlight"><pre><span></span><code>{
+<p><code>{
     “id”: 10,
     “uuid”: “056e452d-41c4-436d-a640-2157a278037d”,
     “slug”: “ms:0,5”,
@@ -2083,8 +2085,7 @@ PM 10.0 (60 sec)
             }
         }
     }]
-}
-</code></pre></div>
+}</code></p>
 <div class="admonition warning">
 <p class="admonition-title">Too much information?</p>
 <p>Drop an email to <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#115;&#109;&#97;&#114;&#116;&#99;&#105;&#116;&#105;&#122;&#101;&#110;&#46;&#109;&#101;">&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#115;&#109;&#97;&#114;&#116;&#99;&#105;&#116;&#105;&#122;&#101;&#110;&#46;&#109;&#101;</a> and we will try to help!</p>

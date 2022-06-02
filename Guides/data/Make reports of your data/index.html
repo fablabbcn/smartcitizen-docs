@@ -1873,13 +1873,11 @@
 <p>Go to the notebooks folder:</p>
 </li>
 </ol>
-<div class="highlight"><pre><span></span><code>cd notebooks
-</code></pre></div>
+<p><code>cd notebooks</code></p>
 <ol>
 <li>Type the command:</li>
 </ol>
-<div class="highlight"><pre><span></span><code>jupyter nbconvert --config sc_nbconvert_config.py notebook.ipynb --sc_Preprocessor.expression=&quot;show_only_output&quot; --to html --TemplateExporter.template_file=./templates/full_sc --output-dir=../reports --output=OUTPUT_NAME
-</code></pre></div>
+<p><code>jupyter nbconvert --config sc_nbconvert_config.py notebook.ipynb --sc_Preprocessor.expression="show_only_output" --to html --TemplateExporter.template_file=./templates/full_sc --output-dir=../reports --output=OUTPUT_NAME</code></p>
 <p>Where:</p>
 <ul>
 <li><code>sc_nbconvert_config.py</code> is the config</li>

@@ -1433,44 +1433,12 @@
     
     <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
+      
     
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Uploading data to zenodo
-        <span class="md-nav__icon md-icon"></span>
-      </label>
     
     <a href="./" title="Uploading data to zenodo" class="md-nav__link md-nav__link--active">
       Uploading data to zenodo
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#set-it-up" class="md-nav__link">
-    Set it up
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#prepare-the-data" class="md-nav__link">
-    Prepare the data
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
     
   </li>
 
@@ -1895,28 +1863,8 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
+    
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#set-it-up" class="md-nav__link">
-    Set it up
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#prepare-the-data" class="md-nav__link">
-    Prepare the data
-  </a>
-  
-</li>
-      
-    </ul>
   
 </nav>
                   </div>
@@ -1936,59 +1884,52 @@
                   
                 
                 
-                  <h1>Uploading data to zenodo</h1>
-                
                 <p>Uploading results to <a href="https://zenodo.org/">Zenodo</a> is also possible using the data analysis framework.</p>
 <p><img alt="" src="https://about.zenodo.org/static/img/logos/zenodo-black-1000.png" /></p>
 <p>Once you have your data organised in a test, you can upload it directly to Zenodo and share it with others. An example of this is provided in the <a href="https://github.com/fablabbcn/smartcitizen-data/blob/master/examples/notebooks/06_upload_to_zenodo.ipynb">example notebook</a>.</p>
 <h2 id="set-it-up">Set it up<a class="headerlink" href="#set-it-up" title="Permanent link">&para;</a></h2>
 <p>For this to work, we need to have a <a href="https://zenodo.org/account/settings/applications/">token</a> in an environment variable called <code>ZENODO_TOKEN</code>. Once you have it, open up a terminal and add it to your environment like:</p>
-<div class="highlight"><pre><span></span><code>export ZENODO_TOKEN=fake-zenodo-token
-</code></pre></div>
+<p><code>export ZENODO_TOKEN=fake-zenodo-token</code></p>
 <p>In the same terminal, check it's there:</p>
-<div class="highlight"><pre><span></span><code>echo $ZENODO_TOKEN
-fake-zenodo-token
-</code></pre></div>
+<p><code>echo $ZENODO_TOKEN
+fake-zenodo-token</code></p>
 <p>Then launch <code>jupyter-lab</code> or start using your python scripts.</p>
 <p>Alternatively, you can store a <code>.env</code> file in a place of your liking with your token:</p>
-<div class="highlight"><pre><span></span><code>ZENODO_TOKEN=&#39;yourtokenhere&#39;
-</code></pre></div>
+<p><code>ZENODO_TOKEN='yourtokenhere'</code></p>
 <p>And then load it like:</p>
-<div class="highlight"><pre><span></span><code>export $(grep -v &#39;^#&#39; .env | xargs -0)
-</code></pre></div>
+<p><code>export $(grep -v '^#' .env | xargs -0)</code></p>
 <h2 id="prepare-the-data">Prepare the data<a class="headerlink" href="#prepare-the-data" title="Permanent link">&para;</a></h2>
 <p>Next, you can define a <code>upload.yaml</code> file to describe the upload (see one example <a href="https://github.com/fablabbcn/smartcitizen-iscape-data/blob/master/data/uploads/example_zenodo_upload.yaml">here</a>:</p>
-<div class="highlight"><pre><span></span><code>example_upload_1.json: 
-  title: &#39;Example Data 1&#39;
-  description: &#39;This field accepts &lt;strong&gt;HTML&lt;/strong&gt;&#39;
-  upload_type: &#39;dataset&#39;
-  keywords: [&#39;Low-Cost Sensors&#39;, &#39;Air Quality&#39;, &#39;Citizen Science&#39;]
-  creators: [{&#39;name&#39;: &#39;Author 1&#39;, &#39;affiliation&#39;: &#39;Affiliation 1&#39;, &#39;orcid&#39;: &#39;0000-0000-0000-0001&#39;}, 
-            {&#39;name&#39;: &#39;Author 2&#39;, &#39;affiliation&#39;: &#39;Affiliation 2&#39;, &#39;orcid&#39;: &#39;0000-0000-0000-0002&#39;}] 
-  tests: [&#39;TEST_1&#39;, &#39;TEST_2&#39;]
-  access_right: &#39;open&#39;
+<p><code>example_upload_1.json: 
+  title: 'Example Data 1'
+  description: 'This field accepts &lt;strong&gt;HTML&lt;/strong&gt;'
+  upload_type: 'dataset'
+  keywords: ['Low-Cost Sensors', 'Air Quality', 'Citizen Science']
+  creators: [{'name': 'Author 1', 'affiliation': 'Affiliation 1', 'orcid': '0000-0000-0000-0001'}, 
+            {'name': 'Author 2', 'affiliation': 'Affiliation 2', 'orcid': '0000-0000-0000-0002'}] 
+  tests: ['TEST_1', 'TEST_2']
+  access_right: 'open'
   options: 
     include_processed_data: false
     include_footer_doi: true
-  communities: [{ &quot;identifier&quot;: &quot;community_in_zenodo&quot;}]
-  grants: [{&quot;id&quot;: &quot;GRANT_ID&quot;}]
-  report: [&#39;report.pdf&#39;]
+  communities: [{ "identifier": "community_in_zenodo"}]
+  grants: [{"id": "GRANT_ID"}]
+  report: ['report.pdf']
 example_upload_2.json: 
-  title: &#39;Example Data 2&#39;
-  description: &#39;This field accepts &lt;strong&gt;HTML&lt;/strong&gt;&#39;
-  upload_type: &#39;dataset&#39;
-  keywords: [&#39;Low-Cost Sensors&#39;, &#39;Air Quality&#39;, &#39;Citizen Science&#39;]
-  creators: [{&#39;name&#39;: &#39;Author 1&#39;, &#39;affiliation&#39;: &#39;Affiliation 1&#39;, &#39;orcid&#39;: &#39;0000-0000-0000-0001&#39;}, 
-            {&#39;name&#39;: &#39;Author 2&#39;, &#39;affiliation&#39;: &#39;Affiliation 2&#39;, &#39;orcid&#39;: &#39;0000-0000-0000-0002&#39;}] 
-  tests: [&#39;TEST_3&#39;, &#39;TEST_4&#39;]
-  access_right: &#39;open&#39;
+  title: 'Example Data 2'
+  description: 'This field accepts &lt;strong&gt;HTML&lt;/strong&gt;'
+  upload_type: 'dataset'
+  keywords: ['Low-Cost Sensors', 'Air Quality', 'Citizen Science']
+  creators: [{'name': 'Author 1', 'affiliation': 'Affiliation 1', 'orcid': '0000-0000-0000-0001'}, 
+            {'name': 'Author 2', 'affiliation': 'Affiliation 2', 'orcid': '0000-0000-0000-0002'}] 
+  tests: ['TEST_3', 'TEST_4']
+  access_right: 'open'
   options: 
     include_processed_data: false
     include_footer_doi: false
-  communities: [{ &quot;identifier&quot;: &quot;community_in_zenodo&quot;}]
-  grants: [{&quot;id&quot;: &quot;GRANT_ID&quot;}]
-  report: [&#39;report_2.pdf&#39;]
-</code></pre></div>
+  communities: [{ "identifier": "community_in_zenodo"}]
+  grants: [{"id": "GRANT_ID"}]
+  report: ['report_2.pdf']</code></p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>All the keys below are linked to the <a href="https://developers.zenodo.org/">zenodo documentation</a></p>
@@ -2016,10 +1957,11 @@ example_upload_2.json:
 <li><code>report</code>: list of reports to attach. Must be also in the <code>data/uploads</code> folder</li>
 </ul>
 <p>To upload the datasets, we can use the zenodo sandbox and a dry_run, to check everything is running well. Then, make these defaults to <code>False</code> to actually upload it:</p>
-<div class="highlight"><pre><span></span><code># You can use the sandbox.zenodo.org for tests, as well as a dry_run. When you are happy with your upload, set these variables to False
-# Then go to uploads in the zenodo section and publish whenever you are ready
-data.upload_to_zenodo(&#39;example_zenodo_upload&#39;, sandbox = False, dry_run = True)
-</code></pre></div>
+<p>```</p>
+<h1 id="you-can-use-the-sandboxzenodoorg-for-tests-as-well-as-a-dry_run-when-you-are-happy-with-your-upload-set-these-variables-to-false">You can use the sandbox.zenodo.org for tests, as well as a dry_run. When you are happy with your upload, set these variables to False<a class="headerlink" href="#you-can-use-the-sandboxzenodoorg-for-tests-as-well-as-a-dry_run-when-you-are-happy-with-your-upload-set-these-variables-to-false" title="Permanent link">&para;</a></h1>
+<h1 id="then-go-to-uploads-in-the-zenodo-section-and-publish-whenever-you-are-ready">Then go to uploads in the zenodo section and publish whenever you are ready<a class="headerlink" href="#then-go-to-uploads-in-the-zenodo-section-and-publish-whenever-you-are-ready" title="Permanent link">&para;</a></h1>
+<p>data.upload_to_zenodo('example_zenodo_upload', sandbox = False, dry_run = True)
+```</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Note that a <code>.json</code> file will be created in the data/uploads folder containing the metadata necessary for the upload (as liked by zenodo API). You can securely delete this file once you are done. Note that, in case <code>include_footer_doi=true</code>, the actual pdf to upload will be <code>report_doi.pdf</code></p>

@@ -2010,13 +2010,12 @@
 <h2 id="connection-to-smartcitizen-kit">Connection to Smartcitizen Kit<a class="headerlink" href="#connection-to-smartcitizen-kit" title="Permanent link">&para;</a></h2>
 <p><img alt="" src="https://i.imgur.com/Dc6Us2F.png" /></p>
 <p>After connecting the <a href="https://atlas-scientific.com/carrier-boards/whitebox-labs-tentacle-t3/">Tentacle 3</a> to the SCK power your kit and if youre connected to the shell the autodetecition message should look similar to this (depending on the connected drivers and probes):</p>
-<div class="highlight"><pre><span></span><code>Urban board detected
+<p><code>Urban board detected
 Enable Atlas Temperature
 Enable Atlas PH
 Enable Atlas Conductivity
 Enable Atlas Specific gravity
-...
-</code></pre></div>
+...</code></p>
 <div class="admonition warning">
 <p class="admonition-title">Sensor calibration</p>
 <p>Make sure to follow our sensor calibration guide for the <a href="/Guides/calibration/Water sensors/">water sensors</a>.</p>
@@ -2026,12 +2025,10 @@ Enable Atlas Specific gravity
 <li>Install raspbian</li>
 <li>Enable I2C with raspi-config, reboot, upgrade.</li>
 <li>Install packages and reboot.
-    <div class="highlight"><pre><span></span><code>sudo apt-get install python-smbus i2c-tools
-</code></pre></div></li>
+    <code>sudo apt-get install python-smbus i2c-tools</code></li>
 <li>Connect the shield with the pi off.</li>
 <li>Test I2C 
-    <div class="highlight"><pre><span></span><code>sudo i2cdetect -y 1
-</code></pre></div></li>
+    <code>sudo i2cdetect -y 1</code></li>
 <li>Code example <a href="https://github.com/AtlasScientific/Raspberry-Pi-sample-code/blob/master/i2c.py">https://github.com/AtlasScientific/Raspberry-Pi-sample-code/blob/master/i2c.py</a></li>
 </ol>
                 

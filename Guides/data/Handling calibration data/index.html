@@ -2041,31 +2041,29 @@
 <p><img alt="" src="/assets/images/postprocessing_edit_url.png" /></p>
 <p>This url should point to a <strong>valid json</strong>, and as long as it follows the instructions defined <a href="https://github.com/fablabbcn/smartcitizen-data/blob/master/hardware/README.md">here</a>, it will be picked up for data postprocessing. A simpler way, is that it can simply be one of the <code>HARDWARE-ID</code> from the list of jsons available in <code>https://raw.githubusercontent.com/fablabbcn/smartcitizen-data/master/hardware/&lt;HARDWARE-ID&gt;.json</code>. The default hardware definitions are in the <a href="https://github.com/fablabbcn/smartcitizen-data/tree/master/hardware">scdata github repository</a> and can be found per <code>ID.json</code>. You can just take the corresponding ID and click in the <code>raw</code> button to get the url needed. If you are using this method, and an url from github, this field should look something like: <code>https://raw.githubusercontent.com/fablabbcn/smartcitizen-data/master/hardware/SCAS21001.json</code>.</p>
 <p>With either method, url or <code>HARDWARE-ID</code>, the json file needs to follow the instructions below to successfully be a valid postprocessing:</p>
-<div class="highlight"><pre><span></span><code>{
-  &quot;blueprint_url&quot;: &quot;https://raw.githubusercontent.com/fablabbcn/smartcitizen-data/master/blueprints/sck_21.json&quot;,
-  &quot;description&quot;: &quot;Smart Citizen Kit 2.1 With PMS5003&quot;,
-  &quot;versions&quot;: [],
-  &quot;forwarding&quot;: &quot;nilu&quot;
-}
-</code></pre></div>
+<p><code>{
+  "blueprint_url": "https://raw.githubusercontent.com/fablabbcn/smartcitizen-data/master/blueprints/sck_21.json",
+  "description": "Smart Citizen Kit 2.1 With PMS5003",
+  "versions": [],
+  "forwarding": "nilu"
+}</code></p>
 <ul>
 <li><code>blueprint_url</code>: this field defines the post-processing to be done in the form of a <code>device-blueprint</code>. It virtually can load a valid json from any url, as long as it follows the instructions defined <a href="https://github.com/fablabbcn/smartcitizen-data/blob/master/examples/notebooks/01_getting_started.ipynb">here</a> and <a href="https://github.com/fablabbcn/smartcitizen-data/blob/master/examples/notebooks/04_processing_data.ipynb">here</a>. If you want to use the base processing select it from the <a href="https://github.com/fablabbcn/smartcitizen-data/tree/master/blueprints">blueprints folder</a>, only selecting the <code>raw</code> json as mentioned above. If you have doubts, please, <a href="mailto:support@smartcitizen.me">contact us</a> to make sure everything will run smoothly. Finally, other blueprints can be added as defined <a href="/Guides/data/Custom%20data%20processing/">in this guide</a></li>
 <li><code>description</code>: brief description of the hardware</li>
 <li>
 <p><code>versions</code>: list containing hardware versions (in case sensors where replaced, but kept in the same physical unit).
-    <div class="highlight"><pre><span></span><code>  &quot;versions&quot;: [
-    {
-      &quot;ids&quot;: {
-        &quot;AS_48_01&quot;: &quot;162581715&quot;,
-        &quot;AS_48_23&quot;: &quot;202365014&quot;,
-        &quot;AS_4A_01&quot;: &quot;164200218&quot;,
-        &quot;AS_4A_23&quot;: &quot;204440527&quot;
-      },
-      &quot;from&quot;: &quot;2020-11-30&quot;,
-      &quot;to&quot;: null
-    }
-  ]
-</code></pre></div></p>
+    <code>"versions": [
+        {
+          "ids": {
+            "AS_48_01": "162581715",
+            "AS_48_23": "202365014",
+            "AS_4A_01": "164200218",
+            "AS_4A_23": "204440527"
+          },
+          "from": "2020-11-30",
+          "to": null
+        }
+      ]</code></p>
 <p>In the versions information, data is stored based on the IDs of the sensors and a naming convention to understand were they are connected to or what they are. It is easier to understand the naming convention with an example:</p>
 <ul>
 <li><code>AS_48_01</code>: Alphasense Electrochemical sensor, connected to the ADC with address <code>48</code>, with the Working Electrode connected to the channel 0 of the ADC, and the Auxiliary Electrode connected to the channel 1 of the ADC. The logic is explained below:<ul>
@@ -2086,8 +2084,7 @@
 <li>either send us the kit ID and it's corresponding hardware ID, and we will do this for you</li>
 <li>or, if you are familiar with <code>http requests</code> you can <code>post</code> this data as such:</li>
 </ul>
-<div class="highlight"><pre><span></span><code>curl &#39;https://api.smartcitizen.me/v0/devices/&lt;DEVICE-ID&gt;&#39; -X PATCH -H &#39;Authorization: Bearer &lt;BEARER-FROM-YOUR-USER-PROFILE&gt;&#39; -H &#39;Content-Type: application/json;charset=UTF-8&#39; --data-binary &#39;{&quot;postprocessing_attributes&quot;: {&quot;blueprint_url&quot;: &quot;https://raw.githubusercontent.com/fablabbcn/smartcitizen-data/master/blueprints/&lt;BLUEPRINT_ID&gt;.json&quot;, &quot;hardware_url&quot;: &quot;https://raw.githubusercontent.com/fablabbcn/smartcitizen-data/master/hardware/&lt;HARDWARE_ID&gt;.json&quot;}}&#39; --compressed
-</code></pre></div>
+<p><code>curl 'https://api.smartcitizen.me/v0/devices/&lt;DEVICE-ID&gt;' -X PATCH -H 'Authorization: Bearer &lt;BEARER-FROM-YOUR-USER-PROFILE&gt;' -H 'Content-Type: application/json;charset=UTF-8' --data-binary '{"postprocessing_attributes": {"blueprint_url": "https://raw.githubusercontent.com/fablabbcn/smartcitizen-data/master/blueprints/&lt;BLUEPRINT_ID&gt;.json", "hardware_url": "https://raw.githubusercontent.com/fablabbcn/smartcitizen-data/master/hardware/&lt;HARDWARE_ID&gt;.json"}}' --compressed</code></p>
 <p>You can get your authorization token on your user profile page in the OAuth section. Make sure to change the following fields in the command above:</p>
 <ul>
 <li><code>&lt;DEVICE-ID&gt;</code></li>

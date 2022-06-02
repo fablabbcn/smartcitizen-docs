@@ -2141,19 +2141,19 @@
 <li><em>University College Dublin</em>: data collected from 27/March to 17/April. The measured pollutants with reference equipments were NO, NO<sub>2</sub> and NOX. One prototype Smart Citizen Station was deployed with two Smart Citizen Kits</li>
 </ul>
 <p>For both results shown below, we used an LSTM with 200 epochs training and the following structure:</p>
-<div class="highlight"><pre><span></span><code>from keras.models import Sequential
-from keras.layers import Dense, Activation, LSTM, Dropout
-
-model = Sequential()
+<p>```</p>
+<p>from keras.models import Sequential
+from keras.layers import Dense, Activation, LSTM, Dropout</p>
+<p>model = Sequential()
 layers = [50, 100, 1]
 model.add(LSTM(layers[0], return_sequences=True, input_shape=(train_X.shape[1], train_X.shape[2])))
 model.add(Dropout(0.2))
 model.add(LSTM(layers[1], return_sequences=False))
 model.add(Dropout(0.2))
 model.add(Dense(output_dim=layers[2]))
-model.add(Activation(&quot;linear&quot;))
-model.compile(loss=&#39;mse&#39;, optimizer=&#39;rmsprop&#39;)
-</code></pre></div>
+model.add(Activation("linear"))
+model.compile(loss='mse', optimizer='rmsprop')
+```</p>
 <h3 id="carbon-monoxide">Carbon Monoxide<a class="headerlink" href="#carbon-monoxide" title="Permanent link">&para;</a></h3>
 <p>The CO model included the following features: <span class="arithmatex"><span class="MathJax_Preview">CO_{R}^{-1}</span><script type="math/tex">CO_{R}^{-1}</script></span>, <span class="arithmatex"><span class="MathJax_Preview">CO_R^{-2}</span><script type="math/tex">CO_R^{-2}</script></span>, <span class="arithmatex"><span class="MathJax_Preview">Temp</span><script type="math/tex">Temp</script></span> and <span class="arithmatex"><span class="MathJax_Preview">Temperature^2</span><script type="math/tex">Temperature^2</script></span>. The results can be seen below:</p>
 <p><img alt="" src="https://i.imgur.com/M2OCMsg.png" /></p>

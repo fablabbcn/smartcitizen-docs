@@ -1221,6 +1221,26 @@
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disabled" class="md-nav__link">
+    Disabled
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enabled" class="md-nav__link">
+    Enabled
+  </a>
+  
+    <nav class="md-nav" aria-label="Enabled">
+      <ul class="md-nav__list">
+        
           <li class="md-nav__item">
   <a href="#readmonitor-some-sensors" class="md-nav__link">
     Read/Monitor some sensors
@@ -2041,6 +2061,26 @@
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disabled" class="md-nav__link">
+    Disabled
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enabled" class="md-nav__link">
+    Enabled
+  </a>
+  
+    <nav class="md-nav" aria-label="Enabled">
+      <ul class="md-nav__list">
+        
           <li class="md-nav__item">
   <a href="#readmonitor-some-sensors" class="md-nav__link">
     Read/Monitor some sensors
@@ -2117,25 +2157,31 @@
 <p><img alt="" src="https://i.imgur.com/iSONfFB.png" /></p>
 </div>
 <p>More advanced users would probably rather use a more <em>rugged</em> interface. In this case, you could use <code>screen</code> in your terminal of choice:</p>
-<div class="highlight"><pre><span></span><code>&gt; ls /dev/cu | grep usb
+<p>```</p>
+<blockquote>
+<p>ls /dev/cu | grep usb
 cu.usbmodem1411
 tty.usbmodem1411
-&gt; screen /dev/cu.usmodem1411
+screen /dev/cu.usmodem1411
 SCK &gt;
 ...
-</code></pre></div>
+```</p>
+</blockquote>
 <p>If you already installed <a href="https://platformio.org/">platformio</a> to <a href="/Guides/Edit%20the%20Firmware/">edit the firmware</a> you can use it here, too</p>
-<div class="highlight"><pre><span></span><code>&gt; pio device monitor
+<p>```</p>
+<blockquote>
+<p>pio device monitor
 SCK &gt;
 ...
-</code></pre></div>
+```</p>
+</blockquote>
 <div class="admonition warning">
 <p class="admonition-title">Be patient!</p>
 <p>The port will take a little time to appear in your list of devices. Normally the LED of your SCK will be <strong>static white</strong> during that period.</p>
 </div>
 <h2 id="some-examples">Some examples!<a class="headerlink" href="#some-examples" title="Permanent link">&para;</a></h2>
 <p>The <code>help</code> command outputs a quite intuitive explanation of all the commands:</p>
-<div class="highlight"><pre><span></span><code>SCK &gt; help
+<p><code>SCK &gt; help
 reset:       Resets the SCK
 version:     Shows versions and Hardware ID
 rcause:      Show last reset cause (debug)
@@ -2150,51 +2196,44 @@ monitor:     Continously read sensor: monitor [-sd] [-notime] [-noms] [-oled] [s
 free:        Shows the amount of free RAM memory
 i2c:         Search the I2C bus for devices
 power:       Controls/shows power config: power [-info (extra info)] [-batcap mAh] [-otg on/off] [-charge on/off] [-sleep min (0-disable)]
-config:      Shows/sets configuration: config [-defaults] [-mode sdcard/network] [-pubint seconds] [-readint seconds] [-wifi &quot;ssid&quot; [&quot;pass&quot;]] [-token token]
+config:      Shows/sets configuration: config [-defaults] [-mode sdcard/network] [-pubint seconds] [-readint seconds] [-wifi "ssid" ["pass"]] [-token token]
 esp:         Controls or shows info from ESP: esp [-on -off -sleep -wake -reboot -flash]
 netinfo:     Shows network information
 time:        Shows/sets date and time: time [epoch time] [-sync]
 hello:       Sends MQTT hello to platform
 debug:       Toggle debug messages: debug [-sdcard] [-esp] [-oled] [-flash] [-telnet] [-speed]
 shell:       Shows or sets shell mode: shell [-on] [-off]
-publish:     Publish custom mqtt message: mqtt [&quot;topic&quot; &quot;message&quot;]
+publish:     Publish custom mqtt message: mqtt ["topic" "message"]
 offline:     Configure offline periods and WiFi retry interval: [-retryint seconds] [-period start-hour end-hour (UTC 0-23)]
 mqttsrv:     Configure mqtt server address and port: [-host serverName] [-port portNum]
-ntpsrv:      Configure ntp server address and port: [-host serverName] [-port portNum]
-</code></pre></div>
+ntpsrv:      Configure ntp server address and port: [-host serverName] [-port portNum]</code></p>
 <h3 id="shell-mode">Shell Mode<a class="headerlink" href="#shell-mode" title="Permanent link">&para;</a></h3>
 <p>The SCK outputs  a lot of information via serial. This can be sometimes confusing while typing commands. You can silent it a bit with this command:</p>
-<div class="highlight"><pre><span></span><code>SCK &gt; shell -on
-Shell mode: on
-</code></pre></div>
+<p><code>SCK &gt; shell -on
+Shell mode: on</code></p>
 <p>This will turn your <strong>LED static yellow</strong>, and no output except responses to your commands will be given. </p>
 <p>Remember to turn it off after you are done experimenting!</p>
-<div class="highlight"><pre><span></span><code>SCK &gt; shell -off
-Shell mode: off
-</code></pre></div>
+<p><code>SCK &gt; shell -off
+Shell mode: off</code></p>
 <h3 id="set-the-recording-configuration">Set the recording configuration<a class="headerlink" href="#set-the-recording-configuration" title="Permanent link">&para;</a></h3>
 <p>If you want to change your recording mode to, for instance, <code>sdcard</code> mode, you could do so by typing:</p>
-<div class="highlight"><pre><span></span><code>SCK &gt; config -mode sdcard
-</code></pre></div>
+<p><code>SCK &gt; config -mode sdcard</code></p>
 <p>To set it up in <code>network</code> mode:</p>
-<div class="highlight"><pre><span></span><code>SCK &gt; config -mode network -wifi &quot;SSID&quot; &quot;PASSWORD&quot; -token 123456
-</code></pre></div>
+<p><code>SCK &gt; config -mode network -wifi "SSID" "PASSWORD" -token 123456</code></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Note that the token is not between quotes since it's always 6 digits</p>
 </div>
 <p>To modify your wifi:</p>
-<div class="highlight"><pre><span></span><code>SCK &gt; config -wifi &quot;NEWSSID&quot; &quot;NEWPASSWORD&quot;
-</code></pre></div>
+<p><code>SCK &gt; config -wifi "NEWSSID" "NEWPASSWORD"</code></p>
 <p>You can check your current configuration by typing <code>config</code>:</p>
-<div class="highlight"><pre><span></span><code>SCK &gt; config
+<p><code>SCK &gt; config
 Mode: sdcard
 Publish interval: 60
 Reading interval: 60
 Wifi credentials: not configured
 Token: not configured
-Mac address:  11:22:33:44:55:66
-</code></pre></div>
+Mac address:  11:22:33:44:55:66</code></p>
 <h3 id="set-recording-and-publication-intervals">Set recording and publication intervals<a class="headerlink" href="#set-recording-and-publication-intervals" title="Permanent link">&para;</a></h3>
 <p>In order to understand the reading and publication intervals, it is important to describe how the structure of the measurements is done:</p>
 <ol>
@@ -2209,26 +2248,21 @@ Mac address:  11:22:33:44:55:66
 <p>This configuration option is very interesting to be used for battery saving. Make sure you check the <a href="/Smart%20Citizen%20Kit/#battery-calculator/">battery calculator</a></p>
 </div>
 <p>All this can be configured using the shell interface. For instance, to set the publication interval to every 10 minutes, we could do:</p>
-<div class="highlight"><pre><span></span><code>config -pubint 600
-</code></pre></div>
+<p><code>config -pubint 600</code></p>
 <p>Or to set the reading interval to every 3 minutes:</p>
-<div class="highlight"><pre><span></span><code>config -readint 180
-</code></pre></div>
+<p><code>config -readint 180</code></p>
 <p>Or both at 10 minutes:</p>
-<div class="highlight"><pre><span></span><code>config -pubint 600 -readint 600
-</code></pre></div>
+<p><code>config -pubint 600 -readint 600</code></p>
 <p>If we want to configure one specific sensor, we can do so by typing the following, only remember, that it's rounded to the closest integer multiplier of the <em>overall reading interval</em>:</p>
-<div class="highlight"><pre><span></span><code>SCK &gt; sensor temp -interval 360
+<p><code>SCK &gt; sensor temp -interval 360
 The sensor read interval is calculated as a multiple of general read interval (180)
 Changing interval of Temperature to 360
-Saved configuration on eeprom!!
-</code></pre></div>
+Saved configuration on eeprom!!</code></p>
 <p>For instance, if we try to do 1.5 times the reading interval of the temperature sensor, we will get:</p>
-<div class="highlight"><pre><span></span><code>SCK &gt; sensor temp -interval 240 
+<p><code>SCK &gt; sensor temp -interval 240 
 The sensor read interval is calculated as a multiple of general read interval (180)
 Changing interval of Temperature to 180
-Saved configuration on eeprom!!
-</code></pre></div>
+Saved configuration on eeprom!!</code></p>
 <p>Some <strong>limitations</strong> apply though:</p>
 <ol>
 <li>The minimum reading and publish interval is 5s</li>
@@ -2239,34 +2273,29 @@ Saved configuration on eeprom!!
 <div class="admonition warning">
 <p class="admonition-title">Default configuration</p>
 <p>At the moment there is no command to return to the default configuration. You should use:
-<div class="highlight"><pre><span></span><code>config -pubint 300 -readint 60
+<code>config -pubint 300 -readint 60
 ...
-sensor pm -interval 300
-</code></pre></div></p>
+sensor pm -interval 300</code></p>
 </div>
 <h3 id="get-version-data">Get version data<a class="headerlink" href="#get-version-data" title="Permanent link">&para;</a></h3>
 <p>Check your <strong>hardware and firmware version</strong> data with the command <code>version</code>:</p>
-<div class="highlight"><pre><span></span><code>SCK &gt; version
+<p><code>SCK &gt; version
 Hardware Version: 2.1
 SAM Hardware ID: 5934C4B550515157382E3120FF151210
 SAM version: 0.9.1-30e1776
 SAM build date: 2019-05-07T02:45:29Z
 ESP MAC address: 86:0D:8E:A7:7F:CC
 ESP version: not synced
-ESP build date: not synced
-</code></pre></div>
+ESP build date: not synced</code></p>
 <h3 id="listmodify-the-active-sensors">List/modify the active sensors<a class="headerlink" href="#listmodify-the-active-sensors" title="Permanent link">&para;</a></h3>
 <p>By typing in <code>sensor</code>, a <strong>list of enabled and supported sensors</strong> is displayed:</p>
-<div class="highlight"><pre><span></span><code>SCK &gt; sensor
-
-Disabled
-----------
-PM board Dallas Temperature
-[...]
-
-Enabled
-----------
-Temperature (60 sec)
+<p>```
+SCK &gt; sensor</p>
+<h2 id="disabled">Disabled<a class="headerlink" href="#disabled" title="Permanent link">&para;</a></h2>
+<p>PM board Dallas Temperature
+[...]</p>
+<h2 id="enabled">Enabled<a class="headerlink" href="#enabled" title="Permanent link">&para;</a></h2>
+<p>Temperature (60 sec)
 Humidity (60 sec)
 Battery (60 sec)
 Light (60 sec)
@@ -2277,31 +2306,27 @@ eCO2 Gas CCS811 (60 sec)
 PM 1.0 (60 sec)
 PM 2.5 (60 sec)
 PM 10.0 (60 sec)
-</code></pre></div>
+```</p>
 <p>To <strong>disable</strong> one sensor, you can type in part of the sensor name:</p>
-<div class="highlight"><pre><span></span><code>SCK &gt; sensor Noise -disable
+<p><code>SCK &gt; sensor Noise -disable
 Disabling Noise dBA
-Saved configuration on eeprom!!
-</code></pre></div>
+Saved configuration on eeprom!!</code></p>
 <p>To <strong>enable</strong> it, if it's present:</p>
-<div class="highlight"><pre><span></span><code>SCK &gt; sensor Noise -enable
+<p><code>SCK &gt; sensor Noise -enable
 Enabling Noise dBA
-Saved configuration on eeprom!!
-</code></pre></div>
+Saved configuration on eeprom!!</code></p>
 <div class="admonition warning">
 <p class="admonition-title">Only if available!</p>
 <p>If the sensor you are trying to connect is not recognised, the kit will complain:</p>
-<div class="highlight"><pre><span></span><code>SCK &gt; sensor atlas -enable
-Failed enabling Atlas Temperature
-</code></pre></div>
+<p><code>SCK &gt; sensor atlas -enable
+Failed enabling Atlas Temperature</code></p>
 </div>
 <h3 id="readmonitor-some-sensors">Read/Monitor some sensors<a class="headerlink" href="#readmonitor-some-sensors" title="Permanent link">&para;</a></h3>
 <p>If one sensor is enabled, you can <code>read</code> it (once) or <code>monitor</code> it (as fast as the SCK can):</p>
-<div class="highlight"><pre><span></span><code>SCK &gt; read Noise
-Noise dBA: 53.85 dBA
-</code></pre></div>
+<p><code>SCK &gt; read Noise
+Noise dBA: 53.85 dBA</code></p>
 <p>To monitor <strong>one sensor</strong>:</p>
-<div class="highlight"><pre><span></span><code>SCK &gt; monitor light
+<p><code>SCK &gt; monitor light
 Time    Miliseconds     Light
 2019-07-10T17:58:07Z    6       137
 2019-07-10T17:58:07Z    98      137
@@ -2315,38 +2340,34 @@ Time    Miliseconds     Light
 2019-07-10T17:58:08Z    98      137
 2019-07-10T17:58:08Z    108     137
 2019-07-10T17:58:08Z    98      136
-...
-</code></pre></div>
+...</code></p>
 <p>Or all of them, with no arguments:</p>
-<div class="highlight"><pre><span></span><code>SCK &gt; monitor
+<p><code>SCK &gt; monitor
 Time    Miliseconds     Battery Light   Temperature     Humidity        Noise dBA       Barometric pressure     VOC Gas CCS811  eCO2 Gas CCS811 PM 1.0  PM 2.5  PM 10.0
 2019-07-11T09:13:04Z    5       37      137     28.75   57.72   1.5    101.29  1.00    408.00  1.5    1.5    1.5
 2019-07-11T09:13:07Z    3195    37      138     28.78   57.65   1.5    101.30  1.00    408.00  1.5    1.5    1.5
-2019-07-11T09:13:08Z    694     37      136     28.77   57.62   1.5    101.29  1.00    408.00  1.5    1.5    1.5
-</code></pre></div>
+2019-07-11T09:13:08Z    694     37      136     28.77   57.62   1.5    101.29  1.00    408.00  1.5    1.5    1.5</code></p>
 <p>If you don't need to output the <code>miliseconds</code> column (the time since last reading) or the <code>timestamp</code>, you can do so by:</p>
-<div class="highlight"><pre><span></span><code>SCK &gt; monitor -noms light
+<p><code>SCK &gt; monitor -noms light
 Time    Light
 2019-07-10T17:58:58Z    136
 2019-07-10T17:58:58Z    136
 2019-07-10T17:58:58Z    137
 2019-07-10T17:58:58Z    137
 2019-07-10T17:58:59Z    136
-...
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>SCK &gt; monitor -notime light
+...</code></p>
+<p><code>SCK &gt; monitor -notime light
 Miliseconds     Light
 6       137
 98      137
 98      137
 99      137
 108     137
-...
-</code></pre></div>
+...</code></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>If your kit has no time configured (the LED should be flashing), the output would look like:</p>
-<div class="highlight"><pre><span></span><code>SCK &gt; monitor Noise
+<p><code>SCK &gt; monitor Noise
 Time    Miliseconds     Noise dBA
 0       1       52.83
 0       187     50.36
@@ -2355,14 +2376,16 @@ Time    Miliseconds     Noise dBA
 0       187     48.28
 0       187     48.72
 0       187     50.81
-...
-</code></pre></div>
+...</code></p>
 </div>
 <p>Something cool to do with the <code>monitor</code>, is to log the sensor output into a file for later analysis. For instance, in your terminal you could do:</p>
-<div class="highlight"><pre><span></span><code>&gt; echo &quot;monitor pm light&quot; &gt; /dev/cu.usbmodem1411 &amp;&amp; screen -L /dev/cu.usbmodem1411
-</code></pre></div>
+<p>```</p>
+<blockquote>
+<p>echo "monitor pm light" &gt; /dev/cu.usbmodem1411 &amp;&amp; screen -L /dev/cu.usbmodem1411
+```</p>
+</blockquote>
 <p>Then, if we check the contents of the file (normally something like <code>screenlog.X</code>:</p>
-<div class="highlight"><pre><span></span><code>monitor light
+<p><code>monitor light
 Time    Miliseconds     Light
 2019-07-11T09:10:05Z    6       141
 2019-07-11T09:10:05Z    98      141
@@ -2377,46 +2400,40 @@ Time    Miliseconds     Light
 2019-07-11T09:10:06Z    108     141
 2019-07-11T09:10:06Z    98      141
 2019-07-11T09:10:06Z    98      141
-...
-</code></pre></div>
+...</code></p>
 <p>This can be useful in case you want to log data as fast as possible, with little delay between readings (~100ms).</p>
 <h3 id="changing-mqtt-or-ntp-servers">Changing mqtt or ntp servers<a class="headerlink" href="#changing-mqtt-or-ntp-servers" title="Permanent link">&para;</a></h3>
 <p>If you want to send data to your own server, or there is a firewall in your network, you can use these two commands to change them:</p>
-<div class="highlight"><pre><span></span><code>mqttsrv:     Configure mqtt server address and port: [-host serverName] [-port portNum]
-ntpsrv:      Configure ntp server address and port: [-host serverName] [-port portNum]
-</code></pre></div>
+<p><code>mqttsrv:     Configure mqtt server address and port: [-host serverName] [-port portNum]
+ntpsrv:      Configure ntp server address and port: [-host serverName] [-port portNum]</code></p>
 <p>Check the <code>mqttsrv</code>:</p>
-<div class="highlight"><pre><span></span><code>SCK &gt; mqttsrv
+<p><code>SCK &gt; mqttsrv
 Mqtt Host: mqtt.smartcitizen.me
-Mqtt Port: 1883
-</code></pre></div>
+Mqtt Port: 1883</code></p>
 <p>Check the <code>ntpsrv</code>:</p>
-<div class="highlight"><pre><span></span><code>SCK &gt; ntpsrv
+<p><code>SCK &gt; ntpsrv
 NTP Host: ntp.smartcitizen.me
-NTP Port: 80
-</code></pre></div>
+NTP Port: 80</code></p>
 <p>Change mqttsrv <code>host</code> and <code>port</code>:</p>
-<div class="highlight"><pre><span></span><code>SCK &gt; mqttsrv -host mqtt.greatcity.me -port 80
+<p><code>SCK &gt; mqttsrv -host mqtt.greatcity.me -port 80
 Mqtt Host: mqtt.greatcity.me
-Mqtt Port: 80
-</code></pre></div>
+Mqtt Port: 80</code></p>
 <h3 id="accessing-the-flash-memory">Accessing the flash memory<a class="headerlink" href="#accessing-the-flash-memory" title="Permanent link">&para;</a></h3>
 <p>This is an advanced feature and helps to explore the data stored in the onboard flash memory for debugging purposes.</p>
 <p>Get a complete map of used sectors in the flash memory:</p>
-<div class="highlight"><pre><span></span><code>SCK &gt; flash
-Scanning Flash memory (it can take a while!)
-
-0 &gt; |u38(_/_)|u36(_/_)|u34(_/_)|u35(_/_)|u35(_/_)|u34(_/_)|u34(_/_)|u35(_/_)|u37(_/_)|u37(_/_)|u37(_/_)|u36(_/_)|u36(_/_)|u36(_/_)|u36(_/_)|u36(_/_)|u36(_/_)|u36(_/_)|u36(_/_)|u36(_/_)|u36(_/_)|u36(_/_)|u36(_/_)|u36(_/_)|u36(_/_)|u36(_/_)|u36(_/_)|u36(_/_)|u36(_/_)|u37(_/_)|u37(_/_)|u37(_/_)|
-32 &gt; |u37(_/_)|u36(_/_)|u36(_/_)|u36(_/_)|u36(_/_)|u37(_/_)|u37(_/_)|u37(_/_)|u37(_/_)|u37(_/_)|u37(_/_)|u37(_/_)|u37(_/_)|u37(_/_)|u37(_/_)|u37(_/_)|u37(_/_)|u37(_/_)|u37(_/_)|u37(_/_)|u37(_/_)|u37(_/_)|u37(_/_)|u37(_/_)|u37(_/_)|u37(_/_)|u37(_/_)|u37(_/_)|u37(_/_)|u37(_/_)|u37(_/_)|u36(_/_)|
+<p>```
+SCK &gt; flash
+Scanning Flash memory (it can take a while!)</p>
+<p>0 &gt; |u38(<em>/</em>)|u36(<em>/</em>)|u34(<em>/</em>)|u35(<em>/</em>)|u35(<em>/</em>)|u34(<em>/</em>)|u34(<em>/</em>)|u35(<em>/</em>)|u37(<em>/</em>)|u37(<em>/</em>)|u37(<em>/</em>)|u36(<em>/</em>)|u36(<em>/</em>)|u36(<em>/</em>)|u36(<em>/</em>)|u36(<em>/</em>)|u36(<em>/</em>)|u36(<em>/</em>)|u36(<em>/</em>)|u36(<em>/</em>)|u36(<em>/</em>)|u36(<em>/</em>)|u36(<em>/</em>)|u36(<em>/</em>)|u36(<em>/</em>)|u36(<em>/</em>)|u36(<em>/</em>)|u36(<em>/</em>)|u36(<em>/</em>)|u37(<em>/</em>)|u37(<em>/</em>)|u37(<em>/</em>)|
+32 &gt; |u37(<em>/</em>)|u36(<em>/</em>)|u36(<em>/</em>)|u36(<em>/</em>)|u36(<em>/</em>)|u37(<em>/</em>)|u37(<em>/</em>)|u37(<em>/</em>)|u37(<em>/</em>)|u37(<em>/</em>)|u37(<em>/</em>)|u37(<em>/</em>)|u37(<em>/</em>)|u37(<em>/</em>)|u37(<em>/</em>)|u37(<em>/</em>)|u37(<em>/</em>)|u37(<em>/</em>)|u37(<em>/</em>)|u37(<em>/</em>)|u37(<em>/</em>)|u37(<em>/</em>)|u37(<em>/</em>)|u37(<em>/</em>)|u37(<em>/</em>)|u37(<em>/</em>)|u37(<em>/</em>)|u37(<em>/</em>)|u37(<em>/</em>)|u37(<em>/</em>)|u37(<em>/</em>)|u36(<em>/</em>)|
 ...
-</code></pre></div>
+```</p>
 <p>Format the flash (will take a long time):</p>
-<div class="highlight"><pre><span></span><code>flash -format
-</code></pre></div>
+<p><code>flash -format</code></p>
 <p>Check a sector (see what's inside):</p>
-<div class="highlight"><pre><span></span><code>SCK &gt; flash -sector 300
-
-Sector 300 in address 1228800 is: Used
+<p>```
+SCK &gt; flash -sector 300</p>
+<p>Sector 300 in address 1228800 is: Used
 Sector 300 fully published to network: true
 Sector 300 fully published to sd-card: true
 Net published groups: 37
@@ -2427,10 +2444,9 @@ Total groups: 37
 Freespace: 53 bytes
 First group: 2021-07-08T09:04:19Z
 Last group:  2021-07-12T07:34:49Z
-</code></pre></div>
+```</p>
 <p>Recover a sector (send it to the platform or save in sdcard, or both - see <code>help</code> command):</p>
-<div class="highlight"><pre><span></span><code>flash -recover all net
-</code></pre></div>
+<p><code>flash -recover all net</code></p>
 <h2 id="advanced-but-cool-example">Advanced (but cool) example!<a class="headerlink" href="#advanced-but-cool-example" title="Permanent link">&para;</a></h2>
 <div class="admonition example">
 <p class="admonition-title">Making most of the digital microphone</p>
@@ -2442,18 +2458,16 @@ Last group:  2021-07-12T07:34:49Z
 <p>First, enable it with:</p>
 </li>
 </ul>
-<div class="highlight"><pre><span></span><code>SCK &gt; sensor fft -enable
-Enabling Noise FFT
-</code></pre></div>
+<p><code>SCK &gt; sensor fft -enable
+Enabling Noise FFT</code></p>
 <ul>
 <li>Then, monitor and log it in a file with:</li>
 </ul>
-<div class="highlight"><pre><span></span><code>echo &quot;monitor fft&quot; &gt; /dev/cu.usbmodem1411 &amp;&amp; screen -L /dev/cu.usbmodem1411
-</code></pre></div>
+<p><code>echo "monitor fft" &gt; /dev/cu.usbmodem1411 &amp;&amp; screen -L /dev/cu.usbmodem1411</code></p>
 <ul>
 <li>In this file, we will have something like:</li>
 </ul>
-<div class="highlight"><pre><span></span><code>12
+<p><code>12
 15
 19
 20
@@ -2462,8 +2476,7 @@ Enabling Noise FFT
 12
 23
 2019-07-11T09:30:01Z    5   null
-...
-</code></pre></div>
+...</code></p>
 <ul>
 <li>
 <p>The values between the dates are the actual FFT spectrum. We will now clean the lines with the dates and then plot the data. For this, we will use a <code>python</code> code to make things easier. You can download the code <a href="/assets/examples/spectrum_example.py">here</a>.</p>
@@ -2472,8 +2485,11 @@ Enabling Noise FFT
 <p>If we run this code in <code>python3</code> in the same folder where the screenlog from before is:</p>
 </li>
 </ul>
-<div class="highlight"><pre><span></span><code>&gt; python spectrum_example.py
-</code></pre></div>
+<p>```</p>
+<blockquote>
+<p>python spectrum_example.py
+```</p>
+</blockquote>
 <p>We will have two outputs: a <code>csv</code> file with the spectrums in rows, and a png image that looks like this!</p>
 <p><img alt="" src="https://i.imgur.com/KZfFDam.png" /></p>
 <p>You can see that we were playing with a <a href="http://onlinetonegenerator.com/">tone generator</a> to make some high pitch noises at 10kHz and 20kHz. </p>

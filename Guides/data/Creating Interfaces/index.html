@@ -1373,6 +1373,8 @@
     
     <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
+      
+    
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
         Creating interfaces
@@ -1387,6 +1389,8 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1395,56 +1399,16 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#custom-dashboards-and-notifications" class="md-nav__link">
-    Custom dashboards and notifications
-  </a>
-  
-    <nav class="md-nav" aria-label="Custom dashboards and notifications">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#node-red" class="md-nav__link">
     Node RED
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#freeboard" class="md-nav__link">
     Freeboard
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#talk-to-the-world" class="md-nav__link">
-    Talk to the world
-  </a>
-  
-    <nav class="md-nav" aria-label="Talk to the world">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#blink-example" class="md-nav__link">
-    Blink example
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#the-sensor-box" class="md-nav__link">
-    The sensor box
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1935,6 +1899,8 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1943,56 +1909,16 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#custom-dashboards-and-notifications" class="md-nav__link">
-    Custom dashboards and notifications
-  </a>
-  
-    <nav class="md-nav" aria-label="Custom dashboards and notifications">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#node-red" class="md-nav__link">
     Node RED
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#freeboard" class="md-nav__link">
     Freeboard
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#talk-to-the-world" class="md-nav__link">
-    Talk to the world
-  </a>
-  
-    <nav class="md-nav" aria-label="Talk to the world">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#blink-example" class="md-nav__link">
-    Blink example
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#the-sensor-box" class="md-nav__link">
-    The sensor box
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -2015,8 +1941,6 @@
                 
                   
                 
-                
-                  <h1>Creating interfaces</h1>
                 
                 <h2 id="custom-dashboards-and-notifications">Custom dashboards and notifications<a class="headerlink" href="#custom-dashboards-and-notifications" title="Permanent link">&para;</a></h2>
 <p>When working on deployments that involve multiple devices a community
@@ -2051,20 +1975,21 @@ may easily blend in the background of users’ attention. To bring the sensed da
 <p>We will need to wire the two LED’s following the schematic below:</p>
 <p><img alt="" src="/assets/images/wiring_raspberry.png" /></p>
 <p>Once we have the Raspberry Pi running and connected to the internet we will need to save the Python script below on the desktop:</p>
-<div class="highlight"><pre><span></span><code># Smart Citizen Examples for the Raspberry Pi
-#
-# http://smartcitizen.me
-#
-# Trigger 2 LEDs depending on the temperature
-# For more information on the LEDs connection check: https://learn.sparkfun.com/tutorials/raspberry-gpio
-# For more information on the SmartCitizen API check: http://developer.smartcitizen.me
-#
-import RPi.GPIO as GPIO
+<p>```</p>
+<h1 id="smart-citizen-examples-for-the-raspberry-pi">Smart Citizen Examples for the Raspberry Pi<a class="headerlink" href="#smart-citizen-examples-for-the-raspberry-pi" title="Permanent link">&para;</a></h1>
+<h1 id="_1"><a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h1 id="httpsmartcitizenme"><a href="http://smartcitizen.me">http://smartcitizen.me</a><a class="headerlink" href="#httpsmartcitizenme" title="Permanent link">&para;</a></h1>
+<h1 id="_2"><a class="headerlink" href="#_2" title="Permanent link">&para;</a></h1>
+<h1 id="trigger-2-leds-depending-on-the-temperature">Trigger 2 LEDs depending on the temperature<a class="headerlink" href="#trigger-2-leds-depending-on-the-temperature" title="Permanent link">&para;</a></h1>
+<h1 id="for-more-information-on-the-leds-connection-check-httpslearnsparkfuncomtutorialsraspberry-gpio">For more information on the LEDs connection check: <a href="https://learn.sparkfun.com/tutorials/raspberry-gpio">https://learn.sparkfun.com/tutorials/raspberry-gpio</a><a class="headerlink" href="#for-more-information-on-the-leds-connection-check-httpslearnsparkfuncomtutorialsraspberry-gpio" title="Permanent link">&para;</a></h1>
+<h1 id="for-more-information-on-the-smartcitizen-api-check-httpdevelopersmartcitizenme">For more information on the SmartCitizen API check: <a href="http://developer.smartcitizen.me">http://developer.smartcitizen.me</a><a class="headerlink" href="#for-more-information-on-the-smartcitizen-api-check-httpdevelopersmartcitizenme" title="Permanent link">&para;</a></h1>
+<h1 id="_3"><a class="headerlink" href="#_3" title="Permanent link">&para;</a></h1>
+<p>import RPi.GPIO as GPIO
 import json, requests, time
 GPIO.setup(18, GPIO.OUT)
 GPIO.setup(23, GPIO.OUT)
 while True:
-r = requests.get(‘https://api.smartcitizen.me/v0/devices/3292’)
+r = requests.get(‘<a href="https://api.smartcitizen.me/v0/devices/3292">https://api.smartcitizen.me/v0/devices/3292</a>’)
 data = json.loads(r.text)
 for sensor in data[‘data’][‘sensors’]:
 if sensor[‘description’] == ‘Temperature’: #CO, NO2...
@@ -2078,11 +2003,10 @@ print ‘LED OFF’
 GPIO.output(18, GPIO.LOW)
 GPIO.output(23, GPIO.HIGH)
 time.sleep(15) #Update every 15 seconds
-</code></pre></div>
+```</p>
 <p>Finally, open the Terminal app and run:</p>
-<div class="highlight"><pre><span></span><code>pi@raspberrypi ~ $ cd Desktop
-pi@raspberrypi Desktop $ sudo python smartcitizen-led.py
-</code></pre></div>
+<p><code>pi@raspberrypi ~ $ cd Desktop
+pi@raspberrypi Desktop $ sudo python smartcitizen-led.py</code></p>
 </div>
 <h3 id="the-sensor-box">The sensor box<a class="headerlink" href="#the-sensor-box" title="Permanent link">&para;</a></h3>
 <p>The <strong>Sensor Box is display installation</strong> aimed at engaging citizens to

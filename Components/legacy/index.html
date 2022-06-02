@@ -1814,27 +1814,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#uploading-the-code" class="md-nav__link">
-    Uploading the code
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#registering-the-kit-in-the-platform_1" class="md-nav__link">
-    Registering the kit in the platform
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#attaching-the-solar-panel" class="md-nav__link">
-    Attaching the solar panel
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -2039,27 +2018,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#uploading-the-code" class="md-nav__link">
-    Uploading the code
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#registering-the-kit-in-the-platform_1" class="md-nav__link">
-    Registering the kit in the platform
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#attaching-the-solar-panel" class="md-nav__link">
-    Attaching the solar panel
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -2251,18 +2209,19 @@
 <p>Once installed open the file <code>Smart-Citizen-Kit/sck_beta_v0_9_0/sck_beta_v0_9.ino</code></p>
 <h3 id="editing-the-code">Editing the code<a class="headerlink" href="#editing-the-code" title="Permanent link">&para;</a></h3>
 <p>If you want to set the network configuration manually, you should go to the <code>Constants.h</code> tab and modify the lines you see below:</p>
-<div class="highlight"><pre><span></span><code>#define networks 0
-#if (networks &gt; 0)
-static char* mySSID[networks]      = {
-  &quot;SSID1&quot;      , &quot;SSID2&quot;            };
+<p>```</p>
+<h1 id="define-networks-0">define networks 0<a class="headerlink" href="#define-networks-0" title="Permanent link">&para;</a></h1>
+<h1 id="if-networks-0">if (networks &gt; 0)<a class="headerlink" href="#if-networks-0" title="Permanent link">&para;</a></h1>
+<p>static char* mySSID[networks]      = {
+  "SSID1"      , "SSID2"            };
 static char* myPassword[networks]  = {
-  &quot;PASS1&quot;      , &quot;PASS2&quot;            };
+  "PASS1"      , "PASS2"            };
 static char* wifiEncript[networks] = {
   WPA2         , WPA2               };
 static char* antennaExt[networks]  = {
-  INT_ANT      , INT_ANT            };
-#endif
-</code></pre></div>
+  INT_ANT      , INT_ANT            };</p>
+<h1 id="endif">endif<a class="headerlink" href="#endif" title="Permanent link">&para;</a></h1>
+<p>```</p>
 <p>The easiest way would be to write <code>"#define networks X"</code> (where X is the number of WI-FI networks you are going to use) and fill the options for your network:</p>
 <ul>
 <li>Add the name of your network in <code>SSIDX</code> and the corresponding password in <code>PASSX</code>. Due to hardware limitations neither the password or the ssid can't be longer tham 32 characters.</li>
@@ -2270,17 +2229,17 @@ static char* antennaExt[networks]  = {
 <li>On <code>antennaExt</code> you can choose the type of antenna you are using (<code>INT_ANT</code> for internal antenna (default) or <code>EXT_ANT</code> for external antenna).</li>
 </ul>
 <p>If you register only one wifi credential, you should obtain something like this:</p>
-<div class="highlight"><pre><span></span><code>#define networks 1
-#if (networks &gt; 0)
-char* mySSID[networks]      = { &quot;MyWifiSSID&quot; };
-char* myPassword[networks]  = { &quot;MyPassword&quot; };
+<p>```</p>
+<h1 id="define-networks-1">define networks 1<a class="headerlink" href="#define-networks-1" title="Permanent link">&para;</a></h1>
+<h1 id="if-networks-0_1">if (networks &gt; 0)<a class="headerlink" href="#if-networks-0_1" title="Permanent link">&para;</a></h1>
+<p>char* mySSID[networks]      = { "MyWifiSSID" };
+char* myPassword[networks]  = { "MyPassword" };
 char* wifiEncript[networks] = { WPA2 };
-char* antennaExt[networks]  = { INT_ANT };
-#endif
-</code></pre></div>
+char* antennaExt[networks]  = { INT_ANT };</p>
+<h1 id="endif_1">endif<a class="headerlink" href="#endif_1" title="Permanent link">&para;</a></h1>
+<p>```</p>
 <p><em>Note that if you configure more than one Wi-fi network you have to separate the variables with a comma, for example:</em></p>
-<div class="highlight"><pre><span></span><code>char* mySSID[networks] = { &quot;MyFirstSSID&quot;, &quot;MySecondSSID&quot; };
-</code></pre></div>
+<p><code>char* mySSID[networks] = { "MyFirstSSID", "MySecondSSID" };</code></p>
 <h2 id="uploading-the-code">Uploading the code<a class="headerlink" href="#uploading-the-code" title="Permanent link">&para;</a></h2>
 <p><img alt="Select the board" src="/assets/images/sck_1/arduino_board.png" /></p>
 <p>On the Arduino IDE <em>Tools</em> menu you should select the right <strong>Board</strong> in the <em>Boards</em> menu:</p>

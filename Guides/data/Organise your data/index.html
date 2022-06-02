@@ -2021,17 +2021,16 @@
 <div class="admonition info">
 <p class="admonition-title">Pro-tip</p>
 <p>We can rename them manually, but if we have many of them, we can use this one-liner (works in oh-my-zsh):</p>
-<div class="highlight"><pre><span></span><code>autoload -Uz zmv
-zmv &#39;(*).(0*)&#39; &#39;$1_$2.CSV&#39;
-</code></pre></div>
+<p><code>autoload -Uz zmv
+zmv '(*).(0*)' '$1_$2.CSV'</code></p>
 </div>
 <p>We can now concatenate all the sd card data from a device with the <code>concat_script.py</code> in the <a href="https://github.com/fablabbcn/smartcitizen-data/tree/master/scdata/utils/other">scripts</a> folder.</p>
 <p>We can access the script's help by typing in the terminal:</p>
-<div class="highlight"><pre><span></span><code>python concat_script.py -h
+<p>```
+python concat_script.py -h
 usage: concat_script.py [-h] [--output OUTPUT] [--index INDEX] [--keep]
-                        [--ignore IGNORE] [--directory DIRECTORY]
-
-optional arguments:
+                        [--ignore IGNORE] [--directory DIRECTORY]</p>
+<p>optional arguments:
   -h, --help            show this help message and exit
   --output OUTPUT, -o OUTPUT
                         Output file name, including extension
@@ -2042,9 +2041,9 @@ optional arguments:
                         Ignore files in concatenation
   --directory DIRECTORY, -d DIRECTORY
                         Directory for csv files to concatenate
-</code></pre></div>
+```</p>
 <p>Create a directory (<code>FILES</code>) and put the sd card data of one device in it. Then, run the script with:</p>
-<div class="highlight"><pre><span></span><code>python concat_script.py -k -d FILES
+<p><code>python concat_script.py -k -d FILES
 Using files in /Users/macoscar/Documents/04_Projects/02_FabLab/01_SmartCitizen/01_Repositories/DataAnalysis/smartcitizen-iscape-data/data/scripts/FILES
 Files to concat:
 18-11-08.CSV
@@ -2056,13 +2055,11 @@ Files to concat:
 18-11-17.CSV
 18-11-18.CSV
 Updating header
-Saving file to: Log_Concat.csv
-</code></pre></div>
+Saving file to: Log_Concat.csv</code></p>
 <p>And if we now navigate to the <code>FILES</code> directory:</p>
-<div class="highlight"><pre><span></span><code>ls
+<p><code>ls
 18-11-08.CSV   18-11-13.CSV   18-11-15.CSV   18-11-17.CSV   Log_Concat.csv
-18-11-09.CSV   18-11-14.CSV   18-11-16.CSV   18-11-18.CSV
-</code></pre></div>
+18-11-09.CSV   18-11-14.CSV   18-11-16.CSV   18-11-18.CSV</code></p>
 <p>We can find our concatenated file!</p>
 <h3 id="create-a-test">Create a test<a class="headerlink" href="#create-a-test" title="Permanent link">&para;</a></h3>
 <p>Once we have all our concatenated files, we can proceed to create our test. For this, you can launch <code>jupyter lab</code> and open the <a href="https://github.com/fablabbcn/smartcitizen-data/blob/master/examples/notebooks/01_getting_started.ipynb">examples notebooks</a>. In it, we can follow the instructions in the notebook by filling up the input data. </p>
