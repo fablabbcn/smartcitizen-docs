@@ -16,7 +16,7 @@ To enable the sensors you just need to plug you board to the Smart Citizen kit a
 
 ### Atlas PH
 
-You need to perform a 3-point calibration with the calibration solutions. The solutions vary their pH with temperature, so make sure to check the temperature prior. **The pH value at current temperature can be found on the reference table on the calibration solution bottle. If the current temperature is not on it, use the closest value.**
+You need to perform a 3-point calibration with the calibration solutions. The solutions vary their pH with temperature, so make sure to check the temperature prior. **The pH value at current temperature can be found on the reference table on the calibration solution bottle. If the current temperature is not on it, use the closest value or use the calculator [here](https://atlas-scientific.com/ph-temperature-calculator/)**.
 
 !!! info "Datasheet"
     Here you can find the [datasheet](https://www.atlas-scientific.com/files/pH_EZO_Datasheet.pdf):
