@@ -1,5 +1,4 @@
-How to install the framework
-============================
+# How to install the framework
 
 The following data analysis framework is a set of tools built on Python 3.7 to help you analyse your data. It can be used with [Jupyter Notebooks](https://jupyter.org/) or [Jupyter Lab](https://jupyterlab.readthedocs.io/en/stable/), although it is not mandatory.
 

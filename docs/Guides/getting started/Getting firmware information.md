@@ -1,5 +1,4 @@
-Getting firmware information
-============================
+# Getting firmware information
 
 There are two ways to get the firmware version:
 

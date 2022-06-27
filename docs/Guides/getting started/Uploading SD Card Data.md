@@ -1,5 +1,4 @@
-Uploading SD Card Data
-======================
+# Uploading SD Card Data
 
 Here some instructions on how to upload CSV files to Smartcitizen platform. First be sure to be logged and go to your [profile](https://smartcitizen.me/profile/kits).
 

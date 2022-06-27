@@ -1,5 +1,4 @@
-Updating the Wi-Fi
-==================
+# Updating the Wi-Fi
 
 !!! info
     This guide will help you update your sensor Wi-Fi settings as well as other parameters, such as the device token

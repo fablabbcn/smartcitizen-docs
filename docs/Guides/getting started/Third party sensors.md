@@ -1,3 +1,5 @@
+# Third party sensors
+
 This page reflects examples on how to use and implement [compatible third party sensors](/Components/Auxiliary/).
 
 !!! info "What are _third party sensors_?"

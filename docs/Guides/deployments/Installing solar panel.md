@@ -1,3 +1,5 @@
+# Installing solar panel
+
 This guide walks through the process for installing a Solar Panel with the Smart Citizen Kit.
 
 !!! warning ""

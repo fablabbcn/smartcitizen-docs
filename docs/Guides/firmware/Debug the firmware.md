@@ -1,3 +1,5 @@
+# Debug the firmware
+
 ## Introduction
 
 Sometimes (many times actually), our code won't do what we want it to do and we need to take a look at what it's doing. By using a **debugger** we will be able to see what is going on _inside_ another program while it executes or even crashes. This is fairly straight forward when you code for a modern day computer, since most IDEs have a proper interface integrated for it. However, debugging a chip like the _SAMD21_ can sometimes be tricky and here is where it's interesting to use a debugging kit.
@@ -99,7 +101,7 @@ In order to use the [SWD connector](http://www.arm.com/products/system-ip/debug-
 ---
 ![](https://i.imgur.com/AEYc8sd.jpg)
 
-###  Running OpenOCD on the raspberry pi
+### Running OpenOCD on the raspberry pi
 
 Once you are logged into the raspberry Pi you need a openOCD config file to start (ej. _sck.cfg_) with this content:
 

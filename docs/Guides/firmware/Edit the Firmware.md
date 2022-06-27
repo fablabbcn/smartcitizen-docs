@@ -1,3 +1,5 @@
+# Edit the Firmware
+
 The data board of your Smart Citizen Kit is has two **two microcontrollers**:
 
 ![](/assets/images/sck_2/SCK21_Microcontrollers.png)

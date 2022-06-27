@@ -1,5 +1,4 @@
-Organise your data
-=========================
+# Organise your data
 
 !!! warning "Step by step"
     Go through the [installation guide](/Guides/data/Install the framework) first before jumping into this guide.

@@ -1,3 +1,5 @@
+# Update the firmware
+
 When new features are developed or bugs are fixed we will release new versions of the SCK firmware.
 
 ## Make a back-up of your info

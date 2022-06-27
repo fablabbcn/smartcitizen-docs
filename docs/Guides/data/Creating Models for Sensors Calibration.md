@@ -1,5 +1,4 @@
-Model your sensor data
-====================================================
+# Model your sensor data
 
 In this section, we will detail how to develop models for our sensors. We will try two different approaches for model calibration:
 
@@ -258,13 +257,14 @@ It is very difficult though, to know which one is performing better. Let's then 
 A measure of the agreement between two signals:
 
 $$
-R = {{1 \over N} \sum_{i=0}^n (m_n-\overline m)( r_n-\overline r ) \over \sigma_m\sigma_r}
+R = {{1 \over N} \sum_{i=0}^n (m_n - \overline m)( r_n - \overline r ) \over \sigma_m \sigma_r}
 $$
 
 The correlation coefficient is bounded by the range $-1 \le R \le 1$. However, it is difficult to discern information about the differences in amplitude between two signals from R alone.
 
 **Normalized standard deviation**
 A measure of the differences in amplitude between two signals:
+
 $$
 \sigma * = {\sigma_m \over \sigma_r}
 $$
