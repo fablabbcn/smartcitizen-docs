@@ -26,16 +26,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.smartcitizen.me/About/about/</loc>
-         <lastmod>2022-06-29</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.smartcitizen.me/About/funding/</loc>
-         <lastmod>2022-06-29</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://docs.smartcitizen.me/Components/</loc>
          <lastmod>2022-06-29</lastmod>
          <changefreq>daily</changefreq>

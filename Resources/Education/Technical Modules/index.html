@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://docs.smartcitizen.me/Resources/Education/Technical%20Modules/">
       
       <link rel="icon" href="../../../assets/images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.7">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.11">
     
     
       
@@ -23,12 +23,11 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.4a0965b7.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.8c5ef100.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.cbb835fc.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.9647289d.min.css">
         
-      
       
     
     
@@ -51,7 +50,7 @@
     
     
     <script defer data-domain="docs.smartcitizen.me" src="https://plausible.io/js/plausible.js"></script>
-    <script src="/javascripts/extra.js"></script>
+    <!-- <script src="/javascripts/extra.js"></script> -->
 
   </head>
   
@@ -75,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#basic" class="md-skip">
+        <a href="#macro-rendering-error" class="md-skip">
           Skip to content
         </a>
       
@@ -2657,35 +2656,8 @@
   
   
   
+    
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#basic" class="md-nav__link">
-    Basic
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#intermediate" class="md-nav__link">
-    Intermediate
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#advanced" class="md-nav__link">
-    Advanced
-  </a>
-  
-</li>
-      
-    </ul>
   
 </nav>
                   </div>
@@ -2713,65 +2685,30 @@
 
 
 
-  <h1>Index</h1>
-
-<h2 id="basic">Basic<a class="headerlink" href="#basic" title="Permanent link">&para;</a></h2>
-<!-- 
-  <div class="card-deck-half">
-
-
-      <div class="card-body card card-list">
-        <a href="//" class="card-title"><h2 class="card-title tag">DASHBOARD </h2></a>
-
-
-
-    </div>
-
-      <div class="card-body card card-list">
-        <a href="//" class="card-title"><h2 class="card-title tag">SD-CARD </h2></a>
-
-
-
-    </div>
-
-  </div> -->
-
-<h2 id="intermediate">Intermediate<a class="headerlink" href="#intermediate" title="Permanent link">&para;</a></h2>
-<!-- 
-  <div class="card-deck-half">
-
-
-      <div class="card-body card card-list">
-        <a href="//" class="card-title"><h2 class="card-title tag">API </h2></a>
-
-
-
-    </div>
-
-  </div> -->
-
-<h2 id="advanced">Advanced<a class="headerlink" href="#advanced" title="Permanent link">&para;</a></h2>
-<!-- 
-  <div class="card-deck-half">
-
-
-      <div class="card-body card card-list">
-        <a href="//" class="card-title"><h2 class="card-title tag">PYTHON </h2></a>
-
-
-
-    </div>
-
-  </div> -->
+<h1 id="macro-rendering-error"><em>Macro Rendering Error</em><a class="headerlink" href="#macro-rendering-error" title="Permanent link">&para;</a></h1>
+<p><strong>TemplateNotFound</strong>: tags.html</p>
+<div class="highlight"><pre><span></span><code>Traceback (most recent call last):
+  File &quot;/opt/hostedtoolcache/Python/3.6.15/x64/lib/python3.6/site-packages/mkdocs_macros/plugin.py&quot;, line 480, in render
+    return md_template.render(**page_variables)
+  File &quot;/opt/hostedtoolcache/Python/3.6.15/x64/lib/python3.6/site-packages/jinja2/environment.py&quot;, line 1291, in render
+    self.environment.handle_exception()
+  File &quot;/opt/hostedtoolcache/Python/3.6.15/x64/lib/python3.6/site-packages/jinja2/environment.py&quot;, line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File &quot;&lt;template&gt;&quot;, line 3, in top-level template code
+  File &quot;/home/runner/work/smartcitizen-docs/smartcitizen-docs/main.py&quot;, line 125, in get_cards
+    template = jenv.get_template(template)
+  File &quot;/opt/hostedtoolcache/Python/3.6.15/x64/lib/python3.6/site-packages/jinja2/loaders.py&quot;, line 214, in get_source
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: tags.html
+</code></pre></div>
 
               
 
             </article>
-            
           </div>
         </div>
         
-          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
             Back to top
           </a>
@@ -2865,14 +2802,16 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["instant", "navigation.indexes", "navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["instant", "navigation.indexes", "navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.0238f547.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.748e2769.min.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       
         <script src="https://buttons.github.io/buttons.js"></script>
+      
+        <script src="/javascripts/extra.js"></script>
       
     
   </body>
