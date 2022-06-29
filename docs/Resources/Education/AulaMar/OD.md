@@ -1,6 +1,6 @@
 # Oxígeno disuelto
 
-![](/assets/images/education/es/OD.jpg)
+![](/assets/images/education/OD_header.jpg)
 
 ## ¿Qué es el oxígeno disuelto?
 

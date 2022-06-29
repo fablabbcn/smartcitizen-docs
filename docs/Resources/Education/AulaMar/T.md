@@ -1,6 +1,6 @@
 # Temperatura
 
-![](/assets/images/education/es/thermometer-gif-8.gif)
+![](/assets/images/education/t_header.gif)
 
 ## ¿Qué es la temperatura del agua?
 

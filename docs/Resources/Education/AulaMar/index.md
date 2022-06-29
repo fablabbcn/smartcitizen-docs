@@ -32,8 +32,7 @@ Selecciona debajo guías y materiales para cada una de las métricas que medimos
 En la parte superior de cada página puedes descargar el contenido de esta web en PDF si lo prefieres. Debajo tienes materiales adicionales para las actividades:
 
 - [Instrucciones de uso](Instrucciones)
-- [Material Docente (secuencia didáctica)]()
-- [Estadillo - Cuaderno de laboratorio]()
+- [Material Docente (secuencia didáctica)](download/Aulamar_Secuencia_Didactica.pdf)
 
 ## Referencias y material adicional
 

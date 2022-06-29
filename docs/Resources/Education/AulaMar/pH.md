@@ -1,6 +1,6 @@
 # Midiendo pH
 
-![](https://pixnio.com/free-images/2020/01/28/2020-01-28-08-53-57-1200x800.jpg)
+![](/assets/images/education/ph_header.jpg)
 
 ## ¿Qué es el pH?
 
