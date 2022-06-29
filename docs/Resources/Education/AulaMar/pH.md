@@ -1,5 +1,7 @@
 # Midiendo pH
 
+![](https://pixnio.com/free-images/2020/01/28/2020-01-28-08-53-57-1200x800.jpg)
+
 ## ¿Qué es el pH?
 
 !!! abstract "Definición"
@@ -40,7 +42,8 @@ Los valores de pH pueden variar muy rápidamente. Este parámetro se debe **medi
 
 Usaremos un sensor de pH, compuesto por una membrana de cristal (**muy delicada**) a través de la cual algunos iones de Hidrógeno del agua pueden pasar y generar una corriente muy pequeña que mediremos en un electrodo.
 
-![](/assets/images/education/es/ph_Sensor.png "FUENTE: Atlas Scientific")
+![](/assets/images/education/es/ph_Sensor.jpg "FUENTE: Atlas Scientific")
+
 FUENTE: Atlas Scientific
 
 El sensor se puede sumergir completamente, y tiene las **siguientes características** (aquí citamos algunas, tienes todas en el datasheet):

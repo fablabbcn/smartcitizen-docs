@@ -85,7 +85,7 @@ Es importante tener en cuenta las variaciones diarias de oxígeno disuelto provo
 
 Usaremos un sensor de oxígeno disuelto, que se compone de una membrana de teflón y dos electrodos, uno de ellos en una solución de electrolito. El oxígeno pasa por la membrana de teflón, y  al reducirse en el cátodo, se crea una diferencia de voltaje entre ellos, que podemos medir. Este tipo de sonda se denomina galvánica, y consume un poco de oxígeno cuando toma lecturas. Por ello, es necesario mover la sonda o el agua alrededor un poco (sin airearla). 
 
-![](/assets/images/education/es/DO_Sensor.png "FUENTE: Atlas Scientific")
+![](/assets/images/education/es/DO_Sensor.jpg "FUENTE: Atlas Scientific")
 FUENTE: Atlas Scientific
 
 El sensor se puede sumergir completamente, y tiene las **siguientes características** (aquí citamos algunas, tienes todas en el datasheet):

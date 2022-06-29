@@ -8,9 +8,9 @@ tags:
 
 ### Dashboard
 
-El dashboard es una herramienta web muy sencilla que nos permite explorar los datos de un kit de forma rápida.
+El [dashboard](https://dashboard.smartcitizen.me) es una herramienta web muy sencilla que nos permite explorar los datos de un kit de forma rápida.
 
-![](/assets/images/dashboard.png)
+[![](/assets/images/dashboard.png)](https://dashboard.smartcitizen.me)
 
 Se puede utilizar sin gráficos (click en el icono 🛠️ y desmarca _Show Graphs_):
 

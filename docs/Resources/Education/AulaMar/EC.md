@@ -36,16 +36,15 @@ La conductividad, con la temperatura, es utilizada para calcular la salinidad, y
 
 ## ¿Cómo medir la conductividad?
 
-Como norma general, es preferible la toma de medidas in situ, en lugar de la toma de muestras y posterior análisis en laboratorio, debido a los posibles cambios químicos que pueden ocurrir en la muestra por diferentes procesos como precipitación, adsorción, desgasificación u oxidación.
+Como norma general, es preferible la toma de medidas in situ, en lugar de la toma de muestras y posterior análisis en laboratorio, debido a los posibles cambios químicos que pueden ocurrir en la muestra.
 
 En caso de que no se pueda hacer una medida in situ, trata de tomar una muestra y hacer la medida lo antes posible. Si la muestra cambia mucho de temperatura, o si se forman deposiciones o burbujas en el transporte, la medida no será representativa.
 
 ### El sensor
 
-Para medir conductividad eléctrica, usaremos un sensor llamado conductímetro. Este sensor no tiene sensor de temperatura integrado, por lo que deberemos usar un sensor de temperatura adicional para medir la temperatura a la cual estamos tomando la muestra. **Este sensor de temperatura debe sumergirse a la vez cuando tomemos medidas de conductividad**. 
+Para medir conductividad eléctrica, usaremos un sensor llamado **conductímetro**. En el caso de Smart Citizen, usando los sensores de Atlas Scientific, el sensor de conductividad no tiene sensor de temperatura integrado, por lo que deberemos usar un sensor de temperatura adicional para medir la temperatura a la cual estamos tomando la muestra. **Este sensor de temperatura debe sumergirse a la vez cuando tomemos medidas de conductividad**.
 
-En caso de tener un sensor de temperatura, los valores reportados serán referenciados a la temperatura medida, siendo este proceso automático. En caso de no tener un sensor de temperatura, la lectura será referenciada a 25ºC, y puede representar un origen de errores. Adicionalmente, es importante revisar las correcciones con valores de pH extremos, ya que éstas pueden introducir errores grandes en los resultados.
-
+En caso de tener un sensor de temperatura, los valores reportados serán referenciados a la temperatura medida, siendo este proceso automático. En caso de no tener un sensor de temperatura, la lectura será referenciada a 25ºC, y puede representar un origen de errores. Adicionalmente, es importante revisar las correcciones con valores de pH extremos (mayores a 12 o menores a 2), ya que éstas pueden introducir errores grandes en los resultados en los sensores de Smart Citizen (y Atlas Scientific).
 
 #### Cómo preparar el sensor
 
