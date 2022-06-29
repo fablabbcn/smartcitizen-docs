@@ -1,4 +1,4 @@
-# Use cases
+# Resources
 
 The Smart Citizen project has had the chance to be part of fantastic projects throughout it's brief history. Ranging from public interventions in urban areas to the development of DIY sensors for agriculture, the team has carried out an enormous efforts to develop a technical platform that supports a wide range of communities on the creation of participatory sensing initiatives.
 
@@ -17,3 +17,26 @@ By providing meaningful examples of novel appropriations and uses we seek to  in
 
     - [Create interfaces for your data](/Guides/data/Creating Interfaces)
     - [Use of third party sensors and adding data from other platforms](/Guides/getting started/Third%20party%20sensors)
+
+## Education
+
+--8<-- "includes/education/index.md"
+
+## Development notes
+
+--8<-- "includes/notes/index.md"
+
+## Academic publications
+
+Find below some of our own publications, or others' that have used the Smart Citizen hardware and software.
+
+--8<-- "includes/publications/index.md"
+
+### Mentions on academic publications
+
+--8<-- "includes/publications/mentions.md"
+
+## Presentations
+
+- [GROW Workshop Material - Lisbon, Portual 2019](https://hackmd.io/@oscgonfer/H15Z76GrH)
+- [iScape Summer School - Hasselt, Belgium 2019](https://docs.google.com/presentation/d/1MPvRuPvP9vKRDUhleZfvJPmNhQXuLeP7jc-VCzA7IQM/edit?usp=sharing)

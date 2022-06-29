@@ -50,13 +50,6 @@ nav:
     - Sensor Platform: Data/Sensor Platform.md
     - Smart Citizen API: Data/Smart Citizen API.md
     - Data Analysis: Data/Data Analysis.md
-  - Use cases:
-    - Main: Use cases/index.md
-    - Citizen Sensing Toolkit: Use cases/Citizen Sensing Toolkit.md
-    - Research Projects: Use cases/Research.md
-    - Education: Use cases/Education.md
-    - Additional material: Use cases/Presentations.md
-    - Friend projects: Use cases/Friends.md
   - Guides:
     - Main: Guides/index.md
     - Getting started:
@@ -85,7 +78,7 @@ nav:
       - Organise your data: Guides/data/Organise your data.md
       - Handling calibration data: Guides/data/Handling calibration data.md
       - Custom data processing: Guides/data/Custom data processing.md
-      - Model your sensor data: Guides/data/Creating Models for Sensors Calibration.md
+      # - Model your sensor data: Guides/data/Creating Models for Sensors Calibration.md
       # - Analyse your data in batch: Guides/Analyse your data in batch.md
       - Uploading data to zenodo: Guides/data/Upload data to zenodo.md
     - Deploying sensors:
@@ -114,21 +107,62 @@ nav:
       - Smart Citizen 2.0:
         - Main: Components/legacy/sck.md
         - About the CO-NO2 MOs: Components/sensors/air/SGX MICS.md
+  - Resources:
+    - Main: Resources/index.md
+    - Citizen Sensing Toolkit: Resources/Citizen Sensing Toolkit.md
+    - Research Projects: Resources/Research.md
+    - Friend projects: Resources/References.md
+    - Education:
+      - Main: Resources/Education/index.md
+      # - Technical Modules:
+      #   - Índice: Resources/Education/Technical Modules/index.md
+      #   - Datos: Resources/Education/Technical Modules/Datos/index.md
+      - Aulamar (ES):
+        - Índice: Resources/Education/AulaMar/index.md
+        - Notas generales: Resources/Education/AulaMar/General.md
+        - Instrucciones: Resources/Education/AulaMar/Instrucciones.md
+        - Guías por métrica:
+          - pH: Resources/Education/AulaMar/pH.md
+          - Oxígeno disuelto: Resources/Education/AulaMar/OD.md
+          - Conductividad: Resources/Education/AulaMar/EC.md
+          - Temperatura: Resources/Education/AulaMar/T.md
 
 theme:
+  language: 'en'
   name: 'material'
   features:
     - instant
-    - navigation.expand
-    - tabs
+    # - navigation.expand
+    - navigation.indexes
+    - navigation.instant
+    # - navigation.prune
+    # - navigation.sections
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+    - content.tooltips
   custom_dir: 'custom_theme'
   palette:
-    primary: 'blue'
-    accent: 'blue'
+    # Palette toggle for light mode
+    - scheme: default
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/lightbulb
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - scheme: slate
+      primary: black
+      accent: amber
+      toggle:
+        icon: material/lightbulb-outline
+        name: Switch to light mode
   logo: 'assets/images/logo.svg'
   favicon: 'assets/images/favicon.ico'
-  feature:
-    tabs: true
   icon:
     repo: fontawesome/brands/git-alt
 
@@ -147,43 +181,54 @@ extra:
   footer_logo: '/assets/images/eu-flag.png'
   license: 'GNU Free Documentation License'
   license_url: 'https://www.gnu.org/licenses/fdl-1.3.html'
+  fullscreen_button: true
+  # alternate:
+  #   - name: English
+  #     link: /
+  #     lang: en
+  #   - name: Español
+  #     link: /es/
+  #     lang: es  
 
-# plugins:
-  # - tags
-#     - with-pdf:
-#         author: Smart Citizen
-#         copyright: 'CC Attribution-NonCommercial-ShareAlike 4.0 International'
-#         cover: true
-#         cover_title: Smart Citizen Sensors Documentation
-#         cover_subtitle: Smart Citizen - Oct 2020
-#         toc_title: Table of contents
-#         heading_shift: false
-#         toc_level: 3
-#         ordered_chapter_level: 2
-#         excludes_children:
-#            - 'release-notes/:upgrading'
-#            - 'release-notes/:changelog'
-#         exclude_pages:
-#            - 'Components/'
-#            - 'Guides/'
-#            - 'Legacy Hardware/'
-#            - 'Sensors Analysis Framework/'
-#            - 'Sensor Platform/'
-#         convert_iframe:
-#            - src: IFRAME SRC
-#              img: POSTER IMAGE URL
-#              text: ALTERNATE TEXT
-#            - src: ...
-#         two_columns_level: 3
-#         render_js: true
-#         headless_chrome_path: headless-chromium
-#         output_path: ..
-#         enabled_if_env: ENABLE_PDF_EXPORT
-#         debug_html: true
-#         show_anchors: true
-#         verbose: true
+plugins:
+  - macros  
+  - search
+# - tags
+# - with-pdf:
+#     author: Smart Citizen
+#     copyright: 'CC Attribution-NonCommercial-ShareAlike 4.0 International'
+#     cover: true
+#     cover_title: Smart Citizen Sensors Documentation
+#     cover_subtitle: Smart Citizen - Oct 2020
+#     toc_title: Table of contents
+#     heading_shift: false
+#     toc_level: 3
+#     ordered_chapter_level: 2
+#     excludes_children:
+#        - 'release-notes/:upgrading'
+#        - 'release-notes/:changelog'
+#     exclude_pages:
+#        - 'Components/'
+#        - 'Guides/'
+#        - 'Legacy Hardware/'
+#        - 'Sensors Analysis Framework/'
+#        - 'Sensor Platform/'
+#     convert_iframe:
+#        - src: IFRAME SRC
+#          img: POSTER IMAGE URL
+#          text: ALTERNATE TEXT
+#        - src: ...
+#     two_columns_level: 3
+#     render_js: true
+#     headless_chrome_path: headless-chromium
+#     output_path: ..
+#     enabled_if_env: ENABLE_PDF_EXPORT
+#     debug_html: true
+#     show_anchors: true
+#     verbose: true
 
 markdown_extensions:
+  - md_in_html
   - admonition
   - codehilite
   - footnotes

@@ -1,3 +1,5 @@
+# Auxiliary connector
+
 The [data board](/Components/Data Board/) features a standard [Grove connector](https://wiki.seeedstudio.com/Grove_System/) where off-the-shelf modules from the same manufacturer can be connected. The connector supports an independent I2C bus by default, but by software it can be configured to support other uses (GPIO, I2C and UART). It can supply power up to 750mA, and it can be enabled or disabled by software to save power.
 
 ![](/assets/images/sck_2/SCK21_Aux.png)
@@ -61,5 +63,4 @@ Check the [Soil and water measurements](/Components/Soil and water/) documentati
 
 This is a list of supported sensors. Find also the datasheets for more information regarding accuracies:
 
-
---8<-- "Components/Supported Sensors.md"
+--8<-- "includes/en/sensors/sensors.md"

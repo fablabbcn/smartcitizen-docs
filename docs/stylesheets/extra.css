@@ -4,6 +4,38 @@
   --md-typeset-a-color:         #0019FF;
   --md-primary-fg-color--light: #0019FF;
   --md-primary-fg-color--dark:  #FFC100;
+  --md-admonition-icon--seawater: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path xmlns="http://www.w3.org/2000/svg" d="M243.524,102.978c4.363,1.972,9.284,3.142,14.394,3.142v21.62c-5.111,0-10.031-1.138-14.394-3.113  c-4.531-2.083-9.588-3.307-14.898-3.307c-5.279,0-10.364,1.224-14.838,3.307c-4.419,1.975-9.311,3.113-14.451,3.113  c-5.114,0-10.034-1.138-14.454-3.113c-4.502-2.083-9.559-3.307-14.838-3.307c-5.31,0-10.367,1.224-14.898,3.307  c-4.363,1.975-9.309,3.113-14.423,3.113s-10.06-1.138-14.426-3.113c-4.528-2.083-9.588-3.307-14.867-3.307  c-5.308,0-10.396,1.224-14.87,3.307c-4.391,1.975-9.309,3.113-14.423,3.113c-5.143,0-10.06-1.138-14.48-3.113  c-4.473-2.083-9.559-3.307-14.841-3.307c-5.279,0-10.365,1.224-14.867,3.307c-8.963,4.147-19.854,4.168-28.806,0  c-2.245-1.045-4.644-1.874-7.144-2.44v-21.649c2.5,0.567,4.899,1.395,7.144,2.44c8.99,4.186,19.821,4.157,28.806,0  c4.502-2.083,9.588-3.307,14.867-3.307c5.282,0,10.367,1.224,14.841,3.307c4.42,1.972,9.338,3.142,14.48,3.142  c5.114,0,10.032-1.17,14.423-3.142c4.474-2.083,9.562-3.307,14.87-3.307c5.279,0,10.339,1.224,14.867,3.307  c4.366,1.972,9.312,3.142,14.426,3.142c5.114,0,10.06-1.17,14.423-3.142c4.53-2.083,9.588-3.307,14.898-3.307  c5.279,0,10.336,1.224,14.838,3.307c4.419,1.972,9.34,3.142,14.454,3.142c5.139,0,10.031-1.17,14.451-3.142  c4.473-2.083,9.559-3.307,14.838-3.307C233.936,99.671,238.993,100.895,243.524,102.978z M228.626,142.926  c-5.279,0-10.365,1.224-14.838,3.307c-4.42,1.972-9.312,3.142-14.451,3.142c-5.114,0-10.035-1.17-14.454-3.142  c-4.502-2.083-9.559-3.307-14.838-3.307c-5.31,0-10.368,1.224-14.898,3.307c-4.363,1.972-9.309,3.142-14.423,3.142  c-5.114,0-10.06-1.17-14.426-3.142c-4.528-2.083-9.588-3.307-14.867-3.307c-5.308,0-10.396,1.224-14.87,3.307  c-4.391,1.972-9.309,3.142-14.423,3.142c-5.142,0-10.06-1.17-14.48-3.142c-4.474-2.083-9.559-3.307-14.841-3.307  c-5.279,0-10.365,1.224-14.867,3.307c-8.985,4.157-19.816,4.186-28.806,0C6.899,145.188,4.5,144.36,2,143.793v21.649  c2.5,0.566,4.899,1.395,7.144,2.44c8.952,4.168,19.843,4.147,28.806,0c4.502-2.083,9.588-3.307,14.867-3.307  c5.282,0,10.368,1.224,14.841,3.307c4.42,1.975,9.337,3.113,14.48,3.113c5.114,0,10.032-1.138,14.423-3.113  c4.474-2.083,9.562-3.307,14.87-3.307c5.279,0,10.339,1.224,14.867,3.307c4.366,1.975,9.312,3.113,14.426,3.113  s10.06-1.138,14.423-3.113c4.531-2.083,9.588-3.307,14.898-3.307c5.279,0,10.336,1.224,14.838,3.307  c4.42,1.975,9.34,3.113,14.454,3.113c5.14,0,10.032-1.138,14.451-3.113c4.474-2.083,9.559-3.307,14.838-3.307  c5.31,0,10.367,1.224,14.898,3.307c4.363,1.975,9.283,3.113,14.394,3.113v-21.62c-5.11,0-10.031-1.17-14.394-3.142  C238.993,144.15,233.936,142.926,228.626,142.926z M248.728,70.311c-2.604-1.008-5.95-1.621-9.538-3.21  c-5.548-2.738-10.187-6.543-10.857-12.325c-0.925-7.975,5.833-15.943,16.667-10.61c0.844-9.281-8.551-18.342-20.925-18.241  c-10.399,0.085-22.075,6.2-35.315,23.668c-4.452,5.874-14.253,17.287-33.514,17.287c-15.47,0-27.895-10.954-25.246-26.196  C132.34,27.223,149.095,21.73,158.5,28c0.77-11.753-13.078-26-32.5-26c-17.313,0-30.5,8.125-51,28.25  c-9.301,9.131-32.674,33.74-73,42.176c0,6.095,12.995,11.971,21.53,11.97c5.107,0,10.032-1.17,14.421-3.145  c4.498-2.085,9.593-3.304,14.872-3.304s10.362,1.219,14.836,3.304c4.425,1.975,9.338,3.145,14.482,3.145  c5.107,0,10.032-1.17,14.421-3.145c4.473-2.085,9.557-3.304,14.872-3.304c5.278,0,10.337,1.219,14.86,3.304  c4.364,1.975,9.313,3.145,14.433,3.145c5.107,0,10.057-1.17,14.421-3.145c4.523-2.085,9.582-3.304,14.897-3.304  c5.279,0,10.338,1.219,14.836,3.304c4.425,1.975,9.338,3.145,14.458,3.145c5.133,0,10.033-1.17,14.446-3.145  c4.474-2.085,9.557-3.304,14.836-3.304c5.315,0,10.374,1.219,14.909,3.304c4.352,1.975,9.362,3.365,14.47,3.365v-2.542  C258,79.781,256.75,73.417,248.728,70.311z"/></svg>')
+}
+
+
+
+.md-typeset .admonition.pied-piper,
+.md-typeset details.pied-piper {
+  border-color: rgb(43, 155, 70);
+}
+.md-typeset .pied-piper > .admonition-title,
+.md-typeset .pied-piper > summary {
+  background-color: rgba(43, 155, 70, 0.1);
+}
+.md-typeset .pied-piper > .admonition-title::before,
+.md-typeset .pied-piper > summary::before {
+  background-color: rgb(43, 155, 70);
+  -webkit-mask-image: var(--md-admonition-icon--pied-piper);
+          mask-image: var(--md-admonition-icon--pied-piper);
+}
+
+
+
+[data-md-color-scheme="slate"] {
+  --md-typeset-a-color:         rgb(255, 170, 0) !important;
+  /*--md-default-fg-color--light: rgb(255, 170, 0);*/
+  --md-admonition-bg-color:     #454545;
+  background-color:             #3e4042;
+  --md-default-fg-color--light:  rgb(233, 235, 252);
+}
+
+button.fullscreen_button:hover{
+    filter: invert(11%) sepia(100%) saturate(4334%) hue-rotate(237deg) brightness(111%) contrast(140%)
 }
 
 .md-typeset__scrollwrap{
@@ -23,6 +55,33 @@
     justify-content: justify;
     align-items: center;
     max-width: 90%;
+}
+
+.md-tabs.fullscreen-mode {
+    height: 0px;
+    transition: .3s ease-in-out;
+}
+
+.md-tabs:not(fullscreen-mode) {
+    transition: .3s ease-in-out;
+}
+
+.md-sidebar--primary.fullscreen-mode {
+    width: 0px;
+    transition: .3s ease-in-out;
+}
+
+.md-sidebar--secondary.fullscreen-mode {
+    width: 0px;
+    transition: .3s ease-in-out;
+}
+
+.md-sidebar--primary:not(.fullscreen-mode) {
+    transition: .3s ease-in-out;    
+}
+
+.md-sidebar--secondary:not(.fullscreen-mode) {
+    transition: .3s ease-in-out;    
 }
 
 .led {
@@ -278,4 +337,157 @@
     padding: 20px;
     color: white;
     text-shadow:1px 1px 1px #101010;
+}
+
+.md-typeset .admonition.seawater,
+.md-typeset details.seawater {
+  border-color: rgba(83, 157, 236);
+  background-color: #2354a721;
+}
+.md-typeset .seawater > .admonition-title,
+.md-typeset .seawater > summary {
+  background-color: rgba(83, 157, 236, 0.41);
+}
+.md-typeset .seawater > .admonition-title::before,
+.md-typeset .seawater > summary::before {
+  background-color: rgba(83, 157, 236);
+  -webkit-mask-image: var(--md-admonition-icon--seawater);
+          mask-image: var(--md-admonition-icon--seawater);
+}
+
+.md-typeset .seawater :is(.admonition-title, summary)::before {
+    width: 2.2rem;
+    height: 2.2rem;
+    top: 0.8em;    
+}
+
+.grid-two-columns {
+    display: grid;
+    grid-gap: 30px 10px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows:  1fr 1fr;
+}
+
+.button-metric{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    border-radius: 3px;
+    font-size: 50px;
+}
+
+.button-metric:hover{
+    transition: 0.1s ease-in-out;
+    transform: scale(1.1, 1.1);
+}
+
+.card-deck {
+    display:flex;
+    flex-flow:row wrap;
+    margin-right:-15px;
+    margin-left:-15px;
+    margin-bottom: 30px;
+}
+
+.card-deck .card {
+    flex:1 1 20%;
+    margin-right:15px;
+    margin-bottom:15px;
+    margin-left:15px;
+}   
+
+@media (max-width:900px) {
+    .card-deck .card{
+        flex:1 1 33%;
+    }
+}
+
+@media (max-width:600px) {
+    .card-deck .card{
+        flex:1 1 100%;
+    }
+}
+
+.card-deck-half{
+    display: flex;
+    flex-flow:row wrap;
+    margin-right:-15px;
+    margin-left:-15px;
+    margin-bottom: 30px;    
+}
+
+
+.card-deck-half > .card{
+    flex: 1 1 40%;
+    margin-right:15px;
+    margin-bottom:15px;
+    margin-left:15px;   
+}
+
+@media (max-width:600px) {
+    .card-deck-half .card{
+        flex:1 1 100%;
+    }
+}
+
+.card-deck-full .card-body{
+    height: 180px;
+}
+
+.card-deck-half .card-body{
+    height: 180px;
+}
+
+.card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    text-decoration: none;
+    margin: 0 0 54px;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+    background: #fff;
+    border: 1px solid #000;
+    border-radius: 3px;
+    text-decoration: none !important;
+}
+
+a.card-title{
+    text-decoration: underline;
+}
+
+h2.card-title{
+    margin-top: 10px;
+    color: black !important;
+}
+
+.card-body {
+    background: var(--md-typeset-a-color);
+    color: black !important;
+    flex:1 1 auto;
+    min-height:1px;
+    padding:1.25rem
+}
+
+.card-body:hover{
+    background: white;
+    color: var(--md-typeset-a-color) !important;
+    transition: 0.2s ease-out;
+    text-decoration: underline;
+}
+
+a.card-title: hover{
+    text-decoration: none;
+}
+
+.card-text {
+    font-size: 14px;
+    line-height: 1.4;
 }

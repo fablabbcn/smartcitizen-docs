@@ -1,5 +1,6 @@
-Citizen Sensing Toolkit
-=======================
+url_to_pdf: http://making-sense.eu/wp-content/uploads/2018/01/Citizen-Sensing-A-Toolkit.pdf
+
+# Citizen Sensing Toolkit
 
 The [Citizen Sensing Toolkit](http://making-sense.eu/wp-content/uploads/2018/01/Citizen-Sensing-A-Toolkit.pdf) was produced as part of the [Making Sense](/European%20Projects/) project, which draws on nine citizen sensing campaigns in Holland, Kosovo and Spain in 2016 and 2017. Based on that experience we developed a framework and methods and tools for citizen participation in environmental monitoring and action. Their approach is bottom-up and participatory, and we call it "citizen sensing". 
 
@@ -17,8 +18,8 @@ The [Citizen Sensing Toolkit](http://making-sense.eu/wp-content/uploads/2018/01/
 
 1. Scoping
 	* Geographical Mapping
-	*Commons Mapping
-	*Collaboration Pilot Schedule
+	* Commons Mapping
+	* Collaboration Pilot Schedule
 2. Community Building
 	* Onboarding
 	* Empathy Timeline

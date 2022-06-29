@@ -21,23 +21,12 @@ Some of the sensors selected are from Atlas Scientific, a New York-based company
 
 The sensors described below are additional to those already supported on the [Smart Citizen Kit base sensors](/Smart Citizen Kit/#sck-21). 
 
-| Metric | Usage | Probe | Driver | Calibration |
-| :-: |:-: |:-: |:-: |:-: |
-| Temperature | Soil and water|  Atlas PT-100 + PT-1000 | Atlas EZO-RTD | Not required |
-| PH | Water |  Atlas ENV-40-PH or ENV-35-PH | Atlas EZO-PH | Atlas CHEM-PH |
-| PH | Soil |  Atlas ENV-45-PH | Atlas EZO-PH | Atlas CHEM-PH |
-| Electrical Conductivity | Soil and water | Atlas ENV-40-EC-K | Atlas EZO-EC | Atlas CHEM-EC |
-| Total Dissolved Solids | Soil and water | Atlas ENV-40-EC-K | Atlas EZO-EC | Atlas CHEM-EC |
-| Salinity | Soil and water | Atlas ENV-40-EC-K | Atlas Atlas EZO-EC | Atlas Atlas CHEM-EC |
-| Specific Gravity |  Soil and water | Atlas ENV-40-EC-K | Atlas EZO-EC | Atlas CHEM-EC |
-| Dissolved Oxygen | Water | Atlas ENV-40-DO | Atlas EZO-DO | Atlas CHEM-DO |
-| Oxygen Saturation| Water | Atlas ENV-40-DO | Atlas EZO-DO | Atlas CHEM-DO |
-| Soil Moisture | Soil | Catnip Chirp! | None | Cup of water |
+--8<-- "includes/en/sensors/water.md"
 
 !!! warning "Soil and water"
     For probes that can be used in both, soil and water, make sure to [follow this procedure](https://atlas-scientific.com/files/ec_soil.pdf).
 
-### Atlas Scientific Carrier board 
+### Atlas Scientific Carrier board
 
 We recommend using [Whitebox Labs Tentacle T3](https://www.whiteboxes.ch/shop/tentacle-t3-for-raspberry-pi/) that hosts up to 3 Atlas Scientific Probes, and can be stacked with several units. It connects to the SCK via the Aux sensor connector, and needs external 5V connection, which means that it can't run on battery directly connected to the SCK without extras. If you want to make your own, before the Tentacle T3 existed we designed a [custom board](https://github.com/fablabbcn/monitoring-kit-hardware) in collaboration in with [Aquapiooners](http://aquapioneers.io).
 
