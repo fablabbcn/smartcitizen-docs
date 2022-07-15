@@ -1,4 +1,4 @@
-# Midiendo pH
+# pH
 
 ![](/assets/images/education/ph_header.jpg)
 
@@ -26,7 +26,19 @@ En el caso de los nutrientes, un cambio en el pH puede aumentar la solubilidad d
 
 	El pH del agua de mar está normalmente en valores neutro-básicos moderados entre 7.4 y 8.5.
 
-	El grado de pH presenta un rol importante en los ciclos de carbono oceánico. Hay evidencia de que la acidificación de los océanos se ha visto provocada por emisiones de CO2. El océano absorbe aproximadamente el 30% de las emisiones de CO2 de la atmósfera y, cuando esto pasa, se produce una reacción química que genera iones de hidrógeno en el agua. Una mayor concentración de iones de hidrógeno implica un pH más ácido. Como decíamos arriba, el pH determina la solubilidad y la disponibilidad de nutrientes para la vida acuática (Nitrógeno, fósforo, etc.). Es decir, no sólo indica si los seres vivos acuáticos tienen nutrientes a su disposición, sino si lo pueden absorber. Un pH ácido podría además limitar el crecimiento de corales, y otras especies que viven fijas, como las ostras o los mejillones, que en aguas ácidas tendrían más dificultad para generar sus cáscaras. 
+	El grado de pH presenta un rol importante en los ciclos de carbono oceánico. Hay evidencia de que la acidificación de los océanos se ha visto provocada por emisiones de CO2. El océano absorbe aproximadamente el 30% de las emisiones de CO2 de la atmósfera y, cuando esto pasa, se produce una reacción química que genera iones de hidrógeno en el agua. Una mayor concentración de iones de hidrógeno implica un pH más ácido. Como decíamos arriba, el pH determina la solubilidad y la disponibilidad de nutrientes para la vida acuática (Nitrógeno, fósforo, etc.). Es decir, no sólo indica si los seres vivos acuáticos tienen nutrientes a su disposición, sino si lo pueden absorber. Un pH ácido podría además limitar el crecimiento de corales, y otras especies que viven fijas, como las ostras o los mejillones, que en aguas ácidas tendrían más dificultad para generar sus cáscaras.
+
+	El océano y la fotosíntesis de sus organismos vegetales (fitoplancton en particular) absorben CO2 y producen oxígeno (O2). El océano absorbe así el 30% del CO2 del planeta y produce entre el 50% y el 75% del oxígeno que respiramos, dependiendo de las fuentes y zonas geográficas. El calentamiento del océano así como su acidificación ponen en peligro la supervivencia del fitoplancton, las praderas de fanerógamas marinas, los manglares y las marismas que son auténticas trampas de CO2. Sin embargo, el 20% de los manglares del planeta ya desaparecieron entre 1980 y 2005. Siempre más ácido, el océano también ve aparecer zonas desoxigenadas fatales para la vida marina y para los  equilibrios globales.
+
+	**Impacto de la acidez**
+
+	La acidez del océano ha sido la misma durante cien millones de años con un pH de 8,18 c. Al absorber el CO2 que producimos, ahora está en 8,08 y la tendencia se acelera. Concretamente, esto significa que el océano ya es un 30% más ácido y será un 50% más ácido en 2100. Con consecuencias directas sobre los animales marinos. 
+
+	-	Más CO2: La acidificación de los océanos dificulta que los pequeños organismos marinos atrapen CO2 al construir sus caparazones.
+
+	-	Menos coral: La acidificación de los océanos provoca el blanqueamiento y la desaparición de los corales, que albergan el 25 % de las especies de peces y sustentan a más de mil millones de personas.
+
+	-	Menos comida: La acidificación de los océanos es corrosiva para las conchas de los pequeños caracoles marinos, que son el primer nivel de la cadena alimentaria.
 
 !!! tip inline end "Curiosidades"
 
