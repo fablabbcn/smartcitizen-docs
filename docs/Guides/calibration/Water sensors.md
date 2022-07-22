@@ -79,11 +79,51 @@ After this command if you take a pH reading the result should be 7.00 (or very c
 
 ##### Low Point Calibration
 
-* Repeat the procedure with the **Low point** 4.00 solution (the red one).
+* Repeat the procedure with the **Low point** 4.00 solution (the red one). First, read the sensor multiple times until the reading is stable:
+
+    ```
+    control ph com r
+    3.98
+    control ph com r
+    3.98
+    ...
+    ```
+
+* Issue the midpoint calibration command:
+
+    ```
+    control atlas ph com cal,low,[value of pH at current temperature]
+    ```
+
+!!! info "Example at 30°C"
+
+    ```
+    control atlas ph com cal,low,4.01
+    ```
 
 ##### High Point Calibration
 
-* The same step with **High point** 10.00 calibration solution (blue)
+* The same step with **High point** 10.00 calibration solution (blue). First, read the sensor multiple times until the reading is stable:
+
+    ```
+    control ph com r
+    9.84
+    control ph com r
+    9.84
+    ...
+    ```
+
+* Issue the midpoint calibration command:
+
+    ```
+    control atlas ph com cal,high,[value of pH at current temperature]
+    ```
+
+!!! info "Example at 30°C"
+
+    ```
+    control atlas ph com cal,high,9.96
+    ```
 
 !!! info "Extra notes"
     The command `control com cal,?` can be used to check the calibration status as explained on datasheet page 52. The answers can be:
@@ -221,21 +261,21 @@ You have two options for this calibration:
     - Calibration info on page 9
     - Calibration commands on page 52)
 
-    **Example commands**
+    **Example commands** (you can put `control ox`, `control oxygen` or `control dissolved oxygen` - **however!** do not put `control dissolved` as  it will use TDS)
 
     ```
-    control dissolved com r
-    control dissolved com cal
-    control dissolved com cal,0
-    control dissolved com cal,clear
-    control dissolved com cal,?
+    control ox com r
+    control ox com cal
+    control ox com cal,0
+    control ox com cal,clear
+    control ox com cal,?
     ```
 
 !!! warning "Pressure compensation"
     If the sensor is going to be used at more than 10 meters deep into the water **Pressure compensation** should be set with:
 
     ```
-    control dissolved com P,kPaValue
+    control ox com P,kPaValue
     ```
     
     More information on [datasheet](https://www.atlas-scientific.com/_files/_datasheets/_circuit/DO_EZO_Datasheet.pdf), page 57
@@ -245,9 +285,9 @@ You have two options for this calibration:
 * Read the sensor multiple times until the reading is stable:
 
     ```
-    control dissolved com r
+    control ox com r
     13.95,50%
-    control dissolved com r
+    control ox com r
     13.76,49%
     ...
     ```
@@ -255,7 +295,7 @@ You have two options for this calibration:
 * Issue the calibration command, after this the readings will change. In this case, there is no need to add any value after `cal`. The sensor will take the current reading as the _dry point_.
 
     ```
-    control dissolved com cal
+    control ox com cal
     ```
 
 #### OPTION 2: 2-point calibration
@@ -267,9 +307,9 @@ Two point calibration is recommended if you require accurate readings below 1.0 
 * Read the sensor multiple times until the reading is stable:
 
     ```
-    control dissolved com r
+    control ox com r
     13.95,50%
-    control dissolved com r
+    control ox com r
     13.76,49%
     ...
     ```
@@ -277,7 +317,7 @@ Two point calibration is recommended if you require accurate readings below 1.0 
 * Issue the calibration command. In this case, you have to input the value of the calibration solution too, for example _0_:
 
     ```
-    control dissolved com cal,0
+    control ox com cal,0
     ```
 
 Reset your SCK and you are ready.
