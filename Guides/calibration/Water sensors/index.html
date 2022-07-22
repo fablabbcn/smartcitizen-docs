@@ -3088,12 +3088,48 @@ control ph com r
 <p>After this command if you take a pH reading the result should be 7.00 (or very close to it)</p>
 <h5 id="low-point-calibration">Low Point Calibration<a class="headerlink" href="#low-point-calibration" title="Permanent link">&para;</a></h5>
 <ul>
-<li>Repeat the procedure with the <strong>Low point</strong> 4.00 solution (the red one).</li>
+<li>
+<p>Repeat the procedure with the <strong>Low point</strong> 4.00 solution (the red one). First, read the sensor multiple times until the reading is stable:</p>
+<div class="highlight"><pre><span></span><code>control ph com r
+3.98
+control ph com r
+3.98
+...
+</code></pre></div>
+</li>
+<li>
+<p>Issue the midpoint calibration command:</p>
+<div class="highlight"><pre><span></span><code>control atlas ph com cal,low,[value of pH at current temperature]
+</code></pre></div>
+</li>
 </ul>
+<div class="admonition info">
+<p class="admonition-title">Example at 30°C</p>
+<div class="highlight"><pre><span></span><code>control atlas ph com cal,low,4.01
+</code></pre></div>
+</div>
 <h5 id="high-point-calibration">High Point Calibration<a class="headerlink" href="#high-point-calibration" title="Permanent link">&para;</a></h5>
 <ul>
-<li>The same step with <strong>High point</strong> 10.00 calibration solution (blue)</li>
+<li>
+<p>The same step with <strong>High point</strong> 10.00 calibration solution (blue). First, read the sensor multiple times until the reading is stable:</p>
+<div class="highlight"><pre><span></span><code>control ph com r
+9.84
+control ph com r
+9.84
+...
+</code></pre></div>
+</li>
+<li>
+<p>Issue the midpoint calibration command:</p>
+<div class="highlight"><pre><span></span><code>control atlas ph com cal,high,[value of pH at current temperature]
+</code></pre></div>
+</li>
 </ul>
+<div class="admonition info">
+<p class="admonition-title">Example at 30°C</p>
+<div class="highlight"><pre><span></span><code>control atlas ph com cal,high,9.96
+</code></pre></div>
+</div>
 <div class="admonition info">
 <p class="admonition-title">Extra notes</p>
 <p>The command <code>control com cal,?</code> can be used to check the calibration status as explained on datasheet page 52. The answers can be:</p>
@@ -3208,18 +3244,18 @@ control conductivity com r
 <li>Calibration info on page 9</li>
 <li>Calibration commands on page 52)</li>
 </ul>
-<p><strong>Example commands</strong></p>
-<div class="highlight"><pre><span></span><code>control dissolved com r
-control dissolved com cal
-control dissolved com cal,0
-control dissolved com cal,clear
-control dissolved com cal,?
+<p><strong>Example commands</strong> (you can put <code>control ox</code>, <code>control oxygen</code> or <code>control dissolved oxygen</code> - <strong>however!</strong> do not put <code>control dissolved</code> as  it will use TDS)</p>
+<div class="highlight"><pre><span></span><code>control ox com r
+control ox com cal
+control ox com cal,0
+control ox com cal,clear
+control ox com cal,?
 </code></pre></div>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Pressure compensation</p>
 <p>If the sensor is going to be used at more than 10 meters deep into the water <strong>Pressure compensation</strong> should be set with:</p>
-<div class="highlight"><pre><span></span><code>control dissolved com P,kPaValue
+<div class="highlight"><pre><span></span><code>control ox com P,kPaValue
 </code></pre></div>
 <p>More information on <a href="https://www.atlas-scientific.com/_files/_datasheets/_circuit/DO_EZO_Datasheet.pdf">datasheet</a>, page 57</p>
 </div>
@@ -3227,16 +3263,16 @@ control dissolved com cal,?
 <ul>
 <li>
 <p>Read the sensor multiple times until the reading is stable:</p>
-<div class="highlight"><pre><span></span><code>control dissolved com r
+<div class="highlight"><pre><span></span><code>control ox com r
 13.95,50%
-control dissolved com r
+control ox com r
 13.76,49%
 ...
 </code></pre></div>
 </li>
 <li>
 <p>Issue the calibration command, after this the readings will change. In this case, there is no need to add any value after <code>cal</code>. The sensor will take the current reading as the <em>dry point</em>.</p>
-<div class="highlight"><pre><span></span><code>control dissolved com cal
+<div class="highlight"><pre><span></span><code>control ox com cal
 </code></pre></div>
 </li>
 </ul>
@@ -3246,16 +3282,16 @@ control dissolved com r
 <ul>
 <li>
 <p>Read the sensor multiple times until the reading is stable:</p>
-<div class="highlight"><pre><span></span><code>control dissolved com r
+<div class="highlight"><pre><span></span><code>control ox com r
 13.95,50%
-control dissolved com r
+control ox com r
 13.76,49%
 ...
 </code></pre></div>
 </li>
 <li>
 <p>Issue the calibration command. In this case, you have to input the value of the calibration solution too, for example <em>0</em>:</p>
-<div class="highlight"><pre><span></span><code>control dissolved com cal,0
+<div class="highlight"><pre><span></span><code>control ox com cal,0
 </code></pre></div>
 </li>
 </ul>
