@@ -1,7 +1,7 @@
-PM Sensor Board
+PM Board
 ====================
 
-The PM Sensor Board is an expansion board which can provide additional measurements, such as two extra Plantower PMS 5003, one wire temperature sensors and extra GPIO and ADC support. This is done with a custom designed PCB with an MCU to provide I2C connectivity with the Data Board.
+The PM Board is an expansion board which can provide additional measurements, such as two extra Plantower PMS 5003, one wire temperature sensors and extra GPIO and ADC support. This is done with a custom designed PCB with an MCU to provide I2C connectivity with the Data Board.
 
 ![](https://i.imgur.com/Hqt1dXh.jpg)
 
@@ -9,7 +9,7 @@ The PM Sensor Board is an expansion board which can provide additional measureme
 
 ## Design
 
-The PM Sensor Board runs a dedicated ARM M0+ 32-bits, the same as the [Data Board](/Components/Data Board) to provide a unified hardware architecture. The board includes an higly efficient step up to provide 5V to drive the PM sensors and a disable/enable circuit to turn off the sensor by software.
+The PM Board runs a dedicated ARM M0+ 32-bits, the same as the [Data Board](/Components/Data Board) to provide a unified hardware architecture. The board includes an higly efficient step up to provide 5V to drive the PM sensors and a disable/enable circuit to turn off the sensor by software.
 
 !!! info
 	Visit the [source files](#source-files) section to download the complete schematics.

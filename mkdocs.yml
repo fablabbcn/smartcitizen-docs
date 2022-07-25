@@ -61,7 +61,8 @@ nav:
       - Debugging your sensors: Guides/getting started/Debugging your sensors.md
       - Getting firmware information: Guides/getting started/Getting firmware information.md
       - Third party sensors: Guides/getting started/Third party sensors.md
-      - Dealing with sensitive sensor readings: Guides/getting started/Dealing with sensitive sensor readings.md
+      - PM Board: Guides/getting started/PM Board.md
+      # - Dealing with sensitive sensor readings: Guides/getting started/Dealing with sensitive sensor readings.md
     - Firmware:
       - Update the firmware: Guides/firmware/Update the firmware.md
       - Edit the firmware: Guides/firmware/Edit the Firmware.md
