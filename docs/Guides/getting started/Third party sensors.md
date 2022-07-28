@@ -269,3 +269,18 @@ Using additional sensors, can be at times confusing, because we might end up in 
 
 !!! info "No graph?"
 	This time you didn't see a graph because there was no data being sent to that metric in the kit. Normally, this is not the normal behaviour, but sometimes, if you are using blueprints for more advanced configurations, you will see that not all the sensors possible are actually in the hardware!
+
+ 
+### Sensors with open leads
+
+If you are using sensors with open leads (not terminated cables), you can use [this grove to screw connector](https://www.seeedstudio.com/Grove-Screw-Terminal.html). However, you need to know how to connect the cables to it:
+
+!!! info "Examples"
+
+	If you are using a [Catnip Chirp Soil Moisture](https://wemakethings.net/chirp/) sensor:
+	
+	![](/assets/images/chirp-screw-connector.jpeg)
+
+	Or if you are using a [DF-Robot Weather proof temperature sensor](https://www.dfrobot.com/product-2160.html):
+
+	![](/assets/images/df-robot-screw-connector.jpeg)
