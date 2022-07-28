@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#third-party-sensors" class="md-skip">
+        <a href="#adding-external-sensors" class="md-skip">
           Skip to content
         </a>
       
@@ -1320,8 +1320,6 @@
         
           
         
-          
-        
       
       
         <label class="md-nav__link" for="__nav_3_2">
@@ -1500,24 +1498,37 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    Example
+  </a>
+  
+    <nav class="md-nav" aria-label="Example">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    Configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#understanding-sensor-names" class="md-nav__link">
+    Understanding sensor names
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
       
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../PM%20Board/" class="md-nav__link">
-        PM Board
-      </a>
     </li>
   
 
@@ -2759,6 +2770,33 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    Example
+  </a>
+  
+    <nav class="md-nav" aria-label="Example">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    Configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#understanding-sensor-names" class="md-nav__link">
+    Understanding sensor names
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2787,7 +2825,7 @@
 
 
 
-<h1 id="third-party-sensors">Third party sensors<a class="headerlink" href="#third-party-sensors" title="Permanent link">&para;</a></h1>
+<h1 id="adding-external-sensors">Adding External Sensors<a class="headerlink" href="#adding-external-sensors" title="Permanent link">&para;</a></h1>
 <p>This page reflects examples on how to use and implement <a href="/Components/Auxiliary/">compatible third party sensors</a>.</p>
 <div class="admonition info">
 <p class="admonition-title">What are <em>third party sensors</em>?</p>
@@ -2940,6 +2978,399 @@ Foto seeed sensors
 <div class="admonition info">
 <p class="admonition-title">Contribute it back to the community</p>
 <p>Make a pull request with your contribution back to the firmware so that other can use it!</p>
+</div>
+<p>Additional sensors can be added to the Smart Citizen Kit as seen in the <a href="/Components/Auxiliary Connector/">Supported Sensors page</a>. The <a href="/Components/boards/PM Board/">PM Board</a> is one of the options, and a powerful auxiliary board that can connect to many things on the auxiliary bus of the Smart Citizen Kit. However, it's not the only way to attach sensors.</p>
+<h2 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h2>
+<p>The example below shows how to connect the PM board to different sensors:</p>
+<p><img alt="" src="/assets/images/pm-board-example.png" /></p>
+<p>Make sure that the Grove cables that will have the I2C connections are short (max 20-30cm).
+You can also use <a href="https://www.seeedstudio.com/Grove-I2C-Hub.html">this grove hub</a> and <a href="https://www.seeedstudio.com/Grove-Screw-Terminal.html">this grove to screw connector</a>.</p>
+<h3 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">&para;</a></h3>
+<p>To use a configuration with additional sensors (with or without PM Board), and in case you want to store the data on the platform, you will need to select the appropiate blueprint for it. When doing the onboarding process, make sure you select the proper blueprint in the <a href="/Guides/getting started/Onboarding Sensors/#advanced-kit-selection">advanced sensor selection</a>. </p>
+<div class="admonition warning">
+<p class="admonition-title">Important to know which sensor you have</p>
+<p>To distinguish the sensors you have plugged in onto your kit, make sure you know what sensor model they are. You can <a href="/#understanding-sensor-names">check these instructions</a> to get around.</p>
+</div>
+<p>Some examples are shown below:</p>
+<ul>
+<li><strong>38</strong> SCK 2.1 Soil and Air (SCK 2.1 - Soil Moisture, Soil Temperature and Air)</li>
+</ul>
+<div class="table-compact"></div>
+
+<table>
+<thead>
+<tr>
+<th align="left">Sensor ID</th>
+<th align="left">Name</th>
+<th align="center">Units</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">10</td>
+<td align="left">Battery SCK</td>
+<td align="center">(%)</td>
+</tr>
+<tr>
+<td align="left">10</td>
+<td align="left">Battery SCK</td>
+<td align="center">(%)</td>
+</tr>
+<tr>
+<td align="left">55</td>
+<td align="left">SHT31 - Temperature</td>
+<td align="center">(ºC)</td>
+</tr>
+<tr>
+<td align="left">56</td>
+<td align="left">SHT31 - Humidity</td>
+<td align="center">(%)</td>
+</tr>
+<tr>
+<td align="left">58</td>
+<td align="left">MPL3115A2 - Barometric Pressure</td>
+<td align="center">(kPa)</td>
+</tr>
+<tr>
+<td align="left">112</td>
+<td align="left">AMS CCS811 - eCO2</td>
+<td align="center">(ppm)</td>
+</tr>
+<tr>
+<td align="left">113</td>
+<td align="left">AMS CCS811 - TVOC</td>
+<td align="center">(ppb)</td>
+</tr>
+<tr>
+<td align="left">14</td>
+<td align="left">BH1730FVC - Light</td>
+<td align="center">(lux)</td>
+</tr>
+<tr>
+<td align="left">87</td>
+<td align="left">PMS5003 - PM2.5</td>
+<td align="center">(ug/m3)</td>
+</tr>
+<tr>
+<td align="left">88</td>
+<td align="left">PMS5003 - PM10</td>
+<td align="center">(ug/m3)</td>
+</tr>
+<tr>
+<td align="left">89</td>
+<td align="left">PMS5003 - PM1.0</td>
+<td align="center">(ug/m3)</td>
+</tr>
+<tr>
+<td align="left">53</td>
+<td align="left">ICS43432 - Noise</td>
+<td align="center">(dBA)</td>
+</tr>
+<tr>
+<td align="left">51</td>
+<td align="left">AS EZO RTD</td>
+<td align="center">(ºC)</td>
+</tr>
+<tr>
+<td align="left">50</td>
+<td align="left">Chirp Capacitive Soil Moisture</td>
+<td align="center">(%)</td>
+</tr>
+<tr>
+<td align="left">96</td>
+<td align="left">DS18B20</td>
+<td align="center">(°C)</td>
+</tr>
+<tr>
+<td align="left">79</td>
+<td align="left">Ext SHT31 - Temperature</td>
+<td align="center">(°C)</td>
+</tr>
+<tr>
+<td align="left">80</td>
+<td align="left">Ext SHT31 - Humidity</td>
+<td align="center">(%)</td>
+</tr>
+<tr>
+<td align="left">45</td>
+<td align="left">AS EZO Electrical Conductivity</td>
+<td align="center">(µS/cm)</td>
+</tr>
+<tr>
+<td align="left">43</td>
+<td align="left">AS EZO PH</td>
+<td align="center">(-)</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>34</strong> BioPV Kit 2.1 (SCK 2.1 - Urban Board + PM + Atlas + Soil Moisture + ADC ADS1115)</li>
+</ul>
+<div class="table-compact"></div>
+
+<table>
+<thead>
+<tr>
+<th align="left">Sensor ID</th>
+<th align="left">Name</th>
+<th align="center">Units</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">10</td>
+<td align="left">Battery SCK</td>
+<td align="center">(%)</td>
+</tr>
+<tr>
+<td align="left">14</td>
+<td align="left">BH1730FVC - Light</td>
+<td align="center">(lux)</td>
+</tr>
+<tr>
+<td align="left">53</td>
+<td align="left">ICS43432 - Noise</td>
+<td align="center">(dBA)</td>
+</tr>
+<tr>
+<td align="left">55</td>
+<td align="left">SHT31 - Temperature</td>
+<td align="center">(ºC)</td>
+</tr>
+<tr>
+<td align="left">56</td>
+<td align="left">SHT31 - Humidity</td>
+<td align="center">(%)</td>
+</tr>
+<tr>
+<td align="left">58</td>
+<td align="left">MPL3115A2 - Barometric Pressure</td>
+<td align="center">(kPa)</td>
+</tr>
+<tr>
+<td align="left">87</td>
+<td align="left">PMS5003 - PM2.5</td>
+<td align="center">(ug/m3)</td>
+</tr>
+<tr>
+<td align="left">88</td>
+<td align="left">PMS5003 - PM10</td>
+<td align="center">(ug/m3)</td>
+</tr>
+<tr>
+<td align="left">89</td>
+<td align="left">PMS5003 - PM1.0</td>
+<td align="center">(ug/m3)</td>
+</tr>
+<tr>
+<td align="left">133</td>
+<td align="left">ADC_48_0</td>
+<td align="center">(V)</td>
+</tr>
+<tr>
+<td align="left">134</td>
+<td align="left">ADC_48_1</td>
+<td align="center">(V)</td>
+</tr>
+<tr>
+<td align="left">135</td>
+<td align="left">ADC_48_2</td>
+<td align="center">(V)</td>
+</tr>
+<tr>
+<td align="left">136</td>
+<td align="left">ADC_48_3</td>
+<td align="center">(V)</td>
+</tr>
+<tr>
+<td align="left">112</td>
+<td align="left">AMS CCS811 - eCO2</td>
+<td align="center">(ppm)</td>
+</tr>
+<tr>
+<td align="left">113</td>
+<td align="left">AMS CCS811 - TVOC</td>
+<td align="center">(ppb)</td>
+</tr>
+<tr>
+<td align="left">50</td>
+<td align="left">Chirp Capacitive Soil Moisture</td>
+<td align="center">(%)</td>
+</tr>
+<tr>
+<td align="left">51</td>
+<td align="left">AS EZO RTD</td>
+<td align="center">(ºC)</td>
+</tr>
+<tr>
+<td align="left">43</td>
+<td align="left">AS EZO PH</td>
+<td align="center">(-)</td>
+</tr>
+<tr>
+<td align="left">48</td>
+<td align="left">AS EZO Dissolved Oxygen</td>
+<td align="center">(mg/L)</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>31</strong> SCK 2.1 Sea Water (Smart Citizen Kit 2.1 with Sea Water Sensors)</li>
+</ul>
+<div class="table-compact"></div>
+
+<table>
+<thead>
+<tr>
+<th align="left">Sensor ID</th>
+<th align="left">Name</th>
+<th align="center">Units</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">14</td>
+<td align="left">BH1730FVC - Light</td>
+<td align="center">(lux)</td>
+</tr>
+<tr>
+<td align="left">53</td>
+<td align="left">ICS43432 - Noise</td>
+<td align="center">(dBA)</td>
+</tr>
+<tr>
+<td align="left">55</td>
+<td align="left">SHT31 - Temperature</td>
+<td align="center">(ºC)</td>
+</tr>
+<tr>
+<td align="left">56</td>
+<td align="left">SHT31 - Humidity</td>
+<td align="center">(%)</td>
+</tr>
+<tr>
+<td align="left">58</td>
+<td align="left">MPL3115A2 - Barometric Pressure</td>
+<td align="center">(kPa)</td>
+</tr>
+<tr>
+<td align="left">113</td>
+<td align="left">AMS CCS811 - TVOC</td>
+<td align="center">(ppb)</td>
+</tr>
+<tr>
+<td align="left">10</td>
+<td align="left">Battery SCK</td>
+<td align="center">(%)</td>
+</tr>
+<tr>
+<td align="left">112</td>
+<td align="left">AMS CCS811 - eCO2</td>
+<td align="center">(ppm)</td>
+</tr>
+<tr>
+<td align="left">51</td>
+<td align="left">AS EZO RTD</td>
+<td align="center">(ºC)</td>
+</tr>
+<tr>
+<td align="left">45</td>
+<td align="left">AS EZO Electrical Conductivity</td>
+<td align="center">(µS/cm)</td>
+</tr>
+<tr>
+<td align="left">122</td>
+<td align="left">AS EZO Total Dissolved Solids</td>
+<td align="center">(ppm)</td>
+</tr>
+<tr>
+<td align="left">123</td>
+<td align="left">AS EZO Salinity</td>
+<td align="center">(PSU(ppt))</td>
+</tr>
+<tr>
+<td align="left">46</td>
+<td align="left">AS EZO  Specific Gravity</td>
+<td align="center">(SG)</td>
+</tr>
+<tr>
+<td align="left">125</td>
+<td align="left">Latitude</td>
+<td align="center">(deg.)</td>
+</tr>
+<tr>
+<td align="left">126</td>
+<td align="left">Longitude</td>
+<td align="center">(deg.)</td>
+</tr>
+<tr>
+<td align="left">127</td>
+<td align="left">Altitude</td>
+<td align="center">(meters)</td>
+</tr>
+<tr>
+<td align="left">128</td>
+<td align="left">Fix</td>
+<td align="center">(fix code)</td>
+</tr>
+<tr>
+<td align="left">129</td>
+<td align="left">Horizontal Speed</td>
+<td align="center">(m/s)</td>
+</tr>
+<tr>
+<td align="left">130</td>
+<td align="left">Satellite Number</td>
+<td align="center">(number)</td>
+</tr>
+<tr>
+<td align="left">131</td>
+<td align="left">Horizontal Dilution</td>
+<td align="center">( )</td>
+</tr>
+<tr>
+<td align="left">43</td>
+<td align="left">AS EZO PH</td>
+<td align="center">(-)</td>
+</tr>
+<tr>
+<td align="left">48</td>
+<td align="left">AS EZO Dissolved Oxygen</td>
+<td align="center">(mg/L)</td>
+</tr>
+<tr>
+<td align="left">49</td>
+<td align="left">AS EZO Oxygen Saturation</td>
+<td align="center">(%)</td>
+</tr>
+<tr>
+<td align="left">42</td>
+<td align="left">DS18B20</td>
+<td align="center">(°C)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="understanding-sensor-names">Understanding sensor names<a class="headerlink" href="#understanding-sensor-names" title="Permanent link">&para;</a></h3>
+<p>Using additional sensors, can be at times confusing, because we might end up in the same kit with several sensors that measure exactly the same metric (for instance, 5 different temperature sensors!). To be able to differentiate between them, use the actual model of the hardware. An example is shown below for different temperature sensors in the same device:</p>
+<ul>
+<li>This is an air temperature sensor (a Sensirion SHT31), which you can find in the <a href="/Components/boards/Urban Board/">Urban Board 2.1</a>:</li>
+</ul>
+<p><img alt="" src="/assets/images/sensor_names_1.png" /></p>
+<ul>
+<li>This is an <strong>external air temperature sensor</strong> (also a Sensirion SHT31), which is an external probe. You can differentiate it because is an external sensor:</li>
+</ul>
+<p><img alt="" src="/assets/images/sensor_names_2.png" /></p>
+<ul>
+<li>This is an <strong>external temperature sensor</strong> (this time a MAXIM DS18B20), which is an external probe, and waterproof - not only meant for air measurements (but also water or soil):</li>
+</ul>
+<p><img alt="" src="/assets/images/sensor_names_3.png" /></p>
+<ul>
+<li>This is also <strong>external temperature sensor</strong> (this time a Atlas EZO RTD - a PT1000 probe), which is an external probe, and waterproof - not only meant for air measurements (but also water or soil):</li>
+</ul>
+<p><img alt="" src="/assets/images/sensor_names_4.png" /></p>
+<div class="admonition info">
+<p class="admonition-title">No graph?</p>
+<p>This time you didn't see a graph because there was no data being sent to that metric in the kit. Normally, this is not the normal behaviour, but sometimes, if you are using blueprints for more advanced configurations, you will see that not all the sensors possible are actually in the hardware!</p>
 </div>
 
               
