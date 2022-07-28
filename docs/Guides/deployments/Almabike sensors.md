@@ -116,7 +116,7 @@ The LED serves as an indication of the battery status. If the LED is flashing or
 _Remember that in addition to these colors you will have the state color of the kit: configuration, network and sd._
 
 !!!info "More details"
-    Find more details about power management under the [data board section of the documentation](/Components/Data%20Board/#power-management)
+    Find more details about power management under the [data board section of the documentation](/Smart Citizen Kit/#power-management)
 
 ## Data Acquisition
 
@@ -148,8 +148,8 @@ In the case of **the Almabike project**, the sensors store data internally in th
 
 Data from the sensors can be accessed in four ways:
 
-- Using the **SD card**. Follow this [guide](https://docs.smartcitizen.me/Components/Firmware/#storage) to understand the data formats
-- Downloading data from Smart Citizen Platform, following [this guide](https://docs.smartcitizen.me/Guides/Downloading%20the%20Data/)
+- Using the **SD card**. Follow this [guide](/Components/Firmware/#storage) to understand the data formats
+- Downloading data from Smart Citizen Platform, following [this guide](/Guides/Downloading%20the%20Data/)
 - Using the API calls, with information [here](https://developer.smartcitizen.me/#get-historical-readings)
 - Using Python to interact directly with the API. There is a python package available [here](https://github.com/fablabbcn/smartcitizen-data-framework) and an example on how to do so [here](https://github.com/fablabbcn/smartcitizen-data-framework/tree/master/examples)
 
@@ -192,7 +192,7 @@ The first step is to connect the battery. The kit will light in red (configurati
 
 ![](assets/almabike_start.png)
 
-After the configuration process, data will be available on the SmartCitizen platform. You can explore the data there or download it using the `CSV Download` option (guide [here](https://docs.smartcitizen.me/Guides/Downloading%20the%20Data/))
+After the configuration process, data will be available on the SmartCitizen platform. You can explore the data there or download it using the `CSV Download` option (guide [here](/Guides/Downloading%20the%20Data/))
 
 ![](assets/almabike_csv.png)
 
