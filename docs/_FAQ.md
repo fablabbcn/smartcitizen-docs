@@ -36,7 +36,7 @@ Here are the ports and protocols used by the Kit to communicate with the platfor
 
 | Service | Function  | Protocol | Port   | Address                                              |
 | ------- | --------- | -------- | ------ | ---------------------------------------------------- |
-| MQTT    | Send Data | TCP      | 80/443 | mqtt.smartcitizen.me |
+| MQTT    | Send Data | TCP      | 1883 (80 legacy firmware)   | mqtt.smartcitizen.me |
 | NTP     | Sync Time | UDP      | 80     | ntp.smartcitizen.me  |
 
 _Notice we use custom ports already to avoid some firewall restrictions_
