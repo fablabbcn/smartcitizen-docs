@@ -21,7 +21,7 @@ Some of the sensors selected are from Atlas Scientific, a New York-based company
 
 The sensors described below are additional to those already supported on the [Smart Citizen Kit base sensors](/Smart Citizen Kit/#sck-21). 
 
---8<-- "includes/en/sensors/water.md"
+{{ get_snippet_rel("docs/includes/en/sensors/water.md") }}
 
 !!! warning "Soil and water"
     For probes that can be used in both, soil and water, make sure to [follow this procedure](https://atlas-scientific.com/files/ec_soil.pdf).

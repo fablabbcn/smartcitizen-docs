@@ -194,6 +194,9 @@ control conductivity com K,?
 
     The data is presented in order and comma separated **EC,TDS,S,SG**, for instance **0.00,0,0.00,1.000**
 
+!!! warning "Readings are 0?"
+    It is normal that if the probe type has been changed (for instance, you are using a K10 probe), that the readings are 0 after setting the probe type.
+
 ##### Dry calibration
 
 Follow the steps below with the dry sensor before introducing it to the calibration solutions. You need to do this step even if the readings in dry state are 0.
@@ -253,7 +256,9 @@ After this steps the **two point calibration is complete** and the readings **wi
 You have two options for this calibration:
 
 1. Single point calibration (dry point)
-2. 2-point calibration (dry point and 0 mg/L point)
+2. 2-point calibration (dry point and 0 mg/l point) - **only if you need accurate readings below 1mg/l**
+
+**Make sure you have followed the [probe reconditioning](/Guides/deployments/Water sensors/#dissolved-oxygen) before proceeding with this calibration.**
 
 !!! info "Datasheet"
     Here you can find the [datasheet](https://www.atlas-scientific.com/_files/_datasheets/_circuit/DO_EZO_Datasheet.pdf):
@@ -282,6 +287,9 @@ You have two options for this calibration:
 
 #### OPTION 1: Single point calibration
 
+!!! warning "First calibrate, compensate later"
+    Temperature, salinity and pressure compensation values have no effect on calibration.
+
 * Read the sensor multiple times until the reading is stable:
 
     ```
@@ -298,9 +306,18 @@ You have two options for this calibration:
     control ox com cal
     ```
 
+!!! danger "Be careful"
+    If at any point of the calibration process you see akward readings (for instance, that using a 0mg/l solution for dissolved oxygen you see weirdly high values), it is better to start over. For this, proceed with:
+
+    ```
+    control ox com cal,clear
+    ```
+
+    And start from the beginning.
+
 #### OPTION 2: 2-point calibration
 
-Two point calibration is recommended if you require accurate readings below 1.0 mg/L. After completing the single point calibration procedure put the probe in the calibration solution.
+**Two point calibration is recommended if you require accurate readings below 1.0 mg/l.** After completing the single point calibration procedure put the probe in the calibration solution.
 
 ![](https://i.imgur.com/icxCaOZ.png)
 
