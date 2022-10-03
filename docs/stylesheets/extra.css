@@ -10,6 +10,7 @@
 div.table-compact + .md-typeset__scrollwrap th, 
 div.table-compact + .md-typeset__scrollwrap td {
     padding: .5em 1.25em;
+    font-size: .62rem;
 }
 
 .md-typeset .admonition.pied-piper,
