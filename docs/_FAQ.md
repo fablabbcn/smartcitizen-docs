@@ -89,6 +89,6 @@ We are working on a new dynamic battery calculator. Currently, you can find some
 
 No. They cannot be exposed to water, high humidity, corrosive environments, or moisture. Always use an enclosure when exposed outdoors. Highly humid environments can provoke corrosion in the sensors (symptom of this is blue powder near the sensors in the urban board). To help protect them, we recommend using _transparent nail polish_ in these areas. **Do not obscure the areas in red**:
 
-![](assets/images/nail_polish_areas.png)
+![](/assets/images/nail_polish_areas.png)
 
 If you are using any enclosure from [the repository](https://github.com/fablabbcn/smartcitizen-enclosures/tree/master/SmartCitizen%20Outdoor%20Cases%20V2.0-2.1), we also recommend using a filtration foam (PPI-20/10) like [this one](http://www.infiltro.es/index.php/filtro-de-aire-2/prefiltros/item/foam). More info [here](https://forum.smartcitizen.me/t/rain-tests-for-the-sck/1300)
