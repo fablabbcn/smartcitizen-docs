@@ -20,21 +20,21 @@ By providing meaningful examples of novel appropriations and uses we seek to  in
 
 ## Education
 
---8<-- "includes/education/index.md"
+{{ get_snippet_rel("docs/includes/en/education/index.md")}}
 
 ## Development notes
 
---8<-- "includes/notes/index.md"
+{{ get_snippet_rel("docs/includes/en/notes/index.md")}}
 
 ## Academic publications
 
 Find below some of our own publications, or others' that have used the Smart Citizen hardware and software.
 
---8<-- "includes/publications/index.md"
+{{ get_snippet_rel("docs/includes/en/publications/index.md") }}
 
 ### Mentions on academic publications
 
---8<-- "includes/publications/mentions.md"
+{{ get_snippet_rel("docs/includes/en/publications/mentions.md") }}
 
 ## Presentations
 

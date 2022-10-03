@@ -86,12 +86,13 @@ nav:
       - Smart Citizen Kit: Guides/deployments/Deploying SCK.md
       - iSCAPE Station V1: Guides/deployments/Deploying iSCAPE Station V1.md
       - iSCAPE Station V2: Guides/deployments/Deploying iSCAPE Station V2.md
-      - Smart Citizen Station: Guides/deployments/Deploying Smart Citizen Station.md
+      - Smart Citizen Station V3: Guides/deployments/Deploying Smart Citizen Station.md
+      - Smart Citizen Water Station: Guides/deployments/Water sensors.md
+      - Mobile sensors (GPS): Guides/deployments/Almabike sensors.md
+    - Using Auxiliaries:
       - Smart Citizen Connectivity Units: Guides/deployments/Installing Connectivity Units.md
       - Smart Citizen Power Supply: Guides/deployments/Using the power supply.md
       - Solar Panel: Guides/deployments/Installing solar panel.md
-      - Almabike sensors: Guides/deployments/Almabike sensors.md
-      - Water sensors: Guides/deployments/Water sensors.md
       - OLED display: Guides/deployments/OLED display.md
     - Replacements:
       - Replacing PM Sensors: Guides/replacements/Replacing PM Sensors.md
@@ -192,7 +193,7 @@ extra:
   #     lang: es  
 
 plugins:
-  - macros  
+  - macros
   - search
 # - tags
 # - with-pdf:
@@ -247,8 +248,8 @@ markdown_extensions:
   - pymdownx.magiclink
   - pymdownx.mark
   - pymdownx.smartsymbols
-  - pymdownx.snippets:
-      base_path: 'docs'
+  # - pymdownx.snippets:
+  #     base_path: 'docs'
   - pymdownx.superfences
   - pymdownx.tasklist:
       custom_checkbox: true

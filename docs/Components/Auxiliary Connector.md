@@ -63,4 +63,4 @@ Check the [Soil and water measurements](/Components/Soil and water/) documentati
 
 This is a list of supported sensors. Find also the datasheets for more information regarding accuracies:
 
---8<-- "includes/en/sensors/sensors.md"
+{{ get_snippet_rel("docs/includes/en/sensors/sensors.md") }}

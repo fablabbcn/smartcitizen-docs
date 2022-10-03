@@ -12,4 +12,4 @@ tags:
 
 Los sensores soportados para este sistema son:
 
---8<-- "includes/es/sensors/water.md"
+{{ get_snippet_rel("docs/includes/es/sensors/water.md")}}

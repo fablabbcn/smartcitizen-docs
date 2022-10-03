@@ -8,7 +8,7 @@ Here there is a compilation of projects that we have done around education, dire
 ![](/assets/images/doit.png)
 _Image credit: [DOIT](https://doit-europe.net)_
 
---8<-- "includes/education/index.md"
+{{ get_snippet_rel('docs/includes/en/education/index.md')}}
 
 ![](/assets/images/learningbydoing.png)
 _Image credit: [DOIT](https://doit-europe.net)_
