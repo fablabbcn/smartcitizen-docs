@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#macro-syntax-error" class="md-skip">
+        <a href="#model-your-sensor-data" class="md-skip">
           Skip to content
         </a>
       
@@ -2680,6 +2680,56 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ordinary-least-squares-example" class="md-nav__link">
+    Ordinary Least Squares example
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#machine-learning-example" class="md-nav__link">
+    Machine learning example
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#model-comparison" class="md-nav__link">
+    Model comparison
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#results" class="md-nav__link">
+    Results
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#export-the-models" class="md-nav__link">
+    Export the models
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    References
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2706,10 +2756,390 @@
 
 
 
-<h1 id="macro-syntax-error"><em>Macro Syntax Error</em><a class="headerlink" href="#macro-syntax-error" title="Permanent link">&para;</a></h1>
-<p><em>Line 260 in Markdown file:</em> <strong>unexpected char '\' at 15844</strong> 
-<div class="highlight"><pre><span></span><code><span class="n">R</span> <span class="o">=</span> <span class="p">{{</span><span class="mi">1</span> \<span class="n">over</span> <span class="n">N</span><span class="p">}</span> \<span class="n">sum_</span><span class="p">{</span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">}</span><span class="o">^</span><span class="n">n</span> <span class="p">(</span><span class="n">m_n</span> <span class="o">-</span> \<span class="n">overline</span> <span class="n">m</span><span class="p">)(</span> <span class="n">r_n</span> <span class="o">-</span> \<span class="n">overline</span> <span class="n">r</span> <span class="p">)</span> \<span class="n">over</span> \<span class="n">sigma_m</span> \<span class="n">sigma_r</span><span class="p">}</span>
-</code></pre></div></p>
+<h1 id="model-your-sensor-data">Model your sensor data<a class="headerlink" href="#model-your-sensor-data" title="Permanent link">&para;</a></h1>
+<p>In this section, we will detail how to develop models for our sensors. We will try two different approaches for model calibration:</p>
+<ul>
+<li><strong>Ordinary Least Squares (OLS)</strong>: based on the <a href="http://www.statsmodels.org/stable">statsmodels package</a>, the model is able to ingest an expression referring to the kit's available data and perform OLS regression over the defined training and test data</li>
+<li><strong>Machine Learning (LSTM)</strong>: based on the <a href="https://keras.io/">keras package</a> using <a href="https://www.tensorflow.org/">tensorflow</a> in the backend. This framework can be used to train larger collections of data, among others:<ul>
+<li>Robust to noise</li>
+<li>Learn non-linear relationships</li>
+<li>Aware of temporal dependence</li>
+</ul>
+</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Load some data first</p>
+<p>We will need to load the data first, for this, check the guides to <a href="/Guides/Organise your data">organise the data</a> and to <a href="/Guides/Organise your data/#load-the-data">load it</a></p>
+</div>
+<h2 id="ordinary-least-squares-example">Ordinary Least Squares example<a class="headerlink" href="#ordinary-least-squares-example" title="Permanent link">&para;</a></h2>
+<p>Let's delve first into an OLS example. </p>
+<div class="admonition info">
+<p class="admonition-title">Info<p>You can follow this example using this <a href="https://github.com/fablabbcn/smartcitizen-iscape-data/blob/master/examples/model_creation.ipynb">notebook</a></p>
+</p>
+</div>
+<div class="highlight"><pre><span></span><code>from src.models.model import model_wrapper
+
+# Input model description
+model_description_ols = {&quot;model_name&quot;: &quot;OLS_UCD&quot;,
+                    &quot;model_type&quot;: &quot;OLS&quot;,
+                    &quot;model_target&quot;: &quot;ALPHASENSE&quot;,
+                    &quot;data&quot;: {&quot;train&quot;: {&quot;2019-03_EXT_UCD_URBAN_BACKGROUND_API&quot;: {&quot;devices&quot;: [&quot;5262&quot;],
+                                                                               &quot;reference_device&quot;: &quot;CITY_COUNCIL&quot;}},
+                            &quot;test&quot;: {&quot;2019-03_EXT_UCD_URBAN_BACKGROUND_API&quot;: {&quot;devices&quot;: [&quot;5565&quot;],
+                                                                               &quot;reference_device&quot;: &quot;CITY_COUNCIL&quot;}},
+                            &quot;features&quot;:  {&quot;REF&quot;: &quot;NO2_CONV&quot;,
+                                            &quot;A&quot;: &quot;GB_2W&quot;,
+                                            &quot;B&quot;: &quot;GB_2A&quot;,
+                                            &quot;C&quot;: &quot;HUM&quot;},
+                            &quot;data_options&quot;: {&quot;frequency&quot;: &#39;1Min&#39;,
+                                            &quot;clean_na&quot;: True,
+                                            &quot;clean_na_method&quot;: &quot;drop&quot;,
+                                            &quot;min_date&quot;: None,
+                                            &quot;frequency&quot;: &quot;1Min&quot;,
+                                            &quot;max_date&quot;: &#39;2019-01-15&#39;},
+                            },
+                    &quot;hyperparameters&quot;: {&quot;ratio_train&quot;: 0.75},
+                    &quot;model_options&quot;: {&quot;session_active_model&quot;: True,
+                                &quot;show_plots&quot;: True,
+                                &quot;export_model&quot;: False,
+                                &quot;export_model_file&quot;: False,
+                                &quot;extract_metrics&quot;: True}
+                    }
+</code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">More info</p>
+<p>Check the guide on <a href="/Sensor Analysis Framework/guides/Analyse your data in batch/#model">batch analysis</a> for a definition of each parameter.</p>
+</div>
+<p>We have to keep at least the key <code>REF</code> within the <code>"features"</code>, but the rest can be renamed at will. We can also input whichever <code>formula_expression</code> for the model regression in the following format:</p>
+<div class="highlight"><pre><span></span><code>&quot;expression&quot; : &#39;REF ~ A + np.log(B)&#39;
+</code></pre></div>
+<p>Which converts to:</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+REF = A + log(B)
+</div>
+<script type="math/tex; mode=display">
+REF = A + log(B)
+</script>
+</div>
+<p>We can also define the ratio between the train and test dataset and the minimum dates to use within the datasets (globally):</p>
+<div class="highlight"><pre><span></span><code>min_date = &#39;2018-08-31 00:00:00&#39;
+max_date = &#39;2018-09-06 00:00:00&#39;
+
+# Important that this is a float, don&#39;t forget the .
+&quot;hyperparameters&quot;: {&quot;ratio_train&quot;: 0.75} 
+</code></pre></div>
+<p>If we run this cell, we will perform model calibration, with the following output:</p>
+<div class="highlight"><pre><span></span><code>                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                    REF   R-squared:                       0.676
+Model:                            OLS   Adj. R-squared:                  0.673
+Method:                 Least Squares   F-statistic:                     197.5
+Date:                Thu, 06 Sep 2018   Prob (F-statistic):          1.87e-135
+Time:                        12:25:17   Log-Likelihood:                 1142.9
+No. Observations:                 575   AIC:                            -2272.
+Df Residuals:                     568   BIC:                            -2241.
+Df Model:                           6                                         
+Covariance Type:            nonrobust                                         
+==================================================================================
+                     coef    std err          t      P&gt;|t|      [0.025      0.975]
+----------------------------------------------------------------------------------
+Intercept         -3.7042      0.406     -9.133      0.000      -4.501      -2.908
+A                  0.0011      0.000      2.953      0.003       0.000       0.002
+np.log(B) -3.863e-05   7.03e-06     -5.496      0.000   -5.24e-05   -2.48e-05
+
+==============================================================================
+Omnibus:                        7.316   Durbin-Watson:                   0.026
+Prob(Omnibus):                  0.026   Jarque-Bera (JB):               10.245
+Skew:                          -0.076   Prob(JB):                      0.00596
+Kurtosis:                       3.636   Cond. No.                     4.29e+05
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 4.29e+05. This might indicate that there are
+strong multicollinearity or other numerical problems.
+</code></pre></div>
+<p>This output brings a lot of information. First, we find what the dependent variable is, in our case always <code>'REF'</code>. The type of model used and some general information is shown below that.</p>
+<p>More statistically important information is found in the rest of the output. Some key data:</p>
+<ul>
+<li><em>R-squared and adjusted R-squared</em>: this is our classic correlation coefficient or R<sup>2</sup>. The adjusted one aims to correct the model overfitting by the inclusion of too many variables, and for that introduces a penalty on the number of variables included</li>
+<li>Below, we can find a summary of the <em>model coefficients</em> applied to all the variables and the P&gt;|t| term, which indicates the significance of the term introduced in the model</li>
+<li><em>Model quality diagnostics</em> are also indicated. Kurtosis and skewness are metrics for determining the distribution of the residuals. They indicate how the residuals of the model resemble a normal distribution. Below, we will review more on diagnosis plots. The <a href="https://en.wikipedia.org/wiki/Jarque–Bera_test">Jarque Bera test</a> indicates if the residuals are normally distributed (the null hypothesis is a joint hypothesis of the skewness being zero and the excess kurtosis being zero), and a value of zero indicates that the data is normally distributed. If the Jarque Bera test is valid (in the case above it isn't), the Durbin Watson is applicable in order to check for autocorrelation of the residuals (meaning that the residuals of our model are related among themselves and that we haven't captured some characteristics of our data with the tested model).</li>
+</ul>
+<p>Finally, there is a warning at the bottom indicating that the condition number is large. It suggests we might have multicollinearity problems in our model, which means that some of the independent variables might be correlated among themselves and that they are probably not necessary.</p>
+<p>Our function also depicts the results in a graphical way for us to see the model itself. It will show the training and test datasets (as <code>Reference Train</code> and <code>Reference Test</code> respectively), and the prediction results. The mean and absolute confidence intervals for 95% confidence are also shown:</p>
+<p><img alt="" src="https://i.imgur.com/M9TBeBT.png" /></p>
+<p>Now we can look at some other model quality plots. If we run the cell below, we will obtain an adaptation of the summary plots from <strong>R</strong>:</p>
+<div class="highlight"><pre><span></span><code>from linear_regression_utils import modelRplots
+%matplotlib inline
+
+modelRplots(model, dataTrain, dataTest)
+</code></pre></div>
+<p>Let's review the output step by step:</p>
+<ul>
+<li><strong>Residual vs Fitted</strong> and <strong>Scale Location plot</strong>: these plots represents the model <a href="https://en.wikipedia.org/wiki/Heteroscedasticity">heteroscedasticity </a>, which is a representation of the residuals versus the fitted values. This plot is helpful to check if the errors are distributed homogeneously and that we are not penalising high, low, or other values. There is also a red line which represents the average trend of this distribution which, we want it to be horizontal. For more information visit <a href="https://stats.stackexchange.com/questions/76226/interpreting-the-residuals-vs-fitted-values-plot-for-verifying-the-assumptions">here</a> and <a href="https://stats.stackexchange.com/questions/52089/what-does-having-constant-variance-in-a-linear-regression-model-mean/52107#52107">here</a>. Clearly, in this model we are missing something:</li>
+</ul>
+<p><img alt="" src="https://i.imgur.com/QR2Ya4r.png" /></p>
+<ul>
+<li>
+<p><strong>Normal QQ</strong>: the qq-plot is a representation of the kurtosis and skewness of the residuals distribution. If the data were well described by a normal distribution, the values should be about the same, i.e.: on the diagonal (red line). For example, in our case the model presents a deviation on both tails, indicating skewness. In general, a simple rubric to interpret a qq-plot is that if a given tail twists off counterclockwise from the reference line, there is more data in that tail of your distribution than in a theoretical normal, and if a tail twists off clockwise there is less data in that tail of your distribution than in a theoretical normal. In other words:</p>
+<ul>
+<li>if both tails twist counterclockwise we have heavy tails (leptokurtosis),</li>
+<li>if both tails twist clockwise, we have light tails (platykurtosis),</li>
+<li>if the right tail twists counterclockwise and the left tail twists clockwise, we have right skew</li>
+<li>if the left tail twists counterclockwise and the right tail twists clockwise, we have left skew</li>
+</ul>
+</li>
+</ul>
+<p><img alt="" src="https://i.imgur.com/4ldXI80.png" /></p>
+<ul>
+<li>
+<p><strong>Residuals vs Leverage</strong>: this plot is probably the most complex of them all. It shows how much leverage one single point has on the whole regression. It can be interpreted as how the average line that passes through all the data (that we are calculating with the OLS) can be modified by 'far' points in the distribution, for example, outliers. This leverage can be seen as how much a single point is able to pull down or up the average line. One way to think about whether or not the results are driven by a given data point is to calculate how far the predicted values for your data would move if your model were fit without the data point in question. This calculated total distance is called Cook's distance. We can have four cases (more information from source, <a href="https://stats.stackexchange.com/questions/58141/interpreting-plot-lm#65864">here</a>)</p>
+<ul>
+<li>everything is fine (the best)</li>
+<li>high-leverage, but low-standardized residual point</li>
+<li>low-leverage, but high-standardized residual point</li>
+<li>high-leverage, high-standardized residual point (the worst)</li>
+</ul>
+</li>
+</ul>
+<p><img alt="" src="https://i.imgur.com/BXsS6tE.png" /></p>
+<p>In this case, we see that our model has some points with higher leverage but low residuals (probably not too bad) and that the higher residuals are found with low leverage, which means that our model is safe to outliers. If we run this function without the filtering, some outliers will be present and the plot turns into:</p>
+<p><img alt="" src="https://i.imgur.com/NQLA4lw.png" /></p>
+<p>Finally, we can export our model and generate some metrics to evaluate the results.</p>
+<h2 id="machine-learning-example">Machine learning example<a class="headerlink" href="#machine-learning-example" title="Permanent link">&para;</a></h2>
+<p>Machine learning algorithms promise a better representation of the sensor's data, being able to learn robust non-linear models and sequential dependencies. For that reason, we have implemented toolset based on <a href="https://keras.io/">keras</a> with <a href="https://www.tensorflow.org/">Tensorflow</a> backend, in order to train sequential models <sup id="fnref:third"><a class="footnote-ref" href="#fn:third">3</a></sup>.</p>
+<div class="highlight"><pre><span></span><code>model_description_rf = {&quot;model_name&quot;: &quot;RF_UCD&quot;,
+                    &quot;model_type&quot;: &quot;RF&quot;,
+                    &quot;model_target&quot;: &quot;ALPHASENSE&quot;,
+                    &quot;data&quot;: {&quot;train&quot;: {&quot;2019-03_EXT_UCD_URBAN_BACKGROUND_API&quot;: {&quot;devices&quot;: [&quot;5262&quot;],
+                                                                               &quot;reference_device&quot;: &quot;CITY_COUNCIL&quot;}},
+                            &quot;test&quot;: {&quot;2019-03_EXT_UCD_URBAN_BACKGROUND_API&quot;: {&quot;devices&quot;: [&quot;5565&quot;],
+                                                                               &quot;reference_device&quot;: &quot;CITY_COUNCIL&quot;}},
+                            &quot;features&quot;:  {&quot;REF&quot;: &quot;NO2_CONV&quot;,
+                                            &quot;A&quot;: &quot;GB_2W&quot;,
+                                            &quot;B&quot;: &quot;GB_2A&quot;,
+                                            &quot;C&quot;: &quot;HUM&quot;},
+                            &quot;data_options&quot;: {&quot;target_raster&quot;: &#39;1Min&#39;,
+                                            &quot;clean_na&quot;: True,
+                                            &quot;clean_na_method&quot;: &quot;drop&quot;,
+                                            &quot;min_date&quot;: None,
+                                            &quot;frequency&quot;: &quot;1Min&quot;,
+                                            &quot;max_date&quot;: &#39;2019-01-15&#39;},
+                            },
+                    &quot;hyperparameters&quot;: {&quot;ratio_train&quot;: 0.75, 
+                                        &quot;min_samples_leaf&quot;: 2,
+                                        &quot;max_features&quot;: None,
+                                       &quot;n_estimators&quot;: 100,
+                                        &quot;shuffle_split&quot;: True},
+                    &quot;model_options&quot;: {&quot;session_active_model&quot;: True,
+                                &quot;show_plots&quot;: True,
+                                &quot;export_model&quot;: False,
+                                &quot;export_model_file&quot;: False,
+                                &quot;extract_metrics&quot;: True}
+                    }
+</code></pre></div>
+<p>Output:</p>
+<div class="highlight"><pre><span></span><code>Using TensorFlow backend.
+...
+Beginning Model RF_UCD
+Model type RF
+Preparing dataframe model for test 2019-03_EXT_UCD_URBAN_BACKGROUND_API
+Data combined successfully
+Creating models session in recordings
+Dataframe model generated successfully
+Training Model RF_UCD...
+Training done
+Variable: HUM_5262 Importance: 0.4
+Variable: GB_2W_5262 Importance: 0.31
+Variable: GB_2A_5262 Importance: 0.3
+Calculating Metrics...
+Metrics Summary:
+Metric                  Train   Test 
+avg_ref                 16.648  15.861
+avg_est                 16.666  16.000
+sig_ref                 11.438  10.584
+sig_est                 9.493   9.404
+bias                    0.019   0.139
+normalised_bias         0.002   0.013
+sigma_norm              0.830   0.888
+sign_sigma              -1.000  -1.000
+rsquared                0.799   0.879
+RMSD                    5.124   3.677
+RMSD_norm_unb           0.453   0.351
+No specifics for RF type
+Preparing devices from prediction
+Channel 5262_RF_UCD prediction finished
+</code></pre></div>
+<p>This will also output some nice plots for visually checking our model performance:</p>
+<p><img alt="" src="https://i.imgur.com/xEuVJVC.png" /></p>
+<p>And some extras about variable importance:</p>
+<p><img alt="" src="https://i.imgur.com/wyRi9dp.png" /></p>
+<h2 id="model-comparison">Model comparison<a class="headerlink" href="#model-comparison" title="Permanent link">&para;</a></h2>
+<p>Here is a visual comparison of both models:</p>
+<p><img alt="" src="https://i.imgur.com/56eVx5P.png" /></p>
+<p>It is very difficult though, to know which one is performing better. Let's then evaluate and compare our models. In order to evaluate it's metrics, we will be using the following principles<sup id="fnref:first"><a class="footnote-ref" href="#fn:first">1</a></sup><sup id="fnref:second"><a class="footnote-ref" href="#fn:second">2</a></sup>:</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>In all of the expressions below, the letter <em>m</em> indicates the model field, <em>r</em> indicates the reference field. Overbar is average and <span class="arithmatex"><span class="MathJax_Preview">\sigma</span><script type="math/tex">\sigma</script></span> is the standard deviation.</p>
+</div>
+<p><strong>Linear correlation Coefficient</strong>
+A measure of the agreement between two signals:</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+R = {{1 \over N} \sum_{i=0}^n (m_n - \overline m)( r_n - \overline r ) \over \sigma_m \sigma_r}
+</div>
+<script type="math/tex; mode=display">
+R = {{1 \over N} \sum_{i=0}^n (m_n - \overline m)( r_n - \overline r ) \over \sigma_m \sigma_r}
+</script>
+</div>
+<p>The correlation coefficient is bounded by the range <span class="arithmatex"><span class="MathJax_Preview">-1 \le R \le 1</span><script type="math/tex">-1 \le R \le 1</script></span>. However, it is difficult to discern information about the differences in amplitude between two signals from R alone.</p>
+<p><strong>Normalized standard deviation</strong>
+A measure of the differences in amplitude between two signals:</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\sigma * = {\sigma_m \over \sigma_r}
+</div>
+<script type="math/tex; mode=display">
+\sigma * = {\sigma_m \over \sigma_r}
+</script>
+</div>
+<p><strong><em>unbiased</em> Root-Mean-Square Difference</strong>
+A measure of how close the modelled points fall to teach other:</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+RMSD' = \Bigl( {1 \over N} \sum_{n=1}^N [(m_n - \overline m)-(r_n - \overline r)]^2  \Bigr)^{0.5}
+</div>
+<script type="math/tex; mode=display">
+RMSD' = \Bigl( {1 \over N} \sum_{n=1}^N [(m_n - \overline m)-(r_n - \overline r)]^2  \Bigr)^{0.5}
+</script>
+</div>
+<p><strong>Potential Bias</strong>
+Difference between the means of two fields:
+$$
+B = \overline m - \overline r
+$$
+<strong>Total RMSD</strong>
+A measure of the average magnitude of difference:
+$$
+RMSD = \Bigl( {1 \over N} \sum_{n=1}^N (m_n - r_n)^2  \Bigr)^{0.5}
+$$</p>
+<p>In other words, the unbiased RMSD (RMSD') is equal to the total RMSD if there is no bias between the model and the reference fields (i.e. B = 0). The relationship between both reads:</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+RMSD^2 = B^2 + RMSD'^2
+</div>
+<script type="math/tex; mode=display">
+RMSD^2 = B^2 + RMSD'^2
+</script>
+</div>
+<p>In contrast, the unbiased RMSD may be conceptualized as an overall measure of the agreement between the aplitude (<span class="arithmatex"><span class="MathJax_Preview">\sigma</span><script type="math/tex">\sigma</script></span>) and phase (<span class="arithmatex"><span class="MathJax_Preview">\phi</span><script type="math/tex">\phi</script></span>) of two temporal patterns. For this reason, the correlation coefficient (<span class="arithmatex"><span class="MathJax_Preview">R</span><script type="math/tex">R</script></span>), normalised standard deviation (<span class="arithmatex"><span class="MathJax_Preview">\sigma*</span><script type="math/tex">\sigma*</script></span>), and unbiased RMSD are all referred to as <strong>patern statistics</strong>, related to one another by:</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+RMSD'^2 = \sigma_r^2 + \sigma_m^2 - 2\sigma_r\sigma_mR
+</div>
+<script type="math/tex; mode=display">
+RMSD'^2 = \sigma_r^2 + \sigma_m^2 - 2\sigma_r\sigma_mR
+</script>
+</div>
+<p><strong>Normalized and unbiased RMSD</strong>
+If we recast in standard deviation normalized units (indicated by the asterisk) it becomes:</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+RMSD'^* = \sqrt { 1 + \sigma*^2 - 2\sigma*R}
+</div>
+<script type="math/tex; mode=display">
+RMSD'^* = \sqrt { 1 + \sigma*^2 - 2\sigma*R}
+</script>
+</div>
+<p><strong>NB</strong>: the minimum of this function occurrs when <span class="arithmatex"><span class="MathJax_Preview">\sigma* = R</span><script type="math/tex">\sigma* = R</script></span>.</p>
+<p><strong>Normalized bias</strong>
+Gives information about the mean difference but normalized by the <span class="arithmatex"><span class="MathJax_Preview">\sigma*</span><script type="math/tex">\sigma*</script></span>
+$$
+B* = {\overline m - \overline r \over \sigma_r}
+$$</p>
+<p><strong>Target diagrams</strong>
+The target diagram is a plot that provides summary information about the <strong>pattern statistics as well as the bias</strong> thus yielding an overview of their respective contributions to the total RMSD. In a simple Cartesian coordinate system, the unbiased RMSD may serve as the X-axis and the bias may serve as the Y-axis. The distance between the origin and the model versus observation statistics (any point, s, within the X,Y Cartesian space) is then equal to the total RMSD. If all is normalized by the <span class="arithmatex"><span class="MathJax_Preview">\sigma_r</span><script type="math/tex">\sigma_r</script></span>, the distance from the origin is again the <em>standard deviation normalized total RMSD</em>:<sup id="fnref2:first"><a class="footnote-ref" href="#fn:first">1</a></sup></p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+RMSD^{*2} = B^{*2}+RMSD^{*'2}
+</div>
+<script type="math/tex; mode=display">
+RMSD^{*2} = B^{*2}+RMSD^{*'2}
+</script>
+</div>
+<p>The resulting target diagram then provides information about:</p>
+<ul>
+<li>whether the <span class="arithmatex"><span class="MathJax_Preview">\sigma_m</span><script type="math/tex">\sigma_m</script></span> is larger or smaller thann the <span class="arithmatex"><span class="MathJax_Preview">\sigma_r</span><script type="math/tex">\sigma_r</script></span></li>
+<li>whether there is a positive or negative bias</li>
+</ul>
+<p><img alt="" src="https://i.imgur.com/x8NY4kD.png" /></p>
+<p><em>Image Source: Jolliff et al. <sup id="fnref3:first"><a class="footnote-ref" href="#fn:first">1</a></sup></em></p>
+<p>Any point greater than RMSD*=1 is to be considered a poor performer since it doesn't offer improvement over the time series average.</p>
+<p>Interestingly, the target diagram has no information about the correlation coefficient R, but some can be inferred, knowing that all the points within the RMSD* &lt;1 are positively correlated (R&gt;0), although, in <sup id="fnref4:first"><a class="footnote-ref" href="#fn:first">1</a></sup> it is shown that a circle marker with radius <span class="arithmatex"><span class="MathJax_Preview">M_{R1}</span><script type="math/tex">M_{R1}</script></span>, means that all the points between that marker and the origin have a R coefficient larger than R1, where:</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+M_{R1} = min(RMSD*') = \sqrt {1+R1^2-2R1^2}
+</div>
+<script type="math/tex; mode=display">
+M_{R1} = min(RMSD*') = \sqrt {1+R1^2-2R1^2}
+</script>
+</div>
+<h2 id="results">Results<a class="headerlink" href="#results" title="Permanent link">&para;</a></h2>
+<p>Let's now compare both models with the target diagram:</p>
+<div class="highlight"><pre><span></span><code>from src.visualization.visualization import targetDiagram
+%matplotlib inline
+models = dict()
+
+group = 0
+for model in [ols_model, rf_model]:
+    for dataset in [&#39;train&#39;, &#39;validation&#39;]:
+        if dataset in model.metrics.keys(): 
+            models[model.name + &#39;_&#39; + dataset] = model.metrics[dataset]
+            models[model.name + &#39;_&#39; + dataset][&#39;group&#39;] = group
+
+targetDiagram(models, True, &#39;seaborn-talk&#39;)
+</code></pre></div>
+<p>Output:</p>
+<p><img alt="" src="https://i.imgur.com/PBuBOpw.png" /></p>
+<p>Here, every point that falls inside the yellow circle, will have an R<sup>2</sup> over 0.7, and so will be the red and green for R<sup>2</sup> over 0.5 and 0.9 respectively. We see that only one of our models performs well in that sense, which is the training dataset of the OLS. However, this dataset performs pretty badly in the test dataset, being the LSTM options much better. This target diagram offers information about how the hyperparameters affect our networks. For instance, increasing the training epochs from 100 to 200 does not affect greatly on model performance, but the effect of filtering the data beforehand to reduce the noise shows a much better model performance in both, training and test dataframe.</p>
+<h2 id="export-the-models">Export the models<a class="headerlink" href="#export-the-models" title="Permanent link">&para;</a></h2>
+<p>Let's now assume that we are happy with our models. We can now export them:</p>
+<div class="highlight"><pre><span></span><code>ols_model.export(&#39;directory&#39;)
+rf_model.export(&#39;directory&#39;)
+</code></pre></div>
+<p>Output:</p>
+<div class="highlight"><pre><span></span><code>Saving metrics
+Saving hyperparameters
+Saving features
+Model included in summary
+</code></pre></div>
+<p>And in our directory:</p>
+<div class="highlight"><pre><span></span><code>➜  models ls -l
+RF_UCD_features.sav
+RF_UCD_hyperparameters.sav
+RF_UCD_metrics.sav
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Save the model file</p>
+<p>If you want to save the model file into the disk, change the option <code>"export_model": False,</code> to <code>True</code>! Be careful though, it can take quite a lot of space. If you just want to keep the model to test in the current session, it is best to just use <code>"session_active_model": True,</code>.</p>
+</div>
+<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:first">
+<p><a href="http://www.itl.nist.gov/div898/handbook/mpc/section5/mpc52.htm">Engineering statistics handbook</a>&#160;<a class="footnote-backref" href="#fnref:first" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:first" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:first" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:first" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:second">
+<p><a href="https://www.sciencedirect.com/science/article/pii/S0924796308001140">Summary diagrams for coupled hydrodynamic-ecosystem model skill assessment (Jolliff et al.)</a>&#160;<a class="footnote-backref" href="#fnref:second" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:third">
+<p><a href="https://machinelearningmastery.com">Machine learning mastery</a>&#160;<a class="footnote-backref" href="#fnref:third" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
 
               
 
