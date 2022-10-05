@@ -1,3 +1,7 @@
+---
+ignore_macros: true
+---
+
 # Model your sensor data
 
 In this section, we will detail how to develop models for our sensors. We will try two different approaches for model calibration:

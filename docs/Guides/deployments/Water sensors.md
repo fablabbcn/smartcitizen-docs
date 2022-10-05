@@ -2,6 +2,12 @@
 
 <img src="https://live.staticflickr.com/65535/51126012000_ef69edea6b_k.jpg" alt="Water Station - Patí Científic">
 
+## Getting around the box
+
+Here is a first overview of the box:
+
+![](/assets/images/water-annotated.jpeg)
+
 ## Setup
 
 !!! danger "Only if you bought them separately"

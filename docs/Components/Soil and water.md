@@ -77,5 +77,6 @@ _Image credit: Pati Scientific_
 - Dissolved Oxygen
 - GPS location
 
-!!! info "BOM"
-	Check the [Water Enclosure](/assets/bom/Water Station PATI_BOM.ods) BOM.
+!!! info "Came to stay"
+
+	This unit is here to stay. It is used in [MINKE](https://minke.eu) and it's also available upon request!

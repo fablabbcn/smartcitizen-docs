@@ -1,3 +1,4 @@
+
 | Métrica | Uso | Sonda | Driver | Calibración |
 | :-: |:-: |:-: |:-: |:-: |
 | Temperatura | Suelo y agua|  Atlas PT-100 + PT-1000 | Atlas EZO-RTD | No necesaria |

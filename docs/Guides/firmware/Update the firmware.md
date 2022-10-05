@@ -43,6 +43,21 @@ The SAMD21 (SAM for short) chip manages the main part of the firmware. This firm
 
 	![](/assets/images/sck_2/uf2_drag.png)
 
+!!! info "Where is the reset?"
+	In other enclosures, the reset button is "exposed" outside of the enclosure:
+
+	- In a big station:
+
+	![](/assets/images/station-v3-bottom-anotated-reset.jpeg)
+
+	- Or a small station (similar 3D printed versions will also have a small hole):
+
+	![](/assets/images/station-small-reset.jpeg)
+
+	- Or a water station:
+
+	![](/assets/images/reset_water.jpg)
+
 ## Updating the ESP firmware
 
 The ESP8266 (ESP for short) chip sometimes also needs upgrade to match the lattest version of the SAM firmware. The ESP chip manages all the communications of the SCK with the outer world. The firmware can be found [here](https://github.com/fablabbcn/smartcitizen-kit-21/tree/master/esp).

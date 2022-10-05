@@ -12,6 +12,14 @@ or here:
 
 ![](/assets/images/station-v3-bottom-anotated-reset.jpeg)
 
+or here (similar 3D printed versions will also have a small hole):
+
+![](/assets/images/station-small-reset.jpeg)
+
+or here:
+
+![](/assets/images/reset_water.jpg)
+
 2. If this doesn't solve the problem, you might want to connect to the kits [using the Shell](/Guides/getting started/Using the Shell). 
 
 3. The next steps would depend on what the actual problem of your kits is. The most common problems are:

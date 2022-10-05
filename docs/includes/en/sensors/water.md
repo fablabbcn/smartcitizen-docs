@@ -1,6 +1,7 @@
+
 | Metric | Usage | Probe | Driver | Calibration |
-| :-: |:-: |:-: |:-: |:-: |
-| Temperature | Soil and water|  Atlas PT-100 + PT-1000 | Atlas EZO-RTD | Not required |
+| :-: | :-: | :-: | :-: | :-: |
+| Temperature | Soil and water | Atlas PT-100 + PT-1000 | Atlas EZO-RTD | Not required |
 | PH | Water |  Atlas ENV-40-PH or ENV-35-PH | Atlas EZO-PH | Atlas CHEM-PH |
 | PH | Soil |  Atlas ENV-45-PH | Atlas EZO-PH | Atlas CHEM-PH |
 | Electrical Conductivity | Soil and water | Atlas ENV-40-EC-K | Atlas EZO-EC | Atlas CHEM-EC |
