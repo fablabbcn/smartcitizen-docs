@@ -60,7 +60,7 @@ The SAMD21 (SAM for short) chip manages the main part of the firmware. This firm
 
 ## Updating the ESP firmware
 
-The ESP8266 (ESP for short) chip sometimes also needs upgrade to match the lattest version of the SAM firmware. The ESP chip manages all the communications of the SCK with the outer world. The firmware can be found [here](https://github.com/fablabbcn/smartcitizen-kit-21/tree/master/esp).
+The ESP8266 (ESP for short) chip sometimes also needs upgrade to match the latest version of the SAM firmware. The ESP chip manages all the communications of the SCK with the outer world. The firmware can be found [here](https://github.com/fablabbcn/smartcitizen-kit-21/tree/master/esp).
 
 !!! example	
 
