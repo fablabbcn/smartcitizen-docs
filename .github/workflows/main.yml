@@ -46,6 +46,6 @@ jobs:
       - name: Repository Dispatch
         uses: peter-evans/repository-dispatch@v2
         with:
-          token: my_token
+          token: ${{ secrets.REPO_ACCESS_TOKEN }}
           repository: ${{ matrix.repo }}
           event-type: updates
