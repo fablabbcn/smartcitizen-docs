@@ -1,0 +1,20 @@
+{% if full %}
+  <div class="card-deck-full">
+{% else %}
+  <div class="card-deck-half">
+{% endif %}
+    {% for tag in tags %}    
+      <div class="card-body card card-list">
+        <a href="/{{ tags[tag][0] }}/" class="card-title"><h2 class="card-title tag">{{ tag.upper() }} </h2></a>
+        {% if tags[tag]['description'] %}
+          <div class="card-text">{{ tags[tag]['description'] }}</div>
+        {% endif %} 
+        {% if tags[tag]['level'] %}
+          <span>Level: <a href="../Technical Modules/#{{ tags[tag]['level'] }}">{{ tags[tag]['level'] }}</a></span>
+        {% endif %}
+        {% if tags[tag]['more'] %}
+        	Tags: <div class="card-tags">{{ tags[tag]['more'] }}</div>
+        {% endif %}
+    </div>
+    {% endfor %}
+  </div>
