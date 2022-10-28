@@ -28,7 +28,19 @@ div.table-compact + .md-typeset__scrollwrap td {
           mask-image: var(--md-admonition-icon--pied-piper);
 }
 
+@media screen and (min-width: 76.25em) {
+    .md-nav--lifted > .md-nav__list > .md-nav__item--active > .md-nav__link {
+        background: none;
+        box-shadow: none;
+    }
+}
 
+@media screen and (min-width: 60em) {
+    .md-nav--secondary .md-nav__title {
+        background: none;
+        box-shadow: none;
+    }
+}
 
 [data-md-color-scheme="slate"] {
   --md-typeset-a-color:         rgb(255, 170, 0) !important;
