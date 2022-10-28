@@ -264,7 +264,7 @@ You have two options for this calibration:
     Here you can find the [datasheet](https://www.atlas-scientific.com/_files/_datasheets/_circuit/DO_EZO_Datasheet.pdf):
 
     - Calibration info on page 9
-    - Calibration commands on page 52)
+    - Calibration commands on page 52
 
     **Example commands** (you can put `control ox`, `control oxygen` or `control dissolved oxygen` - **however!** do not put `control dissolved` as  it will use TDS)
 
@@ -341,3 +341,101 @@ Reset your SCK and you are ready.
 
 !!! success "Ready to go?"
     If you want to send the data to the platform, you will need to  [Advanced Kit Selection](/Guides/getting started/Onboarding Sensors/#advanced-kit-selection/). At the moment the closest Kit Blueprint will be `#22 BioPV Kit` or `#31 SCK 2.1 Sea Water` in case you are using a SCK2.1 with GPS. You can request in the [forum](http://forum.smartcitizen.me) for a custom blueprint with the specific sensors you are using. 
+
+### Atlas ORP
+
+You only need to perform a single point calibration. You can use any calibrated solution, as long as it's within your sensor range. Atlas uses a 225mV calibration.
+
+!!! info "Datasheet"
+    Here you can find the [datasheet](https://files.atlas-scientific.com/ORP_EZO_Datasheet.pdf):
+
+    - Calibration info on page 12
+    - Calibration commands on page 49
+
+    **Example commands**
+
+    ```
+    control orp com r
+    control orp com cal
+    control orp com cal,[value]
+    control orp com cal,clear
+    control orp com cal,?
+    ```
+
+#### Single point calibration
+
+![](/assets/images/atlas_orp_cal_process.png)
+
+* Read the sensor multiple times until the reading is stable:
+
+    ```
+    control orp com r
+    225
+    control orp com r
+    224
+    ...
+    ```
+
+* Issue calibration command
+
+    ```
+    control orp com cal,[value of ORP]
+    ```
+
+!!! info "Example at 25°C"
+
+    ```
+    control orp com cal,225
+    ```
+
+### Atlas PT100/1000 Temperature
+
+You only need to perform a single point calibration. This process is only necessary if you change the probe cable or the first time you use the sensor.
+
+!!! info "Datasheet"
+    Here you can find the [datasheet](https://files.atlas-scientific.com/EZO_RTD_Datasheet.pdf):
+
+    - Calibration info on page 12
+    - Calibration commands on page 53
+
+    **Example commands** (you can put `control ox`, `control oxygen` or `control dissolved oxygen` - **however!** do not put `control dissolved` as  it will use TDS)
+
+    ```
+    control atlas temp com r
+    control atlas temp com cal
+    control atlas temp com cal,[value]
+    control atlas temp com cal,clear
+    control atlas temp com cal,?
+    ```
+
+!!! warning
+    This is needed because the temperature probe is a resistive sensor – more cable → more resistance!
+
+!!! danger "You need an additional calibrated probe or something of known temperature (boiling water)"
+    You will need another temperature probe that is already calibrated for this. Make sure both are stable before issuing calibration commands!
+
+* Read the **reference probe** multiple times until the reading is stable. Write down the value:
+
+    ```
+    control atlas temp com r
+    22.5
+    control atlas temp com r
+    22.4
+    ...
+    ```
+
+* Read the **target probe** multiple times until the reading is stable:
+
+    ```
+    control atlas temp com r
+    29.5
+    control atlas temp com r
+    29.4
+    ...
+    ```
+
+* Issue calibration command:
+
+    ```
+    control atlas temp com cal,[value of temperature from reference probe or temperature]
+    ```
