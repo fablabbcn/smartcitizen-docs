@@ -411,8 +411,10 @@ You only need to perform a single point calibration. This process is only necess
 !!! warning
     This is needed because the temperature probe is a resistive sensor – more cable → more resistance!
 
-!!! danger "You need an additional calibrated probe or something of known temperature (boiling water)"
-    You will need another temperature probe that is already calibrated for this. Make sure both are stable before issuing calibration commands!
+!!! danger "Reference"
+    You will need another temperature probe or something of known temperature (like boiling water) that is already calibrated for this. Make sure both are stable before issuing calibration commands!
+
+#### Single point calibration
 
 * Read the **reference probe** multiple times until the reading is stable. Write down the value:
 

@@ -91,6 +91,12 @@ No particular consideration for these probes, other than they are very delicate:
 
 ![](/assets/images/education/es/atlas_ph_cuidado.png)
 
+
+!!! danger "Storage solution"
+    Both probes need storage solution in a small soaker bottle to prevent it from drying out.
+
+    If the probe is not being used you need to put the soaker bottle back on.
+
 ## Maintenance
 
 Make sure that the sensors are cleaned frequently, specially if deployed on the field.
