@@ -1747,6 +1747,33 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#atlas-orp" class="md-nav__link">
+    Atlas ORP
+  </a>
+  
+    <nav class="md-nav" aria-label="Atlas ORP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#single-point-calibration" class="md-nav__link">
+    Single point calibration
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atlas-pt1001000-temperature" class="md-nav__link">
+    Atlas PT100/1000 Temperature
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -3003,6 +3030,33 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#atlas-orp" class="md-nav__link">
+    Atlas ORP
+  </a>
+  
+    <nav class="md-nav" aria-label="Atlas ORP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#single-point-calibration" class="md-nav__link">
+    Single point calibration
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atlas-pt1001000-temperature" class="md-nav__link">
+    Atlas PT100/1000 Temperature
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -3268,7 +3322,7 @@ control conductivity com r
 <p>Here you can find the <a href="https://www.atlas-scientific.com/_files/_datasheets/_circuit/DO_EZO_Datasheet.pdf">datasheet</a>:</p>
 <ul>
 <li>Calibration info on page 9</li>
-<li>Calibration commands on page 52)</li>
+<li>Calibration commands on page 52</li>
 </ul>
 <p><strong>Example commands</strong> (you can put <code>control ox</code>, <code>control oxygen</code> or <code>control dissolved oxygen</code> - <strong>however!</strong> do not put <code>control dissolved</code> as  it will use TDS)</p>
 <div class="highlight"><pre><span></span><code>control ox com r
@@ -3337,6 +3391,96 @@ control ox com r
 <p class="admonition-title">Ready to go?</p>
 <p>If you want to send the data to the platform, you will need to  <a href="/Guides/getting started/Onboarding Sensors/#advanced-kit-selection/">Advanced Kit Selection</a>. At the moment the closest Kit Blueprint will be <code>#22 BioPV Kit</code> or <code>#31 SCK 2.1 Sea Water</code> in case you are using a SCK2.1 with GPS. You can request in the <a href="http://forum.smartcitizen.me">forum</a> for a custom blueprint with the specific sensors you are using. </p>
 </div>
+<h3 id="atlas-orp">Atlas ORP<a class="headerlink" href="#atlas-orp" title="Permanent link">&para;</a></h3>
+<p>You only need to perform a single point calibration. You can use any calibrated solution, as long as it's within your sensor range. Atlas uses a 225mV calibration.</p>
+<div class="admonition info">
+<p class="admonition-title">Datasheet</p>
+<p>Here you can find the <a href="https://files.atlas-scientific.com/ORP_EZO_Datasheet.pdf">datasheet</a>:</p>
+<ul>
+<li>Calibration info on page 12</li>
+<li>Calibration commands on page 49</li>
+</ul>
+<p><strong>Example commands</strong></p>
+<div class="highlight"><pre><span></span><code>control orp com r
+control orp com cal
+control orp com cal,[value]
+control orp com cal,clear
+control orp com cal,?
+</code></pre></div>
+</div>
+<h4 id="single-point-calibration">Single point calibration<a class="headerlink" href="#single-point-calibration" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="/assets/images/atlas_orp_cal_process.png" /></p>
+<ul>
+<li>
+<p>Read the sensor multiple times until the reading is stable:</p>
+<div class="highlight"><pre><span></span><code>control orp com r
+225
+control orp com r
+224
+...
+</code></pre></div>
+</li>
+<li>
+<p>Issue calibration command</p>
+<div class="highlight"><pre><span></span><code>control orp com cal,[value of ORP]
+</code></pre></div>
+</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Example at 25°C</p>
+<div class="highlight"><pre><span></span><code>control orp com cal,225
+</code></pre></div>
+</div>
+<h3 id="atlas-pt1001000-temperature">Atlas PT100/1000 Temperature<a class="headerlink" href="#atlas-pt1001000-temperature" title="Permanent link">&para;</a></h3>
+<p>You only need to perform a single point calibration. This process is only necessary if you change the probe cable or the first time you use the sensor.</p>
+<div class="admonition info">
+<p class="admonition-title">Datasheet</p>
+<p>Here you can find the <a href="https://files.atlas-scientific.com/EZO_RTD_Datasheet.pdf">datasheet</a>:</p>
+<ul>
+<li>Calibration info on page 12</li>
+<li>Calibration commands on page 53</li>
+</ul>
+<p><strong>Example commands</strong> (you can put <code>control ox</code>, <code>control oxygen</code> or <code>control dissolved oxygen</code> - <strong>however!</strong> do not put <code>control dissolved</code> as  it will use TDS)</p>
+<div class="highlight"><pre><span></span><code>control atlas temp com r
+control atlas temp com cal
+control atlas temp com cal,[value]
+control atlas temp com cal,clear
+control atlas temp com cal,?
+</code></pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is needed because the temperature probe is a resistive sensor – more cable → more resistance!</p>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">You need an additional calibrated probe or something of known temperature (boiling water)</p>
+<p>You will need another temperature probe that is already calibrated for this. Make sure both are stable before issuing calibration commands!</p>
+</div>
+<ul>
+<li>
+<p>Read the <strong>reference probe</strong> multiple times until the reading is stable. Write down the value:</p>
+<div class="highlight"><pre><span></span><code>control atlas temp com r
+22.5
+control atlas temp com r
+22.4
+...
+</code></pre></div>
+</li>
+<li>
+<p>Read the <strong>target probe</strong> multiple times until the reading is stable:</p>
+<div class="highlight"><pre><span></span><code>control atlas temp com r
+29.5
+control atlas temp com r
+29.4
+...
+</code></pre></div>
+</li>
+<li>
+<p>Issue calibration command:</p>
+<div class="highlight"><pre><span></span><code>control atlas temp com cal,[value of temperature from reference probe or temperature]
+</code></pre></div>
+</li>
+</ul>
 
               
 
@@ -3390,8 +3534,8 @@ control ox com r
             <!-- <div class="md-footer-copyright__highlight">GNU Free Documentation License</div> -->
         <!-- -->
           <div class="md-footer-iscape">
-		        <img style="margin-right: 20px;" class="logo" alt="The Smart Citizen as part of the iSCAPE project has received funding from the European Community’s H2020 Programme under Grant Agreement No. 689954." src="/assets/images/eu-flag.png">
-            <p class="md-footer-copyright__highlight">The Smart Citizen as part of the iSCAPE project has received funding from the European Community’s H2020 Programme under Grant Agreement No. 689954.</p>
+		        <img style="margin-right: 20px;" class="logo" alt="The Smart Citizen has received funding from the European Community’s H2020 and HORIZON programmes. <br>- As part of the <a href="https://www.iscapeproject.eu/">iSCAPE project</a> under Grant Agreement No. 689954. <br>- As part of <a href="https://minke.eu">MINKE project</a> under Grant Agreement No. 101008724. <br>- As part of TwinAIR project under Grant Agreement No. 101057779" src="/assets/images/eu-flag.png">
+            <p class="md-footer-copyright__highlight">The Smart Citizen has received funding from the European Community’s H2020 and HORIZON programmes. <br>- As part of the <a href="https://www.iscapeproject.eu/">iSCAPE project</a> under Grant Agreement No. 689954. <br>- As part of <a href="https://minke.eu">MINKE project</a> under Grant Agreement No. 101008724. <br>- As part of TwinAIR project under Grant Agreement No. 101057779</p>
           </div>
           <p>Except where otherwise noted, content on this site is licensed under a <a rel="license" target="_blank" href="https://www.gnu.org/licenses/fdl-1.3.html">GNU Free Documentation License</a>.</p>
             <p><a rel="license" target="_blank" href="http://smartcitizen.me">Smart Citizen</a> is a project by <a rel="license" target="_blank" href="http://fablabbcn.org">Fab Lab Barcelona</a> at the <a rel="license" target="_blank" href="http://iaac.net">Institute For Advanced Architecture Of Catalonia</a>.</p>
