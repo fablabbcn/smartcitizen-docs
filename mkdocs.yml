@@ -180,8 +180,8 @@ extra:
     - icon: fontawesome/brands/github
       link: 'https://www.github.com/fablabbcn/smartcitizen-kit-21'
   project: 'The Smart Citizen has received funding from the European Community’s H2020 and HORIZON programmes.
-  <br>- As part of the <a href="https://www.iscapeproject.eu/">iSCAPE project</a> under Grant Agreement No. 689954.
-  <br>- As part of <a href="https://minke.eu">MINKE project</a> under Grant Agreement No. 101008724.
+  <br>- As part of the iSCAPE project under Grant Agreement No. 689954.
+  <br>- As part of MINKE project under Grant Agreement No. 101008724.
   <br>- As part of TwinAIR project under Grant Agreement No. 101057779'
   footer_logo: '/assets/images/eu-flag.png'
   license: 'GNU Free Documentation License'
