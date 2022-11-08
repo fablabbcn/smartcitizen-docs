@@ -6,7 +6,7 @@ The Smart Citizen project has had the chance to be part of fantastic projects th
 
 This section is a summary of these projects that might inspire you in future actions. They show the vast amount of possibilities offered by the Smart Citizen tools as key enablers of participatory sensing pilots and experiments.
 
-[![](https://i.imgur.com/md5MEp0.jpg)](Use cases/Citizen Sensing Toolkit)
+[![](https://i.imgur.com/md5MEp0.jpg)](/Resources/Citizen Sensing Toolkit)
 
 By providing meaningful examples of novel appropriations and uses we seek to  inspire communities to conduct their own experiments and, hopefully, even their  own custom tools.
 
@@ -38,5 +38,8 @@ Find below some of our own publications, or others' that have used the Smart Cit
 
 ## Presentations
 
-- [GROW Workshop Material - Lisbon, Portual 2019](https://hackmd.io/@oscgonfer/H15Z76GrH)
-- [iScape Summer School - Hasselt, Belgium 2019](https://docs.google.com/presentation/d/1MPvRuPvP9vKRDUhleZfvJPmNhQXuLeP7jc-VCzA7IQM/edit?usp=sharing)
+- [GROW Workshop Material - Lisbon, Portugal 2019](https://hackmd.io/@oscgonfer/H15Z76GrH)
+
+## Webinars
+
+{{ get_snippet_rel("docs/includes/en/webinars/minke.md") }}
