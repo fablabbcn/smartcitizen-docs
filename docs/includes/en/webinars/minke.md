@@ -1,5 +1,3 @@
-### MINKE
-
 !!! info "Working on it"
 	These webinars are currently ongoing!
 
