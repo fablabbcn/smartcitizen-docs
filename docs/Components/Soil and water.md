@@ -37,7 +37,7 @@ We recommend using [Whitebox Labs Tentacle T3](https://www.whiteboxes.ch/shop/te
 
 ### Enclosures
 
-A normal IP enclosure can be used for this setup. More information about the BOM and design files can be found [in the enclosures repository](https://github.com/fablabbcn/smartcitizen-enclosures/tree/master/Smart%20Citizen%20Water%20Station).
+A normal IP enclosure can be used for this setup. More information about the BOM and design files can be found [in the enclosures repository](https://github.com/fablabbcn/smartcitizen-enclosures/tree/master/SmartCitizen%20Water%20Enclosures/SmartCitizen%20Water%20Station).
 
 <img src="https://live.staticflickr.com/65535/51125200496_67b06e79bd_k.jpg" alt="Water Station - Patí Científic">
 

@@ -7,7 +7,7 @@ If we want to leave the kit on the outside for a few days you will need to provi
 ![](https://i.imgur.com/ZoRN28m.png)
 
 !!! info "A note about the enclosures"
-    Previous versions of the Smart Citizen Kit, without the PMS5003 sensor, included a 3D printed enclosure that holds the Data Board and Urban Sensor Board, as well as the lithium batteries. Different versions are available for the SCK 2.1, either with a [CNC'ed](https://github.com/fablabbcn/smartcitizen-enclosures/tree/master/SmartCitizen%20Outdoor%20Cases%20V2.0-2.1/Milled%20HDPE) version, or [3D printed one](https://github.com/fablabbcn/smartcitizen-enclosures/tree/master/SmartCitizen%20Outdoor%20Cases%20V2.0-2.1/3D%20Printed%20Prototype). Currently, there is no mass produced version at SEEED.
+    Previous versions of the Smart Citizen Kit, without the PMS5003 sensor, included a 3D printed enclosure that holds the Data Board and Urban Sensor Board, as well as the lithium batteries. Different versions are available for the SCK 2.1, either with a [CNC'ed](https://github.com/fablabbcn/smartcitizen-enclosures/tree/master/SmartCitizen%20Air%20Enclosures/SmartCitizen%20Kit/SCK2.1_PMS5003/HDPE%20circle) version, or [3D printed one](https://github.com/fablabbcn/smartcitizen-enclosures/tree/master/SmartCitizen%20Air%20Enclosures/SmartCitizen%20Kit/SCK2.1_PMS5003/3D%20Printed%20square). Currently, there is no mass produced version at SEEED.
 
 See the CNC'ed HDPE version:
 
@@ -15,7 +15,7 @@ See the CNC'ed HDPE version:
 
 Or the 3D printed one:
 
-![](https://raw.githubusercontent.com/fablabbcn/smartcitizen-enclosures/master/SmartCitizen%20Outdoor%20Cases%20V2.0-2.1/3D%20Printed%20Prototype/case_render.png)
+![](https://github.com/fablabbcn/smartcitizen-enclosures/blob/master/SmartCitizen%20Air%20Enclosures/SmartCitizen%20Kit/SCK2.1_PMS5003/3D%20Printed%20square/case_render.png)
 
 !!! tips "Follow the guides"
     Head over to the [guides section](/Guides/enclosures/Making your own enclosures) for instructions on fabricating each enclosure.

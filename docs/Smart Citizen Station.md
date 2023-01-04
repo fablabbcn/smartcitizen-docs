@@ -40,7 +40,7 @@ The sensors can include **some, or all of**:
 ![](/assets/images/station30bottom.jpg)
 
 !!! tip "Dimensions"
-    If you are looking at the dimensions and mechanical/electrical information about the Smart Citizen Station, have a look at the [enclosures repository](https://github.com/fablabbcn/smartcitizen-enclosures/tree/master/SmartCitizen%20Station%20V3.0)
+    If you are looking at the dimensions and mechanical/electrical information about the Smart Citizen Station, have a look at the [enclosures repository](https://github.com/fablabbcn/smartcitizen-enclosures/tree/master/SmartCitizen%20Air%20Enclosures/SmartCitizen%20Station)
 
 ### Exposure methods
 
@@ -61,7 +61,7 @@ Currently, the Smart Citizen Station is only available with an external power su
 
 ## Connectivity
 
-Currently, the Smart Citizen Station requires a Wi-Fi connection to report data to the [online platform](Sensor Platform) and it can also store data offline locally. Read more about the [operation modes](https://docs.smartcitizen.me/Smart%20Citizen%20Kit/#operation-modes) and the supported networks.
+Currently, the Smart Citizen Station requires a Wi-Fi connection to report data to the [online platform](Sensor Platform) and it can also store data offline locally. Read more about the [operation modes](/Smart%20Citizen%20Kit/#operation-modes) and the supported networks.
 
 !!! tip "Connectivity Units"
 	We tested customized connectivity units capable of deploying a local Wi-Fi network where multiple Smart Citizen Station can connect, data can be relied over GSM (3/4/5G) or other IoT connectivity standards.

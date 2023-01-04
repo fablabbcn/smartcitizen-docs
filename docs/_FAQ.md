@@ -91,4 +91,4 @@ No. They cannot be exposed to water, high humidity, corrosive environments, or m
 
 ![](/assets/images/nail_polish_areas.png)
 
-If you are using any enclosure from [the repository](https://github.com/fablabbcn/smartcitizen-enclosures/tree/master/SmartCitizen%20Outdoor%20Cases%20V2.0-2.1), we also recommend using a filtration foam (PPI-20/10) like [this one](http://www.infiltro.es/index.php/filtro-de-aire-2/prefiltros/item/foam). More info [here](https://forum.smartcitizen.me/t/rain-tests-for-the-sck/1300)
+If you are using any enclosure from [the repository](https://github.com/fablabbcn/smartcitizen-enclosures/), we also recommend using a filtration foam (PPI-20/10) like [this one](http://www.infiltro.es/index.php/filtro-de-aire-2/prefiltros/item/foam). More info [here](https://forum.smartcitizen.me/t/rain-tests-for-the-sck/1300)

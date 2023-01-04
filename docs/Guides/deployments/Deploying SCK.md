@@ -6,7 +6,7 @@ The Smart Citizen Kit can be used in both, indoor or outdoor setups. This page g
 
 ## Indoor installation
 
-In indoor conditions, the Kit can be installed using this [3D printed clip](https://github.com/fablabbcn/smartcitizen-enclosures/blob/master/SmartCitizen%20Outdoor%20Cases%20V2.0-2.1/Milled%20HDPE/components/CLIP_NO_ORING.stl).
+In indoor conditions, the Kit can be installed using this [3D printed clip](https://github.com/fablabbcn/smartcitizen-enclosures/blob/master/SmartCitizen%20Air%20Enclosures/SmartCitizen%20Kit/SCK2.1_PMS5003/HDPE%20circle/components/CLIP_NO_ORING.stl).
 
 ![](https://live.staticflickr.com/65535/48020070592_ebad902f1d_h.jpg)
 
@@ -31,7 +31,7 @@ Make sure you read the information about each type of sensor before installation
 
 For outdoor installation, an enclosure is recommended in order to avoid moisture to damage the sensors and electronics. The [Enclosures Repository](https://github.com/fablabbcn/smartcitizen-enclosures) contains various types (3D printed, milled, DIY) from us and contributions from users that customise their own! Feel free to download the models and tweak them, and if happy, share them back via pull request to the repository.
 
-![](https://raw.githubusercontent.com/fablabbcn/smartcitizen-enclosures/master/SmartCitizen%20Outdoor%20Cases%20V2.0-2.1/Milled%20HDPE/final_render.png)
+![](https://github.com/fablabbcn/smartcitizen-enclosures/blob/master/SmartCitizen%20Air%20Enclosures/SmartCitizen%20Kit/SCK2.1_PMS5003/HDPE%20circle/render_w_clip_foam.png)
 
 The general tips from above also apply, as well as:
 
@@ -54,7 +54,7 @@ The SCK can be powered through:
 
 The sensors can log data in sd card or remote post data to the Smart Citizen Platform. In the case of remote logging and outdoor deployments, a _connectivity unit_ can be used with a SIM Card data plan. These units are enclosed in a waterproof box and can be powered from 230VAC 3m cable (or more), deploying a network to which several SCKs can be connected in an outdoor deployment. 
 
-You can check the BOM and installation/building [here](https://github.com/fablabbcn/smartcitizen-enclosures/tree/master/SmartCitizen%20Connectivity%20Unit) and you can email us at [info@smartcitizen](mailto:info@smartcitizen.me) for more information.
+You can check the BOM and installation/building [here](https://github.com/fablabbcn/smartcitizen-enclosures/tree/master/SmartCitizen%20Air%20Enclosures/Misc/CONNECTIVITY_UNIT) and you can email us at [info@smartcitizen](mailto:info@smartcitizen.me) for more information.
 
 ![](https://i.imgur.com/y9ap4LK.jpg)
 
