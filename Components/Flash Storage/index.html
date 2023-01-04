@@ -14,8 +14,14 @@
       
         <link rel="canonical" href="https://docs.smartcitizen.me/Components/Flash%20Storage/">
       
+      
+        <link rel="prev" href="../Firmware/">
+      
+      
+        <link rel="next" href="../sensors/performance/">
+      
       <link rel="icon" href="../../assets/images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.2">
     
     
       
@@ -23,11 +29,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.975780f9.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.f56500e0.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
-        
       
       
 
@@ -121,8 +126,6 @@
       <form class="md-header__option" data-md-component="palette">
         
           
-          
-          
           <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
           
             <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
@@ -130,8 +133,6 @@
             </label>
           
         
-          
-          
           
           <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="amber"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
           
@@ -2851,10 +2852,9 @@
 
                   
 
-  <a href="https://github.com/fablabbcn/smartcitizen-docs/edit/master/docs/Components/Flash Storage.md" title="Edit this page" class="md-content__button md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
-  </a>
+  
+  
+
 
 
 <h1 id="flash-storing">Flash storing<a class="headerlink" href="#flash-storing" title="Permanent link">&para;</a></h1>
@@ -2868,11 +2868,11 @@
 <p><img alt="" src="/assets/images/sck_2/Flash_structure.png" /></p>
 <h3 id="flash-sectors">Flash sectors<a class="headerlink" href="#flash-sectors" title="Permanent link">&para;</a></h3>
 <p>The minimum erasable unit is a sector (4 KB), so we use this as a base for data organization. On the first 3 bytes of each sector we store information about its contents, in this way we can find which ones are empty, currently in use or have valid data.  </p>
-<div class="highlight"><pre><span></span><code><span class="k">enum</span><span class="w"> </span><span class="n">SectorAddr</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">SECTOR_STATE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x00</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="n">SECTOR_NET</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="mh">0x01</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="n">SECTOR_SD</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="mh">0x02</span><span class="w"></span>
-<span class="p">};</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="k">enum</span><span class="w"> </span><span class="n">SectorAddr</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">SECTOR_STATE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x00</span><span class="p">,</span>
+<span class="w">    </span><span class="n">SECTOR_NET</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="mh">0x01</span><span class="p">,</span>
+<span class="w">    </span><span class="n">SECTOR_SD</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="mh">0x02</span>
+<span class="p">};</span>
 </code></pre></div>
 <p>The first byte of each sector (<code>SECTOR_STATE</code>) describes if the sector is empty or already used. On boot, we scan sector by sector until we find an empty one to store new data.</p>
 <p>The <code>SECTOR_NET</code> and <code>SECTOR_SD</code> bytes of each sector contain the flags related to the publish state of contained data. This bytes are only marked if all the groups of the sector are already published and the sector is full.</p>
@@ -3015,10 +3015,10 @@ The <code>-recover</code> option takes 2 parameters: the sector number or the ke
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["instant", "navigation.indexes", "navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "content.tooltips"], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["instant", "navigation.indexes", "navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "content.tooltips"], "search": "../../assets/javascripts/workers/search.12658920.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      <script src="../../assets/javascripts/bundle.5cf534bf.min.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       
@@ -3026,7 +3026,6 @@ The <code>-recover</code> option takes 2 parameters: the sector number or the ke
       
         <script src="/javascripts/extra.js"></script>
       
-    
     
   </body>
 </html>

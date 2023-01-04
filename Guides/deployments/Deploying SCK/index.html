@@ -14,8 +14,14 @@
       
         <link rel="canonical" href="https://docs.smartcitizen.me/Guides/deployments/Deploying%20SCK/">
       
+      
+        <link rel="prev" href="../../data/Upload%20data%20to%20zenodo/">
+      
+      
+        <link rel="next" href="../Deploying%20iSCAPE%20Station%20V1/">
+      
       <link rel="icon" href="../../../assets/images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.2">
     
     
       
@@ -23,11 +29,10 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.975780f9.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.f56500e0.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.2505c338.min.css">
-        
       
       
 
@@ -121,8 +126,6 @@
       <form class="md-header__option" data-md-component="palette">
         
           
-          
-          
           <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
           
             <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
@@ -130,8 +133,6 @@
             </label>
           
         
-          
-          
           
           <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="amber"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
           
@@ -2875,17 +2876,16 @@
 
                   
 
-  <a href="https://github.com/fablabbcn/smartcitizen-docs/edit/master/docs/Guides/deployments/Deploying SCK.md" title="Edit this page" class="md-content__button md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
-  </a>
+  
+  
+
 
 
 <h1 id="deploying-the-smart-citizen-kit">Deploying the Smart Citizen Kit<a class="headerlink" href="#deploying-the-smart-citizen-kit" title="Permanent link">&para;</a></h1>
 <p>The Smart Citizen Kit can be used in both, indoor or outdoor setups. This page gives guidelines on how to install in either situation.</p>
 <p><img alt="" src="https://camo.githubusercontent.com/bfecdc4c79c986951a73b62df7fe74ebbced1b83/68747470733a2f2f6c6976652e737461746963666c69636b722e636f6d2f36353533352f34383433393530353430365f633331336537656461335f682e6a7067" /></p>
 <h2 id="indoor-installation">Indoor installation<a class="headerlink" href="#indoor-installation" title="Permanent link">&para;</a></h2>
-<p>In indoor conditions, the Kit can be installed using this <a href="https://github.com/fablabbcn/smartcitizen-enclosures/blob/master/SmartCitizen%20Outdoor%20Cases%20V2.0-2.1/Milled%20HDPE/components/CLIP_NO_ORING.stl">3D printed clip</a>.</p>
+<p>In indoor conditions, the Kit can be installed using this <a href="https://github.com/fablabbcn/smartcitizen-enclosures/blob/master/SmartCitizen%20Air%20Enclosures/SmartCitizen%20Kit/SCK2.1_PMS5003/HDPE%20circle/components/CLIP_NO_ORING.stl">3D printed clip</a>.</p>
 <p><img alt="" src="https://live.staticflickr.com/65535/48020070592_ebad902f1d_h.jpg" /></p>
 <h3 id="how-to-install-the-kit">How to install the kit<a class="headerlink" href="#how-to-install-the-kit" title="Permanent link">&para;</a></h3>
 <p>Make sure you read the information about each type of sensor before installation:</p>
@@ -2905,7 +2905,7 @@
 </ul>
 <h2 id="outdoor-installation">Outdoor installation<a class="headerlink" href="#outdoor-installation" title="Permanent link">&para;</a></h2>
 <p>For outdoor installation, an enclosure is recommended in order to avoid moisture to damage the sensors and electronics. The <a href="https://github.com/fablabbcn/smartcitizen-enclosures">Enclosures Repository</a> contains various types (3D printed, milled, DIY) from us and contributions from users that customise their own! Feel free to download the models and tweak them, and if happy, share them back via pull request to the repository.</p>
-<p><img alt="" src="https://raw.githubusercontent.com/fablabbcn/smartcitizen-enclosures/master/SmartCitizen%20Outdoor%20Cases%20V2.0-2.1/Milled%20HDPE/final_render.png" /></p>
+<p><img alt="" src="https://github.com/fablabbcn/smartcitizen-enclosures/blob/master/SmartCitizen%20Air%20Enclosures/SmartCitizen%20Kit/SCK2.1_PMS5003/HDPE%20circle/render_w_clip_foam.png" /></p>
 <p>The general tips from above also apply, as well as:</p>
 <ul>
 <li>Avoid exhausts from air conditioning units, kitchens and others</li>
@@ -2925,7 +2925,7 @@
 </div>
 <h3 id="connectivity">Connectivity<a class="headerlink" href="#connectivity" title="Permanent link">&para;</a></h3>
 <p>The sensors can log data in sd card or remote post data to the Smart Citizen Platform. In the case of remote logging and outdoor deployments, a <em>connectivity unit</em> can be used with a SIM Card data plan. These units are enclosed in a waterproof box and can be powered from 230VAC 3m cable (or more), deploying a network to which several SCKs can be connected in an outdoor deployment. </p>
-<p>You can check the BOM and installation/building <a href="https://github.com/fablabbcn/smartcitizen-enclosures/tree/master/SmartCitizen%20Connectivity%20Unit">here</a> and you can email us at <a href="mailto:info@smartcitizen.me">info@smartcitizen</a> for more information.</p>
+<p>You can check the BOM and installation/building <a href="https://github.com/fablabbcn/smartcitizen-enclosures/tree/master/SmartCitizen%20Air%20Enclosures/Misc/CONNECTIVITY_UNIT">here</a> and you can email us at <a href="mailto:info@smartcitizen.me">info@smartcitizen</a> for more information.</p>
 <p><img alt="" src="https://i.imgur.com/y9ap4LK.jpg" /></p>
 <div class="admonition info">
 <p class="admonition-title">Got one?</p>
@@ -3039,10 +3039,10 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["instant", "navigation.indexes", "navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["instant", "navigation.indexes", "navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.12658920.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.5cf534bf.min.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       
@@ -3050,7 +3050,6 @@
       
         <script src="/javascripts/extra.js"></script>
       
-    
     
   </body>
 </html>
