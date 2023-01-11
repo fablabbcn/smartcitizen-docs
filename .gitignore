@@ -3,3 +3,4 @@ TO-DO.md
 *.DS_Store
 aux/
 __pycache__/
+*.swp.p

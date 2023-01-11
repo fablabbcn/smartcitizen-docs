@@ -114,6 +114,16 @@ nav:
     - Citizen Sensing Toolkit: Resources/Citizen Sensing Toolkit.md
     - Research Projects: Resources/Research.md
     - Friend projects: Resources/References.md
+    - Tutorials:
+      - Index: Resources/Tutorials/index.md
+      - Arduino:
+        - Arduino serial monitor with the SCK: Resources/Tutorials/Arduino Serial.md
+        - Change data rate in the SCK: Resources/Tutorials/Change data rate in the SCK.md
+      - Data:
+        - Configure Orange Data Analysis: Resources/Tutorials/Configure Orange Data Analysis.md
+        - Smart Citizen Orange Widgets: Guides/data/Orange Data Widgets.md
+        - Simple workflow for data analysis in Orange: Resources/Tutorials/Simple Orange Workflow.md
+        - Orange and geolocated data: Resources/Tutorials/Orange and geolocated data.md
     - Education:
       - Main: Resources/Education/index.md
       # - Technical Modules:
@@ -128,6 +138,7 @@ nav:
           - Oxígeno disuelto: Resources/Education/AulaMar/OD.md
           - Conductividad: Resources/Education/AulaMar/EC.md
           - Temperatura: Resources/Education/AulaMar/T.md
+      - CLAB (EN): Resources/Education/CLAB/index.md
 
 theme:
   language: 'en'
