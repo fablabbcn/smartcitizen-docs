@@ -221,11 +221,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.smartcitizen.me/Guides/data/Configure%20Orange%20Data%20Analysis/</loc>
-         <lastmod>2023-01-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://docs.smartcitizen.me/Guides/data/Creating%20Interfaces/</loc>
          <lastmod>2023-01-17</lastmod>
          <changefreq>daily</changefreq>
@@ -252,6 +247,11 @@
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Guides/data/Make%20reports%20of%20your%20data/</loc>
+         <lastmod>2023-01-17</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.smartcitizen.me/Guides/data/Orange%20Data%20Widgets/</loc>
          <lastmod>2023-01-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
