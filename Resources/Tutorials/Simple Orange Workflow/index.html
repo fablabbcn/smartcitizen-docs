@@ -2746,6 +2746,56 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#look-for-the-kit-that-you-want-to-use" class="md-nav__link">
+    Look for the kit that you want to use
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-the-data-from-the-kit" class="md-nav__link">
+    Get the data from the kit
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#see-the-data-in-a-table" class="md-nav__link">
+    See the data in a table
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#set-the-data-as-a-timeseries" class="md-nav__link">
+    Set the data as a timeseries
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#plot-the-results" class="md-nav__link">
+    Plot the results
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#plot-the-results-and-tinker-it" class="md-nav__link">
+    Plot the results and tinker it
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2774,6 +2824,99 @@
 
 
 <h1 id="create-a-simple-workflow-for-data-analysis-in-orange">Create a simple workflow for data analysis in Orange<a class="headerlink" href="#create-a-simple-workflow-for-data-analysis-in-orange" title="Permanent link">&para;</a></h1>
+<p>This is a tutorial meant for someone who hasn't used orange at all to create a very simple, but powerful, workflow. </p>
+<p>Requisites</p>
+<ul>
+<li>Having installed orange and the add-ons of mecoda-orange  and time series. <a href="../Configure%20Orange%20Data%20Analysis/">Here you can see the tutorial</a></li>
+<li>Knowing the kit and the timespan that you want to analyse</li>
+</ul>
+<h2 id="look-for-the-kit-that-you-want-to-use">Look for the kit that you want to use<a class="headerlink" href="#look-for-the-kit-that-you-want-to-use" title="Permanent link">&para;</a></h2>
+<p>We're starting from a new file, a white canvas for this example. </p>
+<p>To start using it we need to click on it in the widgets menu on the left for the widget of Smart Citizen Search. We <strong>select</strong> the <strong>Smart Citizen Search</strong> widget from the <strong>MECODA</strong> extension. </p>
+<p>It will create the widget on the canvas on the right</p>
+<p><img alt="" src="https://i.imgur.com/NdgHPlx.png" /></p>
+<p>If you click on it it will pop up a window with the available options</p>
+<p><img alt="" src="https://i.imgur.com/H2OGEBv.png" /></p>
+<p>We need to press "Search devices" in order to get some data. </p>
+<p>Here you can try to find your Kit. There are several options  to retrieve this information but in this case we have the URL of our kit</p>
+<p><a href="https://smartcitizen.me/kits/15618">https://smartcitizen.me/kits/15618</a></p>
+<p>This URL tells us the Device ID that we want at the end of the URL (in this case 15618).</p>
+<p>:::spoiler If you want to use the map to find your kit follow this instructions.</p>
+<p>Go to </p>
+<p><a href="https://smartcitizen.me/kits/">https://smartcitizen.me/kits/</a></p>
+<p>Find your kit in the map and select it. </p>
+<p>For example: </p>
+<p><img alt="" src="https://i.imgur.com/zXmz53a.png" /></p>
+<p>When you select it the URL of the site will change, in this case to</p>
+<p><a href="https://smartcitizen.me/kits/15618">https://smartcitizen.me/kits/15618</a></p>
+<p>Here you have the device id in the URL at the end. In this case it's 15618. </p>
+<p>:::</p>
+<p>Once we have it we type it or paste it in Device ID and press "Search Devices"</p>
+<p><img alt="" src="https://i.imgur.com/oAhSFjX.png" /></p>
+<p>It will tell us that we have just one data because the icon of exit says that there is only one data. </p>
+<p><img alt="" src="https://i.imgur.com/bLJAjMN.png" /></p>
+<p>Now that we have only just one device we need to retrieve the data that is stored in it. </p>
+<h2 id="get-the-data-from-the-kit">Get the data from the kit<a class="headerlink" href="#get-the-data-from-the-kit" title="Permanent link">&para;</a></h2>
+<p>Now we need to add another widget from the tools that we have on the left. To do that we <strong>click</strong> ond the widget <strong>Smart Citizen Data</strong> </p>
+<p><img alt="" src="https://i.imgur.com/HNGLmeB.png" /></p>
+<p>When we press it it will be set in the canvas near the other widget of Smart Citizen Search that we have already configured.</p>
+<p><img alt="" src="https://i.imgur.com/Ds2PQ2b.png" /></p>
+<p>We need to <strong>connect both of them</strong> pressing the dotted lines on the right of the Smart Cizizen Search and dragging the cursor into the Smart Citizen Data. Once you have it would look like this: </p>
+<p><img alt="" src="https://i.imgur.com/DD63yLw.png" /></p>
+<p>To see if everything is correct we can click on Smart Citizen Data and we can click on it and check it out</p>
+<p><img alt="" src="https://i.imgur.com/3jTD66H.png" /></p>
+<p>If the Info panel from the image above says the same that yours it will mean that it's working. </p>
+<p>Now we're setting up the data that we want to collect. In this example we're getting the data that we have every 10 minutes (10 minutes) and we want to get just from one month. From first of october of 2022 to the last day of that month. </p>
+<p>To do that we <strong>set</strong> <strong>rollup</strong> in <strong>10</strong> and the <strong>rollup units</strong> in m (minutes). <em>(that's the setting by default)</em> Then we set <strong>Initial Date</strong> to <strong>2022-10-01</strong> and <strong>End Date</strong> to <strong>2022-11-01</strong>. And we <strong>tick off</strong> the box of <strong>Resample data</strong>. You will have something like this:</p>
+<p><img alt="" src="https://i.imgur.com/cOLbgFN.png" /></p>
+<p>Now we have to <strong>press Get data</strong> to fetch the data. </p>
+<p><img alt="" src="https://i.imgur.com/Ukd7KVq.png" /></p>
+<p>It will take some seconds to fetch the data from the back end of smart citizen and it will have in the Info panel "Device 15618 data downloaded!"</p>
+<h2 id="see-the-data-in-a-table">See the data in a table<a class="headerlink" href="#see-the-data-in-a-table" title="Permanent link">&para;</a></h2>
+<p>As an <em>optional</em> step we can look at it as a table. To do that we need to use the widget <strong>Data table</strong> from the left menu in "Data"</p>
+<p><img alt="" src="https://i.imgur.com/7Bdt52b.png" /></p>
+<p>We click on it as we have clicked on other widgets and it will appear on the canvas</p>
+<p><img alt="" src="https://i.imgur.com/BO803hU.png" /></p>
+<p>We connect it to the Smart Citizen Data dragging the data from the Smart Citizen Data to the Data Table like this:</p>
+<p><img alt="" src="https://i.imgur.com/HZxxq7s.png" /></p>
+<p>If we open it we'll see the data that we have gathered clicking on it. </p>
+<p><img alt="" src="https://i.imgur.com/tog47oH.png" /></p>
+<p>The Data tables have more propierties that are explained here: 
+<a href="https://orange3.readthedocs.io/projects/orange-visual-programming/en/latest/widgets/data/datatable.html">https://orange3.readthedocs.io/projects/orange-visual-programming/en/latest/widgets/data/datatable.html</a></p>
+<h2 id="set-the-data-as-a-timeseries">Set the data as a timeseries<a class="headerlink" href="#set-the-data-as-a-timeseries" title="Permanent link">&para;</a></h2>
+<p>To plot it properly we need to set this data as a timeseries. To do that we need to go to the menu on the left and click on <strong>As Timeseries</strong> in the menu "Time Series". </p>
+<p><img alt="" src="https://i.imgur.com/r9ONvBD.png" /></p>
+<p>:::warning
+Remember that timeseries is an extra add-on that you need to download. [Link to the docs about how to do it]
+:::</p>
+<p>We <strong>click it</strong> and it will appear in the canvas</p>
+<p><img alt="" src="https://i.imgur.com/XZOXoy8.png" /></p>
+<p>We <strong>connect it</strong> to the Smart Citizen Data dragging the data from the Smart Citizen Data to the As Timeseries like this:</p>
+<p><img alt="" src="https://i.imgur.com/0tYVHq5.png" /></p>
+<h2 id="plot-the-results">Plot the results<a class="headerlink" href="#plot-the-results" title="Permanent link">&para;</a></h2>
+<p>Lastly, we create one more widget. <strong>Line chart</strong>. To do that we need to go to the menu on the left and click on <strong>Line chart</strong> in the menu "Time Series". </p>
+<p><img alt="" src="https://i.imgur.com/vDGjMKa.png" /></p>
+<p>:::warning
+Remember that timeseries is an extra add-on that you need to download. [Link to the docs about how to do it]
+:::</p>
+<p>We <strong>click it</strong> and it will appear in the canvas</p>
+<p><img alt="" src="https://i.imgur.com/k0VH1OP.png" /></p>
+<p>We <strong>connect it</strong> to the As Timeseries dragging the data from the As Timeseries to the Line chart like this:</p>
+<p><img alt="" src="https://i.imgur.com/nobupdR.png" /></p>
+<p>If the edit links windows shows up, select time series to time series as shown.</p>
+<p>Now we press on the Line Chart and we can see the Chart through time.</p>
+<h2 id="plot-the-results-and-tinker-it">Plot the results and tinker it<a class="headerlink" href="#plot-the-results-and-tinker-it" title="Permanent link">&para;</a></h2>
+<p>If we click on Line Chart it will show something like this:</p>
+<p><img alt="" src="https://i.imgur.com/zdDOrR9.png" /></p>
+<p>:::info</p>
+<p>To more information about this you can visit Orange documentation: <a href="https://orange3-timeseries.readthedocs.io/en/latest/widgets/line_chart.html#line-chart">https://orange3-timeseries.readthedocs.io/en/latest/widgets/line_chart.html#line-chart</a>
+:::</p>
+<p>This chart is done with one of the columns (in this case Temperature) and we can see the changes from one day to another and we can see also on the left part of the chart the data that we have missing. </p>
+<p>On the left we can Add more plots to compare them For example to compare temperature and humidity. </p>
+<p><img alt="" src="https://i.imgur.com/iZPmUda.png" /></p>
+<p>We can close them to get rid of them usin ghe x arrow. </p>
+<p>To select the type of data that we want to check we need only to get the appropiate sensor and select it. </p>
+<p>To save it or retrieve it again we can save the file as a <em>.ows</em> and retrieve it again. </p>
 
 
 
