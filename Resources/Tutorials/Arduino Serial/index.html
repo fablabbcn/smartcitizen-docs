@@ -2913,37 +2913,41 @@
 <p><strong>Set your port.</strong> For doing that we are going to go to  Tools-&gt;Port and we select to the port that says something like "(Arduino Zero (Native USB Port))" or "(Arduino/Genuino Zero (Autodetect Port))" in MAC or linux. </p>
 <p><img alt="" src="https://i.imgur.com/XVAq6lP.png" /></p>
 <p>If this is your first start it might be asking you to <strong>set the Board</strong>. You can do it by going again into Tools-&gt;Boards and you set any of them (for example Arduino UNO). </p>
-<p>:::warning</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+</div>
 <p><strong>Connection troubleshooting</strong></p>
 <p><em>"Couldn't open serial plotter"</em></p>
 <p><img alt="" src="https://i.imgur.com/lTbdfwJ.png" /></p>
 <p><strong>Check if the USB</strong> is properly connected and then, <strong>revise if the port is properly selected</strong>. Last, <strong>check if there is a board selected</strong>. </p>
 <p>If the cable is connected but it's not being recognized by the Arduino IDE, try to reset the smartcitizen kit using the reset button</p>
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/smartcitizen/48439505516/in/album-72157708816777936/" title="SCK 2.1 Outdoor enclosure"><img src="https://live.staticflickr.com/65535/48439505516_1d3bd25915_z.jpg" width="640"  alt="SCK 2.1 Outdoor enclosure"></a>
-:::</p>
-<p>:::info
-Alternativately, in Arduino IDE 2.x you can select the port from the display on the top</p>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/smartcitizen/48439505516/in/album-72157708816777936/" title="SCK 2.1 Outdoor enclosure"><img src="https://live.staticflickr.com/65535/48439505516_1d3bd25915_z.jpg" width="640"  alt="SCK 2.1 Outdoor enclosure"></a></p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+</div>
+<p>Alternativately, in Arduino IDE 2.x you can select the port from the display on the top</p>
 <p><img alt="" src="https://i.imgur.com/OmUzewO.png" /></p>
 <p>If you do, you're going to be asked probably to install the specific board of the board that the smartcitizen has on the bottom. </p>
 <p><img alt="" src="https://i.imgur.com/8Gjzh0d.png" /></p>
 <p>You can just follow the steps of installing the board (you may have some warnings from Windows of needing permissions)</p>
-<p>:::</p>
 <p><img alt="" src="https://i.imgur.com/gfwybmd.png" /></p>
 <h2 id="brief-explanation-of-the-serial-plotter">Brief explanation of the serial plotter<a class="headerlink" href="#brief-explanation-of-the-serial-plotter" title="Permanent link">&para;</a></h2>
-<p>:::info
-More information about serial plotter in Arduino IDE with tutorials:</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+</div>
+<p>More information about serial plotter in Arduino IDE with tutorials:</p>
 <p><a href="https://docs.arduino.cc/software/ide-v2/tutorials/ide-v2-serial-plotter">https://docs.arduino.cc/software/ide-v2/tutorials/ide-v2-serial-plotter</a> [EN]</p>
-<p><a href="https://arduino.cl/como-usar-el-serial-plotter-en-arduino-ide/">https://arduino.cl/como-usar-el-serial-plotter-en-arduino-ide/</a> [ES]
-:::</p>
+<p><a href="https://arduino.cl/como-usar-el-serial-plotter-en-arduino-ide/">https://arduino.cl/como-usar-el-serial-plotter-en-arduino-ide/</a> [ES]</p>
 <h2 id="use-commands-to-select-the-plotting-device">Use commands to select the plotting device.<a class="headerlink" href="#use-commands-to-select-the-plotting-device" title="Permanent link">&para;</a></h2>
 <p>When you open the serial plotter you will have something like this</p>
 <p><img alt="" src="https://i.imgur.com/yaaSM7l.png" /></p>
 <p>It's important to check the bottom part where it should say "Carriage Return" and 115200 baud. </p>
 <p><img alt="" src="https://i.imgur.com/nvT5mrN.png" /></p>
 <p>In the box of "Type Message" we can send message to the smartcitizen kit. </p>
-<p>:::info</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+</div>
 <p>If you want to know more about the available commands you can visit the information about using the shell <a href="https://docs.smartcitizen.me/Guides/getting%20started/Using%20the%20Shell/#connectivity-or-configuration-issues">https://docs.smartcitizen.me/Guides/getting%20started/Using%20the%20Shell/#connectivity-or-configuration-issues</a></p>
-<p>:::</p>
 <p>These commands are without timestamp and they are usually seen in "value2", they will change at very high speed.</p>
 <h3 id="noise">Noise<a class="headerlink" href="#noise" title="Permanent link">&para;</a></h3>
 <p>Input this command: </p>
