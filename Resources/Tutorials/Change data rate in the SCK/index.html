@@ -2876,32 +2876,35 @@
 <p>In Arduino IDE 2.0 (the newer version) you will see the serial monitor in the bottom of the screen. In older Arduino IDE you will get a pop up window. </p>
 <p><strong>Check</strong> that is set as "Carriage Return" and it's set to 115200 bauds as the image below: </p>
 <p><img alt="" src="https://i.imgur.com/NpSa4V6.png" /></p>
-<p>:::info</p>
-<p>It might give you some text even if you don't type anything. This is normal and it means that the smartcitizen is properly connected. </p>
-<p><img alt="" src="https://i.imgur.com/X15JPFX.png" /></p>
-<p>If this happens, you can continue to input the command.</p>
-<p>:::</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+</div>
+<p>It might give you some text even if you don't type anything. This is normal and it means that the smartcitizen is properly connected. 
+<img alt="" src="https://i.imgur.com/X15JPFX.png" />
+If this happens, you can continue to input the command.</p>
 <p>To check if everything works as spected you can type "help" in the box where it says "Message (Enter to send message to..)" and you will get something like this. </p>
 <p><img alt="" src="https://i.imgur.com/e5fhHLa.png" />
 <em>This is the list of the possible commands of the shell of smartcitizen</em></p>
 <p>If this happens, you can continue to the next step. </p>
-<p>:::warning</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+</div>
 <p><strong>Connection troubleshooting</strong></p>
 <p><em>"Not connected. Select a board and a port to connect automatically."</em></p>
 <p><img alt="" src="https://i.imgur.com/670FKdb.png" /></p>
 <p><strong>Check if the USB</strong> is properly connected and then, <strong>revise if the port is properly selected</strong>. Last, <strong>check if there is a board selected</strong>. </p>
 <p>If the cable is connected but it's not being recognized by the Arduino IDE, try to reset the smartcitizen kit using the reset button</p>
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/smartcitizen/48439505516/in/album-72157708816777936/" title="SCK 2.1 Outdoor enclosure"><img src="https://live.staticflickr.com/65535/48439505516_1d3bd25915_z.jpg" width="640" height="427" alt="SCK 2.1 Outdoor enclosure"></a>
-:::</p>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/smartcitizen/48439505516/in/album-72157708816777936/" title="SCK 2.1 Outdoor enclosure"><img src="https://live.staticflickr.com/65535/48439505516_1d3bd25915_z.jpg" width="640" height="427" alt="SCK 2.1 Outdoor enclosure"></a></p>
 <h2 id="the-command-that-we-have-to-use">The command that we have to use<a class="headerlink" href="#the-command-that-we-have-to-use" title="Permanent link">&para;</a></h2>
 <p>To state a "real time sensing" of the smartcitizen you need to <strong>state this command</strong> in the command line and press ENTER: </p>
 <p><div class="highlight"><pre><span></span><code>config -pubint 5 -readint 5
 </code></pre></div>
 You will get something like this</p>
 <p><img alt="" src="https://i.imgur.com/Hz9Jhst.png" /></p>
-<p>:::warning</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+</div>
 <p>This setup consumes the battery very fast. It's useful for doing a class, but if you're using the smartcitizen with the battery be sure to Set up the default reading and uploading rate to default after the showcase</p>
-<p>:::</p>
 <h3 id="setting-up-the-default-after-using-the-real-time">Setting up the default after using the real time<a class="headerlink" href="#setting-up-the-default-after-using-the-real-time" title="Permanent link">&para;</a></h3>
 <p>Using the 5 s update is going to take a lot of time</p>
 <p>To restore the default upload rate you have to <strong>put this command</strong> and press ENTER. 
@@ -2934,9 +2937,10 @@ You will get something like this</p>
 <p>Then you will get this information on the web:</p>
 <p><em>press again the 🛠️ icon to close the menu on the right</em></p>
 <p><img alt="" src="https://i.imgur.com/nT9lZQY.png" /></p>
-<p>:::info
-You can use the menu for filter the values that you're more interested on. 
-:::</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+</div>
+<p>You can use the menu for filter the values that you're more interested on. </p>
 <p>You will see that the data is updated more less every 6 seconds (5 seconds + the delay to post it into the platform)</p>
 
 
