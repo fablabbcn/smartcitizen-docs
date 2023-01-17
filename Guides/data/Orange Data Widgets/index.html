@@ -2817,9 +2817,10 @@
 <p>Smart Citizen Search is a widget that gets information about kits, but not the data gathered by those kits. This the menu of the Smart Citizen Search:</p>
 <p><img alt="" src="https://i.imgur.com/H2OGEBv.png" /></p>
 <p>The <strong>info</strong> panel is going to get updated with data fetched from the Smart Citizen back end. If you don't press "Search devices" is not going to fetch anything. </p>
-<p>:::info</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+</div>
 <p>If you press Search devices while there is no filter it's going to retrieve all the devices in the database, which is not necessaraly a bad thing because you can filter/find yours after that. </p>
-<p>:::</p>
 <p>The <strong>Search filters</strong> are going to apply some filters in case that you want to find one specific Kit</p>
 <ul>
 <li><strong>City</strong> states the city that you are looking for. Remember to spell it with the first letter in upper case and with the local denomination. </li>
@@ -2828,13 +2829,15 @@
 <li><strong>Kit-ID</strong> refers to the type of kit that is your smart citizen kit. 
 <img alt="" src="https://i.imgur.com/4aeaKhP.png" /></li>
 </ul>
-<p>:::success
-SCK stands for "Smart Citizen Kit"
-:::</p>
+<div class="admonition success">
+<p class="admonition-title">Success</p>
+<p>SCK stands for "Smart Citizen Kit"</p>
+</div>
 <p>And lastly if you know the <strong>Device ID</strong> (unique to your specific kit) you can find the kit that you need. You can find the ID of your kit in the last part of the URL of your kit. For example this kit from this URL <a href="https://smartcitizen.me/kits/15618">https://smartcitizen.me/kits/15618</a> has the Device ID of 15618.</p>
-<p>:::info
-Alternatively you can use this search to find the deviceID in a table and then lock the ID of the kit that you need information about
-:::</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+</div>
+<p>Alternatively you can use this search to find the deviceID in a table and then lock the ID of the kit that you need information about</p>
 <p>The <strong>Search devices</strong> button makes the request to the database so it's important to press it. </p>
 <p>In the bottom part also you can see how many devices have you retrieved from your query. </p>
 <h3 id="smart-citizen-data">Smart Citizen Data<a class="headerlink" href="#smart-citizen-data" title="Permanent link">&para;</a></h3>
@@ -2852,18 +2855,21 @@ Alternatively you can use this search to find the deviceID in a table and then l
 </li>
 </ul>
 <p><img alt="" src="https://i.imgur.com/xAgiWG7.png" /></p>
-<p>:::success</p>
+<div class="admonition success">
+<p class="admonition-title">Success</p>
+</div>
 <p>The options are y for years, M for months, w for weeks, d for days, h for hours, m for minutes, s for seconds and ms for milliseconds</p>
-<p>:::</p>
-<p>:::warning</p>
-<p>This frequency is mandatory to be filled for the widget to work. 
-:::</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+</div>
+<p>This frequency is mandatory to be filled for the widget to work. </p>
 <ul>
 <li>The <strong>Filter by Date (YYYY-MM-DD)</strong> is a panel where you can select a subset of all the dates in format YYYY-MM-DD (Year-month-day). From initial date 00:00 up to end date 00:00 (so the end date is not taken in a complete loop) </li>
 </ul>
-<p>:::info
-If this field is empty, the widget retrieves all the data on the record.</p>
-<p>:::</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+</div>
+<p>If this field is empty, the widget retrieves all the data on the record.</p>
 <ul>
 <li>The checkbox <strong>resample data</strong> if checked fills the missing data from the rollup so you will have al the lines from the rollup even if it doesn't exist with empty cells. If it's unchecked is only going to get the data that is available.</li>
 </ul>
