@@ -21,7 +21,7 @@
     
     
       
-        <title>SC Orange Widgets - Smart Citizen Docs</title>
+        <title>Tutorial. How to install and configure Orange to make data analysis. - Smart Citizen Docs</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#sc-orange-widgets" class="md-skip">
+        <a href="#tutorial-how-to-install-and-configure-orange-to-make-data-analysis" class="md-skip">
           Skip to content
         </a>
       
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              SC Orange Widgets
+              Tutorial. How to install and configure Orange to make data analysis.
             
           </span>
         </div>
@@ -2746,6 +2746,48 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#install-orange" class="md-nav__link">
+    Install Orange
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-add-ons" class="md-nav__link">
+    Install add-ons
+  </a>
+  
+    <nav class="md-nav" aria-label="Install add-ons">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#steps-for-installing" class="md-nav__link">
+    Steps for installing
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#check-if-everything-is-installed" class="md-nav__link">
+    Check if everything is installed
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2773,7 +2815,57 @@
 
 
 
-<h1 id="sc-orange-widgets">SC Orange Widgets<a class="headerlink" href="#sc-orange-widgets" title="Permanent link">&para;</a></h1>
+<h1 id="tutorial-how-to-install-and-configure-orange-to-make-data-analysis">Tutorial. How to install and configure Orange to make data analysis.<a class="headerlink" href="#tutorial-how-to-install-and-configure-orange-to-make-data-analysis" title="Permanent link">&para;</a></h1>
+<h2 id="install-orange">Install Orange<a class="headerlink" href="#install-orange" title="Permanent link">&para;</a></h2>
+<p>:::warning
+You might need admin permissions and you need internet connection</p>
+<p>:::</p>
+<p>Go to the download page of Orange:</p>
+<p><a href="https://orangedatamining.com/download/">https://orangedatamining.com/download/</a></p>
+<p>Choose your OS and follow the instructions</p>
+<p>It will also install "miniconda". </p>
+<h2 id="install-add-ons">Install add-ons<a class="headerlink" href="#install-add-ons" title="Permanent link">&para;</a></h2>
+<p>Once you have installed Orange open it and you will see something similar to this:</p>
+<p><img alt="" src="https://i.imgur.com/6BlZktR.png" /></p>
+<p>You can check the documentation, examples and tutorials from orange. You can dismiss or use that documentation to get familiarized with orange. </p>
+<p>We will need to install 3 add-ons</p>
+<ul>
+<li>Mecoda-orange</li>
+<li>Timeseries</li>
+<li>Geo (in the case of using GPS)</li>
+</ul>
+<h3 id="steps-for-installing">Steps for installing<a class="headerlink" href="#steps-for-installing" title="Permanent link">&para;</a></h3>
+<p>:::info
+ <a href="https://github.com/eosc-cos4cloud/mecoda-orange">Mecoda</a> is a package of widgets for Orange to access data from <a href="https://minka-sdg.org/">Minka</a>, <a href="https://odourcollect.eu/">Odour Collect</a>, <a href="https://canair.io/">canAIRio</a>, <a href="https://ictio.org/">Ictio</a>, <a href="https://natusfera.gbif.es/">Natusfera</a> or <a href="https://smartcitizen.me">Smart Citizen</a>.</p>
+<p>:::</p>
+<p>These steps are also explained here:
+<a href="https://github.com/eosc-cos4cloud/mecoda-orange/blob/master/docs/installation_and_user_guide.md">https://github.com/eosc-cos4cloud/mecoda-orange/blob/master/docs/installation_and_user_guide.md</a></p>
+<p>Go to <strong>Options</strong> -&gt; <strong>Add-ons...</strong> and you will see a window like this. We need to press "<strong>Add more...</strong>"</p>
+<p><img alt="" src="https://i.imgur.com/j3tDkUF.png" /></p>
+<p>You will see a pop-up window asking for the name</p>
+<p><img alt="" src="https://i.imgur.com/ArwCdi7.png" /></p>
+<p>We write <strong>"mecoda-orange"</strong> and we press <strong>add</strong>.</p>
+<p>Now we will find in the previous window a new addion called "Mecoda Orange"</p>
+<p>Now we need to select all the extensions that we want to install from the list. </p>
+<p>When you sellect them in the collumn action it will say "Install"</p>
+<p><img alt="" src="https://i.imgur.com/smH9ABz.png" /></p>
+<p>In our case we need to select:</p>
+<ul>
+<li>Mecoda Orange</li>
+<li>Timeseries</li>
+<li>Geo</li>
+</ul>
+<p>After that we press OK. </p>
+<p>It may take some time to install the packages</p>
+<p><img alt="" src="https://i.imgur.com/15f1HX9.png" /></p>
+<p>You may need to restart Orange to the changes to take effect. </p>
+<p><img alt="" src="https://i.imgur.com/qbxH6I4.png" /></p>
+<h2 id="check-if-everything-is-installed">Check if everything is installed<a class="headerlink" href="#check-if-everything-is-installed" title="Permanent link">&para;</a></h2>
+<p>If the installation was correct in Orange in the panel on the left you will se new panels of widgets available. (MECODA, Time Series, Geo)</p>
+<p><img alt="" src="https://i.imgur.com/jmwYmFv.png" /></p>
+<p>If you open MECODA you will find the widgets for Smart Citien (Smart citizen Search and Smart Citizen Data) between the others. </p>
+<p><img alt="" src="https://i.imgur.com/Q0AXXP4.png" /></p>
+<p>If everything is as expected, the add-ons are correctly installed. </p>
 
 
 
