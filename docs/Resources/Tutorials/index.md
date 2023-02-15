@@ -14,12 +14,12 @@ For these tutorials make sure you check [how to use the Shell](/Guides/getting%2
 !!! warning "Having issues?"
     Check [here](/Guides/getting%20started/Debugging%20your%20sensors/) how to debug the SCK!
 
-### Data
+## Data
+
+### Tutorials
 
 !!! info "MECODA Credits"
-    This section (in particular de Orange Widgets), has been developed and integrated thanks to the work done in [Mecoda](https://github.com/eosc-cos4cloud/mecoda-orange) and [cos4cloud](https://cos4cloud.eu/) by the [ICM](https://www.icm.csic.es/es). The initial implementation of widgets connecting to environmental data platforms was done by them, and only contributed our widget to this fantastic project! 
-
-![](/assets/images/tutorials/orange-flow.png)
+    This section (in particular the `Orange Widgets`), has been developed and integrated thanks to the work done in [MECODA](https://github.com/eosc-cos4cloud/mecoda-orange) and [cos4cloud](https://cos4cloud.eu/) by the [ICM](https://www.icm.csic.es/es). The initial implementation of widgets connecting to environmental data platforms was done by them, and we only contributed our widget to this fantastic project!
 
 These tutorials will help you go through some basic data analysis tools we like, such as [Orange](https://orangedatamining.com/):
 
@@ -31,7 +31,7 @@ These tutorials will help you go through some basic data analysis tools we like,
 ![](/assets/images/tutorials/orange-geo.png)
 
 !!! info "Orange workflows"
-    If you want to use some existing workflows, you can visit the Orange Workflows Repository https://github.com/fablabbcn/smartcitizen-docs/tree/master/docs/assets/ows
+    If you want to use some existing workflows, you can visit the **Orange Workflows Repository** https://github.com/fablabbcn/smartcitizen-docs/tree/master/docs/assets/ows
 
 ### Technical
 

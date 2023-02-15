@@ -1,5 +1,10 @@
 # MECODA Smartcitizen widgets
 
+
+
+{{ get_snippet_rel('docs/Resources/Tutorials/index.md','### Mecoda-orange')}}
+
+
 **Requisites:**
 
 * Having installed orange and the add-ons. [Here you can check the instructions](/Resources/Tutorials/Configure%20Orange%20Data%20Analysis.md)
