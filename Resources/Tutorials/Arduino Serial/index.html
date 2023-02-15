@@ -2584,32 +2584,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#connect-your-kit-to-your-computer" class="md-nav__link">
-    Connect your kit to your Computer
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#open-the-arduino-ide-and-connect-to-the-kit" class="md-nav__link">
-    Open the Arduino IDE and connect to the kit
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#brief-explanation-of-the-serial-plotter" class="md-nav__link">
-    Brief explanation of the serial plotter
+  <a href="#connect-to-your-kit" class="md-nav__link">
+    Connect to your kit
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#use-commands-to-select-the-plotting-device" class="md-nav__link">
-    Use commands to select the plotting device.
+    Use commands to select the plotting device
   </a>
   
-    <nav class="md-nav" aria-label="Use commands to select the plotting device.">
+    <nav class="md-nav" aria-label="Use commands to select the plotting device">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -3107,32 +3093,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#connect-your-kit-to-your-computer" class="md-nav__link">
-    Connect your kit to your Computer
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#open-the-arduino-ide-and-connect-to-the-kit" class="md-nav__link">
-    Open the Arduino IDE and connect to the kit
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#brief-explanation-of-the-serial-plotter" class="md-nav__link">
-    Brief explanation of the serial plotter
+  <a href="#connect-to-your-kit" class="md-nav__link">
+    Connect to your kit
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#use-commands-to-select-the-plotting-device" class="md-nav__link">
-    Use commands to select the plotting device.
+    Use commands to select the plotting device
   </a>
   
-    <nav class="md-nav" aria-label="Use commands to select the plotting device.">
+    <nav class="md-nav" aria-label="Use commands to select the plotting device">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -3240,32 +3212,33 @@
 
 
 <h1 id="arduino-serial-monitor-with-the-sck">Arduino serial monitor with the SCK<a class="headerlink" href="#arduino-serial-monitor-with-the-sck" title="Permanent link">&para;</a></h1>
-<p>This tutorial is useful for testing the data recorded in real time and live demostrations. </p>
+<p>This tutorial is useful for testing the data recorded in real time and live demostrations.</p>
 <p><code>Estimated time:</code> 15 minutes + 15 minutes if you don't have Arduino IDE installed. </p>
 <p><strong>Requirements</strong>:</p>
 <ul>
-<li>Smartcitizen Kit that we want to configure.</li>
+<li>SCK to monitor</li>
 <li>MicroUSB cable.</li>
 <li>A computer where we're going to configure it. </li>
 <li>Have Arduino IDE installed or other serial monitor installed (or knowledge about using it through terminal). You can download it from <a href="https://www.arduino.cc/en/software">here</a></li>
 </ul>
-<h2 id="connect-your-kit-to-your-computer">Connect your kit to your Computer<a class="headerlink" href="#connect-your-kit-to-your-computer" title="Permanent link">&para;</a></h2>
-<p><strong>Connect the MicroUSB cable</strong> to the Smartcitizen kit </p>
+<h2 id="connect-to-your-kit">Connect to your kit<a class="headerlink" href="#connect-to-your-kit" title="Permanent link">&para;</a></h2>
+<p><strong>Connect the MicroUSB cable</strong> to the SCK:</p>
 <p><img alt="" src="https://i.imgur.com/GzrOomC.png" /></p>
-<p>And the USB to your computer</p>
+<p>And the USB to your computer:</p>
 <p><img alt="" src="https://i.imgur.com/JiY7bpZ.jpg" /></p>
-<h2 id="open-the-arduino-ide-and-connect-to-the-kit">Open the Arduino IDE and connect to the kit<a class="headerlink" href="#open-the-arduino-ide-and-connect-to-the-kit" title="Permanent link">&para;</a></h2>
-<p>We are opening the Arduino IDE. (the screenshots are done Arduino 2.0 in windows) If this is your first start with Arduino IDE we are just focusing in a couple of things</p>
-<p><strong>Set your port.</strong> For doing that we are going to go to  Tools-&gt;Port and we select to the port that says something like "(Arduino Zero (Native USB Port))" or "(Arduino/Genuino Zero (Autodetect Port))" in MAC or linux. </p>
+<p>Open the Arduino IDE (the screenshots are done Arduino 2.0 in Windows). If this is your first time with the Arduino IDE don't worry, we will just be working with a couple of things.</p>
+<p><strong>Set the port</strong> </p>
+<p>Go to <code>Tools-&gt;Port</code> and  select the port that reads like either: 
+- <code>(Arduino Zero (Native USB Port))</code>
+- <code>(Arduino/Genuino Zero (Autodetect Port))</code></p>
 <p><img alt="" src="https://i.imgur.com/XVAq6lP.png" /></p>
-<p>If this is your first start it might be asking you to <strong>set the Board</strong>. You can do it by going again into Tools-&gt;Boards and you set any of them (for example Arduino UNO). </p>
 <div class="admonition warning">
 <p class="admonition-title">Connection troubleshooting</p>
 <p><em>"Couldn't open serial plotter"</em></p>
 <p><img alt="" src="https://i.imgur.com/lTbdfwJ.png" /></p>
 <p><strong>Check if the USB</strong> is properly connected and then, <strong>revise if the port is properly selected</strong>. Last, <strong>check if there is a board selected</strong>. </p>
-<p>If the cable is connected but it's not being recognized by the Arduino IDE, try to reset the smartcitizen kit using the reset button</p>
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/smartcitizen/48439505516/in/album-72157708816777936/" title="SCK 2.1 Outdoor enclosure"><img src="https://live.staticflickr.com/65535/48439505516_1d3bd25915_z.jpg" width="640"  alt="SCK 2.1 Outdoor enclosure"></a></p>
+<p>If the cable is connected but it's not being recognized by the Arduino IDE, try to reset the SCK by the reset button:</p>
+<p><img src="https://live.staticflickr.com/65535/48439505516_1d3bd25915_z.jpg" width="640"  alt="SCK 2.1 Outdoor enclosure"></p>
 </div>
 <div class="admonition info">
 <p class="admonition-title">Arduino IDE 2.x</p>
@@ -3276,24 +3249,23 @@
 <p>You can just follow the steps of installing the board (you may have some warnings from Windows of needing permissions)</p>
 </div>
 <p><img alt="" src="https://i.imgur.com/gfwybmd.png" /></p>
-<h2 id="brief-explanation-of-the-serial-plotter">Brief explanation of the serial plotter<a class="headerlink" href="#brief-explanation-of-the-serial-plotter" title="Permanent link">&para;</a></h2>
 <div class="admonition info">
 <p class="admonition-title">More on the serial plotter</p>
 <p>More information about serial plotter in Arduino IDE with tutorials:</p>
 <p><a href="https://docs.arduino.cc/software/ide-v2/tutorials/ide-v2-serial-plotter">https://docs.arduino.cc/software/ide-v2/tutorials/ide-v2-serial-plotter</a> [EN]</p>
 <p><a href="https://arduino.cl/como-usar-el-serial-plotter-en-arduino-ide/">https://arduino.cl/como-usar-el-serial-plotter-en-arduino-ide/</a> [ES]</p>
 </div>
-<h2 id="use-commands-to-select-the-plotting-device">Use commands to select the plotting device.<a class="headerlink" href="#use-commands-to-select-the-plotting-device" title="Permanent link">&para;</a></h2>
-<p>When you open the serial plotter you will have something like this</p>
+<h2 id="use-commands-to-select-the-plotting-device">Use commands to select the plotting device<a class="headerlink" href="#use-commands-to-select-the-plotting-device" title="Permanent link">&para;</a></h2>
+<p>When you open the serial plotter you will have something like this:</p>
 <p><img alt="" src="https://i.imgur.com/yaaSM7l.png" /></p>
-<p>It's important to check the bottom part where it should say "Carriage Return" and 115200 baud. </p>
+<p>It's important to check the bottom part where it should say <code>Carriage Return</code>:</p>
 <p><img alt="" src="https://i.imgur.com/nvT5mrN.png" /></p>
-<p>In the box of "Type Message" we can send message to the smartcitizen kit. </p>
+<p>In the box of <code>Type Message</code> we can send message to the kit. </p>
 <div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>If you want to know more about the available commands you can visit the information about using the shell <a href="https://docs.smartcitizen.me/Guides/getting%20started/Using%20the%20Shell/#connectivity-or-configuration-issues">https://docs.smartcitizen.me/Guides/getting%20started/Using%20the%20Shell/#connectivity-or-configuration-issues</a> or visit the <a href="https://www.youtube.com/watch?v=ZNStSudpg0A&amp;list=PL33KKs9g8Y1IWsTZZmDc-46yFuuIRZEmi&amp;index=5">Shell webinars</a>!</p>
+<p class="admonition-title">The commands</p>
+<p>If you want to know more about the available commands you can visit the information about <a href="https://docs.smartcitizen.me/Guides/getting%20started/Using%20the%20Shell/#connectivity-or-configuration-issues">using the shell</a> or visit the <a href="https://www.youtube.com/watch?v=ZNStSudpg0A&amp;list=PL33KKs9g8Y1IWsTZZmDc-46yFuuIRZEmi&amp;index=5">Shell webinars</a>!</p>
 </div>
-<p>These commands are without timestamp and they are usually seen in "value2", they will change at very high speed.</p>
+<p>These commands are without timestamp and they are usually seen in "value2". They will change at very high speed!</p>
 <h3 id="noise">Noise<a class="headerlink" href="#noise" title="Permanent link">&para;</a></h3>
 <p>Input this command: </p>
 <div class="highlight"><pre><span></span><code>monitor noise -notime -noms
@@ -3307,30 +3279,28 @@
 </code></pre></div>
 <p>You will get something like this. </p>
 <p><img alt="" src="https://i.imgur.com/x2Jzfyx.png" /></p>
+<p>Output is in lux. By covering or pointing the sensor to a light source you should see some changes.</p>
 <h3 id="temperature">Temperature<a class="headerlink" href="#temperature" title="Permanent link">&para;</a></h3>
 <p>Input this command: </p>
 <div class="highlight"><pre><span></span><code>monitor temp -notime -noms
 </code></pre></div>
 <p>You will get something like this:</p>
 <p><img alt="" src="https://i.imgur.com/w2OpzDg.png" /></p>
-<p>The output will be in ºC. </p>
-<p>You can put your finger into the temp and humidity sensor to see how it changes over time and go back to normal. </p>
+<p>The output will be in degC. You can put your finger into the temp and humidity sensor to see how it changes over time and go back to normal. </p>
 <h3 id="humidity">Humidity<a class="headerlink" href="#humidity" title="Permanent link">&para;</a></h3>
 <p>Input this command: </p>
 <div class="highlight"><pre><span></span><code>monitor humidity -notime -noms
 </code></pre></div>
 <p>You will get something like this. </p>
 <p><img alt="" src="https://i.imgur.com/wHtkknW.png" /></p>
-<p>The output is in % of total humidity. </p>
-<p>You can put your finger into the temp and humidity sensor to see how it changes over time and go back to normal. </p>
+<p>The output is in %RH. You can put your finger into the temp and humidity sensor to see how it changes over time and go back to normal. </p>
 <h3 id="pressure">Pressure<a class="headerlink" href="#pressure" title="Permanent link">&para;</a></h3>
 <p>Input this command: </p>
 <div class="highlight"><pre><span></span><code>monitor pressure -notime -noms
 </code></pre></div>
 <p>You will get something like this. </p>
 <p><img alt="" src="https://i.imgur.com/EcNKmZm.png" /></p>
-<p>The output is in kPa </p>
-<p>You can put your finger and actually press into the barometric pressure sensor to see how it changes over time and go back to normal.</p>
+<p>The output is in kPa.</p>
 <h3 id="voc-gas-ccs811">VOC Gas CCS811<a class="headerlink" href="#voc-gas-ccs811" title="Permanent link">&para;</a></h3>
 <p>Input this command: </p>
 <div class="highlight"><pre><span></span><code>monitor VOC -notime -noms

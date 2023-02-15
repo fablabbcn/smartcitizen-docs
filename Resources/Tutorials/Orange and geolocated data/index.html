@@ -3088,74 +3088,62 @@
 
 
 <h1 id="creating-a-map-workflow-in-orange">Creating a map workflow in orange<a class="headerlink" href="#creating-a-map-workflow-in-orange" title="Permanent link">&para;</a></h1>
-<p>This is a tutorial meant for someone who hasn't used orange at all to create a very simple, but powerful, workflow that has some geographical data. </p>
+<p>This is a tutorial meant for someone who hasn't used <code>Orange</code> at all. It will create a very simple, but powerful, workflow for geographical data. </p>
 <p><strong>Requirements</strong>:</p>
 <ul>
-<li>Having installed orange and the add-ons of mecoda-orange  and time series. <a href="/Resources/Tutorials/Configure%20Orange%20Data%20Analysis.md">Here you can find instructions about how to do it</a></li>
+<li>Having installed <code>Orange</code> and the add-ons of <code>mecoda-orange</code> and <code>geo</code>. <a href="../Configure%20Orange%20Data%20Analysis/">Here you can see the tutorial</a></li>
+<li>Knowing the particular device and the time range that you want to analyse</li>
 <li>Using a kit that has a GPS installed</li>
-<li>Knowing the kit and the timespan that you want to analyse</li>
 </ul>
 <h2 id="look-for-the-kit-that-you-want-to-use">Look for the kit that you want to use<a class="headerlink" href="#look-for-the-kit-that-you-want-to-use" title="Permanent link">&para;</a></h2>
-<p>We're starting from a new file, a white canvas for this example. </p>
-<p>To start using it we need to click on it in the widgets menu on the left for the widget of Smart Citizen Search. We <strong>select</strong> the <strong>Smart Citizen Search</strong> widget from the <strong>MECODA</strong> extension. </p>
-<p>It will create the widget on the canvas on the right</p>
+<p>We're starting from scratch, a white canvas for this example. </p>
+<p>Click on the widget of <code>Smart Citizen Search</code> (on the widgets menu) from the <strong>MECODA</strong> extension. It will create the widget on the canvas on the right:</p>
 <p><img alt="" src="https://i.imgur.com/NdgHPlx.png" /></p>
-<p>If you click on it it will pop up a window with the available options</p>
+<p>If you click on the new item, a window will pop up with the available options:</p>
 <p><img alt="" src="https://i.imgur.com/H2OGEBv.png" /></p>
-<p>We need to press "Search devices" in order to get some data. </p>
-<p>Here you can try to find your Kit. There are several options  to retrieve this information but in this case we have the URL of our kit</p>
-<p><a href="https://smartcitizen.me/kits/14471">https://smartcitizen.me/kits/14471</a></p>
-<p>This URL tells us the Device ID that we want at the end of the URL (in this case 14471).</p>
-<div class="admonition info">
-<p class="admonition-title">Using the map?</p>
-<p>If you want to use the map to find your kit follow this instructions.</p>
-<p>Go to </p>
-<p><a href="https://smartcitizen.me/kits/">https://smartcitizen.me/kits/</a></p>
-<p>Find your kit in the map and select it. </p>
-<p>For example: </p>
-<p><img alt="" src="https://i.imgur.com/zXmz53a.png" /></p>
-<p>When you select it the URL of the site will change, in this case to: <a href="https://smartcitizen.me/kits/15618">https://smartcitizen.me/kits/15618</a></p>
-<p>Here you have the device id in the URL at the end. In this case it's 15618.</p>
-</div>
-<p>Once we have it we type it or paste it in Device ID and press "Search Devices"</p>
+<p>Here you can try to find your Kit. There are several options to retrieve this information but in this case we have the URL of our kit: <a href="https://smartcitizen.me/kits/14471">https://smartcitizen.me/kits/14471</a>. This URL tells us the Device ID that we want at the end of the URL (in this case <code>15618</code>).</p>
+<p>Once we have it, we type it or paste it in Device ID and press <em>Search Devices</em>:</p>
 <p><img alt="" src="https://i.imgur.com/k55Czxv.png" /></p>
-<p>It will tell us that we have just one data because the icon of exit says that there is only one data. </p>
+<p>It will tell us that we have just one result: </p>
 <p><img alt="" src="https://i.imgur.com/bLJAjMN.png" /></p>
-<p>Now that we have only just one device we need to retrieve the data that is stored in it. </p>
+<p>Now we found our device, we will get the data that is stored in it!</p>
 <h2 id="get-the-data-from-the-kit">Get the data from the kit<a class="headerlink" href="#get-the-data-from-the-kit" title="Permanent link">&para;</a></h2>
-<p>Now we need to add another widget from the tools that we have on the left. To do that we <strong>click</strong> ond the widget <strong>Smart Citizen Data</strong> </p>
+<p>We will now add another widget: this time, the <code>Smart Citizen Data</code>:</p>
 <p><img alt="" src="https://i.imgur.com/HNGLmeB.png" /></p>
-<p>When we press it it will be set in the canvas near the other widget of Smart Citizen Search that we have already configured.</p>
+<p>It will be set in the canvas near the other widget of <code>Smart Citizen Search</code> that we have already configured:</p>
 <p><img alt="" src="https://i.imgur.com/Ds2PQ2b.png" /></p>
-<p>We need to <strong>connect both of them</strong> pressing the dotted lines on the right of the Smart Cizizen Search and dragging the cursor into the Smart Citizen Data. Once you have it would look like this: </p>
+<p>Now, we will <strong>connect both of them</strong> by pressing the dotted lines on the right of the <code>Smart Cizizen Search</code> and dragging the cursor into the <code>Smart Citizen Data</code>. Once you have it would look like this: </p>
 <p><img alt="" src="https://i.imgur.com/DD63yLw.png" /></p>
-<p>To see if everything is correct we can click on Smart Citizen Data and we can click on it and check it out</p>
-<p><img alt="" src="https://i.imgur.com/q7Q39tn.png" /></p>
-<p>If the Info panel from the image above says the same that yours it will mean that it's working. </p>
-<p>Now we're setting up the data that we want to collect. In this example we're getting all the data, so we can leave it as it is and just <strong>press Get data</strong> to fetch the data. </p>
-<p>It will take some seconds to fetch the data from the back end of smart citizen and it will have in the Info panel "Device 14471 data downloaded!"</p>
+<p>To see if everything is correct we can click on <code>Smart Citizen Data</code> and check it out:</p>
+<p><img alt="" src="https://i.imgur.com/3jTD66H.png" /></p>
+<p>In the <code>Info panel</code> you will see the data we are about to load.</p>
+<p>Now we will define what data we want to collect. In this example we're getting the data that we have every 10 minutes and we want to get just from one month. From 01/10/2022 to 30/10/2022. To do all that, we will <strong>set the rollup</strong> to <strong>10</strong> and the <strong>rollup units</strong> in <strong>m</strong> (minutes). <em>(That's the setting by default)</em>. Then we set <strong>Initial Date</strong> to <strong>2022-10-01</strong> and <strong>End Date</strong> to <strong>2022-11-01</strong>. And we <strong>tick off</strong> the box of <strong>Resample data</strong>. You will have something like this:</p>
+<p><img alt="" src="https://i.imgur.com/cOLbgFN.png" /></p>
+<p>Now we have to <strong>press Get data</strong> to fetch the data.</p>
+<p><img alt="" src="https://i.imgur.com/Ukd7KVq.png" /></p>
+<p>It will take some seconds to fetch the data from the platform. Once it's done the Info panel will read: <code>Device 15618 data downloaded!</code></p>
 <h2 id="see-the-data-in-a-table">See the data in a table<a class="headerlink" href="#see-the-data-in-a-table" title="Permanent link">&para;</a></h2>
-<p>The next step we can look at it as a table. To do that we need to use the widget <strong>Data table</strong> from the left menu in "Data"</p>
+<p>As an <em>optional</em> step, we can look at the data in a table format. Place a <strong>Data table</strong> widget from the left menu in <code>Data</code>:</p>
 <p><img alt="" src="https://i.imgur.com/7Bdt52b.png" /></p>
-<p>We click on it as we have clicked on other widgets and it will appear on the canvas</p>
+<p>We click on it as we have clicked on other widgets and it will appear on the canvas:</p>
 <p><img alt="" src="https://i.imgur.com/BO803hU.png" /></p>
-<p>We connect it to the Smart Citizen Data dragging the data from the Smart Citizen Data to the Data Table like this:</p>
+<p>We connect it to the <code>Smart Citizen Data</code> by dragging it's output to the <code>Data Table</code> like this:</p>
 <p><img alt="" src="https://i.imgur.com/HZxxq7s.png" /></p>
-<p>If we open it we'll see the data that we have gathered clicking on it. If we scroll to the right using the scroll at the bottom we'll see that we have a column with Latitude and other with Longitude</p>
+<p>If we open it, we'll see the data that we have gathered. If we scroll to the right (using the scroll at the bottom) we'll see that we have a column with Latitude and other with Longitude:</p>
 <p><img alt="" src="https://i.imgur.com/SsyHdiv.png" /></p>
-<p>The Data tables have more propierties that are explained here: 
-<a href="https://orange3.readthedocs.io/projects/orange-visual-programming/en/latest/widgets/data/datatable.html">https://orange3.readthedocs.io/projects/orange-visual-programming/en/latest/widgets/data/datatable.html</a></p>
+<div class="admonition info">
+<p class="admonition-title">More info?</p>
+<p>The <code>Data tables</code> have more properties that are explained here <a href="https://orange3.readthedocs.io/projects/orange-visual-programming/en/latest/widgets/data/datatable.html">https://orange3.readthedocs.io/projects/orange-visual-programming/en/latest/widgets/data/datatable.html</a></p>
+</div>
 <p>Now we add one more widget to print this data in a map. </p>
 <h2 id="create-the-map-using-geo-map-widget">Create the map using Geo Map widget<a class="headerlink" href="#create-the-map-using-geo-map-widget" title="Permanent link">&para;</a></h2>
-<p>Now we go to the panel on the left that says "Geo" and we click on Geo Map to add the Geo Map widget. </p>
+<p>Now, go to the "Geo" panel on the left and click on <code>Geo Map</code> widget:</p>
 <p><img alt="" src="https://i.imgur.com/GJK2UbR.png" /></p>
-<p>It will look like this</p>
+<p>It will look like this:</p>
 <p><img alt="" src="https://i.imgur.com/mmPkXPj.png" /></p>
-<p>As we have done before, we <strong>connect the data table into the Geo Map</strong> dragging from the right of the data table (the output) to the left of the geo map (the input)</p>
-<p>We can open it and we'll see something like this</p>
+<p>As we have done before, we <strong>connect the data table into the Geo Map</strong> dragging from the right of the <code>data table</code> (the output) to the left of the <code>geo map</code> (the input). When we click on the <code>geo map</code>, we see this:</p>
 <p><img alt="" src="https://i.imgur.com/ThxWa1x.png" /></p>
-<p>In this case we can see the timing of different samples in colour being the bluest the oldest and the most yellow the newest. </p>
-<p>We can adjust ussing the attributes on the left part of the GUI to see where are the places with, i.e more temperature.</p>
+<p>We can adjust colors, sizes and parameters using the attributes on the left part of the GUI.</p>
 <div class="admonition warning">
 <p>All the data that doesn't have latitude and longitude is ignored by default</p>
 </div>
