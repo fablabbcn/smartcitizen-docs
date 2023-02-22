@@ -31,6 +31,12 @@ Go to `Tools->Port` and  select the port that reads like either:
 
 ![](https://i.imgur.com/XVAq6lP.png)
 
+    
+## Open the serial plotter
+
+Go to `Tools->Serial plotter`
+
+
 !!! warning "Connection troubleshooting"
     _"Couldn't open serial plotter"_
 
@@ -38,9 +44,10 @@ Go to `Tools->Port` and  select the port that reads like either:
 
     **Check if the USB** is properly connected and then, **revise if the port is properly selected**. Last, **check if there is a board selected**. 
 
-    If the cable is connected but it's not being recognized by the Arduino IDE, try to reset the SCK by the reset button:
+    If the cable is connected but it's not being recognized by the Arduino IDE, try to reset the SCK by the ON/OFF button:
 
     <img src="https://live.staticflickr.com/65535/48439505516_1d3bd25915_z.jpg" width="640"  alt="SCK 2.1 Outdoor enclosure">
+    _ON/OFF button_
 
 !!! info "Arduino IDE 2.x"
     Alternativately, in Arduino IDE 2.x you can select the port from the display on the top
@@ -51,9 +58,13 @@ Go to `Tools->Port` and  select the port that reads like either:
     
     ![](https://i.imgur.com/8Gjzh0d.png)
     
-    You can just follow the steps of installing the board (you may have some warnings from Windows of needing permissions)
+    You can just follow the steps of installing the board (you may have some warnings from Windows of needing permissions).
+    
+If everything is correct you should get something like this:    
 
 ![](https://i.imgur.com/gfwybmd.png)
+_serial plotter without configuration_
+
 
 !!! info "More on the serial plotter"
     More information about serial plotter in Arduino IDE with tutorials:
@@ -68,7 +79,7 @@ When you open the serial plotter you will have something like this:
 
 ![](https://i.imgur.com/yaaSM7l.png)
 
-It's important to check the bottom part where it should say `Carriage Return`:
+It's important to check the bottom part where it should say `Carriage Return` and `115200 baud`:
 
 ![](https://i.imgur.com/nvT5mrN.png)
 
@@ -120,7 +131,7 @@ You will get something like this:
 
 ![](https://i.imgur.com/w2OpzDg.png)
 
-The output will be in degC. You can put your finger into the temp and humidity sensor to see how it changes over time and go back to normal. 
+The output will be in ºC. You can put your finger into the temp and humidity sensor to see how it changes over time and go back to normal. 
 
 ### Humidity
 
