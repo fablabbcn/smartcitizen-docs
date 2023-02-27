@@ -14,9 +14,9 @@ In indoor conditions, the Kit can be installed using this [3D printed clip](http
 
 Make sure you read the information about each type of sensor before installation:
 
-- [eCO2 and tVOCs sensor](/Components/sensors/CCS811/#sensor-considerations)
-- [Noise](/Components/sensors/Noise/#sensor-considerations)
-- [PM sensor](/Components/sensors/PM Sensors/#sensor-considerations)
+- [eCO2 and tVOCs sensor](/Components/sensors/air/CCS811/#sensor-considerations)
+- [Noise](/Components/sensors/air/Noise/#sensor-considerations)
+- [PM sensor](/Components/sensors/air/PM Sensors/#sensor-considerations)
 
 #### General tips
 
