@@ -3,13 +3,7 @@ Welcome!
 
 Welcome to the Smart Citizen project documentation! Check the different [sections](#sections) or get started with our [guides](#guides).
 
-![](https://i.imgur.com/0U9T29b.jpg)
-
-!!! info "A note about versions"
-
-    <a href="https://www.iscapeproject.eu/"><img class="logo" src="https://i.imgur.com/ud8lUOo.png" width="120" alt=""></a>
-
-    The new [**Smart Citizen Kit**](Smart Citizen Kit) and the [**Smart Citizen Station**](Smart Citizen Station) development was possible thanks to  [iSCAPE](https://www.iscapeproject.eu/), a project under European Community’s H2020 Programme (Grant Agreement No. [689954](https://cordis.europa.eu/project/rcn/202639/en))
+<img src="https://live.staticflickr.com/65535/52716091733_8512429e01_k.jpg" alt="Laboratorio Ciudadano de Salud Urbana - by LICHEN">
 
 ## Sections
 
@@ -25,6 +19,12 @@ Welcome to the Smart Citizen project documentation! Check the different [section
 * **Guides:** Contains step-by-step [**guides**](/Guides/) for different features of the kit, how to get started, use the shell, or make some more advanced analysis of the sensor readings!
 
 * **Legacy Hardware:** Are you a pioneer of participatory sensing looking for the original SCK 1.0 and SCK 1.1 documentation? Check the [**Legacy Hardware**](/Components/legacy/) section!
+
+!!! info "A note about versions"
+
+    <a href="https://www.iscapeproject.eu/"><img class="logo" src="https://i.imgur.com/ud8lUOo.png" width="120" alt=""></a>
+
+    The new [**Smart Citizen Kit**](Smart Citizen Kit) and the [**Smart Citizen Station**](Smart Citizen Station) development was possible thanks to  [iSCAPE](https://www.iscapeproject.eu/), a project under European Community’s H2020 Programme (Grant Agreement No. [689954](https://cordis.europa.eu/project/rcn/202639/en))
 
 ## Guides
 

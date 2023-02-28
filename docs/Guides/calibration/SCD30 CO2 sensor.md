@@ -2,6 +2,9 @@
 
 This guide will show the calibration process and particularities for using the Sensirion SCD30 CO2 sensor with the Smart Citizen Kit.
 
+<img src="https://live.staticflickr.com/65535/52716091663_4246cf97da_k.jpg" alt="Laboratorio Ciudadano de Salud Urbana - by LICHEN">
+_Image credit: Laboratorio Ciudadano de Salud Urbana - Lichen Social Innovation_
+
 ## Manufacturer information
 
 Sensirion provides a lot of information in their [applications note website](https://www.sensirion.com/en/download-center/carbon-dioxide-sensors-co2/co2-sensor-scd30/) for the SCD30 CO2. The datasheet can be found [here](https://www.sensirion.com/fileadmin/user_upload/customers/sensirion/Dokumente/9.5_CO2/Sensirion_CO2_Sensors_SCD30_Datasheet.pdf).

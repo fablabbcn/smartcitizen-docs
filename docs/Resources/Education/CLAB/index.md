@@ -1,11 +1,14 @@
 # CLAB
 
+<img src="https://live.staticflickr.com/65535/51719385193_74ef294e8c_k.jpg" alt="AIRE Workshop for the Venice Biennale Architettura 2021">
+_Image Credit: Martin Balestrini for the Catalonia in Venice - [air/aria/aire project](http://air.llull.cat/)_
+
 !!! info "Context"
 	This content was created by FabLab Barcelona, in the context of the _CLAB project - INNOVACIÓN EN PROCESOS DE FABRICACIÓN CIRCULAR Y ABIERTA PARA ENTORNOS EDUCATIVOS_, funded by _Aid program to support innovative business groups from the Ministry of Industry, Commerce and Tourism. Call 2022_
 
 ## Tutorials
 
-{{ get_snippet_rel('docs/Resources/Tutorials/index.md')}}
+{{ get_snippet_rel('docs/Resources/Tutorials/index.md') }}
 
 ## Other references
 

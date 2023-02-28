@@ -139,6 +139,8 @@ nav:
           - Conductividad: Resources/Education/AulaMar/EC.md
           - Temperatura: Resources/Education/AulaMar/T.md
       - CLAB (EN): Resources/Education/CLAB/index.md
+    - Webinars:
+      - Main: Resources/Webinars/index.md
 
 theme:
   language: 'en'
