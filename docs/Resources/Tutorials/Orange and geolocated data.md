@@ -2,6 +2,10 @@
 
 This is a tutorial meant for someone who hasn't used `Orange` at all. It will create a very simple, but powerful, workflow for geographical data. 
 
+!!! info "Orange workflow file"
+	This tutorial orange file can be downloaded from the repository in this folder: https://github.com/fablabbcn/smartcitizen-docs/tree/master/docs/assets/ows
+	The name of the file of this workflow is `example_map.ows `
+
 **Requirements**:
 
 * Having installed `Orange` and the add-ons of `mecoda-orange` and `geo`. [Here you can see the tutorial](Configure%20Orange%20Data%20Analysis.md)
