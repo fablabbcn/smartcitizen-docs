@@ -2,612 +2,612 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://docs.smartcitizen.me/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Smart%20Citizen%20Kit/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Smart%20Citizen%20Station/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Troubleshooting/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/_FAQ/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Components/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Components/Auxiliary%20Connector/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Components/Firmware/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Components/Flash%20Storage/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Components/GPS/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Components/Soil%20and%20water/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Components/Solar%20Panel/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Components/boards/Analog%20Sensor%20Board/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Components/boards/Data%20Board/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Components/boards/Gases%20Pro%20Board/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Components/boards/PM%20Board/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Components/boards/Power%20Supply/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Components/boards/Urban%20Board/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Components/enclosures/Enclosures/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Components/legacy/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Components/legacy/Command%20Line/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Components/legacy/Faq/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Components/legacy/Hardware/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Components/legacy/Troubleshooting/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Components/legacy/sck/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Components/sensors/performance/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Components/sensors/air/CCS811/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Components/sensors/air/Electrochemical%20Sensors/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Components/sensors/air/Metal%20Oxide/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Components/sensors/air/Noise/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Components/sensors/air/PM%20Sensors/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Components/sensors/air/SGX%20MICS/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Components/sensors/soil/Soil%20Moisture%20Sensors/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Components/sensors/soil/Tensiometer/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Data/Data%20Analysis/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Data/Low%20Cost%20Sensors%20Calibration/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Data/Sensor%20Platform/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Data/Smart%20Citizen%20API/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Guides/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Guides/calibration/Air%20sensors/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Guides/calibration/SCD30%20CO2%20sensor/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Guides/calibration/Soil%20moisture%20sensors/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Guides/calibration/Water%20sensors/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Guides/data/Analyse%20your%20data%20in%20batch/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Guides/data/Creating%20Interfaces/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Guides/data/Creating%20Models%20for%20Sensors%20Calibration/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Guides/data/Custom%20data%20processing/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Guides/data/Handling%20calibration%20data/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Guides/data/Install%20the%20framework/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Guides/data/Make%20reports%20of%20your%20data/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Guides/data/Orange%20Data%20Widgets/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Guides/data/Organise%20your%20data/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Guides/data/Upload%20data%20to%20zenodo/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Guides/deployments/Almabike%20sensors/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Guides/deployments/Deploying%20SCK/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Guides/deployments/Deploying%20Smart%20Citizen%20Station/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Guides/deployments/Deploying%20iSCAPE%20Station%20V1/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Guides/deployments/Deploying%20iSCAPE%20Station%20V2/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Guides/deployments/Installing%20Connectivity%20Units/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Guides/deployments/Installing%20solar%20panel/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Guides/deployments/OLED%20display/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Guides/deployments/Using%20the%20power%20supply/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Guides/deployments/Water%20sensors/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Guides/enclosures/Assembling%20Smart%20Citizen%20Stations/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Guides/enclosures/Making%20your%20own%20enclosures/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Guides/firmware/Debug%20the%20firmware/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Guides/firmware/Edit%20the%20Firmware/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Guides/firmware/Update%20the%20firmware/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Guides/getting%20started/Dealing%20with%20sensitive%20sensor%20readings/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Guides/getting%20started/Debugging%20your%20sensors/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Guides/getting%20started/Downloading%20the%20Data/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Guides/getting%20started/Getting%20firmware%20information/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Guides/getting%20started/Onboarding%20Sensors/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Guides/getting%20started/Third%20party%20sensors/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Guides/getting%20started/Updating%20the%20Wi-Fi/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Guides/getting%20started/Uploading%20SD%20Card%20Data/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Guides/getting%20started/Using%20the%20Shell/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Guides/getting%20started/_Third%20party%20sensors/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Guides/replacements/Replacing%20PM%20Sensors/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Resources/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Resources/Citizen%20Sensing%20Toolkit/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Resources/References/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Resources/Research/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Resources/Education/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Resources/Education/AulaMar/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Resources/Education/AulaMar/EC/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Resources/Education/AulaMar/General/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Resources/Education/AulaMar/Instrucciones/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Resources/Education/AulaMar/OD/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Resources/Education/AulaMar/T/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Resources/Education/AulaMar/pH/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Resources/Education/AulaMar/pH_extras/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Resources/Education/CLAB/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Resources/Education/Technical%20Modules/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Resources/Education/Technical%20Modules/es/Calibration/Water/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Resources/Education/Technical%20Modules/es/Datos/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Resources/Education/Technical%20Modules/es/Datos/dashboard/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Resources/Education/Technical%20Modules/es/Datos/platform/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Resources/Education/Technical%20Modules/es/Datos/python/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Resources/Education/Technical%20Modules/es/Datos/sdcard/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Resources/Education/Technical%20Modules/es/Intro/Hardware/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Resources/Education/Technical%20Modules/es/Intro/Interface/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Resources/Education/Technical%20Modules/es/Intro/Onboarding/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Resources/Education/Technical%20Modules/es/Intro/Water/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Resources/Tutorials/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Resources/Tutorials/Arduino%20Serial/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Resources/Tutorials/Change%20data%20rate%20in%20the%20SCK/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Resources/Tutorials/Configure%20Orange%20Data%20Analysis/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Resources/Tutorials/Orange%20and%20geolocated%20data/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Resources/Tutorials/Simple%20Orange%20Workflow/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/Resources/Webinars/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/assets/notes/electrochemical%20sensors%20methods/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/assets/notes/sensor-evaluation-campaign-notes/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/assets/notes/sensor-selection-alphasense/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/includes/en/education/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/includes/en/notes/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/includes/en/publications/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/includes/en/publications/mentions/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/includes/en/sensors/sensors/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/includes/en/sensors/water/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/includes/en/webinars/minke/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.smartcitizen.me/includes/es/sensors/water/</loc>
-         <lastmod>2023-03-01</lastmod>
+         <lastmod>2023-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
