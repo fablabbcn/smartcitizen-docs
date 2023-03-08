@@ -20,11 +20,11 @@ Click on the widget of `Smart Citizen Search` (on the widgets menu) from the **M
 
 ![](https://i.imgur.com/NdgHPlx.png)
 
-If you click on the new item, a window will pop up with the available options:
+If you click on the new widget that just have appeared in the canvas, a window will pop up with the available options:
 
 ![](https://i.imgur.com/H2OGEBv.png)
 
-Here you can try to find your Kit. There are several options to retrieve this information but in this case we have the URL of our kit: https://smartcitizen.me/kits/14471. This URL tells us the Device ID that we want at the end of the URL (in this case `15618`).
+Here you can search for your Kit. There are several options to retrieve this information but in this case we have the URL of our kit: https://smartcitizen.me/kits/14471. This URL tells us the Device ID that we want at the end of the URL (in this case `15618`).
 
 Once we have it, we type it or paste it in Device ID and press _Search Devices_:
 

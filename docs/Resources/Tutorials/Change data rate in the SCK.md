@@ -89,9 +89,8 @@ You will get something like this
 
 ### Setting up the default after using the real time
 
-Using the 5 s update is going to take a lot of time
 
-To restore the default upload rate you have to **put this command** and press ENTER.
+To restore the default upload rate so it doesn't drain the battery that much, you have to **put this command** and press ENTER.
 
 ```
 config -pubint 180 -readint 60
