@@ -24,7 +24,7 @@ If you click on the new widget that just have appeared in the canvas, a window w
 
 ![](https://i.imgur.com/H2OGEBv.png)
 
-Here you can search for your Kit. There are several options to retrieve this information but in this case we have the URL of our kit: https://smartcitizen.me/kits/14471. This URL tells us the Device ID that we want at the end of the URL (in this case `15618`).
+Here you can search for your Kit. There are several options to retrieve this information but in this case we have the URL of our kit from the platform: https://smartcitizen.me/kits/15618. This URL tells us the Device ID that we want at the end of the URL (in this case `15618`).
 
 Once we have it, we type it or paste it in Device ID and press _Search Devices_:
 
@@ -38,7 +38,7 @@ Now we found our device, we will get the data that is stored in it!
 
 ## Get the data from the kit
 
-We will now add another widget: this time, the `Smart Citizen Data`:
+We will now add another widget: this time, the `Smart Citizen Data`, also in the **MECODA** extension:
 
 ![](https://i.imgur.com/HNGLmeB.png)
 
@@ -46,7 +46,7 @@ It will be set in the canvas near the other widget of `Smart Citizen Search` tha
 
 ![](https://i.imgur.com/Ds2PQ2b.png)
 
-Now, we will **connect both of them** by pressing the dotted lines on the right of the `Smart Cizizen Search` and dragging the cursor into the `Smart Citizen Data`. Once you have it would look like this: 
+Now, we will **connect both of them** by pressing the dotted line on the right of the `Smart Cizizen Search` and dragging the cursor into the left dotted line of `Smart Citizen Data`. Once you have it would look like this: 
 
 ![](https://i.imgur.com/DD63yLw.png)
 
@@ -54,9 +54,25 @@ To see if everything is correct we can click on `Smart Citizen Data` and check i
 
 ![](https://i.imgur.com/3jTD66H.png)
 
-In the `Info panel` you will see the data we are about to load.
+In the `Info panel` you will see the data of the device which are about to load data from. 
 
-Now we will define what data we want to collect. In this example we're getting the data that we have every 10 minutes and we want to get just from one month. From 01/10/2022 to 30/10/2022. To do all that, we will **set the rollup** to **10** and the **rollup units** in **m** (minutes). _(That's the setting by default)_. Then we set **Initial Date** to **2022-10-01** and **End Date** to **2022-11-01**. And we **tick off** the box of **Resample data**. You will have something like this:
+!!! warning "Troubleshooting"
+	If there is no information about the device on the top it means that the panel is not well connected or there is no device found (check if you pressed `Search devices` in the node `Smart Cizizen Search`)
+
+Now we will define what data we want to collect. In this example we're getting the data that we have every 10 minutes and we want to get just from one month. From 01/10/2022 to 30/10/2022. To do all that, we will **set the rollup** to **10** and the **rollup units** in **m** (minutes). _(That's the setting by default)_. 
+
+!!! info "Data can be gather in the following units"
+	y - years
+	M - Months
+	w - weeks
+	d - days
+	h - hours
+	m - minutes
+	s - seconds
+	ms -  milliseconds
+
+
+Then we set **Initial Date** to **2022-10-01** and **End Date** to **2022-11-01**. And we **tick off** the box of **Resample data**. You will have something like this:
 
 ![](https://i.imgur.com/cOLbgFN.png)
 
@@ -105,5 +121,8 @@ As we have done before, we **connect the data table into the Geo Map** dragging 
 
 We can adjust colors, sizes and parameters using the attributes on the left part of the GUI.
 
+!!! info "Other colour palettes"
+	For changing the colour palletes use the widget "color" between the Geo Map and the data table. 
+
 !!! warning ""
-	All the data that doesn't have latitude and longitude is ignored by default
+	All the data that doesn't have latitude and longitude is ignored by default by the widget Geomap
