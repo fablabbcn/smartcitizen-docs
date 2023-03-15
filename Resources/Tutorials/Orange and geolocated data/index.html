@@ -21,7 +21,7 @@
         <link rel="next" href="../../Education/">
       
       <link rel="icon" href="../../../assets/images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.1">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.3">
     
     
       
@@ -29,7 +29,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.402914a4.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.c4a75a56.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.a0c5b2b5.min.css">
@@ -3151,23 +3151,39 @@ The name of the file of this workflow is <code>example_map.ows</code></p>
 <p><img alt="" src="https://i.imgur.com/NdgHPlx.png" /></p>
 <p>If you click on the new widget that just have appeared in the canvas, a window will pop up with the available options:</p>
 <p><img alt="" src="https://i.imgur.com/H2OGEBv.png" /></p>
-<p>Here you can search for your Kit. There are several options to retrieve this information but in this case we have the URL of our kit: <a href="https://smartcitizen.me/kits/14471">https://smartcitizen.me/kits/14471</a>. This URL tells us the Device ID that we want at the end of the URL (in this case <code>15618</code>).</p>
+<p>Here you can search for your Kit. There are several options to retrieve this information but in this case we have the URL of our kit from the platform: <a href="https://smartcitizen.me/kits/15618">https://smartcitizen.me/kits/15618</a>. This URL tells us the Device ID that we want at the end of the URL (in this case <code>15618</code>).</p>
 <p>Once we have it, we type it or paste it in Device ID and press <em>Search Devices</em>:</p>
 <p><img alt="" src="https://i.imgur.com/k55Czxv.png" /></p>
 <p>It will tell us that we have just one result: </p>
 <p><img alt="" src="https://i.imgur.com/bLJAjMN.png" /></p>
 <p>Now we found our device, we will get the data that is stored in it!</p>
 <h2 id="get-the-data-from-the-kit">Get the data from the kit<a class="headerlink" href="#get-the-data-from-the-kit" title="Permanent link">&para;</a></h2>
-<p>We will now add another widget: this time, the <code>Smart Citizen Data</code>:</p>
+<p>We will now add another widget: this time, the <code>Smart Citizen Data</code>, also in the <strong>MECODA</strong> extension:</p>
 <p><img alt="" src="https://i.imgur.com/HNGLmeB.png" /></p>
 <p>It will be set in the canvas near the other widget of <code>Smart Citizen Search</code> that we have already configured:</p>
 <p><img alt="" src="https://i.imgur.com/Ds2PQ2b.png" /></p>
-<p>Now, we will <strong>connect both of them</strong> by pressing the dotted lines on the right of the <code>Smart Cizizen Search</code> and dragging the cursor into the <code>Smart Citizen Data</code>. Once you have it would look like this: </p>
+<p>Now, we will <strong>connect both of them</strong> by pressing the dotted line on the right of the <code>Smart Cizizen Search</code> and dragging the cursor into the left dotted line of <code>Smart Citizen Data</code>. Once you have it would look like this: </p>
 <p><img alt="" src="https://i.imgur.com/DD63yLw.png" /></p>
 <p>To see if everything is correct we can click on <code>Smart Citizen Data</code> and check it out:</p>
 <p><img alt="" src="https://i.imgur.com/3jTD66H.png" /></p>
-<p>In the <code>Info panel</code> you will see the data we are about to load.</p>
-<p>Now we will define what data we want to collect. In this example we're getting the data that we have every 10 minutes and we want to get just from one month. From 01/10/2022 to 30/10/2022. To do all that, we will <strong>set the rollup</strong> to <strong>10</strong> and the <strong>rollup units</strong> in <strong>m</strong> (minutes). <em>(That's the setting by default)</em>. Then we set <strong>Initial Date</strong> to <strong>2022-10-01</strong> and <strong>End Date</strong> to <strong>2022-11-01</strong>. And we <strong>tick off</strong> the box of <strong>Resample data</strong>. You will have something like this:</p>
+<p>In the <code>Info panel</code> you will see the data of the device which are about to load data from. </p>
+<div class="admonition warning">
+<p class="admonition-title">Troubleshooting</p>
+<p>If there is no information about the device on the top it means that the panel is not well connected or there is no device found (check if you pressed <code>Search devices</code> in the node <code>Smart Cizizen Search</code>)</p>
+</div>
+<p>Now we will define what data we want to collect. In this example we're getting the data that we have every 10 minutes and we want to get just from one month. From 01/10/2022 to 30/10/2022. To do all that, we will <strong>set the rollup</strong> to <strong>10</strong> and the <strong>rollup units</strong> in <strong>m</strong> (minutes). <em>(That's the setting by default)</em>. </p>
+<div class="admonition info">
+<p class="admonition-title">Data can be gather in the following units</p>
+<p>y - years
+M - Months
+w - weeks
+d - days
+h - hours
+m - minutes
+s - seconds
+ms -  milliseconds</p>
+</div>
+<p>Then we set <strong>Initial Date</strong> to <strong>2022-10-01</strong> and <strong>End Date</strong> to <strong>2022-11-01</strong>. And we <strong>tick off</strong> the box of <strong>Resample data</strong>. You will have something like this:</p>
 <p><img alt="" src="https://i.imgur.com/cOLbgFN.png" /></p>
 <p>Now we have to <strong>press Get data</strong> to fetch the data.</p>
 <p><img alt="" src="https://i.imgur.com/Ukd7KVq.png" /></p>
@@ -3194,8 +3210,12 @@ The name of the file of this workflow is <code>example_map.ows</code></p>
 <p>As we have done before, we <strong>connect the data table into the Geo Map</strong> dragging from the right of the <code>data table</code> (the output) to the left of the <code>geo map</code> (the input). When we click on the <code>geo map</code>, we see this:</p>
 <p><img alt="" src="https://i.imgur.com/ThxWa1x.png" /></p>
 <p>We can adjust colors, sizes and parameters using the attributes on the left part of the GUI.</p>
+<div class="admonition info">
+<p class="admonition-title">Other colour palettes</p>
+<p>For changing the colour palletes use the widget "color" between the Geo Map and the data table. </p>
+</div>
 <div class="admonition warning">
-<p>All the data that doesn't have latitude and longitude is ignored by default</p>
+<p>All the data that doesn't have latitude and longitude is ignored by default by the widget Geomap</p>
 </div>
 
 
@@ -3210,10 +3230,10 @@ The name of the file of this workflow is <code>example_map.ows</code></p>
           
         </div>
         
-          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
             Back to top
-          </a>
+          </button>
         
       </main>
       
@@ -3314,7 +3334,7 @@ The name of the file of this workflow is <code>example_map.ows</code></p>
     <script id="__config" type="application/json">{"base": "../../..", "features": ["instant", "navigation.indexes", "navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.b78d2936.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.efa0ade1.min.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       
