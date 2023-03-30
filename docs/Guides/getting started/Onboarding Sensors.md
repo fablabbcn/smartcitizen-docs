@@ -8,7 +8,6 @@ The onboarding app guides you through the process of the setup using simple lang
 	- A computer to visit the onboarding app
 	- A smartphone (or tablet, or another computer) to connect to the kit and configure it
 
-
 The welcome page looks like this. For sensors different from the Smart Citizen Kit 2.1, please check the [advanced kit selection](#advanced-kit-selection):
 
 ![](/assets/images/onboarding_1.png)
@@ -50,7 +49,7 @@ You can also add some tags to your sensor:
 
 ![](/assets/images/onboarding_5.png)
 
-Finally, add the sensor to your user account (if you don't have one you can register now):
+Finally, add the sensor to an **user account** (if you don't have one you can register now). This step is needed as every device needs to be owned by one user:
 
 ![](/assets/images/onboarding_7.png)
 
@@ -60,6 +59,9 @@ Finally, add the sensor to your user account (if you don't have one you can regi
 You are done!
 
 ![](/assets/images/onboarding_8.png)
+
+!!! info "Working with a community?"
+	You can either choose to create a joint email account, or work with each participant with one account. Working with a joint email account speeds things up, but it is not the same sense of ownership. When in doubt, we recommend giving each participant the freedom to choose, and if they do not want to create an account, a fallback option can be used.
 
 Visit the Kit on the platform. **Wait one minute till it publishes data**:
 
