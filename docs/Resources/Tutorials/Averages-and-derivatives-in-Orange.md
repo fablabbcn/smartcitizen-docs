@@ -93,7 +93,7 @@ _Top: raw data. Bottom: daily average_
     ![](https://i.imgur.com/tu1ex3M.png)
     
 
-!!! success 
+!!! success "Battery life"
 
     You can use also mins for detecting when the SCK's battery of the is lower than a certain threshold.
 
