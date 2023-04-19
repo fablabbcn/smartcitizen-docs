@@ -43,3 +43,13 @@ These tutorials will help you go through some basic data analysis tools we like,
 !!! info "Orange workflows"
     If you want to use some existing workflows, you can visit the **Orange Workflows Repository** https://github.com/fablabbcn/smartcitizen-docs/tree/master/docs/assets/ows
 
+#### Processing
+
+![](https://media.giphy.com/media/b5KYsvAUlcFDn1pyyj/giphy.gif)
+
+These tutorials will help you using processing to get data from a Smart Citizen Kit, either by serial or using the API. 
+
+- [Configure Processing to read by serial and example with flocking](/Resources/Tutorials/Setting-up-Processing-and-using-Serial/)
+
+!!! info "Processing sketches"
+    If you want to use some existing sketches for processing, you can visit the **Processing Sketches Repository** https://github.com/fablabbcn/smartcitizen-docs/blob/master/docs/assets/pde/
