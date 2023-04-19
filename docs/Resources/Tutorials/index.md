@@ -38,6 +38,7 @@ These tutorials will help you go through some basic data analysis tools we like,
 - [Smart Citizen Orange Widgets](/Guides/data/Orange%20Data%20Widgets/)
 - [Create a simple workflow for data analysis in Orange](/Resources/Tutorials/Simple%20Orange%20Workflow/)
 - [Orange and geolocated data](/Resources/Tutorials/Orange%20and%20geolocated%20data/)
+- [Averaging and derivating in Orange](/Resources/Tutorials/Averages-and-derivatives-in-Orange/)
 
 !!! info "Orange workflows"
     If you want to use some existing workflows, you can visit the **Orange Workflows Repository** https://github.com/fablabbcn/smartcitizen-docs/tree/master/docs/assets/ows
