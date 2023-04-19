@@ -551,6 +551,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.smartcitizen.me/Resources/Tutorials/Setting-up-Processing-and-using-Serial/</loc>
+         <lastmod>2023-04-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.smartcitizen.me/Resources/Tutorials/Simple%20Orange%20Workflow/</loc>
          <lastmod>2023-04-19</lastmod>
          <changefreq>daily</changefreq>
