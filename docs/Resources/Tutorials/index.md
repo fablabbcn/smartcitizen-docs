@@ -50,6 +50,7 @@ These tutorials will help you go through some basic data analysis tools we like,
 These tutorials will help you using processing to get data from a Smart Citizen Kit, either by serial or using the API. 
 
 - [Configure Processing to read by serial and example with flocking](/Resources/Tutorials/Setting-up-Processing-and-using-Serial/)
+- [Example of calling Smart Citizen API with Processing explained](/Resources/Tutorials/How-to-call-the-Smart-Citizen-API-using-Processing/)
 
 !!! info "Processing sketches"
     If you want to use some existing sketches for processing, you can visit the **Processing Sketches Repository** https://github.com/fablabbcn/smartcitizen-docs/blob/master/docs/assets/pde/
