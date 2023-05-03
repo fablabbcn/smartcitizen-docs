@@ -1,5 +1,3 @@
-Setting-up-Processing-and-using-Serial.md
-
 # How to set up Processing and use serial to communicate with the Smart Citizen Kit
 
 In this tutorial we'll go step by step through the setup of processing with a real time example of a Smart Citizen Kit
@@ -17,7 +15,7 @@ And follow the steps for a regular installation.
     This tutorial was done in 2023 with the version 4.2 for windows of Processing
     
     
-You can find the code used in this tutorial here: https://github.com/fablabbcn/smartcitizen-docs/blob/master/docs/assets/pde/Flocks_example_serial.pde
+You can find the code used in this tutorial here: https://github.com/fablabbcn/smartcitizen-docs/blob/master/docs/assets/pde/Flocks_example_serial/Flocks_example_serial.pde
     
     
 ## Find the right port
@@ -84,7 +82,7 @@ Here we're going to see the code for doing this and how to make it work and a br
 
 ### The code
 
-You can find the code used in this tutorial here: https://github.com/fablabbcn/smartcitizen-docs/blob/master/docs/assets/pde/Flocks_example_serial.pde
+You can find the code used in this tutorial here: https://github.com/fablabbcn/smartcitizen-docs/blob/master/docs/assets/pde/Flocks_example_serial/Flocks_example_serial.pde
 
 !!! info "Aknowledgements"
 
