@@ -546,6 +546,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.smartcitizen.me/Resources/Tutorials/How-to-call-the-Smart-Citizen-API-using-Processing/</loc>
+         <lastmod>2023-05-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.smartcitizen.me/Resources/Tutorials/Orange%20and%20geolocated%20data/</loc>
          <lastmod>2023-05-03</lastmod>
          <changefreq>daily</changefreq>
