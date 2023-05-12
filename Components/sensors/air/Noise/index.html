@@ -21,7 +21,7 @@
         <link rel="next" href="../Metal%20Oxide/">
       
       <link rel="icon" href="../../../../assets/images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.11">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.12">
     
     
       
@@ -3330,15 +3330,15 @@
 
 <h1 id="noise-readings">Noise readings<a class="headerlink" href="#noise-readings" title="Permanent link">&para;</a></h1>
 <p>The new Urban Sensor Board SCK 2.0 (and onwards) comes with a digital <strong>MEMs I2S microphone</strong>. There is a wide range of possibilities in the market, and our pick was the INVENSENSE (now TDK) <a href="https://www.invensense.com/products/digital/ics-43432/">ICS43432</a>: a tiny digital MEMs microphone with I2S output. There is an extensive documentation at TDK's website coming from the former and we would recommend to review the nicely put documents for those interested in the topic.</p>
-<p><img alt="" src="https://i.imgur.com/ZbkN4aj.png" /></p>
+<p><img alt="" src="/assets/images/ZbkN4aj.png" /></p>
 <p><em>Image credit: <a href="https://www.invensense.com/products/digital/ics-43432">Invensense ICS43432</a></em></p>
 <h2 id="hardware">Hardware<a class="headerlink" href="#hardware" title="Permanent link">&para;</a></h2>
 <p>The <strong>MEMs microphone</strong> comes with a transducer element which converts the sound pressure into electric signals. The sound pressure reaches the transducer through a hole drilled in the package and the transducer's signal is sent to an ADC which provides with a signal which can be pulse density modulated (PDM) or in I2S format. Since the ADC is already in the microphone, we have an all-digital audio capture path to the processor and it’s less likely to pick up interferences from other RF, such as the WiFi, for example. The I2S has the advantage of a decimated output, and since the SAMD21 has an I2S port, this allows us to connect it directly to the microcontroller with no CODEC needed to decode the audio data. Additionally, there is a bandpass filter, which eliminates <em>DC</em> and low frequency components (i.e. at fs = 48kHz, the filter has -3dB corner at 3,7Hz) and high frequencies at <em>0,5·fs</em> (-3dB cutoff). Both specifications are important to consider when analysing the data and discarding unusable frequencies. The microphone acoustic response has to be considered as well, with subsequent equalisation in the data treatment in order.</p>
-<p><img alt="" src="https://i.imgur.com/cToxGKY.png" /></p>
+<p><img alt="" src="/assets/images/cToxGKY.png" /></p>
 <p><em>Image credit: <a href="https://www.invensense.com/wp-content/uploads/2015/02/ICS-43432-data-sheet-v1.3.pdf">ICS43432 Datasheet - TDK Invensense</a></em></p>
 <h3 id="i2s-protocol">I2S Protocol<a class="headerlink" href="#i2s-protocol" title="Permanent link">&para;</a></h3>
 <p>The <strong><a href="https://www.sparkfun.com/datasheets/BreakoutBoards/I2SBUS.pdf">I2S protocol</a></strong> (<em>Inter-IC-Sound</em>) is a serial bus interface which consists of: a bit clock line or Serial Clock (<em>SCK</em>), a word clock line or Word Select (<em>WS</em>) and a multiplexed Serial Data line (<em>SD</em>). The SD is transmitted in two’s complement with MSB first, with a 24-bit word length in the microphone we picked. The <em>WS</em> is used to indicate which channel is being transmitted (left or right). In the case of the ICS43432, there is an additional pin which corresponds with the L/R, allowing to use the left or right channel to output the signal and the use of stereo configurations. When set to left, the data follows WS’s falling edge and when set to right, the WS’s rising edge. For the SAMD21 processor, there is a well developed <a href="https://github.com/arduino/ArduinoCore-samd/tree/master/libraries/I2S">I2S library</a> that will take control of this configuration. </p>
-<p><img alt="" src="https://i.imgur.com/Z6TdV9h.png" /></p>
+<p><img alt="" src="/assets/images/Z6TdV9h.png" /></p>
 <p><em>Image credit: <a href="https://www.sparkfun.com/datasheets/BreakoutBoards/I2SBUS.pdf">I2S bus specification - Philips Semiconductors</a></em></p>
 <p>The SD line of the I2S protocol is quite delicate at high frequencies and it is largely affected by noise in the path the line follows. If you want to try this at home (for example with an Arduino Zero and an I2S microphone like <a href="https://www.tindie.com/products/onehorse/ics43432-i2s-digital-microphone/">this one</a>, it is important not to use cables in this line and to connect the output pin directly to the board, to avoid having interfaces throughout the SD line. One interesting way to see this is that every time the line sees a medium change, part of it will be reflected and part will be transmitted, just like any other wave. This means that introducing a cable for the line will provoke at least three medium changes and a potential signal quality loss much higher than a direct connection. Apart from this point, the I2S connection is pretty straight forward and it is reasonably easy to retrieve data from the line and start playing around with some FFT analysis.</p>
 <h3 id="manufacturer-specifications">Manufacturer specifications<a class="headerlink" href="#manufacturer-specifications" title="Permanent link">&para;</a></h3>
@@ -3378,7 +3378,7 @@
 </table>
 <h2 id="evaluation">Evaluation<a class="headerlink" href="#evaluation" title="Permanent link">&para;</a></h2>
 <p>The sensor is calibrated in an anechoic chamber with a reference microphone to obtain sensor characteristics. The ICS43432 has a clear non-linear response, which is specified in it's datasheet and is characterised in an anechoic chamber:</p>
-<p><img alt="" src="https://i.imgur.com/FYxxWxB.jpg" /></p>
+<p><img alt="" src="/assets/images/FYxxWxB.jpg" /></p>
 <p><em>Image credit: <a href="https://www.invensense.com/products/digital/ics-43432">Invensense ICS43432</a></em></p>
 <h3 id="test-setup">Test setup<a class="headerlink" href="#test-setup" title="Permanent link">&para;</a></h3>
 <p><em>SCK side</em></p>
@@ -3394,11 +3394,11 @@
 <p>The noise floor of the microphone in this test setup is of <strong>35,5 dB / 30,1 dBA</strong></p>
 <h3 id="spectrum-response">Spectrum response<a class="headerlink" href="#spectrum-response" title="Permanent link">&para;</a></h3>
 <p>The results for this characterisation, for different SPLs are shown below:</p>
-<p><img alt="" src="https://i.imgur.com/P3co21a.png" /></p>
+<p><img alt="" src="/assets/images/P3co21a.png" /></p>
 <p>The microphone's spectrum response is not dependent on the SPL, but only on the frequency. The above response is corrected in the Smart Citizen Kit on real time. A double point validation is performed on both microphones, from the SCK1.5 and the SCK2.0 (onwards), yielding the following results (<strong>the results below do not show any equalisation</strong>):</p>
-<p><img alt="" src="https://i.imgur.com/wf7ZWzg.png" /></p>
+<p><img alt="" src="/assets/images/wf7ZWzg.png" /></p>
 <p>Finally, if comparing these with the thresholds, in dBA scale <a href="https://webstore.iec.ch/preview/info_iec61672-1{ed1.0}en_d.pdf">IEC 61672-1</a>, without accounting for the previous equalisation:</p>
-<p><img alt="" src="https://i.imgur.com/rRMGL7N.png" /></p>
+<p><img alt="" src="/assets/images/rRMGL7N.png" /></p>
 <p>Which yields a very good linearity off-the-shelf over the common urban frequency range (below 2000Hz).</p>
 <h3 id="sensor-considerations">Sensor Considerations<a class="headerlink" href="#sensor-considerations" title="Permanent link">&para;</a></h3>
 <p>There are some known limitations that need to be taken into account when performing noise measurements with the SCK:</p>
@@ -3454,17 +3454,17 @@ x = {\sqrt{x_1^2+x_2^2+...+x_N^2 \over N}}
 <p><em>Image credit: <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Sine_wave_voltages.svg/400px-Sine_wave_voltages.svg.png">Sine wave parameters- Wikipedia</a></em></p>
 <p>Now that we know how to calculate the RMS level of our signal, let's go into something more interesting: <em>how do we actually perform the weighting?</em> Well, if you recall the previous section, when we talked about hearing, we were talking about the different hearing capabilities in terms of <strong>frequencies</strong> (in humans, mouses, beluga whales... ). Therefore, something interesting to know about our signal is its <strong>frequency content</strong>,  so that we are able to perform the weighting. For this purpose, we have the <strong>FFT algorithm</strong>.</p>
 <p><em>FFT</em> stands for <strong>Fast Fourier Transform</strong>, and it's an algorithm capable of performing a Fourier Transform in a simplified and efficient way (that's where the <em>fast</em> comes in). What it does in a detailed mathematical way is something quite complicated with the details; but being practical, it is basically a convertion between the signal in time domain and its frequency domain components. Interestingly, this process is reversible and the other way around it is called <strong>IFFT</strong> (<em>I</em> for <em>Inverse</em>).</p>
-<p><img alt="" src="https://i.imgur.com/1B1MZSF.png" /></p>
+<p><img alt="" src="/assets/images/1B1MZSF.png" /></p>
 <p><em>Image credit: Smart Citizen</em></p>
 <p>In the example above, things in the time domain get a bit messy, but in the frequency domain we can <em>clearly</em> see the composition of two sine waves of the same amplitude of roughly 40Hz and 120Hz. The FFT algorithm hence helps us digest the information contained in a signal in a more visually understandable way.</p>
 <p>For this introduction, let's move on to what we actually want to do: <em>the much anticipated weighting</em>. At this point, our task is fairly easy: we just have to multiply both: our signal in the frequency domain with the weighting function and that's it! If we have a look at the figure below, in the time and frequency domain, the signals look like this:</p>
-<p><img alt="" src="https://i.imgur.com/3REv8Ah.png" /></p>
+<p><img alt="" src="/assets/images/3REv8Ah.png" /></p>
 <p><em>Image credit: Smart Citizen</em></p>
 <p>This example shows how our ears are only capable of perceiving the signal in red, but the actual sound components are in blue -- being much higher in the amplitude spectrum. If you want to get into the thick of it, here you have the actual <a href="https://github.com/oscgonfer/AudioI2S_SCK/tree/master/OCTAVE/A_WEIGHTING">implementation in Matlab/Octave</a> of the A-weighting function that we'll use in the SCK V2.0.</p>
 <h3 id="signal-windowing">Signal windowing<a class="headerlink" href="#signal-windowing" title="Permanent link">&para;</a></h3>
 <p>In this section we are going to describe how we have to pre process our signals in order to obtain the results in the manner we are expecting. These are very important steps in our processing chain, since the FFT algorithms -or convolution FIR Filters- won't be able to cope with our system's limitations. These limitations might not be obvious at the beginning, but you really don't want to ignore them while designing your system, since they'll invalidate many of your measurements.</p>
 <p>The very first of these limitations, is the fact that our microphone is, in fact, taking <strong>discrete samples</strong> of the ambient noise surrounding it. This means that, from the very beginning, we are missing some pieces of information and we will never be able to process them. For the purpose of our analysis, we don't need to sample continuosly and this situation is easily bypassed. </p>
-<p><img alt="Discrete sampling" src="https://i.imgur.com/3Iz2tE0.png" /></p>
+<p><img alt="Discrete sampling" src="/assets/images/3Iz2tE0.png" /></p>
 <p><em>Image credit: <a href="https://www.nutaq.com/blog/analog-digital-%E2%80%93-part-2-conversion-process">NUTAQ - Signal processing</a></em></p>
 <p>Discrete sampling has two main consequences for us: the first one is that we are taking samples once every <span class="arithmatex"><span class="MathJax_Preview">1/f_s</span><script type="math/tex">1/f_s</script></span>, where <span class="arithmatex"><span class="MathJax_Preview">f_s</span><script type="math/tex">f_s</script></span> is the sampling frequency. Normal audio systems sample at 44,1kHz, but this number might vary depending on the application. If you remember <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Animal_hearing_frequency_range.svg/512px-Animal_hearing_frequency_range.svg.png">this chart</a>, you might be wondering why we have to sample at such a high frequency. </p>
 <p><img alt="" src="https://www.adinstruments.com/sites/default/files/wysiwyg-resources/images/data-quality-digital-sampling_0.gif" /></p>
@@ -3474,13 +3474,13 @@ x = {\sqrt{x_1^2+x_2^2+...+x_N^2 \over N}}
 <p><em>Image credit: <a href="https://en.wikipedia.org/wiki/Aliasing">Wikipedia - Aliasing</a></em></p>
 <p>The second of the discrete sampling limitation comes from the <strong>amount of samples we are able to handle at a time</strong>. Normally, this is due to memory limitations in the RAM. Nevertheless, it is not useful to handle buffers that are <em>too long</em>, since at some point, the increase of buffer length does not provide any additional information. Buffer length requirements in our case come from the minimum frequency we want to sample, which is <em>around 20Hz</em>. Doing some quick math, we need 0,05s worth of sample buffer, which at 44,1kHz is roughly <em>2200 samples</em>. This is equally too many samples, considering that each could be allocated as a <code>uint8_t</code>, taking up to 16kB just for the raw buffer!</p>
 <p>This is where <strong>signal windowing</strong> kicks in. Imagine that we have a very-low-frequency sinusoid and that we are not able to sample completely the whole sine wave, due to buffer limitations. By definition, our system is assuming that the discrete samples we measure are constantly being repeated in the environment, one after the other:</p>
-<p><img alt="" src="https://i.imgur.com/DOfCeAI.png" /></p>
+<p><img alt="" src="/assets/images/DOfCeAI.png" /></p>
 <p><em>Image credit: Smart Citizen</em></p>
 <p>When we take the FFT of this signal, we see undesired frequencies that make our frequency spectrum invalid. This is called <strong>spectral leakage</strong> and it's mitigated by the use of <a href="https://en.wikipedia.org/wiki/Window_function"><em>windows</em></a> (math funcions, not the OS). These windows operate by <strong>smoothing the edges</strong> of our measurement and preventing the <em>jumps</em> in the signal helping the FFT algorithm to properly analyse the signals.</p>
 <p><img alt="" src="ttps://i.imgur.com/1BSCYdu.png" /></p>
 <p><em>Image credit: Smart Citizen</em></p>
 <p>With the use of <em>signal windowing</em>, more specifically with the use of the <em>hamming window</em>, we are then able to reduce the amount of samples needed to roughly 1000 samples. Now we are down to <strong>50% of the memory allocation needed without windowing</strong>. You can see the effect on the <em>RMS relative errors</em> in the image below, where the trend of the Hann (another common window) and the Hamming treated buffers, with respect to the frequency tends to stabilise <em>much more quickly</em> than the <em>raw</em> buffers.</p>
-<p><img alt="" src="https://i.imgur.com/rlmh9jf.png" /></p>
+<p><img alt="" src="/assets/images/rlmh9jf.png" /></p>
 <p><em>Image credit: Smart Citizen</em></p>
 <p>There is a wide range of functions to use and the decision depends on your application. For audio applications, the most common ones are the Hann, Hamming, and Blackmann. We chose the Hamming because it's trend is to stabilise a bit more quickly than the rest, although the differencies are minimal. For reference, there is a very interesting description of all these phenomena in this <a href="http://www.ni.com/white-paper/4278/en/">article</a>, where you'll find a more mathematical approach.</p>
 <h3 id="signal-equalisation">Signal Equalisation<a class="headerlink" href="#signal-equalisation" title="Permanent link">&para;</a></h3>
@@ -3502,13 +3502,13 @@ x = {\sqrt{x_1^2+x_2^2+...+x_N^2 \over N}}
 <p><img alt="" src="http://www.dspguide.com/graphics/F_6_8.gif" /></p>
 <p><em>Image credit: <a href="http://www.dspguide.com/">DSP Guide</a></em></p>
 <p>Now, the most interesting thing of all this theory is that <strong>convolution and multiplication are equivalent operations when we jump from the time to the frequency domain</strong>. This means that multiplication in time domain equals to convolution in frequency domain, and more importantly for us, <strong>convolution in the time domain, equals to multiplication in the frequency domain</strong>. To sum up, the relationship between both domains would look like:</p>
-<p><img alt="" src="https://i.imgur.com/3Bhyqt3.png" /></p>
+<p><img alt="" src="/assets/images/3Bhyqt3.png" /></p>
 <p><em>Image credit: SmartCitizen</em></p>
 <p>Therefore, what we could do is to define a <strong>custom filter function</strong> and apply it via convolution to our input buffer. This is basically a <strong>FIR filter</strong>, where <em>FIR</em> stands for <em>Finite Impulse Response</em>. There is another type of filters called <strong>IIR</strong>, where <em>IIR</em> stands for <em>Infinite impulse response</em>. The difference between them is that <em>FIR uses convolution</em> and <em>IIR uses recursion</em>. The concept of <strong>recursion</strong> is very simple and it's nothing else than a simplification of the convolution, given that in the convolution algorithm, there are many <em>recursive</em> operations that we repeat over an over and we can implement into a smarter algorithm. Normally, IIR filters are <em>more efficient in terms of speed and memory</em>, but we need to specify a series of coefficients, and it's tricky, if not impossible, to create a custom filter response.</p>
 <p><img alt="" src="http://www.dspguide.com/graphics/F_19_1.gif" /></p>
 <p><em>Image credit: <a href="http://www.dspguide.com/">DSP Guide</a></em></p>
 <p>So finally! <em>How can we avoid using the FFT algorithm to extract the desired frequency content of a signal and recreate the signal without it?</em> Sounds complex, but now we know that  we can use a <strong>FIR filter</strong>, with a <strong>custom frequency response</strong> and apply it via convolution to our input buffer. As simple as that. The custom frequency response, with the proper math, can be optained by applying the IFFT algorithm to the desired frequency response (for example, the A-weighting function). You can have a look to <a href="https://github.com/oscgonfer/AudioI2S_SCK/tree/dev_i2s_dbg/OCTAVE">this example</a> if you want to create a custom filter function in <a href="https://www.gnu.org/software/octave/">octave</a>, with A or C weighting and implement it to a FIR filter in C++.</p>
-<p><img alt="" src="https://i.imgur.com/MDJgGeH.png" /></p>
+<p><img alt="" src="/assets/images/MDJgGeH.png" /></p>
 <p><em>Image credit: SmartCitizen</em></p>
 <p>Also, if you are really into it, you can read more about convolution and other DSP topics, we would recommended to go through <a href="http://www.dspguide.com/ch6.htm">this fantastic guide</a>.</p>
 <h2 id="source-files">Source files<a class="headerlink" href="#source-files" title="Permanent link">&para;</a></h2>
@@ -3631,7 +3631,7 @@ x = {\sqrt{x_1^2+x_2^2+...+x_N^2 \over N}}
     <script id="__config" type="application/json">{"base": "../../../..", "features": ["instant", "navigation.indexes", "navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "content.tooltips"], "search": "../../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.fac441b0.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.c2be25ad.min.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       

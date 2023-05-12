@@ -17,7 +17,7 @@
       
       
       <link rel="icon" href="../../../assets/images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.11">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.12">
     
     
       
@@ -3120,7 +3120,7 @@
 
 
 <h1 id="how-to-call-the-smart-citizen-api-using-processing">How to call the Smart Citizen API using Processing<a class="headerlink" href="#how-to-call-the-smart-citizen-api-using-processing" title="Permanent link">&para;</a></h1>
-<p><img alt="" src="https://i.imgur.com/2xtIx82.png" /></p>
+<p><img alt="" src="/assets/images/2xtIx82.png" /></p>
 <p>This is a tutorial that goes over a sketch in processing that asks via API the data of a specific device and sensor and plots it. There is no need for any specific library. </p>
 <p>It can be easily modified to change the device, the sensor and other elements. </p>
 <div class="admonition info">
@@ -3133,7 +3133,7 @@
 </div>
 <h2 id="the-api">The API<a class="headerlink" href="#the-api" title="Permanent link">&para;</a></h2>
 <p>The Smartcitizen V0 API is a publicly available interface allowing anyone to develop applications and experiments on top of the Smartcitizen platform.</p>
-<p><img alt="" src="https://i.imgur.com/PV4YkRD.png" /></p>
+<p><img alt="" src="/assets/images/PV4YkRD.png" /></p>
 <p>The summary of what the API does is that you ask the API for information using a specific URL and the API is going to answer you with data ordered in a JSON. In this tutorial we're going to do that and then print what we have found. </p>
 <div class="admonition info">
 <p class="admonition-title">More information about the API</p>
@@ -3238,7 +3238,7 @@ or here in JSON form
 <p>We have to use JSONObject and JSONArray to get the information. For more information about this objects here you can find the documentation of processing for <a href="https://processing.org/reference/JSONArray.html">JSONArray</a> and <a href="https://processing.org/reference/JSONObject.html">JSONObject</a></p>
 <h2 id="process-the-data">Process the data<a class="headerlink" href="#process-the-data" title="Permanent link">&para;</a></h2>
 <p>The data is stored in a response in JSON that follows a specific structure dictated by the API. You can see it in the API documentation in the <strong>response</strong> table <a href="https://developer.smartcitizen.me/#get-historical-readings">https://developer.smartcitizen.me/#get-historical-readings</a></p>
-<p><img alt="" src="https://i.imgur.com/JqNuJfd.png" /></p>
+<p><img alt="" src="/assets/images/JqNuJfd.png" /></p>
 <p>In this sketch we fill a generic array of float numbers using a for loop. </p>
 <div class="highlight"><pre><span></span><code><span class="w">  </span><span class="n">readingsFloats</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">float</span><span class="o">[</span><span class="n">readings</span><span class="p">.</span><span class="na">size</span><span class="p">()</span><span class="o">]</span><span class="p">;</span>
 <span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;</span><span class="n">readings</span><span class="p">.</span><span class="na">size</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -3262,7 +3262,7 @@ or here in JSON form
 <span class="w">  </span><span class="p">}</span>
 </code></pre></div>
 <p>And this is the result</p>
-<p><img alt="" src="https://i.imgur.com/ldi4dcS.png" /></p>
+<p><img alt="" src="/assets/images/ldi4dcS.png" /></p>
 
 
 
@@ -3380,7 +3380,7 @@ or here in JSON form
     <script id="__config" type="application/json">{"base": "../../..", "features": ["instant", "navigation.indexes", "navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.fac441b0.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.c2be25ad.min.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       

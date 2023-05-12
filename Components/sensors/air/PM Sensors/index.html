@@ -21,7 +21,7 @@
         <link rel="next" href="../Noise/">
       
       <link rel="icon" href="../../../../assets/images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.11">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.12">
     
     
       
@@ -3154,7 +3154,7 @@
 <h2 id="working-principle">Working principle<a class="headerlink" href="#working-principle" title="Permanent link">&para;</a></h2>
 <p><a data-flickr-embed="true"  title="SCK 2.1 Particle Sensor"><img src="https://live.staticflickr.com/65535/47950939936_8942068512_h.jpg" alt="SCK 2.1 Particle Sensor"></a></p>
 <p>The PM sensors available in the Smart Citizen Kit (one sensor per Kit) and the Smart Citizen Station (two sensors per Station), are the Plantower PMS5003 sensor. The PMS5003 is a <a href="https://en.wikipedia.org/wiki/Nephelometer">nephelometer</a>, and this type of measures suspended particulates by employing a light beam and a light detector set to one side (often 90°) of the source beam. Particle density is then a function of the light reflected into the detector and the particle mass is a calculation derived from this density, assuming certain properties of the particles, such as shape, color and reflectivity, among others. </p>
-<p><img alt="" src="https://i.imgur.com/aNlzRba.png" /></p>
+<p><img alt="" src="/assets/images/aNlzRba.png" /></p>
 <p>What the sensor does, is to analyse the readings from the sensing element and count how many particles are there, for different particles sizes, or bins. This means that the sensor will group, for instance, the particles that have a diameter between 1um and 2.5um in one bucket, and count them. Once it has the <strong>particle number</strong> calculated for all the buckets, it <strong>estimates</strong> the <strong>Particle Mass</strong> for PM1 (particles with a diameter below 1um), PM2.5 (particles with a diameter below 2.5um) and PM10 (particles with a diameter below 10um). For estimating this, it makes quite a few assumptions (the internal calculations are unknown to us), such as:</p>
 <ul>
 <li>Particle shape (normally a sphere, but with some shape factors)</li>
@@ -3306,7 +3306,7 @@
     <script id="__config" type="application/json">{"base": "../../../..", "features": ["instant", "navigation.indexes", "navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "content.tooltips"], "search": "../../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.fac441b0.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.c2be25ad.min.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       

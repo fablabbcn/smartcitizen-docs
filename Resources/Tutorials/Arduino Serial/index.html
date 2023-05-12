@@ -21,7 +21,7 @@
         <link rel="next" href="../Change%20data%20rate%20in%20the%20SCK/">
       
       <link rel="icon" href="../../../assets/images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.11">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.12">
     
     
       
@@ -3288,21 +3288,21 @@
 </ul>
 <h2 id="connect-to-your-kit">Connect to your kit<a class="headerlink" href="#connect-to-your-kit" title="Permanent link">&para;</a></h2>
 <p><strong>Connect the MicroUSB cable</strong> to the SCK:</p>
-<p><img alt="" src="https://i.imgur.com/GzrOomC.png" /></p>
+<p><img alt="" src="/assets/images/GzrOomC.png" /></p>
 <p>And the USB to your computer:</p>
-<p><img alt="" src="https://i.imgur.com/JiY7bpZ.jpg" /></p>
+<p><img alt="" src="/assets/images/JiY7bpZ.jpg" /></p>
 <p>Open the Arduino IDE (the screenshots are done Arduino 2.0 in Windows). If this is your first time with the Arduino IDE don't worry, we will just be working with a couple of things.</p>
 <p><strong>Set the port</strong> </p>
 <p>Go to <code>Tools-&gt;Port</code> and  select the port that reads like either: 
 - <code>(Arduino Zero (Native USB Port))</code>
 - <code>(Arduino/Genuino Zero (Autodetect Port))</code></p>
-<p><img alt="" src="https://i.imgur.com/XVAq6lP.png" /></p>
+<p><img alt="" src="/assets/images/XVAq6lP.png" /></p>
 <h2 id="open-the-serial-plotter">Open the serial plotter<a class="headerlink" href="#open-the-serial-plotter" title="Permanent link">&para;</a></h2>
 <p>Go to <code>Tools-&gt;Serial plotter</code></p>
 <div class="admonition warning">
 <p class="admonition-title">Connection troubleshooting</p>
 <p><em>"Couldn't open serial plotter"</em></p>
-<p><img alt="" src="https://i.imgur.com/lTbdfwJ.png" /></p>
+<p><img alt="" src="/assets/images/lTbdfwJ.png" /></p>
 <p><strong>Check if the USB</strong> is properly connected and then, <strong>revise if the port is properly selected</strong>. Last, <strong>check if there is a board selected</strong>. </p>
 <p>If the cable is connected but it's not being recognized by the Arduino IDE, try to reset the SCK by the ON/OFF button:</p>
 <p><img src="https://live.staticflickr.com/65535/48439505516_1d3bd25915_z.jpg" width="640"  alt="SCK 2.1 Outdoor enclosure">
@@ -3311,13 +3311,13 @@
 <div class="admonition info">
 <p class="admonition-title">Arduino IDE 2.x</p>
 <p>Alternativately, in Arduino IDE 2.x you can select the port from the display on the top</p>
-<p><img alt="" src="https://i.imgur.com/OmUzewO.png" /></p>
+<p><img alt="" src="/assets/images/OmUzewO.png" /></p>
 <p>If you do, you're going to be asked probably to install the specific board of the board that the smartcitizen has on the bottom. </p>
-<p><img alt="" src="https://i.imgur.com/8Gjzh0d.png" /></p>
+<p><img alt="" src="/assets/images/8Gjzh0d.png" /></p>
 <p>You can just follow the steps of installing the board (you may have some warnings from Windows of needing permissions).</p>
 </div>
 <p>If everything is correct you should get something like this:    </p>
-<p><img alt="" src="https://i.imgur.com/gfwybmd.png" />
+<p><img alt="" src="/assets/images/gfwybmd.png" />
 <em>serial plotter without configuration</em></p>
 <div class="admonition info">
 <p class="admonition-title">More on the serial plotter</p>
@@ -3327,9 +3327,9 @@
 </div>
 <h2 id="use-commands-to-select-the-plotting-device">Use commands to select the plotting device<a class="headerlink" href="#use-commands-to-select-the-plotting-device" title="Permanent link">&para;</a></h2>
 <p>When you open the serial plotter you will have something like this:</p>
-<p><img alt="" src="https://i.imgur.com/yaaSM7l.png" /></p>
+<p><img alt="" src="/assets/images/yaaSM7l.png" /></p>
 <p>It's important to check the bottom part where it should say <code>Carriage Return</code> and <code>115200 baud</code>:</p>
-<p><img alt="" src="https://i.imgur.com/nvT5mrN.png" /></p>
+<p><img alt="" src="/assets/images/nvT5mrN.png" /></p>
 <p>In the box of <code>Type Message</code> we can send message to the kit. </p>
 <div class="admonition info">
 <p class="admonition-title">The commands</p>
@@ -3341,35 +3341,35 @@
 <div class="highlight"><pre><span></span><code>monitor noise -notime -noms
 </code></pre></div>
 <p>You will get something like this. </p>
-<p><img alt="" src="https://i.imgur.com/zFroBTy.png" /></p>
+<p><img alt="" src="/assets/images/zFroBTy.png" /></p>
 <p>You will get the data in dBA. You can try to clap or stay quiet to keep the noise levels low. </p>
 <h3 id="light">Light<a class="headerlink" href="#light" title="Permanent link">&para;</a></h3>
 <p>Input this command: </p>
 <div class="highlight"><pre><span></span><code>monitor light -notime -noms
 </code></pre></div>
 <p>You will get something like this. </p>
-<p><img alt="" src="https://i.imgur.com/x2Jzfyx.png" /></p>
+<p><img alt="" src="/assets/images/x2Jzfyx.png" /></p>
 <p>Output is in lux. By covering or pointing the sensor to a light source you should see some changes.</p>
 <h3 id="temperature">Temperature<a class="headerlink" href="#temperature" title="Permanent link">&para;</a></h3>
 <p>Input this command: </p>
 <div class="highlight"><pre><span></span><code>monitor temp -notime -noms
 </code></pre></div>
 <p>You will get something like this:</p>
-<p><img alt="" src="https://i.imgur.com/w2OpzDg.png" /></p>
+<p><img alt="" src="/assets/images/w2OpzDg.png" /></p>
 <p>The output will be in ºC. You can put your finger into the temp and humidity sensor to see how it changes over time and go back to normal. </p>
 <h3 id="humidity">Humidity<a class="headerlink" href="#humidity" title="Permanent link">&para;</a></h3>
 <p>Input this command: </p>
 <div class="highlight"><pre><span></span><code>monitor humidity -notime -noms
 </code></pre></div>
 <p>You will get something like this. </p>
-<p><img alt="" src="https://i.imgur.com/wHtkknW.png" /></p>
+<p><img alt="" src="/assets/images/wHtkknW.png" /></p>
 <p>The output is in %RH. You can put your finger into the temp and humidity sensor to see how it changes over time and go back to normal. </p>
 <h3 id="pressure">Pressure<a class="headerlink" href="#pressure" title="Permanent link">&para;</a></h3>
 <p>Input this command: </p>
 <div class="highlight"><pre><span></span><code>monitor pressure -notime -noms
 </code></pre></div>
 <p>You will get something like this. </p>
-<p><img alt="" src="https://i.imgur.com/EcNKmZm.png" /></p>
+<p><img alt="" src="/assets/images/EcNKmZm.png" /></p>
 <p>The output is in kPa.</p>
 <h3 id="voc-gas-ccs811">VOC Gas CCS811<a class="headerlink" href="#voc-gas-ccs811" title="Permanent link">&para;</a></h3>
 <p>Input this command: </p>
@@ -3508,7 +3508,7 @@
     <script id="__config" type="application/json">{"base": "../../..", "features": ["instant", "navigation.indexes", "navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.fac441b0.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.c2be25ad.min.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       

@@ -21,7 +21,7 @@
         <link rel="next" href="../../calibration/Water%20sensors/">
       
       <link rel="icon" href="../../../assets/images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.11">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.12">
     
     
       
@@ -3480,7 +3480,7 @@
 <p><img alt="" src="https://imgs.xkcd.com/comics/fixing_problems.png" /></p>
 <p>To keep it simple: our final target is to be able to <strong>interact</strong> with the SAMD21 (or the chip) <strong>while it's executing the program</strong> and tell it to pause the execution, give us the value of some variables and then continue. We will release a fairly extensive report with documentation on this process, but for those interested in reading an overview on how to debug, this post can be a short introduction.</p>
 <p>So, here we go! The first item we need is the <a href="http://openocd.org/"><strong>Open On-Chip Debugger</strong> (OpenOCD)</a> which provides debugging with the assistance of a <strong>debug adapter</strong>. This adapter is a small hardware module which helps provide the right kind of electrical signaling to the target being debugged. These are required since the debug host, on which OpenOCD runs (i.e. your computer, a Raspberry PI...) won’t usually have native support for such signaling, or the connector needed to hook up to the target.</p>
-<p><img alt="" src="https://i.imgur.com/qJ2fV3N.jpg" /></p>
+<p><img alt="" src="/assets/images/qJ2fV3N.jpg" /></p>
 <p>These adapters are sometimes packaged as discrete dongles, which may generically be called <strong>hardware interface dongles</strong> (and are quite expensive). Some development boards also integrate them directly, which may let the development board connect directly to the debug host over USB (and sometimes also to power it over USB, like the <a href="https://store.arduino.cc/genuino-zero">Arduino Genuino Zero</a>). In the case of the <strong>Smart Smart Citizen Kit</strong>, we have a <strong>SWD</strong> Adapter that supports <em>Serial Wire Debug</em> signaling to communicate with the <em>ARM core</em>. In our approach, <strong>using a complete open toolchain</strong>, OpenOCD is be running on a Raspberry Pi, and communicating with the SCK's SWD through the GPIO pins of the Pi.</p>
 <p>Finally, to be able to actually <strong>see what is going on inside our firmware while it executes</strong>, we need something that is able to read and understand the machine code and hand it over to a human understandable interface. This is where <a href="https://www.gnu.org/software/gdb/"><strong>GDB</strong></a> kicks in and helps us by:</p>
 <ul>
@@ -3554,9 +3554,9 @@ sudo make install
 </code></pre></div>
 <p>The list of interfaces that openOCD can use is under: <em>/usr/local/share/openocd/scripts/interface</em>.</p>
 <p>In order to use the <a href="http://www.arm.com/products/system-ip/debug-trace/coresight-soc-components/serial-wire-debug.php">SWD connector</a> that the SCK features, by using <em>Bit Banging</em>, we connect it directly to the Raspberry Pi GPIOs:</p>
-<p><img alt="" src="https://i.imgur.com/qJ2fV3N.jpg" /></p>
+<p><img alt="" src="/assets/images/qJ2fV3N.jpg" /></p>
 <hr />
-<p><img alt="" src="https://i.imgur.com/AEYc8sd.jpg" /></p>
+<p><img alt="" src="/assets/images/AEYc8sd.jpg" /></p>
 <h3 id="running-openocd-on-the-raspberry-pi">Running OpenOCD on the raspberry pi<a class="headerlink" href="#running-openocd-on-the-raspberry-pi" title="Permanent link">&para;</a></h3>
 <p>Once you are logged into the raspberry Pi you need a openOCD config file to start (ej. <em>sck.cfg</em>) with this content:</p>
 <div class="highlight"><pre><span></span><code>source [find interface/raspberrypi2-native.cfg]
@@ -3968,7 +3968,7 @@ In the upper frame you can see the code that's being executed.</p>
     <script id="__config" type="application/json">{"base": "../../..", "features": ["instant", "navigation.indexes", "navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.fac441b0.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.c2be25ad.min.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       

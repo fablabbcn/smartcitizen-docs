@@ -17,7 +17,7 @@
       
       
       <link rel="icon" href="../../../assets/images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.11">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.12">
     
     
       
@@ -3154,7 +3154,7 @@
 <span class="n">printArray</span><span class="p">(</span><span class="n">Serial</span><span class="p">.</span><span class="na">list</span><span class="p">());</span>
 </code></pre></div>
 <p>Copy and paste this in a new sketch. Press the play button on the top left and you will see something like this:</p>
-<p><img alt="" src="https://i.imgur.com/ZzrBN5o.png" /></p>
+<p><img alt="" src="/assets/images/ZzrBN5o.png" /></p>
 <p>In the console you will see one or more ports. You will have to select the one that has connected the Smart Citizen Kit.</p>
 <p>For example:</p>
 <div class="highlight"><pre><span></span><code>[0] &quot;COM3&quot;
@@ -3164,7 +3164,7 @@
 <p>This is a notation of an array, where <code>0</code> means <code>COM3</code>, <code>1</code> means <code>COM4</code> and so on. We'll need to find which number (index) we need. In this case between 0, 1, and 2. </p>
 <h3 id="using-arduino-ide">Using arduino IDE<a class="headerlink" href="#using-arduino-ide" title="Permanent link">&para;</a></h3>
 <p>If you have Arduino IDE installed, you can open it and check which port has the Smart Citizen Kit. To do that just open Arduino IDE and in the dropdown menu next to the verify and upload buttons. </p>
-<p><img alt="" src="https://i.imgur.com/rqovYXy.png" /></p>
+<p><img alt="" src="/assets/images/rqovYXy.png" /></p>
 <p>We're looking for the one that says "Arduino Zero(Native USB Port)" to know which name has. In this case <code>COM 6</code></p>
 <div class="admonition info">
 <p class="admonition-title">Older version?</p>
@@ -3188,7 +3188,7 @@
 </div>
 <h3 id="instructions-to-make-it-work">Instructions to make it work<a class="headerlink" href="#instructions-to-make-it-work" title="Permanent link">&para;</a></h3>
 <p>Find the number of the port that is explained above and look the part of the code (in the beggining, line 9) that has the constant PORT_INDEX and substitute with the number of the index of the port array. </p>
-<p><img alt="" src="https://i.imgur.com/5MqGSL0.png" /></p>
+<p><img alt="" src="/assets/images/5MqGSL0.png" /></p>
 <p>In this example it's 2, but can be other integer number (probably from 0 to 2).</p>
 <p>Now, if you press run it would work and the number of flocks will be equal to the amount of luxes that the SmartCitizen Kit recieves at any given moment (So you can pass your hand over it and you will see the flocks reduce their numbers). </p>
 <h3 id="comments-on-the-code-how-does-it-work">Comments on the code. How does it work<a class="headerlink" href="#comments-on-the-code-how-does-it-work" title="Permanent link">&para;</a></h3>
@@ -3364,7 +3364,7 @@
     <script id="__config" type="application/json">{"base": "../../..", "features": ["instant", "navigation.indexes", "navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.fac441b0.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.c2be25ad.min.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       

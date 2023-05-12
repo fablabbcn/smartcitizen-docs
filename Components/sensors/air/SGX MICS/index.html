@@ -21,7 +21,7 @@
         <link rel="next" href="../../../../Resources/">
       
       <link rel="icon" href="../../../../assets/images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.11">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.12">
     
     
       
@@ -3283,12 +3283,12 @@
 <li><em>Sensor cross-sensitivity</em>: is the resistance variation with variations of gases other than the target gas</li>
 <li><em>Sensor poisoning</em>: an irreversible resistance variation provoked by the reaction of gases other than the target gas</li>
 </ul>
-<p><img alt="" src="https://i.imgur.com/EUCes5C.png" />
+<p><img alt="" src="/assets/images/EUCes5C.png" />
 <em>Source: Peterson et al. <sup id="fnref4:first"><a class="footnote-ref" href="#fn:first">1</a></sup></em></p>
 <p>Peterson et al. <sup id="fnref5:first"><a class="footnote-ref" href="#fn:first">1</a></sup> describes the various types of interactions between atmospheric gases and a MOS sensor surface. In the image above, the leftmost region describes the unpowered behaviour, or <strong>base resistance</strong>. The three other regions of the diagram describe different processes that actually occur simultaneously to varying degrees. The sensor’s output is the resistance across the whole of the sensor material, which forms a resistor network with contributions from both the bulk and surface regions. The model described in <sup id="fnref6:first"><a class="footnote-ref" href="#fn:first">1</a></sup> also explains the wide variation in base resistance between individual sensors of the same type, as the random nature of the surface geometry means an equally random network of resistances. This diagram is a two-dimensional representation of a three-dimensional material; in an actual sensor, the sensitive region is spread into the surface with a distance dependent on the grain size and arrangement resulting from the sintering.</p>
 <p>Each sensor will then have a different resistance in air and how much this baseline resistance changes with the concentration of the target gas will also differ (what we defined above as sensitivity). Therefore to convert from resistance readings to concentration it is necessary to derive a <strong>calibration curve for each sensor</strong>. This will require measuring the resistances in air and at a number of gas concentrations over the desired range. It is important that the concentrations are in a background of air as Oxygen is needed for the sensor to work correctly. As stated in <sup id="fnref3:second"><a class="footnote-ref" href="#fn:second">2</a></sup>, the sensor’s response is only partially a function of the amount of gas to which the surface is exposed. Instead, the sensor will have a baseline resistance that is related to the bulk and particle boundary resistance. Because of the random geometry of the granular sensor surface, the baseline resistance will vary between individual sensors.</p>
 <p>The change in resistance with the change in gas concentration is generally not a linear response. The response can be measured and fitted to a <strong>polynomial relationship</strong>, with interactions from other metrics such as temperature, humidity and other gases. It has been proved that air flow around the sensor yields better sensor reactivity, and that the usage of PTFE filters also helps reducing cross-sensitivity and sensor poisoning. An important practical consideration with any in situ air quality sensor design is ensuring adequate flow of sampling air through the device. <strong>Stale air inside a casing will produce unrepresentative results</strong>, and even sensors mounted outside a casing might not get a properly-mixed sample.</p>
-<p><img alt="" src="https://i.imgur.com/wKuthZo.png" />
+<p><img alt="" src="/assets/images/wKuthZo.png" />
 <em>Source: Peterson et al. <sup id="fnref7:first"><a class="footnote-ref" href="#fn:first">1</a></sup></em></p>
 <p>Although the deployment of multiple different sensors can compensate for the cross-sensitivity issues in calibration, it cannot eliminate it. MOS sensors can thus be used only in situations where any interfering species can either be measured by other means, or they must be calibrated regularly and used in locations where the background varies in concentration slowly compared with the target gases. As well, the <strong>sensor drift</strong> over time is an important issue that requires sensor recalibration over time.</p>
 <p>There are two major factors in the longevity of a sensor’s calibration. The first is the <strong>natural degradation</strong> of the heater element, which becomes hotter over prolonged use and causes the sensor’s response profile to vary. The second is the effect of slowly-varying interfering gases, which over the course of months shifts the sensor’s baseline. The first problem may have an engineering solution, but the second will involve taking the results of the tests in an artificial atmosphere, identifying the most critical species and either measuring or possibly modelling their likely concentrations during deployments.</p>
@@ -3322,10 +3322,10 @@ model.compile(loss=&#39;mse&#39;, optimizer=&#39;rmsprop&#39;)
 </code></pre></div>
 <h3 id="carbon-monoxide">Carbon Monoxide<a class="headerlink" href="#carbon-monoxide" title="Permanent link">&para;</a></h3>
 <p>The CO model included the following features: <span class="arithmatex"><span class="MathJax_Preview">CO_{R}^{-1}</span><script type="math/tex">CO_{R}^{-1}</script></span>, <span class="arithmatex"><span class="MathJax_Preview">CO_R^{-2}</span><script type="math/tex">CO_R^{-2}</script></span>, <span class="arithmatex"><span class="MathJax_Preview">Temp</span><script type="math/tex">Temp</script></span> and <span class="arithmatex"><span class="MathJax_Preview">Temperature^2</span><script type="math/tex">Temperature^2</script></span>. The results can be seen below:</p>
-<p><img alt="" src="https://i.imgur.com/M2OCMsg.png" /></p>
+<p><img alt="" src="/assets/images/M2OCMsg.png" /></p>
 <h3 id="nitrogen-dioxide">Nitrogen Dioxide<a class="headerlink" href="#nitrogen-dioxide" title="Permanent link">&para;</a></h3>
 <p>The NO<sub>2</sub> model included the following features: <span class="arithmatex"><span class="MathJax_Preview">NO~2~_{R}</span><script type="math/tex">NO~2~_{R}</script></span>, <span class="arithmatex"><span class="MathJax_Preview">NO~2~_R^{-2}</span><script type="math/tex">NO~2~_R^{-2}</script></span>, Light, <span class="arithmatex"><span class="MathJax_Preview">Temp</span><script type="math/tex">Temp</script></span> and <span class="arithmatex"><span class="MathJax_Preview">Temperature^2</span><script type="math/tex">Temperature^2</script></span>. The results can be seen below:</p>
-<p><img alt="" src="https://i.imgur.com/982qA89.png" /></p>
+<p><img alt="" src="/assets/images/982qA89.png" /></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>This test campaign contains a short amount of data to be used as a training dataset for a LSTM algorithm. Therefore, this is just to considered as an use case example and further tests and data should be carried out to train broader models.</p>
@@ -3333,8 +3333,8 @@ model.compile(loss=&#39;mse&#39;, optimizer=&#39;rmsprop&#39;)
 <h2 id="metal-oxide-sensors-implementation">Metal Oxide Sensors Implementation<a class="headerlink" href="#metal-oxide-sensors-implementation" title="Permanent link">&para;</a></h2>
 <h3 id="heating-stage">Heating stage<a class="headerlink" href="#heating-stage" title="Permanent link">&para;</a></h3>
 <p>The solution present at Urban Sensor Board V2.0 for MICS-4514 sensor's heaters excitation, pretends to make it compatible with a 3.3V global voltage source.</p>
-<p><img alt="" src="https://i.imgur.com/z3ikGvq.png" /></p>
-<p><img alt="" src="https://i.imgur.com/aum9WUX.png" /></p>
+<p><img alt="" src="/assets/images/z3ikGvq.png" /></p>
+<p><img alt="" src="/assets/images/aum9WUX.png" /></p>
 <p>The manufacturer reccomend the following circuit topology, with a global supply voltage of 5V. In the datasheet are collected the electrical nominal conditions for that resistors, in order to operate safely with the heater, without damaging it.</p>
 <p>Besides that, several other possible conditions could also damage early the heater resistors, like the fact of consider a pure PWM signal, with source 5V and subsequent dutty cycle, as excitation. Even if the frequency is relatively high (100kHz), the resistors are forced to operate briefly with 5V, and this accelerates the destruction of this part of the MICS sensor.</p>
 <p>So its is possible to provide the nominal voltages for heater resistors from a 3.3V source, if we replace the auxiliar resistors (from recomended topology) with corresponding values, to preserve the total power dissipated and current at same normal operating conditions.</p>
@@ -3342,34 +3342,34 @@ model.compile(loss=&#39;mse&#39;, optimizer=&#39;rmsprop&#39;)
 <p>The source for the PWM signal must be buffered, because the resistive load of the system demands currents avobe the SAMD21 can supply. For this purpose, the solution selected is to use a digital hex-inverter buffer, which can drive up to 32mA with each output pin, wich we can paralelize to operate under propper safety factor for the buffer.</p>
 <h3 id="simulations">Simulations<a class="headerlink" href="#simulations" title="Permanent link">&para;</a></h3>
 <p>The first simulations and given values leads to the selection of the RC components values if we set a PWM frequency around 40 kHz.</p>
-<p><img alt="" src="https://i.imgur.com/BWAvuX2.png" /></p>
-<p><img alt="" src="https://i.imgur.com/FUZOQ5A.png" /></p>
-<p><img alt="" src="https://i.imgur.com/aXpadKV.png" /></p>
+<p><img alt="" src="/assets/images/BWAvuX2.png" /></p>
+<p><img alt="" src="/assets/images/FUZOQ5A.png" /></p>
+<p><img alt="" src="/assets/images/aXpadKV.png" /></p>
 <p>To evaluate the R part of the filter, is needed to take into account the output resistance of the hex-inverter buffer.</p>
 <h3 id="prototypes">Prototypes<a class="headerlink" href="#prototypes" title="Permanent link">&para;</a></h3>
 <p>We build the circuit into a protoboard, with several IC HEX-INV manufacturers, based on the following schematic:</p>
-<p><img alt="" src="https://i.imgur.com/Jz0WM4G.png" /></p>
-<p><img alt="" src="https://i.imgur.com/L1w3ihW.jpg" /></p>
+<p><img alt="" src="/assets/images/Jz0WM4G.png" /></p>
+<p><img alt="" src="/assets/images/L1w3ihW.jpg" /></p>
 <p>The measures are sumarized in the following table, in which we compare four pre-selected devices, which can fit in our application for size an price considerations.</p>
-<p><img alt="" src="https://i.imgur.com/QMOJUUc.png" /></p>
+<p><img alt="" src="/assets/images/QMOJUUc.png" /></p>
 <p>Four cases with paralellized inverters, for each device were performed: pasive load 70R test with DC input, and three tests with 10R+Rheater load at DC input, 60% dutty cycle and 30% dutty cycle. The 74LCX04FT(AE) was selected because it has the lowest LOW output level (0.45V,0.22V), which is considered here as the quality (or close to ideal) of the square wave input source.</p>
 <h3 id="final-implementation">Final implementation<a class="headerlink" href="#final-implementation" title="Permanent link">&para;</a></h3>
 <p>The solution implemented in the PCB, has a constant auxilar R (10R+Rout_buff), and constant C (47uF), and also operates at consatant frequency, then, the output power regulation is based on the PWM's dutty cycle. The following circuit represent the implemented schematic.</p>
-<p><img alt="" src="https://i.imgur.com/dn4FyNE.png" /></p>
+<p><img alt="" src="/assets/images/dn4FyNE.png" /></p>
 <h3 id="operation">Operation<a class="headerlink" href="#operation" title="Permanent link">&para;</a></h3>
 <p>First of all, is needed to know the real implemented Rheater of each sensor (which may vary among devices and time), and can be estimated by measuring the V_heater_* at 100% dutty cycle, then:</p>
-<p><img alt="" src="https://i.imgur.com/6MvPMhT.png" /></p>
+<p><img alt="" src="/assets/images/6MvPMhT.png" /></p>
 <p>Where Rint_buff can be aproximated with 4 Ohm resistor.</p>
 <p>The desired_reference_voltage is function of the desired_power_Rheater and dutty cycle. If we set 80mW we can use the value of the Rheater to obtain desired_reference_voltage through tis formula:</p>
-<p><img alt="" src="https://i.imgur.com/0LVFLy9.png" /></p>
+<p><img alt="" src="/assets/images/0LVFLy9.png" /></p>
 <p>(Take into account this resistor has a drift over time, therefore is recomended to take periodic measurements of the value of Rheater itself, and check the output power reachability).</p>
 <p>With selected parameters, after 2ms of PWM operation, the RC reaches the permanent, and then is recomended to take measurements of V_HEATER_<em>. The loop can be closed to determine the dutty cycle as function of the difference (desired_reference_voltage – V_HEATER_</em> (averaged)).</p>
 <p>Is recomended to average several samples to remove the AC part of the signal. The measured DC signal has a noise of ±20mV peak to peak (with triangular distribution).</p>
 <p>The sign of the PWM signal is inverted due to the action of the inverter, then, a desired x% dutty is obtained as 100%-x%.</p>
-<p><img alt="" src="https://i.imgur.com/uPlbFLQ.png" /></p>
+<p><img alt="" src="/assets/images/uPlbFLQ.png" /></p>
 <p>As initial PWM aproximation to begin to converge close to the regulated dutty cycle can be obtained through this simplification:</p>
-<p><img alt="" src="https://i.imgur.com/XpGP2OB.png" /></p>
-<p><img alt="" src="https://i.imgur.com/25bEQx1.png" /></p>
+<p><img alt="" src="/assets/images/XpGP2OB.png" /></p>
+<p><img alt="" src="/assets/images/25bEQx1.png" /></p>
 <h3 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h3>
 <div class="footnote">
 <hr />
@@ -3513,7 +3513,7 @@ in Urban Environments</a>&#160;<a class="footnote-backref" href="#fnref:first" t
     <script id="__config" type="application/json">{"base": "../../../..", "features": ["instant", "navigation.indexes", "navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "content.tooltips"], "search": "../../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.fac441b0.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.c2be25ad.min.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       

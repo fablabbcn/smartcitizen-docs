@@ -21,7 +21,7 @@
         <link rel="next" href="../Orange%20and%20geolocated%20data/">
       
       <link rel="icon" href="../../../assets/images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.11">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.12">
     
     
       
@@ -3167,9 +3167,9 @@ The name of the file of this workflow is <code>example_plot.ows</code></p>
 <h2 id="look-for-the-kit-that-you-want-to-use">Look for the kit that you want to use<a class="headerlink" href="#look-for-the-kit-that-you-want-to-use" title="Permanent link">&para;</a></h2>
 <p>We're starting from scratch, a white canvas for this example. </p>
 <p>Click on the widget of <code>Smart Citizen Search</code> (on the widgets menu) from the <strong>MECODA</strong> extension. It will create the widget on the canvas on the right:</p>
-<p><img alt="" src="https://i.imgur.com/NdgHPlx.png" /></p>
+<p><img alt="" src="/assets/images/NdgHPlx.png" /></p>
 <p>If you click on the new item, a window will pop up with the available options:</p>
-<p><img alt="" src="https://i.imgur.com/H2OGEBv.png" /></p>
+<p><img alt="" src="/assets/images/H2OGEBv.png" /></p>
 <p>Here you can try to find your Kit. There are several options to retrieve this information but in this case we have the URL of our kit: <a href="https://smartcitizen.me/kits/15618">https://smartcitizen.me/kits/15618</a>. This URL tells us the Device ID that we want at the end of the URL (in this case <code>15618</code>).</p>
 <div class="admonition info">
 <p class="admonition-title">Using the map?</p>
@@ -3178,71 +3178,71 @@ The name of the file of this workflow is <code>example_plot.ows</code></p>
 <li>Go to <a href="https://smartcitizen.me/kits/">https://smartcitizen.me/kits/</a></li>
 <li>Find your kit in the map and select it. For example: </li>
 </ul>
-<p><img alt="" src="https://i.imgur.com/zXmz53a.png" /></p>
+<p><img alt="" src="/assets/images/zXmz53a.png" /></p>
 <ul>
 <li>When you select it the URL of the site will change, in this case to: <a href="https://smartcitizen.me/kits/15618">https://smartcitizen.me/kits/15618</a></li>
 <li>Here you have the device id in the URL at the end. In this case it's 15618. </li>
 </ul>
 </div>
 <p>Once we have it, we type it or paste it in Device ID and press <em>Search Devices</em>:</p>
-<p><img alt="" src="https://i.imgur.com/oAhSFjX.png" /></p>
+<p><img alt="" src="/assets/images/oAhSFjX.png" /></p>
 <p>It will tell us that we have just one result: </p>
-<p><img alt="" src="https://i.imgur.com/bLJAjMN.png" /></p>
+<p><img alt="" src="/assets/images/bLJAjMN.png" /></p>
 <p>Now we found our device, we will get the data that is stored in it!</p>
 <h2 id="get-the-data-from-the-kit">Get the data from the kit<a class="headerlink" href="#get-the-data-from-the-kit" title="Permanent link">&para;</a></h2>
 <p>We will now add another widget: this time, the <code>Smart Citizen Data</code>:</p>
-<p><img alt="" src="https://i.imgur.com/HNGLmeB.png" /></p>
+<p><img alt="" src="/assets/images/HNGLmeB.png" /></p>
 <p>It will be set in the canvas near the other widget of <code>Smart Citizen Search</code> that we have already configured:</p>
-<p><img alt="" src="https://i.imgur.com/Ds2PQ2b.png" /></p>
+<p><img alt="" src="/assets/images/Ds2PQ2b.png" /></p>
 <p>Now, we will <strong>connect both of them</strong> by pressing the dotted lines on the right of the <code>Smart Cizizen Search</code> and dragging the cursor into the <code>Smart Citizen Data</code>. Once you have it would look like this: </p>
-<p><img alt="" src="https://i.imgur.com/DD63yLw.png" /></p>
+<p><img alt="" src="/assets/images/DD63yLw.png" /></p>
 <p>To see if everything is correct we can click on <code>Smart Citizen Data</code> and check it out:</p>
-<p><img alt="" src="https://i.imgur.com/3jTD66H.png" /></p>
+<p><img alt="" src="/assets/images/3jTD66H.png" /></p>
 <p>In the <code>Info panel</code> you will see the data we are about to load.</p>
 <p>Now we will define what data we want to collect. In this example we're getting the data that we have every 10 minutes and we want to get just from one month. From 01/10/2022 to 30/10/2022. To do all that, we will <strong>set the rollup</strong> to <strong>10</strong> and the <strong>rollup units</strong> in <strong>m</strong> (minutes). <em>(That's the setting by default)</em>. Then we set <strong>Initial Date</strong> to <strong>2022-10-01</strong> and <strong>End Date</strong> to <strong>2022-11-01</strong>. And we <strong>tick off</strong> the box of <strong>Resample data</strong>. You will have something like this:</p>
-<p><img alt="" src="https://i.imgur.com/cOLbgFN.png" /></p>
+<p><img alt="" src="/assets/images/cOLbgFN.png" /></p>
 <p>Now we have to <strong>press Get data</strong> to fetch the data.</p>
-<p><img alt="" src="https://i.imgur.com/Ukd7KVq.png" /></p>
+<p><img alt="" src="/assets/images/Ukd7KVq.png" /></p>
 <p>It will take some seconds to fetch the data from the platform. Once it's done the Info panel will read: <code>Device 15618 data downloaded!</code></p>
 <h2 id="see-the-data-in-a-table">See the data in a table<a class="headerlink" href="#see-the-data-in-a-table" title="Permanent link">&para;</a></h2>
 <p>As an <em>optional</em> step, we can look at the data in a table format. Place a <strong>Data table</strong> widget from the left menu in <code>Data</code>:</p>
-<p><img alt="" src="https://i.imgur.com/7Bdt52b.png" /></p>
+<p><img alt="" src="/assets/images/7Bdt52b.png" /></p>
 <p>We click on it as we have clicked on other widgets and it will appear on the canvas:</p>
-<p><img alt="" src="https://i.imgur.com/BO803hU.png" /></p>
+<p><img alt="" src="/assets/images/BO803hU.png" /></p>
 <p>We connect it to the <code>Smart Citizen Data</code> by dragging it's output to the <code>Data Table</code> like this:</p>
-<p><img alt="" src="https://i.imgur.com/HZxxq7s.png" /></p>
+<p><img alt="" src="/assets/images/HZxxq7s.png" /></p>
 <p>If we open it, we'll see the data that we have gathered:</p>
-<p><img alt="" src="https://i.imgur.com/tog47oH.png" /></p>
+<p><img alt="" src="/assets/images/tog47oH.png" /></p>
 <div class="admonition info">
 <p class="admonition-title">More info?</p>
 <p>The <code>Data tables</code> have more properties that are explained here <a href="https://orange3.readthedocs.io/projects/orange-visual-programming/en/latest/widgets/data/datatable.html">https://orange3.readthedocs.io/projects/orange-visual-programming/en/latest/widgets/data/datatable.html</a></p>
 </div>
 <h2 id="set-the-data-as-timeseries">Set the data as <code>timeseries</code><a class="headerlink" href="#set-the-data-as-timeseries" title="Permanent link">&para;</a></h2>
 <p>To plot data, we need to first set it a timeseries. Add a <strong>As Timeseries</strong> widget in the menu <code>timeseries</code>. </p>
-<p><img alt="" src="https://i.imgur.com/r9ONvBD.png" /></p>
+<p><img alt="" src="/assets/images/r9ONvBD.png" /></p>
 <div class="admonition warning">
 <p class="admonition-title">Timeseries not found?</p>
 <p>Remember that <code>timeseries</code> is an extra add-on that you need to download. <a href="../Configure%20Orange%20Data%20Analysis/">Here's how you can do it</a></p>
 </div>
 <p>As usual, if we <strong>click it</strong>, it will appear on the canvas:</p>
-<p><img alt="" src="https://i.imgur.com/XZOXoy8.png" /></p>
+<p><img alt="" src="/assets/images/XZOXoy8.png" /></p>
 <p>We <strong>connect it</strong> to the <code>Smart Citizen Data</code> by dragging it's output to the <code>As Timeseries</code> like this:</p>
-<p><img alt="" src="https://i.imgur.com/0tYVHq5.png" /></p>
+<p><img alt="" src="/assets/images/0tYVHq5.png" /></p>
 <h2 id="plot-the-results">Plot the results<a class="headerlink" href="#plot-the-results" title="Permanent link">&para;</a></h2>
 <p>Lastly, we create one more widget: <strong>Line chart</strong> (in the menu <code>Time Series</code>):</p>
-<p><img alt="" src="https://i.imgur.com/vDGjMKa.png" /></p>
+<p><img alt="" src="/assets/images/vDGjMKa.png" /></p>
 <p>We <strong>click it</strong> and it will appear in the canvas:</p>
-<p><img alt="" src="https://i.imgur.com/k0VH1OP.png" /></p>
+<p><img alt="" src="/assets/images/k0VH1OP.png" /></p>
 <p>We <strong>connect it</strong> to the <code>As Timeseries</code> dragging the data from the As Timeseries to the <code>Line chart</code> like this:</p>
-<p><img alt="" src="https://i.imgur.com/nobupdR.png" /></p>
+<p><img alt="" src="/assets/images/nobupdR.png" /></p>
 <p>If the <code>edit links</code> windows shows up, select time series to time series as shown. If we click on <code>Line Chart</code>, it will show something like this:</p>
-<p><img alt="" src="https://i.imgur.com/zdDOrR9.png" /></p>
+<p><img alt="" src="/assets/images/zdDOrR9.png" /></p>
 <div class="admonition info">
 <p class="admonition-title">Orange docs</p>
 <p>For more information about this you can visit Orange documentation: <a href="https://orange3-timeseries.readthedocs.io/en/latest/widgets/line_chart.html#line-chart">https://orange3-timeseries.readthedocs.io/en/latest/widgets/line_chart.html#line-chart</a></p>
 </div>
 <p>This chart is done with one of the columns (in this case <code>Temperature</code>).  On the left we can <code>Add more plots</code> to compare them. For example to compare temperature and humidity:</p>
-<p><img alt="" src="https://i.imgur.com/iZPmUda.png" /></p>
+<p><img alt="" src="/assets/images/iZPmUda.png" /></p>
 <p>To select the type of data that we want to check we need only to get the appropiate sensor and select it.</p>
 <div class="admonition info">
 <p class="admonition-title">Done for today?</p>
@@ -3365,7 +3365,7 @@ The name of the file of this workflow is <code>example_plot.ows</code></p>
     <script id="__config" type="application/json">{"base": "../../..", "features": ["instant", "navigation.indexes", "navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.fac441b0.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.c2be25ad.min.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       

@@ -21,7 +21,7 @@
         <link rel="next" href="../Auxiliary%20Connector/">
       
       <link rel="icon" href="../../assets/images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.11">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.12">
     
     
       
@@ -3206,7 +3206,7 @@
 <p><img src="https://live.staticflickr.com/65535/51124639732_90241111a9_k.jpg" alt="Water Station - Patí Científic"></p>
 <p>Although most of the time we have been working with air quality sensors and air metrics, we also like to keep an eye on soil and water sensors. This page details our integration of water and soil sensors, often interchangeable in some cases.</p>
 <p>Different sensor probes can be combined for different configurations. For example the setup shown above is designed for soil measurements and includes <a href="https://www.atlas-scientific.com">Atlas Scientific</a> temperature, conductivity and PH probes and a GPS. Additional sensors include a Chirp Moisture Sensor as described in the <a href="/Components/sensors/soil/Soil Moisture Sensors/">soil section</a>. Another example is the setup in the figure below is designed for water monitoring on aquaponics systems and includes Atlas Scientific probes for PH, conductivity and dissolved oxygen.</p>
-<p><img alt="" src="https://i.imgur.com/gQavZqU.png" /></p>
+<p><img alt="" src="/assets/images/gQavZqU.png" /></p>
 <p>Some of the sensors selected are from Atlas Scientific, a New York-based company that <em>converts devices that were originally designed to be used by humans into devices that are specifically designed to be used by robots</em>. The sensors are not entirely open source as the other sensors (the Chirp Sensor is a low cost moisture and temperature sensor developed by <a href="https://wemakethings.net/chirp/">WeMakeThings</a>: a hackers and engineers collective based in Vilnius, Lithuania). However, they are modular and exceptionally well documented by the manufacturer. That includes <strong>excellent</strong> documentation on how to install, calibrate and integrate them with additional existing hardware. In this direction, we developed a full library for the SCK to support the sensors via the Auxiliary sensor connector. As the sensors can be configured in different ways, we do not provide a full step-by-step guide. Instead, we refer to the documentation on the <a href="https://github.com/fablabbcn/smartcitizen-grow/tree/master/soil-water-probes">project's repository</a>.</p>
 <div class="admonition info">
 <p class="admonition-title">Use cases</p>
@@ -3305,7 +3305,7 @@
 </div>
 <h3 id="atlas-scientific-carrier-board">Atlas Scientific Carrier board<a class="headerlink" href="#atlas-scientific-carrier-board" title="Permanent link">&para;</a></h3>
 <p>We recommend using <a href="https://www.whiteboxes.ch/shop/tentacle-t3-for-raspberry-pi/">Whitebox Labs Tentacle T3</a> that hosts up to 3 Atlas Scientific Probes, and can be stacked with several units. It connects to the SCK via the Aux sensor connector, and needs external 5V connection, which means that it can't run on battery directly connected to the SCK without extras. If you want to make your own, before the Tentacle T3 existed we designed a <a href="https://github.com/fablabbcn/monitoring-kit-hardware">custom board</a> in collaboration in with <a href="http://aquapioneers.io">Aquapiooners</a>.</p>
-<p><img alt="" src="https://i.imgur.com/6FysvIl.png" /></p>
+<p><img alt="" src="/assets/images/6FysvIl.png" /></p>
 <div class="admonition info">
 <p class="admonition-title">Ready to set it all up</p>
 <p>Visit <a href="/Guides/deployments/Water sensors/">this guide</a> to get started.</p>
@@ -3319,14 +3319,14 @@
 </div>
 <h4 id="legacy-enclosures">Legacy enclosures<a class="headerlink" href="#legacy-enclosures" title="Permanent link">&para;</a></h4>
 <p>In collaboration in with <a href="http://aquapioneers.io">Aquapiooners</a> we designed the <a href="https://github.com/fablabbcn/monitoring-kit-hardware">custom enclosure</a> below.</p>
-<p><img alt="" src="https://i.imgur.com/aowaWtl.png" /></p>
+<p><img alt="" src="/assets/images/aowaWtl.png" /></p>
 <p>The enclosure of the monitoring board and the smart citizen have been designed on Onshape, you can either download the STL files or copy the project to your onshape account and modify them as you wish : <a href="https://cad.onshape.com/documents/50f1112a541136a65bec4a67/w/db735112a72871fb7c20053e/e/57e22425fb47d5e8030621de">The Onshape documents of the monitoring case</a></p>
-<p><img alt="" src="https://i.imgur.com/tXNBC5e.png" /></p>
+<p><img alt="" src="/assets/images/tXNBC5e.png" /></p>
 <p>We have also designed a probe holder if you want to hold your probes on the side of you fish tank. Here you can find the <a href="https://cad.onshape.com/documents/8977ef824f45a910c0b8beaa/w/7ac458735dae629f0a5a73cd/e/be59d435418832bfe5f78afb">Onshape document of the probes holder</a></p>
-<p><img alt="" src="https://i.imgur.com/6sM3sCY.jpg" /></p>
+<p><img alt="" src="/assets/images/6sM3sCY.jpg" /></p>
 <h2 id="soil-station">Soil Station<a class="headerlink" href="#soil-station" title="Permanent link">&para;</a></h2>
 <p>More soil sensors can be added as well, not only Atlas Scientific sensors, or  the <a href="https://wemakethings.net/chirp/">WeMakeThings Chirp</a> sensor for Soil moisture. More developments available upon request.</p>
-<p><img alt="" src="https://i.imgur.com/DT45dpM.jpg" /></p>
+<p><img alt="" src="/assets/images/DT45dpM.jpg" /></p>
 <h2 id="water-station">Water Station<a class="headerlink" href="#water-station" title="Permanent link">&para;</a></h2>
 <p>An specific Water Station was designed as part of the <a href="https://paticientific.org/">Pati Scientific</a> project in colaboration with the <a href="https://www.icm.csic.es/en">Institut de Ciències del Mar</a>. The station currently measures the sensors below, but virtually any <a href="/Components/Auxiliary Connector/#full-list">supported sensor</a> can be added:</p>
 <p><img alt="" src="/assets/images/pativela.jpg" />
@@ -3459,7 +3459,7 @@
     <script id="__config" type="application/json">{"base": "../..", "features": ["instant", "navigation.indexes", "navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "content.tooltips"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.fac441b0.min.js"></script>
+      <script src="../../assets/javascripts/bundle.c2be25ad.min.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       

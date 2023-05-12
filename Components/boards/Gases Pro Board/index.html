@@ -21,7 +21,7 @@
         <link rel="next" href="../PM%20Board/">
       
       <link rel="icon" href="../../../assets/images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.11">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.12">
     
     
       
@@ -3146,16 +3146,16 @@
 <p>The Gases Pro Sensor Board is the development board used during the iSCAPE Project. For reading electrochemical sensors, please refer to the <a href="/Components/boards/Analog%20Sensor%20Board/">Analog Sensor Board section</a>.</p>
 </div>
 <p>The Gases Sensor Board is a custom, ultra-low noise, high-performance, low power, digital output driver for 3 Alphasense Ltd. Electrochemical Series B Gas Sensors specifically designed for the project from the ground up.</p>
-<p><img alt="" src="https://i.imgur.com/4tNzsdR.jpg" /></p>
+<p><img alt="" src="/assets/images/4tNzsdR.jpg" /></p>
 <p><a class="github-button" data-size="large" href="https://github.com/fablabbcn/smartcitizen-kit-gases-pro-board" aria-label="Check the source code">Check the source code</a></p>
 <h2 id="sensor-measurements">Sensor measurements<a class="headerlink" href="#sensor-measurements" title="Permanent link">&para;</a></h2>
 <p>The Gases Pro Board is capable of interfacing with Alphasense Ltd. B4 series sensors without offset voltage compensarion, i.e. it can't interface with NO, NO2 or OX sensors, but it can be used for CO, SO2 and H2S. For measuring NO, NO2 or OX, please refer to the <a href="/Components/Analog%20Sensor%20Board/">Analog Sensor Board</a></p>
 <h2 id="design">Design<a class="headerlink" href="#design" title="Permanent link">&para;</a></h2>
 <p>Each of the three drivers for Alphasense Ltd. Series B Sensors is built around the same design. They include a three stage adjustable amplifier design for the working electrode and and another simetrical design for the auxiliary electrode. Both signals are then feed to a high accuracy delta-sigma A/D converter with differential inputs 18 bits of resolution. All the parameters are digitally adjustable via I2C from the <strong>Data Board</strong>. Each board also include a unique identifier chip allowing the firmware on the <strong>Data Board</strong> to identify the board and apply the corresponding calibration values and a humidity and temperature sensor. </p>
-<p><img alt="" src="https://i.imgur.com/b9tGVmH.png" /></p>
+<p><img alt="" src="/assets/images/b9tGVmH.png" /></p>
 <h2 id="setup">Setup<a class="headerlink" href="#setup" title="Permanent link">&para;</a></h2>
 <p>The board is connected to the <a href="/Components/Data Board">Data Board</a> using the AUX connector. Before, the Alphasense sensors need to be in place and properly registered using the board id. The board will be autodetected by the main <a href="/Components/Firmware">Firmware</a> running on the Data Board. Multiple sensor board can be daisy-chained as seen on the image.</p>
-<p><img alt="" src="https://i.imgur.com/RRu8MiV.jpg" /></p>
+<p><img alt="" src="/assets/images/RRu8MiV.jpg" /></p>
 <h2 id="source-files">Source files<a class="headerlink" href="#source-files" title="Permanent link">&para;</a></h2>
 <p><a class="github-button" data-size="large" href="https://github.com/fablabbcn/smartcitizen-kit-gases-pro-board/archive/master.zip" data-icon="octicon-cloud-download" aria-label="Download from GitHub">Download</a></p>
 <p><a class="github-button" data-size="large" href="https://github.com/fablabbcn/smartcitizen-kit-gases-pro-board" aria-label="Check the source code">Check the source code</a></p>
@@ -3276,7 +3276,7 @@
     <script id="__config" type="application/json">{"base": "../../..", "features": ["instant", "navigation.indexes", "navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.fac441b0.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.c2be25ad.min.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       

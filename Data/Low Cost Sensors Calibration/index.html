@@ -17,7 +17,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.11">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.12">
     
     
       
@@ -3052,7 +3052,7 @@
 
 <h1 id="low-cost-sensors-calibration">Low Cost Sensors Calibration<a class="headerlink" href="#low-cost-sensors-calibration" title="Permanent link">&para;</a></h1>
 <p>Low cost sensor calibration and assessment poses a great challenge for data quality objectives. We follow this <strong>sensor calibration procedure</strong>, which can be split into three stages:</p>
-<p><img alt="" src="https://i.imgur.com/6BZqNrR.png" /></p>
+<p><img alt="" src="/assets/images/6BZqNrR.png" /></p>
 <ol>
 <li>
 <p><strong>Behaviour assesment</strong>: in laboratory conditions, serving as base testing for assessing general sensor behaviour.</p>
@@ -3066,7 +3066,7 @@
 </ol>
 <p>Each of these stages apply differently depending on the type of sensor. For instance the electrochemical sensors present in the <em>Station</em> are already characterised by the manufacturer, while the old SGX MICS4514 Metal Oxyde Sensors in the <em>Urban Board</em> of the <em>Smart Citizen Kit</em> are not. The different characteristics of these sensors make different calibration approaches to be carried out.</p>
 <p><strong>Base calibration parameters</strong> need to be determined in controlled conditions. In this stage, the aim would be to find parameters such as:</p>
-<p><img alt="" src="https://i.imgur.com/FprLD0n.png" /></p>
+<p><img alt="" src="/assets/images/FprLD0n.png" /></p>
 <ul>
 <li><strong>Sensor sensitivity</strong>: the sensor response per each ppm of target pollutant in <em>nominal</em> conditions</li>
 <li><strong>Zero</strong>: the sensor reading in zero air (pure air at 25degC).</li>
@@ -3084,12 +3084,12 @@
 <p>These needs make <strong>machine learning</strong> methods great canditates for modeling the data. These methods are implemented in the Sensor Analysis Framework, as well as other <em>more traditional</em> linear methods. The combination of these algorithms with large amounts of data gathered during, for instance, the iScape project, offers a great opportunity to demonstrate the use of low cost sensors for air quality monitoring.</p>
 <h3 id="smart-citizen-kits">Smart Citizen Kits<a class="headerlink" href="#smart-citizen-kits" title="Permanent link">&para;</a></h3>
 <p>Due to their construction, low-cost metal oxyde sensors suffer from high levels of spread in their baseline resistance and sensitivity. As well, these sensors are generally reactive to other pollutants in the atmosphere, with a low selectivity of the actual target pollutant and drifts in their behaviour can be seen after some weeks of exposure. As well, metal oxyde sensors show short and long term drifts in their calibrations. </p>
-<p><img alt="" src="https://i.imgur.com/JfujXTA.png" /></p>
+<p><img alt="" src="/assets/images/JfujXTA.png" /></p>
 <p>Ideally, a <strong>sensor characterisation</strong> in laboratory conditions is needed to assess sensitiviy, baseline resistances sensor-to-sensor spread, aiming to obtain normalising factors for each sensor or group of sensors. Even if possible, the variability of the sensor behaviour during the deployment stage, makes the individual characterisation and calibration of the Metal Oxyde sensors unrealistic. For this reason, indicative measurements are to be expected from this type of low cost sensors. More information about the sensors present in the urban board of the SCK can be found in <a href="/Components/Urban Sensor Board/#a-word-about-metal-oxide-sensors">this section</a>.</p>
 <h3 id="smart-citizen-stations">Smart Citizen Stations<a class="headerlink" href="#smart-citizen-stations" title="Permanent link">&para;</a></h3>
 <p><strong>Electrochemical sensors</strong> </p>
 <p>These sensors can achieve significant accuracy, but they require a particular data post-processing that combines the measurement at the sensor electrodes with the sensor characterisation on the factory as well as other environmental parameters as air temperature and relative humidity (i.e. absolute humidity). Luckily the manufacturer of these sensors, Alphasense, provides us with that reference data. However, the complexity of the operations performed can not be done inside the sensing device as it uses advanced operations as well as historical data from the same device. For that reason, the data needs to be post processed using the Sensors Analysis Framework. The algorithm is <strong>in a beta stage</strong> and later it will be applied automatically on the data once it arrives at the platform. More details can be found in the <a href="https://docs.iscape.smartcitizen.me/Components/Gas%20Pro%20Sensor%20Board/Electrochemical%20Sensors/#sensor-calibration"><em>Electrochemical sensor baseline methodology</em> Section</a>.</p>
-<p><img alt="" src="https://i.imgur.com/Mi896Jh.png" /></p>
+<p><img alt="" src="/assets/images/Mi896Jh.png" /></p>
 <p>This process doesn't require any on-site reference data but requires the data to be processed using the manufacturer calibration reference per sensor as well as other environmental values as temperature and humidity.</p>
 <p><strong>PM sensor</strong></p>
 <p>The selected PM sensor is internally characterised by the manufacturer and, it's readings are currently being evaluated. Preliminarily, the measurements can be as well improved when reference data is available, as some have noted that the PM sensors can be affected by relative humidity. </p>
@@ -3214,7 +3214,7 @@
     <script id="__config" type="application/json">{"base": "../..", "features": ["instant", "navigation.indexes", "navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "content.tooltips"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.fac441b0.min.js"></script>
+      <script src="../../assets/javascripts/bundle.c2be25ad.min.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       
