@@ -3,7 +3,7 @@ PM Board
 
 The PM Board is an expansion board which can provide additional measurements, such as two extra Plantower PMS 5003, one wire temperature sensors and extra GPIO and ADC support. This is done with a custom designed PCB with an MCU to provide I2C connectivity with the Data Board.
 
-![](https://i.imgur.com/Hqt1dXh.jpg)
+![](/assets/images/Hqt1dXh.jpg)
 
 <a class="github-button" data-size="large" href="https://github.com/fablabbcn/smartcitizen-kit-pm-board" aria-label="Check the source code">Check the source code</a>
 
@@ -16,19 +16,19 @@ The PM Board runs a dedicated ARM M0+ 32-bits, the same as the [Data Board](/Com
 
 ### Pinout
 
-![](https://i.imgur.com/DU0hmvx.png)
+![](/assets/images/DU0hmvx.png)
 
-![](https://i.imgur.com/TEPeK3h.png)
+![](/assets/images/TEPeK3h.png)
 
 #### SERCOM distribution
 
-![](https://i.imgur.com/80ob4cX.png)
+![](/assets/images/80ob4cX.png)
 
 ## Setup
 
 The board is connected to the [Data Board](/Components/Data Board) using the AUX connector. Before, the Plantower PMS sensors need to be connected. The board will autodetect the PMS sensors and present them seamlessly to the main [Firmware](/Components/Firmware)  running on the Data Board. Multiple sensor board can be daisy-chained as seen on the image.
 
-![](https://i.imgur.com/RRu8MiV.jpg)
+![](/assets/images/RRu8MiV.jpg)
 
 ## Source files
 

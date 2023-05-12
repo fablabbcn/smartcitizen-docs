@@ -68,12 +68,12 @@ Currently, the Smart Citizen Station requires a Wi-Fi connection to report data 
 
 ## Development versions
 
-![](https://i.imgur.com/CiFikz8.jpg)
+![](/assets/images/CiFikz8.jpg)
 _Final iSCAPE Station version (iSCAPE-V2.0)_
 
 !!! info "A note about versions"
 
     The **iScape Living Lab Station 1.0** was the development version for the 2.0 version. It was sponsored thanks to the [iSCAPE project](https://www.iscapeproject.eu/) under European Community’s H2020 Programme under Grant Agreement No. [689954](https://cordis.europa.eu/project/rcn/202639/en)
 
-![](https://i.imgur.com/QB5P4r9.jpg)
+![](/assets/images/QB5P4r9.jpg)
 _Middle iSCAPE Station version (iSCAPE-V1.0)_

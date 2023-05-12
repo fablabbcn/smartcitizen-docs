@@ -10,7 +10,7 @@
 
 - Click your **kit button** until the kit is in [setup mode](/Smart%20Citizen%20Kit/#setup-mode), the LED should be red.  
 
-![](https://i.imgur.com/aR0gF3V.jpg)
+![](/assets/images/aR0gF3V.jpg)
 
 - **Connect to the kit** with your mobile device as you did during the installation process. You will need to search for a **Wi-Fi network** called `SmartCitizen[···]`. If you have multiple kits `[···]` is the unique identifier of your kit.
 
@@ -21,15 +21,15 @@
 
 - On the app **choose start** to move to the next page.
 
-![](https://i.imgur.com/zyZEXDj.png)
+![](/assets/images/zyZEXDj.png)
 
 - You will see your **device key** or **token**. Do not change it and **choose next**.
 
-![](https://i.imgur.com/k6gdWeP.png)
+![](/assets/images/k6gdWeP.png)
 
 - Set your new Wi-Fi settings on the next screen as you did during the installation process.
 
-![](https://i.imgur.com/V1jQ1rj.png)
+![](/assets/images/V1jQ1rj.png)
 
 - The LED will go blue and **your kit should start to publish again using the new Wi-Fi**. You can confirm it by visiting your device on [smartcitizen.me/kits](https://smartcitizen.me/kits). You can repeat the process as many times as you want by going back to step 1.
 

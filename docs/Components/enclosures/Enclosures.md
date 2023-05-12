@@ -4,7 +4,7 @@
 
 If we want to leave the kit on the outside for a few days you will need to provide it with extra protection. Below you can see the well-known 3D printed enclosure (for versions without PM sensor):
 
-![](https://i.imgur.com/ZoRN28m.png)
+![](/assets/images/ZoRN28m.png)
 
 !!! info "A note about the enclosures"
     Previous versions of the Smart Citizen Kit, without the PMS5003 sensor, included a 3D printed enclosure that holds the Data Board and Urban Sensor Board, as well as the lithium batteries. Different versions are available for the SCK 2.1, either with a [CNC'ed](https://github.com/fablabbcn/smartcitizen-enclosures/tree/master/SmartCitizen%20Air%20Enclosures/SmartCitizen%20Kit/SCK2.1_PMS5003/HDPE%20circle) version, or [3D printed one](https://github.com/fablabbcn/smartcitizen-enclosures/tree/master/SmartCitizen%20Air%20Enclosures/SmartCitizen%20Kit/SCK2.1_PMS5003/3D%20Printed%20square). Currently, there is no mass produced version at SEEED.

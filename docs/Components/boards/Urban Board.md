@@ -5,11 +5,11 @@ Urban Sensor Board
 
 The Urban Sensor Board is a solution that contains a selection of low-cost sensors for environmental monitoring. Its main purpose is to serve as a tool for citizen science and awareness activities, and for that reason, metrics such as temperature, pressure, and humidity, as well as noise levels, ambient light, air quality indicators and PM sensors are included. The Urban Sensor Board has undergone several modifications throughout its development, and its **current version is V2.1**:
 
-![](https://i.imgur.com/SGdx1Q2.jpg)
+![](/assets/images/SGdx1Q2.jpg)
 
 An iteration with a different set of sensors was developed as part of the [iScape Project](https://www.iscapeproject.eu/) and is shown in the image below:
 
-![](https://i.imgur.com/Xk2Gkeo.jpg)
+![](/assets/images/Xk2Gkeo.jpg)
 
 <a class="github-button" data-size="large" href="https://github.com/fablabbcn/smartcitizen-kit-21" aria-label="Check the source code">Check the source code</a>
 
@@ -18,7 +18,7 @@ A major effort has been carried out on this design to improve the accuracy of th
 !!! info "Board assembly"
     The Urban Sensor Board connect to the Data Board connector named **Sensor Board**
 
-    ![](https://i.imgur.com/IqLEbIr.png)
+    ![](/assets/images/IqLEbIr.png)
 
 **V2.1 Sensors**
 

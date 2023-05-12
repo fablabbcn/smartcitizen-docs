@@ -14,7 +14,7 @@ The [Citizen Sensing Toolkit](http://making-sense.eu/wp-content/uploads/2018/01/
 
 ### Tools
 
-![](https://i.imgur.com/HMk1665.png)
+![](/assets/images/HMk1665.png)
 
 1. Scoping
 	* Geographical Mapping

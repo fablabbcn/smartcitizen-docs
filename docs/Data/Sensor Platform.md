@@ -3,11 +3,11 @@ Sensor Platform
 
 The platform is a front and backend solution for ingesting, storing and interacting with public data with a particular focus on crowd sensing applications.
 
-![](https://i.imgur.com/qiDKL0r.jpg)
+![](/assets/images/qiDKL0r.jpg)
 
 We believe building modular and reusable software and using existing platforms is critical towards optimizing the research and development effort.
 
-![](https://i.imgur.com/loUgFJv.png)
+![](/assets/images/loUgFJv.png)
 
 !!! warning "Are all systems operational?"
 	Check the smartcitizen.me instance status in real time in the [uptimerobot.com](https://stats.uptimerobot.com/9Mr4TLWo) dashboard.

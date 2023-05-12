@@ -33,7 +33,7 @@ If the drivers are new normally they come configured in UART mode so we need to 
 
 ### Connection to Smartcitizen Kit
 
-![](https://i.imgur.com/Dc6Us2F.png)
+![](/assets/images/Dc6Us2F.png)
 
 After connecting the [Tentacle 3](https://atlas-scientific.com/carrier-boards/whitebox-labs-tentacle-t3/) to the SCK power your kit and if youre connected to the shell the autodetecition message should look similar to this (depending on the connected drivers and probes):
 

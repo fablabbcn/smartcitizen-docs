@@ -40,7 +40,7 @@ The Kit features a modular architecture where sensors can be updated independent
 
 !!! info "Example of a Sensor Board"
 	This is the V2.0 Urban Board example.
-    ![](https://i.imgur.com/IqLEbIr.png)
+    ![](/assets/images/IqLEbIr.png)
 
 Here there is a pinout of the data board connector:
 
@@ -51,7 +51,7 @@ Here there is a pinout of the data board connector:
 The Data Board features and independent configurable auxiliary bus at 3.3V with a SEEED Studio Grove connector. The Bus has native support for I2C, but it can also be setup on firmware as a GPIO or UART port. It can supply power up to 750mA, and it can be enabled or disabled by software.
 
 !!! info "Example of devices connected via the **AUX connector.**"
-	![](https://i.imgur.com/RRu8MiV.jpg)
+	![](/assets/images/RRu8MiV.jpg)
 
 ## Power management
 

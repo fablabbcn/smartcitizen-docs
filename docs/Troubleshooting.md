@@ -1,7 +1,7 @@
 :construction_worker: Troubleshooting
 ==========================
 
-![](https://i.imgur.com/iI3Bu6F.jpg)
+![](/assets/images/iI3Bu6F.jpg)
 
 ## First, reboot your kit
 
@@ -9,7 +9,7 @@
 
     Before trying anything else, the data board of your SCK comes with a very functional button that makes a hardware reset on the whole device. This is probably our best first try once the kit has any problem. You can see it here:
 
-    ![](https://i.imgur.com/lnFrnwS.png)
+    ![](/assets/images/lnFrnwS.png)
 
     Some issues this might help solving:
 

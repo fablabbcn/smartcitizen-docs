@@ -32,4 +32,4 @@ This generates an html export containing only the mkdown or code cell outputs, w
 
 And here is the result!
 
-![](https://i.imgur.com/XNBnRUr.png)
+![](/assets/images/XNBnRUr.png)

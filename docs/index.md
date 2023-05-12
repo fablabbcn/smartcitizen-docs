@@ -30,7 +30,7 @@ Welcome to the Smart Citizen project documentation! Check the different [section
 
 The documentation contains multiple [guides](/Guides/) as step-by-step tutorials to perform essential tasks as installing a kit or upgrading it's firmware:
 
-![](https://i.imgur.com/feS0bZ8.jpg)
+![](/assets/images/feS0bZ8.jpg)
 
 !!! info "Example guides"
 
@@ -55,4 +55,4 @@ The entire project is released under open source licenses: 
 !!! info
     Check the **Source files** section for each component and explore the software source code and the hardware blueprints.
 
-    ![](https://i.imgur.com/X1fUET3.png)
+    ![](/assets/images/X1fUET3.png)

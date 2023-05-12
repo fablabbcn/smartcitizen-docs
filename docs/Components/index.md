@@ -1,7 +1,7 @@
 Hardware Architecture
 =====================
 
-![](https://i.imgur.com/qTh4CpB.jpg)
+![](/assets/images/qTh4CpB.jpg)
 
 The Smart Citizen sensor portfolio aims to **create a boilerplate for individuals and communities with different sensing expertise levels in a modular, expandable and intuitive way**. Building on the legacy of previous Smart Citizen Kit generations, the hardware is especially aimed at providing meaningful data insights on a low budget. The core of the system is a central data logger with network connectivity to which the different components can be connected and aims to give support to a wide range of activities ranging from education to more advanced scientific research, in **various environmental fields such as air, water or soil quality**.
 
@@ -57,4 +57,4 @@ The entire project it is released under open source licenses: 
 !!! info
 	Check the **Source files** section for each component and explore the software source code and the hardware blueprints.
 
-	![](https://i.imgur.com/X1fUET3.png)
+	![](/assets/images/X1fUET3.png)

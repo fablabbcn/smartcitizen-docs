@@ -10,7 +10,7 @@ To keep it simple: our final target is to be able to **interact** with the SAMD2
 
 So, here we go! The first item we need is the [**Open On-Chip Debugger** (OpenOCD)](http://openocd.org/) which provides debugging with the assistance of a **debug adapter**. This adapter is a small hardware module which helps provide the right kind of electrical signaling to the target being debugged. These are required since the debug host, on which OpenOCD runs (i.e. your computer, a Raspberry PI...) won’t usually have native support for such signaling, or the connector needed to hook up to the target.
 
-![](https://i.imgur.com/qJ2fV3N.jpg)
+![](/assets/images/qJ2fV3N.jpg)
 
 These adapters are sometimes packaged as discrete dongles, which may generically be called **hardware interface dongles** (and are quite expensive). Some development boards also integrate them directly, which may let the development board connect directly to the debug host over USB (and sometimes also to power it over USB, like the [Arduino Genuino Zero](https://store.arduino.cc/genuino-zero)). In the case of the **Smart Smart Citizen Kit**, we have a **SWD** Adapter that supports _Serial Wire Debug_ signaling to communicate with the _ARM core_. In our approach, **using a complete open toolchain**, OpenOCD is be running on a Raspberry Pi, and communicating with the SCK's SWD through the GPIO pins of the Pi.
 
@@ -96,10 +96,10 @@ The list of interfaces that openOCD can use is under: _/usr/local/share/openocd/
 
 In order to use the [SWD connector](http://www.arm.com/products/system-ip/debug-trace/coresight-soc-components/serial-wire-debug.php) that the SCK features, by using _Bit Banging_, we connect it directly to the Raspberry Pi GPIOs:
 
-![](https://i.imgur.com/qJ2fV3N.jpg)
+![](/assets/images/qJ2fV3N.jpg)
 
 ---
-![](https://i.imgur.com/AEYc8sd.jpg)
+![](/assets/images/AEYc8sd.jpg)
 
 ### Running OpenOCD on the raspberry pi
 

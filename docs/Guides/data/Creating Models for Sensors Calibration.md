@@ -126,7 +126,7 @@ Finally, there is a warning at the bottom indicating that the condition number i
 
 Our function also depicts the results in a graphical way for us to see the model itself. It will show the training and test datasets (as `Reference Train` and `Reference Test` respectively), and the prediction results. The mean and absolute confidence intervals for 95% confidence are also shown:
 
-![](https://i.imgur.com/M9TBeBT.png)
+![](/assets/images/M9TBeBT.png)
 
 Now we can look at some other model quality plots. If we run the cell below, we will obtain an adaptation of the summary plots from **R**:
 
@@ -141,7 +141,7 @@ Let's review the output step by step:
 
 - **Residual vs Fitted** and **Scale Location plot**: these plots represents the model [heteroscedasticity ](https://en.wikipedia.org/wiki/Heteroscedasticity), which is a representation of the residuals versus the fitted values. This plot is helpful to check if the errors are distributed homogeneously and that we are not penalising high, low, or other values. There is also a red line which represents the average trend of this distribution which, we want it to be horizontal. For more information visit [here](https://stats.stackexchange.com/questions/76226/interpreting-the-residuals-vs-fitted-values-plot-for-verifying-the-assumptions) and [here](https://stats.stackexchange.com/questions/52089/what-does-having-constant-variance-in-a-linear-regression-model-mean/52107#52107). Clearly, in this model we are missing something:
 
-![](https://i.imgur.com/QR2Ya4r.png)
+![](/assets/images/QR2Ya4r.png)
 
 - **Normal QQ**: the qq-plot is a representation of the kurtosis and skewness of the residuals distribution. If the data were well described by a normal distribution, the values should be about the same, i.e.: on the diagonal (red line). For example, in our case the model presents a deviation on both tails, indicating skewness. In general, a simple rubric to interpret a qq-plot is that if a given tail twists off counterclockwise from the reference line, there is more data in that tail of your distribution than in a theoretical normal, and if a tail twists off clockwise there is less data in that tail of your distribution than in a theoretical normal. In other words:
 
@@ -150,7 +150,7 @@ Let's review the output step by step:
     - if the right tail twists counterclockwise and the left tail twists clockwise, we have right skew
     - if the left tail twists counterclockwise and the right tail twists clockwise, we have left skew
 
-![](https://i.imgur.com/4ldXI80.png)
+![](/assets/images/4ldXI80.png)
 
 - **Residuals vs Leverage**: this plot is probably the most complex of them all. It shows how much leverage one single point has on the whole regression. It can be interpreted as how the average line that passes through all the data (that we are calculating with the OLS) can be modified by 'far' points in the distribution, for example, outliers. This leverage can be seen as how much a single point is able to pull down or up the average line. One way to think about whether or not the results are driven by a given data point is to calculate how far the predicted values for your data would move if your model were fit without the data point in question. This calculated total distance is called Cook's distance. We can have four cases (more information from source, [here](https://stats.stackexchange.com/questions/58141/interpreting-plot-lm#65864))
 
@@ -159,11 +159,11 @@ Let's review the output step by step:
     - low-leverage, but high-standardized residual point
     - high-leverage, high-standardized residual point (the worst)
 
-![](https://i.imgur.com/BXsS6tE.png)
+![](/assets/images/BXsS6tE.png)
 
 In this case, we see that our model has some points with higher leverage but low residuals (probably not too bad) and that the higher residuals are found with low leverage, which means that our model is safe to outliers. If we run this function without the filtering, some outliers will be present and the plot turns into:
 
-![](https://i.imgur.com/NQLA4lw.png)
+![](/assets/images/NQLA4lw.png)
 
 Finally, we can export our model and generate some metrics to evaluate the results.
 
@@ -240,17 +240,17 @@ Channel 5262_RF_UCD prediction finished
 
 This will also output some nice plots for visually checking our model performance:
 
-![](https://i.imgur.com/xEuVJVC.png)
+![](/assets/images/xEuVJVC.png)
 
 And some extras about variable importance:
 
-![](https://i.imgur.com/wyRi9dp.png)
+![](/assets/images/wyRi9dp.png)
 
 ## Model comparison
 
 Here is a visual comparison of both models:
 
-![](https://i.imgur.com/56eVx5P.png)
+![](/assets/images/56eVx5P.png)
 
 It is very difficult though, to know which one is performing better. Let's then evaluate and compare our models. In order to evaluate it's metrics, we will be using the following principles[^first][^second]:
 
@@ -330,7 +330,7 @@ The resulting target diagram then provides information about:
 - whether the $\sigma_m$ is larger or smaller thann the $\sigma_r$
 - whether there is a positive or negative bias
 
-![](https://i.imgur.com/x8NY4kD.png)
+![](/assets/images/x8NY4kD.png)
 
 _Image Source: Jolliff et al. [^first]_
 
@@ -363,7 +363,7 @@ targetDiagram(models, True, 'seaborn-talk')
 
 Output:
 
-![](https://i.imgur.com/PBuBOpw.png)
+![](/assets/images/PBuBOpw.png)
 
 Here, every point that falls inside the yellow circle, will have an R<sup>2</sup> over 0.7, and so will be the red and green for R<sup>2</sup> over 0.5 and 0.9 respectively. We see that only one of our models performs well in that sense, which is the training dataset of the OLS. However, this dataset performs pretty badly in the test dataset, being the LSTM options much better. This target diagram offers information about how the hyperparameters affect our networks. For instance, increasing the training epochs from 100 to 200 does not affect greatly on model performance, but the effect of filtering the data beforehand to reduce the noise shows a much better model performance in both, training and test dataframe.
 

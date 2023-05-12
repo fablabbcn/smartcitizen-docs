@@ -22,7 +22,7 @@ All the Smart Citizen Kit new sensors generation measure **at least** air temper
 
 ### SCK 2.0
 
-![](https://i.imgur.com/vgt8m3p.jpg)
+![](/assets/images/vgt8m3p.jpg)
 
 The **non-commercially available** SCK 2.0 components are listed below:
 

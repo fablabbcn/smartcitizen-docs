@@ -35,7 +35,7 @@ This is a list of supported sensors that you can connect directly to the **auxil
     - [Smart Citizen PM Board](/Components/PM Board): supports 2 Plantower PMS5003 sensors, I2C extension, 4 ADC pins, 2 GPIO and a UART Serial port
     - [Smart Citizen Analog Sensor Board](/Components/Analog Sensor Board): supports 4 or 8 analog channels at 16bit resolution.
     
-    ![](https://i.imgur.com/RRu8MiV.jpg)
+    ![](/assets/images/RRu8MiV.jpg)
 
 ### Soil and Water
 

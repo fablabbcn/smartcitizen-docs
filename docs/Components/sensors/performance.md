@@ -26,7 +26,7 @@ The following characteristics have been considered for the sensor choice
     Check the [Noise sensor implementation full documentation](/Components/sensors/air/Noise) and the performance evaluation in the [ISCAPE 7.8 Deliverable (section 6.1)](/assets/publications/iSCAPE_D78.pdf)
 
 !!! tip "Sensor integration"
-    ![](https://i.imgur.com/KHkyHEX.png)
+    ![](/assets/images/KHkyHEX.png)
 
 ## Relative Humidity and Air Temperature Sensor
 
@@ -47,7 +47,7 @@ The following characteristics have been considered for the sensor choice
 * Commonly found in many commercial weather stations as the Davis Vantage Pro.
 
 !!! tip "Sensor integration"
-    ![](https://i.imgur.com/xoF233L.png)
+    ![](/assets/images/xoF233L.png)
 
 ## Ambient Light Sensor
 
@@ -65,7 +65,7 @@ The following characteristics have been considered for the sensor choice:
 * 50Hz/60Hz (electric network frequency) light rejection. Filtering the interference of most artificial light sources.
 
 !!! tip "Sensor integration"
-    ![](https://i.imgur.com/vYPNdcC.png)
+    ![](/assets/images/vYPNdcC.png)
 
 ## Barometric Pressure
 
@@ -86,7 +86,7 @@ choice:
 * Low power consumption.
 
 !!! tip "Sensor integration"
-    ![](https://i.imgur.com/5g64P7r.png)
+    ![](/assets/images/5g64P7r.png)
 
 ## PM Sensor
 
@@ -104,7 +104,7 @@ The following characteristics have been considered for the sensor choice (see mo
 * Low Power
 
 !!! tip "Sensor integration"
-    ![](https://i.imgur.com/vyLMF07.png)
+    ![](/assets/images/vyLMF07.png)
 
 ## CO2 NDIR Sensor
 

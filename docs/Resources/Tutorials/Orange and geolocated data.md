@@ -18,21 +18,21 @@ We're starting from scratch, a white canvas for this example.
 
 Click on the widget of `Smart Citizen Search` (on the widgets menu) from the **MECODA** extension. It will create the widget on the canvas on the right:
 
-![](https://i.imgur.com/NdgHPlx.png)
+![](/assets/images/NdgHPlx.png)
 
 If you click on the new widget that just have appeared in the canvas, a window will pop up with the available options:
 
-![](https://i.imgur.com/H2OGEBv.png)
+![](/assets/images/H2OGEBv.png)
 
 Here you can search for your Kit. There are several options to retrieve this information but in this case we have the URL of our kit from the platform: https://smartcitizen.me/kits/15618. This URL tells us the Device ID that we want at the end of the URL (in this case `15618`).
 
 Once we have it, we type it or paste it in Device ID and press _Search Devices_:
 
-![](https://i.imgur.com/k55Czxv.png)
+![](/assets/images/k55Czxv.png)
 
 It will tell us that we have just one result: 
 
-![](https://i.imgur.com/bLJAjMN.png)
+![](/assets/images/bLJAjMN.png)
 
 Now we found our device, we will get the data that is stored in it!
 
@@ -40,19 +40,19 @@ Now we found our device, we will get the data that is stored in it!
 
 We will now add another widget: this time, the `Smart Citizen Data`, also in the **MECODA** extension:
 
-![](https://i.imgur.com/HNGLmeB.png)
+![](/assets/images/HNGLmeB.png)
 
 It will be set in the canvas near the other widget of `Smart Citizen Search` that we have already configured:
 
-![](https://i.imgur.com/Ds2PQ2b.png)
+![](/assets/images/Ds2PQ2b.png)
 
 Now, we will **connect both of them** by pressing the dotted line on the right of the `Smart Cizizen Search` and dragging the cursor into the left dotted line of `Smart Citizen Data`. Once you have it would look like this: 
 
-![](https://i.imgur.com/DD63yLw.png)
+![](/assets/images/DD63yLw.png)
 
 To see if everything is correct we can click on `Smart Citizen Data` and check it out:
 
-![](https://i.imgur.com/3jTD66H.png)
+![](/assets/images/3jTD66H.png)
 
 In the `Info panel` you will see the data of the device which are about to load data from. 
 
@@ -74,11 +74,11 @@ Now we will define what data we want to collect. In this example we're getting t
 
 Then we set **Initial Date** to **2022-10-01** and **End Date** to **2022-11-01**. And we **tick off** the box of **Resample data**. You will have something like this:
 
-![](https://i.imgur.com/cOLbgFN.png)
+![](/assets/images/cOLbgFN.png)
 
 Now we have to **press Get data** to fetch the data.
 
-![](https://i.imgur.com/Ukd7KVq.png)
+![](/assets/images/Ukd7KVq.png)
 
 It will take some seconds to fetch the data from the platform. Once it's done the Info panel will read: `Device 15618 data downloaded!`
 
@@ -86,19 +86,19 @@ It will take some seconds to fetch the data from the platform. Once it's done th
 
 As an _optional_ step, we can look at the data in a table format. Place a **Data table** widget from the left menu in `Data`:
 
-![](https://i.imgur.com/7Bdt52b.png)
+![](/assets/images/7Bdt52b.png)
 
 We click on it as we have clicked on other widgets and it will appear on the canvas:
 
-![](https://i.imgur.com/BO803hU.png)
+![](/assets/images/BO803hU.png)
 
 We connect it to the `Smart Citizen Data` by dragging it's output to the `Data Table` like this:
 
-![](https://i.imgur.com/HZxxq7s.png)
+![](/assets/images/HZxxq7s.png)
 
 If we open it, we'll see the data that we have gathered. If we scroll to the right (using the scroll at the bottom) we'll see that we have a column with Latitude and other with Longitude:
 
-![](https://i.imgur.com/SsyHdiv.png)
+![](/assets/images/SsyHdiv.png)
 
 !!! info "More info?"
 	The `Data tables` have more properties that are explained here https://orange3.readthedocs.io/projects/orange-visual-programming/en/latest/widgets/data/datatable.html
@@ -109,15 +109,15 @@ Now we add one more widget to print this data in a map.
 
 Now, go to the "Geo" panel on the left and click on `Geo Map` widget:
 
-![](https://i.imgur.com/GJK2UbR.png)
+![](/assets/images/GJK2UbR.png)
 
 It will look like this:
 
-![](https://i.imgur.com/mmPkXPj.png)
+![](/assets/images/mmPkXPj.png)
 
 As we have done before, we **connect the data table into the Geo Map** dragging from the right of the `data table` (the output) to the left of the `geo map` (the input). When we click on the `geo map`, we see this:
 
-![](https://i.imgur.com/ThxWa1x.png)
+![](/assets/images/ThxWa1x.png)
 
 We can adjust colors, sizes and parameters using the attributes on the left part of the GUI.
 

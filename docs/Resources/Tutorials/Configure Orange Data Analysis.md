@@ -12,7 +12,7 @@
 
 Once you have installed `Orange`,  open it and you will see something similar to this:
 
-![](https://i.imgur.com/6BlZktR.png)
+![](/assets/images/6BlZktR.png)
 
 You can check the documentation, examples and tutorials from `Orange`. You can dismiss or use that documentation to get familiarized with `Orange`. 
 
@@ -31,11 +31,11 @@ We will need to install 3 add-ons:
 
 1. Go to **Options** -> **Add-ons...** and you will see a window like this. We need to press "**Add more...**"
 
-![](https://i.imgur.com/j3tDkUF.png)
+![](/assets/images/j3tDkUF.png)
 
 2. You will see a pop-up window asking for the name.
 
-![](https://i.imgur.com/ArwCdi7.png)
+![](/assets/images/ArwCdi7.png)
 
 3. We write **"mecoda-orange"** and we press **add**.
 
@@ -45,24 +45,24 @@ We will need to install 3 add-ons:
 
 6. When you sellect them in the collumn action it will hit **Install**.
 
-![](https://i.imgur.com/smH9ABz.png)
+![](/assets/images/smH9ABz.png)
 
 7. After that we press OK. It may take some time to install the packages.
 
-![](https://i.imgur.com/15f1HX9.png)
+![](/assets/images/15f1HX9.png)
 
 8. You may need to restart `Orange` for the changes to take effect. 
 
-![](https://i.imgur.com/qbxH6I4.png)
+![](/assets/images/qbxH6I4.png)
 
 ## Check if everything is installed
 
 If the installation was correct in `Orange`, in the panel to the left you will see new widgets available. (`MECODA`, `Time Series`, `Geo`)
 
-![](https://i.imgur.com/jmwYmFv.png)
+![](/assets/images/jmwYmFv.png)
 
 If you open MECODA, you will find the widgets for Smart Citizen (`Smart citizen Search` and `Smart Citizen Data`) among others. 
 
-![](https://i.imgur.com/Q0AXXP4.png)
+![](/assets/images/Q0AXXP4.png)
 
 If everything is as expected, the add-ons are correctly installed.

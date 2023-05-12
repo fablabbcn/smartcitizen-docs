@@ -13,13 +13,13 @@ Software-wise, different platforms will have different interfaces. The easiest a
 !!! example "Using the Arduino IDE"
     - Launch the _Arduino IDE_ and select the port under `Tools > Port >`:
     
-    ![](https://i.imgur.com/XEZXoyy.png)
+    ![](/assets/images/XEZXoyy.png)
 
     - Launch the `Serial Monitor` under `Tools > Serial Monitor`. Make sure that the dropdowns in the bottom are set as in the image below (`Carriage return` and `115200 baud`)
 
     - Type in `help` to get started.
 
-    ![](https://i.imgur.com/iSONfFB.png)
+    ![](/assets/images/iSONfFB.png)
 
 More advanced users would probably rather use a more _rugged_ interface. In this case, you could use `screen` in your terminal of choice:
 
@@ -491,6 +491,6 @@ flash -recover all net
 
     We will have two outputs: a `csv` file with the spectrums in rows, and a png image that looks like this!
 
-    ![](https://i.imgur.com/KZfFDam.png)
+    ![](/assets/images/KZfFDam.png)
 
     You can see that we were playing with a [tone generator](http://onlinetonegenerator.com/) to make some high pitch noises at 10kHz and 20kHz. 

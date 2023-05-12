@@ -98,18 +98,18 @@ The SCK and the PMS5003 are held together by a [3D printed clip](https://github.
 
     1.Use scissors to cut an empty plastic bottle at about 12 cm from the top
 
-    ![](https://i.imgur.com/heo8cwW.jpg)
+    ![](/assets/images/heo8cwW.jpg)
 
     2.Use the rubber band to fix it using the bottle cap
 
-    ![](https://i.imgur.com/CjKDBBl.jpg)
+    ![](/assets/images/CjKDBBl.jpg)
 
     3.Place the Kit inside and use the rubber band to hold it
 
-    ![](https://i.imgur.com/8KzbAqV.jpg)
+    ![](/assets/images/8KzbAqV.jpg)
 
     4.You have now a simple enclosure to use your Kit outdoors for short measurement periods!
 
-    ![](https://i.imgur.com/IhGxV67.jpg)
+    ![](/assets/images/IhGxV67.jpg)
 
-    ![](https://i.imgur.com/0kV6gie.jpg)
+    ![](/assets/images/0kV6gie.jpg)
