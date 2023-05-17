@@ -35,7 +35,7 @@ printArray(Serial.list());
 
 Copy and paste this in a new sketch. Press the play button on the top left and you will see something like this:
 
-![](https://i.imgur.com/ZzrBN5o.png)
+![](/assets/images/ZzrBN5o.png)
 
 In the console you will see one or more ports. You will have to select the one that has connected the Smart Citizen Kit.
 
@@ -53,7 +53,7 @@ This is a notation of an array, where `0` means `COM3`, `1` means `COM4` and so 
 
 If you have Arduino IDE installed, you can open it and check which port has the Smart Citizen Kit. To do that just open Arduino IDE and in the dropdown menu next to the verify and upload buttons. 
 
-![](https://i.imgur.com/rqovYXy.png)
+![](/assets/images/rqovYXy.png)
 
 We're looking for the one that says "Arduino Zero(Native USB Port)" to know which name has. In this case `COM 6`
 
@@ -92,7 +92,7 @@ You can find the code used in this tutorial here: https://github.com/fablabbcn/s
 Find the number of the port that is explained above and look the part of the code (in the beggining, line 9) that has the constant PORT_INDEX and substitute with the number of the index of the port array. 
 
 
-![](https://i.imgur.com/5MqGSL0.png)
+![](/assets/images/5MqGSL0.png)
 
 In this example it's 2, but can be other integer number (probably from 0 to 2).
 

@@ -56,7 +56,7 @@ The sensors can log data in sd card or remote post data to the Smart Citizen Pla
 
 You can check the BOM and installation/building [here](https://github.com/fablabbcn/smartcitizen-enclosures/tree/master/SmartCitizen%20Air%20Enclosures/Misc/CONNECTIVITY_UNIT) and you can email us at [info@smartcitizen](mailto:info@smartcitizen.me) for more information.
 
-![](https://i.imgur.com/y9ap4LK.jpg)
+![](/assets/images/y9ap4LK.jpg)
 
 !!! info "Got one?"
     Check this [installation guide to get started](/Guides/Installing Connectivity Units)

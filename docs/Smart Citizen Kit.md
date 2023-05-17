@@ -29,7 +29,7 @@ The Smart Citizen Kit is the core of what we call the Smart Citizen System: a co
 
 The system is designed in a extendable way, with a central data logger (the [Data Board](/Components/boards/Data Board)) with network connectivity to which the different components are branched. The system is based on the principle of reproducibility, also integrating non-hardware components such as a dedicated [Storage platform](/Data/Sensor Platform) and a [Sensor analysis framework](/Data/Data Analysis).
 
-![](https://i.imgur.com/i2qzNVl.jpg)
+![](/assets/images/i2qzNVl.jpg)
 
 On top of that, the system is meant to serve as a **base solution for more complex settings**, not only related with air quality monitoring. For that purpose, in addition to the [Urban Board](/Components/boards/Urban Board), the system also provides off-the-shelf support for a wide variety of third party sensors, using the expansion bus as a common port. One example is what we call the [Smart Citizen Station](/Smart Citizen Station): a full solution for low cost air pollution monitoring.
 
@@ -42,7 +42,7 @@ All the Smart Citizen Kit new sensors generation measure **at least** air temper
 
 ### SCK 2.1
 
-![](https://i.imgur.com/4UEoDoW.png)
+![](/assets/images/4UEoDoW.png)
 
 Here is the table summarising the sensors:
 
@@ -68,14 +68,14 @@ The sensor comes mounted and almost ready to be used:
 
 The first step is to connect the battery. The kit will light in red (configuration mode) and we will be able to configure it by following the instructions at [start.smartcitizen.me](https://start.smartcitizen.me).
 
-![](https://i.imgur.com/NhSNXJ8.png)
+![](/assets/images/NhSNXJ8.png)
 
 !!! info "Detailed guide"
     Have a look [at this guide](/Guides/getting started/Onboarding Sensors/) for a step-by-step installation.
 
 After the configuration process, data will be available on the SmartCitizen platform. You can explore the data there or download it using the `CSV Download` option (you can check a more detailed guide [here](/Guides/getting started/Downloading the Data/))
 
-![](https://i.imgur.com/5NlWx6O.jpg)
+![](/assets/images/5NlWx6O.jpg)
 
 ## :battery: Power management
 
@@ -126,7 +126,7 @@ The SCK needs 5V input via the micro USB connector. A normal 5V power charger ca
 
 The LED serves as an indication of the battery status. If the LED is flashing orange <span class="led small orange"> </span> it indicates that the battery must be charged. The battery takes about 4 hours to fully charge. When the battery is fully charged, the LED will change from orange to green <span class="led small green"> </span>.
 
-![](https://i.imgur.com/ABSXX4w.jpg){: style="max-width:400px !important"}
+![](/assets/images/ABSXX4w.jpg){: style="max-width:400px !important"}
 
 _Remember that in addition to these colors you will have the state color of the kit: configuration, network and sd._
 
@@ -137,7 +137,7 @@ _Remember that in addition to these colors you will have the state color of the 
 
 The data board features a set of user interfaces which provide feedback to the user, as well as two buttons with different functionalities. The main RGB LED provides general feedback of the data board status. Additionally, two buttons are provided for user action. A hardware reset button, which forces a power cut to the board, and a power button, used to change the device's mode, turn on and off the device, and to perform a factory reset. You can see both buttons below:
 
-![](https://i.imgur.com/AmlA8e2.png)
+![](/assets/images/AmlA8e2.png)
 
 ### The button
 

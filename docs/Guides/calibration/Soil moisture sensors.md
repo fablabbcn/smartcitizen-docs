@@ -23,7 +23,7 @@ If we are not aiming to get a full-fledged sensor reading, we will only need to 
 The sensor can be calibrated [using the shell interface](/Components/Firmware/guides/Using the Shell/). The process is as follows:
 
 1. Connect your kit to a computer and open the terminal for the SCK. If you use the Arduino IDE, go to Tools > Serial Monitor and select `115200 baud` at the bottom right corner
-![](https://i.imgur.com/hs5Ny7Q.png)
+![](/assets/images/hs5Ny7Q.png)
 
 2. If you use the IDE type `sensor` on the top and click `Send`
 3. Check if the output has something like `Soil Moisture Raw (60 sec)` after `Enabled`
@@ -33,7 +33,7 @@ The sensor can be calibrated [using the shell interface](/Components/Firmware/gu
 7. Check that the reading is OK by: `read soil moisture percent`. You should receive an answer in rh%
 8. Now you should see the data online (if in network mode):
 
-![](https://i.imgur.com/4Lrv62R.png)
+![](/assets/images/4Lrv62R.png)
 
 !!! info "Find out more"
     Check the project source code [files](https://github.com/fablabbcn/smartcitizen-grow/tree/master/soil-moisture).

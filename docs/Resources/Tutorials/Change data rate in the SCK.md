@@ -16,11 +16,11 @@ This tutorial is useful for changing the default data update. This is useful for
 
 **Connect the MicroUSB cable** to the Smartcitizen kit 
 
-![](https://i.imgur.com/GzrOomC.png)
+![](/assets/images/GzrOomC.png)
 
 And the USB to your computer
 
-![](https://i.imgur.com/JiY7bpZ.jpg)
+![](/assets/images/JiY7bpZ.jpg)
 
 ## Open the Arduino IDE and connect to the kit
 
@@ -28,33 +28,33 @@ We are opening the Arduino IDE. (the screenshots are done Arduino 2.0 in windows
 
 **Set your port.** For doing that we are going to go to  Tools->Port and we select to the port that says something like "(Arduino Zero (Native USB Port))" or "(Arduino/Genuino Zero (Autodetect Port))" in MAC or linux. 
 
-![](https://i.imgur.com/XVAq6lP.png)
+![](/assets/images/XVAq6lP.png)
 
 If this is your first start it might be asking you to **set the Board**. You can do it by going again into Tools->Boards and you set any of them (for example Arduino UNO). 
 
-![](https://i.imgur.com/LyiejSE.png)
+![](/assets/images/LyiejSE.png)
 
 Now you can **open the serial monitor** display going to **tools -> Serial Monitor**
 
-![](https://i.imgur.com/SnsIYTm.png)
+![](/assets/images/SnsIYTm.png)
 
 In Arduino IDE 2.0 (the newer version) you will see the serial monitor in the bottom of the screen. In older Arduino IDE you will get a pop up window. 
 
 **Check** that is set as "Carriage Return" and it's set to 115200 bauds as the image below: 
 
-![](https://i.imgur.com/NpSa4V6.png)
+![](/assets/images/NpSa4V6.png)
 
 !!! info "Unintended feedback?"
 
     It might give you some text even if you don't type anything. This is normal and it means that the smartcitizen is properly connected. 
     
-    ![](https://i.imgur.com/X15JPFX.png)
+    ![](/assets/images/X15JPFX.png)
     
     If this happens, you can continue to input the command.
 
 To check if everything works as spected you can type "help" in the box where it says "Message (Enter to send message to..)" and you will get something like this. 
 
-![](https://i.imgur.com/e5fhHLa.png)
+![](/assets/images/e5fhHLa.png)
 _This is the list of the possible commands of the shell of smartcitizen_
 
 If this happens, you can continue to the next step. 
@@ -63,7 +63,7 @@ If this happens, you can continue to the next step.
     
     _"Not connected. Select a board and a port to connect automatically."_
     
-    ![](https://i.imgur.com/670FKdb.png)
+    ![](/assets/images/670FKdb.png)
     
     **Check if the USB** is properly connected and then, **revise if the port is properly selected**. Last, **check if there is a board selected**. 
     
@@ -81,7 +81,7 @@ config -pubint 5 -readint 5
 
 You will get something like this
 
-![](https://i.imgur.com/Hz9Jhst.png)
+![](/assets/images/Hz9Jhst.png)
 
 !!! warning "Battery drain-up"
 
@@ -112,11 +112,11 @@ You can either use dashboard.smartcitizen.me or smartcitizen.me/kits/ to check y
 
 **Access martcitizen.me/kits** and filter the kits to find yours. 
 
-![](https://i.imgur.com/deuc9JW.png)
+![](/assets/images/deuc9JW.png)
 
 Once you have it you will find this data below
 
-![](https://i.imgur.com/xwNMFSS.jpg)
+![](/assets/images/xwNMFSS.jpg)
 
 You will see that the data is updated more less every 6 seconds (5 seconds + the delay to post it into the platform)
 
@@ -124,7 +124,7 @@ You will see that the data is updated more less every 6 seconds (5 seconds + the
 
 **Access dashboard.smartcitizen.me** and filter the kits to find yours
 
-![](https://i.imgur.com/Es5maWS.png)
+![](/assets/images/Es5maWS.png)
 
 You can use your user, the name of the kit, the city or any data and the search tool is going to find it. 
 
@@ -132,7 +132,7 @@ You can use your user, the name of the kit, the city or any data and the search 
 
 You will see something like this of the chosen kit:
 
-![](https://i.imgur.com/IMhlsLQ.png)
+![](/assets/images/IMhlsLQ.png)
 
 Then, **click on 🛠️**, the setup icon on the top right. 
 
@@ -140,13 +140,13 @@ Then, **click on 🛠️**, the setup icon on the top right.
 
 Then it will open up a bar on the right in blue. Here you need to **press the button of SHOW GRAPHS**
 
-![](https://i.imgur.com/IdYsHwe.png)
+![](/assets/images/IdYsHwe.png)
 
 Then you will get this information on the web:
 
 _press again the 🛠️ icon to close the menu on the right_
 
-![](https://i.imgur.com/nT9lZQY.png)
+![](/assets/images/nT9lZQY.png)
 
 !!! info ""
     You can use the menu for filter the values that you're more interested on. 

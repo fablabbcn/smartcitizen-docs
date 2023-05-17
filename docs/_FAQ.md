@@ -1,7 +1,7 @@
 Frequently asked questions
 ==========================
 
-![](https://i.imgur.com/feS0bZ8.jpg)
+![](/assets/images/feS0bZ8.jpg)
 
 ## Can the sensors be placed outdoors?
 Yes. The sensor is designed for both indoors and outdoors use. But if you’re planning to use it outdoors, you will have to consider purchasing or making a rainproof enclosure.
@@ -75,7 +75,7 @@ You can retrieve the MAC address with two methods: either you can use your phone
 3. Once you are on your Kit configuration page, go to the Info section. You will see a page with all the information about your Kit.
 4. Your MAC address is listed as seen below:
 
-![](https://i.imgur.com/WuZ1mpw.jpg)
+![](/assets/images/WuZ1mpw.jpg)
 
 ## What batteries are shipped with the kits?
 

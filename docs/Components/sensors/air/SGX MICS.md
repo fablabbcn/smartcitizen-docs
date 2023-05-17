@@ -28,7 +28,7 @@ However, despite the low cost nature of these sensors, they have been subject of
 - *Sensor cross-sensitivity*: is the resistance variation with variations of gases other than the target gas
 - *Sensor poisoning*: an irreversible resistance variation provoked by the reaction of gases other than the target gas
 
-![](https://i.imgur.com/EUCes5C.png)
+![](/assets/images/EUCes5C.png)
 _Source: Peterson et al. [^first]_
 
 Peterson et al. [^first] describes the various types of interactions between atmospheric gases and a MOS sensor surface. In the image above, the leftmost region describes the unpowered behaviour, or **base resistance**. The three other regions of the diagram describe different processes that actually occur simultaneously to varying degrees. The sensor’s output is the resistance across the whole of the sensor material, which forms a resistor network with contributions from both the bulk and surface regions. The model described in [^first] also explains the wide variation in base resistance between individual sensors of the same type, as the random nature of the surface geometry means an equally random network of resistances. This diagram is a two-dimensional representation of a three-dimensional material; in an actual sensor, the sensitive region is spread into the surface with a distance dependent on the grain size and arrangement resulting from the sintering.
@@ -37,7 +37,7 @@ Each sensor will then have a different resistance in air and how much this basel
 
 The change in resistance with the change in gas concentration is generally not a linear response. The response can be measured and fitted to a **polynomial relationship**, with interactions from other metrics such as temperature, humidity and other gases. It has been proved that air flow around the sensor yields better sensor reactivity, and that the usage of PTFE filters also helps reducing cross-sensitivity and sensor poisoning. An important practical consideration with any in situ air quality sensor design is ensuring adequate flow of sampling air through the device. **Stale air inside a casing will produce unrepresentative results**, and even sensors mounted outside a casing might not get a properly-mixed sample.
 
-![](https://i.imgur.com/wKuthZo.png)
+![](/assets/images/wKuthZo.png)
 _Source: Peterson et al. [^first]_
 
 Although the deployment of multiple different sensors can compensate for the cross-sensitivity issues in calibration, it cannot eliminate it. MOS sensors can thus be used only in situations where any interfering species can either be measured by other means, or they must be calibrated regularly and used in locations where the background varies in concentration slowly compared with the target gases. As well, the **sensor drift** over time is an important issue that requires sensor recalibration over time.
@@ -83,13 +83,13 @@ model.compile(loss='mse', optimizer='rmsprop')
 
 The CO model included the following features: $CO_{R}^{-1}$, $CO_R^{-2}$, $Temp$ and $Temperature^2$. The results can be seen below:
 
-![](https://i.imgur.com/M2OCMsg.png)
+![](/assets/images/M2OCMsg.png)
 
 ### Nitrogen Dioxide
 
 The NO~2~ model included the following features: $NO~2~_{R}$, $NO~2~_R^{-2}$, Light, $Temp$ and $Temperature^2$. The results can be seen below:
 
-![](https://i.imgur.com/982qA89.png)
+![](/assets/images/982qA89.png)
 
 !!! warning
     This test campaign contains a short amount of data to be used as a training dataset for a LSTM algorithm. Therefore, this is just to considered as an use case example and further tests and data should be carried out to train broader models.
@@ -100,9 +100,9 @@ The NO~2~ model included the following features: $NO~2~_{R}$, $NO~2~_R^{-2}$, Li
 
 The solution present at Urban Sensor Board V2.0 for MICS-4514 sensor's heaters excitation, pretends to make it compatible with a 3.3V global voltage source.
 
-![](https://i.imgur.com/z3ikGvq.png)
+![](/assets/images/z3ikGvq.png)
 
-![](https://i.imgur.com/aum9WUX.png)
+![](/assets/images/aum9WUX.png)
 
 The manufacturer reccomend the following circuit topology, with a global supply voltage of 5V. In the datasheet are collected the electrical nominal conditions for that resistors, in order to operate safely with the heater, without damaging it.
 
@@ -118,11 +118,11 @@ The source for the PWM signal must be buffered, because the resistive load of th
 
 The first simulations and given values leads to the selection of the RC components values if we set a PWM frequency around 40 kHz.
 
-![](https://i.imgur.com/BWAvuX2.png)
+![](/assets/images/BWAvuX2.png)
 
-![](https://i.imgur.com/FUZOQ5A.png)
+![](/assets/images/FUZOQ5A.png)
 
-![](https://i.imgur.com/aXpadKV.png)
+![](/assets/images/aXpadKV.png)
 
 To evaluate the R part of the filter, is needed to take into account the output resistance of the hex-inverter buffer.
 
@@ -130,13 +130,13 @@ To evaluate the R part of the filter, is needed to take into account the output 
 
 We build the circuit into a protoboard, with several IC HEX-INV manufacturers, based on the following schematic:
 
-![](https://i.imgur.com/Jz0WM4G.png)
+![](/assets/images/Jz0WM4G.png)
 
-![](https://i.imgur.com/L1w3ihW.jpg)
+![](/assets/images/L1w3ihW.jpg)
 
 The measures are sumarized in the following table, in which we compare four pre-selected devices, which can fit in our application for size an price considerations.
 
-![](https://i.imgur.com/QMOJUUc.png)
+![](/assets/images/QMOJUUc.png)
 
 Four cases with paralellized inverters, for each device were performed: pasive load 70R test with DC input, and three tests with 10R+Rheater load at DC input, 60% dutty cycle and 30% dutty cycle. The 74LCX04FT(AE) was selected because it has the lowest LOW output level (0.45V,0.22V), which is considered here as the quality (or close to ideal) of the square wave input source.
 
@@ -144,19 +144,19 @@ Four cases with paralellized inverters, for each device were performed: pasive l
 
 The solution implemented in the PCB, has a constant auxilar R (10R+Rout_buff), and constant C (47uF), and also operates at consatant frequency, then, the output power regulation is based on the PWM's dutty cycle. The following circuit represent the implemented schematic.
 
-![](https://i.imgur.com/dn4FyNE.png)
+![](/assets/images/dn4FyNE.png)
 
 ### Operation
 
 First of all, is needed to know the real implemented Rheater of each sensor (which may vary among devices and time), and can be estimated by measuring the V_heater_* at 100% dutty cycle, then:
 
-![](https://i.imgur.com/6MvPMhT.png)
+![](/assets/images/6MvPMhT.png)
 
 Where Rint_buff can be aproximated with 4 Ohm resistor.
 
 The desired_reference_voltage is function of the desired_power_Rheater and dutty cycle. If we set 80mW we can use the value of the Rheater to obtain desired_reference_voltage through tis formula:
 
-![](https://i.imgur.com/0LVFLy9.png)
+![](/assets/images/0LVFLy9.png)
 
  (Take into account this resistor has a drift over time, therefore is recomended to take periodic measurements of the value of Rheater itself, and check the output power reachability).
 
@@ -166,13 +166,13 @@ Is recomended to average several samples to remove the AC part of the signal. Th
 
 The sign of the PWM signal is inverted due to the action of the inverter, then, a desired x% dutty is obtained as 100%-x%.
 
-![](https://i.imgur.com/uPlbFLQ.png)
+![](/assets/images/uPlbFLQ.png)
 
 As initial PWM aproximation to begin to converge close to the regulated dutty cycle can be obtained through this simplification:
 
-![](https://i.imgur.com/XpGP2OB.png)
+![](/assets/images/XpGP2OB.png)
 
-![](https://i.imgur.com/25bEQx1.png)
+![](/assets/images/25bEQx1.png)
 
 ### References
 

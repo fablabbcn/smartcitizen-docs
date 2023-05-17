@@ -17,11 +17,11 @@ El kit tiene **tres modos fundamentales de operación**: modo configuración, mo
 
 El usuario también tiene la posibilidad de cambiar el modo de operación a través del botón:
 
-![](https://i.imgur.com/BMDCmMa.png)
+![](/assets/images/BMDCmMa.png)
 
 !!! warning "Documentación"
 	Las interfaces se encuentran documentadas en la [siguiente página de la documentación](/Smart%20Citizen%20Kit/#user-interfaces)
 
 Además, existe un botón de reset (un poco más oculto), para que puedas _resetear_ el kit:
 
-![](https://i.imgur.com/lnFrnwS.png)
+![](/assets/images/lnFrnwS.png)

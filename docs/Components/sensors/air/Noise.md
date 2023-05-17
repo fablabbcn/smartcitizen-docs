@@ -2,7 +2,7 @@
 
 The new Urban Sensor Board SCK 2.0 (and onwards) comes with a digital **MEMs I2S microphone**. There is a wide range of possibilities in the market, and our pick was the INVENSENSE (now TDK) [ICS43432](https://www.invensense.com/products/digital/ics-43432/): a tiny digital MEMs microphone with I2S output. There is an extensive documentation at TDK's website coming from the former and we would recommend to review the nicely put documents for those interested in the topic.
 
-![](https://i.imgur.com/ZbkN4aj.png)
+![](/assets/images/ZbkN4aj.png)
 
 _Image credit: [Invensense ICS43432](https://www.invensense.com/products/digital/ics-43432)_
 
@@ -10,7 +10,7 @@ _Image credit: [Invensense ICS43432](https://www.invensense.com/products/digital
 
 The **MEMs microphone** comes with a transducer element which converts the sound pressure into electric signals. The sound pressure reaches the transducer through a hole drilled in the package and the transducer's signal is sent to an ADC which provides with a signal which can be pulse density modulated (PDM) or in I2S format. Since the ADC is already in the microphone, we have an all-digital audio capture path to the processor and it’s less likely to pick up interferences from other RF, such as the WiFi, for example. The I2S has the advantage of a decimated output, and since the SAMD21 has an I2S port, this allows us to connect it directly to the microcontroller with no CODEC needed to decode the audio data. Additionally, there is a bandpass filter, which eliminates *DC* and low frequency components (i.e. at fs = 48kHz, the filter has -3dB corner at 3,7Hz) and high frequencies at *0,5·fs* (-3dB cutoff). Both specifications are important to consider when analysing the data and discarding unusable frequencies. The microphone acoustic response has to be considered as well, with subsequent equalisation in the data treatment in order.
 
-![](https://i.imgur.com/cToxGKY.png)
+![](/assets/images/cToxGKY.png)
 
 _Image credit: [ICS43432 Datasheet - TDK Invensense](https://www.invensense.com/wp-content/uploads/2015/02/ICS-43432-data-sheet-v1.3.pdf)_
 
@@ -18,7 +18,7 @@ _Image credit: [ICS43432 Datasheet - TDK Invensense](https://www.invensense.com/
 
 The **[I2S protocol](https://www.sparkfun.com/datasheets/BreakoutBoards/I2SBUS.pdf)** (*Inter-IC-Sound*) is a serial bus interface which consists of: a bit clock line or Serial Clock (*SCK*), a word clock line or Word Select (*WS*) and a multiplexed Serial Data line (*SD*). The SD is transmitted in two’s complement with MSB first, with a 24-bit word length in the microphone we picked. The *WS* is used to indicate which channel is being transmitted (left or right). In the case of the ICS43432, there is an additional pin which corresponds with the L/R, allowing to use the left or right channel to output the signal and the use of stereo configurations. When set to left, the data follows WS’s falling edge and when set to right, the WS’s rising edge. For the SAMD21 processor, there is a well developed [I2S library](https://github.com/arduino/ArduinoCore-samd/tree/master/libraries/I2S) that will take control of this configuration. 
 
-![](https://i.imgur.com/Z6TdV9h.png)
+![](/assets/images/Z6TdV9h.png)
 
 _Image credit: [I2S bus specification - Philips Semiconductors](https://www.sparkfun.com/datasheets/BreakoutBoards/I2SBUS.pdf)_
 
@@ -39,7 +39,7 @@ The SD line of the I2S protocol is quite delicate at high frequencies and it is 
 
 The sensor is calibrated in an anechoic chamber with a reference microphone to obtain sensor characteristics. The ICS43432 has a clear non-linear response, which is specified in it's datasheet and is characterised in an anechoic chamber:
 
-![](https://i.imgur.com/FYxxWxB.jpg)
+![](/assets/images/FYxxWxB.jpg)
 
 _Image credit: [Invensense ICS43432](https://www.invensense.com/products/digital/ics-43432)_
 
@@ -62,15 +62,15 @@ The noise floor of the microphone in this test setup is of **35,5 dB / 30,1 dBA*
 
 The results for this characterisation, for different SPLs are shown below:
 
-![](https://i.imgur.com/P3co21a.png)
+![](/assets/images/P3co21a.png)
 
 The microphone's spectrum response is not dependent on the SPL, but only on the frequency. The above response is corrected in the Smart Citizen Kit on real time. A double point validation is performed on both microphones, from the SCK1.5 and the SCK2.0 (onwards), yielding the following results (**the results below do not show any equalisation**):
 
-![](https://i.imgur.com/wf7ZWzg.png)
+![](/assets/images/wf7ZWzg.png)
 
 Finally, if comparing these with the thresholds, in dBA scale [IEC 61672-1](https://webstore.iec.ch/preview/info_iec61672-1{ed1.0}en_d.pdf), without accounting for the previous equalisation:
 
-![](https://i.imgur.com/rRMGL7N.png)
+![](/assets/images/rRMGL7N.png)
 
 Which yields a very good linearity off-the-shelf over the common urban frequency range (below 2000Hz).
 
@@ -139,7 +139,7 @@ Now that we know how to calculate the RMS level of our signal, let's go into som
 
 *FFT* stands for **Fast Fourier Transform**, and it's an algorithm capable of performing a Fourier Transform in a simplified and efficient way (that's where the _fast_ comes in). What it does in a detailed mathematical way is something quite complicated with the details; but being practical, it is basically a convertion between the signal in time domain and its frequency domain components. Interestingly, this process is reversible and the other way around it is called **IFFT** (*I* for *Inverse*).
 
-![](https://i.imgur.com/1B1MZSF.png)
+![](/assets/images/1B1MZSF.png)
 
 _Image credit: Smart Citizen_
 
@@ -147,7 +147,7 @@ In the example above, things in the time domain get a bit messy, but in the freq
 
 For this introduction, let's move on to what we actually want to do: _the much anticipated weighting_. At this point, our task is fairly easy: we just have to multiply both: our signal in the frequency domain with the weighting function and that's it! If we have a look at the figure below, in the time and frequency domain, the signals look like this:
 
-![](https://i.imgur.com/3REv8Ah.png)
+![](/assets/images/3REv8Ah.png)
 
 _Image credit: Smart Citizen_
 
@@ -159,7 +159,7 @@ In this section we are going to describe how we have to pre process our signals 
 
 The very first of these limitations, is the fact that our microphone is, in fact, taking **discrete samples** of the ambient noise surrounding it. This means that, from the very beginning, we are missing some pieces of information and we will never be able to process them. For the purpose of our analysis, we don't need to sample continuosly and this situation is easily bypassed. 
 
-![Discrete sampling](https://i.imgur.com/3Iz2tE0.png)
+![Discrete sampling](/assets/images/3Iz2tE0.png)
 
 _Image credit: [NUTAQ - Signal processing](https://www.nutaq.com/blog/analog-digital-%E2%80%93-part-2-conversion-process)_
 
@@ -179,7 +179,7 @@ The second of the discrete sampling limitation comes from the **amount of sample
 
 This is where **signal windowing** kicks in. Imagine that we have a very-low-frequency sinusoid and that we are not able to sample completely the whole sine wave, due to buffer limitations. By definition, our system is assuming that the discrete samples we measure are constantly being repeated in the environment, one after the other:
 
-![](https://i.imgur.com/DOfCeAI.png)
+![](/assets/images/DOfCeAI.png)
 
 _Image credit: Smart Citizen_
 
@@ -192,7 +192,7 @@ _Image credit: Smart Citizen_
 
 With the use of _signal windowing_, more specifically with the use of the _hamming window_, we are then able to reduce the amount of samples needed to roughly 1000 samples. Now we are down to **50% of the memory allocation needed without windowing**. You can see the effect on the _RMS relative errors_ in the image below, where the trend of the Hann (another common window) and the Hamming treated buffers, with respect to the frequency tends to stabilise _much more quickly_ than the _raw_ buffers.
 
-![](https://i.imgur.com/rlmh9jf.png)
+![](/assets/images/rlmh9jf.png)
 
 _Image credit: Smart Citizen_
 
@@ -231,7 +231,7 @@ _Image credit: [DSP Guide](http://www.dspguide.com/)_
 
 Now, the most interesting thing of all this theory is that **convolution and multiplication are equivalent operations when we jump from the time to the frequency domain**. This means that multiplication in time domain equals to convolution in frequency domain, and more importantly for us, **convolution in the time domain, equals to multiplication in the frequency domain**. To sum up, the relationship between both domains would look like:
 
-![](https://i.imgur.com/3Bhyqt3.png)
+![](/assets/images/3Bhyqt3.png)
 
 _Image credit: SmartCitizen_
 
@@ -243,7 +243,7 @@ _Image credit: [DSP Guide](http://www.dspguide.com/)_
 
 So finally! _How can we avoid using the FFT algorithm to extract the desired frequency content of a signal and recreate the signal without it?_ Sounds complex, but now we know that  we can use a **FIR filter**, with a **custom frequency response** and apply it via convolution to our input buffer. As simple as that. The custom frequency response, with the proper math, can be optained by applying the IFFT algorithm to the desired frequency response (for example, the A-weighting function). You can have a look to [this example](https://github.com/oscgonfer/AudioI2S_SCK/tree/dev_i2s_dbg/OCTAVE) if you want to create a custom filter function in [octave](https://www.gnu.org/software/octave/), with A or C weighting and implement it to a FIR filter in C++.
 
-![](https://i.imgur.com/MDJgGeH.png)
+![](/assets/images/MDJgGeH.png)
 
 _Image credit: SmartCitizen_
 

@@ -206,7 +206,7 @@ Below are some general guidelines for the installation of the device:
 
 The process to register the Smart Citizen Station and send data to the platform is the same as the one from the Smart Citizen Kit ([start.smartcitizen.me](https://start.smartcitizen.me)):
 
-![](https://i.imgur.com/NhSNXJ8.png)
+![](/assets/images/NhSNXJ8.png)
 
 Only, make sure to select the appropiate Kit (`#33 Smart Citizen Station 2.1 rev3`) in the [Advanced Selection](/Guides/getting started/Onboarding Sensors/#advanced-kit-selection) field:
 

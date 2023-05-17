@@ -1,6 +1,6 @@
 # How to call the Smart Citizen API using Processing
 
-![](https://i.imgur.com/2xtIx82.png)
+![](/assets/images/2xtIx82.png)
 
 This is a tutorial that goes over a sketch in processing that asks via API the data of a specific device and sensor and plots it. There is no need for any specific library. 
 
@@ -20,7 +20,7 @@ It can be easily modified to change the device, the sensor and other elements.
 
 The Smartcitizen V0 API is a publicly available interface allowing anyone to develop applications and experiments on top of the Smartcitizen platform.
 
-![](https://i.imgur.com/PV4YkRD.png)
+![](/assets/images/PV4YkRD.png)
 
 
 The summary of what the API does is that you ask the API for information using a specific URL and the API is going to answer you with data ordered in a JSON. In this tutorial we're going to do that and then print what we have found. 
@@ -141,7 +141,7 @@ We have to use JSONObject and JSONArray to get the information. For more informa
 
 The data is stored in a response in JSON that follows a specific structure dictated by the API. You can see it in the API documentation in the **response** table https://developer.smartcitizen.me/#get-historical-readings
 
-![](https://i.imgur.com/JqNuJfd.png)
+![](/assets/images/JqNuJfd.png)
 
 In this sketch we fill a generic array of float numbers using a for loop. 
 
@@ -175,4 +175,4 @@ Then for each value is going to create a small dot (elipse 2,2) and if it's not 
 
 And this is the result
 
-![](https://i.imgur.com/ldi4dcS.png)
+![](/assets/images/ldi4dcS.png)

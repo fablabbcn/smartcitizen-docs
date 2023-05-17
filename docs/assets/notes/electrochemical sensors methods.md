@@ -17,7 +17,7 @@ The readings are treated in a day-to-day basis in order to avoid non-stationary 
 
 Finally, a background pollutant concentration is assumed from [^3] which is also summarised below for each pollutant. This background concentration is added to the final result.
 
-![](https://i.imgur.com/qDp2cED.png)
+![](/assets/images/qDp2cED.png)
 **Background concentrations**. _Source [^3]_
 
 #### Application on 4-electrode sensors
@@ -29,18 +29,18 @@ This algorithm can be used to correct temperature effects on the working electro
 
 The results found with this methodology in the reduction sensors (NO~2~, O3) are significant in a daily basis. Two examples of the variation of the correlation coefficient with respect to the delta used to calculate the baseline are shown below:
 
-![](https://i.imgur.com/PhA3UVN.png)
+![](/assets/images/PhA3UVN.png)
 
-![](https://i.imgur.com/XL7OPTx.png)
+![](/assets/images/XL7OPTx.png)
 
 
 The algorithm is set to apply the best performing correlation function from either a linear or an exponential fit, basing this decission on the one that yields better correlation coefficient. NO~2~ and O3 at high concentrations yield better results with an exponential fit, whilst lower concentrations reflect a linear trend:
 
-![](https://i.imgur.com/yRUrTZJ.jpg)
+![](/assets/images/yRUrTZJ.jpg)
 
 Furthermore, the study from which this methodology is drawn from states that oxidation sensors do not yield a proper baseline correlation methodology and so is validated. The result is indeed far better correlated with the reference measurement if using the manufacturer's methodology:
 
-![](https://i.imgur.com/F4uAY8y.jpg)
+![](/assets/images/F4uAY8y.jpg)
 
 This methodology reads as follows:
 
@@ -64,11 +64,11 @@ Where:
 * k is a **constant convertion factor** (*~ 6.36* in the case of the SCK Gas Pro Board electronics)
 
 In the case of NO~2~, the results provided by this baseline correction algorithm yield better results:
-![](https://i.imgur.com/jW7qSaB.jpg)
+![](/assets/images/jW7qSaB.jpg)
 
 Both, CO and NO~2~ pollutants, using the best method for each calculation, are shown below:
 
-![](https://i.imgur.com/lripMLT.jpg)
+![](/assets/images/lripMLT.jpg)
 
 Finally, a comparison between the reference measurement results from both methods is detailed below:
 
@@ -82,11 +82,11 @@ Finally, a comparison between the reference measurement results from both method
 
 As seen above, the NO~2~ correlation with both methods yields significant results for non-corrected signals, whilst the RMSE values are higher in the case of the manufacturer's proposal. Therefore, for this pollutant, the selected methodology will be the baseline method. On the contrary, the CO measurements are highly uncorrelated with the baseline method, whilst the original manufacturer's proposal yields decent results. Finally, the O3 correlation levels are lower than the CO and NO~2~ measurements. This is possibly due to the O3 reference measurement equipment used in the Bologna campaing, since it shows an inverse relationship with NO~2~ which suggests a biased pollutant calculation in the reference equipment:
 
-![](https://i.imgur.com/258Gec6.jpg)
+![](/assets/images/258Gec6.jpg)
 
 As well, the results from UCD that are used as a reference for NO~2~, suggest a poor zero/span calibration of the equipment as it yields negative results that could spoil the NO~2~ correlation/model errors from those tests:
 
-![](https://i.imgur.com/DbCuX0g.jpg)
+![](/assets/images/DbCuX0g.jpg)
 
 ### Baseline correction based on auxiliary electrode
 

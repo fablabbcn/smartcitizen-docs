@@ -86,12 +86,12 @@ The feature below is for users who want to know how to configure new or customiz
 
 	- Click the 🛠️ icon in the bottom right corner
 
-	![](https://i.imgur.com/Qy7NpXQ.png)
+	![](/assets/images/Qy7NpXQ.png)
 
 	- Choose the blueprint of the device you want to setup
 
-	![](https://i.imgur.com/ERXdPvK.png)
+	![](/assets/images/ERXdPvK.png)
 
 	- Click save and continue the process as normal
 
-	![](https://i.imgur.com/O6oT13q.png)
+	![](/assets/images/O6oT13q.png)

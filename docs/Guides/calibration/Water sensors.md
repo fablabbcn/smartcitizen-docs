@@ -51,7 +51,7 @@ This is the order of the calibration:
 
 * Put the sensor in the pH 7 calibration solution. 
 
-![](https://i.imgur.com/WhpJiN2.png)
+![](/assets/images/WhpJiN2.png)
 
 * Read the sensor multiple times until the reading is stable:
 
@@ -169,7 +169,7 @@ This is the order of the calibration:
 
 Depending on which probe you have (check drawing for reference) you should set the probe type to K 0.1, 1.0 or 10 (new drivers have K1.0 as default):
 
-![](https://i.imgur.com/MWFjbYw.png)
+![](/assets/images/MWFjbYw.png)
 
 To set the correct probe type:
 
@@ -221,7 +221,7 @@ Follow the steps below with the dry sensor before introducing it to the calibrat
 
 You can check the recommended calibration solutions for each probe on the _Probetypes_ drawing (for instance, for K1.0 probe, _12,880uS_ and _80,000uS_ are recomended)
 
-![](https://i.imgur.com/nendSkI.png)
+![](/assets/images/nendSkI.png)
 
 * Read the sensor multiple times until the reading is stable:
 
@@ -319,7 +319,7 @@ You have two options for this calibration:
 
 **Two point calibration is recommended if you require accurate readings below 1.0 mg/l.** After completing the single point calibration procedure put the probe in the calibration solution.
 
-![](https://i.imgur.com/icxCaOZ.png)
+![](/assets/images/icxCaOZ.png)
 
 * Read the sensor multiple times until the reading is stable:
 

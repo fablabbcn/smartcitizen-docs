@@ -12,21 +12,21 @@
 
 The mecoda-orange add-on includes 2 widgets:
 
-![](https://i.imgur.com/mJ3hdYf.png)
+![](/assets/images/mJ3hdYf.png)
 
 * Smart Citizen Search. This widget looks for the kits in the Smart Citizen kits. Here you select the kit which data you're going to work with
 
-![](https://i.imgur.com/HNGLmeB.png)
+![](/assets/images/HNGLmeB.png)
 
 * Smart Citizen Data. This widget gets the data from that widget
 
 ## Smart Citizen Search
 
-![](https://i.imgur.com/mJ3hdYf.png)
+![](/assets/images/mJ3hdYf.png)
 
 Smart Citizen Search is a widget that gets information about kits, but not the data gathered by those kits. This the menu of the Smart Citizen Search:
 
-![](https://i.imgur.com/H2OGEBv.png)
+![](/assets/images/H2OGEBv.png)
 
 The **info** panel is going to get updated with data fetched from the Smart Citizen back end. If you don't press "Search devices" is not going to fetch anything. 
 
@@ -39,7 +39,7 @@ The **Search filters** are going to apply some filters in case that you want to 
 * **Tags** looks for tags separated with commas with the logical operator "OR". That means that if you look for _indoor, online_ the widget is going to get all the kits that at least one of their tags are either _indoor_ or _online_
 * **User name** the user that it is linked to. 
 * **Kit-ID** refers to the type of kit that is your smart citizen kit. 
-![](https://i.imgur.com/4aeaKhP.png)
+![](/assets/images/4aeaKhP.png)
 
 And lastly if you know the **Device ID** (unique to your specific kit) you can find the kit that you need. You can find the ID of your kit in the last part of the URL of your kit. For example this kit from this URL https://smartcitizen.me/kits/15618 has the Device ID of 15618.
 
@@ -52,7 +52,7 @@ In the bottom part also you can see how many devices have you retrieved from you
 
 ### Smart Citizen Data
 
-![](https://i.imgur.com/HNGLmeB.png)
+![](/assets/images/HNGLmeB.png)
 
 The widget Smart Citizen Data from the data of one (and just one per widget) it will retrieve the data that one device has gathered. 
 
@@ -60,13 +60,13 @@ It requires to be connected as an input one Smart Citizen device.
 
 This is the menu of Smart Citizen Data:
 
-![](https://i.imgur.com/vLQySNB.png)
+![](/assets/images/vLQySNB.png)
 
 * The **info** panel is going to get updated with the data that is connected to. If it's not connected it will be empty. It will show you also when you press _Get data_ how many rows has it retrieved. 
 
 * The **Get data a specific fequency** is the panel where we state the data frequency that we want to get. Rollup is the amount and the Rollup units is the time units that you can choose from.
 
-![](https://i.imgur.com/xAgiWG7.png)
+![](/assets/images/xAgiWG7.png)
 
 !!! success "Options meaning"
 
@@ -84,8 +84,8 @@ This is the menu of Smart Citizen Data:
 
 Example without resampling in a datatable: (rollout of 30 minutes)
 
-![](https://i.imgur.com/C3R2mqU.png)
+![](/assets/images/C3R2mqU.png)
 
 Same example with resampling in a datatable: (rollout of 30 minutes)
 
-![](https://i.imgur.com/WQsnbro.png)
+![](/assets/images/WQsnbro.png)

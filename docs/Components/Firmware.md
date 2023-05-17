@@ -9,7 +9,7 @@ The firmware is OOP and is entirely written in C++. Both processors the core ARM
 
     The current version has been funded by the [iSCAPE project](https://www.iscapeproject.eu/) project under European Community’s H2020 Programme under Grant Agreement No. [689954](https://cordis.europa.eu/project/rcn/202639/en).
 
-![](https://i.imgur.com/aDfydqU.png)
+![](/assets/images/aDfydqU.png)
 
 Firmware updates are done via the micro USB port using the Platform IO software available for Linux, Mac and Windows. 
 

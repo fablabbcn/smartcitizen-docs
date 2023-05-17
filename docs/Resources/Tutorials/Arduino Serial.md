@@ -15,11 +15,11 @@ This tutorial is useful for testing the data recorded in real time and live demo
 
 **Connect the MicroUSB cable** to the SCK:
 
-![](https://i.imgur.com/GzrOomC.png)
+![](/assets/images/GzrOomC.png)
 
 And the USB to your computer:
 
-![](https://i.imgur.com/JiY7bpZ.jpg)
+![](/assets/images/JiY7bpZ.jpg)
 
 Open the Arduino IDE (the screenshots are done Arduino 2.0 in Windows). If this is your first time with the Arduino IDE don't worry, we will just be working with a couple of things.
 
@@ -29,7 +29,7 @@ Go to `Tools->Port` and  select the port that reads like either:
 - `(Arduino Zero (Native USB Port))`
 - `(Arduino/Genuino Zero (Autodetect Port))`
 
-![](https://i.imgur.com/XVAq6lP.png)
+![](/assets/images/XVAq6lP.png)
 
     
 ## Open the serial plotter
@@ -40,7 +40,7 @@ Go to `Tools->Serial plotter`
 !!! warning "Connection troubleshooting"
     _"Couldn't open serial plotter"_
 
-    ![](https://i.imgur.com/lTbdfwJ.png)
+    ![](/assets/images/lTbdfwJ.png)
 
     **Check if the USB** is properly connected and then, **revise if the port is properly selected**. Last, **check if there is a board selected**. 
 
@@ -52,17 +52,17 @@ Go to `Tools->Serial plotter`
 !!! info "Arduino IDE 2.x"
     Alternativately, in Arduino IDE 2.x you can select the port from the display on the top
     
-    ![](https://i.imgur.com/OmUzewO.png)
+    ![](/assets/images/OmUzewO.png)
     
     If you do, you're going to be asked probably to install the specific board of the board that the smartcitizen has on the bottom. 
     
-    ![](https://i.imgur.com/8Gjzh0d.png)
+    ![](/assets/images/8Gjzh0d.png)
     
     You can just follow the steps of installing the board (you may have some warnings from Windows of needing permissions).
     
 If everything is correct you should get something like this:    
 
-![](https://i.imgur.com/gfwybmd.png)
+![](/assets/images/gfwybmd.png)
 _serial plotter without configuration_
 
 
@@ -77,11 +77,11 @@ _serial plotter without configuration_
 
 When you open the serial plotter you will have something like this:
 
-![](https://i.imgur.com/yaaSM7l.png)
+![](/assets/images/yaaSM7l.png)
 
 It's important to check the bottom part where it should say `Carriage Return` and `115200 baud`:
 
-![](https://i.imgur.com/nvT5mrN.png)
+![](/assets/images/nvT5mrN.png)
 
 In the box of `Type Message` we can send message to the kit. 
 
@@ -101,7 +101,7 @@ monitor noise -notime -noms
 
 You will get something like this. 
 
-![](https://i.imgur.com/zFroBTy.png)
+![](/assets/images/zFroBTy.png)
 
 You will get the data in dBA. You can try to clap or stay quiet to keep the noise levels low. 
 
@@ -115,7 +115,7 @@ monitor light -notime -noms
 
 You will get something like this. 
 
-![](https://i.imgur.com/x2Jzfyx.png)
+![](/assets/images/x2Jzfyx.png)
 
 Output is in lux. By covering or pointing the sensor to a light source you should see some changes.
 
@@ -129,7 +129,7 @@ monitor temp -notime -noms
 
 You will get something like this:
 
-![](https://i.imgur.com/w2OpzDg.png)
+![](/assets/images/w2OpzDg.png)
 
 The output will be in ºC. You can put your finger into the temp and humidity sensor to see how it changes over time and go back to normal. 
 
@@ -143,7 +143,7 @@ monitor humidity -notime -noms
 
 You will get something like this. 
 
-![](https://i.imgur.com/wHtkknW.png)
+![](/assets/images/wHtkknW.png)
 
 The output is in %RH. You can put your finger into the temp and humidity sensor to see how it changes over time and go back to normal. 
 
@@ -157,7 +157,7 @@ monitor pressure -notime -noms
 
 You will get something like this. 
 
-![](https://i.imgur.com/EcNKmZm.png)
+![](/assets/images/EcNKmZm.png)
 
 The output is in kPa.
 
