@@ -58,7 +58,6 @@ If you have Arduino IDE installed, you can open it and check which port has the 
 We're looking for the one that says "Arduino Zero(Native USB Port)" to know which name has. In this case `COM 6`
 
 !!! info "Older version?"
-
     If you're using Arduino IDE 1.x and the interface is too different you can also access to this going to the menu Tools -> Port and you will find the same options. 
 
 ### Finding the array number
@@ -98,7 +97,7 @@ Find the number of the port that is explained above and look the part of the cod
 In this example it's 2, but can be other integer number (probably from 0 to 2).
 
 
-Now, if you press run it would work and the number of flocks will be equal to the amount of luxes that the SmartCitizen Kit recieves at any given moment (So you can pass your hand over it and you will see the flocks reduce their numbers). 
+Now, if you press run it would work and the number of flocks will be equal to the amount of luxes that the Smart Citizen Kit recieves at any given moment (So you can pass your hand over it and you will see the flocks reduce their numbers). 
 
 ### Comments on the code. How does it work
 
@@ -116,7 +115,6 @@ void setup() {
    
    
    !!! info "Other links of reference on Serial "
-
 
     Tutorial for connecting an Arduino and processing:  https://learn.sparkfun.com/tutorials/connecting-arduino-to-processing/all
     
@@ -142,9 +140,10 @@ void setup() {
  For more reference you can check [The guide about using the shell](https://docs.smartcitizen.me/Guides/getting%20started/Using%20the%20Shell/#set-recording-and-publication-intervals) or the [tutorial about monitoring in real time with arduino](https://docs.smartcitizen.me/Resources/Tutorials/Arduino%20Serial/#connect-to-your-kit) in which we use the same commands. 
 
  
- !!! success "Point  for customization :+1: "
- 
-     This is an easy spot for customization because changing this command we can switch from reading the light sensor to other sensors. 
+ !!! success "Point  for customization :+1:"
+      This is an easy spot for customization because changing this command we can switch from reading the light sensor to other sensors. 
+
+
      
 #### Reading the serial
 
