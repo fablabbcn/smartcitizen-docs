@@ -17,7 +17,7 @@
       
       
       <link rel="icon" href="../../../assets/images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.12">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.13">
     
     
       
@@ -3190,7 +3190,7 @@
 <p>Find the number of the port that is explained above and look the part of the code (in the beggining, line 9) that has the constant PORT_INDEX and substitute with the number of the index of the port array. </p>
 <p><img alt="" src="/assets/images/5MqGSL0.png" /></p>
 <p>In this example it's 2, but can be other integer number (probably from 0 to 2).</p>
-<p>Now, if you press run it would work and the number of flocks will be equal to the amount of luxes that the SmartCitizen Kit recieves at any given moment (So you can pass your hand over it and you will see the flocks reduce their numbers). </p>
+<p>Now, if you press run it would work and the number of flocks will be equal to the amount of luxes that the Smart Citizen Kit recieves at any given moment (So you can pass your hand over it and you will see the flocks reduce their numbers). </p>
 <h3 id="comments-on-the-code-how-does-it-work">Comments on the code. How does it work<a class="headerlink" href="#comments-on-the-code-how-does-it-work" title="Permanent link">&para;</a></h3>
 <h4 id="initializating-serial">Initializating serial<a class="headerlink" href="#initializating-serial" title="Permanent link">&para;</a></h4>
 <p>In the setup function (that runs only once) you can see something like this:</p>
@@ -3217,10 +3217,8 @@
        -noms (don't send the milliseconds between each reading)
     \n end of the line (Requirements by serial communication. )</p>
 <p>For more reference you can check <a href="https://docs.smartcitizen.me/Guides/getting%20started/Using%20the%20Shell/#set-recording-and-publication-intervals">The guide about using the shell</a> or the <a href="https://docs.smartcitizen.me/Resources/Tutorials/Arduino%20Serial/#connect-to-your-kit">tutorial about monitoring in real time with arduino</a> in which we use the same commands. </p>
-<p>!!! success "Point  for customization <img alt="👍" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f44d.svg" title=":+1:" /> "</p>
-<div class="codehilite"><pre><span></span><code><span class="w"> </span><span class="nv">This</span><span class="w"> </span><span class="nv">is</span><span class="w"> </span><span class="nv">an</span><span class="w"> </span><span class="nv">easy</span><span class="w"> </span><span class="nv">spot</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nv">customization</span><span class="w"> </span><span class="nv">because</span><span class="w"> </span><span class="nv">changing</span><span class="w"> </span><span class="nv">this</span><span class="w"> </span><span class="nv">command</span><span class="w"> </span><span class="nv">we</span><span class="w"> </span><span class="nv">can</span><span class="w"> </span><span class="nv">switch</span><span class="w"> </span><span class="nv">from</span><span class="w"> </span><span class="nv">reading</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">light</span><span class="w"> </span><span class="nv">sensor</span><span class="w"> </span><span class="nv">to</span><span class="w"> </span><span class="nv">other</span><span class="w"> </span><span class="nv">sensors</span>.
-</code></pre></div>
-
+<p>!!! success "Point  for customization <img alt="👍" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f44d.svg" title=":+1:" />"
+      This is an easy spot for customization because changing this command we can switch from reading the light sensor to other sensors. </p>
 <h4 id="reading-the-serial">Reading the serial<a class="headerlink" href="#reading-the-serial" title="Permanent link">&para;</a></h4>
 <p>In the draw function from line 35 you can see this snippet:
 <div class="highlight"><pre><span></span><code><span class="w"> </span><span class="c1">//Serial reading</span>
@@ -3364,7 +3362,7 @@
     <script id="__config" type="application/json">{"base": "../../..", "features": ["instant", "navigation.indexes", "navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.c2be25ad.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.b4d07000.min.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       
