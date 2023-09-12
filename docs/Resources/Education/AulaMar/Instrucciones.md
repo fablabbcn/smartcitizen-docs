@@ -10,9 +10,9 @@ El proyecto Smart Citizen tiene como objetivo proveer herramientas tecnológicas
 
 En esta página, nos centraremos en explicar cómo funcionan los sensores y la plataforma.
 
-{{ get_content('Resources/Education/Technical Modules/es/Intro/Hardware.md') }}
+{{ get_snippet_rel('docs/includes/modules/intro/Hardware.md') }}
 
-{{ get_content('Resources/Education/Technical Modules/es/Intro/Interface.md') }}
+{{ get_snippet_rel('docs/includes/modules/intro/Interface.md') }}
 
 !!! info "Reset"
 
@@ -20,15 +20,20 @@ En esta página, nos centraremos en explicar cómo funcionan los sensores y la p
 
 	![](/assets/images/reset_water.jpg)
 
+### Sensores de agua
 
-{{ get_content('Resources/Education/Technical Modules/es/Intro/Water.md') }}
+<img src="https://live.staticflickr.com/65535/51230999551_3941affaa5_k.jpg" width="2000" height="1333" alt="Patí Científic Workshop">
+
+Los sensores soportados para este sistema son:
+
+{{ get_snippet_rel("docs/includes/supported sensors/water/es/index.md") }}
 
 !!! info "En Aulamar"
 	Para el caso de Aulamar hemos preparado mucho [material didáctico](/Resources/Education/AulaMar/#guias-por-metrica) para entender mejor las métricas que vamos a medir.
 
-{{ get_content('Resources/Education/Technical Modules/es/Calibration/Water.md') }}
+{{ get_snippet_rel('docs/includes/modules/calibration/water.md') }}
 
-{{ get_content('Resources/Education/Technical Modules/es/Intro/Onboarding.md') }}
+{{ get_snippet_rel('docs/includes/modules/intro/Onboarding.md') }}
 
 ## Datos
 
@@ -38,8 +43,8 @@ Existen diversar maneras de acceder a los datos capturados por los sensores:
 - Visualización WEB y Dashboard
 - API
 
-{{ get_content('Resources/Education/Technical Modules/es/Datos/sdcard.md') }}
+{{ get_snippet_rel('docs/includes/modules/data/sdcard.md') }}
 
-{{ get_content('Resources/Education/Technical Modules/es/Datos/platform.md') }}
+{{ get_snippet_rel('docs/includes/modules/data/platform.md') }}
 
-{{ get_content('Resources/Education/Technical Modules/es/Datos/dashboard.md') }}
+{{ get_snippet_rel('docs/includes/modules/data/dashboard.md') }}

@@ -1,6 +1,6 @@
 # Resources
 
-The Smart Citizen project has had the chance to be part of fantastic projects throughout it's brief history. Ranging from public interventions in urban areas to the development of DIY sensors for agriculture, the team has carried out an enormous efforts to develop a technical platform that supports a wide range of communities on the creation of participatory sensing initiatives.
+The Smart Citizen project has had the chance to be part of fantastic projects throughout it's (brief) history. Ranging from public interventions in urban areas to the development of DIY sensors for agriculture, the team has carried out an enormous efforts to develop a technical platform that supports a wide range of communities on the creation of participatory sensing initiatives.
 
 ![](https://live.staticflickr.com/4483/38165401276_ef6eacca0c_h.jpg)
 
@@ -13,28 +13,21 @@ By providing meaningful examples of novel appropriations and uses we seek to  in
 <iframe width="800" height="425" src="https://www.youtube-nocookie.com/embed/hvn5LyACUYw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 !!! info "Check our guides"
-    All these projects left us with a great amount of experience and knowledge that we have compiled in this documentation. Find out how to use them in our [guides section](/Guides):
-
-    - [Create interfaces for your data](/Guides/data/Creating Interfaces)
-    - [Use of third party sensors and adding data from other platforms](/Guides/getting started/Third%20party%20sensors)
+    All these projects left us with a great amount of experience and knowledge that we have compiled in this documentation. Find out how to use them in our [guides section](/Guides)
 
 ## Education
 
-{{ get_snippet_rel("docs/includes/en/education/index.md")}}
+{{ get_snippet_rel("docs/includes/education/en/index.md")}}
 
 ## Development notes
 
-{{ get_snippet_rel("docs/includes/en/notes/index.md")}}
+{{ get_snippet_rel("docs/includes/notes/en/index.md")}}
 
 ## Academic publications
 
 Find below some of our own publications, or others' that have used the Smart Citizen hardware and software.
 
-{{ get_snippet_rel("docs/includes/en/publications/index.md") }}
-
-### Mentions on academic publications
-
-{{ get_snippet_rel("docs/includes/en/publications/mentions.md") }}
+{{ get_snippet_rel("docs/includes/publications/en/index.md") }}
 
 ## Presentations
 
@@ -42,4 +35,4 @@ Find below some of our own publications, or others' that have used the Smart Cit
 
 ## Webinars
 
-{{ get_snippet_rel("docs/includes/en/webinars/minke.md") }}
+{{ get_snippet_rel("docs/includes/webinars/en/minke.md") }}

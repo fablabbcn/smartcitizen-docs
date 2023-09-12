@@ -1,9 +1,10 @@
 ---
+language: es
 variables:
-  - [pH, pH, '#f05133', 'white']
-  - [Oxígeno disuelto, OD, '#ffd200', 'black']
-  - [Conductividad, EC, '#289045', 'white']
-  - [Temperatura, T, '#58595b', 'white']
+  - [pH, '/includes/metrics/water/pH', '#f05133', 'white']
+  - [Oxígeno disuelto, '/includes/metrics/water/OD', '#ffd200', 'black']
+  - [Conductividad, '/includes/metrics/water/EC', '#289045', 'white']
+  - [Temperatura, '/includes/metrics/water/T', '#58595b', 'white']
 ---
 
 # AulaMar
@@ -11,7 +12,7 @@ variables:
 <img src="https://live.staticflickr.com/65535/51230999551_3941affaa5_k.jpg" width="2000" height="1333" alt="Patí Científic Workshop">
 
 !!! danger "Lo primero es lo primero"
-	¡**Muy importante**! Revisa [esta página](General) antes de hacer nada.
+	¡**Muy importante**! Revisa [esta página](Safety) antes de hacer nada.
 
 ## Guías por métrica
 
@@ -19,7 +20,7 @@ Selecciona debajo guías y materiales para cada una de las métricas que medimos
 
 <div class="grid-two-columns">
 	{%- for x in page.meta.variables %}
-		<a href={{ x[1] }}>
+		<a href={{ x[1] }}/{{ page.meta.language }}>
 			<div class="button-metric" style="background-color: {{ x[2] }}">
 				<span style="font-size: 25px;font-weight: bolder; color: {{x[3]}}">{{ x[0] }}</span>
 			</div>

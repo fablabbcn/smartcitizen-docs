@@ -1,6 +1,6 @@
 # Auxiliary connector
 
-The [data board](/Components/Data Board/) features a standard [Grove connector](https://wiki.seeedstudio.com/Grove_System/) where off-the-shelf modules from the same manufacturer can be connected. The connector supports an independent I2C bus by default, but by software it can be configured to support other uses (GPIO, I2C and UART). It can supply power up to 750mA, and it can be enabled or disabled by software to save power.
+The [data board](/Components/Data Board/) features a standard [Grove connector](https://wiki.seeedstudio.com/Grove_System/) where external modules can be connected. The connector supports an independent I2C bus by default, but by software it can be configured to support other uses (GPIO, I2C and UART). It can supply power **up to 750mA**, and it can be enabled or disabled by software to save energy.
 
 ![](/assets/images/sck_2/SCK21_Aux.png)
 
@@ -9,7 +9,7 @@ The [data board](/Components/Data Board/) features a standard [Grove connector](
 
 ## Supported sensors
 
-This is a list of supported sensors that you can connect directly to the **auxiliary port**.
+This is a list of supported sensors and other components that you can connect directly to the **auxiliary port**. The links provided below are for breakout boards by some other open hardware provided such as [Sparkfun](https://sparkfun.com), [Adafruit](https://adafruit.com) or [Seeed Studio](https://seeedstudio.com). However, any other format or breakout board would work. 
 
 !!! info "Looking for datasheets?"
     Refer to the [Performance section](/Components/sensors/performance) for more information and datasheets.
@@ -17,23 +17,25 @@ This is a list of supported sensors that you can connect directly to the **auxil
 ### General purpose
 
 - [Seeed Grove ADC](http://wiki.seeedstudio.com/Grove-I2C_ADC/) - 12 bit ADC from Seeed Studio
-- [Adafruit INA219](https://www.adafruit.com/product/904) - Supports Bus voltage, shunt voltage, current and load voltage
-- [SparkFun ToF Range Finder Sensor - VL6180](https://www.sparkfun.com/products/12785) - supports distance and light. Can be used for water level measurements
-- [ADS1X15](https://www.adafruit.com/product/1085) - 16 bit ADC from Texas instruments also found in Adafruit development boards
+- [Adafruit breakout for INA219](https://www.adafruit.com/product/904) - Supports Bus voltage, shunt voltage, current and load voltage
+- [SparkFun breakout for ToF Range Finder Sensor - VL6180](https://www.sparkfun.com/products/12785) - supports distance and light. Can be used for water level measurements
+- [Adafruit breakout for ADS1X15](https://www.adafruit.com/product/1085) - 16 bit ADC from Texas instruments also found in Adafruit development boards
 
 ### Air
 
-- [Seeed Grove SHT31 Temperature/Humidity](https://www.seeedstudio.com/Grove-Temperature-Humidity-Sensor-SHT31.html)
-- [Adafruit dev kit for Bosch BME680](https://www.adafruit.com/product/3660) - supports temperature, humidity, barometric pressure and VOC gas
-- [Sparkfun dev kit for AMS CCS811](https://www.adafruit.com/product/3660) - supports temperature, humidity, barometric pressure and VOC gas
-- [Atlas Scientific Temperature](https://www.atlas-scientific.com/product_pages/kits/temp_kit.html) - can be used with any PT-100 or PT-1000 temperature probes
+You will find below sensors that are deployed in air. Many anufacturers offer them: Seeed, Adafruit, Sparkfun and many more.
+
+- [Sensirion SHT31](https://sensirion.com/products/catalog/SHT31-DIS-F) - supports temperature and humidity. 
+- [Bosch BME680](https://www.adafruit.com/product/3660) - supports temperature, humidity, barometric pressure and tVOC
+- [AMS CCS811](https://www.adafruit.com/product/3660) (deprecated) - supports tVOC
 
 !!! info "Smart Citizen Station"
-    Expanding the base air quality solution, the [Smart Citizen Station](/Smart Citizen Station) is a more advanced setup in a more rugged enclosure. The sensors below can be directly plugged in and detected by the SCK:
+    Expanding the base air quality solution, the [Smart Citizen Station](/Smart Citizen Station) is a more advanced hardware setup in a more rugged enclosure. The sensors below can be directly plugged in and detected by the SCK:
 
-    - [Smart Citizen Gases Pro Board](/Components/Gases Pro Board): supports 3 electrochemical alphasense sensors, temperature and humidity 
-    - [Smart Citizen PM Board](/Components/PM Board): supports 2 Plantower PMS5003 sensors, I2C extension, 4 ADC pins, 2 GPIO and a UART Serial port
-    - [Smart Citizen Analog Sensor Board](/Components/Analog Sensor Board): supports 4 or 8 analog channels at 16bit resolution.
+    - [Smart Citizen Analog Sensor Board](/Components/Analog Sensor Board/): supports 4 or 8 analog channels at 16bit resolution.
+    - [Smart Citizen Gases Pro Board](/Components/Gases Pro Board/) (deprecated): supports 3 electrochemical Alphasense sensors, and has an onboard temperature and humidity sensor
+    - [Smart Citizen PM Board](/Components/PM Board/): supports 2 Plantower PMS5003 sensors, I2C extension, 4 ADC pins, 2 GPIO and a UART Serial port
+
     
     ![](https://i.imgur.com/RRu8MiV.jpg)
 
@@ -41,13 +43,18 @@ This is a list of supported sensors that you can connect directly to the **auxil
 
 Check the [Soil and water measurements](/Components/Soil and water/) documentation with examples on sensors such as:
 
-- [Atlas Scientific Dissolved Oxygen](https://www.atlas-scientific.com/product_pages/kits/do_kit.html)
-- [DS18B20 Water Temperature](https://www.adafruit.com/product/381) for water
+- [Atlas Scientific](https://atlas-scientific.com):
+    - [Temperature](https://atlas-scientific.com/temperature)
+    - [pH](https://atlas-scientific.com/ph)
+    - [ORP](https://atlas-scientific.com/orp)
+    - [Electric Conductivity](https://atlas-scientific.com/conductivity)
+    - [Dissolved Oxygen](https://atlas-scientific.com/dissolved-oxygen)
+- [DS18B20 Water Temperature](https://www.adafruit.com/product/381)
 - [Chirp Soil Moisture](https://www.tindie.com/products/miceuz/i2c-soil-moisture-sensor/), with support of soil moisture (requires calibration), temperature and ambient light.
 
 ## Other auxiliaries
 
-- [Seeed Grove OLED screen (128x128)](http://wiki.seeedstudio.com/Grove-OLED_Display_1.12inch/), check the [documentation](https://docs.smartcitizen.me/Guides/deployments/OLED%20display/) for more details. 
+- [Seeed Grove OLED screen (128x128)](http://wiki.seeedstudio.com/Grove-OLED_Display_1.12inch/), check the [documentation](/Guides/auxiliaries/OLED%20display/) for more details. 
 - [Sparkfun GPS NEO-M8U](https://www.sparkfun.com/products/16329)
 - [SparkFun GPS XA1110](https://www.sparkfun.com/products/14414)
 - [SparkFun GPS SAM-M8Q](https://www.sparkfun.com/products/15210), only in a forked repository for now by [serialc](https://github.com/serialc/) [here](https://github.com/serialc/smartcitizen-kit-21). Read this post [here](https://forum.smartcitizen.me/t/power-off-qwiic-on-sck2-1-power-off/1623)
@@ -57,10 +64,10 @@ Check the [Soil and water measurements](/Components/Soil and water/) documentati
     If you are using Sparkfun QWIIC GPS, note that you will need [an adaptor from GROVE to QWIIC](https://www.sparkfun.com/products/15109)
 
 !!! info "Implement your own"
-    [Contact](mailto:support@smartcitizen.me) on how to implement sensors made by others.
+    Check the guide on [integrating other sensors](/Guides/getting started/Third party sensors/), or [contact us](mailto:support@smartcitizen.me) to know how to implement sensors made by others.
 
 ## Full list
 
-This is a list of supported sensors. Find also the datasheets for more information regarding accuracies:
+This is a list of supported sensors:
 
-{{ get_snippet_rel("docs/includes/en/sensors/sensors.md") }}
+{{ get_snippet_rel("docs/includes/supported sensors/index.md") }}

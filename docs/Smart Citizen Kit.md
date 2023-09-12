@@ -1,5 +1,4 @@
-Smart Citizen Kit
-===========
+# Smart Citizen Kit
 
 !!! info "A note about versions"
 
@@ -183,7 +182,7 @@ In this mode, the Kit is ready to be configured in **network** mode or **SD card
 
 This is the standard mode for a network that requires a Wi-Fi connection. In this way, the device will publish the data every minute on the [smartcitizen.me](https://smartcitizen.me) platform. If there is an inserted micro SD card, the data will be stored in it as well.
 
-| LED color                            |  Kit status                             |
+| LED color                                |  Kit status                             |
 |------------------------------------------|------------------------------------------- |
 | <span class="led net"></span>            | :thumbsup: Collecting data online                 |
 | <span class="led net-warning"></span>    | :warning: Warning. Collecting data but not sending it online         |
@@ -191,7 +190,7 @@ This is the standard mode for a network that requires a Wi-Fi connection. In thi
 | <span class="led net-lowbat"></span>     | :battery: Collecting data online but battery is low, charge the Kit    |
 | <span class="led net-chargebat"></span>  | :battery: Collecting data online, battery charging              |
 | <span class="led net-fullbat"></span>    | :battery: Collecting data online, battery charged               |
-| <span class="led net-sleep"></span>    | :bed: Sleep-mode. Collecting data online and saving battery               |
+| <span class="led net-sleep"></span>      | :bed: Sleep-mode. Collecting data online and saving battery               |
 
 !!! warning
 	:white_check_mark: The kit supports Wi-Fi WEP, WPA/WPA2 and open networks that are common networks in domestic environments and small businesses.

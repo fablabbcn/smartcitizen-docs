@@ -6,7 +6,7 @@ When working on deployments that involve multiple devices a community
 might face the need to create their own page where the sensors’ data is
 updated on real time. Also, it is sometimes useful to trigger notifications on different services.
 
-This can help to look at data from different spots simultaneously and also to create a sense of community among the devices’ owners. This feature can be easily built using [Freeboards](http://freeboard.io/) or [Node-RED](http://nodered.org/), both online free visual tool that supports the creation of dashboards. Additionally, [Node-RED] can be used to create notifications on common services such as Twitter or Telegram.
+This can help to look at data from different spots simultaneously and also to create a sense of community among the devices’ owners. This feature can be easily built using [Freeboards](http://freeboard.io/) or [Node-RED](http://nodered.org/), both online free visual tool that supports the creation of dashboards. Additionally, Node-RED can also be used to create notifications on common services such as Twitter or Telegram.
 
 ### Node RED
 
@@ -15,7 +15,7 @@ This can help to look at data from different spots simultaneously and also to cr
 !!! info "Examples"
     You can find the following examples in the toolkit repository:
 
-    -  [Trigger notifications](https://github.com/fablabbcn/smartcitizen-toolkit/blob/master/nodered-examples/nodered-smartcitizen-battrigger.json)
+    - [Trigger notifications](https://github.com/fablabbcn/smartcitizen-toolkit/blob/master/nodered-examples/nodered-smartcitizen-battrigger.json)
     - [Device dashboard](https://github.com/fablabbcn/smartcitizen-toolkit/tree/master/nodered-examples)
 
 ### Freeboard
@@ -25,8 +25,7 @@ This can help to look at data from different spots simultaneously and also to cr
 
 ## Talk to the world
 
-Due to their unobtrusive nature, sensor technologies like Smart Citizen
-may easily blend in the background of users’ attention. To bring the sensed data back to the surface and support sensemaking and awareness processes, it is possible to use the SCKs’ data to trigger actions on the physical environment.
+Due to their unobtrusive nature, sensor technologies like Smart Citizen may easily blend in the background of users’ attention. To bring the sensed data back to the surface and support sensemaking and awareness processes, it is possible to use the SCKs’ data to trigger actions on the physical environment.
 
 A Raspberry Pi is probably the best tool to do so, since it can also be a suitable tool to engage people with coding, creating new internet of things (IoT) and physical computing applications.
 

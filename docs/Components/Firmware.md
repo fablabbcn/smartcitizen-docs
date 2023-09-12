@@ -1,7 +1,4 @@
-Firmware
-========
-
-The firmware is OOP and is entirely written in C++. Both processors the core ARM MCU and the ESP8266 WIFI are developed as part of the same framework integrating seemingly by using a set of bridge libraries that provide a unifies the RPC architecture.
+# Firmware
 
 !!! info "A note about versions"
 
@@ -11,12 +8,11 @@ The firmware is OOP and is entirely written in C++. Both processors the core ARM
 
 ![](https://i.imgur.com/aDfydqU.png)
 
-Firmware updates are done via the micro USB port using the Platform IO software available for Linux, Mac and Windows. 
-
 ## Architecture
 
-### Core Microcontroller
+The firmware is OOP (Object Oriented Programming) and is entirely written in C++. Both processors, the core ARM MCU and the ESP8266 WiFi, are developed as part of the same framework integrating seemingly.
 
+### Core Microcontroller
 
 | Name      | Functions                                                            |
 |-----------|----------------------------------------------------------------------|
@@ -33,31 +29,7 @@ Firmware updates are done via the micro USB port using the Platform IO software 
 
 #### Dependencies
 
-* SPIMemory [Library](https://github.com/Marzogh/SPIMemory)
-* RTCZero [Library](https://github.com/arduino-libraries/RTCZero)
-* SdFat [Library](https://github.com/greiman/SdFat)
-* Arduino Json [Library](https://github.com/bblanchon/ArduinoJson)
-* Adafruit INA219 [Library](https://github.com/adafruit/Adafruit_INA219)
-* U8g2 [Library](https://github.com/olikraus/U8g2_Arduino)
-* RadioHead [Library](http://www.airspayce.com/mikem/arduino/RadioHead/)
-* FlashStorage [Library](https://github.com/cmaglie/FlashStorage)
-* Dallas Temperature [Library](https://github.com/milesburton/Arduino-Temperature-Control-Library)
-* Sparkfun CCS811 [Library](https://github.com/sparkfun/SparkFun_CCS811_Arduino_Library)
-* Sparkfun MediaTek I2C Interface [Library](https://github.com/sparkfun/SparkFun_I2C_GPS_Arduino_Library)
-* Sparkfun u-blox Arduino GNSS [Library](https://github.com/sparkfun/SparkFun_u-blox_GNSS_Arduino_Library)
-* TinyGPSPlus [Library](https://github.com/mikalhart/TinyGPSPlus)
-* LinkedList [Library](https://github.com/ivanseidel/LinkedList)
-* Adafruit ADS1015 [Library](https://github.com/fablabbcn/Adafruit_ADS1X15)
-* ArduinoZero PMUX Report [Library](https://github.com/WestfW/ArduinoZero-PMUX-report)
-* MCP342X Analog-to-Digital Converter [Library](https://github.com/uChip/MCP342X)
-* DS2482 [Library](https://github.com/paeaetech/paeae)
-* Adafruit MPL3115A2 [Library](https://github.com/adafruit/Adafruit_MPL3115A2_Library)
-* I2C Soil Moisture Sensor [Library](https://github.com/Apollon77/I2CSoilMoistureSensor)
-* SmartSmart Citizen Kit Gases Pro Board [Library](https://github.com/fablabbcn/smartcitizen-kit-gases-pro-board)
-* Sparkfun ToF Range Finder - VL6180 Arduino [Library](https://github.com/sparkfun/SparkFun_ToF_Range_Finder-VL6180_Arduino_Library)
-* Adafruit BME680 [Library](https://github.com/adafruit/Adafruit_BME680)
-* Adafruit Unified Sensor Driver [Library](https://github.com/adafruit/Adafruit_Sensor)
-* Sparkfun SCD30 CO₂ Sensor Library [Library](https://github.com/sparkfun/SparkFun_SCD30_Arduino_Library)
+You can check the [dependencies](https://github.com/fablabbcn/smartcitizen-kit-21/tree/master/sam/platformio.ini) in the firmware repository.
 
 ### WiFi Module
 
@@ -65,21 +37,15 @@ Firmware updates are done via the micro USB port using the Platform IO software 
 |--------|-------------------------------------------------|
 | SckESP | Runs all the Wi-Fi networking related functions |
 
-### Dependencies
+#### Dependencies
 
-* Time [Library](https://github.com/PaulStoffregen/Time)
-* ArduinoJson [Library](https://github.com/bblanchon/ArduinoJson)
-* RemoteDebug [Library](https://github.com/JoaoLopesF/RemoteDebug)
-* RadioHead [Library](http://www.airspayce.com/mikem/arduino/RadioHead/)
-* PubSubclient [Library](https://github.com/knolleary/pubsubclient)
-* ESPAsyncWebServer [Library](https://github.com/me-no-dev/ESPAsyncWebServer)
+You can check the [dependencies](https://github.com/fablabbcn/smartcitizen-kit-21/tree/master/esp/platformio.ini) in the firmware repository.
 
 ### Shared
 
 | Name   | Functions                                            |
 |--------|------------------------------------------------------|
 | Config | Provides a shared configuration between the two MCUs |
-
 
 ## Data management
 
@@ -116,7 +82,7 @@ Detecting: Grove OLED... nothing!
 
 The firmware provides a comprehensive command shell over USB to manage all the kits functionalities for advanced users. 
 
-_Use any Serial console as `screen`, `platformio device monitor`, or the serial monitor on the Arduino IDE_
+_Use any Serial console as `screen`, `platformio device monitor`, or the `Serial monitor` on the Arduino IDE_
 
 !!! info
     Have a look at the guide for different platforms [here](/Guides/getting started/Using the Shell)
@@ -146,10 +112,9 @@ YY-MM-DD.CSV -> YY-MM-DD.CSV
 !!! warning
     If there is a problem with the device, sometimes it can be that the SD card contains many files for a single day. These resets might go unnoticed, and the SD card files can be a way of detecting an issue.
 
-### Debug log file DEBUG.txt
+### Debugging
 
-The debug file is generated and updated by the kit, only if the debug mode is enabled on the configuration.
-
+A debug file is generated and updated by the SCK, only if the debug mode is enabled on the configuration. TODO
 When the debug mode is enabled the verbosity level of this file is defined by the outlevel (_normal, verbose or silent_).
 
 ## Source files

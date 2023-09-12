@@ -38,8 +38,5 @@ Although not H2020 projects, the projects below have allowed us to further our c
 
 Find below some of our own publications, or others' that have used the Smart Citizen hardware and software.
 
-{{ get_snippet_rel("docs/includes/en/publications/index.md")}}
+{{ get_snippet_rel("docs/includes/publications/en/index.md")}}
 
-### Mentions
-
-{{ get_snippet_rel("docs/includes/en/publications/mentions.md")}}

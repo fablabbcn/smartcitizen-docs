@@ -10,6 +10,7 @@ The [Citizen Sensing Toolkit](http://making-sense.eu/wp-content/uploads/2018/01/
 	</a>
 </div>
 
+<<<<<<< Updated upstream
 ## Book Sections
 
 ### Tools
@@ -61,3 +62,5 @@ The [Citizen Sensing Toolkit](http://making-sense.eu/wp-content/uploads/2018/01/
 * Barcelona
 	* Beta pilot 
 	* Gracia sounds pilot 
+=======
+>>>>>>> Stashed changes

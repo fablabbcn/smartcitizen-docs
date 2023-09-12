@@ -1,7 +1,6 @@
-Sensor Platform
-===============
+# Sensor Platform
 
-The platform is a front and backend solution for ingesting, storing and interacting with public data with a particular focus on crowd sensing applications.
+The platform is a front and backend solution for ingesting, storing and interacting with environmental data.
 
 ![](https://i.imgur.com/qiDKL0r.jpg)
 

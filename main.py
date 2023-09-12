@@ -100,9 +100,7 @@ def define_env(env):
         if '---\n' in lines:
             frontmatter = yaml.load('\n'.join(lines[1:lines[1:].index('---\n')+1]),
                 Loader=yaml.SafeLoader)
-
         else:
-
             frontmatter = ''
 
         return frontmatter
@@ -113,11 +111,8 @@ def define_env(env):
         lines = get_file(filename)
 
         if '---\n' in lines:
-
             content = '\n'.join(lines[lines[1:].index('---\n')+1:])
-
         else:
-
             content = lines
 
         return content
@@ -134,7 +129,7 @@ def define_env(env):
 
     @env.macro
     # Inspired by function in mkdocs-snippets-plugin
-    def get_snippet_git(git_url, file_path, section_name):
+    def get_snippet_git(git_url, file_path, section_name, ignore_frontmatter = True):
         repos = dict()
 
         p = re.compile("^#+ ")
@@ -171,13 +166,16 @@ def define_env(env):
 
             # If there are any images, find them, copy them
             result = copy_markdown_images(root, result, only_url=False)
+            if ignore_frontmatter:
+                result = remove_frontmatter(result)            
+            
             return result
         else:
             return "Markdown section doesn't exist in source"
 
     @env.macro
     # Inspired by function in mkdocs-snippets-plugin
-    def get_snippet_url(url, section_name):
+    def get_snippet_url(url, section_name, ignore_frontmatter = True):
         repos = dict()
 
         p = re.compile("^#+ ")
@@ -205,22 +203,32 @@ def define_env(env):
 
                 # If there are any images, find them, copy them
                 result = copy_markdown_images(None, result, only_url=True)
+                if ignore_frontmatter:
+                    result = remove_frontmatter(result)
             else:
                 result = None
+
             return result
         else:
             return "Markdown section doesn't exist in source"
 
     @env.macro
     # Inspired by function in mkdocs-snippets-plugin
-    def get_snippet_rel(file_path, section_name = None):
+    def get_snippet_rel(file_path, section_name = None, ignore_frontmatter = True):
 
         with open(env.project_dir + '/' + file_path, 'r') as myfile:
             content = myfile.read()
 
         if section_name is None:
-            extract = content.split('\n')[1:]
-            return '\n'.join(extract)
+            extract = content.split('\n')
+            if extract[0] == '---':
+                # print ('we have frontmatter!')
+                if ignore_frontmatter:
+                    # print ('remove!')
+                    result = '\n'.join(remove_frontmatter(extract))
+            else:
+                result = '\n'.join(extract[1:])
+            return result
 
         p = re.compile("^#+ ")
         m = p.search(section_name)
@@ -244,11 +252,24 @@ def define_env(env):
                 else:
                     result = content[start_index:]
                     # Images should be in absolute paths
+                    if ignore_frontmatter:
+                        result = remove_frontmatter(result)
             else:
                 result = None
+
             return result
         else:
             return "Markdown section doesn't exist in source"
+    
+    @env.macro
+    def remove_frontmatter(markdown):
+        if markdown is not None:
+            if '---' in markdown:
+                result = markdown[markdown[1:].index('---')+2:]
+                return result
+            else:
+                return markdown
+        return None
 
     @env.macro
     def copy_markdown_images(tmpRoot, markdown, only_url):
