@@ -5,6 +5,8 @@ mkdocs-macros-plugin
 GitPython
 requests==2.26.0
 mkdocs-redirects
+mkdocs-linkcheck
+pytest
 #mkdocs-print-site-plugin
 #mkdocs-plugin-tags
 #mkdocs-with-pdf

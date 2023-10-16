@@ -9,7 +9,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-      
     - name: Setup Python
       uses: actions/setup-python@v1
       with:
@@ -20,6 +19,13 @@ jobs:
       run: |
         python3 -m pip install --upgrade pip
         python3 -m pip install -r requirements.txt
+
+    - name: Check links
+      run: |
+        # This will not make anything fail on build, but at least we will know
+        pytest -s
+        # Giving it a try to cat something on gh actions
+        cat tests/out.log
 
     - name: mkdocs build
       run: |
