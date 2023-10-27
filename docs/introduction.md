@@ -19,7 +19,7 @@ Citizen science is often implemented by mapping the environment and, more concre
 
 The [Smart Citizen Kit (SCK)](/Smart Citizen Kit/) is a key component of the larger [Smart Citizen hardware ecosystem](/Components/), providing a modular architecture for environmental data collection. Built around a central Data Board, the SCK facilitates data logging and network connectivity. Users can upload data to the Smart Citizen platform via standard domestic WiFi or store it on an internal SD card for later manual upload.
 
-Outfitted with the Urban [Sensor Board]([/Smart Citizen Kit](/Smart Citizen Kit/#measurements) , the standard kit measures various environmental variables such as air temperature, humidity, and particulate matter (primarily PM2.5 and PM10). Custom sensor configurations are available for specialized applications in air and water monitoring.
+Outfitted with the Urban [Sensor Board](/Smart Citizen Kit/#measurements) , the standard kit measures various environmental variables such as air temperature, humidity, and particulate matter (primarily PM2.5 and PM10). Custom sensor configurations are available for specialized applications in air and water monitoring.
 
 The device accommodates various [3D-printed enclosures](/Components/enclosures/Enclosures/), ranging from simple indoor setups to rugged outdoor solutions. Most designs are compatible with locally accessible 3D printers, negating the need for long-distance shipping.
 
