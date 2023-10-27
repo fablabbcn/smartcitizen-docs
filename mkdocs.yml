@@ -7,8 +7,9 @@ repo_url: https://github.com/fablabbcn/smartcitizen-docs
 # https://www.mkdocs.org/user-guide/writing-your-docs/#configure-pages-and-navigation
 
 nav:
-  - Main:
-    - Welcome: index.md
+  - Welcome!:
+    - Getting Started: index.md
+    - Introduction: introduction.md
     - Hardware:
       - Hardware Ecosystem: Components/index.md
       - Smart Citizen Kit:
