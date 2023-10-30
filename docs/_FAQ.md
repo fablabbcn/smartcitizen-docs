@@ -120,3 +120,15 @@ The kit is able to store the last reason by which it _restarted_. This informati
 | `EXT`    | External Reset                 | This reset takes place when you press the _reset_ button |
 | `WDT`    | Watchdog Reset                 | This reset takes place when the _watchdog timer_ from the SAMD21 _orders it_. Currently not suported |
 | `SYST`   | System Reset Request"          | This reset takes place when the Kit _orders_ it (sanity reset), or when you type `reset` in the [shell](/Guides/getting started/Using the Shell/) |
+
+## What are good signal values?
+
+Starting from firmware version `0.9.9`, the kit also keeps track of the Wi-Fi signal strength (RSSI in dBm - decibel miliWatts) to help you get a grasp of the signal strength **seen by the kit** (this relativeness is important, as many other devices will see a stronger signal potentially thanks to a better antenna). Based on [this reference](https://techmusa.com/wireless-dbm-table/) here you have some indicators of how good or bad the value you see is:
+
+* `-30 to -50dBm`: Excellent single strength (Next to Router).
+* `-50 to -67dBm`: At Good signal strength for Web browsing, voice/video calls.
+* `-67 to -70dBm`: Best effort for Web browsing for reliable packet delivery.
+* `-70 to -80dBm`: Experience bad connectivity, Packet delivery may be unreliable.
+* `-90 to 100dBm`: Worst single strength.
+
+We recommend to stay between the `-30 to -70dBm` range if possible. Remeber that this value must be _seen_ by the Kit!
