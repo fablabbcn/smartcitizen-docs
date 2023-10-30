@@ -35,7 +35,7 @@ You need to perform a 3-point calibration with the calibration solutions. The so
 
 #### 3-point calibration
 
-This is the order of the calibration: 
+This is the order of the calibration:
 
 1. mid point
 2. low point
@@ -49,7 +49,7 @@ This is the order of the calibration:
 
 ##### Mid point calibration
 
-* Put the sensor in the pH 7 calibration solution. 
+* Put the sensor in the pH 7 calibration solution.
 
 ![](/assets/images/WhpJiN2.png)
 
@@ -72,7 +72,7 @@ This is the order of the calibration:
 !!! info "Example at 30°C"
 
     ```
-    control atlas ph com cal,mid,6.99 
+    control atlas ph com cal,mid,6.99
     ```
 
 After this command if you take a pH reading the result should be 7.00 (or very close to it)
@@ -159,7 +159,7 @@ You need to perform a 3 step calibration with a dry point and a 2-point calibrat
 
 #### 2-point calibration
 
-This is the order of the calibration: 
+This is the order of the calibration:
 
 1. set probe type
 1. dry point
@@ -282,7 +282,7 @@ You have two options for this calibration:
     ```
     control ox com P,kPaValue
     ```
-    
+
     More information on [datasheet](https://www.atlas-scientific.com/_files/_datasheets/_circuit/DO_EZO_Datasheet.pdf), page 57
 
 #### OPTION 1: Single point calibration
@@ -340,7 +340,7 @@ You have two options for this calibration:
 Reset your SCK and you are ready.
 
 !!! success "Ready to go?"
-    If you want to send the data to the platform, you will need to  [Advanced Kit Selection](/Guides/getting started/Onboarding Sensors/#advanced-kit-selection/). At the moment the closest Kit Blueprint will be `#22 BioPV Kit` or `#31 SCK 2.1 Sea Water` in case you are using a SCK2.1 with GPS. You can request in the [forum](http://forum.smartcitizen.me) for a custom blueprint with the specific sensors you are using. 
+    If you want to send the data to the platform, you will need to  [Advanced Kit Selection](/Guides/getting started/Onboarding Sensors/#advanced-kit-selection/). At the moment the closest Kit Blueprint will be `#22 BioPV Kit` or `#31 SCK 2.1 Sea Water` in case you are using a SCK2.1 with GPS. You can request in the [forum](http://forum.smartcitizen.me) for a custom blueprint with the specific sensors you are using.
 
 ### Atlas ORP
 
@@ -355,11 +355,11 @@ You only need to perform a single point calibration. You can use any calibrated 
     **Example commands**
 
     ```
-    control orp com r
-    control orp com cal
-    control orp com cal,[value]
-    control orp com cal,clear
-    control orp com cal,?
+    control redox com r
+    control redox com cal
+    control redox com cal,[value]
+    control redox com cal,clear
+    control redox com cal,?
     ```
 
 #### Single point calibration
@@ -369,9 +369,9 @@ You only need to perform a single point calibration. You can use any calibrated 
 * Read the sensor multiple times until the reading is stable:
 
     ```
-    control orp com r
+    control redox com r
     225
-    control orp com r
+    control redox com r
     224
     ...
     ```
@@ -379,13 +379,13 @@ You only need to perform a single point calibration. You can use any calibrated 
 * Issue calibration command
 
     ```
-    control orp com cal,[value of ORP]
+    control redox com cal,[value of redox]
     ```
 
 !!! info "Example at 25°C"
 
     ```
-    control orp com cal,225
+    control redox com cal,225
     ```
 
 ### Atlas PT100/1000 Temperature
