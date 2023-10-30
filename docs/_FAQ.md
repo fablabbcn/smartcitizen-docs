@@ -121,7 +121,7 @@ The kit is able to store the last reason by which it _restarted_. This informati
 | `WDT`    | Watchdog Reset                 | This reset takes place when the _watchdog timer_ from the SAMD21 _orders it_. Currently not suported |
 | `SYST`   | System Reset Request"          | This reset takes place when the Kit _orders_ it (sanity reset), or when you type `reset` in the [shell](/Guides/getting started/Using the Shell/) |
 
-## What are good signal values?
+## What are good RSSI values?
 
 Starting from firmware version `0.9.9`, the kit also keeps track of the Wi-Fi signal strength (RSSI in dBm - decibel miliWatts) to help you get a grasp of the signal strength **seen by the kit** (this relativeness is important, as many other devices will see a stronger signal potentially thanks to a better antenna). Based on [this reference](https://techmusa.com/wireless-dbm-table/) here you have some indicators of how good or bad the value you see is:
 
