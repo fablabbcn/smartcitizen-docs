@@ -1627,6 +1627,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#what-are-good-signal-values" class="md-nav__link">
+    What are good signal values?
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -4230,6 +4237,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#what-are-good-signal-values" class="md-nav__link">
+    What are good signal values?
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -4381,6 +4395,16 @@ Yes, it will be maintained just as it has been for the past five years. Also, th
 </tr>
 </tbody>
 </table>
+<h2 id="what-are-good-signal-values">What are good signal values?<a class="headerlink" href="#what-are-good-signal-values" title="Permanent link">&para;</a></h2>
+<p>Starting from firmware version <code>0.9.9</code>, the kit also keeps track of the Wi-Fi signal strength (RSSI in dBm - decibel miliWatts) to help you get a grasp of the signal strength <strong>seen by the kit</strong> (this relativeness is important, as many other devices will see a stronger signal potentially thanks to a better antenna). Based on <a href="https://techmusa.com/wireless-dbm-table/">this reference</a> here you have some indicators of how good or bad the value you see is:</p>
+<ul>
+<li><code>-30 to -50dBm</code>: Excellent single strength (Next to Router).</li>
+<li><code>-50 to -67dBm</code>: At Good signal strength for Web browsing, voice/video calls.</li>
+<li><code>-67 to -70dBm</code>: Best effort for Web browsing for reliable packet delivery.</li>
+<li><code>-70 to -80dBm</code>: Experience bad connectivity, Packet delivery may be unreliable.</li>
+<li><code>-90 to 100dBm</code>: Worst single strength.</li>
+</ul>
+<p>We recommend to stay between the <code>-30 to -70dBm</code> range if possible. Remeber that this value must be <em>seen</em> by the Kit!</p>
 
 
 
