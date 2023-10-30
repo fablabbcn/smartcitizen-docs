@@ -1620,6 +1620,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#what-is-reset-cause" class="md-nav__link">
+    What is reset cause?
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -4216,6 +4223,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#what-is-reset-cause" class="md-nav__link">
+    What is reset cause?
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -4329,6 +4343,44 @@ Yes, it will be maintained just as it has been for the past five years. Also, th
 <p>No. They cannot be exposed to water, high humidity, corrosive environments, or moisture. Always use an enclosure when exposed outdoors. Highly humid environments can provoke corrosion in the sensors (symptom of this is blue powder near the sensors in the urban board). To help protect them, we recommend using <em>transparent nail polish</em> in these areas. <strong>Do not obscure the areas in red</strong>:</p>
 <p><img alt="" src="/assets/images/nail_polish_areas.png" /></p>
 <p>If you are using any enclosure from <a href="https://github.com/fablabbcn/smartcitizen-enclosures/">the repository</a>, we also recommend using a filtration foam (PPI-20/10) like <a href="http://www.infiltro.es/index.php/filtro-de-aire-2/prefiltros/item/foam">this one</a>. More info <a href="https://forum.smartcitizen.me/t/rain-tests-for-the-sck/1300">here</a></p>
+<h2 id="what-is-reset-cause">What is <code>reset cause</code>?<a class="headerlink" href="#what-is-reset-cause" title="Permanent link">&para;</a></h2>
+<p>The kit is able to store the last reason by which it <em>restarted</em>. This information can be very helpful to know in order to <em>debug</em> problems with a faulty kit. </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Code</th>
+<th style="text-align: left;">Explanation</th>
+<th style="text-align: left;">Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><code>POR</code></td>
+<td style="text-align: left;">Power On Reset</td>
+<td style="text-align: left;">This reset takes place when you connect the USB cable to the Kit.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>BOD12</code> and <code>BOD33</code></td>
+<td style="text-align: left;">Brown Out <code>12</code> and <code>33</code> Detector Reset</td>
+<td style="text-align: left;">This reset takes place when there is a low voltage on the supply (more in the SAMD21 <a href="https://microchipdeveloper.com/32arm:samd21-pm-overview">docs</a>)</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>EXT</code></td>
+<td style="text-align: left;">External Reset</td>
+<td style="text-align: left;">This reset takes place when you press the <em>reset</em> button</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>WDT</code></td>
+<td style="text-align: left;">Watchdog Reset</td>
+<td style="text-align: left;">This reset takes place when the <em>watchdog timer</em> from the SAMD21 <em>orders it</em>. Currently not suported</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>SYST</code></td>
+<td style="text-align: left;">System Reset Request"</td>
+<td style="text-align: left;">This reset takes place when the Kit <em>orders</em> it (sanity reset), or when you type <code>reset</code> in the <a href="/Guides/getting started/Using the Shell/">shell</a></td>
+</tr>
+</tbody>
+</table>
 
 
 
