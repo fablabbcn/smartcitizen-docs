@@ -4372,7 +4372,7 @@ control ph com cal,?
 </code></pre></div>
 </div>
 <h4 id="3-point-calibration">3-point calibration<a class="headerlink" href="#3-point-calibration" title="Permanent link">&para;</a></h4>
-<p>This is the order of the calibration: </p>
+<p>This is the order of the calibration:</p>
 <ol>
 <li>mid point</li>
 <li>low point</li>
@@ -4388,7 +4388,7 @@ control ph com cal,?
 </div>
 <h5 id="mid-point-calibration">Mid point calibration<a class="headerlink" href="#mid-point-calibration" title="Permanent link">&para;</a></h5>
 <ul>
-<li>Put the sensor in the pH 7 calibration solution. </li>
+<li>Put the sensor in the pH 7 calibration solution.</li>
 </ul>
 <p><img alt="" src="/assets/images/WhpJiN2.png" /></p>
 <ul>
@@ -4409,7 +4409,7 @@ control ph com r
 </ul>
 <div class="admonition info">
 <p class="admonition-title">Example at 30°C</p>
-<div class="highlight"><pre><span></span><code>control atlas ph com cal,mid,6.99 
+<div class="highlight"><pre><span></span><code>control atlas ph com cal,mid,6.99
 </code></pre></div>
 </div>
 <p>After this command if you take a pH reading the result should be 7.00 (or very close to it)</p>
@@ -4488,7 +4488,7 @@ control conductivity com cal,?
 </code></pre></div>
 </div>
 <h4 id="2-point-calibration">2-point calibration<a class="headerlink" href="#2-point-calibration" title="Permanent link">&para;</a></h4>
-<p>This is the order of the calibration: </p>
+<p>This is the order of the calibration:</p>
 <ol>
 <li>set probe type</li>
 <li>dry point</li>
@@ -4641,7 +4641,7 @@ control ox com r
 <p>Reset your SCK and you are ready.</p>
 <div class="admonition success">
 <p class="admonition-title">Ready to go?</p>
-<p>If you want to send the data to the platform, you will need to  <a href="/Guides/getting started/Onboarding Sensors/#advanced-kit-selection/">Advanced Kit Selection</a>. At the moment the closest Kit Blueprint will be <code>#22 BioPV Kit</code> or <code>#31 SCK 2.1 Sea Water</code> in case you are using a SCK2.1 with GPS. You can request in the <a href="http://forum.smartcitizen.me">forum</a> for a custom blueprint with the specific sensors you are using. </p>
+<p>If you want to send the data to the platform, you will need to  <a href="/Guides/getting started/Onboarding Sensors/#advanced-kit-selection/">Advanced Kit Selection</a>. At the moment the closest Kit Blueprint will be <code>#22 BioPV Kit</code> or <code>#31 SCK 2.1 Sea Water</code> in case you are using a SCK2.1 with GPS. You can request in the <a href="http://forum.smartcitizen.me">forum</a> for a custom blueprint with the specific sensors you are using.</p>
 </div>
 <h3 id="atlas-orp">Atlas ORP<a class="headerlink" href="#atlas-orp" title="Permanent link">&para;</a></h3>
 <p>You only need to perform a single point calibration. You can use any calibrated solution, as long as it's within your sensor range. Atlas uses a 225mV calibration.</p>
@@ -4653,11 +4653,11 @@ control ox com r
 <li>Calibration commands on page 49</li>
 </ul>
 <p><strong>Example commands</strong></p>
-<div class="highlight"><pre><span></span><code>control orp com r
-control orp com cal
-control orp com cal,[value]
-control orp com cal,clear
-control orp com cal,?
+<div class="highlight"><pre><span></span><code>control redox com r
+control redox com cal
+control redox com cal,[value]
+control redox com cal,clear
+control redox com cal,?
 </code></pre></div>
 </div>
 <h4 id="single-point-calibration">Single point calibration<a class="headerlink" href="#single-point-calibration" title="Permanent link">&para;</a></h4>
@@ -4665,22 +4665,22 @@ control orp com cal,?
 <ul>
 <li>
 <p>Read the sensor multiple times until the reading is stable:</p>
-<div class="highlight"><pre><span></span><code>control orp com r
+<div class="highlight"><pre><span></span><code>control redox com r
 225
-control orp com r
+control redox com r
 224
 ...
 </code></pre></div>
 </li>
 <li>
 <p>Issue calibration command</p>
-<div class="highlight"><pre><span></span><code>control orp com cal,[value of ORP]
+<div class="highlight"><pre><span></span><code>control redox com cal,[value of redox]
 </code></pre></div>
 </li>
 </ul>
 <div class="admonition info">
 <p class="admonition-title">Example at 25°C</p>
-<div class="highlight"><pre><span></span><code>control orp com cal,225
+<div class="highlight"><pre><span></span><code>control redox com cal,225
 </code></pre></div>
 </div>
 <h3 id="atlas-pt1001000-temperature">Atlas PT100/1000 Temperature<a class="headerlink" href="#atlas-pt1001000-temperature" title="Permanent link">&para;</a></h3>
