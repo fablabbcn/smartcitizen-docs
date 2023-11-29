@@ -10,184 +10,170 @@ nav:
     - Getting Started: index.md
     - Introduction: introduction.md
     - Hardware:
-      - Hardware Ecosystem: Components/index.md
-      - Smart Citizen Kit:
-        - What is it?: Smart Citizen Kit.md
-        - Components:
-          - Data Board: Components/boards/Data Board.md
-          - Urban Board: Components/boards/Urban Board.md
-        - Enclosures: Components/enclosures/Enclosures.md
-      - Smart Citizen Stations:
-        - What is it?: Smart Citizen Stations.md
-        - Air:
-          - Index: Configurations/Air Quality Station.md
-          - Components:
-            - Gas Pro Sensor Board: Components/boards/Gases Pro Board.md
-            - PM Board: Components/boards/PM Board.md
-            - Analog Sensor Board: Components/boards/Analog Sensor Board.md
-        - Soil and Water: 
-          - Index: Configurations/Soil and Water Station.md
-          - Components:
-            - Carrier boards: Components/boards/Carrier Boards.md
-      - Supported sensors: Components/Auxiliary Connector.md
-      - Additional components:
-        - Power Supply: Components/boards/Power Supply.md
-        - Solar Panel: Components/Solar Panel.md
-        - GPS: Components/GPS.md
+      - Introduction: hardware/index.md
+      - Smart Citizen Kit: hardware/Smart Citizen Kit.md
+      - Smart Citizen Stations: hardware/Smart Citizen Stations.md
+      - Enclosures: hardware/enclosures/index.md
+      - Hardware Components:
+        - Data Board: hardware/boards/Data Board.md
+        - Urban Board: hardware/boards/Urban Board.md
+        - PM Board: hardware/boards/PM Board.md
+        - Analog Sensor Board: hardware/boards/Analog Sensor Board.md
+        - Carrier boards: hardware/boards/Carrier Boards.md
+        - Extras:
+          - Introduction: hardware/extras/index.md
+          - OLED Screen: hardware/extras/OLED.md
+          - GPS: hardware/extras/GPS.md
+        - Power:
+          - Introduction: hardware/power/index.md
+          - Power Supply: hardware/power/Power Supply.md
+          - Solar Panel: hardware/power/Solar Panel.md
+      - Supported sensors: hardware/Supported Sensors.md
     - Firmware:
-      - Architecture: Components/Firmware.md
-      - Flash Storage: Components/Flash Storage.md
+      - Introduction: firmware/index.md
+      # - Architecture: firmware/Architecture.md
+      - Flash Storage: firmware/Flash Storage.md
     - Data:
-      - Sensor Platform: Data/Sensor Platform.md
-      - Smart Citizen API: Data/Smart Citizen API.md
-      - Data Analysis: Data/Data Analysis.md
+      - Introduction: data/index.md
+      - Sensor Platform: data/Sensor Platform.md
+      - API: data/Smart Citizen API.md
+      - Data Analysis: data/Data Analysis.md
     - FAQ: _FAQ.md
     - Troubleshooting: Troubleshooting.md
   - Knowledge:
-    - Index: Components/sensors/index.md
-    - Air:
-      - Intro: Components/sensors/air/index.md
-      - Metrics:
-        - Particulate Matter: includes/metrics/air/PM/en/index.md
-        - Noise: includes/metrics/air/Noise/en/index.md
-        - VOCs: includes/metrics/air/VOCs/en/index.md
-        - Chemical composition: includes/metrics/air/Chemical Composition/en/index.md
-        - CO2: includes/metrics/air/CO2/en/index.md
-      - Sensors:
-        - MEMs: 
-          - Index: Components/sensors/air/MEMs/index.md
-          - Microphones: Components/sensors/air/MEMs/Microphones.md
-        - OPCs:
-          - Index: Components/sensors/air/OPCs/index.md
-          - Plantower PMSX003: Components/sensors/air/OPCs/PMSX003.md
-          - Sensirion SPS30: Components/sensors/air/OPCs/SPS30.md
-          - Sensirion SEN50: Components/sensors/air/OPCs/SEN50.md
+    - Sensors:
+      - Index: hardware/sensors/index.md
+      - Performance: hardware/sensors/performance.md
+      - Calibration: hardware/sensors/calibration.md
+      - Air:
+        - Introduction: hardware/sensors/air/index.md
+        - PM Sensors:
+          - Index: hardware/sensors/air/PM/index.md
+          - Plantower PMSX003: hardware/sensors/air/PM/PMSX003.md
+          - Sensirion SPS30: hardware/sensors/air/PM/SPS30.md
+          - Sensirion SEN50: hardware/sensors/air/PM/SEN50.md
         - Metal Oxides:
-          - Index: Components/sensors/air/metal oxides/index.md
-          - SGX Mics: Components/sensors/air/metal oxides/MICS.md
-          - AMS CCS811: Components/sensors/air/metal oxides/CCS811.md
-          # - Sciosense ENS160: Components/sensors/air/metal oxides/ENS160.md
-          # - Sensirion SPG4X: Components/sensors/air/metal oxides/SPG4X.md
-        - Electrochemical Sensors: 
-          - Index: Components/sensors/air/electrochemical sensors/index.md
-          - Alphasense Electrochemical: Components/sensors/air/electrochemical sensors/alphasense.md
-        - NDIR:
-          - Index: Components/sensors/air/NDIR/index.md
-          - Sensirion SCD30: Components/sensors/air/NDIR/SCD30.md
-    - Soil and Water:
-      - Intro: Components/sensors/water/index.md
-      - Metrics:
-        - pH: includes/metrics/water/pH/en/index.md
-        - DO: includes/metrics/water/DO/en/index.md
-        - EC: includes/metrics/water/EC/en/index.md
-        - T: includes/metrics/water/T/en/index.md
-        - ORP: includes/metrics/water/ORP/en/index.md
-        - Soil Moisture/Tension: includes/metrics/soil/moisture/en/index.md
-      - Sensors:
-        - pH: Components/sensors/water/pH Sensors.md
-        - Dissolved Oxygen: Components/sensors/water/DO Sensors.md
-        - Conductivity: Components/sensors/water/EC Sensors.md
-        - Temperature: Components/sensors/water/T Sensors.md
-        - ORP: Components/sensors/water/ORP Sensors.md
-        - Soil Moisture Sensors: Components/sensors/soil/Soil Moisture Sensors.md
-        - Tensionmenter: Components/sensors/soil/Tensiometer.md
-    - Performance: Components/sensors/performance.md
+          - Index: hardware/sensors/air/MOx/index.md
+          - SGX Mics: hardware/sensors/air/MOx/MICS.md
+          - AMS CCS811: hardware/sensors/air/MOx/CCS811.md
+          # - Sciosense ENS160: Components/sensors/air/MOx/ENS160.md
+          # - Sensirion SPG4X: Components/sensors/air/MOx/SPG4X.md
+        - Electrochemical Sensors:
+          - Index: hardware/sensors/air/EC/index.md
+          - Alphasense Electrochemical: hardware/sensors/air/EC/alphasense.md
+        - CO2 Sensors:
+          - Index: hardware/sensors/air/CO2/index.md
+          - Sensirion SCD30: hardware/sensors/air/CO2/SCD30.md
+        - MEMs:
+          - Index: hardware/sensors/air/MEMs/index.md
+          - Microphones: hardware/sensors/air/MEMs/Microphones.md
+      - Soil and Water:
+        - Introduction: hardware/sensors/soil-water/index.md
+        - pH: hardware/sensors/soil-water/pH Sensors.md
+        - Dissolved Oxygen: hardware/sensors/soil-water/DO Sensors.md
+        - Conductivity: hardware/sensors/soil-water/EC Sensors.md
+        - Temperature: hardware/sensors/soil-water/T Sensors.md
+        - ORP: hardware/sensors/soil-water/ORP Sensors.md
+        - Soil Moisture: hardware/sensors/soil-water/Soil Moisture Sensors.md
+        - Tensionmenter: hardware/sensors/soil-water/Tensiometer.md
+    - Research: resources/Research.md
+    - Toolkits:
+      - Index: resources/toolkits/index.md
+      - Citizen Sensing Toolkit: resources/toolkits/Citizen Sensing Toolkit.md
   - Guides:
-    - Main: Guides/index.md
+    - Introduction: guides/index.md
     - Getting Started:
-      - Onboarding Sensors: Guides/getting started/Onboarding Sensors.md
-      - Downloading platform data: Guides/getting started/Downloading the Data.md
-      - Uploading SD-card data: Guides/getting started/Uploading SD Card Data.md
-      - Updating the Wi-Fi: Guides/getting started/Updating the Wi-Fi.md
-      - Using the Shell: Guides/getting started/Using the Shell.md
-      - Debugging your sensors: Guides/getting started/Debugging your sensors.md
-      - Getting firmware information: Guides/getting started/Getting firmware information.md
-      - Third party sensors: Guides/getting started/Third party sensors.md
-      # - External Sensors: Guides/getting started/External Sensors.md
-      # - Dealing with sensitive sensor readings: Guides/getting started/Dealing with sensitive sensor readings.md
+      - Onboarding Sensors: guides/getting started/Onboarding Sensors.md
+      - Updating the Wi-Fi: guides/getting started/Updating the Wi-Fi.md
+      - Downloading platform data: guides/getting started/Downloading the Data.md
+      - Uploading SD-card data: guides/getting started/Uploading SD Card Data.md
+      - Using the Shell: guides/getting started/Using the Shell.md
+      - Debugging your sensors: guides/getting started/Debugging your sensors.md
+      - Getting firmware information: guides/getting started/Getting firmware information.md
+      - Third party sensors: guides/getting started/Third party sensors.md
+      # - External Sensors: guides/getting started/External Sensors.md
+      # - Dealing with sensitive sensor readings: guides/getting started/Dealing with sensitive sensor readings.md
     - Firmware Operations:
-      - Updating the firmware: Guides/firmware/Update the firmware.md
-      - Editing the firmware: Guides/firmware/Edit the Firmware.md
-      - Debugging the firmware: Guides/firmware/Debug the firmware.md
+      - Updating the firmware: guides/firmware/Update the firmware.md
+      - Editing the firmware: guides/firmware/Edit the Firmware.md
+      - Debugging the firmware: guides/firmware/Debug the firmware.md
     - Calibrating Sensors:
-      # - Air sensors: Guides/calibration/Air sensors.md
-      - Water: Guides/calibration/Water sensors.md
-      - Soil: Guides/calibration/Soil moisture sensors.md
-      - Air: 
-        - CO2: Guides/calibration/SCD30 CO2 sensor.md
+      # - Air sensors: guides/calibration/Air sensors.md
+      - Water: guides/calibration/Water sensors.md
+      - Soil: guides/calibration/Soil moisture sensors.md
+      - Air:
+        - CO2: guides/calibration/SCD30 CO2 sensor.md
     - Working with Data:
-      - Index: Guides/data/index.md
+      - Index: guides/data/index.md
       - Basic:
-        - Creating data interfaces: Guides/data/Creating Interfaces.md
-        - Visual programming: Guides/data/Visual Programming.md
-        - Creative coding: Guides/data/Creative Coding.md
+        - Creating data interfaces: guides/data/Creating Interfaces.md
+        - Visual programming: guides/data/Visual Programming.md
+        - Creative coding: guides/data/Creative Coding.md
       - Advanced:
-        # - Model your sensor data: Guides/data/Creating Models for Sensors Calibration.md
-        # - Analyse your data in batch: Guides/Analyse your data in batch.md
-        - Setting up scdata: Guides/data/Install the framework.md
-        - Organising and sharing your data: Guides/data/Organise your data.md
-        - Handling calibration data: Guides/data/Handling calibration data.md
-        - Custom data processing: Guides/data/Custom data processing.md
+        # - Model your sensor data: guides/data/Creating Models for Sensors Calibration.md
+        # - Analyse your data in batch: guides/Analyse your data in batch.md
+        - Setting up scdata: guides/data/Install the framework.md
+        # - Organising and sharing your data: guides/data/Organise your data.md
+        - Handling calibration data: guides/data/Handling calibration data.md
+        - Custom data processing: guides/data/Custom data processing.md
     - Deploying Devices:
-      - Smart Citizen Kit: Guides/deployments/Deploying SCK.md
-      - iSCAPE Station V1: Guides/deployments/Deploying iSCAPE Station V1.md
-      - iSCAPE Station V2: Guides/deployments/Deploying iSCAPE Station V2.md
-      - Smart Citizen Air Station: Guides/deployments/Deploying Air Station.md
-      - Smart Citizen Water Station: Guides/deployments/Deploying Water Station.md
-      - Smart Citizen Connectivity Units: Guides/deployments/Installing Connectivity Units.md
-      - Smart Citizen Power Supply: Guides/deployments/Using the power supply.md
-      - Solar Panel: Guides/deployments/Installing solar panel.md      
-      - Mobile sensors (GPS): Guides/deployments/Almabike sensors.md
+      - Smart Citizen Kit: guides/deployments/Deploying SCK.md
+      - iSCAPE Station V1: guides/deployments/Deploying iSCAPE Station V1.md
+      - iSCAPE Station V2: guides/deployments/Deploying iSCAPE Station V2.md
+      - Smart Citizen Air Station: guides/deployments/Deploying Air Station.md
+      - Smart Citizen Water Station: guides/deployments/Deploying Water Station.md
+      - Smart Citizen Connectivity Units: guides/deployments/Installing Connectivity Units.md
+      - Smart Citizen Power Supply: guides/deployments/Using the power supply.md
+      - Solar Panel: guides/deployments/Installing solar panel.md
+      - Mobile sensors (GPS): guides/deployments/Almabike sensors.md
     - Using Auxiliaries:
-      - Water Sensor Drivers: Guides/auxiliaries/Water Sensors Drivers.md
-      - OLED display: Guides/auxiliaries/OLED display.md
+      - Water Sensor Drivers: guides/auxiliaries/Water Sensors Drivers.md
+      - OLED display: guides/auxiliaries/OLED display.md
     - Replacing Components:
-      - Replacing PM Sensors: Guides/replacements/Replacing PM Sensors.md
+      - Replacing PM Sensors: guides/replacements/Replacing PM Sensors.md
     - Making Enclosures:
-      - Making your own enclosures: Guides/enclosures/Making your own enclosures.md
-      - Assembling Smart Citizen Stations: Guides/enclosures/Assembling Smart Citizen Stations.md
+      - Making your own enclosures: guides/enclosures/Making your own enclosures.md
+      - Assembling Smart Citizen Stations: guides/enclosures/Assembling Smart Citizen Stations.md
     - Legacy Hardware:
       - Smart Citizen 1.1:
-        - Main: Components/legacy/index.md
-        - Hardware: Components/legacy/Hardware.md
-        - Command Line: Components/legacy/Command Line.md
-        - FAQ: Components/legacy/Faq.md
-        - Troubleshooting: Components/legacy/Troubleshooting.md
+        - Main: hardware/legacy/index.md
+        - Hardware: hardware/legacy/Hardware.md
+        - Command Line: hardware/legacy/Command Line.md
+        - FAQ: hardware/legacy/Faq.md
+        - Troubleshooting: hardware/legacy/Troubleshooting.md
       - Smart Citizen 2.0:
-        - Main: Components/legacy/sck.md
-        - About the CO-NO2 MOs: Components/sensors/air/metal oxides/MICS.md
+        - Main: hardware/legacy/sck.md
+        - About the CO-NO2 MOs: hardware/sensors/air/MOx/MICS.md
   - Resources:
-    - Main: Resources/index.md
-    - Citizen Sensing Toolkit: Resources/Citizen Sensing Toolkit.md
-    - Research: Resources/Research.md
-    - Friends: Resources/References.md
-    - Education:
-      - Main: Resources/Education/index.md
-      - Aulamar (ES): 
-        - Índice: Resources/Education/AulaMar/index.md
-        - Notas generales: Resources/Education/AulaMar/General.md
-        - Instrucciones: Resources/Education/AulaMar/Instrucciones.md
-#        - Guías por métrica:
-#          - pH: Resources/Education/AulaMar/pH.md
-#          - Oxígeno disuelto: Resources/Education/AulaMar/OD.md
-#          - Conductividad: Resources/Education/AulaMar/EC.md
-#          - Temperatura: Resources/Education/AulaMar/T.md
-      - CLAB (EN): 
-        - Index: Resources/Education/CLAB/index.md
-        - Instructions: Resources/Education/CLAB/Instructions.md
-    - Webinars:
-      - Main: Resources/Webinars/index.md
+    - Introduction: resources/index.md
+    - Webinars: resources/Webinars.md
+    - For educators: resources/education/index.md
+    # - Main: resources/Education/index.md
+    # - Aulamar (ES):
+    #   - Índice: resources/Education/AulaMar/index.md
+    #   - Notas generales: resources/Education/AulaMar/General.md
+    #   - Instrucciones: resources/Education/AulaMar/Instrucciones.md
+    #    - Guías por métrica:
+    #      - pH: resources/Education/AulaMar/pH.md
+    #      - Oxígeno disuelto: resources/Education/AulaMar/OD.md
+    #      - Conductividad: resources/Education/AulaMar/EC.md
+    #      - Temperatura: resources/Education/AulaMar/T.md
+    # - CLAB (EN):
+    #   - Index: resources/Education/CLAB/index.md
+    #   - Instructions: resources/Education/CLAB/Instructions.md
+  - About:
+    - About: about/index.md
+    - Funding: about/funding.md
+    - Friends: resources/Friends.md
 
 theme:
   language: 'en'
   name: 'material'
   features:
     - instant
-    # - navigation.expand
     - navigation.indexes
     - navigation.instant
-    # - navigation.prune
-    # - navigation.sections
+    - navigation.path
     - navigation.tabs
     - navigation.tabs.sticky
     - navigation.top
@@ -196,6 +182,8 @@ theme:
     - search.share
     - search.suggest
     - content.tooltips
+    - toc.follow
+    - navigation.footer
   custom_dir: 'custom_theme'
   palette:
     # Palette toggle for light mode
@@ -217,9 +205,7 @@ theme:
   icon:
     repo: fontawesome/brands/git-alt
 
-extra_css:
-  - stylesheets/extra.css
- 
+
 extra:
   social:
     - icon: fontawesome/brands/twitter
@@ -238,7 +224,7 @@ extra:
   #     lang: en
   #   - name: Español
   #     link: /es/
-  #     lang: es  
+  #     lang: es
 
 plugins:
   - macros
@@ -249,7 +235,6 @@ plugins:
   #       'Resources/Tutorials/Orange Data Widgets.md': 'Guides/data/Orange Data Widgets.md'
   #       'Resources/Tutorials/Simple Orange Workflow.md': 'Guides/data/Simple Orange Workflow.md'
   #       'Resources/Tutorials/Orange and geolocated data.md': 'Guides/data/Orange and geolocated data.md'
-# - tags
 # - with-pdf:
 #     author: Smart Citizen
 #     copyright: 'CC Attribution-NonCommercial-ShareAlike 4.0 International'
@@ -309,7 +294,10 @@ markdown_extensions:
   - attr_list
   - pymdownx.tabbed
 
+extra_css:
+  - assets/stylesheets/extra.css
+
 extra_javascript:
   - 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'
   - 'https://buttons.github.io/buttons.js'
-  - '/javascripts/extra.js'
+  - 'assets/javascripts/extra.js'

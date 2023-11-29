@@ -4,3 +4,5 @@ TO-DO.md
 aux/
 __pycache__/
 *.swp.p
+.vscode
+*.log

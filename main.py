@@ -167,8 +167,8 @@ def define_env(env):
             # If there are any images, find them, copy them
             result = copy_markdown_images(root, result, only_url=False)
             if ignore_frontmatter:
-                result = remove_frontmatter(result)            
-            
+                result = remove_frontmatter(result)
+
             return result
         else:
             return "Markdown section doesn't exist in source"
@@ -216,8 +216,18 @@ def define_env(env):
     # Inspired by function in mkdocs-snippets-plugin
     def get_snippet_rel(file_path, section_name = None, ignore_frontmatter = True):
 
-        with open(env.project_dir + '/' + file_path, 'r') as myfile:
-            content = myfile.read()
+        ok_to_go = False
+        try:
+            with open(env.project_dir + '/' + file_path, 'r') as myfile:
+                content = myfile.read()
+        except:
+            print (f'Error found while rendeding file: {env.page.file.src_uri}')
+            print (f"Can't find {env.project_dir + '/' + file_path}")
+            pass
+        else:
+            ok_to_go = True
+
+        if ok_to_go == False: return None
 
         if section_name is None:
             extract = content.split('\n')
@@ -260,7 +270,7 @@ def define_env(env):
             return result
         else:
             return "Markdown section doesn't exist in source"
-    
+
     @env.macro
     def remove_frontmatter(markdown):
         if markdown is not None:
