@@ -1,9 +1,30 @@
-Analog Sensor Board
-======================
+---
+type: external
+feature_img:
+status: stable
+versions:
+    - 4 channel:
+        image:
+        description:
+    - 8 channel:
+        image:
+        description:
+interface:
+    - Auxiliary Port:
+        description: I2C via Auxiliary Port
+        image:
+        comment:
+source:
+    Design files: https://github.com/fablabbcn/smartcitizen-analog-sensor-board TODO
+resources:
+    pdf:
+---
 
-<img src="https://live.staticflickr.com/65535/50813319911_fc2c6c020f_k.jpg" width="2000" height="1335" alt="Smart Citizen Station rev3">
+{{ insert_banner() }}
 
-The SmartCitizen ASB is an expansion board for the Smart Citizen Kit that provides connectivity to analog sensors with a high precission ADS1115 via I2C, with four configurable addresses. It also gives the possibility to directly hook up [this ADC by Adafruit](https://www.adafruit.com/product/1085).
+# Analog Sensor Board
+
+The SmartCitizen Analog Sensor Board (_ASB_) is an expansion board for the Smart Citizen Kit that provides connectivity to analog sensors with a high precission ADC (Texas ADS1115) via I2C, with four configurable addresses. It also gives the possibility to directly hook up [this ADC by Adafruit](https://www.adafruit.com/product/1085).
 
 ![](/assets/images/asb4ch.jpg)
 

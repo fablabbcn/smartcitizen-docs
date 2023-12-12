@@ -2,15 +2,16 @@
 
 ## Custom dashboards and notifications
 
-When working on deployments that involve multiple devices a community
-might face the need to create their own page where the sensors’ data is
-updated on real time. Also, it is sometimes useful to trigger notifications on different services.
+When working on deployments that involve multiple devices a community might face the need to create their own page where the sensors’ data is updated on real time. Also, it is sometimes useful to trigger notifications on different services.
 
-This can help to look at data from different spots simultaneously and also to create a sense of community among the devices’ owners. This feature can be easily built using [Freeboards](http://freeboard.io/) or [Node-RED](http://nodered.org/), both online free visual tool that supports the creation of dashboards. Additionally, Node-RED can also be used to create notifications on common services such as Twitter or Telegram.
+!!!info "Looking for _faster_ Live demos?"
+    This guide is complementary to the [Live demos one](Live demos). Make sure to check it too!
+
+This guide will help you look at data from different spots simultaneously and also to create a sense of community among the devices’ owners. This feature can be easily built using [Freeboards](http://freeboard.io/) or [Node-RED](http://nodered.org/), both online free visual tool that supports the creation of dashboards. Additionally, Node-RED can also be used to create notifications on common services such as Twitter or Telegram.
 
 ### Node RED
 
-[Node-RED](http://nodered.org/) is an open-source visual tool that enabled the wiring of hardware devices, APIs and online services. The tool can be [easily installed](http://nodered.org/docs/getting-started/installation) on any local computer or it can be used directly on the Smart Citizen infrastructure. 
+[Node-RED](http://nodered.org/) is an open-source visual tool that enabled the wiring of hardware devices, APIs and online services. The tool can be [installed](http://nodered.org/docs/getting-started/installation) on any local computer.
 
 !!! info "Examples"
     You can find the following examples in the toolkit repository:
@@ -40,7 +41,7 @@ We will implement a simple logic: When temperature on the remote sensor reaches 
 !!!example "Step-by-step"
 
     We will need to wire the two LED’s following the schematic below:
-    
+
     ![](/assets/images/wiring_raspberry.png)
 
     Once we have the Raspberry Pi running and connected to the internet we will need to save the Python script below on the desktop:
@@ -74,7 +75,7 @@ We will implement a simple logic: When temperature on the remote sensor reaches 
     GPIO.output(23, GPIO.HIGH)
     time.sleep(15) #Update every 15 seconds
     ```
-    
+
     Finally, open the Terminal app and run:
 
     ```

@@ -10,7 +10,7 @@ Feel free to keep reading about the different [sections](#get-started) or go dir
 
 If you don't know where to go, take a look at the **sections** below:
 
-TODO: Improve design of this
+TODO (Improve design of this)
 
 * **Main:** Contains the hardware, firmware and data documentation:
     * **Hardware:** Here you will find the [**Smart Citizen Kit**](Smart Citizen Kit) and [**Smart Citizen Stations**](Smart Citizen Station) documentation to help you get started. Visit the [Hardware](/Components/) page to understand a bit better how you can better use all the SCK possibilities, or check the [wide range of sensors](/Components/Auxiliary Connector/) the project supports.
@@ -29,7 +29,7 @@ The documentation contains multiple [guides](/Guides/) as step-by-step tutorials
 
 ![](/assets/images/feS0bZ8.jpg)
 
-!!! info "Example guides"
+!!!info "Example guides"
 
     * [Installing the Smart Citizen Kit](/Guides/deployments/Deploying SCK/)
     * [Installing the Smart Citizen Station](/Guides/deployments/Deploying Air Station/)

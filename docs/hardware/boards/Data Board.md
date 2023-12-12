@@ -1,5 +1,30 @@
-Data Board
-==========
+---
+type: core
+feature_img:
+status: stable
+versions:
+	- 1.5
+		image:
+		description:
+	- 2.0:
+		image:
+		description:
+	- 2.1:
+		image:
+		description:
+	- 2.2:
+		image:
+		description:
+interface:
+source:
+    Design files: https://github.com/fablabbcn/smartcitizen-kit-21
+resources:
+    pdf:
+---
+
+{{ insert_banner() }}
+
+# Data Board
 
 The data board is a data-logger at the core of the sensors architecture supporting the Smart Citizen Kit and the Smart Citizen Station. This module is powered by an ARM M0+ 32-bits 48Mhz **SAMD21** running the [Smart Citizen Firmware](/Components/Firmware), combining the low power consumption of the ARM M0 family with the power of a 32-bits processor with 32KB of RAM and 256KB of FLASH memory. This solution offers enough program storage and memory space to support multiple auxiliary sensors. This chip is used by the Arduino Zero and MKR boards, therefore benefiting from the open community built around these boards in particular and the Arduino project in general.
 
@@ -23,7 +48,7 @@ The Smart Citizen Kit firmware is comprised of two parts: 1) the primary process
 
 !!! info
 
-	Learn more about the software running inside the Data Board on the [Firmware section](/Components/Firmware). 
+	Learn more about the software running inside the Data Board on the [Firmware section](/Components/Firmware).
 
 !!! tips "Software guides"
 	Check the firmware guides and learn how to update and even modify the software:

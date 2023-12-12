@@ -1,5 +1,32 @@
-Urban Sensor Board
-==================
+---
+type: core
+feature_img:
+status: stable
+versions:
+	- 1.5
+		image:
+		description:
+	- 2.0:
+		image:
+		description:
+	- 2.1:
+		image:
+		description:
+	- 2.2:
+		image:
+		description:
+interface:
+    - Data Board Header:
+        description: Data Board Header
+        image:
+        comment:
+source:
+    Design files: https://github.com/fablabbcn/smartcitizen-analog-sensor-board TODO
+resources:
+    pdf:
+---
+
+# Urban Sensor Board
 
 ## What is it?
 

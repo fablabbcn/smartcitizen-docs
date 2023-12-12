@@ -1,85 +1,97 @@
 site_name: Smart Citizen Docs
 site_description: Smart Citizen Documentation
-site_author: Smart Citizen Team
+site_author: Fab Lab Barcelona
 site_url: https://docs.smartcitizen.me/
 repo_name: smartcitizen-docs
 repo_url: https://github.com/fablabbcn/smartcitizen-docs
 
 nav:
-  - Welcome!:
-    - Getting Started: index.md
-    - Introduction: introduction.md
+  - Main:
+    - Welcome!: index.md
     - Hardware:
-      - Introduction: hardware/index.md
+      - Index: hardware/index.md
       - Smart Citizen Kit: hardware/Smart Citizen Kit.md
       - Smart Citizen Stations: hardware/Smart Citizen Stations.md
-      - Enclosures: hardware/enclosures/index.md
-      - Hardware Components:
+      - Enclosures:
+        - Index: hardware/enclosures/index.md
+      - Boards:
         - Data Board: hardware/boards/Data Board.md
         - Urban Board: hardware/boards/Urban Board.md
+        - Auxiliary Connector: hardware/sensors/Auxiliary Connector.md
         - PM Board: hardware/boards/PM Board.md
         - Analog Sensor Board: hardware/boards/Analog Sensor Board.md
-        - Carrier boards: hardware/boards/Carrier Boards.md
-        - Extras:
-          - Introduction: hardware/extras/index.md
-          - OLED Screen: hardware/extras/OLED.md
-          - GPS: hardware/extras/GPS.md
-        - Power:
-          - Introduction: hardware/power/index.md
-          - Power Supply: hardware/power/Power Supply.md
-          - Solar Panel: hardware/power/Solar Panel.md
-      - Supported sensors: hardware/Supported Sensors.md
+        # - Carrier boards: hardware/boards/Carrier Boards.md
+        - Discontinued:
+          - Gases Pro Board: hardware/boards/Gases Pro Board.md
+          - PM Board: hardware/boards/PM Board.md
+      - Extras:
+        - Index: hardware/extras/index.md
+        - OLED Screen: hardware/extras/OLED.md
+        - GPS: hardware/extras/GPS.md
+      - Power:
+        - Index: hardware/power/index.md
+        - Power Supply: hardware/power/Power Supply.md
+        - Solar Panel: hardware/power/Solar Panel.md
+      - Sensors: hardware/sensors/index.md
     - Firmware:
       - Introduction: firmware/index.md
       # - Architecture: firmware/Architecture.md
       - Flash Storage: firmware/Flash Storage.md
     - Data:
-      - Introduction: data/index.md
-      - Sensor Platform: data/Sensor Platform.md
-      - API: data/Smart Citizen API.md
+      - Index: data/index.md
+      - Smart Citizen API: data/Smart Citizen API.md
       - Data Analysis: data/Data Analysis.md
     - FAQ: _FAQ.md
     - Troubleshooting: Troubleshooting.md
   - Knowledge:
     - Sensors:
       - Index: hardware/sensors/index.md
-      - Performance: hardware/sensors/performance.md
-      - Calibration: hardware/sensors/calibration.md
+      # - Performance: hardware/sensors/performance.md
+      # - Calibration: hardware/sensors/calibration.md
       - Air:
         - Introduction: hardware/sensors/air/index.md
-        - PM Sensors:
-          - Index: hardware/sensors/air/PM/index.md
-          - Plantower PMSX003: hardware/sensors/air/PM/PMSX003.md
-          - Sensirion SPS30: hardware/sensors/air/PM/SPS30.md
-          - Sensirion SEN50: hardware/sensors/air/PM/SEN50.md
-        - Metal Oxides:
-          - Index: hardware/sensors/air/MOx/index.md
-          - SGX Mics: hardware/sensors/air/MOx/MICS.md
-          - AMS CCS811: hardware/sensors/air/MOx/CCS811.md
-          # - Sciosense ENS160: Components/sensors/air/MOx/ENS160.md
-          # - Sensirion SPG4X: Components/sensors/air/MOx/SPG4X.md
-        - Electrochemical Sensors:
-          - Index: hardware/sensors/air/EC/index.md
-          - Alphasense Electrochemical: hardware/sensors/air/EC/alphasense.md
-        - CO2 Sensors:
-          - Index: hardware/sensors/air/CO2/index.md
-          - Sensirion SCD30: hardware/sensors/air/CO2/SCD30.md
-        - MEMs:
-          - Index: hardware/sensors/air/MEMs/index.md
-          - Microphones: hardware/sensors/air/MEMs/Microphones.md
+        - Particulate Matter:
+          - Index: hardware/sensors/air/pm/index.md
+          - Plantower PMS5003: hardware/sensors/air/Plantower_PMS5003.md
+          - Sensirion SPS30: hardware/sensors/air/Sensirion_SPS30.md
+          - Sensirion SEN5X: hardware/sensors/air/Sensirion_SEN5X.md
+        - Chemical composition:
+          - Index: hardware/sensors/air/chemical/index.md
+          - Alphasense Electrochemical: hardware/sensors/air/chemical/Alphasense_Electrochemical.md
+          - SGX Mics: hardware/sensors/air/chemical/SGX_MICS.md
+          - AMS CCS811: hardware/sensors/air/chemical/AMS_CCS811.md
+          - Bosch BME680: hardware/sensors/air/chemical/Bosch_BME680.md
+          - Sensirion SFA30: hardware/sensors/air/chemical/Sensirion_SFA30.md
+          # - Sciosense ENS160: hardware/sensors/air/Sciosense_ENS160.md
+          # - Sensirion SPG4X: hardware/sensors/air/Sensirion_SPG4X.md
+        - CO2:
+          - Index: hardware/sensors/air/co2/index.md
+          - Sensirion SCD30: hardware/sensors/air/co2/Sensirion_SCD30.md
+          # - Sensirion SCD4X: hardware/sensors/air/co2/Sensirion_SCD4X.md
+        - Noise:
+          - Index: hardware/sensors/air/noise/index.md
+          - TDK ICS43432: hardware/sensors/air/noise/TDK_ICS43432.md
+        - Temperature:
+          - Index: hardware/sensors/air/temperature/index.md
+          - Sensirion SHT3X: hardware/sensors/air/temperature/Sensirion_SHT3X.md
+          - DS2812B: hardware/sensors/air/temperature/DS2812B.md
+        - Light:
+          - Index: hardware/sensors/air/light/index.md
+          - AMS AS7311: hardware/sensors/air/light/AMS_AS7331.md
+          - Rohm BH1721FVC: hardware/sensors/air/light/Rohm_BH1721FVC.md
+        - Pressure:
+          - Index: hardware/sensors/air/pressure/index.md
+          - NXP MPL3115A26: hardware/sensors/air/pressure/NXP_MPL3115A26.md
+          - ST LPS33K: hardware/sensors/air/pressure/ST_LPTS33K.md
       - Soil and Water:
-        - Introduction: hardware/sensors/soil-water/index.md
-        - pH: hardware/sensors/soil-water/pH Sensors.md
-        - Dissolved Oxygen: hardware/sensors/soil-water/DO Sensors.md
-        - Conductivity: hardware/sensors/soil-water/EC Sensors.md
-        - Temperature: hardware/sensors/soil-water/T Sensors.md
-        - ORP: hardware/sensors/soil-water/ORP Sensors.md
-        - Soil Moisture: hardware/sensors/soil-water/Soil Moisture Sensors.md
+        - Index: hardware/sensors/soil-water/index.md
+        - Atlas pH: hardware/sensors/soil-water/Atlas_pH.md
+        - Atlas Dissolved Oxygen: hardware/sensors/soil-water/Atlas_DO.md
+        - Atlas Conductivity: hardware/sensors/soil-water/Atlas_EC.md
+        - Atlas Temperature: hardware/sensors/soil-water/Atlas_Temperature.md
+        - Atlas ORP: hardware/sensors/soil-water/Atlas_ORP.md
+        - Chirp Soil Moisture: hardware/sensors/soil-water/Chirp_Soil_Moisture.md
         - Tensionmenter: hardware/sensors/soil-water/Tensiometer.md
-    - Research: resources/Research.md
-    - Toolkits:
-      - Index: resources/toolkits/index.md
-      - Citizen Sensing Toolkit: resources/toolkits/Citizen Sensing Toolkit.md
   - Guides:
     - Introduction: guides/index.md
     - Getting Started:
@@ -104,18 +116,16 @@ nav:
       - Air:
         - CO2: guides/calibration/SCD30 CO2 sensor.md
     - Working with Data:
-      - Index: guides/data/index.md
-      - Basic:
-        - Creating data interfaces: guides/data/Creating Interfaces.md
-        - Visual programming: guides/data/Visual Programming.md
-        - Creative coding: guides/data/Creative Coding.md
-      - Advanced:
+      - Handling calibration data: guides/data/Handling calibration data.md
+      - Custom data processing: guides/data/Custom data processing.md
+      - Creating data interfaces: guides/data/Creating Interfaces.md
+      - Live demos: guides/data/Live demos.md
+      - Visual programming: guides/data/Visual programming.md
+      - Creative coding: guides/data/Creative coding.md
+      - Python, R and jupyter: guides/data/Advanced data tools.md
         # - Model your sensor data: guides/data/Creating Models for Sensors Calibration.md
         # - Analyse your data in batch: guides/Analyse your data in batch.md
-        - Setting up scdata: guides/data/Install the framework.md
         # - Organising and sharing your data: guides/data/Organise your data.md
-        - Handling calibration data: guides/data/Handling calibration data.md
-        - Custom data processing: guides/data/Custom data processing.md
     - Deploying Devices:
       - Smart Citizen Kit: guides/deployments/Deploying SCK.md
       - iSCAPE Station V1: guides/deployments/Deploying iSCAPE Station V1.md
@@ -126,10 +136,7 @@ nav:
       - Smart Citizen Power Supply: guides/deployments/Using the power supply.md
       - Solar Panel: guides/deployments/Installing solar panel.md
       - Mobile sensors (GPS): guides/deployments/Almabike sensors.md
-    - Using Auxiliaries:
-      - Water Sensor Drivers: guides/auxiliaries/Water Sensors Drivers.md
-      - OLED display: guides/auxiliaries/OLED display.md
-    - Replacing Components:
+    - Replacements:
       - Replacing PM Sensors: guides/replacements/Replacing PM Sensors.md
     - Making Enclosures:
       - Making your own enclosures: guides/enclosures/Making your own enclosures.md
@@ -146,7 +153,13 @@ nav:
         - About the CO-NO2 MOs: hardware/sensors/air/MOx/MICS.md
   - Resources:
     - Introduction: resources/index.md
-    - Webinars: resources/Webinars.md
+    - Research: resources/research.md
+    - Toolkits:
+      - Index: resources/toolkits/index.md
+      - Citizen Sensing Toolkit: resources/toolkits/Citizen Sensing Toolkit.md
+      - Doit! Toolkit: resources/toolkits/Doit.md
+      - Citizen-led Action Toolkit: resources/toolkits/Citizen-led Action Toolkit.md
+    - Webinars: resources/webinars.md
     - For educators: resources/education/index.md
     # - Main: resources/Education/index.md
     # - Aulamar (ES):
@@ -162,9 +175,9 @@ nav:
     #   - Index: resources/Education/CLAB/index.md
     #   - Instructions: resources/Education/CLAB/Instructions.md
   - About:
-    - About: about/index.md
+    - The Smart Citizen Project: about/index.md
     - Funding: about/funding.md
-    - Friends: resources/Friends.md
+    - Friends: about/friends.md
 
 theme:
   language: 'en'
@@ -275,6 +288,7 @@ markdown_extensions:
   - footnotes
   - toc:
       permalink: true
+      toc_depth: 3
   - pymdownx.arithmatex
   - pymdownx.betterem:
       smart_enable: all

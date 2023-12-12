@@ -1,4 +1,21 @@
-# Data Analysis
+---
+source:
+    Pen and Paper: https://github.com/fablabbcn/smartcitizen-data/ TODO
+    Smart Citizen API: https://github.com/fablabbcn/smartcitizen-api
+    Smart Citizen Web: https://github.com/fablabbcn/smartcitizen-web
+    Smart Citizen Dashboard: https://github.com/fablabbcn/smartcitizen-dashboard-js TODO
+    Onboarding App: https://github.com/fablabbcn/smartcitizen-onboarding
+    Smart Citizen Data: https://github.com/fablabbcn/smartcitizen-data
+    Smart Citizen Connector: https://github.com/fablabbcn/smartcitizen-connector
+    Smart Citizen Flows: https://github.com/fablabbcn/smartcitizen-flows
+    Creative Coding: https://github.com/fablabbcn/smartcitizen-docs/ TODO
+    Mecoda Orange: https://github.com/eosc-cos4cloud/mecoda-orange TODO
+    Node-red: https://github.com/fablabbcn/smartcitizen-toolkit/ TODO
+    Live demos: https://github.com/fablabbcn/smartcitizen-toolkit/ TODO
+toc_depth: 1 # TODO
+---
+
+# Data Tools
 
 ![Data analysis with pen and paper tools in Plaça del Sol - Barcelona](https://live.staticflickr.com/4490/24368448418_d602723a10_h.jpg)
 
@@ -16,6 +33,10 @@ Probably the best way to get started in data analysis by using simple tools for 
 !!! tip "How to make them?"
     Soon you will be able to generate the files for printing from the [web dashboard](https://dashboard.smartcitizen.me). In the meantime, you can check [this tutorial](https://github.com/fablabbcn/smartcitizen-data/blob/master/examples/notebooks/13_pdf_largescale_plots.ipynb) in python
 
+### Source files
+
+{{ insert_source(["Pen and Paper"]) }}
+
 ## Web tools
 
 Web tools do not require any installation, and for that they are very easy to use (almost) everywhere. Normally data is directly requested via the [API](Smart Citizen API), but in some cases you can also load a CSV file. However, this ease of use comes at a cost: many of the tools are not very flexible, and different visualisations are not possible, or integrations with our API is not always complete. Nevertheless, they normally require zero setup, so you can get started in no time!
@@ -32,12 +53,32 @@ Some examples you can check out:
 !!! tip "More?"
     More tools can be found in the [toolkit repository](https://github.com/fablabbcn/smartcitizen-toolkit/). You can check some of them as well on the [Creating interfaces Guide](/Guides/data/Creating Interfaces/).
 
+### Source files
+
+{{ insert_source(["Smart Citizen Web", "Smart Citizen Dashboard"]) }}
+
+## Live demos
+
+The Smart Citizen kit is intentionally _accessible_ (to the touch as well) for you to be able to see how sensors _look and feel_. Live demos can help show how sensors work or how they react to different events: for instance, how PM data changes when you put a candle near the kit, even if you can't see the smoke, or how temperature rises when you touch the temperature sensor.
+
+For you to be able to do these experiments, you need _high speed data_ (i.e. data that is updated way faster than once a minute on a web dashboard). To help with that, we have prepared a [specific guide for Live Demos](/guides/data/Live demos), so make sure to check it out!
+
+TODO - SerialStudio image
+
+### Source files
+
+{{ insert_source(["Live demos"])}}
+
 ## Creative coding
 
 Sometimes visualising data is more impactful when using creative visualisations that do not have numbers or graphs on them. Creative coding refers to those tools that generate some short of data visualisation, but that is not done in the _conventional_ way, but more on an _artistic_ way. A good example to get started is [processing](https://processing.org) or it's web version [p5](https://p5.js). Both are simple to use if you want to learn how to code in a fun way, they are full of examples, and very well documented. Although it's more advanced, you can also make some 3D modelling based on data by using [Blender](https://blender.org) or [this tool](TODO).
 
 !!! info "Examples"
-    Some examples can be found on the [guides too](/Guides/data#creative-coding/)!
+    Some examples can be found on the [guides too](/Guides/data/Creative coding)!
+
+### Source files
+
+{{ insert_source(["Creative Coding"]) }}
 
 ## Visual programming
 
@@ -53,7 +94,11 @@ Some examples are below:
 !!! info "Orange workflows"
     If you want to use some existing workflows, you can visit the **Orange Workflows Repository** https://github.com/fablabbcn/smartcitizen-docs/tree/master/docs/assets/ows
 
-    Also, a lot of [step-by-step tutorials](/Guides/data#visual-programming) will help you use it in any use case (also in educational setups!)
+    Also, a lot of [step-by-step tutorials](/Guides/data/Visual programming) will help you use it in any use case (also in educational contexts!)
+
+### Source files
+
+{{ insert_source(["Mecoda Orange", "Node-red"]) }}
 
 ## Advanced
 
@@ -75,8 +120,6 @@ Here we go, this is the most advanced and flexible tool of them all: a data anal
 
 The framework integrates with the [Smart Citizen API](/Data/Smart Citizen API) and helps with the analysis of **large amounts of data in an efficient way**. It also integrates functionality to **generate reports** in _html_ or _pdf_ format, and to **publish datasets** and documents to [Zenodo](https://zenodo.org).
 
-<a class="github-button" data-size="large" href="https://github.com/fablabbcn/smartcitizen-iscape-data" aria-label="Check the source code">Check the source code</a>
-
 !!! info "Raw and processed data"
     All the raw sensor data from the devices is sent to the Platform and processed outside of the sensors. **Raw data is never deleted**, and the postprocessing of it can be traced back to it's origin by using the sensor blueprint information. This way, we guarantee openness and accesibility of the data for research purposes.
 
@@ -84,8 +127,9 @@ The framework integrates with the [Smart Citizen API](/Data/Smart Citizen API) a
 
 This is the tool that probably has the largest amount of examples and use cases:
 
-- [Guides](/Guides/data#advanced) will help you to install the framework or start using it!
+- [Guides](/Guides/data/Advanced data tools) will help you to install the framework and start using it!
 - [Scripts and Notebook Examples](https://github.com/fablabbcn/smartcitizen-data/tree/master/examples) is a compilation of examples ready to get hands on with the data
 
+### Source files
 
-<a class="github-button" data-size="large" href="https://github.com/fablabbcn/smartcitizen-data" aria-label="Check the source code">Check the source code</a>
+{{ insert_source(["Smart Citizen Data", "Smart Citizen Connector", "Smart Citizen Flows"]) }}

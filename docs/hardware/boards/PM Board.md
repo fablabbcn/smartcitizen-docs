@@ -1,5 +1,23 @@
-PM Board
-====================
+---
+type: external
+feature_img:
+status: EOL
+versions:
+	- 1.0
+		image:
+		description:
+interface:
+    - Auxiliary Port:
+        description: I2C via Auxiliary Port
+        image:
+        comment:
+source:
+    Design files: https://github.com/fablabbcn/smartcitizen-pm-board TODO
+resources:
+    pdf:
+---
+
+# PM Board
 
 The PM Board is an expansion board which can provide additional measurements, such as two extra Plantower PMS 5003, one wire temperature sensors and extra GPIO and ADC support. This is done with a custom designed PCB with an MCU to provide I2C connectivity with the Data Board.
 

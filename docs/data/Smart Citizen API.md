@@ -1,6 +1,11 @@
+---
+source:
+    Smart Citizen API: https://github.com/fablabbcn/smartcitizen-api
+---
+
 # Smart Citizen API
 
-The Smart Citizen API exposes the Platform functionalities over a clear REST API. It allows applications to be developed on easily on top having access to all the features to create complex and rich tools. The main instance is available at [api.smartcitizen.me](https://api.smartcitizen.me/). 
+The Smart Citizen API exposes the Platform functionalities over a clear REST API. It allows applications to be developed on easily on top having access to all the features to create complex and rich tools. The main instance is available at [api.smartcitizen.me](https://api.smartcitizen.me/).
 
 You can explore and contribute to the [source](https://github.com/fablabbcn/smartcitizen-api). This is free software available under GNU (Affero) General Public License (AGPL).
 

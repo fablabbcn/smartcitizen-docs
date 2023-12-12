@@ -1,5 +1,23 @@
-Gases Pro Sensor Board
-======================
+---
+type: external
+feature_img:
+status: EOL
+versions:
+    - 1.0
+        image:
+        description:
+interface:
+    - Auxiliary Port:
+        description: I2C via Auxiliary Port
+        image:
+        comment:
+source:
+    Design files: https://github.com/fablabbcn/smartcitizen-gases-board TODO
+resources:
+    pdf:
+---
+
+# Gases Pro Sensor Board
 
 !!! warning "Deprecated"
     The Gases Pro Sensor Board is the development board used during the iSCAPE Project. For reading electrochemical sensors, please refer to the [Analog Sensor Board section](/Components/boards/Analog%20Sensor%20Board/).
@@ -16,7 +34,7 @@ The Gases Pro Board is capable of interfacing with Alphasense Ltd. B4 series sen
 
 ## Design
 
-Each of the three drivers for Alphasense Ltd. Series B Sensors is built around the same design. They include a three stage adjustable amplifier design for the working electrode and and another simetrical design for the auxiliary electrode. Both signals are then feed to a high accuracy delta-sigma A/D converter with differential inputs 18 bits of resolution. All the parameters are digitally adjustable via I2C from the **Data Board**. Each board also include a unique identifier chip allowing the firmware on the **Data Board** to identify the board and apply the corresponding calibration values and a humidity and temperature sensor. 
+Each of the three drivers for Alphasense Ltd. Series B Sensors is built around the same design. They include a three stage adjustable amplifier design for the working electrode and and another simetrical design for the auxiliary electrode. Both signals are then feed to a high accuracy delta-sigma A/D converter with differential inputs 18 bits of resolution. All the parameters are digitally adjustable via I2C from the **Data Board**. Each board also include a unique identifier chip allowing the firmware on the **Data Board** to identify the board and apply the corresponding calibration values and a humidity and temperature sensor.
 
 ![](https://i.imgur.com/b9tGVmH.png)
 

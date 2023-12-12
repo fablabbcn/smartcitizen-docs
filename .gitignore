@@ -4,5 +4,6 @@ TO-DO.md
 aux/
 __pycache__/
 *.swp.p
-.vscode
+.vscode/
 *.log
+.pytest_cache/

@@ -1,4 +1,4 @@
-TODO
+TODO - Move to each sensor
 
 # Sensor performance summary
 
@@ -55,7 +55,7 @@ The following characteristics have been considered for the sensor choice
 
 !!! info "Version"
     This sensor is supported from V1.5 onwards
-    
+
 The Ambient Light Sensors is based around the ROHM BH1721FVC[^5] which uses an LDR10 combined with an ADC and the corresponding circuit that allows communicating with the device with the I2C protocol.
 
 The following characteristics have been considered for the sensor choice:
@@ -171,10 +171,10 @@ The sensors that are currently supported are:
 
     [https://datasheets.maximintegrated.com/en/ds/MAX30105.pdf](https://datasheets.maximintegrated.com/en/ds/MAX30105.pdf)
 
-[^8]: PLANTOWER PMS5003 [Technical Datasheet](/assets/datasheets/pms5003/PTQ3004-2015 PMS5003 series data manual English_SLT_V1.0K.pdf) 
+[^8]: PLANTOWER PMS5003 [Technical Datasheet](/assets/datasheets/pms5003/PTQ3004-2015 PMS5003 series data manual English_SLT_V1.0K.pdf)
 
     [Also in https://aqicn.org/air/view/sensor/spec/pms5003.pdf](https://aqicn.org/air/view/sensor/spec/pms5003.pdf)
 
-[^9]: Sensirion SCD30 Technical Datasheet 
+[^9]: Sensirion SCD30 Technical Datasheet
 
     [https://files.seeedstudio.com/wiki/Grove-CO2-Temperature-Humidity-Sensor-SCD30/res/Sensirion_CO2_Sensors_SCD30_Datasheet.pdf](https://files.seeedstudio.com/wiki/Grove-CO2-Temperature-Humidity-Sensor-SCD30/res/Sensirion_CO2_Sensors_SCD30_Datasheet.pdf)

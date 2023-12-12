@@ -327,3 +327,66 @@ def define_env(env):
             markdown = markdown.replace(path, "gen_/" + path)
 
         return markdown
+
+    @env.macro
+    def insert_cards(type = "", filter = str, value = list()):
+        # TODO
+        return None
+        custom_dir = os.path.basename(os.path.normpath(env.conf.theme.custom_dir))
+
+        if 'faculty' in env.page.meta:
+            result = ''
+
+            for faculty in env.page.meta['faculty']:
+                create_faculty(faculty, custom_dir)
+
+                if os.path.exists(f"{custom_dir}/includes/{faculty}.html"):
+                    with open(f"{custom_dir}/includes/{faculty}.html") as file:
+                        result += file.read()
+                else:
+                    print (f"{faculty}.html not found")
+
+        return result
+
+    @env.macro
+    def insert_source(source = list()):
+        # TODO
+        return None
+
+    @env.macro
+    def insert_banner():
+        # TODO
+        return None
+
+    @env.macro
+    def insert_specs():
+        # TODO
+        return None
+
+    @env.macro
+    def insert_interface():
+        # TODO
+        return None
+
+    @env.macro
+    def insert_resources():
+        # TODO
+        return None
+        custom_dir = os.path.basename(os.path.normpath(env.conf.theme.custom_dir))
+
+        environment = Environment(loader=FileSystemLoader(f"{custom_dir}/templates/"), autoescape=True)
+        template = environment.get_template("students.html")
+
+        if 'students' in env.page.meta:
+            students = []
+            for item in env.page.meta['students'].keys():
+                students.append({'name': item,
+                                 'photo': env.page.meta['students'][item]['photo'],
+                                 'website': env.page.meta['students'][item]['website']
+                                 })
+
+            result = template.render(students=students)
+            return result
+        else:
+            print ('Incorrectly configured')
+            return None

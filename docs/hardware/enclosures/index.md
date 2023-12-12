@@ -1,3 +1,5 @@
+# Enclosures
+
 ![](/assets/images/clip-front.jpg)
 
 <a class="github-button" data-size="large" href="https://github.com/fablabbcn/smartcitizen-enclosures" aria-label="Check the source">Check the source</a>
@@ -18,7 +20,7 @@ Or (a lot of) 3D printed ones:
 ![](https://github.com/fablabbcn/smartcitizen-enclosures/blob/master/SmartCitizen%20Air%20Enclosures/SmartCitizen%20Kit/SCK2.1_PMS5003/3D%20Printed%20square/case_render.png)
 
 !!! tips "Follow the guides"
-    Head over to the [guides section](/Guides/enclosures/Making your own enclosures) for instructions on fabricating each enclosure. Also, make sure you read [this fantastic summary](https://hackaday.com/2023/03/27/a-survey-of-long-term-waterproofing-options/) on how to waterproof sensors. 
+    Head over to the [guides section](/Guides/enclosures/Making your own enclosures) for instructions on fabricating each enclosure. Also, make sure you read [this fantastic summary](https://hackaday.com/2023/03/27/a-survey-of-long-term-waterproofing-options/) on how to waterproof sensors.
 
 !!! info "Want to contribute?"
     Visit the [Smart Citizen Enclosures repository](https://github.com/fablabbcn/smartcitizen-enclosures) to download, modify, or add your own!
