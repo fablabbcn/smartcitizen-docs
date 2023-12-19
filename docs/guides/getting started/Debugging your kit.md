@@ -1,4 +1,4 @@
-# Debugging your sensors
+# Debugging your kit
 
 <img src="https://live.staticflickr.com/65535/50977039386_c250d3141d_k.jpg" width="2000" height="1333" alt="Smart Citizen Kits being tested at Fab Lab Barcelona">
 
@@ -20,7 +20,7 @@ or here:
 
 ![](/assets/images/reset_water.jpg)
 
-2. If this doesn't solve the problem, you might want to connect to the kits [using the Shell](/Guides/getting started/Using the Shell). 
+2. If this doesn't solve the problem, you might want to connect to the kits [using the Shell](/Guides/getting started/Using the Shell).
 
 3. The next steps would depend on what the actual problem of your kits is. The most common problems are:
     - Sensor or hardware issues
