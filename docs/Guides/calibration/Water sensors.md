@@ -2,24 +2,31 @@
 
 <img src="https://live.staticflickr.com/65535/51230999551_3941affaa5_k.jpg" width="2000" height="1333" alt="Patí Científic Workshop">
 
-## Calibration on the Smart Citizen Kit
+The Smart Citizen firmware has built-in support for the calibration of the Atlas Scientific sensors. In order to calibrate the sensors you will need to use the [SCK Shell](/Guides/getting started/Using the Shell/).
 
-The Smart Citizen firmware has built-in support for the calibration of the sensors. In order to calibrate the sensors you will need to use the [SCK Shell](/Guides/getting started/Using the Shell/).
-
-To enable the sensors you just need to plug you board to the Smart Citizen kit aux port and reboot the Smart Citizen Kit and the sensors will be handled by the board.
+To enable the sensors you just need to turn your Kit off, plug the [carrier boards](https://atlas-scientific.com/carrier-boards/) ([tentacle T3](https://atlas-scientific.com/electrical-isolation/whitebox-t3/) or [individual EZO carriers](https://atlas-scientific.com/carrier-boards/electrically-isolated-ezo-carrier-board-gen-2/)) to the [Auxiliary Port](/Components/Auxiliary Connector/) and turn it back on. The sensors will be automatically detected by the Data Board.
 
 !!! warning
     When calibrating **don't use the normal `read sensor` command**, this command applies temperature/salinity compensation and will ruin your calibration. Calibration should be done without any compensation. Instead you should use `control sensorName com r` and that will return the raw metrics that sensor can provide. On the documentation of each sensor calibration procedure we describe the format of this metrics.
 
-!!! danger
-    After finishing the calibration process **restart your SCK** to start from a clean state.
+!!! info "Before we start"
+    **Two important notes:**
 
-### Atlas PH
+    1. A lot of the materials from this guide are taken from [Atlas Scientific](https://atlas-scientific.com) datasheets. All credit to the well-designed images is theirs. We have integrated these probes in the Smart Citizen Kit because of their quality and good documentation. **This page is not meant to be a replacement for Atlas Scientific documents and we do not have any affiliation to Atlas Scientific**.
+    2. There is also additional webinars that can support this page in more detail. Here [you can find the presentation](https://storage.smartcitizen.me/presentations/Minke-WEBINAR_WQ.pdf) and the link to the videos below:
+        - [Smart Citizen Webinar - 3.1 Water sensors (Part 1)](https://www.youtube.com/watch?v=u4zUqcp17-g&list=PL33KKs9g8Y1IWsTZZmDc-46yFuuIRZEmi&index=10)
+        - [Smart Citizen Webinar - 3.2 Water sensors (Part 2)](https://www.youtube.com/watch?v=aGtT2JRmkaY&list=PL33KKs9g8Y1IWsTZZmDc-46yFuuIRZEmi&index=12)
+        - [Smart Citizen Webinar - 3.3 Water sensors preparation](https://www.youtube.com/watch?v=xpk4Jxd-E04&list=PL33KKs9g8Y1IWsTZZmDc-46yFuuIRZEmi&index=13)
+        - [Smart Citizen Webinar - 3.4 Water sensors calibration](https://www.youtube.com/watch?v=FXsMiyONtF4&list=PL33KKs9g8Y1IWsTZZmDc-46yFuuIRZEmi&index=14)
+        - [Smart Citizen Webinar - 3.5 Water sensors deployment](https://www.youtube.com/watch?v=b3ftsRNpDzA&list=PL33KKs9g8Y1IWsTZZmDc-46yFuuIRZEmi&index=15)
+
+## Atlas PH
 
 You need to perform a 3-point calibration with the calibration solutions. The solutions vary their pH with temperature, so make sure to check the temperature prior. **The pH value at current temperature can be found on the reference table on the calibration solution bottle - you can find it [here](#calibration-solutions-temperature)**.
 
 !!! info "Datasheet"
     Here you can find:
+
     - The [consumer grade pH probe datasheet](https://files.atlas-scientific.com/consumer-grade-pH-probe.pdf)
     - The [lab grade pH probe datasheet](https://files.atlas-scientific.com/pH_probe.pdf)
     - The [pH driver datasheet](https://www.atlas-scientific.com/files/pH_EZO_Datasheet.pdf):
@@ -35,7 +42,7 @@ You need to perform a 3-point calibration with the calibration solutions. The so
     control ph com cal,?
     ```
 
-#### 3-point calibration
+### 3-point calibration
 
 This is the order of the calibration:
 
@@ -49,11 +56,11 @@ This is the order of the calibration:
 !!! danger
     **Always clean the probe with distilled water between each calibration**.
 
-##### Mid point calibration
+#### Mid point calibration
 
 1. Put the sensor in the pH 7.00 calibration solution (mid point, the yellow one). **The probe needs to be in the calibration solution until you issue the calibration command**.
 
-![](/assets/images/WhpJiN2.png)
+    ![](/assets/images/WhpJiN2.png)
 
 2. Read the sensor **multiple times until the reading is stable**:
 
@@ -70,16 +77,16 @@ This is the order of the calibration:
     ```
     SCK > control atlas ph com cal,mid,[value of pH calibration solution at current temperature]
     ```
-    
+
     !!! info "Example at 30°C"
-    
+
         ```
         SCK > control atlas ph com cal,mid,6.99
         ```
 
 4. After this command, if you take a pH reading, the result should be 7.00 (or very close to it). You can **now remove the probe from the calibration solution and clean it**.
 
-##### Low Point Calibration
+#### Low Point Calibration
 
 1. Put the sensor in the pH 4.00 calibration solution (low point, the red one). **The probe needs to be in the calibration solution until you issue the calibration command**.
 
@@ -100,14 +107,14 @@ This is the order of the calibration:
     ```
 
     !!! info "Example at 30°C"
-    
+
         ```
         SCK > control atlas ph com cal,low,4.01
         ```
 
 4. After this command, if you take a pH reading, the result should be 4.00 (or very close to it). You can **now remove the probe from the calibration solution and clean it**.
 
-##### High Point Calibration
+#### High Point Calibration
 
 1. Put the sensor in the pH 10.00 calibration solution (high point, the blue one). **The probe needs to be in the calibration solution until you issue the calibration command**.
 
@@ -128,7 +135,7 @@ This is the order of the calibration:
     ```
 
     !!! info "Example at 30°C"
-    
+
         ```
         SCK > control atlas ph com cal,high,9.96
         ```
@@ -137,7 +144,7 @@ This is the order of the calibration:
 
 !!! info "Extra notes"
     The command `control com cal,?` can be used to check the calibration status as explained on datasheet page.
-   
+
     The answers can be:
 
     - **`?CAL,0`** → No calibration done
@@ -147,13 +154,13 @@ This is the order of the calibration:
 
     *(not tested)* If your calibration solutions are not 4, 7 and 10, you can still use them and replace `[value of pH at current temperature]` by your values.
 
-#### Calibration solutions temperature 
+### Calibration solutions temperature
 
 The pH value of the calibration solutions is affected by temperature. Make sure you compensate according to the table below when you input the calibration value:
 
 ![](/assets/images/calibration-solutions.png)
 
-### Atlas Conductivity
+## Atlas Conductivity
 
 You need to perform a 3 step calibration process with a **dry point** (in air), followed by a **2-point calibration** (with the calibration solutions).
 
@@ -180,16 +187,16 @@ You need to perform a 3 step calibration process with a **dry point** (in air), 
     control conductivity com cal,?
     ```
 
-#### 2-point calibration
+### 2-point calibration
 
 This is the order of the calibration:
 
-1. set probe type
-2. dry point calibration (independent of the probe type)
-3. low-point calibration (calibration solution to use dependent on the probe type)
-4. high-point calibration (calibration solution to use dependent on the probe type)
+1. Set probe type.
+2. Dry point calibration (independent of the probe type).
+3. Low point calibration (calibration solution to use dependent on the probe type).
+4. High point calibration (calibration solution to use dependent on the probe type).
 
-##### Set probe type
+#### Set probe type
 
 Depending on which probe you have (check drawing for reference) you should set the probe type to K 0.1, 1.0 or 10 (new drivers have K1.0 as default):
 
@@ -201,7 +208,7 @@ To set the correct probe type:
 SCK > control conductivity com K,1.0
 ```
 
-and check which type is set:
+To double-check which type is set:
 
 ```
 SCK > control conductivity com K,?
@@ -221,7 +228,7 @@ SCK > control conductivity com K,?
 !!! warning "Readings are 0?"
     It is normal that if the probe type has changed (for instance, if you are using a K10 probe), that the readings are 0 after setting the probe type.
 
-##### Dry calibration
+#### Dry calibration
 
 Follow the steps below with a **dry sensor** before introducing it to the calibration solutions. You need to do this step **even if the readings in are 0**.
 
@@ -241,14 +248,14 @@ Follow the steps below with a **dry sensor** before introducing it to the calibr
     SCK > control conductivity com cal,dry
     ```
 
-##### Low point calibration
+#### Low point calibration
 
 You can check the recommended calibration solutions for each probe on the _Probetypes_ drawing (for instance, for the K1.0 probe, the _12,880uS_ and _80,000uS_ solutions are recomended)
 
 ![](/assets/images/nendSkI.png)
 
 1. Put the probe in the low point calibration solution. **Make sure there are no bubbles.** **The probe needs to be in the calibration solution until you issue the calibration command**.
-   
+
 2. Read the sensor multiple times until the reading is stable:
 
     ```
@@ -267,7 +274,7 @@ You can check the recommended calibration solutions for each probe on the _Probe
 
 After this command readings will **not change**. **You can remove the probe from the calibration solution and rinse it now. Calibration solution can be reused.**
 
-##### High point calibration
+#### High point calibration
 
 Repeat the steps above with **high point** calibration solution.
 
@@ -282,7 +289,7 @@ Repeat the steps above with **high point** calibration solution.
     79530,...,...
     ...
     ```
-    
+
 3. Again, **remember that the value to input here is the one from the calibration solution**, for instance _80000_:
 
     ```
@@ -301,7 +308,7 @@ After this steps the **two point calibration is complete** and the readings **wi
     ...
     ```
 
-### Atlas DO
+## Atlas DO
 
 You have two options for this calibration:
 
@@ -313,7 +320,7 @@ You have two options for this calibration:
 !!! info "Datasheets"
 
     Here you can find:
-    
+
     * The [datasheet of the lab grade probe](https://files.atlas-scientific.com/LG_DO_probe.pdf)
     * The [datasheet of the mini lab grade probe](https://files.atlas-scientific.com/Mini_DO_probe.pdf)
     * The [datasheet of the driver](https://www.atlas-scientific.com/_files/_datasheets/_circuit/DO_EZO_Datasheet.pdf):
@@ -339,12 +346,12 @@ You have two options for this calibration:
 
     More information on [datasheet](https://www.atlas-scientific.com/_files/_datasheets/_circuit/DO_EZO_Datasheet.pdf), page 57
 
-#### Single point calibration
+### Single point calibration
 
 !!! warning "First calibrate, compensate later"
     Temperature, salinity and pressure compensation values have no effect on calibration.
 
-1. Read the sensor multiple times until the reading is stable. 
+1. Read the sensor multiple times until the reading is stable.
 
     ```
     SCK > control dissolved oxygen com r
@@ -369,7 +376,7 @@ You have two options for this calibration:
 
     And start from the beginning.
 
-#### 2-point calibration
+### 2-point calibration
 
 **Two point calibration is recommended if you require accurate readings below 1.0 mg/l.** After completing the single point calibration procedure put the probe in the calibration solution.
 
@@ -378,7 +385,8 @@ You have two options for this calibration:
 1. Put the probe in the 0mg/l point calibration solution. **Make sure there are no bubbles.** **The probe needs to be in the calibration solution until you issue the calibration command**.
 
     !!! danger "Be careful"
-       As you are calibrating the probe, oxygen is going into the solution. This calibration solution can't be reused if left open for long periods of time. Make sure you check the probe datasheet for more info.
+
+        As you are calibrating the probe, oxygen is going into the solution. This calibration solution can't be reused if left open for long periods of time. Make sure you check the [driver datasheet](https://files.atlas-scientific.com/LG_DO_probe.pdf) (page 6 and 7) for more info.
 
 2. Read the sensor multiple times until the reading is stable:
 
@@ -396,7 +404,14 @@ You have two options for this calibration:
     SCK > control dissolved oxygen com cal,0
     ```
 
-### Atlas ORP
+!!! info "Check the common pitfalls"
+    Atlas has some interesting videos about this probe common issues:
+
+        [Dissolved Oxygen | Common Mistakes | Air Bubble](https://youtu.be/1I1Sk9pt47c)
+        [Dissolved Oxygen | Common Mistakes | Stagnant vs Moving Water](https://youtu.be/d9zkxkv55SE)
+        [Dissolved Oxygen | Common Mistakes | Damaged Membrane](https://youtu.be/PiXnvrTnVjs)
+
+## Atlas ORP
 
 You only need to perform a **single point calibration**. You can use any calibrated solution, as long as it's within your sensor range. Atlas Scientific uses a 225mV calibration solution.
 
@@ -418,7 +433,7 @@ You only need to perform a **single point calibration**. You can use any calibra
     control redox com cal,?
     ```
 
-#### Single point calibration
+### Single point calibration
 
 ![](/assets/images/atlas_orp_cal_process.png)
 
@@ -444,7 +459,7 @@ You only need to perform a **single point calibration**. You can use any calibra
     SCK > control redox com cal,225
     ```
 
-### Atlas PT100/1000 Temperature
+## Atlas PT100/1000 Temperature
 
 You only need to perform a single point calibration. This process is only necessary if you change the probe cable or the first time you use the sensor.
 
@@ -471,7 +486,7 @@ You only need to perform a single point calibration. This process is only necess
 !!! danger "Reference"
     You will need another temperature probe or something of known temperature (like boiling water) that is already calibrated for this. Make sure both are stable before issuing calibration commands!
 
-#### Single point calibration
+### Single point calibration
 
 * Read the **reference probe** multiple times until the reading is stable. Write down the value:
 
@@ -499,7 +514,7 @@ You only need to perform a single point calibration. This process is only necess
     control atlas temp com cal,[value of temperature from reference probe or temperature]
     ```
 
-### Factory reset procedure
+## Factory reset procedure
 
 !!! info "Why is this needed?"
     You may need to do a factory reset for water sensors for different reasons. However, the most common case is a wrong calibration process and it's very much related to a wrongful automatic temperature compensation of the sensor while calibrating the sensor.
@@ -550,3 +565,6 @@ Each EZO driver has it's independent calibration and status. This process needs 
 
 !!! success "Ready to go?"
     If you want to send the data to the platform, you will need to register the unit using the [Advanced Kit Selection](/Guides/getting started/Onboarding Sensors/#advanced-kit-selection/). At the moment the closest Kit Blueprint will be `#22 BioPV Kit` or `#31 SCK 2.1 Sea Water` in case you are using a SCK2.1 with GPS. You can request in the [forum](http://forum.smartcitizen.me) for a custom blueprint with the specific sensors you are using.
+
+!!! danger
+    After finishing the calibration process **restart your SCK** to start from a clean state.
