@@ -97,10 +97,10 @@ nav:
     - Getting Started:
       - Onboarding Sensors: guides/getting started/Onboarding Sensors.md
       - Updating the Wi-Fi: guides/getting started/Updating the Wi-Fi.md
-      - Downloading platform data: guides/getting started/Downloading the Data.md
+      - Downloading platform data: guides/getting started/Downloading the data.md
       - Uploading SD-card data: guides/getting started/Uploading SD Card Data.md
       - Using the Shell: guides/getting started/Using the Shell.md
-      - Debugging your sensors: guides/getting started/Debugging your sensors.md
+      - Debugging your kit: guides/getting started/Debugging your kit.md
       - Getting firmware information: guides/getting started/Getting firmware information.md
       - Third party sensors: guides/getting started/Third party sensors.md
       # - External Sensors: guides/getting started/External Sensors.md

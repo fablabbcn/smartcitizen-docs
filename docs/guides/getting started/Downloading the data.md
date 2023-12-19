@@ -18,10 +18,9 @@ The <a href="http://developer.smartcitizen.me/" target="_blank">Smart Citizen AP
 
 It is a <a href="https://en.wikipedia.org/wiki/Representational_state_transfer" target="_blank">REST</a> API and it returns the information in <a href="https://en.wikipedia.org/wiki/Json" target="_blank">JSON</a> format. This means you can easily access the information from any language like Javascript, PHP, Processing.org, Python, and start doing things with it quickly.
 
-
 ### Using scripts
 
 Python scripts are provided in the [scdata](https://pypi.org/project/scdata/) python package repository for downloading devices data in a programatic way. Make sure to [check the examples](https://github.com/fablabbcn/smartcitizen-data/tree/master/examples) in the git repository.
 
 !!! tip "Code examples"
-	You can also find some examples on [smartcitizen-toolkit](https://github.com/fablabbcn/smartcitizen-toolkit) respository
+	You can also find some examples on [smartcitizen-toolkit](https://github.com/fablabbcn/smartcitizen-toolkit) repository.
