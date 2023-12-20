@@ -119,7 +119,7 @@ The kit is able to store the last reason by which it _restarted_. This informati
 | `BOD12` and `BOD33` | Brown Out `12` and `33` Detector Reset    | This reset takes place when there is a low voltage on the supply (more in the SAMD21 [docs](https://microchipdeveloper.com/32arm:samd21-pm-overview)) |
 | `EXT`    | External Reset                 | This reset takes place when you press the _reset_ button |
 | `WDT`    | Watchdog Reset                 | This reset takes place when the _watchdog timer_ from the SAMD21 _orders it_. Currently not suported |
-| `SYST`   | System Reset Request"          | This reset takes place when the Kit _orders_ it (sanity reset), or when you type `reset` in the [shell](/Guides/getting started/Using the Shell/) |
+| `SYST`   | System Reset Request           | This reset takes place when the Kit _orders_ it (sanity reset), or when you type `reset` in the [shell](/Guides/getting started/Using the Shell/) |
 
 ## What are good RSSI values?
 
