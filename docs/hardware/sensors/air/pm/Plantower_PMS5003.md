@@ -1,4 +1,5 @@
 ---
+name: Plantower PMS5003
 field: air
 type: onboard, external
 target: pm

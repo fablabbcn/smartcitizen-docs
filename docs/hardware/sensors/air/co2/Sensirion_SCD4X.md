@@ -1,4 +1,5 @@
 ---
+name: Sensirion SCD4X
 field: air
 type: external
 target: co2

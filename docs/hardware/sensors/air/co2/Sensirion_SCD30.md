@@ -1,4 +1,5 @@
 ---
+name: Sensirion SCD30
 field: air
 type: external
 target: co2
@@ -21,7 +22,7 @@ resources:
         Grove guide: X
 ---
 
-{{ insert_banner () }}
+{{ insert_banner() }}
 
 # Sensirion SCD30
 
