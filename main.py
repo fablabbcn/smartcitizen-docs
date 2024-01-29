@@ -18,69 +18,6 @@ def define_env(env):
     """
 
     @env.macro
-    def include_tags(filename, tag = 'all'):
-        """
-        Include a file, optionally indicating start_line and end_line
-        (start counting from 0)
-        The path is relative to the top directory of the documentation
-        project.
-        """
-
-        full_filename = os.path.join(env.project_dir, filename)
-        with open(full_filename, 'r') as file:
-            lines = file.readlines()
-
-        klines = dict()
-        pattern_tag = re.compile("(?<=>)(.*)(?=<)")
-
-        for line in lines[4:]:
-
-            if line.startswith('# ') or line.startswith('---'): continue
-            if line.startswith('## '):
-
-                ctag = ''.join(pattern_tag.findall(line))
-                klines[ctag] = dict()
-                continue
-
-            if '*' not in line: continue
-            if 'index' in line: continue
-
-            desc = line[line.index("[")+1:line.index("]")]
-            link = line[line.index("(")+1:line.index(")")]
-
-            frontmatter = get_frontmatter(link)
-
-            description = None
-            if 'description' in frontmatter:
-                description = frontmatter['description']
-
-            level = None
-            more = list()
-            if 'tags' in frontmatter:
-                for item in frontmatter['tags']:
-                    if 'level' in item:
-                        level = item.replace('level', '').strip()
-                    else:
-                        more.append(item)
-
-            klines[ctag][desc] = {
-                'link': link.replace('.md', ''),
-            }
-
-            if description is not None:
-                klines[ctag][desc]['description'] = description
-
-            if level is not None:
-                klines[ctag][desc]['level'] = level
-
-            if more is not None:
-                klines[ctag][desc]['more'] = more
-
-        if tag != 'all': klines = klines[tag]
-
-        return klines
-
-    @env.macro
     def get_file(filename):
         full_filename = os.path.join(env.project_dir, 'docs', filename)
 
@@ -92,16 +29,15 @@ def define_env(env):
 
         return lines
 
-    @env.macro
-    def get_frontmatter(filename):
+    def get_frontmatter(content):
+        if '---\n' not in content:
+            print ('No frontmatter in content')
+            return None
 
-        lines = get_file(filename)
-
-        if '---\n' in lines:
-            frontmatter = yaml.load('\n'.join(lines[1:lines[1:].index('---\n')+1]),
-                Loader=yaml.SafeLoader)
+        if '---\n' in content[1:]:
+            frontmatter = yaml.load('\n'.join(content[1:content[1:].index('---\n')+1]), Loader=yaml.SafeLoader)
         else:
-            frontmatter = ''
+            frontmatter = None
 
         return frontmatter
 
@@ -116,16 +52,6 @@ def define_env(env):
             content = lines
 
         return content
-
-    @env.macro
-    def get_cards(template = 'tags.html', tags = 'all', full = False):
-
-        file_loader = FileSystemLoader('templates')
-
-        jenv = Environment(loader=file_loader)
-        template = jenv.get_template(template)
-
-        return template.render(tags=include_tags('aux/tags.md', tags), full=full)
 
     @env.macro
     # Inspired by function in mkdocs-snippets-plugin
@@ -221,7 +147,7 @@ def define_env(env):
             with open(env.project_dir + '/' + file_path, 'r') as myfile:
                 content = myfile.read()
         except:
-            print (f'Error found while rendeding file: {env.page.file.src_uri}')
+            print (f'Error found while rendering file: {env.page.file.src_uri}')
             print (f"Can't find {env.project_dir + '/' + file_path}")
             pass
         else:
@@ -329,22 +255,90 @@ def define_env(env):
         return markdown
 
     @env.macro
-    def insert_cards(type = "", filter = str, value = list()):
-        # TODO
-        return None
+    def create_cards():
         custom_dir = os.path.basename(os.path.normpath(env.conf.theme.custom_dir))
+        environment = Environment(loader=FileSystemLoader(f"{custom_dir}/templates/"), autoescape=True)
+        template = environment.get_template("sensor_item.html")
 
-        if 'faculty' in env.page.meta:
-            result = ''
+        source_folder = os.path.join('docs',env.page.url)
+        print('*****************************')
+        print ('Creating cards in subfolders under:')
+        print (source_folder)
+        print('*****************************')
 
-            for faculty in env.page.meta['faculty']:
-                create_faculty(faculty, custom_dir)
+        for (root,_,files) in os.walk(source_folder):
+            for file in files:
+                print (file)
+                file_path = os.path.join(root, file)
+                if os.path.exists(file_path):
+                    with open(file_path, 'r') as _file:
+                        content = _file.readlines()
 
-                if os.path.exists(f"{custom_dir}/includes/{faculty}.html"):
-                    with open(f"{custom_dir}/includes/{faculty}.html") as file:
-                        result += file.read()
-                else:
-                    print (f"{faculty}.html not found")
+                    frontmatter = get_frontmatter(content)
+                    if frontmatter is not None:
+                        result = template.render(frontmatter)
+
+                        if 'name' not in frontmatter:
+                            print ('ERROR: no name in frontmatter!')
+                            continue
+
+                        with open(os.path.join(f"{custom_dir}/includes", file.replace('.md', '.html')), 'w') as _file:
+                            _file.write(result)
+
+    @env.macro
+    def insert_cards(type = "", filter = None, value = list()):
+        print ('********')
+        print ('Insert cards')
+        print (f'Type: {type}')
+        print (f'Filter: {filter}')
+        print (f'Value: {value}')
+        print ('********')
+        custom_dir = os.path.basename(os.path.normpath(env.conf.theme.custom_dir))
+        cards_to_get = []
+
+        source_folder = os.path.join('docs',env.page.url)
+        print (source_folder)
+
+        for (root,_,files) in os.walk(source_folder):
+            for file in files:
+                print (file)
+                file_path = os.path.join(root, file)
+                if os.path.exists(file_path):
+                    with open(file_path, 'r') as _file:
+                        content = _file.readlines()
+
+                    frontmatter = get_frontmatter(content)
+                    if frontmatter is not None:
+
+                        if 'name' not in frontmatter:
+                            print ('ERROR: no name in frontmatter!')
+                            continue
+
+                        if filter is not None:
+                            if filter in frontmatter:
+                                item_value = frontmatter[filter]
+                            else:
+                                print (f'ERROR: filter type not in frontmatter {filter}')
+                                continue
+                            if item_value in value:
+                                cards_to_get.append(file.replace('.md', '.html'))
+                        else:
+                            cards_to_get.append(file.replace('.md', '.html'))
+
+                    else:
+                        print ('ERROR: no frontmatter')
+                        continue
+
+        print (cards_to_get)
+
+        result = ''
+
+        for item in cards_to_get:
+            file_path = f"{custom_dir}/includes/{item}"
+            print (f'Adding card: {file_path}')
+            if os.path.exists(file_path):
+                with open(file_path) as file:
+                    result += file.read()
 
         return result
 
@@ -360,8 +354,19 @@ def define_env(env):
 
     @env.macro
     def insert_specs():
-        # TODO
-        return None
+        result = ''
+
+        if 'faculty' in env.page.meta:
+            for faculty in env.page.meta['faculty']:
+                create_faculty(faculty, custom_dir)
+
+                if os.path.exists(f"{custom_dir}/includes/{faculty}.html"):
+                    with open(f"{custom_dir}/includes/{faculty}.html") as file:
+                        result += file.read()
+                else:
+                    print (f"{faculty}.html not found")
+
+        return result
 
     @env.macro
     def insert_interface():
