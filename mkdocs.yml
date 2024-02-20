@@ -12,12 +12,12 @@ nav:
       - Index: hardware/index.md
       - Smart Citizen Kit: hardware/Smart Citizen Kit.md
       - Smart Citizen Stations: hardware/Smart Citizen Stations.md
+      - Auxiliary Connector: hardware/Auxiliary Connector.md
       - Enclosures:
         - Index: hardware/enclosures/index.md
       - Boards:
         - Data Board: hardware/boards/Data Board.md
         - Urban Board: hardware/boards/Urban Board.md
-        - Auxiliary Connector: hardware/sensors/Auxiliary Connector.md
         - PM Board: hardware/boards/PM Board.md
         - Analog Sensor Board: hardware/boards/Analog Sensor Board.md
         # - Carrier boards: hardware/boards/Carrier Boards.md
@@ -39,7 +39,7 @@ nav:
       - Flash Storage: firmware/Flash Storage.md
     - Data:
       - Index: data/index.md
-      - Smart Citizen API: data/Smart Citizen API.md
+      - Data Plaform: data/Smart Citizen API.md
       - Data Analysis: data/Data Analysis.md
     - FAQ: _FAQ.md
     - Troubleshooting: Troubleshooting.md
@@ -52,9 +52,9 @@ nav:
         - Introduction: hardware/sensors/air/index.md
         - Particulate Matter:
           - Index: hardware/sensors/air/pm/index.md
-          - Plantower PMS5003: hardware/sensors/air/Plantower_PMS5003.md
-          - Sensirion SPS30: hardware/sensors/air/Sensirion_SPS30.md
-          - Sensirion SEN5X: hardware/sensors/air/Sensirion_SEN5X.md
+          - Plantower PMS5003: hardware/sensors/air/pm/Plantower_PMS5003.md
+          - Sensirion SPS30: hardware/sensors/air/pm/Sensirion_SPS30.md
+          - Sensirion SEN5X: hardware/sensors/air/pm/Sensirion_SEN5X.md
         - Chemical composition:
           - Index: hardware/sensors/air/chemical/index.md
           - Alphasense Electrochemical: hardware/sensors/air/chemical/Alphasense_Electrochemical.md
@@ -67,7 +67,7 @@ nav:
         - CO2:
           - Index: hardware/sensors/air/co2/index.md
           - Sensirion SCD30: hardware/sensors/air/co2/Sensirion_SCD30.md
-          # - Sensirion SCD4X: hardware/sensors/air/co2/Sensirion_SCD4X.md
+          - Sensirion SCD4X: hardware/sensors/air/co2/Sensirion_SCD4X.md
         - Noise:
           - Index: hardware/sensors/air/noise/index.md
           - TDK ICS43432: hardware/sensors/air/noise/TDK_ICS43432.md
@@ -114,7 +114,7 @@ nav:
       - Water: guides/calibration/Water sensors.md
       - Soil: guides/calibration/Soil moisture sensors.md
       - Air:
-        - CO2: guides/calibration/SCD30 CO2 sensor.md
+        - CO2: guides/calibration/Sensirion SCD30.md
     - Working with Data:
       - Handling calibration data: guides/data/Handling calibration data.md
       - Custom data processing: guides/data/Custom data processing.md
@@ -217,6 +217,8 @@ theme:
   favicon: 'assets/images/favicon.ico'
   icon:
     repo: fontawesome/brands/git-alt
+    annotation: material/star-four-points-circle
+
 
 
 extra:
