@@ -256,6 +256,7 @@ def define_env(env):
 
     @env.macro
     # TODO - Cleanup
+    # TODO - call this on pre-page build instead on supported sensors page
     def create_cards():
         custom_dir = os.path.basename(os.path.normpath(env.conf.theme.custom_dir))
         environment = Environment(loader=FileSystemLoader(f"{custom_dir}/templates/"), autoescape=True)
@@ -289,6 +290,7 @@ def define_env(env):
                         print (f'Creating card {file_path}')
                         with open(file_path, 'w') as _file:
                             _file.write(result)
+        return ''
 
     @env.macro
     # TODO - Cleanup

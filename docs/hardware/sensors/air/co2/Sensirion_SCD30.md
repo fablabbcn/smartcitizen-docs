@@ -12,7 +12,6 @@ excerpt: The [SCD30](https://www.sensirion.com/products/catalog/SCD30) is a **ND
 ---
 
 <!-- TODO - Proofread + check on links -->
-
 # Sensirion SCD30
 
 {{ page.meta.excerpt }}
