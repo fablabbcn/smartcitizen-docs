@@ -285,7 +285,9 @@ def define_env(env):
                             print ('ERROR: no name in frontmatter!')
                             continue
 
-                        with open(os.path.join(f"{custom_dir}/includes", file.replace('.md', '.html')), 'w') as _file:
+                        file_path = os.path.join(f"{custom_dir}/aux", file.replace('.md', '.html'))
+                        print (f'Creating card {file_path}')
+                        with open(file_path, 'w') as _file:
                             _file.write(result)
 
     @env.macro
@@ -338,7 +340,7 @@ def define_env(env):
         result = ''
 
         for item in cards_to_get:
-            file_path = f"{custom_dir}/includes/{item}"
+            file_path = f"{custom_dir}/aux/{item}"
             print (f'Adding card: {file_path}')
             if os.path.exists(file_path):
                 with open(file_path) as file:

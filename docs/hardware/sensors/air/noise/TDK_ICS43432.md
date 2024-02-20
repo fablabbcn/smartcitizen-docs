@@ -7,25 +7,10 @@ status: stable
 versions:
     hardware: 2.0+
     firmware: 0.9.5+
-interface:
-    - Urban 2.X:
-        description: I2S on Urban Board
-        image:
-        comment:
-resources:
-    datasheet:
-    papers:
-        ISCAPE 7.8 Deliverable (section 6.1): /assets/publications/iSCAPE_D78.pdf
-    guides:
-    external:
-        forum:
 ---
-
-{{ insert_banner () }}
 
 # TDK ICS43432
 
-{{ insert_specs() }}
 
 ## Working principle
 
@@ -286,5 +271,3 @@ Also, if you are really into it, you can read more about convolution and other D
 ## Usage and considerations
 
 ## Resources
-
-{{ insert_resources() }}

@@ -7,41 +7,9 @@ status: experimental
 versions:
     hardware: 2.1
     firmware: 0.9.8
-interface:
-    - Auxiliary Port:
-        description: Analog Sensor Board via Auxiliary Port
-        image:
-        comment:
-resources:
-    datasheet:
-    papers:
-        In search of an optimal in-field calibration method of low-cost gas sensors for ambient air pollutants. Comparison of linear, multilinear and artificial neural network approaches. In Atmospheric Environment (2018):
-            url: https://doi.org/10.1016/j.atmosenv.2019.06.028
-        The use of electrochemical sensors for monitoring urban air quality in low-cost, high-density networks:
-            authors: M.I. Mead, O.A.M. Popoola, G.B. Stewart, P. Landshoff, M. Calleja, M. Hayesb, J.J. Baldovi, M.W. McLeod, T.F. Hodgson, J. Dicks, A. Lewis J. Cohen, R. Baron, J.R. Saffell, R.L. Jones
-            url: https://www.sciencedirect.com/science/article/pii/S1352231012011284?via%3Dihub
-        Development of a baseline-temperature correction methodology for electrochemical sensors and its implications for long-term stability:
-            authors: Olalekan A.M. Popoola*, Gregor B. Stewart, Mohammed I. Mead, Roderic L. Jones
-            url: https://www.sciencedirect.com/science/article/pii/S1352231016308317?via%3Dihub
-        Modelling atmospheric composition in urban street canyons:
-            authors: Vivien Bright, William Bloss and Xiaoming Cai
-            url: https://rmets.onlinelibrary.wiley.com/doi/full/10.1002/wea.781
-        ISCAPE D7.8 Sensor monitoring experiences and technological innovations:
-            authors:
-            url: /assets/publications/iSCAPE_D78.pdf
-        Node-to-node field calibration of wireless distributed air pollution sensor network. In Environmental pollution (2017):
-            authors: Kizel et al
-            url: https://doi.org/10.1016/j.envpol.2017.09.042
-    guides:
-        - /guides/calibration/alphasense.md
-    external:
 ---
 
-{{ insert_banner() }}
-
 # Alphasense Electrochemical Sensors
-
-{{ insert_specs() }}
 
 ## Working principle
 
@@ -111,5 +79,26 @@ Since co-location possibilities could be limited, two options are compared for t
 
 ## Resources
 
-{{ insert_resources() }}
-
+resources:
+    datasheet:
+    papers:
+        In search of an optimal in-field calibration method of low-cost gas sensors for ambient air pollutants. Comparison of linear, multilinear and artificial neural network approaches. In Atmospheric Environment (2018):
+            url: https://doi.org/10.1016/j.atmosenv.2019.06.028
+        The use of electrochemical sensors for monitoring urban air quality in low-cost, high-density networks:
+            authors: M.I. Mead, O.A.M. Popoola, G.B. Stewart, P. Landshoff, M. Calleja, M. Hayesb, J.J. Baldovi, M.W. McLeod, T.F. Hodgson, J. Dicks, A. Lewis J. Cohen, R. Baron, J.R. Saffell, R.L. Jones
+            url: https://www.sciencedirect.com/science/article/pii/S1352231012011284?via%3Dihub
+        Development of a baseline-temperature correction methodology for electrochemical sensors and its implications for long-term stability:
+            authors: Olalekan A.M. Popoola*, Gregor B. Stewart, Mohammed I. Mead, Roderic L. Jones
+            url: https://www.sciencedirect.com/science/article/pii/S1352231016308317?via%3Dihub
+        Modelling atmospheric composition in urban street canyons:
+            authors: Vivien Bright, William Bloss and Xiaoming Cai
+            url: https://rmets.onlinelibrary.wiley.com/doi/full/10.1002/wea.781
+        ISCAPE D7.8 Sensor monitoring experiences and technological innovations:
+            authors:
+            url: /assets/publications/iSCAPE_D78.pdf
+        Node-to-node field calibration of wireless distributed air pollution sensor network. In Environmental pollution (2017):
+            authors: Kizel et al
+            url: https://doi.org/10.1016/j.envpol.2017.09.042
+    guides:
+        - /guides/calibration/alphasense.md
+    external:

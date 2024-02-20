@@ -1,3 +1,3 @@
 # Boards
 
-{{ insert_cards(type="boards", filter="", value=[]) }}
+<!-- {{ insert_cards(type="boards", filter="", value=[]) }} -->

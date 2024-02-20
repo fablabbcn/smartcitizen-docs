@@ -3,18 +3,18 @@ type: core
 feature_img:
 status: stable
 versions:
-	- 1.5
-		image:
-		description:
-	- 2.0:
-		image:
-		description:
-	- 2.1:
-		image:
-		description:
-	- 2.2:
-		image:
-		description:
+# - 1.5:
+# 	image:
+# 	description:
+# - 2.0:
+# 	image:
+# 	description:
+# - 2.1:
+# 	image:
+# 	description:
+# - 2.2:
+# 	image:
+# 	description:
 interface:
 source:
     Design files: https://github.com/fablabbcn/smartcitizen-kit-21

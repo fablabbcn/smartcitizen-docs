@@ -7,35 +7,16 @@ status: deprecated
 versions:
     hardware: 1.5+
     firmware: 0.9.5+
-interface:
-    - Urban 2.0:
-        description: I2C on Urban Board
-        image:
-        comment:
-    - Auxiliary Port:
-        description: I2C via Auxiliary Port
-        image:
-        comment:
-resources:
-    datasheet:
-    papers:
-    guides:
-    external:
 ---
-
-{{ insert_banner () }}
 
 # SGX MICs
 
-{{ insert_specs() }}
 
 ## Working principle
 
 ## Usage and considerations
 
 ## Resources
-
-{{ insert_resources() }}
 
 The SGX Mics is a Metal Oxide Resistive sensor capable of reacting to different substances in the atmosphere. In a simplified way, it is comprised of two main elements:
 

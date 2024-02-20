@@ -1,3 +1,8 @@
+---
+hide:
+    - toc
+---
+
 # Air quality sensors
 
-{{ insert_cards(type="sensors/air", filter="field", value=["air"]) }}
+{{ insert_cards(type="sensors", filter="field", value=["air"]) }}

@@ -7,24 +7,9 @@ status: experimental
 versions:
     hardware: 1.5
     firmware: 0.9.4
-interface:
-    - Auxiliary Port:
-        description: I2C via Auxiliary Port
-        image:
-        comment:
-resources:
-    datasheet:
-    papers:
-    guides:
-    external:
 ---
 
-
-{{ insert_banner () }}
-
 # Soil Tension
-
-{{ insert_specs() }}
 
 !!! danger "WIP"
     This version is a WIP but is not fully functional with the SCK 2.1. It is shown here as a showcase of the project's capabilities. Have a look at the forum or drop us an email to discuss this. Check the source [files](https://github.com/fablabbcn/smartcitizen-grow/tree/master/soil-water-tension).
@@ -39,10 +24,9 @@ The design is entirely open source and it is deeply inspired by the work of Rein
 
 ## Usage and considerations
 
-{{ insert_interface() }}
+<!-- TODO - Check if we want to do this -->
+<!-- {{ insert_interface() }} -->
 
 The design is entirely open source and it is deeply inspired by the work of Reinier Van der Lee from the [Vinduino project](http://vanderleevineyard.com/vineyard-blog.html), using an already calibrated commercial probe like the **Watermark 200SS9**. The sensor itself is straightforward and it consists of two stainless steel screws that work as electrodes cast inside a piece of plaster and covered by a plastic mesh to prevent erosion. As water is added more electrons can pass between the electrodes of the probe reducing the amount of resistance between them. By using this range of values, you can determine the amount of water that exists in your soil. To avoid interferences and degradation of the electrodes the design only applies voltage for a very short time and uses alternating electric polarities. For the sensor to work, we need a minimal circuit that uses two resistors and two diodes. The resistors work together with the electrodes to build a voltage divider. We can calculate the resistance value between the two electrodes by knowing the value of the resistors and the voltage. However to be able to alternate the electric current we need to duplicate the circuit and add two diodes. In total, we need 4 Pins to be connected to a microcontroller like the Arduino or the Smart Citizen Kit.
 
 ## Resources
-
-{{ insert_resources() }}

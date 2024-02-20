@@ -7,24 +7,9 @@ status: stable
 versions:
     hardware: 2.1
     firmware: 0.9.8
-interface:
-    - Auxiliary Port:
-        description: I2C via Auxiliary Port
-        image:
-        comment:
-resources:
-    datasheet:
-    papers:
-    guides:
-        - /guides/calibration/Chirp
-    external:
 ---
 
-{{ insert_banner () }}
-
 # Soil Moisture
-
-{{ insert_specs() }}
 
 The Chirp! Sensor is a low cost moisture and temperature sensor developed by [WeMakeThings](https://wemakethings.net/chirp/): a hackers and engineers collective based in Vilnius, Lithuania. Their hardware and software are fully open-source, and it can be easily integrated but also replicated and customized for new projects.
 
@@ -34,7 +19,8 @@ The sensor uses capacitive sensing to measure soil's moisture. A 1MHz square wav
 
 ## Usage and considerations
 
-{{ insert_interface() }}
+<!-- TODO - Check if we want to do this -->
+<!-- {{ insert_interface() }} -->
 
 There are different versions of the Chirp sensor, and for this application we chose the Chirp I2C sensor. The sensor was integrated on to the SCK's firmware, and it is automatically recognized by the board once it is plugged into the SCK using the Aux sensor connector. A Grove 4 pin Female Jumper to Grove will need to be used with the sensor to connect it to the SCK. The original Chirp sensors come coated with PRF202 - a moisture resistant varnish for electronics, but it is not enough for actual deployment. For such, one must add additional protection to the whole sensor. We suggest polyester or epoxy resin. However, you must note that sensitivity of the sensor will decrease depending on how thick the layer you are going to apply and might need to be recalibrated. We also recommend covering the electronics with heat shrink to fully waterproof the sensor. Some versions already include a pre-ruggedized sensor, which is a recommended solution for a faster use.
 
@@ -49,5 +35,3 @@ Three Chirp sensors were compared to the [Parrot](https://www.parrot.com/) Flowe
 ![](/assets/images/chirp_test.png)
 
 ## Resources
-
-{{ insert_resources() }}

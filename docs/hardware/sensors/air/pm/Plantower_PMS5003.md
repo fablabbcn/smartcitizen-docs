@@ -3,33 +3,23 @@ name: Plantower PMS5003
 field: air
 type: onboard, external
 target: pm
-feature_img: /assets/images/sensors/pms5003.jpg TODO
+feature_img: /assets/images/pms5003.jpg
 status: stable
 versions:
     hardware: 2.1
     firmware: 0.9.4+
-interface:
-    - Urban 2.0-2.1:
-        description: UART via Urban Board
-        image:
-        comment:
-    - Data 2.2:
-        description: I2C via Urban Board header
-        image:
-        comment:
-resources:
-    datasheet:
-    papers:
-    guides:
-        - /guides/calibration/Plantower PMS5003
-    external:
+excerpt: The [PMS5003](https://www.plantower.com/en/products_33/74.html) is an **Optical PM** sensor by [Plantower](https://plantower.com/) at a very low cost!
 ---
-
-{{ insert_banner () }}
 
 # Plantower PMS5003
 
-{{ insert_specs() }}
+{{ page.meta.excerpt }}
+
+![]({{page.meta.feature_img}})
+
+<!-- TODO - Make this chunk reproducible over other pages -->
+!!! info "Version support"
+    It is supported in the Smart Citizen Kit `{{ page.meta.versions.hardware }}`, and firmware version `{{ page.meta.versions.firmware }}`. This is an {{ page.meta.type }} sensor, available in various formats. Check the [usage](#usage) section below!
 
 ## Working principle
 
@@ -50,7 +40,8 @@ What the sensor does, is to analyse the readings from the sensing element and co
 
 ## Usage and considerations
 
-{{ insert_interface() }}
+<!-- TODO - Check if we want to do this -->
+<!-- {{ insert_interface() }} -->
 
 !!! info "Sources"
     Have a read to the [Technical Datasheet](/assets/datasheets/pms5003/PTQ3004-2015 PMS5003 series data manual English_SLT_V1.0K.pdf)
@@ -79,5 +70,3 @@ From the long term deployment point of view, the one-shot mode has not been foun
 Make sure that you power the Smart Citizen Kit with a _good enough USB cable_ and with an adaptor that can provide at least 1A. We have found some issues when powering the sensor with a thin cable, or from a weak power source, like a screen.
 
 ## Resources
-
-{{ insert_resources() }}
