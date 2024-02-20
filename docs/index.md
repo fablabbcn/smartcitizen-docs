@@ -1,6 +1,6 @@
 # Welcome!
 
-Welcome to the **Smart Citizen project** documentation! This page is a compilation of all the project's experience and knowledge on the technology and tools for environmental monitoring that it develops. The project touches upon many fields, so we really hope these resources are useful for anyone wanting to learn about what we do: **open hardware, software, sensors knowledge, data, platforms, and much more**.
+Welcome to the **Smart Citizen Project** documentation! In this website you will find all the project's experience and knowledge related to the environmental monitoring tools that it develops. The project touches upon many fields, so we really hope these resources are useful for anyone wanting to learn about what we do: **open hardware, software, sensors knowledge, data, platforms, and much more**.
 
 Feel free to keep reading about the different [sections](#get-started) or go directly to our [guides](#guides).
 
