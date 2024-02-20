@@ -255,6 +255,7 @@ def define_env(env):
         return markdown
 
     @env.macro
+    # TODO - Cleanup
     def create_cards():
         custom_dir = os.path.basename(os.path.normpath(env.conf.theme.custom_dir))
         environment = Environment(loader=FileSystemLoader(f"{custom_dir}/templates/"), autoescape=True)
@@ -275,7 +276,9 @@ def define_env(env):
                         content = _file.readlines()
 
                     frontmatter = get_frontmatter(content)
+
                     if frontmatter is not None:
+                        frontmatter['target_url'] = source_folder
                         result = template.render(frontmatter)
 
                         if 'name' not in frontmatter:
@@ -286,6 +289,7 @@ def define_env(env):
                             _file.write(result)
 
     @env.macro
+    # TODO - Cleanup
     def insert_cards(type = "", filter = None, value = list()):
         print ('********')
         print ('Insert cards')
@@ -343,55 +347,54 @@ def define_env(env):
         return result
 
     @env.macro
-    def insert_source(source = list()):
-        # TODO
-        return None
-
-    @env.macro
     def insert_banner():
         # TODO
         return None
 
     @env.macro
-    def insert_specs():
-        result = ''
+    # Inspired by function in mkdocs-snippets-plugin
+    # TODO - Cleanup once it's final
+    def insert_references(file_path, ignore_frontmatter = True):
 
-        if 'faculty' in env.page.meta:
-            for faculty in env.page.meta['faculty']:
-                create_faculty(faculty, custom_dir)
+        ok_to_go = False
+        try:
+            with open(env.project_dir + '/' + file_path, 'r') as myfile:
+                content = myfile.read()
+        except:
+            print (f'Error found while rendering file: {env.page.file.src_uri}')
+            print (f"Can't find {env.project_dir + '/' + file_path}")
+            pass
+        else:
+            ok_to_go = True
 
-                if os.path.exists(f"{custom_dir}/includes/{faculty}.html"):
-                    with open(f"{custom_dir}/includes/{faculty}.html") as file:
-                        result += file.read()
+        if not ok_to_go:
+            return None
+
+        extract = content.split('\n')
+        references = {}
+        print ('REFERENCES')
+        print (extract)
+        print (type(extract))
+        print ('PAGE CONTENT')
+        print (env.page.markdown)
+        print ('-----------')
+
+        for item in extract:
+            print (item)
+            if item.startswith('['):
+                print ('reference key')
+                if item not in references:
+                    print ('new item')
+                    if item in env.page.markdown:
+                        print ('item in md!')
+                        references[item]=extract[extract.index(item)+1]
                 else:
-                    print (f"{faculty}.html not found")
+                    print ("WARNING: Duplicated item in references")
+
+        print ('references')
+        print (references)
+        result = '\n'.join('{}\n {}'.format(key, value) for key, value in references.items())
+        print ('result')
+        print (result)
 
         return result
-
-    @env.macro
-    def insert_interface():
-        # TODO
-        return None
-
-    @env.macro
-    def insert_resources():
-        # TODO
-        return None
-        custom_dir = os.path.basename(os.path.normpath(env.conf.theme.custom_dir))
-
-        environment = Environment(loader=FileSystemLoader(f"{custom_dir}/templates/"), autoescape=True)
-        template = environment.get_template("students.html")
-
-        if 'students' in env.page.meta:
-            students = []
-            for item in env.page.meta['students'].keys():
-                students.append({'name': item,
-                                 'photo': env.page.meta['students'][item]['photo'],
-                                 'website': env.page.meta['students'][item]['website']
-                                 })
-
-            result = template.render(students=students)
-            return result
-        else:
-            print ('Incorrectly configured')
-            return None
