@@ -7,3 +7,5 @@ __pycache__/
 .vscode/
 *.log
 .pytest_cache/
+
+custom_theme/includes/auto/*.html
