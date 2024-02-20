@@ -7,6 +7,8 @@ source:
     Smart Citizen Flows: https://github.com/fablabbcn/smartcitizen-flows
 ---
 
+<!-- TODO Fix -->
+
 # Sensor Platform
 
 The platform is a front and backend solution for ingesting, storing and interacting with environmental data.
