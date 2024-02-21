@@ -195,6 +195,8 @@ theme:
     - search.share
     - search.suggest
     - content.tooltips
+    - content.action.edit
+    - content.action.view
     - toc.follow
     - navigation.footer
   custom_dir: 'custom_theme'
