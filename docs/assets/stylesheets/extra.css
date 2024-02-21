@@ -65,6 +65,9 @@ button.fullscreen_button:hover{
 	margin: auto !important;
 	/* max-width: 95% !important; */
 }
+.md-typeset:not(.emojione) img:not(.emojione, .logo){
+    color:rgb(255, 0, 0);
+}
 
 .md-footer-copyright{
     margin-left: 20px;
@@ -503,7 +506,7 @@ h2.card-title{
     text-decoration: underline;
 }
 
-a.card-title: hover{
+a.card-title:hover{
     text-decoration: none;
 }
 
