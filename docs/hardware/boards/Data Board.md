@@ -1,28 +1,4 @@
----
-type: core
-feature_img:
-status: stable
-versions:
-# - 1.5:
-# 	image:
-# 	description:
-# - 2.0:
-# 	image:
-# 	description:
-# - 2.1:
-# 	image:
-# 	description:
-# - 2.2:
-# 	image:
-# 	description:
-interface:
-source:
-    Design files: https://github.com/fablabbcn/smartcitizen-kit-21
-resources:
-    pdf:
----
-
-{{ insert_banner() }}
+<!-- TODO - Fix versions and add microcontrollers -->
 
 # Data Board
 
@@ -33,6 +9,8 @@ The data board is a data-logger at the core of the sensors architecture supporti
 <a class="github-button" data-size="large" href="https://github.com/fablabbcn/smartcitizen-kit-21" aria-label="Check the source code">Check the source code</a>
 
 The data board also includes a Wi-Fi module, a micro SD card slot, an internal Flash and a battery management solution. In addition, it includes 4MB of extra Flash Memory for offline data storage, in case of network brownouts. The Wi-Fi Module is the well-known [Espressif ESP8266](https://www.espressif.com/en/products/hardware/esp8266ex/overview) IEEE 802.11 b/g/n Wi-Fi with 4MB Internal Flash for web content storage:
+
+## Microcontrollers
 
 ![](/assets/images/sck_2/SCK21_Microcontrollers.png)
 

@@ -1,12 +1,3 @@
----
-source:
-    Smart Citizen API: https://github.com/fablabbcn/smartcitizen-api
-    Smart Citizen Web: https://github.com/fablabbcn/smartcitizen-web
-    Onboarding App: https://github.com/fablabbcn/smartcitizen-onboarding
-    Smart Citizen Data: https://github.com/fablabbcn/smartcitizen-data
-    Smart Citizen Flows: https://github.com/fablabbcn/smartcitizen-flows
----
-
 <!-- TODO Fix -->
 
 # Sensor Platform
@@ -32,6 +23,10 @@ We believe building modular and reusable software and using existing platforms i
 !!! info "Want to learn more?"
 	Check the developers ready [**API Documentation**](https://developer.smartcitizen.me/)
 
+<!-- TODO  -->
+
+## CSV Format
+
 ## Software components
 
 * **Smart Citizen Website**: It aims to provide a visual website where the project environmental sensors can be accessed in near real time to facilitate the exploration of data with other contextual data (maps, keywords) and processed reports. This is especially important towards citizens engaging at each local site having a sense of ownership over a technology intervention has been associated with sustained community engagement _(Balestrini et al. 2014)_. The main instance its available at [smartcitizen.me/kits](https://smartcitizen.me/kits). You can explore and contribute to the [source](https://github.com/fablabbcn/smartcitizen-web). This is free software available under GNU Affero General Public License (AGPL).
@@ -42,4 +37,10 @@ We believe building modular and reusable software and using existing platforms i
 
 ## Source files
 
-{{ insert_source() }}
+Check the source below:
+
+* Smart Citizen API: https://github.com/fablabbcn/smartcitizen-api
+* Smart Citizen Web: https://github.com/fablabbcn/smartcitizen-web
+* Onboarding App: https://github.com/fablabbcn/smartcitizen-onboarding
+* Smart Citizen Data: https://github.com/fablabbcn/smartcitizen-data
+* Smart Citizen Flows: https://github.com/fablabbcn/smartcitizen-flows

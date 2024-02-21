@@ -44,3 +44,7 @@ Once the steps above are completed data is stored in a database cluster performi
 implemented.
 - _Timestamp_: The time the datapoint was generated.
 Once stored historical data available via the Smart Citizen API. All the other services, as the Smart Citizen Webpage, access the data from there. The API also exposes a method where data is processed to a CSV file and email to the user. That allows loading the data offline to any software capable of dealing with CSV files (i.e. Microsoft Excel, MATLAB, etc.)
+
+<!-- TODO -->
+
+## Using the API
