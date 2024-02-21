@@ -63,7 +63,7 @@ button.fullscreen_button:hover{
 	display: flex;
 	justify-content: center;
 	margin: auto !important;
-	max-width: 95% !important;
+	/* max-width: 95% !important; */
 }
 
 .md-footer-iscape{
