@@ -428,7 +428,8 @@
           <div class="card-text">
             <div class="card request-card">
               <div class="card-header">
-                <a name="{{id}}">Change {{index}}/{{total}}</a> -
+                <a name="{{id}}">Change {{index}}/{{total}}</a><br>
+                <h2>Endpoint: {{endpoint}}</h2><br>
                 <a class="btn btn-outline-primary" href="{{oldUrl}}"
                   >old: {{oldHost}}</a
                 >
@@ -436,9 +437,6 @@
                 <a class="btn btn-outline-primary" href="{{newUrl}}"
                   >new: {{newHost}}</a
                 >
-              </div>
-              <div class="card-text p-2">
-                <b><pre>{{params}}</pre></b>
               </div>
             </div>
 
@@ -486,7 +484,6 @@
       let json = {
   "startTime": "2024-03-04T10:26:40.743Z",
   "endTime": "2024-03-04T10:26:41.611Z",
-  "command": "/home/oscar/.nvm/versions/node/v9.8.0/bin/node /home/oscar/.nvm/versions/node/v9.8.0/bin/api-diff --new.host staging-api.smartcitizen.me --old.host api.smartcitizen.me --input_queries input-api.txt --output_mode html --output_file diffs.html",
   "totalQueries": 5,
   "numQueriesRun": 5,
   "old": {
@@ -573,7 +570,6 @@
       },
       "old": {
         "response": {
-          "notice": "Welcome. The old API has been removed.",
           "api_documentation_url": "https://developer.smartcitizen.me",
           "current_user_url": "https://api.smartcitizen.me/v0/me",
           "components_url": "https://api.smartcitizen.me/v0/components",
@@ -584,14 +580,12 @@
           "users_url": "https://api.smartcitizen.me/v0/users",
           "tags_url": "https://api.smartcitizen.me/v0/tags",
           "tags_sensors_url": "https://api.smartcitizen.me/v0/tag_sensors",
-          "version_git": "1.1.5\n"
         },
         "status": 200,
         "url": "http://api.smartcitizen.me/v0"
       },
       "new": {
         "response": {
-          "notice": "Welcome. The old API has been removed.",
           "api_documentation_url": "https://developer.smartcitizen.me",
           "current_user_url": "https://staging-api.smartcitizen.me/v0/me",
           "components_url": "https://staging-api.smartcitizen.me/v0/components",
@@ -601,7 +595,6 @@
           "users_url": "https://staging-api.smartcitizen.me/v0/users",
           "tags_url": "https://staging-api.smartcitizen.me/v0/tags",
           "tags_sensors_url": "https://staging-api.smartcitizen.me/v0/tag_sensors",
-          "version_git": "1.1.5\n"
         },
         "status": 200,
         "url": "http://staging-api.smartcitizen.me/v0"
@@ -26149,6 +26142,7 @@
               index: index + 1,
               total: changes.length,
               params: JSON.stringify(change.query.params, null, 2),
+              endpoint: JSON.stringify(change.query.endpoint, null, 2),
               oldUrl: change.old?.url,
               newUrl: change.new?.url,
               oldHost: json.old.apiEnv.host,
@@ -26279,7 +26273,7 @@
 
         renderHeader();
         renderChanges();
-        renderScoreboardAndSummary();
+        // renderScoreboardAndSummary();
       }
 
       let selectedDiffIndex = 0;
