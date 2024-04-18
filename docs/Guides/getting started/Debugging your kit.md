@@ -90,7 +90,7 @@ Normally, configuration or connectivity issues can be due to the following reaso
     !!! danger "Beware of the quoutes"
         Note that the `token` **does not have quotes** around it and that the `SSID` and `PASS` have **straight** quotes.
 
-3. If the issue is not solved, you can use the [Shell](/Guides/getting started/Using the Shell/) and look for an `ERROR` message. You can write in the [forum](forum.smartcitizen.me) and we will support there!
+3. If the issue is not solved, you can use the [Shell](/Guides/getting started/Using the Shell/) and look for an `ERROR` message. You can write in the [forum](https://forum.smartcitizen.me) and we will support there!
 
 !!! info "Not solved"?
     In case there is no problem with the configuration, there problem might get solved by a firmware update.
