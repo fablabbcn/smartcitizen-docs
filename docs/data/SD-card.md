@@ -16,7 +16,7 @@ Data is stored on the SD-card in CSV format, with a `comma` separator and `UTF-8
 
 The file format for the sensor readings is as follows:
 
-![](assets/images/csv-format.png)
+![](/assets/images/csv-format.png)
 
 Below you can find what each row/rows mean, in order:
 
