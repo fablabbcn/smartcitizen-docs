@@ -1,7 +1,7 @@
 Frequently asked questions
 ==========================
 
-![](https://i.imgur.com/feS0bZ8.jpg)
+![Making Sense Toolkit Operation manuals](/assets/images/toolkit-operation-manuals.jpg)
 
 ## Can the sensors be placed outdoors?
 Yes. The sensor is designed for both indoors and outdoors use. But if you’re planning to use it outdoors, you will have to consider purchasing or making a rainproof enclosure.
@@ -13,7 +13,7 @@ Of course! The manufacturing files for the 3D printed enclosure will be availabl
 Sure! But note that the sensor requires a 5V solar panel to work properly. More information [here](/Components/Solar Panel/)
 
 ## Can I add external sensors to the system?
-Yes. The sensor has an independently configurable auxiliary bus at 3.3V with a SEEED Grove connector. The Bus has native support for I2C, but it can also be setup on firmware as a GPIO or UART. It can supply power up to 750mA, and it can be enabled or disabled by software. More info [here](/Components/Auxiliary Connector/)
+Yes. The sensor has an independently configurable auxiliary bus at 3.3V with a SEEED Grove connector. The Bus has native support for I2C, but it can also be setup on firmware as a GPIO or UART. It can supply power up to 750mA, and it can be enabled or disabled by software. More info [here](/hardware/Smart Citizen Kit/#auxiliary-connector)
 
 ## What happens if there is a loss of network connectivity?
 If the sensor is working in network mode and at any time the network is not available, it will store the data on its internal memory and publish all the collected data as soon as the network is available again.
@@ -66,7 +66,7 @@ Of course. You are the owner of the data that you collect, and you can download 
 
 ## How can I retrieve the MAC address from my device?
 
-You can retrieve the MAC address with two methods: either you can use your phone (see below), or follow [this guide](/Components/Firmware/guides/Using the Shell) if you want to try out the console interface in the kit. 
+You can retrieve the MAC address with two methods: either you can use your phone (see below), or follow [this guide](/Components/Firmware/guides/Using the Shell) if you want to try out the console interface in the kit.
 
 **Using your phone**
 

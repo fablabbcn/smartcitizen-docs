@@ -1,15 +1,15 @@
 :construction_worker: Troubleshooting
 ==========================
 
-![](https://i.imgur.com/iI3Bu6F.jpg)
+![Assembling the SC Station](/assets/images/station-build-table.jpg)
 
 ## First, reboot your kit
 
 !!! info "The magical reset button"
 
-    Before trying anything else, the data board of your SCK comes with a very functional button that makes a hardware reset on the whole device. This is probably our best first try once the kit has any problem. You can see it here:
+    Before trying anything else, the [data board](/hardware/boards/data board/) of your SCK comes with a very functional button that makes a hardware [reset](/hardware/Smart Citizen Kit/#the-reset-button) on the whole device. This is probably our best first try once the kit has any problem. You can see it here:
 
-    ![](https://i.imgur.com/lnFrnwS.png)
+    ![SCK Reset](/assets/images/sck-reset.png)
 
     Some issues this might help solving:
 
