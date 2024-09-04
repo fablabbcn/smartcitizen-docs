@@ -67,25 +67,30 @@ If this doesn't help, try to [reflash the firmware](/Guides/firmware/Update the 
 ## Connectivity or configuration issues
 
 Normally, configuration or connectivity issues can be due to the following reasons:
+
 - Typo during the setup process
 - Old firmware
 
-1. If not using the Shell, make sure that the information provided for the network is correct by putting the SCK in SETUP mode (RED LED) and accessing the SmartCitizeXXXX network.
+1. If **not** using the [Shell](/Guides/getting started/Using the Shell/), make sure that the information provided for the network is correct by putting the SCK in SETUP mode (RED LED) and accessing the SmartCitizeXXXX network.
 
-![](/assets/images/sck_2/esp_force_upload_1.png)
+    ![](/assets/images/sck_2/esp_force_upload_1.png)
 
-2. If using the Shell, you can check the recording configuration by typing:
+2. If using the [Shell](/Guides/getting started/Using the Shell/), you can check the recording configuration by typing:
 
-```
-config
-```
+    ```
+    config
+    ```
 
-If you see a problem with the configuration, you can fix each item or the whole thing by typing:
+    If you see a problem with the configuration, you can fix each item or the whole thing by typing:
 
-```
-config -mode network -wifi "SSID" "PASS" -token token
-```
+    ```
+    config -mode network -wifi "SSID" "PASS" -token token
+    ```
 
-Note that the `token` does not have quotes around it and that the `SSID` and `PASS` have straight quoutes.
+    !!! danger "Beware of the quoutes"
+        Note that the `token` **does not have quotes** around it and that the `SSID` and `PASS` have **straight** quotes.
 
-In case there is no problem with the configuration, there problem might get solved by a firmware update.
+3. If the issue is not solved, you can use the [Shell](/Guides/getting started/Using the Shell/) and look for an `ERROR` message. You can write in the [forum](forum.smartcitizen.me) and we will support there!
+
+!!! info "Not solved"?
+    In case there is no problem with the configuration, there problem might get solved by a firmware update.

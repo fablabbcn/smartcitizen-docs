@@ -1,20 +1,9 @@
 ---
-type: external
-feature_img:
-status: EOL
-versions:
-    - 1.0
-        image:
-        description:
-interface:
-    - Auxiliary Port:
-        description: I2C via Auxiliary Port
-        image:
-        comment:
-source:
-    Design files: https://github.com/fablabbcn/smartcitizen-gases-board TODO
-resources:
-    pdf:
+type: core
+feature_img: None
+status: stable
+versions: None
+interface: None
 ---
 
 # Gases Pro Sensor Board

@@ -1,5 +1,3 @@
-<!-- TODO - Proofread -->
-
 # Smart Citizen Kit
 
 ![Smart Citizen Kit 2.1 in Context](/assets/images/sck21-in-context.jpg)
@@ -24,20 +22,18 @@
 
 ## What is it?
 
-The Smart Citizen Kit (_SCK_ for short, also just _the kit_) is an open hardware solution for **environmental monitoring** that can be used by **citizen scientists**,  **educators** and **researchers**. It is one of the most important parts of our project, and in it's most basic version collects various [metrics](#ear-measurements), such as particulate matter, noise, light and temperature.
+The Smart Citizen Kit (_SCK_ for short, also just _the Kit_) is an open hardware solution for **environmental monitoring** designed to be used by **anyone** (you name it: **citizen scientists**,  **educators** and **researchers**...). It is one of the most important parts of our project, and in it's most basic version collects various [metrics](#ear-measurements), such as particulate matter, noise, light and temperature. Below you can see the SCK2.2 version, you can see other [versions below](#hash-versions)
+
+![SCK 2.2 All parts](/assets/images/sck22-components.jpg)
 
 !!!tip "More on the use cases"
-    If you want to learn more about how to use it, visit our [Use Cases page](/Resources/Use Cases/).
+    If you want to learn more about how to use it, visit our [resources](/Resources/) page
 
-<!-- TODO Add Use Cases Page -->
-
-![SCK 2.1 All parts](/assets/images/sck21-components.jpg)
-
-The system is designed in a **modular** way, with a central _data logger_ (the [Data Board](/Components/boards/Data Board)) with WiFi connectivity, a micro SD Card slot, a micro USB slot and a battery. Various components can be added to the **Data Board**, being the default the [Urban Board](/Components/boards/Urban Board), featuring different onboard sensors and a particulate matter sensor connector.
+The system is designed in a **modular** way, with a central _data logger_ (the [Data Board](/Components/boards/Data Board)) with Wi-Fi connectivity, a micro SD Card slot, a micro USB slot and a battery. Various components can be added to the **Data Board**, being the default the [Urban Board](/Components/boards/Urban Board), featuring different onboard sensors and a particulate matter sensor connector.
 
 ![SCK 2.1 Outdoors](/assets/images/sck21-outdoor.jpg)
 
-The Smart Citizen Kit connects to non-hardware components such as a dedicated [Storage platform](/Data/), and a web interface for visualising the data. Any other configuration based on the Smart Citizen Kit core components also connects to such platform with all features freely available. On top of that, the Smart Citize Kit can also be a starting point for **more complex settings**, not only related with air quality monitoring. For that purpose, in addition to the [Urban Board](/Components/boards/Urban Board), the system also provides off-the-shelf support for a [wide variety of third party sensors](/hardware/sensors/), using the [Auxiliary Connector](Auxiliary Connector) for that purpose. One example is what we call the [Smart Citizen Stations](/Smart Citizen Stations).
+The Smart Citizen Kit can send the data to a dedicated [Storage platform](/data/Data Platform/), which can then be visualised through a web interface or [many other tools](/data/Data%20Tools/). Any other configuration based on the Smart Citizen Kit core components also connects to such platform with all features freely available. On top of that, the Smart Citizen Kit can also be a starting point for **more complex settings**, not only related with air quality monitoring. For that purpose, in addition to the [Urban Board](/Components/boards/Urban Board), the system also provides off-the-shelf support for a [wide variety of third party sensors](/hardware/sensors/), using the [Auxiliary Connector](Auxiliary Connector) for that purpose. One example is what we call the [Smart Citizen Stations](/Smart Citizen Stations).
 
 !!! info "More on the supported sensors"
     Have a look a the supported sensors in our [knowledge section](/hardware/sensors/)!
@@ -47,9 +43,7 @@ The Smart Citizen Kit connects to non-hardware components such as a dedicated [S
 
 ## :hash: Versions
 
-<!-- TODO - Think how to show this part -->
-
-Most of the documentation applies to the **Smart Citizen Kit 2.1 and the 2.2**.
+Most of the documentation applies to the **Smart Citizen Kit 2.1, the 2.2 and the 2.3 versions**.
 
 ![SCK 2.1 All parts](/assets/images/sck21-components.jpg)
 
@@ -57,10 +51,16 @@ Most of the documentation applies to the **Smart Citizen Kit 2.1 and the 2.2**.
 
 ![SCK 2.2 All parts](/assets/images/sck22-components.jpg)
 
-A summary of the **differences**:
+<!-- TODO Add photo -->
 
-- **Data Board**: 2.1 and 2.2 are mostly the same. [Check here for details on the differences](/hardware/boards/Data Board/)
-- **Urban Board**: 2.1 and 2.2 have many differences: the PM sensor has changed, so has the pressure sensor. We have added a UV Sensor, and removed the tVOC sensor, as it was discontinued. The rest stays the same (noise, light, temperature and humidity)
+![SCK 2.3 All parts](/assets/images/sck23-components.jpg)
+
+
+!!! info "Differences"
+    A summary of the **differences**:
+
+    - **Data Board**: 2.1, 2.2 and 2.3 are mostly the same. [Check here for details on the differences](/hardware/boards/Data Board/)
+    - **Urban Board**: 2.1, 2.2 and 2.3 have many differences: from version 2.1 to 2.2 the PM sensor was changed, so has the pressure sensor. We have added a UV Sensor, and removed the tVOC sensor, as it was discontinued by the manufacturer. The rest stays the same (noise, light, temperature and humidity). The 2.3 version features a small hole to be able to reset the Data board from outside the box, and changes the pressure sensor again.
 
 ## :ear: Measurements
 
@@ -69,44 +69,44 @@ All the Smart Citizen Kit new sensors generation measure **at least** air temper
 !!! info "Sensor performance"
     Make sure you visit the [sensor knowledge page](/hardware/sensors/) for _a lot_ more information.
 
-### SCK 2.1
-
-![SCK 2.1 Measurements](/assets/images/sck21-measurements.png)
-
-Here is the table summarising the measurements and the corresponding sensors:
-
-| Measurement                           | Units | Sensor                |
-|:-                                     |:-:    |:-:                    |
-| Air temperature                       | ºC    | Sensirion SHT-31      |
-| Relative Humidity                     | % REL | Sensirion SHT-31      |
-| Noise level                           | dBA   | Invensense ICS-434342 |
-| Ambient light                         | lux   | Rohm BH1721FVC        |
-| Barometric pressure                   | kPa   | NXP MPL3115A26        |
-| Equivalent Carbon Dioxide             | ppm   | AMS CCS811            |
-| Volatile Organic Compounds            | ppb   | AMS CCS811            |
-| Particulate Matter PM1, PM2.5, PM10   | µg/m3 | Plantower PMS 5003    |
-
-### SCK 2.2
-
-![SCK 2.2 Measurements](/assets/images/sck22-measurements.png)
-
-Here is the table summarising the measurements and the corresponding sensors:
-
-| Measurement                               | Units | Sensor                |
-|:-                                         |:-:    |:-:                    |
-| Air temperature                           | ºC    | Sensirion SHT-31      |
-| Relative Humidity                         | % REL | Sensirion SHT-31      |
-| Noise level                               | dBA   | Invensense ICS-434342 |
-| Ambient light                             | lux   | Rohm BH1721FVC        |
-| Barometric pressure                       | kPa   | ST LPS33K             |
-| UV-A, B, C                                | uW/cm2| AMS AS7311            |
-| Particulate Matter PM1, PM2.5, PM4, PM10  | µg/m3 | Sensirion SEN5X       |
-| NOx Index, VOx Index                      | -     | Sensirion SEN5X       |
+=== "SCK 2.1"
+    | Measurement                           | Units | Sensor                |
+    |:-                                     |:-:    |:-:                    |
+    | Air temperature                       | ºC    | Sensirion SHT-31      |
+    | Relative Humidity                     | % REL | Sensirion SHT-31      |
+    | Noise level                           | dBA   | Invensense ICS-434342 |
+    | Ambient light                         | lux   | Rohm BH1721FVC        |
+    | Barometric pressure                   | kPa   | NXP MPL3115A26        |
+    | Equivalent Carbon Dioxide             | ppm   | AMS CCS811            |
+    | Volatile Organic Compounds            | ppb   | AMS CCS811            |
+    | Particulate Matter PM1, PM2.5, PM10   | µg/m3 | Plantower PMS 5003    |
+=== "SCK 2.2"
+    | Measurement                               | Units | Sensor                |
+    |:-                                         |:-:    |:-:                    |
+    | Air temperature                           | ºC    | Sensirion SHT-31      |
+    | Relative Humidity                         | % REL | Sensirion SHT-31      |
+    | Noise level                               | dBA   | Invensense ICS-434342 |
+    | Ambient light                             | lux   | Rohm BH1721FVC        |
+    | Barometric pressure                       | kPa   | ST LPS33K             |
+    | UV-A, B, C                                | uW/cm2| AMS AS7311            |
+    | Particulate Matter PM1, PM2.5, PM4, PM10  | µg/m3 | Sensirion SEN5X       |
+    | NOx Index, VOx Index (Optional)           | -     | Sensirion SEN54, 55           |
+=== "SCK 2.3"
+    | Measurement                               | Units | Sensor                |
+    |:-                                         |:-:    |:-:                    |
+    | Air temperature                           | ºC    | Sensirion SHT-31      |
+    | Relative Humidity                         | % REL | Sensirion SHT-31      |
+    | Noise level                               | dBA   | Invensense ICS-434342 |
+    | Ambient light                             | lux   | Rohm BH1721FVC        |
+    | Barometric pressure                       | kPa   | NXP MPL3115A26S            |
+    | UV-A, B, C                                | uW/cm2| AMS AS7311            |
+    | Particulate Matter PM1, PM2.5, PM4, PM10  | µg/m3 | Sensirion SEN5X       |
+    | NOx Index, VOx Index (Optional)           | -     | Sensirion SEN54, 55           |
 
 !!! info "About the SEN5X"
     `SEN5X` refers to the different configurations of the PM sensors in that series: `SEN50`, `SEN54`, `SEN55`.
 
-    We chose the SEN55 for it's additional metrics, but the SEN50 and the SEN54 are also compatible! The SEN50 measures only PM, the SEN54 PM and NOx index, and the SEN55 PM, NOx and VOC indexes.
+    We chose the SEN50 as it's a cheap, good solution to measure PM. The SEN55 and the SEN54 are also compatible with the same connector! The SEN50 measures _only_ PM, the SEN54 PM and NOx index, and the SEN55 PM, NOx and VOC indexes.
 
 ## :notebook: Installation instructions
 
@@ -121,7 +121,7 @@ You can head over to the onboarding at [start.smartcitizen.me](https://start.sma
 !!! info "Detailed guide"
     Have a look [at this guide](/Guides/getting started/Onboarding Sensors/) for a step-by-step installation.
 
-If you selected the WiFi option, once you are done, data will be available on the [Smart Citizen Plafform](https://smartcitizen.me/kits). You can explore the data there or download it using the [CSV Download](/Guides/getting started/Downloading the Data/) option, or by using the [API](https://api.smartcitizen.me).
+If you selected the Wi-Fi option, once you are done, data will be available on the [Smart Citizen Plafform](https://smartcitizen.me/kits). You can explore the data there or download it using the [CSV Download](/Guides/getting started/Downloading the Data/) option, or by using the [API](https://api.smartcitizen.me).
 
 ![SC Platform components](/assets/images/platform-components.jpg)
 
@@ -179,7 +179,7 @@ The SCK needs 5V input via the micro USB connector. A normal 5V power charger ca
 
 ### Battery Status
 
-The SCK will display _user_ feedback via a set of LEDs. To show the battery status, we use the `STATUS` LED. There are two more LEDs, one that shows if the WiFi antenna is ON, or if there is data being transmitted via USB.
+The SCK will display _user_ feedback via a set of LEDs. To show the battery status, we use the `STATUS` LED. There are two more LEDs, one that shows if the Wi-Fi antenna is ON, or if there is data being transmitted via USB.
 
 ![SCK LEDs](/assets/images/sck-leds.jpg){: style="max-width:400px !important"}
 
@@ -190,11 +190,11 @@ If the `STATUS` LED is _agressively_ flashing in orange <span class="led small o
 
 ## :triangular_flag_on_post: User interfaces
 
-The [Data board](/hardware/boards/Data Board/) features a set of LEDs that provide feedback to the user, as well as two buttons with different functionalities. The `STATUS` LED provides general feedback of the data board status, both on the [operation mode](#operation-modes) and on the [battery status](#battery-status). Additionally, two buttons are provided for user actio: a hardware `reset` button, which literally does a full reset on the board, and an `ON/OFF` button, used to change the device's mode, turn on and off the device, and to perform a _factory reset_. You can see both buttons below:
+The [Data board](/hardware/boards/Data Board/) features a set of LEDs that provide feedback to the user, as well as two buttons with different functionalities. The **`STATUS`** LED provides general feedback of the data board status, both on the [operation mode](#operation-modes) and on the [battery status](#battery-status). Additionally, two buttons are provided for user actio: a hardware **`RESET`** button, which literally does a full reset on the board, and an **`ON/OFF`** button, used to change the device's mode, turn on and off the device, and to perform a _factory reset_. You can see both buttons below:
 
 ![SCK Buttons](/assets/images/sck-buttons.png){: style="max-width:500px !important"}
 
-### The `ON/OFF` button
+### The **`ON/OFF`** button
 
 The main button interaction is detailed below:
 
@@ -208,7 +208,7 @@ The main button interaction is detailed below:
 !!! info "Changing mode"
     When you change the mode, you will switch between *Setup* mode, and whatever mode you have configured (online or offline).
 
-    For instance, if you configured your kit in _online_ mode, clicking the `ON/OFF` button will switch you to _setup_ mode. Hitting it again will switch you back to _online_ mode.
+    For instance, if you configured your kit in _online_ mode, clicking the **`ON/OFF`** button will switch you to _setup_ mode. Hitting it again will switch you back to _online_ mode.
 
 You can see it in action below (remember, the SCK 2.1 and SCK 2.2 share the same data board!):
 
@@ -217,36 +217,22 @@ You can see it in action below (remember, the SCK 2.1 and SCK 2.2 share the same
 !!! info "Troubleshooting"
     Have a look at the [troubleshoothing section](/Troubleshooting) to check how you can use the buttons in case of problems with your SCK!
 
-### The `reset` button
+### The **`RESET`** button
 
 This button is used for [_troubleshooting_](/Troubleshooting) your kit, or to [_upgrade_](/guides/firmware/Update the firmware/) the firmware. Unless you are in any of these situations, you shouldn't need it! In any case, it's handy and useful to know what it's for.
-
-<!-- TODO - Make this image nicer? -->
 
 ![SCK Reset](/assets/images/sck-reset.png)
 
 !!! info "Using the button inside a box"
-    If you are using the kit inside a box, it may be tricky to access the `reset` button. Check the [enclosures page](/hardware/enclosures/) for more options.
+    If you are using the kit inside a box, it may be tricky to access the **`RESET`** button. Check the [enclosures page](/hardware/enclosures/) for more options.
 
 ## Operation modes
 
-!!! warning "New `WARNING` mode"
-
-    After firmware version `0.9.8`, a new `WARNING` mode was introduced. This feature gives feedback to the user in case something _not too bad_ happened, and the kit is able to still collect data, but not store it on the micro SD card or send it to the platform. This `WARNING` mode is a new addition to the already existing `NORMAL` and `ERROR` modes. For a more formal explanation of each mode:
-
-    - `NORMAL`: no problem! **The `STATUS` LED is _slowly_ breathing**
-    - `WARNING`: can take readings, but can't save them to the micro SD card (problem with SD card) or send them to the platform (problem with network). Data is stored in the onboard [Flash memory](#flash-memory) and will be stored on the SD card or sent to the platform after the problem is solved: either because the network comes back or the SD card is OK. **The `STATUS` LED is _partially blinking_**
-    - `ERROR`: can't take readings. Either there is "no time", or there is a big problem that prevents data to be read. **The `STATUS` LED is _agressively blinking_**
-
-    :bulb: Remember, you can check your SCK firmware version quickly following this [guide](/guides/getting%20started/Getting%20firmware%20information/).
-
-The different operation modes are described below. The animations help to understand what _partially blinking_, _agressively blinking_ or _breathing_ means.
-
 ### <span class="led small red"> </span> Setup mode
 
-In this mode, the kit is ready to be configured in [WiFi](#wi-fi-mode) or in [SD card](#sd-card-mode).
+In this mode, the kit is ready to be configured in [Wi-Fi](#wi-fi-mode) or in [SD card](#sd-card-mode).
 
-| LED color                                  | Kit status                                                          |
+| LED color                                  | Kit status                                                           |
 | :-:                                        | :-:                                                                  |
 | <span class="led setup"></span>            | :thumbsup: Ready to be setup                                         |
 | <span class="led setup-lowbat"></span>     | :battery: Ready to be setup but battery is low, charge the Kit       |
@@ -255,7 +241,7 @@ In this mode, the kit is ready to be configured in [WiFi](#wi-fi-mode) or in [SD
 
 ### <span class="led small blue"> </span> Wi-Fi mode
 
-WiFi mode (or online), is the most common mode for the kit. In this mode, it will publish data to the [Smart Citizen Platform](https://smartcitizen.me/kits) (although you can [change this](/guides/getting started/Using the shell)). If there is micro SD card in the kit, data will be stored in it too.
+Wi-Fi mode (or _online_ mode), is the most common mode for the kit. In this mode, it will publish data to the [Smart Citizen Platform](https://smartcitizen.me/kits) (although you can [change this](/guides/getting started/Using the shell)). If there is micro SD card in the kit, data will be stored in it too.
 
 | LED color                                | Kit status                                                              |
 | :-:                                      | :-:                                                                     |
@@ -277,7 +263,7 @@ WiFi mode (or online), is the most common mode for the kit. In this mode, it wil
 
 ### <span class="led small pink"> </span> SD card mode
 
-SD Card mode (or offline), can be used if you do not have an internet connection available. In this case, the device will record the data on the micro SD card, in [CSV format](/data#csv-format). You can take a look at this data in a spreadsheet, or upload it to the [Smart Citizen Platform](https://smartcitizen.me/kits) by using the [CSV Upload](/guides/getting started/Uploading SD Card Data/) option, or via the [API](/data/Smart Citizen API#using-the-api).
+SD Card mode (or offline), can be used if you do not have an internet connection available. In this case, the device will record the data on the micro [SD-card](/data/SD-card), in [CSV format](/data/SD-card#csv-format). You can take a look at this data in a spreadsheet, or upload it to the [Smart Citizen Platform](https://smartcitizen.me/kits) by using the [CSV Upload](/guides/getting started/Uploading SD Card Data/) option, or via the [API](/data/Smart Citizen API#using-the-api).
 
 | LED color                                 |  Kit status                                                           |
 | :-:                                       | :-:                                                                   |
@@ -298,9 +284,23 @@ SD Card mode (or offline), can be used if you do not have an internet connection
 
     These are data files that the sensor creates once there it _resets_ to avoid file corruption. It does so by creating a new file in the SD card. In _older_ firmware versions, it's normal to have some additional files, specially because of the [sanity reset](#sanity-reset). Note that **after `0.9.9` firmware version** you should only get one file per day, even with the _sanity reset_. If you have more than one, the kit had was reset.
 
+### Warning and error levels
+
+!!! warning "New `WARNING` mode"
+
+    After firmware version `0.9.8`, a new `WARNING` mode was introduced. This feature gives feedback to the user in case something _not too bad_ happened, and the kit is able to still collect data, but not store it on the micro SD card or send it to the platform. This `WARNING` mode is a new addition to the already existing `NORMAL` and `ERROR` modes. For a more formal explanation of each mode:
+
+    - `NORMAL`: no problem! **The `STATUS` LED is _slowly_ breathing**
+    - `WARNING`: can take readings, but can't save them to the micro SD card (problem with SD card) or send them to the platform (problem with network). Data is stored in the onboard [Flash memory](#flash-memory) and will be stored on the SD card or sent to the platform after the problem is solved: either because the network comes back or the SD card is OK. **The `STATUS` LED is _partially blinking_**
+    - `ERROR`: can't take readings. Either there is "no time", or there is a big problem that prevents data to be read. **The `STATUS` LED is _agressively blinking_**
+
+    :book: Remember, you can check your SCK firmware version quickly following this [guide](/guides/getting%20started/Getting%20firmware%20information/).
+
+    :bulb: The different operation modes are described below. The animations help to understand what _partially blinking_, _agressively blinking_ or _breathing_ means.
+
 ### Special status
 
-You will see these colors _only_ in special moments, most of the times when the kit is booting or is being updated.
+You will see these colors _only_ in special moments, most commonly when the kit is booting or is being updated.
 
 | LED color                                 | Kit status                                                                                                 |
 | :-:                                       | :-:                                                                                                        |
@@ -308,9 +308,18 @@ You will see these colors _only_ in special moments, most of the times when the 
 | <span class="led firmware"></span>        | :wrench: Software update going on!                                                                         |
 | <span class="led yellow"></span>          | :computer: Shell mode [more info here](/Guides/getting started/Using the Shell/#shell-mode)                |
 
+## Auxiliary connector
+
+The [data board](/Components/Data Board/) features a standard [Grove connector](https://wiki.seeedstudio.com/Grove_System/) where external modules can be connected to. The connector supports an independent I2C bus by default, but by software it can be configured to support other uses (GPIO, I2C and UART). It can supply power **up to 750mA**, and it can be enabled or disabled by software to save energy.
+
+![](/assets/images/sck_2/SCK21_Aux.png)
+
+!!!info "There is a lot more to it!"
+    The Smart Citizen Kit is designed with a modular approach in mind. This means that the [Urban Board](/Components/Urban%20Sensor%20Board/) is only a selection of low cost sensors for air quality, but the hardware itself can be expanded for other use cases such as a more advanced air quality monitoring setup, soil monitoring, or water quality. Make sure you check our [sensor library](/knowledge/) and [guide on how to use them](/Guides/getting%20started/Third%20party%20sensors/).
+
 ## Software Updates
 
-Sofware updates are released in the [firmware repository](https://github.com/fablabbcn/smartcitizen-kit-21/releases). These updates will need to be applied periodically to the [two main microcontrollers of the Data Board](/hardware/boards/Data Board/#microcontrollers): the Atmel SAMD21 (main processor) and the Espressif ESP8266 (Wi-Fi module). Check the instructions in the [firmware upgrade](/Guides/firmware/Update the firmware/) guide for more information.
+Sofware updates are released in the [firmware repository](https://github.com/fablabbcn/smartcitizen-kit-2x/releases). These updates will need to be applied periodically to the [two main microcontrollers of the Data Board](/hardware/boards/Data Board/#microcontrollers): the Atmel SAMD21 (main processor) and the Espressif ESP8266 (Wi-Fi module). Check the instructions in the [firmware upgrade](/Guides/firmware/Update the firmware/) guide for more information.
 
 ![Smart Citizen Kits being tested at Fab Lab Barcelona](/assets/images/sck-test.jpg)
 
@@ -318,26 +327,51 @@ Sofware updates are released in the [firmware repository](https://github.com/fab
 
 ### Flash memory
 
-After firmware version `0.9.8`, a new [flash memory](/firmware/Flash Storage/) feature was implemented. The flash memory changes completely the arrangement of sensor readings vs publication/storage, and how errors are handled. From there on, data is always stored in flash memory before stored in **SD card** or published over **Wi-Fi**. That means that data can be always recovered if there is a problem with the SD card or the connection to the Internet fails, i.e. if we have poor network connectivity, the SCK will still store data and publish it in batch once the network is back.
+After firmware version **`0.9.8`**, a new [flash memory](/firmware/Flash Storage/) feature was implemented. The flash memory feature is used to store data internally before publishing it to the [Smart Citizen Platform](https://smartcitizen.me/kits) or storing it into the micro SD card. This allows us to still collect data when there are network issues, or the SD card is not present or corrupt; or to recover data when something happened with the data while it was stored on the micro SD card or on it's way to the platform. That can be very useful in many situations, for instance, whenever we cannot use permanent network connection, or you are using the SCK while going around in the city. The flash memory feature changes completely how readings are handled, separating sensor readings and the publication or storage process. This also affects how errors are handled, allowing for the introduction of a new `WARNING` mode.
 
-!!! tip "Check and update your Kit software version"
+!!! tip "Check and upgrade the firmware version"
 	:bulb: Remember, you can check your SCK firmware version quickly following this [guide](/Guides/getting%20started/Getting%20firmware%20information/). Later, learn [here](/Guides/firmware/Update%20the%20firmware/) how to update it.
 
-That can be very useful in many situations, for instance, whenever we cannot use permanent network connection, or you are using the SCK while going around in the city. Of course, everything has its limitations: the flash memory follows a _[circular buffer](https://en.wikipedia.org/wiki/Circular_buffer)_, which means that, whenever the flash memory is full, it will start overwriting data, no matter if it was published or not. In a normal SCK, the flash memory will last for some weeks though, but it's better to always be on the safe side and not lose any data.
+Of course, everything has its limitations: the flash memory follows a _[circular buffer](https://en.wikipedia.org/wiki/Circular_buffer)_, which means that whenever the flash memory is full, it will start overwriting data, no matter if it was published or not. In a normal SCK, the flash memory will last for some weeks though (more details in the [flash memory section](/firmware/Flash Storage/)), but it's better to always be on the safe side and to avoid losing any data, make sure to check the **`STATUS`** LED for any warnings or errors.
 
-When the SCK doesn't have , after **three attempts to connect**, it will enter _warning mode_ (see [here](/Smart Citizen Kit/#operation-modes)). After this, it will try again after 5 times the publication interval (by default 3'), which means, after the Internet connection is back the **SCK will take a maximum of 15' to connect to it** and start pushing data. The data publication is not immediate and will take some minutes. If you are in a hurry, click the user button twice (blue-red-blue mode) or reset the kit and data will start being posted right away.
+In the particular case of the _Wi-Fi_ mode, two possible things can happen:
 
-!!! warning "Be careful!"
-    Having a non-permanent WiFi connection means that we can also risk entering error mode if the SCK runs out of battery because it obtains the time from the internet (or from a phone during the SD card setup process). **Losing the network connection and running out of battery means the device will lose the internal clock time, and the device will stop taking readings until it has power and can connect to the internet to sync, again.**
+- If the **SCK has time** but it doesn't have a stable network connection, it will attempt **three times** to connect to the network. If all 3 attempts fail, it will enter **`WARNING`** mode (see [here](#operation-modes) for more information). After these initial attempts, by default, it will try again after 15' (or 5 times the publication interval, in case you changed it). This allows us to avoid wasting energy by trying to connect to an unexisting or unstable network, but it also has a side effect: after the network connection is back, the next attempt to connnect will take some time, and **it will take a maximum of 15' to connect to it** and start pushing data. If you are in a hurry, click the [**`ON/OFF`** button](#the-onoff-button) twice (blue->red->blue mode) or [**`RESET`**](#the-reset-button) the kit and data will start being posted right away.
+- On the contrary, **if the SCK doesn't have time**, then it will always be in **`ERROR`** mode until it manages to connect to the network and get _the time_ from it. It will keep trying to connect forever.
+
+!!! warning "Be aware of _the time_"
+    Having a non-permanent Wi-Fi connection means that we can also risk entering error mode if the SCK runs out of battery. This is because the SCK obtains _the time_ from the internet (or from a phone during the SD card setup process). **Losing the network connection and running out of battery means the device will lose the internal clock time, and the device will stop taking readings until it has power and can connect to the internet to sync, again.**
 
 !!! info "Debugging commands"
     Check [this guide](/Guides/getting started/Using the Shell/#accessing-the-flash-memory) for more debugging commands.
 
-### USB reset
-
 ### Sanity reset
 
-The kit will reboot itself takes place every night at 2am CET. ith the purpose to avoid data loss because a problem. The SCK then stores the data in a file with a sequential name, and does so by changing the filename to YY-MM-DD.01, .02… etc depending on the amount of resets it sees during that day. You can see the data and work with it by changing the name from YY-MM-DD.01 to YY-MM-DD_01.CSV. [Check the guide on how to organise your data](/Guides/data/Organise your data/#pre-process-the-sd-card-data) to automatise this.
+The kit will force reboot itself every night at 00:00 UTC. We call this _sanity reset_ and it's done to prevent _simple_ issues to build up. Until firmware **0.9.8**, the _sanity reset_ took place at 2am UTC, but it was changed on **`0.9.9`** to 00:00 UTC to avoid creating unnecessary CSV files in the SD card because of this reset.
+
+!!! danger "You can disable this"
+    This reset will cut all power to internal and external sensors, and potentially affect their readings. You can disable this feature [using the shell](/guides/getting started/Using the Shell/#disable-sanity-reset).
 
 ### Massive storage mode
 
+The `Massive storage mode` is mostly used to [upgrade the SAMD21 firmware](/guides/firmware/Update the firmware/), by a simple drag-and-drop. However it also has interesting files:
+
+```
+CURRENT.UF2
+INDEX.HTM
+INFO_UF2.TXT
+```
+
+- `CURRENT.UF2`: your current firmware binary file
+- `INDEX.HTM`: a link to the [firmware current releases page](https://github.com/fablabbcn/smartcitizen-kit-21/releases/)
+- `INFO_UF2.TXT`: information about the bootloader version, hardware model and board:
+
+    ```
+    UF2 Bootloader v2.0.0-adafruit.5-3-g6402020-dirty SFHWRO
+    Model: Smartcitizen Kit 2.0
+    Board-ID: SAMD21G18A-sck2-v2
+    ```
+
+### SD-card access
+
+You can access files from the SD-card using the Shell. This is described in the [Data - SD-card Section](/data/SD-card).

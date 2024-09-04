@@ -7,10 +7,10 @@ The guides in this section are aimed at creating a set of tools and resources ar
 These guides will help you with many aspects of the Smart Citizen Project. Since there are a lot of different guides, here there is a small summary for each type of device:
 
 !!! info "What are the differences between the sensor units?"
-	The hardware, being designed in a modular way, allows for a lot of customisation. We call [**Smart Citizen Kit** ](/Smart Citizen Kit/) to the different variants of devices that have a [Data Board](/Components/boards/Data Board/), an [Urban Board](/Components/boards/Urban Board/) and a [PMS5003 Particulate matter sensor](/Components/sensors/air/PM Sensors/).
+	The hardware, being designed in a modular way, allows for a lot of customisation. We call [**Smart Citizen Kit** ](/hardware/Smart Citizen Kit/) to the different variants of devices that have a [Data Board](/Components/boards/Data Board/), an [Urban Board](/Components/boards/Urban Board/) and a [PMS5003 Particulate matter sensor](/Components/sensors/air/PM Sensors/).
 	Adding any additional sensor to the Smart Citizen Kit, with or without Urban Board, is what we call a [**Smart Citizen Station**](/Smart Citizen Station/). The **Stations** amount of sensors could range from 1 to virtually any number. There are some **Stations** that are meant for air quality measurements, and some that take water measurements. Some of them have only one additional CO2 sensor, and some Stations have up to 16 analog measurements in parallel. Check the guides compilation below to make sure you follow the different steps for the configuration of your particular unit.
 
-### Smart Citizen Kit
+## Smart Citizen Kit
 
 <img src="https://live.staticflickr.com/65535/48992224646_bd32af64ae_k.jpg" width="2000" height="1333" alt="SCK 2.1 - Street 2">
 
@@ -21,7 +21,7 @@ These guides will help you with many aspects of the Smart Citizen Project. Since
 - [ ] More advanced features? Check the [using the Shell](/Guides/getting%20started/Using%20the%20Shell/) guide
 
 
-### Smart Citizen Air Quality Stations
+## Smart Citizen Air Quality Stations
 
 <img src="https://live.staticflickr.com/65535/50977149367_922fc1c478_k.jpg" width="2000" height="1333" alt="Smart Citizen Station v3">
 
@@ -35,7 +35,7 @@ These guides will help you with many aspects of the Smart Citizen Project. Since
 !!! warning ""
 	Note that if your unit has electrochemical sensors, data needs to be postprocessed outside of the units (in the platform). By following the [handling calibration information](/Guides/data/Handling%20calibration%20data/) guide, you are set with the default processing. However, if you want to perform custom algorithms in an automated way, follow the [Data processing](/Guides/data/Custom%20data%20processing/) guide to set it up
 
-### Smart Citizen Water Stations
+## Smart Citizen Water Stations
 
 <img src="https://live.staticflickr.com/65535/51124639732_90241111a9_k.jpg" width="2048" height="1365" alt="Water Station - Patí Científic">
 

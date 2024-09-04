@@ -11,11 +11,17 @@ nav:
     - Hardware:
       - Index: hardware/index.md
       - Smart Citizen Kit: hardware/Smart Citizen Kit.md
-      - Smart Citizen Stations: hardware/Smart Citizen Stations.md
-      - Auxiliary Connector: hardware/Auxiliary Connector.md
-      - Enclosures:
-        - Index: hardware/enclosures/index.md
+      - Smart Citizen Stations:
+        - Index: hardware/stations/index.md
+        - Air:
+          - SCK + CO2: hardware/stations/air/sck_co2.md
+        - Water:
+          - Water Kit: hardware/stations/water/sck_water_kit.md
+          - Water Stations: hardware/stations/water/sck_water.md
+      - Firmware: hardware/firmware.md
+      - Enclosures: hardware/enclosures.md
       - Boards:
+        - Index: hardware/boards/index.md
         - Data Board: hardware/boards/Data Board.md
         - Urban Board: hardware/boards/Urban Board.md
         - PM Board: hardware/boards/PM Board.md
@@ -23,75 +29,84 @@ nav:
         # - Carrier boards: hardware/boards/Carrier Boards.md
         - Discontinued:
           - Gases Pro Board: hardware/boards/Gases Pro Board.md
-          - PM Board: hardware/boards/PM Board.md
-      - Extras:
-        - Index: hardware/extras/index.md
-        - OLED Screen: hardware/extras/OLED.md
-        - GPS: hardware/extras/GPS.md
-      - Power:
-        - Index: hardware/power/index.md
-        - Power Supply: hardware/power/Power Supply.md
-        - Solar Panel: hardware/power/Solar Panel.md
-      - Sensors: hardware/sensors/index.md
-    - Firmware:
-      - Introduction: firmware/index.md
-      # - Architecture: firmware/Architecture.md
-      - Flash Storage: firmware/Flash Storage.md
+      - Add-ons:
+        - Index: hardware/addons/index.md
+        - OLED Screen: hardware/addons/OLED.md
+        - GPS: hardware/addons/GPS.md
+        - Power Supply: hardware/addons/Power Supply.md
+        - Solar Panel: hardware/addons/Solar Panel.md
     - Data:
       - Index: data/index.md
-      - Data Plaform: data/Smart Citizen API.md
-      - Data Analysis: data/Data Analysis.md
+      - Data Platform: data/Data Platform.md
+      - Data Tools: data/Data Tools.md
+      - SD-card Data: data/SD-card.md
     - FAQ: _FAQ.md
     - Troubleshooting: Troubleshooting.md
   - Knowledge:
-    - Sensors:
-      - Index: hardware/sensors/index.md
-      # - Performance: hardware/sensors/performance.md
-      # - Calibration: hardware/sensors/calibration.md
-      - Air:
-        - Introduction: hardware/sensors/air/index.md
-        - Particulate Matter:
-          - Index: hardware/sensors/air/pm/index.md
-          - Plantower PMS5003: hardware/sensors/air/pm/Plantower_PMS5003.md
-          - Sensirion SPS30: hardware/sensors/air/pm/Sensirion_SPS30.md
-          - Sensirion SEN5X: hardware/sensors/air/pm/Sensirion_SEN5X.md
-        - Chemical composition:
-          - Index: hardware/sensors/air/chemical/index.md
-          - Alphasense Electrochemical: hardware/sensors/air/chemical/Alphasense_Electrochemical.md
-          - SGX Mics: hardware/sensors/air/chemical/SGX_MICS.md
-          - AMS CCS811: hardware/sensors/air/chemical/AMS_CCS811.md
-          - Bosch BME680: hardware/sensors/air/chemical/Bosch_BME680.md
-          - Sensirion SFA30: hardware/sensors/air/chemical/Sensirion_SFA30.md
-          # - Sciosense ENS160: hardware/sensors/air/Sciosense_ENS160.md
-          # - Sensirion SPG4X: hardware/sensors/air/Sensirion_SPG4X.md
-        - CO2:
-          - Index: hardware/sensors/air/co2/index.md
-          - Sensirion SCD30: hardware/sensors/air/co2/Sensirion_SCD30.md
-          - Sensirion SCD4X: hardware/sensors/air/co2/Sensirion_SCD4X.md
-        - Noise:
-          - Index: hardware/sensors/air/noise/index.md
-          - TDK ICS43432: hardware/sensors/air/noise/TDK_ICS43432.md
-        - Temperature:
-          - Index: hardware/sensors/air/temperature/index.md
-          - Sensirion SHT3X: hardware/sensors/air/temperature/Sensirion_SHT3X.md
-          - DS2812B: hardware/sensors/air/temperature/DS2812B.md
-        - Light:
-          - Index: hardware/sensors/air/light/index.md
-          - AMS AS7311: hardware/sensors/air/light/AMS_AS7331.md
-          - Rohm BH1721FVC: hardware/sensors/air/light/Rohm_BH1721FVC.md
-        - Pressure:
-          - Index: hardware/sensors/air/pressure/index.md
-          - NXP MPL3115A26: hardware/sensors/air/pressure/NXP_MPL3115A26.md
-          - ST LPS33K: hardware/sensors/air/pressure/ST_LPTS33K.md
-      - Soil and Water:
-        - Index: hardware/sensors/soil-water/index.md
-        - Atlas pH: hardware/sensors/soil-water/Atlas_pH.md
-        - Atlas Dissolved Oxygen: hardware/sensors/soil-water/Atlas_DO.md
-        - Atlas Conductivity: hardware/sensors/soil-water/Atlas_EC.md
-        - Atlas Temperature: hardware/sensors/soil-water/Atlas_Temperature.md
-        - Atlas ORP: hardware/sensors/soil-water/Atlas_ORP.md
-        - Chirp Soil Moisture: hardware/sensors/soil-water/Chirp_Soil_Moisture.md
-        - Tensionmenter: hardware/sensors/soil-water/Tensiometer.md
+    - Index: knowledge/index.md
+    - Air:
+      - Introduction: knowledge/air/index.md
+      - Particulate Matter:
+        - Index: knowledge/air/pm/index.md
+        - Plantower PMS5003: knowledge/air/pm/Plantower_PMS5003.md
+        - Sensirion SPS30: knowledge/air/pm/Sensirion_SPS30.md
+        - Sensirion SEN5X: knowledge/air/pm/Sensirion_SEN5X.md
+      - Chemical composition:
+        - Index: knowledge/air/chemical/index.md
+        - Alphasense Electrochemical: knowledge/air/chemical/Alphasense_Electrochemical.md
+        - SGX Mics: knowledge/air/chemical/SGX_MICS.md
+        - AMS CCS811: knowledge/air/chemical/AMS_CCS811.md
+        - Bosch BME680: knowledge/air/chemical/Bosch_BME680.md
+        - Sensirion SFA30: knowledge/air/chemical/Sensirion_SFA30.md
+        # - Sciosense ENS160: hardware/air/Sciosense_ENS160.md
+        # - Sensirion SPG4X: hardware/air/Sensirion_SPG4X.md
+      - CO2:
+        - Index: knowledge/air/co2/index.md
+        - Sensirion SCD30: knowledge/air/co2/Sensirion_SCD30.md
+        - Sensirion SCD4X: knowledge/air/co2/Sensirion_SCD4X.md
+      - Noise:
+        - Index: knowledge/air/noise/index.md
+        - TDK ICS43432: knowledge/air/noise/TDK_ICS43432.md
+      - Temperature:
+        - Index: knowledge/air/temperature/index.md
+        - Sensirion SHT3X: knowledge/air/temperature/Sensirion_SHT3X.md
+        - Dallas DS18B20: knowledge/air/temperature/DS18B20.md
+      - Light:
+        - Index: knowledge/air/light/index.md
+        - AMS AS7311: knowledge/air/light/AMS_AS7331.md
+        - Rohm BH1721FVC: knowledge/air/light/Rohm_BH1721FVC.md
+      - Pressure:
+        - Index: knowledge/air/pressure/index.md
+        - NXP MPL3115A26: knowledge/air/pressure/NXP_MPL3115A26.md
+        - ST LPS33K: knowledge/air/pressure/ST_LPTS33K.md
+    - Soil and Water:
+      - Index: knowledge/soil-water/index.md
+      - pH:
+        - Index: kwoledge/soil-water/pH/index.md
+        - Atlas pH: knowledge/soil-water/pH/Atlas_pH.md
+      - Dissolved Oxygen:
+        - Index: knowledge/soil-water/DO/index.md
+        - Atlas Dissolved Oxygen: knowledge/soil-water/DO/Atlas_DO.md
+      - Conductivity:
+        - Index: knowledge/soil-water/EC/Atlas_EC.md
+        - Atlas Conductivity: knowledge/soil-water/EC/Atlas_EC.md
+      - Temperature:
+        - Index: knowledge/soil-water/temperature/index.md
+        - Atlas Temperature: knowledge/soil-water/temperature/Atlas_Temperature.md
+      - ORP:
+        - Index: knowledge/soil-water/ORP/index.md
+        - Atlas ORP: knowledge/soil-water/ORP/Atlas_ORP.md
+      - Soil Moisture:
+        - Index: knowledge/soil-water/moisture/index.md
+        - Tensiometer: knowledge/soil-water/moisture/Tensiometer.md
+        - Chirp Soil Moisture: knowledge/soil-water/moisture/Chirp_Soil_Moisture.md
+    - Other:
+      - Index: knowledge/other/index.md
+      - Electric Current/Voltage:
+        - Index: knowledge/other/electric/index.md
+        - Seeed Grove ADC (voltage): knowledge/other/electric/Seeed_Grove_ADC.md
+        - TI ADS1X15 (voltage): knowledge/electric/TI_ADS1X15.md
+        - TI INA219 (current): knowledge/other/electric/TI_INA219.md
   - Guides:
     - Introduction: guides/index.md
     - Getting Started:
@@ -106,7 +121,7 @@ nav:
       # - External Sensors: guides/getting started/External Sensors.md
       # - Dealing with sensitive sensor readings: guides/getting started/Dealing with sensitive sensor readings.md
     - Firmware Operations:
-      - Updating the firmware: guides/firmware/Update the firmware.md
+      - Upgrading the firmware: guides/firmware/Upgrade the firmware.md
       - Editing the firmware: guides/firmware/Edit the Firmware.md
       - Debugging the firmware: guides/firmware/Debug the firmware.md
     - Calibrating Sensors:
@@ -157,27 +172,24 @@ nav:
     - Toolkits:
       - Index: resources/toolkits/index.md
       - Citizen Sensing Toolkit: resources/toolkits/Citizen Sensing Toolkit.md
-      - Doit! Toolkit: resources/toolkits/Doit.md
-      - Citizen-led Action Toolkit: resources/toolkits/Citizen-led Action Toolkit.md
+      # - Doit! Toolkit: resources/toolkits/Doit.md
+      # - Citizen-led Action Toolkit: resources/toolkits/Citizen-led Action Toolkit.md
     - Webinars: resources/webinars.md
-    - For educators: resources/education/index.md
-    # - Main: resources/Education/index.md
-    # - Aulamar (ES):
-    #   - Índice: resources/Education/AulaMar/index.md
-    #   - Notas generales: resources/Education/AulaMar/General.md
-    #   - Instrucciones: resources/Education/AulaMar/Instrucciones.md
-    #    - Guías por métrica:
-    #      - pH: resources/Education/AulaMar/pH.md
-    #      - Oxígeno disuelto: resources/Education/AulaMar/OD.md
-    #      - Conductividad: resources/Education/AulaMar/EC.md
-    #      - Temperatura: resources/Education/AulaMar/T.md
-    # - CLAB (EN):
-    #   - Index: resources/Education/CLAB/index.md
-    #   - Instructions: resources/Education/CLAB/Instructions.md
+    - Education: resources/education/index.md
+      # - Aulamar (ES):
+      #   - Índice: resources/education/AulaMar/index.md
+      #   - Notas generales: resources/education/AulaMar/General.md
+      #   - Instrucciones: resources/education/AulaMar/Instrucciones.md
+      #   - Guías por métrica:
+      #     - pH: resources/education/AulaMar/pH.md
+      #     - Oxígeno disuelto: resources/education/AulaMar/OD.md
+      #     - Conductividad: resources/education/AulaMar/EC.md
+      #     - Temperatura: resources/education/AulaMar/T.md
   - About:
-    - The Smart Citizen Project: about/index.md
+    - Index: about/index.md
     - Funding: about/funding.md
     - Friends: about/friends.md
+    - Open Source: about/open-source.md
 
 theme:
   language: 'en'
@@ -221,8 +233,6 @@ theme:
     repo: fontawesome/brands/git-alt
     annotation: material/star-four-points-circle
 
-
-
 extra:
   social:
     - icon: fontawesome/brands/twitter
@@ -234,7 +244,7 @@ extra:
   footer_logo: '/assets/images/eu-flag.png'
   license: 'GNU Free Documentation License'
   license_url: 'https://www.gnu.org/licenses/fdl-1.3.html'
-  fullscreen_button: true
+  fullscreen_button: false
   # alternate:
   #   - name: English
   #     link: /
@@ -252,47 +262,16 @@ plugins:
   #       'Resources/Tutorials/Orange Data Widgets.md': 'Guides/data/Orange Data Widgets.md'
   #       'Resources/Tutorials/Simple Orange Workflow.md': 'Guides/data/Simple Orange Workflow.md'
   #       'Resources/Tutorials/Orange and geolocated data.md': 'Guides/data/Orange and geolocated data.md'
-# - with-pdf:
-#     author: Smart Citizen
-#     copyright: 'CC Attribution-NonCommercial-ShareAlike 4.0 International'
-#     cover: true
-#     cover_title: Smart Citizen Sensors Documentation
-#     cover_subtitle: Smart Citizen - Oct 2020
-#     toc_title: Table of contents
-#     heading_shift: false
-#     toc_level: 3
-#     ordered_chapter_level: 2
-#     excludes_children:
-#        - 'release-notes/:upgrading'
-#        - 'release-notes/:changelog'
-#     exclude_pages:
-#        - 'Components/'
-#        - 'Guides/'
-#        - 'Legacy Hardware/'
-#        - 'Sensors Analysis Framework/'
-#        - 'Sensor Platform/'
-#     convert_iframe:
-#        - src: IFRAME SRC
-#          img: POSTER IMAGE URL
-#          text: ALTERNATE TEXT
-#        - src: ...
-#     two_columns_level: 3
-#     render_js: true
-#     headless_chrome_path: headless-chromium
-#     output_path: ..
-#     enabled_if_env: ENABLE_PDF_EXPORT
-#     debug_html: true
-#     show_anchors: true
-#     verbose: true
 
 markdown_extensions:
+  - attr_list
   - md_in_html
   - admonition
   - codehilite
   - footnotes
   - toc:
       permalink: true
-      toc_depth: 2
+      toc_depth: 3
   - pymdownx.arithmatex
   - pymdownx.betterem:
       smart_enable: all
@@ -300,7 +279,8 @@ markdown_extensions:
   - pymdownx.critic
   - pymdownx.details
   - pymdownx.emoji:
-      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.inlinehilite
   - pymdownx.magiclink
   - pymdownx.mark
@@ -309,8 +289,9 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde
-  - attr_list
-  - pymdownx.tabbed
+  - pymdownx.tabbed:
+      alternate_style: true
+
 
 extra_css:
   - assets/stylesheets/extra.css

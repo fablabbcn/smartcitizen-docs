@@ -141,7 +141,7 @@ The workflow we normally follow for this goes like:
     Make a pull request with your contribution back to the firmware so that other can use it!
 
 
-Additional sensors can be added to the Smart Citizen Kit as seen in the [Supported Sensors page](/Components/Auxiliary Connector/). The [PM Board](/Components/boards/PM Board/) is one of the options, and a powerful auxiliary board that can connect to many things on the auxiliary bus of the Smart Citizen Kit. However, it's not the only way to attach sensors.
+Additional sensors can be added to the Smart Citizen Kit as seen in the [Supported Sensors page](/hardware/Smart Citizen Kit/#auxiliary-connector). The [PM Board](/Components/boards/PM Board/) is one of the options, and a powerful auxiliary board that can connect to many things on the auxiliary bus of the Smart Citizen Kit. However, it's not the only way to attach sensors.
 
 ## Example
 
@@ -154,7 +154,7 @@ You can also use [this grove hub](https://www.seeedstudio.com/Grove-I2C-Hub.html
 
 ### Configuration
 
-To use a configuration with additional sensors (with or without PM Board), and in case you want to store the data on the platform, you will need to select the appropiate blueprint for it. When doing the onboarding process, make sure you select the proper blueprint in the [advanced sensor selection](/Guides/getting started/Onboarding Sensors/#advanced-kit-selection). 
+To use a configuration with additional sensors (with or without PM Board), and in case you want to store the data on the platform, you will need to select the appropiate blueprint for it. When doing the onboarding process, make sure you select the proper blueprint in the [advanced sensor selection](/Guides/getting started/Onboarding Sensors/#advanced-kit-selection).
 
 !!! warning "Important to know which sensor you have"
 	To distinguish the sensors you have plugged in onto your kit, make sure you know what sensor model they are. You can [check these instructions](/#understanding-sensor-names) to get around.
@@ -270,7 +270,7 @@ Using additional sensors, can be at times confusing, because we might end up in 
 !!! info "No graph?"
 	This time you didn't see a graph because there was no data being sent to that metric in the kit. Normally, this is not the normal behaviour, but sometimes, if you are using blueprints for more advanced configurations, you will see that not all the sensors possible are actually in the hardware!
 
- 
+
 ### Sensors with open leads
 
 If you are using sensors with open leads (not terminated cables), you can use [this grove to screw connector](https://www.seeedstudio.com/Grove-Screw-Terminal.html). However, you need to know how to connect the cables to it:
@@ -278,7 +278,7 @@ If you are using sensors with open leads (not terminated cables), you can use [t
 !!! info "Examples"
 
 	If you are using a [Catnip Chirp Soil Moisture](https://wemakethings.net/chirp/) sensor:
-	
+
 	![](/assets/images/chirp-screw-connector.jpeg)
 
 	Or if you are using a [DF-Robot Weather proof temperature sensor](https://www.dfrobot.com/product-2160.html):

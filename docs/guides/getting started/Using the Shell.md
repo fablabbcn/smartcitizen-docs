@@ -12,7 +12,7 @@ Software-wise, different platforms will have different interfaces. The easiest a
 
 !!! example "Using the Arduino IDE"
     - Launch the _Arduino IDE_ and select the port under `Tools > Port >`:
-    
+
     ![](https://i.imgur.com/XEZXoyy.png)
 
     - Launch the `Serial Monitor` under `Tools > Serial Monitor`. Make sure that the dropdowns in the bottom are set as in the image below (`Carriage return` and `115200 baud`)
@@ -55,25 +55,28 @@ rcause:      Show last reset cause (debug)
 outlevel:    Shows/sets output level: outlevel [0:silent, 1:normal, 2:verbose]
 help:        Duhhhh!!
 pinmux:      Shows SAMD pin mapping status
-flash:       Shows and manage flash memory state [no-param -> info] [-format (be carefull)] [-dump sect-num (0-2040)] [-sector sect-num] [-recover sect-num/all net/sd]
-sensor:      Shows/sets sensor state or interval: sensor sensor-name [-enable or -disable] [-interval interval(seconds)] [-oled]
+flash:       Shows and manage flash memory state [no-param -> info] [-format (be careful)] [-dump sect-num (0-2040)] [-sector sect-num] [-recover sect-num/all net/sd]
+sensor:      Shows/sets sensor state or interval: sensor sensor-name [-enable or -disable] [-interval interval(seconds)]
+monitor:     Continously read sensor: monitor [-sd] [-notime] [-noms] [sensorName[,sensorNameN]]
+debug:       Toggle debug messages: debug [-sdcard] [-flash] [-speed] [-serial]
 read:        Reads sensor: read [sensorName]
 control:     Control sensor: control [sensorName] [command]
-monitor:     Continously read sensor: monitor [-sd] [-notime] [-noms] [-oled] [sensorName[,sensorNameN]]
 free:        Shows the amount of free RAM memory
 i2c:         Search the I2C bus for devices
 power:       Controls/shows power config: power [-info (extra info)] [-batcap mAh] [-otg on/off] [-charge on/off] [-sleep min (0-disable)]
-config:      Shows/sets configuration: config [-defaults] [-mode sdcard/network] [-pubint seconds] [-readint seconds] [-wifi "ssid" ["pass"]] [-token token]
+config:      Shows/sets configuration: config [-defaults] [-mode sdcard/network] [-pubint seconds] [-readint seconds] [-wifi "ssid" ["pass"]] [-token token] [-sanity(reset) on/off]
 esp:         Controls or shows info from ESP: esp [-on -off -sleep -wake -reboot -flash]
 netinfo:     Shows network information
 time:        Shows/sets date and time: time [epoch time] [-sync]
 hello:       Sends MQTT hello to platform
-debug:       Toggle debug messages: debug [-sdcard] [-esp] [-oled] [-flash] [-telnet] [-speed]
 shell:       Shows or sets shell mode: shell [-on] [-off]
 publish:     Publish custom mqtt message: mqtt ["topic" "message"]
 offline:     Configure offline periods and WiFi retry interval: [-retryint seconds] [-period start-hour end-hour (UTC 0-23)]
 mqttsrv:     Configure mqtt server address and port: [-host serverName] [-port portNum]
 ntpsrv:      Configure ntp server address and port: [-host serverName] [-port portNum]
+sleep:       Send the kit to sleep
+led:         Changes led brightness: led [percent]
+file:        SD card file operations: [-ls] [-rm filename] [-less filename] [-allcsv]
 ```
 
 ### Shell Mode
@@ -85,7 +88,7 @@ SCK > shell -on
 Shell mode: on
 ```
 
-This will turn your **LED static yellow**, and no output except responses to your commands will be given. 
+This will turn your **LED static yellow**, and no output except responses to your commands will be given.
 
 Remember to turn it off after you are done experimenting!
 
@@ -137,7 +140,7 @@ In order to understand the reading and publication intervals, it is important to
 2. **Individual sensor reading interval**: period for each sensor to take a measurement. It is defined as N times the _Overall reading interval_
 3. **Publication interval**: time for the SCK to publish to the Smart Citizen Platform, independent of the reading interval.
 
-Each of the sensors can be configured independently, with a reading interval N times the _overall reading interval_. For instance, after the `SAM firmware V0.9.7`, all the sensors are read every 60s except the PMS5003, which is read every 5 minutes or 5 times the reading interval. 
+Each of the sensors can be configured independently, with a reading interval N times the _overall reading interval_. For instance, after the `SAM firmware V0.9.7`, all the sensors are read every 60s except the PMS5003, which is read every 5 minutes or 5 times the reading interval.
 
 In the case of the publication interval to the Smart Citizen Platform, the  default is 3 minutes.
 
@@ -174,7 +177,7 @@ Saved configuration on eeprom!!
 For instance, if we try to do 1.5 times the reading interval of the temperature sensor, we will get:
 
 ```
-SCK > sensor temp -interval 240 
+SCK > sensor temp -interval 240
 The sensor read interval is calculated as a multiple of general read interval (180)
 Changing interval of Temperature to 180
 Saved configuration on eeprom!!
@@ -325,7 +328,7 @@ Miliseconds     Light
 ...
 ```
 
-!!! warning 
+!!! warning
     If your kit has no time configured (the LED should be flashing), the output would look like:
 
     ```
@@ -448,6 +451,54 @@ Recover a sector (send it to the platform or save in sdcard, or both - see `help
 flash -recover all net
 ```
 
+### Disable `sanity reset`
+
+The sanity reset can be disabled by:
+
+```
+SCK > config -sanity off
+
+-- New config --
+
+Mode: network
+Publish interval (s): 180
+Reading interval (s): 60
+Wifi credentials: My Wi-Fi - mypassword
+Token: ----
+Mac address:  AA:BB:CC:CC:BB:AA
+Sanity reset (every 24 hours) is: off
+```
+
+You can enable it back on by:
+
+```
+SCK > config -sanity on
+
+-- New config --
+
+Mode: network
+Publish interval (s): 180
+Reading interval (s): 60
+Wifi credentials: My Wi-Fi - mypassword
+Token: ----
+Mac address:  AA:BB:CC:CC:BB:AA
+Sanity reset (every 24 hours) is: on
+```
+
+To check, simply type `config`.
+
+```
+SCK > config
+
+Mode: network
+Publish interval (s): 180
+Reading interval (s): 60
+Wifi credentials: My Wi-Fi - mypassword
+Token: ----
+Mac address:  AA:BB:CC:CC:BB:AA
+Sanity reset (every 24 hours) is: on
+```
+
 ## Advanced (but cool) example!
 
 !!! example "Making most of the digital microphone"
@@ -493,4 +544,4 @@ flash -recover all net
 
     ![](https://i.imgur.com/KZfFDam.png)
 
-    You can see that we were playing with a [tone generator](http://onlinetonegenerator.com/) to make some high pitch noises at 10kHz and 20kHz. 
+    You can see that we were playing with a [tone generator](http://onlinetonegenerator.com/) to make some high pitch noises at 10kHz and 20kHz.

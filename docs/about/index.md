@@ -1,9 +1,14 @@
----
-hide:
-    - navigation
----
+# About
 
-# Beginner's introduction
+WIP - TODO
+
+The Smart Citizen project works to provide tools for anyone willing to use technology in a critical way. By developing environmental sensing tools, branching out in various fields such as open hardware, software, data, social innovation and digital fabrication, our main contribution is the amount of resources that this documentation hopes to compile. The project was born in [Fab Lab Barcelona](https://fablabbcn.org) which, up until now, is the main maintainer of the project. However, the project is [released under **free** and **open source** licenses](#open-source), hoping that anyone can contribute to it, reuse it, adapt it and improve it in any way needed.
+
+<!-- TODO - Link to licenses of the different components -->
+
+!!! info "A note about funding"
+
+    One important aspect to mention in the front page of our documentation is that we have received public funding in several ocasions, including the European Commission funds in H2020 and Horizon Projects. In the [funding page](/About/funding/) you can find a complete list of these projects, for which we are thankful and that we hope that we have been able to deliver results accordingly. For publicly funded projects, information on the project numbers is available through the links in the `ID` column.
 
 ![](https://live.staticflickr.com/4519/24368451748_172c258274_h.jpg)
 

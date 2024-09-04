@@ -56,7 +56,7 @@ In order to find a raspberry pi over the network we can use commands like these:
 MY_IP_RANGE=$(ip addr | grep 'state UP' -A2 | tail -n1 | awk '{print $2}') && nmap -sn $MY_IP_RANGE && IP=$(arp -na | grep b8:27:eb | grep -Eo '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}') && ssh $IP;
 ```
 
-**Mac** 
+**Mac**
 
 ```
 MY_RANGE=$(ip addr | grep "UP" -A3 | grep '192' -A0 | awk '{print $2}') && nmap -sn $MY_RANGE && arp -na | grep b8:27:eb
@@ -98,7 +98,6 @@ In order to use the [SWD connector](http://www.arm.com/products/system-ip/debug-
 
 ![](https://i.imgur.com/qJ2fV3N.jpg)
 
----
 ![](https://i.imgur.com/AEYc8sd.jpg)
 
 ### Running OpenOCD on the raspberry pi
@@ -308,7 +307,7 @@ ress    What
 (gdb) break main.cpp:344
 ```
 !!! info
-    Use the **tbreak** command instead of break if you want to stop the program once, and then remove the breakpoint. More **breakpoint condition** options can be found [**here**](https://sourceware.org/gdb/current/onlinedocs/gdb/Conditions.html#Conditions) you can find 
+    Use the **tbreak** command instead of break if you want to stop the program once, and then remove the breakpoint. More **breakpoint condition** options can be found [**here**](https://sourceware.org/gdb/current/onlinedocs/gdb/Conditions.html#Conditions) you can find
 
 `watchpoint`
 

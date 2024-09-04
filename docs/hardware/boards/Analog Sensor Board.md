@@ -1,26 +1,10 @@
 ---
-type: external
-feature_img:
+type: core
+feature_img: None
 status: stable
-versions:
-    - 4 channel:
-        image:
-        description:
-    - 8 channel:
-        image:
-        description:
-interface:
-    - Auxiliary Port:
-        description: I2C via Auxiliary Port
-        image:
-        comment:
-source:
-    Design files: https://github.com/fablabbcn/smartcitizen-analog-sensor-board TODO
-resources:
-    pdf:
+versions: None
+interface: None
 ---
-
-{{ insert_banner() }}
 
 # Analog Sensor Board
 
