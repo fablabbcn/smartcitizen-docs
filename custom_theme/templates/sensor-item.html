@@ -1,39 +1,37 @@
-<div class="sensor-banner">
+<div class="sensor-banner {{ color }}-sensor-banner">
     <div class="sensor-image-block">
-        <img src="/assets/images/scd30-seeed-transparent.png" alt="Sensirion SCD30" class="sensor-image">
+        <a href="{{target_url}}"><img src="{{ feature_img }}" alt="{{ name }}" class="sensor-image"></a>
     </div>
     <div class="sensor-tags-block-container">
-        <h1>Sensirion SCD30</h1>
+        <a href="{{ target_url }}"><h1>{{ name }}</h1></a>
         <div class="sensor-tags-block">
-            <a href="">
+            <a href="{{ field_url }}">
                 <div class="sensor-field sensor-tag">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="sensor-field-icon"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M288 32c0 17.7 14.3 32 32 32h32c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32 14.3-32 32s14.3 32 32 32h320c53 0 96-43 96-96S405 0 352 0h-32c-17.7 0-32 14.3-32 32zm64 352c0 17.7 14.3 32 32 32h32c53 0 96-43 96-96s-43-96-96-96H32c-17.7 0-32 14.3-32 32s14.3 32 32 32h384c17.7 0 32 14.3 32 32s-14.3 32-32 32h-32c-17.7 0-32 14.3-32 32zM128 512h32c53 0 96-43 96-96s-43-96-96-96H32c-17.7 0-32 14.3-32 32s14.3 32 32 32h128c17.7 0 32 14.3 32 32s-14.3 32-32 32h-32c-17.7 0-32 14.3-32 32s14.3 32 32 32z"/></svg>
-                    <p class="sensor-field-name">Field | <b class="sensor-tag-content">air</b></p>
+                    {{ icon|safe }}
+                    <p class="sensor-field-name">Field | <b class="sensor-tag-content">{% for i in field %}{{i}}{% endfor %}</b></p>
                 </div>
             </a>
-            <a href="">
+            <a href="{{ metric_url }}">
                 <div class="target-field sensor-tag">
-                    <p>Metric | <b class="sensor-tag-content">co2</b></p>
+                    <p>Metric | <b class="sensor-tag-content"> {% for i in target %}{{i}}{% endfor %}</b></p>
                 </div>
             </a>
-            <a href="">
-                <div class="type-field sensor-tag">
-                    <p>Connection | <b class="sensor-tag-content">External</b></p>
-                </div>
-            </a>
-            <a href="">
+            <div class="type-field sensor-tag">
+                <p>Connection | <b class="sensor-tag-content"> {% for i in type %}{{i}}{%- if not loop.last %} or {% endif %}{% endfor %}</b></p>
+            </div>
+            <a href=" {{ firmware_url }}">
                 <div class="firmware-field sensor-tag" title="Firmware version">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" class="sensor-field-icon"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3l89.3 89.4-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"/></svg>
-                    <p>FW | <b class="sensor-tag-content">0.9.8+</b></p>
+                    <p>FW | <b class="sensor-tag-content">{{ versions['firmware'] }}</b></p>
                 </div>
             </a>
-            <a href="">
+            <a href=" {{ hardware_url }}">
                 <div class="hardware-field sensor-tag" title="Hardware version">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="sensor-field-icon"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M176 24c0-13.3-10.7-24-24-24s-24 10.7-24 24v40c-35.3 0-64 28.7-64 64H24c-13.3 0-24 10.7-24 24s10.7 24 24 24h40v56H24c-13.3 0-24 10.7-24 24s10.7 24 24 24h40v56H24c-13.3 0-24 10.7-24 24s10.7 24 24 24h40c0 35.3 28.7 64 64 64v40c0 13.3 10.7 24 24 24s24-10.7 24-24v-40h56v40c0 13.3 10.7 24 24 24s24-10.7 24-24v-40h56v40c0 13.3 10.7 24 24 24s24-10.7 24-24v-40c35.3 0 64-28.7 64-64h40c13.3 0 24-10.7 24-24s-10.7-24-24-24h-40v-56h40c13.3 0 24-10.7 24-24s-10.7-24-24-24h-40v-56h40c13.3 0 24-10.7 24-24s-10.7-24-24-24h-40c0-35.3-28.7-64-64-64V24c0-13.3-10.7-24-24-24s-24 10.7-24 24v40h-56V24c0-13.3-10.7-24-24-24s-24 10.7-24 24v40h-56V24zm-16 104h192c17.7 0 32 14.3 32 32v192c0 17.7-14.3 32-32 32H160c-17.7 0-32-14.3-32-32V160c0-17.7 14.3-32 32-32zm192 32H160v192h192V160z"/></svg>
-                    <p>HW | <b class="sensor-tag-content">2.1+</b></p>
+                    <p>HW | <b class="sensor-tag-content">{{ versions['hardware'] }}</b></p>
                 </div>
             </a>
         </div>
-        <p class="sensor-excerpt">The <a href="https://www.sensirion.com/products/catalog/SCD30">SCD30</a> is a <strong>NDIR CO2</strong> sensor by <a href="https://sensirion.com/">Sensirion</a>. You can use it to measure CO2 in indoor spaces or for experiments where you need to know an accurate CO2 level.</p>
+        <p class="sensor-excerpt"> {{excerpt}} </p>
     </div>
 </div>

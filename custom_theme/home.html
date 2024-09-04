@@ -1,0 +1,71 @@
+<!-- Custom HTML site displayed as the Home chapter -->
+
+{% extends "main.html" %}
+{% block tabs %}
+<style>
+
+    body {
+        background-image: url(assets/images/station-v3-stack.jpg);
+    }
+
+    .md-header{
+        /* background-color: hsla(var(--md-hue),15%,9%,1); */
+        background-color: var(--nav-background-color);
+        color: var(--nav-font-color);
+        /* box-shadow: none; */
+    }
+
+    .md-tabs {
+        background-color: #00000000;
+    }
+
+    .md-main{
+        background-color: var(--overlay-background-color);
+    }
+
+    .md-content, h1, h2, p, .md-content {
+        color: var(--font-color);
+    }
+
+    @media screen and (min-width:30em) {
+        .md-nav  {
+            color: var(--font-color) !important;
+        }
+    }
+
+    .md-content__button {
+        display: none;
+    }
+
+    .grid > ul > li {
+        background-color: #ffffff11;
+    }
+
+    .md-typeset .grid.cards > ol > li, .md-typeset .grid.cards > ul > li, .md-typeset .grid > .card {
+    /* border-radius: .1rem; */
+        border-radius: 0.3rem;
+    }
+
+    .md-typeset a, .md-typeset a::before {
+        color: var(--md-accent-fg-color) !important;
+        /* font-weight: bold; */
+    }
+
+    .md-content__inner > h1 {
+        /* font-weight: bolder; */
+    }
+
+    .md-footer p {
+        color: var(--footer-font-color);
+    }
+
+</style>
+{{ super() }}
+{% endblock %}
+{% block content %}
+{{ super() }}
+{% endblock %}
+{% block footer %}
+{{ super() }}
+{% endblock %}
+

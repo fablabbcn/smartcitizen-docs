@@ -11,6 +11,22 @@
   --cards-other: #2CB5AE;
 }
 
+[data-md-color-scheme="slate"]{
+    --overlay-background-color: #00000099;
+    --font-color: white;
+    --nav-background-color: black;
+    --nav-font-color: var(--font-color);
+    --footer-font-color: white;
+}
+
+[data-md-color-scheme="default"]{
+    --overlay-background-color: #f8f8f8d3;
+    --font-color: rgb(20, 20, 20);
+    --nav-background-color: #2094f3;
+    --nav-font-color: white;
+    --footer-font-color: white;
+}
+
 div.table-compact + .md-typeset__scrollwrap th,
 div.table-compact + .md-typeset__scrollwrap td {
     padding: .5em 1.25em;
@@ -62,15 +78,12 @@ button.fullscreen_button:hover{
 	text-align: center;
 }
 
-.md-typeset:not(.emojione, .sensor-image, .sensor-field-icon) img:not(.emojione, .logo, .sensor-image, .sensor-field-icon),
-.md-typeset:not(.emojione, .sensor-image, .sensor-field-icon) svg:not(.emojione, .logo, .sensor-image, .sensor-field-icon){
+.md-typeset:not(.emojione, .twemoji, .sensor-image, .sensor-field-icon) img:not(.emojione, .twemoji, .logo, .sensor-image, .sensor-field-icon),
+.md-typeset:not(.emojione, .twemoji, .sensor-image, .sensor-field-icon) svg:not(.emojione, .twemoji, .logo, .sensor-image, .sensor-field-icon){
 	display: flex;
 	justify-content: center;
 	margin: auto !important;
 	/* max-width: 95% !important; */
-}
-.md-typeset:not(.emojione) img:not(.emojione, .logo){
-    color:rgb(255, 0, 0);
 }
 
 .md-footer-copyright{
@@ -527,17 +540,34 @@ a.card-title:hover{
 }
 
 .sensor-banner {
-    background-color: var(--cards-air);
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: max-content;
 }
+
+.orange-sensor-banner {
+    background-color: var(--cards-air);
+}
+
+.green-sensor-banner {
+    background-color: var(--cards-other);
+}
+
+.red-sensor-banner {
+    background-color: var(--cards-soil);
+}
+
+.blue-sensor-banner {
+    background-color: var(--cards-water);
+}
+
 .sensor-banner .sensor-image-block {
     background-color:#ffffffad;
     display: grid;
     align-content: center;
     justify-content: center;
 }
+
 .sensor-banner .sensor-image-block img.sensor-image {
     object-fit: cover;
     object-position: 50% 50%;
@@ -635,10 +665,10 @@ b.sensor-tag-content{
     }
     .sensor-block-multi .sensor-banner .sensor-tags-block-container {
         align-content: flex-start;
-    }      
+    }
     .sensor-banner {
         grid-template-columns: 50% 50%;
-        
+
     }
 
 }
