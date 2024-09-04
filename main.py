@@ -2,12 +2,129 @@ import os
 import re
 import yaml
 from jinja2 import Environment, FileSystemLoader
-
+import fnmatch
 from git import Repo
 import uuid
 import re
 import shutil
 from requests import get
+
+def get_frontmatter(content):
+    if '---\n' not in content:
+        print ('No frontmatter in content')
+        return None
+
+    if '---\n' in content[1:]:
+        frontmatter = yaml.load('\n'.join(content[1:content[1:].index('---\n')+1]), Loader=yaml.SafeLoader)
+    else:
+        frontmatter = None
+
+    return frontmatter
+
+colors = {
+    'air': 'orange',
+    'soil': 'red',
+    'water': 'blue',
+    'other': 'green'
+}
+
+def on_pre_page_macros(env):
+    custom_dir = os.path.basename(os.path.normpath(env.conf.theme.custom_dir))
+    environment = Environment(loader=FileSystemLoader(f"{custom_dir}/templates/"), autoescape=True)
+
+    source_folder = os.path.join('docs', env.page.url)
+
+    if source_folder != 'docs/':
+        return
+
+    print('*****************************')
+    print ('Creating cards under:')
+    print (source_folder)
+    print('*****************************')
+
+    if os.path.exists(os.path.join(source_folder, '.macroignore')):
+        with open(os.path.join(source_folder, '.macroignore'), 'r') as ignore_file:
+            ignores = ignore_file.read().splitlines()
+
+    for (root,_,files) in os.walk(source_folder):
+
+        for file in files:
+            print (file)
+            if file in ignores:
+                print ('Ignoring. Direct match')
+                continue
+
+            ignore_file = False
+            for ignore in ignores:
+                if (fnmatch.fnmatch(file, ignore)):
+                    print (ignore)
+                    ignore_file = True
+                    break
+
+            if ignore_file:
+                print ('Ignoring')
+                continue
+
+            file_path = os.path.join(root, file)
+            print (file_path)
+            if os.path.exists(file_path):
+                with open(file_path, 'r') as _file:
+                    content = _file.readlines()
+
+                frontmatter = get_frontmatter(content)
+                if frontmatter is not None:
+                    if 'card' not in frontmatter:
+                        continue
+                    if not frontmatter['card']:
+                        continue
+
+                    frontmatter['target_url'] = '/'+file_path.replace('docs/','').replace('.md','/')
+
+                    if 'field' in frontmatter:
+                        print (frontmatter['field'])
+                        # We can only choose one
+                        field = frontmatter['field'][0]
+
+                        frontmatter['color'] = colors[field]
+                        frontmatter['field_url'] = frontmatter['target_url'].split(field)[0]+f'{field}/'
+
+                        icon_file = f"{custom_dir}/templates/{field}-icon.html"
+                        if os.path.exists(icon_file):
+                            with open(icon_file, 'r') as iconfile:
+                                icon_text = iconfile.read()
+                        frontmatter['icon'] = icon_text
+
+                    # Do this for different types of units
+                    if 'type' in frontmatter:
+                        if frontmatter['type'] == 'unit':
+                            template = environment.get_template("unit-item.html")
+                        else:
+                            template = environment.get_template("sensor-item.html")
+
+                            # Firmware is hardcoded - TODO
+                            firmware_repo = 'https://github.com/fablabbcn/smartcitizen-kit-2x/releases/tag/'
+
+                            if 'versions' in frontmatter:
+                                if 'firmware' in frontmatter['versions']:
+                                    frontmatter['firmware_url'] = f"{firmware_repo}{frontmatter['versions']['firmware'].replace('+', '')}"
+
+                            if 'target' in frontmatter:
+                                metric = frontmatter['target'][0]
+                                frontmatter['metric_url'] = frontmatter['field_url']+f'{metric}/'
+
+                    print (frontmatter)
+                    result = template.render(frontmatter)
+
+                    if 'name' not in frontmatter:
+                        print ('ERROR: no name in frontmatter!')
+                        continue
+
+                    file_path = os.path.join(f"{custom_dir}/aux", file.replace('.md', '.html'))
+                    print (f'Creating card {file_path}')
+                    with open(file_path, 'w', encoding='utf-8') as _file:
+                        _file.write(result)
+                    print ('--DONE--')
+    return ''
 
 def define_env(env):
     """
@@ -28,18 +145,6 @@ def define_env(env):
             lines = ''
 
         return lines
-
-    def get_frontmatter(content):
-        if '---\n' not in content:
-            print ('No frontmatter in content')
-            return None
-
-        if '---\n' in content[1:]:
-            frontmatter = yaml.load('\n'.join(content[1:content[1:].index('---\n')+1]), Loader=yaml.SafeLoader)
-        else:
-            frontmatter = None
-
-        return frontmatter
 
     @env.macro
     def get_content(filename):
@@ -256,44 +361,6 @@ def define_env(env):
 
     @env.macro
     # TODO - Cleanup
-    # TODO - call this on pre-page build instead on supported sensors page
-    def create_cards():
-        custom_dir = os.path.basename(os.path.normpath(env.conf.theme.custom_dir))
-        environment = Environment(loader=FileSystemLoader(f"{custom_dir}/templates/"), autoescape=True)
-        template = environment.get_template("sensor_item.html")
-
-        source_folder = os.path.join('docs',env.page.url)
-        print('*****************************')
-        print ('Creating cards in subfolders under:')
-        print (source_folder)
-        print('*****************************')
-
-        for (root,_,files) in os.walk(source_folder):
-            for file in files:
-                print (file)
-                file_path = os.path.join(root, file)
-                if os.path.exists(file_path):
-                    with open(file_path, 'r') as _file:
-                        content = _file.readlines()
-
-                    frontmatter = get_frontmatter(content)
-
-                    if frontmatter is not None:
-                        frontmatter['target_url'] = source_folder
-                        result = template.render(frontmatter)
-
-                        if 'name' not in frontmatter:
-                            print ('ERROR: no name in frontmatter!')
-                            continue
-
-                        file_path = os.path.join(f"{custom_dir}/aux", file.replace('.md', '.html'))
-                        print (f'Creating card {file_path}')
-                        with open(file_path, 'w') as _file:
-                            _file.write(result)
-        return ''
-
-    @env.macro
-    # TODO - Cleanup
     def insert_cards(type = "", filter = None, value = list()):
         print ('********')
         print ('Insert cards')
@@ -302,14 +369,15 @@ def define_env(env):
         print (f'Value: {value}')
         print ('********')
         custom_dir = os.path.basename(os.path.normpath(env.conf.theme.custom_dir))
-        cards_to_get = []
+        environment = Environment(loader=FileSystemLoader(f"{custom_dir}/templates/"), autoescape=True)
+        template = environment.get_template("grid.html")
 
-        source_folder = os.path.join('docs',env.page.url)
-        print (source_folder)
+        cards_to_get = []
+        source_folder = os.path.join('docs', env.page.url)
+        print ('Source folder:', source_folder)
 
         for (root,_,files) in os.walk(source_folder):
             for file in files:
-                print (file)
                 file_path = os.path.join(root, file)
                 if os.path.exists(file_path):
                     with open(file_path, 'r') as _file:
@@ -317,38 +385,50 @@ def define_env(env):
 
                     frontmatter = get_frontmatter(content)
                     if frontmatter is not None:
+                        print (file)
 
                         if 'name' not in frontmatter:
-                            print ('ERROR: no name in frontmatter!')
+                            print (f'ERROR: {file} has no \'name\' in frontmatter!')
                             continue
 
                         if filter is not None:
                             if filter in frontmatter:
-                                item_value = frontmatter[filter]
+                                item_values = frontmatter[filter]
                             else:
-                                print (f'ERROR: filter type not in frontmatter {filter}')
+                                print (f'ERROR: {file} does not have {filter} in frontmatter')
                                 continue
-                            if item_value in value:
+                            print (value, item_values)
+                            if any([item_value in value for item_value in item_values]):
+                                print ('adding to get')
                                 cards_to_get.append(file.replace('.md', '.html'))
+                            print ('----')
                         else:
                             cards_to_get.append(file.replace('.md', '.html'))
-
                     else:
-                        print ('ERROR: no frontmatter')
+                        print (f'ERROR: {file} has no frontmatter')
                         continue
 
+        print ('CARDS TO GET')
         print (cards_to_get)
+        print ('---')
 
-        result = ''
+        cards = ''
+        if cards_to_get:
+            print ('Adding cards')
+            for item in cards_to_get:
+                file_path = f"{custom_dir}/aux/{item}"
 
-        for item in cards_to_get:
-            file_path = f"{custom_dir}/aux/{item}"
-            print (f'Adding card: {file_path}')
-            if os.path.exists(file_path):
-                with open(file_path) as file:
-                    result += file.read()
+                if os.path.exists(file_path):
+                    print (f'Adding card: {file_path}')
+                    with open(file_path, 'r', encoding='utf-8') as file:
+                        card = file.read()
+                    if card:
+                        cards+=card
 
-        return result
+        if cards:
+            result = template.render(cards=cards)
+            return result
+        return None
 
     @env.macro
     def insert_banner():
@@ -377,28 +457,28 @@ def define_env(env):
         extract = content.split('\n')
         references = {}
         print ('REFERENCES')
-        print (extract)
-        print (type(extract))
-        print ('PAGE CONTENT')
-        print (env.page.markdown)
-        print ('-----------')
+        # print (extract)
+        # print (type(extract))
+        # print ('PAGE CONTENT')
+        # print (env.page.markdown)
+        # print ('-----------')
 
         for item in extract:
-            print (item)
+            # print (item)
             if item.startswith('['):
-                print ('reference key')
+                # print ('reference key')
                 if item not in references:
-                    print ('new item')
+                    # print ('new item')
                     if item in env.page.markdown:
-                        print ('item in md!')
+                        # print ('item in md!')
                         references[item]=extract[extract.index(item)+1]
                 else:
                     print ("WARNING: Duplicated item in references")
 
-        print ('references')
-        print (references)
+        # print ('references')
+        # print (references)
         result = '\n'.join('{}\n {}'.format(key, value) for key, value in references.items())
-        print ('result')
-        print (result)
-
+        # print ('result')
+        # print (result)
+        print ('---')
         return result

@@ -7,5 +7,6 @@ requests
 mkdocs-redirects
 mkdocs-linkcheck
 pytest
+Jinja2
 #mkdocs-print-site-plugin
 #mkdocs-with-pdf
