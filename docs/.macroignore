@@ -1,0 +1,11 @@
+.DS_Store
+index.md
+*.pdf
+*.jpg
+*.ico
+*.gif
+*.png
+*.jpeg
+*.ods
+*.ows*
+*.pde
