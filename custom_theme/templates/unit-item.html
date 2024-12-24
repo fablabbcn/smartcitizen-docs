@@ -1,9 +1,11 @@
 <div class="sensor-banner {{ color }}-sensor-banner">
-    <div class="sensor-image-block">
-        <a href="{{target_url}}"><img src="{{ feature_img }}" alt="{{ name }}" class="sensor-image"></a>
-    </div>
-    <div class="sensor-tags-block-container">
-        <a href="{{ target_url }}"><h1>{{ name }}</h1></a>
-        <p class="sensor-excerpt"> {{excerpt}} </p>
-    </div>
+    <a href="{{target_url}}" class="a-sensor-banner">
+        <div class="sensor-image-block">
+            <img src="{{ feature_img }}" alt="{{ name }}" class="sensor-image">
+        </div>
+        <div class="sensor-tags-block-container">
+            <h1>{{ name }}</h1>
+            <p class="sensor-excerpt"> {{excerpt}} </p>
+        </div>
+    </a>
 </div>

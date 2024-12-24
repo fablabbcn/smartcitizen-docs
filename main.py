@@ -9,9 +9,11 @@ import re
 import shutil
 from requests import get
 
+DEBUG = True
+
 def get_frontmatter(content):
     if '---\n' not in content:
-        print ('No frontmatter in content')
+        if DEBUG: print ('No frontmatter in content')
         return None
 
     if '---\n' in content[1:]:
@@ -21,12 +23,14 @@ def get_frontmatter(content):
 
     return frontmatter
 
-colors = {
+field_color_map = {
     'air': 'orange',
     'soil': 'red',
     'water': 'blue',
     'other': 'green'
 }
+
+colors =  ['black', 'orange', 'red', 'blue', 'green', 'gray']
 
 def on_pre_page_macros(env):
     custom_dir = os.path.basename(os.path.normpath(env.conf.theme.custom_dir))
@@ -36,11 +40,11 @@ def on_pre_page_macros(env):
 
     if source_folder != 'docs/':
         return
-
-    print('*****************************')
-    print ('Creating cards under:')
-    print (source_folder)
-    print('*****************************')
+    if DEBUG:
+        print('*****************************')
+        print ('Creating cards under:')
+        print (source_folder)
+        print('*****************************')
 
     if os.path.exists(os.path.join(source_folder, '.macroignore')):
         with open(os.path.join(source_folder, '.macroignore'), 'r') as ignore_file:
@@ -49,24 +53,27 @@ def on_pre_page_macros(env):
     for (root,_,files) in os.walk(source_folder):
 
         for file in files:
-            print (file)
             if file in ignores:
-                print ('Ignoring. Direct match')
+                # if DEBUG: print ('\tIgnoring. Direct match')
                 continue
 
             ignore_file = False
             for ignore in ignores:
                 if (fnmatch.fnmatch(file, ignore)):
-                    print (ignore)
+                    # if DEBUG: print (ignore)
                     ignore_file = True
                     break
 
             if ignore_file:
-                print ('Ignoring')
+                # if DEBUG:
+                    # print ('\tIgnoring. Regex match')
+                    # print ('---')
                 continue
 
             file_path = os.path.join(root, file)
-            print (file_path)
+
+            print (f'File: {file_path}')
+
             if os.path.exists(file_path):
                 with open(file_path, 'r') as _file:
                     content = _file.readlines()
@@ -75,17 +82,24 @@ def on_pre_page_macros(env):
                 if frontmatter is not None:
                     if 'card' not in frontmatter:
                         continue
+
                     if not frontmatter['card']:
+                        if DEBUG: print ('\tNot a card!')
                         continue
 
-                    frontmatter['target_url'] = '/'+file_path.replace('docs/','').replace('.md','/')
+                    if 'name' not in frontmatter:
+                        if DEBUG: print ('\tERROR: no name in frontmatter!')
+                        continue
+
+                    frontmatter['target_url'] = '/'+file_path.replace('docs/','').replace('.md','/').replace('index/', '')
 
                     if 'field' in frontmatter:
-                        print (frontmatter['field'])
+                        if DEBUG: print (frontmatter['field'])
+
                         # We can only choose one
                         field = frontmatter['field'][0]
 
-                        frontmatter['color'] = colors[field]
+                        frontmatter['color'] = field_color_map[field]
                         frontmatter['field_url'] = frontmatter['target_url'].split(field)[0]+f'{field}/'
 
                         icon_file = f"{custom_dir}/templates/{field}-icon.html"
@@ -93,6 +107,10 @@ def on_pre_page_macros(env):
                             with open(icon_file, 'r') as iconfile:
                                 icon_text = iconfile.read()
                         frontmatter['icon'] = icon_text
+
+                    if 'custom_color' in frontmatter:
+                        if frontmatter['custom_color'] in colors:
+                            frontmatter['color'] = frontmatter['custom_color']
 
                     # Do this for different types of units
                     if 'type' in frontmatter:
@@ -112,18 +130,17 @@ def on_pre_page_macros(env):
                                 metric = frontmatter['target'][0]
                                 frontmatter['metric_url'] = frontmatter['field_url']+f'{metric}/'
 
-                    print (frontmatter)
+                    if DEBUG:
+                        print ('\tFrontmatter')
+                        print (f'\t{frontmatter}')
                     result = template.render(frontmatter)
 
-                    if 'name' not in frontmatter:
-                        print ('ERROR: no name in frontmatter!')
-                        continue
+                    html_path = os.path.join(f"{custom_dir}/aux", file.replace('.md', '.html')).replace("index", frontmatter['name'].lower().replace(" ","_"))
+                    if DEBUG: print (f'\tCreating card {html_path}')
 
-                    file_path = os.path.join(f"{custom_dir}/aux", file.replace('.md', '.html'))
-                    print (f'Creating card {file_path}')
-                    with open(file_path, 'w', encoding='utf-8') as _file:
+                    with open(html_path, 'w', encoding='utf-8') as _file:
                         _file.write(result)
-                    print ('--DONE--')
+                    if DEBUG: print ('--DONE--')
     return ''
 
 def define_env(env):
@@ -362,19 +379,19 @@ def define_env(env):
     @env.macro
     # TODO - Cleanup
     def insert_cards(type = "", filter = None, value = list()):
-        print ('********')
-        print ('Insert cards')
-        print (f'Type: {type}')
-        print (f'Filter: {filter}')
-        print (f'Value: {value}')
-        print ('********')
+        if DEBUG: print ('********')
+        if DEBUG: print ('Insert cards')
+        if DEBUG: print (f'Type: {type}')
+        if DEBUG: print (f'Filter: {filter}')
+        if DEBUG: print (f'Value: {value}')
+        if DEBUG: print ('********')
         custom_dir = os.path.basename(os.path.normpath(env.conf.theme.custom_dir))
         environment = Environment(loader=FileSystemLoader(f"{custom_dir}/templates/"), autoescape=True)
         template = environment.get_template("grid.html")
 
         cards_to_get = []
         source_folder = os.path.join('docs', env.page.url)
-        print ('Source folder:', source_folder)
+        if DEBUG: print ('Source folder:', source_folder)
 
         for (root,_,files) in os.walk(source_folder):
             for file in files:
@@ -385,48 +402,76 @@ def define_env(env):
 
                     frontmatter = get_frontmatter(content)
                     if frontmatter is not None:
-                        print (file)
+                        if DEBUG: print (file)
 
                         if 'name' not in frontmatter:
-                            print (f'ERROR: {file} has no \'name\' in frontmatter!')
+                            if DEBUG: print (f'ERROR: {file} has no \'name\' in frontmatter!')
                             continue
 
                         if filter is not None:
                             if filter in frontmatter:
                                 item_values = frontmatter[filter]
                             else:
-                                print (f'ERROR: {file} does not have {filter} in frontmatter')
+                                if DEBUG: print (f'ERROR: {file} does not have {filter} in frontmatter')
                                 continue
-                            print (value, item_values)
+                            if DEBUG: print (value, item_values)
                             if any([item_value in value for item_value in item_values]):
-                                print ('adding to get')
+                                if DEBUG: print ('adding to get')
                                 cards_to_get.append(file.replace('.md', '.html'))
-                            print ('----')
+                            if DEBUG: print ('----')
                         else:
                             cards_to_get.append(file.replace('.md', '.html'))
                     else:
-                        print (f'ERROR: {file} has no frontmatter')
+                        if DEBUG: print (f'ERROR: {file} has no frontmatter')
                         continue
 
-        print ('CARDS TO GET')
-        print (cards_to_get)
-        print ('---')
+        if DEBUG: print ('CARDS TO GET')
+        if DEBUG: print (cards_to_get)
+        if DEBUG: print ('---')
 
         cards = ''
         if cards_to_get:
-            print ('Adding cards')
+            if DEBUG: print ('Adding cards')
             for item in cards_to_get:
                 file_path = f"{custom_dir}/aux/{item}"
 
                 if os.path.exists(file_path):
-                    print (f'Adding card: {file_path}')
+                    if DEBUG: print (f'Adding card: {file_path}')
                     with open(file_path, 'r', encoding='utf-8') as file:
                         card = file.read()
                     if card:
                         cards+=card
 
         if cards:
-            result = template.render(cards=cards)
+            result = template.render(cards=cards,  wide=False)
+            return result
+        return None
+
+    @env.macro
+    def insert_custom_cards(custom_cards = list(), wide_columns = False):
+        print ('Insert custom cards')
+        custom_dir = os.path.basename(os.path.normpath(env.conf.theme.custom_dir))
+        environment = Environment(loader=FileSystemLoader(f"{custom_dir}/templates/"), autoescape=True)
+        template = environment.get_template("grid.html")
+
+        source_folder = os.path.join('docs', env.page.url)
+        if DEBUG: print ('Source folder:', source_folder)
+
+        cards = ''
+
+        for item in custom_cards:
+            file_path = f"{custom_dir}/aux/{item}"
+            print (file_path)
+
+            if os.path.exists(file_path):
+                if DEBUG: print (f'Adding card: {file_path}')
+                with open(file_path, 'r', encoding='utf-8') as file:
+                    card = file.read()
+                if card:
+                    cards+=card
+
+        if cards:
+            result = template.render(cards=cards, wide=wide_columns)
             return result
         return None
 
@@ -445,8 +490,8 @@ def define_env(env):
             with open(env.project_dir + '/' + file_path, 'r') as myfile:
                 content = myfile.read()
         except:
-            print (f'Error found while rendering file: {env.page.file.src_uri}')
-            print (f"Can't find {env.project_dir + '/' + file_path}")
+            if DEBUG: print (f'Error found while rendering file: {env.page.file.src_uri}')
+            if DEBUG: print (f"Can't find {env.project_dir + '/' + file_path}")
             pass
         else:
             ok_to_go = True
@@ -456,29 +501,29 @@ def define_env(env):
 
         extract = content.split('\n')
         references = {}
-        print ('REFERENCES')
-        # print (extract)
-        # print (type(extract))
-        # print ('PAGE CONTENT')
-        # print (env.page.markdown)
-        # print ('-----------')
+        if DEBUG: print ('REFERENCES')
+        # if DEBUG: print (extract)
+        # if DEBUG: print (type(extract))
+        # if DEBUG: print ('PAGE CONTENT')
+        # if DEBUG: print (env.page.markdown)
+        # if DEBUG: print ('-----------')
 
         for item in extract:
-            # print (item)
+            # if DEBUG: print (item)
             if item.startswith('['):
-                # print ('reference key')
+                # if DEBUG: print ('reference key')
                 if item not in references:
-                    # print ('new item')
+                    # if DEBUG: print ('new item')
                     if item in env.page.markdown:
-                        # print ('item in md!')
+                        # if DEBUG: print ('item in md!')
                         references[item]=extract[extract.index(item)+1]
                 else:
-                    print ("WARNING: Duplicated item in references")
+                    if DEBUG: print ("WARNING: Duplicated item in references")
 
-        # print ('references')
-        # print (references)
+        # if DEBUG: print ('references')
+        # if DEBUG: print (references)
         result = '\n'.join('{}\n {}'.format(key, value) for key, value in references.items())
-        # print ('result')
-        # print (result)
-        print ('---')
+        # if DEBUG: print ('result')
+        # if DEBUG: print (result)
+        if DEBUG: print ('---')
         return result

@@ -1,7 +1,8 @@
 mkdocs
 mkdocs-material
-mkdocs-material-extensions
+mkdocs-material-extensions==1.1
 mkdocs-macros-plugin
+pymdown-extensions
 GitPython
 requests
 mkdocs-redirects
