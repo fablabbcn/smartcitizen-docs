@@ -1,7 +1,7 @@
 mkdocs
 mkdocs-material>8
 mkdocs-material-extensions
-mkdocs-macros-plugin
+mkdocs-macros-plugin==1.0.4
 GitPython
 requests==2.26.0
 #mkdocs-print-site-plugin
