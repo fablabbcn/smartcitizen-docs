@@ -45,71 +45,10 @@ h2, h3, h4{
     color: var(--md-primary-fg-color) !important;
 }
 
-[data-md-color-scheme="slate"]{
-    --overlay-background-color: #00000099;
-    --font-color: white;
-    --nav-background-color: black;
-    --nav-font-color: var(--font-color);
-    --footer-font-color: white;
-}
-
-[data-md-color-scheme="default"]{
-    --overlay-background-color: #f8f8f8d3;
-    --font-color: rgb(20, 20, 20);
-    --nav-background-color: #2094f3;
-    --nav-font-color: white;
-    --footer-font-color: white;
-}
-
 div.table-compact + .md-typeset__scrollwrap th,
 div.table-compact + .md-typeset__scrollwrap td {
     padding: .5em 1.25em;
     font-size: .62rem;
-}
-
-.md-typeset .admonition.pied-piper,
-.md-typeset details.pied-piper {
-  border-color: rgb(43, 155, 70);
-}
-.md-typeset .pied-piper > .admonition-title,
-.md-typeset .pied-piper > summary {
-  background-color: rgba(43, 155, 70, 0.1);
-}
-.md-typeset .pied-piper > .admonition-title::before,
-.md-typeset .pied-piper > summary::before {
-  background-color: rgb(43, 155, 70);
-  -webkit-mask-image: var(--md-admonition-icon--pied-piper);
-          mask-image: var(--md-admonition-icon--pied-piper);
-}
-
-@media screen and (min-width: 76.25em) {
-    .md-nav--lifted > .md-nav__list > .md-nav__item--active > .md-nav__link {
-        background: none;
-        box-shadow: none;
-    }
-}
-
-@media screen and (min-width: 60em) {
-    .md-nav--secondary .md-nav__title {
-        background: none;
-        box-shadow: none;
-    }
-}
-
-[data-md-color-scheme="slate"] {
-  --md-typeset-a-color:         rgb(255, 170, 0) !important;
-  /*--md-default-fg-color--light: rgb(255, 170, 0);*/
-  --md-admonition-bg-color:     #454545;
-  background-color:             #3e4042;
-  --md-default-fg-color--light:  rgb(233, 235, 252);
-}
-
-button.fullscreen_button:hover{
-    filter: invert(11%) sepia(100%) saturate(4334%) hue-rotate(237deg) brightness(111%) contrast(140%)
-}
-
-.md-typeset__scrollwrap{
-	text-align: center;
 }
 
 .md-typeset:not(.emojione, .twemoji, .sensor-image, .sensor-field-icon) img:not(.emojione, .twemoji, .logo, .sensor-image, .sensor-field-icon),
@@ -131,40 +70,12 @@ button.fullscreen_button:hover{
     max-width: 90%;
 }
 
-.md-tabs.fullscreen-mode {
-    height: 0px;
-    transition: .3s ease-in-out;
-}
-
-.md-tabs:not(fullscreen-mode) {
-    transition: .3s ease-in-out;
-}
-
-.md-sidebar--primary.fullscreen-mode {
-    width: 0px;
-    transition: .3s ease-in-out;
-}
-
-.md-sidebar--secondary.fullscreen-mode {
-    width: 0px;
-    transition: .3s ease-in-out;
-}
-
-.md-sidebar--primary:not(.fullscreen-mode) {
-    transition: .3s ease-in-out;
-}
-
-.md-sidebar--secondary:not(.fullscreen-mode) {
-    transition: .3s ease-in-out;
-}
-
 .led {
     width: 20px; height: 20px; border-radius:10px; display: inline-block; margin-top: 7px;
 }
 
 .small {
     width: 14px; height: 14px; border-radius:7px;
-
 }
 
 .orange {
@@ -413,28 +324,6 @@ button.fullscreen_button:hover{
     text-shadow:1px 1px 1px #101010;
 }
 
-.md-typeset .admonition.seawater,
-.md-typeset details.seawater {
-  border-color: rgba(83, 157, 236);
-  background-color: #2354a721;
-}
-.md-typeset .seawater > .admonition-title,
-.md-typeset .seawater > summary {
-  background-color: rgba(83, 157, 236, 0.41);
-}
-.md-typeset .seawater > .admonition-title::before,
-.md-typeset .seawater > summary::before {
-  background-color: rgba(83, 157, 236);
-  -webkit-mask-image: var(--md-admonition-icon--seawater);
-          mask-image: var(--md-admonition-icon--seawater);
-}
-
-.md-typeset .seawater :is(.admonition-title, summary)::before {
-    width: 2.2rem;
-    height: 2.2rem;
-    top: 0.8em;
-}
-
 .grid-two-columns {
     display: grid;
     grid-gap: 30px 10px;
@@ -490,7 +379,6 @@ button.fullscreen_button:hover{
     margin-left:-15px;
     margin-bottom: 30px;
 }
-
 
 .card-deck-half > .card{
     flex: 1 1 40%;
