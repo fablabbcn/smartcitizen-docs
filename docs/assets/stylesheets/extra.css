@@ -611,7 +611,6 @@ a.card-title:hover{
     background-color: var(--cards-gray);
 }
 
-
 .sensor-banner .sensor-image-block {
     background-color:#ffffffad;
     display: grid;
@@ -728,12 +727,19 @@ b.sensor-tag-content{
     .sensor-banner {
         grid-template-columns: 50% 50%;
     }
+    .sensor-banner .sensor-image-block img.sensor-image {
+        height: 300px;
+    }
 }
 
 @media only screen and (min-width: 950px) {
     .grid-block-multi-wide {
         grid-template-columns: repeat(3, 1fr);
         max-width: 100%;
+    }
+
+    .sensor-banner .sensor-image-block img.sensor-image {
+        height: 300px;
     }
 }
 
