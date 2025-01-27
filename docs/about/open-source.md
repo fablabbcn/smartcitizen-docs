@@ -12,5 +12,3 @@ The entire project is released under open source licenses:
 
 !!! info
     Check the **Source files** section for each component and explore the software source code and the hardware blueprints.
-
-## Contribute

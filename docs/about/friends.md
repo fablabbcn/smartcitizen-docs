@@ -8,6 +8,7 @@ Below there's a list of similar projects in either philosophy, sensors and ideas
 - [Lichen Social Innovation](https://lichensi.com)
 - [Ideas4Change](https://www.ideasforchange.com/)
 - [Laboratorio Ciudanano de Salud Urbana](https://www.labcsu.com/)
+- [ISGLOBAL](https://isglobal.com)
 - [Aire Ciudadano](https://aireciudadano.com/)
 - [Luftdaten - now sensor.community](https://sensor.community/en/)
 - [Purpleair](https://www2.purpleair.com/)

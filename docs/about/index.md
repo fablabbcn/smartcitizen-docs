@@ -1,3 +1,12 @@
+---
+card: true
+type: unit
+custom_color: black
+name: About
+feature_img: https://live.staticflickr.com/4482/37510067734_7c5ca097cc_h.jpg
+excerpt: Learn more about the Smart Citizen Project, its funding, its origins and other likeminded projects.
+---
+
 # About
 
 WIP - TODO

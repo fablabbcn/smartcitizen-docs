@@ -10,38 +10,43 @@ nav:
     - Welcome!: index.md
     - Hardware:
       - Index: hardware/index.md
-      - Smart Citizen Kit: hardware/Smart Citizen Kit.md
+      - Smart Citizen Kit:
+        - Index: hardware/kit/index.md
+        - Features: hardware/kit/features.md
+        - Technical Specs: hardware/kit/specs.md
       - Smart Citizen Stations:
         - Index: hardware/stations/index.md
         - Air:
+          - Index: hardware/stations/air/index.md
           - SCK + CO2: hardware/stations/air/sck_co2.md
         - Water:
-          - Water Kit: hardware/stations/water/sck_water_kit.md
-          - Water Stations: hardware/stations/water/sck_water.md
-      - Firmware: hardware/firmware.md
-      - Enclosures: hardware/enclosures.md
+          - Index: hardware/stations/water/index.md
+          - One-Sensor Station: hardware/stations/water/sck_water_one_sensor.md
+          - Multi-Sensor Station: hardware/stations/water/sck_water_multi_sensor.md
+      - Firmware:
+        - Index: hardware/firmware/index.md
+        # - Features: hardware/firmware/features.md
       - Boards:
         - Index: hardware/boards/index.md
-        - Data Board: hardware/boards/Data Board.md
-        - Urban Board: hardware/boards/Urban Board.md
-        - PM Board: hardware/boards/PM Board.md
-        - Analog Sensor Board: hardware/boards/Analog Sensor Board.md
-        # - Carrier boards: hardware/boards/Carrier Boards.md
+        - Data Board: hardware/boards/data-board.md
+        - Urban Board: hardware/boards/urban-board.md
+        - Analog Sensor Board: hardware/boards/analog-sensor-board.md
         - Discontinued:
-          - Gases Pro Board: hardware/boards/Gases Pro Board.md
+          - Gases Pro Board: hardware/boards/gases-pro-board.md
+          - PM Board: hardware/boards/pm-board.md
       - Add-ons:
         - Index: hardware/addons/index.md
-        - OLED Screen: hardware/addons/OLED.md
-        - GPS: hardware/addons/GPS.md
-        - Power Supply: hardware/addons/Power Supply.md
-        - Solar Panel: hardware/addons/Solar Panel.md
+        - OLED Screen: hardware/addons/oled-screen.md
+        - GPS: hardware/addons/gps.md
+        - Power Supply: hardware/addons/power-supply.md
+        - Solar Panel: hardware/addons/solar-panel.md
     - Data:
       - Index: data/index.md
-      - Data Platform: data/Data Platform.md
-      - Data Tools: data/Data Tools.md
-      - SD-card Data: data/SD-card.md
+      - Data Platform: data/data-platform.md
+      - Data Tools: data/data-tools.md
+      - SD-card Data: data/sd-card.md
     - FAQ: _FAQ.md
-    - Troubleshooting: Troubleshooting.md
+    - Troubleshooting: troubleshooting.md
   - Knowledge:
     - Index: knowledge/index.md
     - Air:
@@ -110,20 +115,20 @@ nav:
   - Guides:
     - Introduction: guides/index.md
     - Getting Started:
-      - Onboarding Sensors: guides/getting started/Onboarding Sensors.md
-      - Updating the Wi-Fi: guides/getting started/Updating the Wi-Fi.md
-      - Downloading platform data: guides/getting started/Downloading the data.md
-      - Uploading SD-card data: guides/getting started/Uploading SD Card Data.md
-      - Using the Shell: guides/getting started/Using the Shell.md
-      - Debugging your kit: guides/getting started/Debugging your kit.md
-      - Getting firmware information: guides/getting started/Getting firmware information.md
-      - Third party sensors: guides/getting started/Third party sensors.md
-      # - External Sensors: guides/getting started/External Sensors.md
-      # - Dealing with sensitive sensor readings: guides/getting started/Dealing with sensitive sensor readings.md
+      - Onboarding your kit: guides/getting-started/onboarding-sensors.md
+      - Updating the Wi-Fi: guides/getting-started/updating-the-wifi-credentials.md
+      - Downloading platform data: guides/getting-started/downloading-data.md
+      - Uploading SD-card data: guides/getting-started/uploading-sd-card-data.md
+      - Using the Shell: guides/getting-started/using-the-shell.md
+      - Debugging your kit: guides/getting-started/debugging-your-kit.md
+      - Third party sensors: guides/getting-started/third-party-sensors.md
+      # - External Sensors: guides/getting-started/External Sensors.md
+      # - Dealing with sensitive sensor readings: guides/getting-started/Dealing with sensitive sensor readings.md
     - Firmware Operations:
-      - Upgrading the firmware: guides/firmware/Upgrade the firmware.md
-      - Editing the firmware: guides/firmware/Edit the Firmware.md
-      - Debugging the firmware: guides/firmware/Debug the firmware.md
+      - Getting firmware information: guides/firmware/getting-firmware-information.md
+      - Upgrading the firmware: guides/firmware/upgrading-the-firmware.md
+      - Editing the firmware: guides/firmware/edit-the-firmware.md
+      - Debugging the firmware: guides/firmware/debug-the-firmware.md
     - Calibrating Sensors:
       # - Air sensors: guides/calibration/Air sensors.md
       - Water: guides/calibration/Water sensors.md
@@ -131,31 +136,31 @@ nav:
       - Air:
         - CO2: guides/calibration/Sensirion SCD30.md
     - Working with Data:
-      - Handling calibration data: guides/data/Handling calibration data.md
-      - Custom data processing: guides/data/Custom data processing.md
-      - Creating data interfaces: guides/data/Creating Interfaces.md
-      - Live demos: guides/data/Live demos.md
-      - Visual programming: guides/data/Visual programming.md
-      - Creative coding: guides/data/Creative coding.md
-      - Python, R and jupyter: guides/data/Advanced data tools.md
+      - Handling calibration data: guides/data/handling-calibration-data.md
+      - Custom data processing: guides/data/custom-data-processing.md
+      - Creating data interfaces: guides/data/creating-interfaces.md
+      - Live demos: guides/data/live-demos.md
+      - Visual programming: guides/data/visual-programming.md
+      - Creative coding: guides/data/creative-coding.md
+      - Python, R and jupyter: guides/data/advanced-data-tools.md
         # - Model your sensor data: guides/data/Creating Models for Sensors Calibration.md
         # - Analyse your data in batch: guides/Analyse your data in batch.md
         # - Organising and sharing your data: guides/data/Organise your data.md
-    - Deploying Devices:
-      - Smart Citizen Kit: guides/deployments/Deploying SCK.md
-      - iSCAPE Station V1: guides/deployments/Deploying iSCAPE Station V1.md
-      - iSCAPE Station V2: guides/deployments/Deploying iSCAPE Station V2.md
-      - Smart Citizen Air Station: guides/deployments/Deploying Air Station.md
-      - Smart Citizen Water Station: guides/deployments/Deploying Water Station.md
-      - Smart Citizen Connectivity Units: guides/deployments/Installing Connectivity Units.md
-      - Smart Citizen Power Supply: guides/deployments/Using the power supply.md
-      - Solar Panel: guides/deployments/Installing solar panel.md
-      - Mobile sensors (GPS): guides/deployments/Almabike sensors.md
-    - Replacements:
-      - Replacing PM Sensors: guides/replacements/Replacing PM Sensors.md
-    - Making Enclosures:
-      - Making your own enclosures: guides/enclosures/Making your own enclosures.md
-      - Assembling Smart Citizen Stations: guides/enclosures/Assembling Smart Citizen Stations.md
+    # - Deploying Devices:
+      # - Smart Citizen Kit: guides/deployments/Deploying SCK.md
+      # - iSCAPE Station V1: guides/deployments/Deploying iSCAPE Station V1.md
+      # - iSCAPE Station V2: guides/deployments/Deploying iSCAPE Station V2.md
+      # - Smart Citizen Air Station: guides/deployments/Deploying Air Station.md
+      # - Smart Citizen Water Station: guides/deployments/Deploying Water Station.md
+      # - Smart Citizen Connectivity Units: guides/deployments/Installing Connectivity Units.md
+      # - Smart Citizen Power Supply: guides/deployments/Using the power supply.md
+      # - Solar Panel: guides/deployments/Installing solar panel.md
+      # - Mobile sensors (GPS): guides/deployments/Mobile sensors.md
+    # - Replacements:
+    #   - Replacing PM Sensors: guides/replacements/Replacing PM Sensors.md
+    # - Making Enclosures:
+    #   - Making your own enclosures: guides/enclosures/Making your own enclosures.md
+    #   - Assembling Smart Citizen Stations: guides/enclosures/Assembling Smart Citizen Stations.md
     - Legacy Hardware:
       - Smart Citizen 1.1:
         - Main: hardware/legacy/index.md
@@ -215,18 +220,8 @@ theme:
   palette:
     # Palette toggle for light mode
     - scheme: default
-      primary: blue
-      accent: blue
-      toggle:
-        icon: material/lightbulb
-        name: Switch to dark mode
-    # Palette toggle for dark mode
-    - scheme: slate
       primary: black
       accent: amber
-      toggle:
-        icon: material/lightbulb-outline
-        name: Switch to light mode
   logo: 'assets/images/logo.svg'
   favicon: 'assets/images/favicon.ico'
   icon:
@@ -235,16 +230,66 @@ theme:
 
 extra:
   social:
-    - icon: fontawesome/brands/twitter
-      link: 'https://twitter.com/smartcitizenkit'
+    # - icon: fontawesome/brands/twitter
+    #   link: 'https://twitter.com/smartcitizenkit'
     - icon: fontawesome/brands/instagram
       link: 'https://www.instagram.com/smartcitizenkit/'
     - icon: fontawesome/brands/github
-      link: 'https://www.github.com/fablabbcn/smartcitizen-kit-21'
+      link: 'https://www.github.com/fablabbcn/smartcitizen-kit-2x'
   footer_logo: '/assets/images/eu-flag.png'
-  license: 'GNU Free Documentation License'
-  license_url: 'https://www.gnu.org/licenses/fdl-1.3.html'
+  license:
+    name: 'GNU Free Documentation License'
+    link: 'https://www.gnu.org/licenses/fdl-1.3.html'
   fullscreen_button: false
+  urls:
+    buy:
+      name: seeedstudio.com
+      link: https://www.seeedstudio.com/Smart-Citizen2-3-p-6327.html
+    installation:
+      name: start.smartcitizen.me
+      link: https://start.smartcitizen.me/
+    main:
+      name: smartcitizen.me
+      link: https://smartcitizen.me/
+    platform:
+      name: smartcitizen.me
+      link: https://smartcitizen.me/kits
+    api:
+      name: api.smartcitizen.me
+      link: https://api.smartcitizen.me
+    developer:
+      name: developer.smartcitizen.me
+      link: https://developer.smartcitizen.me
+    forum:
+      name: forum.smartcitizen.me
+      link: https://forum.smartcitizen.me
+    support:
+      name: support@smartcitizen.me
+      link: mailto:support@smartcitizen.me
+    info:
+      name: info@smartcitizen.me
+      link: mailto:info@smartcitizen.me
+    status:
+      name: status.smartcitizen.me
+      link: https://status.smartcitizen.me
+    firmware:
+      name: fablabbcn/smartcitizen-kit-2x
+      link: https://github.com/fablabbcn/smartcitizen-kit-2x
+    ghfablab:
+      name: github.com/fablabbcn/
+      link: https://github.com/search?q=org%3Afablabbcn+smartcitizen&type=repositories
+    ghhardware:
+      name: fablabbcn/smartcitizen-kit-2x/hardware
+      link: https://github.com/fablabbcn/smartcitizen-kit-2x/tree/master/hardware
+    enclosures:
+      name: enclosures.smartcitizen.me
+      link: https://enclosures.smartcitizen.me
+    fablabbcn:
+      name: Fab Lab Barcelona
+      link: https://fablabbcn.org
+    iaac:
+      name: Institute For Advanced Architecture Of Catalonia
+      link: https://iaac.net
   # alternate:
   #   - name: English
   #     link: /
@@ -256,6 +301,7 @@ extra:
 plugins:
   - macros
   - search
+  - tags
   # - redirects:
   #     redirect_maps:
   #       'Resources/Tutorials/Configure Orange Data Analysis.md': 'Guides/data/Configure Orange Data Analysis.md'
@@ -279,8 +325,8 @@ markdown_extensions:
   - pymdownx.critic
   - pymdownx.details
   - pymdownx.emoji:
-      emoji_index: !!python/name:material.extensions.emoji.twemoji
-      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
   - pymdownx.inlinehilite
   - pymdownx.magiclink
   - pymdownx.mark

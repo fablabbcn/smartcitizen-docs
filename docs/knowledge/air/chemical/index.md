@@ -1,6 +1,8 @@
-# Chemical Composition Sensors
+# Chemical Composition Measurements in Air
 
-{{ insert_cards(type="sensor", filter="target", value=["chemical"])}}
+## VOCs
+
 
 ## Supported sensors
 
+{{ insert_cards(type="sensor", filter="target", value=["chemical"])}}

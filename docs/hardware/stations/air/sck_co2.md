@@ -1,19 +1,19 @@
 ---
 card: true
 type: unit
-name: SCK + CO2 Station
+name: SCK + CO2
 field:
   - air
-versions:
-    hardware: 2.x
-    firmware:  sck22_air
+grade: intermediate
 feature_img: https://live.staticflickr.com/65535/53909712132_b46cae1a7e_k.jpg
 excerpt: Measure Indoor or Outdoor Air Quality with this unit. Beyond the metrics from the kit, it can measure CO2 with a very reliable CO2 sensor!
 ---
 
-# SCK + CO2
+# {{ name }}
 
-![TODO](Photo)
+**Grade**: _{{ grade }}_
+
+![]({{ feature_img }})
 
 ## Measurements
 
@@ -29,8 +29,6 @@ SCK2.1 Based
 | Equivalent Carbon Dioxide             | ppm   | AMS CCS811            |
 | Volatile Organic Compounds            | ppb   | AMS CCS811            |
 | Particulate Matter PM1, PM2.5, PM10   | µg/m3 | Plantower PMS 5003    |
-
-TODO
 
 
 ## Technical specifications

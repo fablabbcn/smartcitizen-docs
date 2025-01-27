@@ -9,26 +9,18 @@ target:
   - co2
 feature_img: /assets/images/scd30-seeed.png
 status: stable
-versions:
-    hardware: 2.1
-    firmware: 0.9.8
 excerpt: The SCD30 is a NDIR CO2 sensor by Sensirion. You can use it to measure CO2 in indoor spaces or for experiments where you need to know an accurate CO2 level.
 ---
 
-<!-- TODO - Proofread + check on links -->
 # Sensirion SCD30
+
+<!-- TODO - Insert card instead? -->
 
 {{ page.meta.excerpt }}
 
 ![]({{page.meta.feature_img}})
 
-<!-- TODO - Make this chunk reproducible over other pages -->
-!!! info "Version support"
-    It is supported in the Smart Citizen Kit `{{ page.meta.versions.hardware }}`, and firmware version `{{ page.meta.versions.firmware }}`. This is an {{ page.meta.type }} sensor, available in various formats. Check the [usage](#usage) section below!
-
 ## Usage
-
-<!-- TODO - Insert versions -->
 
 The easiest way to connect to the SCD30 to the SCK is by using the [SEEED Studio breakout](https://www.seeedstudio.com/Grove-CO2-Temperature-Humidity-Sensor-SCD30-p-2911.html), the sensor can be directly connected to the [Auxiliary connector](/hardware/Auxiliary Connector/) on the data board, using a [4-wire grove cable](https://www.seeedstudio.com/cables-c-949.html).
 
@@ -64,6 +56,10 @@ CO2 molecules strongly absorb IR light in these wavelengths, so shining these th
 |Life expectancy     	|15 years                                                                       |
 |Deployment type 		|indoor/outdoor (mostly indoor). Sensor provides auto compensation for drift.   |
 
+## Calibration
+
+<!-- TODO -->
+
 ### Limitations
 
 NDIR CO2 sensors tend to show drift in the data signal over time, and have interferences by humidity [^14], [^23]. This can lead to invalid data, jumps in the signal, and other artefacts that need to be corrected. In the particular case of the SCD30, these limitations are addressed by including a temperature and humidity sensor that can correct by these effects. The signal drift over time is corrected by an onboard algorithm, known as [automatic-shelf calibration](/guides/calibration/Sensirion SCD30/#asc). This type of algorithm is commonly used to detect clean instances of air and correct the readings, assuming that baseline levels are constant over time [^24]. After several reviews of sensors, we have seen that this type of technology is currently providing good results and evolving rapidly [^25], [^26].
@@ -81,4 +77,4 @@ Make sure to check our [calibration guide](/Guides/calibration/SCD30 CO2 sensor/
 
 ## References
 
-
+{{ insert_references('docs/includes/references.md')}}
