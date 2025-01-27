@@ -5,6 +5,13 @@
         </div>
         <div class="sensor-tags-block-container">
             <h1>{{ name }}</h1>
+            {% if grade %}
+            <div class="sensor-tags-block">
+                <div class="sensor-field sensor-tag">
+                    <p class="sensor-field-name">Grade | <b class="sensor-tag-content">{% for i in grade %}{{i}}{% endfor %}</b></p>
+                </div>
+            </div>
+            {% endif %}
             <p class="sensor-excerpt"> {{excerpt}} </p>
         </div>
     </a>

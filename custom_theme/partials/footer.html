@@ -72,23 +72,19 @@
   <!-- Further information -->
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
-
       <!-- Copyright and theme information -->
       <div class="md-footer-copyright">
         <div class="md-footer-projects">
-        {%- if config.extra.footer_logo %}
+          {%- if config.extra.footer_logo %}
 	        <img style="margin-right: 20px;" class="logo" alt="{{config.extra.project}}" src="{{config.extra.footer_logo}}">
-        {%- endif %}
-          <p class="md-footer-copyright__highlight">The Smart Citizen has received funding from the European Community’s H2020 and HORIZON programmes.<br>Check the <a href="/about/funding">funding page</a> for more information</p>
+          {%- endif %}
+          <p class="md-footer-copyright__highlight"><a target="_blank" href="{{ config.extra.urls.main.link }}">Smart Citizen</a> has received funding from the European Community’s H2020 and HORIZON programmes.<br>Check the <a href="/about/funding">funding page</a> for more information</p>
         </div>
         {%- if config.extra.license %}
-
-          <p>Except where otherwise noted, content on this site is licensed under a <a rel="license" target="_blank" href="{{config.extra.license_url}}">{{config.extra.license}}</a>.</p>
+        <p>Except where otherwise noted, content on this site is licensed under a <a rel="license" target="_blank" href="{{config.extra.license.link}}">{{config.extra.license.name}}</a>.</p>
         {%- endif %}
-
-          <p><a rel="license" target="_blank" href="http://smartcitizen.me">Smart Citizen</a> is a project by <a rel="license" target="_blank" href="http://fablabbcn.org">Fab Lab Barcelona</a> at the <a rel="license" target="_blank" href="http://iaac.net">Institute For Advanced Architecture Of Catalonia</a>.</p>
+        <p><a target="_blank" href="{{ config.extra.urls.main.link }}">Smart Citizen</a> is a project by <a target="_blank" href="{{ config.extra.urls.fablabbcn.link }}">{{ config.extra.urls.fablabbcn.name }}</a> at the <a target="_blank" href="{{ config.extra.urls.iaac.link }}">{{ config.extra.urls.iaac.name }}</a>.</p>
       </div>
-
       <!-- Social links -->
       {% block social %}
         {% include "partials/social.html" %}
