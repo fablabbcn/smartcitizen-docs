@@ -1,6 +1,6 @@
 mkdocs
 mkdocs-material
-mkdocs-material-extensions==1.1
+mkdocs-material-extensions
 mkdocs-macros-plugin
 pymdown-extensions
 GitPython
