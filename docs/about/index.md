@@ -11,7 +11,7 @@ excerpt: Learn more about the Smart Citizen Project, its funding, its origins an
 
 WIP - TODO
 
-The Smart Citizen project works to provide tools for anyone willing to use technology in a critical way. By developing environmental sensing tools, branching out in various fields such as open hardware, software, data, social innovation and digital fabrication, our main contribution is the amount of resources that this documentation hopes to compile. The project was born in [Fab Lab Barcelona](https://fablabbcn.org) which, up until now, is the main maintainer of the project. However, the project is [released under **free** and **open source** licenses](#open-source), hoping that anyone can contribute to it, reuse it, adapt it and improve it in any way needed.
+The Smart Citizen project works to provide tools for anyone willing to use technology in a critical way. By developing environmental sensing tools, branching out in various fields such as open hardware, software, data, social innovation and digital fabrication, our main contribution is the amount of resources that this documentation hopes to compile. The project was born in [{{ extra.urls.fablabbcn.name }}]({{ extra.urls.fablabbcn.link }}) which, up until now, is the main maintainer of the project. However, the project is [released under **free** and **open source** licenses](#open-source), hoping that anyone can contribute to it, reuse it, adapt it and improve it in any way needed.
 
 <!-- TODO - Link to licenses of the different components -->
 
@@ -87,12 +87,12 @@ The infrastructure process can be understood as the creation of the necessary so
 
 More information about the Smart Citizen project can be found in:
 
-- Web: https://smartcitizen.me
-- Documentation: https://docs.smartcitizen.me
-- Platform: https://smartcitizen.me/kits
+- Web: **[{{ extra.urls.main.name }}]({{ extra.urls.main.link }})**
+- Documentation: **[docs.smartcitizen.me](https://docs.smartcitizen.me)**
+- Platform: **[{{ extra.urls.platform.name }}]({{ extra.urls.platform.link }})**
 - Various open-source repositories: https://github.com/search?utf8=%E2%9C%93&q=smartcitizen
 
-The devices can be purchased through the SEEED Studio Marketplace and are available as a [Kit](https://www.seeedstudio.com/Smart-Citizen-Kit-p-2864.html) or a [Starter Pack](https://www.seeedstudio.com/Smart-Citizen-Starter-Kit-p-2865.html). An additional [sales channel](mailto:info@fablabbcn.org) is directly provided by Fab Lab Barcelona for customised and more advanced developments.
+The devices can be purchased through the SEEED Studio Marketplace and are available at [{{ extra.urls.buy.name }}]({{ extra.urls.buy.link }}). An additional [sales channel]({{ extra.urls.info.link }}) is directly provided by Fab Lab Barcelona for customised and more advanced developments.
 
 
 ## References
@@ -104,6 +104,6 @@ The devices can be purchased through the SEEED Studio Marketplace and are availa
 [^5]: Denisa Kera, Jan Rod and Radka Peterova 2013. Post-Apocalyptic Citizenship and Humanitarian Hardware. Nuclear Disaster at Fukushima Daiichi: Social, Political and Environmental Issues, p. 97.
 [^6]: Smart Cities Need Thick Data, Not Big Data.
 The Guardian, 18 April 2018 www.theguardian. com/science/political- science/2018/apr/18/ smart-cities-need-thick- data-not-big-data
-[^7]: Smart Citizen Kit: https://smartcitizen.me
-[^8]: Smart Citizen API: https://developer.smartcitizen.me
+[^7]: Smart Citizen Kit: {{ extra.urls.main.link }}
+[^8]: Smart Citizen API: {{ extra.urls.developer.link }}
 [^9]: Ehn, P.: 2008. Participa- tion in design things. In Proceedings of the tenth anniversary conference on participatory design 2008 (pp. 92–101). Indiana University. Bjögvinsson, E., Ehn, P. and Hillgren, P.A.: 2012. Design things and design thinking: Con- temporary participatory design challenges. Design issues, 28(3), pp. 101– 116. Dantec, C.A.l. and DiSalvo, C.: 2013. Infra- structuring and the for- mation of publics in par- ticipatory design. Social Studies of Science, 43(2), pp. 241–264.

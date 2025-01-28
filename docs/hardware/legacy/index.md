@@ -11,7 +11,7 @@ To join the *Smart Citizen family*, we're going to walk you through the steps to
 
 *SIGN UP*
 
-First, go to <a href="https://smartcitizen.me/" target="_blank">smartcitizen.me</a> using your web browser, currently only Google Chrome is supported for the SCK configuration process. Click in **Go to the platform** and then **Sign up** on the upper right menu. Complete the required fields, accept the *[Terms of use and privacy](https://smartcitizen.me/privacy)* and click the **Sign up** button.
+First, go to [{{ extra.urls.main.name }}]({{ extra.urls.main.link }}) using your web browser, currently only Google Chrome is supported for the SCK configuration process. Click on **"Platform"** in the top menu and then **Sign up** on the upper right menu. Complete the required fields, accept the *[Terms of use and privacy](https://smartcitizen.me/privacy)* and click the **Sign up** button.
 
 Required Fields:
 
@@ -35,7 +35,7 @@ Please, provide basic information about your kit so others can understand better
 
  - **Kit location** - Please, let us locate you, later you can adjust the location by dragging the marker on the map.
 
- - **Kit tags** - We suggest you to add tags to help other find your kit. Choose from the available tags or submit a tag request on the [Forum](http://forum.smartcitizen.me).
+ - **Kit tags** - We suggest you to add tags to help other find your kit. Choose from the available tags or submit a tag request on the [Forum]({{ extra.urls.forum.link }}).
 
  - **Description** - This is an optional field that helps  others understand the data you provide.  Why is it for? Is this part of any kind of project? Information like "outdoors in my balcony facing the road" or "in my garden under a tree" could help others understand why some of your data looks the way it does.
 
@@ -105,15 +105,15 @@ Next step is optional, you can set your SCK update interval to optimize the batt
 
 Now is time to record the settings on your SCK, just click on **Sync Settings** and wait for a moment.
 
-*If there is any issue during the process this will be displayed on the **Message window** above. I f you need help please contact [support@smartcitizen.me](mailto:support@smartcitizen.me) *
+*If there is any issue during the process this will be displayed on the **Message window** above. If you need help please contact [{{ extra.urls.support.name }}]({{ extra.urls.support.link }}).*
 
 Last but now least you will see your SCK *Mac Address* registered below this is the ID of your SCK. Just click on **Save** and wait for your kit to publish. **Done!**
 
 *You might need to wait up to 2 minutes or more if you changed the time update settings and refresh your browser in order to see your SCK first post in your device page.*
 
- **Did you registered your SCK before or did your SCK belong to someone else before?** *Take care your SCK can be registered once at a time, in case you registered before check [How to unlink your SCK?](#/start/how-do-i-register-again-my-sck) or contact [support@smartcitizen.me](mailto:support@smartcitizen.me) .*
+ **Did you registered your SCK before or did your SCK belong to someone else before?** *Take care your SCK can be registered once at a time, in case you registered before check [How to unlink your SCK?](#/start/how-do-i-register-again-my-sck) or contact [{{ extra.urls.support.name }}]({{ extra.urls.support.link }}).*
 
-*Please, if your kit is not publishing properly contact [support@smartcitizen.me](mailto:support@smartcitizen.me) or ask for help in the [forum](http://forum.smartcitizen.me/) .*
+*Please, if your kit is not publishing properly contact [{{ extra.urls.support.name }}]({{ extra.urls.support.link }}) or ask for help on the [forum]({{ extra.urls.forum.link }}).*
 
 ## Manual set up: The Serial Way
 
@@ -192,7 +192,7 @@ You are now done with the manual configuration of your SCK. Wait for a few minut
 
 If you want to explore further options with the WiFly module check [The SCK Command Line](#/start/the-sck-command-line) section.
 
-If you encounter any issue, please share your problem on the [forum](http://forum.smartcitizen.me/)
+If you encounter any issue, please share your problem on the [forum]({{ extra.urls.forum.link }}).
 
 ## Manual set up: The Compilation Way
 
@@ -288,7 +288,7 @@ In both cases, you have to fill the mac address input field in the configuration
 
 You are now done with the manual configuration of your SCK. Wait for a few minutes to see your data coming on the server and being displayed on the web page. You can also check that everything is ok by looking the output of your kit via the Arduino serial monitor.
 
-If you encounter any issue, please share your problem on the [forum](http://forum.smartcitizen.me/)
+If you encounter any issue, please share your problem on the [forum]({{ extra.urls.forum.link }}).
 
 ## Attaching the solar panel
 

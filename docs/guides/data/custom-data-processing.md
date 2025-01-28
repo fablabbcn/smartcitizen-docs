@@ -1,12 +1,12 @@
 # Custom data processing
 
-Some units require performing data processing after readings are collected, and we provide default algorithms for all the data we collect. Iin the default scenario, for those sensors that need it (i.e. electrochemical sensors), _raw data_ is processed outside of the units in a periodic way by [`scdata`](https://github.com/fablabbcn/smartcitizen-data/). However, you might need to perform _custom_ data processing algorithms on your data. You can do so by simply accessing the data on our [API](https://api.smartcitizen.me/), and then working with it _offline_, or you can set up an automatic data processing workflow. To summarise, there are two ways to have a custom data processing:
+Some units require performing data processing after readings are collected, and we provide default algorithms for all the data we collect. Iin the default scenario, for those sensors that need it (i.e. electrochemical sensors), _raw data_ is processed outside of the units in a periodic way by [`scdata`](https://github.com/fablabbcn/smartcitizen-data/). However, you might need to perform _custom_ data processing algorithms on your data. You can do so by simply accessing the data on our [API]({{ extra.urls.api.link }}), and then working with it _offline_, or you can set up an automatic data processing workflow. To summarise, there are two ways to have a custom data processing:
 
 1. [Set up a development environment](/Guides/data/Install the framework/#development-instructions-advanced) and following the example on [data processing](https://github.com/fablabbcn/smartcitizen-data/tree/master/examples)
 2. Follow the guide below for automatic processing
 
 !!!info "Too confusing?"
-    [Contact us](mailto:support@smartcitizen.me) and or open a topic in the [forum](https://forum.smartcitizen.me) and we will try to help!
+    [Contact us]({{ extra.urls.support.link }}) and/or open a topic on the [forum]({{ extra.urls.forum.link }}) and we will try to help!
 
 ## Automatic data processing
 
@@ -41,5 +41,5 @@ In the `ids` field, the keys (`AS_48_32`, `AS_49_10`, ... in the example above),
 
 ### Defining custom functions
 
-If you want to define custom processing functions, make a Pull Request to [the repository of scdata](https://github.com/fablabbcn/smartcitizen-data/pulls) to integrate your functions. Otherwise, you can make a fork and install the package in `editable mode`. You can then add the functions in the [device processing](https://github.com/fablabbcn/smartcitizen-data/tree/master/scdata/device/process) folder of your own. We are available at [support@smartcitizen.me](mailto:support@smartcitizen.me) for more support.
+If you want to define custom processing functions, make a Pull Request to [the repository of scdata](https://github.com/fablabbcn/smartcitizen-data/pulls) to integrate your functions. Otherwise, you can make a fork and install the package in `editable mode`. You can then add the functions in the [device processing](https://github.com/fablabbcn/smartcitizen-data/tree/master/scdata/device/process) folder of your own. We are available at [{{ extra.urls.support.name }}]({{ extra.urls.support.link }}) for more support.
 

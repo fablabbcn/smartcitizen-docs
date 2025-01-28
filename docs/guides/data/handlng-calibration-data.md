@@ -22,7 +22,7 @@ The calibration data for is managed by a unique `hardware ID`, and should be vis
 ![](/assets/images/postprocessing_id.jpg)
 
 !!! danger
-    This `hardware ID` is not the same as the `kit ID`. The `kit ID` is the number you have after the [smartcitizen.me/kits/](https://smartcitizen.me/kits/) url where you see the data of your kit. The `hardware ID` is the one in the sticker. The hardware ID is meant to never change, while the `kit ID` can change as you can register your kit many times!
+    This `hardware ID` is not the same as the `kit ID`. The `kit ID` is the number you have after the [{{ extra.urls.platform.name }}]({{ extra.urls.platform.link }}) url where you see the data of your kit. The `hardware ID` is the one in the sticker. The hardware ID is meant to never change, while the `kit ID` can change as you can register your kit many times!
 
 The easiest way to store this ID is to visit your kit and click on the **EDIT** button:
 
@@ -57,7 +57,7 @@ With either method, url or `HARDWARE-ID`, the json file needs to follow the inst
 }
 ```
 
-- `blueprint_url`: this field defines the post-processing to be done in the form of a `device-blueprint`. It virtually can load a valid json from any url, as long as it follows the instructions defined [here](https://github.com/fablabbcn/smartcitizen-data/blob/master/examples/notebooks/01_getting_started.ipynb) and [here](https://github.com/fablabbcn/smartcitizen-data/blob/master/examples/notebooks/04_processing_data.ipynb). If you want to use the base processing select it from the [blueprints folder](https://github.com/fablabbcn/smartcitizen-data/tree/master/blueprints), only selecting the `raw` json as mentioned above. If you have doubts, please, [contact us](mailto:support@smartcitizen.me) to make sure everything will run smoothly. Finally, other blueprints can be added as defined [in this guide](/Guides/data/Custom%20data%20processing/)
+- `blueprint_url`: this field defines the post-processing to be done in the form of a `device-blueprint`. It virtually can load a valid json from any url, as long as it follows the instructions defined [here](https://github.com/fablabbcn/smartcitizen-data/blob/master/examples/notebooks/01_getting_started.ipynb) and [here](https://github.com/fablabbcn/smartcitizen-data/blob/master/examples/notebooks/04_processing_data.ipynb). If you want to use the base processing select it from the [blueprints folder](https://github.com/fablabbcn/smartcitizen-data/tree/master/blueprints), only selecting the `raw` json as mentioned above. If you have doubts, please, contact us at[{{ extra.urls.support.name }}]({{ extra.urls.support.link }}) to make sure everything will run smoothly. Finally, other blueprints can be added as defined [in this guide](/Guides/data/Custom%20data%20processing/)
 - `description`: brief description of the hardware
 - `versions`: list containing hardware versions (in case sensors where replaced, but kept in the same physical unit).
     ```

@@ -11,7 +11,7 @@ The Smart Citizen Hardware is an **open source boilerplate for anyone, no matter
 
     Well, it depends on many factors, even on the definition of _low-cost_. When you get the [Smart Citizen Kit](kit/index.md) in [SeeedStudio](https://www.seeedstudio.com/Smart-Citizen2-3-p-6327.html) costs around 150 (USD or EUR), and it's the central piece of the ecosystem. This can be _low-cost_ in some contexts, and expensive in others. There are more advanced configurations available, which they normally feature more sensors and require more _lab_ work. Obviously, the cost increases as we include other sensors in the budget, but the idea is to try to keep it affordable, easy to use and hackable. Being an open source project, the _hardware_, _firmware_ and _data platform_ are provided _as-is_.
 
-    However, if you are looking at making more advanced configurations, or want to develop a project together, you can write us at [info@smartcitizen.me](mailto:info@smartcitizen.me).
+    However, if you are looking at making more advanced configurations, or want to develop a project together, you can write us at [{{ extra.urls.info.name }}]({{ extra.urls.info.link }}).
 
 ## Applications
 

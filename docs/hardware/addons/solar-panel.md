@@ -24,7 +24,7 @@ We recommend a Solar Panel from [Voltaic Systems](https://voltaicsystems.com/). 
 To calculate the system, you will need to estimate the hardware energy consumption and the solar radiation in your area. With that, you will be able to estimate thesize of your solar panel and the batteries needed. Bigger batteries can be used as a back-up, but in certain locations, there may be need for large size pannels. Depending on your budget, you will need to maybe compromise data frequency, or in some panel/battery/hardware and location combinations, the devices may be offline.
 
 !!! info "Check the discussion"
-    Check the discussion with our recommendations in the [forum](https://forum.smartcitizen.me/t/solar-panel-estimations/1805).
+    Check the discussion with our recommendations on the [forum](https://forum.smartcitizen.me/t/solar-panel-estimations/1805).
 
 ### BOM
 

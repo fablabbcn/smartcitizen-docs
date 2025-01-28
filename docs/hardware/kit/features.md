@@ -138,7 +138,7 @@ Wi-Fi mode (or _online_ mode), is the most common mode for the kit. In this mode
 
 ### <span class="led small pink"> </span> SD-card mode
 
-SD-card mode (or offline), can be used if you do not have an internet connection available. In this case, the device will record the data on the micro [SD-card](/data/sd-card/), in [CSV format](/data/sd-card/#sensor-readings). You can take a look at this data in a spreadsheet, or upload it to the [Smart Citizen Platform](https://smartcitizen.me/kits) by using the [CSV Upload](/guides/getting-started/uploading-sd-card-data/) option, or via the [API](/data/data-platform/#api).
+SD-card mode (or offline), can be used if you do not have an internet connection available. In this case, the device will record the data on the micro [SD-card](/data/sd-card/), in [CSV format](/data/sd-card/#sensor-readings). You can take a look at this data in a spreadsheet, or upload it to the [Smart Citizen Platform]({{ extra.urls.platform.link }}) by using the [CSV Upload](/guides/getting-started/uploading-sd-card-data/) option, or via the [API](/data/data-platform/#api).
 
 | LED color                                 |  Kit status                                                           |
 | :-:                                       | :-:                                                                   |
@@ -183,7 +183,7 @@ You will see these colors _only_ in special moments, most commonly when the kit 
 | <span class="led yellow"></span>   | :computer: Shell mode [more info here](/guides/getting-started/ssing-the-shell/#shell-mode) |
 
 !!!warning "Permanently in one color?"
-    That's not normal, so either [reset](#the-reset-button) your kit or write us in the [forum]({{ extra.urls.forum.link }}).
+    That's not normal, so either [reset](#the-reset-button) your kit or write us on the [forum]({{ extra.urls.forum.link }}).
 
 ## Auxiliary connector
 

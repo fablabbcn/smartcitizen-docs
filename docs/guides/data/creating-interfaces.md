@@ -53,7 +53,7 @@ We will implement a simple logic: When temperature on the remote sensor reaches 
     #
     # Trigger 2 LEDs depending on the temperature
     # For more information on the LEDs connection check: https://learn.sparkfun.com/tutorials/raspberry-gpio
-    # For more information on the SmartCitizen API check: http://developer.smartcitizen.me
+    # For more information on the SmartCitizen API check: [{{ extra.urls.developer.name }}]({{ extra.urls.developer.link }})
     #
     import RPi.GPIO as GPIO
     import json, requests, time

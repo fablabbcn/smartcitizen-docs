@@ -15,7 +15,7 @@ For communications the SCK has an **ESP8266 microcontroler with Wifi capabilitie
 The Smart Citizen Kit Firmware is on our [repository on github](https://github.com/fablabbcn/smartcitizen-kit-21) so you will need [git](https://mirrors.edge.kernel.org/pub/software/scm/git/) software [installed](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
 
 !!! danger
-    Do not install anything until reading completely this guide. Specially for `Windows` users, it can be particularly painful and we don't guarantee everything is going to work. Drop us an email at [support](mailto:support@smartcitizen.me) if you need help.
+    Do not install anything until reading completely this guide. Specially for `Windows` users, it can be particularly painful and we don't guarantee everything is going to work. Drop us an email at [{{ extra.urls.support.name }}]({{ extra.urls.support.link }}) if you need help.
 
 ### Building the firmware
 
@@ -313,7 +313,7 @@ You can perform a manual update if you only want or can have a small `python`ins
 > wget https://raw.githubusercontent.com/fablabbcn/smartcitizen-tools/master/esptool.py
 ```
 
-* Get the latest firmware from https://github.com/fablabbcn/smartcitizen-kit-21/releases or ask us at [support](mailto:support@smartcitizen.me)
+* Get the latest firmware from https://github.com/fablabbcn/smartcitizen-kit-21/releases or ask us at [{{ extra.urls.support.name }}]({{ extra.urls.support.link }}).
 
 ##### Flashing
 

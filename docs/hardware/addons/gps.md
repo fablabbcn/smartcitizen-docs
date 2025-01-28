@@ -62,7 +62,7 @@ Here you have a list of supported GPSs:
     If you are using Sparkfun QWIIC GPS, note that you will need [an adaptor from GROVE to QWIIC](https://www.sparkfun.com/products/15109)
 
 !!! info "Implement your own"
-    Check the guide on [integrating other sensors](/guides/getting-started/third-party-sensors/), or [write in the forum]({{extra.urls.forum.link}}) to know how to implement sensors made by others.
+    Check the guide on [integrating other sensors](/guides/getting-started/third-party-sensors/), or [write on the forum]({{extra.urls.forum.link}}) to know how to implement sensors made by others.
 
 ### Antennas
 

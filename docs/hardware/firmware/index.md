@@ -5,7 +5,7 @@ The firmware is OOP (Object Oriented Programming) and is entirely written in C++
 ![](/assets/images/firmware.png)
 
 !!! info "Contribute to the firmware"
-    The firmware is entirely open source, and is continuosly developed in the [firmware repository](https://github.com/fablabbcn/smartcitizen-kit-2x). Issues and Pull requests are welcome!
+    The firmware is entirely open source, and is continuosly developed in the [firmware repository]({{ extra.urls.firmware.link }}). Issues and Pull requests are welcome!
 
 The firmware in the core microcontroller (Atmel SAMD21) is in charge of running the show by interacting with all the sensors, take readings, manage configuration of those, and handle all user interactions. It also manages the communication to the [SD-card](data/SD-card), as well as other peripherals like the battery charger, or the [flash memory](#flash-storage). Finally, it also is in charge of interacting with the WiFi Antenna (ESP8266) via _serial_ communication, which manages the data publication over WiFi.
 

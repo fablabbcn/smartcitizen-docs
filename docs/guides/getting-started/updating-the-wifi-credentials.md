@@ -34,7 +34,7 @@ This guide will help you update your kit's Wi-Fi settings.
 
 ![](/assets/images/onboarding-wifi.png)
 
-- The LED will go blue and **your kit should start to publish again using the new Wi-Fi**. You can confirm it by visiting your device on [smartcitizen.me/kits](https://smartcitizen.me/kits). You can repeat the process as many times as you want by going back to step 1.
+- The LED will go blue and **your kit should start to publish again using the new Wi-Fi**. You can confirm it by visiting your device on [{{ extra.urls.platform.name }}]({{ extra.urls.platform.link }}). You can repeat the process as many times as you want by going back to step 1.
 
 !!! info
 	If your Kit is not publishing check the [LED status chart](/hardware/kit/features/#operation-modes) to know more about it.

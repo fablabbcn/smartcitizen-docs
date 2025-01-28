@@ -46,7 +46,7 @@ The Smart Citizen Platform supports data from any sensor that has a
 For each device type, a new device blueprint needs to be created. **A device blueprint defines the sensors and the metrics that your devices will have.** This will include the hardware details of your sensors and the kind of data that will be published to the platform. Custom calibration formulas to be applied to the data when processed in the platform can be also added.
 
 !!! info "How to do it?"
-    Once a device blueprint is added to the platform, any user can create as many devices as needed and publish data to them following the standard Smart Citizen API. It is important to note that Device Blueprint currently cannot be created by users and should be requested by contacting support@smartcitizen.me.
+    Once a device blueprint is added to the platform, any user can create as many devices as needed and publish data to them following the standard Smart Citizen API. It is important to note that Device Blueprint currently cannot be created by users and should be requested by contacting [{{ extra.urls.support.name }}]({{ extra.urls.support.link }}).
 
 The minimal Device Blueprint includes all the necessary data that a user might provide in order to create a [Kit](http://developer.smartcitizen.me/#kits). It is composed of [Components](http://developer.smartcitizen.me/#components
 ) and those can reuse existing [Sensors](http://developer.smartcitizen.me/#sensors
@@ -115,7 +115,7 @@ The following examples expand the previous Device Blueprint with the complete da
 ```
 
 !!! warning "Too much information?"
-    Drop an email to support@smartcitizen.me and we will try to help!
+    Drop an email to [{{ extra.urls.support.name }}]({{ extra.urls.support.link }}) and we will try to help!
 
 !!! info "Using SEEED Studio Grove bricks"
     You can use off-the-shelf sensors from the extensive Grove open hardware sensor library, removing the need to build our own sensor add-ons from scratch.
@@ -135,7 +135,7 @@ The workflow we normally follow for this goes like:
 
 2. Implement this library in the firmware. The library needs certain functions to be valid. (More info soon!)
 
-3. If the device needs to log the data on the platform, you can email us at support@smartcitizen.me with a request for a new device blueprint. However, it is easier to simply log the data in SD-card in this case, if the online recording is not fully mandatory.
+3. If the device needs to log the data on the platform, you can email us at [{{ extra.urls.support.name }}]({{ extra.urls.support.link }}) with a request for a new device blueprint. However, it is easier to simply log the data in SD-card in this case, if the online recording is not fully mandatory.
 
 !!! info "Contribute it back to the community"
     Make a pull request with your contribution back to the firmware so that other can use it!

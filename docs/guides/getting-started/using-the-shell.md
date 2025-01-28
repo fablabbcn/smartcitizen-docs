@@ -189,7 +189,7 @@ Some **limitations** apply though:
 2. The maximum reading interval is one hour
 3. The maximum publish interval is one hour
 
-For more customisation, please [email](mailto: support@smartcitizen.me) or post on the [forum](https://forum.smartcitizen.me).
+For more customisation, please contact [{{ extra.urls.support.name }}]({{ extra.urls.support.link }}) or post on the [forum]({{ extra.urls.forum.link }}).
 
 !!! warning "Default configuration"
     At the moment there is no command to return to the default configuration. You should use:

@@ -35,7 +35,7 @@ The power supply is very simple to operate. If you have purchased one, normally,
 
 ![](/assets/images/power-supply-off.jpeg)
 
-When connecting the plug to the wall socket, the red LED should turn on indicating 5V output. The input is protected with a 1A Fuse and the pack should be enclosed in a waterproof enclosure as detailed [here](hhttps://github.com/fablabbcn/smartcitizen-enclosures/tree/master/SmartCitizen%20Power%20Options).
+When connecting the plug to the wall socket, the red LED should turn on indicating 5V output. The input is protected with a 1A Fuse and the pack should be enclosed in a waterproof enclosure as detailed [here](https://github.com/fablabbcn/smartcitizen-enclosures/tree/master/SmartCitizen%20Power%20Options).
 
 The indication LED shows the Power Supply is active. It is also a warning in case you have unplugged it but there is still some charge in it (it might take some seconds to fade out):
 

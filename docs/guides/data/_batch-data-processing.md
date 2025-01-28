@@ -1,6 +1,6 @@
 # Analyse your data in batch
 
-Sometimes we have a lot of devices to process, and the interfaces for analysis in [smartcitizen.me](https://smartcitizen.me) or in the `jupyter notebook` might not be the most efficient way to do it. For this reason, we have developed a functionality to process the data in batches, defining the tasks to perform in a `json` descriptor file.
+Sometimes we have a lot of devices to process, and the interfaces for analysis in [{{ extra.urls.platform.name }}]({{ extra.urls.platform.link }}) or in the `jupyter notebook` might not be the most efficient way to do it. For this reason, we have developed a functionality to process the data in batches, defining the tasks to perform in a `json` descriptor file.
 
 The descriptor file can be placed in the `src/tasks` directory (or any, actually). An example of how to run it is shown in [`examples/batch_analysis.ipynb`](https://github.com/fablabbcn/smartcitizen-iscape-data/blob/master/examples/batch_analysis.ipynb):
 
@@ -119,7 +119,7 @@ Different preprocessing options can be defined. The most common one, for the sen
 ### Model
 
 !!! warning "Recommended to just get in touch"
-        This can be overwhelming at first. Just [get in touch](mailto:support@smartcitizen.me)
+        This can be overwhelming at first. Just get in touch at [{{ extra.urls.support.name }}]({{ extra.urls.support.link }}).
 
 In the `model` sub-task, currently three possibilities are implemented:
 

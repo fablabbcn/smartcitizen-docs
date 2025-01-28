@@ -206,7 +206,7 @@ Below are some general guidelines for the installation of the device:
 
 <img src="https://live.staticflickr.com/65535/50976345368_c109c935a7_k.jpg" width="2000" height="1333" alt="Smart Citizen Station v3">
 
-The process to register the Smart Citizen Station and send data to the platform is the same as the one from the Smart Citizen Kit ([start.smartcitizen.me](https://start.smartcitizen.me)):
+The process to register the Smart Citizen Station and send data to the platform is the same as the one from the Smart Citizen Kit [{{ extra.urls.installation.name }}]({{ extra.urls.installation.link }}):
 
 ![](https://i.imgur.com/NhSNXJ8.png)
 

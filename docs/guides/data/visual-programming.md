@@ -102,7 +102,7 @@ Finally, the **resample data** checkbox fills the missing data if it doesn't exi
     ![](/assets/images/WQsnbro.png)
 
 !!! info "Mecoda"
-    [Mecoda](https://github.com/eosc-cos4cloud/mecoda-orange) is a package of widgets for Orange to access data from [Minka](https://minka-sdg.org/), [Odour Collect](https://odourcollect.eu/), [canAIRio](https://canair.io/), [Ictio](https://ictio.org/), [Natusfera](https://natusfera.gbif.es/) or [Smart Citizen](https://smartcitizen.me).
+    [Mecoda](https://github.com/eosc-cos4cloud/mecoda-orange) is a package of widgets for Orange to access data from [Minka](https://minka-sdg.org/), [Odour Collect](https://odourcollect.eu/), [canAIRio](https://canair.io/), [Ictio](https://ictio.org/), [Natusfera](https://natusfera.gbif.es/) or [Smart Citizen]({{ extra.urls.main.link }}).
 
     Installation steps are also explained [here](https://github.com/eosc-cos4cloud/mecoda-orange/blob/master/docs/installation_and_user_guide.md).
 

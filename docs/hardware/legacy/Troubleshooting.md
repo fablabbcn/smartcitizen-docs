@@ -46,7 +46,7 @@ If you're having problems updating the firmware you can try one of these two opt
 - Update the latest firmware through the web browser configurator.
 - Update the latest firmware through Arduino IDE.
 
-If you're still having problems it's may be due to a hardware or software issue, contact us at <a href="mailto:support@smartcitizen.me">support@smartcitizen.me</a>.
+If you're still having problems it's may be due to a hardware or software issue, contact us at [{{ extra.urls.support.name }}]({{ extra.urls.support.link }}).
 
 
 ## No MAC address registered
@@ -58,7 +58,7 @@ If you're getting this message, the may be due:
 
 ## Collapsed USB port
 
-First batches of SCK version 1.1 came with this issue. We have a tutorial you can follow to repair it or contact us at <a href="mailto:support@smartcitizen.me" target="_blank">support@smartcitizen.me</a>.
+First batches of SCK version 1.1 came with this issue. We have a tutorial you can follow to repair it or contact us at [{{ extra.urls.support.name }}]({{ extra.urls.support.link }}).
 
 ## Broken LiPo battery wire
 
@@ -107,7 +107,7 @@ In this tutorial we are going to show you how turn an Arduino into AVR ISP to bu
 
 ![Select the board](/assets/images/sck_1/arduino_board.png)
 
-*We know this is not an easy task! For any question contact [support@smartcitizen.me](mailto:support@smartcitizen.me) or ask for help in the [forum](http://forum.smartcitizen.me/).*
+*We know this is not an easy task! For any question contact [{{ extra.urls.support.name }}]({{ extra.urls.support.link }}) or ask for help on the [forum]({{ extra.urls.forum.link }}).*
 
 ## Reinstall the bootloader using the AVRISP MKII
 
@@ -139,4 +139,4 @@ In this tutorial we are going to show you how to program the SCK with the Atmel 
 - Select in `Tools > Burn Bootloader`. This step can take some minutes, the led  AVRISP mkII will blink and after go green.
 - *Done!* Please, go back to the on-line setup page in order to install the firmware again.
 
-*We know this is not an easy task! For any question contact [support@smartcitizen.me](mailto:support@smartcitizen.me) or ask for help in the [forum](http://forum.smartcitizen.me/) .*
+*We know this is not an easy task! For any question contact [{{ extra.urls.support.name }}]({{ extra.urls.support.link }}) or ask for help on the [forum]({{ extra.urls.forum.link }}).*

@@ -17,7 +17,7 @@ excerpt: The Water Station is a multiparametric water unit, capable of measuring
 
 ### Technical specifications
 
-A normal IP enclosure can be used for the Water Station. More information about the BOM and design files can be found [in the enclosures repository](https://github.com/fablabbcn/smartcitizen-enclosures/).
+A normal IP enclosure can be used for the Water Station. More information about the BOM and design files can be found [in the enclosures repository]({{ extra.urls.enclosures.link }}).
 
 <img src="https://live.staticflickr.com/65535/51125200496_67b06e79bd_k.jpg" alt="Water Station - Patí Científic">
 
@@ -48,7 +48,7 @@ Currently, the Smart Citizen Soil/Water Stations are only available with an exte
 | Probe holder  | | |
 
 !!! info "Design files"
-    If you are looking for the design files about the Smart Citizen Station, take a look at the [enclosures repository](https://github.com/fablabbcn/smartcitizen-enclosures/).
+    If you are looking for the design files about the Smart Citizen Station, take a look at the [enclosures repository]({{ extra.urls.enclosures.link }}).
 
 #### Connectivity
 

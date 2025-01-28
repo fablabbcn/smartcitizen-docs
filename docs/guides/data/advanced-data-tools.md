@@ -3,7 +3,7 @@
 This guide will help set up and start working with more advanced data tools. We recommend using these tools for accessing and performing operations on the data coming from multiple devices, visualising it, or _maybe_ testing sensor calibration models.
 
 There are two options for this:
-- A couple of advanced `python` packages for accessing the data from the [Smart Citizen API](https://api.smartcitizen.me)
+- A couple of advanced `python` packages for accessing the data from the [Smart Citizen API]({{ extra.urls.api.link }})
 - A more simple `R` package for those that prefer it (although not so advanced as the `python` ones...)
 
 !!!info "Rather watch a video?"

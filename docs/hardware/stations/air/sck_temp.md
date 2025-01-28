@@ -66,7 +66,7 @@ Currently, the Smart Citizen Air Quality Stations have only been tested with an 
 | Outdoor (with umbrella)         | | |
 
 !!! info "Design files"
-    If you are looking for the design files about the Smart Citizen Station, take a look at the [enclosures repository](https://github.com/fablabbcn/smartcitizen-enclosures/).
+    If you are looking for the design files about the Smart Citizen Station, take a look at the [enclosures repository]({{ extra.urls.enclosures.link }}).
 
 ![TODO](TODO)
 

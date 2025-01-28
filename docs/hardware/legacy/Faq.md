@@ -26,7 +26,7 @@ We also do not support **WPA Enterprise** networks or **Captive portal** log in 
 
 1. **microSD**: We recommend formatting **micro SD** cards using the official SD tool you can download [here](https://www.sdcard.org/downloads/formatter_4/).
 
-2. **RTC**: Place a **CR1220** cell battery on your kit. Before uploading the SD firmware use the on-line configuration tool at [smartcitizen.me](https://smartcitizen.me) to set your Wi-Fi credentials. Turn your kit off and on for a minute, the blue led's will blink and your kit will connect to the internet and sync its the internal clock with our remote servers. Once the time is set the cell battery will keep SCK time in sync for more than 4 years.
+2. **RTC**: Place a **CR1220** cell battery on your kit. Before uploading the SD firmware use the on-line configuration tool at [{{ extra.urls.main.name }}]({{ extra.urls.main.link }}) to set your Wi-Fi credentials. Turn your kit off and on for a minute, the blue led's will blink and your kit will connect to the internet and sync its the internal clock with our remote servers. Once the time is set the cell battery will keep SCK time in sync for more than 4 years.
 
 3. You can now install the <a href="https://github.com/fablabbcn/Smart-Citizen-Kit/tree/master/sck_beta_v0_8_7_SDCARD" target="_blank">**SD firmware**</a> using the [Arduino IDE](http://www.arduino.cc/en/Main/Software).
 
@@ -96,7 +96,7 @@ You can easily check each time your kit is publishing data to our platform in re
 
 ## How to retrieve other kit's data?
 
-Current [API](http://developer.smartcitizen.me/) allows you full access to all the Smart Citizen Platform. Please, ask in the [forum](http://forum.smartcitizen.me/) or contact [support@smartcitizen.me](mailto:support@smartcitizen.me) for any questions regarding the API.
+Current [API]({{ extra.urls.developer.link }}) allows you full access to all the Smart Citizen Platform. Please, ask on the [forum]({{ extra.urls.forum.link }}) or contact [{{ extra.urls.support.name }}]({{ extra.urls.support.link }}) for any questions regarding the API.
 
 ## How to store data in your own database?
 
@@ -197,9 +197,9 @@ Here are the different paths you can take in order to built your own backend:
 
 - Create a fork of the the <a href="https://github.com/fablabbcn/Smart-Citizen-Kit/tree/master" target="_blank">Smart Smart Citizen Kit firmware</a> in order to send the data as your custom backend expect it.
 
-- Create your own custom backend. We can share all the different modules of our backend in order for you to receive data as on the curl example above, calibrate it and store it. Contact us at <a href="mailto:support@smartcitizen.me">support@smartcitizen.me</a>.
+- Create your own custom backend. We can share all the different modules of our backend in order for you to receive data as on the curl example above, calibrate it and store it. Contact us at [{{ extra.urls.support.name }}]({{ extra.urls.support.link }})
 
-- Keep using our backend but request our API <a href="http://developer.smartcitizen.me/" target="_blank">developer.smartcitizen.me</a> and then fill database choosen with it.
+- Keep using our backend but request our API [{{ extra.urls.developer.name }}]({{ extra.urls.developer.link }}) and then fill database choosen with it.
 
 
 ## How to install the drivers on Windows?

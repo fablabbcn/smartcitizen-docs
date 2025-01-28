@@ -72,7 +72,7 @@ The ESP8266 (ESP for short) chip sometimes also needs upgrade to match the lates
 
 	![](/assets/images/sck_2/esp_update.png)
 
-	* After the update you just did, you can configure your kit as a new device following the [onboarding](https://start.smartcitizen.me) process or use your previous token as explained before
+	* After the update you just did, you can configure your kit as a new device following the [onboarding]({{ extra.urls.installation.link }}) process or use your previous token as explained before.
 
 ### Force ESP upload
 

@@ -1,6 +1,6 @@
 ---
 hide:
-    -toc
+  - toc
 ---
 
 # CO2 Measurements

@@ -7,7 +7,7 @@ Frequently asked questions
 Yes. The sensor is designed for both indoors and outdoors use. But if you’re planning to use it outdoors, you will have to consider purchasing or making a rainproof enclosure.
 
 ## Can I make my own rainproof enclosure?
-Of course! The manufacturing files for the 3D printed enclosure will be available to download in the [Enclosures repository](https://github.com/fablabbcn/smartcitizen-enclosures). Throughout the history of the Smart Citizen project, we’ve seen many inventive solutions for placing the sensor outdoors.
+Of course! The manufacturing files for the 3D printed enclosure will be available to download in the [Enclosures repository]({{ extra.urls.enclosures.link }}). Throughout the history of the Smart Citizen project, we’ve seen many inventive solutions for placing the sensor outdoors.
 
 ## Can I charge the sensors with a solar panel?
 Sure! But note that the sensor requires a 5V solar panel to work properly. More information [here](/Components/Solar Panel/)
@@ -22,7 +22,7 @@ If the sensor is working in network mode and at any time the network is not avai
 Quite a few! Check [here](/Components/Auxiliary Connector/#full-list)
 
 ## Will I be able to access the collected data?
-Of course! The data collected by your sensor is available for anyone on the [Smart Citizen Platform](https://smartcitizen.me/kits/), and you can download it at any time as a CSV file. Besides, you can also use the API to built custom applications to interact with your device. If you are familiar with python, check also [scdata](https://pypi.org/project/scdata/)
+Of course! The data collected by your sensor is available for anyone on the [Smart Citizen Platform]({{ extra.urls.platform.link }}), and you can download it at any time as a CSV file. Besides, you can also use the API to built custom applications to interact with your device. If you are familiar with python, check also [scdata](https://pypi.org/project/scdata/)
 
 ## How does the kit record the data?
 The sensor can work in network and SD card modes. In network mode, the sensor publish data to the SC platform over Wi-Fi (every minute by default, but configurable). In SD card mode, all the collected data is stored locally in CSV format, and it can be later uploaded manually to the platform using the "Manual Data Upload" option.
@@ -93,7 +93,7 @@ No. They cannot be exposed to water, high humidity, corrosive environments, or m
 
 ![](/assets/images/nail_polish_areas.png)
 
-If you are using any enclosure from [the repository](https://github.com/fablabbcn/smartcitizen-enclosures/), we also recommend using a filtration foam (PPI-20/10) like [this one](http://www.infiltro.es/index.php/filtro-de-aire-2/prefiltros/item/foam). More info [here](https://forum.smartcitizen.me/t/rain-tests-for-the-sck/1300)
+If you are using any enclosure from [the repository]({{ extra.urls.enclosures.link }}), we also recommend using a filtration foam (PPI-20/10) like [this one](http://www.infiltro.es/index.php/filtro-de-aire-2/prefiltros/item/foam). More info [here](https://forum.smartcitizen.me/t/rain-tests-for-the-sck/1300).
 
 ## Can I send data to a different platform?
 

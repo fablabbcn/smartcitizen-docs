@@ -190,7 +190,7 @@ Notes about data:
 
 The sensor comes mounted and almost ready to be used.
 
-The first step is to connect the battery. The kit will light in red (configuration mode) and we will be able to configure it by following the instructions at [start.smartcitizen.me](https://start.smartcitizen.me).
+The first step is to connect the battery. The kit will light in red (configuration mode) and we will be able to configure it by following the instructions at [start.smartcitizen.me]({{ extra.urls.installation.link }}).
 
 ![](assets/almabike_start.png)
 
@@ -214,7 +214,7 @@ After the configuration process, data will be available on the SmartCitizen plat
 
         ![](assets/almabike_save.png)
 
-Due to privacy concerns, all geolocated data for the Almabike project will remain private unless the user choses to release it. When you set up your user profile, please, contact "support@smartcitizen.me" to request your if your user can be upgraded from `citizen` to `researcher`.
+Due to privacy concerns, all geolocated data for the Almabike project will remain private unless the user choses to release it. When you set up your user profile, please, contact [{{ extra.urls.support.name }}]({{ extra.urls.support.link }}) to inquire about whether your user can be upgraded from `citizen` to `researcher`.
 
 This will allow to visit any of your devices and select the option "Make private" under the "Open Data" settings:
 

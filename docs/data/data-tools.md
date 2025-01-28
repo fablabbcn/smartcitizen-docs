@@ -32,7 +32,7 @@ Web tools do not require any installation, and for that they are very easy to us
 
 Some examples you can check out:
 
-- [Smart Citizen Map](https://smartcitizen.me/kits): the classic map, with simple time-series plots and comparisons between metrics from one device
+- [Smart Citizen Map]({{ extra.urls.platform.link }}): the classic map, with simple time-series plots and comparisons between metrics from one device
 - [Smart Citizen Dashboard](https://dashboard.smartcitizen.me): a basic dashboard, written in javascript, that can show all the devices, their status, and allows for filtering based on location and tags. It also features a basic time-series plot with customisable time-frame, websockets notifications, and data download in CSV, from any device!
 - [RawGraphs](https://rawgraphs.org): an open source web based visualisation tool, based on [D3](https://d3.js), that can interact with data from a CSV file (and maybe from our API sometime soon)
 - [Binder](https://mybinder.org): a web based notebook tool for more advanced data analysis. See below in the [advanced section](#advanced)
