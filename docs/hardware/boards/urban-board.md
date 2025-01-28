@@ -8,8 +8,6 @@ interface: None
 
 # Urban Board
 
-## Description
-
 The Urban Board is a solution that contains a selection of low-cost sensors for environmental monitoring. The actual [measurements](#measurements) it takes depend on the version, but overall, it is capable of measurements such as:
 
 - Temperature and Relative Humidity
@@ -21,21 +19,18 @@ The Urban Board is a solution that contains a selection of low-cost sensors for 
 
 The Urban Board has undergone several modifications throughout its development, and its current version is the **V2.3**. Below you can see all versions:
 
-<!-- === "SCK 2.0"
-    ![TODO](SCK20) -->
-=== "SCK 2.3"
-    <img src="https://live.staticflickr.com/65535/54163699376_1cd43f2fe7_k.jpg" alt="SCK2.3 Urban Board"/>
-=== "SCK 2.2"
-    <img src="https://live.staticflickr.com/65535/53967486162_a874c1baf3_k.jpg" alt="SCK2.2 Urban Board"/>
-=== "SCK 2.1"
-    <img src="https://live.staticflickr.com/65535/47950912253_1404d418dd_k.jpg" alt="SCK2.1 Urban Board"/>
+=== "SCK2.3"
+    <img style="max-height: 450px; width: 100%; object-fit: cover;" src="https://live.staticflickr.com/65535/54281726349_e3353f828b_o.jpg" alt="SCK2.3 Urban Board"/>
+=== "SCK2.2"
+    <img style="max-height: 450px; width: 100%; object-fit: cover;" src="https://live.staticflickr.com/65535/54281726359_471ec852eb_o.jpg" alt="SCK2.2 Urban Board"/>
+=== "SCK2.1"
+    <img style="max-height: 450px; width: 100%; object-fit: cover;" src="https://live.staticflickr.com/65535/54281911420_32e26bdd40_o.jpg" alt="SCK2.1 Urban Board"/>
 
-
-<a class="github-button" data-size="large" href="https://github.com/fablabbcn/smartcitizen-kit-2x" aria-label="Check the source code">Check the source code</a>
+<a class="github-button" data-size="large" href="{{ config.extra.urls.ghhardware.link }}" aria-label="Check the design files">Check the design files</a>
 
 ## Assembly
 
-The Urban Board connect to the [Data Board](/hardware/boards/data-board/) connector named `Sensor Board`:
+The Urban Board connects to the [Data Board](/hardware/boards/data-board/) with the connector labeled `Sensor Board`:
 
 ![](/assets/images/sck-connection.png)
 
@@ -87,9 +82,10 @@ The Urban Board connect to the [Data Board](/hardware/boards/data-board/) connec
 
 ## Design files
 
-You can find all the design files for the different versions of the Urban Boards in the [hardware repository]({{ extra.urls.ghhardware.link }}).
+You can find all the design files for the different versions of the Urban Board in the [hardware repository]({{ extra.urls.ghhardware.link }}).
 
 !!!info "Previous versions"
     Previous versions of the SCK, are in their respective repositories:
+
     - Smart Citizen Kit 2.0: https://github.com/fablabbcn/smartcitizen-kit-20
     - Smart Citizen Kit 1.5: https://github.com/fablabbcn/smartcitizen-kit-15

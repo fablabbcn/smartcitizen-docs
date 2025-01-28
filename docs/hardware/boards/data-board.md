@@ -4,9 +4,14 @@
 
 The Data Board is a data-logger at the core of the sensors architecture supporting the Smart Citizen Kit and the Smart Citizen Station. This module is powered by an ARM M0+ 32-bits 48Mhz **SAMD21** running the [Smart Citizen Firmware](/Components/Firmware), combining the low power consumption of the ARM M0 family with the power of a 32-bits processor with 32KB of RAM and 256KB of FLASH memory. This solution offers enough program storage and memory space to support multiple auxiliary sensors. This chip is used by the Arduino Zero and MKR boards, therefore benefiting from the open community built around these boards in particular and the Arduino project in general.
 
-<img src="https://live.staticflickr.com/65535/47950912298_2b132245cb_h.jpg" walt="SCK 2.1 Data Board">
+=== "SCK2.3"
+    <img style="max-height: 325px; width: 100%; object-fit: cover;" src="https://live.staticflickr.com/65535/54281911435_c1ae473a74_o.jpg" alt="SCK2.3 Data Board"/>
+=== "SCK2.2"
+    <img style="max-height: 325px; width: 100%; object-fit: cover;" src="https://live.staticflickr.com/65535/54281911450_2edda8b7ed_o.jpg" alt="SCK2.2 Data Board"/>
+=== "SCK2.1"
+    <img style="max-height: 325px; width: 100%; object-fit: cover;" src="https://live.staticflickr.com/65535/54281911410_5f944402a3_o.jpg" alt="SCK2.1 Data Board"/>
 
-<a class="github-button" data-size="large" href="https://github.com/fablabbcn/smartcitizen-kit-21" aria-label="Check the source code">Check the source code</a>
+<a class="github-button" data-size="large" href="{{ config.extra.urls.ghhardware.link }}" aria-label="Check the design files">Check the design files</a>
 
 The Data Board also includes a Wi-Fi module, a micro SD card slot, an internal Flash and a battery management solution. In addition, it includes 4MB of extra Flash Memory for offline data storage, in case of network brownouts. The Wi-Fi Module is the well-known [Espressif ESP8266](https://www.espressif.com/en/products/hardware/esp8266ex/overview) IEEE 802.11 b/g/n Wi-Fi with 4MB Internal Flash for web content storage:
 
@@ -22,7 +27,12 @@ The controller allows the batteries to be easily charged using the boards micro 
 
 ## Firmware
 
-The Smart Citizen Kit firmware is comprised of two parts: 1) the primary processing tasks are done by the SAMD21 microcontroller firmware; 2) the tasks related to network communication are run through the ESP8266. The SAMD21 is built on top of the Arduino Zero with a custom variant for the Data Board main MCU. The ESP8266 is also built using the Arduino ESP Core. Both firmwares are built and managed with Platform IO, an open-source IDE for embedded development. Platform IO features built-in dependency management and allows you to compile and upload both processors with a single command. Using the SWD ARM connector you can change the MCU bootloader and debug the firmware using Open Source tools.
+The Smart Citizen Kit firmware is comprised of two parts: 
+
+1. the primary processing tasks are done by the SAMD21 microcontroller firmware; 
+2. the tasks related to network communication are run through the ESP8266.
+
+The SAMD21 is built on top of the Arduino Zero with a custom variant for the Data Board main MCU. The ESP8266 is also built using the Arduino ESP Core. Both firmwares are built and managed with Platform IO, an open-source IDE for embedded development. Platform IO features built-in dependency management and allows you to compile and upload both processors with a single command. Using the SWD ARM connector you can change the MCU bootloader and debug the firmware using Open Source tools.
 
 !!! info
 
@@ -78,5 +88,6 @@ You can find all the design files for the different versions of the Urban Boards
 
 !!!info "Previous versions"
     Previous versions of the SCK, are in their respective repositories:
+
     - Smart Citizen Kit 2.0: https://github.com/fablabbcn/smartcitizen-kit-20
     - Smart Citizen Kit 1.5: https://github.com/fablabbcn/smartcitizen-kit-15
