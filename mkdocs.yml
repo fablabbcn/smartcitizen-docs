@@ -252,7 +252,7 @@ extra:
       name: smartcitizen.me
       link: https://smartcitizen.me/
     platform:
-      name: smartcitizen.me
+      name: smartcitizen.me/kits
       link: https://smartcitizen.me/kits
     api:
       name: api.smartcitizen.me
