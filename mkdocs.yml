@@ -301,6 +301,7 @@ extra:
 plugins:
   - macros
   - search
+  - open-in-new-tab
   - tags
   # - redirects:
   #     redirect_maps:

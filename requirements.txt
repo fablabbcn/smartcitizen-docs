@@ -7,6 +7,7 @@ GitPython
 requests
 mkdocs-redirects
 mkdocs-linkcheck
+mkdocs-open-in-new-tab
 pytest
 Jinja2
 #mkdocs-print-site-plugin
