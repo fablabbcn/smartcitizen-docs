@@ -1,9 +1,9 @@
 ---
-type: core
-feature_img: None
-status: stable
-versions: None
-interface: None
+internal:
+  writing: false
+  proofread: false
+  links: false
+  images: false
 ---
 
 # Urban Board
@@ -34,19 +34,15 @@ The Urban Board connects to the [Data Board](/hardware/boards/data-board/) with 
 
 ![](/assets/images/sck-connection.png)
 
+### PM sensor
+
+=== "SCK2.3/2.2"
+    ![](/assets/urban-board-sen5x.png)
+=== "SCK2.1"
+    TODO
+
 ## Measurements
 
-<!-- === "SCK 2.0"
-    | Measurement                                  | Units                                          | Sensor                |
-    |----------------------------------------------|------------------------------------------------|-----------------------|
-    | Air Temperature                              | ºC                                             | Sensirion SHT-31      |
-    | Relative Humidity                            | % REL                                          | Sensirion SHT-31      |
-    | Noise Level and Spectrum                     | dBA, dBC or dBZ                                | Invensense ICS-43432  |
-    | Ambient Light                                | Lux                                            | Rohm BH1721FVC        |
-    | Barometric pressure and AMSL                 | kPa and Meters                                 | NXP MPL3115A2         |
-    | Carbon Monoxide                              | ppm                                            | SGX MICS-4514         |
-    | Nitrogen Dioxide                             | ppb                                            | SGX MICS-4514         |
-    | PM1, PM2.5 and PM10 | µg/m3                                                                   | Plantower PMS5003     | -->
 === "SCK 2.3"
     | Measurement                                  | Units                                          | Sensor                |
     |----------------------------------------------|------------------------------------------------|-----------------------|

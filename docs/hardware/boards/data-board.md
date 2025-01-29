@@ -1,8 +1,14 @@
-<!-- TODO - Fix versions and add microcontrollers -->
+---
+internal:
+  writing: false
+  proofread: false
+  links: false
+  images: false
+---
 
 # Data Board
 
-The Data Board is a data-logger at the core of the sensors architecture supporting the Smart Citizen Kit and the Smart Citizen Station. This module is powered by an ARM M0+ 32-bits 48Mhz **SAMD21** running the [Smart Citizen Firmware](/Components/Firmware), combining the low power consumption of the ARM M0 family with the power of a 32-bits processor with 32KB of RAM and 256KB of FLASH memory. This solution offers enough program storage and memory space to support multiple auxiliary sensors. This chip is used by the Arduino Zero and MKR boards, therefore benefiting from the open community built around these boards in particular and the Arduino project in general.
+The Data Board is a data-logger at the core of the sensors architecture supporting the Smart Citizen Kit and the Smart Citizen Station. This module is powered by an ARM M0+ 32-bits 48Mhz **SAMD21** running the [Smart Citizen Firmware](/docs/hardware/firmware/), combining the low power consumption of the ARM M0 family with the power of a 32-bits processor with 32KB of RAM and 256KB of FLASH memory. This solution offers enough program storage and memory space to support multiple auxiliary sensors. This chip is used by the Arduino Zero and MKR boards, therefore benefiting from the open community built around these boards in particular and the Arduino project in general.
 
 === "SCK2.3"
     <img style="max-height: 325px; width: 100%; object-fit: cover;" src="https://live.staticflickr.com/65535/54281911435_c1ae473a74_o.jpg" alt="SCK2.3 Data Board"/>
@@ -17,19 +23,25 @@ The Data Board also includes a Wi-Fi module, a micro SD card slot, an internal F
 
 ## Microcontrollers
 
-![](/assets/images/sck-mcus.png)
+![](/assets/images/data-board-mcus.png){:style="width: 500px"}
 
 The Data Board connects to the sensor board providing power, analog and digital communications (12 bits ADC, GPIO, I2C, I2S, VCC). The Data Board also includes a Seeed Studio standard Grove connector where off-the-shelf modules from the same manufacturer can be connected. The connector supports an independent I2C bus by default, but by software it can be configured to support other uses (GPIO, I2C and UART). It can supply power up to 750mA, and it can be enabled or disabled by software to save power.
+
+![](/assets/images/data-board-connectors.png){:style="width: 500px"}
 
 The board includes a power unit, with a battery management system, capable of handling a variety of Lithium polymer cells. The batteries are connected to a standard JST-2 pin battery connector. The Smart Citizen Kit by default uses a 2000mAh battery, but larger capacities can be used. Under normal conditions, and depending on the sensors enabled, a 2000mAh battery can last between 24 hours (with all sensors enabled, and a 1-minute recording frequency) to more than a week. The board also features a _sleep mode_, through which drastically lower average consumption are achieved.
 
 The controller allows the batteries to be easily charged using the boards micro USB connector using any standard USB power adapter like the ones used on Smartphones. On remote areas, it can also be powered using a selection of PV Panels like [Voltaics Systems](https://www.voltaicsystems.com/) 6W panel.
 
+![](/assets/images/data-board-connectors-power.png){:style="width: 500px"}
+
+TODO - Leds, buttons...
+
 ## Firmware
 
-The Smart Citizen Kit firmware is comprised of two parts: 
+The Smart Citizen Kit firmware is made out of two parts:
 
-1. the primary processing tasks are done by the SAMD21 microcontroller firmware; 
+1. the primary processing tasks are done by the SAMD21 microcontroller firmware;
 2. the tasks related to network communication are run through the ESP8266.
 
 The SAMD21 is built on top of the Arduino Zero with a custom variant for the Data Board main MCU. The ESP8266 is also built using the Arduino ESP Core. Both firmwares are built and managed with Platform IO, an open-source IDE for embedded development. Platform IO features built-in dependency management and allows you to compile and upload both processors with a single command. Using the SWD ARM connector you can change the MCU bootloader and debug the firmware using Open Source tools.
@@ -51,20 +63,13 @@ The SAMD21 is built on top of the Arduino Zero with a custom variant for the Dat
 
 The Kit features a modular architecture where sensors can be updated independently by replacing any individual Sensor Board. The Sensor Boards features GPIO, ADC, I2C, UART and I2S connections at 3.3V. Currently, we only offer the Urban Sensor Board, but more boards are on the way, and you can even design and build a custom one.
 
-!!! info "Example of a Sensor Board"
-	This is the V2.0 Urban Board example.
-    ![](/assets/images/sck-connection.png)
-
 Here there is a pinout of the Data Board connector:
 
-![](/assets/images/data-board-pinout.png)
+![](/assets/images/data-board-pinout.png){:style="width: 500px"}
 
 ### Auxiliary connector
 
 The Data Board features and independent configurable auxiliary bus at 3.3V with a SEEED Studio Grove connector. The Bus has native support for I2C, but it can also be setup on firmware as a GPIO or UART port. It can supply power up to 750mA, and it can be enabled or disabled by software.
-
-!!! info "Example of devices connected via the **AUX connector.**"
-	![](/assets/images/station-components.jpg)
 
 ## Power management
 
