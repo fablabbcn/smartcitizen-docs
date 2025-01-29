@@ -1,3 +1,10 @@
+---
+internal:
+  proofread: false
+  links: false
+  images: false
+---
+
 # Uploading SD Card Data
 
 !!! info ""

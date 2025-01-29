@@ -1,3 +1,10 @@
+---
+internal:
+  proofread: false
+  links: false
+  images: false
+---
+
 # Creative coding
 
 Sometimes, data can be better represented without numbers or graphs. This guide will help you use the famous [processing](https://processing.org) tools for making some creative coding. We will start by configuring a live demo using the **Serial port**, and then making a simple plot by interacting with **the API**.
@@ -49,7 +56,7 @@ int PORT_INDEX = 2; //change the 0 to a 1 or 2 etc. to match your port using  pr
 
 Now, if you hit run! The number of flocks will be equal to the _luxes_ that the kit gets at any given moment. Check it by covering the light sensor with your hand!
 
-![](/assets/images/flock.gif)
+![](/assets/images/processing-flock.gif)
 
 !!! info "Rather see other data?"
     Find the line in the example where we use the _monitor_ function:
@@ -67,7 +74,7 @@ Now, if you hit run! The number of flocks will be equal to the _luxes_ that the 
 
 In this case we will asks data to the Smart Citizen API the data and plot it:
 
-![](/assets/images/2xtIx82.png)
+![](/assets/images/processing-api.png)
 
 !!!info "Too lazy to read?"
     You can find the code used in this tutorial [here](https://github.com/fablabbcn/smartcitizen-docs/blob/master/docs/assets/pde/SmartCitizenAPIreadings/SmartCitizenAPIreadings.pde). You can directly run the example and check the output, and you can read below for more details
@@ -120,8 +127,6 @@ JSONArray readings = sckData.getJSONArray("readings");  // This contains your re
 
     The data is stored in a response in JSON that follows a specific structure dictated by the API. You can see it in the [API documentation](https://developer.smartcitizen.me/#get-historical-readings) in the **response** table.
 
-    ![](/assets/images/JqNuJfd.png)
-
     In this sketch we fill a generic array of float numbers using a for loop.
 
     ```java
@@ -149,4 +154,4 @@ for (int i = 0; i < readingsFloats.length; i++){
 
 And this is the result!
 
-![](/assets/images/ldi4dcS.png)
+![](/assets/images/processing-graph.png)

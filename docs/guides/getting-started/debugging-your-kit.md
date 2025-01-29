@@ -1,3 +1,10 @@
+---
+internal:
+  proofread: false
+  links: false
+  images: false
+---
+
 # Debugging your kit
 
 <img src="https://live.staticflickr.com/65535/50977039386_c250d3141d_k.jpg" width="2000" height="1333" alt="Smart Citizen Kits being tested at Fab Lab Barcelona">
@@ -6,7 +13,7 @@ This guide will try to summarize the basic steps to debug your kits whenever the
 
 1. Reset the kit using the **hardware reset button**. This is either here:
 
-    ![](/assets/images/sck_2/SCK21_Reset.png)
+    ![](/assets/images/sck21-reset.png)
 
     or here:
 
@@ -18,7 +25,7 @@ This guide will try to summarize the basic steps to debug your kits whenever the
 
     or here:
 
-    ![](/assets/images/reset_water.jpg)
+    ![](/assets/images/reset-water.jpg)
 
 2. If this doesn't solve the problem, you might want to connect to the kits [using the Shell](/guides/getting-started/using-the-shell/).
 
@@ -55,14 +62,14 @@ This should show if all the sensors are being recognised. If one of them is miss
 i2c
 ```
 
-If one of the sensors is not shown, it means that there is probably a hardware issue with the sensor itself and that the microcontroller is not recognising it. Now, it would be useful to look for [corrosion signs](https://forum.smartcitizen.me/t/unit-failure-suffering-from-weather/1262) around the sensors and maybe reflash the firmware in case there is a better detection of the sensors in a firmware update. Otherwise, it is likely that the hardware is no longer functioning and it needs replacement.
+If one of the sensors is not shown, it means that there is probably a hardware issue with the sensor itself and that the microcontroller is not recognising it. Now, it would be useful to look for [corrosion signs]({{ config.extra.urls.forum.link}}/t/unit-failure-suffering-from-weather/1262) around the sensors and maybe reflash the firmware in case there is a better detection of the sensors in a firmware update. Otherwise, it is likely that the hardware is no longer functioning and it needs replacement.
 
-2. If the [LED is static](https://forum.smartcitizen.me/t/persistent-green-light-during-onboarding/1330/25), very likely there is a problem with the detection or an electric problem with the sensors. For this, it is useful to start disconnecting each component to understand which component fails:
+2. If the [LED is static]({{ config.extra.urls.forum.link}}/t/persistent-green-light-during-onboarding/1330/25), very likely there is a problem with the detection or an electric problem with the sensors. For this, it is useful to start disconnecting each component to understand which component fails:
 
 - Disconnect the power (USB and battery) and disconnect the PMS5003 sensor. Power on again and check
 - Disconnect the power (USB and battery) and disconnect the Urban Board. Power on again and check
 
-If this doesn't help, try to [reflash the firmware](/Guides/firmware/Update the firmware/), as there might be improvements. If it helps, also update and check if it improves. If the sensors heat up too much (it burns to touch), there might be an electric issue.
+If this doesn't help, try to [upgrade the firmware](/docs/guides/firmware/upgrading-the-firmware/), as there might be improvements. If it helps, also update and check if it improves. If the sensors heat up too much (it burns to touch), there might be an electric issue.
 
 ## Connectivity or configuration issues
 
@@ -73,7 +80,7 @@ Normally, configuration or connectivity issues can be due to the following reaso
 
 1. If **not** using the [Shell](/guides/getting-started/using-the-shell/), make sure that the information provided for the network is correct by putting the SCK in SETUP mode (RED LED) and accessing the SmartCitizeXXXX network.
 
-    ![](/assets/images/sck_2/esp_force_upload_1.png)
+    ![](/assets/images/esp-force-upload-1.png)
 
 2. If using the [Shell](/guides/getting-started/using-the-shell/), you can check the recording configuration by typing:
 

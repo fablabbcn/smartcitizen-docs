@@ -1,4 +1,11 @@
-# Onboarding Sensors
+---
+internal:
+  proofread: false
+  links: false
+  images: false
+---
+
+# Onboarding your kit
 
 The onboarding app guides you through the process of the setup using simple language and a friendly graphic language. It is built as a separate tool from the core Smart Citizen Webpage in order it can be customized for each deployment.
 

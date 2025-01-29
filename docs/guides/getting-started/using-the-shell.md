@@ -1,3 +1,10 @@
+---
+internal:
+  proofread: false
+  links: false
+  images: false
+---
+
 # Using the Shell
 
 The SCK (from V2.0 onwards) has an integrated command shell over USB to manage all the kits functionalities for advanced users. In this guide, we will cover how to access to this functionality in different platforms, and some examples.
@@ -10,16 +17,28 @@ We could define the `shell` as a text-based interface to access almost any SCK f
 
 Software-wise, different platforms will have different interfaces. The easiest and most reliable for all of them would be through the [Arduino IDE](https://www.arduino.cc/en/Main/Software).
 
-!!! example "Using the Arduino IDE"
-    - Launch the _Arduino IDE_ and select the port under `Tools > Port >`:
+### Using the Arduino IDE
 
-    ![](https://i.imgur.com/XEZXoyy.png)
+Launch the _Arduino IDE_ and select the port under `Tools > Port >`:
 
-    - Launch the `Serial Monitor` under `Tools > Serial Monitor`. Make sure that the dropdowns in the bottom are set as in the image below (`Carriage return` and `115200 baud`)
+![](/assets/images/arduino-ide-port.png)
 
-    - Type in `help` to get started.
+Launch the `Serial Monitor` under `Tools > Serial Monitor`. Make sure that the dropdowns in the bottom are set as in the image below (`Carriage return` and `115200 baud`)
 
-    ![](https://i.imgur.com/iSONfFB.png)
+Type in `help` to get started.
+
+![](/assets/images/arduino-ide-monitor.png)
+
+### Using WebUSB
+
+You can use a terminal running on the browser, using the `WebUSB` technology.
+
+!!! warning "Not for all browsers"
+    Not all browsers support this at the moment. You can check its compatibility [here](https://developer.mozilla.org/en-US/docs/Web/API/USB#browser_compatibility)
+
+Accessing the terminal on the browser is fairly simple. There are plenty of web services, such as [spacehuhn webserial terminal](https://serial.huhn.me/).
+
+### Using a terminal directly
 
 More advanced users would probably rather use a more _rugged_ interface. In this case, you could use `screen` in your terminal of choice:
 
@@ -32,12 +51,22 @@ SCK >
 ...
 ```
 
-If you already installed [platformio](https://platformio.org/) to [edit the firmware](/Guides/Edit%20the%20Firmware/) you can use it here, too
+If you already installed [platformio](https://platformio.org/) to [edit the firmware](/docs/guides/firmware/edit-the-firmware/) you can use it here, too
 
 ```
 > pio device monitor
 SCK >
 ...
+```
+
+Finally, if you are a `linux` user, you can use [`tio`](https://github.com/tio/tio):
+
+```
+> tio /dev/ttyACM0
+[14:06:45.050] tio v2.5
+[14:06:45.050] Press ctrl-t q to quit
+[14:06:45.109] Connected
+SCK >
 ```
 
 !!! warning "Be patient!"

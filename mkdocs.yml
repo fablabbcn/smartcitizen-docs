@@ -115,8 +115,8 @@ nav:
   - Guides:
     - Introduction: guides/index.md
     - Getting Started:
-      - Onboarding your kit: guides/getting-started/onboarding-sensors.md
-      - Updating the Wi-Fi: guides/getting-started/updating-the-wifi-credentials.md
+      - Onboarding your kit: guides/getting-started/onboarding-your-kit.md
+      - Updating the Wi-Fi: guides/getting-started/updating-wifi-credentials.md
       - Downloading platform data: guides/getting-started/downloading-data.md
       - Uploading SD-card data: guides/getting-started/uploading-sd-card-data.md
       - Using the Shell: guides/getting-started/using-the-shell.md

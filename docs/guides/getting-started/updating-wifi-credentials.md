@@ -1,4 +1,11 @@
-# Updating the Wi-Fi
+---
+internal:
+  proofread: false
+  links: false
+  images: false
+---
+
+# Updating the Wi-Fi credentials
 
 This guide will help you update your kit's Wi-Fi settings.
 

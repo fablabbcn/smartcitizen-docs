@@ -1,3 +1,10 @@
+---
+internal:
+  proofread: false
+  links: false
+  images: false
+---
+
 # Python, R and Jupyter
 
 This guide will help set up and start working with more advanced data tools. We recommend using these tools for accessing and performing operations on the data coming from multiple devices, visualising it, or _maybe_ testing sensor calibration models.
