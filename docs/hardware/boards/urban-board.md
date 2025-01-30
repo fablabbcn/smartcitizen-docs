@@ -1,6 +1,6 @@
 ---
 internal:
-  writing: false
+  writing: true
   proofread: false
   links: false
   images: false
@@ -8,16 +8,16 @@ internal:
 
 # Urban Board
 
-The Urban Board is a solution that contains a selection of low-cost sensors for environmental monitoring. The actual [measurements](#measurements) it takes depend on the version, but overall, it is capable of measurements such as:
+The **Urban Board** is a passive board that contains a selection of low-cost sensors for environmental monitoring, and a connector for a PM sensor. The [measurements](#measurements) it takes depend on the version, but overall, it is capable of measurements such as:
 
 - Temperature and Relative Humidity
 - Barometric Pressure
 - Noise Level and Frequency Spectrum
 - Light (including UV-index after the 2.2 version)
 - Air Quality Indicators (depending on the version)
-- PM sensor connector
+- PM
 
-The Urban Board has undergone several modifications throughout its development, and its current version is the **V2.3**. Below you can see all versions:
+The **Urban Board** has undergone several modifications throughout its development, and its current version is the **V2.3**. Below you can see all versions:
 
 === "SCK2.3"
     <img style="max-height: 450px; width: 100%; object-fit: cover;" src="https://live.staticflickr.com/65535/54281726349_e3353f828b_o.jpg" alt="SCK2.3 Urban Board"/>
@@ -30,18 +30,21 @@ The Urban Board has undergone several modifications throughout its development, 
 
 ## Assembly
 
-The Urban Board connects to the [Data Board](/hardware/boards/data-board/) with the connector labeled `Sensor Board`:
+The **Urban Board** connects to the [Data Board](/hardware/boards/data-board/) with the connector labeled `SENSOR BOARD`:
 
-![](/assets/images/sck-connection.png)
+![](/assets/images/sck-connection.png){:style="width: 500px"}
 
-### PM sensor
+### PM sensor connection
 
 === "SCK2.3/2.2"
-    ![](/assets/urban-board-sen5x.png)
+    ![](/assets/images/urban-board-sen5x.png){:style="width: 500px"}
 === "SCK2.1"
     TODO
 
-## Measurements
+!!! info "Custom cable"
+    Note that the PM cable, both for PMS5003 or the SEN5X, are custom made.
+
+## Sensors
 
 === "SCK 2.3"
     | Measurement                                  | Units                                          | Sensor                |
@@ -79,6 +82,8 @@ The Urban Board connects to the [Data Board](/hardware/boards/data-board/) with 
 ## Design files
 
 You can find all the design files for the different versions of the Urban Board in the [hardware repository]({{ extra.urls.ghhardware.link }}).
+
+<a class="github-button" data-size="large" href="{{ config.extra.urls.ghhardware.link }}" aria-label="Check the design files">Check the design files</a>
 
 !!!info "Previous versions"
     Previous versions of the SCK, are in their respective repositories:

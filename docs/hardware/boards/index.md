@@ -1,3 +1,11 @@
+---
+internal:
+  writing: true
+  proofread: false
+  links: false
+  images: false
+---
+
 # Boards
 
 The core of the system is the [Data Board](/hardware/boards/data-board), a data logger with Wi-Fi connectivity, a micro SD-card, micro USB and battery connectors. Different components can be connected to the board: customized sensor boards, or a wide range of digital and analog sensors. The idea is to make it very easy to get started, no matter if you want to collect air quality or noise data, working on educational settings, or on more _advanced_ scientific research. The type of sensors that we normally work with can take [air](/knowledge/air), [water](/knowledge/water) or [soil](/knowledge/soil) measurements.
@@ -16,10 +24,13 @@ The most popular one of these boards are the [Urban Boards](/hardware/boards/urb
 
 These boards are used to interface with sensors that the _data board_ can't interface with directly:
 
-* [Analog Sensors Board](/hardware/boards/analog-sensor-board/): An auxiliary board using two high-resolution Analog to Digital Converters (ADCs) capable of reading 8 analog channels at 16 bit resolution. It is used in the [Smart Citizen Stations](/hardware/stations/) for the interfacing with sensors such as [electrochemical cells](/knwoledge/sensors/air/chemical/Alphasense_Electrochemical/) or [PIDs](/knwoledge/sensors/air/chemical/Alphasense_PID/).
+* [**Analog Sensors Board**](/hardware/boards/analog-sensor-board/): An auxiliary board using two high-resolution Analog to Digital Converters (ADCs) capable of reading 8 analog channels at 16 bit resolution. It is used in the [Smart Citizen Stations](/hardware/stations/) for the interfacing with sensors such as [electrochemical cells](/knwoledge/sensors/air/chemical/Alphasense_Electrochemical/) or [PIDs](/knwoledge/sensors/air/chemical/Alphasense_PID/).
 
 <img style="max-height: 350px; width: 100%; object-fit: cover;" src="https://live.staticflickr.com/65535/53968621883_5c4f1ab625_k.jpg" alt="Analog-Sensor-Board-front-b"/>
 
-* The [PM Sensors Board](/hardware/boards/pm-board/): An auxiliary board capable of driving two [PMS5003 Particulate Matter sensors](/hardware/sensors/air/OPCs/) as well as other auxiliary sensors required for specific deployments. It is generally used in the big [Smart Citizen Stations](/hardware/stations/).
+* [**PM Sensor Board**](/hardware/boards/pm-board/): An auxiliary board capable of driving two [PMS5003 Particulate Matter sensors](/hardware/sensors/air/OPCs/) as well as other auxiliary sensors required for specific deployments. It is generally used in the big [Smart Citizen Stations](/hardware/stations/).
 
 <img src="https://live.staticflickr.com/65535/47950953122_788b43618a_k.jpg" alt="SCK 2.1 PM Board"/>
+
+!!! info "Commercial availability"
+    All interface boards are currently not available for purchases, except from Fab Lab Barcelona directly. Email us at [{{config.extra.urls.info.name}}]({{config.extra.urls.info.mail}}) in case you are interested.
