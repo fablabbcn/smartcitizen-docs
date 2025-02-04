@@ -26,8 +26,8 @@
 
 **Related Documents:**
 
-- [Battery datasheet](https://docs.smartcitizen.me/assets/datasheets/batteries/PL804050_2000mAh/PL804050_2000mAh_Datasheet.pdf)
-- [Material Safety data sheet](https://docs.smartcitizen.me/assets/datasheets/batteries/DTP605068_6000mAh/DTP605068_6000mAh_Safety_Datasheet.pdf)
+- [Battery datasheet](/assets/datasheets/batteries/PL804050_2000mAh/PL804050_2000mAh_Datasheet.pdf)
+- [Material Safety data sheet](/assets/datasheets/batteries/DTP605068_6000mAh/DTP605068_6000mAh_Safety_Datasheet.pdf)
 
 ## Connectivity
 
@@ -41,4 +41,4 @@
 
 **Related Documents:**
 
-- [Wi-Fi Antenna datasheet](https://docs.smartcitizen.me/assets/datasheets/wifi/ESP-12F.pdf)
+- [Wi-Fi Antenna datasheet](/assets/datasheets/wifi/ESP-12F.pdf)

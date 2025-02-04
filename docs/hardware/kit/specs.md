@@ -1,3 +1,10 @@
+---
+internal:
+  proofread: false
+  links: true
+  images: true
+---
+
 # Technical specifications
 
 ## Physical
