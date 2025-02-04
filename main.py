@@ -485,6 +485,12 @@ def define_env(env):
         return None
 
     @env.macro
+    def insert_guides():
+        # TODO
+        return None
+
+
+    @env.macro
     # Inspired by function in mkdocs-snippets-plugin
     # TODO - Cleanup once it's final
     def insert_references(file_path, ignore_frontmatter = True):
