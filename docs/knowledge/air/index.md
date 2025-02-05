@@ -13,7 +13,7 @@ hide:
 - [Noise](noise/index.md)
 - [Light](light/index.md)
 - [CO2](co2/index.md)
-- [Chemical composition (besides CO2)](chemical/index.md), including [VOCs](chemical/index#vocs)
+- [Chemical composition (besides CO2)](chemical/index.md), including [VOCs](chemical/#vocs)
 
 ## Supported sensors
 

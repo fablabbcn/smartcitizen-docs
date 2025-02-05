@@ -1,15 +1,24 @@
 ---
-field: soil
-target: soil tension
-type: external
-feature_img:
-status: experimental
-versions:
-    hardware: 1.5
-    firmware: 0.9.4
+card: true
+name: Tensiometer / Irrometer
+field: 
+  - soil
+type:
+  - external
+target:
+  - soil tension
+feature_img: /assets/images/tensiometer-irrometer.jpg
+feature_img_credit: "WATERMARK"
+excerpt: ""
 ---
 
-# Soil Tension
+# {{ name }}
+
+{%if excerpt %}{{ excerpt }}{%endif%}
+
+{%if feature_img %}![]({{feature_img}}){.banner-box}{%endif%}
+
+{%if feature_img_credit %}_Image Credit: **{{ feature_img_credit }}**_{.image-credit-banner-box}{%endif%}
 
 !!! danger "WIP"
     This version is a WIP but is not fully functional with the SCK 2.1. It is shown here as a showcase of the project's capabilities. Have a look at the forum or drop us an email to discuss this. Check the source [files](https://github.com/fablabbcn/smartcitizen-grow/tree/master/soil-water-tension).
@@ -18,7 +27,7 @@ Soil Moisture data as the one provided by the Chirp Moisture Sensor is interesti
 
 ![Watermark Tensionmeter Demo](/assets/images/watermark.png)
 
-The design is entirely open source and it is deeply inspired by the work of Reinier Van der Lee from the [Vinduino project](http://vanderleevineyard.com/vineyard-blog.html), using an already calibrated commercial probe like the **Watermark 200SS9**. The sensor itself is straightforward and it consists of two stainless steel screws that work as electrodes cast inside a piece of plaster and covered by a plastic mesh to prevent erosion. As water is added more electrons can pass between the electrodes of the probe reducing the amount of resistance between them. By using this range of values, you can determine the amount of water that exists in your soil. To avoid interferences and degradation of the electrodes the design only applies voltage for a very short time and uses alternating electric polarities. For the sensor to work, we need a minimal circuit that uses two resistors and two diodes. The resistors work together with the electrodes to build a voltage divider. We can calculate the resistance value between the two electrodes by knowing the value of the resistors and the voltage. However to be able to alternate the electric current we need to duplicate the circuit and add two diodes. In total, we need 4 Pins to be connected to a microcontroller like the Arduino or the Smart Citizen Kit.
+The design is entirely open source and it is deeply inspired by the work of Reinier Van der Lee from the [Vinduino project](https://github.com/ReiniervdL/Vinduino), using an already calibrated commercial probe like the **Watermark 200SS9**. The sensor itself is straightforward and it consists of two stainless steel screws that work as electrodes cast inside a piece of plaster and covered by a plastic mesh to prevent erosion. As water is added more electrons can pass between the electrodes of the probe reducing the amount of resistance between them. By using this range of values, you can determine the amount of water that exists in your soil. To avoid interferences and degradation of the electrodes the design only applies voltage for a very short time and uses alternating electric polarities. For the sensor to work, we need a minimal circuit that uses two resistors and two diodes. The resistors work together with the electrodes to build a voltage divider. We can calculate the resistance value between the two electrodes by knowing the value of the resistors and the voltage. However to be able to alternate the electric current we need to duplicate the circuit and add two diodes. In total, we need 4 Pins to be connected to a microcontroller like the Arduino or the Smart Citizen Kit.
 
 ## Working principle
 

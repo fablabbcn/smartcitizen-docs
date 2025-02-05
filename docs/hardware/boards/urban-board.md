@@ -56,7 +56,7 @@ The **Urban Board** connects to the [Data Board](/hardware/boards/data-board/) w
     | Barometric pressure                          | kPa                                            | NXP MPL3115A26S       |
     | UV-A, B, C                                   | uW/cm2                                         | AMS AS7311            |
     | PM1, PM2.5, PM4 and PM10                     | µg/m3                                          | Sensirion SEN5X       |
-    | NOx Index, VOx Index (Optional)              | -                                              | Sensirion SEN54, 55   |
+    | NOx Index, VOCs Index (Optional)              | -                                              | Sensirion SEN54, 55   |
 === "SCK 2.2"
     | Measurement                                  | Units                                          | Sensor                |
     |----------------------------------------------|------------------------------------------------|-----------------------|
@@ -67,7 +67,7 @@ The **Urban Board** connects to the [Data Board](/hardware/boards/data-board/) w
     | Barometric pressure                          | kPa                                            | ST LPS33K             |
     | UV-A, B, C                                   | uW/cm2                                         | AMS AS7311            |
     | PM1, PM2.5, PM4 and PM10                     | µg/m3                                          | Sensirion SEN5X       |
-    | NOx Index, VOx Index (Optional)              | -                                              | Sensirion SEN54, 55   |
+    | NOx Index, VOCs Index (Optional)              | -                                              | Sensirion SEN54, 55   |
 === "SCK 2.1"
     | Measurement                                  | Units                                          | Sensor                |
     |----------------------------------------------|------------------------------------------------|-----------------------|

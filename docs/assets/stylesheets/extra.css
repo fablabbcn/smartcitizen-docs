@@ -51,7 +51,7 @@ div.table-compact + .md-typeset__scrollwrap td {
     font-size: .62rem;
 }
 
-.md-typeset:not(.emojione, .twemoji, .sensor-image, .sensor-field-icon) img:not(.emojione, .twemoji, .logo, .sensor-image, .sensor-field-icon),
+.md-typeset:not(.emojione, .twemoji, .sensor-image, .sensor-field-icon) img:not(.emojione, .twemoji, .logo, .sensor-image, .sensor-field-icon, .banner-box),
 .md-typeset:not(.emojione, .twemoji, .sensor-image, .sensor-field-icon) svg:not(.emojione, .twemoji, .logo, .sensor-image, .sensor-field-icon){
 	display: flex;
 	justify-content: center;
@@ -468,6 +468,19 @@ a.card-title:hover{
     grid-auto-rows: max-content;
     border: 3px solid #1C1C1C;
     box-shadow: 10px 10px 0px -3px #FFC100, 10px 10px 0px 0px #1C1C1C;
+}
+.banner-box {
+    border: 3px solid #1C1C1C;
+    box-shadow: 10px 10px 0px -3px #FFC100, 10px 10px 0px 0px #1C1C1C;
+    aspect-ratio: 4/3;
+    width: 80%;
+    display: block;
+    margin: 30px auto;
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+.image-credit-banner-box{
+    padding-left: 10%;
 }
 
 .sensor-banner:hover{

@@ -5,8 +5,6 @@ custom_color: gray
 name: Knowledge
 feature_img: https://live.staticflickr.com/4536/24368450488_0c25f78995_h.jpg
 excerpt: Learn about different environmental variables, supported sensors, and how to operate them!
-hide:
-  - toc
 ---
 
 # Knowledge

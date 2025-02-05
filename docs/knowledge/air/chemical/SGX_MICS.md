@@ -1,16 +1,24 @@
 ---
-field: air
-type: onboard, external
-target: chemical
-feature_img:
-status: deprecated
-versions:
-    hardware: 1.5+
-    firmware: 0.9.5+
+card: true
+name: SGX MiCS
+field: 
+  - air
+type:
+  - onboard
+target:
+  - chemical
+feature_img: /assets/images/sgx-mics.jpg
+feature_img_credit: "Amphenol SGX Sensortech"
+excerpt: ""
 ---
 
-# SGX MICs
+# {{ name }}
 
+{%if excerpt %}{{ excerpt }}{%endif%}
+
+{%if feature_img %}![]({{feature_img}}){.banner-box}{%endif%}
+
+{%if feature_img_credit %}_Image Credit: **{{ feature_img_credit }}**_{.image-credit-banner-box}{%endif%}
 
 ## Working principle
 

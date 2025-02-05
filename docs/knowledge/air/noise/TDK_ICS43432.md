@@ -1,25 +1,28 @@
 ---
-field: air
-target: noise
-type: onboard
-feature_img:
-status: stable
-versions:
-    hardware: 2.0+
-    firmware: 0.9.5+
+card: true
+name: TDK ICS43432
+field: 
+  - air
+type:
+  - onboard
+target:
+  - noise
+feature_img: /assets/images/tdk-ics43432.jpg
+feature_img_credit: "TDK InvenSense"
+excerpt: ""
 ---
 
-# TDK ICS43432
+# {{ name }}
 
+{%if excerpt %}{{ excerpt }}{%endif%}
+
+{%if feature_img %}![]({{feature_img}}){.banner-box}{%endif%}
+
+{%if feature_img_credit %}_Image Credit: **{{ feature_img_credit }}**_{.image-credit-banner-box}{%endif%}
 
 ## Working principle
 
 The new Urban Sensor Board SCK 2.0 (and onwards) comes with a digital **MEMs I2S microphone**. There is a wide range of possibilities in the market, and our pick was the INVENSENSE (now TDK) [ICS43432](https://www.invensense.com/products/digital/ics-43432/): a tiny digital MEMs microphone with I2S output. There is an extensive documentation at TDK's website coming from the former and we would recommend to review the nicely put documents for those interested in the topic.
-
-![](https://i.imgur.com/ZbkN4aj.png)
-
-_Image credit: [Invensense ICS43432](https://www.invensense.com/products/digital/ics-43432)_
-
 
 The **MEMs microphone** comes with a transducer element which converts the sound pressure into electric signals. The sound pressure reaches the transducer through a hole drilled in the package and the transducer's signal is sent to an ADC which provides with a signal which can be pulse density modulated (PDM) or in I2S format. Since the ADC is already in the microphone, we have an all-digital audio capture path to the processor and it’s less likely to pick up interferences from other RF, such as the WiFi, for example. The I2S has the advantage of a decimated output, and since the SAMD21 has an I2S port, this allows us to connect it directly to the microcontroller with no CODEC needed to decode the audio data. Additionally, there is a bandpass filter, which eliminates *DC* and low frequency components (i.e. at fs = 48kHz, the filter has -3dB corner at 3,7Hz) and high frequencies at *0,5·fs* (-3dB cutoff). Both specifications are important to consider when analysing the data and discarding unusable frequencies. The microphone acoustic response has to be considered as well, with subsequent equalisation in the data treatment in order.
 

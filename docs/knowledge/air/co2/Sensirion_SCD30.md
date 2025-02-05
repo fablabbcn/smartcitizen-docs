@@ -7,18 +7,18 @@ type:
   - external
 target:
   - co2
-feature_img: /assets/images/scd30-seeed.png
-status: stable
+feature_img: /assets/images/sensirion-scd30.png
+feature_img_credit: "Seeed Studio"
 excerpt: The SCD30 is a NDIR CO2 sensor by Sensirion. You can use it to measure CO2 in indoor spaces or for experiments where you need to know an accurate CO2 level.
 ---
 
-# Sensirion SCD30
+# {{ name }}
 
-<!-- TODO - Insert card instead? -->
+{%if excerpt %}{{ excerpt }}{%endif%}
 
-{{ page.meta.excerpt }}
+{%if feature_img %}![]({{feature_img}}){.banner-box}{%endif%}
 
-![]({{page.meta.feature_img}})
+{%if feature_img_credit %}_Image Credit: **{{ feature_img_credit }}**_{.image-credit-banner-box}{%endif%}
 
 ## Usage
 

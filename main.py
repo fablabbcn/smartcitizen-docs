@@ -412,6 +412,14 @@ def define_env(env):
                             std_out (f'ERROR: {file} has no \'name\' in frontmatter!')
                             continue
 
+                        if 'card' not in frontmatter:
+                            std_out (f'ERROR: {file} has no \'card\' in frontmatter!')
+                            continue
+
+                        if not frontmatter['card']:
+                            std_out (f'INFO: {file} Skipping card')
+                            continue
+
                         if filter is not None:
                             if filter in frontmatter:
                                 item_values = frontmatter[filter]

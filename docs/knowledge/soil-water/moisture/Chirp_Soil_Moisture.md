@@ -1,13 +1,24 @@
 ---
-field: soil
-target: moisture
-type: external
-feature_img: /assets/images/chirp.png
-status: stable
-versions:
-    hardware: 2.1
-    firmware: 0.9.8
+card: true
+name: Chirp Soil Moisture
+field: 
+  - soil
+type:
+  - external
+target:
+  - moisture
+feature_img: /assets/images/chirp-soil-moisture.jpg
+feature_img_credit: "WeMakeThings"
+excerpt: ""
 ---
+
+# {{ name }}
+
+{%if excerpt %}{{ excerpt }}{%endif%}
+
+{%if feature_img %}![]({{feature_img}}){.banner-box}{%endif%}
+
+{%if feature_img_credit %}_Image Credit: **{{ feature_img_credit }}**_{.image-credit-banner-box}{%endif%}
 
 # Soil Moisture
 

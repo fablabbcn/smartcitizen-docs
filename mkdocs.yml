@@ -62,11 +62,13 @@ nav:
         - Sensirion SEN5X: knowledge/air/pm/Sensirion_SEN5X.md
       - Chemical composition:
         - Index: knowledge/air/chemical/index.md
-        - Alphasense Electrochemical: knowledge/air/chemical/Alphasense_Electrochemical.md
+        - Alphasense PID: knowledge/air/chemical/Alphasense_PID.md
+        - Figaro TGS260X: knowledge/air/chemical/Figaro_TGS260X.md
+        - Sensirion SFA30: knowledge/air/chemical/Sensirion_SFA30.md
+        - Alphasense EC Sensors: knowledge/air/chemical/Alphasense_Electrochemical.md
         - SGX Mics: knowledge/air/chemical/SGX_MICS.md
         - AMS CCS811: knowledge/air/chemical/AMS_CCS811.md
         - Bosch BME680: knowledge/air/chemical/Bosch_BME680.md
-        - Sensirion SFA30: knowledge/air/chemical/Sensirion_SFA30.md
         # - Sciosense ENS160: hardware/air/Sciosense_ENS160.md
         # - Sensirion SPG4X: hardware/air/Sensirion_SPG4X.md
       - CO2:
@@ -77,9 +79,10 @@ nav:
         - Index: knowledge/air/noise/index.md
         - TDK ICS43432: knowledge/air/noise/TDK_ICS43432.md
       - Temperature:
-        - Index: knowledge/air/temperature/index.md
-        - Sensirion SHT3X: knowledge/air/temperature/Sensirion_SHT3X.md
-        - Dallas DS18B20: knowledge/air/temperature/DS18B20.md
+        - Index: knowledge/air/temperature_rel_humidity/index.md
+        - Sensirion SHT3X: knowledge/air/temperature_rel_humidity/Sensirion_SHT3X.md
+        - Sensirion SHT3X Weatherproof: knowledge/air/temperature_rel_humidity/Sensirion_SHT3X-weatherproof.md
+        - Dallas DS18B20: knowledge/air/temperature_rel_humidity/DS18B20.md
       - Light:
         - Index: knowledge/air/light/index.md
         - AMS AS7311: knowledge/air/light/AMS_AS7331.md
@@ -91,13 +94,13 @@ nav:
     - Soil and Water:
       - Index: knowledge/soil-water/index.md
       - pH:
-        - Index: kwoledge/soil-water/pH/index.md
+        - Index: knowledge/soil-water/pH/index.md
         - Atlas pH: knowledge/soil-water/pH/Atlas_pH.md
       - Dissolved Oxygen:
         - Index: knowledge/soil-water/DO/index.md
         - Atlas Dissolved Oxygen: knowledge/soil-water/DO/Atlas_DO.md
       - Conductivity:
-        - Index: knowledge/soil-water/EC/Atlas_EC.md
+        - Index: knowledge/soil-water/EC/index.md
         - Atlas Conductivity: knowledge/soil-water/EC/Atlas_EC.md
       - Temperature:
         - Index: knowledge/soil-water/temperature/index.md
@@ -112,10 +115,10 @@ nav:
     - Other:
       - Index: knowledge/other/index.md
       - Electric Current/Voltage:
-        - Index: knowledge/other/electric/index.md
-        - Seeed Grove ADC (voltage): knowledge/other/electric/Seeed_Grove_ADC.md
-        - TI ADS1X15 (voltage): knowledge/electric/TI_ADS1X15.md
-        - TI INA219 (current): knowledge/other/electric/TI_INA219.md
+        - Index: knowledge/other/index.md
+        - Seeed Grove ADC (voltage): knowledge/other/Seeed_Grove_ADC.md
+        - TI ADS1X15 (voltage): knowledge/other/TI_ADS1X15.md
+        - TI INA219 (current): knowledge/other/TI_INA219.md
   - Guides:
     - Introduction: guides/index.md
     - Getting Started:
@@ -174,7 +177,7 @@ nav:
         - Troubleshooting: hardware/legacy/Troubleshooting.md
       - Smart Citizen 2.0:
         - Main: hardware/legacy/sck.md
-        - About the CO-NO2 MOs: hardware/sensors/air/MOx/MICS.md
+        - About the CO-NO2 MOs: knowledge/air/chemical/SGX_MICS.md
   - Resources:
     - Introduction: resources/index.md
     - Research: resources/research.md

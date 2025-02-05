@@ -7,14 +7,18 @@ type:
   - external
 target:
   - pm
-feature_img:
-status: stable
-versions:
-    hardware: 2.1+
-    firmware: 0.9.8+
+feature_img: /assets/images/sensirion-sps30.jpg
+feature_img_credit: "Sensirion"
+excerpt: ""
 ---
 
-# Sensirion SEN5X
+# {{ name }}
+
+{%if excerpt %}{{ excerpt }}{%endif%}
+
+{%if feature_img %}![]({{feature_img}}){.banner-box}{%endif%}
+
+{%if feature_img_credit %}_Image Credit: **{{ feature_img_credit }}**_{.image-credit-banner-box}{%endif%}
 
 ## Working principle
 

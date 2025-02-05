@@ -5,30 +5,22 @@ field:
   - air
 type:
   - onboard
-  - external
 target:
   - pm
+feature_img_credit: ""
 feature_img: /assets/images/pms5003.jpg
-status: stable
-versions:
-    hardware: 2.1
-    firmware: 0.9.4
 excerpt: The PMS5003 is an Optical PM sensor by Plantower at a very low cost!
 ---
 
-# Plantower PMS5003
+# {{ name }}
 
-{{ page.meta.excerpt }}
+{%if excerpt %}{{ excerpt }}{%endif%}
 
-![]({{page.meta.feature_img}})
+{%if feature_img %}![]({{feature_img}}){.banner-box}{%endif%}
 
-<!-- TODO - Make this chunk reproducible over other pages -->
-!!! info "Version support"
-    It is supported in the Smart Citizen Kit `{{ page.meta.versions.hardware }}`, and firmware version `{{ page.meta.versions.firmware }}`. This is an {{ page.meta.type }} sensor, available in various formats. Check the [usage](#usage) section below!
+{%if feature_img_credit %}_Image Credit: **{{ feature_img_credit }}**_{.image-credit-banner-box}{%endif%}
 
 ## Working principle
-
-<a data-flickr-embed="true"  title="SCK 2.1 Particle Sensor"><img src="https://live.staticflickr.com/65535/47950939936_8942068512_h.jpg" alt="SCK 2.1 Particle Sensor"></a>
 
 The PM sensors available in the Smart Citizen Kit (one sensor per Kit) and the Smart Citizen Station (two sensors per Station), are the Plantower PMS5003 sensor. The PMS5003 is a [nephelometer](https://en.wikipedia.org/wiki/Nephelometer), and this type of measures suspended particulates by employing a light beam and a light detector set to one side (often 90°) of the source beam. Particle density is then a function of the light reflected into the detector and the particle mass is a calculation derived from this density, assuming certain properties of the particles, such as shape, color and reflectivity, among others.
 

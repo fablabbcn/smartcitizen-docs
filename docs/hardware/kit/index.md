@@ -104,7 +104,7 @@ All the {{ short_name }}2.X generations above 2.1 (included) measure **at least*
     | Barometric pressure                       | kPa   | ST LPS33K                 |
     | UV-A, B, C                                | uW/cm2| AMS AS7311                |
     | Particulate Matter PM1, PM2.5, PM4, PM10  | µg/m3 | Sensirion SEN5X           |
-    | NOx Index, VOx Index (Optional)           | -     | Sensirion SEN54, 55       |
+    | NOx Index, VOCs Index (Optional)           | -     | Sensirion SEN54, 55       |
 === "{{ short_name }} 2.3"
     | Measurement                               | Units | Sensor                    |
     |:-                                         |:-:    |:-:                        |
@@ -115,7 +115,7 @@ All the {{ short_name }}2.X generations above 2.1 (included) measure **at least*
     | Barometric pressure                       | kPa   | NXP MPL3115A26S           |
     | UV-A, B, C                                | uW/cm2| AMS AS7311                |
     | Particulate Matter PM1, PM2.5, PM4, PM10  | µg/m3 | Sensirion SEN5X           |
-    | NOx Index, VOx Index (Optional)           | -     | Sensirion SEN54, 55       |
+    | NOx Index, VOCs Index (Optional)           | -     | Sensirion SEN54, 55       |
 
 !!! info "About the SEN5X"
     `SEN5X` refers to the different configurations of the PM sensors in that series: `SEN50`, `SEN54`, `SEN55`.
