@@ -60,21 +60,20 @@ TODO - SerialStudio image
 
 ## Creative coding
 
-Sometimes visualising data is more impactful when using creative visualisations that do not have numbers or graphs on them. Creative coding refers to those tools that generate some short of data visualisation, but that is not done in the _conventional_ way, but more on an _artistic_ way. A good example to get started is [processing](https://processing.org) or it's web version [p5](https://p5.js). Both are simple to use if you want to learn how to code in a fun way, they are full of examples, and very well documented. Although it's more advanced, you can also make some 3D modelling based on data by using [Blender](https://blender.org) or [this tool](TODO).
+Sometimes visualising data is more impactful when using creative visualisations that do not have numbers or graphs on them. seCreative coding refers to those tools that generate some short of data visualisation, but that is not done in the _conventional_ way, but more on an _artistic_ way.
+
+![](/assets/images/processing-flock.gif)
+
+A good example to get started is [processing](https://processing.org) or it's web version [p5](https://p5.js). Both are simple to use if you want to learn how to code in a fun way, they are full of examples, and very well documented. Also, you can make music based on your kit's data with [supercollider](https://supercollider.github.io/).
 
 !!! info "Examples"
-    Some examples can be found on the [guides too](/Guides/data/Creative coding)!
-
-!!! tip "Source files"
-    Creative Coding: https://github.com/fablabbcn/smartcitizen-docs/ TODO
-    Mecoda Orange: https://github.com/eosc-cos4cloud/mecoda-orange TODO
-    Node-red: https://github.com/fablabbcn/smartcitizen-toolkit/ TODO
+    You can find some examples in the [guides](/guides/data/creative-coding)!
 
 ## Visual programming
 
 Needing to get more advanced insights, but not wanting to program them? Visual programming tools can help you get started. They are midway between web tools (with no installation, but not very flexible) and more advanced tools (installation and flexibility is full on). Here you will need to install something, as they normally require libraries and other background processes to run in your computer. However, that initial process comes with loads of good things, for instance, the ability to use generic data analysis tools with our data.
 
-![](TODO)
+![](/assets/images/orange-basic.png)
 
 Some examples are below:
 
@@ -82,14 +81,9 @@ Some examples are below:
 - [Orange](https://orangedatamining.com/) - an open source tool for data analysis. As part of a collaboration with [Cos4Cloud MECODA](https://github.com/eosc-cos4cloud/mecoda-orange), you can also access Smart Citizen data from this great tool with a few clicks.
 
 !!! info "Orange workflows"
-    If you want to use some existing workflows, you can visit the **Orange Workflows Repository** https://github.com/fablabbcn/smartcitizen-docs/tree/master/docs/assets/ows
+    If you want to use some existing workflows, you can visit the **Orange Workflows Repository** {{config.repo_url}}/tree/master/docs/assets/ows
 
-    Also, a lot of [step-by-step tutorials](/Guides/data/Visual programming) will help you use it in any use case (also in educational contexts!)
-
-!!! tip "Source files"
-    TODO - put links
-    Node-RED:
-    Orange:
+    Also, a lot of [step-by-step tutorials](/guides/data/visual-programming) will help you use it in any use case (also in educational contexts!)
 
 ## Advanced
 

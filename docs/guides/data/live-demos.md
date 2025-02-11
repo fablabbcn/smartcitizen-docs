@@ -38,7 +38,7 @@ After Arduino 2.0 version, you can see the _Serial Monitor_ and the _Serial Plot
 ![](TODO)
 
 !!!info "Examples"
-    You can see the examples [here](/assets/serial_studio) TODO
+    You can see the examples [here](https://github.com/fablabbcn/smartcitizen-toolkit/tree/master/serialstudio)
 
 ## Using the web dashboard
 

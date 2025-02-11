@@ -7,12 +7,22 @@ internal:
 
 # Creative coding
 
+Below, we run through a couple of examples on how to access data via Processing. However, you have more options:
+
+- [Supercollider example](https://github.com/oscgonfer/a-que-suenan-las-nubes/tree/supercollider-patch)
+- [p5 example](https://github.com/antoine3000/inthisverymoment)
+
+!!! info "Doing something creative with the kit?"
+    Make a [pull request]({{config.repo_url}}/pulls) on the github documentation repository or [edit this page]({{config.repo_url}}/edit/master/docs/guides/data/creative-coding.md)
+
+## Processing
+
 Sometimes, data can be better represented without numbers or graphs. This guide will help you use the famous [processing](https://processing.org) tools for making some creative coding. We will start by configuring a live demo using the **Serial port**, and then making a simple plot by interacting with **the API**.
 
 !!! info "Requirements"
     For this guide, you will need to get _processing_ from their [downloads page](https://processing.org/download).
 
-## Serial example
+### Serial data example
 
 For this example, we will plot data from the _Serial monitor_ (with USB) and use it to animate some _circles_ in processing.
 
@@ -70,7 +80,7 @@ Now, if you hit run! The number of flocks will be equal to the _luxes_ that the 
 
     ![](https://raw.githubusercontent.com/fablabbcn/smartcitizen-docs/master/docs/assets/pde/sc_lallauna_pde/noise_level.jpg)
 
-## API example
+### API example
 
 In this case we will asks data to the Smart Citizen API the data and plot it:
 
