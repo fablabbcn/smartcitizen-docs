@@ -10,6 +10,10 @@ target:
 feature_img: /assets/images/tensiometer-irrometer.jpg
 feature_img_credit: "WATERMARK"
 excerpt: ""
+internal:
+  proofread: false
+  links: false
+  images: false
 ---
 
 # {{ name }}

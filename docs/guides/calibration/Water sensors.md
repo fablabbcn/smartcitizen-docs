@@ -17,7 +17,7 @@ In order to calibrate the sensors you will need to use the [SCK Shell](/guides/g
 To enable the sensors you just need to plug you board to the Smart Citizen kit aux port and reboot the Smart Citizen Kit and the sensors will be handled by the board.
 
 !!! warning
-    When calibrating **don't use the normal `read sensor` command**, this command applies temperature/salinity compensation, calibration should be done without any compensation. Instead you should use `control sensorName com r` and that will return the raw metrics that sensor can provide. On the documentation of each sensor calibration procedure we describe the format of this metrics.
+    When calibrating **don't use the normal `read sensor` command**, this command applies temperature/salinity compensation, calibration should be done without any compensation. Instead you should use `control sensorName com,r` and that will return the raw metrics that sensor can provide. On the documentation of each sensor calibration procedure we describe the format of this metrics.
 
 !!! danger
     After finishing the calibration process **restart your SCK** to start from a clean state.
@@ -35,10 +35,10 @@ You need to perform a 3-point calibration with the calibration solutions. The so
     **Example commands**
 
     ```
-    control ph com r
-    control ph com cal,[mid,low,high],value
-    control ph com cal,clear
-    control ph com cal,?
+    control ph com,r
+    control ph com,cal,[mid,low,high],value
+    control ph com,cal,clear
+    control ph com,cal,?
     ```
 
 #### 3-point calibration
@@ -64,9 +64,9 @@ This is the order of the calibration:
 * Read the sensor multiple times until the reading is stable:
 
     ```
-    control ph com r
+    control ph com,r
     6.48
-    control ph com r
+    control ph com,r
     6.45
     ...
     ```
@@ -74,13 +74,13 @@ This is the order of the calibration:
 * Issue the midpoint calibration command:
 
     ```
-    control atlas ph com cal,mid,[value of pH at current temperature]
+    control atlas ph com,cal,mid,[value of pH at current temperature]
     ```
 
 !!! info "Example at 30°C"
 
     ```
-    control atlas ph com cal,mid,6.99
+    control atlas ph com,cal,mid,6.99
     ```
 
 After this command if you take a pH reading the result should be 7.00 (or very close to it)
@@ -90,9 +90,9 @@ After this command if you take a pH reading the result should be 7.00 (or very c
 * Repeat the procedure with the **Low point** 4.00 solution (the red one). First, read the sensor multiple times until the reading is stable:
 
     ```
-    control ph com r
+    control ph com,r
     3.98
-    control ph com r
+    control ph com,r
     3.98
     ...
     ```
@@ -100,13 +100,13 @@ After this command if you take a pH reading the result should be 7.00 (or very c
 * Issue the midpoint calibration command:
 
     ```
-    control atlas ph com cal,low,[value of pH at current temperature]
+    control atlas ph com,cal,low,[value of pH at current temperature]
     ```
 
 !!! info "Example at 30°C"
 
     ```
-    control atlas ph com cal,low,4.01
+    control atlas ph com,cal,low,4.01
     ```
 
 ##### High Point Calibration
@@ -114,9 +114,9 @@ After this command if you take a pH reading the result should be 7.00 (or very c
 * The same step with **High point** 10.00 calibration solution (blue). First, read the sensor multiple times until the reading is stable:
 
     ```
-    control ph com r
+    control ph com,r
     9.84
-    control ph com r
+    control ph com,r
     9.84
     ...
     ```
@@ -124,17 +124,17 @@ After this command if you take a pH reading the result should be 7.00 (or very c
 * Issue the midpoint calibration command:
 
     ```
-    control atlas ph com cal,high,[value of pH at current temperature]
+    control atlas ph com,cal,high,[value of pH at current temperature]
     ```
 
 !!! info "Example at 30°C"
 
     ```
-    control atlas ph com cal,high,9.96
+    control atlas ph com,cal,high,9.96
     ```
 
 !!! info "Extra notes"
-    The command `control com cal,?` can be used to check the calibration status as explained on datasheet page 52. The answers can be:
+    The command `control com,cal,?` can be used to check the calibration status as explained on datasheet page 52. The answers can be:
 
     - **`?CAL,0`** → No calibration done
     - **`?CAL,1`** → One point calibration done
@@ -156,13 +156,13 @@ You need to perform a 3 step calibration with a dry point and a 2-point calibrat
     **Example commands**
 
     ```
-    control conductivity com r
-    control conductivity com K,[probeType]
-    control conductivity com K,?
-    control conductivity com cal,[dry,clear,84]
-    control conductivity com cal,low,1413
-    control conductivity com cal,high,12,880
-    control conductivity com cal,?
+    control conductivity com,r
+    control conductivity com,K,[probeType]
+    control conductivity com,K,?
+    control conductivity com,cal,[dry,clear,84]
+    control conductivity com,cal,low,1413
+    control conductivity com,cal,high,12,880
+    control conductivity com,cal,?
     ```
 
 #### 2-point calibration
@@ -182,13 +182,13 @@ Depending on which probe you have (check drawing for reference) you should set t
 To set the correct probe type:
 
 ```
-control conductivity com K,1.0
+control conductivity com,K,1.0
 ```
 
 and check which type is set:
 
 ```
-control conductivity com K,?
+control conductivity com,K,?
 ?K,1.0
 ```
 
@@ -212,9 +212,9 @@ Follow the steps below with the dry sensor before introducing it to the calibrat
 * Read the sensor multiple times until the reading is stable:
 
     ```
-    control conductivity com r
+    control conductivity com,r
     0.00,0,0.00,1.000
-    control conductivity com r
+    control conductivity com,r
     0.00,0,0.00,1.000
     ...
     ```
@@ -222,7 +222,7 @@ Follow the steps below with the dry sensor before introducing it to the calibrat
 * Issue the dry calibration command:
 
     ```
-    control conductivity com cal,dry
+    control conductivity com,cal,dry
     ```
 
 ##### Low point calibration
@@ -234,9 +234,9 @@ You can check the recommended calibration solutions for each probe on the _Probe
 * Read the sensor multiple times until the reading is stable:
 
     ```
-    control conductivity com r
+    control conductivity com,r
     13470,7278,7.76,1.0
-    control conductivity com r
+    control conductivity com,r
     13230,7144,7.61,1.0
     ...
     ```
@@ -244,7 +244,7 @@ You can check the recommended calibration solutions for each probe on the _Probe
 * Issue the low point calibration command. **The value to input is the one of the calibration solution**, for example _128800_:
 
     ```
-    control conductivity com cal,low,12880
+    control conductivity com,cal,low,12880
     ```
 
 After this command readings will **not change**.
@@ -254,7 +254,7 @@ After this command readings will **not change**.
 Repeat this steps with **high point** calibration solution and when the readings stabilize issue the command. Again, **remember that the value to input here is the one from the calibration solution**, for instance _80000_:
 
 ```
-control conductivity com cal,high,80000
+control conductivity com,cal,high,80000
 ```
 
 After this steps the **two point calibration is complete** and the readings **will change**.
@@ -277,18 +277,18 @@ You have two options for this calibration:
     **Example commands** (you can put `control ox`, `control oxygen` or `control dissolved oxygen` - **however!** do not put `control dissolved` as  it will use TDS)
 
     ```
-    control ox com r
-    control ox com cal
-    control ox com cal,0
-    control ox com cal,clear
-    control ox com cal,?
+    control ox com,r
+    control ox com,cal
+    control ox com,cal,0
+    control ox com,cal,clear
+    control ox com,cal,?
     ```
 
 !!! warning "Pressure compensation"
     If the sensor is going to be used at more than 10 meters deep into the water **Pressure compensation** should be set with:
 
     ```
-    control ox com P,kPaValue
+    control ox com,P,kPaValue
     ```
 
     More information on [datasheet](https://www.atlas-scientific.com/_files/_datasheets/_circuit/DO_EZO_Datasheet.pdf), page 57
@@ -301,9 +301,9 @@ You have two options for this calibration:
 * Read the sensor multiple times until the reading is stable:
 
     ```
-    control ox com r
+    control ox com,r
     13.95,50%
-    control ox com r
+    control ox com,r
     13.76,49%
     ...
     ```
@@ -311,14 +311,14 @@ You have two options for this calibration:
 * Issue the calibration command, after this the readings will change. In this case, there is no need to add any value after `cal`. The sensor will take the current reading as the _dry point_.
 
     ```
-    control ox com cal
+    control ox com,cal
     ```
 
 !!! danger "Be careful"
     If at any point of the calibration process you see akward readings (for instance, that using a 0mg/l solution for dissolved oxygen you see weirdly high values), it is better to start over. For this, proceed with:
 
     ```
-    control ox com cal,clear
+    control ox com,cal,clear
     ```
 
     And start from the beginning.
@@ -332,9 +332,9 @@ You have two options for this calibration:
 * Read the sensor multiple times until the reading is stable:
 
     ```
-    control ox com r
+    control ox com,r
     13.95,50%
-    control ox com r
+    control ox com,r
     13.76,49%
     ...
     ```
@@ -342,7 +342,7 @@ You have two options for this calibration:
 * Issue the calibration command. In this case, you have to input the value of the calibration solution too, for example _0_:
 
     ```
-    control ox com cal,0
+    control ox com,cal,0
     ```
 
 Reset your SCK and you are ready.
@@ -363,11 +363,11 @@ You only need to perform a single point calibration. You can use any calibrated 
     **Example commands**
 
     ```
-    control redox com r
-    control redox com cal
-    control redox com cal,[value]
-    control redox com cal,clear
-    control redox com cal,?
+    control redox com,r
+    control redox com,cal
+    control redox com,cal,[value]
+    control redox com,cal,clear
+    control redox com,cal,?
     ```
 
 #### Single point calibration
@@ -377,9 +377,9 @@ You only need to perform a single point calibration. You can use any calibrated 
 * Read the sensor multiple times until the reading is stable:
 
     ```
-    control redox com r
+    control redox com,r
     225
-    control redox com r
+    control redox com,r
     224
     ...
     ```
@@ -387,13 +387,13 @@ You only need to perform a single point calibration. You can use any calibrated 
 * Issue calibration command
 
     ```
-    control redox com cal,[value of ORP]
+    control redox com,cal,[value of ORP]
     ```
 
 !!! info "Example at 25°C"
 
     ```
-    control redox com cal,225
+    control redox com,cal,225
     ```
 
 ### Temperature
@@ -409,11 +409,11 @@ You only need to perform a single point calibration. This process is only necess
     **Example commands** (you can put `control ox`, `control oxygen` or `control dissolved oxygen` - **however!** do not put `control dissolved` as  it will use TDS)
 
     ```
-    control atlas temp com r
-    control atlas temp com cal
-    control atlas temp com cal,[value]
-    control atlas temp com cal,clear
-    control atlas temp com cal,?
+    control atlas temp com,r
+    control atlas temp com,cal
+    control atlas temp com,cal,[value]
+    control atlas temp com,cal,clear
+    control atlas temp com,cal,?
     ```
 
 !!! warning
@@ -427,9 +427,9 @@ You only need to perform a single point calibration. This process is only necess
 * Read the **reference probe** multiple times until the reading is stable. Write down the value:
 
     ```
-    control atlas temp com r
+    control atlas temp com,r
     22.5
-    control atlas temp com r
+    control atlas temp com,r
     22.4
     ...
     ```
@@ -437,9 +437,9 @@ You only need to perform a single point calibration. This process is only necess
 * Read the **target probe** multiple times until the reading is stable:
 
     ```
-    control atlas temp com r
+    control atlas temp com,r
     29.5
-    control atlas temp com r
+    control atlas temp com,r
     29.4
     ...
     ```
@@ -447,5 +447,5 @@ You only need to perform a single point calibration. This process is only necess
 * Issue calibration command:
 
     ```
-    control atlas temp com cal,[value of temperature from reference probe or temperature]
+    control atlas temp com,cal,[value of temperature from reference probe or temperature]
     ```

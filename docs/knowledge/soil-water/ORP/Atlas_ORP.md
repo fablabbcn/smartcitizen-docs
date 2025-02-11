@@ -10,6 +10,10 @@ target:
 feature_img: /assets/images/atlas-scientific-orp.jpg
 feature_img_credit: "Atlas Scientific"
 excerpt: ""
+internal:
+  proofread: false
+  links: false
+  images: false
 ---
 
 # {{ name }}

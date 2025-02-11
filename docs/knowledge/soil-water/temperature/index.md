@@ -1,3 +1,10 @@
+---
+internal:
+  proofread: false
+  links: false
+  images: false
+---
+
 # Temperature Measurements (Soil and Water)
 
 ## Supported sensors

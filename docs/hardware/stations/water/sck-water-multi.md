@@ -6,6 +6,7 @@ field:
   - water
 grade: advanced
 feature_img: https://live.staticflickr.com/65535/53909712132_b46cae1a7e_k.jpg
+feature_img_description: "Multi-Sensor Water Station"
 excerpt: The Water Station is a multiparametric water unit, capable of measuring pH, Temperature, Dissolved Oxygen, Conductivity and ORP.
 ---
 
@@ -13,7 +14,10 @@ excerpt: The Water Station is a multiparametric water unit, capable of measuring
 
 **Grade**: _{{ grade }}_
 
-![]({{ feature_img }})
+{%if excerpt %}{{ excerpt }}{%endif%}
+
+{%if feature_img %}![]({{feature_img}}){.banner-box}{%endif%}
+{%if feature_img_description %}***{{ feature_img_description }}***{.image-credit-banner-box}{%endif%}
 
 ## Measurements
 

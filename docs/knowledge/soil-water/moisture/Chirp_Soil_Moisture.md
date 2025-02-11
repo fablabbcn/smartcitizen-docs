@@ -10,6 +10,10 @@ target:
 feature_img: /assets/images/chirp-soil-moisture.jpg
 feature_img_credit: "WeMakeThings"
 excerpt: ""
+internal:
+  proofread: false
+  links: false
+  images: false
 ---
 
 # {{ name }}
