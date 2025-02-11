@@ -9,29 +9,29 @@ nav:
   - Main:
     - Welcome!: index.md
     - Hardware:
-      - Index: hardware/index.md
+      - hardware/index.md
       - Smart Citizen Kit:
-        - Index: hardware/kit/index.md
+        - hardware/kit/index.md
         - Features: hardware/kit/features.md
         - Technical Specs: hardware/kit/specs.md
       - Smart Citizen Stations:
-        - Index: hardware/stations/index.md
+        - hardware/stations/index.md
         - Air:
-          - Index: hardware/stations/air/index.md
+          - hardware/stations/air/index.md
           - SCK + CO2: hardware/stations/air/sck-co2.md
           - SCK + Temp: hardware/stations/air/sck-temp.md
           - SCK + CO2 + HCHO: hardware/stations/air/sck-co2-hcho.md
           - SCK + 1x CHEM: hardware/stations/air/sck-1xchem.md
           - SCK + 2x CHEM: hardware/stations/air/sck-2xchem.md
         - Water:
-          - Index: hardware/stations/water/index.md
+          - hardware/stations/water/index.md
           - One-Sensor Station: hardware/stations/water/sck-water-single.md
           - Multi-Sensor Station: hardware/stations/water/sck-water-multi.md
       - Firmware:
-        - Index: hardware/firmware/index.md
+        - hardware/firmware/index.md
         # - Features: hardware/firmware/features.md
       - Boards:
-        - Index: hardware/boards/index.md
+        - hardware/boards/index.md
         - Data Board: hardware/boards/data-board.md
         - Urban Board: hardware/boards/urban-board.md
         - Analog Sensor Board: hardware/boards/analog-sensor-board.md
@@ -39,29 +39,29 @@ nav:
           - Gases Pro Board: hardware/boards/gases-pro-board.md
           - PM Board: hardware/boards/pm-board.md
       - Add-ons:
-        - Index: hardware/addons/index.md
+        - hardware/addons/index.md
         - OLED Screen: hardware/addons/oled-screen.md
         - GPS: hardware/addons/gps.md
         - Power Supply: hardware/addons/power-supply.md
         - Solar Panel: hardware/addons/solar-panel.md
     - Data:
-      - Index: data/index.md
+      - data/index.md
       - Data Platform: data/data-platform.md
       - Data Tools: data/data-tools.md
       - SD-card Data: data/sd-card.md
     - FAQ: _FAQ.md
     - Troubleshooting: troubleshooting.md
   - Knowledge:
-    - Index: knowledge/index.md
+    - knowledge/index.md
     - Air:
       - Introduction: knowledge/air/index.md
       - Particulate Matter:
-        - Index: knowledge/air/pm/index.md
+        - knowledge/air/pm/index.md
         - Plantower PMS5003: knowledge/air/pm/Plantower_PMS5003.md
         - Sensirion SPS30: knowledge/air/pm/Sensirion_SPS30.md
         - Sensirion SEN5X: knowledge/air/pm/Sensirion_SEN5X.md
       - Chemical composition:
-        - Index: knowledge/air/chemical/index.md
+        - knowledge/air/chemical/index.md
         - Alphasense PID: knowledge/air/chemical/Alphasense_PID.md
         - Figaro TGS260X: knowledge/air/chemical/Figaro_TGS260X.md
         - Sensirion SFA30: knowledge/air/chemical/Sensirion_SFA30.md
@@ -72,50 +72,50 @@ nav:
         # - Sciosense ENS160: hardware/air/Sciosense_ENS160.md
         # - Sensirion SPG4X: hardware/air/Sensirion_SPG4X.md
       - CO2:
-        - Index: knowledge/air/co2/index.md
+        - knowledge/air/co2/index.md
         - Sensirion SCD30: knowledge/air/co2/Sensirion_SCD30.md
         - Sensirion SCD4X: knowledge/air/co2/Sensirion_SCD4X.md
       - Noise:
-        - Index: knowledge/air/noise/index.md
+        - knowledge/air/noise/index.md
         - TDK ICS43432: knowledge/air/noise/TDK_ICS43432.md
       - Temperature:
-        - Index: knowledge/air/temperature_rel_humidity/index.md
+        - knowledge/air/temperature_rel_humidity/index.md
         - Sensirion SHT3X: knowledge/air/temperature_rel_humidity/Sensirion_SHT3X.md
         - Sensirion SHT3X Weatherproof: knowledge/air/temperature_rel_humidity/Sensirion_SHT3X-weatherproof.md
         - Dallas DS18B20: knowledge/air/temperature_rel_humidity/DS18B20.md
       - Light:
-        - Index: knowledge/air/light/index.md
+        - knowledge/air/light/index.md
         - AMS AS7311: knowledge/air/light/AMS_AS7331.md
         - Rohm BH1721FVC: knowledge/air/light/Rohm_BH1721FVC.md
       - Pressure:
-        - Index: knowledge/air/pressure/index.md
+        - knowledge/air/pressure/index.md
         - NXP MPL3115A26: knowledge/air/pressure/NXP_MPL3115A26.md
         - ST LPS33K: knowledge/air/pressure/ST_LPTS33K.md
     - Soil and Water:
-      - Index: knowledge/soil-water/index.md
+      - knowledge/soil-water/index.md
       - pH:
-        - Index: knowledge/soil-water/pH/index.md
+        - knowledge/soil-water/pH/index.md
         - Atlas pH: knowledge/soil-water/pH/Atlas_pH.md
       - Dissolved Oxygen:
-        - Index: knowledge/soil-water/DO/index.md
+        - knowledge/soil-water/DO/index.md
         - Atlas Dissolved Oxygen: knowledge/soil-water/DO/Atlas_DO.md
       - Conductivity:
-        - Index: knowledge/soil-water/EC/index.md
+        - knowledge/soil-water/EC/index.md
         - Atlas Conductivity: knowledge/soil-water/EC/Atlas_EC.md
       - Temperature:
-        - Index: knowledge/soil-water/temperature/index.md
+        - knowledge/soil-water/temperature/index.md
         - Atlas Temperature: knowledge/soil-water/temperature/Atlas_Temperature.md
       - ORP:
-        - Index: knowledge/soil-water/ORP/index.md
+        - knowledge/soil-water/ORP/index.md
         - Atlas ORP: knowledge/soil-water/ORP/Atlas_ORP.md
       - Soil Moisture:
-        - Index: knowledge/soil-water/moisture/index.md
+        - knowledge/soil-water/moisture/index.md
         - Tensiometer: knowledge/soil-water/moisture/Tensiometer.md
         - Chirp Soil Moisture: knowledge/soil-water/moisture/Chirp_Soil_Moisture.md
     - Other:
-      - Index: knowledge/other/index.md
+      - knowledge/other/index.md
       - Electric Current/Voltage:
-        - Index: knowledge/other/index.md
+        - knowledge/other/index.md
         - Seeed Grove ADC (voltage): knowledge/other/Seeed_Grove_ADC.md
         - TI ADS1X15 (voltage): knowledge/other/TI_ADS1X15.md
         - TI INA219 (current): knowledge/other/TI_INA219.md
@@ -182,7 +182,7 @@ nav:
     - Introduction: resources/index.md
     - Research: resources/research.md
     - Toolkits:
-      - Index: resources/toolkits/index.md
+      - resources/toolkits/index.md
       - Citizen Sensing Toolkit: resources/toolkits/Citizen Sensing Toolkit.md
       # - Doit! Toolkit: resources/toolkits/Doit.md
       # - Citizen-led Action Toolkit: resources/toolkits/Citizen-led Action Toolkit.md
@@ -198,7 +198,7 @@ nav:
       #     - Conductividad: resources/education/AulaMar/EC.md
       #     - Temperatura: resources/education/AulaMar/T.md
   - About:
-    - Index: about/index.md
+    - about/index.md
     - Funding: about/funding.md
     - Friends: about/friends.md
     - Open Source: about/open-source.md
