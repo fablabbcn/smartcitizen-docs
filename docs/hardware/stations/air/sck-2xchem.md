@@ -5,7 +5,8 @@ name: SCK + 2xCHEM
 field:
   - air
 grade: intermediate
-feature_img: /assets/images/station-2xchem.jpg
+feature_img: https://live.staticflickr.com/65535/54318267807_78d5c57497_o.jpg
+feature_img_description: "Smart Citizen 2x Chemical Air Quality Station"
 excerpt: Measure Indoor or Outdoor Air Quality with this unit. Beyond the metrics from the kit, it can measure 2 chemical composition metrics with electrochemical sensors.
 ---
 
@@ -13,7 +14,10 @@ excerpt: Measure Indoor or Outdoor Air Quality with this unit. Beyond the metric
 
 **Grade**: _{{ grade }}_
 
-![]({{ feature_img }})
+{%if excerpt %}{{ excerpt }}{%endif%}
+
+{%if feature_img %}![]({{feature_img}}){.banner-box}{%endif%}
+{%if feature_img_description %}***{{ feature_img_description }}***{.image-credit-banner-box}{%endif%}
 
 ## Measurements
 
@@ -43,6 +47,9 @@ excerpt: Measure Indoor or Outdoor Air Quality with this unit. Beyond the metric
     | 2 Chemical metrics (NO2, CO, NO, O3, SO2 or H2S) | ppb/ppm | Alphasense A-series    |
 
 ## Technical specifications
+
+![](https://live.staticflickr.com/65535/54319161481_b7006df36b_o.jpg)
+***Smart Citizen 2x Chemical Air Quality Station***
 
 ### Dimensions and weight
 

@@ -20,8 +20,6 @@ excerpt: ""
 
 {%if feature_img_credit %}_Image Credit: **{{ feature_img_credit }}**_{.image-credit-banner-box}{%endif%}
 
-## Working principle
+!!! warning "Under Construction"
 
-## Usage and considerations
-
-## Resources
+    More details on working principles, usage and considerations, and resources are coming soon.

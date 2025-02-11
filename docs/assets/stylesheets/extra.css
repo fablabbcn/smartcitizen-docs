@@ -482,6 +482,9 @@ a.card-title:hover{
 .image-credit-banner-box{
     padding-left: 10%;
 }
+.black-box {
+    border: 1px solid #c0c0c0a5;
+}
 
 .sensor-banner:hover{
     transform: scale(1.01, 1.01);

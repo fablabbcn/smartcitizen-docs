@@ -6,6 +6,7 @@ field:
   - air
 grade: intermediate
 feature_img: /assets/images/station-co2-hcho.jpg
+feature_img_description: ""
 excerpt: Measure Indoor or Outdoor Air Quality with this unit. Beyond the metrics from the kit, it can measure CO2 and Formaldehyde!
 ---
 
@@ -13,7 +14,10 @@ excerpt: Measure Indoor or Outdoor Air Quality with this unit. Beyond the metric
 
 **Grade**: _{{ grade }}_
 
-![]({{ feature_img }})
+{%if excerpt %}{{ excerpt }}{%endif%}
+
+{%if feature_img %}![]({{feature_img}}){.banner-box}{%endif%}
+{%if feature_img_description %}***{{ feature_img_description }}***{.image-credit-banner-box}{%endif%}
 
 ## Measurements
 
