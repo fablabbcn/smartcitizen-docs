@@ -53,7 +53,7 @@ Live demos can help show how sensors work or how they react to different events:
 
 For you to be able to do these experiments, you need _high speed data_ (i.e. data that is updated way faster than once a minute on a web dashboard). To help with that, we have prepared a [specific guide for Live Demos](/guides/data/live-demos/), so make sure to check it out!
 
-TODO - SerialStudio image
+![](/assets/images/serialstudio.png)
 
 !!! tip "Source files"
     Live demos: https://github.com/fablabbcn/smartcitizen-toolkit/

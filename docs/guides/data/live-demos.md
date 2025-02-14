@@ -35,7 +35,7 @@ After Arduino 2.0 version, you can see the _Serial Monitor_ and the _Serial Plot
 
 [SerialStudio](https://serial-studio.github.io/) is a great tool for visualising data and make dashboards with your kit connected to a computer. It's more advanced than the Arduino Serial Monitor because you can customise how your data will be displayed, add graphs, widgets, and save the configuration for each device.
 
-![](TODO)
+![](/assets/images/serialstudio.png)
 
 !!!info "Examples"
     You can see the examples [here](https://github.com/fablabbcn/smartcitizen-toolkit/tree/master/serialstudio)
