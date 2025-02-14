@@ -28,10 +28,10 @@ def get_frontmatter(content):
 
 def get_ignores(source_folder="docs/"):
     if os.path.exists(os.path.join(source_folder, '.macroignore')):
-    
+
         with open(os.path.join(source_folder, '.macroignore'), 'r') as ignore_file:
             ignores = ignore_file.read().splitlines()
-    
+
         return ignores
     return []
 
@@ -410,10 +410,9 @@ def define_env(env):
             if files is None: continue
 
             for file in sorted(files):
-                print (source_folder)
-                print (ignores)
+
                 if file in ignores: continue
-                print (file)
+
                 file_path = os.path.join(root, file)
                 if os.path.exists(file_path):
                     with open(file_path, 'r') as _file:
@@ -460,7 +459,7 @@ def define_env(env):
 
         os.makedirs(f"{custom_dir}/aux/", exist_ok=True)
         # TODO add a way to get mkdocs file order and sort cards here by that order
-        
+
         if cards_to_get:
             std_out ('Adding cards')
             for item in sorted(cards_to_get):
