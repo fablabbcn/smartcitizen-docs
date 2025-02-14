@@ -26,6 +26,15 @@ def get_frontmatter(content):
 
     return frontmatter
 
+def get_ignores(source_folder="docs/"):
+    if os.path.exists(os.path.join(source_folder, '.macroignore')):
+    
+        with open(os.path.join(source_folder, '.macroignore'), 'r') as ignore_file:
+            ignores = ignore_file.read().splitlines()
+    
+        return ignores
+    return []
+
 field_color_map = {
     'air': 'orange',
     'soil': 'red',
@@ -49,9 +58,7 @@ def on_pre_page_macros(env):
     std_out (source_folder)
     std_out('*****************************')
 
-    if os.path.exists(os.path.join(source_folder, '.macroignore')):
-        with open(os.path.join(source_folder, '.macroignore'), 'r') as ignore_file:
-            ignores = ignore_file.read().splitlines()
+    ignores = get_ignores(source_folder=source_folder)
 
     for (root,_,files) in os.walk(source_folder):
 
@@ -397,8 +404,16 @@ def define_env(env):
         source_folder = os.path.join('docs', env.page.url)
         std_out ('Source folder:', source_folder)
 
+        ignores = get_ignores()
+
         for (root,_,files) in os.walk(source_folder):
-            for file in files:
+            if files is None: continue
+
+            for file in sorted(files):
+                print (source_folder)
+                print (ignores)
+                if file in ignores: continue
+                print (file)
                 file_path = os.path.join(root, file)
                 if os.path.exists(file_path):
                     with open(file_path, 'r') as _file:
@@ -442,9 +457,13 @@ def define_env(env):
         std_out ('---')
 
         cards = ''
+
+        os.makedirs(f"{custom_dir}/aux/", exist_ok=True)
+        # TODO add a way to get mkdocs file order and sort cards here by that order
+        
         if cards_to_get:
             std_out ('Adding cards')
-            for item in cards_to_get:
+            for item in sorted(cards_to_get):
                 file_path = f"{custom_dir}/aux/{item}"
 
                 if os.path.exists(file_path):
