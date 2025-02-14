@@ -21,8 +21,8 @@ Probably the best way to get started in data analysis by using simple tools for 
     Soon you will be able to generate the files for printing from the [web dashboard](https://dashboard.smartcitizen.me). In the meantime, you can check [this tutorial](https://github.com/fablabbcn/smartcitizen-data/blob/master/examples/notebooks/13_pdf_largescale_plots.ipynb) in python
 
 !!! tip "Source files"
-    <!-- TODO -->
-    Pen and Paper: https://github.com/fablabbcn/smartcitizen-data/
+    Paper charts on the Smart Citizen Toolkit: https://github.com/fablabbcn/smartcitizen-toolkit/tree/master/pen-and-paper
+    Pen and Paper with python scripts: https://github.com/fablabbcn/smartcitizen-data/blob/master/examples/notebooks/13_pdf_largescale_plots.ipynb
 
 ## Web tools
 
