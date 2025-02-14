@@ -77,9 +77,7 @@ You are done!
 
 ## SD-Card Mode
 
-If you go with SD-Card mode, data will be stored **only** on the SD-card. Simply press start and the LED will turn pink:
-
-![](TODO)
+If you go with SD-Card mode, data will be stored **only** on the SD-card. Simply press start and the LED will turn pink. Check the [sd-card operation mode](/hardware/kit/features/#sd-card-mode) for more information.
 
 ## Visit your Kit
 
