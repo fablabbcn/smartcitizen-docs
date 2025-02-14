@@ -1,13 +1,13 @@
 # Firmware
 
-The firmware is OOP (Object Oriented Programming) and is entirely written in C++, building upon the [arduino core](TODO). Both processors on the [Data Board](boards/Data%20Board), the core microcontroller (Atmel SAMD21) and the WiFi Antenna (ESP8266 WiFi), work together and are developed in parallel.
+The firmware is OOP (Object Oriented Programming) and is entirely written in C++, building upon the [arduino core](https://github.com/arduino/ArduinoCore-samd). Both processors on the [Data Board](/hardware/boards/data-board/), the core microcontroller (Atmel SAMD21) and the WiFi Antenna (ESP8266 WiFi), work together and are developed in parallel.
 
 ![](/assets/images/firmware.png)
 
 !!! info "Contribute to the firmware"
     The firmware is entirely open source, and is continuosly developed in the [firmware repository]({{ extra.urls.firmware.link }}). Issues and Pull requests are welcome!
 
-The firmware in the core microcontroller (Atmel SAMD21) is in charge of running the show by interacting with all the sensors, take readings, manage configuration of those, and handle all user interactions. It also manages the communication to the [SD-card](data/SD-card), as well as other peripherals like the battery charger, or the [flash memory](#flash-storage). Finally, it also is in charge of interacting with the WiFi Antenna (ESP8266) via _serial_ communication, which manages the data publication over WiFi.
+The firmware in the core microcontroller (Atmel SAMD21) is in charge of running the show by interacting with all the sensors, take readings, manage configuration of those, and handle all user interactions. It also manages the communication to the [SD-card](/data/sd-card/), as well as other peripherals like the battery charger, or the [flash memory](#flash-storage). Finally, it also is in charge of interacting with the WiFi Antenna (ESP8266) via _serial_ communication, which manages the data publication over WiFi.
 
 The WiFi antenna is also in charge of getting network time via _NTP_ syncing the built-in RTC, manage connection to the MQTT broker, and interact with the SAMD21 for data publication.
 
@@ -17,34 +17,32 @@ The WiFi antenna is also in charge of getting network time via _NTP_ syncing the
 
 Any supported sensor connected to the [data board](/hardware/boards/data-board/) is autodetected and enabled if the configuration defaults to that. This means, that the firmware can be configure to autodetect a series of supported sensors, and that each sensor can be enabled or disabled, both by default, or by [shell configuration](#configuration-via-shell).
 
-Below, you can see an example of sensor auto-detection:
+Below, you can see an example of sensor auto-detection, which happens on boot:
 
 ```
-Detecting: AlphaDelta 1A... found, Enabling AlphaDelta 1A
-Detecting: AlphaDelta 1W... found, already enabled!!!
-Detecting: AlphaDelta 2A... found, already enabled!!!
-Detecting: AlphaDelta 2W... found, already enabled!!!
-Detecting: AlphaDelta 3A... found, already enabled!!!
-Detecting: AlphaDelta 3W... found, already enabled!!!
-Detecting: AlphaDelta Temperature... found, already enabled!!!
-Detecting: AlphaDelta Humidity... found, already enabled!!!
-Detecting: Grove ADC... nothing!
-Detecting: INA219 Bus voltage... nothing!
-Detecting: INA219 Shunt voltage... nothing!
-Detecting: INA219 Current... nothing!
-Detecting: INA219 Load voltage... nothing!
-Detecting: DS18B20 Water temperature... nothing!
-Detecting: Atlas PH... nothing!
-Detecting: Atlas Conductivity... nothing!
-Detecting: Atlas Specific gravity... nothing!
-Detecting: Atlas Dissolved Oxygen... nothing!
-Detecting: Atlas DO Saturation... nothing!
-Detecting: Grove OLED... nothing!
+Enabling Temperature
+Enabling Humidity
+Enabling Noise dBA
+Enabling MPL Barometric pressure
+SEN5X: found sensor model SEN50
+Enabling SEN5X PM 1.0
+Enabling SEN5X PM 2.5
+Enabling SEN5X PM 4.0
+Enabling SEN5X PM 10.0
+Enabling SEN5X PN 0.5
+Enabling SEN5X PN 1.0
+Enabling SEN5X PN 2.5
+Enabling SEN5X PN 4.0
+Enabling SEN5X PN 10.0
+Enabling SEN5X Typical Particle Size
+Enabling AS7331 UVA
+Enabling AS7331 UVB
+Enabling AS7331 UVC
 ```
 
 ### Configuration via Shell
 
-The board firmware is fully customizable without requiring any changes to the core software. That includes enabling or disabling sensors, the sampling frequency of the sensors or the operation mode, among many other settings. There different configuration options via the [Shell](guides/getting started/using the shell) are available when the board is connected over USB.
+The board firmware is fully customizable without requiring any changes to the core software. That includes enabling or disabling sensors, the sampling frequency of the sensors or the operation mode, among many other settings. There different configuration options via the [Shell](/guides/getting-started/using-the-shell) are available when the board is connected over USB.
 
 !!! info
     Have a look at the guide for different platforms [here](/guides/getting-started/using-the-shell).
