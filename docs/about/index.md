@@ -37,7 +37,7 @@ Outfitted with the Urban Sensor Board, the standard kit measures various environ
 
 The device accommodates various 3D-printed enclosures, ranging from simple indoor setups to rugged outdoor solutions. Most designs are compatible with locally accessible 3D printers, negating the need for long-distance shipping.
 
-![](https://i.imgur.com/CbXDdY8.png)
+![](/assets/images/sck-metrics.png)
 
 ### Installation
 
@@ -49,7 +49,7 @@ The SCK arrives pre-assembled, requiring only a brief setup guided online. Users
 
 Designed for resilience, the SCK features internal memory for data buffering and a user interface with status-indicating LEDs and functional buttons. Devices are easily resettable, enabling multiple community deployments with the same hardware.
 
-![](https://i.imgur.com/MPXlpiB.jpg)
+![](/assets/images/sck-deployment.jpeg)
 
 ### Data Exploration and Archiving
 
@@ -57,11 +57,11 @@ Data uploaded to the Smart Citizen Platform is publicly accessible and easily na
 
 A suite of Python, R, and Orange tools is available for advanced analytics. Furthermore, a custom open API offers communities and corporations the flexibility to create bespoke visualization tools or integrate the SCK into existing workflows.
 
-![](https://i.imgur.com/taC62WH.jpg)
+![](/assets/images/SCK-Platform-mobile.jpg)
 
 ## Hypothesis driven deployment
 
-![](https://i.imgur.com/SDMJe2h.png)
+![](/assets/images/hypothesis-driven-deployment.png)
 
 The starting point of any citizen data collection intervention is to select a significant issue for people. Galvanising people around a problem helps create a sense of purpose with the intervention and is a cornerstone that sustains lasting participation. The first phase involves identifying issues of interest related to the environment that affects citizens. That is done by reviewing news items from the press, social networks, blogs and scientific articles and involving local communities in collaboratively mapping issues and resources in their areas. The primary outcome of phase one is the identification of shared concerns of citizens who are, therefore, willing to give their time and energy to collect evidence.
 
