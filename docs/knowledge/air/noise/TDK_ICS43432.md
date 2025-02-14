@@ -1,7 +1,7 @@
 ---
 card: true
 name: TDK ICS43432
-field: 
+field:
   - air
 type:
   - onboard
@@ -9,7 +9,7 @@ target:
   - noise
 feature_img: /assets/images/tdk-ics43432.jpg
 feature_img_credit: "TDK InvenSense"
-excerpt: ""
+excerpt: "A MEMs microphone with high sensitivity, available on SCK2.X series by default."
 ---
 
 # {{ name }}

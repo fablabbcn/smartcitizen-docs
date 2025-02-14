@@ -1,7 +1,7 @@
 ---
 card: true
 name: Atlas Temperature
-field: 
+field:
  - water
  - soil
 type:
@@ -106,5 +106,3 @@ You only need to perform a single point calibration. This process is only necess
     ```
     control atlas temp com,cal,[value of temperature from reference probe or temperature]
     ```
-
-## Resources

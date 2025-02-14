@@ -249,5 +249,19 @@ Finally, **mechanical stress** can make these sensors yield invalid values, due 
 - [Official datasheet](https://www.sensirion.com/fileadmin/user_upload/customers/sensirion/Dokumente/9.5_CO2/Sensirion_CO2_Sensors_SCD30_Datasheet.pdf)
 - [Seeed Studio Guide](https://wiki.seeedstudio.com/Grove-CO2_Temperature_Humidity_Sensor-SCD30/)
 
-<!-- TODO -- THIS ISN'T WORKING -->
-{{ insert_references('docs/includes/references.md')}}
+### References
+
+[^14]:
+    Clements, A., S. Lung, A. Arfire, AND A. Polidori. An Update on Low-Cost Sensors for the Measurement of Atmospheric Composition: Evaluation Activities. An Update on Low-Cost Sensors for the Measurement of Atmospheric Composition. World Meteorological Organization, Geneva, Switzerland, , NA, (2020).
+[^22]:
+    Dinh, Trieu-Vuong, In-Young Choi, Youn-Suk Son, and Jo-Chun Kim. “A Review on Non-Dispersive Infrared Gas Sensors: Improvement of Sensor Detection Limit and Interference Correction.” Sensors and Actuators B: Chemical 231 (August 2016): 529–38. https://doi.org/10.1016/j.snb.2016.03.040.
+[^23]:
+    Müller, Michael, Peter Graf, Jonas Meyer, Anastasia Pentina, Dominik Brunner, Fernando Perez-Cruz, Christoph Hüglin, and Lukas Emmenegger. “Integration and Calibration of Non-Dispersive Infrared (NDIR) CO2 Low-Cost Sensors and Their Operation in a Sensor Network Covering Switzerland.” Atmospheric Measurement Techniques 13, no. 7 (July 15, 2020): 3815–34. https://doi.org/10.5194/amt-13-3815-2020.
+[^24]:
+    Sensirion SCD30 Field Calibration Application Note (Accessed January 2023) https://sensirion.com/media/documents/33C09C07/620638B8/Sensirion_SCD30_Field_Calibration.pdf
+[^25]:
+    Demanega, Ingrid, Igor Mujan, Brett C. Singer, Aleksandar S. Anđelković, Francesco Babich, and Dusan Licina. “Performance Assessment of Low-Cost Environmental Monitors and Single Sensors under Variable Indoor Air Quality and Thermal Conditions.” Building and Environment 187 (January 2021): 107415. https://doi.org/10.1016/j.buildenv.2020.107415.
+[^26]:
+    Zheng, Hailin, Vinayak Krishnan, Shalika Walker, Marcel Loomans, and Wim Zeiler. “Laboratory Evaluation of Low-Cost Air Quality Monitors and Single Sensors for Monitoring Typical Indoor Emission Events in Dutch Daycare Centers.” Environment International 166 (August 2022): 107372. https://doi.org/10.1016/j.envint.2022.107372.
+[^37]:
+    Popa, Daniel, and Florin Udrea. “Towards Integrated Mid-Infrared Gas Sensors.” Sensors 19, no. 9 (May 4, 2019): 2076. https://doi.org/10.3390/s19092076.

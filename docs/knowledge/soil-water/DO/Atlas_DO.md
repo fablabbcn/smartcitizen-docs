@@ -1,7 +1,7 @@
 ---
 card: true
 name: Atlas DO
-field: 
+field:
   - water
 type:
   - external
@@ -174,6 +174,3 @@ Choose, depending on whether you're going to [take a sample](#taking-a-sample) a
     If you can, check the measurement with calibration solution after each reading.
 
     ![alt_text](/assets/images/education/es/do_method.png "How to measure in turbulent waters")
-
-
-## Resources

@@ -1,7 +1,7 @@
 ---
 card: true
 name: Sensirion SHT3X
-field: 
+field:
   - air
 type:
   - onboard
@@ -23,3 +23,6 @@ excerpt: ""
 !!! warning "Under Construction"
 
     More details on working principles, usage, considerations, and resources are coming soon.
+
+!!! info "Version"
+    This sensor is supported from V2.0 onwards

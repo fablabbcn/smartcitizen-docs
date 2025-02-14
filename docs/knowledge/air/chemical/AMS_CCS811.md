@@ -9,7 +9,7 @@ target:
   - chemical
 feature_img: /assets/images/ams-ccs811.jpg
 feature_img_credit: "ScioSense"
-excerpt: "The AMS CCS811 is a Metal Oxide Sensor with I2C connectivity which is capable of measuring a **volatile organic compounds**. Sadly, it's deprecated, but it was part of the SCK2.1 family!"
+excerpt: "The AMS CCS811 is a Metal Oxide Sensor with I2C connectivity which is capable of measuring a VOCs."
 ---
 
 # {{ name }}

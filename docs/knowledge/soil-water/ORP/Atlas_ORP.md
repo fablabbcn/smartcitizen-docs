@@ -1,7 +1,7 @@
 ---
 card: true
 name: Atlas ORP
-field: 
+field:
   - water
 type:
   - external
@@ -82,5 +82,3 @@ You only need to perform a single point calibration. You can use any calibrated 
     ```
     control redox com,cal,225
     ```
-
-## Resources

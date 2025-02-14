@@ -24,7 +24,7 @@ excerpt: ""
 
 The electrochemical cells used are toxic gas sensors from Alphasense Ltd. that operate in an amperometric mode. That is, they generate a current that is linearly proportional to the fractional volume of the toxic gas in the environment:
 
-![](https://i.imgur.com/K0yeMN0.png)
+![](/assets/images/alphasense-electrochemical-working-principle.png)
 
 _Image Source: Alphasense Ltd._
 
