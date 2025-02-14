@@ -1,7 +1,7 @@
 ---
 card: true
 name: GPS
-feature_img: https://live.staticflickr.com/65535/54183550083_58f8204c78_k.jpg
+feature_img: /assets/images/sck23-gps.jpg
 custom_color: blue
 type:
     - addon
@@ -10,9 +10,12 @@ excerpt: You can connect a GPS to the SCK and collect geolocated data while you 
 
 # {{ name }}
 
-![]({{ feature_img }})
+{%if excerpt %}{{ excerpt }}{%endif%}
 
-{{ excerpt }}
+{%if feature_img %}![]({{feature_img}}){.banner-box}{%endif%}
+
+{%if feature_img_credit %}_Image Credit: **{{ feature_img_credit }}**_{.image-credit-banner-box}{%endif%}
+
 
 !!! info "Supported hardware"
     Only some [GPS modules](#supported-modules) are supported. See the table below to see the metrics and the available modules.
@@ -21,7 +24,7 @@ excerpt: You can connect a GPS to the SCK and collect geolocated data while you 
 
 As usual, data can be recorded offline or published online to the Smart Citizen Platform. If you use the sensor out of WiFi connectivity (i.e. moving), the sensors store data internally in the [Flash memory](//hardware/firmware/features/#flash-storage) during the trips and publish it in batch when the configured WiFi network is visible. Data is also stored in the SD card for later use in CSV file format.
 
-![](/assets/images/bike_trip.jpg)
+![](/assets/images/gps-bike-trip.jpg)
 
 ### Recording interval
 
@@ -68,13 +71,13 @@ Here you have a list of supported GPSs:
 
 Some modules support an external antenna via U.FL. connector. We recommend uing an external ceramic patch antenna for better gain (unless the module  already has one, like the XA1110):
 
-![](/assets/images/ceramic_antenna.png){: style="width:400px"}
+![](/assets/images/gps-ceramic-antenna.png){: style="width:400px"}
 
 The U.FL antenna connector **shouldn't need to be unplugged** from the board, specially never when the board is being powered in order to avoid damaging the circuitry:
 
-![](/assets/images/UFL.png){: style="width:400px"}
+![](/assets/images/gps-UFL.png){: style="width:400px"}
 
-> Antenna images by [Sparkfun](https://www.sparkfun.com) (License [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/)) and edited by Smart Citizen.
+Antenna images by [Sparkfun](https://www.sparkfun.com) (License [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/)) and edited by Smart Citizen.
 
 !!! info "Harsher environments?"
     In harser environments, a magnetic mounted waterproof antenna like [this one](https://eu.mouser.com/ProductDetail/Taoglas/AA171301111?qs=%2Fha2pyFaduhLT2djiVcQ%252BmKy6lTU1e7%2FjAvHSK%252B8w22J1i%252BNOh5WUg%3D%3D) is preferred.
@@ -93,10 +96,6 @@ Below, there is a list of known issues with the `0.9.8` version of the firmware.
 
 Before going on a trip, make sure that:
 
-1. The SCK has enough battery (you can check this with the [shell](/docs/guides/getting-started/using-the-shell/)).
-2. The GPS is being powered, and recognized by the data board. You can use the (you can check this with the [shell](/docs/guides/getting-started/using-the-shell/)) for this.
+1. The SCK has enough battery (you can check this with the [shell](/guides/getting-started/using-the-shell/)).
+2. The GPS is being powered, and recognized by the data board. You can use the (you can check this with the [shell](/guides/getting-started/using-the-shell/)) for this.
 3. If you want to make sure the complete trip is recorded, make sure the GPS can receive a clear view of the sky and that you have a valid [_gps fix_](#data-formats).
-
-## Applications
-
-TODO - Create note with Almabike sensor manual and link it here.

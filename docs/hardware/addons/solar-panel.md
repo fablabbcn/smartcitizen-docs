@@ -2,6 +2,7 @@
 card: true
 name: Solar Panel
 feature_img: https://cdn11.bigcommerce.com/s-6ubn8z08et/images/stencil/500x659/products/185/1049/Bracket_Pole_Mount-6_Watt_Panel__96828.1583444808.jpg
+feature_img_credit: Voltaic Systems
 custom_color: black
 type:
     - addon
@@ -10,10 +11,11 @@ excerpt: Solar Panels can be a good option for powering your Smart Citizen Kit o
 
 # {{ name }}
 
-{{ excerpt }}
+{%if excerpt %}{{ excerpt }}{%endif%}
 
-![]({{ feature_img }})
-> Image credit: [Voltaic System](https://voltaicsystems.com/6-watt-panel/).
+{%if feature_img %}![]({{feature_img}}){.banner-box}{%endif%}
+
+{%if feature_img_credit %}_Image Credit: **{{ feature_img_credit }}**_{.image-credit-banner-box}{%endif%}
 
 ## Hardware
 
