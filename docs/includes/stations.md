@@ -2,7 +2,7 @@
 
 ### Power
 
-Currently, the Smart Citizen Air Quality Stations have only been tested with an [external power supply](/hardware/power/Power Supply) (230VAC to 5VDC), with a small battery for backup during power brownouts. Due to the number of sensors, and depending on the configuration the solution is normally not meant for long term deployment with just battery power. For detailed specifications of the power supply, visit the [power supply section](/hardware/power/Power Supply/).
+Currently, the Smart Citizen Air Quality Stations have only been tested with an [external power supply](/docs/hardware/addons/power-supply/) (230VAC to 5VDC), with a small battery for backup during power brownouts. Due to the number of sensors, and depending on the configuration the solution is normally not meant for long term deployment with just battery power. For detailed specifications of the power supply, visit the [power supply section](/hardware/power/Power Supply/).
 
 | Power        |                                                                  |
 | :-:          | :-                                                               |
@@ -13,8 +13,6 @@ Currently, the Smart Citizen Air Quality Stations have only been tested with an 
 
 !!! warning "Battery or solar operation?"
     The Station currently supports battery operation only for short periods of time (<2d days). Depending on the location, [solar power](/hardware/power/Solar Panel/) might be available, but we do not recommend it unless you are willing to _experiment_.
-
-![TODO](TODO)
 
 ### Connectivity
 
