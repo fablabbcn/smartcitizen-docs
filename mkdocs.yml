@@ -265,6 +265,9 @@ extra:
     api:
       name: api.smartcitizen.me
       link: https://api.smartcitizen.me
+    ghapi:
+      name: fablabbcn/smartcitizen-api
+      link: https://github.com/fablabbcn/smartcitizen-api
     developer:
       name: developer.smartcitizen.me
       link: https://developer.smartcitizen.me

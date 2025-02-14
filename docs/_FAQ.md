@@ -75,7 +75,7 @@ You can retrieve the MAC address with two methods: either you can use your phone
 3. Once you are on your Kit configuration page, go to the Info section. You will see a page with all the information about your Kit.
 4. Your MAC address is listed as seen below:
 
-![](https://i.imgur.com/WuZ1mpw.jpg)
+![](/assets/images/mobile-phone-setup.jpeg)
 
 ## What batteries are shipped with the kits?
 
@@ -97,8 +97,18 @@ If you are using any enclosure from [the repository]({{ extra.urls.enclosures.li
 
 ## Can I send data to a different platform?
 
+Yes. There are various ways in which you can do this. You can either configure your SCK to send data directly to your own [MQTT](https://mqtt.org/) broker via the [Shell](/guides/getting-started/using-the-shell/). Otherwise, you can forward incoming data via the Smart Citizen Platform. See details on [data forwarding](/data/data-platform/#data-fowarding) on the [data platform](/data/data-platform) page, or visit the [developer documentation]({{extra.urls.developer.link}}) for more details on our API.
+
 ## How can I get a kit?
+
+This is an easy one! Kits are available for purchase at :gift: **[{{ extra.urls.buy.name }}]({{ extra.urls.buy.link }})**.
+
+If you are involved in a research project, an educational initiative, or developing a specialized monitoring system we can support and offer customized solutions. Contact us via **[{{ extra.urls.info.name }}]({{ extra.urls.info.link }})** to discuss your exact needs.
 
 ## Are there enclosures included?
 
+The Smart Citizen Kit doesn’t come with an enclosure, but there are plenty of freely available designs on our [enclosures repository]({{ extra.urls.enclosures.link }})**!. We have a wide range of open source designs that you can 3D print and build yourself, saving some industrial plastic manufacturing in the process. If you don’t have a 3D printer, you can always [find a Fab Lab near you](https://fablabs.io/labs/map) and once the enclosure’s life is done, you can repurpose it to make more 3D printing filament!
+
 ## I want to contribute, what can I do?
+
+We would love you to contribute! Is modeling your thing? Take a look at our [enclosure repository]({{ extra.urls.enclosures.link }}) and try your hand at designing or tweaking an enclosure. Are you into tech specs? Help us add information to the documentation! Do you like coding? Take a look at our open source repositories and contribute to the source code of the [firmware]({{extra.urls.firmware.link}}) or the [data platform]({{extra.urls.ghapi}})!
