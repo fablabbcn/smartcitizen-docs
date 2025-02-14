@@ -66,7 +66,7 @@ nav:
         - Alphasense PID: knowledge/air/chemical/Alphasense_PID.md
         - Figaro TGS260X: knowledge/air/chemical/Figaro_TGS260X.md
         - Sensirion SFA30: knowledge/air/chemical/Sensirion_SFA30.md
-        - Alphasense EC Sensors: knowledge/air/chemical/Alphasense_Electrochemical.md
+        - Alphasense Electrochemical: knowledge/air/chemical/Alphasense_Electrochemical.md
         - SGX Mics: knowledge/air/chemical/SGX_MICS.md
         - AMS CCS811: knowledge/air/chemical/AMS_CCS811.md
         - Bosch BME680: knowledge/air/chemical/Bosch_BME680.md
@@ -91,7 +91,7 @@ nav:
       - Pressure:
         - knowledge/air/pressure/index.md
         - NXP MPL3115A26: knowledge/air/pressure/NXP_MPL3115A26.md
-        - ST LPS33K: knowledge/air/pressure/ST_LPTS33K.md
+        - ST LPS33K: knowledge/air/pressure/ST_LPS33K.md
     - Soil and Water:
       - knowledge/soil-water/index.md
       - pH:
@@ -179,7 +179,6 @@ nav:
         - Troubleshooting: hardware/legacy/Troubleshooting.md
       - Smart Citizen 2.0:
         - Main: hardware/legacy/sck.md
-        - About the CO-NO2 MOs: knowledge/air/chemical/SGX_MICS.md
   - Resources:
     - Introduction: resources/index.md
     - Research: resources/research.md
@@ -189,7 +188,7 @@ nav:
       # - Doit! Toolkit: resources/toolkits/Doit.md
       # - Citizen-led Action Toolkit: resources/toolkits/Citizen-led Action Toolkit.md
     - Webinars: resources/webinars.md
-    - Education: resources/education/index.md
+    - Education: resources/education.md
       # - Aulamar (ES):
       #   - Índice: resources/education/AulaMar/index.md
       #   - Notas generales: resources/education/AulaMar/General.md
