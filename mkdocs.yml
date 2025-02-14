@@ -137,12 +137,12 @@ nav:
       - Upgrading the firmware: guides/firmware/upgrading-the-firmware.md
       - Editing the firmware: guides/firmware/edit-the-firmware.md
       - Debugging the firmware: guides/firmware/debug-the-firmware.md
-    - Calibrating Sensors:
+    # - Calibrating Sensors:
       # - Air sensors: guides/calibration/Air sensors.md
-      - Water: guides/calibration/Water sensors.md
-      - Soil: guides/calibration/Soil moisture sensors.md
-      - Air:
-        - CO2: guides/calibration/Sensirion SCD30.md
+      # - Water: guides/calibration/Water sensors.md
+      # - Soil: guides/calibration/Soil moisture sensors.md
+      # - Air:
+      #   - CO2: guides/calibration/Sensirion SCD30.md
     - Working with Data:
       - Handling calibration data: guides/data/handling-calibration-data.md
       - Sending data to a different platform: guides/data/sending-data-to-other-platforms.md
