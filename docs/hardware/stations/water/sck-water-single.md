@@ -50,6 +50,4 @@ In the image at the top of the page you can see an example of a One-Sensor Water
 
 {{ get_snippet_rel("docs/includes/stations.md") }}
 
-## Guides
-
-{{ insert_guides() }}
+{{ get_snippet_rel("docs/includes/water-sensors.md") }}

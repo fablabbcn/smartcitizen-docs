@@ -45,6 +45,4 @@ Measurements on the water stations can be from 2, to all 5 from below:
 
 {{ get_snippet_rel("docs/includes/stations.md") }}
 
-## Guides
-
-{{ insert_guides() }}
+{{ get_snippet_rel("docs/includes/water-sensors.md") }}
