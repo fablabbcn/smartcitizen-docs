@@ -177,7 +177,7 @@ This is the order of the calibration:
 
 Depending on which probe you have (check drawing for reference) you should set the probe type to K 0.1, 1.0 or 10 (new drivers have K1.0 as default):
 
-![](https://i.imgur.com/MWFjbYw.png)
+![](/docs/assets/images/water/atlas-ec-probe-type.png)
 
 To set the correct probe type:
 
