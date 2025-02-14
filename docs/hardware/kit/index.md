@@ -83,6 +83,28 @@ All the {{ short_name }}2.X generations above 2.1 (included) measure **at least*
 !!! info "Sensor performance"
     Make sure you visit the [sensor knowledge page](/knowledge/) for more information!
 
+=== "{{ short_name }} 2.3"
+    | Measurement                               | Units | Sensor                    |
+    |:-                                         |:-:    |:-:                        |
+    | Air temperature                           | ºC    | Sensirion SHT-31          |
+    | Relative Humidity                         | % REL | Sensirion SHT-31          |
+    | Noise level                               | dBA   | Invensense ICS-434342     |
+    | Ambient light                             | lux   | Rohm BH1721FVC            |
+    | Barometric pressure                       | kPa   | NXP MPL3115A26S           |
+    | UV-A, B, C                                | uW/cm2| AMS AS7311                |
+    | Particulate Matter PM1, PM2.5, PM4, PM10  | µg/m3 | Sensirion SEN5X           |
+    | NOx Index, VOCs Index (Optional)          | -     | Sensirion SEN54, 55       |
+=== "{{ short_name }} 2.2"
+    | Measurement                               | Units | Sensor                    |
+    |:-                                         |:-:    |:-:                        |
+    | Air temperature                           | ºC    | Sensirion SHT-31          |
+    | Relative Humidity                         | % REL | Sensirion SHT-31          |
+    | Noise level                               | dBA   | Invensense ICS-434342     |
+    | Ambient light                             | lux   | Rohm BH1721FVC            |
+    | Barometric pressure                       | kPa   | ST LPS33K                 |
+    | UV-A, B, C                                | uW/cm2| AMS AS7311                |
+    | Particulate Matter PM1, PM2.5, PM4, PM10  | µg/m3 | Sensirion SEN5X           |
+    | NOx Index, VOCs Index (Optional)          | -     | Sensirion SEN54, 55       |
 === "{{ short_name }} 2.1"
     | Measurement                               | Units | Sensor                    |
     |:-                                         |:-:    |:-:                        |
@@ -94,28 +116,6 @@ All the {{ short_name }}2.X generations above 2.1 (included) measure **at least*
     | Equivalent Carbon Dioxide                 | ppm   | AMS CCS811                |
     | Volatile Organic Compounds                | ppb   | AMS CCS811                |
     | Particulate Matter PM1, PM2.5, PM10       | µg/m3 | Plantower PMS 5003        |
-=== "{{ short_name }} 2.2"
-    | Measurement                               | Units | Sensor                    |
-    |:-                                         |:-:    |:-:                        |
-    | Air temperature                           | ºC    | Sensirion SHT-31          |
-    | Relative Humidity                         | % REL | Sensirion SHT-31          |
-    | Noise level                               | dBA   | Invensense ICS-434342     |
-    | Ambient light                             | lux   | Rohm BH1721FVC            |
-    | Barometric pressure                       | kPa   | ST LPS33K                 |
-    | UV-A, B, C                                | uW/cm2| AMS AS7311                |
-    | Particulate Matter PM1, PM2.5, PM4, PM10  | µg/m3 | Sensirion SEN5X           |
-    | NOx Index, VOCs Index (Optional)           | -     | Sensirion SEN54, 55       |
-=== "{{ short_name }} 2.3"
-    | Measurement                               | Units | Sensor                    |
-    |:-                                         |:-:    |:-:                        |
-    | Air temperature                           | ºC    | Sensirion SHT-31          |
-    | Relative Humidity                         | % REL | Sensirion SHT-31          |
-    | Noise level                               | dBA   | Invensense ICS-434342     |
-    | Ambient light                             | lux   | Rohm BH1721FVC            |
-    | Barometric pressure                       | kPa   | NXP MPL3115A26S           |
-    | UV-A, B, C                                | uW/cm2| AMS AS7311                |
-    | Particulate Matter PM1, PM2.5, PM4, PM10  | µg/m3 | Sensirion SEN5X           |
-    | NOx Index, VOCs Index (Optional)           | -     | Sensirion SEN54, 55       |
 
 !!! info "About the SEN5X"
     `SEN5X` refers to the different configurations of the PM sensors in that series: `SEN50`, `SEN54`, `SEN55`.
@@ -148,7 +148,7 @@ If you want to leave the {{ short_name}} outdoors, protect the electronics.
 
 [<img src="https://live.staticflickr.com/65535/54172280536_a67af99ddc_k.jpg" alt="Code Lab, kits in progress"/>]({{ extra.urls.enclosures.link }})
 
-There are plenty of freely available designs on our [enclosures repository]({{ extra.urls.enclosures.link }}). We have a wide range of open source designs that you can 3D print and build yourself, saving some industrial plastic manufacturing in the process. If you don’t have a 3D printer, you can always find a [Fab Lab near you],(https://fablabs.io/labs/map) and once the enclosure’s use has run its course, you can repurpose it to make more 3D printing filament!
+There are plenty of freely available designs on our [enclosures repository]({{ extra.urls.enclosures.link }}). We have a wide range of open source designs that you can 3D print and build yourself, saving some industrial plastic manufacturing in the process. If you don’t have a 3D printer, you can always find a [Fab Lab near you](https://fablabs.io/labs/map) and once the enclosure’s use has run its course, you can repurpose it to make more 3D printing filament!
 
 !!! info "Want to contribute? Or buy one?"
     Visit the [Smart Citizen Enclosures repository]({{ extra.urls.enclosures.link }}) to download, modify, or add your own! Also, make sure you read [this fantastic summary](https://hackaday.com/2023/03/27/a-survey-of-long-term-waterproofing-options/) on how to waterproof sensors.

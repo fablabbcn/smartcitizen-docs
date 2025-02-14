@@ -101,7 +101,7 @@ This button is used for [troubleshooting](/troubleshooting) your kit, or to [upg
 === "SCK 2.1/SCK2.2"
     ![SCK Reset](/assets/images/sck21-reset.png)
 === "SCK 2.3"
-    TODO ![SCK Reset](/assets/images/sck23-reset.png)
+    ![SCK Reset](/assets/images/sck23-reset-button-with-line.jpg)
 
 !!! info "Using the button inside a box"
     If you are using an SCK2.1 or SCK2.2 inside a box, it may be tricky to access the **`RESET`** button. Check the [enclosures page]({{ extra.urls.enclosures.link }}) for more options.
