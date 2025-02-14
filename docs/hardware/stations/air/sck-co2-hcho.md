@@ -5,8 +5,8 @@ name: SCK + CO2 + HCHO
 field:
   - air
 grade: intermediate
-feature_img: /assets/images/station-co2-hcho.jpg
-feature_img_description: ""
+feature_img: https://live.staticflickr.com/65535/54323282033_4e809d48ee_o.jpg
+feature_img_description: "Smart Citizen CO2+HCHO Air Quality Station"
 excerpt: Measure Indoor or Outdoor Air Quality with this unit. Beyond the metrics from the kit, it can measure CO2 and Formaldehyde!
 ---
 
@@ -49,6 +49,10 @@ excerpt: Measure Indoor or Outdoor Air Quality with this unit. Beyond the metric
     | HCHO                                  | ppb   | Sensirion SFA30       |
 
 ## Technical specifications
+
+
+![](https://live.staticflickr.com/65535/54323454845_af966626b4_o.jpg)
+***Smart Citizen CO2+HCHO Air Quality Station***
 
 ### Dimensions and weight
 

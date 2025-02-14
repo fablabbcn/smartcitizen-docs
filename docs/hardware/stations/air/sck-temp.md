@@ -5,8 +5,8 @@ name: SCK + T / RH
 field:
   - air
 grade: basic
-feature_img: https://live.staticflickr.com/65535/53909712132_b46cae1a7e_k.jpg
-feature_img_description: ""
+feature_img: https://live.staticflickr.com/65535/54325253435_f9b2859671_o.jpg
+feature_img_description: "Smart Citizen Temperature/RH Air Quality Station"
 excerpt: Measure Indoor or Outdoor Air Quality with this unit. Beyond the metrics from the kit, it can measure CO2 with a very reliable CO2 sensor!
 ---
 
@@ -21,7 +21,7 @@ excerpt: Measure Indoor or Outdoor Air Quality with this unit. Beyond the metric
 
 ## Measurements
 
-=="SCK2.1 based (deprecated)"
+=== "SCK2.1 based (deprecated)"
     | Measurement                           | Units | Sensor                |
     |:-                                     |:-:    |:-:                    |
     | Air temperature                       | ºC    | Sensirion SHT-31      |
@@ -34,7 +34,8 @@ excerpt: Measure Indoor or Outdoor Air Quality with this unit. Beyond the metric
     | Particulate Matter PM1, PM2.5, PM10   | µg/m3 | Plantower PMS 5003    |
     | External air temperature              | ºC    | DF Robot Module Sensirion SHT-31 Weatherproof    |
     | External relative Humidity            | % REL | DF Robot Module Sensirion SHT-31 Weatherproof    |
-=="SCK2.3 based"
+
+=== "SCK2.3 based"
     | Measurement                           | Units | Sensor                |
     |:-                                     |:-:    |:-:                    |
     | Air temperature                       | ºC    | Sensirion SHT-31      |
@@ -47,6 +48,9 @@ excerpt: Measure Indoor or Outdoor Air Quality with this unit. Beyond the metric
     | External relative Humidity            | % REL | DF Robot Module Sensirion SHT-31 Weatherproof    |
 
 ## Technical specifications
+
+![](https://live.staticflickr.com/65535/54324846296_fc5f1bf887_o.jpg)
+***Smart Citizen Temperature/RH Air Quality Station***
 
 ### Dimensions and weight
 

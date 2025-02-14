@@ -18,11 +18,12 @@ nav:
         - hardware/stations/index.md
         - Air:
           - hardware/stations/air/index.md
+          - SCK + T / RH: hardware/stations/air/sck-temp.md
           - SCK + CO2: hardware/stations/air/sck-co2.md
-          - SCK + Temp: hardware/stations/air/sck-temp.md
-          - SCK + CO2 + HCHO: hardware/stations/air/sck-co2-hcho.md
           - SCK + 1x CHEM: hardware/stations/air/sck-1xchem.md
           - SCK + 2x CHEM: hardware/stations/air/sck-2xchem.md
+          - SCK + CO2 + HCHO: hardware/stations/air/sck-co2-hcho.md
+          - SCK + CO2 + 2x CHEM: hardware/stations/air/sck-co2-2xchem.md
         - Water:
           - hardware/stations/water/index.md
           - One-Sensor Station: hardware/stations/water/sck-water-single.md

@@ -5,8 +5,8 @@ name: SCK + 1xCHEM
 field:
   - air
 grade: intermediate
-feature_img: https://live.staticflickr.com/65535/53909712132_b46cae1a7e_k.jpg
-feature_img_description: ""
+feature_img: https://live.staticflickr.com/65535/54323463658_aff558cb91_o.jpg
+feature_img_description: "Smart Citizen 1x Chemical Air Quality Station Open"
 excerpt: Measure Indoor or Outdoor Air Quality with this unit. Beyond the metrics from the kit, it can measure CO2 with a very reliable CO2 sensor!
 ---
 
@@ -47,6 +47,9 @@ excerpt: Measure Indoor or Outdoor Air Quality with this unit. Beyond the metric
     | 1 Chemical metrics (NO2, CO, NO, O3, SO2 or H2S) | ppb/ppm | Alphasense B-series    |
 
 ## Technical specifications
+
+![](https://live.staticflickr.com/65535/54323463653_db29c82709_o.jpg)
+***Smart Citizen 1x Chemical Air Quality Station Open***
 
 ### Dimensions and weight
 
