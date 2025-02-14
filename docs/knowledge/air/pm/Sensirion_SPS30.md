@@ -22,4 +22,4 @@ excerpt: ""
 
 !!! warning "Under Construction"
 
-    More details on working principles, usage and considerations, and resources are coming soon.
+    More details on working principles, usage, considerations, and resources are coming soon.

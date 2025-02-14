@@ -73,6 +73,11 @@ _SOURCE: **ThermoScientific - KCl Creep**_
 
     ![alt_text](/assets/images/water/atlas-ph-warning.png "Caution!")
 
+!!! danger "Storage solution"
+    This probe needs storage solution in a small soaker bottle to prevent it from drying out.
+
+    If the probe is not being used you need to put the soaker bottle back on.
+
 ### Calibration
 
 You need to perform a 3-point calibration with the calibration solutions. The solutions vary their pH with temperature, so make sure to check the temperature prior. **The pH value at the current temperature can be found on the reference table on the calibration solution bottle. If the current temperature is not on it, use the closest value or use the calculator [here](https://atlas-scientific.com/ph-temperature-calculator/)**.

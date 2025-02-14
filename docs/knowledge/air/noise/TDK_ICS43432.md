@@ -100,6 +100,8 @@ There are some known limitations that need to be taken into account when perform
 
 ## Working principle
 
+<!-- TODO -- WORKING PRINCIPLE IS THE NAME OF TWO SECTIONS, TO FIX -->
+
 Real-world sound pressure levels (SPL) travelling around in the air are not fully perceived by our ears.
 
 ![](http://www.dspguide.com/graphics/F_22_1.gif)

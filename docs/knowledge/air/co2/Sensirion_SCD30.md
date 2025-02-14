@@ -45,7 +45,9 @@ CO2 molecules strongly absorb IR light in these wavelengths, so shining these th
 
 <!-- TODO - Add references -->
 
-## Performance
+## Usage and considerations
+
+### Performance
 
 |Property               |Value                                                                          |
 |:-                     |:-                                                                             |
@@ -56,7 +58,7 @@ CO2 molecules strongly absorb IR light in these wavelengths, so shining these th
 |Life expectancy     	|15 years                                                                       |
 |Deployment type 		|indoor/outdoor (mostly indoor). Sensor provides auto compensation for drift.   |
 
-## Calibration
+### Calibration
 
 <!-- TODO -->
 
@@ -77,4 +79,5 @@ Make sure to check our [calibration guide](/Guides/calibration/SCD30 CO2 sensor/
 
 ## References
 
+<!-- TODO -- THIS ISN'T WORKING -->
 {{ insert_references('docs/includes/references.md')}}

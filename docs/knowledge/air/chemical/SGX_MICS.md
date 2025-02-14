@@ -22,10 +22,6 @@ excerpt: ""
 
 ## Working principle
 
-## Usage and considerations
-
-## Resources
-
 The SGX Mics is a Metal Oxide Resistive sensor capable of reacting to different substances in the atmosphere. In a simplified way, it is comprised of two main elements:
 
 - A **SnO~2~ substrate** that acts as a sensor element
@@ -42,7 +38,9 @@ In the case of the SGX 4514, the detection of the pollution gases is achieved by
 
 Finally, the chemical reactions within the resistive element are directly related to temperature and follow an [Arrhenius equation](https://en.wikipedia.org/wiki/Arrhenius_equation) type of behaviour. Each sensor's type has a different optimal operation temperature, which is translated into different heating powers for the heater element. Depending on the heating power and transition speeds, different reactions can be facilitated and this can lead to positive effects such as sensor clean up or battery compsuption savings, for example, when heated up in a pulsed profile. On the other hand, it can facilitate sensor poisoning or ageing, which highlights the need of proper sensor characterisation.
 
-## Sensor Calibration
+## Usage and considerations
+
+### Sensor Calibration
 
 The SGX4514 is a low cost sensor originally ment to detect instances or trends of target gas in the atmosphere [^fourth][^fifth]. The applications intended for these sensors are ‘event sensing‘ applications and the level of accuracy required is not necessarily within regulatory standards. Furthermore, these sensors should not be used with safety related issues.
 
@@ -79,7 +77,7 @@ Having all this in mind, the sensor calibration we follow is comprised of the fo
 
 The use of deployment campaigns is of utmost importance in order to develop sensor models that are _reality proof_. With the possibility of collecting the data with the [SmartCitizen Platform](https://docs.iscape.smartcitizen.me/Sensor%20Platform/Sensor%20Platform/) and the data treatment provided by the [Sensor Calibration Framework](https://docs.iscape.smartcitizen.me/Sensor%20Analysis%20Framework/), we are able to iterate over the different sensor calibration possibilities, ranging from Ordinary Linear Regression or more advanced techniques such as ML models such as LSTMs networks.
 
-## Field results
+### Field results
 
 In this section, we will detail some of the MOS related results obtained during the sensor validation campaigns detailed below:
 
@@ -104,13 +102,13 @@ model.add(Activation("linear"))
 model.compile(loss='mse', optimizer='rmsprop')
 ```
 
-### Carbon Monoxide
+#### Carbon Monoxide
 
 The CO model included the following features: $CO_{R}^{-1}$, $CO_R^{-2}$, $Temp$ and $Temperature^2$. The results can be seen below:
 
 ![](https://i.imgur.com/M2OCMsg.png)
 
-### Nitrogen Dioxide
+#### Nitrogen Dioxide
 
 The NO~2~ model included the following features: $NO~2~_{R}$, $NO~2~_R^{-2}$, Light, $Temp$ and $Temperature^2$. The results can be seen below:
 
@@ -119,9 +117,9 @@ The NO~2~ model included the following features: $NO~2~_{R}$, $NO~2~_R^{-2}$, Li
 !!! warning
     This test campaign contains a short amount of data to be used as a training dataset for a LSTM algorithm. Therefore, this is just to considered as an use case example and further tests and data should be carried out to train broader models.
 
-## Metal Oxide Sensors Implementation
+### Metal Oxide Sensors Implementation
 
-### Heating stage
+#### Heating stage
 
 The solution present at Urban Sensor Board V2.0 for MICS-4514 sensor's heaters excitation, pretends to make it compatible with a 3.3V global voltage source.
 
@@ -139,7 +137,7 @@ Even more, we can upgrade the function of the auxiliar resistors adding a capaci
 
 The source for the PWM signal must be buffered, because the resistive load of the system demands currents avobe the SAMD21 can supply. For this purpose, the solution selected is to use a digital hex-inverter buffer, which can drive up to 32mA with each output pin, wich we can paralelize to operate under propper safety factor for the buffer.
 
-### Simulations
+#### Simulations
 
 The first simulations and given values leads to the selection of the RC components values if we set a PWM frequency around 40 kHz.
 
@@ -151,7 +149,7 @@ The first simulations and given values leads to the selection of the RC componen
 
 To evaluate the R part of the filter, is needed to take into account the output resistance of the hex-inverter buffer.
 
-### Prototypes
+#### Prototypes
 
 We build the circuit into a protoboard, with several IC HEX-INV manufacturers, based on the following schematic:
 
@@ -165,13 +163,13 @@ The measures are sumarized in the following table, in which we compare four pre-
 
 Four cases with paralellized inverters, for each device were performed: pasive load 70R test with DC input, and three tests with 10R+Rheater load at DC input, 60% dutty cycle and 30% dutty cycle. The 74LCX04FT(AE) was selected because it has the lowest LOW output level (0.45V,0.22V), which is considered here as the quality (or close to ideal) of the square wave input source.
 
-### Final implementation
+#### Final implementation
 
 The solution implemented in the PCB, has a constant auxilar R (10R+Rout_buff), and constant C (47uF), and also operates at consatant frequency, then, the output power regulation is based on the PWM's dutty cycle. The following circuit represent the implemented schematic.
 
 ![](https://i.imgur.com/dn4FyNE.png)
 
-### Operation
+#### Operation
 
 First of all, is needed to know the real implemented Rheater of each sensor (which may vary among devices and time), and can be estimated by measuring the V_heater_* at 100% dutty cycle, then:
 
