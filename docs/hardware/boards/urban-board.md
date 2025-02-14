@@ -39,7 +39,7 @@ The **Urban Board** connects to the [Data Board](/hardware/boards/data-board/) w
 === "SCK2.3/2.2"
     ![](/assets/images/urban-board-sen5x.png){:style="width: 500px"}
 === "SCK2.1"
-    TODO
+    ![](/assets/images/urban-board-pms5003.png){:style="width: 500px"}
 
 !!! info "Custom cable"
     Note that the PM cable, both for PMS5003 or the SEN5X, are custom made.
