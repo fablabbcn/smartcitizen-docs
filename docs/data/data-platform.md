@@ -2,7 +2,7 @@
 
 The platform is a *front and backend* solution for ingesting, storing and interacting with data.
 
-![](https://i.imgur.com/qiDKL0r.jpg)
+![](/assets/images/platform-components.jpg)
 
 The Data platform englobes services/tools with the following functionalities:
 
@@ -42,7 +42,7 @@ The Platform can ingest data from multiple sensor types and even data coming fro
 For certain projects, data can also be forwarded to other platforms via MQTT. This is an *opt-in* experimental feature, and can be used to retrieve real-time data via MQTT, using th same JSON representation as the one in the API. This allows for connection to external platforms without needing to request via the API, since all the necessary information is available in the JSON representation.
 
 !!! info "Existing integrations"
-	Currently, we are working together with other colleagues on integrating modules so that data can be directly ingested into a [FIWARE](TODO) platform, or into a [OGC STAplus](TODO) platform. This allows incredible interoperability, leveraging the scalability of MQTT.
+	Currently, we are working together with other colleagues on integrating modules so that data can be directly ingested into a [FIWARE](https://www.fiware.org/) platform, or into a [OGC STAplus](https://www.ogc.org/es/publications/standard/sensor-things-api-extension/) platform. This allows incredible interoperability, leveraging the scalability of MQTT.
 
 !!! info "Check the developer documentation"
 	For more information and use cases, check the [developer]({{ extra.urls.developer.link }}) documentation.
@@ -75,9 +75,9 @@ There are various applications that use the API to access data, or manage device
 !!! tip "Check the guides"
 	We prepared a series of guides to help you on the most common features you will use
 
-	* [Onboarding Sensors](/guides/Onboarding Sensors)
-	* [Uploading SD Card Data](/guides/Uploading SD Card Data)
-	* [Downloading data](/guides/Downloading the Data)
+	* [Onboarding Sensors](/guides/getting-started/onboarding-your-kit/)
+	* [Uploading SD Card Data](/guides/getting-started/uploading-sd-card-data/)
+	* [Downloading data](/guides/getting-started/downloading-data/)
 
 !!! info "Want to build your own?"
 	Check the developers ready [**API Documentation**]({{ extra.urls.developer.link }})
@@ -91,4 +91,5 @@ Check the source below:
 * Onboarding App: https://github.com/fablabbcn/smartcitizen-onboarding
 * Smart Citizen Data (python): https://github.com/fablabbcn/smartcitizen-data
 * Smart Citizen Data (R): https://github.com/fablabbcn/smartcitizen-R-data
+* Smart Citizen Connector: https://github.com/fablabbcn/smartcitizen-connector
 * Smart Citizen Flows: https://github.com/fablabbcn/smartcitizen-flows

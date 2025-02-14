@@ -142,13 +142,13 @@ Start with this example is you haven't used `Orange` at all. It will create a ve
 
 * Add another the `Smart Citizen Data` widget and connect both of them:
 
-    ![](https://i.imgur.com/orange-search-data-bubbles.png)
+    ![](/assets/images/orange-search-data-bubbles.png)
 
 * To see if everything is correct we can click on `Smart Citizen Data` and check it out. In the `Info panel` you will see the data we are about to load.
 
 * Next, define what data we want to download. In this example we're getting the data every 10 minutes and we want to get just data for one month. From 01/10/2022 to 30/10/2022. To do all that, we will **set the rollup** to **10** and the **rollup units** in **m** (minutes). We will set the **Initial Date** to **2022-10-01** and **End Date** to **2022-11-01**. Keep the **Resample data** unchecked. You will have something like this:
 
-    ![](https://i.imgur.com/orange-data-download-options.png)
+    ![](/assets/images/orange-data-download-options.png)
 
 * Now we have to **press Get data** to fetch the data. It will take some seconds to fetch the data from the platform. Once it's done the Info panel will read: `Device 15618 data downloaded!`
 

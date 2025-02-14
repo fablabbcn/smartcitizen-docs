@@ -777,6 +777,6 @@ SCK > file -allcsv
 
     We will have two outputs: a `csv` file with the spectrums in rows, and a png image that looks like this!
 
-    ![](https://i.imgur.com/KZfFDam.png)
+    ![](/assets/images/shell-spectrum-noise.png)
 
     You can see that we were playing with a [tone generator](http://onlinetonegenerator.com/) to make some high pitch noises at 10kHz and 20kHz.
