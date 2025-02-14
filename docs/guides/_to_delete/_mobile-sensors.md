@@ -1,4 +1,4 @@
-TODO - Convert to static document
+TODO - Delete?
 
 # Almabike Sensors User Manual
 

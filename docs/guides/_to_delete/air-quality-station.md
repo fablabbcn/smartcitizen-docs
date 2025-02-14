@@ -1,6 +1,6 @@
 # Deploying the Smart Citizen Station
 
-TODO: move to air units (repeating content)
+TODO: decide if we move part of this page to air units (repeating content)
 
 This guide will summarise how to install the Smart Citizen Station and set it all up for successful readings.
 

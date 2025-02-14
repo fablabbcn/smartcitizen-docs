@@ -19,7 +19,6 @@ _Image credit: [DOIT](https://doit-europe.net)_
 
 - [DOIT Toolkit - Measuring our environment (EN)- Future Learning Unit at Fablab Barcelona](https://toolboxadmin.doit-europe.net/sites/default/files/2020-05/10_Measuring%20Our%20Environment_DOIT-Manual_en.pdf)
 - [DOIT Toolkit - Midiendo nuestro entorno (ES)- Future Learning Unit at Fablab Barcelona](https://toolboxadmin.doit-europe.net/sites/default/files/2020-05/10_Measuring%20Our%20Environment_DOIT-Manual_espanol.pdf)
-<!-- - [AULAMAR - Técnicas de Muestreo de agua (ES)](resources/education/Aulamar/) -->
 <!-- TODO - Find a way to arrange it -->
 
 ### External links

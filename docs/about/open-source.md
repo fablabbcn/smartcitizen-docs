@@ -1,7 +1,5 @@
 # Open Source
 
-WIP - TODO
-
 **We're against black boxes!**
 
 The entire project is released under open source licenses:

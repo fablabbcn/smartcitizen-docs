@@ -9,19 +9,17 @@ excerpt: Learn more about the Smart Citizen Project, its funding, its origins an
 
 # About
 
-WIP - TODO
+<!-- TODO -->
 
 The Smart Citizen project works to provide tools for anyone willing to use technology in a critical way. By developing environmental sensing tools, branching out in various fields such as open hardware, software, data, social innovation and digital fabrication, our main contribution is the amount of resources that this documentation hopes to compile. The project was born in [{{ extra.urls.fablabbcn.name }}]({{ extra.urls.fablabbcn.link }}) which, up until now, is the main maintainer of the project. However, the project is [released under **free** and **open source** licenses](#open-source), hoping that anyone can contribute to it, reuse it, adapt it and improve it in any way needed.
 
-<!-- TODO - Link to licenses of the different components -->
-
 !!! info "A note about funding"
 
-    One important aspect to mention in the front page of our documentation is that we have received public funding in several ocasions, including the European Commission funds in H2020 and Horizon Projects. In the [funding page](/About/funding/) you can find a complete list of these projects, for which we are thankful and that we hope that we have been able to deliver results accordingly. For publicly funded projects, information on the project numbers is available through the links in the `ID` column.
+    One important aspect to mention in the front page of our documentation is that we have received public funding in several ocasions, including the European Commission funds in H2020 and Horizon Projects. In the [funding page](/about/funding/) you can find a complete list of these projects, for which we are thankful and that we hope that we have been able to deliver results accordingly. For publicly funded projects, information on the project numbers is available through the links in the `ID` column.
 
 ![](https://live.staticflickr.com/4519/24368451748_172c258274_h.jpg)
 
-## About Citizen Science
+## About Civic Monitoring
 
 With the proliferation of portable technologies, such as smartphones and wearable technologies, low-cost sensors and increased technological skills among the population, the role of citizens in monitoring their environment has increasingly taken root. Citizens are becoming increasingly active in tackling environmental problems that directly affect them, thereby implementing many bottom-up initiatives around the globe. They are demonstrating that environmental issues in cities can be addressed collaboratively, considering the realities and needs of the communities affected and harnessing their creative capacity and contributions, thereby raising citizens' awareness of environmental issues and increasing the sense of citizenship. This involvement can take many shapes and forms and generally comes together under the umbrella of citizen science. The essence of citizen science is that citizens are involved in one or various stages of a scientific investigation, such as compiling research questions, conducting observations, analysing data and using the resulting knowledge [^2]. Researchers or scientific institutions can lead or mediate in citizen science projects or have no role, as in extreme citizen science [^3]. One of the critical missions of citizen science is to promote the production of citizen-generated data, defined as data that people produce to directly monitor, demand or boost change in issues that affect them [^4]. The SafeCast community collected and openly shared radiation data as a response to the lack of reliable information available during the nuclear disaster in Fukushima [^5] and the Plaça del Sol community in Barcelona, where citizens collected data to demonstrate that noise levels in the area were above WHO recommendations and local legislation [^6], are just two examples of how citizen science can promote citizen-generated data to produce tangible results and social as well as sustainable impacts.
 
