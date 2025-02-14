@@ -7,25 +7,28 @@
 
 !!! info "The magical reset button"
 
-    Before trying anything else, the [data board](/hardware/boards/data board/) of your SCK comes with a very functional button that makes a hardware [reset](/hardware/Smart Citizen Kit/#the-reset-button) on the whole device. This is probably our best first try once the kit has any problem. You can see it here:
+    Before trying anything else, the [data board](/hardware/boards/data board/) of your SCK comes with a very functional button that makes a hardware [reset](/hardware/Smart Citizen Kit/#the-reset-button) on the whole device. This is probably our best first try once the kit has any problem.
 
+=== "SCK 2.3"
+    ![SCK Reset](/assets/images/sck23-reset-button-with-line.jpg)
+=== "SCK 2.1/SCK2.2"
     ![SCK Reset](/assets/images/sck21-reset.png)
 
-    Some issues this might help solving:
+Some issues this might help solving:
 
-    - The kit hasn't been posting data for a while
-    - The kit doesn't respond to user interaction with the ON/OFF button
-    - The LED is fixed and does not react to anything
-    - ...
+- The kit hasn't been posting data for a while
+- The kit doesn't respond to user interaction with the ON/OFF button
+- The LED is fixed and does not react to anything
+- ...
 
-    Pressing the reset button will not delete any configuration, it will simply restart your device. The light will go off and on and the device will start again with a white LED.
+Pressing the reset button will not delete any configuration, it will simply restart your device. The light will go off and on and the device will start again with a white LED.
 
-    This button is also to be used when reflashing the firmware, by double clicking it. Have a look at the guide [here](/Guides/firmware/Update the firmware).
+This button is also to be used when reflashing the firmware, by double clicking it. Have a look at the guide [here](/guides/firmware/upgrading-the-firmware/).
 
-    You can also perform a reboot by disconnecting the battery and the USB cable so that the kit is restarted. In this way we will not lose any data or configuration. However, if we are in `SD card mode`, the kit won't know _what time it is_ and we will need to give to him. For doing so:
+You can also perform a reboot by disconnecting the battery and the USB cable so that the kit is restarted. In this way we will not lose any data or configuration. However, if we are in `SD card mode`, the kit won't know _what time it is_ and we will need to give to him. For doing so:
 
-    - Press the ON/OFF button once. The LED should be breathing RED.
-    - Connect to the network `SmartCitizen[...]` and set it up again to log in `SD card mode`.
+- Press the ON/OFF button once. The LED should be breathing RED.
+- Connect to the network `SmartCitizen[...]` and set it up again to log in `SD card mode`.
 
 ## The network won't show up
 
@@ -57,7 +60,7 @@ Some SD cards may have problems over time. We can try formatting it, but in case
 
 Make sure that you power the Smart Citizen Kit with a _good enough USB cable_ and with an adaptor that can provide at least 1A. We have found some issues when powering the sensor with a thin cable, or from a weak power source, like a screen.
 
-## Known (fixed) issues
+## List of known and fixed issues
 
 In this section, we will detail some problems you might have found in the early firmware versions of SCK 2.1.
 
@@ -69,6 +72,6 @@ The issue is caused due to a firmware bug (light) and a problem with some SHT31 
 
 This issue is caused due to a firmware bug that initialized badly the I2S microphone in SCK2.0 and SCK2.1 sensors. A full explanation is detailed on the [forum](https://forum.smartcitizen.me/t/origin-of-the-noise-db-a-code/1391/12) and and the fix was released with a pre-releasue [V0.9.8](https://github.com/fablabbcn/smartcitizen-kit-21/releases/tag/0.9.8) of the SAMD firmware.
 
-### PM Sensor always reads 0ug/m3
+### PM Sensor always reads 0
 
 This issue has been detected after a batch from Plantower PMS5003 sensors during 2021 that yields 0ug/m3. A full explanation is detailed [this AN](/assets/notes/2022_01_PM_INTERVALS.html) and on the [forum](https://forum.smartcitizen.me/t/pm-sensor-always-reading-0-0/1649/21) and the fix release is [V0.9.9](https://github.com/fablabbcn/smartcitizen-kit-21/releases/tag/0.9.9). **The sensor operation is correct, and there is no need for hardware replacement.**
