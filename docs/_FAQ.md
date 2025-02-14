@@ -111,7 +111,7 @@ If you are involved in a research project, an educational initiative, or develop
 
 ## Are there enclosures included?
 
-The Smart Citizen Kit doesn’t come with an enclosure, but there are plenty of freely available designs on our [enclosures repository]({{ extra.urls.enclosures.link }})**!. We have a wide range of open source designs that you can 3D print and build yourself, saving some industrial plastic manufacturing in the process. If you don’t have a 3D printer, you can always [find a Fab Lab near you](https://fablabs.io/labs/map) and once the enclosure’s life is done, you can repurpose it to make more 3D printing filament!
+The Smart Citizen Kit doesn’t come with an enclosure, but there are plenty of freely available designs on our **[enclosures repository]({{ extra.urls.enclosures.link }})**!. We have a wide range of open source designs that you can 3D print and build yourself, saving some industrial plastic manufacturing in the process. If you don’t have a 3D printer, you can always [find a Fab Lab near you](https://fablabs.io/labs/map) and once the enclosure’s life is done, you can repurpose it to make more 3D printing filament!
 
 ## I want to contribute, what can I do?
 
