@@ -145,6 +145,7 @@ nav:
         - CO2: guides/calibration/Sensirion SCD30.md
     - Working with Data:
       - Handling calibration data: guides/data/handling-calibration-data.md
+      - Sending data to a different platform: guides/data/sending-data-to-other-platforms.md
       - Custom data processing: guides/data/custom-data-processing.md
       - Creating data interfaces: guides/data/creating-interfaces.md
       - Live demos: guides/data/live-demos.md

@@ -97,7 +97,11 @@ If you are using any enclosure from [the repository]({{ extra.urls.enclosures.li
 
 ## Can I send data to a different platform?
 
-Yes. There are various ways in which you can do this. You can either configure your SCK to send data directly to your own [MQTT](https://mqtt.org/) broker via the [Shell](/guides/getting-started/using-the-shell/). Otherwise, you can forward incoming data via the Smart Citizen Platform. See details on [data forwarding](/data/data-platform/#data-fowarding) on the [data platform](/data/data-platform) page, or visit the [developer documentation]({{extra.urls.developer.link}}) for more details on our API.
+Yes. There are various ways in which you can do this.
+
+You can either configure your SCK to send data directly to your own [MQTT](https://mqtt.org/) broker via the [Shell](/guides/getting-started/using-the-shell/). Follow this [guide](/guides/data/sending-data-to-other-platforms/) for more details on the payloads.
+
+Otherwise, you can forward incoming data via the Smart Citizen Platform. See details on [data forwarding](/data/data-platform/#data-fowarding) on the [data platform](/data/data-platform) page, or visit the [developer documentation]({{extra.urls.developer.link}}) for more details on our API.
 
 ## How can I get a kit?
 
