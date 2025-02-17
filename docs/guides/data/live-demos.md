@@ -1,11 +1,11 @@
 # Live demos
 
-This guide is meant to show some possibilities for you to do _live demos_ with data. There are plenty of ways to do it, but in this guide we will focus on the following three:
+![](/assets/images/arduino-monitor.gif)
 
-TODO - GIF with graph
+This guide is meant to show some possibilities for you to do _live demos_ with data. There are plenty of ways to do it, but in this guide we will focus on the following:
 
-- Through the Serial (USB), either with [Arduino IDE](https://www.arduino.cc/en/software/) Serial Monitor (simple) or with [SerialStudio](https://serial-studio.github.io/) (more configurable plots)
-- Via the online web dashboard available at [dashboard.smartcitizen.me](https://dashboard.smartcitizen.me), useful for _long-term_ displays
+- Through the Serial (USB), either with [Arduino IDE](#arduino-ide) Serial Monitor (simple) or with [SerialStudio](#serialstudio) (more configurable plots)
+- Via the online web dashboard available at [dashboard.smartcitizen.me](#using-the-web-dashboard), useful for _long-term_ displays
 
 ## Using Serial Tools
 
