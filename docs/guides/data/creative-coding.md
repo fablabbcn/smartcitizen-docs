@@ -7,13 +7,19 @@ internal:
 
 # Creative coding
 
-Below, we run through a couple of examples on how to access data via Processing. However, you have more options:
+![](/assets/images/processing-flock.gif)
 
-- [Supercollider example](https://github.com/oscgonfer/a-que-suenan-las-nubes/tree/supercollider-patch)
-- [p5 example](https://github.com/antoine3000/inthisverymoment)
+This page will run through some options on how you can make more creative things with your Smart Citizen Kit and data. We will focus primarily on processing, but you have plenty of options!
 
-!!! info "Doing something creative with the kit?"
-    Make a [pull request]({{config.repo_url}}/pulls) on the github documentation repository or [edit this page]({{config.repo_url}}/edit/master/docs/guides/data/creative-coding.md)
+!!! info " Make music or nice reactive p5js animation"
+
+    These are some contributed examples:
+
+    - [Supercollider example](https://github.com/oscgonfer/a-que-suenan-las-nubes/tree/supercollider-patch)
+    - [p5 example](https://github.com/antoine3000/inthisverymoment)
+
+!!! success "Doing something creative with the kit?"
+    Make a [pull request]({{config.repo_url}}/pulls) on the github documentation repository or [edit this page]({{config.repo_url}}/edit/master/docs/guides/data/creative-coding.md).
 
 ## Processing
 
@@ -27,10 +33,10 @@ Sometimes, data can be better represented without numbers or graphs. This guide 
 For this example, we will plot data from the _Serial monitor_ (with USB) and use it to animate some _circles_ in processing.
 
 !!!info "Too lazy to read?"
-    You can find the code used in this tutorial [here](https://github.com/fablabbcn/smartcitizen-docs/blob/master/docs/assets/pde/Flocks_example_serial/Flocks_example_serial.pde)
+    You can find the code used in this tutorial [here](https://github.com/fablabbcn/smartcitizen-docs/blob/master/docs/assets/pde/Flocks_example_serial/Flocks_example_serial.pde).
 
 !!! info "Aknowledgements"
-    The base code for this and more explanations about the Flocks can be found [here](https://happycoding.io/tutorials/processing/creating-classes/flocking)
+    The base code for this and more explanations about the Flocks can be found [here](https://happycoding.io/tutorials/processing/creating-classes/flocking).
 
 First, you will need to connect your kit to your computer with an USB cable, and find out which port it's connected to. Depending on your configuration you will need to use this sketch:
 
