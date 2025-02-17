@@ -486,6 +486,20 @@ a.card-title:hover{
     border: 3px solid #c0c0c0a5;
 }
 
+.webinar-container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+}
+.webinar-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
 .sensor-banner:hover{
     transform: scale(1.01, 1.01);
     transition: 0.2s ease-in-out;

@@ -8,7 +8,9 @@ The Smart Citizen project has had the chance to be part of fantastic projects th
 
 By providing meaningful examples of novel appropriations and uses we seek to  inspire communities to conduct their own experiments and, hopefully, even their  own custom tools.
 
-<iframe width="800" height="425" src="https://www.youtube-nocookie.com/embed/hvn5LyACUYw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="webinar-container">
+<iframe src="https://www.youtube-nocookie.com/embed/hvn5LyACUYw" frameborder="0" allowfullscreen class="webinar-video"></iframe>
+</div>
 
 !!! info "Check our guides"
     All these projects left us with a great amount of experience and knowledge that we have compiled in this documentation. Find out how to use them in our [guides section](/guides)
@@ -71,17 +73,3 @@ Find below some of our own publications, or others' that have used the Smart Cit
 ## Presentations
 
 - [GROW Workshop Material - Lisbon, Portugal 2019](https://hackmd.io/@oscgonfer/H15Z76GrH)
-
-## Webinars
-
-We conducted a series of online webinars as part of the [MINKE project](https://minke.eu):
-
-- [MINKE Webinar Basics - Online, 2022](https://storage.smartcitizen.me/presentations/Minke-WEBINAR_INTRO.pdf)
-- [MINKE Webinar Advanced - Online, 2022](https://storage.smartcitizen.me/presentations/Minke-WEBINAR_CLI.pdf)
-- [MINKE Webinar Water Metrics - Online, 2022](https://storage.smartcitizen.me/presentations/Minke-WEBINAR_WQ.pdf)
-- [MINKE Webinar Air Metrics - Online, 2022](https://storage.smartcitizen.me/presentations/Minke-WEBINAR_AQ.pdf)
-- [MINKE Webinar Data Analysis (1) - Online, 2022](https://storage.smartcitizen.me/presentations/Minke-WEBINAR_DA.pdf)
-- [MINKE Webinar Data Analysis (2) - Online, 2022](https://storage.smartcitizen.me/presentations/Minke-WEBINAR_DA2.pdf)
-
-!!! success "View the edited video capsules!"
-	You can view the edited capsules [here](https://www.youtube.com/watch?v=1FQGXelJ6t0&list=PL33KKs9g8Y1IWsTZZmDc-46yFuuIRZEmi)!
