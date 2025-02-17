@@ -1,13 +1,12 @@
 ---
 card: true
 name: OLED Display
-feature_img: /assets/images/oled-seeed.png
+feature_img: https://live.staticflickr.com/65535/54333644986_e3e5c93c62_h.jpg
 custom_color: green
 type:
     - addon
 excerpt: An experimental OLED Screen to visualise sensor values and plot data!
 ---
-
 
 # {{ name }}
 

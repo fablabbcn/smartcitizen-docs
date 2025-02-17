@@ -1,8 +1,8 @@
 ---
 card: true
 name: Power Supply
-feature_img: /assets/images/power-supply.jpg
-custom_color: red
+feature_img: https://live.staticflickr.com/65535/54334059575_d4968cf083_h.jpg
+custom_color: black
 type:
     - addon
 excerpt: The Smart Citizen Power Supply is a simple power supply to power the SCK and the Smart Citizen Station.

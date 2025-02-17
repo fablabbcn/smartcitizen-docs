@@ -2,7 +2,7 @@
 card: true
 name: GPS
 feature_img: /assets/images/sck23-gps.jpg
-custom_color: blue
+custom_color: red
 type:
     - addon
 excerpt: You can connect a GPS to the SCK and collect geolocated data while you are moving!

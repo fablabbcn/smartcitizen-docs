@@ -41,10 +41,11 @@ nav:
           - PM Board: hardware/boards/pm-board.md
       - Add-ons:
         - hardware/addons/index.md
-        - OLED Screen: hardware/addons/oled-screen.md
         - GPS: hardware/addons/gps.md
         - Power Supply: hardware/addons/power-supply.md
         - Solar Panel: hardware/addons/solar-panel.md
+        - OLED Screen: hardware/addons/oled-screen.md
+        - Atlas EZO Drivers: hardware/addons/atlas-drivers.md
     - Data:
       - data/index.md
       - Data Platform: data/data-platform.md
