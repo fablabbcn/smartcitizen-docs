@@ -1,7 +1,7 @@
 ---
 card: true
 name: Sensirion SHT3X Weatherproof
-field: 
+field:
   - air
 type:
   - external
@@ -9,7 +9,7 @@ target:
   - temperature
 feature_img: /assets/images/sensirion-sht3x-weatherproof.jpg
 feature_img_credit: "Sensirion"
-excerpt: ""
+excerpt: "A temperature and humidity sensor in a weatherproof capsule"
 ---
 
 # {{ name }}

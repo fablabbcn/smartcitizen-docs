@@ -1,7 +1,7 @@
 ---
 card: true
 name: Sensirion SFA30
-field: 
+field:
   - air
 type:
   - external
@@ -9,7 +9,7 @@ target:
   - vocs
 feature_img: /assets/images/sensirion-sfa30.jpg
 feature_img_credit: "Seeed Studio"
-excerpt: ""
+excerpt: "An electrochemical sensor for measuring formaldehydes."
 ---
 
 # {{ name }}

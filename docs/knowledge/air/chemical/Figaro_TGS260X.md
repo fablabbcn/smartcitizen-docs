@@ -9,7 +9,7 @@ target:
   - vocs
 feature_img: /assets/images/figaro-tgs260x.jpg
 feature_img_credit: "Figaro"
-excerpt: ""
+excerpt: "Low cost Metal Oxide sensors for VOCs"
 ---
 
 # {{ name }}

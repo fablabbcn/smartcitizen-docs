@@ -1,7 +1,7 @@
 ---
-card: true
+card: false
 name: Seeed Grove ADC
-field: 
+field:
   - other
 type:
   - external
@@ -9,7 +9,7 @@ target:
   - location
 feature_img: /assets/images/seeed-grove-adc.jpg
 feature_img_credit: "Seeed Studio"
-excerpt: ""
+excerpt: "An ADC breakout board by Seeed Studio."
 ---
 
 # {{ name }}

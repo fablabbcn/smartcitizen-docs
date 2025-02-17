@@ -9,7 +9,7 @@ target:
   - temperature
 feature_img: /assets/images/sensirion-sht3x.jpg
 feature_img_credit: "Sensirion"
-excerpt: ""
+excerpt: "A temperature and humidity sensor that we love! Available in SCK2.X."
 ---
 
 # {{ name }}

@@ -1,7 +1,7 @@
 ---
-card: true
+card: false
 name: NXP MPL3115A26
-field: 
+field:
   - air
 type:
   - onboard

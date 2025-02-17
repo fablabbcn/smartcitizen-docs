@@ -9,7 +9,7 @@ target:
   - chemical
 feature_img: /assets/images/sgx-mics.jpg
 feature_img_credit: "Amphenol SGX Sensortech"
-excerpt: ""
+excerpt: "The classic Metal Oxyde for CO and NO2 measurements!"
 ---
 
 # {{ name }}

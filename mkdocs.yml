@@ -88,11 +88,11 @@ nav:
       - Light:
         - knowledge/air/light/index.md
         - AMS AS7311: knowledge/air/light/AMS_AS7331.md
-        - Rohm BH1721FVC: knowledge/air/light/Rohm_BH1721FVC.md
+        # - Rohm BH1721FVC: knowledge/air/light/Rohm_BH1721FVC.md
       - Pressure:
         - knowledge/air/pressure/index.md
-        - NXP MPL3115A26: knowledge/air/pressure/NXP_MPL3115A26.md
-        - ST LPS33K: knowledge/air/pressure/ST_LPS33K.md
+        # - NXP MPL3115A26: knowledge/air/pressure/NXP_MPL3115A26.md
+        # - ST LPS33K: knowledge/air/pressure/ST_LPS33K.md
     - Soil and Water:
       - knowledge/soil-water/index.md
       - pH:

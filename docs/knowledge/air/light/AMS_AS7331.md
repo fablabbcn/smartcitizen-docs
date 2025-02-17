@@ -1,7 +1,7 @@
 ---
 card: true
 name: AMS AS7331
-field: 
+field:
   - air
 type:
   - onboard
@@ -9,7 +9,7 @@ target:
   - light
 feature_img: /assets/images/ams-as7331.jpg
 feature_img_credit: "ams OSRAM"
-excerpt: ""
+excerpt: "A sensor for measuring UV-index!"
 ---
 
 # {{ name }}

@@ -1,7 +1,7 @@
 ---
 card: true
 name: TI INA219
-field: 
+field:
   - other
 type:
   - external
@@ -9,7 +9,7 @@ target:
   - current
 feature_img: /assets/images/ti-ina219.jpg
 feature_img_credit: "Texas Instruments"
-excerpt: ""
+excerpt: "A digital sensor for measuring electric current!"
 ---
 
 # {{ name }}

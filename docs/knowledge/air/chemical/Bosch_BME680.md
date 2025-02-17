@@ -1,7 +1,7 @@
 ---
 card: true
 name: Bosch BME680
-field: 
+field:
   - air
 type:
   - external
@@ -9,7 +9,7 @@ target:
   - chemical
 feature_img: /assets/images/bosch-bme680.jpg
 feature_img_credit: "Bosch Sensortec"
-excerpt: ""
+excerpt: "A multi-sensor node for environmental metrics and air quality."
 ---
 
 # {{ name }}

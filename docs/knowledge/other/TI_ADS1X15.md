@@ -1,7 +1,7 @@
 ---
 card: true
 name: TI ADS1115
-field: 
+field:
   - other
 type:
   - external
@@ -9,7 +9,7 @@ target:
   - current
 feature_img: /assets/images/ti-ads1115.jpg
 feature_img_credit: "Texas Instruments"
-excerpt: ""
+excerpt: "A high-end 16-bit 2 channel ADC available in the Analog Sensor Board."
 ---
 
 # {{ name }}

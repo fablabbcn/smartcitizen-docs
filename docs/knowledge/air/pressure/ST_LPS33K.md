@@ -1,7 +1,7 @@
 ---
-card: true
+card: false
 name: ST LPS33K
-field: 
+field:
   - air
 type:
   - onboard

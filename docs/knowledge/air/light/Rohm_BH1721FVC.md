@@ -1,7 +1,7 @@
 ---
-card: true
+card: false
 name: Rohm BH1721FVC
-field: 
+field:
   - air
 type:
   - onboard

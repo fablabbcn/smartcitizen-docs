@@ -9,7 +9,7 @@ target:
   - chemical
 feature_img: /assets/images/alphasense-electrochemical-sensors.jpg
 feature_img_credit: "Alphasense"
-excerpt: ""
+excerpt: "Electrochemical sensors for a variety of chemical pollutants"
 ---
 
 # {{ name }}
