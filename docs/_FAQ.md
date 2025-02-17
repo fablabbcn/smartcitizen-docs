@@ -1,5 +1,4 @@
-Frequently asked questions
-==========================
+# Frequently asked questions
 
 ![Making Sense Toolkit Operation manuals](/assets/images/toolkit-operation-manuals.jpg)
 
@@ -10,16 +9,16 @@ Yes. The sensor is designed for both indoors and outdoors use. But if you’re p
 Of course! The manufacturing files for the 3D printed enclosure will be available to download in the [Enclosures repository]({{ extra.urls.enclosures.link }}). Throughout the history of the Smart Citizen project, we’ve seen many inventive solutions for placing the sensor outdoors.
 
 ## Can I charge the sensors with a solar panel?
-Sure! But note that the sensor requires a 5V solar panel to work properly. More information [here](/Components/Solar Panel/)
+Sure! But note that the sensor requires a 5V solar panel to work properly. More information [here](/hardware/addons/solar-panel/).
 
 ## Can I add external sensors to the system?
-Yes. The sensor has an independently configurable auxiliary bus at 3.3V with a SEEED Grove connector. The Bus has native support for I2C, but it can also be setup on firmware as a GPIO or UART. It can supply power up to 750mA, and it can be enabled or disabled by software. More info [here](/hardware/Smart Citizen Kit/#auxiliary-connector)
+Yes. The sensor has an independently configurable auxiliary bus at 3.3V with a SEEED Grove connector. The Bus has native support for I2C, but it can also be setup on firmware as a GPIO or UART. It can supply power up to 750mA, and it can be enabled or disabled by software. More info [here](/hardware/boards/data-board/#auxiliary-connector).
 
 ## What happens if there is a loss of network connectivity?
 If the sensor is working in network mode and at any time the network is not available, it will store the data on its internal memory and publish all the collected data as soon as the network is available again.
 
 ## Which external sensors can be added?
-Quite a few! Check [here](/Components/Auxiliary Connector/#full-list)
+Quite a few! Check [here](/knowledge).
 
 ## Will I be able to access the collected data?
 Of course! The data collected by your sensor is available for anyone on the [Smart Citizen Platform]({{ extra.urls.platform.link }}), and you can download it at any time as a CSV file. Besides, you can also use the API to built custom applications to interact with your device. If you are familiar with python, check also [scdata](https://pypi.org/project/scdata/)
@@ -66,7 +65,7 @@ Of course. You are the owner of the data that you collect, and you can download 
 
 ## How can I retrieve the MAC address from my device?
 
-You can retrieve the MAC address with two methods: either you can use your phone (see below), or follow [this guide](/Components/Firmware/guides/Using the Shell) if you want to try out the console interface in the kit.
+You can retrieve the MAC address with two methods: either you can use your phone (see below), or follow [this guide](/guides/getting-started/using-the-shell) if you want to try out the console interface in the kit.
 
 **Using your phone**
 
@@ -85,7 +84,7 @@ For custom projects we also offer a bigger 6000mAh LiPo battery model DTP605068 
 
 The connector is [JST-PHR-2](https://www.digikey.com/en/products/detail/jst-sales-america-inc/PHR-2/608607). When looking at the data board from the top (white side), the positive of the battery (red) should be on the left.
 
-We are working on a new dynamic battery calculator. Currently, you can find some approximate data [here](/Smart Citizen Kit/#battery-duration) for the SCK 2.1.
+We are working on a new dynamic battery calculator. Currently, you can find some approximate data [here](/hardware/kit/features/#battery-duration) for the SCK 2.1.
 
 ## Are the electronics waterproof?
 
@@ -115,4 +114,4 @@ The Smart Citizen Kit doesn’t come with an enclosure, but there are plenty of 
 
 ## I want to contribute, what can I do?
 
-We would love you to contribute! Is modeling your thing? Take a look at our [enclosure repository]({{ extra.urls.enclosures.link }}) and try your hand at designing or tweaking an enclosure. Are you into tech specs? Help us add information to the documentation! Do you like coding? Take a look at our open source repositories and contribute to the source code of the [firmware]({{extra.urls.firmware.link}}) or the [data platform]({{extra.urls.ghapi}})!
+We would love you to contribute! Is modeling your thing? Take a look at our [enclosure repository]({{ extra.urls.enclosures.link }}) and try your hand at designing or tweaking an enclosure. Are you into tech specs? Help us add information to the documentation! Do you like coding? Take a look at our open source repositories and contribute to the source code of the [firmware]({{extra.urls.firmware.link}}) or the [data platform]({{extra.urls.ghapi.link}})!

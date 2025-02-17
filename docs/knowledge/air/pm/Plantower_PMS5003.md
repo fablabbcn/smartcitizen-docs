@@ -33,12 +33,12 @@ What the sensor does, is to analyse the readings from the sensing element and co
 - Particle composition, and hence density
 
 !!! info "The performance of the sensor"
-    We have been part of a study in which we characterised a few low cost sensors. You can check it in [here](https://doi.org/10.5194/amt-2019-422)
+    We have been part of a study in which we characterised a few low cost sensors. You can check it out [here](https://doi.org/10.5194/amt-2019-422).
 
 ## Usage and considerations
 
 !!! info "Sources"
-    Have a read to the [Technical Datasheet](/assets/datasheets/pms5003/PTQ3004-2015 PMS5003 series data manual English_SLT_V1.0K.pdf)
+    Have a read through the [Technical Datasheet](/assets/datasheets/pms5003/PTQ3004-2015 PMS5003 series data manual English_SLT_V1.0K.pdf).
 
 These sensors are used in some other projects, such as [Purple Air](https://www2.purpleair.com/) and have been evaluated in [laboratory](https://doi.org/10.5194/amt-2019-422) by the [Finnish Meteorological Institute - FMI](https://en.ilmatieteenlaitos.fi/) and in outdoor conditions the [South Coast AQMD](http://www.aqmd.gov/docs/default-source/aq-spec/field-evaluations/purpleair---field-evaluation.pd) (Air Quality Management District), USA. The study by the FMI did not yield good results for this sensor (specially in PM10), but given the cost we still think is a good citizen awareness sensor and that can be used for certain studies. The AQMD study shows better results for PM10 and PM2.5 with high correlation results with respect to reference equipment (R2 > 0.9 in most cases), although we are not aware of actual testing conditions, or the reference equipment calibration. Other authors also show good results and recommend the usage of these sensors, although in some measurement conditions (like specific types of particles) they perform better, which makes sense given the assumptions mentioned above (read the academic article [here](https://doi.org/10.1016/j.envpol.2018.11.065)). Similar sensors are used in the [Luftdaten project](https://luftdaten.info/en/home-en/) (with a [SDS011](https://inovafitness.de/produkt/sds011/) in this case).
 
@@ -52,7 +52,7 @@ Relative humidity affects this type of sensor, since particles can absorb water 
 The sensor is operated in a _one-shot mode_: turning on for 15s the sensor, everytime a reading is needed. This is done this way in order to save battery.
 
 !!! info "About one-shot mode"
-    An study of this was carried out to validate the measurements and can be found [here](/assets/notes/one-shot-pmsx003-analysis.pdf)
+    An study of this was carried out to validate the measurements and can be found [here](/assets/notes/one-shot-pmsx003-analysis.pdf).
 
 From the long term deployment point of view, the one-shot mode has not been found to have any effect of this in the performance of the sensor, other than normal accumulation of dust in the inner channels of the PMS. This has been seen in continuous mode as well, and it’s probably more due to the construction of the sensor itself.
 

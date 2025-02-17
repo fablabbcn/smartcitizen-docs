@@ -7,7 +7,7 @@
 
 !!! info "The magical reset button"
 
-    Before trying anything else, the [data board](/hardware/boards/data board/) of your SCK comes with a very functional button that makes a hardware [reset](/hardware/Smart Citizen Kit/#the-reset-button) on the whole device. This is probably our best first try once the kit has any problem.
+    Before trying anything else, the [data board](/hardware/boards/data-board/) of your SCK comes with a very functional button that makes a hardware [reset](/hardware/kit/features/#the-reset-button) on the whole device. This is probably our best first try once the kit has any problem.
 
 === "SCK 2.3"
     ![SCK Reset](/assets/images/sck23-reset-button-with-line.jpg)

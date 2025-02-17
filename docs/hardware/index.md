@@ -16,7 +16,7 @@ The Smart Citizen Hardware is an **open source boilerplate for anyone, no matter
 
 !!!info "Is it _low-cost_?"
 
-    Well, that depends on many factors, even the definition of _low-cost_. When you purchase the [Smart Citizen Kit](kit/index.md) through [SeeedStudio]({{ extra.urls.buy.link }}), it costs around 150 (USD or EUR) and is the central piece of the ecosystem. This price can be _low-cost_ in some contexts and expensive in others. More advanced configurations are available, which generally feature more sensors and require more _lab_ work. The cost increases as we include additional sensors in the budget, but the idea is to keep it affordable, easy to use, and hackable. As an open source project, the _hardware_, _firmware_, and _data platform_ are provided _as-is_.
+    Well, that depends on many factors, even the definition of _low-cost_. When you purchase the [Smart Citizen Kit](kit) through [SeeedStudio]({{ extra.urls.buy.link }}), it costs around 150 (USD or EUR) and is the central piece of the ecosystem. This price can be _low-cost_ in some contexts and expensive in others. More advanced configurations are available, which generally feature more sensors and require more _lab_ work. The cost increases as we include additional sensors in the budget, but the idea is to keep it affordable, easy to use, and hackable. As an open source project, the _hardware_, _firmware_, and _data platform_ are provided _as-is_.
 
     However, if you are looking for more advanced environmental monitoring setups or want to develop a project together, you can write us at [{{ extra.urls.info.name }}]({{ extra.urls.info.link }}).
 

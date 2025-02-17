@@ -22,7 +22,7 @@ excerpt: The SCD30 is a NDIR CO2 sensor by Sensirion. You can use it to measure 
 
 ## Usage
 
-The easiest way to connect to the SCD30 to the SCK is by using the [SEEED Studio breakout](https://www.seeedstudio.com/Grove-CO2-Temperature-Humidity-Sensor-SCD30-p-2911.html), the sensor can be directly connected to the [Auxiliary connector](/hardware/Auxiliary Connector/) on the data board, using a [4-wire grove cable](https://www.seeedstudio.com/cables-c-949.html).
+The easiest way to connect to the SCD30 to the SCK is by using the [SEEED Studio breakout](https://www.seeedstudio.com/Grove-CO2-Temperature-Humidity-Sensor-SCD30-p-2911.html), the sensor can be directly connected to the [Auxiliary connector](/hardware/boards/data-board#auxiliary-connector) on the data board, using a [4-wire grove cable](https://www.seeedstudio.com/cables-c-949.html).
 
 If you have the SCD30 _rugged_ board by Sensirion: you can connect it using [4-wire grove to female header cables](https://www.seeedstudio.com/Grove-4-pin-Female-Jumper-to-Grove-4-pin-Conversion-Cable-5-PCs-per-PAck.html) as below:
 
@@ -240,7 +240,7 @@ For those cases in which there is not a significant amount of sensors to evaluat
 
 ### Limitations
 
-NDIR CO2 sensors tend to show drift in the data signal over time, and have interferences by humidity [^14], [^23]. This can lead to invalid data, jumps in the signal, and other artefacts that need to be corrected. In the particular case of the SCD30, these limitations are addressed by including a temperature and humidity sensor that can correct by these effects. The signal drift over time is corrected by an onboard algorithm, known as [automatic-shelf calibration](/guides/calibration/Sensirion SCD30/#asc). This type of algorithm is commonly used to detect clean instances of air and correct the readings, assuming that baseline levels are constant over time [^24]. After several reviews of sensors, we have seen that this type of technology is currently providing good results and evolving rapidly [^25], [^26].
+NDIR CO2 sensors tend to show drift in the data signal over time, and have interferences by humidity [^14], [^23]. This can lead to invalid data, jumps in the signal, and other artefacts that need to be corrected. In the particular case of the SCD30, these limitations are addressed by including a temperature and humidity sensor that can correct by these effects. The signal drift over time is corrected by an onboard algorithm, known as [automatic-self calibration](#asc). This type of algorithm is commonly used to detect clean instances of air and correct the readings, assuming that baseline levels are constant over time [^24]. After several reviews of sensors, we have seen that this type of technology is currently providing good results and evolving rapidly [^25], [^26].
 
 Finally, **mechanical stress** can make these sensors yield invalid values, due to the misalignment between the emitter and the photodetector. In the case of mobile devices, [photoacoustic NDIR sensors](/knowledge/air/co2/Sensirion_SCD4X/) would be more suitable, with the further advantage of their smaller size.
 

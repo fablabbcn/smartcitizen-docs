@@ -1,8 +1,3 @@
----
-hide:
-  - toc
----
-
 # CO2 Measurements
 
 **Carbon dioxide (CO2)** is a colorless gas produced by the combustion of all carbon-based fuels, such as methane (natural gas), petroleum distillates (gasoline, diesel, kerosene, propane), coal, wood and generic organic matter. Carbon dioxide is the most significant long-lived greenhouse gas in Earth's atmosphere. Although not a pollutant *per se*, CO2 can also be considered an indicator of ventilation, and several international norms indicate levels of CO2 that are recommended depending on different indoor space categories (EN 15251, EN 16789, EN 13779 and ASHRAE 62.1 standards).

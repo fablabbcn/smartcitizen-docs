@@ -10,7 +10,7 @@ These first four webinars offer a basic introduction to the SCK device, setting 
         
         Do you prefer to follow along with the presentation notes? Or would you just rather read through the notes on your own? We've got you covered.
 
-        [**MINKE Webinar Basics - Online, 2022, _presentation notes_**](https://storage.smartcitizen.me/presentations/Minke-WEBINAR_INTRO.pdf)
+        [**MINKE Webinar Basics - Online, 2022, _presentation notes_**](https://s3.eu-west-3.amazonaws.com/storage.smartcitizen.me/presentations/Minke-WEBINAR_INTRO.pdf)
 
 ### 1.1 What’s in the box?
 
@@ -44,7 +44,7 @@ The five webinars grouped as "Advanced" dive deeper into topics including updati
         
         Do you prefer to follow along with the presentation notes? Or would you just rather read through the notes on your own? We've got you covered.
 
-        [**MINKE Webinar Advanced - Online, 2022, _presentation notes_**](https://storage.smartcitizen.me/presentations/Minke-WEBINAR_CLI.pdf)
+        [**MINKE Webinar Advanced - Online, 2022, _presentation notes_**](https://s3.eu-west-3.amazonaws.com/storage.smartcitizen.me/presentations/Minke-WEBINAR_CLI.pdf)
 
 ### 2.1 Updating the firmware
 
@@ -84,7 +84,7 @@ The five webinars cover everything about water sensors, including an introductio
         
         Do you prefer to follow along with the presentation notes? Or would you just rather read through the notes on your own? We've got you covered.
 
-        [**MINKE Webinar Water Metrics - Online, 2022, _presentation notes_**](https://storage.smartcitizen.me/presentations/Minke-WEBINAR_WQ.pdf)
+        [**MINKE Webinar Water Metrics - Online, 2022, _presentation notes_**](https://s3.eu-west-3.amazonaws.com/storage.smartcitizen.me/presentations/Minke-WEBINAR_WQ.pdf)
 
 ### 3.1 Water sensors (Part 1)
 
@@ -124,7 +124,7 @@ These four webinars take a deeper dive into air sensors, including an introducti
         
         Do you prefer to follow along with the presentation notes? Or would you just rather read through the notes on your own? We've got you covered.
 
-        [**MINKE Webinar Air Metrics - Online, 2022, _presentation notes_**](https://storage.smartcitizen.me/presentations/Minke-WEBINAR_AQ.pdf)
+        [**MINKE Webinar Air Metrics - Online, 2022, _presentation notes_**](https://s3.eu-west-3.amazonaws.com/storage.smartcitizen.me/presentations/Minke-WEBINAR_AQ.pdf)
 
 ### 4.1 Air sensors (Part 1)
 
@@ -158,7 +158,7 @@ Dive into data with these six webinars starting out with visualizing data on the
         
         Do you prefer to follow along with the presentation notes? Or would you just rather read through the notes on your own? We've got you covered.
 
-        [**MINKE Webinar Data Analysis (1) - Online, 2022, _presentation notes_**](https://storage.smartcitizen.me/presentations/Minke-WEBINAR_DA.pdf)
+        [**MINKE Webinar Data Analysis (1) - Online, 2022, _presentation notes_**](https://s3.eu-west-3.amazonaws.com/storage.smartcitizen.me/presentations/Minke-WEBINAR_DA.pdf)
 
 ### 5.1 Data access basics
 
@@ -204,7 +204,7 @@ Dive even further into data in these four webinars covering more on data in R an
         
         Do you prefer to follow along with the presentation notes? Or would you just rather read through the notes on your own? We've got you covered.
 
-        [**MINKE Webinar Data Analysis (2) - Online, 2022, _presentation notes_**](https://storage.smartcitizen.me/presentations/Minke-WEBINAR_DA2.pdf)
+        [**MINKE Webinar Data Analysis (2) - Online, 2022, _presentation notes_**](https://s3.eu-west-3.amazonaws.com/storage.smartcitizen.me/presentations/Minke-WEBINAR_DA2.pdf)
 
 ### 6.1 More on data in R and python
 

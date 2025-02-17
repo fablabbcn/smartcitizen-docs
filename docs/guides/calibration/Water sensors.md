@@ -347,9 +347,6 @@ You have two options for this calibration:
 
 Reset your SCK and you are ready.
 
-!!! success "Ready to go?"
-    If you want to send the data to the platform, you will need to  [Advanced Kit Selection](/Guides/getting started/Onboarding Sensors/#advanced-kit-selection/). At the moment the closest Kit Blueprint will be `#22 BioPV Kit` or `#31 SCK 2.1 Sea Water` in case you are using a SCK2.1 with GPS. You can request on the [forum]({{ extra.urls.forum.link }}) for a custom blueprint with the specific sensors you are using.
-
 ### Oxidation-reduction potential
 
 You only need to perform a single point calibration. You can use any calibrated solution, as long as it's within your sensor range. Atlas uses a 225mV calibration.

@@ -57,6 +57,8 @@ As mentioned above, the **counter electrode** is meant to balance the reaction o
 
 ![]({{ connection_img }})
 
+<!-- TODO FIX IMAGE ABOVE -->
+
 Alphasense Ltd. provides the calibration data in laboratory conditions for each of the electrochemical cells used. This data can be used to calculate pollutant concentration and to correct for _known effects_ by temperature deviations.
 
 !!! info "More on this"

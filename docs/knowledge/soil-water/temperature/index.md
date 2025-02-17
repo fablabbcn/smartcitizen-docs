@@ -7,7 +7,7 @@ internal:
 
 # Temperature Measurements
 
-![](/assets/images/education/t_header.gif)
+![](/assets/images/water/t_header.gif)
 
 ## What is water temperature?
 

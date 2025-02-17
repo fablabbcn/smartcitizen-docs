@@ -1,8 +1,3 @@
----
-hide:
-    -toc
----
-
 # Particulate Matter Measurements
 
 <!-- TODO - Proofread + check on links -->
@@ -34,6 +29,8 @@ These are well known limitations that some manufacturers are tackling at the mom
 Finally, it is very important to remember that low cost particulate matter sensors are particle counters, which in case of polydisperse aerosols of unknown composition, the conversion between particle number to mass is not always attained properly, especially without other measurement methods in place [^7]. No matter which final selected sensor is used, there will always be an assumption made by the manufacturer that will never be fulfilled in every deployment scenario. If not only precision, but also accuracy is needed, then using the particle counts directly can provide one of the necessary pieces to derive the final mass, which will only be determined if the particle composition and density are known by other means (i.e. laboratory analysis of collected samples).
 
 ## Supported Sensors
+
+<!-- TODO FIX ANCHOR LINK BELOW -->
 
 Low cost PM sensors are normally built around the [light scattering](#light-scattering-sensors) principle. These sensors are an evolution of the Optical Particle Counters (OPCs), but with a lower cost, ranging from approximately USD 10 to USD 500 in some cases. Check the sensors supported on the Smart Citizen Kit below!
 

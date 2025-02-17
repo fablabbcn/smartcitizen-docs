@@ -28,9 +28,6 @@ internal:
 
 This Atlas Scientific dissolved oxygen probe consists of a teflon membrane and two electrodes, one of them in an electrolyte solution. Oxygen passes through the Teflon membrane, and as it shrinks in the cathode, a voltage difference is created between them, which we can measure. This type of probe is referred to as galvanic, and consumes some oxygen when you take readings. Therefore, it is necessary to move the probe or water around a little (without aerating it).
 
-![](/assets/images/water/atlas-do-lab.jpg "SOURCE: Atlas Scientific")
-_SOURCE: **Atlas Scientific**_
-
 The sensor can be completely submerged, and has the **following features** (a selection is listed here, but you can find a complete description in the datasheet):
 
 - Range: 1-50mg/l
@@ -53,8 +50,9 @@ This sensor comes in several sizes, depending on how much electrolyte solution i
 
 You may see Potassium Chloride (KCl) formation on the probe. Clean it with distilled water, without scrubbing harshly, and use it normally.
 
-![alt_text](/assets/images/education/es/creep.png "SOURCE: ThermoScientific - KCl Creep")
-SOURCE: ThermoScientific - KCl Creep
+![alt_text](/assets/images/water/atlas-do-mini-kcl-creep.png "SOURCE: ThermoScientific - KCl Creep")
+
+_SOURCE: **ThermoScientific - KCl Creep**_
 
 !!! info "**Calibration**"
 
@@ -67,7 +65,7 @@ You have two options for this calibration:
 1. Single point calibration (dry point)
 2. 2-point calibration (dry point and 0 mg/l point) - **only if you need accurate readings below 1mg/l**
 
-**Make sure you have followed the [probe reconditioning](/Guides/deployments/Water sensors/#dissolved-oxygen) before proceeding with this calibration.**
+**Make sure you have followed the [probe preparation](#how-to-prepare-the-sensor) above before proceeding with this calibration.**
 
 !!! info "Datasheet"
     Here you can find the [datasheet](https://www.atlas-scientific.com/_files/_datasheets/_circuit/DO_EZO_Datasheet.pdf):
@@ -147,9 +145,6 @@ You have two options for this calibration:
     ```
 
 Reset your SCK and you are ready.
-
-!!! success "Ready to go?"
-    If you want to send the data to the platform, you will need to  [Advanced Kit Selection](/Guides/getting started/Onboarding Sensors/#advanced-kit-selection/). At the moment the closest Kit Blueprint will be `#22 BioPV Kit` or `#31 SCK 2.1 Sea Water` in case you are using a SCK2.1 with GPS. You can request on the [forum]({{ extra.urls.forum.link }}) for a custom blueprint with the specific sensors you are using.
 
 ### How to take measurements
 

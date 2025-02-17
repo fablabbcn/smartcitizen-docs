@@ -8,7 +8,7 @@ internal:
 
 # Urban Board
 
-The **Urban Board** is a passive board that contains a selection of low-cost sensors for environmental monitoring, and a connector for a PM sensor. The [measurements](#measurements) it takes depend on the version, but overall, it is capable of measurements such as:
+The **Urban Board** is a passive board that contains a selection of low-cost sensors for environmental monitoring, and a connector for a PM sensor. The [measurements](#sensors) it takes depend on the version, but overall, it is capable of measurements such as:
 
 - Temperature and Relative Humidity
 - Barometric Pressure

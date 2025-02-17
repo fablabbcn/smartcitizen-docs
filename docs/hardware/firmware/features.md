@@ -31,7 +31,7 @@ Detecting: Grove OLED... nothing!
 
 ## Configuration via Shell
 
-The board firmware is fully customizable without requiring any changes to the core software. That includes enabling or disabling sensors, the sampling frequency of the sensors or the operation mode, among many other settings. There different configuration options via the [Shell](guides/getting started/using the shell) are available when the board is connected over USB.
+The board firmware is fully customizable without requiring any changes to the core software. That includes enabling or disabling sensors, the sampling frequency of the sensors or the operation mode, among many other settings. There different configuration options via the [Shell](/guides/getting-started/using-the-shell) are available when the board is connected over USB.
 
 !!! info
     Have a look at the guide for different platforms [here](/guides/getting-started/using-the-shell).

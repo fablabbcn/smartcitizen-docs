@@ -76,4 +76,3 @@ An analytical approach to counteracting this drift might be "merging calibration
 [^third]:[MICS-4514 Datasheet](http://files.manylabs.org/datasheets/MICS-4514.pdf)
 [^fourth]:[Frequently-Asked-Questions-for-MiCS-Gas-Sensors](https://www.sgxsensortech.com/content/uploads/2014/08/AN2-%E2%80%93-Frequently-Asked-Questions-for-MiCS-Gas-Sensors.pdf)
 [^fifth]:[SGX Metal Oxide Gas Sensors - How to use and how they perform](https://www.sgxsensortech.com/content/uploads/2014/08/AN-0172-SGX-Metal-Oxide-Gas-Sensors-V1.pdf)
-[^sixth]:[Sensors 2017, 17, 1653](http://www.mdpi.com/1424-8220/17/7/1653)

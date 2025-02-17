@@ -2,7 +2,7 @@
 
 ## Preparing the probes
 
-[Atlas Scientific](https://atlas-scientific.com) has great documents on how to use their probes, and maintain them (all the images below are theirs). Many other probes by other manufacturers will have the same issues, as they are based on the similar working principles. Below we compile some guidelines specific to the sensors. Make sure you also follow the instructions on [how to calibrate them](/Guides/calibration/Water sensors/).
+[Atlas Scientific](https://atlas-scientific.com) has great documents on how to use their probes, and maintain them (all the images below are theirs). Many other probes by other manufacturers will have the same issues, as they are based on the similar working principles. Below we compile some guidelines specific to the sensors. Make sure you also follow the instructions on [how to calibrate them as specified for each probe](/knowledge/soil-water/).
 
 ### All probes
 

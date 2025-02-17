@@ -29,10 +29,6 @@ internal:
 
 This Atlas Scientific pH sensor is composed of a crystal membrane (**which is very delicate**) through which some hydrogen ions of water can pass and generate a very small current which are then measured with an electrode.
 
-![](/assets/images/water/atlas-ph-Sensor.jpg "SOURCE: Atlas Scientific")
-
-_SOURCE: **Atlas Scientific**_
-
 The sensor can be completely submerged, and has the **following characteristics** (a selection is listed here, but you can find a complete description in the datasheet):
 
 - pH range: 1 to 13

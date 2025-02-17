@@ -10,7 +10,7 @@ This page links to various sensors that can be used to measure chemical compound
 
 ### Chemical substances: CO, NO2, NO, SO2, ...
 
-We currently support electrochemical sensors from [Alphasense Ltd.](https://www.alphasense.com/index.php/air/) with a digital interface [Analog Sensor Board](/hardware/boards/analog-sensor-board/) that can operate at 3.3V or 5V. The basic data postprocessing that is specified in [Alphasense Application Note 803_04](/assets/notes/alphasense-an-803-04-zero-offset.pdf) is implemented as a default processing for these sensors and that we can [trigger automatically](/docs/guides/data/custom-data-processing/).
+We currently support electrochemical sensors from [Alphasense Ltd.](https://www.alphasense.com/index.php/air/) with a digital interface [Analog Sensor Board](/hardware/boards/analog-sensor-board/) that can operate at 3.3V or 5V. The basic data postprocessing that is specified in [Alphasense Application Note 803_04](/assets/notes/alphasense-an-803-04-zero-offset.pdf) is implemented as a default processing for these sensors and that we can [trigger automatically](/guides/data/custom-data-processing/).
 
 Other sensors can be used, such as [SPEC Sensors](https://www.spec-sensors.com/), with the same hardware (**note that these sensors operate at 3.3V**). The process is now been worked on in this [thread in our forum](https://forum.smartcitizen.me/t/smart-citizen-station-extended-with-anemometer-rain-gps-4g-radio-and-solar/1622) and will be integrated in the basic data postprocessing as with Alphasense sensors to be triggered automatically.
 
