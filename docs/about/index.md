@@ -1,41 +1,38 @@
----
-card: true
-type: unit
-custom_color: black
-name: About
-feature_img: https://live.staticflickr.com/4482/37510067734_7c5ca097cc_h.jpg
-excerpt: Learn more about the Smart Citizen Project, its funding, its origins and other likeminded projects.
----
-
 # About
 
 <!-- TODO -->
 
-The Smart Citizen project works to provide tools for anyone willing to use technology in a critical way. By developing environmental sensing tools, branching out in various fields such as open hardware, software, data, social innovation and digital fabrication, our main contribution is the amount of resources that this documentation hopes to compile. The project was born in [{{ extra.urls.fablabbcn.name }}]({{ extra.urls.fablabbcn.link }}) which, up until now, is the main maintainer of the project. However, the project is [released under **free** and **open source** licenses](#open-source), hoping that anyone can contribute to it, reuse it, adapt it and improve it in any way needed.
+The Smart Citizen project works to provide tools for anyone willing to use technology in a critical way. By developing environmental sensing tools, branching out in various fields such as open hardware, software, data, social innovation and digital fabrication, our main contribution is the amount of resources that this documentation hopes to compile. The project was born in [{{ extra.urls.fablabbcn.name }}]({{ extra.urls.fablabbcn.link }}) which, up until now, is the main maintainer of the project. However, the project is [released under **free** and **open source** licenses](/about/open-source), hoping that anyone can contribute to it, reuse it, adapt it and improve it in any way needed.
 
 !!! info "A note about funding"
 
-    One important aspect to mention in the front page of our documentation is that we have received public funding in several ocasions, including the European Commission funds in H2020 and Horizon Projects. In the [funding page](/about/funding/) you can find a complete list of these projects, for which we are thankful and that we hope that we have been able to deliver results accordingly. For publicly funded projects, information on the project numbers is available through the links in the `ID` column.
+    One important aspect to mention in our documentation is that we have received public funding in several ocasions, including the European Commission funds in H2020 and Horizon Projects. In the [funding page](/about/funding/) you can find a complete list of these projects, for which we are thankful and that we hope that we have been able to deliver results accordingly. For publicly funded projects, information on the project numbers is available through the Grant Agreement Number in the `ID` column.
 
 ![](https://live.staticflickr.com/4519/24368451748_172c258274_h.jpg)
 
-## About Civic Monitoring
+## Citizen Science
 
-With the proliferation of portable technologies, such as smartphones and wearable technologies, low-cost sensors and increased technological skills among the population, the role of citizens in monitoring their environment has increasingly taken root. Citizens are becoming increasingly active in tackling environmental problems that directly affect them, thereby implementing many bottom-up initiatives around the globe. They are demonstrating that environmental issues in cities can be addressed collaboratively, considering the realities and needs of the communities affected and harnessing their creative capacity and contributions, thereby raising citizens' awareness of environmental issues and increasing the sense of citizenship. This involvement can take many shapes and forms and generally comes together under the umbrella of citizen science. The essence of citizen science is that citizens are involved in one or various stages of a scientific investigation, such as compiling research questions, conducting observations, analysing data and using the resulting knowledge [^2]. Researchers or scientific institutions can lead or mediate in citizen science projects or have no role, as in extreme citizen science [^3]. One of the critical missions of citizen science is to promote the production of citizen-generated data, defined as data that people produce to directly monitor, demand or boost change in issues that affect them [^4]. The SafeCast community collected and openly shared radiation data as a response to the lack of reliable information available during the nuclear disaster in Fukushima [^5] and the Plaça del Sol community in Barcelona, where citizens collected data to demonstrate that noise levels in the area were above WHO recommendations and local legislation [^6], are just two examples of how citizen science can promote citizen-generated data to produce tangible results and social as well as sustainable impacts.
+With the proliferation of portable technologies, such as smartphones and wearable technologies, low-cost sensors and increased technological skills among the population, the role of citizens in monitoring their environment has increasingly taken root. Given the increasing pressure in environmental problems, citizens and communities are becoming increasingly more active in tackling environmental problems that directly affect them, in some cases implementing bottom-up initiatives, or participating in collaboration with local authorities or scientific institution all around the globe. They are demonstrating that environmental issues can be addressed collaboratively, considering the realities and needs of the communities affected and harnessing their creative capacity and contributions.
 
-Citizen science is often implemented by mapping the environment and, more concretely, air pollution by low-cost sensors. This type of sensor has gained significant attention in recent years due to its potential in a ubiquitous and granular sensor network that can be exploited for data collection at a low cost per unit. This popularity has been the subject of many studies in the academic field, with several case studies showcasing great potential in providing successful data collection, the key to building community and trust in the technological tools used by the citizens in these participatory processes.
+This involvement can take many shapes and forms and generally comes together under the umbrella of **citizen science**. The essence of citizen science is that citizens are involved in one or various stages of a (scientific) investigation, whereas it's driven by a scientific institution or by the community's own interest to protect or monitor the environment. Researchers or scientific institutions can lead or mediate in citizen science projects or have no role, as in _extreme citizen science_. In any case, the production of citizen-generated data, defined as data that people produce to directly monitor, can be seen as a demand to make a change in issues that affect them [^4]. For instance, the SafeCast community collected and openly shared radiation data as a response to the lack of reliable information available during the nuclear disaster in Fukushima [^5] and the Plaça del Sol community in Barcelona, where citizens collected data to demonstrate that noise levels in the area were above WHO recommendations and local legislation [^6], are just two examples of how citizen science can promote citizen-generated data to produce tangible results and social as well as sustainable impacts.
+
+Citizen science is often implemented by monitoring the environment with technological tools, such as low-cost sensors. This type of sensor has gained significant attention in recent years due to its potential in a ubiquitous and granular sensor network that can be exploited for data collection at a low cost per unit. This popularity has been the subject of many studies in the academic field, with several case studies showcasing great potential in providing successful data collection, the key to building community and trust in the technological tools used by the citizens in these participatory processes.
+
+However, many other citizen monitoring schemes exist that do not make use of technological tools and they can be even more relevant and necessary. For instance, these schemes can focus on monitoring [forests](https://www.forestsoftheworld.org/), [biodiversity](https://minka-sdg.org/), [taking water samples](https://www.coastwatch.org/), [monitoring marine litter](https://cientificosdelabasura.ucn.cl/) or [monitoring migration paths and collision of birds](https://rebeca-aves.com/). In many cases, citizen-generated data is the only resource available, even for universities.
 
 ## The Smart Citizen project
 
+We can't neglect anymore that the environment needs to be protected, given it's constant degradation by human practices. We need new methods to decide how we want to shape our future while respecting humans and ecosystems. Anybody should be able to collect, share and contribute environmental data and take action in environmental protection. Smart Citizen is a platform that helps do this by connecting people, data and knowledge with open source tools and technologies that are consciously designed to bring power back to the people.
+
+Smart Citizen offers an alternative to centralised data production and management systems used by large corporations that constitute the driving force behind the smart city concept. The project has collaborated with communities around the world, helping them collect and share environmental data, making it available for anybody that wants to use it. The project began in 2012 in Fab Lab Barcelona at IAAC. The project develops open technological tools for environmental monitoring, as well as methodologies for participatory sensing and community action.
+
 ### The Device
 
-The Smart Citizen Kit (SCK) is a key component of the larger Smart Citizen System, providing a modular architecture for environmental data collection. Built around a central Data Board, the SCK facilitates data logging and network connectivity. Users can upload data to the Smart Citizen platform via standard domestic WiFi or store it on an internal SD card for later manual upload.
+At a technical level, the project has developed several iterations of the Smart Citizen Kit (SCK). The SCK is a key component of the larger Smart Citizen System, providing a modular architecture for environmental data collection. Anyone can upload data to the Smart Citizen platform via standard domestic Wi-Fi or store it on an internal SD card for later manual upload.
 
 Outfitted with the Urban Sensor Board, the standard kit measures various environmental variables such as air temperature, humidity, and particulate matter (primarily PM2.5 and PM10). Custom sensor configurations are available for specialized applications in air and water monitoring.
 
-The device accommodates various 3D-printed enclosures, ranging from simple indoor setups to rugged outdoor solutions. Most designs are compatible with locally accessible 3D printers, negating the need for long-distance shipping.
-
-![](/assets/images/sck-metrics.png)
+The device accommodates various 3D-printed enclosures, ranging from simple indoor setups to rugged outdoor solutions. Most designs are compatible with locally accessible 3D printers, avoiding long-distance shipping.
 
 ### Installation
 
@@ -59,9 +56,9 @@ A suite of Python, R, and Orange tools is available for advanced analytics. Furt
 
 ## Hypothesis driven deployment
 
-![](/assets/images/hypothesis-driven-deployment.png)
-
 The starting point of any citizen data collection intervention is to select a significant issue for people. Galvanising people around a problem helps create a sense of purpose with the intervention and is a cornerstone that sustains lasting participation. The first phase involves identifying issues of interest related to the environment that affects citizens. That is done by reviewing news items from the press, social networks, blogs and scientific articles and involving local communities in collaboratively mapping issues and resources in their areas. The primary outcome of phase one is the identification of shared concerns of citizens who are, therefore, willing to give their time and energy to collect evidence.
+
+![](/assets/images/hypothesis-driven-deployment.png)
 
 The second phase focuses on jointly defining the data collection strategy that serves to amass evidence about the selected subject. When monitoring this phenomenon requires the use of technological sensors, decisions have to be made about where to locate them, as well as when and for how long. The role of citizens is fundamental in this process since they can provide local knowledge as to when and where it is best to monitor the phenomenon. In this phase, it may be useful to set up a matrix of requirements and preferences that allow participants to make decisions. At this stage, citizens also make informed decisions about how the data collected by their sensor is shared and visualised to meet privacy concerns. Different scenarios of data sharing are collaboratively created and discussed.
 
