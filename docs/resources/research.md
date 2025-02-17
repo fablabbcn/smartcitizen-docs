@@ -1,31 +1,31 @@
 # Research
 
-This is a _live_ compilation of our participation and results in some research projects we are/have been involved with:
+This is a _live_ compilation of our participation and results in some research projects we are/have been involved with.
 
-## European Commission
+<img src="https://live.staticflickr.com/65535/51231210938_638d5d413a_h.jpg" width="1600" height="1066" alt="Patí Científic Workshop"/>
 
-![](/assets/images/eu-flag.jpg)
+## Large projects
+
+The projects below have been funded by the European Commission (H2020 or HORIZON programmes). You can find more information in the [funding page](/about/funding/).
 
 - [**Making Sense**](https://making-sense.eu): advances and experiments in participatory sensing. _(Grant agreement Nº: 688620)_. Making Sense explored how open source software, open source hardware, digital maker practices and open design can be effectively used by local communities to fabricate their own sensing tools, make sense of their environments and address pressing environmental problems in air, water, soil and sound pollution.
-- [**iScape**](https://www.iscapeproject.eu/):  Improving the Smart Control of Air Pollution in Europe _(Grant agreement Nº: 689954)_. iScape works on integrating and advancing the control of air quality and carbon emissions in European cities in the context of climate change through the development of sustainable and passive air pollution remediation strategies, policy interventions and behavioural change initiatives.
+    - [Making Sense Citizen Sensing A Toolkit book](http://making-sense.eu/wp-content/uploads/2018/01/Citizen-Sensing-A-Toolkit.pdf)
+    - [Making Sense D.23 Smart Citizen Toolkit report](http://making-sense.eu/wp-content/uploads/2016/08/Making-Sense-D23-Smart-Citizen-Toolkit.pdf)
+    - [Making Sense D.24 Smart Citizen Toolkit report updates](http://making-sense.eu/wp-content/uploads/2017/09/Making-Sense-D2.4-Documentation-on-Toolkit-add-ons.pdf)
+- [**iScape**](https://cordis.europa.eu/project/id/689954):  Improving the Smart Control of Air Pollution in Europe _(Grant agreement Nº: 689954)_. iScape works on integrating and advancing the control of air quality and carbon emissions in European cities in the context of climate change through the development of sustainable and passive air pollution remediation strategies, policy interventions and behavioural change initiatives.
+    - [iScape Results (cordis site)](https://cordis.europa.eu/project/id/689954/results)
+    - [iScape D7.8 Sensor monitoring experiences and technological innovations](/assets/publications/iSCAPE_D78.pdf)
 - [**GROW Observatory**](https://growobservatory.org/): _(Grant agreement Nº: 690199)_. A citizens' observatory for growers, researchers and decision makers, aiming to build better soil through Citizen Science.
+- [**MINKE**](https://minke.eu): (Grant agreement Nº: 101008724). Innovative design to monitor and manage data on marine ecosystems. MINKE proposes a new vision in the design of marine monitoring networks using two dimensions of data quality, accuracy and completeness, as the driving components of quality in data acquisition. We have been in charge of making water sensors and provide them as a service.
+- [**TwinAIR**](https://twinair-project.eu/)  Innovative tools to improve indoor air quality. _(Grant agreement Nº: 101057779)._ An investigation of indoor air quality and how it relates to external factors. With the aim of improving quality of life in the city, the project will introduce innovative tools for identifying and tracing pollutants and pathogens to increase understanding of their effects and assess their impact on health.
+    - [TwinAIR Results](https://cordis.europa.eu/project/id/101057779/results)
+    - [TwinAIR D6.1 - Low cost sensor review](/assets/publicatiosn/TwinAIR-D61.pdf)
+- [**CitiObs**](https://citiobs.eu): _(Grant agreement Nº: 101086421)_. Enhancing citizen observatories for sustainable cities. CitiObs is a EU Project aimed at fostering inclusive, diverse, and stable citizen participation in the observation, monitoring, and protection of urban environments. Through the use of low-cost sensor technologies and wearables, CitiObs supports the observation of air quality and other environmental measures, empowering citizens to take an active role in shaping sustainable urban policies.
 
-![](https://live.staticflickr.com/65535/47957156716_6354656db3_k.jpg)
+!!! info "Check the toolkit section"
+    Some of these projects produced toolkits. Make sure to check the [toolkits](/resources/toolkits/) section.
 
-### Documents and results
-
-![](https://live.staticflickr.com/65535/48145200041_792ae80801_k.jpg)
-
-- [Making Sense Citizen Sensing A Toolkit book](http://making-sense.eu/wp-content/uploads/2018/01/Citizen-Sensing-A-Toolkit.pdf)
-- [Making Sense D.23 Smart Citizen Toolkit report](http://making-sense.eu/wp-content/uploads/2016/08/Making-Sense-D23-Smart-Citizen-Toolkit.pdf)
-- [Making Sense D.24 Smart Citizen Toolkit report updates](http://making-sense.eu/wp-content/uploads/2017/09/Making-Sense-D2.4-Documentation-on-Toolkit-add-ons.pdf)
-- [iScape Results (iScape site)](https://www.iscapeproject.eu/scientific-reports/)
-- [iScape Results (cordis site)](https://cordis.europa.eu/project/id/689954/results)
-- [iScape D7.8 Sensor monitoring experiences and technological innovations](/assets/publications/iSCAPE_D78.pdf)
-
-## More projects
-
-<img src="https://live.staticflickr.com/65535/51231210938_eef7360f5e_k.jpg" width="2000" height="1333" alt="Patí Científic Workshop">
+## Local projects or small scale collaborations
 
 Although not H2020 projects, the projects below have allowed us to further our connections with scientific research institutions, and have contributed to the development of the Smart Citizen project. We are proud to have worked with:
 

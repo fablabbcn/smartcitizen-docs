@@ -181,7 +181,7 @@ nav:
         - Main: hardware/legacy/sck.md
   - Resources:
     - Introduction: resources/index.md
-    - Research: resources/research.md
+
     - Toolkits:
       - resources/toolkits/index.md
       - Citizen Sensing Toolkit: resources/toolkits/Citizen Sensing Toolkit.md
@@ -189,6 +189,8 @@ nav:
       # - Citizen-led Action Toolkit: resources/toolkits/Citizen-led Action Toolkit.md
     - Webinars: resources/webinars.md
     - Education: resources/education.md
+    - Research: resources/research.md
+    - Notes: resources/notes.md
       # - Aulamar (ES):
       #   - Índice: resources/education/AulaMar/index.md
       #   - Notas generales: resources/education/AulaMar/General.md
