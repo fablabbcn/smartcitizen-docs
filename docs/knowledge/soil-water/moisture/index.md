@@ -7,7 +7,7 @@ internal:
 
 # Soil Moisture Measurements
 
-<!-- TODO -- MISSING DESCRIPTION INFORMATION -->
+Soil moisture sensors can be used for schedule irrigations (i.e. determine when to water the plants); or for calculating soil water deficit to work out how much water to apply.
 
 ## Supported sensors
 

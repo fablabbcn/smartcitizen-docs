@@ -9,7 +9,7 @@ target:
   - pm
 feature_img: /assets/images/sensirion-sen5x.jpg
 feature_img_credit: ""
-excerpt: ""
+excerpt: "The Sensirion SEN5X is a newer PM sensor with a very good performance for such low cost. Available in SCK2.3!"
 ---
 
 # {{ name }}
@@ -23,3 +23,5 @@ excerpt: ""
 !!! warning "Under Construction"
 
     More details on working principles, usage, considerations, and resources are coming soon.
+
+    <!-- TODO -->

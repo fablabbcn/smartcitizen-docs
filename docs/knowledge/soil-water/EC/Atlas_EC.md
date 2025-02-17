@@ -10,7 +10,7 @@ target:
   - electrical conductivity
 feature_img: /assets/images/atlas-scientific-ec.jpg
 feature_img_credit: "Atlas Scientific"
-excerpt: ""
+excerpt: "A conductivity meter to measure electrolytes in a liquid!"
 internal:
   proofread: false
   links: false
@@ -178,7 +178,7 @@ If you aren't familiar with the site where you are taking samples, measure at se
 ## Resources
 
 !!! tip "Additional resources"
-    
+
     On the importance of salinity for physical oceanography, as well as its application to the identification of fronts between different bodies of water:
 
     - [Ocean Science In Your Kitchen | Salinity & Density (_Royal Museums Greenwich_)](https://www.youtube.com/watch?v=-B5PDNmSidY)

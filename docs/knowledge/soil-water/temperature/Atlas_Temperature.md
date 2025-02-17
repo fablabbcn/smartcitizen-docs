@@ -10,7 +10,7 @@ target:
   - temperature
 feature_img: /assets/images/atlas-scientific-temperature.jpg
 feature_img_credit: "Atlas Scientific"
-excerpt: ""
+excerpt: "An encapsulated resistive sensor (RTD, resistance temperature detector)."
 internal:
   proofread: false
   links: false

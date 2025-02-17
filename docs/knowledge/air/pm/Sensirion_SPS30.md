@@ -9,7 +9,7 @@ target:
   - pm
 feature_img: /assets/images/sensirion-sps30.jpg
 feature_img_credit: "Sensirion"
-excerpt: ""
+excerpt: "The Sensirion SPS30 is PM sensor with a very good performance for such low cost. Only supported for experimental setups!"
 ---
 
 # {{ name }}
@@ -23,3 +23,5 @@ excerpt: ""
 !!! warning "Under Construction"
 
     More details on working principles, usage, considerations, and resources are coming soon.
+
+    <!-- TODO -->

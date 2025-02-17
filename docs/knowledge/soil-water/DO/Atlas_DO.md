@@ -9,7 +9,7 @@ target:
   - dissolved oxygen
 feature_img: /assets/images/atlas-scientific-do.jpg
 feature_img_credit: "Atlas Scientific"
-excerpt: "Atlas DO is a galvanic probe that can measure dissolved oxygen in water."
+excerpt: "A galvanic probe that can measure dissolved oxygen in water."
 internal:
   proofread: false
   links: false

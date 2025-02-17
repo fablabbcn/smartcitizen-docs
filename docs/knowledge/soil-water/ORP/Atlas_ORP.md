@@ -9,7 +9,7 @@ target:
   - orp
 feature_img: /assets/images/atlas-scientific-orp.jpg
 feature_img_credit: "Atlas Scientific"
-excerpt: ""
+excerpt: "An ORP probe is a passive device that detects a current generated from the oxidation or reduction of chemical substances in water."
 internal:
   proofread: false
   links: false

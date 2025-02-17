@@ -20,6 +20,8 @@ excerpt: ""
 
 {%if feature_img_credit %}_Image Credit: **{{ feature_img_credit }}**_{.image-credit-banner-box}{%endif%}
 
+In electrochemical (EC) sensors a gaseous pollutant undergoes a chemical reaction that results in a signal – typically manifested as a current – that is related to the concentration of the target gas in the air [^14]. This type of sensor is called an amperometric gas sensor. Since the interface to this sensor is normally provided as a current reading, dedicated circuitry is necessary to convert such to a voltage reading, for which an Analog to Digital converter (ADC) will suffice on the data-logger side. Signal processing and calculation of the final concentrations can be done in different ways, some of which rely on physically rooted models or, more commonly, on empirical evaluations (e.g., linear models) or even black-box models shaped by sample-based knowledge (e.g., machine learning models).
+
 ## Working principle
 
 The electrochemical cells used are toxic gas sensors from Alphasense Ltd. that operate in an amperometric mode. That is, they generate a current that is linearly proportional to the fractional volume of the toxic gas in the environment:
@@ -55,10 +57,6 @@ As mentioned above, the **counter electrode** is meant to balance the reaction o
 
 ## Usage and considerations
 
-![]({{ connection_img }})
-
-<!-- TODO FIX IMAGE ABOVE -->
-
 Alphasense Ltd. provides the calibration data in laboratory conditions for each of the electrochemical cells used. This data can be used to calculate pollutant concentration and to correct for _known effects_ by temperature deviations.
 
 !!! info "More on this"
@@ -77,6 +75,10 @@ Humidity and temperature extremes will require of further sensor adaptation, in 
 
 !!! danger
     Do not extract/attach the sensor capsule from the base board while powered, this could irreversibly damage the sensor.
+
+### Limitations
+
+Electrochemical sensors typically show a good sensitivity, however, they can be affected by a series of factors such as temperature, humidity, and the presence of other pollutants. Not only temperature and humidity absolute levels affect the readings, but also the speed at which the changes take place can induce short term instabilities on the readings that provoke noise and some artefacts. These artefacts can provoke two issues: wrong readings, and wrong calibrations, especially if not cleaned and when using machine learning algorithms [^21]. In addition, ageing and drift are known problems, which affect the loss of sensitivity and deviations in the baseline response [^14]. In general, it is a common practice to include temperature and humidity sensors of the target air, as well as the electrochemical cells used for the measurement. This is particularly relevant in the case of indoor environments, as mentioned above, since the absolute values and the changes can be more abrupt in certain times of the day due to human activity, i.e. opening windows, doors, heating and air conditioning activation, etc. Typically, the approach for the deployment of electrochemical sensors is to provide a factory base calibration, in laboratory conditions, and to correct this in the final deployment conditions, by co-locating the sensors with high-end instruments during a pre-assigned period of time [^14]. In most cases, a laboratory evaluation to derive linear models will not be sufficient, but will provide good enough information to kick-off the deployment. Specific on-site calibration is needed if accurate readings and other effects, as explained above, are to be compensated. This is a recommendation for the case of the TwinAIR pilots.
 
 ### Open questions
 
@@ -98,3 +100,7 @@ Below you can find a small selection of publications on these sensors:
 [^4]:Modelling atmospheric composition in urban street canyons: https://rmets.onlinelibrary.wiley.com/doi/full/10.1002/wea.781
 [^5]:ISCAPE D7.8 Sensor monitoring experiences and technological innovations: [link](/assets/publications/iSCAPE_D78.pdf)
 [^6]:Node-to-node field calibration of wireless distributed air pollution sensor network. In Environmental pollution (2017): https://doi.org/10.1016/j.envpol.2017.09.042
+[^14]:
+    Clements, A., S. Lung, A. Arfire, AND A. Polidori. An Update on Low-Cost Sensors for the Measurement of Atmospheric Composition: Evaluation Activities. An Update on Low-Cost Sensors for the Measurement of Atmospheric Composition. World Meteorological Organization, Geneva, Switzerland, , NA, (2020).
+[^21]:
+    iSCAPE Project Deliverable 7.8 Sensor monitoring experiences and technological innovations (November 2019). (Accessed January 2023) https://ec.europa.eu/research/participants/documents/downloadPublic?documentIds=080166e5cff9eb33&appId=PPGMS

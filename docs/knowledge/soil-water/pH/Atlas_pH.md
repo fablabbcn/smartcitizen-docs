@@ -1,7 +1,7 @@
 ---
 card: true
 name: Atlas pH
-field: 
+field:
   - water
   - soil
 type:
@@ -10,7 +10,7 @@ target:
   - pH
 feature_img: /assets/images/atlas-scientific-ph.jpg
 feature_img_credit: "Atlas Scientific"
-excerpt: ""
+excerpt: "The pH probe is a very delicate submerged electrode in a thin glass bubble."
 internal:
   proofread: true
   links: false
@@ -36,16 +36,9 @@ The sensor can be completely submerged, and has the **following characteristics*
 - **Response speed: 95% in 4s**
 - Safe for use in food/beverages
 
-<!-- TODO -- FIX LINKS AND DECIDE WHICH LINKS TO INCLUDE -->
+!!! warning "Before doing anything, review the datasheets:"
 
-!!! warning "Before doing anything, review the datasheet:"
-
-    If your sensor is transparent (not yellow): [https://files.atlas-scientific.com/consumer-grade-pH-probe.pdf](https://files.atlas-scientific.com/consumer-grade-pH-probe.pdf)
-
-    If your sensor is transparent and yellow: [https://files.atlas-scientific.com/lab-grade-pH-probe.pdf](https://files.atlas-scientific.com/lab-grade-pH-probe.pdf)
-
-    If your sensor is black: [https://files.atlas-scientific.com/lab-grade-pH-probe.pdf](https://files.atlas-scientific.com/spear-tip-pH-probe.pdf)
-
+    Check [Atlas Scientific pH page](https://atlas-scientific.com/ph/) for the datasheets.
 
 ## Usage and considerations
 
@@ -205,12 +198,4 @@ After this command, if you take a pH reading the result should be 7.00 (or very 
 
 ## Resources
 
-### Datasheets
-
-<!-- TODO -- FIX LINKS AND DECIDE WHICH LINKS TO INCLUDE -->
-
-If your sensor is transparent (not yellow): [https://files.atlas-scientific.com/consumer-grade-pH-probe.pdf](https://files.atlas-scientific.com/consumer-grade-pH-probe.pdf)
-
-If your sensor is transparent and yellow: [https://files.atlas-scientific.com/lab-grade-pH-probe.pdf](https://files.atlas-scientific.com/lab-grade-pH-probe.pdf)
-
-If your sensor is black: [https://files.atlas-scientific.com/lab-grade-pH-probe.pdf](https://files.atlas-scientific.com/spear-tip-pH-probe.pdf)
+Check [Atlas Scientific pH page](https://atlas-scientific.com/ph/) for the datasheets.
