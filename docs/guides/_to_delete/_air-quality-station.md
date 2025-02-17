@@ -8,7 +8,7 @@ This guide will summarise how to install the Smart Citizen Station and set it al
 
 ## Hardware
 
-The Stations should come assembled and ready to use. It consists of various parts:
+The Stations should come assembled and ready to use. They consist of various parts:
 
 - Enclosure and mounting system
 - Sensors module
