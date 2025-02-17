@@ -11,6 +11,8 @@ The Smart Citizen project has had the chance to be part of fantastic projects th
 
 By providing meaningful examples of novel appropriations and uses we seek to inspire communities to conduct their own experiments and, hopefully, even their own custom tools.
 
+## The Citizen Science Revolution Documentary
+
 <div class="webinar-container">
 <iframe src="https://www.youtube-nocookie.com/embed/hvn5LyACUYw" frameborder="0" allowfullscreen class="webinar-video"></iframe>
 </div>
