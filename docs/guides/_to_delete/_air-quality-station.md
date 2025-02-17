@@ -229,7 +229,7 @@ Only, make sure to select the appropiate Kit (`#33 Smart Citizen Station 2.1 rev
 
     Also, if you are using the phone, you can turn the unit to SETUP mode again, using the ON-OFF button (the indication LED should shine in RED) and from there connect to the Station and get it's information:
 
-    ![](/assets/images/sck_2/esp_force_upload_1.png)
+    ![](/assets/images/esp-force-upload-1.png)
 
 ### Handling calibration data
 

@@ -19,13 +19,13 @@ excerpt: You can use these drivers to interface with Atlas Scientific Probes!
 
 These drivers can be used to interface with Atlas Scientific sensors. Each driver is designed to interface with a different type of probe. You can find probe information in the [knowledge](/knowledge/soil-water/) section.
 
-The drivers can be used with carrier boards. We generally use the [Isolated carrier board](https://atlas-scientific.com/carrier-boards/electrically-isolated-ezo-carrier-board-gen-2/), but you can choose other options. These carrier boards can be found in the [water stations](/docs/hardware/stations/water/).
+The drivers can be used with carrier boards. We generally use the [Isolated carrier board](https://atlas-scientific.com/carrier-boards/electrically-isolated-ezo-carrier-board-gen-2/), but you can choose other options. These carrier boards can be found in the [water stations](/hardware/stations/water/).
 
 ![](https://live.staticflickr.com/65535/54334059580_c7e9d8c68f_h.jpg)
 
 ## Setup
 
-This page describes the setup procedure of the Atlas Scientific probes in case you bought them separately. If you have a [water stations](/docs/hardware/stations/water/), you don't need to do this.
+This page describes the setup procedure of the Atlas Scientific probes in case you bought them separately. If you have a [water stations](/hardware/stations/water/), you don't need to do this.
 
 ### Manually switching circuits to I2C mode
 

@@ -50,7 +50,7 @@ nav:
       - data/index.md
       - Data Platform: data/data-platform.md
       - Data Tools: data/data-tools.md
-      - SD-card Data: data/sd-card.md
+      - SD-card Storage: data/sd-card.md
     - FAQ: _FAQ.md
     - Troubleshooting: troubleshooting.md
   - Knowledge:

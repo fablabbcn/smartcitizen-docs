@@ -26,7 +26,7 @@ Probably the best way to get started in data analysis by using simple tools for 
 
 ## Web tools
 
-Web tools do not require any installation, and for that they are very easy to use (almost) everywhere. Normally data is directly requested via the [API](Smart Citizen API), but in some cases you can also load a CSV file. However, this ease of use comes at a cost: many of the tools are not very flexible, and different visualisations are not possible, or integrations with our API is not always complete. Nevertheless, they normally require zero setup, so you can get started in no time!
+Web tools do not require any installation, and for that they are very easy to use (almost) everywhere. Normally data is directly requested via the [API](/data/data-platform/#api), but in some cases you can also load a CSV file. However, this ease of use comes at a cost: many of the tools are not very flexible, and different visualisations are not possible, or integrations with our API is not always complete. Nevertheless, they normally require zero setup, so you can get started in no time!
 
 ![](/assets/images/dashboard.png)
 
@@ -38,7 +38,7 @@ Some examples you can check out:
 - [Binder](https://mybinder.org): a web based notebook tool for more advanced data analysis. See below in the [advanced section](#advanced)
 
 !!! tip "More?"
-    More tools can be found in the [toolkit repository](https://github.com/fablabbcn/smartcitizen-toolkit/). You can check some of them as well on the [Creating interfaces Guide](/Guides/data/Creating Interfaces/).
+    More tools can be found in the [toolkit repository](https://github.com/fablabbcn/smartcitizen-toolkit/). You can check some of them as well on the [Creating interfaces Guide](/guides/data/creating-interfaces/).
 
 !!! tip "Source files"
 
@@ -108,11 +108,11 @@ The framework integrates with the [Smart Citizen API](/Data/Smart Citizen API) a
 !!! info "Raw and processed data"
     All the raw sensor data from the devices is sent to the Platform and processed outside of the sensors. **Raw data is never deleted**, and the postprocessing of it can be traced back to it's origin by using the sensor blueprint information. This way, we guarantee openness and accesibility of the data for research purposes.
 
-    Check [this guide](/Guides/data/Custom data processing) to learn more about how we postprocess the data of the sensors and how to make it your own way.
+    Check [this guide](/guides/data/custom-data-processing/) to learn more about how we postprocess the data of the sensors and how to make it your own way.
 
 This is the tool that probably has the largest amount of examples and use cases:
 
-- [Guides](/Guides/data/Advanced data tools) will help you to install the framework and start using it!
+- [Guides](/guides/data/advanced-data-tools/) will help you to install the framework and start using it!
 - [Scripts and Notebook Examples](https://github.com/fablabbcn/smartcitizen-data/tree/master/examples) is a compilation of examples ready to get hands on with the data
 
 ## Source files

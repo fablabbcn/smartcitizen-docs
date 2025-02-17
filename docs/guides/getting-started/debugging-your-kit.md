@@ -50,7 +50,7 @@ As said above, there is no single point of failure for the kits.
 version
 ```
 
-Note this for later. If it's an old version of the firmware, it might help to [directly upgrade](/Guides/firmware/Update the firmware/).
+Note this for later. If it's an old version of the firmware, it might help to [directly upgrade](/guides/firmware/upgrading-the-firmware/).
 
 ```
 sensor
@@ -69,7 +69,7 @@ If one of the sensors is not shown, it means that there is probably a hardware i
 - Disconnect the power (USB and battery) and disconnect the PMS5003 sensor. Power on again and check
 - Disconnect the power (USB and battery) and disconnect the Urban Board. Power on again and check
 
-If this doesn't help, try to [upgrade the firmware](/docs/guides/firmware/upgrading-the-firmware/), as there might be improvements. If it helps, also update and check if it improves. If the sensors heat up too much (it burns to touch), there might be an electric issue.
+If this doesn't help, try to [upgrade the firmware](/guides/firmware/upgrading-the-firmware/), as there might be improvements. If it helps, also update and check if it improves. If the sensors heat up too much (it burns to touch), there might be an electric issue.
 
 ## Connectivity or configuration issues
 

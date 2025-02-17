@@ -2,7 +2,7 @@
 
 The data board of your Smart Citizen Kit is has two **two microcontrollers**:
 
-![](/assets/images/sck_2/SCK21_Microcontrollers.png)
+![](/assets/images/sck-mcus.png)
 
 The main one is an **Atmel SAMD21**, this chip is in charge of all the normal tasks like reading the sensors, saving data, interacting with the user, etc. For this chip we need two software components the bootloader and the main firmware.
 
@@ -139,7 +139,7 @@ git pull --recurse-submodules
 !!! danger "Make sure you need to do this"
     This instructions only are needed if your kit doesn't have the bootloader already flashed. If you don't know what you are doing here, skip to [the flashing section](#samd21-firmware).
 
-If your kit doesn't have the bootloader already flashed (all the kits that we ship come with it) you will need an [ATMEL-ICE](https://www.digikey.es/en/product-highlight/a/atmel/atmel-ice-programmer-debugger) programmer. This process can also be done with a Raspberry Pi computer and the proper [connector](https://www.adafruit.com/product/2094) and cables, in [this guide](/Guides/firmware/Debug the firmware/) you will find information on how to do this.
+If your kit doesn't have the bootloader already flashed (all the kits that we ship come with it) you will need an [ATMEL-ICE](https://www.digikey.es/en/product-highlight/a/atmel/atmel-ice-programmer-debugger) programmer. This process can also be done with a Raspberry Pi computer and the proper [connector](https://www.adafruit.com/product/2094) and cables, in [this guide](/guides/firmware/debug-the-firmware/) you will find information on how to do this.
 
 ![](/assets/images/sck-data-connectors.png)
 
@@ -162,7 +162,7 @@ You are ready for the next step, just remember to disconnect the Atmel-ICE progr
 
 The bootloader we just flashed allows a very simple way of uploading the SCK firmware based on the [UF2](https://github.com/Microsoft/uf2) format, when you **double-click the reset button** of your kit it will expose a [MSD](https://en.wikipedia.org/wiki/USB_mass_storage_device_class) interface to your computer and a new drive will popup where you can just drag the compiled firmware file (converted to UF2 format).
 
-![Reset button](/assets/images/sck_2/SCK21_Reset.png)
+![Reset button](/assets/images/sck23-reset-button-with-line.jpg)
 
 ### Build script
 

@@ -17,13 +17,11 @@ excerpt: An experimental OLED Screen to visualise sensor values and plot data!
 
 Supported [screens](https://wiki.seeedstudio.com/Grove-OLED_Display_1.12inch/) are 128x128 and use the SH1107 controller, we have tested the code with displays labeled as v2.0 and v2.1. If the screen is connected to the _AUX_ grove connector on the SCK it will be autodetected on boot:
 
-![](/assets/images/oled-detected.png)
-
-![](/assets/images/oled-logo.png)
+![](/assets/images/oled-logo.jpg)
 
 ## Info bar
 
-![](/assets/images/oled-infobar.png)
+![](/assets/images/oled-infobar.jpg)
 
 From left to right on the info bar we will find:
 
@@ -69,7 +67,7 @@ Noise dBA (60 sec) - oled
 
 Errors related to SD card, time sync, Wi-Fi, missing configuration or general network errors are shown in a pop-up at the bottom of the screen.
 
-![](/assets/images/oled-error.png)
+![](/assets/images/oled-error.jpg)
 
 ## Monitor plot
 
@@ -79,7 +77,7 @@ You can plot one sensor in real time directly to the OLED screen, to use this fe
 SCK > monitor -oled light
 ~~~
 
-![](/assets/images/oled-plot.png)
+![](/assets/images/oled-plot.jpg)
 
 ## Debug log view
 
@@ -89,8 +87,6 @@ Debug output to OLED screen is supported, it has to be enabled via the [command 
 SCK > debug -oled
 Oled display debug: true
 ~~~
-
-![](/assets/images/oled-debug.png)
 
 ## Known issues
 

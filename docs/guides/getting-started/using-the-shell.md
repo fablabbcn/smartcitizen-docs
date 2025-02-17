@@ -189,7 +189,7 @@ Each sensor interval can be configured independently. By default, readings are r
 The default **publication interval to the Smart Citizen Platform is 3 minutes**.
 
 !!! info "Battery calculator"
-    This configuration option is very interesting to be used for battery saving. Make sure you check the [battery calculator](/Smart%20Citizen%20Kit/#battery-calculator/)
+    This configuration option is very interesting to be used for battery saving. Make sure you check the [battery calculator](/hardware/kit/features/#battery-calculator)
 
 All these intervals can be configured using the shell interface. For instance, to set the publication interval to every 10 minutes, we do:
 

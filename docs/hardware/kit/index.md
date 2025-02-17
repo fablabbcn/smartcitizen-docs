@@ -133,7 +133,7 @@ You can head over to start the onboarding at [{{ extra.urls.installation.name }}
 [![Onboarding main](/assets/images/onboarding-main.png)]({{ extra.urls.installation.link }})
 
 !!! info "Detailed guide"
-    Have a look [at this guide](/Guides/getting-started/onboarding-sensors/) for a step-by-step installation.
+    Have a look [at this guide](/guides/getting-started/onboarding-your-kit/) for a step-by-step installation.
 
 If you select the **Wi-Fi** option, data will be available on the [Smart Citizen Platform]({{ extra.urls.platform.link }}). You can explore the data on the platform or download it, either using the [CSV Download](/guides/getting-started/downloading-data/#direct-csv-download) option or the [API](/guides/getting-started/downloading-data/#api). If you prefer to work **Offline**, data will be available on the [SD card](/data/sd-card/) in CSV format.
 

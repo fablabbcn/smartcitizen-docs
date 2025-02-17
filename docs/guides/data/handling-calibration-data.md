@@ -15,7 +15,7 @@ This guide will help you manage the calibration data for your units. Some sensor
 ## How to store calibration data
 
 !!! warning
-    Only do this once you have finished [setting up your kit](/Guides/getting started/Onboarding Sensors/). Remember that this process is only needed in case your sensors require calibration (air quality sensors such as CO, NOx, SO2, H2S, OX, and sometimes CO2). This is not necessary for water sensors. If you are using water sensors, [follow this guide](/Guides/calibration/Water sensors/).
+    Only do this once you have finished [setting up your kit](/guides/getting-started/onboarding-your-kit/). Remember that this process is only needed in case your sensors require calibration (air quality sensors such as CO, NOx, SO2, H2S, OX, and sometimes CO2). This is not necessary for water sensors. If you are using water sensors, [follow instructions on each sensor knowledge page](/knowledge/soil-water/).
 
 The calibration data for is managed by a unique `hardware ID`, and should be visible on the device itself (on a yellow sticker, normally on the form of <span style="color: black; background: orange;border-radius: 35px;padding:0 7px;border: solid 1px #C7BEB6;font-weight: bold;">SCAS21000X</span>) as seen below:
 
@@ -57,7 +57,7 @@ With either method, url or `HARDWARE-ID`, the json file needs to follow the inst
 }
 ```
 
-- `blueprint_url`: this field defines the post-processing to be done in the form of a `device-blueprint`. It virtually can load a valid json from any url, as long as it follows the instructions defined [here](https://github.com/fablabbcn/smartcitizen-data/blob/master/examples/notebooks/01_getting_started.ipynb) and [here](https://github.com/fablabbcn/smartcitizen-data/blob/master/examples/notebooks/04_processing_data.ipynb). If you want to use the base processing select it from the [blueprints folder](https://github.com/fablabbcn/smartcitizen-data/tree/master/blueprints), only selecting the `raw` json as mentioned above. If you have doubts, please, contact us at[{{ extra.urls.support.name }}]({{ extra.urls.support.link }}) to make sure everything will run smoothly. Finally, other blueprints can be added as defined [in this guide](/Guides/data/Custom%20data%20processing/)
+- `blueprint_url`: this field defines the post-processing to be done in the form of a `device-blueprint`. It virtually can load a valid json from any url, as long as it follows the instructions defined [here](https://github.com/fablabbcn/smartcitizen-data/blob/master/examples/notebooks/01_getting_started.ipynb) and [here](https://github.com/fablabbcn/smartcitizen-data/blob/master/examples/notebooks/04_processing_data.ipynb). If you want to use the base processing select it from the [blueprints folder](https://github.com/fablabbcn/smartcitizen-data/tree/master/blueprints), only selecting the `raw` json as mentioned above. If you have doubts, please, contact us at[{{ extra.urls.support.name }}]({{ extra.urls.support.link }}) to make sure everything will run smoothly. Finally, other blueprints can be added as defined [in this guide](/guides/data/custom-data-processing/)
 - `description`: brief description of the hardware
 - `versions`: list containing hardware versions (in case sensors where replaced, but kept in the same physical unit).
     ```

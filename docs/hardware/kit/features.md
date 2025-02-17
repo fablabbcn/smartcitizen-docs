@@ -96,7 +96,7 @@ You can see it in action below (remember, the SCK 2.X series share the same data
 
 ### The **`RESET`** button
 
-This button is used for [troubleshooting](/troubleshooting) your kit, or to [upgrade the firmware](/guides/firmware/upgrade-the-firmware/). Unless you are in any of these situations, you shouldn't need to touch this button! In any case, it's useful to know what it's for.
+This button is used for [troubleshooting](/troubleshooting) your kit, or to [upgrade the firmware](/guides/firmware/upgrading-the-firmware/). Unless you are in any of these situations, you shouldn't need to touch this button! In any case, it's useful to know what it's for.
 
 === "SCK 2.1/SCK2.2"
     ![SCK Reset](/assets/images/sck21-reset.png)
@@ -107,6 +107,21 @@ This button is used for [troubleshooting](/troubleshooting) your kit, or to [upg
     If you are using an SCK2.1 or SCK2.2 inside a box, it may be tricky to access the **`RESET`** button. Check the [enclosures page]({{ extra.urls.enclosures.link }}) for more options.
 
     On the SCK2.3, we made a little hole in the [Urban Board](/hardware/boards/urban-board/) to make it easier to access the reset button.
+
+### Local access point
+
+A local access point (AP) is used to configure the SCK. You can connect to this AP with your Smartphone or computer, by connecting to a Wi-Fi network called "SmartCitizen[...]". To do so, make sure that the SCK is in [Setup Mode](#setup-mode).
+
+![](/assets/images/onboarding_3.png)
+
+In your phone, something like below should pop-up:
+
+![](/assets/images/phone-start.png)
+
+!!! danger "If nothing comes up"
+	In some cases, your phone will be disconected from the WiFi as it doesn't have access to the internet. Stay connected to it!
+
+	If nothing pop-up in your phone, open your phone's web browser and navigate to sck.me
 
 ## Operation modes
 
@@ -187,7 +202,7 @@ You will see these colors _only_ in special moments, most commonly when the kit 
 | :-:                                | :-:                                                      |
 | <span class="led busy"></span>     | :hourglass_flowing_sand:  Busy, please wait!             |
 | <span class="led firmware"></span> | :wrench: Software update is ongoing!                     |
-| <span class="led yellow"></span>   | :computer: Shell mode [more info here](/guides/getting-started/ssing-the-shell/#shell-mode) |
+| <span class="led yellow"></span>   | :computer: Shell mode [more info here](/guides/getting-started/using-the-shell/#shell-mode) |
 
 !!!warning "Permanently in one color?"
     That's not normal, so either [reset](#the-reset-button) your kit or write us on the [forum]({{ extra.urls.forum.link }}).

@@ -2,7 +2,7 @@
 
 If you don't want to store data on the platform, or remote connectivity is not available for you, you can choose to store data on the SD-card.
 
-By default, the [Data Board](/boards/Data Board) comes with a 16Gb micro SD-card, which can literally store years of data. Sensor data is stored in [CSV format](#sensor-readings). You will also find other files, which are described below, such as [hardware information](#hardware-information) or other special features, such as [debugging](#debugging), or the possibility to [access SD-card data via USB](#console-access).
+By default, the [Data Board](/hardware/boards/data-board/) comes with a 16Gb micro SD-card, which can literally store years of data. Sensor data is stored in [CSV format](#sensor-readings). You will also find other files, which are described below, such as [hardware information](#hardware-information) or other special features, such as [debugging](#debugging), or the possibility to [access SD-card data via USB](#console-access).
 
 ## Sensor readings
 
@@ -28,7 +28,7 @@ Below you can find what each row/rows mean, in order:
 
 ## Hardware information
 
-Hardware information is stored in a file called `INFO.TXT`. This file can be used to retrieve firmware information, hardware versions, and some brief debugging information. The same information is available via the [API](https://api.smartcitizen.me/devices) (on `hardware>last_status_message`) and on the [mobile access point](/guides/firmware/upgrade-the-firmware/#make-a-back-up-of-your-info). This file contains the device serial number and the hardware and firmware versions and build dates for both microcontrollers:
+Hardware information is stored in a file called `INFO.TXT`. This file can be used to retrieve firmware information, hardware versions, and some brief debugging information. The same information is available via the [API](https://api.smartcitizen.me/devices) (on `hardware>last_status_message`) and on the [mobile access point](/hardware/kit/features/#local-access-point). This file contains the device serial number and the hardware and firmware versions and build dates for both microcontrollers:
 
 ```
 Hardware Version: 2.1

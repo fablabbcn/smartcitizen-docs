@@ -8,7 +8,7 @@ The soil moisture sensor can be used for schedule irrigations (i.e. determine wh
 
 In case of **irrigation scheduling**, it is generally sufficient to simply match the raw readings from each sensor at both 0% (held in air) and 100% water levels (submerged in water). This is, of course, an approximation and will need some further analysis from the user to determine when to irrigate. When a **more accurate measurement is required**, the sensor needs to be calibrated with the actual soil where it's going to be deployed, since different types of soil will have different capacities. A [valid approach](https://www.edaphic.com.au/soil-water-compendium/soil-moisture-sensor-calibration/) is to prepare different samples of the soil with different levels of saturation, and adapt the sensor readings for it.
 
-![](/assets/images/calibration_soil_buckets.jpg)
+![](/assets/images/chirp-calibration_soil_buckets.jpg)
 
 _Image Source: [Edaphic Scientific](https://www.edaphic.com.au/soil-water-compendium/soil-moisture-sensor-calibration/)_
 
@@ -20,10 +20,11 @@ If we are not aiming to get a full-fledged sensor reading, we will only need to 
 - Our sensor
 - A cup filled up with water and a napkin
 
-The sensor can be calibrated [using the shell interface](/Components/Firmware/guides/Using the Shell/). The process is as follows:
+The sensor can be calibrated [using the shell interface](/guides/getting-started/using-the-shell/). The process is as follows:
 
-1. Connect your kit to a computer and open the terminal for the SCK. If you use the Arduino IDE, go to Tools > Serial Monitor and select `115200 baud` at the bottom right corner
-![](https://i.imgur.com/hs5Ny7Q.png)
+1. Connect your kit to a computer and open the terminal for the SCK. If you use the Arduino IDE, go to Tools > Serial Monitor and select `115200 baud` at the bottom right corner.
+
+![](/assets/images/arduino-IDE-serial-monitor.png)
 
 2. If you use the IDE type `sensor` on the top and click `Send`
 3. Check if the output has something like `Soil Moisture Raw (60 sec)` after `Enabled`
@@ -33,7 +34,7 @@ The sensor can be calibrated [using the shell interface](/Components/Firmware/gu
 7. Check that the reading is OK by: `read soil moisture percent`. You should receive an answer in rh%
 8. Now you should see the data online (if in network mode):
 
-![](https://i.imgur.com/4Lrv62R.png)
+![](/assets/images/platform-soil-moisture.png)
 
 !!! info "Find out more"
     Check the project source code [files](https://github.com/fablabbcn/smartcitizen-grow/tree/master/soil-moisture).

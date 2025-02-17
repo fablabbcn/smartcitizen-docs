@@ -5,7 +5,7 @@
 When working on deployments that involve multiple devices a community might face the need to create their own page where the sensors’ data is updated on real time. Also, it is sometimes useful to trigger notifications on different services.
 
 !!!info "Looking for _faster_ Live demos?"
-    This guide is complementary to the [Live demos one](Live demos). Make sure to check it too!
+    This guide is complementary to the [Live demos one](/guides/data/live-demos/). Make sure to check it too!
 
 This guide will help you look at data from different spots simultaneously and also to create a sense of community among the devices’ owners. This feature can be easily built using [Freeboards](http://freeboard.io/) or [Node-RED](http://nodered.org/), both online free visual tool that supports the creation of dashboards. Additionally, Node-RED can also be used to create notifications on common services such as Twitter or Telegram.
 

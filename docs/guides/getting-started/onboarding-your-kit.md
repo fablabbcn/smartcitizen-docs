@@ -25,7 +25,7 @@ You can then follow the steps by pressing on _Let's go!_. For experienced users,
 
 ## Connect to the Kit
 
-After this, make sure that the SCK is in [Setup Mode](/hardware/Smart Citizen Kit/#setup-mode) (LED is red) and **connect with your smartphone** to the `SmartCitizen[...]` network.
+After this, make sure that the SCK is in [Setup Mode](/hardware/kit/features/#setup-mode) (LED is red) and **connect with your smartphone** to the `SmartCitizen[...]` network.
 
 ![](/assets/images/onboarding_3.png)
 

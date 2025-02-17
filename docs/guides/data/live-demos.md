@@ -12,7 +12,7 @@ This guide is meant to show some possibilities for you to do _live demos_ with d
 In this case, we will need a computer with either the [Arduino IDE](https://www.arduino.cc/en/software/) or [SerialStudio](https://serial-studio.github.io/). These tools will be used to plot the data coming from the kit (only one kit at a time), which will be connected via USB with a computer.
 
 !!!info "Feeling creative?"
-    If you rather use a more creative approach, you can follow [this guide](Creative coding) for using [processing](https://processing.org) to make these visualisations.
+    If you rather use a more creative approach, you can follow [this guide](/guides/data/creative-coding/) for using [processing](https://processing.org) to make these visualisations.
 
 ### Arduino IDE
 

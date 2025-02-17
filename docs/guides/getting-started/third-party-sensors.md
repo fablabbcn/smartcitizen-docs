@@ -117,7 +117,7 @@ Modifying the `SCKAux.h` and `SCKAux.cpp` means:
 
 Using additional sensors, can be at times confusing, because we might end up in the same kit with several sensors that measure exactly the same metric (for instance, 5 different temperature sensors!). To be able to differentiate between them, use the actual model of the hardware. An example is shown below for different temperature sensors in the same device:
 
-* This is an air temperature sensor (a Sensirion SHT31), which you can find in the [Urban Board 2.1](/docs/hardware/boards/urban-board/):
+* This is an air temperature sensor (a Sensirion SHT31), which you can find in the [Urban Board 2.1](/hardware/boards/urban-board/):
 
     ![](/assets/images/sensor_names_1.png)
 

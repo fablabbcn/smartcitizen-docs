@@ -232,11 +232,11 @@ Then, connect the `Data table` into the `Geo Map`. If you double click on the `g
 Finally, we can use `Orange` to understand, plot and tinker with math concepts such as averages and derivatives.
 
 !!! info "Orange workflow file"
-	You can find this example [here](/assets/ows/example_averages_and_derivatives.ows)
+	You can find this example [here](/assets/ows/example_means_and_derivatives.ows)
 
 We will use data from an existing kit in Uruguay (`14671`). We will focus on the `temperature` data, but these tools are aplicable to any type of `timeseries` data. In this case we're getting the information in a rollup of 1 minute from 05/February to 28/February:
 
-![](/assets/images/orange-data-agg.png)
+![](/assets/images/orange-agg.png)
 
 As before, we will add a `Data table`, and then plot it (`As timeseries` + `Line Chart`):
 

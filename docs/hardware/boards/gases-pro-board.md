@@ -9,7 +9,7 @@ interface: None
 # Gases Pro Sensor Board
 
 !!! warning "Deprecated"
-    The Gases Pro Sensor Board is the development board used during the iSCAPE Project. For reading electrochemical sensors, please refer to the [Analog Sensor Board section](/Components/boards/Analog%20Sensor%20Board/).
+    The Gases Pro Sensor Board is the development board used during the iSCAPE Project. For reading electrochemical sensors, please refer to the [Analog Sensor Board section](/hardware/boards/analog-sensor-board/).
 
 The Gases Sensor Board is a custom, ultra-low noise, high-performance, low power, digital output driver for 3 Alphasense Ltd. Electrochemical Series B Gas Sensors specifically designed for the project from the ground up.
 
@@ -19,7 +19,7 @@ The Gases Sensor Board is a custom, ultra-low noise, high-performance, low power
 
 ## Sensor measurements
 
-The Gases Pro Board is capable of interfacing with Alphasense Ltd. B4 series sensors without offset voltage compensarion, i.e. it can't interface with NO, NO2 or OX sensors, but it can be used for CO, SO2 and H2S. For measuring NO, NO2 or OX, please refer to the [Analog Sensor Board](/Components/Analog%20Sensor%20Board/)
+The Gases Pro Board is capable of interfacing with Alphasense Ltd. B4 series sensors without offset voltage compensarion, i.e. it can't interface with NO, NO2 or OX sensors, but it can be used for CO, SO2 and H2S. For measuring NO, NO2 or OX, please refer to the [Analog Sensor Board](/hardware/boards/analog-sensor-board/).
 
 ## Design
 
@@ -29,7 +29,7 @@ Each of the three drivers for Alphasense Ltd. Series B Sensors is built around t
 
 ## Setup
 
-The board is connected to the [Data Board](/Components/Data Board) using the AUX connector. Before, the Alphasense sensors need to be in place and properly registered using the board id. The board will be autodetected by the main [Firmware](/Components/Firmware) running on the Data Board. Multiple sensor board can be daisy-chained as seen on the image.
+The board is connected to the [Data Board](/hardware/boards/data-board/) using the AUX connector. Before, the Alphasense sensors need to be in place and properly registered using the board id. The board will be autodetected by the main [Firmware](/hardware/firmware/) running on the Data Board. Multiple sensor board can be daisy-chained as seen on the image.
 
 ![](https://i.imgur.com/RRu8MiV.jpg)
 
