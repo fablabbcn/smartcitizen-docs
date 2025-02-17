@@ -12,14 +12,14 @@
 |   Parameter                       |   Conditions      |   Min     |   Typ     |   Max |   Units   |
 |   :-                              |   :-:             |   :-:     |   :-:     |   :-: |   :-:     |
 |   USB Supply Voltage              |   -               |   5       |   5       |   5   |   V       |
-|   USB Supply Voltage              |   -               |   0.01    |   0.4     |   2   |   A       |
+|   USB Supply Current              |   -               |   0.01    |   0.4     |   2   |   A       |
 |   Battery Supply Voltage          |   -               |   3.2     |   3.7     |   4.2 |   V       |
 |   Battery Charging Method         |   Standard        |   -       |   0.2C    |   -   |   -       |
 |   Battery Charging Method         |   Fast            |   -       |   0.5C    |   -   |   -       |
 |   Battery Charging Current        |   Standard        |   -       |   400     |   -   |   mA      |
 |   Battery Charging Current        |   Fast            |   -       |   1000    |   -   |   mA      |
 |   Battery Charging Time           |   Standard        |   -       |   6       |   -   |   h       |
-|   Battery Charging Time           |   Fast            |   -       |   0.5C    |   -   |   h       |
+|   Battery Charging Time           |   Fast            |   -       |   4       |   -   |   h       |
 |   Battery Operating Temperature   |   Charge          |   -       |   6       |   -   |   ºC      |
 |   Battery Operating Temperature   |   Discharge       |   -10     |   -       |   55  |   ºC      |
 |   Battery Life Cycles             |   -               |   300     |   -       |   -   |   Cycles  |
