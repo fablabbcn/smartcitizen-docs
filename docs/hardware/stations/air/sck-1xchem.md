@@ -62,3 +62,5 @@ excerpt: Measure Indoor or Outdoor Air Quality with this unit. Beyond the metric
     If you are looking for the design files about the Smart Citizen Station, take a look at the [enclosures repository]({{ extra.urls.enclosures.link }}).
 
 {{ get_snippet_rel("docs/includes/stations.md") }}
+
+{{ get_snippet_rel("docs/includes/aq-stations.md") }}
