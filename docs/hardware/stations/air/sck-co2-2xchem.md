@@ -28,10 +28,9 @@ excerpt: Measure Indoor or Outdoor Air Quality with this unit. Beyond the metric
 
 ### Dimensions and weight
 
-| Version                   | Dimensions | Weight |
-| :-:                       | :-         | :-     |
-| Indoor                    |            |        |
-| Outdoor (with umbrella)   |            |        |
+| Version                   | Dimensions          | Weight |
+| :-:                       | :-                  | :-     |
+| Indoor                    | 19 x 12.3 x 5.5 cm  | 410g   |
 
 !!! info "Design files"
     If you are looking for the design files about the Smart Citizen Station, take a look at the [enclosures repository]({{ extra.urls.enclosures.link }}).
