@@ -24,7 +24,7 @@ These tasks are intended to automatise data analysis tasks as the following:
 
 ## Workflow
 
-![](https://i.imgur.com/eDBftEx.png)
+![](/assets/images/eDBftEx.png)
 
 ## Json task description
 
@@ -288,7 +288,7 @@ The plot sub-task accepts two different libraries: `matplotlib` and `plotly`. Th
 
 This description is suitable for timeseries plots. Check below for other types:
 
-![](https://i.imgur.com/p6qogrD.png)
+![](/assets/images/p6qogrD.png)
 
 - `plot_type`: the plot type to be used. Currently we support `timeseries`, `violin`, `scatter_matrix`, `correlation_plot`, `heatmap`, `barplot`, `coherence_plot`
 - `plotting_library`: `matplotlib` or `plotly`
@@ -318,7 +318,7 @@ This description is suitable for timeseries plots. Check below for other types:
 
 **Heatmap**
 
-![](https://i.imgur.com/bKyX7fb.png)
+![](/assets/images/bKyX7fb.png)
 
 ```
 "1" : {"plot_type": "heatmap",
@@ -352,7 +352,7 @@ This description is suitable for timeseries plots. Check below for other types:
 
 **Correlation plot**
 
-![](https://i.imgur.com/ACxGP9n.png)
+![](/assets/images/ACxGP9n.png)
 
 ```
 "1" : {"plot_type": "correlation_plot",
@@ -392,7 +392,7 @@ Note that in this case it only makes sense to put two traces, in the same subplo
 
  The big brother of the `correlation plot`:
 
-![](https://i.imgur.com/IfLLAUg.jpg)
+![](/assets/images/IfLLAUg.jpg)
 
 ```
 "1" : {"plot_type": "scatter_matrix",
@@ -423,7 +423,7 @@ Note that in this case it only makes sense to put two traces, in the same subplo
 
  **Coherence plot**
 
-![](https://i.imgur.com/DmvnwBj.png)
+![](/assets/images/DmvnwBj.png)
 
 This plot it's used to plot the coherence between x and y. Coherence is the normalized cross spectral density. More info [here](https://matplotlib.org/3.1.1/api/_as_gen/matplotlib.pyplot.cohere.html):
 
@@ -453,7 +453,7 @@ This plot it's used to plot the coherence between x and y. Coherence is the norm
 
  **Violin plot**
 
- ![](https://i.imgur.com/3d8j0qa.png)
+ ![](/assets/images/3d8j0qa.png)
 
  This plot shows the signal distribution. 
 

@@ -3,6 +3,7 @@
 ![Making Sense Toolkit Operation manuals](/assets/images/toolkit-operation-manuals.jpg)
 
 ## Can the sensors be placed outdoors?
+
 Yes. The sensor is designed for both indoors and outdoors use. But if you’re planning to use it outdoors, you will have to consider purchasing or making a rainproof enclosure.
 
 ## Can I make my own rainproof enclosure?
@@ -15,6 +16,7 @@ Sure! But note that the sensor requires a 5V solar panel to work properly. More 
 Yes. The sensor has an independently configurable auxiliary bus at 3.3V with a SEEED Grove connector. The Bus has native support for I2C, but it can also be setup on firmware as a GPIO or UART. It can supply power up to 750mA, and it can be enabled or disabled by software. More info [here](/hardware/boards/data-board/#auxiliary-connector).
 
 ## What happens if there is a loss of network connectivity?
+
 If the sensor is working in network mode and at any time the network is not available, it will store the data on its internal memory and publish all the collected data as soon as the network is available again.
 
 ## Which external sensors can be added?
@@ -24,9 +26,11 @@ Quite a few! Check [here](/knowledge).
 Of course! The data collected by your sensor is available for anyone on the [Smart Citizen Platform]({{ extra.urls.platform.link }}), and you can download it at any time as a CSV file. Besides, you can also use the API to built custom applications to interact with your device. If you are familiar with python, check also [scdata](https://pypi.org/project/scdata/)
 
 ## How does the kit record the data?
+
 The sensor can work in network and SD card modes. In network mode, the sensor publish data to the SC platform over Wi-Fi (every minute by default, but configurable). In SD card mode, all the collected data is stored locally in CSV format, and it can be later uploaded manually to the platform using the "Manual Data Upload" option.
 
 ## What networks does it support?
+
 The SCK supports Wi-Fi WEP, WPA/WPA2 and open networks that are common networks in domestic environments and small businesses. However, like many other embedded devices such as Apple TV® or Chromecast®, it **does not** support networks with captive portals such as those found in Airports and Hotels. Currently, it also **does not** WPA/WPA2 Enterprise networks such as EDUROAM. However, the viability to support those in the future is under analysis.
 
 In addition, the WiFi antenna is based on the low-cost ESP8266 chip, which supports **802.11b/g/n networks.**
@@ -43,24 +47,30 @@ Here are the ports and protocols used by the Kit to communicate with the platfor
 _Notice we use custom ports already to avoid some firewall restrictions_
 
 ## Is there a mobile phone app that lets me view the data?
+
 Currently there is an android app available, but we are working to make the website fully mobile device friendly, so that no mobile phone app is required. We would rather focus the time of our small team on the kits themselves instead of maintaining apps. So our final aim is to be app free, but fully mobile friendly.
 
 ## How accurate are the measurements?
+
 Weather, noise, light and PM sensor measurements have been calibrated and validated against reference sensors through both in-house and external validations and they provide accurate data. Make sure you check the [performance section](https://docs.smartcitizen.me/Components/sensors/performance/) for more information.
 
 <!-- ## Will the global platform be maintained after the project finishes release?
 Yes, it will be maintained just as it has been for the past five years. Also, the platform is fully open source so the community can take over the maintenance if at some point the Smart Citizen core team can no longer run it. -->
 
 ## Are there any notable case studies using similar sensors?
+
 Yes! Check all of them [here](https://docs.smartcitizen.me/Use%20cases/). A particularly interesting case study is the Making Sense project at Plaça del Sol in Barcelona, where a group of 15 technology enthusiasts and environmentalists joined a community of neighbours from a middle-class district that has been suffering from noise issues due to the nightlife in the square. You can find more information about this case study at: www.making-sense.eu
 
 ## What happens if I want to move the device or give it to someone else?
+
 Just by pressing the button you can fully reset your sensor and configure it again using your account or a new one. All your previous data will remain available on the platform as it was before the reset.
 
 ## What about using other wireless technologies?
+
 We are working closely with Barcelona’s The Things Network community to develop a TTN enabled sensor. A LoRA prototype has been tested, but we don’t have dates for the final version yet. BLE, Zigbee, or others are not currently supported, and except for G5, we are not planning to implement them unless there is a custom hardware integration demand.
 
 ## Can I remove my data from the platform?
+
 Of course. You are the owner of the data that you collect, and you can download and/or delete all your sensor data at any time.
 
 ## How can I retrieve the MAC address from my device?
@@ -115,3 +125,40 @@ The Smart Citizen Kit doesn’t come with an enclosure, but there are plenty of 
 ## I want to contribute, what can I do?
 
 We would love you to contribute! Is modeling your thing? Take a look at our [enclosure repository]({{ extra.urls.enclosures.link }}) and try your hand at designing or tweaking an enclosure. Are you into tech specs? Help us add information to the documentation! Do you like coding? Take a look at our open source repositories and contribute to the source code of the [firmware]({{extra.urls.firmware.link}}) or the [data platform]({{extra.urls.ghapi.link}})!
+If you are using any enclosure from [the repository](https://github.com/fablabbcn/smartcitizen-enclosures/), we also recommend using a filtration foam (PPI-20/10) like [this one](http://www.infiltro.es/index.php/filtro-de-aire-2/prefiltros/item/foam). More info [here](https://forum.smartcitizen.me/t/rain-tests-for-the-sck/1300)
+
+## What is `reset cause`?
+
+The kit is able to store the last reason by which it _restarted_. This information can be very helpful to know in order to _debug_ problems with a faulty kit.
+
+| Code | Explanation | Comment |
+|:-:   |:-           | :-      |
+| `POR`    | Power On Reset                 | This reset takes place when you connect the USB cable to the Kit. |
+| `BOD12` and `BOD33` | Brown Out `12` and `33` Detector Reset    | This reset takes place when there is a low voltage on the supply (more in the SAMD21 [docs](https://microchipdeveloper.com/32arm:samd21-pm-overview)) |
+| `EXT`    | External Reset                 | This reset takes place when you press the _reset_ button |
+| `WDT`    | Watchdog Reset                 | This reset takes place when the _watchdog timer_ from the SAMD21 _orders it_. Currently not suported |
+| `SYST`   | System Reset Request           | This reset takes place when the Kit _orders_ it (sanity reset), or when you type `reset` in the [shell](/Guides/getting started/Using the Shell/) |
+
+## What can I do in unstable Wi-Fi environments?
+
+Unstable Wi-Fi environments are problematic if there are [low RSSI values](#what-are-good-rssi-values?). Not only data can get to the platform in unconsistent frequency, but can cause the SCK to malfunction in some cases. Although we try to make the SCK as robust as possible, sometimes it helps to use some _special configuration_. This configuration will **increase energy consumption**, so it's not recommended for battery use.
+
+You can use the [Shell](/Guides/getting started/Using the Shell/) and change the configuration with the commands below:
+
+```
+config -pubint 60
+power -sleep 0
+offline -retryint 60
+```
+
+## What are good RSSI values?
+
+Starting from firmware version `0.9.9`, the kit also keeps track of the Wi-Fi signal strength (RSSI in dBm - decibel miliWatts) to help you get a grasp of the signal strength **seen by the kit** (this relativeness is important, as many other devices will see a stronger signal potentially thanks to a better antenna). Based on [this reference](https://techmusa.com/wireless-dbm-table/) here you have some indicators of how good or bad the value you see is:
+
+* `-30 to -50dBm`: Excellent single strength (Next to Router).
+* `-50 to -67dBm`: At Good signal strength for Web browsing, voice/video calls.
+* `-67 to -70dBm`: Best effort for Web browsing for reliable packet delivery.
+* `-70 to -80dBm`: Experience bad connectivity, Packet delivery may be unreliable.
+* `-90 to 100dBm`: Worst single strength.
+
+We recommend to stay between the `-30 to -70dBm` range if possible. Remeber that this value must be _seen_ by the Kit!

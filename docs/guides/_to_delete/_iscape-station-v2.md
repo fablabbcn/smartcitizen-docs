@@ -2,7 +2,7 @@
 
 ## Components
 
-![](https://i.imgur.com/CiFikz8.jpg)
+![](/assets/images/CiFikz8.jpg)
 
 ### Sensors
 
