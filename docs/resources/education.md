@@ -12,10 +12,10 @@ _Image credit: [DOIT](https://doit-europe.net)_
 !!! info "About this resource"
     **Resource:** [DOIT Toolkit - Measuring our environment (EN)- Future Learning Unit at Fablab Barcelona](/assets/toolkits/10_Measuring Our Environment_DOIT-Manual_en-2.pdf)
 
-    **Duration**: 28h - 8 units
-    **Setting**: Inside School
-    **Group size**: 20-25 students
-    **Age**: 14-15 years old
+    * **Duration**: 28h - 8 units
+    * **Setting**: Inside School
+    * **Group size**: 20-25 students
+    * **Age**: 14-15 years old
 
 This resource presents activities that can be used to apply _maker_ education practices and open design for students to collect data and use it as a transformative tool for their immediate environment.
 

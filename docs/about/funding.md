@@ -18,6 +18,6 @@ For each of the projects below, you can visit [Cordis](https://cordis.europa.eu/
 
 Below additional projects from Barcelona and Spain:
 
-- [PatiCientific](https://paticientific.org/)
-- [Aulamar](https://paticientific.org/index.php/aulamar/): This material was created as part of AULAMAR (Fundació Bit Habitat, ref. ID253) in collaboration with the Institut de Ciències del Mar (ICM - CSIC, Barcelona).
-- [CLAB](https://habilis.ro-botica.com/es/curs/proyecto-clab-ii-analiza-tu-entorno-con-smart-citizen/): This educational content was created by FabLab Barcelona, in the context of the CLAB project - INNOVACIÓN EN PROCESOS DE FABRICACIÓN CIRCULAR Y ABIERTA PARA ENTORNOS EDUCATIVOS, funded by Aid program to support innovative business groups from the Ministry of Industry, Commerce and Tourism. Call 2022.
+- [**PatiCientific**](https://paticientific.org/)
+- [**Aulamar**](https://paticientific.org/index.php/aulamar/): This material was created as part of AULAMAR (Fundació Bit Habitat, ref. ID253) in collaboration with the Institut de Ciències del Mar (ICM - CSIC, Barcelona).
+- [**CLAB**](https://habilis.ro-botica.com/es/curs/proyecto-clab-ii-analiza-tu-entorno-con-smart-citizen/): This educational content was created by FabLab Barcelona, in the context of the CLAB project - INNOVACIÓN EN PROCESOS DE FABRICACIÓN CIRCULAR Y ABIERTA PARA ENTORNOS EDUCATIVOS, funded by Aid program to support innovative business groups from the Ministry of Industry, Commerce and Tourism. Call 2022.
