@@ -1,6 +1,15 @@
+---
+card: true
+type: unit
+custom_color: black
+name: About
+feature_img: https://live.staticflickr.com/4482/37510067734_7c5ca097cc_h.jpg
+excerpt: Learn more about the Smart Citizen Project, its funding, its origins and other likeminded projects.
+---
+
 # About
 
-<!-- TODO -->
+<!-- TODO Finalise and potentially split this page-->
 
 The Smart Citizen project works to provide tools for anyone willing to use technology in a critical way. By developing environmental sensing tools, branching out in various fields such as open hardware, software, data, social innovation and digital fabrication, our main contribution is the amount of resources that this documentation hopes to compile. The project was born in [{{ extra.urls.fablabbcn.name }}]({{ extra.urls.fablabbcn.link }}) which, up until now, is the main maintainer of the project. However, the project is [released under **free** and **open source** licenses](/about/open-source), hoping that anyone can contribute to it, reuse it, adapt it and improve it in any way needed.
 
