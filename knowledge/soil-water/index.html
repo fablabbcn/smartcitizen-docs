@@ -2617,6 +2617,8 @@
         
           
         
+          
+        
       
       
         
@@ -2653,8 +2655,6 @@
       <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
       
       
-        
-          
         
           
         
@@ -2746,20 +2746,6 @@
     <li class="md-nav__item">
       <a href="../../guides/getting-started/using-the-shell/" class="md-nav__link">
         Using the Shell
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../guides/getting-started/debugging-your-kit/" class="md-nav__link">
-        Debugging your kit
       </a>
     </li>
   
@@ -3073,12 +3059,80 @@
       
       
         <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
-          Legacy Hardware
+          Debugging
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_3_5">
+          <span class="md-nav__icon md-icon"></span>
+          Debugging
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/getting-started/debugging-your-kit/" class="md-nav__link">
+        Debugging your kit
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/getting-started/troubleshooting-sd-card/" class="md-nav__link">
+        Troubleshooting SD-card Mode
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+          Legacy Hardware
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_6">
           <span class="md-nav__icon md-icon"></span>
           Legacy Hardware
         </label>
@@ -3095,7 +3149,7 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5_1" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6_1" >
       
       
         
@@ -3118,14 +3172,14 @@
         <div class="md-nav__link md-nav__link--index ">
           <a href="../../hardware/legacy/">Smart Citizen 1.1</a>
           
-            <label for="__nav_3_5_1">
+            <label for="__nav_3_6_1">
               <span class="md-nav__icon md-icon"></span>
             </label>
           
         </div>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_5_1_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_5_1">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_6_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_6_1">
           <span class="md-nav__icon md-icon"></span>
           Smart Citizen 1.1
         </label>
@@ -3201,48 +3255,10 @@
   
   
   
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5_2" >
-      
-      
-        
-          
-        
-      
-      
-        <label class="md-nav__link" for="__nav_3_5_2" id="__nav_3_5_2_label" tabindex="0">
-          Smart Citizen 2.0
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_5_2_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_5_2">
-          <span class="md-nav__icon md-icon"></span>
-          Smart Citizen 2.0
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
     <li class="md-nav__item">
       <a href="../../hardware/legacy/sck/" class="md-nav__link">
-        Main
+        Smart Citizen 2.0
       </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
     </li>
   
 
@@ -3612,6 +3628,21 @@
 
 <h1 id="soil-and-water-measurements">Soil and water measurements<a class="headerlink" href="#soil-and-water-measurements" title="Permanent link">&para;</a></h1>
 <p><em>Water measurements</em> are a bit more complex than those in air, at least for <em>lower-cost sensors</em>. Here, we are generally limited to physico-chemical parameters such as pH, conductivity, dissolved oxygen and similar. Similar to <a href="../air/index">air measurements</a>, when the data board by itself can't read the sensor directly, we need to use <em>interface electronics</em> to get reading from them.</p>
+<div class="admonition info">
+<p class="admonition-title">Before we start</p>
+<p><strong>Two important notes:</strong></p>
+<ol>
+<li>A lot of the materials from this guide are taken from <a href="https://atlas-scientific.com">Atlas Scientific</a> datasheets. All credit to the well-designed images is theirs. We have integrated these probes in the Smart Citizen Kit because of their quality and good documentation. <strong>This page is not meant to be a replacement for Atlas Scientific documents and we do not have any affiliation to Atlas Scientific</strong>.</li>
+<li>There is also additional webinars that can support this page in more detail. Here <a href="https://storage.smartcitizen.me/presentations/Minke-WEBINAR_WQ.pdf">you can find the presentation</a> and the link to the videos below:<ul>
+<li><a href="https://www.youtube.com/watch?v=u4zUqcp17-g&amp;list=PL33KKs9g8Y1IWsTZZmDc-46yFuuIRZEmi&amp;index=10">Smart Citizen Webinar - 3.1 Water sensors (Part 1)</a></li>
+<li><a href="https://www.youtube.com/watch?v=aGtT2JRmkaY&amp;list=PL33KKs9g8Y1IWsTZZmDc-46yFuuIRZEmi&amp;index=12">Smart Citizen Webinar - 3.2 Water sensors (Part 2)</a></li>
+<li><a href="https://www.youtube.com/watch?v=xpk4Jxd-E04&amp;list=PL33KKs9g8Y1IWsTZZmDc-46yFuuIRZEmi&amp;index=13">Smart Citizen Webinar - 3.3 Water sensors preparation</a></li>
+<li><a href="https://www.youtube.com/watch?v=FXsMiyONtF4&amp;list=PL33KKs9g8Y1IWsTZZmDc-46yFuuIRZEmi&amp;index=14">Smart Citizen Webinar - 3.4 Water sensors calibration</a></li>
+<li><a href="https://www.youtube.com/watch?v=b3ftsRNpDzA&amp;list=PL33KKs9g8Y1IWsTZZmDc-46yFuuIRZEmi&amp;index=15">Smart Citizen Webinar - 3.5 Water sensors deployment</a></li>
+</ul>
+</li>
+</ol>
+</div>
 <h2 id="supported-sensors">Supported sensors<a class="headerlink" href="#supported-sensors" title="Permanent link">&para;</a></h2>
 <div class="sensor-block-multi ">
     <div class="sensor-banner blue-sensor-banner">

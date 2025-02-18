@@ -2687,6 +2687,8 @@
         
           
         
+          
+        
       
       
         
@@ -2723,8 +2725,6 @@
       <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
       
       
-        
-          
         
           
         
@@ -2816,20 +2816,6 @@
     <li class="md-nav__item">
       <a href="../../../../guides/getting-started/using-the-shell/" class="md-nav__link">
         Using the Shell
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../guides/getting-started/debugging-your-kit/" class="md-nav__link">
-        Debugging your kit
       </a>
     </li>
   
@@ -3143,12 +3129,80 @@
       
       
         <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
-          Legacy Hardware
+          Debugging
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_3_5">
+          <span class="md-nav__icon md-icon"></span>
+          Debugging
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../guides/getting-started/debugging-your-kit/" class="md-nav__link">
+        Debugging your kit
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../guides/getting-started/troubleshooting-sd-card/" class="md-nav__link">
+        Troubleshooting SD-card Mode
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+          Legacy Hardware
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_6">
           <span class="md-nav__icon md-icon"></span>
           Legacy Hardware
         </label>
@@ -3165,7 +3219,7 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5_1" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6_1" >
       
       
         
@@ -3188,14 +3242,14 @@
         <div class="md-nav__link md-nav__link--index ">
           <a href="../../../../hardware/legacy/">Smart Citizen 1.1</a>
           
-            <label for="__nav_3_5_1">
+            <label for="__nav_3_6_1">
               <span class="md-nav__icon md-icon"></span>
             </label>
           
         </div>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_5_1_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_5_1">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_6_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_6_1">
           <span class="md-nav__icon md-icon"></span>
           Smart Citizen 1.1
         </label>
@@ -3271,48 +3325,10 @@
   
   
   
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5_2" >
-      
-      
-        
-          
-        
-      
-      
-        <label class="md-nav__link" for="__nav_3_5_2" id="__nav_3_5_2_label" tabindex="0">
-          Smart Citizen 2.0
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_5_2_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_5_2">
-          <span class="md-nav__icon md-icon"></span>
-          Smart Citizen 2.0
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
     <li class="md-nav__item">
       <a href="../../../../hardware/legacy/sck/" class="md-nav__link">
-        Main
+        Smart Citizen 2.0
       </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
     </li>
   
 
@@ -3735,12 +3751,12 @@
 <li><em>Sensor cross-sensitivity</em>: is the resistance variation with variations of gases other than the target gas</li>
 <li><em>Sensor poisoning</em>: an irreversible resistance variation provoked by the reaction of gases other than the target gas</li>
 </ul>
-<p><img alt="" src="/assets/images/EUCes5C.png" />
+<p><img alt="" src="/assets/images/peterson-et-al.png" />
 <em>Source: Peterson et al. <sup id="fnref4:first"><a class="footnote-ref" href="#fn:first">1</a></sup></em></p>
 <p>Peterson et al. <sup id="fnref5:first"><a class="footnote-ref" href="#fn:first">1</a></sup> describes the various types of interactions between atmospheric gases and a MOS sensor surface. In the image above, the leftmost region describes the unpowered behaviour, or <strong>base resistance</strong>. The three other regions of the diagram describe different processes that actually occur simultaneously to varying degrees. The sensor’s output is the resistance across the whole of the sensor material, which forms a resistor network with contributions from both the bulk and surface regions. The model described in <sup id="fnref6:first"><a class="footnote-ref" href="#fn:first">1</a></sup> also explains the wide variation in base resistance between individual sensors of the same type, as the random nature of the surface geometry means an equally random network of resistances. This diagram is a two-dimensional representation of a three-dimensional material; in an actual sensor, the sensitive region is spread into the surface with a distance dependent on the grain size and arrangement resulting from the sintering.</p>
 <p>Each sensor will then have a different resistance in air and how much this baseline resistance changes with the concentration of the target gas will also differ (what we defined above as sensitivity). Therefore to convert from resistance readings to concentration it is necessary to derive a <strong>calibration curve for each sensor</strong>. This will require measuring the resistances in air and at a number of gas concentrations over the desired range. It is important that the concentrations are in a background of air as Oxygen is needed for the sensor to work correctly. As stated in <sup id="fnref3:second"><a class="footnote-ref" href="#fn:second">2</a></sup>, the sensor’s response is only partially a function of the amount of gas to which the surface is exposed. Instead, the sensor will have a baseline resistance that is related to the bulk and particle boundary resistance. Because of the random geometry of the granular sensor surface, the baseline resistance will vary between individual sensors.</p>
 <p>The change in resistance with the change in gas concentration is generally not a linear response. The response can be measured and fitted to a <strong>polynomial relationship</strong>, with interactions from other metrics such as temperature, humidity and other gases. It has been proved that air flow around the sensor yields better sensor reactivity, and that the usage of PTFE filters also helps reducing cross-sensitivity and sensor poisoning. An important practical consideration with any in situ air quality sensor design is ensuring adequate flow of sampling air through the device. <strong>Stale air inside a casing will produce unrepresentative results</strong>, and even sensors mounted outside a casing might not get a properly-mixed sample.</p>
-<p><img alt="" src="/assets/images/wKuthZo.png" />
+<p><img alt="" src="/assets/images/figure-17-peterson-et-al.png" />
 <em>Source: Peterson et al. <sup id="fnref7:first"><a class="footnote-ref" href="#fn:first">1</a></sup></em></p>
 <p>Although the deployment of multiple different sensors can compensate for the cross-sensitivity issues in calibration, it cannot eliminate it. MOS sensors can thus be used only in situations where any interfering species can either be measured by other means, or they must be calibrated regularly and used in locations where the background varies in concentration slowly compared with the target gases. As well, the <strong>sensor drift</strong> over time is an important issue that requires sensor recalibration over time.</p>
 <p>There are two major factors in the longevity of a sensor’s calibration. The first is the <strong>natural degradation</strong> of the heater element, which becomes hotter over prolonged use and causes the sensor’s response profile to vary. The second is the effect of slowly-varying interfering gases, which over the course of months shifts the sensor’s baseline. The first problem may have an engineering solution, but the second will involve taking the results of the tests in an artificial atmosphere, identifying the most critical species and either measuring or possibly modelling their likely concentrations during deployments.</p>

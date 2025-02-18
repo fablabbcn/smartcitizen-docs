@@ -2615,6 +2615,8 @@
         
           
         
+          
+        
       
       
         
@@ -2651,8 +2653,6 @@
       <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
       
       
-        
-          
         
           
         
@@ -2744,20 +2744,6 @@
     <li class="md-nav__item">
       <a href="../../getting-started/using-the-shell/" class="md-nav__link">
         Using the Shell
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../getting-started/debugging-your-kit/" class="md-nav__link">
-        Debugging your kit
       </a>
     </li>
   
@@ -3250,12 +3236,80 @@
       
       
         <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
-          Legacy Hardware
+          Debugging
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_3_5">
+          <span class="md-nav__icon md-icon"></span>
+          Debugging
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/debugging-your-kit/" class="md-nav__link">
+        Debugging your kit
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/troubleshooting-sd-card/" class="md-nav__link">
+        Troubleshooting SD-card Mode
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+          Legacy Hardware
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_6">
           <span class="md-nav__icon md-icon"></span>
           Legacy Hardware
         </label>
@@ -3272,7 +3326,7 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5_1" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6_1" >
       
       
         
@@ -3295,14 +3349,14 @@
         <div class="md-nav__link md-nav__link--index ">
           <a href="../../../hardware/legacy/">Smart Citizen 1.1</a>
           
-            <label for="__nav_3_5_1">
+            <label for="__nav_3_6_1">
               <span class="md-nav__icon md-icon"></span>
             </label>
           
         </div>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_5_1_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_5_1">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_6_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_6_1">
           <span class="md-nav__icon md-icon"></span>
           Smart Citizen 1.1
         </label>
@@ -3378,48 +3432,10 @@
   
   
   
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5_2" >
-      
-      
-        
-          
-        
-      
-      
-        <label class="md-nav__link" for="__nav_3_5_2" id="__nav_3_5_2_label" tabindex="0">
-          Smart Citizen 2.0
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_5_2_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_5_2">
-          <span class="md-nav__icon md-icon"></span>
-          Smart Citizen 2.0
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
     <li class="md-nav__item">
       <a href="../../../hardware/legacy/sck/" class="md-nav__link">
-        Main
+        Smart Citizen 2.0
       </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
     </li>
   
 
@@ -3929,7 +3945,7 @@
 <p><img alt="" src="https://imgs.xkcd.com/comics/fixing_problems.png" /></p>
 <p>To keep it simple: our final target is to be able to <strong>interact</strong> with the SAMD21 (or the chip) <strong>while it's executing the program</strong> and tell it to pause the execution, give us the value of some variables and then continue. We will release a fairly extensive report with documentation on this process, but for those interested in reading an overview on how to debug, this post can be a short introduction.</p>
 <p>So, here we go! The first item we need is the <a href="http://openocd.org/"><strong>Open On-Chip Debugger</strong> (OpenOCD)</a> which provides debugging with the assistance of a <strong>debug adapter</strong>. This adapter is a small hardware module which helps provide the right kind of electrical signaling to the target being debugged. These are required since the debug host, on which OpenOCD runs (i.e. your computer, a Raspberry PI...) won’t usually have native support for such signaling, or the connector needed to hook up to the target.</p>
-<p><img alt="" src="/assets/images/qJ2fV3N.jpg" /></p>
+<p><img alt="" src="/assets/images/sck-pi-debug.jpeg" /></p>
 <p>These adapters are sometimes packaged as discrete dongles, which may generically be called <strong>hardware interface dongles</strong> (and are quite expensive). Some development boards also integrate them directly, which may let the development board connect directly to the debug host over USB (and sometimes also to power it over USB, like the <a href="https://store.arduino.cc/genuino-zero">Arduino Genuino Zero</a>). In the case of the <strong>Smart Smart Citizen Kit</strong>, we have a <strong>SWD</strong> Adapter that supports <em>Serial Wire Debug</em> signaling to communicate with the <em>ARM core</em>. In our approach, <strong>using a complete open toolchain</strong>, OpenOCD is be running on a Raspberry Pi, and communicating with the SCK's SWD through the GPIO pins of the Pi.</p>
 <p>Finally, to be able to actually <strong>see what is going on inside our firmware while it executes</strong>, we need something that is able to read and understand the machine code and hand it over to a human understandable interface. This is where <a href="https://www.gnu.org/software/gdb/"><strong>GDB</strong></a> kicks in and helps us by:</p>
 <ul>
@@ -4003,8 +4019,8 @@ sudo make install
 </code></pre></div>
 <p>The list of interfaces that openOCD can use is under: <em>/usr/local/share/openocd/scripts/interface</em>.</p>
 <p>In order to use the <a href="http://www.arm.com/products/system-ip/debug-trace/coresight-soc-components/serial-wire-debug.php">SWD connector</a> that the SCK features, by using <em>Bit Banging</em>, we connect it directly to the Raspberry Pi GPIOs:</p>
-<p><img alt="" src="/assets/images/qJ2fV3N.jpg" /></p>
-<p><img alt="" src="https://i.imgur.com/AEYc8sd.jpg" /></p>
+<p><img alt="" src="/assets/images/sck-pi-debug.jpeg" /></p>
+<p><img alt="" src="/assets/images/sck-pi-swd-connector.jpeg" /></p>
 <h3 id="running-openocd-on-the-raspberry-pi">Running OpenOCD on the raspberry pi<a class="headerlink" href="#running-openocd-on-the-raspberry-pi" title="Permanent link">&para;</a></h3>
 <p>Once you are logged into the raspberry Pi you need a openOCD config file to start (ej. <em>sck.cfg</em>) with this content:</p>
 <div class="highlight"><pre><span></span><code>source [find interface/raspberrypi2-native.cfg]

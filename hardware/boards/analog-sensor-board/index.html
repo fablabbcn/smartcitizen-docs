@@ -2667,6 +2667,8 @@
         
           
         
+          
+        
       
       
         
@@ -2703,8 +2705,6 @@
       <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
       
       
-        
-          
         
           
         
@@ -2796,20 +2796,6 @@
     <li class="md-nav__item">
       <a href="../../../guides/getting-started/using-the-shell/" class="md-nav__link">
         Using the Shell
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../guides/getting-started/debugging-your-kit/" class="md-nav__link">
-        Debugging your kit
       </a>
     </li>
   
@@ -3123,12 +3109,80 @@
       
       
         <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
-          Legacy Hardware
+          Debugging
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_3_5">
+          <span class="md-nav__icon md-icon"></span>
+          Debugging
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/getting-started/debugging-your-kit/" class="md-nav__link">
+        Debugging your kit
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/getting-started/troubleshooting-sd-card/" class="md-nav__link">
+        Troubleshooting SD-card Mode
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+          Legacy Hardware
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_6">
           <span class="md-nav__icon md-icon"></span>
           Legacy Hardware
         </label>
@@ -3145,7 +3199,7 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5_1" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6_1" >
       
       
         
@@ -3168,14 +3222,14 @@
         <div class="md-nav__link md-nav__link--index ">
           <a href="../../legacy/">Smart Citizen 1.1</a>
           
-            <label for="__nav_3_5_1">
+            <label for="__nav_3_6_1">
               <span class="md-nav__icon md-icon"></span>
             </label>
           
         </div>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_5_1_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_5_1">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_6_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_6_1">
           <span class="md-nav__icon md-icon"></span>
           Smart Citizen 1.1
         </label>
@@ -3251,48 +3305,10 @@
   
   
   
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5_2" >
-      
-      
-        
-          
-        
-      
-      
-        <label class="md-nav__link" for="__nav_3_5_2" id="__nav_3_5_2_label" tabindex="0">
-          Smart Citizen 2.0
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_5_2_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_5_2">
-          <span class="md-nav__icon md-icon"></span>
-          Smart Citizen 2.0
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
     <li class="md-nav__item">
       <a href="../../legacy/sck/" class="md-nav__link">
-        Main
+        Smart Citizen 2.0
       </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
     </li>
   
 
@@ -3670,7 +3686,7 @@
 <h1 id="analog-sensor-board">Analog Sensor Board<a class="headerlink" href="#analog-sensor-board" title="Permanent link">&para;</a></h1>
 <p>The SmartCitizen Analog Sensor Board (<em>ASB</em>) is an expansion board for the Smart Citizen Kit that provides connectivity to analog sensors with a high precission ADC (Texas ADS1115) via I2C, with four configurable addresses. It also gives the possibility to directly hook up <a href="https://www.adafruit.com/product/1085">this ADC by Adafruit</a>.</p>
 <p><img style="max-height: 350px; width: 100%; object-fit: cover;" src="https://live.staticflickr.com/65535/53968621883_5c4f1ab625_k.jpg" alt="Analog-Sensor-Board-front-b"/></p>
-<p>We use it to measure analog voltages from low power sensors such as the <a href="https://www.alphasense.com/">Alphasense Ltd.</a> <a href="knowledge/air/chemical/Alphasense_Electrochemical/">electrochemical</a> sensors, or <a href="https://www.spec-sensors.com/">SPEC</a> sensors. You can use it in different configurations and the different headers:</p>
+<p>We use it to measure analog voltages from low power sensors such as the <a href="https://www.alphasense.com/">Alphasense Ltd.</a> <a href="/knowledge/air/chemical/Alphasense_Electrochemical/">electrochemical</a> sensors, or <a href="https://www.spec-sensors.com/">SPEC</a> sensors. You can use it in different configurations and the different headers:</p>
 <p><img alt="" src="/assets/images/asb-socket-options.png" /></p>
 <p>Below you see a comparison:</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">B-series sensors</label><label for="__tabbed_1_2">A-series sensors</label><label for="__tabbed_1_3">Empty</label></div>
