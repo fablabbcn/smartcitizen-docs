@@ -19,7 +19,7 @@ The projects below have been funded by the European Commission (H2020 or HORIZON
 - [**MINKE**](https://minke.eu): (Grant agreement Nº: 101008724). Innovative design to monitor and manage data on marine ecosystems. MINKE proposes a new vision in the design of marine monitoring networks using two dimensions of data quality, accuracy and completeness, as the driving components of quality in data acquisition. We have been in charge of making water sensors and provide them as a service.
 - [**TwinAIR**](https://twinair-project.eu/)  Innovative tools to improve indoor air quality. _(Grant agreement Nº: 101057779)._ An investigation of indoor air quality and how it relates to external factors. With the aim of improving quality of life in the city, the project will introduce innovative tools for identifying and tracing pollutants and pathogens to increase understanding of their effects and assess their impact on health.
     - [TwinAIR Results](https://cordis.europa.eu/project/id/101057779/results)
-    - [TwinAIR D6.1 - Low cost sensor review](/assets/publicatiosn/TwinAIR-D61.pdf)
+    - [TwinAIR D6.1 - Low cost sensor review](/assets/publications/TwinAIR-D61.pdf)
 - [**CitiObs**](https://citiobs.eu): _(Grant agreement Nº: 101086421)_. Enhancing citizen observatories for sustainable cities. CitiObs is a EU Project aimed at fostering inclusive, diverse, and stable citizen participation in the observation, monitoring, and protection of urban environments. Through the use of low-cost sensor technologies and wearables, CitiObs supports the observation of air quality and other environmental measures, empowering citizens to take an active role in shaping sustainable urban policies.
 
 !!! info "Check the toolkit section"

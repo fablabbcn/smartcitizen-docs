@@ -12,7 +12,7 @@ The SmartCitizen Analog Sensor Board (_ASB_) is an expansion board for the Smart
 
 <img style="max-height: 350px; width: 100%; object-fit: cover;" src="https://live.staticflickr.com/65535/53968621883_5c4f1ab625_k.jpg" alt="Analog-Sensor-Board-front-b"/>
 
-We use it to measure analog voltages from low power sensors such as the [Alphasense Ltd.](https://www.alphasense.com/) [electrochemical](knowledge/air/chemical/Alphasense_Electrochemical/) sensors, or [SPEC](https://www.spec-sensors.com/) sensors. You can use it in different configurations and the different headers:
+We use it to measure analog voltages from low power sensors such as the [Alphasense Ltd.](https://www.alphasense.com/) [electrochemical](/knowledge/air/chemical/Alphasense_Electrochemical/) sensors, or [SPEC](https://www.spec-sensors.com/) sensors. You can use it in different configurations and the different headers:
 
 ![](/assets/images/asb-socket-options.png)
 

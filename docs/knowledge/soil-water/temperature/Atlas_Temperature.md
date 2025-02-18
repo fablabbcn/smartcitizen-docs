@@ -55,6 +55,8 @@ This type of sensor does not require maintenance or recalibration, only periodic
 
 ### Calibration
 
+{{ get_snippet_rel('docs/includes/pre-calibration-water-stations.md')}}
+
 You only need to perform a single point calibration. This process is only necessary if you change the probe cable or the first time you use the sensor.
 
 !!! info "Datasheet"
@@ -106,3 +108,5 @@ You only need to perform a single point calibration. This process is only necess
     ```
     control atlas temp com,cal,[value of temperature from reference probe or temperature]
     ```
+
+{{ get_snippet_rel("docs/includes/water-probes-reset.md") }}

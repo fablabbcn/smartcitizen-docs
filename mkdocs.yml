@@ -129,7 +129,6 @@ nav:
       - Downloading platform data: guides/getting-started/downloading-data.md
       - Uploading SD-card data: guides/getting-started/uploading-sd-card-data.md
       - Using the Shell: guides/getting-started/using-the-shell.md
-      - Debugging your kit: guides/getting-started/debugging-your-kit.md
       - Third party sensors: guides/getting-started/third-party-sensors.md
       # - External Sensors: guides/getting-started/External Sensors.md
       # - Dealing with sensitive sensor readings: guides/getting-started/Dealing with sensitive sensor readings.md
@@ -153,6 +152,9 @@ nav:
       - Visual programming: guides/data/visual-programming.md
       - Creative coding: guides/data/creative-coding.md
       - Python, R and jupyter: guides/data/advanced-data-tools.md
+    - Debugging: 
+      - Debugging your kit: guides/getting-started/debugging-your-kit.md
+      - Troubleshooting SD-card Mode: guides/getting-started/troubleshooting-sd-card.md
         # - Model your sensor data: guides/data/Creating Models for Sensors Calibration.md
         # - Analyse your data in batch: guides/Analyse your data in batch.md
         # - Organising and sharing your data: guides/data/Organise your data.md
@@ -178,11 +180,9 @@ nav:
         - Command Line: hardware/legacy/Command Line.md
         - FAQ: hardware/legacy/Faq.md
         - Troubleshooting: hardware/legacy/Troubleshooting.md
-      - Smart Citizen 2.0:
-        - Main: hardware/legacy/sck.md
+      - Smart Citizen 2.0: hardware/legacy/sck.md
   - Resources:
     - Introduction: resources/index.md
-
     - Toolkits:
       - resources/toolkits/index.md
       - Citizen Sensing Toolkit: resources/toolkits/Citizen Sensing Toolkit.md

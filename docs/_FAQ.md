@@ -137,13 +137,13 @@ The kit is able to store the last reason by which it _restarted_. This informati
 | `BOD12` and `BOD33` | Brown Out `12` and `33` Detector Reset    | This reset takes place when there is a low voltage on the supply (more in the SAMD21 [docs](https://microchipdeveloper.com/32arm:samd21-pm-overview)) |
 | `EXT`    | External Reset                 | This reset takes place when you press the _reset_ button |
 | `WDT`    | Watchdog Reset                 | This reset takes place when the _watchdog timer_ from the SAMD21 _orders it_. Currently not suported |
-| `SYST`   | System Reset Request           | This reset takes place when the Kit _orders_ it (sanity reset), or when you type `reset` in the [shell](/Guides/getting started/Using the Shell/) |
+| `SYST`   | System Reset Request           | This reset takes place when the Kit _orders_ it (sanity reset), or when you type `reset` in the [shell](/guides/getting-started/using-the-shell/) |
 
 ## What can I do in unstable Wi-Fi environments?
 
-Unstable Wi-Fi environments are problematic if there are [low RSSI values](#what-are-good-rssi-values?). Not only data can get to the platform in unconsistent frequency, but can cause the SCK to malfunction in some cases. Although we try to make the SCK as robust as possible, sometimes it helps to use some _special configuration_. This configuration will **increase energy consumption**, so it's not recommended for battery use.
+Unstable Wi-Fi environments are problematic if there are [low RSSI values](#what-are-good-rssi-values). Not only data can get to the platform in unconsistent frequency, but can cause the SCK to malfunction in some cases. Although we try to make the SCK as robust as possible, sometimes it helps to use some _special configuration_. This configuration will **increase energy consumption**, so it's not recommended for battery use.
 
-You can use the [Shell](/Guides/getting started/Using the Shell/) and change the configuration with the commands below:
+You can use the [Shell](/guides/getting-started/using-the-shell/) and change the configuration with the commands below:
 
 ```
 config -pubint 60

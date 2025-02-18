@@ -3,7 +3,7 @@ url_to_pdf: http://making-sense.eu/wp-content/uploads/2018/01/Citizen-Sensing-A-
 ---
 # Citizen Sensing Toolkit
 
-The [Citizen Sensing Toolkit](http://making-sense.eu/wp-content/uploads/2018/01/Citizen-Sensing-A-Toolkit.pdf) was produced as part of the [Making Sense](/European%20Projects/) project, which draws on nine citizen sensing campaigns in Holland, Kosovo and Spain in 2016 and 2017. Based on that experience we developed a framework and methods and tools for citizen participation in environmental monitoring and action. Their approach is bottom-up and participatory, and we call it "citizen sensing".
+The [Citizen Sensing Toolkit](http://making-sense.eu/wp-content/uploads/2018/01/Citizen-Sensing-A-Toolkit.pdf) was produced as part of the [Making Sense](/resources/research/) project, which draws on nine citizen sensing campaigns in Holland, Kosovo and Spain in 2016 and 2017. Based on that experience we developed a framework and methods and tools for citizen participation in environmental monitoring and action. Their approach is bottom-up and participatory, and we call it "citizen sensing".
 
 <div style="text-align: center">
 	<a href="http://making-sense.eu/wp-content/uploads/2018/01/Citizen-Sensing-A-Toolkit.pdf" target="_blank">
@@ -13,7 +13,7 @@ The [Citizen Sensing Toolkit](http://making-sense.eu/wp-content/uploads/2018/01/
 
 ## The Making Sense Framework
 
-![](/assets/images/HMk1665.png)
+![](/assets/images/hypothesis-driven-deployment.png)
 
 !!! info "About the framework"
 	The Making Sense project presents a framework for citizen sensing projects. The framework includes key stages and principles, specifically geared towards projects aimed at supporting community action. The stages are flexible and can be done in any order, and the principles are co-creation, empowerment, openness, and changemaking. The framework will help community organisers, project teams, community members, or individual citizens to develop and deliver a citizen sensing project successfully. The framework stages are explained in more detail in the book chapters, along with their examples in action, and they should help gather the necessary resources to engage people, deliver the project, and navigate common challenges.

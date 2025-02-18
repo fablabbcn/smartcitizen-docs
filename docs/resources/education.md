@@ -10,7 +10,7 @@ _Image credit: [DOIT](https://doit-europe.net)_
 ## Measuring our environment
 
 !!! info "About this resource"
-    **Resource:** [DOIT Toolkit - Measuring our environment (EN)- Future Learning Unit at Fablab Barcelona](/assets/toolkits/10_Measuring Our Environment_DOIT-Manual_en-2.pdf)
+    **Resource:** [DOIT Toolkit - Measuring our environment (EN)- Future Learning Unit at Fablab Barcelona](/assets/toolkits/DOIT-10_Measuring Our Environment_DOIT-Manual_en-2.pdf)
 
     * **Duration**: 28h - 8 units
     * **Setting**: Inside School

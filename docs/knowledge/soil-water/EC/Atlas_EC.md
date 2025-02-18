@@ -43,6 +43,8 @@ If there is an active temperature sensor taking simultaneous readings, the repor
 
 ### Calibration
 
+{{ get_snippet_rel('docs/includes/pre-calibration-water-stations.md')}}
+
 You need to perform a 3 step calibration with a dry point and a 2-point calibration with the calibration solutions.
 
 !!! info "Datasheet"
@@ -174,6 +176,8 @@ If you aren't familiar with the site where you are taking samples, measure at se
     It also prevents bubbles from accumulating in the sensor covering. Simply shake the sensor a little to remove the bubbles:
 
     ![alt_text](/assets/images/water/atlas-ec-bubbles.jpg "Bubbles")
+
+{{ get_snippet_rel("docs/includes/water-probes-reset.md") }}
 
 ## Resources
 

@@ -91,7 +91,7 @@ You should complete the fields with your router or access point information:
 
  - **Encryption** -  _Optional_  You can leave it to _WPA2_ this is the default for most modern networks.
 
- - **External Antenna** - _Optional_ Is your SCK quite far away from Wi-Fi access point? You can use an external antenna with your SCK. Check the [How to use an external antenna?](#/start/how-i-can-extend-the-wi-fi-range) )
+ - **External Antenna** - _Optional_ Is your SCK quite far away from Wi-Fi access point? You can use an external antenna with your SCK. Check the [How to use an external antenna?](#/start/how-i-can-extend-the-wi-fi-range)
 
 Next step is optional, you can set your SCK update interval to optimize the battery performance and sensor resolution ratio.
 
@@ -172,8 +172,6 @@ Note: You have to replace XXX with your phrase, filling any space with the dolla
 
 `exit`
 
-
-
 ### Registering the kit in the platform
 
 After you've uploaded your settings, don't forget to register your kit in our database by saving it's mac address. To find the mac address, you can use the serial command "get mac". Or have a look at the wifi module on the board and read the serial number under the bar code (something like "131G0006662116E4" on kit v1.0 or "0006662116E4" on kit v.1.1).
@@ -185,8 +183,6 @@ The [mac address](http://en.wikipedia.org/wiki/MAC_address) is the last 12 digit
 In both cases, you have to fill the mac address input field in the configuration page of your kit and press the save button.
 
 ![Register The Kit](/assets/images/sck_1/mac_2.png)
-
-
 
 You are now done with the manual configuration of your SCK. Wait for a few minutes to see your data coming on the server and being displayed on the web page. You can also check that everything is ok by looking at the Arduino serial monitor. Debug messages coming from your SCK should look like this:
 
@@ -201,7 +197,6 @@ This tutorial is aimed to advanced users, we will guide you through the process 
 One advantage of this method is that it gives you the opportunity to register multiple Wi-Fi networks at the same time and make the persistent. The Wi-fi networks that you register directly in the source code are called *hardcoded* and the only way to remove them is with the same process of compiling and uploading the firmware again. This is useful if your SCK is traveling from one location to another where the Wi-Fi credentials are known.
 
 The downside of this method is that you can not extract the MAC address of your kit, if you don't know it yet you will have to use the method described in [The Serial Way](#/start/manual-set-up-the-serial-way) or via the configurator in the setup page of your kit.
-
 
 ### Getting the Firmware
 
@@ -254,7 +249,6 @@ char* antennaExt[networks]  = { INT_ANT };
 ```
 char* mySSID[networks] = { "MyFirstSSID", "MySecondSSID" };
 ```
-
 
 ## Uploading the code
 

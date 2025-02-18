@@ -60,6 +60,8 @@ _SOURCE: **ThermoScientific - KCl Creep**_
 
 ### Calibration
 
+{{ get_snippet_rel('docs/includes/pre-calibration-water-stations.md')}}
+
 You have two options for this calibration:
 
 1. Single point calibration (dry point)
@@ -168,4 +170,6 @@ Choose, depending on whether you're going to [take a sample](#taking-a-sample) a
 
     If you can, check the measurement with calibration solution after each reading.
 
-    ![alt_text](/assets/images/education/es/do_method.png "How to measure in turbulent waters")
+    ![](/assets/images/water/do_method.png "How to measure in turbulent waters")
+
+{{ get_snippet_rel("docs/includes/water-probes-reset.md") }}

@@ -69,6 +69,8 @@ _SOURCE: **ThermoScientific - KCl Creep**_
 
 ### Calibration
 
+{{ get_snippet_rel('docs/includes/pre-calibration-water-stations.md')}}
+
 You need to perform a 3-point calibration with the calibration solutions. The solutions vary their pH with temperature, so make sure to check the temperature prior. **The pH value at the current temperature can be found on the reference table on the calibration solution bottle. If the current temperature is not on it, use the closest value or use the calculator [here](https://atlas-scientific.com/ph-temperature-calculator/)**.
 
 !!! info "Datasheet"
@@ -90,12 +92,12 @@ You need to perform a 3-point calibration with the calibration solutions. The so
 
 This is the order of the calibration:
 
-1. midpoint
-2. lowpoint
-3. highpoint
+1. Mid point (7.00)
+2. Low point (4.00)
+3. High point (10.00)
 
 !!! warning
-    Always calibrate the midpoint first because its calibration erases all the previous calibrations done.
+    Always calibrate the **mid point** first because it will erase all the previous calibrations you may have done.
 
 !!! danger
     **Always clean the probe with distilled water between each calibration**
@@ -116,23 +118,25 @@ This is the order of the calibration:
     ...
     ```
 
-* Issue the midpoint calibration command:
+* Issue the mid point calibration command. Remember to input the pH value of the [calibration solution at the current temperature](#calibration-solutions-temperature)
 
     ```
     control atlas ph com,cal,mid,[value of pH at current temperature]
     ```
 
-!!! info "Example at 30°C"
+    !!! info "Example at 30°C"
 
-    ```
-    control atlas ph com,cal,mid,6.99
-    ```
+        ```
+        control atlas ph com,cal,mid,6.99
+        ```
 
-After this command, if you take a pH reading the result should be 7.00 (or very close to it).
+After this command, if you take a pH reading the result should be 7.00 (or very close to it). You can **now remove the probe from the calibration solution and clean it**.
 
 ##### Lowpoint Calibration
 
-* Repeat the procedure with the **Lowpoint** 4.00 solution (the red one). First, read the sensor multiple times until the reading is stable:
+Repeat the procedure with the **Lowpoint** 4.00 solution (the red one).  **The probe needs to be in the calibration solution until you issue the calibration command**. 
+
+* Read the sensor multiple times until the reading is stable:
 
     ```
     control ph com,r
@@ -142,21 +146,25 @@ After this command, if you take a pH reading the result should be 7.00 (or very 
     ...
     ```
 
-* Issue the midpoint calibration command:
+* Issue the **low point** calibration command. Remember to input the pH value of the [calibration solution at the current temperature](#calibration-solutions-temperature):
 
     ```
     control atlas ph com,cal,low,[value of pH at current temperature]
     ```
 
-!!! info "Example at 30°C"
+    !!! info "Example at 30°C"
 
-    ```
-    control atlas ph com,cal,low,4.01
-    ```
+        ```
+        control atlas ph com,cal,low,4.01
+        ```
+
+After this command, if you take a pH reading, the result should be 4.00 (or very close to it). You can **now remove the probe from the calibration solution and clean it**.
 
 ##### Highpoint Calibration
 
-* The same step with **Highpoint** 10.00 calibration solution (blue). First, read the sensor multiple times until the reading is stable:
+Put the sensor in the pH 10.00 calibration solution (high point, the blue one). **The probe needs to be in the calibration solution until you issue the calibration command**.
+
+* First, read the sensor multiple times until the reading is stable:
 
     ```
     control ph com,r
@@ -166,17 +174,17 @@ After this command, if you take a pH reading the result should be 7.00 (or very 
     ...
     ```
 
-* Issue the midpoint calibration command:
+* Issue the **high point calibration command**. Remember to input the pH value of the [calibration solution at the current temperature](#calibration-solutions-temperature)
 
     ```
     control atlas ph com,cal,high,[value of pH at current temperature]
     ```
 
-!!! info "Example at 30°C"
+    !!! info "Example at 30°C"
 
-    ```
-    control atlas ph com,cal,high,9.96
-    ```
+        ```
+        control atlas ph com,cal,high,9.96
+        ```
 
 !!! info "Extra notes"
     The command `control com,cal,?` can be used to check the calibration status as explained on datasheet page 52. The answers can be:
@@ -195,6 +203,8 @@ After this command, if you take a pH reading the result should be 7.00 (or very 
 3. Insert the probe into the sample and take several readings (usually 3 readings are sufficient). When the probe is submerged in the sample, move it gently so that there are no air bubbles that could affect the measurement. **If it takes a long time to stabilize, move it gently, but don't shake it, as this could cause changes in the reading!**
 4. When the readings are stable, take that value as valid and write it down.
 5. Repeat 2 more times.
+
+{{ get_snippet_rel("docs/includes/water-probes-reset.md") }}
 
 ## Resources
 

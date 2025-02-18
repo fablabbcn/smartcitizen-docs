@@ -39,6 +39,8 @@ No particular consideration for the probe, other than it is very delicate:
 
 ### Calibration
 
+{{ get_snippet_rel('docs/includes/pre-calibration-water-stations.md')}}
+
 You only need to perform a single point calibration. You can use any calibrated solution, as long as it's within your sensor range. Atlas uses a 225mV calibration.
 
 !!! info "Datasheet"
@@ -59,7 +61,7 @@ You only need to perform a single point calibration. You can use any calibrated 
 
 #### Single point calibration
 
-![](/assets/images/atlas_orp_cal_process.png)
+![](/assets/images/water/atlas_orp_cal_process.png)
 
 * Read the sensor multiple times until the reading is stable:
 
@@ -82,3 +84,5 @@ You only need to perform a single point calibration. You can use any calibrated 
     ```
     control redox com,cal,225
     ```
+
+{{ get_snippet_rel("docs/includes/water-probes-reset.md") }}

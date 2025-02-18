@@ -214,7 +214,7 @@ The [Data Board](/hardware/boards/data-board/) features a standard [Grove Connec
 ![](/assets/images/sck-aux.png)
 
 !!!info "There is a lot more to it!"
-    The Smart Citizen Kit is designed with a modular approach in mind. This means that the [Urban Board](/hardware/boards/urban-board/) is only a selection of low-cost sensors for air quality, but the hardware itself can be expanded for other use cases such as a more advanced air quality monitoring setup, soil monitoring, or water quality. Check out our [sensor library](/knowledge/) and our [guide on how to use them](/guides/getting%20started/Third%20party%20sensors/).
+    The Smart Citizen Kit is designed with a modular approach in mind. This means that the [Urban Board](/hardware/boards/urban-board/) is only a selection of low-cost sensors for air quality, but the hardware itself can be expanded for other use cases such as a more advanced air quality monitoring setup, soil monitoring, or water quality. Check out our [sensor library](/knowledge/) and our [guide on how to use them](/guides/getting-started/third-party-sensors/).
 
 ## Software Updates
 
@@ -229,9 +229,9 @@ Sofware updates are released in the [firmware repository](https://github.com/fab
 After firmware version **`0.9.8`**, a new [flash memory](/hardware/firmware/features/#flash-storage/) feature was implemented. The flash memory feature is used to store data internally before publishing it to the [Smart Citizen Platform]({{ extra.urls.platform.link }}) or storing it into the micro SD card. This allows us to still collect data when there is no Wi-Fi, when the SD card is not present or corrupt, or to recover data in general. This feature is very useful in many situations, for instance, whenever we cannot use permanent network connection, or you are using the SCK while moving around in the city. The flash memory feature changes completely how readings are handled, separating sensor readings and the publication or storage process. This also affects how errors are handled, allowing for the introduction of a new `WARNING` mode.
 
 !!! tip "Check and upgrade the firmware version"
-	:bulb: Remember, you can check your SCK firmware version quickly following this [guide](/guides/getting%20started/Getting%20firmware%20information/). Later, learn [here](/guides/firmware/Update%20the%20firmware/) how to update it.
+	:bulb: Remember, you can check your SCK firmware version quickly following this [guide](/guides/firmware/getting-firmware-information/). Later, learn [here](/guides/firmware/upgrading-the-firmware/) how to update it.
 
-Of course, everything has its limitations: the flash memory follows a _[circular buffer](https://en.wikipedia.org/wiki/Circular_buffer)_, which means that whenever the flash memory is full, it will start overwriting data, no matter if it was published or not. In a normal SCK, the flash memory will last for some weeks though (more details in the [flash memory section](/firmware/Flash Storage/)), but it's better to always be on the safe side and to avoid losing any data, make sure to check the **`STATUS`** LED for any warnings or errors.
+Of course, everything has its limitations: the flash memory follows a _[circular buffer](https://en.wikipedia.org/wiki/Circular_buffer)_, which means that whenever the flash memory is full, it will start overwriting data, no matter if it was published or not. In a normal SCK, the flash memory will last for some weeks though (more details in the [flash memory section](/hardware/firmware/#flash-storage)), but it's better to always be on the safe side and to avoid losing any data, make sure to check the **`STATUS`** LED for any warnings or errors.
 
 In the particular case of the _Wi-Fi_ mode, two possible things can happen:
 
@@ -253,7 +253,7 @@ The kit will force reboot itself every night at 00:00 UTC. We call this _sanity 
 
 ### Massive storage mode
 
-The `Massive storage mode` is mostly used to [upgrade the SAMD21 firmware](/guides/firmware/upgrade-the-firmware/), by a simple drag-and-drop. However it also has interesting files:
+The `Massive storage mode` is mostly used to [upgrade the SAMD21 firmware](/guides/firmware/upgrading-the-firmware/), by a simple drag-and-drop. However it also has interesting files:
 
 ```
 CURRENT.UF2

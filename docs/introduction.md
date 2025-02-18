@@ -17,13 +17,13 @@ Citizen science is often implemented by mapping the environment and, more concre
 
 ### The Device
 
-The [Smart Citizen Kit (SCK)](/Smart Citizen Kit/) is a key component of the larger [Smart Citizen hardware ecosystem](/Components/), providing a modular architecture for environmental data collection. Built around a central Data Board, the SCK facilitates data logging and network connectivity. Users can upload data to the Smart Citizen platform via standard domestic WiFi or store it on an internal SD card for later manual upload.
+The [Smart Citizen Kit (SCK)](/hardware/kit/) is a key component of the larger [Smart Citizen hardware ecosystem](/hardware/), providing a modular architecture for environmental data collection. Built around a central Data Board, the SCK facilitates data logging and network connectivity. Users can upload data to the Smart Citizen platform via standard domestic WiFi or store it on an internal SD card for later manual upload.
 
-Outfitted with the Urban [Sensor Board](/Smart Citizen Kit/#measurements) , the standard kit measures various environmental variables such as air temperature, humidity, and particulate matter (primarily PM2.5 and PM10). Custom sensor configurations are available for specialized applications in air and water monitoring.
+Outfitted with the Urban [Sensor Board](/hardware/kit/#measurements) , the standard kit measures various environmental variables such as air temperature, humidity, and particulate matter (primarily PM2.5 and PM10). Custom sensor configurations are available for specialized applications in air and water monitoring.
 
-The device accommodates various [3D-printed enclosures](/Components/enclosures/Enclosures/), ranging from simple indoor setups to rugged outdoor solutions. Most designs are compatible with locally accessible 3D printers, negating the need for long-distance shipping.
+The device accommodates various [3D-printed enclosures]({{ extra.urls.enclosures.link }}), ranging from simple indoor setups to rugged outdoor solutions. Most designs are compatible with locally accessible 3D printers, negating the need for long-distance shipping.
 
-![](https://i.imgur.com/CbXDdY8.png)
+![](/assets/images/sck-metrics.png)
 
 ### Installation
 
@@ -31,11 +31,11 @@ Matching environmental factors to be measured with the specific deployment requi
 
 Situating the Kit in domestic outdoor spaces that are both elevated and proximal to the residence is advocated for standard deployments. Such locations yield multiple benefits: they afford convenient access to electrical power through nearby interior outlets, enable stable connectivity via the domicile's pre-existing WiFi infrastructure, and position the apparatus at a minimum height to avoid its unintentional manipulation. 
 
-The SCK arrives pre-assembled, requiring only a brief [setup guided online](/Guides/getting%20started/Onboarding%20Sensors/). Users must register on the Smart Citizen Platform to specify device location and name. A small rechargeable battery powers the kit and offers a 2-5 day battery and backup over short power disruptions. The device can be connected to a standard socket for medium to long deployment using an external USB adapter. Custom power solutions are also available for non-standard implementations.
+The SCK arrives pre-assembled, requiring only a brief [setup guided online](/guides/getting-started/onboarding-your-kit/). Users must register on the Smart Citizen Platform to specify device location and name. A small rechargeable battery powers the kit and offers a 2-5 day battery and backup over short power disruptions. The device can be connected to a standard socket for medium to long deployment using an external USB adapter. Custom power solutions are also available for non-standard implementations.
 
 Designed for resilience, the SCK features internal memory for data buffering and a user interface with status-indicating LEDs and functional buttons. Devices are easily resettable, enabling multiple community deployments with the same hardware.
 
-The Kit is initially designed for static deployments, but research initiatives have evaluated versions with [built-in GPS](/Components/GPS/). However, movement can influence sensor exposure and thus affect data quality. Therefore, we must carefully assess each use case to maintain data integrity.
+The Kit is initially designed for static deployments, but research initiatives have evaluated versions with [built-in GPS](/hardware/addons/gps/). However, movement can influence sensor exposure and thus affect data quality. Therefore, we must carefully assess each use case to maintain data integrity.
 
 ![](https://i.imgur.com/MPXlpiB.jpg)
 
@@ -43,7 +43,7 @@ The Kit is initially designed for static deployments, but research initiatives h
 
 Data uploaded to the [Smart Citizen Platform](https://smartcitizen.me/kits/) is publicly accessible and easily navigable. Comparative and historical analyses can be performed on device data, downloadable in CSV format for common spreadsheet applications.
 
-A suite of Python, R, and Orange tools is available for [advanced analytics](/Data/Data Analysis). Furthermore, an [open API](https://developer.smartcitizen.me/) offers communities and corporations the flexibility to create bespoke visualization tools or integrate the SCK into existing workflows.
+A suite of Python, R, and Orange tools is available for [advanced analytics](/data/data-tools/). Furthermore, an [open API](https://developer.smartcitizen.me/) offers communities and corporations the flexibility to create bespoke visualization tools or integrate the SCK into existing workflows.
 
 ![](https://i.imgur.com/taC62WH.jpg)
 

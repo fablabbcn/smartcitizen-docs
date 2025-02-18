@@ -6,7 +6,7 @@ This guide will walk you through some easy steps in case your kit is not collect
 
 1. Plug in your kit with the USB cable provided. A LED on the **blue side** of the kit should light up.
 
-    ![image](/assets/images/sck_2/led_location.png)
+    ![image](/assets/images/data-board-leds.png){:style="max-width: 500px;"}
 
 2. Check if the LED is...
     + ***Hard flashing pink light*** <span class="led sd-error"></span>. In this case, your kit **IS NOT** storing data.
@@ -31,7 +31,7 @@ This guide will walk you through some easy steps in case your kit is not collect
 
 1. Press the **ON/OFF button** on the SCK. The ON/OFF Button is inside the box, next to the USB cable:
 
-    ![image](/assets/images/sck_2/button_location.png)
+    ![](/assets/images/data-board-buttons.png){:style="max-width: 500px;"}
 
 2. The LED from before should now be **red**.
 

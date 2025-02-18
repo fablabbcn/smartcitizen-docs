@@ -3,7 +3,7 @@ Smart Citizen Kit
 
 !!! info "A note about versions"
 
-    The [**SCK 2.0**](/Legacy Hardware/sck) was the development version for the now commercially available **SCK 2.1** sponsored thanks to the [iSCAPE project](https://www.iscapeproject.eu/) under European Community’s H2020 Programme under Grant Agreement No. [689954](https://cordis.europa.eu/project/rcn/202639/en)
+    The [**SCK 2.0**](/hardware/legacy/sck/#sck-20) was the development version for the now commercially available **SCK 2.1** sponsored thanks to the [iSCAPE project](https://www.iscapeproject.eu/) under European Community’s H2020 Programme under Grant Agreement No. [689954](https://cordis.europa.eu/project/rcn/202639/en)
 
 !!! tip "Quick links"
     :rocket: **Installation**: [{{ extra.urls.installation.name }}]({{ extra.urls.installation.link }})
@@ -42,7 +42,7 @@ The measurements of the SCK2.0 are listed below:
 | Particulate Matter PM 1 / 2.5 / 10 | µg/m3 | Planttower PMS 5003              |
 
 !!! info "Find out more"
-    Except for the sensors, most information about the SCK2.0 is the same as the one for SCK2.1. More information about the metal oxyde sensors can be found [here](/Components/Urban%20Sensor%20Board/Metal%20Oxide%20Sensor/MICS/)
+    Except for the sensors, most information about the SCK2.0 is the same as the one for SCK2.1. More information about the metal oxyde sensors can be found [here](/knowledge/air/chemical/SGX_MICS/.)
 
-    The firmware for the 2.0 is still maintained and can be found in [Github](https://github.com/fablabbcn/smartcitizen-kit-20) 
+    The firmware for the 2.0 is still maintained and can be found in [Github](https://github.com/fablabbcn/smartcitizen-kit-20).
 
