@@ -1,0 +1,12 @@
+.DS_Store
+*.pdf
+*.jpg
+*.ico
+*.gif
+*.png
+*.jpeg
+*.ods
+*.ows*
+*.pde
+*.ide
+*.sh

@@ -1,0 +1,25 @@
+<div class="sensor-banner {{ color }}-sensor-banner">
+    <div class="sensor-image-block">
+        <a href="{{target_url}}"><img src="{{ feature_img }}" alt="{{ name }}" class="sensor-image"></a>
+    </div>
+    <div class="sensor-tags-block-container">
+        <a href="{{ target_url }}"><h1>{{ name }}</h1></a>
+        <div class="sensor-tags-block">
+            <a href="{{ field_url }}">
+                <div class="sensor-field sensor-tag">
+                    {{ icon|safe }}
+                    <p class="sensor-field-name">Field | <b class="sensor-tag-content">{% for i in field %}{{i}}{% endfor %}</b></p>
+                </div>
+            </a>
+            <a href="{{ metric_url }}">
+                <div class="target-field sensor-tag">
+                    <p>Metric | <b class="sensor-tag-content"> {% for i in target %}{{i}}{% endfor %}</b></p>
+                </div>
+            </a>
+            <div class="type-field sensor-tag">
+                <p>Connection | <b class="sensor-tag-content"> {% for i in type %}{{i}}{%- if not loop.last %} or {% endif %}{% endfor %}</b></p>
+            </div>
+        </div>
+        <p class="sensor-excerpt"> {{excerpt}} </p>
+    </div>
+</div>

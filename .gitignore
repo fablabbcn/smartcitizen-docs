@@ -4,3 +4,8 @@ TO-DO.md
 aux/
 __pycache__/
 *.swp.p
+.vscode/
+*.log
+.pytest_cache/
+
+custom_theme/includes/auto/*.html
