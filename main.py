@@ -146,6 +146,8 @@ def on_pre_page_macros(env):
                     std_out (f'\t{frontmatter}')
                     result = template.render(frontmatter)
 
+                    os.makedirs(f"{custom_dir}/aux/", exist_ok=True)
+
                     html_path = os.path.join(f"{custom_dir}/aux", file.replace('.md', '.html')).replace("index", frontmatter['name'].lower().replace(" ","_"))
                     std_out (f'\tCreating card {html_path}')
 
