@@ -1,5 +1,5 @@
 ---
-ignore_macros: true
+render_macros: false
 ---
 
 # Model your sensor data
@@ -11,13 +11,13 @@ In this section, we will detail how to develop models for our sensors. We will t
 	- Robust to noise
 	- Learn non-linear relationships
 	- Aware of temporal dependence
-   
+
 !!! info "Load some data first"
     We will need to load the data first, for this, check the guides to [organise the data](/Guides/Organise your data) and to [load it](/Guides/Organise your data/#load-the-data)
 
 ## Ordinary Least Squares example
 
-Let's delve first into an OLS example. 
+Let's delve first into an OLS example.
 
 !!! info
         You can follow this example using this [notebook](https://github.com/fablabbcn/smartcitizen-iscape-data/blob/master/examples/model_creation.ipynb)
@@ -76,13 +76,13 @@ min_date = '2018-08-31 00:00:00'
 max_date = '2018-09-06 00:00:00'
 
 # Important that this is a float, don't forget the .
-"hyperparameters": {"ratio_train": 0.75} 
+"hyperparameters": {"ratio_train": 0.75}
 ```
 
 If we run this cell, we will perform model calibration, with the following output:
 
 ```
-                            OLS Regression Results                            
+                            OLS Regression Results
 ==============================================================================
 Dep. Variable:                    REF   R-squared:                       0.676
 Model:                            OLS   Adj. R-squared:                  0.673
@@ -91,8 +91,8 @@ Date:                Thu, 06 Sep 2018   Prob (F-statistic):          1.87e-135
 Time:                        12:25:17   Log-Likelihood:                 1142.9
 No. Observations:                 575   AIC:                            -2272.
 Df Residuals:                     568   BIC:                            -2241.
-Df Model:                           6                                         
-Covariance Type:            nonrobust                                         
+Df Model:                           6
+Covariance Type:            nonrobust
 ==================================================================================
                      coef    std err          t      P>|t|      [0.025      0.975]
 ----------------------------------------------------------------------------------
@@ -190,7 +190,7 @@ model_description_rf = {"model_name": "RF_UCD",
                                             "frequency": "1Min",
                                             "max_date": '2019-01-15'},
                             },
-                    "hyperparameters": {"ratio_train": 0.75, 
+                    "hyperparameters": {"ratio_train": 0.75,
                                         "min_samples_leaf": 2,
                                         "max_features": None,
                                        "n_estimators": 100,
@@ -221,7 +221,7 @@ Variable: GB_2W_5262 Importance: 0.31
 Variable: GB_2A_5262 Importance: 0.3
 Calculating Metrics...
 Metrics Summary:
-Metric                  Train   Test 
+Metric                  Train   Test
 avg_ref                 16.648  15.861
 avg_est                 16.666  16.000
 sig_ref                 11.438  10.584
@@ -354,7 +354,7 @@ models = dict()
 group = 0
 for model in [ols_model, rf_model]:
     for dataset in ['train', 'validation']:
-        if dataset in model.metrics.keys(): 
+        if dataset in model.metrics.keys():
             models[model.name + '_' + dataset] = model.metrics[dataset]
             models[model.name + '_' + dataset]['group'] = group
 
