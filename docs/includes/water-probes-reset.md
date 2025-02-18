@@ -9,7 +9,7 @@
 
 Each EZO driver has it's independent calibration and status. This process needs to be done per **_driver_** (i.e. per EZO metric). To make a factory reset procedure for the EZO drivers follow the steps below:
 
-1. Make sure that the [Smart Citizen Data](/Components/boards/Data%20Board/) board will not take any readings while you follow the calibration process. The best option is to reset the configuration to the defaults. Make sure you [back-up your information](/Guides/firmware/Update%20the%20firmware/?h=bac#make-a-back-up-of-your-info) before:
+1. Make sure that the [Smart Citizen Data](/hardware/boards/data-board/) board will not take any readings while you follow the calibration process. The best option is to reset the configuration to the defaults. Make sure you [back-up your information](/guides/firmware/upgrading-the-firmware/#make-a-back-up-of-your-info/) before:
 
     - The config command will output your current configuration. Copy it and keep it safe:
 
@@ -23,7 +23,7 @@ Each EZO driver has it's independent calibration and status. This process needs 
     config -defaults
     ```
 
-    - The LED should be red now (the Data Board is in [Setup mode](/Smart%20Citizen%20Kit/?h=setup#setup-mode))
+    - The LED should be red now (the Data Board is in [Setup mode](/hardware/kit/features/#setup-mode))
 
 2. Issue the factory reset command to the _driver_ in question. For instance, for the _conductivity_ one:
 
@@ -41,16 +41,13 @@ Each EZO driver has it's independent calibration and status. This process needs 
 
 4. Reset the kit
 
-5. Follow the calibration process as you would normally would. Remember that for _conductivity_ you may need to [re-issue the probe type](#set-probe-type)
+5. Follow the calibration process as you would normally would.
 
 6. Reconfigure the kit using the `config` command, by putting back the information you backed-up before:
 
     ```
     config -mode ...
     ```
-
-!!! success "Ready to go?"
-    If you want to send the data to the platform, you will need to register the unit using the [Advanced Kit Selection](/Guides/getting started/Onboarding Sensors/#advanced-kit-selection/). At the moment the closest Kit Blueprint will be `#22 BioPV Kit` or `#31 SCK 2.1 Sea Water` in case you are using a SCK2.1 with GPS. You can request in the [forum]({{ extra.urls.forum.link }}) for a custom blueprint with the specific sensors you are using.
 
 !!! danger
     After finishing the calibration process **restart your SCK** to start from a clean state.
