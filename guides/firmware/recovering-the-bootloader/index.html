@@ -12,27 +12,27 @@
         <meta name="author" content="Fab Lab Barcelona">
       
       
-        <link rel="canonical" href="https://docs.smartcitizen.me/hardware/stations/air/sck-2xchem/">
+        <link rel="canonical" href="https://docs.smartcitizen.me/guides/firmware/recovering-the-bootloader/">
       
       
-        <link rel="prev" href="../sck-1xchem/">
+        <link rel="prev" href="../debug-the-firmware/">
       
       
-        <link rel="next" href="../sck-co2-hcho/">
+        <link rel="next" href="../../data/handling-calibration-data/">
       
-      <link rel="icon" href="../../../../assets/images/favicon.ico">
+      <link rel="icon" href="../../../assets/images/favicon.ico">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.1.0">
     
     
       
-        <title>SCK + 2x CHEM - Smart Citizen Docs</title>
+        <title>Recovering the bootloader - Smart Citizen Docs</title>
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.402914a4.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.402914a4.min.css">
       
         
-        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.a0c5b2b5.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.a0c5b2b5.min.css">
       
       
 
@@ -48,9 +48,9 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/extra.css">
     
-    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#sck-2xchem" class="md-skip">
+        <a href="#recovering-samd21-bootloader" class="md-skip">
           Skip to content
         </a>
       
@@ -98,9 +98,9 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../../.." title="Smart Citizen Docs" class="md-header__button md-logo" aria-label="Smart Citizen Docs" data-md-component="logo">
+    <a href="../../.." title="Smart Citizen Docs" class="md-header__button md-logo" aria-label="Smart Citizen Docs" data-md-component="logo">
       
-  <img src="../../../../assets/images/logo.svg" alt="logo">
+  <img src="../../../assets/images/logo.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              SCK + 2x CHEM
+              Recovering the bootloader
             
           </span>
         </div>
@@ -196,15 +196,13 @@
         
   
   
-    
-  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../../../.." class="md-tabs__link md-tabs__link--active">
+      <a href="../../.." class="md-tabs__link">
         Main
       </a>
     </li>
@@ -220,7 +218,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../../knowledge/" class="md-tabs__link">
+      <a href="../../../knowledge/" class="md-tabs__link">
         Knowledge
       </a>
     </li>
@@ -230,13 +228,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../../../../guides/" class="md-tabs__link">
+      <a href="../../" class="md-tabs__link md-tabs__link--active">
         Guides
       </a>
     </li>
@@ -252,7 +252,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../../resources/" class="md-tabs__link">
+      <a href="../../../resources/" class="md-tabs__link">
         Resources
       </a>
     </li>
@@ -268,7 +268,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../../about/" class="md-tabs__link">
+      <a href="../../../about/" class="md-tabs__link">
         About
       </a>
     </li>
@@ -302,9 +302,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../.." title="Smart Citizen Docs" class="md-nav__button md-logo" aria-label="Smart Citizen Docs" data-md-component="logo">
+    <a href="../../.." title="Smart Citizen Docs" class="md-nav__button md-logo" aria-label="Smart Citizen Docs" data-md-component="logo">
       
-  <img src="../../../../assets/images/logo.svg" alt="logo">
+  <img src="../../../assets/images/logo.svg" alt="logo">
 
     </a>
     Smart Citizen Docs
@@ -330,16 +330,14 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
       
       
         
@@ -360,7 +358,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../..">Main</a>
+          <a href="../../..">Main</a>
           
             <label for="__nav_1">
               <span class="md-nav__icon md-icon"></span>
@@ -368,7 +366,7 @@
           
         </div>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_1">
           <span class="md-nav__icon md-icon"></span>
           Main
@@ -381,16 +379,14 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" >
       
       
         
@@ -413,7 +409,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../">Hardware</a>
+          <a href="../../../hardware/">Hardware</a>
           
             <label for="__nav_1_2">
               <span class="md-nav__icon md-icon"></span>
@@ -421,7 +417,7 @@
           
         </div>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_1_2">
           <span class="md-nav__icon md-icon"></span>
           Hardware
@@ -458,7 +454,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../kit/">Smart Citizen Kit</a>
+          <a href="../../../hardware/kit/">Smart Citizen Kit</a>
           
             <label for="__nav_1_2_2">
               <span class="md-nav__icon md-icon"></span>
@@ -481,7 +477,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../kit/features/" class="md-nav__link">
+      <a href="../../../hardware/kit/features/" class="md-nav__link">
         Features
       </a>
     </li>
@@ -495,7 +491,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../kit/specs/" class="md-nav__link">
+      <a href="../../../hardware/kit/specs/" class="md-nav__link">
         Technical Specs
       </a>
     </li>
@@ -514,16 +510,14 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2_3" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2_3" >
       
       
         
@@ -540,7 +534,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../">Smart Citizen Stations</a>
+          <a href="../../../hardware/stations/">Smart Citizen Stations</a>
           
             <label for="__nav_1_2_3">
               <span class="md-nav__icon md-icon"></span>
@@ -548,7 +542,7 @@
           
         </div>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_2_3_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_2_3_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_1_2_3">
           <span class="md-nav__icon md-icon"></span>
           Smart Citizen Stations
@@ -561,16 +555,14 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2_3_2" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2_3_2" >
       
       
         
@@ -595,7 +587,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../">Air</a>
+          <a href="../../../hardware/stations/air/">Air</a>
           
             <label for="__nav_1_2_3_2">
               <span class="md-nav__icon md-icon"></span>
@@ -603,7 +595,7 @@
           
         </div>
       
-      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_1_2_3_2_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_1_2_3_2_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_1_2_3_2">
           <span class="md-nav__icon md-icon"></span>
           Air
@@ -618,7 +610,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sck-temp/" class="md-nav__link">
+      <a href="../../../hardware/stations/air/sck-temp/" class="md-nav__link">
         SCK + T / RH
       </a>
     </li>
@@ -632,7 +624,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sck-co2/" class="md-nav__link">
+      <a href="../../../hardware/stations/air/sck-co2/" class="md-nav__link">
         SCK + CO2
       </a>
     </li>
@@ -646,7 +638,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sck-1xchem/" class="md-nav__link">
+      <a href="../../../hardware/stations/air/sck-1xchem/" class="md-nav__link">
         SCK + 1x CHEM
       </a>
     </li>
@@ -658,120 +650,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          SCK + 2x CHEM
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../hardware/stations/air/sck-2xchem/" class="md-nav__link">
         SCK + 2x CHEM
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#measurements" class="md-nav__link">
-    Measurements
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#technical-specifications" class="md-nav__link">
-    Technical specifications
-  </a>
-  
-    <nav class="md-nav" aria-label="Technical specifications">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#dimensions-and-weight" class="md-nav__link">
-    Dimensions and weight
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#power" class="md-nav__link">
-    Power
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#connectivity" class="md-nav__link">
-    Connectivity
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#hardware-design" class="md-nav__link">
-    Hardware design
-  </a>
-  
-    <nav class="md-nav" aria-label="Hardware design">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#enclosure-and-mounting-system" class="md-nav__link">
-    Enclosure and mounting system
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#deployment-tips" class="md-nav__link">
-    Deployment tips
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#handling-calibration-data" class="md-nav__link">
-    Handling calibration data
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -783,7 +666,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sck-co2-hcho/" class="md-nav__link">
+      <a href="../../../hardware/stations/air/sck-co2-hcho/" class="md-nav__link">
         SCK + CO2 + HCHO
       </a>
     </li>
@@ -797,7 +680,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sck-co2-2xchem/" class="md-nav__link">
+      <a href="../../../hardware/stations/air/sck-co2-2xchem/" class="md-nav__link">
         SCK + CO2 + 2x CHEM
       </a>
     </li>
@@ -840,7 +723,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../water/">Water</a>
+          <a href="../../../hardware/stations/water/">Water</a>
           
             <label for="__nav_1_2_3_3">
               <span class="md-nav__icon md-icon"></span>
@@ -863,7 +746,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../water/sck-water-single/" class="md-nav__link">
+      <a href="../../../hardware/stations/water/sck-water-single/" class="md-nav__link">
         One-Sensor Station
       </a>
     </li>
@@ -877,7 +760,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../water/sck-water-multi/" class="md-nav__link">
+      <a href="../../../hardware/stations/water/sck-water-multi/" class="md-nav__link">
         Multi-Sensor Station
       </a>
     </li>
@@ -923,7 +806,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../firmware/">Firmware</a>
+          <a href="../../../hardware/firmware/">Firmware</a>
           
         </div>
       
@@ -975,7 +858,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../boards/">Boards</a>
+          <a href="../../../hardware/boards/">Boards</a>
           
             <label for="__nav_1_2_5">
               <span class="md-nav__icon md-icon"></span>
@@ -998,7 +881,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../boards/data-board/" class="md-nav__link">
+      <a href="../../../hardware/boards/data-board/" class="md-nav__link">
         Data Board
       </a>
     </li>
@@ -1012,7 +895,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../boards/urban-board/" class="md-nav__link">
+      <a href="../../../hardware/boards/urban-board/" class="md-nav__link">
         Urban Board
       </a>
     </li>
@@ -1026,7 +909,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../boards/analog-sensor-board/" class="md-nav__link">
+      <a href="../../../hardware/boards/analog-sensor-board/" class="md-nav__link">
         Analog Sensor Board
       </a>
     </li>
@@ -1073,7 +956,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../boards/gases-pro-board/" class="md-nav__link">
+      <a href="../../../hardware/boards/gases-pro-board/" class="md-nav__link">
         Gases Pro Board
       </a>
     </li>
@@ -1087,7 +970,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../boards/pm-board/" class="md-nav__link">
+      <a href="../../../hardware/boards/pm-board/" class="md-nav__link">
         PM Board
       </a>
     </li>
@@ -1143,7 +1026,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../addons/">Add-ons</a>
+          <a href="../../../hardware/addons/">Add-ons</a>
           
             <label for="__nav_1_2_6">
               <span class="md-nav__icon md-icon"></span>
@@ -1166,7 +1049,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../addons/gps/" class="md-nav__link">
+      <a href="../../../hardware/addons/gps/" class="md-nav__link">
         GPS
       </a>
     </li>
@@ -1180,7 +1063,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../addons/power-supply/" class="md-nav__link">
+      <a href="../../../hardware/addons/power-supply/" class="md-nav__link">
         Power Supply
       </a>
     </li>
@@ -1194,7 +1077,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../addons/solar-panel/" class="md-nav__link">
+      <a href="../../../hardware/addons/solar-panel/" class="md-nav__link">
         Solar Panel
       </a>
     </li>
@@ -1208,7 +1091,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../addons/oled-screen/" class="md-nav__link">
+      <a href="../../../hardware/addons/oled-screen/" class="md-nav__link">
         OLED Screen
       </a>
     </li>
@@ -1222,7 +1105,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../addons/atlas-drivers/" class="md-nav__link">
+      <a href="../../../hardware/addons/atlas-drivers/" class="md-nav__link">
         Atlas EZO Drivers
       </a>
     </li>
@@ -1274,7 +1157,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../data/">Data</a>
+          <a href="../../../data/">Data</a>
           
             <label for="__nav_1_3">
               <span class="md-nav__icon md-icon"></span>
@@ -1297,7 +1180,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../data/data-platform/" class="md-nav__link">
+      <a href="../../../data/data-platform/" class="md-nav__link">
         Data Platform
       </a>
     </li>
@@ -1311,7 +1194,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../data/data-tools/" class="md-nav__link">
+      <a href="../../../data/data-tools/" class="md-nav__link">
         Data Tools
       </a>
     </li>
@@ -1325,7 +1208,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../data/sd-card/" class="md-nav__link">
+      <a href="../../../data/sd-card/" class="md-nav__link">
         SD-card Storage
       </a>
     </li>
@@ -1346,7 +1229,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../_FAQ/" class="md-nav__link">
+      <a href="../../../_FAQ/" class="md-nav__link">
         FAQ
       </a>
     </li>
@@ -1360,7 +1243,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../troubleshooting/" class="md-nav__link">
+      <a href="../../../troubleshooting/" class="md-nav__link">
         Troubleshooting
       </a>
     </li>
@@ -1406,7 +1289,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../knowledge/">Knowledge</a>
+          <a href="../../../knowledge/">Knowledge</a>
           
             <label for="__nav_2">
               <span class="md-nav__icon md-icon"></span>
@@ -1461,7 +1344,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../knowledge/air/">Air</a>
+          <a href="../../../knowledge/air/">Air</a>
           
             <label for="__nav_2_2">
               <span class="md-nav__icon md-icon"></span>
@@ -1508,7 +1391,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../knowledge/air/pm/">Particulate Matter</a>
+          <a href="../../../knowledge/air/pm/">Particulate Matter</a>
           
             <label for="__nav_2_2_2">
               <span class="md-nav__icon md-icon"></span>
@@ -1531,7 +1414,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../knowledge/air/pm/Plantower_PMS5003/" class="md-nav__link">
+      <a href="../../../knowledge/air/pm/Plantower_PMS5003/" class="md-nav__link">
         Plantower PMS5003
       </a>
     </li>
@@ -1545,7 +1428,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../knowledge/air/pm/Sensirion_SPS30/" class="md-nav__link">
+      <a href="../../../knowledge/air/pm/Sensirion_SPS30/" class="md-nav__link">
         Sensirion SPS30
       </a>
     </li>
@@ -1559,7 +1442,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../knowledge/air/pm/Sensirion_SEN5X/" class="md-nav__link">
+      <a href="../../../knowledge/air/pm/Sensirion_SEN5X/" class="md-nav__link">
         Sensirion SEN5X
       </a>
     </li>
@@ -1612,7 +1495,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../knowledge/air/chemical/">Chemical composition</a>
+          <a href="../../../knowledge/air/chemical/">Chemical composition</a>
           
             <label for="__nav_2_2_3">
               <span class="md-nav__icon md-icon"></span>
@@ -1635,7 +1518,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../knowledge/air/chemical/Alphasense_PID/" class="md-nav__link">
+      <a href="../../../knowledge/air/chemical/Alphasense_PID/" class="md-nav__link">
         Alphasense PID
       </a>
     </li>
@@ -1649,7 +1532,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../knowledge/air/chemical/Figaro_TGS260X/" class="md-nav__link">
+      <a href="../../../knowledge/air/chemical/Figaro_TGS260X/" class="md-nav__link">
         Figaro TGS260X
       </a>
     </li>
@@ -1663,7 +1546,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../knowledge/air/chemical/Sensirion_SFA30/" class="md-nav__link">
+      <a href="../../../knowledge/air/chemical/Sensirion_SFA30/" class="md-nav__link">
         Sensirion SFA30
       </a>
     </li>
@@ -1677,7 +1560,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../knowledge/air/chemical/Alphasense_Electrochemical/" class="md-nav__link">
+      <a href="../../../knowledge/air/chemical/Alphasense_Electrochemical/" class="md-nav__link">
         Alphasense Electrochemical
       </a>
     </li>
@@ -1691,7 +1574,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../knowledge/air/chemical/SGX_MICS/" class="md-nav__link">
+      <a href="../../../knowledge/air/chemical/SGX_MICS/" class="md-nav__link">
         SGX Mics
       </a>
     </li>
@@ -1705,7 +1588,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../knowledge/air/chemical/AMS_CCS811/" class="md-nav__link">
+      <a href="../../../knowledge/air/chemical/AMS_CCS811/" class="md-nav__link">
         AMS CCS811
       </a>
     </li>
@@ -1719,7 +1602,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../knowledge/air/chemical/Bosch_BME680/" class="md-nav__link">
+      <a href="../../../knowledge/air/chemical/Bosch_BME680/" class="md-nav__link">
         Bosch BME680
       </a>
     </li>
@@ -1762,7 +1645,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../knowledge/air/co2/">CO2</a>
+          <a href="../../../knowledge/air/co2/">CO2</a>
           
             <label for="__nav_2_2_4">
               <span class="md-nav__icon md-icon"></span>
@@ -1785,7 +1668,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../knowledge/air/co2/Sensirion_SCD30/" class="md-nav__link">
+      <a href="../../../knowledge/air/co2/Sensirion_SCD30/" class="md-nav__link">
         Sensirion SCD30
       </a>
     </li>
@@ -1799,7 +1682,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../knowledge/air/co2/Sensirion_SCD4X/" class="md-nav__link">
+      <a href="../../../knowledge/air/co2/Sensirion_SCD4X/" class="md-nav__link">
         Sensirion SCD4X
       </a>
     </li>
@@ -1840,7 +1723,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../knowledge/air/noise/">Noise</a>
+          <a href="../../../knowledge/air/noise/">Noise</a>
           
             <label for="__nav_2_2_5">
               <span class="md-nav__icon md-icon"></span>
@@ -1863,7 +1746,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../knowledge/air/noise/TDK_ICS43432/" class="md-nav__link">
+      <a href="../../../knowledge/air/noise/TDK_ICS43432/" class="md-nav__link">
         TDK ICS43432
       </a>
     </li>
@@ -1908,7 +1791,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../knowledge/air/temperature_rel_humidity/">Temperature</a>
+          <a href="../../../knowledge/air/temperature_rel_humidity/">Temperature</a>
           
             <label for="__nav_2_2_6">
               <span class="md-nav__icon md-icon"></span>
@@ -1931,7 +1814,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../knowledge/air/temperature_rel_humidity/Sensirion_SHT3X/" class="md-nav__link">
+      <a href="../../../knowledge/air/temperature_rel_humidity/Sensirion_SHT3X/" class="md-nav__link">
         Sensirion SHT3X
       </a>
     </li>
@@ -1945,7 +1828,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../knowledge/air/temperature_rel_humidity/Sensirion_SHT3X-weatherproof/" class="md-nav__link">
+      <a href="../../../knowledge/air/temperature_rel_humidity/Sensirion_SHT3X-weatherproof/" class="md-nav__link">
         Sensirion SHT3X Weatherproof
       </a>
     </li>
@@ -1959,7 +1842,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../knowledge/air/temperature_rel_humidity/DS18B20/" class="md-nav__link">
+      <a href="../../../knowledge/air/temperature_rel_humidity/DS18B20/" class="md-nav__link">
         Dallas DS18B20
       </a>
     </li>
@@ -2000,7 +1883,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../knowledge/air/light/">Light</a>
+          <a href="../../../knowledge/air/light/">Light</a>
           
             <label for="__nav_2_2_7">
               <span class="md-nav__icon md-icon"></span>
@@ -2023,7 +1906,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../knowledge/air/light/AMS_AS7331/" class="md-nav__link">
+      <a href="../../../knowledge/air/light/AMS_AS7331/" class="md-nav__link">
         AMS AS7311
       </a>
     </li>
@@ -2062,7 +1945,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../knowledge/air/pressure/">Pressure</a>
+          <a href="../../../knowledge/air/pressure/">Pressure</a>
           
         </div>
       
@@ -2125,7 +2008,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../knowledge/soil-water/">Soil and Water</a>
+          <a href="../../../knowledge/soil-water/">Soil and Water</a>
           
             <label for="__nav_2_3">
               <span class="md-nav__icon md-icon"></span>
@@ -2168,7 +2051,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../knowledge/soil-water/pH/">pH</a>
+          <a href="../../../knowledge/soil-water/pH/">pH</a>
           
             <label for="__nav_2_3_2">
               <span class="md-nav__icon md-icon"></span>
@@ -2191,7 +2074,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../knowledge/soil-water/pH/Atlas_pH/" class="md-nav__link">
+      <a href="../../../knowledge/soil-water/pH/Atlas_pH/" class="md-nav__link">
         Atlas pH
       </a>
     </li>
@@ -2232,7 +2115,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../knowledge/soil-water/DO/">Dissolved Oxygen</a>
+          <a href="../../../knowledge/soil-water/DO/">Dissolved Oxygen</a>
           
             <label for="__nav_2_3_3">
               <span class="md-nav__icon md-icon"></span>
@@ -2255,7 +2138,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../knowledge/soil-water/DO/Atlas_DO/" class="md-nav__link">
+      <a href="../../../knowledge/soil-water/DO/Atlas_DO/" class="md-nav__link">
         Atlas Dissolved Oxygen
       </a>
     </li>
@@ -2296,7 +2179,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../knowledge/soil-water/EC/">Conductivity</a>
+          <a href="../../../knowledge/soil-water/EC/">Conductivity</a>
           
             <label for="__nav_2_3_4">
               <span class="md-nav__icon md-icon"></span>
@@ -2319,7 +2202,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../knowledge/soil-water/EC/Atlas_EC/" class="md-nav__link">
+      <a href="../../../knowledge/soil-water/EC/Atlas_EC/" class="md-nav__link">
         Atlas Conductivity
       </a>
     </li>
@@ -2360,7 +2243,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../knowledge/soil-water/temperature/">Temperature</a>
+          <a href="../../../knowledge/soil-water/temperature/">Temperature</a>
           
             <label for="__nav_2_3_5">
               <span class="md-nav__icon md-icon"></span>
@@ -2383,7 +2266,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../knowledge/soil-water/temperature/Atlas_Temperature/" class="md-nav__link">
+      <a href="../../../knowledge/soil-water/temperature/Atlas_Temperature/" class="md-nav__link">
         Atlas Temperature
       </a>
     </li>
@@ -2424,7 +2307,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../knowledge/soil-water/ORP/">ORP</a>
+          <a href="../../../knowledge/soil-water/ORP/">ORP</a>
           
             <label for="__nav_2_3_6">
               <span class="md-nav__icon md-icon"></span>
@@ -2447,7 +2330,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../knowledge/soil-water/ORP/Atlas_ORP/" class="md-nav__link">
+      <a href="../../../knowledge/soil-water/ORP/Atlas_ORP/" class="md-nav__link">
         Atlas ORP
       </a>
     </li>
@@ -2490,7 +2373,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../knowledge/soil-water/moisture/">Soil Moisture</a>
+          <a href="../../../knowledge/soil-water/moisture/">Soil Moisture</a>
           
             <label for="__nav_2_3_7">
               <span class="md-nav__icon md-icon"></span>
@@ -2513,7 +2396,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../knowledge/soil-water/moisture/Tensiometer/" class="md-nav__link">
+      <a href="../../../knowledge/soil-water/moisture/Tensiometer/" class="md-nav__link">
         Tensiometer
       </a>
     </li>
@@ -2527,7 +2410,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../knowledge/soil-water/moisture/Chirp_Soil_Moisture/" class="md-nav__link">
+      <a href="../../../knowledge/soil-water/moisture/Chirp_Soil_Moisture/" class="md-nav__link">
         Chirp Soil Moisture
       </a>
     </li>
@@ -2575,7 +2458,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../knowledge/other/">Other</a>
+          <a href="../../../knowledge/other/">Other</a>
           
             <label for="__nav_2_4">
               <span class="md-nav__icon md-icon"></span>
@@ -2622,7 +2505,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../knowledge/other/">Electric Current/Voltage</a>
+          <a href="../../../knowledge/other/">Electric Current/Voltage</a>
           
             <label for="__nav_2_4_2">
               <span class="md-nav__icon md-icon"></span>
@@ -2645,7 +2528,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../knowledge/other/Seeed_Grove_ADC/" class="md-nav__link">
+      <a href="../../../knowledge/other/Seeed_Grove_ADC/" class="md-nav__link">
         Seeed Grove ADC (voltage)
       </a>
     </li>
@@ -2659,7 +2542,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../knowledge/other/TI_ADS1X15/" class="md-nav__link">
+      <a href="../../../knowledge/other/TI_ADS1X15/" class="md-nav__link">
         TI ADS1X15 (voltage)
       </a>
     </li>
@@ -2673,7 +2556,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../knowledge/other/TI_INA219/" class="md-nav__link">
+      <a href="../../../knowledge/other/TI_INA219/" class="md-nav__link">
         TI INA219 (current)
       </a>
     </li>
@@ -2707,14 +2590,16 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
       
       
         
@@ -2737,7 +2622,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../guides/">Guides</a>
+          <a href="../../">Guides</a>
           
             <label for="__nav_3">
               <span class="md-nav__icon md-icon"></span>
@@ -2745,7 +2630,7 @@
           
         </div>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
           Guides
@@ -2801,7 +2686,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../guides/getting-started/onboarding-your-kit/" class="md-nav__link">
+      <a href="../../getting-started/onboarding-your-kit/" class="md-nav__link">
         Onboarding your kit
       </a>
     </li>
@@ -2815,7 +2700,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../guides/getting-started/updating-wifi-credentials/" class="md-nav__link">
+      <a href="../../getting-started/updating-wifi-credentials/" class="md-nav__link">
         Updating the Wi-Fi
       </a>
     </li>
@@ -2829,7 +2714,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../guides/getting-started/downloading-data/" class="md-nav__link">
+      <a href="../../getting-started/downloading-data/" class="md-nav__link">
         Downloading platform data
       </a>
     </li>
@@ -2843,7 +2728,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../guides/getting-started/uploading-sd-card-data/" class="md-nav__link">
+      <a href="../../getting-started/uploading-sd-card-data/" class="md-nav__link">
         Uploading SD-card data
       </a>
     </li>
@@ -2857,7 +2742,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../guides/getting-started/using-the-shell/" class="md-nav__link">
+      <a href="../../getting-started/using-the-shell/" class="md-nav__link">
         Using the Shell
       </a>
     </li>
@@ -2871,7 +2756,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../guides/getting-started/third-party-sensors/" class="md-nav__link">
+      <a href="../../getting-started/third-party-sensors/" class="md-nav__link">
         Third party sensors
       </a>
     </li>
@@ -2890,14 +2775,16 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" checked>
       
       
         
@@ -2918,7 +2805,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_3_3">
           <span class="md-nav__icon md-icon"></span>
           Firmware Operations
@@ -2931,7 +2818,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../guides/firmware/getting-firmware-information/" class="md-nav__link">
+      <a href="../getting-firmware-information/" class="md-nav__link">
         Getting firmware information
       </a>
     </li>
@@ -2945,7 +2832,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../guides/firmware/upgrading-the-firmware/" class="md-nav__link">
+      <a href="../upgrading-the-firmware/" class="md-nav__link">
         Upgrading the firmware
       </a>
     </li>
@@ -2959,7 +2846,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../guides/firmware/edit-the-firmware/" class="md-nav__link">
+      <a href="../edit-the-firmware/" class="md-nav__link">
         Editing the firmware
       </a>
     </li>
@@ -2973,7 +2860,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../guides/firmware/debug-the-firmware/" class="md-nav__link">
+      <a href="../debug-the-firmware/" class="md-nav__link">
         Debugging the firmware
       </a>
     </li>
@@ -2985,11 +2872,59 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../../../guides/firmware/recovering-the-bootloader/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Recovering the bootloader
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Recovering the bootloader
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#equipment-required" class="md-nav__link">
+    Equipment required
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#steps" class="md-nav__link">
+    Steps
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -3053,7 +2988,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../guides/data/handling-calibration-data/" class="md-nav__link">
+      <a href="../../data/handling-calibration-data/" class="md-nav__link">
         Handling calibration data
       </a>
     </li>
@@ -3067,7 +3002,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../guides/data/sending-data-to-other-platforms/" class="md-nav__link">
+      <a href="../../data/sending-data-to-other-platforms/" class="md-nav__link">
         Sending data to a different platform
       </a>
     </li>
@@ -3081,7 +3016,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../guides/data/custom-data-processing/" class="md-nav__link">
+      <a href="../../data/custom-data-processing/" class="md-nav__link">
         Custom data processing
       </a>
     </li>
@@ -3095,7 +3030,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../guides/data/creating-interfaces/" class="md-nav__link">
+      <a href="../../data/creating-interfaces/" class="md-nav__link">
         Creating data interfaces
       </a>
     </li>
@@ -3109,7 +3044,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../guides/data/live-demos/" class="md-nav__link">
+      <a href="../../data/live-demos/" class="md-nav__link">
         Live demos
       </a>
     </li>
@@ -3123,7 +3058,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../guides/data/visual-programming/" class="md-nav__link">
+      <a href="../../data/visual-programming/" class="md-nav__link">
         Visual programming
       </a>
     </li>
@@ -3137,7 +3072,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../guides/data/creative-coding/" class="md-nav__link">
+      <a href="../../data/creative-coding/" class="md-nav__link">
         Creative coding
       </a>
     </li>
@@ -3151,7 +3086,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../guides/data/advanced-data-tools/" class="md-nav__link">
+      <a href="../../data/advanced-data-tools/" class="md-nav__link">
         Python, R and jupyter
       </a>
     </li>
@@ -3205,7 +3140,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../guides/getting-started/debugging-your-kit/" class="md-nav__link">
+      <a href="../../getting-started/debugging-your-kit/" class="md-nav__link">
         Debugging your kit
       </a>
     </li>
@@ -3219,7 +3154,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../guides/getting-started/troubleshooting-sd-card/" class="md-nav__link">
+      <a href="../../getting-started/troubleshooting-sd-card/" class="md-nav__link">
         Troubleshooting SD-card Mode
       </a>
     </li>
@@ -3299,7 +3234,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../legacy/">Smart Citizen 1.1</a>
+          <a href="../../../hardware/legacy/">Smart Citizen 1.1</a>
           
             <label for="__nav_3_6_1">
               <span class="md-nav__icon md-icon"></span>
@@ -3322,7 +3257,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../legacy/Hardware/" class="md-nav__link">
+      <a href="../../../hardware/legacy/Hardware/" class="md-nav__link">
         Hardware
       </a>
     </li>
@@ -3336,7 +3271,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../legacy/Command%20Line/" class="md-nav__link">
+      <a href="../../../hardware/legacy/Command%20Line/" class="md-nav__link">
         Command Line
       </a>
     </li>
@@ -3350,7 +3285,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../legacy/Faq/" class="md-nav__link">
+      <a href="../../../hardware/legacy/Faq/" class="md-nav__link">
         FAQ
       </a>
     </li>
@@ -3364,7 +3299,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../legacy/Troubleshooting/" class="md-nav__link">
+      <a href="../../../hardware/legacy/Troubleshooting/" class="md-nav__link">
         Troubleshooting
       </a>
     </li>
@@ -3385,7 +3320,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../legacy/sck/" class="md-nav__link">
+      <a href="../../../hardware/legacy/sck/" class="md-nav__link">
         Smart Citizen 2.0
       </a>
     </li>
@@ -3442,7 +3377,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../resources/">Resources</a>
+          <a href="../../../resources/">Resources</a>
           
             <label for="__nav_4">
               <span class="md-nav__icon md-icon"></span>
@@ -3485,7 +3420,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../resources/toolkits/">Toolkits</a>
+          <a href="../../../resources/toolkits/">Toolkits</a>
           
             <label for="__nav_4_2">
               <span class="md-nav__icon md-icon"></span>
@@ -3508,7 +3443,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../resources/toolkits/Citizen%20Sensing%20Toolkit/" class="md-nav__link">
+      <a href="../../../resources/toolkits/Citizen%20Sensing%20Toolkit/" class="md-nav__link">
         Citizen Sensing Toolkit
       </a>
     </li>
@@ -3529,7 +3464,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../resources/webinars/" class="md-nav__link">
+      <a href="../../../resources/webinars/" class="md-nav__link">
         Webinars
       </a>
     </li>
@@ -3543,7 +3478,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../resources/education/" class="md-nav__link">
+      <a href="../../../resources/education/" class="md-nav__link">
         Education
       </a>
     </li>
@@ -3557,7 +3492,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../resources/research/" class="md-nav__link">
+      <a href="../../../resources/research/" class="md-nav__link">
         Research
       </a>
     </li>
@@ -3571,7 +3506,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../resources/notes/" class="md-nav__link">
+      <a href="../../../resources/notes/" class="md-nav__link">
         Notes
       </a>
     </li>
@@ -3617,7 +3552,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../about/">About</a>
+          <a href="../../../about/">About</a>
           
             <label for="__nav_5">
               <span class="md-nav__icon md-icon"></span>
@@ -3640,7 +3575,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../about/funding/" class="md-nav__link">
+      <a href="../../../about/funding/" class="md-nav__link">
         Funding
       </a>
     </li>
@@ -3654,7 +3589,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../about/friends/" class="md-nav__link">
+      <a href="../../../about/friends/" class="md-nav__link">
         Friends
       </a>
     </li>
@@ -3668,7 +3603,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../about/open-source/" class="md-nav__link">
+      <a href="../../../about/open-source/" class="md-nav__link">
         Open Source
       </a>
     </li>
@@ -3709,76 +3644,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#measurements" class="md-nav__link">
-    Measurements
+  <a href="#equipment-required" class="md-nav__link">
+    Equipment required
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#technical-specifications" class="md-nav__link">
-    Technical specifications
-  </a>
-  
-    <nav class="md-nav" aria-label="Technical specifications">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#dimensions-and-weight" class="md-nav__link">
-    Dimensions and weight
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#power" class="md-nav__link">
-    Power
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#connectivity" class="md-nav__link">
-    Connectivity
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#hardware-design" class="md-nav__link">
-    Hardware design
-  </a>
-  
-    <nav class="md-nav" aria-label="Hardware design">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#enclosure-and-mounting-system" class="md-nav__link">
-    Enclosure and mounting system
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#deployment-tips" class="md-nav__link">
-    Deployment tips
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#handling-calibration-data" class="md-nav__link">
-    Handling calibration data
+  <a href="#steps" class="md-nav__link">
+    Steps
   </a>
   
 </li>
@@ -3807,7 +3681,7 @@
 
 
   
-    <a href="https://github.com/fablabbcn/smartcitizen-docs/edit/master/docs/hardware/stations/air/sck-2xchem.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/fablabbcn/smartcitizen-docs/edit/master/docs/guides/firmware/recovering-the-bootloader.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
     </a>
@@ -3816,242 +3690,54 @@
     
       
     
-    <a href="https://github.com/fablabbcn/smartcitizen-docs/raw/master/docs/hardware/stations/air/sck-2xchem.md" title="View source of this page" class="md-content__button md-icon">
+    <a href="https://github.com/fablabbcn/smartcitizen-docs/raw/master/docs/guides/firmware/recovering-the-bootloader.md" title="View source of this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.15 8.15 0 0 1-1.23-2Z"/></svg>
     </a>
   
 
 
-<h1 id="sck-2xchem">SCK + 2xCHEM<a class="headerlink" href="#sck-2xchem" title="Permanent link">&para;</a></h1>
-<p><strong>Grade</strong>: <em>intermediate</em></p>
-<p>Measure Indoor or Outdoor Air Quality with this unit. Beyond the metrics from the kit, it can measure 2 chemical composition metrics with electrochemical sensors.</p>
-<p><img alt="" class="banner-box" src="https://live.staticflickr.com/65535/54318267807_78d5c57497_o.jpg" />
-<strong class="image-credit-banner-box"><em>Smart Citizen 2x Chemical Air Quality Station</em></strong></p>
-<h2 id="measurements">Measurements<a class="headerlink" href="#measurements" title="Permanent link">&para;</a></h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">SCK2.3 based</label><label for="__tabbed_1_2">SCK2.1 based (deprecated)</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Measurement</th>
-<th style="text-align: center;">Units</th>
-<th style="text-align: center;">Sensor</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">Air temperature</td>
-<td style="text-align: center;">ºC</td>
-<td style="text-align: center;">Sensirion SHT-31</td>
-</tr>
-<tr>
-<td style="text-align: left;">Relative Humidity</td>
-<td style="text-align: center;">% REL</td>
-<td style="text-align: center;">Sensirion SHT-31</td>
-</tr>
-<tr>
-<td style="text-align: left;">Noise level</td>
-<td style="text-align: center;">dBA</td>
-<td style="text-align: center;">Invensense ICS-434342</td>
-</tr>
-<tr>
-<td style="text-align: left;">Ambient light</td>
-<td style="text-align: center;">lux</td>
-<td style="text-align: center;">Rohm BH1721FVC</td>
-</tr>
-<tr>
-<td style="text-align: left;">Barometric pressure</td>
-<td style="text-align: center;">kPa</td>
-<td style="text-align: center;">NXP MPL3115A26</td>
-</tr>
-<tr>
-<td style="text-align: left;">Equivalent Carbon Dioxide</td>
-<td style="text-align: center;">ppm</td>
-<td style="text-align: center;">AMS CCS811</td>
-</tr>
-<tr>
-<td style="text-align: left;">Volatile Organic Compounds</td>
-<td style="text-align: center;">ppb</td>
-<td style="text-align: center;">AMS CCS811</td>
-</tr>
-<tr>
-<td style="text-align: left;">Particulate Matter PM1, PM2.5, PM4.0 PM10</td>
-<td style="text-align: center;">µg/m3</td>
-<td style="text-align: center;">Sensirion SEN5X</td>
-</tr>
-<tr>
-<td style="text-align: left;">2 Chemical metrics (NO2, CO, NO, O3, SO2 or H2S)</td>
-<td style="text-align: center;">ppb/ppm</td>
-<td style="text-align: center;">Alphasense A-series</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="tabbed-block">
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Measurement</th>
-<th style="text-align: center;">Units</th>
-<th style="text-align: center;">Sensor</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">Air temperature</td>
-<td style="text-align: center;">ºC</td>
-<td style="text-align: center;">Sensirion SHT-31</td>
-</tr>
-<tr>
-<td style="text-align: left;">Relative Humidity</td>
-<td style="text-align: center;">% REL</td>
-<td style="text-align: center;">Sensirion SHT-31</td>
-</tr>
-<tr>
-<td style="text-align: left;">Noise level</td>
-<td style="text-align: center;">dBA</td>
-<td style="text-align: center;">Invensense ICS-434342</td>
-</tr>
-<tr>
-<td style="text-align: left;">Ambient light</td>
-<td style="text-align: center;">lux</td>
-<td style="text-align: center;">Rohm BH1721FVC</td>
-</tr>
-<tr>
-<td style="text-align: left;">Barometric pressure</td>
-<td style="text-align: center;">kPa</td>
-<td style="text-align: center;">NXP MPL3115A26</td>
-</tr>
-<tr>
-<td style="text-align: left;">Equivalent Carbon Dioxide</td>
-<td style="text-align: center;">ppm</td>
-<td style="text-align: center;">AMS CCS811</td>
-</tr>
-<tr>
-<td style="text-align: left;">Volatile Organic Compounds</td>
-<td style="text-align: center;">ppb</td>
-<td style="text-align: center;">AMS CCS811</td>
-</tr>
-<tr>
-<td style="text-align: left;">PM1, PM2.5 and PM10</td>
-<td style="text-align: center;">µg/m3</td>
-<td style="text-align: center;">Plantower PMS5003</td>
-</tr>
-<tr>
-<td style="text-align: left;">2 Chemical metrics (NO2, CO, NO, O3, SO2 or H2S)</td>
-<td style="text-align: center;">ppb/ppm</td>
-<td style="text-align: center;">Alphasense A-series</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-<h2 id="technical-specifications">Technical specifications<a class="headerlink" href="#technical-specifications" title="Permanent link">&para;</a></h2>
-<p><img alt="" src="https://live.staticflickr.com/65535/54319161481_b7006df36b_o.jpg" />
-<strong><em>Smart Citizen 2x Chemical Air Quality Station</em></strong></p>
-<h3 id="dimensions-and-weight">Dimensions and weight<a class="headerlink" href="#dimensions-and-weight" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th style="text-align: center;">Version</th>
-<th style="text-align: left;">Dimensions</th>
-<th style="text-align: left;">Weight</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;">Indoor</td>
-<td style="text-align: left;">16.6 x 12.5 x 5.5 cm</td>
-<td style="text-align: left;">360g</td>
-</tr>
-<tr>
-<td style="text-align: center;">Outdoor (with umbrella)</td>
-<td style="text-align: left;">23.1 x 14.7 x 8.5 cm</td>
-<td style="text-align: left;">1080g</td>
-</tr>
-</tbody>
-</table>
+<h1 id="recovering-samd21-bootloader">Recovering SAMD21 bootloader<a class="headerlink" href="#recovering-samd21-bootloader" title="Permanent link">&para;</a></h1>
+<p>If your kit doesn't have the bootloaded flashed (all the kits that we ship come with it), or if it has lost it for a reason (bad USB cable for instance), you will need to recover the bootloader.</p>
 <div class="admonition info">
-<p class="admonition-title">Design files</p>
-<p>If you are looking for the design files about the Smart Citizen Station, take a look at the <a href="https://enclosures.smartcitizen.me">enclosures repository</a>.</p>
+<p class="admonition-title">What is the bootloader?</p>
+<p>The bootloader is a small piece of code that lives inside the <a href="/hardware/boards/data-board#microcontrollers">Data Board SAMD21 microcontroller</a> that takes care of the initialisation of the core systems of the SAMD21. For instance, it starts communications via USB, and takes care of booting the first instructions of the <a href="/hardware/firmware/">Smart Citizen firmware</a>.</p>
+<p>Not having a bootloader, means that the device is practically <em>bricked</em>, the <a href="/hardware/kit/features#special-status">status LED</a> is GREEN, and we need to recover the bootloader.</p>
 </div>
-<h3 id="power">Power<a class="headerlink" href="#power" title="Permanent link">&para;</a></h3>
-<p>Currently, the Smart Citizen Air Quality Stations have only been tested with an <a href="/hardware/addons/power-supply/">external power supply</a> (230VAC to 5VDC), with a small battery for backup during power brownouts. Due to the number of sensors, and depending on the configuration the solution is normally not meant for long term deployment with just battery power. For detailed specifications of the power supply, visit the <a href="/hardware/addons/power-supply/">power supply section</a>.</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: center;">Power</th>
-<th style="text-align: left;"></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;">DC Voltage</td>
-<td style="text-align: left;">5V</td>
-</tr>
-<tr>
-<td style="text-align: center;">DC Current</td>
-<td style="text-align: left;">2A <em>recommended</em></td>
-</tr>
-<tr>
-<td style="text-align: center;">AC Voltage</td>
-<td style="text-align: left;">230V  <em>into the <a href="/hardware/addons/power-supply/">Power Supply</a></em></td>
-</tr>
-<tr>
-<td style="text-align: center;">AC Current</td>
-<td style="text-align: left;">&lt;0.16A <em>into the <a href="/hardware/addons/power-supply/">Power Supply</a></em></td>
-</tr>
-</tbody>
-</table>
-<div class="admonition warning">
-<p class="admonition-title">Battery or solar operation?</p>
-<p>The Station currently supports battery operation only for short periods of time (&lt;2d days). Depending on the location, <a href="/hardware/addons/solar-panel/">solar power</a> might be available, but we do not recommend it unless you are willing to <em>experiment</em>.</p>
+<div class="admonition danger">
+<p class="admonition-title">Make sure you need to do this</p>
+<p>This instructions only are needed if your kit doesn't have the bootloader already flashed.</p>
 </div>
-<h3 id="connectivity">Connectivity<a class="headerlink" href="#connectivity" title="Permanent link">&para;</a></h3>
-<p>Similar to the <a href="/hardware/kit/">Smart Citizen Kit</a> if you want to have your data online, the Smart Citizen Air Quality Station requires a Wi-Fi connection to report data to the <a href="/data/data-platform/">platform</a>. If not, the unit can also store data locally on its onboard sd-card. Read more about the <a href="/hardware/kit#operation-modes">operation modes</a> and the <a href="/_FAQ/#what-networks-does-it-support">supported networks</a>.</p>
-<h2 id="hardware-design">Hardware design<a class="headerlink" href="#hardware-design" title="Permanent link">&para;</a></h2>
-<div class="admonition warning">
-<p class="admonition-title">A note about versions</p>
-<p>Some of the diagrams below are from older designs, but you they haven't changed much! Hopefully they are still understandable!</p>
+<h2 id="equipment-required">Equipment required<a class="headerlink" href="#equipment-required" title="Permanent link">&para;</a></h2>
+<p>Typically you will need <a href="https://www.digikey.es/en/product-highlight/a/atmel/atmel-ice-programmer-debugger">ATMEL-ICE</a> programmer.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>This process can also be done with a Raspberry Pi computer and the proper <a href="https://www.adafruit.com/product/2094">connector</a> and cables, in <a href="/guides/firmware/debug-the-firmware/">this guide</a> you will find information on how to do this.</p>
 </div>
-<p>The Stations should come assembled and ready to use. They consist of various parts:</p>
-<ul>
-<li><a href="#enclosure-and-mounting-system">Enclosure and mounting system</a>: for protection and support.</li>
-<li>Sensors module: contains the electronics and sensors, it can be accessed without having to uninstall the rain cover.</li>
-<li><a href="#power">Power supply</a>: is separated from the main module, so that intervention in the sensors' area can be performed safely with a tangible desconection of the mains power.</li>
-</ul>
-<p><img alt="" src="/assets/images/station-small-exploded.png" /></p>
-<h3 id="enclosure-and-mounting-system">Enclosure and mounting system<a class="headerlink" href="#enclosure-and-mounting-system" title="Permanent link">&para;</a></h3>
-<p>The enclosure holds the sensors in place and protects them against weather. A rain and sun radiation <strong>cover</strong> for additional protection can be used, which carries out the structural support of the station and protects the unit against rain, wind or heat.</p>
-<p><img alt="" src="/assets/images/station-v3-mounting.png" /></p>
-<div class="admonition tip">
-<p class="admonition-title">Flexible attachment</p>
-<p>This mounting is thought to work on a lampost, fence or wall. We recommend a somewhat flexible join (i.e. zip-ties) in case of windy locations.</p>
-</div>
-<p>The enclosure can be installed using the <em>mounting holes</em> seen below. There is sufficient space to pass zip ties. If you want to use drills, we recommend at least 6mm screws (or 8mm) and to dissasemble the plastic cover from the sandwich pannel for safer installation.</p>
-<h2 id="deployment-tips">Deployment tips<a class="headerlink" href="#deployment-tips" title="Permanent link">&para;</a></h2>
-<p>Below are some general guidelines for the installation of the device:</p>
-<ul>
-<li>Avoid areas with moist accumulation when possible</li>
-<li>Avoid temperature and humidity transients</li>
-<li>Avoid covering the sensors in front of the sensors, specially the PM sensor</li>
-<li>Avoid covering the microphone and particles to go in the microphone port</li>
-<li>Avoid direct flow towards the sensors. If exposed under flow conditions, have the flow go parallel to the sensors' surface</li>
-<li>Despite the umbrella cover, sun radiation and transients are better to be avoided</li>
-<li>A good height for installing the sensors is somewhere between 2-3m, but it all depends on the case study and available support structures.</li>
-</ul>
-<h2 id="handling-calibration-data">Handling calibration data<a class="headerlink" href="#handling-calibration-data" title="Permanent link">&para;</a></h2>
-<p>Some components of the Station have individual calibrations such as the Alphasense Electrochemical Sensors. For this reason, it's necessary to store the physical ID (hardware ID) of the Station alonside to the virtual device in the Smart Citizen Platform. The harwdware ID should normally be in a sticker to the enclosure <strong>both inside and outside</strong> and looks like this:</p>
-<div class="highlight"><pre><span></span><code>SCAS2100XX
+<p><img alt="" src="/assets/images/sck-data-connectors.png" /></p>
+<h2 id="steps">Steps<a class="headerlink" href="#steps" title="Permanent link">&para;</a></h2>
+<p>In order to flash the bootloader, follow the steps below:</p>
+<ol>
+<li>Connect the Atmel-ICE programmer to the 10 pin SWD connector and to your computer.</li>
+<li>Power the SCK via USB, you can use any USB charger or even your computer.</li>
+<li>
+<p>Open a terminal, go to the folder where you <a href="/guides/firmware/edit-the-firmware#getting-the-firmware">cloned the firmware repository</a> and run:</p>
+<div class="highlight"><pre><span></span><code>&gt; cd smartcitizen-kit-21
+&gt; ./make.py boot
 </code></pre></div>
-<p>This number is important to relate to the actual calibration values of the sensors, stored in the <a href="https://github.com/fablabbcn/smartcitizen-data/tree/master/hardware">data repository</a>. In order to postprocess the data and calculate pollutants, make sure that the <code>Hardware ID</code> is safely stored in the platform's device, by posting this data to <code>postprocessing_info</code> field of the device. You can follow <a href="/guides/data/handling-calibration-data/">these instructions</a> to store the <code>postprocessing_info</code> of your device.</p>
-<p>All the data is sent in raw to the Smart Citizen Platform and it's then processed outside of the sensors themselves. Both raw, and processed data are kept on the platform and can be accessed at any time. Data can be published to other APIs or to <a href="https://zenodo.org">Zenodo</a> as well, in case of research projects that seek contribution to Open Science Datasets.</p>
-<div class="admonition tip">
-<p class="admonition-title">More on the processing of the data</p>
-<p>Check <a href="/guides/data/custom-data-processing/">this guide</a> to learn more about how to postprocess the data of the sensors your own way.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Make sure you have the necessary requirements for running the python script.</p>
+</div>
+</li>
+<li>
+<p>You will see a lot of output when compiling, the led on the SCK should <em>breath</em> in <strong>green</strong> and you should see an output similar to this:</p>
+<p><img alt="" src="/assets/images/sck_2/flashing_bootloader.png" /></p>
+</li>
+</ol>
+<div class="admonition success">
+<p class="admonition-title">Done with the bootloader</p>
+<p>You are done with this step! The kit now needs to be reflashed. Follow the steps in the <a href="/guides/firmware/upgrading-the-firmware/">firmware upgrade guide</a>.</p>
 </div>
 
 
@@ -4106,7 +3792,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../sck-1xchem/" class="md-footer__link md-footer__link--prev" aria-label="Previous: SCK + 1x CHEM">
+          <a href="../debug-the-firmware/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Debugging the firmware">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -4116,20 +3802,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                SCK + 1x CHEM
+                Debugging the firmware
               </div>
             </div>
           </a>
         
         
           
-          <a href="../sck-co2-hcho/" class="md-footer__link md-footer__link--next" aria-label="Next: SCK + CO2 + HCHO">
+          <a href="../../data/handling-calibration-data/" class="md-footer__link md-footer__link--next" aria-label="Next: Handling calibration data">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                SCK + CO2 + HCHO
+                Handling calibration data
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -4191,18 +3877,18 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../../../..", "features": ["instant", "navigation.indexes", "navigation.instant", "navigation.path", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "content.tooltips", "content.action.edit", "content.action.view", "toc.follow", "navigation.footer"], "search": "../../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["instant", "navigation.indexes", "navigation.instant", "navigation.path", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "content.tooltips", "content.action.edit", "content.action.view", "toc.follow", "navigation.footer"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.ce72ebac.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.ce72ebac.min.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       
         <script src="https://buttons.github.io/buttons.js"></script>
       
-        <script src="../../../../assets/javascripts/extra.js"></script>
+        <script src="../../../assets/javascripts/extra.js"></script>
       
-        <script src="../../../../js/open_in_new_tab.js"></script>
+        <script src="../../../js/open_in_new_tab.js"></script>
       
     
   </body>

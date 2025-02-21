@@ -2796,6 +2796,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
@@ -3016,6 +3018,20 @@
     <li class="md-nav__item">
       <a href="../debug-the-firmware/" class="md-nav__link">
         Debugging the firmware
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../recovering-the-bootloader/" class="md-nav__link">
+        Recovering the bootloader
       </a>
     </li>
   
@@ -4022,6 +4038,10 @@ git pull --recurse-submodules
 <p>You will see a lot of output when compiling, the led on the SCK should <em>breath</em> in <strong>green</strong> and you should see an output similar to this:</p>
 <p><img alt="" src="/assets/images/sck_2/flashing_bootloader.png" /></p>
 <p>You are ready for the next step, just remember to disconnect the Atmel-ICE programmer and connect the SCK to your computer with a USB cable.</p>
+<div class="admonition info">
+<p class="admonition-title">Bricked kit?</p>
+<p>Check <a href="/guides/firmware/recovering-the-bootloader/">this guide</a> on how to identify and recover the bootloader.</p>
+</div>
 <h2 id="samd21-firmware">SAMD21 firmware<a class="headerlink" href="#samd21-firmware" title="Permanent link">&para;</a></h2>
 <p>The bootloader we just flashed allows a very simple way of uploading the SCK firmware based on the <a href="https://github.com/Microsoft/uf2">UF2</a> format, when you <strong>double-click the reset button</strong> of your kit it will expose a <a href="https://en.wikipedia.org/wiki/USB_mass_storage_device_class">MSD</a> interface to your computer and a new drive will popup where you can just drag the compiled firmware file (converted to UF2 format).</p>
 <p><img alt="Reset button" src="/assets/images/sck23-reset-button-with-line.jpg" /></p>
