@@ -137,6 +137,7 @@ nav:
       - Upgrading the firmware: guides/firmware/upgrading-the-firmware.md
       - Editing the firmware: guides/firmware/edit-the-firmware.md
       - Debugging the firmware: guides/firmware/debug-the-firmware.md
+      - Recovering the bootloader: guides/firmware/recovering-the-bootloader.md
     # - Calibrating Sensors:
       # - Air sensors: guides/calibration/Air sensors.md
       # - Water: guides/calibration/Water sensors.md
@@ -152,7 +153,7 @@ nav:
       - Visual programming: guides/data/visual-programming.md
       - Creative coding: guides/data/creative-coding.md
       - Python, R and jupyter: guides/data/advanced-data-tools.md
-    - Debugging: 
+    - Debugging:
       - Debugging your kit: guides/getting-started/debugging-your-kit.md
       - Troubleshooting SD-card Mode: guides/getting-started/troubleshooting-sd-card.md
         # - Model your sensor data: guides/data/Creating Models for Sensors Calibration.md

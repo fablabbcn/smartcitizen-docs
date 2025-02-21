@@ -158,6 +158,9 @@ You will see a lot of output when compiling, the led on the SCK should _breath_ 
 
 You are ready for the next step, just remember to disconnect the Atmel-ICE programmer and connect the SCK to your computer with a USB cable.
 
+!!! info "Bricked kit?"
+    Check [this guide](/guides/firmware/recovering-the-bootloader/) on how to identify and recover the bootloader.
+
 ## SAMD21 firmware
 
 The bootloader we just flashed allows a very simple way of uploading the SCK firmware based on the [UF2](https://github.com/Microsoft/uf2) format, when you **double-click the reset button** of your kit it will expose a [MSD](https://en.wikipedia.org/wiki/USB_mass_storage_device_class) interface to your computer and a new drive will popup where you can just drag the compiled firmware file (converted to UF2 format).
