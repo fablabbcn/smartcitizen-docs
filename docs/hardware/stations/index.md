@@ -41,5 +41,8 @@ Stations can be used to gather _field-specific_ environmental data not only for 
 
 ## What versions are there?
 
+!!! info ""
+    The stations below are the current stable designs. If you are looking into developing other versions, feel free to reach out via [{{extra.urls.info.name}}]({{extra.urls.info.link}}).
+
 {{ insert_cards(type="stations", filter="field", value=["air", "water"]) }}
 

@@ -31,6 +31,9 @@ Generally, an AQ Station is a [Kit](/hardware/kit) with either [CO2](/knowledge/
 
 ## Versions
 
+!!! info ""
+    The stations below are the current stable designs. If you are looking into developing other versions, feel free to reach out via [{{extra.urls.info.name}}]({{extra.urls.info.link}}).
+
 {{ insert_cards(type="stations", filter="field", value=["air"]) }}
 
 ### Legacy versions
