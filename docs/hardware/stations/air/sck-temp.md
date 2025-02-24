@@ -7,7 +7,7 @@ field:
 grade: basic
 feature_img: https://live.staticflickr.com/65535/54325253435_f9b2859671_o.jpg
 feature_img_description: "Smart Citizen Temperature/RH Air Quality Station"
-excerpt: Measure Indoor or Outdoor Air Quality with this unit. Beyond the metrics from the kit, it can measure CO2 with a very reliable CO2 sensor!
+excerpt: Measure Indoor or Outdoor Air Quality with this unit. Beyond the metrics from the kit, it can measure temperature and humidity with a weatherproof probe!
 ---
 
 # {{ name }}

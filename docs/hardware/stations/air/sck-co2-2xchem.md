@@ -7,7 +7,7 @@ field:
 grade: intermediate
 feature_img: https://live.staticflickr.com/65535/54323336879_a42b2b028a_o.jpg
 feature_img_description: "Smart Citizen HCHO + 2x Chemical Air Quality Station"
-excerpt: Measure Indoor or Outdoor Air Quality with this unit. Beyond the metrics from the kit, it can measure CO2 with a very reliable CO2 sensor!
+excerpt: Measure Indoor or Outdoor Air Quality with this unit. Beyond the metrics from the kit, it can measure CO2 with a very reliable CO2 sensor and 2 chemical composition metrics with Alphasense A-series electrochemical sensors.
 ---
 
 # {{ name }}

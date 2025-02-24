@@ -7,7 +7,7 @@ field:
 grade: intermediate
 feature_img: https://live.staticflickr.com/65535/54318267807_78d5c57497_o.jpg
 feature_img_description: "Smart Citizen 2x Chemical Air Quality Station"
-excerpt: Measure Indoor or Outdoor Air Quality with this unit. Beyond the metrics from the kit, it can measure 2 chemical composition metrics with electrochemical sensors.
+excerpt: Measure Indoor or Outdoor Air Quality with this unit. Beyond the metrics from the kit, it can measure 2 chemical composition metrics with two Alphasense A-series electrochemical sensors.
 ---
 
 # {{ name }}
