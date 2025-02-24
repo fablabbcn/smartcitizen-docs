@@ -36,6 +36,21 @@ Below are some general guidelines for the installation of the device:
 - Despite the umbrella cover, sun radiation and transients are better to be avoided
 - A good height for installing the sensors is somewhere between 2-3m, but it all depends on the case study and available support structures.
 
+### Sensor placement
+
+!!! danger ""
+    The device should never be placed horizontally (wide side flat on a surface). This placement would cover completely the sensor inlets, or leave them exposed to dust accumulation. Likewise, the sensors, do not work properly on this configuration.
+
+For indoor placement, check the placement below:
+
+![](/assets/images/sensor-placement-horizontal.png)
+
+![](/assets/images/sensor-placement-vertical.png)
+
+For outdoow placement, if you are using the umbrella, check the image below. **Sensors should be facing down**:
+
+![](/assets/images/mini-station-field.jpg)
+
 ## Handling calibration data
 
 Some components of the Station have individual calibrations such as the Alphasense Electrochemical Sensors. For this reason, it's necessary to store the physical ID (hardware ID) of the Station alonside to the virtual device in the Smart Citizen Platform. The harwdware ID should normally be in a sticker to the enclosure **both inside and outside** and looks like this:
