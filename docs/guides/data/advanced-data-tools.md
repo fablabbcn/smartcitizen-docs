@@ -22,7 +22,7 @@ Both, `python` and `R` packages can be used with [Jupyter Notebooks](https://jup
 
 ### Requirements
 
-The framework runs in python 3.6 or later. Download and install python following [this guide](https://docs.python-guide.org/starting/installation/) if you don't already have it.
+The framework runs in **python 3.6 until python 3.11**. Download and install python following [this guide](https://docs.python-guide.org/starting/installation/) if you don't already have it.
 
 ### Installation
 

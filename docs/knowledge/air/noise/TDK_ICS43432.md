@@ -253,7 +253,7 @@ Finally, if comparing these with the thresholds, in dBA scale [IEC 61672-1](http
 
 Which yields a very good linearity off-the-shelf over the common urban frequency range (below 2000Hz).
 
-## Usage and considerations
+## Protecting the microphone
 
 There are some known limitations that need to be taken into account when performing noise measurements with the SCK:
 

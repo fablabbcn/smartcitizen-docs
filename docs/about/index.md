@@ -101,13 +101,13 @@ The devices can be purchased through the SEEED Studio Marketplace and are availa
 
 ## References
 
-[^1]: www.euro.who.int/en/ media-centre/sections/ press-releases/2015/04/ air-pollution-costs- european-economies- us$-1.6-trillion-a-year-in- diseases-and-deaths,- new-who-study-says
+[^1]: www.euro.who.int/en/media-centre/sections/press-releases/2015/04/air-pollution-costs-european-economies-us$-1.6-trillion-a-year-in-diseases-and-deaths,- new-who-study-says
 [^2]: Max Craglia and Carlos granell: 2014. Citizen Science and Smart Cities—Report of Summit Ispra, 5–7 February 2014. JRC Technical Report.
 [^3]: Muki Haklay: 2015. Citizen Science and Policy: A European Perspective. washington, DC: woodrow wilson International.
-[^4]: what Is Citizen-generated Data and what Is the DataShift Doing to Promote it? Retrieved from civicus.org/images/ ER%20cgd_brief.pdf
+[^4]: What Is Citizen-generated Data and what Is the DataShift Doing to Promote it? Retrieved from civicus.org/images/ER%20cgd_brief.pdf
 [^5]: Denisa Kera, Jan Rod and Radka Peterova 2013. Post-Apocalyptic Citizenship and Humanitarian Hardware. Nuclear Disaster at Fukushima Daiichi: Social, Political and Environmental Issues, p. 97.
 [^6]: Smart Cities Need Thick Data, Not Big Data.
-The Guardian, 18 April 2018 www.theguardian. com/science/political- science/2018/apr/18/ smart-cities-need-thick- data-not-big-data
+The Guardian, 18 April 2018 www.theguardian.com/science/political-science/2018/apr/18/smart-cities-need-thick-data-not-big-data
 [^7]: Smart Citizen Kit: {{ extra.urls.main.link }}
 [^8]: Smart Citizen API: {{ extra.urls.developer.link }}
-[^9]: Ehn, P.: 2008. Participa- tion in design things. In Proceedings of the tenth anniversary conference on participatory design 2008 (pp. 92–101). Indiana University. Bjögvinsson, E., Ehn, P. and Hillgren, P.A.: 2012. Design things and design thinking: Con- temporary participatory design challenges. Design issues, 28(3), pp. 101– 116. Dantec, C.A.l. and DiSalvo, C.: 2013. Infra- structuring and the for- mation of publics in par- ticipatory design. Social Studies of Science, 43(2), pp. 241–264.
+[^9]: Ehn, P.: 2008. Participation in design things. In Proceedings of the tenth anniversary conference on participatory design 2008 (pp. 92–101). Indiana University. Bjögvinsson, E., Ehn, P. and Hillgren, P.A.: 2012. Design things and design thinking: Con- temporary participatory design challenges. Design issues, 28(3), pp. 101– 116. Dantec, C.A.l. and DiSalvo, C.: 2013. Infra- structuring and the for- mation of publics in par- ticipatory design. Social Studies of Science, 43(2), pp. 241–264.
