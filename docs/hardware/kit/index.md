@@ -91,7 +91,7 @@ All the {{ short_name }}2.X generations above 2.1 (included) measure **at least*
     | Noise level                               | dBA   | Invensense ICS-434342     |
     | Ambient light                             | lux   | Rohm BH1721FVC            |
     | Barometric pressure                       | kPa   | NXP MPL3115A26S           |
-    | UV-A, B, C                                | uW/cm2| AMS AS7311                |
+    | UV-A, B, C                                | uW/cm2| AMS AS7331                |
     | Particulate Matter PM1, PM2.5, PM4, PM10  | µg/m3 | Sensirion SEN5X           |
     | NOx Index, VOCs Index (Optional)          | -     | Sensirion SEN54, 55       |
 === "{{ short_name }} 2.2"
@@ -102,7 +102,7 @@ All the {{ short_name }}2.X generations above 2.1 (included) measure **at least*
     | Noise level                               | dBA   | Invensense ICS-434342     |
     | Ambient light                             | lux   | Rohm BH1721FVC            |
     | Barometric pressure                       | kPa   | ST LPS33K                 |
-    | UV-A, B, C                                | uW/cm2| AMS AS7311                |
+    | UV-A, B, C                                | uW/cm2| AMS AS7331                |
     | Particulate Matter PM1, PM2.5, PM4, PM10  | µg/m3 | Sensirion SEN5X           |
     | NOx Index, VOCs Index (Optional)          | -     | Sensirion SEN54, 55       |
 === "{{ short_name }} 2.1"
