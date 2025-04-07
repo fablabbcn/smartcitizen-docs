@@ -62,7 +62,7 @@ All stored historical data is available via the Smart Citizen API. All the [fron
 The API also exposes a method where data is processed to a CSV file and email to the user. That allows loading the data offline to any software capable of dealing with CSV files (i.e. Microsoft Excel, MATLAB, etc.). The CSV format is different from that of the SD-card.
 
 !!! info "Developer ready"
-	Check the developer documentation to get more info on the API.
+	Check the [**developer Documentation**]({{ extra.urls.developer.link }}) to get more info on the API.
 
 ## Front-end applications
 
