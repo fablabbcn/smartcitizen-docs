@@ -10,7 +10,7 @@ _Image credit: [DOIT](https://doit-europe.net)_
 ## Measuring our environment
 
 !!! info "About this resource"
-    **Resource:** [DOIT Toolkit - Measuring our environment (EN)- Future Learning Unit at Fablab Barcelona](/assets/toolkits/DOIT-10_Measuring Our Environment_DOIT-Manual_en-2.pdf)
+    **Resource:** [DOIT Toolkit - Measuring our environment (EN) - Future Learning Unit at Fablab Barcelona](/assets/toolkits/DOIT-10_Measuring Our Environment_DOIT-Manual_en-2.pdf)
 
     * **Duration**: 28h - 8 units
     * **Setting**: Inside School
@@ -39,7 +39,7 @@ This resource presents activities that can be used to apply _maker_ education pr
 More information on the _Atenció Project - Citizen Science empowerment for students_, with additional material can be found on the [project's page](https://sites.google.com/view/projecteatencio/material-did%C3%A0ctic-19-20).
 
 !!! info "Later project"
-    A later version of this project was the[Multipliers project](https://multipliers-project.org/), with their [Open Schooling Hub](https://multipliers-project.org/open-schooling-hub/).
+    A later version of this project was the [Multipliers project](https://multipliers-project.org/), with their [Open Schooling Hub](https://multipliers-project.org/open-schooling-hub/).
 
 ## CLAB
 
