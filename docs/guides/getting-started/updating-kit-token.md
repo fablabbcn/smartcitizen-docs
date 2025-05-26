@@ -5,7 +5,7 @@ internal:
   images: false
 ---
 
-# Updating the SCK token
+# Updating the token
 
 This guide will help you update your kit's token.
 
