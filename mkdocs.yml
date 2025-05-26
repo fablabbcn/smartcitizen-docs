@@ -126,6 +126,7 @@ nav:
     - Getting Started:
       - Onboarding your kit: guides/getting-started/onboarding-your-kit.md
       - Updating the Wi-Fi: guides/getting-started/updating-wifi-credentials.md
+      - Updating the SCK token: guides/getting-started/updating-kit-token.md
       - Downloading platform data: guides/getting-started/downloading-data.md
       - Uploading SD-card data: guides/getting-started/uploading-sd-card-data.md
       - Using the Shell: guides/getting-started/using-the-shell.md
