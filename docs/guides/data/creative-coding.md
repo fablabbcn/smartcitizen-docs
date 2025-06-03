@@ -9,24 +9,31 @@ internal:
 
 ![](/assets/images/processing-flock.gif)
 
-This page will run through some options on how you can make more creative things with your Smart Citizen Kit and data. We will focus primarily on processing, but you have plenty of options!
-
-!!! info " Make music or nice reactive p5js animation"
-
-    These are some contributed examples:
-
-    - [Supercollider example](https://github.com/oscgonfer/a-que-suenan-las-nubes/tree/supercollider-patch)
-    - [p5 example](https://github.com/antoine3000/inthisverymoment)
+This page will run through some options on how you can make more creative things with your Smart Citizen Kit and data. You have plenty of options!
 
 !!! success "Doing something creative with the kit?"
     Make a [pull request]({{config.repo_url}}/pulls) on the github documentation repository or [edit this page]({{config.repo_url}}/edit/master/docs/guides/data/creative-coding.md).
 
-## Processing
+## Making music
+
+You can make music with the SCK data! Below some examples following you can use:
+
+![](https://maxforlive.com/images/screenshots/?ss=EnviFXphoto.jpg&id=12022)
+_Image credit: jordanmalik, EnviFX 1.0_
+
+- [**Supercollider** example](https://github.com/oscgonfer/a-que-suenan-las-nubes/tree/supercollider-patch)
+- [**Ableton** device](https://maxforlive.com/library/device/12022/envifx)
+
+## Processing / p5
 
 Sometimes, data can be better represented without numbers or graphs. This guide will help you use the famous [processing](https://processing.org) tools for making some creative coding. We will start by configuring a live demo using the **Serial port**, and then making a simple plot by interacting with **the API**.
 
 !!! info "Requirements"
     For this guide, you will need to get _processing_ from their [downloads page](https://processing.org/download).
+
+!!! info " Rather use p5js?"
+
+   Check this contributed example by [our friend `antoine3000`](https://github.com/antoine3000/inthisverymoment)
 
 ### Serial data example
 
