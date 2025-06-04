@@ -16,10 +16,10 @@ This page will run through some options on how you can make more creative things
 
 ## Making music
 
-You can make music with the SCK data! Below some examples following you can use:
-
 ![](https://maxforlive.com/images/screenshots/?ss=EnviFXphoto.jpg&id=12022)
 _Image credit: jordanmalik, EnviFX 1.0_
+
+You can make music with the SCK data! Below some examples following you can use:
 
 - [**Supercollider** example](https://github.com/oscgonfer/a-que-suenan-las-nubes/tree/supercollider-patch)
 - [**Ableton** device](https://maxforlive.com/library/device/12022/envifx)
@@ -32,7 +32,6 @@ Sometimes, data can be better represented without numbers or graphs. This guide 
     For this guide, you will need to get _processing_ from their [downloads page](https://processing.org/download).
 
 !!! info " Rather use p5js?"
-
    Check this contributed example by [our friend `antoine3000`](https://github.com/antoine3000/inthisverymoment)
 
 ### Serial data example
