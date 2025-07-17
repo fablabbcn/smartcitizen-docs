@@ -17,7 +17,10 @@ When new features are developed or bugs are fixed we will release new versions o
 	After updating the firmware follow this same steps to input the token and wifi credentials, after this your kit will be publishing on the same registered device than before.
 
 !!! info "A note about versions"
-	:white_check_mark: The guide below applies to both, SCK 2.0 and SCK2.1.
+	:white_check_mark: The guide below applies to all SCK2.* versions.
+
+!!! danger "If you are updating to `0.9.10`"
+	:warning: If you are updating to `0.9.10` we recommend you update first the [ESP](#updating-the-esp-firmware) and later on the [SAM](#updating-the-sam-firmware).
 
 ## Updating the SAM firmware
 
@@ -77,8 +80,13 @@ If you want to force the ESP to upload, please, follow the steps below.
 
 	![](/assets/images/esp-force-upload-3.png)
 
+!!! warning "Make sure to disconnect your data"
+	Modern phones will have Wi-Fi and LTE (data) active at the same time. The `SmartCitizen[...]` network doesn't have internet access, so your phone will likely switch to using your data plan. If this happens, make sure to switch it off temporarily while updating the firmware.
+
 !!! danger "Doesn't work?"
-	Sometimes in the phone the firmware selection screen will not pop up. You can always try to do the _developer-way_ with [check this guide here](/guides/firmware/edit-the-firmware/#manual-update)
+	Sometimes in the phone, the firmware selection screen will work when you click on `Browse`. This is very likely because the browser on your phone doesn't have this feature. We recommend using a modern browser (firefox, chrome...) instead of the default Wi-Fi login portal that typically pops up in some phones. 
+ 	
+ 	You can always try to do the _developer-way_ with [check this guide here](#using-command-line-tools)
 
 ## Using command-line tools
 
@@ -92,11 +100,11 @@ The steps below are a summary of the steps you will need to update the firmware 
 
 4. In your terminal, navigate to a folder in which you want to download the firmware in. Then, get the firmware following the [instructions here](/guides/firmware/edit-the-firmware/#getting-the-firmware)
 
-5. Navigate to the firmware folder, plug the sensor to your computer and run the command below.
+5. Navigate to the firmware folder, plug the sensor to your computer and run the command below. The [SAM firmware has different versions](https://forum.smartcitizen.me/t/wq-sensors-wouldnt-enable/1958/3), defined by `environments`. The `environments` are: `sck2`, `sck21_air`, `sck22_air, `sck23_air` and `sck_water`. Make rue to use the corresponding one after the `--env` option below. Note that `ESP` doesn't need a flag, as it's independent.
 
 	This will upload the SAM firmware:
 	```
-	python make.py flash sam -v
+	python make.py flash sam -v --env sck23_air
 	```
 
 	This will also upload the ESP firmware:
@@ -106,5 +114,5 @@ The steps below are a summary of the steps you will need to update the firmware 
 
 	You can upload both at the same time by:
 	```
-	python make.py flash sam esp -v
+	python make.py flash sam esp -v --env sck23_air
 	```
