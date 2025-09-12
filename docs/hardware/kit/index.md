@@ -120,7 +120,7 @@ All the {{ short_name }}2.X generations above 2.1 (included) measure **at least*
 !!! info "About the SEN5X"
     `SEN5X` refers to the different configurations of the PM sensors in that series: `SEN50`, `SEN54`, `SEN55`.
 
-    We chose the SEN50 since it offers a good, cheap solution to measure PM. The SEN55 and the SEN54 are also compatible using the same connector in both the {{ short_name }}2.2 and {{ short_name }}2.3! The SEN50 measures _only_ PM, the SEN54 PM and NOx index, and the SEN55 PM, NOx and VOC indexes.
+    We chose the SEN50 since it offers a good, cheap solution to measure PM. The SEN55 and the SEN54 are also compatible using the same connector in both the {{ short_name }}2.2 and {{ short_name }}2.3! The SEN50 measures _only_ PM, the SEN54 PM and VOC index, and the SEN55 PM, NOx and VOC indexes.
 
 ## :notebook: Installation instructions
 
