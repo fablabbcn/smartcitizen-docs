@@ -620,7 +620,7 @@ Current humidity offset: 3.50 (rh)
 ```
 
 !!! info "Default offsets"
-    These offsets are calibrated based on internal tests on each hardware version. You can always modify them to suit your needs, or revert back to the default with `control temp cal clear` or `control hum cal clear`
+    These offsets are calibrated based on internal tests on each hardware version. You can always modify them to suit your needs, or revert back to the default with `control temp cal clear` or `control hum cal clear`.
 
 To modify, you can issue the `control temp cal` command followed by a the offset to add in float notation (for instance `-10.0`):
 
