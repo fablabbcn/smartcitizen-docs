@@ -1829,9 +1829,40 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Sensirion SHT3X
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Sensirion SHT3X
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#modify-temperature-and-relative-humidity-offset" class="md-nav__link">
+    Modify temperature and relative humidity offset
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -3617,6 +3648,21 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#modify-temperature-and-relative-humidity-offset" class="md-nav__link">
+    Modify temperature and relative humidity offset
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -3667,6 +3713,55 @@
 <p class="admonition-title">Version</p>
 <p>This sensor is supported from V2.0 onwards</p>
 </div>
+<h2 id="modify-temperature-and-relative-humidity-offset">Modify temperature and relative humidity offset<a class="headerlink" href="#modify-temperature-and-relative-humidity-offset" title="Permanent link">&para;</a></h2>
+<p>Starting in firmware <code>0.9.11</code>, we have included a command to <code>control</code> temperature and relative humidity offsets for <a href="/knowledge/air/temperature_rel_humidity/Sensirion_SHT3X/">Sensirion SHT3X</a> sensors, present in the <a href="/hardware/boards/urban-board/">Urban Board</a> or as <a href="/knowledge/air/temperature_rel_humidity/Sensirion_SHT3X-weatherproof/">an external probe</a>, for both the <code>SHT31</code> and the <code>SHT35</code> type. This feature allows introducing an offset to both variables: temperature and relative humidity. This offset can be used to compensate for heat build-up on the device. Note that this offset is the same for <a href="/hardware/kit/features/#wi-fi-mode">wi-fi / online</a> or <a href="/hardware/kit/features/#sd-card-mode">sd-card / offline</a> modes. In addition, a small adjustment is <em>hardcoded</em> to compensate for battery charging additional heat up <strong>only on the urban board</strong>. </p>
+<p>To check available commands (note that you can change <code>temp</code> or <code>hum</code> for the urban board):</p>
+<div class="highlight"><pre><span></span><code>SCK &gt; control temp
+Temperature: 
+Available commands:
+* cal: [float - clear] Sets temperature offset with respect to current offset or clears it
+</code></pre></div>
+<p>To check the offset currently implemented:</p>
+<div class="highlight"><pre><span></span><code>SCK &gt; control temp cal
+Current temperature offset: -1.00 (degC)
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>SCK &gt; control hum cal
+Current humidity offset: 3.50 (rh)
+</code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">Default offsets</p>
+<p>These offsets are calibrated based on internal tests on each hardware version. You can always modify them to suit your needs, or revert back to the default with <code>control temp cal clear</code> or <code>control hum cal clear</code></p>
+</div>
+<p>To modify, you can issue the <code>control temp cal</code> command followed by a the offset to add in float notation (for instance <code>-10.0</code>):</p>
+<p>Check the calibration and read the current value:</p>
+<div class="highlight"><pre><span></span><code>SCK &gt; control temp cal
+Temperature: cal
+Current temperature offset: -1.00 (degC)
+SCK &gt; read temp
+Temperature: 25.95 C
+</code></pre></div>
+<p>Set the temperature offset to -10.0 degC. Note that for the previous reading, there was already an offset of <code>-1.00 degC</code>, so now the offset will be -11.0 degC:</p>
+<div class="highlight"><pre><span></span><code>SCK &gt; control temp cal -10.00
+Temperature: cal -10.00
+SCK &gt; control temp cal
+Current temperature offset: -11.00 (degC)
+SCK &gt; read temp
+Temperature: 15.96 C
+</code></pre></div>
+<p>To revert to the previous value:</p>
+<div class="highlight"><pre><span></span><code>SCK &gt; control temp cal clear
+Set default offset: -1.00 (degC)
+SCK &gt; control temp cal
+Current temperature offset: -1.00 (degC)
+SCK &gt; read temp
+Temperature: 26.09 C
+</code></pre></div>
+<p>As an example, other sensors can be also modified. For instance, for humidity:</p>
+<div class="highlight"><pre><span></span><code>control hum cal
+Current humidity offset: 3.50 (rh)
+SCK &gt; read hum
+Humidity: 63.06 %
+</code></pre></div>
 
 
 
