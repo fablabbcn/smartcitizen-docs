@@ -1843,9 +1843,40 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Sensirion SHT3X Weatherproof
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Sensirion SHT3X Weatherproof
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#modify-temperature-and-relative-humidity-offset" class="md-nav__link">
+    Modify temperature and relative humidity offset
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -3617,6 +3648,21 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#modify-temperature-and-relative-humidity-offset" class="md-nav__link">
+    Modify temperature and relative humidity offset
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -3659,10 +3705,67 @@
 <p>A temperature and humidity sensor in a weatherproof capsule</p>
 <p><img alt="" class="banner-box" src="/assets/images/sensirion-sht3x-weatherproof.jpg" /></p>
 <p><em class="image-credit-banner-box">Image Credit: <strong>Sensirion</strong></em></p>
-<div class="admonition warning">
-<p class="admonition-title">Under Construction</p>
-<p>More details on working principles, usage, considerations, and resources are coming soon.</p>
+<h2 id="modify-temperature-and-relative-humidity-offset">Modify temperature and relative humidity offset<a class="headerlink" href="#modify-temperature-and-relative-humidity-offset" title="Permanent link">&para;</a></h2>
+<p>External sensors offsets can be modified via the <code>control</code> command.</p>
+<p>To check available commands (note that you can change <code>sht31</code> or <code>sht35</code>):</p>
+<div class="highlight"><pre><span></span><code>SCK &gt; control ext sht31
+Temperature: 
+Available commands:
+* cal: [float - clear] Sets temperature offset with respect to current offset or clears it
+</code></pre></div>
+<p>To check the offset currently implemented:</p>
+<div class="highlight"><pre><span></span><code>SCK &gt; control ext sht31 temp cal
+Current temperature offset: -1.00 (degC)
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>SCK &gt; control ext sht31 hum cal
+Current humidity offset: 3.50 (rh)
+</code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">Default offsets</p>
+<p>The default offsets for external sensors are always 0degC and 0%rh. You can always modify them to suit your needs, or revert back to the default with <code>control temp cal clear</code> or <code>control hum cal clear</code>.</p>
 </div>
+<p>To modify, you can issue the <code>control ext sht31 temp cal</code> command followed by a the offset to add in float notation (for instance <code>-10.0</code>):</p>
+<p>Check the calibration and read the current value:</p>
+<div class="highlight"><pre><span></span><code>SCK &gt; control ext sht31 temp cal
+Temperature: cal
+Current temperature offset: -1.00 (degC)
+SCK &gt; read ext sht31 temp
+Temperature: 25.95 C
+</code></pre></div>
+<p>Set the temperature offset to -10.0 degC. Note that for the previous reading, there was already an offset of <code>-1.00 degC</code>, so now the offset will be -11.0 degC:</p>
+<div class="highlight"><pre><span></span><code>SCK &gt; control ext sht31 temp cal -10.00
+Temperature: cal -10.00
+SCK &gt; control ext sht31 temp cal
+Current temperature offset: -11.00 (degC)
+SCK &gt; read ext sht31 temp
+Temperature: 15.96 C
+</code></pre></div>
+<p>To revert to the previous value:</p>
+<div class="highlight"><pre><span></span><code>SCK &gt; control ext sht31 temp cal clear
+Set default offset: -1.00 (degC)
+SCK &gt; control ext sht31 temp cal
+Current temperature offset: -1.00 (degC)
+SCK &gt; read ext sht31 temp
+Temperature: 26.09 C
+</code></pre></div>
+<p>Additional, for relative humidity:</p>
+<div class="highlight"><pre><span></span><code>control ext sht31 hum cal
+Current humidity offset: 3.50 (rh)
+SCK &gt; read ext sht31 hum
+Humidity: 63.06 %
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>SCK &gt; control ext sht31 temp cal
+Ext SHT31 Temperature: cal
+Current temperature offset: 0.00 (degC)
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>SCK &gt; control ext sht31 temp cal -2.00
+Ext SHT31 Temperature: cal -2.00
+Temperature offset set to -2.00 degC
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>SCK &gt; control ext sht31 temp cal clear
+Ext SHT31 Temperature: cal clear
+Set default offset: 0.00 (degC)
+</code></pre></div>
 
 
 
