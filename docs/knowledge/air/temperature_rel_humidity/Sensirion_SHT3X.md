@@ -30,7 +30,7 @@ excerpt: "A temperature and humidity sensor that we love! Available in SCK2.X."
 
 ## Modify temperature and relative humidity offset
 
-Starting in firmware `0.9.11`, we have included a command to `control` temperature and relative humidity offsets for [Sensirion SHT3X](/knowledge/air/temperature_rel_humidity/Sensirion_SHT3X/) sensors, present in the [Urban Board](/hardware/boards/urban-board/) or as [an external probe](/knowledge/air/temperature_rel_humidity/Sensirion_SHT3X-weatherproof/), for both the `SHT31` and the `SHT35` type. This feature allows introducing an offset to both variables: temperature and relative humidity. This offset can be used to compensate for heat build-up on the device. Note that this offset is the same for [wi-fi / online](/hardware/kit/features/#wi-fi-mode) or [sd-card / offline](/hardware/kit/features/#sd-card-mode) modes. In addition, a small adjustment is *hardcoded* to compensate for battery charging additional heat up **only on the urban board**. 
+This offset can be used to compensate for heat build-up on the device. Note that this offset is the same for [wi-fi / online](/hardware/kit/features/#wi-fi-mode) or [sd-card / offline](/hardware/kit/features/#sd-card-mode) modes. In addition, a small adjustment is *hardcoded* to compensate for battery charging additional heat up **only on the urban board**. 
 
 To check available commands (note that you can change `temp` or `hum` for the urban board):
 
