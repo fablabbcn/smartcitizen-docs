@@ -18,7 +18,7 @@ internal:
 
 !!! tip "Quick links"
 
-    :gift: **Buy: [{{ extra.urls.buy.name }}]({{ extra.urls.buy.link }})**
+    :gift: **Buy: [{{ extra.urls.buy.name }}]({{ extra.urls.buy.link }}) and [LABmaker](https://www.labmaker.org/collections/earth-and-ecology/products/smart-citizen-kit)**
 
 	:rocket: **Installation: [{{ extra.urls.installation.name }}]({{ extra.urls.installation.link }})**
 
