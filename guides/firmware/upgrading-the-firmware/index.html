@@ -3864,20 +3864,17 @@
 <p>The steps below are a summary of the steps you will need to update the firmware in case you are handling a lot of sensosr. The process builds on top the tools used in the <a href="/guides/firmware/edit-the-firmware/">edit the firmware</a>, but simplified as we do not want to compile the firmware (since we are not changing it):</p>
 <ol>
 <li>
-<p>Install python as per the instructions <a href="/guides/firmware/edit-the-firmware/#installing-python">here</a></p>
+<p>Install <code>python</code> (3.*)</p>
 </li>
 <li>
-<p>Install <a href="/guides/firmware/edit-the-firmware/#installing-requirements">python requirements</a></p>
+<p>Clone or download the firmware repository. If you are familiar with <code>git</code>, clone the <a href="https://github.com/fablabbcn/smartcitizen-kit-2x">firmware repository</a> (recursing submodules). You can avoid this by downloading the firmware from GitHub and, in the tools folder, downloading the <a href="https://github.com/fablabbcn/smartcitizen-tools">tools repository</a> and putting its content in the <code>tools</code> folder in the firmware directory</p>
 </li>
 <li>
-<p>Install git following <a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">these instructions </a>. Check that you need to install it first by simply typing <code>git</code> in your terminal. If the output is not <code>command not found</code>, skip to step 4</p>
+<p>Install <a href="https://github.com/fablabbcn/smartcitizen-tools/blob/master/requirements.txt">requirements</a></p>
 </li>
 <li>
-<p>In your terminal, navigate to a folder in which you want to download the firmware in. Then, get the firmware following the <a href="/guides/firmware/edit-the-firmware/#getting-the-firmware">instructions here</a></p>
-</li>
-<li>
-<p>Navigate to the firmware folder, plug the sensor to your computer and run the command below. The <a href="https://forum.smartcitizen.me/t/wq-sensors-wouldnt-enable/1958/3">SAM firmware has different versions</a>, defined by <code>environments</code>. The <code>environments</code> are: <code>sck2</code>, <code>sck21_air</code>, <code>sck22_air,</code>sck23_air<code>and</code>sck_water<code>. Make rue to use the corresponding one after the</code>--env<code>option below. Note that</code>ESP` doesn't need a flag, as it's independent.</p>
-<p>This will upload the SAM firmware:
+<p>Navigate to the firmware folder, plug the SCK to your computer and run the command below. The <a href="https://forum.smartcitizen.me/t/wq-sensors-wouldnt-enable/1958/3">SAM firmware has different versions</a>, defined by <code>environments</code>. The <code>environments</code> are: <code>sck2</code>, <code>sck21_air</code>, <code>sck22_air</code>, <code>sck23_air</code> and <code>sck_water</code>. Make rue to use the corresponding one after the <code>--env</code> option below. Note that <code>ESP</code> doesn't need a flag, as it's independent.</p>
+<p>This will upload the SAM firmware, version <code>2.3</code>:
 <div class="highlight"><pre><span></span><code>python make.py flash sam -v --env sck23_air
 </code></pre></div></p>
 <p>This will also upload the ESP firmware:
