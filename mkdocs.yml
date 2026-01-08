@@ -136,6 +136,7 @@ nav:
     - Firmware Operations:
       - Getting firmware information: guides/firmware/getting-firmware-information.md
       - Upgrading the firmware: guides/firmware/upgrading-the-firmware.md
+      - Enabling additional features: guides/firmware/enabling-additional-features.md
       - Editing the firmware: guides/firmware/edit-the-firmware.md
       - Debugging the firmware: guides/firmware/debug-the-firmware.md
       - Recovering the bootloader: guides/firmware/recovering-the-bootloader.md

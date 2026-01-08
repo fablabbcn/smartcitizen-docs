@@ -10,10 +10,11 @@ excerpt: An experimental OLED Screen to visualise sensor values and plot data!
 
 # {{ name }}
 
-{{ excerpt }}
+{%if excerpt %}{{ excerpt }}{%endif%}
 
-![]({{ feature_img }})
-> Image credits: Seeed Studio
+{%if feature_img %}![]({{feature_img}}){.banner-box}{%endif%}
+
+{%if feature_img_credit %}_Image Credit: **{{ feature_img_credit }}**_{.image-credit-banner-box}{%endif%}
 
 Supported [screens](https://wiki.seeedstudio.com/Grove-OLED_Display_1.12inch/) are 128x128 and use the SH1107 controller, we have tested the code with displays labeled as v2.0 and v2.1. If the screen is connected to the _AUX_ grove connector on the SCK it will be autodetected on boot:
 
@@ -25,21 +26,23 @@ To enable this screen, you need to compile the firmware with a `WITH_SENSOR_GROV
 
 - Add firmware compile flags to `platformio.ini` in the `sam` directory. For instance, for the `SCK 2.3`:
 
-```
-[env:sck23_air]
-build_flags =
-    !sh ../tools/git-rev.sh -e sck23_air
-    -D SCK23_AIR
-    -D WITH_SENSOR_GROVE_OLED
-```
+    ```
+    [env:sck23_air]
+    build_flags =
+        !sh ../tools/git-rev.sh -e sck23_air
+        -D SCK23_AIR
+        -D WITH_SENSOR_GROVE_OLED
+    ```
 
-- Uncomment the relevant line in the [Sensors.h](https://github.com/fablabbcn/smartcitizen-kit-2x/blob/master/lib/Sensors/Sensors.h) file. In this case, the file should read:
+- Uncomment the relevant line in the [Sensors.h](https://github.com/fablabbcn/smartcitizen-kit-2x/blob/master/lib/Sensors/Sensors.h) file. In the case of the oled display, the file should read:
 
-```
-#define WITH_SENSOR_GROVE_OLED  // Saves 2496 bytes
-```
+    ```
+    #define WITH_SENSOR_GROVE_OLED  // Saves 2496 bytes
+    ```
 
-## Info bar
+## Features
+
+### Info bar
 
 ![](/assets/images/oled-infobar.jpg)
 
@@ -54,12 +57,12 @@ From left to right on the info bar we will find:
 **External power:** Shown when the USB cable that provides power to the kit is connected.
 **Battery states:** Charging, full (75%-100%), half (25%-75%), empty (<25%). The battery level is also shown as a percentage. When the battery is disconnected, no icon or percentage are shown.
 
-## Setup screen
+### Setup screen
 When the SCK is in setup mode, it will display the name of the Wi-Fi Access point network and some simple instructions.
 
 ![](/assets/images/oled-setup.jpg)
 
-## Readings display
+### Readings display
 
 Enabled sensors will be shown by default in a three-second loop (except the battery, that's already on the info bar).
 
@@ -83,13 +86,13 @@ Noise dBA (60 sec) - oled
 ...
 ~~~
 
-## Error bar
+### Error bar
 
 Errors related to SD card, time sync, Wi-Fi, missing configuration or general network errors are shown in a pop-up at the bottom of the screen.
 
 ![](/assets/images/oled-error.jpg)
 
-## Monitor plot
+### Monitor plot
 
 You can plot one sensor in real time directly to the OLED screen, to use this feature you need to issue the command `monitor -oled sensorName` via the [command shell](/guides/getting-started/using-the-shell/). During the execution, the kit will stop all other tasks and try to send readings as fast as it can. Update speed depends on which sensor you are plotting.
 
@@ -99,7 +102,7 @@ SCK > monitor -oled light
 
 ![](/assets/images/oled-plot.jpg)
 
-## Debug log view
+### Debug log view
 
 Debug output to OLED screen is supported, it has to be enabled via the [command shell](/guides/getting-started/using-the-shell/). You can toggle debug output with the command `debug -oled`. Everything that is normally printed on the shell will also be redirected to the OLED screen with a very small font!!
 
