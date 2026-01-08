@@ -1138,44 +1138,57 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#features" class="md-nav__link">
+    Features
+  </a>
+  
+    <nav class="md-nav" aria-label="Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#info-bar" class="md-nav__link">
     Info bar
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#setup-screen" class="md-nav__link">
     Setup screen
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#readings-display" class="md-nav__link">
     Readings display
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#error-bar" class="md-nav__link">
     Error bar
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#monitor-plot" class="md-nav__link">
     Monitor plot
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#debug-log-view" class="md-nav__link">
     Debug log view
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2906,6 +2919,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
@@ -2942,6 +2957,20 @@
     <li class="md-nav__item">
       <a href="../../../guides/firmware/upgrading-the-firmware/" class="md-nav__link">
         Upgrading the firmware
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/firmware/enabling-additional-features/" class="md-nav__link">
+        Enabling additional features
       </a>
     </li>
   
@@ -3711,44 +3740,57 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#features" class="md-nav__link">
+    Features
+  </a>
+  
+    <nav class="md-nav" aria-label="Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#info-bar" class="md-nav__link">
     Info bar
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#setup-screen" class="md-nav__link">
     Setup screen
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#readings-display" class="md-nav__link">
     Readings display
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#error-bar" class="md-nav__link">
     Error bar
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#monitor-plot" class="md-nav__link">
     Monitor plot
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#debug-log-view" class="md-nav__link">
     Debug log view
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -3801,29 +3843,29 @@
 
 <h1 id="oled-display">OLED Display<a class="headerlink" href="#oled-display" title="Permanent link">&para;</a></h1>
 <p>An experimental OLED Screen to visualise sensor values and plot data!</p>
-<p><img alt="" src="https://live.staticflickr.com/65535/54333644986_e3e5c93c62_h.jpg" /></p>
-<blockquote>
-<p>Image credits: Seeed Studio</p>
-</blockquote>
+<p><img alt="" class="banner-box" src="https://live.staticflickr.com/65535/54333644986_e3e5c93c62_h.jpg" /></p>
 <p>Supported <a href="https://wiki.seeedstudio.com/Grove-OLED_Display_1.12inch/">screens</a> are 128x128 and use the SH1107 controller, we have tested the code with displays labeled as v2.0 and v2.1. If the screen is connected to the <em>AUX</em> grove connector on the SCK it will be autodetected on boot:</p>
 <p><img alt="" src="/assets/images/oled-logo.jpg" /></p>
 <h2 id="enable">Enable<a class="headerlink" href="#enable" title="Permanent link">&para;</a></h2>
 <p>To enable this screen, you need to compile the firmware with a <code>WITH_SENSOR_GROVE_OLED</code> flag. You can do this in two ways:</p>
 <ul>
-<li>Add firmware compile flags to <code>platformio.ini</code> in the <code>sam</code> directory. For instance, for the <code>SCK 2.3</code>:</li>
-</ul>
+<li>
+<p>Add firmware compile flags to <code>platformio.ini</code> in the <code>sam</code> directory. For instance, for the <code>SCK 2.3</code>:</p>
 <div class="highlight"><pre><span></span><code>[env:sck23_air]
 build_flags =
     !sh ../tools/git-rev.sh -e sck23_air
     -D SCK23_AIR
     -D WITH_SENSOR_GROVE_OLED
 </code></pre></div>
-<ul>
-<li>Uncomment the relevant line in the <a href="https://github.com/fablabbcn/smartcitizen-kit-2x/blob/master/lib/Sensors/Sensors.h">Sensors.h</a> file. In this case, the file should read:</li>
-</ul>
+</li>
+<li>
+<p>Uncomment the relevant line in the <a href="https://github.com/fablabbcn/smartcitizen-kit-2x/blob/master/lib/Sensors/Sensors.h">Sensors.h</a> file. In the case of the oled display, the file should read:</p>
 <div class="highlight"><pre><span></span><code>#define WITH_SENSOR_GROVE_OLED  // Saves 2496 bytes
 </code></pre></div>
-<h2 id="info-bar">Info bar<a class="headerlink" href="#info-bar" title="Permanent link">&para;</a></h2>
+</li>
+</ul>
+<h2 id="features">Features<a class="headerlink" href="#features" title="Permanent link">&para;</a></h2>
+<h3 id="info-bar">Info bar<a class="headerlink" href="#info-bar" title="Permanent link">&para;</a></h3>
 <p><img alt="" src="/assets/images/oled-infobar.jpg" /></p>
 <p>From left to right on the info bar we will find:</p>
 <p><img alt="" src="/assets/images/oled-icons.png" /></p>
@@ -3833,10 +3875,10 @@ build_flags =
 <strong>Time synced:</strong> Shown when the SCK internal clock has been synced.
 <strong>External power:</strong> Shown when the USB cable that provides power to the kit is connected.
 <strong>Battery states:</strong> Charging, full (75%-100%), half (25%-75%), empty (&lt;25%). The battery level is also shown as a percentage. When the battery is disconnected, no icon or percentage are shown.</p>
-<h2 id="setup-screen">Setup screen<a class="headerlink" href="#setup-screen" title="Permanent link">&para;</a></h2>
+<h3 id="setup-screen">Setup screen<a class="headerlink" href="#setup-screen" title="Permanent link">&para;</a></h3>
 <p>When the SCK is in setup mode, it will display the name of the Wi-Fi Access point network and some simple instructions.</p>
 <p><img alt="" src="/assets/images/oled-setup.jpg" /></p>
-<h2 id="readings-display">Readings display<a class="headerlink" href="#readings-display" title="Permanent link">&para;</a></h2>
+<h3 id="readings-display">Readings display<a class="headerlink" href="#readings-display" title="Permanent link">&para;</a></h3>
 <p>Enabled sensors will be shown by default in a three-second loop (except the battery, that's already on the info bar).</p>
 <p><img alt="" src="/assets/images/oled-readings.jpg" /></p>
 <p>Using the <a href="/guides/getting-started/using-the-shell/">command shell</a>, you can manually add/remove sensors from the display loop with the command <code>sensor sensorName -oled</code> that will toggle the state of the selected sensor.</p>
@@ -3852,15 +3894,15 @@ Light (60 sec) - oled
 Noise dBA (60 sec) - oled
 ...
 </code></pre></div>
-<h2 id="error-bar">Error bar<a class="headerlink" href="#error-bar" title="Permanent link">&para;</a></h2>
+<h3 id="error-bar">Error bar<a class="headerlink" href="#error-bar" title="Permanent link">&para;</a></h3>
 <p>Errors related to SD card, time sync, Wi-Fi, missing configuration or general network errors are shown in a pop-up at the bottom of the screen.</p>
 <p><img alt="" src="/assets/images/oled-error.jpg" /></p>
-<h2 id="monitor-plot">Monitor plot<a class="headerlink" href="#monitor-plot" title="Permanent link">&para;</a></h2>
+<h3 id="monitor-plot">Monitor plot<a class="headerlink" href="#monitor-plot" title="Permanent link">&para;</a></h3>
 <p>You can plot one sensor in real time directly to the OLED screen, to use this feature you need to issue the command <code>monitor -oled sensorName</code> via the <a href="/guides/getting-started/using-the-shell/">command shell</a>. During the execution, the kit will stop all other tasks and try to send readings as fast as it can. Update speed depends on which sensor you are plotting.</p>
 <div class="highlight"><pre><span></span><code>SCK &gt; monitor -oled light
 </code></pre></div>
 <p><img alt="" src="/assets/images/oled-plot.jpg" /></p>
-<h2 id="debug-log-view">Debug log view<a class="headerlink" href="#debug-log-view" title="Permanent link">&para;</a></h2>
+<h3 id="debug-log-view">Debug log view<a class="headerlink" href="#debug-log-view" title="Permanent link">&para;</a></h3>
 <p>Debug output to OLED screen is supported, it has to be enabled via the <a href="/guides/getting-started/using-the-shell/">command shell</a>. You can toggle debug output with the command <code>debug -oled</code>. Everything that is normally printed on the shell will also be redirected to the OLED screen with a very small font!!</p>
 <div class="highlight"><pre><span></span><code>SCK &gt; debug -oled
 Oled display debug: true
@@ -3870,6 +3912,10 @@ Oled display debug: true
 <li>All this development has been done with a short (~5 cm) grove cable, when testing longer cables we have seen instabilities that prevent the display refresh or even hang the SCK kit. More tests with bus speed and related issues are needed.</li>
 <li>Using this display simultaneously with other external sensors on the auxiliary I2C bus may cause instabilities.</li>
 </ul>
+<div class="admonition danger">
+<p class="admonition-title">Using with GPS</p>
+<p>Read this issue if you are using the screen with a GPS: <a href="https://github.com/fablabbcn/smartcitizen-kit-2x/issues/96">https://github.com/fablabbcn/smartcitizen-kit-2x/issues/96</a></p>
+</div>
 
 
 
