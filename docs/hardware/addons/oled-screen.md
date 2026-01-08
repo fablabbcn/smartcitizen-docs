@@ -115,3 +115,6 @@ Oled display debug: true
 
 * All this development has been done with a short (~5 cm) grove cable, when testing longer cables we have seen instabilities that prevent the display refresh or even hang the SCK kit. More tests with bus speed and related issues are needed.
 * Using this display simultaneously with other external sensors on the auxiliary I2C bus may cause instabilities.
+
+!!! danger "Using with GPS"
+    Read this issue if you are using the screen with a GPS: https://github.com/fablabbcn/smartcitizen-kit-2x/issues/96
