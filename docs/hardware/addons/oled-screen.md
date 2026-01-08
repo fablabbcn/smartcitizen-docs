@@ -19,6 +19,26 @@ Supported [screens](https://wiki.seeedstudio.com/Grove-OLED_Display_1.12inch/) a
 
 ![](/assets/images/oled-logo.jpg)
 
+## Enable
+
+To enable this screen, you need to compile the firmware with a `WITH_SENSOR_GROVE_OLED` flag. You can do this in two ways:
+
+- Add firmware compile flags to `platformio.ini` in the `sam` directory. For instance, for the `SCK 2.3`:
+
+```
+[env:sck23_air]
+build_flags =
+    !sh ../tools/git-rev.sh -e sck23_air
+    -D SCK23_AIR
+    -D WITH_SENSOR_GROVE_OLED
+```
+
+- Uncomment the relevant line in the [Sensors.h](https://github.com/fablabbcn/smartcitizen-kit-2x/blob/master/lib/Sensors/Sensors.h) file. In this case, the file should read:
+
+```
+#define WITH_SENSOR_GROVE_OLED  // Saves 2496 bytes
+```
+
 ## Info bar
 
 ![](/assets/images/oled-infobar.jpg)
