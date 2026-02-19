@@ -118,6 +118,6 @@ This is the tool that probably has the largest amount of examples and use cases:
 ## Source files
 
 - Smart Citizen Data (python): https://github.com/fablabbcn/smartcitizen-data
-- Smart Citizen Data (R): https://github.com/fablabbcn/smartcitizen-data
+- Smart Citizen Data (R): https://github.com/fablabbcn/smartcitizen-R-data
 - Smart Citizen Connector (python): https://github.com/fablabbcn/smartcitizen-connector
 - Smart Citizen Flows: https://github.com/fablabbcn/smartcitizen-flows
