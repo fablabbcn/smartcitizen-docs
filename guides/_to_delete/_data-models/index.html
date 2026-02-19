@@ -3854,7 +3854,7 @@ modelRplots(model, dataTrain, dataTest)
 <p><img alt="" src="/assets/images/NQLA4lw.png" /></p>
 <p>Finally, we can export our model and generate some metrics to evaluate the results.</p>
 <h2 id="machine-learning-example">Machine learning example<a class="headerlink" href="#machine-learning-example" title="Permanent link">&para;</a></h2>
-<p>Machine learning algorithms promise a better representation of the sensor's data, being able to learn robust non-linear models and sequential dependencies. For that reason, we have implemented toolset based on <a href="https://keras.io/">keras</a> with <a href="https://www.tensorflow.org/">Tensorflow</a> backend, in order to train sequential models <sup id="fnref:third"><a class="footnote-ref" href="#fn:third">1</a></sup>.</p>
+<p>Machine learning algorithms promise a better representation of the sensor's data, being able to learn robust non-linear models and sequential dependencies. For that reason, we have implemented toolset based on <a href="https://keras.io/">keras</a> with <a href="https://www.tensorflow.org/">Tensorflow</a> backend, in order to train sequential models <sup id="fnref:third"><a class="footnote-ref" href="#fn:third">3</a></sup>.</p>
 <div class="highlight"><pre><span></span><code>model_description_rf = {&quot;model_name&quot;: &quot;RF_UCD&quot;,
                     &quot;model_type&quot;: &quot;RF&quot;,
                     &quot;model_target&quot;: &quot;ALPHASENSE&quot;,
@@ -3924,7 +3924,7 @@ Channel 5262_RF_UCD prediction finished
 <h2 id="model-comparison">Model comparison<a class="headerlink" href="#model-comparison" title="Permanent link">&para;</a></h2>
 <p>Here is a visual comparison of both models:</p>
 <p><img alt="" src="/assets/images/56eVx5P.png" /></p>
-<p>It is very difficult though, to know which one is performing better. Let's then evaluate and compare our models. In order to evaluate it's metrics, we will be using the following principles<sup id="fnref:first"><a class="footnote-ref" href="#fn:first">2</a></sup><sup id="fnref:second"><a class="footnote-ref" href="#fn:second">3</a></sup>:</p>
+<p>It is very difficult though, to know which one is performing better. Let's then evaluate and compare our models. In order to evaluate it's metrics, we will be using the following principles<sup id="fnref:first"><a class="footnote-ref" href="#fn:first">1</a></sup><sup id="fnref:second"><a class="footnote-ref" href="#fn:second">2</a></sup>:</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>In all of the expressions below, the letter <em>m</em> indicates the model field, <em>r</em> indicates the reference field. Overbar is average and <span class="arithmatex"><span class="MathJax_Preview">\sigma</span><script type="math/tex">\sigma</script></span> is the standard deviation.</p>
@@ -4005,7 +4005,7 @@ $$
 B* = {\overline m - \overline r \over \sigma_r}
 $$</p>
 <p><strong>Target diagrams</strong>
-The target diagram is a plot that provides summary information about the <strong>pattern statistics as well as the bias</strong> thus yielding an overview of their respective contributions to the total RMSD. In a simple Cartesian coordinate system, the unbiased RMSD may serve as the X-axis and the bias may serve as the Y-axis. The distance between the origin and the model versus observation statistics (any point, s, within the X,Y Cartesian space) is then equal to the total RMSD. If all is normalized by the <span class="arithmatex"><span class="MathJax_Preview">\sigma_r</span><script type="math/tex">\sigma_r</script></span>, the distance from the origin is again the <em>standard deviation normalized total RMSD</em>:<sup id="fnref2:first"><a class="footnote-ref" href="#fn:first">2</a></sup></p>
+The target diagram is a plot that provides summary information about the <strong>pattern statistics as well as the bias</strong> thus yielding an overview of their respective contributions to the total RMSD. In a simple Cartesian coordinate system, the unbiased RMSD may serve as the X-axis and the bias may serve as the Y-axis. The distance between the origin and the model versus observation statistics (any point, s, within the X,Y Cartesian space) is then equal to the total RMSD. If all is normalized by the <span class="arithmatex"><span class="MathJax_Preview">\sigma_r</span><script type="math/tex">\sigma_r</script></span>, the distance from the origin is again the <em>standard deviation normalized total RMSD</em>:<sup id="fnref2:first"><a class="footnote-ref" href="#fn:first">1</a></sup></p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 RMSD^{*2} = B^{*2}+RMSD^{*'2}
@@ -4020,9 +4020,9 @@ RMSD^{*2} = B^{*2}+RMSD^{*'2}
 <li>whether there is a positive or negative bias</li>
 </ul>
 <p><img alt="" src="/assets/images/x8NY4kD.png" /></p>
-<p><em>Image Source: Jolliff et al. <sup id="fnref3:first"><a class="footnote-ref" href="#fn:first">2</a></sup></em></p>
+<p><em>Image Source: Jolliff et al. <sup id="fnref3:first"><a class="footnote-ref" href="#fn:first">1</a></sup></em></p>
 <p>Any point greater than RMSD*=1 is to be considered a poor performer since it doesn't offer improvement over the time series average.</p>
-<p>Interestingly, the target diagram has no information about the correlation coefficient R, but some can be inferred, knowing that all the points within the RMSD* &lt;1 are positively correlated (R&gt;0), although, in <sup id="fnref4:first"><a class="footnote-ref" href="#fn:first">2</a></sup> it is shown that a circle marker with radius <span class="arithmatex"><span class="MathJax_Preview">M_{R1}</span><script type="math/tex">M_{R1}</script></span>, means that all the points between that marker and the origin have a R coefficient larger than R1, where:</p>
+<p>Interestingly, the target diagram has no information about the correlation coefficient R, but some can be inferred, knowing that all the points within the RMSD* &lt;1 are positively correlated (R&gt;0), although, in <sup id="fnref4:first"><a class="footnote-ref" href="#fn:first">1</a></sup> it is shown that a circle marker with radius <span class="arithmatex"><span class="MathJax_Preview">M_{R1}</span><script type="math/tex">M_{R1}</script></span>, means that all the points between that marker and the origin have a R coefficient larger than R1, where:</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 M_{R1} = min(RMSD*') = \sqrt {1+R1^2-2R1^2}
@@ -4074,14 +4074,14 @@ RF_UCD_metrics.sav
 <div class="footnote">
 <hr />
 <ol>
-<li id="fn:third">
-<p><a href="https://machinelearningmastery.com">Machine learning mastery</a>&#160;<a class="footnote-backref" href="#fnref:third" title="Jump back to footnote 1 in the text">&#8617;</a></p>
-</li>
 <li id="fn:first">
-<p><a href="http://www.itl.nist.gov/div898/handbook/mpc/section5/mpc52.htm">Engineering statistics handbook</a>&#160;<a class="footnote-backref" href="#fnref:first" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:first" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:first" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:first" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+<p><a href="http://www.itl.nist.gov/div898/handbook/mpc/section5/mpc52.htm">Engineering statistics handbook</a>&#160;<a class="footnote-backref" href="#fnref:first" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:first" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:first" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:first" title="Jump back to footnote 1 in the text">&#8617;</a></p>
 </li>
 <li id="fn:second">
-<p><a href="https://www.sciencedirect.com/science/article/pii/S0924796308001140">Summary diagrams for coupled hydrodynamic-ecosystem model skill assessment (Jolliff et al.)</a>&#160;<a class="footnote-backref" href="#fnref:second" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+<p><a href="https://www.sciencedirect.com/science/article/pii/S0924796308001140">Summary diagrams for coupled hydrodynamic-ecosystem model skill assessment (Jolliff et al.)</a>&#160;<a class="footnote-backref" href="#fnref:second" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:third">
+<p><a href="https://machinelearningmastery.com">Machine learning mastery</a>&#160;<a class="footnote-backref" href="#fnref:third" title="Jump back to footnote 3 in the text">&#8617;</a></p>
 </li>
 </ol>
 </div>
