@@ -6,7 +6,7 @@ This is a _live_ compilation of our participation and results in some research p
 
 ## Large projects
 
-The projects below have been funded by the European Commission (H2020 or HORIZON programmes). You can find more information in the [funding page](/about/funding/).
+The projects below have been funded by the European Commission H2020 or HORIZON programmes. You can find more information in the [funding page](/about/funding/).
 
 - [**Making Sense**](https://making-sense.eu): advances and experiments in participatory sensing. _(Grant agreement Nº: 688620)_. Making Sense explored how open source software, open source hardware, digital maker practices and open design can be effectively used by local communities to fabricate their own sensing tools, make sense of their environments and address pressing environmental problems in air, water, soil and sound pollution.
     - [Making Sense Citizen Sensing A Toolkit book](http://making-sense.eu/wp-content/uploads/2018/01/Citizen-Sensing-A-Toolkit.pdf)
@@ -27,25 +27,81 @@ The projects below have been funded by the European Commission (H2020 or HORIZON
 
 ## Local projects or small scale collaborations
 
-Although not H2020 projects, the projects below have allowed us to further our connections with scientific research institutions, and have contributed to the development of the Smart Citizen project. We are proud to have worked with:
+Although not European scale projects, the projects below have allowed us to further our connections with scientific research institutions, and have contributed to the development of the Smart Citizen project. We are proud to have worked with:
 
 - [Institut Salud Global - iSGlobal](https://www.isglobal.org/en/): [climate shelters project](https://www.barcelona.cat/barcelona-pel-clima/en/climate-shelters-schools)
 - [CSIC - UTM - ICM](https://www.icm.csic.es/en): [Pati Cientific Project](https://paticientific.org/)
 - [University of Bologna](https://www.unibo.it/en): [Almabike project](https://site.unibo.it/multicampus-sostenibile/en/mobility/almabike)
 - [Fraunhofer institute](https://www.fraunhofer.de/): https://gis-iq.esri.de/fraunhofer-institut-iao-digital-labor-bad-duerrheim/
 
-## Academic publications
+## Publications and references
 
-Find below some of our own publications, or others' that have used the Smart Citizen hardware and software.
+This bibliography brings together publications that document the Smart Citizen project directly, analyse its use in applied contexts, or situate it within broader discussions on citizen sensing, environmental monitoring, and participatory infrastructures.
 
-- [Special Issue on Open tools for environmental monitoring: Hardware X - 2019](https://www.sciencedirect.com/science/article/pii/S2468067219300203)
-- [A citizen science approach for enhancing public understanding of air pollution](https://www.sciencedirect.com/science/article/pii/S2210670719317020?via%3Dihub)
-- [Citizen Sensing: A Toolkit](https://eprints.whiterose.ac.uk/148521/)
-- [Onboarding Communities to the IoT](https://link.springer.com/chapter/10.1007/978-3-319-70284-1_2)
-- [Laboratory  evaluation  of  particle  size-selectivity  of  optical  low-cost particulate matter sensors](https://amt.copernicus.org/articles/13/2413/2020/): study lead by the [Finnish Meteorological Institute](https://en.ilmatieteenlaitos.fi/), as part of the [iScape project](https://www.iscapeproject.eu/)
+### Core publications by project contributors
 
-### Mentions
+👉 Start here if you want to understand the origins, development, and methodological grounding of Smart Citizen. These publications are authored or co-authored by core project contributors and document the platform’s conceptual, technical, and civic dimensions.
 
-- [The influence of the vegetation cycle on the mitigation of air pollution by a deciduous roadside hedge - Thor-Bjørn Ottosen, Prashant Kumar](https://www.sciencedirect.com/science/article/pii/S2210670719329567?via%3Dihub): study lead by the [University of Surrey](https://www.surrey.ac.uk/), as part of the [iScape project](https://www.iscapeproject.eu/)
-- [Evaluation of low-cost sensors for quantitative personal exposure monitoring - Sachit Mahajan, PrashantKumar](https://www.sciencedirect.com/science/article/abs/pii/S2210670720300639): study lead by the [University of Surrey](https://www.surrey.ac.uk/), as part of the [iScape project](https://www.iscapeproject.eu/)
-- [How to get the best from low-cost particulate matter sensors: guidelines and practical recommendations](https://doi.org/10.3390/s20113073): study lead by the [University of Bologna](https://www.unibo.it/en), published as part of the Special Issue for Sensors for [Particulate Matter and Air pollution](https://www.mdpi.com/journal/sensors/special_issues/PM_AP)
+* González, Ó., Calvo Juárez, M., & Guy, J. (2024). An inquiry into Fab Labs as enablers for environmental protection initiatives. In *Fab 24: Fabricating Equity research papers* (Fab24, Puebla, Mexico). [https://doi.org/10.5281/zenodo.13221337](https://doi.org/10.5281/zenodo.13221337)
+
+* Maccani, G., Errandonea, L., Righi, V., Camprodon, G., & Galli, J. (2021). VenicAIRE. *Quaderns d’Arquitectura i Urbanisme*, 74–81. [https://raco.cat/index.php/QuadernsArquitecturaUrbanisme/article/view/392968](https://raco.cat/index.php/QuadernsArquitecturaUrbanisme/article/view/392968)
+
+* Mahajan, S., Kumar, P., Camprodon, G., et al. (2020). A citizen science approach for enhancing public understanding of air pollution. *Sustainable Cities and Society, 52*, 101800. [https://doi.org/10.1016/j.scs.2019.101800](https://doi.org/10.1016/j.scs.2019.101800)
+
+* Kuula, J., Mäkelä, T., Aurela, M., Teinilä, K., Varjonen, S., González, Ó., & Timonen, H. (2020). Laboratory evaluation of particle-size selectivity of optical low-cost particulate matter sensors. *Atmospheric Measurement Techniques, 13*(5), 2413–2423. [https://doi.org/10.5194/amt-13-2413-2020](https://doi.org/10.5194/amt-13-2413-2020)
+
+* Camprodon, G., González, Ó., Barberán, V., Pérez, M., Smári, V., de Heras, M. Á., & Bizzotto, A. (2019). Smart Citizen Kit and station: An open environmental monitoring system for citizen participation and scientific experimentation. *HardwareX, 6*, e00070. [https://doi.org/10.1016/j.ohx.2019.e00070](https://doi.org/10.1016/j.ohx.2019.e00070)
+
+* Woods, M., Balestrini, M., Bejtullahu, S., Bocconi, S., Boerwinkel, G., Boonstra, M., Camprodon, G., Diez, T., … & Seiz, G. (2018). *Citizen sensing: A toolkit*. [https://eprints.whiterose.ac.uk/148521/](https://eprints.whiterose.ac.uk/148521/)
+
+* Coulson, S., Woods, M., Scott, M., Hemment, D., & Balestrini, M. (2018). Stop the noise!: Enhancing meaningfulness in participatory sensing with community level indicators. In *Proceedings of the 2018 Designing Interactive Systems Conference (DIS)* (pp. 1163–1174). [https://doi.org/10.1145/3196709.3196762](https://doi.org/10.1145/3196709.3196762)
+
+* Balestrini, M., Seiz, G., Peña, L. L., & Camprodon, G. (2017). Onboarding communities to the IoT. In *Internet Science: 4th International Conference (INSCI 2017), Thessaloniki, Greece* (pp. 19–27). Springer. [https://doi.org/10.1007/978-3-319-70284-1_2](https://doi.org/10.1007/978-3-319-70284-1_2)
+
+* Balestrini, M., Diez, T., Marshall, P., Gluhak, A., & Rogers, Y. (2015). *IoT community technologies: Leaving users to their own devices or orchestration of engagement?* *EAI Endorsed Transactions on Internet of Things, 1*(1), e7. [https://discovery.ucl.ac.uk/id/eprint/1474761/](https://discovery.ucl.ac.uk/id/eprint/1474761/)
+
+* Balestrini, M., Diez, T., & Marshall, P. (2014). Beyond boundaries: The home as city infrastructure for smart citizens. In *Proceedings of the 2014 ACM International Joint Conference on Pervasive and Ubiquitous Computing Adjunct Publication*. [https://doi.org/10.1145/2638728.2641557](https://doi.org/10.1145/2638728.2641557)
+
+* Diez, T., & Posada, A. (2013). *The fab and the smart city: The use of machines and technology for the city production by its citizens*. In *Proceedings of the 7th International Conference on Tangible, Embedded and Embodied Interaction* (pp. 447–454). Association for Computing Machinery. [https://doi.org/10.1145/2460625.2460725](https://doi.org/10.1145/2460625.2460725)
+
+### Applications and deployments
+
+This section focuses on independent publications that show how Smart Citizen, or closely related sensing approaches, have been used in practice. These examples are useful for readers interested in field deployments, community-facing projects, and applied environmental monitoring in different contexts.
+
+* Cameli, L., et al. (2025). Integrating environmental sensing into cargo bikes for urban monitoring. *Sensors*. *(Early access / preprint, DOI pending)*
+
+* Tenbeitel, A., Arnold, S., & Rettkowski, J. (2025). SenseBike: A new low-cost mobile-networked sensor system for cyclists to monitor air quality and automatically measure passing distances in urban traffic. *Sensors, 25*(22), 7099. [https://doi.org/10.3390/s25227099](https://doi.org/10.3390/s25227099)
+
+* Esbrí, L., Llasat-Botija, M., Llasat, M. C., et al. (2025). Implementing citizen science activities for climate action: The I-CHANGE day. *Frontiers in Environmental Science, 13*. [https://doi.org/10.3389/fenvs.2025.1650360](https://doi.org/10.3389/fenvs.2025.1650360)
+
+* Ramos, G., et al. (2024). Citizen-generated environmental data and urban sensing practices in smart cities. *Smart Cities, 4*(1), 6. [https://doi.org/10.3390/smartcities4010006](https://doi.org/10.3390/smartcities4010006)
+
+* Rodríguez-Trejo, A., et al. (2024). Air quality monitoring with low-cost sensors during pyrotechnic events in Querétaro, Mexico. *Atmosphere, 15*(8), 879. [https://doi.org/10.3390/atmos15080879](https://doi.org/10.3390/atmos15080879)
+
+* Sanz-Mas, M., Ubalde-López, M., Borràs, S., et al. (2024). Adapting schools to climate change with green, blue, and grey measures in Barcelona: Study protocol of a mixed-method evaluation. *Journal of Urban Health, 101*, 141–154. [https://doi.org/10.1007/s11524-023-00814-y](https://doi.org/10.1007/s11524-023-00814-y)
+
+* Moura, P., Moreno, J. I., López, G., & Álvarez-Campana, M. (2021). IoT platform for energy sustainability in university campuses. *Sensors, 21*(2), 357. [https://doi.org/10.3390/s21020357](https://doi.org/10.3390/s21020357)
+
+* Gryech, I., et al. (2020). MoreAir: A low-cost urban air pollution monitoring system. *Sensors, 20*(4), 998. [https://doi.org/10.3390/s20040998](https://doi.org/10.3390/s20040998)
+
+* Ottosen, T.-B., & Kumar, P. (2020). The influence of the vegetation cycle on the mitigation of air pollution by a deciduous roadside hedge. *Sustainable Cities and Society, 53*, 101919. [https://doi.org/10.1016/j.scs.2019.101919](https://doi.org/10.1016/j.scs.2019.101919)
+
+* Álvarez-Campana, M., López, G., Vázquez, E., Villagrá, V. A., & Berrocal, J. (2017). Smart CEI Moncloa: An IoT-based platform for people flow and environmental monitoring on a smart university campus. *Sensors, 17*(12), 2856. [https://doi.org/10.3390/s17122856](https://doi.org/10.3390/s17122856)
+
+* van den Horn, C., & Boonstra, R. (2014). *Smart Citizen Kit Amsterdam: Meten is weten?* Waag Society.
+
+### Benchmarking, validation, and technical references
+
+This section gathers independent publications that are useful for understanding the performance, limits, and technical context of low-cost environmental sensing. These references are particularly relevant for readers assessing data quality, sensor behaviour, or technical adaptations of the Smart Citizen hardware.
+
+* Suriano, D. (2024). Design and development of an electronic board for supporting the operation of electrochemical gas sensors. *Hardware, 2*(2), 173–189. [https://doi.org/10.3390/hardware2020009](https://doi.org/10.3390/hardware2020009)
+
+* Mahajan, S., & Kumar, P. (2020). Evaluation of low-cost sensors for quantitative personal exposure monitoring. *Sustainable Cities and Society, 57*, 102076. [https://doi.org/10.1016/j.scs.2020.102076](https://doi.org/10.1016/j.scs.2020.102076)
+
+* Mistry, C., Stelea, B., Kumar, V., & Pasquier, T. F. J.-M. (2020). Demonstrating the practicality of unikernels to build a serverless platform at the edge. In *2020 IEEE International Conference on Cloud Computing Technology and Science (CloudCom)* (pp. 25–32). [https://doi.org/10.1109/CloudCom49646.2020.00001](https://doi.org/10.1109/CloudCom49646.2020.00001)
+
+* Borrego, C., Costa, A. M., Ginja, J., et al. (2020). How to get the best from low-cost particulate matter sensors: Guidelines and practical recommendations. *Sensors, 20*(11), 3073. [https://doi.org/10.3390/s20113073](https://doi.org/10.3390/s20113073)
+
+* Morawska, L., Thai, P. K., Liu, X., et al. (2018). Applications of low-cost sensing technologies for air quality monitoring and exposure assessment: How far have they gone? *Environment International, 116*, 286–299. [https://doi.org/10.1016/j.envint.2018.04.018](https://doi.org/10.1016/j.envint.2018.04.018)
+
+* Jiang, Q., Kresin, F., Bregt, A. K., et al. (2016). Citizen sensing for improved urban environmental monitoring. *Journal of Sensors, 2016*, 5656245. [https://doi.org/10.1155/2016/5656245](https://doi.org/10.1155/2016/5656245)
