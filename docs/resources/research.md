@@ -102,6 +102,12 @@ This section gathers independent publications that are useful for understanding 
 
 * Borrego, C., Costa, A. M., Ginja, J., et al. (2020). How to get the best from low-cost particulate matter sensors: Guidelines and practical recommendations. *Sensors, 20*(11), 3073. [https://doi.org/10.3390/s20113073](https://doi.org/10.3390/s20113073)
 
+* South Coast Air Quality Management District. (2019). *Laboratory evaluation: Smart Citizen Kit v2.1*. AQ-SPEC. [https://www.aqmd.gov/docs/default-source/aq-spec/laboratory-evaluations/smart-citizen-kit-v2-1---lab-evaluation.pdf](https://www.aqmd.gov/docs/default-source/aq-spec/laboratory-evaluations/smart-citizen-kit-v2-1---lab-evaluation.pdf)
+
+* South Coast Air Quality Management District. (2019). *Field evaluation: Smart Citizen Kit v2.1*. AQ-SPEC. [https://www.aqmd.gov/docs/default-source/aq-spec/field-evaluations/smart-citizen-kit-v2-1---field-evaluation.pdf](https://www.aqmd.gov/docs/default-source/aq-spec/field-evaluations/smart-citizen-kit-v2-1---field-evaluation.pdf)
+
 * Morawska, L., Thai, P. K., Liu, X., et al. (2018). Applications of low-cost sensing technologies for air quality monitoring and exposure assessment: How far have they gone? *Environment International, 116*, 286–299. [https://doi.org/10.1016/j.envint.2018.04.018](https://doi.org/10.1016/j.envint.2018.04.018)
 
 * Jiang, Q., Kresin, F., Bregt, A. K., et al. (2016). Citizen sensing for improved urban environmental monitoring. *Journal of Sensors, 2016*, 5656245. [https://doi.org/10.1155/2016/5656245](https://doi.org/10.1155/2016/5656245)
+
+* South Coast Air Quality Management District. (2015). *Field evaluation: Smart Citizen Kit*. AQ-SPEC. [https://www.aqmd.gov/docs/default-source/aq-spec/field-evaluations/smart-citizen-kit---field-evaluation.pdf](https://www.aqmd.gov/docs/default-source/aq-spec/field-evaluations/smart-citizen-kit---field-evaluation.pdf)
