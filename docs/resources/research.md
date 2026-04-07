@@ -42,6 +42,10 @@ This bibliography brings together publications that document the Smart Citizen p
 
 👉 Start here if you want to understand the origins, development, and methodological grounding of Smart Citizen. These publications are authored or co-authored by core project contributors and document the platform’s conceptual, technical, and civic dimensions.
 
+* Chen, J., González, Ó., O’Connor, D., Tallon, L., & Pilla, F. (2025). Assessment of IoT low-cost sensor networks for long-term outdoor and indoor air quality monitoring: A case study in Dublin. *Atmospheric Pollution Research, 16*(11), 102651. [https://doi.org/10.1016/j.apr.2025.102651](https://doi.org/10.1016/j.apr.2025.102651)
+
+* González, Ó., & Peters, R. A. (2025). The network beyond the network: the potential of FabLabs as partners in participatory environmental monitoring efforts. Fab25 Czechia – Bridge the Gap (Fab25), Brno & Prague,Czechia. [https://doi.org/10.5281/zenodo.16211933](https://doi.org/10.5281/zenodo.16211933)
+
 * González, Ó., Calvo Juárez, M., & Guy, J. (2024). An inquiry into Fab Labs as enablers for environmental protection initiatives. In *Fab 24: Fabricating Equity research papers* (Fab24, Puebla, Mexico). [https://doi.org/10.5281/zenodo.13221337](https://doi.org/10.5281/zenodo.13221337)
 
 * Maccani, G., Errandonea, L., Righi, V., Camprodon, G., & Galli, J. (2021). VenicAIRE. *Quaderns d’Arquitectura i Urbanisme*, 74–81. [https://raco.cat/index.php/QuadernsArquitecturaUrbanisme/article/view/392968](https://raco.cat/index.php/QuadernsArquitecturaUrbanisme/article/view/392968)
