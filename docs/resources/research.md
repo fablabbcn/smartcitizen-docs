@@ -72,6 +72,10 @@ This bibliography brings together publications that document the Smart Citizen p
 
 This section focuses on independent publications that show how Smart Citizen, or closely related sensing approaches, have been used in practice. These examples are useful for readers interested in field deployments, community-facing projects, and applied environmental monitoring in different contexts.
 
+* Zhu, M., Zhao, Q., & Jin, J. (2026, June 5). Hidden Vulnerability and Heat-Triggered Decompensation: Rethinking Urban Overheating Beyond Clinical Risk. (preprint) [https://doi.org/10.31235/osf.io/yjebp_v1](https://doi.org/10.31235/osf.io/yjebp_v1)
+
+* Roncella, R., Boldrini, E., Parodi, A., Galizia, A., Vranic, S., Smart, S., & Mazzetti, P. (2026). From citizens to citizens: information sharing for evidence-based response to climate change. International Journal of Digital Earth, 19(1). [https://doi.org/10.1080/17538947.2026.2677925](https://doi.org/10.1080/17538947.2026.2677925)
+
 * Cameli, L., et al. (2025). Integrating environmental sensing into cargo bikes for urban monitoring. *Sensors*. *(Early access / preprint, DOI pending)*
 
 * Tenbeitel, A., Arnold, S., & Rettkowski, J. (2025). SenseBike: A new low-cost mobile-networked sensor system for cyclists to monitor air quality and automatically measure passing distances in urban traffic. *Sensors, 25*(22), 7099. [https://doi.org/10.3390/s25227099](https://doi.org/10.3390/s25227099)
