@@ -72,7 +72,9 @@ This bibliography brings together publications that document the Smart Citizen p
 
 This section focuses on independent publications that show how Smart Citizen, or closely related sensing approaches, have been used in practice. These examples are useful for readers interested in field deployments, community-facing projects, and applied environmental monitoring in different contexts.
 
-* Zhu, M., Zhao, Q., & Jin, J. (2026, June 5). Hidden Vulnerability and Heat-Triggered Decompensation: Rethinking Urban Overheating Beyond Clinical Risk. (preprint) [https://doi.org/10.31235/osf.io/yjebp_v1](https://doi.org/10.31235/osf.io/yjebp_v1)
+* Shirazi, A., Grigorev, A., MirzaMohammadi, P. K., Xenaki, D., Oliver, B., & Mihaita, A.-S. (2026). Indoor and outdoor air quality monitoring in a Sydney medical research center using IoT and toxicological assessment. E3S Web of Conferences, 716, Article 01032. [https://doi.org/10.1051/e3sconf/202671601032](https://doi.org/10.1051/e3sconf/202671601032)
+
+* Zhu, M., Zhao, Q., & Jin, J. (2026). Hidden Vulnerability and Heat-Triggered Decompensation: Rethinking Urban Overheating Beyond Clinical Risk. (preprint) [https://doi.org/10.31235/osf.io/yjebp_v1](https://doi.org/10.31235/osf.io/yjebp_v1)
 
 * Roncella, R., Boldrini, E., Parodi, A., Galizia, A., Vranic, S., Smart, S., & Mazzetti, P. (2026). From citizens to citizens: information sharing for evidence-based response to climate change. International Journal of Digital Earth, 19(1). [https://doi.org/10.1080/17538947.2026.2677925](https://doi.org/10.1080/17538947.2026.2677925)
 
