@@ -51,6 +51,7 @@ nav:
       - Data Platform: data/data-platform.md
       - Data Tools: data/data-tools.md
       - SD-card Storage: data/sd-card.md
+      - Experiments: data/experiments.md
     - FAQ: _FAQ.md
     - Troubleshooting: troubleshooting.md
   - Knowledge:
@@ -124,6 +125,7 @@ nav:
   - Guides:
     - Introduction: guides/index.md
     - Getting Started:
+      - Assembling the kit: guides/getting-started/kit-assembly.md
       - Onboarding your kit: guides/getting-started/onboarding-your-kit.md
       - Updating the Wi-Fi: guides/getting-started/updating-wifi-credentials.md
       - Updating the SCK token: guides/getting-started/updating-kit-token.md
