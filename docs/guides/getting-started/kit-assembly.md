@@ -103,13 +103,13 @@ For **outdoor DIY kits**, you will need the following components:
 
 Insert the 6 x M3x30mm INOX screws as indicated in the photographs below.
 
+<div><figure><img src="/assets/images/pre-assembly-enclosure.jpg" alt=""><figcaption><p>Pre-assembly enclosure</p></figcaption></figure> <figure><img src="/assets/images/post-assembly-enclosure.jpg" alt=""><figcaption><p>Post-assembly enclosure</p></figcaption></figure></div>
+
 !!! info ""
     It is easiest to start with the screws on the individual sides of the enclosure, and then to close the box with the hinges in order to align more precisely the two sides.
 
 !!! danger ""
     Do not screw the components too tightly, they just need to be screwed into place so that the head of the screw is touching the 3D printed component.
-
-<div><figure><img src="/assets/images/pre-assembly-enclosure.jpg" alt=""><figcaption><p>Pre-assembly enclosure</p></figcaption></figure> <figure><img src="/assets/images/post-assembly-enclosure.jpg" alt=""><figcaption><p>Post-assembly enclosure</p></figcaption></figure></div>
 
 #### 2. Assemble the device
 
@@ -118,6 +118,7 @@ Insert the 6 x M3x30mm INOX screws as indicated in the photographs below.
 <div align="left"><figure><img src="/assets/images/insert-sd-card.jpg" alt=""><figcaption></figcaption></figure></div>
 
 * Separate the two boards, insert the nylon spacers, then reconnect the boards assuring that the pins are correctly aligned. (_**See video below.**_)
+
 * Insert the PCB boards into the 3D printed clip. There is a small groove where the board sits, slide the board all the way in and then snap the two other corners into place. (_**See video below.**_)
 
 <div><figure><img src="/assets/images/data-urban-board-assembly.jpg" alt=""><figcaption></figcaption></figure> <figure><img src="/assets/images/data-urban-board-assembly-clip.jpg" alt=""><figcaption></figcaption></figure></div>
@@ -131,20 +132,19 @@ Insert the 6 x M3x30mm INOX screws as indicated in the photographs below.
 
 <div><figure><img src="/assets/images/pm-assembly-clip.jpg" alt=""><figcaption></figcaption></figure> <figure><img src="/assets/images/pm-assembly-clip-side.jpg" alt=""><figcaption></figcaption></figure></div>
 
-* Connect the PM cable from the PCB board to the PM sensor feeding it through the holders on the back of the clip to keep it flat.
-  * The cable orientation does not matter, both ends are the same.
+* Connect the PM cable from the PCB board to the PM sensor feeding it through the holders on the back of the clip to keep it flat. The cable orientation does not matter, both ends are the same.
 
 <div><figure><img src="/assets/images/pm-assembly-clip-top.jpg" alt=""><figcaption></figcaption></figure> <figure><img src="/assets/images/pm-assembly-clip-bottom.jpg" alt=""><figcaption></figcaption></figure></div>
 
-* Insert the components into the base of the enclosure, ensuring that it is fully pushed into the enclosure.
+* Insert the components into the base of the enclosure, ensuring that it is fully pushed into the enclosure:
 
 <figure><img src="/assets/images/clip-assembly-enclosure.jpg" alt=""><figcaption></figcaption></figure>
 
-* Tuck the battery into place behind the PCB board, using the PM cable to keep it in place.
+* Tuck the battery into place behind the PCB board, using the PM cable to keep it in place:
 
 <figure><img src="/assets/images/clip-assembly-enclosure-battery.jpg" alt=""><figcaption></figcaption></figure>
 
-* Use the 2x M3x10mm and the 2.5 HEX key to screws to screw the clip and components into place
+* Use the 2x M3x10mm screws and the 2.5 HEX key to screw the clip and components into place:
 
 <figure><img src="/assets/images/clip-assembly-enclosure-battery-screws.jpg" alt=""><figcaption></figcaption></figure>
 
