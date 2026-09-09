@@ -4171,7 +4171,7 @@ Flashing SAM firmware... OK
 Linking .pio/build/sck2/firmware.elf
 Checking size .pio/build/sck2/firmware.elf
 Building .pio/build/sck2/firmware.bin
-Advanced Memory Usage is available via &quot;PlatformIO Home &gt; Project Inspect&quot;
+Advanced Memory Usage is available via "PlatformIO Home &gt; Project Inspect"
 RAM:   [=======   ]  73.3% (used 24004 bytes from 32768 bytes)
 Flash: [========  ]  80.7% (used 211548 bytes from 262144 bytes)
 ====================== [SUCCESS] Took 43.41 seconds ======================
@@ -4241,7 +4241,7 @@ Flashing ESP firmware... OK
 <p>Put the SAM in bridge mode (replace <code>&lt;PORT&gt;</code> with the portname from above).</p>
 </li>
 </ul>
-<div class="highlight"><pre><span></span><code>&gt; echo &#39;esp -flash 115200&#39; &gt; &lt;PORT&gt;
+<div class="highlight"><pre><span></span><code>&gt; echo 'esp -flash 115200' &gt; &lt;PORT&gt;
 </code></pre></div>
 <div class="admonition warning">
 <p class="admonition-title">echo not working?</p>
@@ -4266,7 +4266,7 @@ Flashing ESP firmware... OK
 </code></pre></div>
 <p>There you should find a binary file for <code>esptool</code>. Now you should be able to run (replace <code>&lt;PROJECT_PACKAGES_DIR&gt;</code> and <code>&lt;PORT&gt;</code>):</p>
 <div class="highlight"><pre><span></span><code>&gt; cd smartcitizen-kit-21
-&gt; echo &#39;esp -flash 115200&#39; &gt; &lt;PORT&gt;
+&gt; echo 'esp -flash 115200' &gt; &lt;PORT&gt;
 &gt; &lt;PROJECT_PACKAGES_DIR&gt;/tool-esptool/esptool -cp &lt;PORT&gt; -cb 115200 -ca 0x000000 -cf bin/ESP_firmware.bin
 </code></pre></div>
 <p>Remember you can put the SAMD21 in bridge mode (white LED) by using Arduino IDE, sending <code>esp -flash 115200</code> using the <code>Serial Monitor</code> and then closing the <code>Serial Monitor</code> window.</p>

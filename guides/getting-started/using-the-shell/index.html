@@ -4105,13 +4105,13 @@ control:     Control sensor: control [sensorName] [command]
 free:        Shows the amount of free RAM memory
 i2c:         Search the I2C bus for devices
 power:       Controls/shows power config: power [-info (extra info)] [-batcap mAh] [-otg on/off] [-charge on/off] [-sleep min (0-disable)]
-config:      Shows/sets configuration: config [-defaults] [-mode sdcard/network] [-pubint seconds] [-readint seconds] [-wifi &quot;ssid&quot; [&quot;pass&quot;]] [-token token] [-sanity(reset) on/off]
+config:      Shows/sets configuration: config [-defaults] [-mode sdcard/network] [-pubint seconds] [-readint seconds] [-wifi "ssid" ["pass"]] [-token token] [-sanity(reset) on/off]
 esp:         Controls or shows info from ESP: esp [-on -off -sleep -wake -reboot -flash]
 netinfo:     Shows network information
 time:        Shows/sets date and time: time [epoch time] [-sync]
 hello:       Sends MQTT hello to platform
 shell:       Shows or sets shell mode: shell [-on] [-off]
-publish:     Publish custom mqtt message: mqtt [&quot;topic&quot; &quot;message&quot;]
+publish:     Publish custom mqtt message: mqtt ["topic" "message"]
 offline:     Configure offline periods and WiFi retry interval: [-retryint seconds] [-period start-hour end-hour (UTC 0-23)]
 mqttsrv:     Configure mqtt server address and port: [-host serverName] [-port portNum]
 ntpsrv:      Configure ntp server address and port: [-host serverName] [-port portNum]
@@ -4134,20 +4134,20 @@ Shell mode: on
 Shell mode: off
 </code></pre></div>
 <h3 id="set-the-recording-configuration-config">Set the recording configuration - <code>config</code><a class="headerlink" href="#set-the-recording-configuration-config" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>config:      Shows/sets configuration: config [-defaults] [-mode sdcard/network] [-pubint seconds] [-readint seconds] [-wifi &quot;ssid&quot; [&quot;pass&quot;]] [-token token] [-sanity(reset) on/off]
+<div class="highlight"><pre><span></span><code>config:      Shows/sets configuration: config [-defaults] [-mode sdcard/network] [-pubint seconds] [-readint seconds] [-wifi "ssid" ["pass"]] [-token token] [-sanity(reset) on/off]
 </code></pre></div>
 <p>If you want to change your recording mode to, for instance, <code>sdcard</code> mode, you could do so by typing:</p>
 <div class="highlight"><pre><span></span><code>SCK &gt; config -mode sdcard
 </code></pre></div>
 <p>To set it up in <code>network</code> mode:</p>
-<div class="highlight"><pre><span></span><code>SCK &gt; config -mode network -wifi &quot;SSID&quot; &quot;PASSWORD&quot; -token 123456
+<div class="highlight"><pre><span></span><code>SCK &gt; config -mode network -wifi "SSID" "PASSWORD" -token 123456
 </code></pre></div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Note that the token is not between quotes since it's always 6 digits.</p>
 </div>
 <p>To modify your Wi-Fi credentials:</p>
-<div class="highlight"><pre><span></span><code>SCK &gt; config -wifi &quot;NEWSSID&quot; &quot;NEWPASSWORD&quot;
+<div class="highlight"><pre><span></span><code>SCK &gt; config -wifi "NEWSSID" "NEWPASSWORD"
 </code></pre></div>
 <p>You can check your current configuration by typing <code>config</code>:</p>
 <div class="highlight"><pre><span></span><code>SCK &gt; config
@@ -4336,7 +4336,7 @@ Failed enabling Atlas Temperature
 <h3 id="read-sensor-data-once-read">Read sensor data once - <code>read</code><a class="headerlink" href="#read-sensor-data-once-read" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code>read:        Reads sensor: read [sensorName]
 </code></pre></div>
-<p>You can `read`` data from one sensor:</p>
+<p>You can <code>ead</code> data from one sensor:</p>
 <div class="highlight"><pre><span></span><code>SCK &gt; read Noise
 Noise dBA: 53.85 dBA
 </code></pre></div>
@@ -4452,7 +4452,7 @@ Time    Miliseconds     Noise dBA
 <div class="admonition info">
 <p class="admonition-title">Pipe data into a file</p>
 <p>In a more advanced case, you can <em>pipe</em> the output to a file. For instance, in your terminal (using a mac) you could do:</p>
-<div class="highlight"><pre><span></span><code>&gt; echo &quot;monitor pm light&quot; &gt; /dev/cu.usbmodem1411 &amp;&amp; screen -L /dev/cu.usbmodem1411
+<div class="highlight"><pre><span></span><code>&gt; echo "monitor pm light" &gt; /dev/cu.usbmodem1411 &amp;&amp; screen -L /dev/cu.usbmodem1411
 </code></pre></div>
 <p>Then, if we check the contents of the file (normally something like <code>screenlog.X</code>):</p>
 <div class="highlight"><pre><span></span><code>monitor light
@@ -4658,7 +4658,7 @@ Enabling Noise FFT
 <ul>
 <li>Then, monitor and log it in a file with:</li>
 </ul>
-<div class="highlight"><pre><span></span><code>echo &quot;monitor fft&quot; &gt; /dev/cu.usbmodem1411 &amp;&amp; screen -L /dev/cu.usbmodem1411
+<div class="highlight"><pre><span></span><code>echo "monitor fft" &gt; /dev/cu.usbmodem1411 &amp;&amp; screen -L /dev/cu.usbmodem1411
 </code></pre></div>
 <ul>
 <li>In this file, we will have something like:</li>

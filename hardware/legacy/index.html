@@ -3957,9 +3957,9 @@
 <div class="highlight"><pre><span></span><code>#define networks 0
 #if (networks &gt; 0)
 static char* mySSID[networks]      = {
-  &quot;SSID1&quot;      , &quot;SSID2&quot;            };
+  "SSID1"      , "SSID2"            };
 static char* myPassword[networks]  = {
-  &quot;PASS1&quot;      , &quot;PASS2&quot;            };
+  "PASS1"      , "PASS2"            };
 static char* wifiEncript[networks] = {
   WPA2         , WPA2               };
 static char* antennaExt[networks]  = {
@@ -3975,14 +3975,14 @@ static char* antennaExt[networks]  = {
 <p>If you register only one wifi credential, you should obtain something like this:</p>
 <div class="highlight"><pre><span></span><code>#define networks 1
 #if (networks &gt; 0)
-char* mySSID[networks]      = { &quot;MyWifiSSID&quot; };
-char* myPassword[networks]  = { &quot;MyPassword&quot; };
+char* mySSID[networks]      = { "MyWifiSSID" };
+char* myPassword[networks]  = { "MyPassword" };
 char* wifiEncript[networks] = { WPA2 };
 char* antennaExt[networks]  = { INT_ANT };
 #endif
 </code></pre></div>
 <p><em>Note that if you configure more than one Wi-fi network you have to separate the variables with a comma, for example:</em></p>
-<div class="highlight"><pre><span></span><code>char* mySSID[networks] = { &quot;MyFirstSSID&quot;, &quot;MySecondSSID&quot; };
+<div class="highlight"><pre><span></span><code>char* mySSID[networks] = { "MyFirstSSID", "MySecondSSID" };
 </code></pre></div>
 <h2 id="uploading-the-code">Uploading the code<a class="headerlink" href="#uploading-the-code" title="Permanent link">&para;</a></h2>
 <p><img alt="Select the board" src="/assets/images/sck_1/arduino_board.png" /></p>

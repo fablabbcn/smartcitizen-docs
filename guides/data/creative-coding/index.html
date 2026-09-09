@@ -3847,9 +3847,9 @@
 <span class="n">printArray</span><span class="p">(</span><span class="n">Serial</span><span class="p">.</span><span class="na">list</span><span class="p">());</span>
 </code></pre></div>
 <p>After running this sketch you will get one or more ports. You will have to select the one that has connected the Smart Citizen Kit. If you are running on <em>windows</em>, you will see something like:</p>
-<div class="highlight"><pre><span></span><code>[0] &quot;COM3&quot;
-[1] &quot;COM4&quot;
-[2] &quot;COM6&quot;
+<div class="highlight"><pre><span></span><code>[0] "COM3"
+[1] "COM4"
+[2] "COM6"
 </code></pre></div>
 <div class="admonition info">
 <p class="admonition-title">Which one?</p>
@@ -3864,7 +3864,7 @@
 <div class="admonition info">
 <p class="admonition-title">Rather see other data?</p>
 <p>Find the line in the example where we use the <em>monitor</em> function:</p>
-<p><div class="highlight"><pre><span></span><code><span class="n">smartCitizenKitSerial</span><span class="p">.</span><span class="na">write</span><span class="p">(</span><span class="s">&quot;monitor light -notime -noms \n&quot;</span><span class="p">);</span>
+<p><div class="highlight"><pre><span></span><code><span class="n">smartCitizenKitSerial</span><span class="p">.</span><span class="na">write</span><span class="p">(</span><span class="s">"monitor light -notime -noms \n"</span><span class="p">);</span>
 </code></pre></div>
 And change it for other sensors: <code>noise</code>, <code>temp</code>... Once at a time!</p>
 <p>You can also make another visualisation with a different background as in <a href="https://github.com/fablabbcn/smartcitizen-docs/tree/master/docs/assets/pde/sc_lallauna_pde">this example</a>:</p>
@@ -3885,7 +3885,7 @@ And change it for other sensors: <code>noise</code>, <code>temp</code>... Once a
 <li>
 <p><strong>Roll-up</strong>:</p>
 <div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">rollUpNumber</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
-<span class="n">String</span><span class="w"> </span><span class="n">rollUpUnit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;m&quot;</span><span class="p">;</span>
+<span class="n">String</span><span class="w"> </span><span class="n">rollUpUnit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"m"</span><span class="p">;</span>
 </code></pre></div>
 </li>
 <li>
@@ -3902,12 +3902,12 @@ And change it for other sensors: <code>noise</code>, <code>temp</code>... Once a
 </li>
 </ul>
 <p>The final URL is constructed below (note that <em>to</em> is optional):</p>
-<div class="highlight"><pre><span></span><code><span class="n">String</span><span class="w"> </span><span class="n">resourceURL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;https://api.smartcitizen.me/v0/devices/&quot;</span><span class="o">+</span><span class="n">deviceId</span><span class="o">+</span><span class="s">&quot;/readings?sensor_id=&quot;</span><span class="o">+</span><span class="n">sensorId</span><span class="o">+</span><span class="s">&quot;&amp;rollup=&quot;</span><span class="o">+</span><span class="n">rollUpNumber</span><span class="o">+</span><span class="n">rollUpUnit</span><span class="o">+</span><span class="s">&quot;&amp;from=&quot;</span><span class="o">+</span><span class="n">fromYear</span><span class="o">+</span><span class="s">&quot;-&quot;</span><span class="o">+</span><span class="n">fromMonth</span><span class="o">+</span><span class="s">&quot;-&quot;</span><span class="o">+</span><span class="n">fromDay</span><span class="o">+</span><span class="s">&quot;&amp;to=&quot;</span><span class="o">+</span><span class="n">toYear</span><span class="o">+</span><span class="s">&quot;-&quot;</span><span class="o">+</span><span class="n">toMonth</span><span class="o">+</span><span class="s">&quot;-&quot;</span><span class="o">+</span><span class="n">toDay</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="n">String</span><span class="w"> </span><span class="n">resourceURL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"https://api.smartcitizen.me/v0/devices/"</span><span class="o">+</span><span class="n">deviceId</span><span class="o">+</span><span class="s">"/readings?sensor_id="</span><span class="o">+</span><span class="n">sensorId</span><span class="o">+</span><span class="s">"&amp;rollup="</span><span class="o">+</span><span class="n">rollUpNumber</span><span class="o">+</span><span class="n">rollUpUnit</span><span class="o">+</span><span class="s">"&amp;from="</span><span class="o">+</span><span class="n">fromYear</span><span class="o">+</span><span class="s">"-"</span><span class="o">+</span><span class="n">fromMonth</span><span class="o">+</span><span class="s">"-"</span><span class="o">+</span><span class="n">fromDay</span><span class="o">+</span><span class="s">"&amp;to="</span><span class="o">+</span><span class="n">toYear</span><span class="o">+</span><span class="s">"-"</span><span class="o">+</span><span class="n">toMonth</span><span class="o">+</span><span class="s">"-"</span><span class="o">+</span><span class="n">toDay</span><span class="p">;</span>
 <span class="c1">// https://api.smartcitizen.me/v0/devices/15822/readings?sensor_id=53&amp;rollup=1m&amp;from=2023-1-11&amp;to=2023-1-12</span>
 </code></pre></div>
 <p>We will be making the API query in this part:</p>
 <div class="highlight"><pre><span></span><code><span class="n">JSONObject</span><span class="w"> </span><span class="n">sckData</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">loadJSONObject</span><span class="p">(</span><span class="n">resourceURL</span><span class="p">);</span>
-<span class="n">JSONArray</span><span class="w"> </span><span class="n">readings</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sckData</span><span class="p">.</span><span class="na">getJSONArray</span><span class="p">(</span><span class="s">&quot;readings&quot;</span><span class="p">);</span><span class="w">  </span><span class="c1">// This contains your requested device info and data.</span>
+<span class="n">JSONArray</span><span class="w"> </span><span class="n">readings</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sckData</span><span class="p">.</span><span class="na">getJSONArray</span><span class="p">(</span><span class="s">"readings"</span><span class="p">);</span><span class="w">  </span><span class="c1">// This contains your requested device info and data.</span>
 </code></pre></div>
 <div class="admonition info">
 <p class="admonition-title">Processing the data</p>

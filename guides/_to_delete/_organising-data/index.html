@@ -3797,7 +3797,7 @@ Visit the <a href="https://github.com/fablabbcn/smartcitizen-data#tokens-and-con
 <p class="admonition-title">Pro-tip</p>
 <p>We can rename them manually, but if we have many of them, we can use this one-liner (works in oh-my-zsh):</p>
 <div class="highlight"><pre><span></span><code>autoload -Uz zmv
-zmv &#39;(*).(0*)&#39; &#39;$1_$2.CSV&#39;
+zmv '(*).(0*)' '$1_$2.CSV'
 </code></pre></div>
 </div>
 <p>We can now concatenate all the sd card data from a device with the <code>concat_script.py</code> in the <a href="https://github.com/fablabbcn/smartcitizen-data/tree/master/scdata/utils/other">scripts</a> folder.</p>
@@ -3862,7 +3862,7 @@ Saving file to: Log_Concat.csv
 <ol>
 <li>Type the command:</li>
 </ol>
-<div class="highlight"><pre><span></span><code>jupyter nbconvert --config sc_nbconvert_config.py notebook.ipynb --sc_Preprocessor.expression=&quot;show_only_output&quot; --to html --TemplateExporter.template_file=./templates/full_sc --output-dir=../reports --output=OUTPUT_NAME
+<div class="highlight"><pre><span></span><code>jupyter nbconvert --config sc_nbconvert_config.py notebook.ipynb --sc_Preprocessor.expression="show_only_output" --to html --TemplateExporter.template_file=./templates/full_sc --output-dir=../reports --output=OUTPUT_NAME
 </code></pre></div>
 <p>Where:</p>
 <ul>
@@ -3894,43 +3894,43 @@ fake-zenodo-token
 </code></pre></div>
 <p>Then launch <code>jupyter-lab</code> or start using your python scripts.</p>
 <p>Alternatively, you can store a <code>.env</code> file in a place of your liking with your token:</p>
-<div class="highlight"><pre><span></span><code>ZENODO_TOKEN=&#39;yourtokenhere&#39;
+<div class="highlight"><pre><span></span><code>ZENODO_TOKEN='yourtokenhere'
 </code></pre></div>
 <p>And then load it like:</p>
-<div class="highlight"><pre><span></span><code>export $(grep -v &#39;^#&#39; .env | xargs -0)
+<div class="highlight"><pre><span></span><code>export $(grep -v '^#' .env | xargs -0)
 </code></pre></div>
 <h3 id="prepare-the-data">Prepare the data<a class="headerlink" href="#prepare-the-data" title="Permanent link">&para;</a></h3>
 <p>Next, you can define a <code>upload.yaml</code> file to describe the upload (see one example <a href="https://github.com/fablabbcn/smartcitizen-iscape-data/blob/master/data/uploads/example_zenodo_upload.yaml">here</a>:</p>
 <div class="highlight"><pre><span></span><code>example_upload_1.json: 
-  title: &#39;Example Data 1&#39;
-  description: &#39;This field accepts &lt;strong&gt;HTML&lt;/strong&gt;&#39;
-  upload_type: &#39;dataset&#39;
-  keywords: [&#39;Low-Cost Sensors&#39;, &#39;Air Quality&#39;, &#39;Citizen Science&#39;]
-  creators: [{&#39;name&#39;: &#39;Author 1&#39;, &#39;affiliation&#39;: &#39;Affiliation 1&#39;, &#39;orcid&#39;: &#39;0000-0000-0000-0001&#39;}, 
-            {&#39;name&#39;: &#39;Author 2&#39;, &#39;affiliation&#39;: &#39;Affiliation 2&#39;, &#39;orcid&#39;: &#39;0000-0000-0000-0002&#39;}] 
-  tests: [&#39;TEST_1&#39;, &#39;TEST_2&#39;]
-  access_right: &#39;open&#39;
+  title: 'Example Data 1'
+  description: 'This field accepts &lt;strong&gt;HTML&lt;/strong&gt;'
+  upload_type: 'dataset'
+  keywords: ['Low-Cost Sensors', 'Air Quality', 'Citizen Science']
+  creators: [{'name': 'Author 1', 'affiliation': 'Affiliation 1', 'orcid': '0000-0000-0000-0001'}, 
+            {'name': 'Author 2', 'affiliation': 'Affiliation 2', 'orcid': '0000-0000-0000-0002'}] 
+  tests: ['TEST_1', 'TEST_2']
+  access_right: 'open'
   options: 
     include_processed_data: false
     include_footer_doi: true
-  communities: [{ &quot;identifier&quot;: &quot;community_in_zenodo&quot;}]
-  grants: [{&quot;id&quot;: &quot;GRANT_ID&quot;}]
-  report: [&#39;report.pdf&#39;]
+  communities: [{ "identifier": "community_in_zenodo"}]
+  grants: [{"id": "GRANT_ID"}]
+  report: ['report.pdf']
 example_upload_2.json: 
-  title: &#39;Example Data 2&#39;
-  description: &#39;This field accepts &lt;strong&gt;HTML&lt;/strong&gt;&#39;
-  upload_type: &#39;dataset&#39;
-  keywords: [&#39;Low-Cost Sensors&#39;, &#39;Air Quality&#39;, &#39;Citizen Science&#39;]
-  creators: [{&#39;name&#39;: &#39;Author 1&#39;, &#39;affiliation&#39;: &#39;Affiliation 1&#39;, &#39;orcid&#39;: &#39;0000-0000-0000-0001&#39;}, 
-            {&#39;name&#39;: &#39;Author 2&#39;, &#39;affiliation&#39;: &#39;Affiliation 2&#39;, &#39;orcid&#39;: &#39;0000-0000-0000-0002&#39;}] 
-  tests: [&#39;TEST_3&#39;, &#39;TEST_4&#39;]
-  access_right: &#39;open&#39;
+  title: 'Example Data 2'
+  description: 'This field accepts &lt;strong&gt;HTML&lt;/strong&gt;'
+  upload_type: 'dataset'
+  keywords: ['Low-Cost Sensors', 'Air Quality', 'Citizen Science']
+  creators: [{'name': 'Author 1', 'affiliation': 'Affiliation 1', 'orcid': '0000-0000-0000-0001'}, 
+            {'name': 'Author 2', 'affiliation': 'Affiliation 2', 'orcid': '0000-0000-0000-0002'}] 
+  tests: ['TEST_3', 'TEST_4']
+  access_right: 'open'
   options: 
     include_processed_data: false
     include_footer_doi: false
-  communities: [{ &quot;identifier&quot;: &quot;community_in_zenodo&quot;}]
-  grants: [{&quot;id&quot;: &quot;GRANT_ID&quot;}]
-  report: [&#39;report_2.pdf&#39;]
+  communities: [{ "identifier": "community_in_zenodo"}]
+  grants: [{"id": "GRANT_ID"}]
+  report: ['report_2.pdf']
 </code></pre></div>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
@@ -3961,7 +3961,7 @@ example_upload_2.json:
 <p>To upload the datasets, we can use the zenodo sandbox and a dry_run, to check everything is running well. Then, make these defaults to <code>False</code> to actually upload it:</p>
 <div class="highlight"><pre><span></span><code># You can use the sandbox.zenodo.org for tests, as well as a dry_run. When you are happy with your upload, set these variables to False
 # Then go to uploads in the zenodo section and publish whenever you are ready
-data.upload_to_zenodo(&#39;example_zenodo_upload&#39;, sandbox = False, dry_run = True)
+data.upload_to_zenodo('example_zenodo_upload', sandbox = False, dry_run = True)
 </code></pre></div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>

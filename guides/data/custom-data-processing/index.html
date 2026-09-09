@@ -3794,13 +3794,13 @@
 <p>The <code>blueprint_url</code> should point to a json that defines which postprocessing you want to apply for each channel, which functions and parameters it has, and how the new channels are called (don't worry, there are a lot of examples in the <a href="https://github.com/fablabbcn/smartcitizen-data/tree/master/blueprints">blueprints folder</a>). In order for your data to be processed automatically, you will need to provide that blueprint to <code>scdata</code>. For this, you can host it somewhere, or you can simply make a <em>pull request</em> to the <a href="https://github.com/fablabbcn/smartcitizen-data">scdata github repository</a>, having the new json in the <code>blueprints</code> folder. Finally, you will then need to modify <code>hardware</code> json and update the blueprint field of your kit, with the new <code>blueprint_url</code>. See <a href="/guides/data/custom-data-processing/#defining-custom-functions">below</a> to understand how this blueprint works and how to write custom fuctions.</p>
 <p>In case your kit has specific calibration data needs, you will also need to modify the <code>versions</code> field. This field is a list which contains the history of the kit in terms of calibration (calibrations can change with time):</p>
 <div class="highlight"><pre><span></span><code>    {
-      &quot;ids&quot;: {
-        &quot;AS_48_32&quot;: &quot;132070362&quot;,
-        &quot;AS_49_10&quot;: &quot;212070552&quot;,
-        &quot;PT_49_23&quot;: &quot;12-000445&quot;
+      "ids": {
+        "AS_48_32": "132070362",
+        "AS_49_10": "212070552",
+        "PT_49_23": "12-000445"
       },
-      &quot;from&quot;: &quot;2021-01-21&quot;,
-      &quot;to&quot;: null
+      "from": "2021-01-21",
+      "to": null
     }
 </code></pre></div>
 <p>Each of the <code>ids</code> field make reference to specific calibration ids for each timespan, where the <code>from</code> and <code>to</code> fields are the dates during which those ids where valid. This method ensures allows to change sensors with time, and also considers that normally sensors that have specific calibrations use a serial number or similar to identify them.</p>

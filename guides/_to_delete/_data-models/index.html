@@ -3757,30 +3757,30 @@
 <div class="highlight"><pre><span></span><code>from src.models.model import model_wrapper
 
 # Input model description
-model_description_ols = {&quot;model_name&quot;: &quot;OLS_UCD&quot;,
-                    &quot;model_type&quot;: &quot;OLS&quot;,
-                    &quot;model_target&quot;: &quot;ALPHASENSE&quot;,
-                    &quot;data&quot;: {&quot;train&quot;: {&quot;2019-03_EXT_UCD_URBAN_BACKGROUND_API&quot;: {&quot;devices&quot;: [&quot;5262&quot;],
-                                                                               &quot;reference_device&quot;: &quot;CITY_COUNCIL&quot;}},
-                            &quot;test&quot;: {&quot;2019-03_EXT_UCD_URBAN_BACKGROUND_API&quot;: {&quot;devices&quot;: [&quot;5565&quot;],
-                                                                               &quot;reference_device&quot;: &quot;CITY_COUNCIL&quot;}},
-                            &quot;features&quot;:  {&quot;REF&quot;: &quot;NO2_CONV&quot;,
-                                            &quot;A&quot;: &quot;GB_2W&quot;,
-                                            &quot;B&quot;: &quot;GB_2A&quot;,
-                                            &quot;C&quot;: &quot;HUM&quot;},
-                            &quot;data_options&quot;: {&quot;frequency&quot;: &#39;1Min&#39;,
-                                            &quot;clean_na&quot;: True,
-                                            &quot;clean_na_method&quot;: &quot;drop&quot;,
-                                            &quot;min_date&quot;: None,
-                                            &quot;frequency&quot;: &quot;1Min&quot;,
-                                            &quot;max_date&quot;: &#39;2019-01-15&#39;},
+model_description_ols = {"model_name": "OLS_UCD",
+                    "model_type": "OLS",
+                    "model_target": "ALPHASENSE",
+                    "data": {"train": {"2019-03_EXT_UCD_URBAN_BACKGROUND_API": {"devices": ["5262"],
+                                                                               "reference_device": "CITY_COUNCIL"}},
+                            "test": {"2019-03_EXT_UCD_URBAN_BACKGROUND_API": {"devices": ["5565"],
+                                                                               "reference_device": "CITY_COUNCIL"}},
+                            "features":  {"REF": "NO2_CONV",
+                                            "A": "GB_2W",
+                                            "B": "GB_2A",
+                                            "C": "HUM"},
+                            "data_options": {"frequency": '1Min',
+                                            "clean_na": True,
+                                            "clean_na_method": "drop",
+                                            "min_date": None,
+                                            "frequency": "1Min",
+                                            "max_date": '2019-01-15'},
                             },
-                    &quot;hyperparameters&quot;: {&quot;ratio_train&quot;: 0.75},
-                    &quot;model_options&quot;: {&quot;session_active_model&quot;: True,
-                                &quot;show_plots&quot;: True,
-                                &quot;export_model&quot;: False,
-                                &quot;export_model_file&quot;: False,
-                                &quot;extract_metrics&quot;: True}
+                    "hyperparameters": {"ratio_train": 0.75},
+                    "model_options": {"session_active_model": True,
+                                "show_plots": True,
+                                "export_model": False,
+                                "export_model_file": False,
+                                "extract_metrics": True}
                     }
 </code></pre></div>
 <div class="admonition info">
@@ -3788,7 +3788,7 @@ model_description_ols = {&quot;model_name&quot;: &quot;OLS_UCD&quot;,
 <p>Check the guide on <a href="/Sensor Analysis Framework/guides/Analyse your data in batch/#model">batch analysis</a> for a definition of each parameter.</p>
 </div>
 <p>We have to keep at least the key <code>REF</code> within the <code>"features"</code>, but the rest can be renamed at will. We can also input whichever <code>formula_expression</code> for the model regression in the following format:</p>
-<div class="highlight"><pre><span></span><code>&quot;expression&quot; : &#39;REF ~ A + np.log(B)&#39;
+<div class="highlight"><pre><span></span><code>"expression" : 'REF ~ A + np.log(B)'
 </code></pre></div>
 <p>Which converts to:</p>
 <div class="arithmatex">
@@ -3800,11 +3800,11 @@ REF = A + log(B)
 </script>
 </div>
 <p>We can also define the ratio between the train and test dataset and the minimum dates to use within the datasets (globally):</p>
-<div class="highlight"><pre><span></span><code>min_date = &#39;2018-08-31 00:00:00&#39;
-max_date = &#39;2018-09-06 00:00:00&#39;
+<div class="highlight"><pre><span></span><code>min_date = '2018-08-31 00:00:00'
+max_date = '2018-09-06 00:00:00'
 
-# Important that this is a float, don&#39;t forget the .
-&quot;hyperparameters&quot;: {&quot;ratio_train&quot;: 0.75}
+# Important that this is a float, don't forget the .
+"hyperparameters": {"ratio_train": 0.75}
 </code></pre></div>
 <p>If we run this cell, we will perform model calibration, with the following output:</p>
 <div class="highlight"><pre><span></span><code>                            OLS Regression Results
@@ -3887,34 +3887,34 @@ modelRplots(model, dataTrain, dataTest)
 <p>Finally, we can export our model and generate some metrics to evaluate the results.</p>
 <h2 id="machine-learning-example">Machine learning example<a class="headerlink" href="#machine-learning-example" title="Permanent link">&para;</a></h2>
 <p>Machine learning algorithms promise a better representation of the sensor's data, being able to learn robust non-linear models and sequential dependencies. For that reason, we have implemented toolset based on <a href="https://keras.io/">keras</a> with <a href="https://www.tensorflow.org/">Tensorflow</a> backend, in order to train sequential models <sup id="fnref:third"><a class="footnote-ref" href="#fn:third">3</a></sup>.</p>
-<div class="highlight"><pre><span></span><code>model_description_rf = {&quot;model_name&quot;: &quot;RF_UCD&quot;,
-                    &quot;model_type&quot;: &quot;RF&quot;,
-                    &quot;model_target&quot;: &quot;ALPHASENSE&quot;,
-                    &quot;data&quot;: {&quot;train&quot;: {&quot;2019-03_EXT_UCD_URBAN_BACKGROUND_API&quot;: {&quot;devices&quot;: [&quot;5262&quot;],
-                                                                               &quot;reference_device&quot;: &quot;CITY_COUNCIL&quot;}},
-                            &quot;test&quot;: {&quot;2019-03_EXT_UCD_URBAN_BACKGROUND_API&quot;: {&quot;devices&quot;: [&quot;5565&quot;],
-                                                                               &quot;reference_device&quot;: &quot;CITY_COUNCIL&quot;}},
-                            &quot;features&quot;:  {&quot;REF&quot;: &quot;NO2_CONV&quot;,
-                                            &quot;A&quot;: &quot;GB_2W&quot;,
-                                            &quot;B&quot;: &quot;GB_2A&quot;,
-                                            &quot;C&quot;: &quot;HUM&quot;},
-                            &quot;data_options&quot;: {&quot;target_raster&quot;: &#39;1Min&#39;,
-                                            &quot;clean_na&quot;: True,
-                                            &quot;clean_na_method&quot;: &quot;drop&quot;,
-                                            &quot;min_date&quot;: None,
-                                            &quot;frequency&quot;: &quot;1Min&quot;,
-                                            &quot;max_date&quot;: &#39;2019-01-15&#39;},
+<div class="highlight"><pre><span></span><code>model_description_rf = {"model_name": "RF_UCD",
+                    "model_type": "RF",
+                    "model_target": "ALPHASENSE",
+                    "data": {"train": {"2019-03_EXT_UCD_URBAN_BACKGROUND_API": {"devices": ["5262"],
+                                                                               "reference_device": "CITY_COUNCIL"}},
+                            "test": {"2019-03_EXT_UCD_URBAN_BACKGROUND_API": {"devices": ["5565"],
+                                                                               "reference_device": "CITY_COUNCIL"}},
+                            "features":  {"REF": "NO2_CONV",
+                                            "A": "GB_2W",
+                                            "B": "GB_2A",
+                                            "C": "HUM"},
+                            "data_options": {"target_raster": '1Min',
+                                            "clean_na": True,
+                                            "clean_na_method": "drop",
+                                            "min_date": None,
+                                            "frequency": "1Min",
+                                            "max_date": '2019-01-15'},
                             },
-                    &quot;hyperparameters&quot;: {&quot;ratio_train&quot;: 0.75,
-                                        &quot;min_samples_leaf&quot;: 2,
-                                        &quot;max_features&quot;: None,
-                                       &quot;n_estimators&quot;: 100,
-                                        &quot;shuffle_split&quot;: True},
-                    &quot;model_options&quot;: {&quot;session_active_model&quot;: True,
-                                &quot;show_plots&quot;: True,
-                                &quot;export_model&quot;: False,
-                                &quot;export_model_file&quot;: False,
-                                &quot;extract_metrics&quot;: True}
+                    "hyperparameters": {"ratio_train": 0.75,
+                                        "min_samples_leaf": 2,
+                                        "max_features": None,
+                                       "n_estimators": 100,
+                                        "shuffle_split": True},
+                    "model_options": {"session_active_model": True,
+                                "show_plots": True,
+                                "export_model": False,
+                                "export_model_file": False,
+                                "extract_metrics": True}
                     }
 </code></pre></div>
 <p>Output:</p>
@@ -4071,20 +4071,20 @@ models = dict()
 
 group = 0
 for model in [ols_model, rf_model]:
-    for dataset in [&#39;train&#39;, &#39;validation&#39;]:
+    for dataset in ['train', 'validation']:
         if dataset in model.metrics.keys():
-            models[model.name + &#39;_&#39; + dataset] = model.metrics[dataset]
-            models[model.name + &#39;_&#39; + dataset][&#39;group&#39;] = group
+            models[model.name + '_' + dataset] = model.metrics[dataset]
+            models[model.name + '_' + dataset]['group'] = group
 
-targetDiagram(models, True, &#39;seaborn-talk&#39;)
+targetDiagram(models, True, 'seaborn-talk')
 </code></pre></div>
 <p>Output:</p>
 <p><img alt="" src="/assets/images/PBuBOpw.png" /></p>
 <p>Here, every point that falls inside the yellow circle, will have an R<sup>2</sup> over 0.7, and so will be the red and green for R<sup>2</sup> over 0.5 and 0.9 respectively. We see that only one of our models performs well in that sense, which is the training dataset of the OLS. However, this dataset performs pretty badly in the test dataset, being the LSTM options much better. This target diagram offers information about how the hyperparameters affect our networks. For instance, increasing the training epochs from 100 to 200 does not affect greatly on model performance, but the effect of filtering the data beforehand to reduce the noise shows a much better model performance in both, training and test dataframe.</p>
 <h2 id="export-the-models">Export the models<a class="headerlink" href="#export-the-models" title="Permanent link">&para;</a></h2>
 <p>Let's now assume that we are happy with our models. We can now export them:</p>
-<div class="highlight"><pre><span></span><code>ols_model.export(&#39;directory&#39;)
-rf_model.export(&#39;directory&#39;)
+<div class="highlight"><pre><span></span><code>ols_model.export('directory')
+rf_model.export('directory')
 </code></pre></div>
 <p>Output:</p>
 <div class="highlight"><pre><span></span><code>Saving metrics
