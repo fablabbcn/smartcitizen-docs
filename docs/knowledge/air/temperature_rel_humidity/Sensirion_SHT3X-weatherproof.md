@@ -8,7 +8,7 @@ type:
 target:
   - temperature
 feature_img: /assets/images/sensirion-sht3x-weatherproof.jpg
-feature_img_credit: "Sensirion"
+feature_img_credit: "DF-Robot"
 excerpt: "A temperature and humidity sensor in a weatherproof capsule"
 ---
 
@@ -19,6 +19,12 @@ excerpt: "A temperature and humidity sensor in a weatherproof capsule"
 {%if feature_img %}![]({{feature_img}}){.banner-box}{%endif%}
 
 {%if feature_img_credit %}_Image Credit: **{{ feature_img_credit }}**_{.image-credit-banner-box}{%endif%}
+
+## Assembly
+
+To use this sensor, you'll need a [screw connector to grove adaptor](/guides/getting-started/third-party-sensors/#sensors-with-open-leads):
+
+![](/assets/images/df-robot-screw-connector.jpeg)
 
 ## Modify temperature and relative humidity offset
 
