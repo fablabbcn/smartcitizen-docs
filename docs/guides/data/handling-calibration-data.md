@@ -33,20 +33,12 @@ Then, in `hardware URL` field, introduce the number in the yellow sticker. Save 
 ![](/assets/images/postprocessing_edit.png)
 
 
-## Advanced setup
+## Advanced features
 
 !!! warning
     Only follow these steps if you are working on the data post-processing of the sensors, or you know what all this means!
 
-The above mentioned `hardware ID` serves to identify the hardware calibration data, alongside with the processing description we want for that device. All this information can be saved in the platform's device using the `postprocessing` field of the device.
-
-The `hardware url` field in the kit edit page can contain a simple `id` as shown above or an URL pointing to a valid `json`:
-
-![](/assets/images/postprocessing_edit_url.png)
-
-This url should point to a **valid json**, and as long as it follows the instructions defined below ([here](https://github.com/fablabbcn/smartcitizen-data/blob/master/hardware/) you can find some examples), it will be picked up for data postprocessing. A simpler way, is that it can simply be one of the `HARDWARE-ID` from the list of jsons available in `https://raw.githubusercontent.com/fablabbcn/smartcitizen-data/master/hardware/<HARDWARE-ID>.json`. The default hardware definitions are in the [scdata github repository](https://github.com/fablabbcn/smartcitizen-data/tree/master/hardware) and can be found per `ID.json`. You can just take the corresponding ID and click in the `raw` button to get the url needed. If you are using this method, and an url from github, this field should look something like: `https://raw.githubusercontent.com/fablabbcn/smartcitizen-data/master/hardware/SCAS21001.json`.
-
-With either method, url or `HARDWARE-ID`, the json file needs to follow the instructions below to successfully be a valid postprocessing:
+The above mentioned `hardware ID` serves to identify the hardware calibration data, alongside with the processing description needed for that device. Behind it, the following information needs to be available:
 
 ```
 {
@@ -57,8 +49,8 @@ With either method, url or `HARDWARE-ID`, the json file needs to follow the inst
 }
 ```
 
-- `blueprint_url`: this field defines the post-processing to be done in the form of a `device-blueprint`. It virtually can load a valid json from any url, as long as it follows the instructions defined [here](https://github.com/fablabbcn/smartcitizen-data/blob/master/examples/notebooks/01_getting_started.ipynb) and [here](https://github.com/fablabbcn/smartcitizen-data/blob/master/examples/notebooks/04_processing_data.ipynb). If you want to use the base processing select it from the [blueprints folder](https://github.com/fablabbcn/smartcitizen-data/tree/master/blueprints), only selecting the `raw` json as mentioned above. If you have doubts, please, contact us at[{{ extra.urls.support.name }}]({{ extra.urls.support.link }}) to make sure everything will run smoothly. Finally, other blueprints can be added as defined [in this guide](/guides/data/custom-data-processing/)
-- `description`: brief description of the hardware
+- `blueprint_url`: this field defines the post-processing to be done in the form of a `device-blueprint`.  If you have doubts, please, contact us at[{{ extra.urls.support.name }}]({{ extra.urls.support.link }}) to make sure everything will run smoothly. Finally, other blueprints can be added as defined [in this guide](/guides/data/custom-data-processing/)
+- `description`: brief description of the hardware.
 - `versions`: list containing hardware versions (in case sensors where replaced, but kept in the same physical unit).
     ```
       "versions": [
@@ -76,13 +68,11 @@ With either method, url or `HARDWARE-ID`, the json file needs to follow the inst
     ```
 
     In the versions information, data is stored based on the IDs of the sensors and a naming convention to understand were they are connected to or what they are. It is easier to understand the naming convention with an example:
- 
+
     - `AS_48_01`: Alphasense Electrochemical sensor, connected to the ADC with address `48`, with the Working Electrode connected to the channel 0 of the ADC, and the Auxiliary Electrode connected to the channel 1 of the ADC. The logic is explained below:
         - `AS` refers to Alphasense. This implies that the rest of the name is going to be on the format `X_YZ`
         - `48` refers to the ADC (analog to digital converter) I2C address. Since we only store the raw data values from the ADC, we use the ADC I2C address to refer to the needed channels
         - `01` are the two channels from the ADC in question that are used for measuring the WE and AE from the Alphasense sensor
-
-- `forwarding`: if this device needs to be forwarded to another data platform. Current supported platforms are specified in [the connectors](https://github.com/fablabbcn/smartcitizen-data/tree/master/connectors) folder
 
 ### Alternative method
 
