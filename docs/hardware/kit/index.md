@@ -40,7 +40,7 @@ internal:
 
 The {{ name }} (_{{ short_name}}_ for short, also just _the Kit_) is an open hardware solution for **environmental monitoring** designed to be used by **anyone** (you name it: _citizen scientists_,  _educators_, _researchers_, etc.). It can take [measurements](#measurements) of many variables, such as particulate matter, noise, light, and temperature, among many others. **The latest version is the {{ short_name }}2.3** (see the other [versions](#versions) below).
 
-<img style="max-height: 350px; width: 100%; object-fit: cover;"src="/assets/images/sck2-3.jpg" alt="SCK2.3"/>
+<img style="max-height: 350px; width: 100%; object-fit: cover;" src="/assets/images/sck2-3.jpg" alt="SCK2.3"/>
 
 !!!tip "More on the use cases"
     If you want to learn more about how to use the Smart Citizen Kit, visit our [resources](/resources/) page.
@@ -61,11 +61,11 @@ The {{ short_name}} is designed to be **flexible**, and many custom configuratio
 Most of the documentation applies to the **{{ short_name }}2.1, the {{ short_name }}2.2, and the {{ short_name }}2.3 versions**.
 
 === "{{ short_name }}2.3"
-    <img style="max-height: 330px; width: 100%; object-fit: cover;"src="/assets/images/sck2-3.jpg" alt="{{ short_name }}2.3"/>
+    <img style="max-height: 330px; width: 100%; object-fit: cover;" src="/assets/images/sck2-3.jpg" alt="{{ short_name }}2.3"/>
 === "{{ short_name }}2.2"
-    <img style="max-height: 330px; width: 100%; object-fit: cover;"src="/assets/images/sck2-2.jpg" alt="{{ short_name }}2.2"/>
+    <img style="max-height: 330px; width: 100%; object-fit: cover;" src="/assets/images/sck2-2.jpg" alt="{{ short_name }}2.2"/>
 === "{{ short_name }}2.1"
-    <img style="max-height: 330px; width: 100%; object-fit: cover;"src="/assets/images/sck2-1.jpg" alt="{{ short_name }}2.1"/>
+    <img style="max-height: 330px; width: 100%; object-fit: cover;" src="/assets/images/sck2-1.jpg" alt="{{ short_name }}2.1"/>
 
 !!! info "Differences"
     A summary of the **differences**:
