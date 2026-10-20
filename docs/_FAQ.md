@@ -29,6 +29,10 @@ Of course! The data collected by your sensor is available for anyone on the [Sma
 
 The sensor can work in network and SD card modes. In network mode, the sensor publish data to the SC platform over Wi-Fi (every minute by default, but configurable). In SD card mode, all the collected data is stored locally in CSV format, and it can be later uploaded manually to the platform using the "Manual Data Upload" option.
 
+## My SD-card is not being recognised, what can I do?
+
+If the SD-card is faulty or needs formatting, make sure you format it with FAT32 file system.
+
 ## What networks does it support?
 
 The SCK supports Wi-Fi WEP, WPA/WPA2 and open networks that are common networks in domestic environments and small businesses. However, like many other embedded devices such as Apple TV® or Chromecast®, it **does not** support networks with captive portals such as those found in Airports and Hotels. Currently, it also **does not** WPA/WPA2 Enterprise networks such as EDUROAM. However, the viability to support those in the future is under analysis.
