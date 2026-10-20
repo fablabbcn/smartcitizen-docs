@@ -9,7 +9,7 @@ internal:
 
 The Smart Citizen Hardware is an **open source boilerplate for anyone, no matter their expertise**, to capture environmental data with modular, hackable, and easy-to-use electronics. The hardware has been developed through various [projects and collaborations](/resources/research), resulting in different hardware _generations_, but it has always aimed at providing meaningful data insights on a _relatively_ **low budget**.
 
-<img src="https://live.staticflickr.com/65535/50977039386_c250d3141d_k.jpg" alt="Smart Citizen Kits being tested at Fab Lab Barcelona"/>
+<img src="/assets/images/smart-citizen-kits-being-tested-at-fab-lab-barcelona.jpg" alt="Smart Citizen Kits being tested at Fab Lab Barcelona"/>
 
 !!! warning "Building upon previous versions"
     Our hardware architecture is **continuously evolving** and will always remain a set of tools for experimentation. Given that, it should be seen more as a toolset for communities, research, and education, not as a final commercial product with full-fledged _big-corporation-type-of-support_.
@@ -33,7 +33,7 @@ _Air measurements_ are the most common use case. These are measurements that imp
 
 Another common use case is the measurement of physico-chemical parameters in [water](/knowledge/soil-water/). These parameters are measured with specialised sensor probes that can measure pH, water temperature, conductivity, or dissolved oxygen. We have generally worked with [Atlas Scientific](https://atlas-scientific.com) probes, which use dedicated drivers to interface with those probes. The [Data Board](/hardware/boards/data-board/) can directly interface with those drivers via I2C through the [auxiliary port](/hardware/boards/data-board#auxiliary-connector).
 
-<img src="https://live.staticflickr.com/65535/53968745679_f7f4b54509_k.jpg" alt="Water Station"/>
+<img src="/assets/images/sck-water-station.jpg" alt="Water Station"/>
 
 There are various possible configurations for water measurements.  Typically, we have built multi-parametric units, but simpler units are possible with one or two probes. All the different configurations are modular and can include more or less probes depending on the particular needs. Some interface boards, like the [Analog Sensor Board](/hardware/boards/analog-sensor-board/), can also be used in this context to read analog turbidimetry sensors or water level sensors, for instance.
 

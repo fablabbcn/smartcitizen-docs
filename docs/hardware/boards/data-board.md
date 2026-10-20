@@ -11,11 +11,11 @@ internal:
 The **Data Board** is the core of the SCK architecture supporting the data-logging tasks. It's designed to perform the heavylifting and interface with sensors, the user, the SD card, take care of communications, and power management. All SCK2.X versions are practically the same, building upon the SCK2.1 design with minor modifications.
 
 === "SCK2.3"
-    <img style="max-height: 325px; width: 100%; object-fit: cover;" src="https://live.staticflickr.com/65535/54281911435_c1ae473a74_o.jpg" alt="SCK2.3 Data Board"/>
+    <img style="max-height: 325px; width: 100%; object-fit: cover;" src="/assets/images/sck2-3-data-board.jpg" alt="SCK2.3 Data Board"/>
 === "SCK2.2"
-    <img style="max-height: 325px; width: 100%; object-fit: cover;" src="https://live.staticflickr.com/65535/54281911450_2edda8b7ed_o.jpg" alt="SCK2.2 Data Board"/>
+    <img style="max-height: 325px; width: 100%; object-fit: cover;" src="/assets/images/sck2-2-data-board.jpg" alt="SCK2.2 Data Board"/>
 === "SCK2.1"
-    <img style="max-height: 325px; width: 100%; object-fit: cover;" src="https://live.staticflickr.com/65535/54281911410_5f944402a3_o.jpg" alt="SCK2.1 Data Board"/>
+    <img style="max-height: 325px; width: 100%; object-fit: cover;" src="/assets/images/sck2-1-data-board.jpg" alt="SCK2.1 Data Board"/>
 
 <a class="github-button" data-size="large" href="{{ config.extra.urls.ghhardware.link }}" aria-label="Check the design files">Check the design files</a>
 

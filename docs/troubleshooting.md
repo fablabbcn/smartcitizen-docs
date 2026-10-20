@@ -34,7 +34,7 @@ You can also perform a reboot by disconnecting the battery and the USB cable so 
 
 Before configuring the Kit, if the `SmartCitizen[...]` network doesn't show up, make sure the LED is red. If not, press the button until the LED turns red.
 
-<img src="https://live.staticflickr.com/65535/48439505516_d210ce2c8a_h.jpg" alt="SCK 2.1 Outdoor enclosure">
+<img src="/assets/images/sck-2-1-outdoor-enclosure.jpg" alt="SCK 2.1 Outdoor enclosure">
 
 ## Factory reset your kit
 

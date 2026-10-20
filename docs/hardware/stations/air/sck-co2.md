@@ -5,7 +5,7 @@ name: SCK + CO2
 field:
   - air
 grade: intermediate
-feature_img: https://live.staticflickr.com/65535/54318976321_7a42735ae5_o.jpg
+feature_img: /assets/images/sck-co2-feature.jpg
 feature_img_description: "Smart Citizen CO2 Air Quality Station"
 excerpt: Measure Indoor or Outdoor Air Quality with this unit. Beyond the metrics from the kit, it can measure CO2 with a very reliable CO2 sensor!
 ---
@@ -48,7 +48,7 @@ excerpt: Measure Indoor or Outdoor Air Quality with this unit. Beyond the metric
 
 ## Technical specifications
 
-![](https://live.staticflickr.com/65535/54319208409_5c3ec3187e_o.jpg)
+![](/assets/images/sck-co2.jpg)
 ***Smart Citizen CO2 Air Quality Station***
 
 

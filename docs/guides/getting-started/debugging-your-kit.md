@@ -7,7 +7,7 @@ internal:
 
 # Debugging your kit
 
-<img src="https://live.staticflickr.com/65535/50977039386_c250d3141d_k.jpg" width="2000" height="1333" alt="Smart Citizen Kits being tested at Fab Lab Barcelona">
+<img src="/assets/images/smart-citizen-kits-being-tested-at-fab-lab-barcelona.jpg" width="2000" height="1333" alt="Smart Citizen Kits being tested at Fab Lab Barcelona">
 
 This guide will try to summarize the basic steps to debug your kits whenever there's any problem. Let's be clear, there is no unique reason or point of failure for the kits to fail, and very likely, if you use them extensively, something will happen, either after 1 month, 1 year, or 5 years. It is key to know how to debug them:
 

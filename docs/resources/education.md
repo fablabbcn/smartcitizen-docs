@@ -60,7 +60,7 @@ Additionally, you can use the project materials:
 - [Data analysis tools for the classrom](/assets/toolkits/CLAB-PT2-E3.pdf) and [step-by-step tutorials](/assets/toolkits/CLAB-PT2-E4.pdf)
 - [Smart Citizen Kit Manual](/assets/toolkits/CLAB-PT2-E5.pdf)
 
-![](https://live.staticflickr.com/65535/51719385193_74ef294e8c_k.jpg)
+![](/assets/images/education.jpg)
 
 ## Aulamar
 

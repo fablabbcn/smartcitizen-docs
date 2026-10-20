@@ -1,7 +1,7 @@
 ---
 card: true
 name: Power Supply
-feature_img: https://live.staticflickr.com/65535/54334059575_d4968cf083_h.jpg
+feature_img: /assets/images/power-supply-feature.jpg
 custom_color: black
 type:
     - addon

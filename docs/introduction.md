@@ -5,7 +5,7 @@ hide:
 
 # Beginner's introduction
 
-![](https://live.staticflickr.com/4519/24368451748_172c258274_h.jpg)
+![](/assets/images/smart-citizen-community.jpg)
 
 ## About Citizen Science
 
@@ -63,7 +63,7 @@ Once the data collection strategy has been defined, it is time to install the se
 
 Helping participants to understand the data and its meaning is a vital part of the intervention. Meet-ups and social events are organised to make data analysis a social and learning experience. Visualisation of the data is a crucial part of this phase, as it raises awareness among the group taking part and the larger public not directly involved in the intervention. In addition to the data collected using the sensors, participants' personal stories about how they experience their relationship with their environment in their daily lives are also relevant to collect. Merging quantitative and qualitative data enables more informed data analysis that considers local knowledge.
 
-![image alt](https://live.staticflickr.com/4483/38165401276_ef6eacca0c_h.jpg "Smart Citizen Data Literacy and Awarness")
+![image alt](/assets/images/smart-citizen-data-literacy-and-awareness.jpg "Smart Citizen Data Literacy and Awarness")
 
 The data analysis results help identify areas where action is needed to bring about change. At this point, the community should plan for change based on collected, structured and analysed evidence. Cocreating and planning collective action is the main activity in this phase. Although many citizen data collection interventions are designed around using a specific technology that helps in data collection, more than providing citizens with a tool is needed to set up and sustain a participatory process. The continuity and sustainability of citizen data collection initiatives are some of these movements' biggest challenges. Designing for sustainability and a sense of belonging goes beyond creating and using material objects. Participatory design researchers use the notion of infrastructure [^9] to express the preparation of a sociotechnical context that supports public participation in the long term, generating a sense of attachment and belonging that helps to sustain commitment.
 

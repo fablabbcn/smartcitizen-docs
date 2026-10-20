@@ -1,6 +1,6 @@
 # Friend projects
 
-<img src="https://live.staticflickr.com/65535/52716034570_4b03a75381_k.jpg" alt="Laboratorio Ciudadano de Salud Urbana - by LICHEN">
+<img src="/assets/images/laboratorio-ciudadano-de-salud-urbana-by-lichen.jpg" alt="Laboratorio Ciudadano de Salud Urbana - by LICHEN">
 _Image Credit: Laboratorio Ciudadano de Salud Urbana_
 
 Below there's a list of similar projects in either philosophy, sensors and ideas:

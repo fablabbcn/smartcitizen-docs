@@ -2,7 +2,7 @@
 
 This is a _live_ compilation of our participation and results in some research projects we are/have been involved with.
 
-<img src="https://live.staticflickr.com/65535/51231210938_638d5d413a_h.jpg" width="1600" height="1066" alt="Patí Científic Workshop"/>
+<img src="/assets/images/pati-cientific-workshop-3.jpg" width="1600" height="1066" alt="Patí Científic Workshop"/>
 
 ## Large projects
 

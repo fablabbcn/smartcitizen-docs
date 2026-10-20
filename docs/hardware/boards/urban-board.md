@@ -20,11 +20,11 @@ The **Urban Board** is a passive board that contains a selection of low-cost sen
 The **Urban Board** has undergone several modifications throughout its development, and its current version is the **V2.3**. Below you can see all versions:
 
 === "SCK2.3"
-    <img style="max-height: 450px; width: 100%; object-fit: cover;" src="https://live.staticflickr.com/65535/54281726349_e3353f828b_o.jpg" alt="SCK2.3 Urban Board"/>
+    <img style="max-height: 450px; width: 100%; object-fit: cover;" src="/assets/images/sck2-3-urban-board.jpg" alt="SCK2.3 Urban Board"/>
 === "SCK2.2"
-    <img style="max-height: 450px; width: 100%; object-fit: cover;" src="https://live.staticflickr.com/65535/54281726359_471ec852eb_o.jpg" alt="SCK2.2 Urban Board"/>
+    <img style="max-height: 450px; width: 100%; object-fit: cover;" src="/assets/images/sck2-2-urban-board.jpg" alt="SCK2.2 Urban Board"/>
 === "SCK2.1"
-    <img style="max-height: 450px; width: 100%; object-fit: cover;" src="https://live.staticflickr.com/65535/54281911420_32e26bdd40_o.jpg" alt="SCK2.1 Urban Board"/>
+    <img style="max-height: 450px; width: 100%; object-fit: cover;" src="/assets/images/sck2-1-urban-board.jpg" alt="SCK2.1 Urban Board"/>
 
 <a class="github-button" data-size="large" href="{{ config.extra.urls.ghhardware.link }}" aria-label="Check the design files">Check the design files</a>
 

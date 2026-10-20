@@ -4,7 +4,7 @@ toc_depth: 1
 
 # Data Tools
 
-![Data analysis with pen and paper tools in Plaça del Sol - Barcelona](https://live.staticflickr.com/4490/24368448418_d602723a10_h.jpg)
+![Data analysis with pen and paper tools in Plaça del Sol - Barcelona](/assets/images/data-analysis-with-pen-and-paper-tools-in-placa-del-sol-barcelona.jpg)
 
 When dealing with sensor data, specially with low cost sensors, a great part of the **effort needs to be dedicated to data analysis**. After a careful data collection, this stage of our experiments is fundamental to extract meaningful conclusions. For this reason, this section is a compilation of tools for making sense of the data. Some of them are custom made, and others are general purpose tools that can be adapted for the Smart Citizen use case. Check them below, and head out [to the guides](/guides/) for more step-by-step documentation on each!
 
@@ -15,7 +15,7 @@ Probably the best way to get started in data analysis by using simple tools for 
 !!! info "Basic, but insightful!"
     This tool, even if seemingly very basic, allows you to work with data and share insights with others very quickly. For instance, while working with the _Plaça del Sol Community_ in Barcelona, we learnt that the noise patterns in social areas are, on average, not as loud as other traffic areas, but that the _peaks_ of the noise are what cause the biggest concerns. From that we learnt that the regulation of noise in public spaces is not really representative for these areas, and that even if on average the readings are below the limits, sometimes the place is unlivable!
 
-<img src="https://live.staticflickr.com/65535/51719385133_9c826ec98d_k.jpg" width="2048" height="1152" alt="AIRE Workshop for the Venice Biennale Architettura 2021"/>
+<img src="/assets/images/aire-workshop-for-the-venice-biennale-architettura-2021.jpg" width="2048" height="1152" alt="AIRE Workshop for the Venice Biennale Architettura 2021"/>
 
 !!! tip "How to make them?"
     Soon you will be able to generate the files for printing from the [web dashboard](https://dashboard.smartcitizen.me). In the meantime, you can check [this tutorial](https://github.com/fablabbcn/smartcitizen-data/blob/master/examples/notebooks/13_pdf_largescale_plots.ipynb) in python

@@ -89,7 +89,7 @@ The **Sensor Box is display installation** aimed at engaging citizens to
 discuss about data on the public space. The installation was built by the Making Sense Barcelona community champions to talk about noise problems affecting neighbours around the Plaça del Sol area in Barcelona. However
 the installation was built from the ground up to be replicable ad easy to built in oder Fab Labs worldwide. This aims at creating a tool communities can built to engage citizens to discuss about issues by using the data provided by the Smart Citizen Kit.
 
-![](https://live.staticflickr.com/4519/24368451748_172c258274_h.jpg)
+![](/assets/images/smart-citizen-community.jpg)
 
 The device comprises a wooden box equipped with a Smart Citizen Kit to which was a 5 meter long LED strip has been attached. Participants can press a button on the box to trigger the noise sensor. The original installation was battery powered but it can also be plugged to simplify the design and cost.
 

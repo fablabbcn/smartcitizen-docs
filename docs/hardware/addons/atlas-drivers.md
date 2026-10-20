@@ -1,7 +1,7 @@
 ---
 card: true
 name: Atlas EZO Drivers
-feature_img: https://live.staticflickr.com/65535/54333644981_23a2dcff0e_h.jpg
+feature_img: /assets/images/atlas-drivers-feature.jpg
 custom_color: blue
 type:
     - addon
@@ -21,7 +21,7 @@ These drivers can be used to interface with Atlas Scientific sensors. Each drive
 
 The drivers can be used with carrier boards. We generally use the [Isolated carrier board](https://atlas-scientific.com/carrier-boards/electrically-isolated-ezo-carrier-board-gen-2/), but you can choose other options. These carrier boards can be found in the [water stations](/hardware/stations/water/).
 
-![](https://live.staticflickr.com/65535/54334059580_c7e9d8c68f_h.jpg)
+![](/assets/images/atlas-drivers.jpg)
 
 ## Setup
 

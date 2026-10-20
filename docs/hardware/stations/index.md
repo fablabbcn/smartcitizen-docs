@@ -4,7 +4,7 @@ type: unit
 custom_color: blue
 name: Smart Citizen Stations
 short_name: Stations
-feature_img: https://live.staticflickr.com/65535/50977039556_541c4727a6_k.jpg
+feature_img: /assets/images/stations-feature.jpg
 excerpt: The Smart Citizen Stations are open-source environmental monitoring systems. They build upon the functionalities of the Smart Citizen Kit, extending its sensing capabilities.
 internal:
   proofread: true

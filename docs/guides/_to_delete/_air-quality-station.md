@@ -4,7 +4,7 @@ TODO: decide if we move part of this page to air units (repeating content)
 
 This guide will summarise how to install the Smart Citizen Station and set it all up for successful readings.
 
-<img src="https://live.staticflickr.com/65535/50977149247_ae7186e67e_k.jpg" width="2000" height="1333" alt="Smart Citizen Station v3">
+<img src="/assets/images/smart-citizen-station-v3.jpg" width="2000" height="1333" alt="Smart Citizen Station v3">
 
 ## Hardware
 
@@ -44,7 +44,7 @@ The enclosure and mounting system is very similar for both units:
 
 The enclosure holds the sensors in place and protects them against weather. A rain and sun radiation **cover** for protection made out of white [sandwich panel or dibond](https://en.wikipedia.org/wiki/Sandwich_panel). This element carries out the structural support of the station and protects the unit against rain, wind or heat.
 
-<img src="https://live.staticflickr.com/65535/50977149367_922fc1c478_k.jpg" width="2000" height="1333" alt="Smart Citizen Station v3">
+<img src="/assets/images/smart-citizen-station-v3-2.jpg" width="2000" height="1333" alt="Smart Citizen Station v3">
 
 The **sensors module** which contains the electronics and sensors, is attached to the cover and can be removed without having to uninstall the rain cover.
 
@@ -82,7 +82,7 @@ The Station is powered through it's USB input. It can be reset by either:
 
 The Smart Citizen Station uses the [Smart Citizen Power Supply](/Components/boards/Power Supply/) for power. The input of the station is the connector shown in the image below.
 
-<img src="https://live.staticflickr.com/65535/50977149542_eedda4d383_k.jpg" width="2000" height="1327" alt="Smart Citizen Station v3">
+<img src="/assets/images/smart-citizen-station-v3-3.jpg" width="2000" height="1327" alt="Smart Citizen Station v3">
 
 Inside the station, power is distributed accross the different units. Data and power goes through the input, in order to connect to the [Data Board](/Components/boards/Data Board/) and be able to use the [Shell](/guides/getting-started/using-the-shell/). All voltage levels inside the station are below 5V.
 
@@ -91,7 +91,7 @@ Inside the station, power is distributed accross the different units. Data and p
 
 ## Installation
 
-<img src="https://live.staticflickr.com/65535/49638797788_d6d1732c7a_k.jpg"  alt="Sensors Collocation in Barcelona">
+<img src="/assets/images/sensors-collocation-in-barcelona.jpg"  alt="Sensors Collocation in Barcelona">
 
 Follow the steps below for making sure everything is working fine before setting it up in an outdoor spot.
 
@@ -190,7 +190,7 @@ This is an example of the sensor list in a normal _4-electrochemical sensors_ St
 
 The enclosure can be installed using the _mounting holes_ seen below. There is sufficient space to pass zip ties. If you want to use drills, we recommend at least 6mm screws (or 8mm) and to dissasemble the plastic cover from the sandwich pannel for safer installation.
 
-<img src="https://live.staticflickr.com/65535/50977039026_8b679d3ef6_k.jpg" width="2000" height="1333" alt="Smart Citizen Station v3">
+<img src="/assets/images/smart-citizen-station-v3-4.jpg" width="2000" height="1333" alt="Smart Citizen Station v3">
 
 Below are some general guidelines for the installation of the device:
 
@@ -204,7 +204,7 @@ Below are some general guidelines for the installation of the device:
 
 ## Configuration
 
-<img src="https://live.staticflickr.com/65535/50976345368_c109c935a7_k.jpg" width="2000" height="1333" alt="Smart Citizen Station v3">
+<img src="/assets/images/smart-citizen-station-v3-5.jpg" width="2000" height="1333" alt="Smart Citizen Station v3">
 
 The process to register the Smart Citizen Station and send data to the platform is the same as the one from the Smart Citizen Kit [{{ extra.urls.installation.name }}]({{ extra.urls.installation.link }}):
 
@@ -250,4 +250,4 @@ All the data is sent in raw to the Smart Citizen Platform and it's then processe
 
 The first step in case anything goes wrong, is to reset the unit by pressing the RESET button. If this doesn't work, make sure that your problem is not already listed in the [FAQs](/_FAQ), and if not, contact us for more support.
 
-<img src="https://live.staticflickr.com/65535/50977149967_0bae638c6d_k.jpg" width="2000" height="1333" alt="Smart Citizen Station v3">
+<img src="/assets/images/smart-citizen-station-v3-6.jpg" width="2000" height="1333" alt="Smart Citizen Station v3">

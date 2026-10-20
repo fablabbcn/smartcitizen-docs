@@ -3,7 +3,7 @@ card: true
 type: unit
 custom_color: green
 name: Guides
-feature_img: https://live.staticflickr.com/65535/53076771726_31fa5b6164_k.jpg
+feature_img: /assets/images/guides-feature.jpg
 excerpt: A compilation of guides to perform different tasks on your SCK, station or with the data!
 internal:
   proofread: false

@@ -1,6 +1,6 @@
 # Atlas Scientific
 
-<img src="https://live.staticflickr.com/65535/51230999551_3941affaa5_k.jpg" width="2000" height="1333" alt="Patí Científic Workshop">
+<img src="/assets/images/pati-cientific-workshop.jpg" width="2000" height="1333" alt="Patí Científic Workshop">
 
 The Smart Citizen firmware has built-in support for the calibration of the Atlas Scientific sensors. In order to calibrate the sensors you will need to use the [SCK Shell](/Guides/getting started/Using the Shell/).
 

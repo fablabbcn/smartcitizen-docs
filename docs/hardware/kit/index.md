@@ -4,7 +4,7 @@ type: unit
 custom_color: orange
 name: Smart Citizen Kit
 short_name: SCK
-feature_img: https://live.staticflickr.com/65535/54183550083_58f8204c78_k.jpg
+feature_img: /assets/images/kit-feature.jpg
 excerpt: The Smart Citizen Kit is an open hardware solution for environmental monitoring designed to be used by anyone.
 internal:
   proofread: true
@@ -40,7 +40,7 @@ internal:
 
 The {{ name }} (_{{ short_name}}_ for short, also just _the Kit_) is an open hardware solution for **environmental monitoring** designed to be used by **anyone** (you name it: _citizen scientists_,  _educators_, _researchers_, etc.). It can take [measurements](#measurements) of many variables, such as particulate matter, noise, light, and temperature, among many others. **The latest version is the {{ short_name }}2.3** (see the other [versions](#versions) below).
 
-<img style="max-height: 350px; width: 100%; object-fit: cover;"src="https://live.staticflickr.com/65535/54281726404_7159ccddc1_o.jpg" alt="SCK2.3"/>
+<img style="max-height: 350px; width: 100%; object-fit: cover;"src="/assets/images/sck2-3.jpg" alt="SCK2.3"/>
 
 !!!tip "More on the use cases"
     If you want to learn more about how to use the Smart Citizen Kit, visit our [resources](/resources/) page.
@@ -61,11 +61,11 @@ The {{ short_name}} is designed to be **flexible**, and many custom configuratio
 Most of the documentation applies to the **{{ short_name }}2.1, the {{ short_name }}2.2, and the {{ short_name }}2.3 versions**.
 
 === "{{ short_name }}2.3"
-    <img style="max-height: 330px; width: 100%; object-fit: cover;"src="https://live.staticflickr.com/65535/54281726404_7159ccddc1_o.jpg" alt="{{ short_name }}2.3"/>
+    <img style="max-height: 330px; width: 100%; object-fit: cover;"src="/assets/images/sck2-3.jpg" alt="{{ short_name }}2.3"/>
 === "{{ short_name }}2.2"
-    <img style="max-height: 330px; width: 100%; object-fit: cover;"src="https://live.staticflickr.com/65535/54280600377_d71bf25bb1_o.jpg" alt="{{ short_name }}2.2"/>
+    <img style="max-height: 330px; width: 100%; object-fit: cover;"src="/assets/images/sck2-2.jpg" alt="{{ short_name }}2.2"/>
 === "{{ short_name }}2.1"
-    <img style="max-height: 330px; width: 100%; object-fit: cover;"src="https://live.staticflickr.com/65535/54281726504_b685a32158_o.jpg" alt="{{ short_name }}2.1"/>
+    <img style="max-height: 330px; width: 100%; object-fit: cover;"src="/assets/images/sck2-1.jpg" alt="{{ short_name }}2.1"/>
 
 !!! info "Differences"
     A summary of the **differences**:
@@ -146,7 +146,7 @@ If you select the **Wi-Fi** option, data will be available on the [Smart Citizen
 
 If you want to leave the {{ short_name}} outdoors, protect the electronics.
 
-[<img src="https://live.staticflickr.com/65535/54172280536_a67af99ddc_k.jpg" alt="Code Lab, kits in progress"/>]({{ extra.urls.enclosures.link }})
+[<img src="/assets/images/code-lab-kits-in-progress.jpg" alt="Code Lab, kits in progress"/>]({{ extra.urls.enclosures.link }})
 
 There are plenty of freely available designs on our [enclosures repository]({{ extra.urls.enclosures.link }}). We have a wide range of open source designs that you can 3D print and build yourself, saving some industrial plastic manufacturing in the process. If you don’t have a 3D printer, you can always find a [Fab Lab near you](https://fablabs.io/labs/map) and once the enclosure’s use has run its course, you can repurpose it to make more 3D printing filament!
 

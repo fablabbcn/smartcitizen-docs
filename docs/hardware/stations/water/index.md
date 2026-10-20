@@ -12,7 +12,7 @@ Although most of our work is with _air quality_ sensors and other related metric
 !!! info "Soil Stations"
     The Water Stations can support additional sensors, such as the [Chirp Moisture Sensor](/knowledge/soil-water/moisture/Chirp_Soil_Moisture/). More soil sensors can be added as well, by using the [Auxiliary connector](/hardware/kit/features/#auxiliary-connector).
 
-<img src="https://live.staticflickr.com/65535/51232063715_5e37cfb1a0_k.jpg" width="2000" height="1333" alt="Patí Científic Workshop">
+<img src="/assets/images/pati-cientific-workshop-2.jpg" width="2000" height="1333" alt="Patí Científic Workshop">
 
 ## Available metrics
 
@@ -37,4 +37,4 @@ Below you will find some legacy (aka _development_) versions. These are left her
 
 Through a collaboration with [Aquapioneers](https://github.com/aquapioneers), we designed the [custom enclosure](https://github.com/fablabbcn/monitoring-kit-hardware) below.
 
-<img src="https://live.staticflickr.com/65535/47957175206_4a63cbdda9_k.jpg" alt="SCK Aquapionners Prototype 2016"/>
+<img src="/assets/images/sck-aquapionners-prototype-2016.jpg" alt="SCK Aquapionners Prototype 2016"/>

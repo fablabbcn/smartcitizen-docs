@@ -2,7 +2,7 @@
 
 TODO: move to specific sensor page on knowledge section for each probe. Remove the I2C part and refer to datasheet.
 
-<img src="https://live.staticflickr.com/65535/51126012000_ef69edea6b_k.jpg" alt="Water Station - Patí Científic">
+<img src="/assets/images/water-station-pati-cientific.jpg" alt="Water Station - Patí Científic">
 
 ## Getting around the box
 
