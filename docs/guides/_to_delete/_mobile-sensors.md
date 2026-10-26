@@ -40,9 +40,9 @@ The sensors are based on the Smart Citizen Kit, with the following components.
 |--------------------------------|-------|-----------------------|
 | Air temperature                | ºC    | Sensirion SHT-31      |
 | Relative Humidity              | % REL | Sensirion SHT-31      |
-| Noise level                    | dBA   | Invensense ICS-434342 |
-| Ambient light                  | Lux   | Rohm BH1721FVC        |
-| Barometric pressure            | Pa    | NXP MPL3115A26        |
+| Noise level                    | dBA   | Invensense ICS-43432 |
+| Ambient light                  | Lux   | Rohm BH1730FVC        |
+| Barometric pressure            | Pa    | NXP MPL3115A2        |
 | Equivalent Carbon Dioxide      | ppm   | AMS CCS811            |
 | Volatile Organic Compounds     | ppb   | AMS CCS811            |
 | Particulate Matter PM 1 / 2.5 / 10 | µg/m3 | Planttower PMS 5003            |

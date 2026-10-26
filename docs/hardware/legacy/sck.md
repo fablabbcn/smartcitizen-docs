@@ -36,9 +36,9 @@ The measurements of the SCK2.0 are listed below:
 |--------------------------------|-------|-----------------------|
 | Air temperature                | ºC    | Sensirion SHT-31      |
 | Relative Humidity              | % REL | Sensirion SHT-31      |
-| Noise level                    | dBA   | Invensense ICS-434342 |
-| Ambient light                  | Lux   | Rohm BH1721FVC        |
-| Barometric pressure            | Pa    | NXP MPL3115A26        |
+| Noise level                    | dBA   | Invensense ICS-43432 |
+| Ambient light                  | Lux   | Rohm BH1730FVC        |
+| Barometric pressure            | Pa    | NXP MPL3115A2        |
 | Particulate Matter PM 1 / 2.5 / 10 | µg/m3 | Planttower PMS 5003              |
 
 !!! info "Find out more"

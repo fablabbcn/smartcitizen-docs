@@ -19,9 +19,9 @@ The Station is a modular system based on different sensor board that connected t
 |----------------------------------------------|------------------------------------------------|-------------------------------|------------------------|
 | Air Temperature                              | ºC                                             | Sensirion SHT-31              | Urban Sensor Board     |
 | Relative Humidity                            | % REL                                          | Sensirion SHT-31              | Urban Sensor Board     |
-| Noise Level                                  | dBA                                            | Invensense ICS-434342         | Urban Sensor Board     |
-| Ambient Light                                | Lux                                            | Rohm BH1721FVC                | Urban Sensor Board     |
-| Barometric pressure and AMSL                 | Pa and Meters                                  | NXP MPL3115A26                | Urban Sensor Board     |
+| Noise Level                                  | dBA                                            | Invensense ICS-43432         | Urban Sensor Board     |
+| Ambient Light                                | Lux                                            | Rohm BH1730FVC                | Urban Sensor Board     |
+| Barometric pressure and AMSL                 | Pa and Meters                                  | NXP MPL3115A2                | Urban Sensor Board     |
 | Carbon Monoxide                              | ppm                                            | Alphasense CO-B4              | Gas Sensor Pro Board   |
 | Nitrogen Dioxide                             | ppb                                            | Alphasense NO2-B43F           | Gas Sensor Pro Board   |
 | Ozone                                        | ppb                                            | Alphasense OX-B431            | Gas Sensor Pro Board   |
