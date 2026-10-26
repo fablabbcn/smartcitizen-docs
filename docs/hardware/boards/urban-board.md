@@ -51,10 +51,10 @@ The **Urban Board** connects to the [Data Board](/hardware/boards/data-board/) w
     |----------------------------------------------|------------------------------------------------|-----------------------|
     | Air temperature                              | ºC                                             | Sensirion SHT-31      |
     | Relative Humidity                            | % REL                                          | Sensirion SHT-31      |
-    | Noise level                                  | dBA, dBC or dBZ                                | Invensense ICS-434342 |
-    | Ambient light                                | lux                                            | Rohm BH1721FVC        |
-    | Barometric pressure                          | kPa                                            | NXP MPL3115A26S       |
-    | UV-A, B, C                                   | uW/cm2                                         | AMS AS7311            |
+    | Noise level                                  | dBA, dBC or dBZ                                | Invensense ICS-43432 |
+    | Ambient light                                | lux                                            | Rohm BH1730FVC        |
+    | Barometric pressure                          | kPa                                            | NXP MPL3115A2       |
+    | UV-A, B, C                                   | uW/cm2                                         | AMS AS7331            |
     | PM1, PM2.5, PM4 and PM10                     | µg/m3                                          | Sensirion SEN5X       |
     | NOx Index, VOCs Index (Optional)              | -                                              | Sensirion SEN54, 55   |
 === "SCK 2.2"
@@ -62,10 +62,10 @@ The **Urban Board** connects to the [Data Board](/hardware/boards/data-board/) w
     |----------------------------------------------|------------------------------------------------|-----------------------|
     | Air temperature                              | ºC                                             | Sensirion SHT-31      |
     | Relative Humidity                            | % REL                                          | Sensirion SHT-31      |
-    | Noise level                                  | dBA, dBC or dBZ                                | Invensense ICS-434342 |
-    | Ambient light                                | lux                                            | Rohm BH1721FVC        |
+    | Noise level                                  | dBA, dBC or dBZ                                | Invensense ICS-43432 |
+    | Ambient light                                | lux                                            | Rohm BH1730FVC        |
     | Barometric pressure                          | kPa                                            | ST LPS33K             |
-    | UV-A, B, C                                   | uW/cm2                                         | AMS AS7311            |
+    | UV-A, B, C                                   | uW/cm2                                         | AMS AS7331            |
     | PM1, PM2.5, PM4 and PM10                     | µg/m3                                          | Sensirion SEN5X       |
     | NOx Index, VOCs Index (Optional)              | -                                              | Sensirion SEN54, 55   |
 === "SCK 2.1"
@@ -74,7 +74,7 @@ The **Urban Board** connects to the [Data Board](/hardware/boards/data-board/) w
     | Air Temperature                              | ºC                                             | Sensirion SHT-31      |
     | Relative Humidity                            | % REL                                          | Sensirion SHT-31      |
     | Noise Level and Spectrum                     | dBA, dBC or dBZ                                | Invensense ICS-43432  |
-    | Ambient Light                                | Lux                                            | Rohm BH1721FVC        |
+    | Ambient Light                                | Lux                                            | Rohm BH1730FVC        |
     | Barometric pressure and AMSL                 | kPa and Meters                                 | NXP MPL3115A2         |
     | eCO2 and TVOC                                | ppm/ppb                                        | AMS CCS811            |
     | PM1, PM2.5 and PM10                          | µg/m3                                          | Plantower PMS5003     |

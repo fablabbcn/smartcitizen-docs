@@ -61,6 +61,17 @@ Finally, although the sensor is considered to be an indoor sensor, _it can be pl
 !!! info "Sources"
     Have a read to the [Datasheet or some other ANs here](https://www.sciosense.com/products/environmental-sensors/ccs811-gas-sensor-solution/)
 
+### Performance
+
+|Property               |Value                                                                          |
+|:-                     |:-                                                                             |
+|Sensor type            |Metal oxide (MOx) gas sensor with digital interface (I2C)                      |
+|eCO2 range             |400 – 8192 ppm (values outside this range are clipped)                         |
+|eTVOC range            |0 – 1187 ppb (values outside this range are clipped)                           |
+|Deployment type        |Indoor                                                                         |
+
+The ranges above are taken from the manufacturer's datasheet. Remember that both outputs are _equivalent_ values estimated from the sensor resistance, not direct measurements of CO2 or of any specific VOC.
+
 ### Early-Life (Burn-In)
 
 The CCS811 performance in terms of resistance levels and sensitivities will change during early life. The change in resistance is greatest over the first 48 hours of operation, although this process can last up to 5 days. CCS811 controls the burn-in period allowing eCO2 and eTVOC readings to be used from first power-on after 60 minutes of operation.

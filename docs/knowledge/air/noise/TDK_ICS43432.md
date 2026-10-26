@@ -33,6 +33,8 @@ The INVENSENSE (now TDK) [ICS43432](https://www.invensense.com/products/digital/
 | BIT length (-) | 24 |
 | Sensitivity at 94 dBSPL 1kHz (dBFS) | -26 |
 
+In practice, the useful range of the microphone in the SCK goes from its noise floor (around 30 dBA, see the [evaluation below](#noise-floor)) to the acoustic overload point (116 dB SPL), above which the signal is distorted.
+
 ## Working principle
 
 The **MEMs microphone** comes with a transducer element which converts the sound pressure into electric signals. The sound pressure reaches the transducer through a hole drilled in the package and the transducer's signal is sent to an ADC which provides with a signal which can be pulse density modulated (PDM) or in I2S format. Since the ADC is already in the microphone, we have an all-digital audio capture path to the processor and it’s less likely to pick up interferences from other RF, such as the WiFi, for example. The I2S has the advantage of a decimated output, and since the SAMD21 has an I2S port, this allows us to connect it directly to the microcontroller with no CODEC needed to decode the audio data. Additionally, there is a bandpass filter, which eliminates *DC* and low frequency components (i.e. at fs = 48kHz, the filter has -3dB corner at 3,7Hz) and high frequencies at *0,5·fs* (-3dB cutoff). Both specifications are important to consider when analysing the data and discarding unusable frequencies. The microphone acoustic response has to be considered as well, with subsequent equalisation in the data treatment in order.

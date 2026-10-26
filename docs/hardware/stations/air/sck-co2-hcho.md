@@ -26,9 +26,9 @@ excerpt: Measure Indoor or Outdoor Air Quality with this unit. Beyond the metric
     |:-                                     |:-:    |:-:                    |
     | Air temperature                       | ºC    | Sensirion SHT-31      |
     | Relative Humidity                     | % REL | Sensirion SHT-31      |
-    | Noise level                           | dBA   | Invensense ICS-434342 |
-    | Ambient light                         | lux   | Rohm BH1721FVC        |
-    | Barometric pressure                   | kPa   | NXP MPL3115A26        |
+    | Noise level                           | dBA   | Invensense ICS-43432 |
+    | Ambient light                         | lux   | Rohm BH1730FVC        |
+    | Barometric pressure                   | kPa   | NXP MPL3115A2        |
     | Equivalent Carbon Dioxide             | ppm   | AMS CCS811            |
     | Volatile Organic Compounds            | ppb   | AMS CCS811            |
     | PM1, PM2.5, PM4.0 and PM10            | µg/m3 | Sensirion SEN5X       |
@@ -39,9 +39,9 @@ excerpt: Measure Indoor or Outdoor Air Quality with this unit. Beyond the metric
     |:-                                     |:-:    |:-:                    |
     | Air temperature                       | ºC    | Sensirion SHT-31      |
     | Relative Humidity                     | % REL | Sensirion SHT-31      |
-    | Noise level                           | dBA   | Invensense ICS-434342 |
-    | Ambient light                         | lux   | Rohm BH1721FVC        |
-    | Barometric pressure                   | kPa   | NXP MPL3115A26        |
+    | Noise level                           | dBA   | Invensense ICS-43432 |
+    | Ambient light                         | lux   | Rohm BH1730FVC        |
+    | Barometric pressure                   | kPa   | NXP MPL3115A2        |
     | Equivalent Carbon Dioxide             | ppm   | AMS CCS811            |
     | Volatile Organic Compounds            | ppb   | AMS CCS811            |
     | PM1, PM2.5 and PM10                   | µg/m3 | Plantower PMS5003     |

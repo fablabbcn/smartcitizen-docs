@@ -67,6 +67,21 @@ Pollutant calculation based on calibration data in laboratory conditions, can be
 - Usage of more advanced physical models as detailed in [^1]
 - Usage of site-specific calibration models with short-term deployments in co-location with reference measurement equipment and generalised calibration models derived from the junction of these [^4].
 
+### Measurement range
+
+The range of each sensor depends on its target gas. These are the ranges of the B4 series sensors, according to the manufacturer (the A4 series have similar targets, check their datasheets):
+
+| Sensor | Target gas | Measurement range |
+|:- |:- |:-: |
+| CO-B4 | Carbon monoxide | 0 – 1000 ppm |
+| NO2-B43F | Nitrogen dioxide | 0 – 20 ppm |
+| NO-B4 | Nitric oxide | 0 – 20 ppm |
+| OX-B431 | Ozone + Nitrogen dioxide | 0 – 20 ppm |
+| SO2-B4 | Sulphur dioxide | 0 – 100 ppm |
+| H2S-B4 | Hydrogen sulphide | 0 – 100 ppm |
+
+Note that ambient concentrations are generally in the ppb range, so the useful part of the range is the very low end, where the noise and the baseline (zero) of the sensors are very important. Check the [Alphasense website](https://www.alphasense.com/products/) for the latest datasheets of each sensor.
+
 ### Stabilisation
 
 The electrochemical sensors **need stabilisation time under the testing conditions** they will be at. It is important to set and power the sensors with sufficient time (1-2 days) on the test environment for them to adapt. The newer the sensor, the more stabilisation time it requires. For this deployment, you will be receiving brand new sensors.

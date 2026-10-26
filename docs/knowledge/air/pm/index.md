@@ -31,6 +31,35 @@ These are well known limitations that some manufacturers are tackling at the mom
 
 Finally, it is very important to remember that low cost particulate matter sensors are particle counters, which in case of polydisperse aerosols of unknown composition, the conversion between particle number to mass is not always attained properly, especially without other measurement methods in place [^7]. No matter which final selected sensor is used, there will always be an assumption made by the manufacturer that will never be fulfilled in every deployment scenario. If not only precision, but also accuracy is needed, then using the particle counts directly can provide one of the necessary pieces to derive the final mass, which will only be determined if the particle composition and density are known by other means (i.e. laboratory analysis of collected samples).
 
+## Reference levels
+
+!!! info "How to use these values"
+    The values below are guidelines for **health protection**, defined as averages over a certain period (24 hours, a year). Short peaks above them are common (for instance, while cooking or near traffic), and what matters for health is the long-term exposure. Also keep in mind that low-cost PM sensors are indicative: they can over or underestimate the concentrations, specially with high relative humidity (see the [limitations](#limitations) above). The World Health Organization (WHO) highlights that there is **no level of PM without health effects**: the lower, the better.
+
+The table below shows the WHO air quality guidelines [^21] and the European Union limit values that apply from 2030 [^22]:
+
+| Pollutant | Averaging period | WHO guideline (2021) | EU limit value (2030) |
+|:- |:- |:-: |:-: |
+| PM2.5 | 24 hours | 15 µg/m3 | 25 µg/m3 (max. 18 days per year) |
+| PM2.5 | Year | 5 µg/m3 | 10 µg/m3 |
+| PM10 | 24 hours | 45 µg/m3 | 45 µg/m3 (max. 18 days per year) |
+| PM10 | Year | 15 µg/m3 | 20 µg/m3 |
+
+There are no guidelines for PM1 or PM4, although PM1 is included in PM2.5, and PM2.5 in PM10.
+
+To classify the readings in levels, a common reference is the US EPA **Air Quality Index** (AQI) [^23], which uses 24-hour averages:
+
+| Category | PM2.5 (µg/m3, 24h) | PM10 (µg/m3, 24h) | Meaning |
+|:- |:-: |:-: |:- |
+| Good | 0 – 9.0 | 0 – 54 | Little or no risk |
+| Moderate | 9.1 – 35.4 | 55 – 154 | Acceptable. Some risk for unusually sensitive people |
+| Unhealthy for sensitive groups | 35.5 – 55.4 | 155 – 254 | Children, older adults and people with heart or lung disease may be affected |
+| Unhealthy | 55.5 – 125.4 | 255 – 354 | Some of the general public may experience health effects |
+| Very unhealthy | 125.5 – 225.4 | 355 – 424 | Health alert: increased risk for everyone |
+| Hazardous | > 225.5 | > 425 | Emergency conditions |
+
+Europe also has its own [European Air Quality Index](https://airindex.eea.europa.eu/), which uses different bands, and many countries have their own national indices.
+
 ## Supported Sensors
 
 Low cost PM sensors are normally built around the [light scattering](#light-scattering-sensors) principle. These sensors are an evolution of the Optical Particle Counters (OPCs), but with a lower cost, ranging from approximately USD 10 to USD 500 in some cases. Check the sensors supported on the Smart Citizen Kit below!
@@ -51,3 +80,10 @@ Low cost PM sensors are normally built around the [light scattering](#light-scat
     Di Antonio, Andrea, Olalekan Popoola, Bin Ouyang, John Saffell, and Roderic Jones. “Developing a Relative Humidity Correction for Low-Cost Sensors Measuring Ambient Particulate Matter.” Sensors 18, no. 9 (August 24, 2018): 2790. https://doi.org/10.3390/s18092790.
 [^20]:
     Wang, Yang, Jiayu Li, He Jing, Qiang Zhang, Jingkun Jiang, and Pratim Biswas. “Laboratory Evaluation and Calibration of Three Low-Cost Particle Sensors for Particulate Matter Measurement.” Aerosol Science and Technology 49, no. 11 (November 2, 2015): 1063–77. https://doi.org/10.1080/02786826.2015.1100710.
+
+[^21]:
+    World Health Organization. “WHO Global Air Quality Guidelines: Particulate Matter (PM2.5 and PM10), Ozone, Nitrogen Dioxide, Sulfur Dioxide and Carbon Monoxide.” Geneva: World Health Organization, 2021. https://www.who.int/publications/i/item/9789240034228.
+[^22]:
+    Directive (EU) 2024/2881 of the European Parliament and of the Council of 23 October 2024 on ambient air quality and cleaner air for Europe. https://eur-lex.europa.eu/eli/dir/2024/2881/oj/eng.
+[^23]:
+    US Environmental Protection Agency. “AQI Basics” (PM breakpoints revised in 2024). https://www.airnow.gov/aqi/aqi-basics/.

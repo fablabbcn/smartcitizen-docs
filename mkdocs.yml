@@ -88,12 +88,13 @@ nav:
         - Dallas DS18B20: knowledge/air/temperature_rel_humidity/DS18B20.md
       - Light:
         - knowledge/air/light/index.md
-        - AMS AS7311: knowledge/air/light/AMS_AS7331.md
-        # - Rohm BH1721FVC: knowledge/air/light/Rohm_BH1721FVC.md
+        - Rohm BH1730FVC: knowledge/air/light/Rohm_BH1730FVC.md
+        - AMS AS7331: knowledge/air/light/AMS_AS7331.md
+        - AMS AS7341: knowledge/air/light/AMS_AS7341.md
       - Pressure:
         - knowledge/air/pressure/index.md
-        # - NXP MPL3115A26: knowledge/air/pressure/NXP_MPL3115A26.md
-        # - ST LPS33K: knowledge/air/pressure/ST_LPS33K.md
+        - NXP MPL3115A2: knowledge/air/pressure/NXP_MPL3115A2.md
+        - ST LPS33K: knowledge/air/pressure/ST_LPS33K.md
     - Soil and Water:
       - knowledge/soil-water/index.md
       - pH:

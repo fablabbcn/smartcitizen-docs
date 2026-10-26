@@ -20,17 +20,31 @@ excerpt: "A high-end PID from Alphasense to measure VOCs."
 
 {%if feature_img_credit %}_Image Credit: **{{ feature_img_credit }}**_{.image-credit-banner-box}{%endif%}
 
-!!! warning "Under Construction"
-
-    More details on working principles, usage, considerations, and resources are coming soon.
-
 ## Working principle
 
-PID technology appears to be the primary sensor element of choice for VOCs measurements and is often used for measurement of summary concentration [2, 47].
+PID technology appears to be the primary sensor element of choice for VOCs measurements and is often used for measurement of summary concentration [^2].
 
 The sensor contains a ionization lamp. As compounds enter the detector they are bombarded by high-energy UV photons and are ionized when they absorb the UV light, resulting in ejection of electrons and the formation of positively charged ions. The ions produce an electric current, which is the signal output of the detector. The greater the concentration of the component, the more ions are produced, and the greater the current. The current is amplified and displayed on an ammeter or digital concentration display.
 
 Substances with ionisation potential below the sensor's lamp specification will be measured as a whole, with very little specificity in the readings [^2][^26][^28].
+
+## Usage and considerations
+
+Alphasense PID sensors have an **analog voltage output**, proportional to the concentration of VOCs. They come in different models with different sensitivities and ranges, from ppb to ppm levels. Check the [Alphasense website](https://www.alphasense.com/index.php/products/pid-air/) for the datasheets and application notes of each model.
+
+!!! info "Connecting to the SCK"
+    There is no dedicated firmware support for PID sensors. They can be connected to the SCK as analog sensors through the [Analog Sensor Board](/hardware/boards/analog-sensor-board/), which reads the voltage with a [TI ADS1115](/knowledge/other/TI_ADS1X15/) ADC. The SCK will log the **voltage**, which needs to be converted to concentration in post-processing, using the sensitivity of the sensor and its baseline (zero) voltage.
+
+Some considerations for using PID sensors:
+
+- The sensor measures all the compounds with an ionisation potential below the energy of its lamp, so the reading is a **total VOC** measurement. The response to each compound is different, so the readings are normally expressed as _isobutylene equivalent_, the gas used for calibrating the sensors
+- The baseline (zero) of the sensor needs to be determined periodically, for instance with a zero air filter
+- The lamp and the electrodes get dirty over time and need periodic cleaning or replacement
+- PID sensors consume more power than other low cost sensors, and need a stable power supply
+
+### Measurement range
+
+The measurement range depends on the model of the sensor. As an example, the high sensitivity **PID-AH2**, which is suitable for ambient air, has a linear range from **1 ppb to 50 ppm** (isobutylene equivalent). Other models are designed for higher concentrations (ppm level), for industrial safety applications. Make sure to check the datasheet of the model you are using.
 
 ## Limitations
 

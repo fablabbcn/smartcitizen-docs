@@ -63,4 +63,19 @@ From the long term deployment point of view, the one-shot mode has not been foun
 
 Make sure that you power the Smart Citizen Kit with a _good enough USB cable_ and with an adaptor that can provide at least 1A. We have found some issues when powering the sensor with a thin cable, or from a weak power source, like a screen.
 
+### Performance
+
+|Property               |Value                                                                          |
+|:-                     |:-                                                                             |
+|Sensor type            |Laser scattering PM sensor                                                     |
+|Particle size range    |0.3 – 1.0 µm, 1.0 – 2.5 µm, 2.5 – 10 µm                                        |
+|Counting efficiency    |50% at 0.3 µm, 98% at ≥0.5 µm                                                  |
+|Effective range (PM2.5) |0 – 500 µg/m3                                                                 |
+|Maximum range (PM2.5)  |≥1000 µg/m3                                                                    |
+|Resolution             |1 µg/m3                                                                        |
+|Consistency error (PM2.5) |±10 µg/m3 from 0 to 100 µg/m3, ±10% from 100 to 500 µg/m3                   |
+
+!!! info "Check the latest datasheet"
+    The specifications above are taken from the manufacturer's [datasheet](/assets/datasheets/pms5003/PTQ3004-2015 PMS5003 series data manual English_SLT_V1.0K.pdf). Note that the _consistency error_ is a measure of the difference between sensors, not of the accuracy against a reference instrument.
+
 ## Resources

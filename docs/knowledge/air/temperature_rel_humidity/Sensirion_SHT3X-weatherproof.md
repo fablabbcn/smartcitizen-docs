@@ -20,6 +20,9 @@ excerpt: "A temperature and humidity sensor in a weatherproof capsule"
 
 {%if feature_img_credit %}_Image Credit: **{{ feature_img_credit }}**_{.image-credit-banner-box}{%endif%}
 
+!!! info "Sensor ranges"
+    The weatherproof version uses the same sensor as the [SHT3X](/knowledge/air/temperature_rel_humidity/Sensirion_SHT3X/#performance) (SHT31 or SHT35), so the measurement ranges are the same: -40 ºC to 125 ºC and 0 to 100 %rh. Check the datasheet of your probe, since the cable and the housing can limit the operating temperature range.
+
 ## Assembly
 
 To use this sensor, you'll need a [screw connector to grove adaptor](/guides/getting-started/third-party-sensors/#sensors-with-open-leads):

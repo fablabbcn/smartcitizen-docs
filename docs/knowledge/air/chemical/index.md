@@ -16,6 +16,26 @@ Almost all the techniques above, except some cases of MOx sensors, only provide 
 
 For simpler, cheaper devices, tVOCs are generally the metric provided with very low selectivity, and the difficulty comes in when trying to perform sensor quality assessments in relation to reference equipment. This is due to the fact that a low-cost tVOCs sensor will not distinguish between different target species, and the sensitivity to each of them is not generally provided or determined by the manufacturer. This presents a challenge in defining firstly exactly what they are responding to, and in the case of using this data for scientific studies, what practical use this non-specific data has [^46]. Reference equipment might show different sensitivities to the same target species, and be more or less selective, so the tVOCs measurement is rendered useless for quantitative measurements, and should be used for trend assessment or qualitative analysis, especially at low ppb levels (<50 ppb) [^26][^28][^40][^41].
 
+### Reference levels
+
+There are no health-based guidelines for **total VOCs**, since their effect depends on the specific compounds in the mixture. As an orientation, the German Environment Agency (UBA) uses the following levels for indoor air [^47]:
+
+| Level | TVOC (mg/m3) | Interpretation |
+|:-: |:-: |:- |
+| 1 | < 0.3 | Hygienically safe. Target value |
+| 2 | 0.3 – 1 | Still hygienically safe, if no individual substance is too high |
+| 3 | 1 – 3 | Hygienically noticeable. Look for sources and ventilate more. Should not stay above this level for more than 12 months |
+| 4 | 3 – 10 | Hygienically of concern. Ventilate and find the source. Should not stay above this level for more than one month |
+| 5 | > 10 | Hygienically unacceptable. Avoid using the room |
+
+The conversion between mg/m3 and ppb depends on the mixture of compounds, so these levels can only be compared with sensors that report TVOC in mass units, and after a proper calibration. Most low-cost sensors report **relative** values, which are better interpreted as trends:
+
+- **Sensirion VOC index** ([SEN5X](/knowledge/air/pm/Sensirion_SEN5X/)): a value of **100** corresponds to the average conditions of the last 24 hours. Values above 100 mean more VOCs than usual (for instance, cooking or cleaning), and values below 100 mean less. Similarly, the **NOx index** has a baseline of **1**, and higher values indicate NOx events (for instance, a gas stove)
+- **MOx resistance** ([BME680](/knowledge/air/chemical/Bosch_BME680/), [TGS260X](/knowledge/air/chemical/Figaro_TGS260X/)): a **lower** resistance means **more** reducing gases. Compare with the sensor's own baseline in clean air
+- **eTVOC** ([CCS811](/knowledge/air/chemical/AMS_CCS811/)): an estimated value in ppb, useful to detect events, but not comparable with the levels above
+
+For **formaldehyde** (measured by the [SFA30](/knowledge/air/chemical/Sensirion_SFA30/)), the WHO indoor air quality guideline is **0.1 mg/m3** (around **80 ppb**) as a 30-minute average, to prevent sensory irritation, which also protects from long-term effects [^48].
+
 ### Supported sensors
 
 {{ insert_cards(type="sensor", filter="target", value=["vocs"])}}
@@ -23,6 +43,28 @@ For simpler, cheaper devices, tVOCs are generally the metric provided with very 
 ## Other chemical measurements
 
 Chemical composition sensors are those that are able to measure a specific chemical target species that are present in the air. Current state of the art of these sensors has proven capabilities of measuring CO, NO2, NO, SO2, H2S, O3, among others. Measurement principles, limitations and technologies available are different for these different target species. Most of the sensors available in the market are based on two types of technologies: electrochemical sensors, and metal oxides [^14].
+
+### Reference levels
+
+The table below shows the WHO air quality guidelines [^49] and the European Union limit values that apply from 2030 [^50] for the main gaseous pollutants. Concentrations are given in µg/m3 (mg/m3 for CO), and the approximate equivalent in ppb (ppm for CO) at 20 ºC and 1 atm is shown in brackets:
+
+| Pollutant | Averaging period | WHO guideline (2021) | EU limit value (2030) |
+|:- |:- |:-: |:-: |
+| NO2 | 1 hour | 200 µg/m3 (105 ppb) | 200 µg/m3 (max. 3 hours per year) |
+| NO2 | 24 hours | 25 µg/m3 (13 ppb) | 50 µg/m3 (max. 18 days per year) |
+| NO2 | Year | 10 µg/m3 (5 ppb) | 20 µg/m3 |
+| O3 | 8 hours | 100 µg/m3 (50 ppb) | 120 µg/m3 (target value) |
+| O3 | Peak season | 60 µg/m3 (30 ppb) | - |
+| SO2 | 10 minutes | 500 µg/m3 (188 ppb) | - |
+| SO2 | 1 hour | - | 350 µg/m3 (max. 3 hours per year) |
+| SO2 | 24 hours | 40 µg/m3 (15 ppb) | 50 µg/m3 (max. 18 days per year) |
+| CO | 8 hours | 10 mg/m3 (8.6 ppm) | 10 mg/m3 |
+| CO | 24 hours | 4 mg/m3 (3.4 ppm) | 4 mg/m3 (max. 18 days per year) |
+
+The conversion factors used are: 1 ppb of NO2 = 1.91 µg/m3, 1 ppb of O3 = 2.00 µg/m3, 1 ppb of SO2 = 2.66 µg/m3 and 1 ppm of CO = 1.16 mg/m3.
+
+!!! warning "Low-cost gas sensors"
+    Typical outdoor concentrations of these gases are in the low ppb range, which is at the limit of what low-cost sensors can measure. The readings of [MOx sensors](/knowledge/air/chemical/SGX_MICS/) cannot be compared with these values, and [electrochemical sensors](/knowledge/air/chemical/Alphasense_Electrochemical/) need a careful calibration (ideally, co-located with a reference station) before doing so.
 
 ### Supported sensors
 
@@ -58,3 +100,12 @@ The sensors that are currently supported are:
     Skog, Kate M., Fulizi Xiong, Hitoshi Kawashima, Evan Doyle, Ricardo Soto, and Drew R. Gentner. “Compact, Automated, Inexpensive, and Field-Deployable Vacuum-Outlet Gas Chromatograph for Trace-Concentration Gas-Phase Organic Compounds.” Analytical Chemistry 91, no. 2 (January 15, 2019): 1318–27. https://doi.org/10.1021/acs.analchem.8b03095.
 [^46]:
     Lewis, Alastair C., James D. Lee, Peter M. Edwards, Marvin D. Shaw, Mat J. Evans, Sarah J. Moller, Katie R. Smith, et al. “Evaluating the Performance of Low Cost Chemical Sensors for Air Pollution Research.” Faraday Discussions 189 (2016): 85–103. https://doi.org/10.1039/C5FD00201J.
+
+[^47]:
+    Umweltbundesamt. “Beurteilung von Innenraumluftkontaminationen mittels Referenz- und Richtwerten. Handreichung der Ad-hoc-Arbeitsgruppe der Innenraumlufthygiene-Kommission des Umweltbundesamtes und der Obersten Landesgesundheitsbehörden.” Bundesgesundheitsblatt 50 (2007): 990–1005. https://doi.org/10.1007/s00103-007-0290-y.
+[^48]:
+    World Health Organization. “WHO Guidelines for Indoor Air Quality: Selected Pollutants.” Copenhagen: WHO Regional Office for Europe, 2010. https://www.who.int/publications/i/item/9789289002134.
+[^49]:
+    World Health Organization. “WHO Global Air Quality Guidelines: Particulate Matter (PM2.5 and PM10), Ozone, Nitrogen Dioxide, Sulfur Dioxide and Carbon Monoxide.” Geneva: World Health Organization, 2021. https://www.who.int/publications/i/item/9789240034228.
+[^50]:
+    Directive (EU) 2024/2881 of the European Parliament and of the Council of 23 October 2024 on ambient air quality and cleaner air for Europe. https://eur-lex.europa.eu/eli/dir/2024/2881/oj/eng.

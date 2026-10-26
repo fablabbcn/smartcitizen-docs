@@ -88,9 +88,9 @@ All the {{ short_name }}2.X generations above 2.1 (included) measure **at least*
     |:-                                         |:-:    |:-:                        |
     | Air temperature                           | ºC    | Sensirion SHT-31          |
     | Relative Humidity                         | % REL | Sensirion SHT-31          |
-    | Noise level                               | dBA   | Invensense ICS-434342     |
-    | Ambient light                             | lux   | Rohm BH1721FVC            |
-    | Barometric pressure                       | kPa   | NXP MPL3115A26S           |
+    | Noise level                               | dBA   | Invensense ICS-43432     |
+    | Ambient light                             | lux   | Rohm BH1730FVC            |
+    | Barometric pressure                       | kPa   | NXP MPL3115A2           |
     | UV-A, B, C                                | uW/cm2| AMS AS7331                |
     | Particulate Matter PM1, PM2.5, PM4, PM10  | µg/m3 | Sensirion SEN5X           |
     | NOx Index, VOCs Index (Optional)          | -     | Sensirion SEN54, 55       |
@@ -99,8 +99,8 @@ All the {{ short_name }}2.X generations above 2.1 (included) measure **at least*
     |:-                                         |:-:    |:-:                        |
     | Air temperature                           | ºC    | Sensirion SHT-31          |
     | Relative Humidity                         | % REL | Sensirion SHT-31          |
-    | Noise level                               | dBA   | Invensense ICS-434342     |
-    | Ambient light                             | lux   | Rohm BH1721FVC            |
+    | Noise level                               | dBA   | Invensense ICS-43432     |
+    | Ambient light                             | lux   | Rohm BH1730FVC            |
     | Barometric pressure                       | kPa   | ST LPS33K                 |
     | UV-A, B, C                                | uW/cm2| AMS AS7331                |
     | Particulate Matter PM1, PM2.5, PM4, PM10  | µg/m3 | Sensirion SEN5X           |
@@ -110,9 +110,9 @@ All the {{ short_name }}2.X generations above 2.1 (included) measure **at least*
     |:-                                         |:-:    |:-:                        |
     | Air temperature                           | ºC    | Sensirion SHT-31          |
     | Relative Humidity                         | % REL | Sensirion SHT-31          |
-    | Noise level                               | dBA   | Invensense ICS-434342     |
-    | Ambient light                             | lux   | Rohm BH1721FVC            |
-    | Barometric pressure                       | kPa   | NXP MPL3115A26            |
+    | Noise level                               | dBA   | Invensense ICS-43432     |
+    | Ambient light                             | lux   | Rohm BH1730FVC            |
+    | Barometric pressure                       | kPa   | NXP MPL3115A2            |
     | Equivalent Carbon Dioxide                 | ppm   | AMS CCS811                |
     | Volatile Organic Compounds                | ppb   | AMS CCS811                |
     | Particulate Matter PM1, PM2.5, PM10       | µg/m3 | Plantower PMS 5003        |

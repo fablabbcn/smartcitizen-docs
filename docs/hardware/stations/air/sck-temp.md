@@ -26,9 +26,9 @@ excerpt: Measure Indoor or Outdoor Air Quality with this unit. Beyond the metric
     |:-                                     |:-:    |:-:                    |
     | Air temperature                       | ºC    | Sensirion SHT-31      |
     | Relative Humidity                     | % REL | Sensirion SHT-31      |
-    | Noise level                           | dBA   | Invensense ICS-434342 |
-    | Ambient light                         | lux   | Rohm BH1721FVC        |
-    | Barometric pressure                   | kPa   | NXP MPL3115A26        |
+    | Noise level                           | dBA   | Invensense ICS-43432 |
+    | Ambient light                         | lux   | Rohm BH1730FVC        |
+    | Barometric pressure                   | kPa   | NXP MPL3115A2        |
     | Equivalent Carbon Dioxide             | ppm   | AMS CCS811            |
     | Volatile Organic Compounds            | ppb   | AMS CCS811            |
     | Particulate Matter PM1, PM2.5, PM10   | µg/m3 | Plantower PMS 5003    |
@@ -40,9 +40,9 @@ excerpt: Measure Indoor or Outdoor Air Quality with this unit. Beyond the metric
     |:-                                     |:-:    |:-:                    |
     | Air temperature                       | ºC    | Sensirion SHT-31      |
     | Relative Humidity                     | % REL | Sensirion SHT-31      |
-    | Noise level                           | dBA   | Invensense ICS-434342 |
-    | Ambient light                         | lux   | Rohm BH1721FVC        |
-    | Barometric pressure                   | kPa   | NXP MPL3115A26        |
+    | Noise level                           | dBA   | Invensense ICS-43432 |
+    | Ambient light                         | lux   | Rohm BH1730FVC        |
+    | Barometric pressure                   | kPa   | NXP MPL3115A2        |
     | Particulate Matter PM1, PM2.5, PM4.0 PM10   | µg/m3 | Sensirion SEN5X    |
     | External air temperature              | ºC    | DF Robot Module Sensirion SHT-31 Weatherproof    |
     | External relative Humidity            | % REL | DF Robot Module Sensirion SHT-31 Weatherproof    |

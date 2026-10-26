@@ -69,6 +69,17 @@ There are two major factors in the longevity of a sensor’s calibration. The fi
 
 An analytical approach to counteracting this drift might be "merging calibrations", where a sensor is calibrated at the start and end of a four-month campaign, and the coefficients gradually change from one end of the experiment run to the other.
 
+### Detection range
+
+The MiCS-4514 has two independent sensors, with the following typical detection ranges, according to the manufacturer [^third]:
+
+| Sensor | Target gas | Typical detection range |
+|:- |:- |:-: |
+| RED | Carbon monoxide (CO) | 1 – 1000 ppm |
+| OX | Nitrogen dioxide (NO2) | 0.05 – 10 ppm |
+
+These ranges are much wider than the typical ambient concentrations of CO (generally below a few ppm) and NO2 (generally below 0.1 ppm), which, together with the cross-sensitivities explained above, is one of the reasons why these sensors are better suited to detect trends than to provide absolute concentrations.
+
 ### References
 
 [^first]:[Practical Use of Metal Oxide Semiconductor Gas Sensors for Measuring Nitrogen Dioxide and Ozone in Urban Environments](https://www.researchgate.net/publication/318567495_Practical_Use_of_Metal_Oxide_Semiconductor_Gas_Sensors_for_Measuring_Nitrogen_Dioxide_and_Ozone_in_Urban_Environments)

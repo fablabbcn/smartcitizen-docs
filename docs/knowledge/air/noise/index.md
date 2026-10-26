@@ -16,6 +16,46 @@ Even if the are high sound pressure levels floating around in the air, we might 
 
 Microphones are very interesting in order to **understand sources of urban noise pollution** since it provides us with readings that we can process to obtain dBA levels (SPL with correction).
 
+## Reference levels
+
+Noise is one of the main environmental health risks in cities: long-term exposure is related to annoyance, sleep disturbance and cardiovascular disease. Noise levels are generally expressed in **dBA** (A-weighted decibels), and since the scale is logarithmic, an increase of 3 dB means **double** the sound energy, and an increase of 10 dB is perceived as roughly twice as loud.
+
+Some typical sound levels, for orientation:
+
+| Sound level (dBA) | Example |
+|:-: |:- |
+| 20 – 30 | Very quiet bedroom at night |
+| 40 | Quiet library, quiet residential area at night |
+| 50 – 60 | Normal conversation, office |
+| 70 | Busy street, vacuum cleaner |
+| 80 – 90 | Heavy traffic at close distance, loud restaurant |
+| 100 – 110 | Concert, nightclub |
+| 120+ | Close to a siren, threshold of pain |
+
+The WHO Environmental Noise Guidelines for Europe recommend these **long-term** average levels [^1]:
+
+| Source | Lden (day-evening-night) | Lnight (night) |
+|:- |:-: |:-: |
+| Road traffic | < 53 dB | < 45 dB |
+| Railway | < 54 dB | < 44 dB |
+| Aircraft | < 45 dB | < 40 dB |
+| Wind turbines | < 45 dB | - |
+| Leisure (yearly average of the exposure, for instance concerts or nightclubs) | < 70 dB LAeq,24h | - |
+
+Indoors, the WHO Guidelines for Community Noise recommend keeping the average level below **35 dBA** in living areas during the day, and below **30 dBA** in bedrooms at night (with peaks below 45 dBA) [^2]. At work, the EU establishes that protective measures are needed above a daily exposure of **80 dBA**, hearing protection is mandatory above **85 dBA**, and the exposure must never exceed **87 dBA** (with hearing protection) [^3].
+
+!!! info "Comparing with the guidelines"
+    The guidelines refer to averages over long periods (a full day, a night, a year). Individual readings of the kit are short-term averages, so they need to be averaged over the same period before comparing them. Also, a single kit measures the noise at one point, and the levels can change a lot within a few meters (for instance, between the street side and the courtyard side of a building).
+
 ## Supported sensors
 
 {{ insert_cards(type="sensor", filter="target", value=["noise"])}}
+
+## References
+
+[^1]:
+    World Health Organization. “Environmental Noise Guidelines for the European Region.” Copenhagen: WHO Regional Office for Europe, 2018. https://www.who.int/europe/publications/i/item/9789289053563.
+[^2]:
+    Berglund, Birgitta, Thomas Lindvall, and Dietrich H. Schwela. “Guidelines for Community Noise.” Geneva: World Health Organization, 1999. https://iris.who.int/handle/10665/66217.
+[^3]:
+    Directive 2003/10/EC of the European Parliament and of the Council of 6 February 2003 on the minimum health and safety requirements regarding the exposure of workers to the risks arising from physical agents (noise). https://eur-lex.europa.eu/eli/dir/2003/10/oj.
