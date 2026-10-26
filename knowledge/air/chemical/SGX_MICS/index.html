@@ -2148,6 +2148,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#detection-range" class="md-nav__link">
+    <span class="md-ellipsis">
+      Detection range
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#references" class="md-nav__link">
     <span class="md-ellipsis">
       References
@@ -2556,6 +2565,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -2603,11 +2616,53 @@
   
   
     <li class="md-nav__item">
+      <a href="../../light/Rohm_BH1730FVC/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Rohm BH1730FVC
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../light/AMS_AS7331/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    AMS AS7311
+    AMS AS7331
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../light/AMS_AS7341/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AMS AS7341
   </span>
   
 
@@ -2638,6 +2693,10 @@
           
         
       
+        
+      
+        
+      
     
     
     
@@ -2662,6 +2721,11 @@
 
             </a>
             
+              
+              <label class="md-nav__link " for="__nav_2_2_8" id="__nav_2_2_8_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
           </div>
         
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_8_label" aria-expanded="false">
@@ -2671,6 +2735,48 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pressure/NXP_MPL3115A2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    NXP MPL3115A2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pressure/ST_LPS33K/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ST LPS33K
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
           </ul>
@@ -4955,6 +5061,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#detection-range" class="md-nav__link">
+    <span class="md-ellipsis">
+      Detection range
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#references" class="md-nav__link">
     <span class="md-ellipsis">
       References
@@ -5043,6 +5158,30 @@
 <p>Although the deployment of multiple different sensors can compensate for the cross-sensitivity issues in calibration, it cannot eliminate it. MOS sensors can thus be used only in situations where any interfering species can either be measured by other means, or they must be calibrated regularly and used in locations where the background varies in concentration slowly compared with the target gases. As well, the <strong>sensor drift</strong> over time is an important issue that requires sensor recalibration over time.</p>
 <p>There are two major factors in the longevity of a sensor’s calibration. The first is the <strong>natural degradation</strong> of the heater element, which becomes hotter over prolonged use and causes the sensor’s response profile to vary. The second is the effect of slowly-varying interfering gases, which over the course of months shifts the sensor’s baseline. The first problem may have an engineering solution, but the second will involve taking the results of the tests in an artificial atmosphere, identifying the most critical species and either measuring or possibly modelling their likely concentrations during deployments.</p>
 <p>An analytical approach to counteracting this drift might be "merging calibrations", where a sensor is calibrated at the start and end of a four-month campaign, and the coefficients gradually change from one end of the experiment run to the other.</p>
+<h3 id="detection-range">Detection range<a class="headerlink" href="#detection-range" title="Permanent link">&para;</a></h3>
+<p>The MiCS-4514 has two independent sensors, with the following typical detection ranges, according to the manufacturer <sup id="fnref2:third"><a class="footnote-ref" href="#fn:third">3</a></sup>:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Sensor</th>
+<th style="text-align: left;">Target gas</th>
+<th style="text-align: center;">Typical detection range</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">RED</td>
+<td style="text-align: left;">Carbon monoxide (CO)</td>
+<td style="text-align: center;">1 – 1000 ppm</td>
+</tr>
+<tr>
+<td style="text-align: left;">OX</td>
+<td style="text-align: left;">Nitrogen dioxide (NO2)</td>
+<td style="text-align: center;">0.05 – 10 ppm</td>
+</tr>
+</tbody>
+</table>
+<p>These ranges are much wider than the typical ambient concentrations of CO (generally below a few ppm) and NO2 (generally below 0.1 ppm), which, together with the cross-sensitivities explained above, is one of the reasons why these sensors are better suited to detect trends than to provide absolute concentrations.</p>
 <h3 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h3>
 <div class="footnote">
 <hr />
@@ -5054,7 +5193,7 @@
 <p><a href="https://www.witpress.com/elibrary/wit-transactions-on-the-built-environment/34/8033">Modelling Of Water Adsorption On SnO<sub>2</sub> Surface</a>&#160;<a class="footnote-backref" href="#fnref:second" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:second" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:second" title="Jump back to footnote 2 in the text">&#8617;</a></p>
 </li>
 <li id="fn:third">
-<p><a href="http://files.manylabs.org/datasheets/MICS-4514.pdf">MICS-4514 Datasheet</a>&#160;<a class="footnote-backref" href="#fnref:third" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+<p><a href="http://files.manylabs.org/datasheets/MICS-4514.pdf">MICS-4514 Datasheet</a>&#160;<a class="footnote-backref" href="#fnref:third" title="Jump back to footnote 3 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:third" title="Jump back to footnote 3 in the text">&#8617;</a></p>
 </li>
 <li id="fn:fourth">
 <p><a href="https://www.sgxsensortech.com/content/uploads/2014/08/AN2-%E2%80%93-Frequently-Asked-Questions-for-MiCS-Gas-Sensors.pdf">Frequently-Asked-Questions-for-MiCS-Gas-Sensors</a>&#160;<a class="footnote-backref" href="#fnref:fourth" title="Jump back to footnote 4 in the text">&#8617;</a></p>

@@ -2133,6 +2133,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#measurement-range" class="md-nav__link">
+    <span class="md-ellipsis">
+      Measurement range
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#stabilisation" class="md-nav__link">
     <span class="md-ellipsis">
       Stabilisation
@@ -2589,6 +2598,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -2636,11 +2649,53 @@
   
   
     <li class="md-nav__item">
+      <a href="../../light/Rohm_BH1730FVC/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Rohm BH1730FVC
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../light/AMS_AS7331/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    AMS AS7311
+    AMS AS7331
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../light/AMS_AS7341/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AMS AS7341
   </span>
   
 
@@ -2671,6 +2726,10 @@
           
         
       
+        
+      
+        
+      
     
     
     
@@ -2695,6 +2754,11 @@
 
             </a>
             
+              
+              <label class="md-nav__link " for="__nav_2_2_8" id="__nav_2_2_8_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
           </div>
         
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_8_label" aria-expanded="false">
@@ -2704,6 +2768,48 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pressure/NXP_MPL3115A2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    NXP MPL3115A2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pressure/ST_LPS33K/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ST LPS33K
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
           </ul>
@@ -4994,6 +5100,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#measurement-range" class="md-nav__link">
+    <span class="md-ellipsis">
+      Measurement range
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#stabilisation" class="md-nav__link">
     <span class="md-ellipsis">
       Stabilisation
@@ -5113,6 +5228,50 @@
 <li>Usage of more advanced physical models as detailed in <sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></li>
 <li>Usage of site-specific calibration models with short-term deployments in co-location with reference measurement equipment and generalised calibration models derived from the junction of these <sup id="fnref:4"><a class="footnote-ref" href="#fn:4">4</a></sup>.</li>
 </ul>
+<h3 id="measurement-range">Measurement range<a class="headerlink" href="#measurement-range" title="Permanent link">&para;</a></h3>
+<p>The range of each sensor depends on its target gas. These are the ranges of the B4 series sensors, according to the manufacturer (the A4 series have similar targets, check their datasheets):</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Sensor</th>
+<th style="text-align: left;">Target gas</th>
+<th style="text-align: center;">Measurement range</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">CO-B4</td>
+<td style="text-align: left;">Carbon monoxide</td>
+<td style="text-align: center;">0 – 1000 ppm</td>
+</tr>
+<tr>
+<td style="text-align: left;">NO2-B43F</td>
+<td style="text-align: left;">Nitrogen dioxide</td>
+<td style="text-align: center;">0 – 20 ppm</td>
+</tr>
+<tr>
+<td style="text-align: left;">NO-B4</td>
+<td style="text-align: left;">Nitric oxide</td>
+<td style="text-align: center;">0 – 20 ppm</td>
+</tr>
+<tr>
+<td style="text-align: left;">OX-B431</td>
+<td style="text-align: left;">Ozone + Nitrogen dioxide</td>
+<td style="text-align: center;">0 – 20 ppm</td>
+</tr>
+<tr>
+<td style="text-align: left;">SO2-B4</td>
+<td style="text-align: left;">Sulphur dioxide</td>
+<td style="text-align: center;">0 – 100 ppm</td>
+</tr>
+<tr>
+<td style="text-align: left;">H2S-B4</td>
+<td style="text-align: left;">Hydrogen sulphide</td>
+<td style="text-align: center;">0 – 100 ppm</td>
+</tr>
+</tbody>
+</table>
+<p>Note that ambient concentrations are generally in the ppb range, so the useful part of the range is the very low end, where the noise and the baseline (zero) of the sensors are very important. Check the <a href="https://www.alphasense.com/products/">Alphasense website</a> for the latest datasheets of each sensor.</p>
 <h3 id="stabilisation">Stabilisation<a class="headerlink" href="#stabilisation" title="Permanent link">&para;</a></h3>
 <p>The electrochemical sensors <strong>need stabilisation time under the testing conditions</strong> they will be at. It is important to set and power the sensors with sufficient time (1-2 days) on the test environment for them to adapt. The newer the sensor, the more stabilisation time it requires. For this deployment, you will be receiving brand new sensors.</p>
 <p>Humidity and temperature extremes will require of further sensor adaptation, in order to dry out or absorb the necessary humidity for their proper functioning.</p>

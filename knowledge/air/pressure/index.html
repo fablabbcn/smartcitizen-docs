@@ -15,10 +15,10 @@
         <link rel="canonical" href="https://docs.smartcitizen.me/knowledge/air/pressure/">
       
       
-        <link rel="prev" href="../light/AMS_AS7331/">
+        <link rel="prev" href="../light/AMS_AS7341/">
       
       
-        <link rel="next" href="../../soil-water/">
+        <link rel="next" href="NXP_MPL3115A2/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.ico">
@@ -2472,6 +2472,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -2519,11 +2523,53 @@
   
   
     <li class="md-nav__item">
+      <a href="../light/Rohm_BH1730FVC/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Rohm BH1730FVC
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../light/AMS_AS7331/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    AMS AS7311
+    AMS AS7331
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../light/AMS_AS7341/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AMS AS7341
   </span>
   
 
@@ -2556,6 +2602,10 @@
           
         
       
+        
+      
+        
+      
     
     
     
@@ -2580,6 +2630,11 @@
 
             </a>
             
+              
+              <label class="md-nav__link md-nav__link--active" for="__nav_2_2_8" id="__nav_2_2_8_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
           </div>
         
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_8_label" aria-expanded="true">
@@ -2589,6 +2644,48 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="NXP_MPL3115A2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    NXP MPL3115A2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ST_LPS33K/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ST LPS33K
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
           </ul>
@@ -4845,6 +4942,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#reference-levels" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reference levels
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#supported-sensors" class="md-nav__link">
     <span class="md-ellipsis">
       Supported Sensors
@@ -4891,8 +4997,67 @@
 
 
 <h1 id="barometric-pressure-measurements">Barometric Pressure Measurements<a class="headerlink" href="#barometric-pressure-measurements" title="Permanent link">&para;</a></h1>
+<p><strong>Barometric pressure</strong> (or atmospheric pressure) is the pressure exerted by the weight of the air above us. At sea level, it is around 101.3 kPa, and it decreases with altitude. It also changes with the weather: low pressure systems are generally related to clouds and rain, while high pressure systems are related to clear skies. Barometric pressure is also used to estimate altitude, and to compensate other sensors that are affected by pressure, such as some gas sensors.</p>
+<p>All the versions of the SCK measure barometric pressure with a MEMS sensor in the <a href="/hardware/boards/urban-board/">Urban Board</a>.</p>
+<h2 id="reference-levels">Reference levels<a class="headerlink" href="#reference-levels" title="Permanent link">&para;</a></h2>
+<p>Barometric pressure has no <em>good</em> or <em>bad</em> levels from a health point of view, but these values help to interpret the readings:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Condition</th>
+<th style="text-align: center;">Pressure</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Standard atmosphere at sea level</td>
+<td style="text-align: center;">101.325 kPa (1013.25 hPa)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Typical range at sea level</td>
+<td style="text-align: center;">~98 – 104 kPa</td>
+</tr>
+<tr>
+<td style="text-align: left;">Low pressure system (clouds, rain, storms)</td>
+<td style="text-align: center;">Below ~100 kPa at sea level</td>
+</tr>
+<tr>
+<td style="text-align: left;">High pressure system (stable weather, clear skies)</td>
+<td style="text-align: center;">Above ~102 kPa at sea level</td>
+</tr>
+<tr>
+<td style="text-align: left;">Change with altitude, close to sea level</td>
+<td style="text-align: center;">~ -1.2 kPa every 100 m</td>
+</tr>
+</tbody>
+</table>
+<p>The SCK reports the <strong>absolute</strong> (station) pressure, in kPa. Weather services report pressure <em>reduced to sea level</em>, so to compare both, the altitude of the kit needs to be taken into account (for instance, a kit at 500 m will read around 6 kPa less than the values reported by the weather service). Instead of the absolute value, the <strong>trend</strong> is often more useful: a fast drop in pressure (several hPa in a few hours) is generally a sign of an approaching storm.</p>
 <h2 id="supported-sensors">Supported Sensors<a class="headerlink" href="#supported-sensors" title="Permanent link">&para;</a></h2>
-<p>None</p>
+<div class="sensor-block-multi ">
+    <div class="sensor-banner orange-sensor-banner">
+    <a href="/knowledge/air/pressure/NXP_MPL3115A2/" class="a-sensor-banner">
+        <div class="sensor-image-block">
+            <img src="/assets/images/nxp-mpl3115a26.jpg" alt="NXP MPL3115A2" class="sensor-image">
+        </div>
+        <div class="sensor-tags-block-container">
+            <h1>NXP MPL3115A2</h1>
+
+            <p class="sensor-excerpt"> A barometric pressure sensor, that can also estimate altitude. Available in SCK2.1 and SCK2.3. </p>
+        </div>
+    </a>
+</div><div class="sensor-banner orange-sensor-banner">
+    <a href="/knowledge/air/pressure/ST_LPS33K/" class="a-sensor-banner">
+        <div class="sensor-image-block">
+            <img src="/assets/images/st-lps33k.jpg" alt="ST LPS33K" class="sensor-image">
+        </div>
+        <div class="sensor-tags-block-container">
+            <h1>ST LPS33K</h1>
+
+            <p class="sensor-excerpt"> A compact barometric pressure sensor. Available in SCK2.2. </p>
+        </div>
+    </a>
+</div>
+</div>
 
 
 
@@ -4955,7 +5120,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../light/AMS_AS7331/" class="md-footer__link md-footer__link--prev" aria-label="Previous: AMS AS7311">
+          <a href="../light/AMS_AS7341/" class="md-footer__link md-footer__link--prev" aria-label="Previous: AMS AS7341">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -4965,20 +5130,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                AMS AS7311
+                AMS AS7341
               </div>
             </div>
           </a>
         
         
           
-          <a href="../../soil-water/" class="md-footer__link md-footer__link--next" aria-label="Next: Soil and water measurements">
+          <a href="NXP_MPL3115A2/" class="md-footer__link md-footer__link--next" aria-label="Next: NXP MPL3115A2">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Soil and water measurements
+                NXP MPL3115A2
               </div>
             </div>
             <div class="md-footer__button md-icon">

@@ -18,7 +18,7 @@
         <link rel="prev" href="../temperature_rel_humidity/DS18B20/">
       
       
-        <link rel="next" href="AMS_AS7331/">
+        <link rel="next" href="Rohm_BH1730FVC/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.ico">
@@ -2474,6 +2474,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -2521,11 +2525,53 @@
   
   
     <li class="md-nav__item">
+      <a href="Rohm_BH1730FVC/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Rohm BH1730FVC
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="AMS_AS7331/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    AMS AS7311
+    AMS AS7331
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="AMS_AS7341/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AMS AS7341
   </span>
   
 
@@ -2556,6 +2602,10 @@
           
         
       
+        
+      
+        
+      
     
     
     
@@ -2580,6 +2630,11 @@
 
             </a>
             
+              
+              <label class="md-nav__link " for="__nav_2_2_8" id="__nav_2_2_8_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
           </div>
         
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_8_label" aria-expanded="false">
@@ -2589,6 +2644,48 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pressure/NXP_MPL3115A2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    NXP MPL3115A2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pressure/ST_LPS33K/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ST LPS33K
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
           </ul>
@@ -4845,9 +4942,60 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#reference-levels" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reference levels
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Reference levels">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ambient-light-lux" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ambient light (lux)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uv-radiation" class="md-nav__link">
+    <span class="md-ellipsis">
+      UV radiation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flicker" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flicker
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#supported-sensors" class="md-nav__link">
     <span class="md-ellipsis">
       Supported sensors
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
     </span>
   </a>
   
@@ -4891,7 +5039,117 @@
 
 
 <h1 id="light-measurements">Light Measurements<a class="headerlink" href="#light-measurements" title="Permanent link">&para;</a></h1>
-<p>Light measurements supported in the SCK can be either for visible light (ambient light sensors or ALS) or ultraviolet light sensors (UV). Ambient light can be an indicator of light pollution, while UV-index can help people determine if they live in an area where they are exposed to high levels of UV radiation. In some areas of the world, this is an important issue, given the ozone-layer depletion and the increased levels of UV-radiation because of it.</p>
+<p>Light measurements supported in the SCK can be either for visible light (ambient light sensors or ALS), ultraviolet light sensors (UV), or spectral sensors. Ambient light can be an indicator of light pollution, while UV-index can help people determine if they live in an area where they are exposed to high levels of UV radiation. In some areas of the world, this is an important issue, given the ozone-layer depletion and the increased levels of UV-radiation because of it. Additionally, spectral sensors can measure the color composition of light, from violet to near infrared, and detect the flicker of artificial lighting.</p>
+<h2 id="reference-levels">Reference levels<a class="headerlink" href="#reference-levels" title="Permanent link">&para;</a></h2>
+<h3 id="ambient-light-lux">Ambient light (lux)<a class="headerlink" href="#ambient-light-lux" title="Permanent link">&para;</a></h3>
+<p>There are no <em>good</em> or <em>bad</em> light levels in absolute terms, as it depends on the activity and on the time of the day. These are some typical values, for orientation:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Illuminance (lux)</th>
+<th style="text-align: left;">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">&lt; 0.01</td>
+<td style="text-align: left;">Moonless night sky, far from cities</td>
+</tr>
+<tr>
+<td style="text-align: center;">0.1 – 0.3</td>
+<td style="text-align: left;">Full moon</td>
+</tr>
+<tr>
+<td style="text-align: center;">5 – 50</td>
+<td style="text-align: left;">Street lighting</td>
+</tr>
+<tr>
+<td style="text-align: center;">100</td>
+<td style="text-align: left;">Corridors, stairs</td>
+</tr>
+<tr>
+<td style="text-align: center;">300 – 500</td>
+<td style="text-align: left;">Offices, classrooms (500 lux is the usual requirement for desk work <sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>)</td>
+</tr>
+<tr>
+<td style="text-align: center;">1000 – 10.000</td>
+<td style="text-align: left;">Overcast day, outdoors</td>
+</tr>
+<tr>
+<td style="text-align: center;">30.000 – 100.000</td>
+<td style="text-align: left;">Direct sunlight</td>
+</tr>
+</tbody>
+</table>
+<p>Light also has an effect on our <strong>sleep and circadian rhythm</strong>. Recent recommendations suggest at least 250 lux during the day, below 10 lux in the three hours before going to sleep, and below 1 lux in the bedroom at night <sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup>. Note that these recommendations are given in <em>melanopic</em> units, which are more sensitive to blue light, so photopic lux (as measured by ambient light sensors) are only an approximation. At night, ambient light measurements can also be used to study <strong>light pollution</strong>: in a natural dark environment, the light level should be well below 1 lux.</p>
+<h3 id="uv-radiation">UV radiation<a class="headerlink" href="#uv-radiation" title="Permanent link">&para;</a></h3>
+<p>The usual reference for UV radiation is the <strong>UV index</strong> (UVI), defined by the WHO <sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup>:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">UV index</th>
+<th style="text-align: left;">Category</th>
+<th style="text-align: left;">Recommended protection</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0 – 2</td>
+<td style="text-align: left;">Low</td>
+<td style="text-align: left;">No protection needed</td>
+</tr>
+<tr>
+<td style="text-align: center;">3 – 5</td>
+<td style="text-align: left;">Moderate</td>
+<td style="text-align: left;">Protection needed: shade around midday, shirt, sunscreen and hat</td>
+</tr>
+<tr>
+<td style="text-align: center;">6 – 7</td>
+<td style="text-align: left;">High</td>
+<td style="text-align: left;">Protection needed</td>
+</tr>
+<tr>
+<td style="text-align: center;">8 – 10</td>
+<td style="text-align: left;">Very high</td>
+<td style="text-align: left;">Extra protection: avoid being outside around midday</td>
+</tr>
+<tr>
+<td style="text-align: center;">11+</td>
+<td style="text-align: left;">Extreme</td>
+<td style="text-align: left;">Extra protection</td>
+</tr>
+</tbody>
+</table>
+<p>The UV index is calculated from the UV irradiance <strong>weighted by the sensitivity of the skin</strong> (<em>erythemal</em> weighting), which is much higher for UV-B than for UV-A. Each unit of UV index corresponds to 25 mW/m2 (2.5 µW/cm2) of erythemally weighted irradiance. The <a href="/knowledge/air/light/AMS_AS7331/">AS7331</a> measures the UV-A, UV-B and UV-C bands <strong>without</strong> this weighting, so its readings can't be directly converted to UV index without a calibration against a reference instrument.</p>
+<h3 id="flicker">Flicker<a class="headerlink" href="#flicker" title="Permanent link">&para;</a></h3>
+<p>Light flicker (measured by the <a href="/knowledge/air/light/AMS_AS7341/">AS7341</a>) is not visible above ~80 Hz, but it can cause discomfort, headaches, and in extreme cases, seizures. The IEEE 1789-2015 recommendation defines a <strong>low risk</strong> zone depending on the frequency and the percent of modulation of the light (the difference between maximum and minimum light, relative to the sum of both) <sup id="fnref:4"><a class="footnote-ref" href="#fn:4">4</a></sup>:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Flicker frequency</th>
+<th style="text-align: center;">Low risk</th>
+<th style="text-align: center;">No observable effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Below 90 Hz</td>
+<td style="text-align: center;">Modulation &lt; 0.025 x frequency (%)</td>
+<td style="text-align: center;">Modulation &lt; 0.01 x frequency (%)</td>
+</tr>
+<tr>
+<td style="text-align: left;">90 – 1250 Hz</td>
+<td style="text-align: center;">Modulation &lt; 0.08 x frequency (%)</td>
+<td style="text-align: center;">Modulation &lt; 0.0333 x frequency (%)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Above 1250 Hz</td>
+<td style="text-align: center;">No restriction</td>
+<td style="text-align: center;">No restriction above 3000 Hz</td>
+</tr>
+</tbody>
+</table>
+<p>For instance, a lamp flickering at 100 Hz is in the low risk zone if its modulation is below 8 %. The SCK reports the flicker amplitude as a peak to peak value in counts, so it is useful to compare light sources, but the percent of modulation needs to be estimated with the average light level.</p>
 <h2 id="supported-sensors">Supported sensors<a class="headerlink" href="#supported-sensors" title="Permanent link">&para;</a></h2>
 <div class="sensor-block-multi ">
     <div class="sensor-banner orange-sensor-banner">
@@ -4902,10 +5160,51 @@
         <div class="sensor-tags-block-container">
             <h1>AMS AS7331</h1>
 
-            <p class="sensor-excerpt"> A sensor for measuring UV-index! </p>
+            <p class="sensor-excerpt"> A sensor for measuring UV-A, UV-B and UV-C light! Available in SCK2.2 and above. </p>
+        </div>
+    </a>
+</div><div class="sensor-banner orange-sensor-banner">
+    <a href="/knowledge/air/light/AMS_AS7341/" class="a-sensor-banner">
+        <div class="sensor-image-block">
+            <img src="/assets/images/ams-as7341.jpg" alt="AMS AS7341" class="sensor-image">
+        </div>
+        <div class="sensor-tags-block-container">
+            <h1>AMS AS7341</h1>
+
+            <p class="sensor-excerpt"> The AS7341 is an 11-channel spectral sensor by ams OSRAM. You can use it to measure the color composition of light, from violet to near infrared, and to detect light flicker. </p>
+        </div>
+    </a>
+</div><div class="sensor-banner orange-sensor-banner">
+    <a href="/knowledge/air/light/Rohm_BH1730FVC/" class="a-sensor-banner">
+        <div class="sensor-image-block">
+            <img src="/assets/images/rohm-bh1721fvc.jpg" alt="Rohm BH1730FVC" class="sensor-image">
+        </div>
+        <div class="sensor-tags-block-container">
+            <h1>Rohm BH1730FVC</h1>
+
+            <p class="sensor-excerpt"> A digital ambient light sensor, that measures light as perceived by the human eye. Available in all SCK2.X versions. </p>
         </div>
     </a>
 </div>
+</div>
+
+<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>CEN. “EN 12464-1:2021 Light and lighting - Lighting of work places - Part 1: Indoor work places.” 2021.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p>Brown, Timothy M., George C. Brainard, Christian Cajochen, Charles A. Czeisler, John P. Hanifin, Steven W. Lockley, Robert J. Lucas, et al. “Recommendations for Daytime, Evening, and Nighttime Indoor Light Exposure to Best Support Physiology, Sleep, and Wakefulness in Healthy Adults.” PLOS Biology 20, no. 3 (March 17, 2022): e3001571. <a href="https://doi.org/10.1371/journal.pbio.3001571">https://doi.org/10.1371/journal.pbio.3001571</a>.&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:3">
+<p>World Health Organization. “Global Solar UV Index: A Practical Guide.” Geneva: World Health Organization, 2002. <a href="https://www.who.int/publications/i/item/9241590076">https://www.who.int/publications/i/item/9241590076</a>.&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:4">
+<p>IEEE. “IEEE 1789-2015 - IEEE Recommended Practices for Modulating Current in High-Brightness LEDs for Mitigating Health Risks to Viewers.” 2015. <a href="https://doi.org/10.1109/IEEESTD.2015.7118618">https://doi.org/10.1109/IEEESTD.2015.7118618</a>.&#160;<a class="footnote-backref" href="#fnref:4" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+</ol>
 </div>
 
 
@@ -4986,13 +5285,13 @@
         
         
           
-          <a href="AMS_AS7331/" class="md-footer__link md-footer__link--next" aria-label="Next: AMS AS7311">
+          <a href="Rohm_BH1730FVC/" class="md-footer__link md-footer__link--next" aria-label="Next: Rohm BH1730FVC">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                AMS AS7311
+                Rohm BH1730FVC
               </div>
             </div>
             <div class="md-footer__button md-icon">

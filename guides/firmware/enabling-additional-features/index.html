@@ -2468,6 +2468,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -2515,11 +2519,53 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../knowledge/air/light/Rohm_BH1730FVC/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Rohm BH1730FVC
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../knowledge/air/light/AMS_AS7331/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    AMS AS7311
+    AMS AS7331
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../knowledge/air/light/AMS_AS7341/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AMS AS7341
   </span>
   
 
@@ -2550,6 +2596,10 @@
           
         
       
+        
+      
+        
+      
     
     
     
@@ -2574,6 +2624,11 @@
 
             </a>
             
+              
+              <label class="md-nav__link " for="__nav_2_2_8" id="__nav_2_2_8_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
           </div>
         
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_8_label" aria-expanded="false">
@@ -2583,6 +2638,48 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../knowledge/air/pressure/NXP_MPL3115A2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    NXP MPL3115A2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../knowledge/air/pressure/ST_LPS33K/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ST LPS33K
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
           </ul>
@@ -3876,6 +3973,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#oled-display" class="md-nav__link">
+    <span class="md-ellipsis">
+      Oled display
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#additional-features" class="md-nav__link">
     <span class="md-ellipsis">
       Additional features
@@ -4953,6 +5059,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#oled-display" class="md-nav__link">
+    <span class="md-ellipsis">
+      Oled display
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#additional-features" class="md-nav__link">
     <span class="md-ellipsis">
       Additional features
@@ -5005,49 +5120,194 @@
 
 <h1 id="enabling-additional-features">Enabling additional features<a class="headerlink" href="#enabling-additional-features" title="Permanent link">&para;</a></h1>
 <p>The SCK has certain features that are disabled by default in order to save flash memory. However these features can be enabled with simple flags at compilation time.</p>
-<p>The available features range from enabling additional <a href="/knowledge/#auxiliary-connector/">supported sensors</a> to other features like the enabling the <a href="/hardware/addons/oled-screen/">oled display</a>.</p>
+<p>The available features range from enabling additional <a href="/knowledge/">supported sensors</a> to other features like enabling the <a href="/hardware/addons/oled-screen/">oled display</a>.</p>
+<div class="admonition info">
+<p class="admonition-title">Firmware version</p>
+<p>This page refers to firmware <strong>V0.9.12</strong> onwards. In previous versions, the flags were named <code>WITH_*</code> instead of <code>SCK_WITH_*</code>.</p>
+</div>
 <h2 id="process">Process<a class="headerlink" href="#process" title="Permanent link">&para;</a></h2>
-<p>To enable these features, you need to compile the firmware with the relevant compile flags. You can do this in two ways:</p>
+<p>To enable these features, you need to <a href="/guides/firmware/edit-the-firmware/">compile the firmware</a> with the relevant compile flags. You can do this in two ways:</p>
 <ul>
 <li>
-<p>Add firmware compile flags to <code>platformio.ini</code> in the <code>sam</code> directory. For instance, for the <code>sck23_air</code>, to add the <a href="/hardware/addons/oled-screen/">oled display</a>:</p>
+<p>Add the flags to the environment you are compiling in the <code>platformio.ini</code> file, in the <code>sam</code> directory. For instance, to add the <a href="/knowledge/air/pm/Sensirion_SPS30/">SPS30</a> to the <code>sck23_air</code> environment:</p>
 <div class="highlight"><pre><span></span><code>[env:sck23_air]
+extends = env_air_common
 build_flags =
+    ${env_common.build_flags}
     !sh ../tools/git-rev.sh -e sck23_air
     -D SCK23_AIR
-    -D WITH_SENSOR_GROVE_OLED
+    -D SCK_WITH_SPS30
 </code></pre></div>
 </li>
 <li>
-<p>Alternatively, you can also uncomment the relevant line in the <a href="https://github.com/fablabbcn/smartcitizen-kit-2x/blob/master/lib/Sensors/Sensors.h">Sensors.h</a> file. In this case, the file should read:</p>
-<div class="highlight"><pre><span></span><code>#define WITH_SENSOR_GROVE_OLED  // Saves 2496 bytes
+<p>Alternatively, you can add a <code>#define</code> line inside the block of your configuration at the top of the <a href="https://github.com/fablabbcn/smartcitizen-kit-2x/blob/master/lib/Sensors/Sensors.h">Sensors.h</a> file. For instance, for the <code>SCK23_AIR</code> configuration:</p>
+<div class="highlight"><pre><span></span><code>#ifdef SCK23_AIR
+#define SCK_WITH_SEN5X
+...
+#define SCK_WITH_SPS30
+#endif
 </code></pre></div>
 </li>
 </ul>
+<div class="admonition warning">
+<p class="admonition-title">Libraries</p>
+<p>Each environment in <code>platformio.ini</code> only includes the libraries needed by the sensors it enables by default (under <code>lib_deps</code>). If you enable a sensor that is not enabled by default in your environment, make sure that its library is also available. For instance, the libraries for the <a href="/knowledge/air/co2/Sensirion_SCD4X/">SCD4X</a> and the <a href="/knowledge/air/light/AMS_AS7341/">AS7341</a> are only listed in the <code>sck23_air</code> environment. If you want to use them with another configuration, copy them to the <code>lib_deps</code> of that environment.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Flash memory</p>
+<p>The flash memory of the SCK is limited. Enabling many additional features at the same time might make the firmware too big to fit. If that happens, disable the features you don't need.</p>
+</div>
 <h2 id="list-of-features">List of features<a class="headerlink" href="#list-of-features" title="Permanent link">&para;</a></h2>
-<p>Most features are listed in the <a href="https://github.com/fablabbcn/smartcitizen-kit-2x/blob/master/lib/Sensors/Sensors.h">Sensors.h</a> file.</p>
-<p>Different versions of the SCK have different features enabled by default. Additionally, the field of measurement (air or water), has different sensors enabled. These versions are defined with the <code>SCK21_AIR</code>, <code>SCK22_AIR</code>, <code>SCK23_AIR</code>, <code>SCK_WATER</code> and <code>SCK2</code>, the latter being a boilerplate for testing. Other configurations are possible by defining custom flags as required. Since the <code>_WATER</code> sensors can be used with <em>any</em> <a href="/hardware/boards/data-board/">data board</a> (SCK2.1 onwards), they are independent of the hardware version.</p>
-<p>In the <code>Sensors.h</code> file, different configuration features are enabled for different versions of the SCK (<code>SCK*</code> flags), with a list of all available flags included in the <code>SCK2</code> section.</p>
+<p>Different versions of the SCK have different features enabled by default. Additionally, the field of measurement (air or water) has different sensors enabled. These configurations are defined with the <code>SCK21_AIR</code>, <code>SCK22_AIR</code>, <code>SCK23_AIR</code> and <code>SCK_WATER</code> flags, each of them with its own environment in <code>platformio.ini</code> (<code>sck21_air</code>, <code>sck22_air</code>, <code>sck23_air</code> and <code>sck_water</code>). Since the <code>_WATER</code> sensors can be used with <em>any</em> <a href="/hardware/boards/data-board/">data board</a> (SCK2.1 onwards), they are independent of the hardware version.</p>
+<p>The <code>Sensors.h</code> file defines which features are enabled for each configuration:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Flag</th>
+<th style="text-align: center;">SCK21_AIR</th>
+<th style="text-align: center;">SCK22_AIR</th>
+<th style="text-align: center;">SCK23_AIR</th>
+<th style="text-align: center;">SCK_WATER</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>SCK_WITH_URBAN</code></td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>SCK_WITH_NOISE</code></td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>SCK_WITH_PMS</code></td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>SCK_WITH_CCS811</code></td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>SCK_WITH_SEN5X</code></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>SCK_WITH_MPL</code></td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>SCK_WITH_LPS33</code></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>SCK_WITH_AS7331</code></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>SCK_WITH_ADS1X15</code></td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>SCK_WITH_SCD30</code></td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>SCK_WITH_SFA30</code></td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>SCK_WITH_EXT_TEMP</code></td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>SCK_WITH_SCD4X</code></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>SCK_WITH_AS7341</code></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>SCK_WITH_GPS</code></td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>SCK_WITH_ATLAS</code></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">✓</td>
+</tr>
+</tbody>
+</table>
 <h3 id="sensor-flags">Sensor flags<a class="headerlink" href="#sensor-flags" title="Permanent link">&para;</a></h3>
-<p>Features starting with <code>WITH_</code> involve sensors or additional boards that are only enabled by default on certain configurations. A complete list is available in <a href="https://github.com/fablabbcn/smartcitizen-kit-2x/blob/master/lib/Sensors/Sensors.h">Sensors.h</a>. For instance:</p>
-<div class="highlight"><pre><span></span><code>#define WITH_SEN5X    // Enables sensirion SEN5X series
-#define WITH_URBAN    // Enables the Urban board
-#define WITH_MPL      // Enables MPL pressure sensor
-#define WITH_AS7331   // Enables UV sensor
-#define WITH_SCD30    // Enables CO2 sensor
-#define WITH_ADS1X15  // Enables ADC
-#define WITH_SFA30    // Enables HCHO sensor
-#define WITH_GPS      // Enables GPS
-#define WITH_EXT_TEMP // Enables External temperature sensor
+<p>Features starting with <code>SCK_WITH_</code> involve sensors or additional boards. Besides the ones in the table above, the following flags are available, but not enabled in any of the default configurations:</p>
+<div class="highlight"><pre><span></span><code>#define SCK_WITH_SPS30          // Sensirion SPS30 PM sensor
+#define SCK_WITH_BME68X         // Bosch BME680 environmental sensor
+#define SCK_WITH_GASES_BOARD    // SCK Gases Board for Alphasense sensors
+#define SCK_WITH_GROVE_I2C_ADC  // Seeed Grove I2C ADC
+#define SCK_WITH_INA219         // TI INA219 current sensor
+#define SCK_WITH_DS18B20        // DS18B20 temperature sensor (via DS2482 I2C bridge)
+#define SCK_WITH_DALLAS_TEMP    // Dallas temperature sensor directly on the AUX connector
+#define SCK_WITH_CHIRP          // Catnip Chirp soil moisture sensor
+#define SCK_WITH_RANGE          // VL6180x range sensor
 </code></pre></div>
+<p>A complete list is available in <a href="https://github.com/fablabbcn/smartcitizen-kit-2x/blob/master/lib/Sensors/Sensors.h">Sensors.h</a>.</p>
+<h3 id="oled-display">Oled display<a class="headerlink" href="#oled-display" title="Permanent link">&para;</a></h3>
+<p>The <a href="/hardware/addons/oled-screen/">oled display</a> is enabled with the <code>SCK_WITH_SENSOR_GROVE_OLED</code> flag. Since it is a common option, <code>platformio.ini</code> already includes an environment with it for each configuration: <code>sck21_air_oled</code>, <code>sck22_air_oled</code>, <code>sck23_air_oled</code> and <code>sck_water_oled</code>.</p>
 <h3 id="additional-features">Additional features<a class="headerlink" href="#additional-features" title="Permanent link">&para;</a></h3>
-<p>Default <a href="https://forum.smartcitizen.me/t/new-firmware-feature-temperature-and-relative-humidity-corrections/2018">temperature calibration</a> parameters (in the form of an offset) can be defined with the following:</p>
-<div class="highlight"><pre><span></span><code>#define URBAN_T_OFFSET 0
-#define URBAN_RH_OFFSET 0
+<p>Default <a href="https://forum.smartcitizen.me/t/new-firmware-feature-temperature-and-relative-humidity-corrections/2018">temperature calibration</a> parameters (in the form of an offset) are defined for each configuration with the following:</p>
+<div class="highlight"><pre><span></span><code>#define URBAN_T_OFFSET -1.0
+#define URBAN_RH_OFFSET 3.5
 </code></pre></div>
 <div class="admonition warning">
 <p class="admonition-title">Better use the shell</p>
-<p>The calibration parameters can be changed directly using the <a href="https://forum.smartcitizen.me/t/new-firmware-feature-temperature-and-relative-humidity-corrections/2018">shell</a>.</p>
+<p>The calibration parameters can be changed directly using the <a href="/knowledge/air/temperature_rel_humidity/Sensirion_SHT3X/#modify-temperature-and-relative-humidity-offset">shell</a>, without recompiling the firmware.</p>
 </div>
 
 

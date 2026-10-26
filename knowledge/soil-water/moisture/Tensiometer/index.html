@@ -2470,6 +2470,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -2517,11 +2521,53 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../air/light/Rohm_BH1730FVC/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Rohm BH1730FVC
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../air/light/AMS_AS7331/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    AMS AS7311
+    AMS AS7331
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../air/light/AMS_AS7341/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AMS AS7341
   </span>
   
 
@@ -2552,6 +2598,10 @@
           
         
       
+        
+      
+        
+      
     
     
     
@@ -2576,6 +2626,11 @@
 
             </a>
             
+              
+              <label class="md-nav__link " for="__nav_2_2_8" id="__nav_2_2_8_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
           </div>
         
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_8_label" aria-expanded="false">
@@ -2585,6 +2640,48 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../air/pressure/NXP_MPL3115A2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    NXP MPL3115A2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../air/pressure/ST_LPS33K/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ST LPS33K
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
           </ul>
@@ -3216,6 +3313,21 @@
       Usage and considerations
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Usage and considerations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#measurement-range" class="md-nav__link">
+    <span class="md-ellipsis">
+      Measurement range
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -4927,6 +5039,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Usage and considerations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#measurement-range" class="md-nav__link">
+    <span class="md-ellipsis">
+      Measurement range
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -4988,6 +5115,8 @@
 <h2 id="working-principle">Working principle<a class="headerlink" href="#working-principle" title="Permanent link">&para;</a></h2>
 <h2 id="usage-and-considerations">Usage and considerations<a class="headerlink" href="#usage-and-considerations" title="Permanent link">&para;</a></h2>
 <p>The design is entirely open source and it is deeply inspired by the work of Reinier Van der Lee from the <a href="http://vanderleevineyard.com/vineyard-blog.html">Vinduino project</a>, using an already calibrated commercial probe like the <strong>Watermark 200SS9</strong>. The sensor itself is straightforward and it consists of two stainless steel screws that work as electrodes cast inside a piece of plaster and covered by a plastic mesh to prevent erosion. As water is added more electrons can pass between the electrodes of the probe reducing the amount of resistance between them. By using this range of values, you can determine the amount of water that exists in your soil. To avoid interferences and degradation of the electrodes the design only applies voltage for a very short time and uses alternating electric polarities. For the sensor to work, we need a minimal circuit that uses two resistors and two diodes. The resistors work together with the electrodes to build a voltage divider. We can calculate the resistance value between the two electrodes by knowing the value of the resistors and the voltage. However to be able to alternate the electric current we need to duplicate the circuit and add two diodes. In total, we need 4 Pins to be connected to a microcontroller like the Arduino or the Smart Citizen Kit.</p>
+<h3 id="measurement-range">Measurement range<a class="headerlink" href="#measurement-range" title="Permanent link">&para;</a></h3>
+<p>The Watermark 200SS probe measures <strong>soil water tension</strong> in a range of <strong>0 to 239 centibars (kPa)</strong>, according to the manufacturer. A reading of 0 means saturated soil, and higher readings mean drier soil (the plants need to make more effort to extract water from it). Check the <a href="/knowledge/soil-water/moisture/#reference-levels">soil moisture page</a> to interpret the readings.</p>
 <h2 id="resources">Resources<a class="headerlink" href="#resources" title="Permanent link">&para;</a></h2>
 
 

@@ -2470,6 +2470,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -2517,11 +2521,53 @@
   
   
     <li class="md-nav__item">
+      <a href="../../air/light/Rohm_BH1730FVC/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Rohm BH1730FVC
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../air/light/AMS_AS7331/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    AMS AS7311
+    AMS AS7331
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../air/light/AMS_AS7341/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AMS AS7341
   </span>
   
 
@@ -2552,6 +2598,10 @@
           
         
       
+        
+      
+        
+      
     
     
     
@@ -2576,6 +2626,11 @@
 
             </a>
             
+              
+              <label class="md-nav__link " for="__nav_2_2_8" id="__nav_2_2_8_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
           </div>
         
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_8_label" aria-expanded="false">
@@ -2585,6 +2640,48 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../air/pressure/NXP_MPL3115A2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    NXP MPL3115A2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../air/pressure/ST_LPS33K/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ST LPS33K
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
           </ul>
@@ -4845,9 +4942,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#reference-levels" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reference levels
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#supported-sensors" class="md-nav__link">
     <span class="md-ellipsis">
       Supported sensors
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
     </span>
   </a>
   
@@ -4892,6 +5007,39 @@
 
 <h1 id="soil-moisture-measurements">Soil Moisture Measurements<a class="headerlink" href="#soil-moisture-measurements" title="Permanent link">&para;</a></h1>
 <p>Soil moisture sensors can be used for schedule irrigations (i.e. determine when to water the plants); or for calculating soil water deficit to work out how much water to apply.</p>
+<h2 id="reference-levels">Reference levels<a class="headerlink" href="#reference-levels" title="Permanent link">&para;</a></h2>
+<p>For irrigation, the most useful measurement is the <strong>soil water tension</strong>, which tells how much effort the plants need to extract water from the soil, independently of the type of soil. These are the reference levels for the <a href="/knowledge/soil-water/moisture/Tensiometer/">Watermark tensiometer</a>, according to the manufacturer <sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Soil water tension (centibars)</th>
+<th style="text-align: left;">Interpretation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0 – 10</td>
+<td style="text-align: left;">Saturated soil</td>
+</tr>
+<tr>
+<td style="text-align: center;">10 – 30</td>
+<td style="text-align: left;">Soil is adequately wet (except coarse sands, which are beginning to lose water)</td>
+</tr>
+<tr>
+<td style="text-align: center;">30 – 60</td>
+<td style="text-align: left;">Usual range to irrigate (most soils)</td>
+</tr>
+<tr>
+<td style="text-align: center;">60 – 100</td>
+<td style="text-align: left;">Usual range to irrigate in heavy clay soils</td>
+</tr>
+<tr>
+<td style="text-align: center;">100 – 200</td>
+<td style="text-align: left;">Soil is becoming dangerously dry</td>
+</tr>
+</tbody>
+</table>
+<p>Capacitive sensors like the <a href="/knowledge/soil-water/moisture/Chirp_Soil_Moisture/">Chirp</a> give a relative value (%) between their dry and wet calibration points, so the right level for irrigation depends on the soil and the crop. A good practice is to note the reading right after a deep irrigation (field capacity) and the reading when plants start to show stress, and use them as the upper and lower references.</p>
 <h2 id="supported-sensors">Supported sensors<a class="headerlink" href="#supported-sensors" title="Permanent link">&para;</a></h2>
 <div class="sensor-block-multi ">
     <div class="sensor-banner red-sensor-banner">
@@ -4917,6 +5065,16 @@
         </div>
     </a>
 </div>
+</div>
+
+<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>IRROMETER Company. “WATERMARK Soil Moisture Sensor - Model 200SS.” <a href="https://www.irrometer.com/pdf/403.pdf">https://www.irrometer.com/pdf/403.pdf</a>.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
 </div>
 
 

@@ -2474,6 +2474,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -2521,11 +2525,53 @@
   
   
     <li class="md-nav__item">
+      <a href="../light/Rohm_BH1730FVC/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Rohm BH1730FVC
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../light/AMS_AS7331/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    AMS AS7311
+    AMS AS7331
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../light/AMS_AS7341/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AMS AS7341
   </span>
   
 
@@ -2556,6 +2602,10 @@
           
         
       
+        
+      
+        
+      
     
     
     
@@ -2580,6 +2630,11 @@
 
             </a>
             
+              
+              <label class="md-nav__link " for="__nav_2_2_8" id="__nav_2_2_8_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
           </div>
         
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_8_label" aria-expanded="false">
@@ -2589,6 +2644,48 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pressure/NXP_MPL3115A2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    NXP MPL3115A2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pressure/ST_LPS33K/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ST LPS33K
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
           </ul>
@@ -4869,6 +4966,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#reference-levels" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reference levels
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#supported-sensors" class="md-nav__link">
     <span class="md-ellipsis">
       Supported Sensors
@@ -4945,6 +5051,99 @@
 </ul>
 <p>These are well known limitations that some manufacturers are tackling at the moment providing new solutions to the market <sup id="fnref:12"><a class="footnote-ref" href="#fn:12">4</a></sup>. It is important to consider the impact of relative humidity on the readings, which leads to hygroscopic growth of the particles by absorption <sup id="fnref:19"><a class="footnote-ref" href="#fn:19">5</a></sup>. It is generally accepted that this is not the case for temperature, which has been shown to have no effect on the readings <sup id="fnref:20"><a class="footnote-ref" href="#fn:20">6</a></sup>. For the purposes of this deliverable, and the TwinAIR project, it is recommended to include a relative humidity sensor that can compensate for the effects on particle sizes. Following the recommendations of [6], the final sensor selection should not only provide particle numbers, in size distribution bins, but also show a proper distinction between different sizes in order to apply these corrections.</p>
 <p>Finally, it is very important to remember that low cost particulate matter sensors are particle counters, which in case of polydisperse aerosols of unknown composition, the conversion between particle number to mass is not always attained properly, especially without other measurement methods in place <sup id="fnref6:7"><a class="footnote-ref" href="#fn:7">2</a></sup>. No matter which final selected sensor is used, there will always be an assumption made by the manufacturer that will never be fulfilled in every deployment scenario. If not only precision, but also accuracy is needed, then using the particle counts directly can provide one of the necessary pieces to derive the final mass, which will only be determined if the particle composition and density are known by other means (i.e. laboratory analysis of collected samples).</p>
+<h2 id="reference-levels">Reference levels<a class="headerlink" href="#reference-levels" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">How to use these values</p>
+<p>The values below are guidelines for <strong>health protection</strong>, defined as averages over a certain period (24 hours, a year). Short peaks above them are common (for instance, while cooking or near traffic), and what matters for health is the long-term exposure. Also keep in mind that low-cost PM sensors are indicative: they can over or underestimate the concentrations, specially with high relative humidity (see the <a href="#limitations">limitations</a> above). The World Health Organization (WHO) highlights that there is <strong>no level of PM without health effects</strong>: the lower, the better.</p>
+</div>
+<p>The table below shows the WHO air quality guidelines <sup id="fnref:21"><a class="footnote-ref" href="#fn:21">7</a></sup> and the European Union limit values that apply from 2030 <sup id="fnref:22"><a class="footnote-ref" href="#fn:22">8</a></sup>:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Pollutant</th>
+<th style="text-align: left;">Averaging period</th>
+<th style="text-align: center;">WHO guideline (2021)</th>
+<th style="text-align: center;">EU limit value (2030)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">PM2.5</td>
+<td style="text-align: left;">24 hours</td>
+<td style="text-align: center;">15 µg/m3</td>
+<td style="text-align: center;">25 µg/m3 (max. 18 days per year)</td>
+</tr>
+<tr>
+<td style="text-align: left;">PM2.5</td>
+<td style="text-align: left;">Year</td>
+<td style="text-align: center;">5 µg/m3</td>
+<td style="text-align: center;">10 µg/m3</td>
+</tr>
+<tr>
+<td style="text-align: left;">PM10</td>
+<td style="text-align: left;">24 hours</td>
+<td style="text-align: center;">45 µg/m3</td>
+<td style="text-align: center;">45 µg/m3 (max. 18 days per year)</td>
+</tr>
+<tr>
+<td style="text-align: left;">PM10</td>
+<td style="text-align: left;">Year</td>
+<td style="text-align: center;">15 µg/m3</td>
+<td style="text-align: center;">20 µg/m3</td>
+</tr>
+</tbody>
+</table>
+<p>There are no guidelines for PM1 or PM4, although PM1 is included in PM2.5, and PM2.5 in PM10.</p>
+<p>To classify the readings in levels, a common reference is the US EPA <strong>Air Quality Index</strong> (AQI) <sup id="fnref:23"><a class="footnote-ref" href="#fn:23">9</a></sup>, which uses 24-hour averages:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Category</th>
+<th style="text-align: center;">PM2.5 (µg/m3, 24h)</th>
+<th style="text-align: center;">PM10 (µg/m3, 24h)</th>
+<th style="text-align: left;">Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Good</td>
+<td style="text-align: center;">0 – 9.0</td>
+<td style="text-align: center;">0 – 54</td>
+<td style="text-align: left;">Little or no risk</td>
+</tr>
+<tr>
+<td style="text-align: left;">Moderate</td>
+<td style="text-align: center;">9.1 – 35.4</td>
+<td style="text-align: center;">55 – 154</td>
+<td style="text-align: left;">Acceptable. Some risk for unusually sensitive people</td>
+</tr>
+<tr>
+<td style="text-align: left;">Unhealthy for sensitive groups</td>
+<td style="text-align: center;">35.5 – 55.4</td>
+<td style="text-align: center;">155 – 254</td>
+<td style="text-align: left;">Children, older adults and people with heart or lung disease may be affected</td>
+</tr>
+<tr>
+<td style="text-align: left;">Unhealthy</td>
+<td style="text-align: center;">55.5 – 125.4</td>
+<td style="text-align: center;">255 – 354</td>
+<td style="text-align: left;">Some of the general public may experience health effects</td>
+</tr>
+<tr>
+<td style="text-align: left;">Very unhealthy</td>
+<td style="text-align: center;">125.5 – 225.4</td>
+<td style="text-align: center;">355 – 424</td>
+<td style="text-align: left;">Health alert: increased risk for everyone</td>
+</tr>
+<tr>
+<td style="text-align: left;">Hazardous</td>
+<td style="text-align: center;">&gt; 225.5</td>
+<td style="text-align: center;">&gt; 425</td>
+<td style="text-align: left;">Emergency conditions</td>
+</tr>
+</tbody>
+</table>
+<p>Europe also has its own <a href="https://airindex.eea.europa.eu/">European Air Quality Index</a>, which uses different bands, and many countries have their own national indices.</p>
 <h2 id="supported-sensors">Supported Sensors<a class="headerlink" href="#supported-sensors" title="Permanent link">&para;</a></h2>
 <p>Low cost PM sensors are normally built around the <a href="#light-scattering-sensors">light scattering</a> principle. These sensors are an evolution of the Optical Particle Counters (OPCs), but with a lower cost, ranging from approximately USD 10 to USD 500 in some cases. Check the sensors supported on the Smart Citizen Kit below!</p>
 <div class="sensor-block-multi ">
@@ -4967,7 +5166,7 @@
         <div class="sensor-tags-block-container">
             <h1>Sensirion SEN5X</h1>
 
-            <p class="sensor-excerpt"> The Sensirion SEN5X is a newer PM sensor with a very good performance for such low cost. Available in SCK2.3! </p>
+            <p class="sensor-excerpt"> The Sensirion SEN5X is a newer PM sensor with a very good performance for such low cost. Available in SCK2.2 and above! </p>
         </div>
     </a>
 </div><div class="sensor-banner orange-sensor-banner">
@@ -5005,6 +5204,15 @@
 </li>
 <li id="fn:20">
 <p>Wang, Yang, Jiayu Li, He Jing, Qiang Zhang, Jingkun Jiang, and Pratim Biswas. “Laboratory Evaluation and Calibration of Three Low-Cost Particle Sensors for Particulate Matter Measurement.” Aerosol Science and Technology 49, no. 11 (November 2, 2015): 1063–77. <a href="https://doi.org/10.1080/02786826.2015.1100710">https://doi.org/10.1080/02786826.2015.1100710</a>.&#160;<a class="footnote-backref" href="#fnref:20" title="Jump back to footnote 6 in the text">&#8617;</a></p>
+</li>
+<li id="fn:21">
+<p>World Health Organization. “WHO Global Air Quality Guidelines: Particulate Matter (PM2.5 and PM10), Ozone, Nitrogen Dioxide, Sulfur Dioxide and Carbon Monoxide.” Geneva: World Health Organization, 2021. <a href="https://www.who.int/publications/i/item/9789240034228">https://www.who.int/publications/i/item/9789240034228</a>.&#160;<a class="footnote-backref" href="#fnref:21" title="Jump back to footnote 7 in the text">&#8617;</a></p>
+</li>
+<li id="fn:22">
+<p>Directive (EU) 2024/2881 of the European Parliament and of the Council of 23 October 2024 on ambient air quality and cleaner air for Europe. <a href="https://eur-lex.europa.eu/eli/dir/2024/2881/oj/eng">https://eur-lex.europa.eu/eli/dir/2024/2881/oj/eng</a>.&#160;<a class="footnote-backref" href="#fnref:22" title="Jump back to footnote 8 in the text">&#8617;</a></p>
+</li>
+<li id="fn:23">
+<p>US Environmental Protection Agency. “AQI Basics” (PM breakpoints revised in 2024). <a href="https://www.airnow.gov/aqi/aqi-basics/">https://www.airnow.gov/aqi/aqi-basics/</a>.&#160;<a class="footnote-backref" href="#fnref:23" title="Jump back to footnote 9 in the text">&#8617;</a></p>
 </li>
 </ol>
 </div>
