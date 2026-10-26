@@ -30,7 +30,8 @@ This Atlas Scientific dissolved oxygen probe consists of a teflon membrane and t
 
 The sensor can be completely submerged, and has the **following features** (a selection is listed here, but you can find a complete description in the datasheet):
 
-- Range: 1-50mg/l
+- Range: 0-50 mg/l
+- Accuracy: ±0.2 mg/l
 - Maximum water depth: 70m
 - Response rate: ~0.5 mg/l/per second
 

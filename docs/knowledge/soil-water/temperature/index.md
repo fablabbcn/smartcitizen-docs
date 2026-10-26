@@ -27,6 +27,26 @@ Whenever possible, take readings using the temperature probe in situ, submerging
 
 If it is not possible to introduce the sensor directly into into the water, and you need to take a sample, stabilize the sampling vessel before measuring (submerging it in water to warm/cool it to the same temperature as the water).
 
+## Reference levels
+
+What is a _good_ water temperature depends on the species and the ecosystem, but warmer water holds less [dissolved oxygen](../DO) and speeds up biological activity, so high temperatures are generally a stress factor. Some references:
+
+| Reference | Value |
+|:- |:- |
+| Cold water fish (trout, salmon) | Prefer temperatures below ~15 ºC, stressed above ~20 ºC |
+| EU salmonid waters [^1] | Maximum 21.5 ºC |
+| EU cyprinid waters (carp, etc.) [^1] | Maximum 28 ºC |
+| Legionella in water systems [^2] | Grows between 25 and 45 ºC. Hot water should be stored at 60 ºC or more, and cold water kept below 25 ºC (ideally below 20 ºC) |
+
+As with other parameters, sudden changes in temperature (for instance, near the discharge of cooling water from an industry) can be more harmful than the absolute value.
+
 ## Supported sensors
 
 {{ insert_cards(type="sensor/soil-water", filter="target", value=["temperature"])}}
+
+## References
+
+[^1]:
+    Directive 2006/44/EC of the European Parliament and of the Council of 6 September 2006 on the quality of fresh waters needing protection or improvement in order to support fish life (repealed in 2013 by the Water Framework Directive, but still a common reference). https://eur-lex.europa.eu/eli/dir/2006/44/oj.
+[^2]:
+    World Health Organization. “Legionella and the Prevention of Legionellosis.” Geneva: World Health Organization, 2007. https://www.who.int/publications/i/item/9241562978.

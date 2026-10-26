@@ -47,6 +47,37 @@ As a general rule, it is preferable to take measurements in situ, rather than ta
 
 If a measure cannot be made on-site, try to take a sample and perform the measurement as soon as possible. If the temperature of the sample changes significantly, or if sedimentation or bubbles form in transport, the measurement will not be representative.
 
+## Reference levels
+
+Conductivity values (at 25 ºC) for different types of water, as an orientation:
+
+| Type of water | Conductivity (µS/cm) |
+|:- |:-: |
+| Ultrapure water | 0.055 |
+| Distilled or deionised water | 0.5 – 5 |
+| Rainwater | 5 – 50 |
+| Freshwater (rivers, lakes) | 50 – 1.500 |
+| Drinking water | 50 – 1.000 (usual), up to 2.500 (EU indicator value at 20 ºC [^1]) |
+| Brackish water | 1.500 – 30.000 |
+| Seawater | ~50.000 – 55.000 |
+
+A sudden change in the conductivity of a river or a lake is generally a sign of a discharge (wastewater, runoff from roads or fields, or seawater intrusion), so the **trend** is very important.
+
+For **irrigation**, salinity can damage crops and soils. The FAO classifies irrigation water as follows [^2]:
+
+| Conductivity of irrigation water | Restriction on use |
+|:-: |:- |
+| < 700 µS/cm | None |
+| 700 – 3.000 µS/cm | Slight to moderate |
+| > 3.000 µS/cm | Severe |
+
 ## Supported sensors
 
 {{ insert_cards(type="sensor", filter="target", value=["electrical conductivity"])}}
+
+## References
+
+[^1]:
+    Directive (EU) 2020/2184 of the European Parliament and of the Council of 16 December 2020 on the quality of water intended for human consumption. https://eur-lex.europa.eu/eli/dir/2020/2184/oj.
+[^2]:
+    Ayers, R.S., and D.W. Westcot. “Water Quality for Agriculture.” FAO Irrigation and Drainage Paper 29 Rev. 1. Rome: FAO, 1985. https://www.fao.org/4/t0234e/t0234e00.htm.

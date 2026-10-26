@@ -26,6 +26,8 @@ internal:
 
 ## Working principle
 
+The ORP probe measures the voltage between a platinum (or gold) measuring electrode and a reference electrode. The EZO ORP circuit reads this voltage in a range of **-1020 mV to +1020 mV**, with an accuracy of ±1 mV [^1].
+
 ## Usage and considerations
 
 No particular consideration for the probe, other than it is very delicate:
@@ -86,3 +88,12 @@ You only need to perform a single point calibration. You can use any calibrated 
     ```
 
 {{ get_snippet_rel("docs/includes/water-probes-reset.md") }}
+
+## Resources
+
+- [EZO ORP datasheet](https://files.atlas-scientific.com/ORP_EZO_Datasheet.pdf)
+
+### References
+
+[^1]:
+    Atlas Scientific. “EZO-ORP Embedded ORP Circuit - Datasheet.” https://files.atlas-scientific.com/ORP_EZO_Datasheet.pdf.

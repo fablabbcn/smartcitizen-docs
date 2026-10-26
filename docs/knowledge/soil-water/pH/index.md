@@ -61,6 +61,31 @@ pH values can vary very quickly. This parameter should be **measured in the fiel
 !!! tip "Additional resources"
     On ocean acidification and its impact: https://www.noaa.gov/education/resource-collections/ocean-coasts/ocean-acidification
 
+## Reference levels
+
+| pH | Interpretation |
+|:-: |:- |
+| < 4 | Very acidic. Not suitable for most aquatic life (e.g. acid mine drainage) |
+| 4 – 6.5 | Acidic. Stress for many fish and invertebrates, metals become more soluble and toxic |
+| 6.5 – 8.5 | Normal range for most natural freshwaters, suitable for aquatic life |
+| 7.4 – 8.5 | Normal range for seawater (around 8.1 in the open ocean) |
+| 8.5 – 9.5 | Alkaline. Possible stress for aquatic life, sometimes found with algae blooms |
+| > 9.5 | Very alkaline. Not suitable for most aquatic life |
+
+Some official references:
+
+- **Drinking water**: the EU establishes that pH should be between **6.5 and 9.5** [^1]. The WHO does not set a health-based value for pH, but indicates that the optimum for water treatment and distribution is usually between **6.5 and 8.5** [^2]
+- **Aquatic life**: the US EPA recommends a pH between **6.5 and 9** for freshwater [^3]
+
 ## Supported sensors
 
 {{ insert_cards(type="sensor", filter="target", value=["pH"])}}
+
+## References
+
+[^1]:
+    Directive (EU) 2020/2184 of the European Parliament and of the Council of 16 December 2020 on the quality of water intended for human consumption. https://eur-lex.europa.eu/eli/dir/2020/2184/oj.
+[^2]:
+    World Health Organization. “Guidelines for Drinking-Water Quality: Fourth Edition Incorporating the First and Second Addenda.” Geneva: World Health Organization, 2022. https://www.who.int/publications/i/item/9789240045064.
+[^3]:
+    US Environmental Protection Agency. “National Recommended Water Quality Criteria - Aquatic Life Criteria Table.” https://www.epa.gov/wqc/national-recommended-water-quality-criteria-aquatic-life-criteria-table.

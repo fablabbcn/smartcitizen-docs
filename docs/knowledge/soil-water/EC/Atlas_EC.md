@@ -31,6 +31,16 @@ To measure electrical conductivity, we'll use a sensor called a **conductivity m
 
 If there is an active temperature sensor taking simultaneous readings, the reported values from the conductivity meter will be based on the measured temperature, and this process will be automatic. If you do not have a temperature sensor, the reading will based on a temperature of 25ºC, which may represent a source of error. Additionally, it is important to check corrections for extreme pH values (greater than 12 or less than 2), as these can introduce large errors in the results on Smart Citizen (and Atlas Scientific) sensors.
 
+The range of the sensor depends on the probe type (its _K_ constant). The EZO conductivity circuit supports probes from K 0.1 to K 10, with the following accurate reading ranges, according to the manufacturer:
+
+| Probe | Conductivity range | TDS | Salinity (PSU) |
+|:- |:-: |:-: |:-: |
+| K 0.1 | 0.07 – 50.000 µS/cm | 0 – 25.000 ppm | 0 – 33 |
+| K 1.0 | 5 – 200.000 µS/cm | 2 – 100.000 ppm | 0 – 42 |
+| K 10 | 10 µS/cm – 1 S/cm | 5 – 500.000 ppm | 0 – 42 |
+
+Check the [EZO EC datasheet](https://files.atlas-scientific.com/EC_EZO_Datasheet.pdf) for more details.
+
 ## Usage and considerations
 
 ### How to prepare the sensor

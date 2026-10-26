@@ -31,7 +31,7 @@ This Atlas Scientific pH sensor is composed of a crystal membrane (**which is ve
 
 The sensor can be completely submerged, and has the **following characteristics** (a selection is listed here, but you can find a complete description in the datasheet):
 
-- pH range: 1 to 13
+- pH range: 2 to 13 (consumer grade probe). The EZO pH circuit can read from 0.001 to 14, so other Atlas probes (lab or industrial grade, 0 to 14) can be used too
 - Maximum depth in water: 35m
 - **Response speed: 95% in 4s**
 - Safe for use in food/beverages

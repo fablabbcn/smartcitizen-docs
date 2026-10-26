@@ -69,6 +69,18 @@ If we are not aiming to get a full-fledged sensor reading, we will only need to 
     6. Once you have both values, type in: `control moisture cal XXX YYY` where XXX and YYY are the dry and wet values that you just measured
     7. Check that the reading is OK by: `read soil moisture percent`. You should receive an answer in rh%
 
+### Measurement range
+
+The sensor does not report soil moisture directly in physical units. The firmware provides:
+
+| Metric | Units | Range |
+|:- |:-: |:- |
+| Soil moisture (raw) | - | Raw capacitance reading of the sensor (unitless). Higher means wetter |
+| Soil moisture | % | 0 – 100 %, scaled between the _dry_ and _wet_ calibration points |
+| Temperature | ºC | Temperature of the sensor |
+
+The percentage is relative to the calibration points, so 0 % corresponds to the _dry_ reading and 100 % to the _wet_ reading set during calibration. It is **not** the volumetric water content of the soil.
+
 ## Sensor evaluation
 
 Three Chirp sensors were compared to the [Parrot](https://www.parrot.com/) Flower Power (now discontinued). The Flower Power can measure several metrics, such as light, temperature, fertilizer and soil moisture. In this test, we compared the soil moisture readings for three Flower Parrot sensors, compared to three Chirp sensors. Both sensors show a good behaviour and the values can be correlated with good R2 scores. The approach for this low-cost sensors, in general, should be more qualitative than quantitative (analyse the trends rather than the absolute values), since their values appear to differ between sensors, even when normalised. In the particular case of the Chirp sensor, the sensor seems to be fairly normalised with simply a two calibration values (water and air) as a first approach.

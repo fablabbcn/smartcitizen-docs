@@ -56,6 +56,21 @@ It is important to take into account the daily variations in dissolved oxygen ca
 
 **Measuring dissolved oxygen is not easy.** It is important not to aerate the samples before taking the measurement, and to ensure that there are no air bubbles in your sample container.
 
+## Reference levels
+
+The amount of oxygen that water can hold depends on its temperature (and salinity): at sea level, fresh water saturated with oxygen holds around **11.3 mg/l at 10 ºC**, **9.1 mg/l at 20 ºC** and **7.6 mg/l at 30 ºC**. For this reason, DO is also expressed as **% of saturation**, where 100 % means the water holds all the oxygen it can at that temperature. As a general orientation for natural waters (see also the table of minimum values for different organisms above):
+
+| DO (mg/l) | Interpretation |
+|:-: |:- |
+| > 8 | Very good. Suitable for sensitive species (like trout or salmon) |
+| 6 – 8 | Good. Suitable for most aquatic life |
+| 4 – 6 | Stress for sensitive species |
+| 2 – 4 | Only tolerant species can survive |
+| < 2 | Hypoxia: most aquatic life cannot survive |
+| < 0.5 | Anoxia |
+
+Remember that DO changes during the day: it is generally lowest at dawn, after a night without photosynthesis, so this is the most critical moment for aquatic life.
+
 ## Supported sensors
 
 {{ insert_cards(type="sensor", filter="target", value=["dissolved oxygen"])}}
