@@ -2,60 +2,98 @@
 
 The SCK has certain features that are disabled by default in order to save flash memory. However these features can be enabled with simple flags at compilation time.
 
-The available features range from enabling additional [supported sensors](/knowledge/#auxiliary-connector/) to other features like the enabling the [oled display](/hardware/addons/oled-screen/).
+The available features range from enabling additional [supported sensors](/knowledge/) to other features like enabling the [oled display](/hardware/addons/oled-screen/).
+
+!!! info "Firmware version"
+    This page refers to firmware **V0.9.12** onwards. In previous versions, the flags were named `WITH_*` instead of `SCK_WITH_*`.
 
 ## Process
 
-To enable these features, you need to compile the firmware with the relevant compile flags. You can do this in two ways:
+To enable these features, you need to [compile the firmware](/guides/firmware/edit-the-firmware/) with the relevant compile flags. You can do this in two ways:
 
-- Add firmware compile flags to `platformio.ini` in the `sam` directory. For instance, for the `sck23_air`, to add the [oled display](/hardware/addons/oled-screen/):
+- Add the flags to the environment you are compiling in the `platformio.ini` file, in the `sam` directory. For instance, to add the [SPS30](/knowledge/air/pm/Sensirion_SPS30/) to the `sck23_air` environment:
 
     ```
     [env:sck23_air]
+    extends = env_air_common
     build_flags =
+        ${env_common.build_flags}
         !sh ../tools/git-rev.sh -e sck23_air
         -D SCK23_AIR
-        -D WITH_SENSOR_GROVE_OLED
+        -D SCK_WITH_SPS30
     ```
 
-- Alternatively, you can also uncomment the relevant line in the [Sensors.h](https://github.com/fablabbcn/smartcitizen-kit-2x/blob/master/lib/Sensors/Sensors.h) file. In this case, the file should read:
+- Alternatively, you can add a `#define` line inside the block of your configuration at the top of the [Sensors.h](https://github.com/fablabbcn/smartcitizen-kit-2x/blob/master/lib/Sensors/Sensors.h) file. For instance, for the `SCK23_AIR` configuration:
 
     ```
-    #define WITH_SENSOR_GROVE_OLED  // Saves 2496 bytes
+    #ifdef SCK23_AIR
+    #define SCK_WITH_SEN5X
+    ...
+    #define SCK_WITH_SPS30
+    #endif
     ```
+
+!!! warning "Libraries"
+    Each environment in `platformio.ini` only includes the libraries needed by the sensors it enables by default (under `lib_deps`). If you enable a sensor that is not enabled by default in your environment, make sure that its library is also available. For instance, the libraries for the [SCD4X](/knowledge/air/co2/Sensirion_SCD4X/) and the [AS7341](/knowledge/air/light/AMS_AS7341/) are only listed in the `sck23_air` environment. If you want to use them with another configuration, copy them to the `lib_deps` of that environment.
+
+!!! warning "Flash memory"
+    The flash memory of the SCK is limited. Enabling many additional features at the same time might make the firmware too big to fit. If that happens, disable the features you don't need.
 
 ## List of features
 
-Most features are listed in the [Sensors.h](https://github.com/fablabbcn/smartcitizen-kit-2x/blob/master/lib/Sensors/Sensors.h) file.
+Different versions of the SCK have different features enabled by default. Additionally, the field of measurement (air or water) has different sensors enabled. These configurations are defined with the `SCK21_AIR`, `SCK22_AIR`, `SCK23_AIR` and `SCK_WATER` flags, each of them with its own environment in `platformio.ini` (`sck21_air`, `sck22_air`, `sck23_air` and `sck_water`). Since the `_WATER` sensors can be used with _any_ [data board](/hardware/boards/data-board/) (SCK2.1 onwards), they are independent of the hardware version.
 
-Different versions of the SCK have different features enabled by default. Additionally, the field of measurement (air or water), has different sensors enabled. These versions are defined with the `SCK21_AIR`, `SCK22_AIR`, `SCK23_AIR`, `SCK_WATER` and `SCK2`, the latter being a boilerplate for testing. Other configurations are possible by defining custom flags as required. Since the `_WATER` sensors can be used with _any_ [data board](/hardware/boards/data-board/) (SCK2.1 onwards), they are independent of the hardware version.
+The `Sensors.h` file defines which features are enabled for each configuration:
 
-In the `Sensors.h` file, different configuration features are enabled for different versions of the SCK (`SCK*` flags), with a list of all available flags included in the `SCK2` section.
+| Flag | SCK21_AIR | SCK22_AIR | SCK23_AIR | SCK_WATER |
+|:- |:-: |:-: |:-: |:-: |
+| `SCK_WITH_URBAN` | ✓ | ✓ | ✓ | |
+| `SCK_WITH_NOISE` | ✓ | ✓ | ✓ | |
+| `SCK_WITH_PMS` | ✓ | | | |
+| `SCK_WITH_CCS811` | ✓ | | | |
+| `SCK_WITH_SEN5X` | | ✓ | ✓ | |
+| `SCK_WITH_MPL` | ✓ | | ✓ | |
+| `SCK_WITH_LPS33` | | ✓ | | |
+| `SCK_WITH_AS7331` | | ✓ | ✓ | |
+| `SCK_WITH_ADS1X15` | ✓ | ✓ | ✓ | |
+| `SCK_WITH_SCD30` | ✓ | ✓ | ✓ | |
+| `SCK_WITH_SFA30` | ✓ | ✓ | ✓ | |
+| `SCK_WITH_EXT_TEMP` | ✓ | ✓ | ✓ | |
+| `SCK_WITH_SCD4X` | | | ✓ | |
+| `SCK_WITH_AS7341` | | | ✓ | |
+| `SCK_WITH_GPS` | ✓ | ✓ | ✓ | ✓ |
+| `SCK_WITH_ATLAS` | | | | ✓ |
 
 ### Sensor flags
 
-Features starting with `WITH_` involve sensors or additional boards that are only enabled by default on certain configurations. A complete list is available in [Sensors.h](https://github.com/fablabbcn/smartcitizen-kit-2x/blob/master/lib/Sensors/Sensors.h). For instance:
+Features starting with `SCK_WITH_` involve sensors or additional boards. Besides the ones in the table above, the following flags are available, but not enabled in any of the default configurations:
 
 ```
-#define WITH_SEN5X    // Enables sensirion SEN5X series
-#define WITH_URBAN    // Enables the Urban board
-#define WITH_MPL      // Enables MPL pressure sensor
-#define WITH_AS7331   // Enables UV sensor
-#define WITH_SCD30    // Enables CO2 sensor
-#define WITH_ADS1X15  // Enables ADC
-#define WITH_SFA30    // Enables HCHO sensor
-#define WITH_GPS      // Enables GPS
-#define WITH_EXT_TEMP // Enables External temperature sensor
+#define SCK_WITH_SPS30          // Sensirion SPS30 PM sensor
+#define SCK_WITH_BME68X         // Bosch BME680 environmental sensor
+#define SCK_WITH_GASES_BOARD    // SCK Gases Board for Alphasense sensors
+#define SCK_WITH_GROVE_I2C_ADC  // Seeed Grove I2C ADC
+#define SCK_WITH_INA219         // TI INA219 current sensor
+#define SCK_WITH_DS18B20        // DS18B20 temperature sensor (via DS2482 I2C bridge)
+#define SCK_WITH_DALLAS_TEMP    // Dallas temperature sensor directly on the AUX connector
+#define SCK_WITH_CHIRP          // Catnip Chirp soil moisture sensor
+#define SCK_WITH_RANGE          // VL6180x range sensor
 ```
+
+A complete list is available in [Sensors.h](https://github.com/fablabbcn/smartcitizen-kit-2x/blob/master/lib/Sensors/Sensors.h).
+
+### Oled display
+
+The [oled display](/hardware/addons/oled-screen/) is enabled with the `SCK_WITH_SENSOR_GROVE_OLED` flag. Since it is a common option, `platformio.ini` already includes an environment with it for each configuration: `sck21_air_oled`, `sck22_air_oled`, `sck23_air_oled` and `sck_water_oled`.
 
 ### Additional features
 
-Default [temperature calibration](https://forum.smartcitizen.me/t/new-firmware-feature-temperature-and-relative-humidity-corrections/2018) parameters (in the form of an offset) can be defined with the following:
+Default [temperature calibration](https://forum.smartcitizen.me/t/new-firmware-feature-temperature-and-relative-humidity-corrections/2018) parameters (in the form of an offset) are defined for each configuration with the following:
 
 ```
-#define URBAN_T_OFFSET 0
-#define URBAN_RH_OFFSET 0
+#define URBAN_T_OFFSET -1.0
+#define URBAN_RH_OFFSET 3.5
 ```
 
 !!! warning "Better use the shell"
-    The calibration parameters can be changed directly using the [shell](https://forum.smartcitizen.me/t/new-firmware-feature-temperature-and-relative-humidity-corrections/2018).
+    The calibration parameters can be changed directly using the [shell](/knowledge/air/temperature_rel_humidity/Sensirion_SHT3X/#modify-temperature-and-relative-humidity-offset), without recompiling the firmware.

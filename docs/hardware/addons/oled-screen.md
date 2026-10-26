@@ -22,23 +22,23 @@ Supported [screens](https://wiki.seeedstudio.com/Grove-OLED_Display_1.12inch/) a
 
 ## Enable
 
-To enable this screen, you need to compile the firmware with a `SCK_WITH_SENSOR_GROVE_OLED` flag. You can do this in two ways:
+To enable this screen, you need to compile the firmware with a `SCK_WITH_SENSOR_GROVE_OLED` flag. The easiest way is to use one of the environments that already include it in `platformio.ini`, in the `sam` directory: `sck21_air_oled`, `sck22_air_oled`, `sck23_air_oled` or `sck_water_oled`. For instance, for the `SCK 2.3`, the environment reads:
 
-- Add firmware compile flags to `platformio.ini` in the `sam` directory. For instance, for the `SCK 2.3`:
+```
+[env:sck23_air_oled]
+extends = env:sck23_air
+build_flags =
+    ${env_common.build_flags}
+    !sh ../tools/git-rev.sh -e sck23_air_oled
+    -D SCK23_AIR
+    -D SCK_WITH_SENSOR_GROVE_OLED
+lib_deps =
+    ${env:sck23_air.lib_deps}
+    https://github.com/fablabbcn/U8g2_Arduino
+```
 
-    ```
-    [env:sck23_air]
-    build_flags =
-        !sh ../tools/git-rev.sh -e sck23_air
-        -D SCK23_AIR
-        -D SCK_WITH_SENSOR_GROVE_OLED
-    ```
-
-- Uncomment the relevant line in the [Sensors.h](https://github.com/fablabbcn/smartcitizen-kit-2x/blob/master/lib/Sensors/Sensors.h) file. In the case of the oled display, the file should read:
-
-    ```
-    #define SCK_WITH_SENSOR_GROVE_OLED  // Saves 2496 bytes
-    ```
+!!! info "Custom configurations"
+    If you are adding the screen to your own environment, add both the `-D SCK_WITH_SENSOR_GROVE_OLED` flag and the `U8g2_Arduino` library, as above. Check the guide on [enabling additional features](/guides/firmware/enabling-additional-features/) for more details.
 
 ## Features
 

@@ -27,7 +27,7 @@ Below you see a comparison:
 
 ## Features
 
-The **Analog Sensor Board** features two [TI ADS1115](https://www.ti.com/product/ADS1115) 16bit 4-channel ADCs, and can read 8 analog channels in total. It has a potential to read up to 16 channels by daisy chainning two boards (by changing the address with the selectable jumper), or many more if you use a multiplexer.
+The **Analog Sensor Board** features two [TI ADS1115](/knowledge/other/TI_ADS1X15/) 16bit 4-channel ADCs, and can read 8 analog channels in total. It has a potential to read up to 16 channels by daisy chainning two boards (by changing the address with the selectable jumper), or many more if you use a multiplexer. Check the [ADS1115 knowledge page](/knowledge/other/TI_ADS1X15/) for details on how the firmware reads the ADCs.
 
 !!! info "Previous version"
     A previous version could interface 4 channels, daisy chainable up to 4 boards - with a total of 16 analog channels, by using [Adafruit ADS1115 Breakout board](https://www.adafruit.com/product/1085).
