@@ -60,6 +60,12 @@ def on_pre_page_macros(env):
 
     ignores = get_ignores(source_folder=source_folder)
 
+    # Remove cards from previous builds, so that cards of deleted or renamed pages don't stay around
+    aux_dir = f"{custom_dir}/aux/"
+    if os.path.isdir(aux_dir):
+        for item in os.listdir(aux_dir):
+            if item.endswith('.html'): os.remove(os.path.join(aux_dir, item))
+
     for (root,_,files) in os.walk(source_folder):
 
         for file in files:
@@ -122,24 +128,33 @@ def on_pre_page_macros(env):
                             frontmatter['color'] = frontmatter['custom_color']
 
                     # Do this for different types of units
-                    if 'type' in frontmatter:
-                        if frontmatter['type'] == 'unit':
-                            template = environment.get_template("unit-item.html")
-                        elif frontmatter['type'] == 'sensor':
-                            template = environment.get_template("sensor-item.html")
-                        elif frontmatter['type'] == 'addon':
-                            template = environment.get_template("addon-item.html")
+                    # Type can be a string (unit) or a list (addon, or onboard/external for sensors)
+                    types = frontmatter.get('type', [])
+                    if isinstance(types, str): types = [types]
 
-                            # Firmware is hardcoded - TODO
-                            firmware_repo = 'https://github.com/fablabbcn/smartcitizen-kit-2x/releases/tag/'
+                    if 'unit' in types:
+                        template = environment.get_template("unit-item.html")
+                    elif 'addon' in types:
+                        template = environment.get_template("addon-item.html")
 
-                            if 'versions' in frontmatter:
-                                if 'firmware' in frontmatter['versions']:
-                                    frontmatter['firmware_url'] = f"{firmware_repo}{frontmatter['versions']['firmware'].replace('+', '')}"
+                        # Firmware is hardcoded - TODO
+                        firmware_repo = 'https://github.com/fablabbcn/smartcitizen-kit-2x/releases/tag/'
 
-                            if 'target' in frontmatter:
-                                metric = frontmatter['target'][0]
-                                frontmatter['metric_url'] = frontmatter['field_url']+f'{metric}/'
+                        if 'versions' in frontmatter:
+                            if 'firmware' in frontmatter['versions']:
+                                frontmatter['firmware_url'] = f"{firmware_repo}{frontmatter['versions']['firmware'].replace('+', '')}"
+                    else:
+                        template = environment.get_template("sensor-item.html")
+
+                    if 'unit' not in types:
+                        # Field and metric pages are the parent folders of the page
+                        # (i.e. /knowledge/air/ and /knowledge/air/light/ for /knowledge/air/light/AMS_AS7341/)
+                        parts = frontmatter['target_url'].strip('/').split('/')
+                        if len(parts) >= 3:
+                            frontmatter['field_url'] = '/' + '/'.join(parts[:2]) + '/'
+                            frontmatter['metric_url'] = '/' + '/'.join(parts[:-1]) + '/'
+                        elif 'field_url' in frontmatter:
+                            frontmatter['metric_url'] = frontmatter['field_url']
 
 
                     std_out ('\tFrontmatter')
