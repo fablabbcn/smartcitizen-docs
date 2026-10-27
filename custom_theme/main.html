@@ -1,6 +1,9 @@
 {% extends "base.html" %}
 
 {% block extrahead %}
+    {% if page and page.meta and page.meta.markdown_url %}
+    <link rel="alternate" type="text/markdown" href="{{ page.meta.markdown_url }}">
+    {% endif %}
     <script defer data-domain="docs.smartcitizen.me" src="https://plausible.io/js/plausible.js"></script>
     <!-- <script src="/javascripts/extra.js"></script> -->
 {% endblock %}
