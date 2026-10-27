@@ -69,7 +69,7 @@ You only need to perform a single point calibration. You can use any calibrated 
 
 #### Single point calibration
 
-![](/assets/images/water/atlas_orp_cal_process.png)
+![](/assets/images/water/atlas-orp-cal-process.png)
 
 * Read the sensor multiple times until the reading is stable:
 

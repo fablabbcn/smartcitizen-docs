@@ -4,7 +4,7 @@ You can have data in real-time on your own data platform in two different ways.
 
 ## Directly from the device
 
-In case you don't want to use the Smart Citizen Platform, you can also configure the kit to send the data to a different location via MQTT. This [guide](/guides/getting-started/using-the-shell#changing-mqtt-or-ntp-servers), explains how to do so. You will need to ingest data listening to the following MQTT topics:
+In case you don't want to use the Smart Citizen Platform, you can also configure the kit to send the data to a different location via MQTT. This [guide](/guides/getting-started/using-the-shell/#changing-mqtt-or-ntp-servers-mqttsrv-ntpsrv), explains how to do so. You will need to ingest data listening to the following MQTT topics:
 
 - Sensor readings: `device/sck/<token>/readings` (old firmware versions) or `device/sck/<token>/readings/raw` (newer firmware versions) with the following format:
 

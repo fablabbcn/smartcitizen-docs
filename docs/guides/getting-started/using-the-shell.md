@@ -665,7 +665,7 @@ SCK > read hum
 Humidity: 63.06 %
 ```
 
-Finally, external sensors, connected via the [auxiliary port](/hardware/kit/features/#auxiliary-connector/) can also be modified.
+Finally, external sensors, connected via the [auxiliary port](/hardware/kit/features/#auxiliary-connector) can also be modified.
 
 ```
 SCK > control ext sht31 temp cal

@@ -1,5 +1,6 @@
 """
-Export every page in the nav as a markdown file for LLMs, next to its HTML:
+Export every page in the nav as a markdown file for LLMs, next to its HTML
+(and advertised in its <head> with <link rel="alternate">):
 
     /hardware/kit/  ->  /hardware/kit.md
 
@@ -32,6 +33,9 @@ def md_url(url):
 @event_priority(-100)  # run after the macros plugin
 def on_page_markdown(markdown, page, config, files):
     _markdown[page.file.src_uri] = markdown
+    if page in _nav.pages:
+        # Used by custom_theme/main.html for <link rel="alternate">
+        page.meta['markdown_url'] = config['site_url'].rstrip('/') + '/' + md_url(page.url)
     return markdown
 
 

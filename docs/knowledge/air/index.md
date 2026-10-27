@@ -8,7 +8,7 @@
 - [Noise](noise)
 - [Light](light)
 - [CO2](co2)
-- [Chemical composition (besides CO2)](chemical), including [VOCs](chemical/#vocs)
+- [Chemical composition (besides CO2)](chemical), including [VOCs](chemical/#voc)
 
 ## Supported sensors
 

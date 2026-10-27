@@ -9,7 +9,7 @@
 
 Each EZO driver has it's independent calibration and status. This process needs to be done per **_driver_** (i.e. per EZO metric). To make a factory reset procedure for the EZO drivers follow the steps below:
 
-1. Make sure that the [Smart Citizen Data](/hardware/boards/data-board/) board will not take any readings while you follow the calibration process. The best option is to reset the configuration to the defaults. Make sure you [back-up your information](/guides/firmware/upgrading-the-firmware/#make-a-back-up-of-your-info/) before:
+1. Make sure that the [Smart Citizen Data](/hardware/boards/data-board/) board will not take any readings while you follow the calibration process. The best option is to reset the configuration to the defaults. Make sure you [back-up your information](/guides/firmware/upgrading-the-firmware/#make-a-back-up-of-your-info) before:
 
     - The config command will output your current configuration. Copy it and keep it safe:
 

@@ -56,14 +56,14 @@ Currently there is an android app available, but we are working to make the webs
 
 ## How accurate are the measurements?
 
-Weather, noise, light and PM sensor measurements have been calibrated and validated against reference sensors through both in-house and external validations and they provide accurate data. Make sure you check the [performance section](https://docs.smartcitizen.me/Components/sensors/performance/) for more information.
+Weather, noise, light and PM sensor measurements have been calibrated and validated against reference sensors through both in-house and external validations and they provide accurate data. Make sure you check the [performance section](/resources/research/#benchmarking-validation-and-technical-references) for more information.
 
 <!-- ## Will the global platform be maintained after the project finishes release?
 Yes, it will be maintained just as it has been for the past five years. Also, the platform is fully open source so the community can take over the maintenance if at some point the Smart Citizen core team can no longer run it. -->
 
 ## Are there any notable case studies using similar sensors?
 
-Yes! Check all of them [here](https://docs.smartcitizen.me/Use%20cases/). A particularly interesting case study is the Making Sense project at Plaça del Sol in Barcelona, where a group of 15 technology enthusiasts and environmentalists joined a community of neighbours from a middle-class district that has been suffering from noise issues due to the nightlife in the square. You can find more information about this case study at: www.making-sense.eu
+Yes! Check all of them [here](/resources/research/). A particularly interesting case study is the Making Sense project at Plaça del Sol in Barcelona, where a group of 15 technology enthusiasts and environmentalists joined a community of neighbours from a middle-class district that has been suffering from noise issues due to the nightlife in the square. You can find more information about this case study at: www.making-sense.eu
 
 ## What happens if I want to move the device or give it to someone else?
 
@@ -114,7 +114,7 @@ Yes. There are various ways in which you can do this.
 
 You can either configure your SCK to send data directly to your own [MQTT](https://mqtt.org/) broker via the [Shell](/guides/getting-started/using-the-shell/). Follow this [guide](/guides/data/sending-data-to-other-platforms/) for more details on the payloads.
 
-Otherwise, you can forward incoming data via the Smart Citizen Platform. See details on [data forwarding](/data/data-platform/#data-fowarding) on the [data platform](/data/data-platform) page, or visit the [developer documentation]({{extra.urls.developer.link}}) for more details on our API.
+Otherwise, you can forward incoming data via the Smart Citizen Platform. See details on [data forwarding](/data/data-platform/#data-forwarding) on the [data platform](/data/data-platform) page, or visit the [developer documentation]({{extra.urls.developer.link}}) for more details on our API.
 
 ## How can I get a kit?
 
