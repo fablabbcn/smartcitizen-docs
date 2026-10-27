@@ -5126,7 +5126,7 @@
 <p>Click on the <strong>Next</strong> button, you are close to the end.</p>
 <p><em>SETUP YOUR SMART Smart Citizen Kit</em></p>
 <p>In order to have your kit connected to the Smart Citizen platform, we need a few step involving the connexion of your kit to your computer. This tool will help you register your kit to the platform, setup your kit's Wi-Fi settings and update its firmware. Currently we support Google Chrome in Win, Mac and Linux.</p>
-<p><em>If you are on Windows check first <a href="#/start/how-to-install-the-drivers-on-windows">How to install the drivers on Windows?</a> section for more information.</em></p>
+<p><em>If you are on Windows check first <a href="/hardware/legacy/Faq/#how-to-install-the-drivers-on-windows">How to install the drivers on Windows?</a> section for more information.</em></p>
 <p>Click on the <em>ADD TO CHROME</em> button and wait for the extension to install.</p>
 <p><img alt="Sck Chrome App" src="/assets/images/sck_1/sck_app_chrome.png" /></p>
 <p>Finally its time to unpack your SCK. Connect the micro USB cable to your SCK and your computer and turn on the SCK switch on the upper left corner.</p>
@@ -5139,7 +5139,7 @@
 <p>If the configurator can't communicate with your board it will report an <strong>Unrecognized board</strong>, we recommend you to try a couple of times, disconnecting your kit, reloading the page and connecting it again to make sure that this is not just a serial port communication problem.</p>
 <p>If the configurator still can't communicate with your kit it may be a firmware/hardware problem. You may try to install the firmware and see if this solves the problem.</p>
 <p><img alt="Unrecognized board" src="/assets/images/sck_1/conf2.jpg" /></p>
-<p>If you <strong>can't upload the firmware</strong> please refer to the <a href="#/start/firmware-update-problem">Firmware update problem</a> section or try doing a <a href="#/start/manual-set-up-the-compilation-way">Manual set up.</a></p>
+<p>If you <strong>can't upload the firmware</strong> please refer to the <a href="/hardware/legacy/Troubleshooting/#firmware-update-problem">Firmware update problem</a> section or try doing a <a href="#manual-set-up-the-compilation-way">Manual set up.</a></p>
 <p>After firmware is installed/updated we can continue with Wi-Fi settings.</p>
 <p><img alt="Wifi settings" src="/assets/images/sck_1/conf3.jpg" /></p>
 <p><em>You can add up to 5 different Wi-Fi credentials in your kit. This will allow your kit to connect to multiple networks in case one fails or you will like to move in between to places</em></p>
@@ -5159,7 +5159,7 @@
 <p><strong>Encryption</strong> -  <em>Optional</em>  You can leave it to <em>WPA2</em> this is the default for most modern networks.</p>
 </li>
 <li>
-<p><strong>External Antenna</strong> - <em>Optional</em> Is your SCK quite far away from Wi-Fi access point? You can use an external antenna with your SCK. Check the <a href="#/start/how-i-can-extend-the-wi-fi-range">How to use an external antenna?</a></p>
+<p><strong>External Antenna</strong> - <em>Optional</em> Is your SCK quite far away from Wi-Fi access point? You can use an external antenna with your SCK. Check the <a href="/hardware/legacy/Faq/#how-i-can-extend-the-wi-fi-range">How to use an external antenna?</a></p>
 </li>
 </ul>
 <p>Next step is optional, you can set your SCK update interval to optimize the battery performance and sensor resolution ratio.</p>
@@ -5177,7 +5177,7 @@
 <p><em>If there is any issue during the process this will be displayed on the <strong>Message window</strong> above. If you need help please contact <a href="mailto:support@smartcitizen.me">support@smartcitizen.me</a>.</em></p>
 <p>Last but now least you will see your SCK <em>Mac Address</em> registered below this is the ID of your SCK. Just click on <strong>Save</strong> and wait for your kit to publish. <strong>Done!</strong></p>
 <p><em>You might need to wait up to 2 minutes or more if you changed the time update settings and refresh your browser in order to see your SCK first post in your device page.</em></p>
-<p><strong>Did you registered your SCK before or did your SCK belong to someone else before?</strong> <em>Take care your SCK can be registered once at a time, in case you registered before check <a href="#/start/how-do-i-register-again-my-sck">How to unlink your SCK?</a> or contact <a href="mailto:support@smartcitizen.me">support@smartcitizen.me</a>.</em></p>
+<p><strong>Did you registered your SCK before or did your SCK belong to someone else before?</strong> <em>Take care your SCK can be registered once at a time, in case you registered before check <a href="/hardware/legacy/Faq/#how-do-i-register-again-my-sck">How to unlink your SCK?</a> or contact <a href="mailto:support@smartcitizen.me">support@smartcitizen.me</a>.</em></p>
 <p><em>Please, if your kit is not publishing properly contact <a href="mailto:support@smartcitizen.me">support@smartcitizen.me</a> or ask for help on the <a href="https://forum.smartcitizen.me">forum</a>.</em></p>
 <h2 id="manual-set-up-the-serial-way">Manual set up: The Serial Way<a class="headerlink" href="#manual-set-up-the-serial-way" title="Permanent link">&para;</a></h2>
 <p>In this tutorial aimed to advanced users you will configure your SCK using serial communication. By using serial communication, you will register your Wi-Fi settings into the SCK and save the SCK’s MAC address in our server.</p>
@@ -5241,12 +5241,12 @@
 <p>In both cases, you have to fill the mac address input field in the configuration page of your kit and press the save button.</p>
 <p><img alt="Register The Kit" src="/assets/images/sck_1/mac_2.png" /></p>
 <p>You are now done with the manual configuration of your SCK. Wait for a few minutes to see your data coming on the server and being displayed on the web page. You can also check that everything is ok by looking at the Arduino serial monitor. Debug messages coming from your SCK should look like this:</p>
-<p>If you want to explore further options with the WiFly module check <a href="#/start/the-sck-command-line">The SCK Command Line</a> section.</p>
+<p>If you want to explore further options with the WiFly module check <a href="/hardware/legacy/Command%20Line/">The SCK Command Line</a> section.</p>
 <p>If you encounter any issue, please share your problem on the <a href="https://forum.smartcitizen.me">forum</a>.</p>
 <h2 id="manual-set-up-the-compilation-way">Manual set up: The Compilation Way<a class="headerlink" href="#manual-set-up-the-compilation-way" title="Permanent link">&para;</a></h2>
 <p>This tutorial is aimed to advanced users, we will guide you through the process of setting up your kit by editing directly the source code. As the code is Open Source, one way of setting the Wi-Fi of your SCK is to download the latest firmware, edit some lines of code, recompile it and upload it to the kit.</p>
 <p>One advantage of this method is that it gives you the opportunity to register multiple Wi-Fi networks at the same time and make the persistent. The Wi-fi networks that you register directly in the source code are called <em>hardcoded</em> and the only way to remove them is with the same process of compiling and uploading the firmware again. This is useful if your SCK is traveling from one location to another where the Wi-Fi credentials are known.</p>
-<p>The downside of this method is that you can not extract the MAC address of your kit, if you don't know it yet you will have to use the method described in <a href="#/start/manual-set-up-the-serial-way">The Serial Way</a> or via the configurator in the setup page of your kit.</p>
+<p>The downside of this method is that you can not extract the MAC address of your kit, if you don't know it yet you will have to use the method described in <a href="#manual-set-up-the-serial-way">The Serial Way</a> or via the configurator in the setup page of your kit.</p>
 <h3 id="getting-the-firmware">Getting the Firmware<a class="headerlink" href="#getting-the-firmware" title="Permanent link">&para;</a></h3>
 <p>You can download the latest firmware on our Github:</p>
 <p><a href="https://github.com/fablabbcn/Smart-Citizen-Kit/releases">https://github.com/fablabbcn/Smart-Citizen-Kit/releases</a></p>
@@ -5300,7 +5300,7 @@ char* antennaExt[networks]  = { INT_ANT };
 <p>Now you just need to click the <em>Upload</em>  button and Arduino will do the rest for you!</p>
 <p>In case you have any issue please check the <a href="https://www.arduino.cc/en/guide/troubleshooting">Arduino Troubleshooting</a> guide.</p>
 <h2 id="registering-the-kit-in-the-platform_1">Registering the kit in the platform<a class="headerlink" href="#registering-the-kit-in-the-platform_1" title="Permanent link">&para;</a></h2>
-<p>After you’ve uploaded your settings, don’t forget to register your kit in our database by saving it’s mac address. To find the mac address, you can use the serial command “get mac”  by following the section <a href="#/start/manual-set-up-the-serial-way">The Serial Way</a>. Or have a look at the wifi module on the board and read the serial number under the bar code (something like “131G0006662116E4” on kit v1.0 or “0006662116E4” on kit v.1.1).</p>
+<p>After you’ve uploaded your settings, don’t forget to register your kit in our database by saving it’s mac address. To find the mac address, you can use the serial command “get mac”  by following the section <a href="#manual-set-up-the-serial-way">The Serial Way</a>. Or have a look at the wifi module on the board and read the serial number under the bar code (something like “131G0006662116E4” on kit v1.0 or “0006662116E4” on kit v.1.1).</p>
 <p><img alt="Find The Mac Address" src="/assets/images/sck_1/mac_manual_sticker.jpg" /></p>
 <p>The <a href="http://en.wikipedia.org/wiki/MAC_address">mac address</a> is the last 12 digit of this serial, separated by a colon every two number. From a number like <code>0006662116E4</code> you would write <code>00:06:66:21:16:E4</code>.</p>
 <p>In both cases, you have to fill the mac address input field in the configuration page of your kit and press the save button.</p>
