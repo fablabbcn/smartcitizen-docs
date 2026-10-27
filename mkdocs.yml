@@ -339,7 +339,8 @@ markdown_extensions:
   - toc:
       permalink: true
       toc_depth: 3
-  - pymdownx.arithmatex
+  - pymdownx.arithmatex:
+      generic: true
   - pymdownx.betterem:
       smart_enable: all
   - pymdownx.caret
@@ -364,6 +365,7 @@ extra_css:
   - assets/stylesheets/extra.css
 
 extra_javascript:
-  - 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'
+  - 'assets/javascripts/mathjax.js'
+  - 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js'
   - 'https://buttons.github.io/buttons.js'
   - 'assets/javascripts/extra.js'
