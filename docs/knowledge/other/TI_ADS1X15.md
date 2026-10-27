@@ -31,18 +31,18 @@ The ADS1115 has a **16-bit** resolution (it divides its measurement range in 655
 
 The ADS1015 is a version of the same chip with a lower resolution (12 bits) and a higher sampling rate.
 
-## Usage
+## Usage and considerations
 
 The ADS1X15 is enabled in all the default _air_ firmware builds (SCK2.1 onwards). The ADC can be connected to the [Auxiliary connector](/hardware/boards/data-board#auxiliary-connector) through the [Analog Sensor Board](/hardware/boards/analog-sensor-board/), or with a breakout board such as the [Adafruit ADS1115 breakout](https://www.adafruit.com/product/1085).
 
 Each ADS1115 can be configured on one of four I2C addresses (`0x48`, `0x49`, `0x4A` or `0x4B`), so up to four ADCs (16 channels) can be used at the same time. The [Analog Sensor Board](/hardware/boards/analog-sensor-board/) has two ADS1115 on board, with selectable addresses. The firmware detects each ADC on boot, and creates one metric per channel:
 
-| Address | Shell names | Units |
-|:- |:- |:-: |
-| `0x48` | `ADS1x15 ADC 0x48 Ch0` to `ADS1x15 ADC 0x48 Ch3` | V |
-| `0x49` | `ADS1x15 ADC 0x49 Ch0` to `ADS1x15 ADC 0x49 Ch3` | V |
-| `0x4A` | `ADS1x15 ADC 0x4A Ch0` to `ADS1x15 ADC 0x4A Ch3` | V |
-| `0x4B` | `ADS1x15 ADC 0x4B Ch0` to `ADS1x15 ADC 0x4B Ch3` | V |
+| Address | Shell names | Units | API |
+|:- |:- |:-: |:- |
+| `0x48` | `ADS1x15 ADC 0x48 Ch0` to `ADS1x15 ADC 0x48 Ch3` | V | [133](https://api.smartcitizen.me/v0/sensors/133), [134](https://api.smartcitizen.me/v0/sensors/134), [135](https://api.smartcitizen.me/v0/sensors/135), [136](https://api.smartcitizen.me/v0/sensors/136) |
+| `0x49` | `ADS1x15 ADC 0x49 Ch0` to `ADS1x15 ADC 0x49 Ch3` | V | [138](https://api.smartcitizen.me/v0/sensors/138), [139](https://api.smartcitizen.me/v0/sensors/139), [140](https://api.smartcitizen.me/v0/sensors/140), [141](https://api.smartcitizen.me/v0/sensors/141) |
+| `0x4A` | `ADS1x15 ADC 0x4A Ch0` to `ADS1x15 ADC 0x4A Ch3` | V | [143](https://api.smartcitizen.me/v0/sensors/143), [144](https://api.smartcitizen.me/v0/sensors/144), [145](https://api.smartcitizen.me/v0/sensors/145), [146](https://api.smartcitizen.me/v0/sensors/146) |
+| `0x4B` | `ADS1x15 ADC 0x4B Ch0` to `ADS1x15 ADC 0x4B Ch3` | V | [148](https://api.smartcitizen.me/v0/sensors/148), [149](https://api.smartcitizen.me/v0/sensors/149), [150](https://api.smartcitizen.me/v0/sensors/150), [151](https://api.smartcitizen.me/v0/sensors/151) |
 
 You can check the readings with the `read` and `monitor` commands, for instance:
 

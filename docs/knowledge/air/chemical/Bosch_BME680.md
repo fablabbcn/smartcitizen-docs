@@ -36,12 +36,14 @@ The gas sensor is not selective to any specific gas. Its resistance decreases wi
 
 When enabled in the firmware, the following metrics are available:
 
-| Metric | Shell name | Units |
-|:- |:- |:-: |
-| Temperature | `Temperature BME680` | ºC |
-| Humidity | `Humidity BME680` | % |
-| Barometric pressure | `Barometric pressure BME680` | kPa |
-| Gas resistance | `VOC Gas BME680` | Ohms |
+| Metric | Shell name | Units | API |
+|:- |:- |:-: |:- |
+| Temperature | `Temperature BME680` | ºC | - |
+| Humidity | `Humidity BME680` | % | - |
+| Barometric pressure | `Barometric pressure BME680` | kPa | - |
+| Gas resistance | `VOC Gas BME680` | Ohms | - |
+
+Metrics with `-` in the API column are not published to the platform.
 
 The firmware reports the **raw gas resistance** of the sensor, in Ohms. Bosch provides a closed-source library (BSEC) that converts this resistance into an _Indoor Air Quality (IAQ) index_ and other estimated values, but this library is **not** used in the SCK firmware, so the resistance needs to be interpreted in post-processing.
 

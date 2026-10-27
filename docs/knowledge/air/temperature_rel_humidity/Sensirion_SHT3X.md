@@ -36,10 +36,10 @@ Each sensor is individually calibrated in the factory. The SHT3X family includes
 
 The sensor is on the Urban Board, and its readings are available as:
 
-| Metric | Shell name | Units |
-|:- |:- |:-: |
-| Air temperature | `Temperature` | ºC |
-| Relative humidity | `Humidity` | % |
+| Metric | Shell name | Units | API |
+|:- |:- |:-: |:- |
+| Air temperature | `Temperature` | ºC | [55](https://api.smartcitizen.me/v0/sensors/55) |
+| Relative humidity | `Humidity` | % | [56](https://api.smartcitizen.me/v0/sensors/56) |
 
 You can check the readings with the `read` and `monitor` commands:
 

@@ -42,6 +42,12 @@ The sensor can be completely submerged, and has the **following characteristics*
 
 ## Usage and considerations
 
+The following metrics are available:
+
+| Metric | Shell name | Units | API |
+|:- |:- |:-: |:- |
+| pH | `Atlas PH` | pH | [43](https://api.smartcitizen.me/v0/sensors/43) |
+
 ### Preparing the sensor
 
 To remove the sensor from the protective canister:

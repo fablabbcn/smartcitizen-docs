@@ -43,6 +43,15 @@ Check the [EZO EC datasheet](https://files.atlas-scientific.com/EC_EZO_Datasheet
 
 ## Usage and considerations
 
+The following metrics are available:
+
+| Metric | Shell name | Units | API |
+|:- |:- |:-: |:- |
+| Electrical conductivity | `Atlas Conductivity` | µS/cm | [45](https://api.smartcitizen.me/v0/sensors/45) |
+| Total dissolved solids | `Atlas Total Dissolved Solids` | ppm | [122](https://api.smartcitizen.me/v0/sensors/122) |
+| Salinity | `Atlas Salinity` | PSU (ppt) | [123](https://api.smartcitizen.me/v0/sensors/123) |
+| Specific gravity | `Atlas Specific gravity` | - | [46](https://api.smartcitizen.me/v0/sensors/46) |
+
 ### How to prepare the sensor
 
 **Before and after** measuring, the sensor should be cleaned with deionized water. In case of debris, it can be cleaned with laboratory tissue to avoid dust. If it is very dirty or contains oily residues, it can also be cleaned first with a little detergent and then with distilled water.

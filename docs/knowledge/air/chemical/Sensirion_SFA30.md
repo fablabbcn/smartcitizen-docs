@@ -23,24 +23,6 @@ excerpt: "An electrochemical sensor for measuring formaldehyde (HCHO)."
 !!! info "Smart Citizen Station"
     This sensor is part of the [SCK CO2 + HCHO](/hardware/stations/air/sck-co2-hcho/) station.
 
-## Usage
-
-The SFA30 can be directly connected to the [Auxiliary connector](/hardware/boards/data-board#auxiliary-connector) on the data board. If you use the Seeed Studio Grove version, use a [4-wire grove cable](https://www.seeedstudio.com/cables-c-949.html). For other boards, use [4-wire grove to female header cables](https://www.seeedstudio.com/Grove-4-pin-Female-Jumper-to-Grove-4-pin-Conversion-Cable-5-PCs-per-PAck.html) or a [grove to screw connector](/guides/getting-started/third-party-sensors/#sensors-with-open-leads). The sensor communicates via I2C, on the address `0x5D`.
-
-The sensor is enabled in all the default _air_ firmware builds (SCK2.1 onwards), and it is automatically detected on boot. The following metrics are available:
-
-| Metric | Shell name | Units |
-|:- |:- |:-: |
-| Formaldehyde | `SFA30 Formaldehyde` | ppb |
-| Temperature | `SFA30 Temperature` | ºC |
-| Humidity | `SFA30 Humidity` | % |
-
-You can check the readings with the `read` and `monitor` commands:
-
-```
-read sfa30 formaldehyde
-```
-
 ## Working principle
 
 **Formaldehyde** (HCHO) is a VOC commonly found in indoor environments, emitted by furniture, building materials (pressed wood, insulation), glues, paints or cleaning products. It is classified as a carcinogen, and several organisations have defined indoor exposure guidelines for it [^1].
@@ -50,6 +32,26 @@ The SFA30 is an **electrochemical** sensor. Like the [Alphasense electrochemical
 The sensor integrates the electronics to amplify the signal, a temperature and humidity sensor for compensation, and the algorithms to convert the signal into a concentration, so it provides a calibrated digital output.
 
 ## Usage and considerations
+
+### Connection
+
+The SFA30 can be directly connected to the [Auxiliary connector](/hardware/boards/data-board#auxiliary-connector) on the data board. If you use the Seeed Studio Grove version, use a [4-wire grove cable](https://www.seeedstudio.com/cables-c-949.html). For other boards, use [4-wire grove to female header cables](https://www.seeedstudio.com/Grove-4-pin-Female-Jumper-to-Grove-4-pin-Conversion-Cable-5-PCs-per-PAck.html) or a [grove to screw connector](/guides/getting-started/third-party-sensors/#sensors-with-open-leads). The sensor communicates via I2C, on the address `0x5D`.
+
+The sensor is enabled in all the default _air_ firmware builds (SCK2.1 onwards), and it is automatically detected on boot. The following metrics are available:
+
+| Metric | Shell name | Units | API |
+|:- |:- |:-: |:- |
+| Formaldehyde | `SFA30 Formaldehyde` | ppb | [212](https://api.smartcitizen.me/v0/sensors/212) |
+| Temperature | `SFA30 Temperature` | ºC | [211](https://api.smartcitizen.me/v0/sensors/211) |
+| Humidity | `SFA30 Humidity` | % | [210](https://api.smartcitizen.me/v0/sensors/210) |
+
+You can check the readings with the `read` and `monitor` commands:
+
+```
+read sfa30 formaldehyde
+```
+
+### Considerations
 
 The [datasheet](https://sensirion.com/products/catalog/SFA30) can be found on Sensirion's website.
 

@@ -33,9 +33,9 @@ The sensor has two photodiodes: one that is sensitive to visible and infrared li
 
 The sensor is on the Urban Board, and its readings are available as:
 
-| Metric | Shell name | Units |
-|:- |:- |:-: |
-| Ambient light | `Light` | lux |
+| Metric | Shell name | Units | API |
+|:- |:- |:-: |:- |
+| Ambient light | `Light` | lux | [14](https://api.smartcitizen.me/v0/sensors/14) |
 
 You can check the readings with the `read` and `monitor` commands:
 

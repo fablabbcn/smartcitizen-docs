@@ -30,6 +30,12 @@ The ORP probe measures the voltage between a platinum (or gold) measuring electr
 
 ## Usage and considerations
 
+The following metrics are available:
+
+| Metric | Shell name | Units | API |
+|:- |:- |:-: |:- |
+| Oxidation-reduction potential | `Atlas Redox potential` | mV | [164](https://api.smartcitizen.me/v0/sensors/164) |
+
 No particular consideration for the probe, other than it is very delicate:
 
 ![](/assets/images/water/atlas-ph-warning.png)

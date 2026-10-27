@@ -23,23 +23,6 @@ excerpt: The SCD4X (SCD40 and SCD41) is a miniature photoacoustic NDIR CO2 senso
 !!! info "Firmware version"
     The SCD4X is supported from firmware **V0.9.12** onwards, and it is enabled by default in the `sck23_air` firmware build. Both the SCD40 and the SCD41 are supported. Check how to [upgrade the firmware](/guides/firmware/upgrading-the-firmware/) if you have an older version.
 
-## Usage
-
-The easiest way to connect the SCD4X to the SCK is by using the [Seeed Studio Grove breakout (SCD41)](https://www.seeedstudio.com/Grove-CO2-Temperature-Humidity-Sensor-SCD41-p-5025.html). The sensor can be directly connected to the [Auxiliary connector](/hardware/boards/data-board#auxiliary-connector) on the data board, using a [4-wire grove cable](https://www.seeedstudio.com/cables-c-949.html).
-
-Other breakouts (Sensirion's evaluation boards, Adafruit, Sparkfun...) can be connected using [4-wire grove to female header cables](https://www.seeedstudio.com/Grove-4-pin-Female-Jumper-to-Grove-4-pin-Conversion-Cable-5-PCs-per-PAck.html), or a [grove to screw connector](/guides/getting-started/third-party-sensors/#sensors-with-open-leads). The sensor communicates via I2C, on the address `0x62`.
-
-Once connected, the sensor will be automatically detected on boot, and three metrics will be available:
-
-| Metric | Shell name | Units |
-|:- |:- |:-: |
-| CO2 | `SCD4X CO2` | ppm |
-| Temperature | `SCD4X Temperature` | ºC |
-| Relative humidity | `SCD4X Humidity` | % |
-
-!!! warning "I2C address conflict"
-    The SCD4X uses the I2C address `0x62`, which is the same one used by the [Atlas Scientific ORP](/knowledge/soil-water/ORP/Atlas_ORP/) sensor. Both sensors cannot be used at the same time on the same SCK. Note that the [SCD30](/knowledge/air/co2/Sensirion_SCD30/) uses a different address (`0x61`), so the SCD30 and SCD4X _can_ be used together.
-
 ## Working principle
 
 The SCD4X is also an NDIR (_non-dispersive infrared_) sensor, but unlike the [SCD30](/knowledge/air/co2/Sensirion_SCD30/), which is a _transmissive_ NDIR sensor, the SCD4X uses a **photoacoustic** measurement principle (_PASens®_ technology by Sensirion) [^34].
@@ -51,6 +34,25 @@ The main advantage of this approach is that it **does not need a long optical pa
 As with the SCD30, the module also integrates a Sensirion humidity and temperature sensor, used to compensate the CO2 readings internally.
 
 ## Usage and considerations
+
+### Connection
+
+The easiest way to connect the SCD4X to the SCK is by using the [Seeed Studio Grove breakout (SCD41)](https://www.seeedstudio.com/Grove-CO2-Temperature-Humidity-Sensor-SCD41-p-5025.html). The sensor can be directly connected to the [Auxiliary connector](/hardware/boards/data-board#auxiliary-connector) on the data board, using a [4-wire grove cable](https://www.seeedstudio.com/cables-c-949.html).
+
+Other breakouts (Sensirion's evaluation boards, Adafruit, Sparkfun...) can be connected using [4-wire grove to female header cables](https://www.seeedstudio.com/Grove-4-pin-Female-Jumper-to-Grove-4-pin-Conversion-Cable-5-PCs-per-PAck.html), or a [grove to screw connector](/guides/getting-started/third-party-sensors/#sensors-with-open-leads). The sensor communicates via I2C, on the address `0x62`.
+
+Once connected, the sensor will be automatically detected on boot, and three metrics will be available:
+
+| Metric | Shell name | Units | API |
+|:- |:- |:-: |:- |
+| CO2 | `SCD4X CO2` | ppm | [258](https://api.smartcitizen.me/v0/sensors/258) |
+| Temperature | `SCD4X Temperature` | ºC | [259](https://api.smartcitizen.me/v0/sensors/259) |
+| Relative humidity | `SCD4X Humidity` | % | [260](https://api.smartcitizen.me/v0/sensors/260) |
+
+!!! warning "I2C address conflict"
+    The SCD4X uses the I2C address `0x62`, which is the same one used by the [Atlas Scientific ORP](/knowledge/soil-water/ORP/Atlas_ORP/) sensor. Both sensors cannot be used at the same time on the same SCK. Note that the [SCD30](/knowledge/air/co2/Sensirion_SCD30/) uses a different address (`0x61`), so the SCD30 and SCD4X _can_ be used together.
+
+### Considerations
 
 Sensirion provides all the documentation for the SCD4X in their [product page](https://sensirion.com/products/catalog/SCD41/), including the datasheet, application notes and design-in guidelines. There are two variants in the SCD4X family, with the same footprint and commands:
 

@@ -31,7 +31,7 @@ The INA219 is a _high-side_ monitor: the shunt is placed between the power suppl
 
 It can be used, for instance, to measure the power consumption of a device, the current produced by a small solar panel, or the voltage of a battery.
 
-## Usage
+## Usage and considerations
 
 The easiest way to use the INA219 is with a breakout board, such as the [Adafruit INA219 breakout](https://www.adafruit.com/product/904), which includes a 0.1Ω shunt resistor. Connect it to the [Auxiliary connector](/hardware/boards/data-board#auxiliary-connector) on the data board with [4-wire grove to female header cables](https://www.seeedstudio.com/Grove-4-pin-Female-Jumper-to-Grove-4-pin-Conversion-Cable-5-PCs-per-PAck.html), or with a STEMMA QT to Grove cable for the newer versions of the board.
 
@@ -40,12 +40,14 @@ The easiest way to use the INA219 is with a breakout board, such as the [Adafrui
 
 The circuit to monitor is connected to the `VIN+` and `VIN-` terminals of the breakout: `VIN+` to the power supply, and `VIN-` to the load. When enabled, the following metrics are available:
 
-| Metric | Shell name | Units | Description |
-|:- |:- |:-: |:- |
-| Bus voltage | `INA219 Bus voltage` | V | Voltage between `VIN-` and ground |
-| Shunt voltage | `INA219 Shunt voltage` | mV | Voltage drop across the shunt |
-| Current | `INA219 Current` | mA | Current through the shunt |
-| Load voltage | `INA219 Load voltage` | V | Bus voltage plus shunt voltage (voltage of the power supply) |
+| Metric | Shell name | Units | Description | API |
+|:- |:- |:-: |:- |:- |
+| Bus voltage | `INA219 Bus voltage` | V | Voltage between `VIN-` and ground | - |
+| Shunt voltage | `INA219 Shunt voltage` | mV | Voltage drop across the shunt | - |
+| Current | `INA219 Current` | mA | Current through the shunt | - |
+| Load voltage | `INA219 Load voltage` | V | Bus voltage plus shunt voltage (voltage of the power supply) | - |
+
+Metrics with `-` in the API column are not published to the platform.
 
 You can check the readings with the `read` and `monitor` commands, for instance:
 

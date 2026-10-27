@@ -53,6 +53,12 @@ This type of sensor does not require maintenance or recalibration, only periodic
 
 ## Usage and considerations
 
+The following metrics are available:
+
+| Metric | Shell name | Units | API |
+|:- |:- |:-: |:- |
+| Water temperature | `Atlas Temperature` | ºC | [51](https://api.smartcitizen.me/v0/sensors/51) |
+
 ### Calibration
 
 {{ get_snippet_rel('docs/includes/pre-calibration-water-stations.md')}}

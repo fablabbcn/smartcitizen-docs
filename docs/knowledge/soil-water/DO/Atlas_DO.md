@@ -45,6 +45,13 @@ The sensor can be completely submerged, and has the **following features** (a se
 
 ## Usage and considerations
 
+The following metrics are available:
+
+| Metric | Shell name | Units | API |
+|:- |:- |:-: |:- |
+| Dissolved oxygen | `Atlas Dissolved Oxygen` | mg/L | [48](https://api.smartcitizen.me/v0/sensors/48) |
+| Oxygen saturation | `Atlas DO Saturation` | % | [49](https://api.smartcitizen.me/v0/sensors/49) |
+
 ### How to prepare the sensor
 
 This sensor comes in several sizes, depending on how much electrolyte solution it has. **Check the sensor for electrolyte before use.**

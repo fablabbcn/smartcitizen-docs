@@ -57,6 +57,30 @@ As mentioned above, the **counter electrode** is meant to balance the reaction o
 
 ## Usage and considerations
 
+When connected through the SCK Gases Board (`SCK_WITH_GASES_BOARD` firmware flag), the firmware reports the raw voltages of the working (`W`) and auxiliary (`A`) electrodes of each slot:
+
+| Metric | Shell name | Units | API |
+|:- |:- |:-: |:- |
+| Slot 1 (CO-B4), working electrode | `Gases Board 1W` | mV | [64](https://api.smartcitizen.me/v0/sensors/64) |
+| Slot 1 (CO-B4), auxiliary electrode | `Gases Board 1A` | mV | [65](https://api.smartcitizen.me/v0/sensors/65) |
+| Slot 2 (NO2-B43F), working electrode | `Gases Board 2W` | mV | [61](https://api.smartcitizen.me/v0/sensors/61) |
+| Slot 2 (NO2-B43F), auxiliary electrode | `Gases Board 2A` | mV | [62](https://api.smartcitizen.me/v0/sensors/62) |
+| Slot 3 (OX-B431), working electrode | `Gases Board 3W` | mV | [67](https://api.smartcitizen.me/v0/sensors/67) |
+| Slot 3 (OX-B431), auxiliary electrode | `Gases Board 3A` | mV | [68](https://api.smartcitizen.me/v0/sensors/68) |
+| Temperature | `Gases Board Temperature` | ºC | [79](https://api.smartcitizen.me/v0/sensors/79) |
+| Humidity | `Gases Board Humidity` | % | [80](https://api.smartcitizen.me/v0/sensors/80) |
+
+Pollutant concentrations are not calculated by the firmware: they are derived in post-processing and published on the platform as:
+
+| Metric | Units | API |
+|:- |:-: |:- |
+| CO | ppb | [152](https://api.smartcitizen.me/v0/sensors/152) |
+| NO2 | ppb | [153](https://api.smartcitizen.me/v0/sensors/153) |
+| NO | ppb | [154](https://api.smartcitizen.me/v0/sensors/154) |
+| SO2 | ppb | [155](https://api.smartcitizen.me/v0/sensors/155) |
+| H2S | ppb | [156](https://api.smartcitizen.me/v0/sensors/156) |
+| O3 | ppb | [157](https://api.smartcitizen.me/v0/sensors/157) |
+
 Alphasense Ltd. provides the calibration data in laboratory conditions for each of the electrochemical cells used. This data can be used to calculate pollutant concentration and to correct for _known effects_ by temperature deviations.
 
 !!! info "More on this"

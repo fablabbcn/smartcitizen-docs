@@ -34,6 +34,17 @@ The sensor uses capacitive sensing to measure soil's moisture. A 1MHz square wav
 
 ## Usage and considerations
 
+The following metrics are available (only the soil moisture percentage is published to the platform):
+
+| Metric | Shell name | Units | API |
+|:- |:- |:-: |:- |
+| Soil moisture | `Soil Moisture Percent` | % | [50](https://api.smartcitizen.me/v0/sensors/50) |
+| Soil moisture (raw) | `Soil Moisture Raw` | - | - |
+| Soil temperature | `Soil Temperature` | ºC | - |
+| Light | `Soil Light` | - | - |
+
+Metrics with `-` in the API column are not published to the platform.
+
 There are different versions of the Chirp sensor, and they are automatically recognized by the SCK. A Grove 4 pin Female Jumper to Grove will need to be used with the sensor to connect it to the SCK. The original Chirp sensors come coated with PRF202 - a moisture resistant varnish for electronics, but it is not enough for actual deployment. For such, one must add additional protection to the whole sensor. We suggest polyester or epoxy resin. However, you must note that sensitivity of the sensor will decrease depending on how thick the layer you are going to apply and might need to be recalibrated. We also recommend covering the electronics with heat shrink to fully waterproof the sensor. Some versions already include a pre-ruggedized sensor, which is a recommended solution for a faster use.
 
 ![](/assets/images/chirp-01.jpg)

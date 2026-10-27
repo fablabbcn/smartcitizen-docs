@@ -37,6 +37,19 @@ What the sensor does, is to analyse the readings from the sensing element and co
 
 ## Usage and considerations
 
+The PMS5003 can be connected to the Urban Board (SCK 2.1), or to the PM board (up to two sensors, _A_ and _B_). The following metrics are available:
+
+| Metric | Shell name | Units | API |
+|:- |:- |:-: |:- |
+| PM1, PM2.5, PM10 (Urban Board) | `PMS PM 1.0`, `PMS PM 2.5`, `PMS PM 10.0` | µg/m3 | [89](https://api.smartcitizen.me/v0/sensors/89), [87](https://api.smartcitizen.me/v0/sensors/87), [88](https://api.smartcitizen.me/v0/sensors/88) |
+| PN0.3, PN0.5, PN1, PN2.5, PN5, PN10 (Urban Board) | `PMS PN 0.3`, `PMS PN 0.5`... | #/0.1l | [165](https://api.smartcitizen.me/v0/sensors/165), [166](https://api.smartcitizen.me/v0/sensors/166), [167](https://api.smartcitizen.me/v0/sensors/167), [168](https://api.smartcitizen.me/v0/sensors/168), [169](https://api.smartcitizen.me/v0/sensors/169), [170](https://api.smartcitizen.me/v0/sensors/170) |
+| PM1, PM2.5, PM10 (PM board, sensor A) | `Ext PM_A 1.0`, `Ext PM_A 2.5`, `Ext PM_A 10.0` | µg/m3 | [71](https://api.smartcitizen.me/v0/sensors/71), [72](https://api.smartcitizen.me/v0/sensors/72), [73](https://api.smartcitizen.me/v0/sensors/73) |
+| PN0.3, PN0.5, PN1, PN2.5, PN5, PN10 (PM board, sensor A) | `Ext PN_A 0.3`, `Ext PN_A 0.5`... | #/0.1l | [99](https://api.smartcitizen.me/v0/sensors/99), [100](https://api.smartcitizen.me/v0/sensors/100), [101](https://api.smartcitizen.me/v0/sensors/101), [102](https://api.smartcitizen.me/v0/sensors/102), [103](https://api.smartcitizen.me/v0/sensors/103), [104](https://api.smartcitizen.me/v0/sensors/104) |
+| PM1, PM2.5, PM10 (PM board, sensor B) | `Ext PM_B 1.0`, `Ext PM_B 2.5`, `Ext PM_B 10.0` | µg/m3 | [75](https://api.smartcitizen.me/v0/sensors/75), [76](https://api.smartcitizen.me/v0/sensors/76), [77](https://api.smartcitizen.me/v0/sensors/77) |
+| PN0.3, PN0.5, PN1, PN2.5, PN5, PN10 (PM board, sensor B) | `Ext PN_B 0.3`, `Ext PN_B 0.5`... | #/0.1l | [105](https://api.smartcitizen.me/v0/sensors/105), [106](https://api.smartcitizen.me/v0/sensors/106), [107](https://api.smartcitizen.me/v0/sensors/107), [108](https://api.smartcitizen.me/v0/sensors/108), [109](https://api.smartcitizen.me/v0/sensors/109), [110](https://api.smartcitizen.me/v0/sensors/110) |
+
+The particle number (PN) metrics of the PM board are disabled by default.
+
 !!! info "Sources"
     Have a read through the [Technical Datasheet](/assets/datasheets/pms5003/PTQ3004-2015 PMS5003 series data manual English_SLT_V1.0K.pdf).
 

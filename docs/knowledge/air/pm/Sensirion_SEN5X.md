@@ -41,15 +41,15 @@ The VOC and NOx sensors are **metal oxide (MOx)** sensors, which change their re
 
 The sensor is connected to the Urban Board with a custom cable, and the firmware automatically detects which model is connected. Depending on the model, the following metrics are available:
 
-| Metric | Shell name | Units | Models |
-|:- |:- |:-: |:- |
-| PM1, PM2.5, PM4, PM10 | `SEN5X PM 1.0`, `SEN5X PM 2.5`... | µg/m3 | All |
-| PN0.5, PN1, PN2.5, PN4, PN10 | `SEN5X PN 0.5`, `SEN5X PN 1.0`... | #/0.1l | All |
-| Typical particle size | `SEN5X Typical Particle Size` | µm | All |
-| Temperature | `SEN5X Temperature` | ºC | SEN54, SEN55 |
-| Humidity | `SEN5X Humidity` | % | SEN54, SEN55 |
-| VOC Index | `SEN5X Vocs Index` | - | SEN54, SEN55 |
-| NOx Index | `SEN5X NOx Index` | - | SEN55 |
+| Metric | Shell name | Units | Models | API |
+|:- |:- |:-: |:- |:- |
+| PM1, PM2.5, PM4, PM10 | `SEN5X PM 1.0`, `SEN5X PM 2.5`... | µg/m3 | All | [193](https://api.smartcitizen.me/v0/sensors/193), [194](https://api.smartcitizen.me/v0/sensors/194), [195](https://api.smartcitizen.me/v0/sensors/195), [196](https://api.smartcitizen.me/v0/sensors/196) |
+| PN0.5, PN1, PN2.5, PN4, PN10 | `SEN5X PN 0.5`, `SEN5X PN 1.0`... | #/0.1l | All | [197](https://api.smartcitizen.me/v0/sensors/197), [198](https://api.smartcitizen.me/v0/sensors/198), [199](https://api.smartcitizen.me/v0/sensors/199), [200](https://api.smartcitizen.me/v0/sensors/200), [201](https://api.smartcitizen.me/v0/sensors/201) |
+| Typical particle size | `SEN5X Typical Particle Size` | µm | All | [202](https://api.smartcitizen.me/v0/sensors/202) |
+| Temperature | `SEN5X Temperature` | ºC | SEN54, SEN55 | [204](https://api.smartcitizen.me/v0/sensors/204) |
+| Humidity | `SEN5X Humidity` | % | SEN54, SEN55 | [203](https://api.smartcitizen.me/v0/sensors/203) |
+| VOC Index | `SEN5X Vocs Index` | - | SEN54, SEN55 | [205](https://api.smartcitizen.me/v0/sensors/205) |
+| NOx Index | `SEN5X NOx Index` | - | SEN55 | [206](https://api.smartcitizen.me/v0/sensors/206) |
 
 Raw values for temperature, humidity, VOCs and NOx are also available, but disabled by default.
 

@@ -30,6 +30,12 @@ Substances with ionisation potential below the sensor's lamp specification will 
 
 ## Usage and considerations
 
+There is no dedicated metric for PID sensors: their output voltage is read by one of the [ADS1X15](/knowledge/other/TI_ADS1X15/) channels, depending on the address and channel where the sensor is connected:
+
+| Metric | Shell name | Units | API |
+|:- |:- |:-: |:- |
+| PID output voltage | `ADS1x15 ADC 0x48 Ch0` to `ADS1x15 ADC 0x4B Ch3` | V | See [ADS1X15](/knowledge/other/TI_ADS1X15/#usage-and-considerations) |
+
 Alphasense PID sensors have an **analog voltage output**, proportional to the concentration of VOCs. They come in different models with different sensitivities and ranges, from ppb to ppm levels. Check the [Alphasense website](https://www.alphasense.com/index.php/products/pid-air/) for the datasheets and application notes of each model.
 
 !!! info "Connecting to the SCK"

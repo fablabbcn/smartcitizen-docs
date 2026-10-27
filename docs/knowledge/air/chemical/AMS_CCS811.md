@@ -47,6 +47,13 @@ Temperature and humidity are used internally to compensate the readings, as the 
 
 ## Usage and considerations
 
+The sensor is on the Urban Board (SCK 2.1), and its readings are available as:
+
+| Metric | Shell name | Units | API |
+|:- |:- |:-: |:- |
+| Total VOCs | `CCS811 VOC Gas` | ppb | [113](https://api.smartcitizen.me/v0/sensors/113) |
+| Equivalent CO2 | `CCS811 eCO2 Gas` | ppm | [112](https://api.smartcitizen.me/v0/sensors/112) |
+
 Like any sensor, the CCS811 has some limitations. As mentioned above, the sensitive layer will decrease it's resistance when in presence of _VOCs_, but other pollutants can have the opposite effect on it. For instance, Ozone (O3) will increase the sensor's resistance, and it could be seen as clean air by the sensor. This could explain why in some outdoor environments (generally with traffic and high levels of sun radiation), the sensor can present an unstable behaviour.
 
 Additionally, humidity is known to affect the sensor resistance. The internal humidity correction can limit this effect up to a certain extent, but a perfect correction is not possible.

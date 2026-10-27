@@ -73,6 +73,18 @@ Because of all this, the very first thing we would like to do is to be able to p
 
 ## Usage and considerations
 
+The microphone is on the Urban Board, and its readings are available as:
+
+| Metric | Shell name | Units | Enabled by default | API |
+|:- |:- |:-: |:-: |:- |
+| Noise level (A-weighting) | `Noise dBA` | dBA | Yes | [53](https://api.smartcitizen.me/v0/sensors/53) |
+| Noise level (C-weighting) | `Noise dBC` | dBC | No | [217](https://api.smartcitizen.me/v0/sensors/217) |
+| Noise level (Z-weighting, no weighting) | `Noise dBZ` | dB | No | [218](https://api.smartcitizen.me/v0/sensors/218) |
+| Peak frequency | `Noise Peak Frequency` | Hz | Yes | [254](https://api.smartcitizen.me/v0/sensors/254) |
+| Spectrum | `Noise FFT` | - | No | - |
+
+Metrics with `-` in the API column are not published to the platform.
+
 This is the whole signal treatment process we use for the I2S microphone ICS43432. We will have a look at _windowing_ and its use in future sections, as well as its implementation in the SAMD21 Cortex M0+ for our firmware.
 
 1. Signal acquisition

@@ -29,6 +29,17 @@ To use this sensor, you'll need a [screw connector to grove adaptor](/guides/get
 
 ![](/assets/images/df-robot-screw-connector.jpeg)
 
+## Usage and considerations
+
+Once connected, the sensor will be automatically detected on boot. Depending on the model, the following metrics are available:
+
+| Metric | Shell name | Units | API |
+|:- |:- |:-: |:- |
+| Air temperature (SHT31) | `Ext SHT31 Temperature` | ºC | [79](https://api.smartcitizen.me/v0/sensors/79) |
+| Relative humidity (SHT31) | `Ext SHT31 Humidity` | % | [80](https://api.smartcitizen.me/v0/sensors/80) |
+| Air temperature (SHT35) | `Ext SHT35 Temperature` | ºC | [224](https://api.smartcitizen.me/v0/sensors/224) |
+| Relative humidity (SHT35) | `Ext SHT35 Humidity` | % | [225](https://api.smartcitizen.me/v0/sensors/225) |
+
 ## Modify temperature and relative humidity offset
 
 External sensors offsets can be modified via the `control` command.

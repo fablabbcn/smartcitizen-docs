@@ -40,6 +40,15 @@ Finally, the chemical reactions within the resistive element are directly relate
 
 ## Usage and considerations
 
+The MiCS-4514 is on the Urban Board of the SCK 1.5 and SCK 2.0 (it is not present on the SCK 2.1 onwards). It reports the resistance of each sensing element:
+
+| Metric | Shell name | Units | API |
+|:- |:- |:-: |:- |
+| CO sensor resistance | `Carbon monoxide resistance` | kOhm | [16](https://api.smartcitizen.me/v0/sensors/16) |
+| NO2 sensor resistance | `Nitrogen dioxide resistance` | kOhm | [15](https://api.smartcitizen.me/v0/sensors/15) |
+
+Concentrations calculated from these resistances, in post-processing, are published on the platform as [82](https://api.smartcitizen.me/v0/sensors/82) (CO, ppm) and [81](https://api.smartcitizen.me/v0/sensors/81) (NO2, ppb).
+
 ### Sensor Calibration
 
 The SGX4514 is a low cost sensor originally ment to detect instances or trends of target gas in the atmosphere [^fourth][^fifth]. The applications intended for these sensors are ‘event sensing‘ applications and the level of accuracy required is not necessarily within regulatory standards. Furthermore, these sensors should not be used with safety related issues.

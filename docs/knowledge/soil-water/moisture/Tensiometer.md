@@ -37,6 +37,12 @@ The design is entirely open source and it is deeply inspired by the work of Rein
 
 ## Usage and considerations
 
+There is no dedicated metric for the tensiometer: its output voltage is read by one of the [ADS1X15](/knowledge/other/TI_ADS1X15/) channels, depending on the address and channel where the sensor is connected:
+
+| Metric | Shell name | Units | API |
+|:- |:- |:-: |:- |
+| Probe output voltage | `ADS1x15 ADC 0x48 Ch0` to `ADS1x15 ADC 0x4B Ch3` | V | See [ADS1X15](/knowledge/other/TI_ADS1X15/#usage-and-considerations) |
+
 The design is entirely open source and it is deeply inspired by the work of Reinier Van der Lee from the [Vinduino project](http://vanderleevineyard.com/vineyard-blog.html), using an already calibrated commercial probe like the **Watermark 200SS9**. The sensor itself is straightforward and it consists of two stainless steel screws that work as electrodes cast inside a piece of plaster and covered by a plastic mesh to prevent erosion. As water is added more electrons can pass between the electrodes of the probe reducing the amount of resistance between them. By using this range of values, you can determine the amount of water that exists in your soil. To avoid interferences and degradation of the electrodes the design only applies voltage for a very short time and uses alternating electric polarities. For the sensor to work, we need a minimal circuit that uses two resistors and two diodes. The resistors work together with the electrodes to build a voltage divider. We can calculate the resistance value between the two electrodes by knowing the value of the resistors and the voltage. However to be able to alternate the electric current we need to duplicate the circuit and add two diodes. In total, we need 4 Pins to be connected to a microcontroller like the Arduino or the Smart Citizen Kit.
 
 ### Measurement range

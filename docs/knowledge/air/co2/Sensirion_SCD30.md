@@ -20,12 +20,6 @@ excerpt: The SCD30 is a NDIR CO2 sensor by Sensirion. You can use it to measure 
 
 {%if feature_img_credit %}_Image Credit: **{{ feature_img_credit }}**_{.image-credit-banner-box}{%endif%}
 
-## Usage
-
-The easiest way to connect to the SCD30 to the SCK is by using the [SEEED Studio breakout](https://www.seeedstudio.com/Grove-CO2-Temperature-Humidity-Sensor-SCD30-p-2911.html), the sensor can be directly connected to the [Auxiliary connector](/hardware/boards/data-board#auxiliary-connector) on the data board, using a [4-wire grove cable](https://www.seeedstudio.com/cables-c-949.html).
-
-If you have the SCD30 _rugged_ board by Sensirion: you can connect it using [4-wire grove to female header cables](https://www.seeedstudio.com/Grove-4-pin-Female-Jumper-to-Grove-4-pin-Conversion-Cable-5-PCs-per-PAck.html) as below:
-
 ## Working principle
 
 Being a NDIR CO2 sensor, the SCD30 has a non dispersive element which is used to filter the light produced by an emitter with a _band-pass_ filter, allowing the infra-red (IR) wavelengths around 4.2μm to pass through [^22].
@@ -37,9 +31,23 @@ CO2 molecules strongly absorb IR light in these wavelengths, so shining these th
 
 ## Usage and considerations
 
-Sensirion provides a lot of information in their [applications note website](https://www.sensirion.com/en/download-center/carbon-dioxide-sensors-co2/co2-sensor-scd30/) for the SCD30 CO2. The datasheet can be found [here](https://www.sensirion.com/fileadmin/user_upload/customers/sensirion/Dokumente/9.5_CO2/Sensirion_CO2_Sensors_SCD30_Datasheet.pdf).
+### Connection
 
-If you are using the [SEEED Studio breakout](https://www.seeedstudio.com/Grove-CO2-Temperature-Humidity-Sensor-SCD30-p-2911.html), the sensor can be directly connected to the [Auxiliary connector](/hardware/boards/data-board#auxiliary-connector) on the data board, using a [4-wire grove cable](https://www.seeedstudio.com/cables-c-949.html).
+The easiest way to connect to the SCD30 to the SCK is by using the [SEEED Studio breakout](https://www.seeedstudio.com/Grove-CO2-Temperature-Humidity-Sensor-SCD30-p-2911.html), the sensor can be directly connected to the [Auxiliary connector](/hardware/boards/data-board#auxiliary-connector) on the data board, using a [4-wire grove cable](https://www.seeedstudio.com/cables-c-949.html).
+
+If you have the SCD30 _rugged_ board by Sensirion: you can connect it using [4-wire grove to female header cables](https://www.seeedstudio.com/Grove-4-pin-Female-Jumper-to-Grove-4-pin-Conversion-Cable-5-PCs-per-PAck.html) as below:
+
+When connected, the following metrics are available:
+
+| Metric | Shell name | Units | API |
+|:- |:- |:-: |:- |
+| CO2 | `SCD30 CO2` | ppm | [158](https://api.smartcitizen.me/v0/sensors/158) |
+| Temperature | `SCD30 Temperature` | ºC | [160](https://api.smartcitizen.me/v0/sensors/160) |
+| Relative humidity | `SCD30 Humidity` | % | [161](https://api.smartcitizen.me/v0/sensors/161) |
+
+### Considerations
+
+Sensirion provides a lot of information in their [applications note website](https://www.sensirion.com/en/download-center/carbon-dioxide-sensors-co2/co2-sensor-scd30/) for the SCD30 CO2. The datasheet can be found [here](https://www.sensirion.com/fileadmin/user_upload/customers/sensirion/Dokumente/9.5_CO2/Sensirion_CO2_Sensors_SCD30_Datasheet.pdf).
 
 {%if feature_img %}![]({{feature_img}}){.banner-box}{%endif%}
 

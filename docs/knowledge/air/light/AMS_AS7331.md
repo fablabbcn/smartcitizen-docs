@@ -41,11 +41,11 @@ UV radiation is relevant for health: UV-A and specially UV-B radiation are respo
 
 The sensor is on the Urban Board, and its readings are available as:
 
-| Metric | Shell name | Units |
-|:- |:- |:-: |
-| UV-A | `AS7331 UVA` | µW/cm2 |
-| UV-B | `AS7331 UVB` | µW/cm2 |
-| UV-C | `AS7331 UVC` | µW/cm2 |
+| Metric | Shell name | Units | API |
+|:- |:- |:-: |:- |
+| UV-A | `AS7331 UVA` | µW/cm2 | [214](https://api.smartcitizen.me/v0/sensors/214) |
+| UV-B | `AS7331 UVB` | µW/cm2 | [215](https://api.smartcitizen.me/v0/sensors/215) |
+| UV-C | `AS7331 UVC` | µW/cm2 | [216](https://api.smartcitizen.me/v0/sensors/216) |
 
 You can check the readings with the `read` and `monitor` commands, for instance:
 

@@ -31,10 +31,12 @@ The LPS33K is a **piezoresistive** MEMS absolute pressure sensor. Like the [MPL3
 
 The sensor is on the Urban Board, and its readings are available as:
 
-| Metric | Shell name | Units | Enabled by default |
-|:- |:- |:-: |:-: |
-| Barometric pressure | `LPS33 Barometric pressure` | kPa | Yes |
-| Internal temperature | `LPS33 internal temperature` | ºC | No |
+| Metric | Shell name | Units | Enabled by default | API |
+|:- |:- |:-: |:-: |:- |
+| Barometric pressure | `LPS33 Barometric pressure` | kPa | Yes | [227](https://api.smartcitizen.me/v0/sensors/227) |
+| Internal temperature | `LPS33 internal temperature` | ºC | No | - |
+
+Metrics with `-` in the API column are not published to the platform.
 
 You can check the readings with the `read` and `monitor` commands:
 

@@ -26,6 +26,12 @@ Metal oxide sensors (MOx) have an exposed surface film that changes its electric
 
 ## Usage and considerations
 
+There is no dedicated metric for these sensors: their output voltage is read by one of the [ADS1X15](/knowledge/other/TI_ADS1X15/) channels, depending on the address and channel where the sensor is connected:
+
+| Metric | Shell name | Units | API |
+|:- |:- |:-: |:- |
+| Load resistor voltage | `ADS1x15 ADC 0x48 Ch0` to `ADS1x15 ADC 0x4B Ch3` | V | See [ADS1X15](/knowledge/other/TI_ADS1X15/#usage-and-considerations) |
+
 The TGS260X family includes several sensors with different target gases, for instance the TGS2600 (general air contaminants, such as hydrogen and carbon monoxide), or the TGS2602 (VOCs and odorous gases, such as ammonia and hydrogen sulfide). Check the [manufacturer's website](https://www.figaro.co.jp/en/product/sensor/) for the datasheets of each model.
 
 These sensors have an **analog output**: the sensing element is a resistor that changes with the gas concentration, and it is generally read by placing it in series with a load resistor, and measuring the voltage across it. The sensor also needs a **heater** powered at 5V, which consumes a significant amount of current compared to digital sensors.

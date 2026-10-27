@@ -23,38 +23,6 @@ excerpt: The AS7341 is an 11-channel spectral sensor by ams OSRAM. You can use i
 !!! info "Firmware version"
     The AS7341 is supported from firmware **V0.9.12** onwards, and it is enabled by default in the `sck23_air` firmware build. Check how to [upgrade the firmware](/guides/firmware/upgrading-the-firmware/) if you have an older version.
 
-## Usage
-
-The easiest way to connect the AS7341 to the SCK is by using the [Adafruit AS7341 breakout](https://www.adafruit.com/product/4698). This board has two [STEMMA QT](https://learn.adafruit.com/introducing-adafruit-stemma-qt) connectors, so you can connect it to the [Auxiliary connector](/hardware/boards/data-board#auxiliary-connector) on the data board with a [STEMMA QT to Grove cable](https://www.adafruit.com/product/4528). Other breakouts (for instance, by DFRobot or Waveshare) can be connected with [4-wire grove to female header cables](https://www.seeedstudio.com/Grove-4-pin-Female-Jumper-to-Grove-4-pin-Conversion-Cable-5-PCs-per-PAck.html) or a [grove to screw connector](/guides/getting-started/third-party-sensors/#sensors-with-open-leads).
-
-The sensor communicates via I2C, on the address `0x39`. Once connected, it will be automatically detected on boot, and the following metrics will be available:
-
-| Metric | Shell name | Center wavelength | Color |
-|:- |:- |:-: |:- |
-| F1 | `AS7341 415nm` | 415 nm | Violet |
-| F2 | `AS7341 445nm` | 445 nm | Indigo |
-| F3 | `AS7341 480nm` | 480 nm | Blue |
-| F4 | `AS7341 515nm` | 515 nm | Cyan |
-| F5 | `AS7341 555nm` | 555 nm | Green |
-| F6 | `AS7341 590nm` | 590 nm | Yellow |
-| F7 | `AS7341 630nm` | 630 nm | Orange |
-| F8 | `AS7341 680nm` | 680 nm | Red |
-| Clear | `AS7341 Clear` | - | Visible (broadband) |
-| NIR | `AS7341 NIR` | ~910 nm | Near infrared |
-| Flicker frequency | `AS7341 Flicker Freq` | - | Hz |
-| Flicker amplitude | `AS7341 Flicker Peak to Peak` | - | - |
-
-You can check the readings with the `read` and `monitor` commands, for instance:
-
-```
-read as7341 555nm
-monitor as7341 415nm
-read as7341 flicker freq
-```
-
-!!! info "Placement"
-    The sensor measures the light that reaches it, so think about **where it is pointing to**. Pointing it towards the sky, a lamp or a wall will give very different results. If you place it inside an enclosure, make sure the window in front of it is transparent and does not filter some of the colors.
-
 ## Working principle
 
 The AS7341 is a **multi-spectral sensor**: instead of measuring the total amount of light (like an [ambient light sensor](/knowledge/air/light/Rohm_BH1730FVC/)), it measures the light in several narrow bands of the spectrum. To do this, it has an array of photodiodes, each one covered with an interference filter deposited directly on the chip (_nano-optic filters_), that only lets a certain band of wavelengths through. Each band is around 30-50 nm wide, and together they cover the visible spectrum from violet to red [^1]. The spectral response of each channel can be found in the [datasheet](https://ams-osram.com/products/sensor-solutions/ambient-light-color-spectral-proximity-sensors/ams-as7341-11-channel-spectral-color-sensor).
@@ -70,6 +38,40 @@ With the information of all the channels, it is possible to estimate the **color
 - Detect light flicker of artificial lighting
 
 ## Usage and considerations
+
+### Connection
+
+The easiest way to connect the AS7341 to the SCK is by using the [Adafruit AS7341 breakout](https://www.adafruit.com/product/4698). This board has two [STEMMA QT](https://learn.adafruit.com/introducing-adafruit-stemma-qt) connectors, so you can connect it to the [Auxiliary connector](/hardware/boards/data-board#auxiliary-connector) on the data board with a [STEMMA QT to Grove cable](https://www.adafruit.com/product/4528). Other breakouts (for instance, by DFRobot or Waveshare) can be connected with [4-wire grove to female header cables](https://www.seeedstudio.com/Grove-4-pin-Female-Jumper-to-Grove-4-pin-Conversion-Cable-5-PCs-per-PAck.html) or a [grove to screw connector](/guides/getting-started/third-party-sensors/#sensors-with-open-leads).
+
+The sensor communicates via I2C, on the address `0x39`. Once connected, it will be automatically detected on boot, and the following metrics will be available:
+
+| Metric | Shell name | Center wavelength | Color | API |
+|:- |:- |:-: |:- |:- |
+| F1 | `AS7341 415nm` | 415 nm | Violet | [244](https://api.smartcitizen.me/v0/sensors/244) |
+| F2 | `AS7341 445nm` | 445 nm | Indigo | [245](https://api.smartcitizen.me/v0/sensors/245) |
+| F3 | `AS7341 480nm` | 480 nm | Blue | [246](https://api.smartcitizen.me/v0/sensors/246) |
+| F4 | `AS7341 515nm` | 515 nm | Cyan | [247](https://api.smartcitizen.me/v0/sensors/247) |
+| F5 | `AS7341 555nm` | 555 nm | Green | [248](https://api.smartcitizen.me/v0/sensors/248) |
+| F6 | `AS7341 590nm` | 590 nm | Yellow | [249](https://api.smartcitizen.me/v0/sensors/249) |
+| F7 | `AS7341 630nm` | 630 nm | Orange | [250](https://api.smartcitizen.me/v0/sensors/250) |
+| F8 | `AS7341 680nm` | 680 nm | Red | [251](https://api.smartcitizen.me/v0/sensors/251) |
+| Clear | `AS7341 Clear` | - | Visible (broadband) | [252](https://api.smartcitizen.me/v0/sensors/252) |
+| NIR | `AS7341 NIR` | ~910 nm | Near infrared | [253](https://api.smartcitizen.me/v0/sensors/253) |
+| Flicker frequency | `AS7341 Flicker Freq` | - | Hz | [255](https://api.smartcitizen.me/v0/sensors/255) |
+| Flicker amplitude | `AS7341 Flicker Peak to Peak` | - | - | [256](https://api.smartcitizen.me/v0/sensors/256) |
+
+You can check the readings with the `read` and `monitor` commands, for instance:
+
+```
+read as7341 555nm
+monitor as7341 415nm
+read as7341 flicker freq
+```
+
+!!! info "Placement"
+    The sensor measures the light that reaches it, so think about **where it is pointing to**. Pointing it towards the sky, a lamp or a wall will give very different results. If you place it inside an enclosure, make sure the window in front of it is transparent and does not filter some of the colors.
+
+### Considerations
 
 The [datasheet and application notes](https://ams-osram.com/products/sensor-solutions/ambient-light-color-spectral-proximity-sensors/ams-as7341-11-channel-spectral-color-sensor) are available on the manufacturer's website. [Adafruit's guide](https://learn.adafruit.com/adafruit-as7341-10-channel-light-color-sensor-breakout) is also a very good introduction to the sensor.
 

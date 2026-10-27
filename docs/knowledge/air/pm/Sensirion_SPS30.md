@@ -33,11 +33,11 @@ The sensor reports mass concentrations (PM1, PM2.5, PM4 and PM10), number concen
 
 The SPS30 is implemented in the firmware as an I2C sensor on the same bus as the Urban Board PM connector (address `0x69`). It needs a 5V supply. When enabled, the following metrics are available:
 
-| Metric | Shell name | Units |
-|:- |:- |:-: |
-| PM1, PM2.5, PM4, PM10 | `SPS30 PM 1.0`, `SPS30 PM 2.5`... | µg/m3 |
-| PN0.5, PN1, PN2.5, PN4, PN10 | `SPS30 PN 0.5`, `SPS30 PN 1.0`... | #/0.1l |
-| Typical particle size | `SPS30 Typical Particle Size` | µm |
+| Metric | Shell name | Units | API |
+|:- |:- |:-: |:- |
+| PM1, PM2.5, PM4, PM10 | `SPS30 PM 1.0`, `SPS30 PM 2.5`... | µg/m3 | [182](https://api.smartcitizen.me/v0/sensors/182), [183](https://api.smartcitizen.me/v0/sensors/183), [184](https://api.smartcitizen.me/v0/sensors/184), [185](https://api.smartcitizen.me/v0/sensors/185) |
+| PN0.5, PN1, PN2.5, PN4, PN10 | `SPS30 PN 0.5`, `SPS30 PN 1.0`... | #/0.1l | [186](https://api.smartcitizen.me/v0/sensors/186), [187](https://api.smartcitizen.me/v0/sensors/187), [188](https://api.smartcitizen.me/v0/sensors/188), [189](https://api.smartcitizen.me/v0/sensors/189), [190](https://api.smartcitizen.me/v0/sensors/190) |
+| Typical particle size | `SPS30 Typical Particle Size` | µm | [191](https://api.smartcitizen.me/v0/sensors/191) |
 
 ### Sensor operation
 

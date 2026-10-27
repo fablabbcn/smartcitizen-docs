@@ -24,6 +24,14 @@ excerpt: "An ADC breakout board by Seeed Studio."
 
     More details on working principles, usage, considerations, and resources are coming soon.
 
+## Usage and considerations
+
+The following metrics are available:
+
+| Metric | Shell name | Units | API |
+|:- |:- |:-: |:- |
+| Input voltage | `Groove ADC` | V | [25](https://api.smartcitizen.me/v0/sensors/25) |
+
 ### Performance
 
 |Property               |Value                                                                          |
