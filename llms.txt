@@ -1,0 +1,248 @@
+# Smart Citizen Docs
+
+> Smart Citizen Documentation
+
+
+## Main
+
+- [Welcome!](https://docs.smartcitizen.me/index.md)
+
+### Hardware
+
+- [Smart Citizen Hardware](https://docs.smartcitizen.me/hardware.md)
+
+#### Smart Citizen Kit
+
+- [Smart Citizen Kit](https://docs.smartcitizen.me/hardware/kit.md)
+- [Features](https://docs.smartcitizen.me/hardware/kit/features.md)
+- [Technical Specs](https://docs.smartcitizen.me/hardware/kit/specs.md)
+
+#### Smart Citizen Stations
+
+- [Smart Citizen Stations](https://docs.smartcitizen.me/hardware/stations.md)
+
+##### Air
+
+- [Smart Citizen Air Quality Stations](https://docs.smartcitizen.me/hardware/stations/air.md)
+- [SCK + T / RH](https://docs.smartcitizen.me/hardware/stations/air/sck-temp.md)
+- [SCK + CO2](https://docs.smartcitizen.me/hardware/stations/air/sck-co2.md)
+- [SCK + 1x CHEM](https://docs.smartcitizen.me/hardware/stations/air/sck-1xchem.md)
+- [SCK + 2x CHEM](https://docs.smartcitizen.me/hardware/stations/air/sck-2xchem.md)
+- [SCK + CO2 + HCHO](https://docs.smartcitizen.me/hardware/stations/air/sck-co2-hcho.md)
+- [SCK + CO2 + 2x CHEM](https://docs.smartcitizen.me/hardware/stations/air/sck-co2-2xchem.md)
+
+##### Water
+
+- [Smart Citizen Water Stations](https://docs.smartcitizen.me/hardware/stations/water.md)
+- [One-Sensor Station](https://docs.smartcitizen.me/hardware/stations/water/sck-water-single.md)
+- [Multi-Sensor Station](https://docs.smartcitizen.me/hardware/stations/water/sck-water-multi.md)
+
+#### Firmware
+
+- [Firmware](https://docs.smartcitizen.me/hardware/firmware.md)
+
+#### Boards
+
+- [Boards](https://docs.smartcitizen.me/hardware/boards.md)
+- [Data Board](https://docs.smartcitizen.me/hardware/boards/data-board.md)
+- [Urban Board](https://docs.smartcitizen.me/hardware/boards/urban-board.md)
+- [Analog Sensor Board](https://docs.smartcitizen.me/hardware/boards/analog-sensor-board.md)
+
+##### Discontinued
+
+- [Gases Pro Board](https://docs.smartcitizen.me/hardware/boards/gases-pro-board.md)
+- [PM Board](https://docs.smartcitizen.me/hardware/boards/pm-board.md)
+
+#### Add-ons
+
+- [Add-ons](https://docs.smartcitizen.me/hardware/addons.md)
+- [GPS](https://docs.smartcitizen.me/hardware/addons/gps.md)
+- [Power Supply](https://docs.smartcitizen.me/hardware/addons/power-supply.md)
+- [Solar Panel](https://docs.smartcitizen.me/hardware/addons/solar-panel.md)
+- [OLED Screen](https://docs.smartcitizen.me/hardware/addons/oled-screen.md)
+- [Atlas EZO Drivers](https://docs.smartcitizen.me/hardware/addons/atlas-drivers.md)
+
+### Data
+
+- [Data](https://docs.smartcitizen.me/data.md)
+- [Data Platform](https://docs.smartcitizen.me/data/data-platform.md)
+- [Data Tools](https://docs.smartcitizen.me/data/data-tools.md)
+- [SD-card Storage](https://docs.smartcitizen.me/data/sd-card.md)
+- [Experiments](https://docs.smartcitizen.me/data/experiments.md)
+- [FAQ](https://docs.smartcitizen.me/_FAQ.md)
+- [Troubleshooting](https://docs.smartcitizen.me/troubleshooting.md)
+
+## Knowledge
+
+- [Knowledge](https://docs.smartcitizen.me/knowledge.md)
+
+### Air
+
+- [Introduction](https://docs.smartcitizen.me/knowledge/air.md)
+
+#### Particulate Matter
+
+- [Particulate Matter Measurements](https://docs.smartcitizen.me/knowledge/air/pm.md)
+- [Plantower PMS5003](https://docs.smartcitizen.me/knowledge/air/pm/Plantower_PMS5003.md)
+- [Sensirion SPS30](https://docs.smartcitizen.me/knowledge/air/pm/Sensirion_SPS30.md)
+- [Sensirion SEN5X](https://docs.smartcitizen.me/knowledge/air/pm/Sensirion_SEN5X.md)
+
+#### Chemical composition
+
+- [Chemical Composition Measurements in Air](https://docs.smartcitizen.me/knowledge/air/chemical.md)
+- [Alphasense PID](https://docs.smartcitizen.me/knowledge/air/chemical/Alphasense_PID.md)
+- [Figaro TGS260X](https://docs.smartcitizen.me/knowledge/air/chemical/Figaro_TGS260X.md)
+- [Sensirion SFA30](https://docs.smartcitizen.me/knowledge/air/chemical/Sensirion_SFA30.md)
+- [Alphasense Electrochemical](https://docs.smartcitizen.me/knowledge/air/chemical/Alphasense_Electrochemical.md)
+- [SGX Mics](https://docs.smartcitizen.me/knowledge/air/chemical/SGX_MICS.md)
+- [AMS CCS811](https://docs.smartcitizen.me/knowledge/air/chemical/AMS_CCS811.md)
+- [Bosch BME680](https://docs.smartcitizen.me/knowledge/air/chemical/Bosch_BME680.md)
+
+#### CO2
+
+- [CO2 Measurements](https://docs.smartcitizen.me/knowledge/air/co2.md)
+- [Sensirion SCD30](https://docs.smartcitizen.me/knowledge/air/co2/Sensirion_SCD30.md)
+- [Sensirion SCD4X](https://docs.smartcitizen.me/knowledge/air/co2/Sensirion_SCD4X.md)
+
+#### Noise
+
+- [Noise Measurements](https://docs.smartcitizen.me/knowledge/air/noise.md)
+- [TDK ICS43432](https://docs.smartcitizen.me/knowledge/air/noise/TDK_ICS43432.md)
+
+#### Temperature
+
+- [Temperature and Relative Humidty Measurements](https://docs.smartcitizen.me/knowledge/air/temperature_rel_humidity.md)
+- [Sensirion SHT3X](https://docs.smartcitizen.me/knowledge/air/temperature_rel_humidity/Sensirion_SHT3X.md)
+- [Sensirion SHT3X Weatherproof](https://docs.smartcitizen.me/knowledge/air/temperature_rel_humidity/Sensirion_SHT3X-weatherproof.md)
+- [Dallas DS18B20](https://docs.smartcitizen.me/knowledge/air/temperature_rel_humidity/DS18B20.md)
+
+#### Light
+
+- [Light Measurements](https://docs.smartcitizen.me/knowledge/air/light.md)
+- [Rohm BH1730FVC](https://docs.smartcitizen.me/knowledge/air/light/Rohm_BH1730FVC.md)
+- [AMS AS7331](https://docs.smartcitizen.me/knowledge/air/light/AMS_AS7331.md)
+- [AMS AS7341](https://docs.smartcitizen.me/knowledge/air/light/AMS_AS7341.md)
+
+#### Pressure
+
+- [Barometric Pressure Measurements](https://docs.smartcitizen.me/knowledge/air/pressure.md)
+- [NXP MPL3115A2](https://docs.smartcitizen.me/knowledge/air/pressure/NXP_MPL3115A2.md)
+- [ST LPS33K](https://docs.smartcitizen.me/knowledge/air/pressure/ST_LPS33K.md)
+
+### Soil and Water
+
+- [Soil and water measurements](https://docs.smartcitizen.me/knowledge/soil-water.md)
+
+#### pH
+
+- [pH Measurements](https://docs.smartcitizen.me/knowledge/soil-water/pH.md)
+- [Atlas pH](https://docs.smartcitizen.me/knowledge/soil-water/pH/Atlas_pH.md)
+
+#### Dissolved Oxygen
+
+- [Dissolved Oxygen Measurements](https://docs.smartcitizen.me/knowledge/soil-water/DO.md)
+- [Atlas Dissolved Oxygen](https://docs.smartcitizen.me/knowledge/soil-water/DO/Atlas_DO.md)
+
+#### Conductivity
+
+- [Electrical Conductivity Measurements](https://docs.smartcitizen.me/knowledge/soil-water/EC.md)
+- [Atlas Conductivity](https://docs.smartcitizen.me/knowledge/soil-water/EC/Atlas_EC.md)
+
+#### Temperature
+
+- [Temperature Measurements](https://docs.smartcitizen.me/knowledge/soil-water/temperature.md)
+- [Atlas Temperature](https://docs.smartcitizen.me/knowledge/soil-water/temperature/Atlas_Temperature.md)
+
+#### ORP
+
+- [Oxidation-Reduction Potential Measurements](https://docs.smartcitizen.me/knowledge/soil-water/ORP.md)
+- [Atlas ORP](https://docs.smartcitizen.me/knowledge/soil-water/ORP/Atlas_ORP.md)
+
+#### Soil Moisture
+
+- [Soil Moisture Measurements](https://docs.smartcitizen.me/knowledge/soil-water/moisture.md)
+- [Tensiometer](https://docs.smartcitizen.me/knowledge/soil-water/moisture/Tensiometer.md)
+- [Chirp Soil Moisture](https://docs.smartcitizen.me/knowledge/soil-water/moisture/Chirp_Soil_Moisture.md)
+
+### Other
+
+- [Other Measurements](https://docs.smartcitizen.me/knowledge/other.md)
+
+#### Electric Current/Voltage
+
+- [Other Measurements](https://docs.smartcitizen.me/knowledge/other.md)
+- [Seeed Grove ADC (voltage)](https://docs.smartcitizen.me/knowledge/other/Seeed_Grove_ADC.md)
+- [TI ADS1X15 (voltage)](https://docs.smartcitizen.me/knowledge/other/TI_ADS1X15.md)
+- [TI INA219 (current)](https://docs.smartcitizen.me/knowledge/other/TI_INA219.md)
+
+## Guides
+
+- [Introduction](https://docs.smartcitizen.me/guides.md)
+
+### Getting Started
+
+- [Assembling the kit](https://docs.smartcitizen.me/guides/getting-started/kit-assembly.md)
+- [Onboarding your kit](https://docs.smartcitizen.me/guides/getting-started/onboarding-your-kit.md)
+- [Updating the Wi-Fi](https://docs.smartcitizen.me/guides/getting-started/updating-wifi-credentials.md)
+- [Updating the SCK token](https://docs.smartcitizen.me/guides/getting-started/updating-kit-token.md)
+- [Downloading platform data](https://docs.smartcitizen.me/guides/getting-started/downloading-data.md)
+- [Uploading SD-card data](https://docs.smartcitizen.me/guides/getting-started/uploading-sd-card-data.md)
+- [Using the Shell](https://docs.smartcitizen.me/guides/getting-started/using-the-shell.md)
+- [Third party sensors](https://docs.smartcitizen.me/guides/getting-started/third-party-sensors.md)
+
+### Firmware Operations
+
+- [Getting firmware information](https://docs.smartcitizen.me/guides/firmware/getting-firmware-information.md)
+- [Upgrading the firmware](https://docs.smartcitizen.me/guides/firmware/upgrading-the-firmware.md)
+- [Enabling additional features](https://docs.smartcitizen.me/guides/firmware/enabling-additional-features.md)
+- [Editing the firmware](https://docs.smartcitizen.me/guides/firmware/edit-the-firmware.md)
+- [Debugging the firmware](https://docs.smartcitizen.me/guides/firmware/debug-the-firmware.md)
+- [Recovering the bootloader](https://docs.smartcitizen.me/guides/firmware/recovering-the-bootloader.md)
+
+### Working with Data
+
+- [Handling calibration data](https://docs.smartcitizen.me/guides/data/handling-calibration-data.md)
+- [Sending data to a different platform](https://docs.smartcitizen.me/guides/data/sending-data-to-other-platforms.md)
+- [Custom data processing](https://docs.smartcitizen.me/guides/data/custom-data-processing.md)
+- [Creating data interfaces](https://docs.smartcitizen.me/guides/data/creating-interfaces.md)
+- [Live demos](https://docs.smartcitizen.me/guides/data/live-demos.md)
+- [Visual programming](https://docs.smartcitizen.me/guides/data/visual-programming.md)
+- [Creative coding](https://docs.smartcitizen.me/guides/data/creative-coding.md)
+- [Python, R and jupyter](https://docs.smartcitizen.me/guides/data/advanced-data-tools.md)
+
+### Debugging
+
+- [Debugging your kit](https://docs.smartcitizen.me/guides/getting-started/debugging-your-kit.md)
+- [Troubleshooting SD-card Mode](https://docs.smartcitizen.me/guides/getting-started/troubleshooting-sd-card.md)
+
+### Legacy Hardware
+
+
+#### Smart Citizen 1.1
+
+- [Main](https://docs.smartcitizen.me/hardware/legacy.md)
+- [Hardware](https://docs.smartcitizen.me/hardware/legacy/Hardware.md)
+- [Command Line](https://docs.smartcitizen.me/hardware/legacy/Command%20Line.md)
+- [FAQ](https://docs.smartcitizen.me/hardware/legacy/Faq.md)
+- [Troubleshooting](https://docs.smartcitizen.me/hardware/legacy/Troubleshooting.md)
+- [Smart Citizen 2.0](https://docs.smartcitizen.me/hardware/legacy/sck.md)
+
+## Resources
+
+- [Introduction](https://docs.smartcitizen.me/resources.md)
+
+### Toolkits
+
+- [Toolkits](https://docs.smartcitizen.me/resources/toolkits.md)
+- [Citizen Sensing Toolkit](https://docs.smartcitizen.me/resources/toolkits/Citizen%20Sensing%20Toolkit.md)
+- [Webinars](https://docs.smartcitizen.me/resources/webinars.md)
+- [Education](https://docs.smartcitizen.me/resources/education.md)
+- [Research](https://docs.smartcitizen.me/resources/research.md)
+- [Notes](https://docs.smartcitizen.me/resources/notes.md)
+
+## About
+
+- [About](https://docs.smartcitizen.me/about.md)
+- [Funding](https://docs.smartcitizen.me/about/funding.md)
+- [Friends](https://docs.smartcitizen.me/about/friends.md)
+- [Open Source](https://docs.smartcitizen.me/about/open-source.md)

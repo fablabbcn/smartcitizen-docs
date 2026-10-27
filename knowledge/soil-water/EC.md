@@ -1,0 +1,79 @@
+<!-- Source: https://docs.smartcitizen.me/knowledge/soil-water/EC/ -->
+
+# Electrical Conductivity Measurements
+
+## What is water conductivity?
+
+The conductivity of water is the capacity it has to allow the flow of electric charges. For conductivity to occur, water needs to have dissolved ions (positive or negative electric charges).
+
+!!! info inline end "Is water conductive, or not?"
+
+    Ion-free (deionized) or pure (distilled) water is non-conductive; in fact, it is a very good insulator! Distilled water, having no ions (as it is pure H2O, without electrical charges), cannot be conductive. However, by adding mineral substances or organic components, which are added in the form of dissolved ions, the water becomes conductive.
+
+There are several ways to express conductivity: specific conductance, specific electrical conductance, or electrical conductivity. The term _electrical conductivity_ is directly related to water temperature, so **it is important to measure the temperature at which this conductivity measurement is taken**. In the most general case, conductivity should be expressed as a specific conductance, in other words, by correcting the conductivity to a temperature of 25ºC, with respect to the temperature at which the measurement was taken.
+
+Conductivity is therefore the water's ability to conduct electric current (measured in Siemens [S]) and is the inverse of resistance (measured in Ohm [Ω]). Electrical conductivity, as measured by our sensor, is the conductance measurement, normalized to a unit of distance and cross-section.
+
+## Why is it important?
+
+Conductivity, along with temperature, is used to calculate salinity and other parameters such as dissolved solids (TDS). Salinity is the amount of salt contained in 1 kg of water. It is expressed in PSU (Practical Salinity Unit, which is equivalent to approximately 1mg/g of salt). The average salinity of seawater is 35 psu, or 35 g/kg.
+
+!!! seawater "In the sea"
+
+    In oceanography, conductivity is used as a measurement to obtain the estimation of the salinity of seawater (in this case, it corresponds to _practical salinity_). On the other hand, absolute salinity corresponds to the concentration of salt contained in water, a measurement which requires complex and time-consuming chemical methods.
+
+    Salinity is an ecological factor of **great importance**, and influences the type of organisms (animals and plants) that can live in water. Variations in water salinity are directly related to freshwater inputs from rivers and rainfall events, but they also relate to the evaporation of surface water and the formation of sea ice in the oceans. It also has an impact on deep water formation at the poles. Finally, accompanied by a temperature measurement, salinity measurements allow for the calculation of the density of these bodies of water, from which information about currents can be obtained.
+
+    These density changes due to temperature and salinity cause changes in the buoyancy of bodies of water. In addition, salinity variations can have an impact on the absorption of CO2 in the oceans (in saltier waters, CO2 is less soluble). Finally, the data on temperature, salinity and density act like an identification card for the different masses of water contained in the oceans and allow us to follow their journey throughout their existence (from their zone formation through their disappearance or transformation into another mass through diffusion or mixing processes).
+
+!!! tip "Interesting fact"
+
+    The maximum load capacity of merchant ships varies depending on their area of navigation and the time of year. Depending on the density of the water they will encounter, they can be loaded more or less to "float the same". The Plimsoll line is a drawing often seen on the sides of merchant ships, near the waterline. It serves to show how full the boat can be safely loaded depending on its route:
+
+    ![](https://docs.smartcitizen.me/assets/images/water/plimsoll.png "Plimsoll")
+
+    **The Mediterranean Sea**
+
+    The average salinity of the Mediterranean Sea is around 38 psu, which makes it saltier than the world average.
+
+## How is conductivity measured?
+
+As a general rule, it is preferable to take measurements in situ, rather than taking samples and subsequently performing analysis in the laboratory, due to possible chemical changes that may occur in the sample.
+
+If a measure cannot be made on-site, try to take a sample and perform the measurement as soon as possible. If the temperature of the sample changes significantly, or if sedimentation or bubbles form in transport, the measurement will not be representative.
+
+## Reference levels
+
+Conductivity values (at 25 ºC) for different types of water, as an orientation:
+
+| Type of water | Conductivity (µS/cm) |
+|:- |:-: |
+| Ultrapure water | 0.055 |
+| Distilled or deionised water | 0.5 – 5 |
+| Rainwater | 5 – 50 |
+| Freshwater (rivers, lakes) | 50 – 1.500 |
+| Drinking water | 50 – 1.000 (usual), up to 2.500 (EU indicator value at 20 ºC [^1]) |
+| Brackish water | 1.500 – 30.000 |
+| Seawater | ~50.000 – 55.000 |
+
+A sudden change in the conductivity of a river or a lake is generally a sign of a discharge (wastewater, runoff from roads or fields, or seawater intrusion), so the **trend** is very important.
+
+For **irrigation**, salinity can damage crops and soils. The FAO classifies irrigation water as follows [^2]:
+
+| Conductivity of irrigation water | Restriction on use |
+|:-: |:- |
+| < 700 µS/cm | None |
+| 700 – 3.000 µS/cm | Slight to moderate |
+| > 3.000 µS/cm | Severe |
+
+## Supported sensors
+
+- [Atlas EC](https://docs.smartcitizen.me/knowledge/soil-water/EC/Atlas_EC.md) (Field | watersoil; Metric | electrical conductivity; Connection | external): A conductivity meter to measure electrolytes in a liquid!
+
+
+## References
+
+[^1]:
+    Directive (EU) 2020/2184 of the European Parliament and of the Council of 16 December 2020 on the quality of water intended for human consumption. https://eur-lex.europa.eu/eli/dir/2020/2184/oj.
+[^2]:
+    Ayers, R.S., and D.W. Westcot. “Water Quality for Agriculture.” FAO Irrigation and Drainage Paper 29 Rev. 1. Rome: FAO, 1985. https://www.fao.org/4/t0234e/t0234e00.htm.
