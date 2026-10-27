@@ -318,6 +318,9 @@ extra:
   #     link: /es/
   #     lang: es
 
+hooks:
+  - hooks/markdown_export.py
+
 plugins:
   - macros
   - search
