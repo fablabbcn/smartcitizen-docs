@@ -197,7 +197,7 @@ You will see these colors _only_ in special moments, most commonly when the kit 
 | :-:                                | :-:                                                      |
 | <span class="led busy"></span>     | :hourglass_flowing_sand:  Busy, please wait!             |
 | <span class="led firmware"></span> | :wrench: Software update is ongoing!                     |
-| <span class="led yellow"></span>   | :computer: Shell mode [more info here](https://docs.smartcitizen.me/guides/getting-started/using-the-shell.md#shell-mode) |
+| <span class="led yellow"></span>   | :computer: Shell mode [more info here](https://docs.smartcitizen.me/guides/getting-started/using-the-shell.md#shell-mode-shell) |
 
 !!!warning "Permanently in one color?"
     That's not normal, so either [reset](#the-reset-button) your kit or write us on the [forum](https://forum.smartcitizen.me).
@@ -221,7 +221,7 @@ Sofware updates are released in the [firmware repository](https://github.com/fab
 
 ### Internal memory
 
-After firmware version **`0.9.8`**, a new [flash memory](https://docs.smartcitizen.me/hardware/firmware/features/#flash-storage/) feature was implemented. The flash memory feature is used to store data internally before publishing it to the [Smart Citizen Platform](https://smartcitizen.me/kits) or storing it into the micro SD card. This allows us to still collect data when there is no Wi-Fi, when the SD card is not present or corrupt, or to recover data in general. This feature is very useful in many situations, for instance, whenever we cannot use permanent network connection, or you are using the SCK while moving around in the city. The flash memory feature changes completely how readings are handled, separating sensor readings and the publication or storage process. This also affects how errors are handled, allowing for the introduction of a new `WARNING` mode.
+After firmware version **`0.9.8`**, a new [flash memory](https://docs.smartcitizen.me/hardware/firmware/features/#flash-storage) feature was implemented. The flash memory feature is used to store data internally before publishing it to the [Smart Citizen Platform](https://smartcitizen.me/kits) or storing it into the micro SD card. This allows us to still collect data when there is no Wi-Fi, when the SD card is not present or corrupt, or to recover data in general. This feature is very useful in many situations, for instance, whenever we cannot use permanent network connection, or you are using the SCK while moving around in the city. The flash memory feature changes completely how readings are handled, separating sensor readings and the publication or storage process. This also affects how errors are handled, allowing for the introduction of a new `WARNING` mode.
 
 !!! tip "Check and upgrade the firmware version"
 	:bulb: Remember, you can check your SCK firmware version quickly following this [guide](https://docs.smartcitizen.me/guides/firmware/getting-firmware-information.md). Later, learn [here](https://docs.smartcitizen.me/guides/firmware/upgrading-the-firmware.md) how to update it.
@@ -237,14 +237,14 @@ In the particular case of the _Wi-Fi_ mode, two possible things can happen:
     Having a non-permanent Wi-Fi connection means that we can also risk entering error mode if the SCK runs out of battery. This is because the SCK obtains _the time_ from the internet (or from a phone during the SD card setup process). **Losing the network connection and running out of battery means the device will lose the internal clock time, and the device will stop taking readings until it has power and can connect to the internet to sync, again.**
 
 !!! info "Debugging commands"
-    Check [this guide](https://docs.smartcitizen.me/guides/getting-started/using-the-shell.md#accessing-the-flash-memory) for more debugging commands.
+    Check [this guide](https://docs.smartcitizen.me/guides/getting-started/using-the-shell.md#accessing-the-flash-memory-flash) for more debugging commands.
 
 ### Sanity reset
 
 The kit will force reboot itself every night at 00:00 UTC. We call this _sanity reset_ and it's done to prevent _simple_ issues to build up. Until firmware **0.9.8**, the _sanity reset_ took place at 2am UTC, but it was changed on **`0.9.9`** to 00:00 UTC to avoid creating unnecessary CSV files in the SD card because of this reset.
 
 !!! danger "You can disable this"
-    This reset will cut all power to internal and external sensors, and potentially affect their readings. You can disable this feature [using-the-shell](https://docs.smartcitizen.me/guides/getting-started/using-the-shell.md#disable-sanity-reset).
+    This reset will cut all power to internal and external sensors, and potentially affect their readings. You can disable this feature [using-the-shell](https://docs.smartcitizen.me/guides/getting-started/using-the-shell.md#disable-sanity-reset-config).
 
 ### Massive storage mode
 

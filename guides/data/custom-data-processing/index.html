@@ -67,6 +67,9 @@
     
     
     
+    
+    <link rel="alternate" type="text/markdown" href="https://docs.smartcitizen.me/guides/data/custom-data-processing.md">
+    
     <script defer data-domain="docs.smartcitizen.me" src="https://plausible.io/js/plausible.js"></script>
     <!-- <script src="/javascripts/extra.js"></script> -->
 
@@ -5081,7 +5084,7 @@
 <p>Visit <a href="/guides/data/handling-calibration-data/">these instructions</a> to make sure your <code>postprocessing</code> is safely stored.</p>
 </div>
 <p>The <code>postprocessing</code> field is composed of several subfields being the most important  one for the automatic data processing the <code>hardware_url</code>.</p>
-<p>The <code>hardware_url</code> should point to a valid json file that contains the necessary information for the data processing. This json file is customisable, but should contain at least the fields defined in <a href="/guides/data/handling-calibration-data/#advanced-setup">the calibration guide</a>. In order to customize how our data is processed, we will need to modify the <code>blueprint_url</code> and, if we have specific calibration needs, the <code>versions</code> field. Once these changes are done, this hardware json should go in the <a href="https://github.com/fablabbcn/smartcitizen-data/tree/master/hardware">hardware folder</a> or any other place that can host it.</p>
+<p>The <code>hardware_url</code> should point to a valid json file that contains the necessary information for the data processing. This json file is customisable, but should contain at least the fields defined in <a href="/guides/data/handling-calibration-data/#advanced-features">the calibration guide</a>. In order to customize how our data is processed, we will need to modify the <code>blueprint_url</code> and, if we have specific calibration needs, the <code>versions</code> field. Once these changes are done, this hardware json should go in the <a href="https://github.com/fablabbcn/smartcitizen-data/tree/master/hardware">hardware folder</a> or any other place that can host it.</p>
 <p>The <code>blueprint_url</code> should point to a json that defines which postprocessing you want to apply for each channel, which functions and parameters it has, and how the new channels are called (don't worry, there are a lot of examples in the <a href="https://github.com/fablabbcn/smartcitizen-data/tree/master/blueprints">blueprints folder</a>). In order for your data to be processed automatically, you will need to provide that blueprint to <code>scdata</code>. For this, you can host it somewhere, or you can simply make a <em>pull request</em> to the <a href="https://github.com/fablabbcn/smartcitizen-data">scdata github repository</a>, having the new json in the <code>blueprints</code> folder. Finally, you will then need to modify <code>hardware</code> json and update the blueprint field of your kit, with the new <code>blueprint_url</code>. See <a href="/guides/data/custom-data-processing/#defining-custom-functions">below</a> to understand how this blueprint works and how to write custom fuctions.</p>
 <p>In case your kit has specific calibration data needs, you will also need to modify the <code>versions</code> field. This field is a list which contains the history of the kit in terms of calibration (calibrations can change with time):</p>
 <div class="highlight"><pre><span></span><code>    {
@@ -5104,6 +5107,9 @@
 
 
 
+
+  
+  
 
 
 

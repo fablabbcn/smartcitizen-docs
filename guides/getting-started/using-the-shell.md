@@ -659,7 +659,7 @@ SCK > read hum
 Humidity: 63.06 %
 ```
 
-Finally, external sensors, connected via the [auxiliary port](https://docs.smartcitizen.me/hardware/kit/features.md#auxiliary-connector/) can also be modified.
+Finally, external sensors, connected via the [auxiliary port](https://docs.smartcitizen.me/hardware/kit/features.md#auxiliary-connector) can also be modified.
 
 ```
 SCK > control ext sht31 temp cal

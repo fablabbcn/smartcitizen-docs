@@ -9,7 +9,7 @@ When new features are developed or bugs are fixed we will release new versions o
 !!! info
 	If you already configured your kit on the smartcitizen platform **you will need the token that the platform gave you during the onboarding process**, to recover it from your kit:
 
-	1. **Click your kit button** until the kit is in [setup mode](https://docs.smartcitizen.me/hardware/kit/features.md#setup-mode/), the led should be red.
+	1. **Click your kit button** until the kit is in [setup mode](https://docs.smartcitizen.me/hardware/kit/features.md#setup-mode), the led should be red.
 	2. **Connect to the kit** with your mobile device as you did during the onboarding process.
 
 	3. **Write down the token** of your kit.

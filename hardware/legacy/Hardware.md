@@ -312,7 +312,7 @@ You can download the files through this links.
 
 Also, we are working in new cases that will be available soon.
 
-<a href="https://docs.smartcitizen.me/hardware/legacy/Hardware/assets/case_assembly.pdf" target="_blank">Smart Citizen Enclosure Assembly Instructions</a>
+<a href="https://docs.smartcitizen.me/assets/case_assembly.pdf" target="_blank">Smart Citizen Enclosure Assembly Instructions</a>
 
 
 ### Acrylic cases

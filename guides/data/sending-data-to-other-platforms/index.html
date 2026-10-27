@@ -67,6 +67,9 @@
     
     
     
+    
+    <link rel="alternate" type="text/markdown" href="https://docs.smartcitizen.me/guides/data/sending-data-to-other-platforms.md">
+    
     <script defer data-domain="docs.smartcitizen.me" src="https://plausible.io/js/plausible.js"></script>
     <!-- <script src="/javascripts/extra.js"></script> -->
 
@@ -5055,7 +5058,7 @@
 <h1 id="sending-data-to-a-different-platform">Sending data to a different platform<a class="headerlink" href="#sending-data-to-a-different-platform" title="Permanent link">&para;</a></h1>
 <p>You can have data in real-time on your own data platform in two different ways.</p>
 <h2 id="directly-from-the-device">Directly from the device<a class="headerlink" href="#directly-from-the-device" title="Permanent link">&para;</a></h2>
-<p>In case you don't want to use the Smart Citizen Platform, you can also configure the kit to send the data to a different location via MQTT. This <a href="/guides/getting-started/using-the-shell#changing-mqtt-or-ntp-servers">guide</a>, explains how to do so. You will need to ingest data listening to the following MQTT topics:</p>
+<p>In case you don't want to use the Smart Citizen Platform, you can also configure the kit to send the data to a different location via MQTT. This <a href="/guides/getting-started/using-the-shell/#changing-mqtt-or-ntp-servers-mqttsrv-ntpsrv">guide</a>, explains how to do so. You will need to ingest data listening to the following MQTT topics:</p>
 <ul>
 <li>
 <p>Sensor readings: <code>device/sck/&lt;token&gt;/readings</code> (old firmware versions) or <code>device/sck/&lt;token&gt;/readings/raw</code> (newer firmware versions) with the following format:</p>
@@ -5109,6 +5112,9 @@
 
 
 
+
+  
+  
 
 
 

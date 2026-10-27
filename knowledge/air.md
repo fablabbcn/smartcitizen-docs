@@ -10,7 +10,7 @@
 - [Noise](https://docs.smartcitizen.me/knowledge/air/noise.md)
 - [Light](https://docs.smartcitizen.me/knowledge/air/light.md)
 - [CO2](https://docs.smartcitizen.me/knowledge/air/co2.md)
-- [Chemical composition (besides CO2)](https://docs.smartcitizen.me/knowledge/air/chemical.md), including [VOCs](https://docs.smartcitizen.me/knowledge/air/chemical.md#vocs)
+- [Chemical composition (besides CO2)](https://docs.smartcitizen.me/knowledge/air/chemical.md), including [VOCs](https://docs.smartcitizen.me/knowledge/air/chemical.md#voc)
 
 ## Supported sensors
 

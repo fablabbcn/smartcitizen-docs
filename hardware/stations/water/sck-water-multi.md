@@ -50,7 +50,7 @@ Currently, the Smart Citizen Air Quality Stations have only been tested with an 
 
 ### Connectivity
 
-Similar to the [Smart Citizen Kit](https://docs.smartcitizen.me/hardware/kit.md) if you want to have your data online, the Smart Citizen Air Quality Station requires a Wi-Fi connection to report data to the [platform](https://docs.smartcitizen.me/data/data-platform.md). If not, the unit can also store data locally on its onboard sd-card. Read more about the [operation modes](https://docs.smartcitizen.me/hardware/kit.md#operation-modes) and the [supported networks](https://docs.smartcitizen.me/_FAQ.md#what-networks-does-it-support).
+Similar to the [Smart Citizen Kit](https://docs.smartcitizen.me/hardware/kit.md) if you want to have your data online, the Smart Citizen Air Quality Station requires a Wi-Fi connection to report data to the [platform](https://docs.smartcitizen.me/data/data-platform.md). If not, the unit can also store data locally on its onboard sd-card. Read more about the [operation modes](https://docs.smartcitizen.me/hardware/kit/features.md#operation-modes) and the [supported networks](https://docs.smartcitizen.me/_FAQ.md#what-networks-does-it-support).
 
 
 ## Preparing the probes

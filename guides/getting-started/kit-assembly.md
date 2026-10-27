@@ -328,7 +328,7 @@ All devices comes with USB cable and an adapter with an additional 2000mAh LiPo 
 
 ### **SD Mode (offline)**
 
-If we do not have an internet connection, we can use the SD mode. In this case, the device will record the data on the micro SD card. Later we can read the card using a card reader. The recorded data can be visually explored in a spreadsheet but also published on the platform utilising the [UPLOAD CSV](https://docs.smartcitizen.me/guides/getting-started/kit-assembly/guides/getting-started/uploading-sd-card-data/) option.
+If we do not have an internet connection, we can use the SD mode. In this case, the device will record the data on the micro SD card. Later we can read the card using a card reader. The recorded data can be visually explored in a spreadsheet but also published on the platform utilising the [UPLOAD CSV](https://docs.smartcitizen.me/guides/getting-started/uploading-sd-card-data.md) option.
 
 ### **Limitations**
 
