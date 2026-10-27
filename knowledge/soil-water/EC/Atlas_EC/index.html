@@ -5196,6 +5196,43 @@
 </table>
 <p>Check the <a href="https://files.atlas-scientific.com/EC_EZO_Datasheet.pdf">EZO EC datasheet</a> for more details.</p>
 <h2 id="usage-and-considerations">Usage and considerations<a class="headerlink" href="#usage-and-considerations" title="Permanent link">&para;</a></h2>
+<p>The following metrics are available:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Metric</th>
+<th style="text-align: left;">Shell name</th>
+<th style="text-align: center;">Units</th>
+<th style="text-align: left;">API</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Electrical conductivity</td>
+<td style="text-align: left;"><code>Atlas Conductivity</code></td>
+<td style="text-align: center;">µS/cm</td>
+<td style="text-align: left;"><a href="https://api.smartcitizen.me/v0/sensors/45">45</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Total dissolved solids</td>
+<td style="text-align: left;"><code>Atlas Total Dissolved Solids</code></td>
+<td style="text-align: center;">ppm</td>
+<td style="text-align: left;"><a href="https://api.smartcitizen.me/v0/sensors/122">122</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Salinity</td>
+<td style="text-align: left;"><code>Atlas Salinity</code></td>
+<td style="text-align: center;">PSU (ppt)</td>
+<td style="text-align: left;"><a href="https://api.smartcitizen.me/v0/sensors/123">123</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Specific gravity</td>
+<td style="text-align: left;"><code>Atlas Specific gravity</code></td>
+<td style="text-align: center;">-</td>
+<td style="text-align: left;"><a href="https://api.smartcitizen.me/v0/sensors/46">46</a></td>
+</tr>
+</tbody>
+</table>
 <h3 id="how-to-prepare-the-sensor">How to prepare the sensor<a class="headerlink" href="#how-to-prepare-the-sensor" title="Permanent link">&para;</a></h3>
 <p><strong>Before and after</strong> measuring, the sensor should be cleaned with deionized water. In case of debris, it can be cleaned with laboratory tissue to avoid dust. If it is very dirty or contains oily residues, it can also be cleaned first with a little detergent and then with distilled water.</p>
 <div class="admonition info">
@@ -5539,7 +5576,9 @@ control conductivity com,r
     
       <script src="../../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
       
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+        <script src="../../../../assets/javascripts/mathjax.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
         <script src="https://buttons.github.io/buttons.js"></script>
       

@@ -5188,6 +5188,31 @@
 <p>The sensor generally targets pollutants that can get oxidised in the sensor substrate. This oxidation process modifies the resistance of the sensor, and the more oxidation reactions we have the lower the resistance is. The concept of baseline resistance in this sense can be confusing, but basically can be explained as: the higher resistance, the cleaner the environment.</p>
 <p>Temperature and humidity are used internally to compensate the readings, as the sensor compares it’s actual resistance with the <em>clean air one</em> (baseline), and inputs the ambient conditions in the correction.</p>
 <h2 id="usage-and-considerations">Usage and considerations<a class="headerlink" href="#usage-and-considerations" title="Permanent link">&para;</a></h2>
+<p>The sensor is on the Urban Board (SCK 2.1), and its readings are available as:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Metric</th>
+<th style="text-align: left;">Shell name</th>
+<th style="text-align: center;">Units</th>
+<th style="text-align: left;">API</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Total VOCs</td>
+<td style="text-align: left;"><code>CCS811 VOC Gas</code></td>
+<td style="text-align: center;">ppb</td>
+<td style="text-align: left;"><a href="https://api.smartcitizen.me/v0/sensors/113">113</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Equivalent CO2</td>
+<td style="text-align: left;"><code>CCS811 eCO2 Gas</code></td>
+<td style="text-align: center;">ppm</td>
+<td style="text-align: left;"><a href="https://api.smartcitizen.me/v0/sensors/112">112</a></td>
+</tr>
+</tbody>
+</table>
 <p>Like any sensor, the CCS811 has some limitations. As mentioned above, the sensitive layer will decrease it's resistance when in presence of <em>VOCs</em>, but other pollutants can have the opposite effect on it. For instance, Ozone (O3) will increase the sensor's resistance, and it could be seen as clean air by the sensor. This could explain why in some outdoor environments (generally with traffic and high levels of sun radiation), the sensor can present an unstable behaviour.</p>
 <p>Additionally, humidity is known to affect the sensor resistance. The internal humidity correction can limit this effect up to a certain extent, but a perfect correction is not possible.</p>
 <p>We also recommend setting the sensor in a stable environment, in which temperature and relative humidity changes are not abrupt. When moving the sensor to another location, beware that any high resistance could be seen as <em>the new baseline resistance</em>, and this value might not apply to the previous environment, should you put the sensor back into it's original location.</p>
@@ -5388,7 +5413,9 @@
     
       <script src="../../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
       
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+        <script src="../../../../assets/javascripts/mathjax.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
         <script src="https://buttons.github.io/buttons.js"></script>
       

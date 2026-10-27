@@ -2471,6 +2471,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#usage-and-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage and considerations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#modify-temperature-and-relative-humidity-offset" class="md-nav__link">
     <span class="md-ellipsis">
       Modify temperature and relative humidity offset
@@ -5009,6 +5018,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#usage-and-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage and considerations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#modify-temperature-and-relative-humidity-offset" class="md-nav__link">
     <span class="md-ellipsis">
       Modify temperature and relative humidity offset
@@ -5065,6 +5083,44 @@
 <h2 id="assembly">Assembly<a class="headerlink" href="#assembly" title="Permanent link">&para;</a></h2>
 <p>To use this sensor, you'll need a <a href="/guides/getting-started/third-party-sensors/#sensors-with-open-leads">screw connector to grove adaptor</a>:</p>
 <p><img alt="" src="/assets/images/df-robot-screw-connector.jpeg" /></p>
+<h2 id="usage-and-considerations">Usage and considerations<a class="headerlink" href="#usage-and-considerations" title="Permanent link">&para;</a></h2>
+<p>Once connected, the sensor will be automatically detected on boot. Depending on the model, the following metrics are available:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Metric</th>
+<th style="text-align: left;">Shell name</th>
+<th style="text-align: center;">Units</th>
+<th style="text-align: left;">API</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Air temperature (SHT31)</td>
+<td style="text-align: left;"><code>Ext SHT31 Temperature</code></td>
+<td style="text-align: center;">ºC</td>
+<td style="text-align: left;"><a href="https://api.smartcitizen.me/v0/sensors/79">79</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Relative humidity (SHT31)</td>
+<td style="text-align: left;"><code>Ext SHT31 Humidity</code></td>
+<td style="text-align: center;">%</td>
+<td style="text-align: left;"><a href="https://api.smartcitizen.me/v0/sensors/80">80</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Air temperature (SHT35)</td>
+<td style="text-align: left;"><code>Ext SHT35 Temperature</code></td>
+<td style="text-align: center;">ºC</td>
+<td style="text-align: left;"><a href="https://api.smartcitizen.me/v0/sensors/224">224</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Relative humidity (SHT35)</td>
+<td style="text-align: left;"><code>Ext SHT35 Humidity</code></td>
+<td style="text-align: center;">%</td>
+<td style="text-align: left;"><a href="https://api.smartcitizen.me/v0/sensors/225">225</a></td>
+</tr>
+</tbody>
+</table>
 <h2 id="modify-temperature-and-relative-humidity-offset">Modify temperature and relative humidity offset<a class="headerlink" href="#modify-temperature-and-relative-humidity-offset" title="Permanent link">&para;</a></h2>
 <p>External sensors offsets can be modified via the <code>control</code> command.</p>
 <p>To check available commands (note that you can change <code>sht31</code> or <code>sht35</code>):</p>
@@ -5282,7 +5338,9 @@ Set default offset: 0.00 (degC)
     
       <script src="../../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
       
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+        <script src="../../../../assets/javascripts/mathjax.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
         <script src="https://buttons.github.io/buttons.js"></script>
       

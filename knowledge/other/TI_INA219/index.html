@@ -3522,13 +3522,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#usage" class="md-nav__link">
+  <a href="#usage-and-considerations" class="md-nav__link">
     <span class="md-ellipsis">
-      Usage
+      Usage and considerations
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Usage">
+    <nav class="md-nav" aria-label="Usage and considerations">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -5048,13 +5048,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#usage" class="md-nav__link">
+  <a href="#usage-and-considerations" class="md-nav__link">
     <span class="md-ellipsis">
-      Usage
+      Usage and considerations
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Usage">
+    <nav class="md-nav" aria-label="Usage and considerations">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -5144,7 +5144,7 @@
 <p>The INA219 is a <strong>current and voltage monitor</strong> by Texas Instruments, with a digital (I2C) interface <sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>. It measures current by placing a small resistor, called <strong>shunt</strong>, in series with the circuit to monitor: the current flowing through the shunt produces a small voltage drop across it, proportional to the current (Ohm's law). The INA219 measures this voltage drop, and also the voltage of the circuit (the <strong>bus voltage</strong>), and calculates the current and power.</p>
 <p>The INA219 is a <em>high-side</em> monitor: the shunt is placed between the power supply and the load, on the positive side of the circuit. This allows to measure the current without interrupting the ground of the circuit.</p>
 <p>It can be used, for instance, to measure the power consumption of a device, the current produced by a small solar panel, or the voltage of a battery.</p>
-<h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
+<h2 id="usage-and-considerations">Usage and considerations<a class="headerlink" href="#usage-and-considerations" title="Permanent link">&para;</a></h2>
 <p>The easiest way to use the INA219 is with a breakout board, such as the <a href="https://www.adafruit.com/product/904">Adafruit INA219 breakout</a>, which includes a 0.1Ω shunt resistor. Connect it to the <a href="/hardware/boards/data-board#auxiliary-connector">Auxiliary connector</a> on the data board with <a href="https://www.seeedstudio.com/Grove-4-pin-Female-Jumper-to-Grove-4-pin-Conversion-Cable-5-PCs-per-PAck.html">4-wire grove to female header cables</a>, or with a STEMMA QT to Grove cable for the newer versions of the board.</p>
 <div class="admonition warning">
 <p class="admonition-title">I2C address</p>
@@ -5158,6 +5158,7 @@
 <th style="text-align: left;">Shell name</th>
 <th style="text-align: center;">Units</th>
 <th style="text-align: left;">Description</th>
+<th style="text-align: left;">API</th>
 </tr>
 </thead>
 <tbody>
@@ -5166,27 +5167,32 @@
 <td style="text-align: left;"><code>INA219 Bus voltage</code></td>
 <td style="text-align: center;">V</td>
 <td style="text-align: left;">Voltage between <code>VIN-</code> and ground</td>
+<td style="text-align: left;">-</td>
 </tr>
 <tr>
 <td style="text-align: left;">Shunt voltage</td>
 <td style="text-align: left;"><code>INA219 Shunt voltage</code></td>
 <td style="text-align: center;">mV</td>
 <td style="text-align: left;">Voltage drop across the shunt</td>
+<td style="text-align: left;">-</td>
 </tr>
 <tr>
 <td style="text-align: left;">Current</td>
 <td style="text-align: left;"><code>INA219 Current</code></td>
 <td style="text-align: center;">mA</td>
 <td style="text-align: left;">Current through the shunt</td>
+<td style="text-align: left;">-</td>
 </tr>
 <tr>
 <td style="text-align: left;">Load voltage</td>
 <td style="text-align: left;"><code>INA219 Load voltage</code></td>
 <td style="text-align: center;">V</td>
 <td style="text-align: left;">Bus voltage plus shunt voltage (voltage of the power supply)</td>
+<td style="text-align: left;">-</td>
 </tr>
 </tbody>
 </table>
+<p>Metrics with <code>-</code> in the API column are not published to the platform.</p>
 <p>You can check the readings with the <code>read</code> and <code>monitor</code> commands, for instance:</p>
 <div class="highlight"><pre><span></span><code>read ina219 current
 </code></pre></div>
@@ -5393,7 +5399,9 @@
     
       <script src="../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
       
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+        <script src="../../../assets/javascripts/mathjax.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
         <script src="https://buttons.github.io/buttons.js"></script>
       

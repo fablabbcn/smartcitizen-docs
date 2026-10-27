@@ -5114,6 +5114,25 @@
 <p>The design is entirely open source and it is deeply inspired by the work of Reinier Van der Lee from the <a href="https://github.com/ReiniervdL/Vinduino">Vinduino project</a>, using an already calibrated commercial probe like the <strong>Watermark 200SS9</strong>. The sensor itself is straightforward and it consists of two stainless steel screws that work as electrodes cast inside a piece of plaster and covered by a plastic mesh to prevent erosion. As water is added more electrons can pass between the electrodes of the probe reducing the amount of resistance between them. By using this range of values, you can determine the amount of water that exists in your soil. To avoid interferences and degradation of the electrodes the design only applies voltage for a very short time and uses alternating electric polarities. For the sensor to work, we need a minimal circuit that uses two resistors and two diodes. The resistors work together with the electrodes to build a voltage divider. We can calculate the resistance value between the two electrodes by knowing the value of the resistors and the voltage. However to be able to alternate the electric current we need to duplicate the circuit and add two diodes. In total, we need 4 Pins to be connected to a microcontroller like the Arduino or the Smart Citizen Kit.</p>
 <h2 id="working-principle">Working principle<a class="headerlink" href="#working-principle" title="Permanent link">&para;</a></h2>
 <h2 id="usage-and-considerations">Usage and considerations<a class="headerlink" href="#usage-and-considerations" title="Permanent link">&para;</a></h2>
+<p>There is no dedicated metric for the tensiometer: its output voltage is read by one of the <a href="/knowledge/other/TI_ADS1X15/">ADS1X15</a> channels, depending on the address and channel where the sensor is connected:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Metric</th>
+<th style="text-align: left;">Shell name</th>
+<th style="text-align: center;">Units</th>
+<th style="text-align: left;">API</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Probe output voltage</td>
+<td style="text-align: left;"><code>ADS1x15 ADC 0x48 Ch0</code> to <code>ADS1x15 ADC 0x4B Ch3</code></td>
+<td style="text-align: center;">V</td>
+<td style="text-align: left;">See <a href="/knowledge/other/TI_ADS1X15/#usage-and-considerations">ADS1X15</a></td>
+</tr>
+</tbody>
+</table>
 <p>The design is entirely open source and it is deeply inspired by the work of Reinier Van der Lee from the <a href="http://vanderleevineyard.com/vineyard-blog.html">Vinduino project</a>, using an already calibrated commercial probe like the <strong>Watermark 200SS9</strong>. The sensor itself is straightforward and it consists of two stainless steel screws that work as electrodes cast inside a piece of plaster and covered by a plastic mesh to prevent erosion. As water is added more electrons can pass between the electrodes of the probe reducing the amount of resistance between them. By using this range of values, you can determine the amount of water that exists in your soil. To avoid interferences and degradation of the electrodes the design only applies voltage for a very short time and uses alternating electric polarities. For the sensor to work, we need a minimal circuit that uses two resistors and two diodes. The resistors work together with the electrodes to build a voltage divider. We can calculate the resistance value between the two electrodes by knowing the value of the resistors and the voltage. However to be able to alternate the electric current we need to duplicate the circuit and add two diodes. In total, we need 4 Pins to be connected to a microcontroller like the Arduino or the Smart Citizen Kit.</p>
 <h3 id="measurement-range">Measurement range<a class="headerlink" href="#measurement-range" title="Permanent link">&para;</a></h3>
 <p>The Watermark 200SS probe measures <strong>soil water tension</strong> in a range of <strong>0 to 239 centibars (kPa)</strong>, according to the manufacturer. A reading of 0 means saturated soil, and higher readings mean drier soil (the plants need to make more effort to extract water from it). Check the <a href="/knowledge/soil-water/moisture/#reference-levels">soil moisture page</a> to interpret the readings.</p>
@@ -5274,7 +5293,9 @@
     
       <script src="../../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
       
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+        <script src="../../../../assets/javascripts/mathjax.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
         <script src="https://buttons.github.io/buttons.js"></script>
       

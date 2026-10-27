@@ -5218,6 +5218,109 @@
 </li>
 </ul>
 <h2 id="usage-and-considerations">Usage and considerations<a class="headerlink" href="#usage-and-considerations" title="Permanent link">&para;</a></h2>
+<p>When connected through the SCK Gases Board (<code>SCK_WITH_GASES_BOARD</code> firmware flag), the firmware reports the raw voltages of the working (<code>W</code>) and auxiliary (<code>A</code>) electrodes of each slot:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Metric</th>
+<th style="text-align: left;">Shell name</th>
+<th style="text-align: center;">Units</th>
+<th style="text-align: left;">API</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Slot 1 (CO-B4), working electrode</td>
+<td style="text-align: left;"><code>Gases Board 1W</code></td>
+<td style="text-align: center;">mV</td>
+<td style="text-align: left;"><a href="https://api.smartcitizen.me/v0/sensors/64">64</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Slot 1 (CO-B4), auxiliary electrode</td>
+<td style="text-align: left;"><code>Gases Board 1A</code></td>
+<td style="text-align: center;">mV</td>
+<td style="text-align: left;"><a href="https://api.smartcitizen.me/v0/sensors/65">65</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Slot 2 (NO2-B43F), working electrode</td>
+<td style="text-align: left;"><code>Gases Board 2W</code></td>
+<td style="text-align: center;">mV</td>
+<td style="text-align: left;"><a href="https://api.smartcitizen.me/v0/sensors/61">61</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Slot 2 (NO2-B43F), auxiliary electrode</td>
+<td style="text-align: left;"><code>Gases Board 2A</code></td>
+<td style="text-align: center;">mV</td>
+<td style="text-align: left;"><a href="https://api.smartcitizen.me/v0/sensors/62">62</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Slot 3 (OX-B431), working electrode</td>
+<td style="text-align: left;"><code>Gases Board 3W</code></td>
+<td style="text-align: center;">mV</td>
+<td style="text-align: left;"><a href="https://api.smartcitizen.me/v0/sensors/67">67</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Slot 3 (OX-B431), auxiliary electrode</td>
+<td style="text-align: left;"><code>Gases Board 3A</code></td>
+<td style="text-align: center;">mV</td>
+<td style="text-align: left;"><a href="https://api.smartcitizen.me/v0/sensors/68">68</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Temperature</td>
+<td style="text-align: left;"><code>Gases Board Temperature</code></td>
+<td style="text-align: center;">ºC</td>
+<td style="text-align: left;"><a href="https://api.smartcitizen.me/v0/sensors/79">79</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Humidity</td>
+<td style="text-align: left;"><code>Gases Board Humidity</code></td>
+<td style="text-align: center;">%</td>
+<td style="text-align: left;"><a href="https://api.smartcitizen.me/v0/sensors/80">80</a></td>
+</tr>
+</tbody>
+</table>
+<p>Pollutant concentrations are not calculated by the firmware: they are derived in post-processing and published on the platform as:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Metric</th>
+<th style="text-align: center;">Units</th>
+<th style="text-align: left;">API</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">CO</td>
+<td style="text-align: center;">ppb</td>
+<td style="text-align: left;"><a href="https://api.smartcitizen.me/v0/sensors/152">152</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">NO2</td>
+<td style="text-align: center;">ppb</td>
+<td style="text-align: left;"><a href="https://api.smartcitizen.me/v0/sensors/153">153</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">NO</td>
+<td style="text-align: center;">ppb</td>
+<td style="text-align: left;"><a href="https://api.smartcitizen.me/v0/sensors/154">154</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">SO2</td>
+<td style="text-align: center;">ppb</td>
+<td style="text-align: left;"><a href="https://api.smartcitizen.me/v0/sensors/155">155</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">H2S</td>
+<td style="text-align: center;">ppb</td>
+<td style="text-align: left;"><a href="https://api.smartcitizen.me/v0/sensors/156">156</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">O3</td>
+<td style="text-align: center;">ppb</td>
+<td style="text-align: left;"><a href="https://api.smartcitizen.me/v0/sensors/157">157</a></td>
+</tr>
+</tbody>
+</table>
 <p>Alphasense Ltd. provides the calibration data in laboratory conditions for each of the electrochemical cells used. This data can be used to calculate pollutant concentration and to correct for <em>known effects</em> by temperature deviations.</p>
 <div class="admonition info">
 <p class="admonition-title">More on this</p>
@@ -5473,7 +5576,9 @@
     
       <script src="../../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
       
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+        <script src="../../../../assets/javascripts/mathjax.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
         <script src="https://buttons.github.io/buttons.js"></script>
       

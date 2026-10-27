@@ -5145,6 +5145,25 @@
 <h2 id="working-principle">Working principle<a class="headerlink" href="#working-principle" title="Permanent link">&para;</a></h2>
 <p>Metal oxide sensors (MOx) have an exposed surface film that changes its electrical properties (typically resistance) when exposed to the target gas. Small changes in conductivity/resistance are measured and are proportional to the concentration of the adsorbed gas <sup id="fnref:14"><a class="footnote-ref" href="#fn:14">1</a></sup>. In very simple terms, chemical reactions take place between the target gas and the exposed surface film, which for oxidising gases such as O3 or NO2 will make the resistance increase; whereas for reducing gases such as CO or VOCs will make the resistance decrease. In general, these reactions occur at elevated temperatures and hence the sensing layer needs to be heated up. There are various sizes and formats for these sensors, sometimes in separate replaceable units, whereas other times are integrated in MEMS solutions.</p>
 <h2 id="usage-and-considerations">Usage and considerations<a class="headerlink" href="#usage-and-considerations" title="Permanent link">&para;</a></h2>
+<p>There is no dedicated metric for these sensors: their output voltage is read by one of the <a href="/knowledge/other/TI_ADS1X15/">ADS1X15</a> channels, depending on the address and channel where the sensor is connected:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Metric</th>
+<th style="text-align: left;">Shell name</th>
+<th style="text-align: center;">Units</th>
+<th style="text-align: left;">API</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Load resistor voltage</td>
+<td style="text-align: left;"><code>ADS1x15 ADC 0x48 Ch0</code> to <code>ADS1x15 ADC 0x4B Ch3</code></td>
+<td style="text-align: center;">V</td>
+<td style="text-align: left;">See <a href="/knowledge/other/TI_ADS1X15/#usage-and-considerations">ADS1X15</a></td>
+</tr>
+</tbody>
+</table>
 <p>The TGS260X family includes several sensors with different target gases, for instance the TGS2600 (general air contaminants, such as hydrogen and carbon monoxide), or the TGS2602 (VOCs and odorous gases, such as ammonia and hydrogen sulfide). Check the <a href="https://www.figaro.co.jp/en/product/sensor/">manufacturer's website</a> for the datasheets of each model.</p>
 <p>These sensors have an <strong>analog output</strong>: the sensing element is a resistor that changes with the gas concentration, and it is generally read by placing it in series with a load resistor, and measuring the voltage across it. The sensor also needs a <strong>heater</strong> powered at 5V, which consumes a significant amount of current compared to digital sensors.</p>
 <div class="admonition info">
@@ -5352,7 +5371,9 @@
     
       <script src="../../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
       
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+        <script src="../../../../assets/javascripts/mathjax.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
         <script src="https://buttons.github.io/buttons.js"></script>
       

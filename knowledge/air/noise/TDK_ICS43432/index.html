@@ -5384,6 +5384,56 @@
 <p>Even if the are high sound pressure levels floating around in the air, we might not hear them just because of the frequency they are at. Normally humans can hear from something around 20Hz to 20kHz, although most adults might not hear anything in out-of-laboratory conditions above 15kHz. Some animals though, can perceive a <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Animal_hearing_frequency_range.svg/512px-Animal_hearing_frequency_range.svg.png">great range of frequencies</a>, and for example mouses can hear up to 80kHz.</p>
 <p>Because of all this, the very first thing we would like to do is to be able to perform <strong>weighting</strong> on the samples we measure. The I2S microphone is interesting in order to <strong>understand sources of urban noise pollution</strong> since it provides us with a raw SPL buffer we can play with. As well, we can obtain dBA levels (SPL with a-weighting correction) by processing this buffer in several ways and calculate the RMS level of the resulting signal.</p>
 <h2 id="usage-and-considerations">Usage and considerations<a class="headerlink" href="#usage-and-considerations" title="Permanent link">&para;</a></h2>
+<p>The microphone is on the Urban Board, and its readings are available as:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Metric</th>
+<th style="text-align: left;">Shell name</th>
+<th style="text-align: center;">Units</th>
+<th style="text-align: center;">Enabled by default</th>
+<th style="text-align: left;">API</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Noise level (A-weighting)</td>
+<td style="text-align: left;"><code>Noise dBA</code></td>
+<td style="text-align: center;">dBA</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: left;"><a href="https://api.smartcitizen.me/v0/sensors/53">53</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Noise level (C-weighting)</td>
+<td style="text-align: left;"><code>Noise dBC</code></td>
+<td style="text-align: center;">dBC</td>
+<td style="text-align: center;">No</td>
+<td style="text-align: left;"><a href="https://api.smartcitizen.me/v0/sensors/217">217</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Noise level (Z-weighting, no weighting)</td>
+<td style="text-align: left;"><code>Noise dBZ</code></td>
+<td style="text-align: center;">dB</td>
+<td style="text-align: center;">No</td>
+<td style="text-align: left;"><a href="https://api.smartcitizen.me/v0/sensors/218">218</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Peak frequency</td>
+<td style="text-align: left;"><code>Noise Peak Frequency</code></td>
+<td style="text-align: center;">Hz</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: left;"><a href="https://api.smartcitizen.me/v0/sensors/254">254</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Spectrum</td>
+<td style="text-align: left;"><code>Noise FFT</code></td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">No</td>
+<td style="text-align: left;">-</td>
+</tr>
+</tbody>
+</table>
+<p>Metrics with <code>-</code> in the API column are not published to the platform.</p>
 <p>This is the whole signal treatment process we use for the I2S microphone ICS43432. We will have a look at <em>windowing</em> and its use in future sections, as well as its implementation in the SAMD21 Cortex M0+ for our firmware.</p>
 <ol>
 <li>Signal acquisition</li>
@@ -5405,14 +5455,9 @@
 </div>
 <h3 id="rms-and-fft-algorithm-simplified">RMS and FFT algorithm simplified<a class="headerlink" href="#rms-and-fft-algorithm-simplified" title="Permanent link">&para;</a></h3>
 <p>In the previous section we introduced the concept of <em>weighting</em> and our interest on calculating the <em>sound pressure level</em> in different scales. Normally, SPL is expressed in <strong>RMS</strong> levels, or <em>root mean square</em>. This is nothing more than a modified arithmetic average, where each term of the expression is added in its square form. We then take the square root of all the average:</p>
-<div class="arithmatex">
-<div class="MathJax_Preview">
+<div class="arithmatex">\[
 x = {\sqrt{x_1^2+x_2^2+...+x_N^2 \over N}}
-</div>
-<script type="math/tex; mode=display">
-x = {\sqrt{x_1^2+x_2^2+...+x_N^2 \over N}}
-</script>
-</div>
+\]</div>
 <p>The interesting thing about the RMS level, is that it expresses an average signal level throughout the signal, and it actually relates to the peak level of sinusoid wave by √2. Therefore, it is a very interesting way to express average levels for signals and for that reason, it's the common standard used.</p>
 <p><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Sine_wave_voltages.svg/400px-Sine_wave_voltages.svg.png" /></p>
 <p><em>Image credit: <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Sine_wave_voltages.svg/400px-Sine_wave_voltages.svg.png">Sine wave parameters- Wikipedia</a></em></p>
@@ -5430,7 +5475,7 @@ x = {\sqrt{x_1^2+x_2^2+...+x_N^2 \over N}}
 <p>The very first of these limitations, is the fact that our microphone is, in fact, taking <strong>discrete samples</strong> of the ambient noise surrounding it. This means that, from the very beginning, we are missing some pieces of information and we will never be able to process them. For the purpose of our analysis, we don't need to sample continuosly and this situation is easily bypassed.</p>
 <p><img alt="Discrete sampling" src="/assets/images/ics43432-discrete-sampling.png" /></p>
 <p><em>Image credit: <a href="https://www.nutaq.com/blog/analog-digital-%E2%80%93-part-2-conversion-process">NUTAQ - Signal processing</a></em></p>
-<p>Discrete sampling has two main consequences for us: the first one is that we are taking samples once every <span class="arithmatex"><span class="MathJax_Preview">1/f_s</span><script type="math/tex">1/f_s</script></span>, where <span class="arithmatex"><span class="MathJax_Preview">f_s</span><script type="math/tex">f_s</script></span> is the sampling frequency. Normal audio systems sample at 44,1kHz, but this number might vary depending on the application. If you remember <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Animal_hearing_frequency_range.svg/512px-Animal_hearing_frequency_range.svg.png">this chart</a>, you might be wondering why we have to sample at such a high frequency.</p>
+<p>Discrete sampling has two main consequences for us: the first one is that we are taking samples once every <span class="arithmatex">\(1/f_s\)</span>, where <span class="arithmatex">\(f_s\)</span> is the sampling frequency. Normal audio systems sample at 44,1kHz, but this number might vary depending on the application. If you remember <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Animal_hearing_frequency_range.svg/512px-Animal_hearing_frequency_range.svg.png">this chart</a>, you might be wondering why we have to sample at such a high frequency.</p>
 <p><img alt="" src="https://www.adinstruments.com/sites/default/files/wysiwyg-resources/images/data-quality-digital-sampling_0.gif" /></p>
 <p><em>Image credit: <a href="https://www.adinstruments.com/">Signal acquisition - Adinstruments</a></em></p>
 <p><a href="https://en.wikipedia.org/wiki/Nyquist%E2%80%93Shannon_sampling_theorem">Nyquist sampling criterion</a> states that <strong>at a minimum, we have to sample at double the maximum frequency we want to analyse</strong>. Since humans hearing has a limited frequency range that goes up to 20kHz in some cases, it is reasonable to use something around 40kHz. With this, the <em>Nyquist criterion</em> solves the so called <strong>aliasing problem</strong>, in which several sinusoid signals could fit the same sampling pattern if the number of samples is too low:</p>
@@ -5666,7 +5711,9 @@ x = {\sqrt{x_1^2+x_2^2+...+x_N^2 \over N}}
     
       <script src="../../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
       
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+        <script src="../../../../assets/javascripts/mathjax.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
         <script src="https://buttons.github.io/buttons.js"></script>
       

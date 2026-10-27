@@ -2492,13 +2492,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#usage" class="md-nav__link">
+  <a href="#usage-and-considerations" class="md-nav__link">
     <span class="md-ellipsis">
-      Usage
+      Usage and considerations
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Usage">
+    <nav class="md-nav" aria-label="Usage and considerations">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -5075,13 +5075,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#usage" class="md-nav__link">
+  <a href="#usage-and-considerations" class="md-nav__link">
     <span class="md-ellipsis">
-      Usage
+      Usage and considerations
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Usage">
+    <nav class="md-nav" aria-label="Usage and considerations">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -5192,13 +5192,13 @@
 <p><em class="image-credit-banner-box">Image Credit: <strong>Seeed Studio</strong></em></p>
 <div class="admonition warning">
 <p class="admonition-title">Experimental support</p>
-<p>The DS18B20 is not enabled in any of the default firmware builds. To use it, you need to compile the firmware with one of the flags described <a href="#usage">below</a>. Check the guide on <a href="/guides/firmware/enabling-additional-features/">enabling additional features</a>.</p>
+<p>The DS18B20 is not enabled in any of the default firmware builds. To use it, you need to compile the firmware with one of the flags described <a href="#usage-and-considerations">below</a>. Check the guide on <a href="/guides/firmware/enabling-additional-features/">enabling additional features</a>.</p>
 </div>
 <h2 id="working-principle">Working principle<a class="headerlink" href="#working-principle" title="Permanent link">&para;</a></h2>
 <p>The DS18B20 is a digital temperature sensor, originally by Dallas Semiconductor (now part of Analog Devices). It measures temperature with an integrated sensor and converts it into a digital value with a configurable resolution from 9 to 12 bits <sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>.</p>
 <p>It communicates using the <strong>1-Wire</strong> protocol: data and commands go through a single data line, and several sensors can share the same line, since each one has a unique 64-bit address. This makes it very simple to wire, even with long cables.</p>
 <p>The sensor is very popular in a <strong>waterproof probe</strong> format: the chip is sealed inside a stainless steel tube at the end of a cable, which makes it suitable for measuring the temperature of water, soil, or air in harsh environments.</p>
-<h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
+<h2 id="usage-and-considerations">Usage and considerations<a class="headerlink" href="#usage-and-considerations" title="Permanent link">&para;</a></h2>
 <p>There are two ways to connect a DS18B20 to the SCK, each with its own firmware flag:</p>
 <table>
 <thead>
@@ -5207,6 +5207,7 @@
 <th style="text-align: left;">Connection</th>
 <th style="text-align: left;">Shell name</th>
 <th style="text-align: center;">Units</th>
+<th style="text-align: left;">API</th>
 </tr>
 </thead>
 <tbody>
@@ -5215,12 +5216,14 @@
 <td style="text-align: left;">Directly to the <a href="/hardware/boards/data-board#auxiliary-connector">Auxiliary connector</a></td>
 <td style="text-align: left;"><code>Direct Dallas Temperature</code></td>
 <td style="text-align: center;">ºC</td>
+<td style="text-align: left;"><a href="https://api.smartcitizen.me/v0/sensors/96">96</a></td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>SCK_WITH_DS18B20</code></td>
 <td style="text-align: left;">Through a <a href="https://www.analog.com/en/products/ds2482-100.html">DS2482-100</a> I2C to 1-Wire bridge (I2C address <code>0x18</code>)</td>
 <td style="text-align: left;"><code>DS18B20 Water temperature</code></td>
 <td style="text-align: center;">ºC</td>
+<td style="text-align: left;"><a href="https://api.smartcitizen.me/v0/sensors/42">42</a></td>
 </tr>
 </tbody>
 </table>
@@ -5465,7 +5468,9 @@
     
       <script src="../../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
       
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+        <script src="../../../../assets/javascripts/mathjax.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
         <script src="https://buttons.github.io/buttons.js"></script>
       

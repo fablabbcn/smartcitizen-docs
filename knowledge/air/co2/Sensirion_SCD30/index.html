@@ -2248,15 +2248,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#usage" class="md-nav__link">
-    <span class="md-ellipsis">
-      Usage
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#working-principle" class="md-nav__link">
     <span class="md-ellipsis">
       Working principle
@@ -2274,6 +2265,24 @@
   
     <nav class="md-nav" aria-label="Usage and considerations">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#connection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Connection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Considerations
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#performance" class="md-nav__link">
@@ -5084,15 +5093,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#usage" class="md-nav__link">
-    <span class="md-ellipsis">
-      Usage
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#working-principle" class="md-nav__link">
     <span class="md-ellipsis">
       Working principle
@@ -5110,6 +5110,24 @@
   
     <nav class="md-nav" aria-label="Usage and considerations">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#connection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Connection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Considerations
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#performance" class="md-nav__link">
@@ -5226,17 +5244,48 @@
 <p>The SCD30 is a NDIR CO2 sensor by Sensirion. You can use it to measure CO2 in indoor spaces or for experiments where you need to know an accurate CO2 level.</p>
 <p><img alt="" class="banner-box" src="/assets/images/sensirion-scd30.png" /></p>
 <p><em class="image-credit-banner-box">Image Credit: <strong>Seeed Studio</strong></em></p>
-<h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
-<p>The easiest way to connect to the SCD30 to the SCK is by using the <a href="https://www.seeedstudio.com/Grove-CO2-Temperature-Humidity-Sensor-SCD30-p-2911.html">SEEED Studio breakout</a>, the sensor can be directly connected to the <a href="/hardware/boards/data-board#auxiliary-connector">Auxiliary connector</a> on the data board, using a <a href="https://www.seeedstudio.com/cables-c-949.html">4-wire grove cable</a>.</p>
-<p>If you have the SCD30 <em>rugged</em> board by Sensirion: you can connect it using <a href="https://www.seeedstudio.com/Grove-4-pin-Female-Jumper-to-Grove-4-pin-Conversion-Cable-5-PCs-per-PAck.html">4-wire grove to female header cables</a> as below:</p>
 <h2 id="working-principle">Working principle<a class="headerlink" href="#working-principle" title="Permanent link">&para;</a></h2>
 <p>Being a NDIR CO2 sensor, the SCD30 has a non dispersive element which is used to filter the light produced by an emitter with a <em>band-pass</em> filter, allowing the infra-red (IR) wavelengths around 4.2μm to pass through <sup id="fnref:22"><a class="footnote-ref" href="#fn:22">2</a></sup>.</p>
 <p><img alt="" src="https://files.seeedstudio.com/products/101020634/3.png" />
 <em>Image credit: Seeed Studio</em></p>
 <p>CO2 molecules strongly absorb IR light in these wavelengths, so shining these through a gas sample, the CO2 concentration can be calculated from the proportion of light that is absorbed. Transmissive NDIR sensors typically feature an <strong>IR emitter and an optical detector</strong>, such as a photodiode, at opposite ends of a specially designed optical cavity. The optical detector measures the amount of IR light energy that is not absorbed by (i.e., transmitted through) the gas sample. The higher the CO2 concentration, the lower the light detected. A comparison between the measurement and a reference intensity at known CO2 concentration provides a direct way to calculate the CO2 concentration. This technique, though, requires <strong>careful alignment of the emitter and detector</strong>, and the <strong>mechanical stresses</strong> on the device can provoke wrong readings <sup id="fnref:37"><a class="footnote-ref" href="#fn:37">7</a></sup>.</p>
 <h2 id="usage-and-considerations">Usage and considerations<a class="headerlink" href="#usage-and-considerations" title="Permanent link">&para;</a></h2>
+<h3 id="connection">Connection<a class="headerlink" href="#connection" title="Permanent link">&para;</a></h3>
+<p>The easiest way to connect to the SCD30 to the SCK is by using the <a href="https://www.seeedstudio.com/Grove-CO2-Temperature-Humidity-Sensor-SCD30-p-2911.html">SEEED Studio breakout</a>, the sensor can be directly connected to the <a href="/hardware/boards/data-board#auxiliary-connector">Auxiliary connector</a> on the data board, using a <a href="https://www.seeedstudio.com/cables-c-949.html">4-wire grove cable</a>.</p>
+<p>If you have the SCD30 <em>rugged</em> board by Sensirion: you can connect it using <a href="https://www.seeedstudio.com/Grove-4-pin-Female-Jumper-to-Grove-4-pin-Conversion-Cable-5-PCs-per-PAck.html">4-wire grove to female header cables</a> as below:</p>
+<p>When connected, the following metrics are available:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Metric</th>
+<th style="text-align: left;">Shell name</th>
+<th style="text-align: center;">Units</th>
+<th style="text-align: left;">API</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">CO2</td>
+<td style="text-align: left;"><code>SCD30 CO2</code></td>
+<td style="text-align: center;">ppm</td>
+<td style="text-align: left;"><a href="https://api.smartcitizen.me/v0/sensors/158">158</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Temperature</td>
+<td style="text-align: left;"><code>SCD30 Temperature</code></td>
+<td style="text-align: center;">ºC</td>
+<td style="text-align: left;"><a href="https://api.smartcitizen.me/v0/sensors/160">160</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Relative humidity</td>
+<td style="text-align: left;"><code>SCD30 Humidity</code></td>
+<td style="text-align: center;">%</td>
+<td style="text-align: left;"><a href="https://api.smartcitizen.me/v0/sensors/161">161</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="considerations">Considerations<a class="headerlink" href="#considerations" title="Permanent link">&para;</a></h3>
 <p>Sensirion provides a lot of information in their <a href="https://www.sensirion.com/en/download-center/carbon-dioxide-sensors-co2/co2-sensor-scd30/">applications note website</a> for the SCD30 CO2. The datasheet can be found <a href="https://www.sensirion.com/fileadmin/user_upload/customers/sensirion/Dokumente/9.5_CO2/Sensirion_CO2_Sensors_SCD30_Datasheet.pdf">here</a>.</p>
-<p>If you are using the <a href="https://www.seeedstudio.com/Grove-CO2-Temperature-Humidity-Sensor-SCD30-p-2911.html">SEEED Studio breakout</a>, the sensor can be directly connected to the <a href="/hardware/boards/data-board#auxiliary-connector">Auxiliary connector</a> on the data board, using a <a href="https://www.seeedstudio.com/cables-c-949.html">4-wire grove cable</a>.</p>
 <p><img alt="" class="banner-box" src="/assets/images/sensirion-scd30.png" /></p>
 <div class="admonition danger">
 <p class="admonition-title">Mechanical stress</p>
@@ -5611,7 +5660,9 @@ Auto Self Calibration: off
     
       <script src="../../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
       
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+        <script src="../../../../assets/javascripts/mathjax.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
         <script src="https://buttons.github.io/buttons.js"></script>
       

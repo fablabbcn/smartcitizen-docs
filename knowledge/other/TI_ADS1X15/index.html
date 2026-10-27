@@ -3501,13 +3501,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#usage" class="md-nav__link">
+  <a href="#usage-and-considerations" class="md-nav__link">
     <span class="md-ellipsis">
-      Usage
+      Usage and considerations
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Usage">
+    <nav class="md-nav" aria-label="Usage and considerations">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -5057,13 +5057,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#usage" class="md-nav__link">
+  <a href="#usage-and-considerations" class="md-nav__link">
     <span class="md-ellipsis">
-      Usage
+      Usage and considerations
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Usage">
+    <nav class="md-nav" aria-label="Usage and considerations">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -5162,7 +5162,7 @@
 <p>The ADS1115 is an <strong>analog to digital converter</strong> (ADC) by Texas Instruments <sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>. Many sensors do not have a digital interface, and instead provide an analog output: a voltage that changes with the measured magnitude. An ADC measures this voltage and converts it into a number that the SCK can read via I2C.</p>
 <p>The ADS1115 has a <strong>16-bit</strong> resolution (it divides its measurement range in 65536 steps), and includes a programmable gain amplifier (PGA). The PGA allows to change the measurement range, so that small voltages can be measured with a much better resolution. It has four inputs, which can be used as four single-ended channels (measured against ground), or as two differential channels.</p>
 <p>The ADS1015 is a version of the same chip with a lower resolution (12 bits) and a higher sampling rate.</p>
-<h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
+<h2 id="usage-and-considerations">Usage and considerations<a class="headerlink" href="#usage-and-considerations" title="Permanent link">&para;</a></h2>
 <p>The ADS1X15 is enabled in all the default <em>air</em> firmware builds (SCK2.1 onwards). The ADC can be connected to the <a href="/hardware/boards/data-board#auxiliary-connector">Auxiliary connector</a> through the <a href="/hardware/boards/analog-sensor-board/">Analog Sensor Board</a>, or with a breakout board such as the <a href="https://www.adafruit.com/product/1085">Adafruit ADS1115 breakout</a>.</p>
 <p>Each ADS1115 can be configured on one of four I2C addresses (<code>0x48</code>, <code>0x49</code>, <code>0x4A</code> or <code>0x4B</code>), so up to four ADCs (16 channels) can be used at the same time. The <a href="/hardware/boards/analog-sensor-board/">Analog Sensor Board</a> has two ADS1115 on board, with selectable addresses. The firmware detects each ADC on boot, and creates one metric per channel:</p>
 <table>
@@ -5171,6 +5171,7 @@
 <th style="text-align: left;">Address</th>
 <th style="text-align: left;">Shell names</th>
 <th style="text-align: center;">Units</th>
+<th style="text-align: left;">API</th>
 </tr>
 </thead>
 <tbody>
@@ -5178,21 +5179,25 @@
 <td style="text-align: left;"><code>0x48</code></td>
 <td style="text-align: left;"><code>ADS1x15 ADC 0x48 Ch0</code> to <code>ADS1x15 ADC 0x48 Ch3</code></td>
 <td style="text-align: center;">V</td>
+<td style="text-align: left;"><a href="https://api.smartcitizen.me/v0/sensors/133">133</a>, <a href="https://api.smartcitizen.me/v0/sensors/134">134</a>, <a href="https://api.smartcitizen.me/v0/sensors/135">135</a>, <a href="https://api.smartcitizen.me/v0/sensors/136">136</a></td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>0x49</code></td>
 <td style="text-align: left;"><code>ADS1x15 ADC 0x49 Ch0</code> to <code>ADS1x15 ADC 0x49 Ch3</code></td>
 <td style="text-align: center;">V</td>
+<td style="text-align: left;"><a href="https://api.smartcitizen.me/v0/sensors/138">138</a>, <a href="https://api.smartcitizen.me/v0/sensors/139">139</a>, <a href="https://api.smartcitizen.me/v0/sensors/140">140</a>, <a href="https://api.smartcitizen.me/v0/sensors/141">141</a></td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>0x4A</code></td>
 <td style="text-align: left;"><code>ADS1x15 ADC 0x4A Ch0</code> to <code>ADS1x15 ADC 0x4A Ch3</code></td>
 <td style="text-align: center;">V</td>
+<td style="text-align: left;"><a href="https://api.smartcitizen.me/v0/sensors/143">143</a>, <a href="https://api.smartcitizen.me/v0/sensors/144">144</a>, <a href="https://api.smartcitizen.me/v0/sensors/145">145</a>, <a href="https://api.smartcitizen.me/v0/sensors/146">146</a></td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>0x4B</code></td>
 <td style="text-align: left;"><code>ADS1x15 ADC 0x4B Ch0</code> to <code>ADS1x15 ADC 0x4B Ch3</code></td>
 <td style="text-align: center;">V</td>
+<td style="text-align: left;"><a href="https://api.smartcitizen.me/v0/sensors/148">148</a>, <a href="https://api.smartcitizen.me/v0/sensors/149">149</a>, <a href="https://api.smartcitizen.me/v0/sensors/150">150</a>, <a href="https://api.smartcitizen.me/v0/sensors/151">151</a></td>
 </tr>
 </tbody>
 </table>
@@ -5418,7 +5423,9 @@
     
       <script src="../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
       
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+        <script src="../../../assets/javascripts/mathjax.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
         <script src="https://buttons.github.io/buttons.js"></script>
       

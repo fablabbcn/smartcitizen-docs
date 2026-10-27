@@ -2269,15 +2269,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#usage" class="md-nav__link">
-    <span class="md-ellipsis">
-      Usage
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#working-principle" class="md-nav__link">
     <span class="md-ellipsis">
       Working principle
@@ -2295,6 +2286,24 @@
   
     <nav class="md-nav" aria-label="Usage and considerations">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#connection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Connection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Considerations
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#performance" class="md-nav__link">
@@ -5075,15 +5084,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#usage" class="md-nav__link">
-    <span class="md-ellipsis">
-      Usage
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#working-principle" class="md-nav__link">
     <span class="md-ellipsis">
       Working principle
@@ -5101,6 +5101,24 @@
   
     <nav class="md-nav" aria-label="Usage and considerations">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#connection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Connection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Considerations
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#performance" class="md-nav__link">
@@ -5212,7 +5230,13 @@
 <p class="admonition-title">Firmware version</p>
 <p>The SCD4X is supported from firmware <strong>V0.9.12</strong> onwards, and it is enabled by default in the <code>sck23_air</code> firmware build. Both the SCD40 and the SCD41 are supported. Check how to <a href="/guides/firmware/upgrading-the-firmware/">upgrade the firmware</a> if you have an older version.</p>
 </div>
-<h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
+<h2 id="working-principle">Working principle<a class="headerlink" href="#working-principle" title="Permanent link">&para;</a></h2>
+<p>The SCD4X is also an NDIR (<em>non-dispersive infrared</em>) sensor, but unlike the <a href="/knowledge/air/co2/Sensirion_SCD30/">SCD30</a>, which is a <em>transmissive</em> NDIR sensor, the SCD4X uses a <strong>photoacoustic</strong> measurement principle (<em>PASens®</em> technology by Sensirion) <sup id="fnref:34"><a class="footnote-ref" href="#fn:34">4</a></sup>.</p>
+<p>In a photoacoustic NDIR sensor, an infrared emitter shines pulses of light at the wavelengths absorbed by CO2 (around 4.2μm) into a small measurement chamber. CO2 molecules absorb part of this energy and heat up, and since the light is pulsed, the gas expands and contracts periodically, creating a pressure wave: <strong>sound</strong>. A small MEMS microphone inside the chamber picks up this pressure wave, and its amplitude is proportional to the amount of CO2 in the chamber <sup id="fnref:22"><a class="footnote-ref" href="#fn:22">2</a></sup> <sup id="fnref:37"><a class="footnote-ref" href="#fn:37">5</a></sup>.</p>
+<p>The main advantage of this approach is that it <strong>does not need a long optical path</strong> between the emitter and the detector, nor a careful alignment between them. This allows for a much smaller sensor (10.1 x 10.1 x 6.5 mm, compared to 35 x 23 x 7 mm for the SCD30) that is <strong>less sensitive to mechanical stress</strong>, which makes it a better candidate for mobile or wearable setups.</p>
+<p>As with the SCD30, the module also integrates a Sensirion humidity and temperature sensor, used to compensate the CO2 readings internally.</p>
+<h2 id="usage-and-considerations">Usage and considerations<a class="headerlink" href="#usage-and-considerations" title="Permanent link">&para;</a></h2>
+<h3 id="connection">Connection<a class="headerlink" href="#connection" title="Permanent link">&para;</a></h3>
 <p>The easiest way to connect the SCD4X to the SCK is by using the <a href="https://www.seeedstudio.com/Grove-CO2-Temperature-Humidity-Sensor-SCD41-p-5025.html">Seeed Studio Grove breakout (SCD41)</a>. The sensor can be directly connected to the <a href="/hardware/boards/data-board#auxiliary-connector">Auxiliary connector</a> on the data board, using a <a href="https://www.seeedstudio.com/cables-c-949.html">4-wire grove cable</a>.</p>
 <p>Other breakouts (Sensirion's evaluation boards, Adafruit, Sparkfun...) can be connected using <a href="https://www.seeedstudio.com/Grove-4-pin-Female-Jumper-to-Grove-4-pin-Conversion-Cable-5-PCs-per-PAck.html">4-wire grove to female header cables</a>, or a <a href="/guides/getting-started/third-party-sensors/#sensors-with-open-leads">grove to screw connector</a>. The sensor communicates via I2C, on the address <code>0x62</code>.</p>
 <p>Once connected, the sensor will be automatically detected on boot, and three metrics will be available:</p>
@@ -5222,6 +5246,7 @@
 <th style="text-align: left;">Metric</th>
 <th style="text-align: left;">Shell name</th>
 <th style="text-align: center;">Units</th>
+<th style="text-align: left;">API</th>
 </tr>
 </thead>
 <tbody>
@@ -5229,16 +5254,19 @@
 <td style="text-align: left;">CO2</td>
 <td style="text-align: left;"><code>SCD4X CO2</code></td>
 <td style="text-align: center;">ppm</td>
+<td style="text-align: left;"><a href="https://api.smartcitizen.me/v0/sensors/258">258</a></td>
 </tr>
 <tr>
 <td style="text-align: left;">Temperature</td>
 <td style="text-align: left;"><code>SCD4X Temperature</code></td>
 <td style="text-align: center;">ºC</td>
+<td style="text-align: left;"><a href="https://api.smartcitizen.me/v0/sensors/259">259</a></td>
 </tr>
 <tr>
 <td style="text-align: left;">Relative humidity</td>
 <td style="text-align: left;"><code>SCD4X Humidity</code></td>
 <td style="text-align: center;">%</td>
+<td style="text-align: left;"><a href="https://api.smartcitizen.me/v0/sensors/260">260</a></td>
 </tr>
 </tbody>
 </table>
@@ -5246,12 +5274,7 @@
 <p class="admonition-title">I2C address conflict</p>
 <p>The SCD4X uses the I2C address <code>0x62</code>, which is the same one used by the <a href="/knowledge/soil-water/ORP/Atlas_ORP/">Atlas Scientific ORP</a> sensor. Both sensors cannot be used at the same time on the same SCK. Note that the <a href="/knowledge/air/co2/Sensirion_SCD30/">SCD30</a> uses a different address (<code>0x61</code>), so the SCD30 and SCD4X <em>can</em> be used together.</p>
 </div>
-<h2 id="working-principle">Working principle<a class="headerlink" href="#working-principle" title="Permanent link">&para;</a></h2>
-<p>The SCD4X is also an NDIR (<em>non-dispersive infrared</em>) sensor, but unlike the <a href="/knowledge/air/co2/Sensirion_SCD30/">SCD30</a>, which is a <em>transmissive</em> NDIR sensor, the SCD4X uses a <strong>photoacoustic</strong> measurement principle (<em>PASens®</em> technology by Sensirion) <sup id="fnref:34"><a class="footnote-ref" href="#fn:34">4</a></sup>.</p>
-<p>In a photoacoustic NDIR sensor, an infrared emitter shines pulses of light at the wavelengths absorbed by CO2 (around 4.2μm) into a small measurement chamber. CO2 molecules absorb part of this energy and heat up, and since the light is pulsed, the gas expands and contracts periodically, creating a pressure wave: <strong>sound</strong>. A small MEMS microphone inside the chamber picks up this pressure wave, and its amplitude is proportional to the amount of CO2 in the chamber <sup id="fnref:22"><a class="footnote-ref" href="#fn:22">2</a></sup> <sup id="fnref:37"><a class="footnote-ref" href="#fn:37">5</a></sup>.</p>
-<p>The main advantage of this approach is that it <strong>does not need a long optical path</strong> between the emitter and the detector, nor a careful alignment between them. This allows for a much smaller sensor (10.1 x 10.1 x 6.5 mm, compared to 35 x 23 x 7 mm for the SCD30) that is <strong>less sensitive to mechanical stress</strong>, which makes it a better candidate for mobile or wearable setups.</p>
-<p>As with the SCD30, the module also integrates a Sensirion humidity and temperature sensor, used to compensate the CO2 readings internally.</p>
-<h2 id="usage-and-considerations">Usage and considerations<a class="headerlink" href="#usage-and-considerations" title="Permanent link">&para;</a></h2>
+<h3 id="considerations">Considerations<a class="headerlink" href="#considerations" title="Permanent link">&para;</a></h3>
 <p>Sensirion provides all the documentation for the SCD4X in their <a href="https://sensirion.com/products/catalog/SCD41/">product page</a>, including the datasheet, application notes and design-in guidelines. There are two variants in the SCD4X family, with the same footprint and commands:</p>
 <ul>
 <li><strong>SCD40</strong>: optimised for the 400 - 2000 ppm range, for indoor air quality and ventilation applications.</li>
@@ -5613,7 +5636,9 @@ Factory reset: OK
     
       <script src="../../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
       
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+        <script src="../../../../assets/javascripts/mathjax.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
         <script src="https://buttons.github.io/buttons.js"></script>
       

@@ -5129,6 +5129,25 @@
 <p>The sensor contains a ionization lamp. As compounds enter the detector they are bombarded by high-energy UV photons and are ionized when they absorb the UV light, resulting in ejection of electrons and the formation of positively charged ions. The ions produce an electric current, which is the signal output of the detector. The greater the concentration of the component, the more ions are produced, and the greater the current. The current is amplified and displayed on an ammeter or digital concentration display.</p>
 <p>Substances with ionisation potential below the sensor's lamp specification will be measured as a whole, with very little specificity in the readings <sup id="fnref2:2"><a class="footnote-ref" href="#fn:2">1</a></sup><sup id="fnref:26"><a class="footnote-ref" href="#fn:26">2</a></sup><sup id="fnref:28"><a class="footnote-ref" href="#fn:28">3</a></sup>.</p>
 <h2 id="usage-and-considerations">Usage and considerations<a class="headerlink" href="#usage-and-considerations" title="Permanent link">&para;</a></h2>
+<p>There is no dedicated metric for PID sensors: their output voltage is read by one of the <a href="/knowledge/other/TI_ADS1X15/">ADS1X15</a> channels, depending on the address and channel where the sensor is connected:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Metric</th>
+<th style="text-align: left;">Shell name</th>
+<th style="text-align: center;">Units</th>
+<th style="text-align: left;">API</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">PID output voltage</td>
+<td style="text-align: left;"><code>ADS1x15 ADC 0x48 Ch0</code> to <code>ADS1x15 ADC 0x4B Ch3</code></td>
+<td style="text-align: center;">V</td>
+<td style="text-align: left;">See <a href="/knowledge/other/TI_ADS1X15/#usage-and-considerations">ADS1X15</a></td>
+</tr>
+</tbody>
+</table>
 <p>Alphasense PID sensors have an <strong>analog voltage output</strong>, proportional to the concentration of VOCs. They come in different models with different sensitivities and ranges, from ppb to ppm levels. Check the <a href="https://www.alphasense.com/index.php/products/pid-air/">Alphasense website</a> for the datasheets and application notes of each model.</p>
 <div class="admonition info">
 <p class="admonition-title">Connecting to the SCK</p>
@@ -5319,7 +5338,9 @@
     
       <script src="../../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
       
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+        <script src="../../../../assets/javascripts/mathjax.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
         <script src="https://buttons.github.io/buttons.js"></script>
       

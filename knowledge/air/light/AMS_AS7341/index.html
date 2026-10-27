@@ -2613,15 +2613,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#usage" class="md-nav__link">
-    <span class="md-ellipsis">
-      Usage
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#working-principle" class="md-nav__link">
     <span class="md-ellipsis">
       Working principle
@@ -2639,6 +2630,24 @@
   
     <nav class="md-nav" aria-label="Usage and considerations">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#connection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Connection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Considerations
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#spectral-readings" class="md-nav__link">
@@ -5075,15 +5084,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#usage" class="md-nav__link">
-    <span class="md-ellipsis">
-      Usage
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#working-principle" class="md-nav__link">
     <span class="md-ellipsis">
       Working principle
@@ -5101,6 +5101,24 @@
   
     <nav class="md-nav" aria-label="Usage and considerations">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#connection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Connection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Considerations
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#spectral-readings" class="md-nav__link">
@@ -5212,102 +5230,6 @@
 <p class="admonition-title">Firmware version</p>
 <p>The AS7341 is supported from firmware <strong>V0.9.12</strong> onwards, and it is enabled by default in the <code>sck23_air</code> firmware build. Check how to <a href="/guides/firmware/upgrading-the-firmware/">upgrade the firmware</a> if you have an older version.</p>
 </div>
-<h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
-<p>The easiest way to connect the AS7341 to the SCK is by using the <a href="https://www.adafruit.com/product/4698">Adafruit AS7341 breakout</a>. This board has two <a href="https://learn.adafruit.com/introducing-adafruit-stemma-qt">STEMMA QT</a> connectors, so you can connect it to the <a href="/hardware/boards/data-board#auxiliary-connector">Auxiliary connector</a> on the data board with a <a href="https://www.adafruit.com/product/4528">STEMMA QT to Grove cable</a>. Other breakouts (for instance, by DFRobot or Waveshare) can be connected with <a href="https://www.seeedstudio.com/Grove-4-pin-Female-Jumper-to-Grove-4-pin-Conversion-Cable-5-PCs-per-PAck.html">4-wire grove to female header cables</a> or a <a href="/guides/getting-started/third-party-sensors/#sensors-with-open-leads">grove to screw connector</a>.</p>
-<p>The sensor communicates via I2C, on the address <code>0x39</code>. Once connected, it will be automatically detected on boot, and the following metrics will be available:</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Metric</th>
-<th style="text-align: left;">Shell name</th>
-<th style="text-align: center;">Center wavelength</th>
-<th style="text-align: left;">Color</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">F1</td>
-<td style="text-align: left;"><code>AS7341 415nm</code></td>
-<td style="text-align: center;">415 nm</td>
-<td style="text-align: left;">Violet</td>
-</tr>
-<tr>
-<td style="text-align: left;">F2</td>
-<td style="text-align: left;"><code>AS7341 445nm</code></td>
-<td style="text-align: center;">445 nm</td>
-<td style="text-align: left;">Indigo</td>
-</tr>
-<tr>
-<td style="text-align: left;">F3</td>
-<td style="text-align: left;"><code>AS7341 480nm</code></td>
-<td style="text-align: center;">480 nm</td>
-<td style="text-align: left;">Blue</td>
-</tr>
-<tr>
-<td style="text-align: left;">F4</td>
-<td style="text-align: left;"><code>AS7341 515nm</code></td>
-<td style="text-align: center;">515 nm</td>
-<td style="text-align: left;">Cyan</td>
-</tr>
-<tr>
-<td style="text-align: left;">F5</td>
-<td style="text-align: left;"><code>AS7341 555nm</code></td>
-<td style="text-align: center;">555 nm</td>
-<td style="text-align: left;">Green</td>
-</tr>
-<tr>
-<td style="text-align: left;">F6</td>
-<td style="text-align: left;"><code>AS7341 590nm</code></td>
-<td style="text-align: center;">590 nm</td>
-<td style="text-align: left;">Yellow</td>
-</tr>
-<tr>
-<td style="text-align: left;">F7</td>
-<td style="text-align: left;"><code>AS7341 630nm</code></td>
-<td style="text-align: center;">630 nm</td>
-<td style="text-align: left;">Orange</td>
-</tr>
-<tr>
-<td style="text-align: left;">F8</td>
-<td style="text-align: left;"><code>AS7341 680nm</code></td>
-<td style="text-align: center;">680 nm</td>
-<td style="text-align: left;">Red</td>
-</tr>
-<tr>
-<td style="text-align: left;">Clear</td>
-<td style="text-align: left;"><code>AS7341 Clear</code></td>
-<td style="text-align: center;">-</td>
-<td style="text-align: left;">Visible (broadband)</td>
-</tr>
-<tr>
-<td style="text-align: left;">NIR</td>
-<td style="text-align: left;"><code>AS7341 NIR</code></td>
-<td style="text-align: center;">~910 nm</td>
-<td style="text-align: left;">Near infrared</td>
-</tr>
-<tr>
-<td style="text-align: left;">Flicker frequency</td>
-<td style="text-align: left;"><code>AS7341 Flicker Freq</code></td>
-<td style="text-align: center;">-</td>
-<td style="text-align: left;">Hz</td>
-</tr>
-<tr>
-<td style="text-align: left;">Flicker amplitude</td>
-<td style="text-align: left;"><code>AS7341 Flicker Peak to Peak</code></td>
-<td style="text-align: center;">-</td>
-<td style="text-align: left;">-</td>
-</tr>
-</tbody>
-</table>
-<p>You can check the readings with the <code>read</code> and <code>monitor</code> commands, for instance:</p>
-<div class="highlight"><pre><span></span><code>read as7341 555nm
-monitor as7341 415nm
-read as7341 flicker freq
-</code></pre></div>
-<div class="admonition info">
-<p class="admonition-title">Placement</p>
-<p>The sensor measures the light that reaches it, so think about <strong>where it is pointing to</strong>. Pointing it towards the sky, a lamp or a wall will give very different results. If you place it inside an enclosure, make sure the window in front of it is transparent and does not filter some of the colors.</p>
-</div>
 <h2 id="working-principle">Working principle<a class="headerlink" href="#working-principle" title="Permanent link">&para;</a></h2>
 <p>The AS7341 is a <strong>multi-spectral sensor</strong>: instead of measuring the total amount of light (like an <a href="/knowledge/air/light/Rohm_BH1730FVC/">ambient light sensor</a>), it measures the light in several narrow bands of the spectrum. To do this, it has an array of photodiodes, each one covered with an interference filter deposited directly on the chip (<em>nano-optic filters</em>), that only lets a certain band of wavelengths through. Each band is around 30-50 nm wide, and together they cover the visible spectrum from violet to red <sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>. The spectral response of each channel can be found in the <a href="https://ams-osram.com/products/sensor-solutions/ambient-light-color-spectral-proximity-sensors/ams-as7341-11-channel-spectral-color-sensor">datasheet</a>.</p>
 <p>Additionally, it has a <strong>clear</strong> channel (no filter, broadband visible light), a <strong>near infrared</strong> channel (NIR), and a dedicated <strong>flicker detection</strong> photodiode. The signal from each photodiode is integrated by one of six 16-bit ADCs, which are internally connected to the photodiodes through a multiplexer (SMUX). Since there are more channels than ADCs, the sensor reads all the channels in two consecutive steps.</p>
@@ -5320,6 +5242,116 @@ read as7341 flicker freq
 <li>Detect light flicker of artificial lighting</li>
 </ul>
 <h2 id="usage-and-considerations">Usage and considerations<a class="headerlink" href="#usage-and-considerations" title="Permanent link">&para;</a></h2>
+<h3 id="connection">Connection<a class="headerlink" href="#connection" title="Permanent link">&para;</a></h3>
+<p>The easiest way to connect the AS7341 to the SCK is by using the <a href="https://www.adafruit.com/product/4698">Adafruit AS7341 breakout</a>. This board has two <a href="https://learn.adafruit.com/introducing-adafruit-stemma-qt">STEMMA QT</a> connectors, so you can connect it to the <a href="/hardware/boards/data-board#auxiliary-connector">Auxiliary connector</a> on the data board with a <a href="https://www.adafruit.com/product/4528">STEMMA QT to Grove cable</a>. Other breakouts (for instance, by DFRobot or Waveshare) can be connected with <a href="https://www.seeedstudio.com/Grove-4-pin-Female-Jumper-to-Grove-4-pin-Conversion-Cable-5-PCs-per-PAck.html">4-wire grove to female header cables</a> or a <a href="/guides/getting-started/third-party-sensors/#sensors-with-open-leads">grove to screw connector</a>.</p>
+<p>The sensor communicates via I2C, on the address <code>0x39</code>. Once connected, it will be automatically detected on boot, and the following metrics will be available:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Metric</th>
+<th style="text-align: left;">Shell name</th>
+<th style="text-align: center;">Center wavelength</th>
+<th style="text-align: left;">Color</th>
+<th style="text-align: left;">API</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">F1</td>
+<td style="text-align: left;"><code>AS7341 415nm</code></td>
+<td style="text-align: center;">415 nm</td>
+<td style="text-align: left;">Violet</td>
+<td style="text-align: left;"><a href="https://api.smartcitizen.me/v0/sensors/244">244</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">F2</td>
+<td style="text-align: left;"><code>AS7341 445nm</code></td>
+<td style="text-align: center;">445 nm</td>
+<td style="text-align: left;">Indigo</td>
+<td style="text-align: left;"><a href="https://api.smartcitizen.me/v0/sensors/245">245</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">F3</td>
+<td style="text-align: left;"><code>AS7341 480nm</code></td>
+<td style="text-align: center;">480 nm</td>
+<td style="text-align: left;">Blue</td>
+<td style="text-align: left;"><a href="https://api.smartcitizen.me/v0/sensors/246">246</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">F4</td>
+<td style="text-align: left;"><code>AS7341 515nm</code></td>
+<td style="text-align: center;">515 nm</td>
+<td style="text-align: left;">Cyan</td>
+<td style="text-align: left;"><a href="https://api.smartcitizen.me/v0/sensors/247">247</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">F5</td>
+<td style="text-align: left;"><code>AS7341 555nm</code></td>
+<td style="text-align: center;">555 nm</td>
+<td style="text-align: left;">Green</td>
+<td style="text-align: left;"><a href="https://api.smartcitizen.me/v0/sensors/248">248</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">F6</td>
+<td style="text-align: left;"><code>AS7341 590nm</code></td>
+<td style="text-align: center;">590 nm</td>
+<td style="text-align: left;">Yellow</td>
+<td style="text-align: left;"><a href="https://api.smartcitizen.me/v0/sensors/249">249</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">F7</td>
+<td style="text-align: left;"><code>AS7341 630nm</code></td>
+<td style="text-align: center;">630 nm</td>
+<td style="text-align: left;">Orange</td>
+<td style="text-align: left;"><a href="https://api.smartcitizen.me/v0/sensors/250">250</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">F8</td>
+<td style="text-align: left;"><code>AS7341 680nm</code></td>
+<td style="text-align: center;">680 nm</td>
+<td style="text-align: left;">Red</td>
+<td style="text-align: left;"><a href="https://api.smartcitizen.me/v0/sensors/251">251</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Clear</td>
+<td style="text-align: left;"><code>AS7341 Clear</code></td>
+<td style="text-align: center;">-</td>
+<td style="text-align: left;">Visible (broadband)</td>
+<td style="text-align: left;"><a href="https://api.smartcitizen.me/v0/sensors/252">252</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">NIR</td>
+<td style="text-align: left;"><code>AS7341 NIR</code></td>
+<td style="text-align: center;">~910 nm</td>
+<td style="text-align: left;">Near infrared</td>
+<td style="text-align: left;"><a href="https://api.smartcitizen.me/v0/sensors/253">253</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Flicker frequency</td>
+<td style="text-align: left;"><code>AS7341 Flicker Freq</code></td>
+<td style="text-align: center;">-</td>
+<td style="text-align: left;">Hz</td>
+<td style="text-align: left;"><a href="https://api.smartcitizen.me/v0/sensors/255">255</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Flicker amplitude</td>
+<td style="text-align: left;"><code>AS7341 Flicker Peak to Peak</code></td>
+<td style="text-align: center;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;"><a href="https://api.smartcitizen.me/v0/sensors/256">256</a></td>
+</tr>
+</tbody>
+</table>
+<p>You can check the readings with the <code>read</code> and <code>monitor</code> commands, for instance:</p>
+<div class="highlight"><pre><span></span><code>read as7341 555nm
+monitor as7341 415nm
+read as7341 flicker freq
+</code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">Placement</p>
+<p>The sensor measures the light that reaches it, so think about <strong>where it is pointing to</strong>. Pointing it towards the sky, a lamp or a wall will give very different results. If you place it inside an enclosure, make sure the window in front of it is transparent and does not filter some of the colors.</p>
+</div>
+<h3 id="considerations">Considerations<a class="headerlink" href="#considerations" title="Permanent link">&para;</a></h3>
 <p>The <a href="https://ams-osram.com/products/sensor-solutions/ambient-light-color-spectral-proximity-sensors/ams-as7341-11-channel-spectral-color-sensor">datasheet and application notes</a> are available on the manufacturer's website. <a href="https://learn.adafruit.com/adafruit-as7341-10-channel-light-color-sensor-breakout">Adafruit's guide</a> is also a very good introduction to the sensor.</p>
 <h3 id="spectral-readings">Spectral readings<a class="headerlink" href="#spectral-readings" title="Permanent link">&para;</a></h3>
 <p>The amount of signal that each channel produces depends on two settings: the <strong>integration time</strong> (how long the photodiodes collect light) and the <strong>gain</strong> of the ADC. The firmware handles both automatically:</p>
@@ -5558,7 +5590,9 @@ read as7341 flicker freq
     
       <script src="../../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
       
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+        <script src="../../../../assets/javascripts/mathjax.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
         <script src="https://buttons.github.io/buttons.js"></script>
       

@@ -5139,6 +5139,32 @@
 </ul>
 <p>Finally, the chemical reactions within the resistive element are directly related to temperature and follow an <a href="https://en.wikipedia.org/wiki/Arrhenius_equation">Arrhenius equation</a> type of behaviour. Each sensor's type has a different optimal operation temperature, which is translated into different heating powers for the heater element. Depending on the heating power and transition speeds, different reactions can be facilitated and this can lead to positive effects such as sensor clean up or battery compsuption savings, for example, when heated up in a pulsed profile. On the other hand, it can facilitate sensor poisoning or ageing, which highlights the need of proper sensor characterisation.</p>
 <h2 id="usage-and-considerations">Usage and considerations<a class="headerlink" href="#usage-and-considerations" title="Permanent link">&para;</a></h2>
+<p>The MiCS-4514 is on the Urban Board of the SCK 1.5 and SCK 2.0 (it is not present on the SCK 2.1 onwards). It reports the resistance of each sensing element:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Metric</th>
+<th style="text-align: left;">Shell name</th>
+<th style="text-align: center;">Units</th>
+<th style="text-align: left;">API</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">CO sensor resistance</td>
+<td style="text-align: left;"><code>Carbon monoxide resistance</code></td>
+<td style="text-align: center;">kOhm</td>
+<td style="text-align: left;"><a href="https://api.smartcitizen.me/v0/sensors/16">16</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">NO2 sensor resistance</td>
+<td style="text-align: left;"><code>Nitrogen dioxide resistance</code></td>
+<td style="text-align: center;">kOhm</td>
+<td style="text-align: left;"><a href="https://api.smartcitizen.me/v0/sensors/15">15</a></td>
+</tr>
+</tbody>
+</table>
+<p>Concentrations calculated from these resistances, in post-processing, are published on the platform as <a href="https://api.smartcitizen.me/v0/sensors/82">82</a> (CO, ppm) and <a href="https://api.smartcitizen.me/v0/sensors/81">81</a> (NO2, ppb).</p>
 <h3 id="sensor-calibration">Sensor Calibration<a class="headerlink" href="#sensor-calibration" title="Permanent link">&para;</a></h3>
 <p>The SGX4514 is a low cost sensor originally ment to detect instances or trends of target gas in the atmosphere <sup id="fnref:fourth"><a class="footnote-ref" href="#fn:fourth">4</a></sup><sup id="fnref:fifth"><a class="footnote-ref" href="#fn:fifth">5</a></sup>. The applications intended for these sensors are ‘event sensing‘ applications and the level of accuracy required is not necessarily within regulatory standards. Furthermore, these sensors should not be used with safety related issues.</p>
 <p>However, despite the low cost nature of these sensors, they have been subject of a great deal of research <sup id="fnref3:first"><a class="footnote-ref" href="#fn:first">1</a></sup><sup id="fnref2:second"><a class="footnote-ref" href="#fn:second">2</a></sup><sup id="fnref:third"><a class="footnote-ref" href="#fn:third">3</a></sup> and have been reported to give considerably good results in field applications. Before delving into the details of sensor calibration, we will try to understand what these sensors are and how they should be handled. Some important definitions are:</p>
@@ -5359,7 +5385,9 @@
     
       <script src="../../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
       
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+        <script src="../../../../assets/javascripts/mathjax.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
         <script src="https://buttons.github.io/buttons.js"></script>
       

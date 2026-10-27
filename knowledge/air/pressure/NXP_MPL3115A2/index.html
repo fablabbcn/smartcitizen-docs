@@ -5152,6 +5152,7 @@
 <th style="text-align: left;">Shell name</th>
 <th style="text-align: center;">Units</th>
 <th style="text-align: center;">Enabled by default</th>
+<th style="text-align: left;">API</th>
 </tr>
 </thead>
 <tbody>
@@ -5160,21 +5161,25 @@
 <td style="text-align: left;"><code>MPL Barometric pressure</code></td>
 <td style="text-align: center;">kPa</td>
 <td style="text-align: center;">Yes</td>
+<td style="text-align: left;"><a href="https://api.smartcitizen.me/v0/sensors/58">58</a></td>
 </tr>
 <tr>
 <td style="text-align: left;">Altitude</td>
 <td style="text-align: left;"><code>MPL Altitude</code></td>
 <td style="text-align: center;">m</td>
 <td style="text-align: center;">No</td>
+<td style="text-align: left;"><a href="https://api.smartcitizen.me/v0/sensors/219">219</a></td>
 </tr>
 <tr>
 <td style="text-align: left;">Internal temperature</td>
 <td style="text-align: left;"><code>MPL internal temperature</code></td>
 <td style="text-align: center;">ºC</td>
 <td style="text-align: center;">No</td>
+<td style="text-align: left;">-</td>
 </tr>
 </tbody>
 </table>
+<p>Metrics with <code>-</code> in the API column are not published to the platform.</p>
 <p>You can check the readings with the <code>read</code> and <code>monitor</code> commands, and enable the other metrics with the <code>sensor</code> command:</p>
 <div class="highlight"><pre><span></span><code>read mpl barometric pressure
 sensor mpl altitude -enable
@@ -5385,7 +5390,9 @@ sensor mpl altitude -enable
     
       <script src="../../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
       
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+        <script src="../../../../assets/javascripts/mathjax.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
         <script src="https://buttons.github.io/buttons.js"></script>
       

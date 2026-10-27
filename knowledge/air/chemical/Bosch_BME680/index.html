@@ -5173,6 +5173,7 @@
 <th style="text-align: left;">Metric</th>
 <th style="text-align: left;">Shell name</th>
 <th style="text-align: center;">Units</th>
+<th style="text-align: left;">API</th>
 </tr>
 </thead>
 <tbody>
@@ -5180,24 +5181,29 @@
 <td style="text-align: left;">Temperature</td>
 <td style="text-align: left;"><code>Temperature BME680</code></td>
 <td style="text-align: center;">ºC</td>
+<td style="text-align: left;">-</td>
 </tr>
 <tr>
 <td style="text-align: left;">Humidity</td>
 <td style="text-align: left;"><code>Humidity BME680</code></td>
 <td style="text-align: center;">%</td>
+<td style="text-align: left;">-</td>
 </tr>
 <tr>
 <td style="text-align: left;">Barometric pressure</td>
 <td style="text-align: left;"><code>Barometric pressure BME680</code></td>
 <td style="text-align: center;">kPa</td>
+<td style="text-align: left;">-</td>
 </tr>
 <tr>
 <td style="text-align: left;">Gas resistance</td>
 <td style="text-align: left;"><code>VOC Gas BME680</code></td>
 <td style="text-align: center;">Ohms</td>
+<td style="text-align: left;">-</td>
 </tr>
 </tbody>
 </table>
+<p>Metrics with <code>-</code> in the API column are not published to the platform.</p>
 <p>The firmware reports the <strong>raw gas resistance</strong> of the sensor, in Ohms. Bosch provides a closed-source library (BSEC) that converts this resistance into an <em>Indoor Air Quality (IAQ) index</em> and other estimated values, but this library is <strong>not</strong> used in the SCK firmware, so the resistance needs to be interpreted in post-processing.</p>
 <div class="admonition info">
 <p class="admonition-title">Interpreting the gas resistance</p>
@@ -5404,7 +5410,9 @@
     
       <script src="../../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
       
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+        <script src="../../../../assets/javascripts/mathjax.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
         <script src="https://buttons.github.io/buttons.js"></script>
       
