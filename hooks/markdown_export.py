@@ -15,7 +15,7 @@ import html
 import os
 import posixpath
 import re
-from urllib.parse import urljoin, urlsplit
+from urllib.parse import unquote, urljoin, urlsplit
 
 from mkdocs.plugins import event_priority
 from mkdocs.structure.pages import Page
@@ -137,7 +137,7 @@ def on_post_build(config):
     for page in pages:
         markdown = _cards_to_lists(_markdown[page.file.src_uri])
         markdown = _rewrite_links(markdown, page, _files, site_url, page_urls)
-        out = os.path.join(config['site_dir'], md_url(page.url))
+        out = os.path.join(config['site_dir'], unquote(md_url(page.url)))
         os.makedirs(os.path.dirname(out), exist_ok=True)
         with open(out, 'w') as f:
             f.write(f"<!-- Source: {site_url}{page.url} -->\n\n{markdown}")

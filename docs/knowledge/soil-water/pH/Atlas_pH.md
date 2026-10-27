@@ -124,7 +124,7 @@ This is the order of the calibration:
     ...
     ```
 
-* Issue the mid point calibration command. Remember to input the pH value of the [calibration solution at the current temperature](#calibration-solutions-temperature)
+* Issue the mid point calibration command. Remember to input the pH value of the [calibration solution at the current temperature](#calibration)
 
     ```
     control atlas ph com,cal,mid,[value of pH at current temperature]
@@ -152,7 +152,7 @@ Repeat the procedure with the **Lowpoint** 4.00 solution (the red one).  **The p
     ...
     ```
 
-* Issue the **low point** calibration command. Remember to input the pH value of the [calibration solution at the current temperature](#calibration-solutions-temperature):
+* Issue the **low point** calibration command. Remember to input the pH value of the [calibration solution at the current temperature](#calibration):
 
     ```
     control atlas ph com,cal,low,[value of pH at current temperature]
@@ -180,7 +180,7 @@ Put the sensor in the pH 10.00 calibration solution (high point, the blue one). 
     ...
     ```
 
-* Issue the **high point calibration command**. Remember to input the pH value of the [calibration solution at the current temperature](#calibration-solutions-temperature)
+* Issue the **high point calibration command**. Remember to input the pH value of the [calibration solution at the current temperature](#calibration)
 
     ```
     control atlas ph com,cal,high,[value of pH at current temperature]

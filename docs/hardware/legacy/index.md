@@ -45,7 +45,7 @@ Click on the **Next** button, you are close to the end.
 
 In order to have your kit connected to the Smart Citizen platform, we need a few step involving the connexion of your kit to your computer. This tool will help you register your kit to the platform, setup your kit's Wi-Fi settings and update its firmware. Currently we support Google Chrome in Win, Mac and Linux.
 
-*If you are on Windows check first [How to install the drivers on Windows?](#/start/how-to-install-the-drivers-on-windows) section for more information.*
+*If you are on Windows check first [How to install the drivers on Windows?](/hardware/legacy/Faq/#how-to-install-the-drivers-on-windows) section for more information.*
 
 Click on the *ADD TO CHROME* button and wait for the extension to install.
 
@@ -71,7 +71,7 @@ If the configurator still can't communicate with your kit it may be a firmware/h
 
 ![Unrecognized board](/assets/images/sck_1/conf2.jpg)
 
-If you **can't upload the firmware** please refer to the [Firmware update problem](#/start/firmware-update-problem) section or try doing a [Manual set up.](#/start/manual-set-up-the-compilation-way)
+If you **can't upload the firmware** please refer to the [Firmware update problem](/hardware/legacy/Troubleshooting/#firmware-update-problem) section or try doing a [Manual set up.](#manual-set-up-the-compilation-way)
 
 After firmware is installed/updated we can continue with Wi-Fi settings.
 
@@ -91,7 +91,7 @@ You should complete the fields with your router or access point information:
 
  - **Encryption** -  _Optional_  You can leave it to _WPA2_ this is the default for most modern networks.
 
- - **External Antenna** - _Optional_ Is your SCK quite far away from Wi-Fi access point? You can use an external antenna with your SCK. Check the [How to use an external antenna?](#/start/how-i-can-extend-the-wi-fi-range)
+ - **External Antenna** - _Optional_ Is your SCK quite far away from Wi-Fi access point? You can use an external antenna with your SCK. Check the [How to use an external antenna?](/hardware/legacy/Faq/#how-i-can-extend-the-wi-fi-range)
 
 Next step is optional, you can set your SCK update interval to optimize the battery performance and sensor resolution ratio.
 
@@ -111,7 +111,7 @@ Last but now least you will see your SCK *Mac Address* registered below this is 
 
 *You might need to wait up to 2 minutes or more if you changed the time update settings and refresh your browser in order to see your SCK first post in your device page.*
 
- **Did you registered your SCK before or did your SCK belong to someone else before?** *Take care your SCK can be registered once at a time, in case you registered before check [How to unlink your SCK?](#/start/how-do-i-register-again-my-sck) or contact [{{ extra.urls.support.name }}]({{ extra.urls.support.link }}).*
+ **Did you registered your SCK before or did your SCK belong to someone else before?** *Take care your SCK can be registered once at a time, in case you registered before check [How to unlink your SCK?](/hardware/legacy/Faq/#how-do-i-register-again-my-sck) or contact [{{ extra.urls.support.name }}]({{ extra.urls.support.link }}).*
 
 *Please, if your kit is not publishing properly contact [{{ extra.urls.support.name }}]({{ extra.urls.support.link }}) or ask for help on the [forum]({{ extra.urls.forum.link }}).*
 
@@ -186,7 +186,7 @@ In both cases, you have to fill the mac address input field in the configuration
 
 You are now done with the manual configuration of your SCK. Wait for a few minutes to see your data coming on the server and being displayed on the web page. You can also check that everything is ok by looking at the Arduino serial monitor. Debug messages coming from your SCK should look like this:
 
-If you want to explore further options with the WiFly module check [The SCK Command Line](#/start/the-sck-command-line) section.
+If you want to explore further options with the WiFly module check [The SCK Command Line](/hardware/legacy/Command%20Line/) section.
 
 If you encounter any issue, please share your problem on the [forum]({{ extra.urls.forum.link }}).
 
@@ -196,7 +196,7 @@ This tutorial is aimed to advanced users, we will guide you through the process 
 
 One advantage of this method is that it gives you the opportunity to register multiple Wi-Fi networks at the same time and make the persistent. The Wi-fi networks that you register directly in the source code are called *hardcoded* and the only way to remove them is with the same process of compiling and uploading the firmware again. This is useful if your SCK is traveling from one location to another where the Wi-Fi credentials are known.
 
-The downside of this method is that you can not extract the MAC address of your kit, if you don't know it yet you will have to use the method described in [The Serial Way](#/start/manual-set-up-the-serial-way) or via the configurator in the setup page of your kit.
+The downside of this method is that you can not extract the MAC address of your kit, if you don't know it yet you will have to use the method described in [The Serial Way](#manual-set-up-the-serial-way) or via the configurator in the setup page of your kit.
 
 ### Getting the Firmware
 
@@ -270,7 +270,7 @@ In case you have any issue please check the [Arduino Troubleshooting](https://ww
 
 ## Registering the kit in the platform
 
-After you’ve uploaded your settings, don’t forget to register your kit in our database by saving it’s mac address. To find the mac address, you can use the serial command “get mac”  by following the section [The Serial Way](#/start/manual-set-up-the-serial-way). Or have a look at the wifi module on the board and read the serial number under the bar code (something like “131G0006662116E4” on kit v1.0 or “0006662116E4” on kit v.1.1).
+After you’ve uploaded your settings, don’t forget to register your kit in our database by saving it’s mac address. To find the mac address, you can use the serial command “get mac”  by following the section [The Serial Way](#manual-set-up-the-serial-way). Or have a look at the wifi module on the board and read the serial number under the bar code (something like “131G0006662116E4” on kit v1.0 or “0006662116E4” on kit v.1.1).
 
 ![Find The Mac Address](/assets/images/sck_1/mac_manual_sticker.jpg)
 
