@@ -5295,6 +5295,17 @@
 <p>Typical outdoor concentrations of these gases are in the low ppb range, which is at the limit of what low-cost sensors can measure. The readings of <a href="/knowledge/air/chemical/SGX_MICS/">MOx sensors</a> cannot be compared with these values, and <a href="/knowledge/air/chemical/Alphasense_Electrochemical/">electrochemical sensors</a> need a careful calibration (ideally, co-located with a reference station) before doing so.</p>
 </div>
 <h3 id="supported-sensors_1">Supported sensors<a class="headerlink" href="#supported-sensors_1" title="Permanent link">&para;</a></h3>
+<p>We currently support electrochemical sensors from <a href="https://www.alphasense.com/index.php/air/">Alphasense Ltd.</a> with a digital interface <a href="/hardware/boards/analog-sensor-board/">Analog Sensor Board</a> that can operate at 3.3V or 5V. The basic data postprocessing that is specified in <a href="/assets/notes/alphasense-an-803-04-zero-offset.pdf">Alphasense Application Note 803_04</a> is implemented as a default processing for these sensors and that we can <a href="/guides/data/custom-data-processing/">trigger automatically</a>.</p>
+<p>Other sensors can be used, such as <a href="https://www.spec-sensors.com/">SPEC Sensors</a>, with the same interface hardware (<strong>note that these sensors operate at 3.3V</strong>). The process is not officially supported, but has been worked on in this <a href="https://forum.smartcitizen.me/t/smart-citizen-station-extended-with-anemometer-rain-gps-4g-radio-and-solar/1622">thread in our forum</a>.</p>
+<p>The chemical substances and sensors that are currently supported are:</p>
+<ul>
+<li><a href="https://www.alphasense.com/product_type/air-quality-sensors/">Alphasense Sensors</a>: CO, NO2, NO, OX, SO2, H2S, both in A or B-Series. These sensors are affected differently by temperature and humidity (some of them are by both, some of them are not). It is important to consider cross-sensitivity of the sensors in this case, for instance:<ul>
+<li>OX sensor is affected by NO2 and O3</li>
+<li>SO2 is affected by SO2 and O3</li>
+</ul>
+</li>
+<li><a href="https://www.spec-sensors.com/product-category/analog-gas-sensors/">SPEC Sensors (although experimental)</a> (see above): CO, NO2, SO2, O3, H2S</li>
+</ul>
 <div class="sensor-block-multi ">
     <div class="sensor-banner orange-sensor-banner">
     <div class="sensor-image-block">
@@ -5395,17 +5406,6 @@
 </div>
 </div>
 
-<p>We currently support electrochemical sensors from <a href="https://www.alphasense.com/index.php/air/">Alphasense Ltd.</a> with a digital interface <a href="/hardware/boards/analog-sensor-board/">Analog Sensor Board</a> that can operate at 3.3V or 5V. The basic data postprocessing that is specified in <a href="/assets/notes/alphasense-an-803-04-zero-offset.pdf">Alphasense Application Note 803_04</a> is implemented as a default processing for these sensors and that we can <a href="/guides/data/custom-data-processing/">trigger automatically</a>.</p>
-<p>Other sensors can be used, such as <a href="https://www.spec-sensors.com/">SPEC Sensors</a>, with the same hardware (<strong>note that these sensors operate at 3.3V</strong>). The process is now been worked on in this <a href="https://forum.smartcitizen.me/t/smart-citizen-station-extended-with-anemometer-rain-gps-4g-radio-and-solar/1622">thread in our forum</a> and will be integrated in the basic data postprocessing as with Alphasense sensors to be triggered automatically.</p>
-<p>The sensors that are currently supported are:</p>
-<ul>
-<li><a href="https://www.alphasense.com/product_type/air-quality-sensors/">Alphasense Sensors</a>: CO, NO2, NO, OX, SO2, H2S, both in A or B-Series. These sensors are affected differently by temperature and humidity (some of them are by both, some of them are not). It is important to consider cross-sensitivity of the sensors in this case, for instance:<ul>
-<li>OX sensor is affected by NO2 and O3</li>
-<li>SO2 is affected by SO2 and O3</li>
-</ul>
-</li>
-<li><a href="https://www.spec-sensors.com/product-category/analog-gas-sensors/">SPEC Sensors (experimental)</a>: CO, NO2, SO2, O3, H2S</li>
-</ul>
 <h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
 <div class="footnote">
 <hr />
