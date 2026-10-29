@@ -40,7 +40,7 @@ For **formaldehyde** (measured by the [SFA30](/knowledge/air/chemical/Sensirion_
 
 {{ insert_cards(type="sensor", filter="target", value=["vocs"])}}
 
-## Other chemical measurements
+## Chemical measurements
 
 Chemical composition sensors are those that are able to measure a specific chemical target species that are present in the air. Current state of the art of these sensors has proven capabilities of measuring CO, NO2, NO, SO2, H2S, O3, among others. Measurement principles, limitations and technologies available are different for these different target species. Most of the sensors available in the market are based on two types of technologies: electrochemical sensors, and metal oxides [^14].
 

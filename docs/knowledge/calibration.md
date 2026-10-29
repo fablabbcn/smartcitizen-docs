@@ -1,59 +1,95 @@
-Low Cost Sensors Calibration
-============================
+# Sensor calibration
 
-Low cost sensor calibration and assessment poses a great challenge for data quality objectives. We follow this **sensor calibration procedure**, which can be split into three stages:
+Low-cost sensors give useful information at a fraction of the cost of reference instruments, but their readings are affected by the environment, by other pollutants, by the spread between units and by ageing. **Calibration** is the process that turns the raw readings of a sensor into values that can be trusted for a given purpose. How much calibration is needed depends on the sensor and on what the data is used for: following trends, comparing locations, or reporting absolute concentrations.
 
-![](https://i.imgur.com/6BZqNrR.png)
+This page explains the general approach, and what it means for each type of sensor we use. The details of each sensor are in its own [knowledge page](/knowledge/).
 
-1. **Behaviour assesment**: in laboratory conditions, serving as base testing for assessing general sensor behaviour.
+## Process overview
 
-2. **Characterisation**: also in laboratory conditions, assess generic sensor parameters as sensitivity, zero and span.
+Typically, sensor calibration requires a series of steps that involve understanding the behaviour of the sensor, to be able to derive a calibration procedure. This process can be split into three stages:
 
-3. **Modelisation with real world deployment**: including other variables such as environmental factors and sensor cross-sensitivity.
+![](/assets/images/calibration-process-stages.png)
 
-Each of these stages apply differently depending on the type of sensor. For instance the electrochemical sensors present in the *Station* are already characterised by the manufacturer, while the old SGX MICS4514 Metal Oxyde Sensors in the *Urban Board* of the *Smart Citizen Kit* are not. The different characteristics of these sensors make different calibration approaches to be carried out.
+1. **Behaviour assessment**: in laboratory conditions, to assess the general behaviour of the sensor.
+2. **Characterisation**: also in laboratory conditions, to find the basic parameters of each sensor.
+3. **Modelling in real world deployments**: to account for other variables, such as environmental factors and cross-sensitivity to other pollutants.
 
-**Base calibration parameters** need to be determined in controlled conditions. In this stage, the aim would be to find parameters such as:
+Not every sensor goes through every stage, and not every stage is done by us. Many sensors are characterised by their manufacturer, and some even apply corrections internally.
 
-![](https://i.imgur.com/FprLD0n.png)
+### Characterisation
 
-- **Sensor sensitivity**: the sensor response per each ppm of target pollutant in _nominal_ conditions
-- **Zero**: the sensor reading in zero air (pure air at 25degC).
-- **Sensor response** (t<sub>90</sub>)
-- **Sensor range**: maximum and minimum readings for the sensor
+The **base calibration parameters** are found in controlled conditions:
 
-Finally, after this initial calibration assessment, it is critical to gather as much data as possible from **long term sensor deployments**. These deployments should aim to cover the widest range of sensor exposure conditions, in order to generate robust models. While dealing with low cost sensors this stage is very important, as it is detailed in the sections below.
+![](/assets/images/calibration-base-parameters.png)
 
-These sensor deployments serve for two main purposes: to generate **quantitative classification methods** that can classify the air quality in predefined ranges (i.e. 'poor', 'fair', good'); and to generate **predictive qualitative models** for more accurate values. Either of them need large amounts of data if the models are aimed to be representative. Additionally, by the mere nature of the data and the sensors themselves, these models would need to be:
+- **Sensitivity**: the sensor response per unit of the target magnitude (e.g. per ppb of a pollutant) in _nominal_ conditions.
+- **Zero** (or baseline): the sensor reading in zero air, i.e. with none of the target pollutant.
+- **Response time** (t~90~): the time the sensor takes to reach 90% of its final reading after a step change.
+- **Range**: the minimum and maximum values the sensor can measure.
 
-- Robusts to noise
-- Capable of learning non-linear relationships
-- Handle multivariate inputs
-- Capable of learning temporal dependence
+### Field calibration
 
-These needs make **machine learning** methods great canditates for modeling the data. These methods are implemented in the Sensor Analysis Framework, as well as other _more traditional_ linear methods. The combination of these algorithms with large amounts of data gathered during, for instance, the iScape project, offers a great opportunity to demonstrate the use of low cost sensors for air quality monitoring.
+The conditions in a laboratory can't represent all the conditions found in a real deployment. For this reason, the usual approach is to **co-locate the sensors with reference grade instruments** (normally, an official air quality monitoring station) for a period of time, and to derive calibration models from the two sets of data [^1] [^2]. These models range from simple linear corrections, to multilinear models that include temperature and humidity, to machine learning models [^3] [^4]. Some things to keep in mind:
 
-### Smart Citizen Kits
+- The models can only be trusted in conditions similar to the ones they were trained with. Co-locations should cover the widest possible range of conditions (seasons, concentrations), and a co-location before and after the deployment is recommended to account for drift [^5] [^6].
+- Models can be specific to each sensor and site, or general models derived from several sensors and co-locations, provided that the differences between sensors are small or can be normalised [^6].
+- More complex models need more data, and they are more prone to learn the artefacts in the data, such as the noise caused by fast changes in temperature and humidity [^5].
+- The reference data has its own uncertainty: reference stations can deviate up to 15% from the actual concentration [^6].
 
-Due to their construction, low-cost metal oxyde sensors suffer from high levels of spread in their baseline resistance and sensitivity. As well, these sensors are generally reactive to other pollutants in the atmosphere, with a low selectivity of the actual target pollutant and drifts in their behaviour can be seen after some weeks of exposure. As well, metal oxyde sensors show short and long term drifts in their calibrations. 
+## Calibration by sensor type
 
-![](https://i.imgur.com/JfujXTA.png)
+| Sensor type | Processing | Calibration |
+|:- |:-: |:- |
+| Temperature, humidity, pressure, light, noise | On the sensor | Factory calibration. Offsets can be adjusted |
+| Particulate matter | On the sensor | Factory calibration. Field calibration recommended |
+| CO~2~ | On the sensor | Factory calibration and automatic self-calibration |
+| Electrochemical sensors | On the platform | Laboratory calibration by the manufacturer. Field calibration recommended |
+| Metal oxide sensors | On the sensor | None: indicative only |
+| Water sensors | On the sensor | Calibrated by the user with calibration solutions |
 
-Ideally, a **sensor characterisation** in laboratory conditions is needed to assess sensitiviy, baseline resistances sensor-to-sensor spread, aiming to obtain normalising factors for each sensor or group of sensors. Even if possible, the variability of the sensor behaviour during the deployment stage, makes the individual characterisation and calibration of the Metal Oxyde sensors unrealistic. For this reason, indicative measurements are to be expected from this type of low cost sensors. More information about the sensors present in the urban board of the SCK can be found in [this section](/Components/Urban Sensor Board/#a-word-about-metal-oxide-sensors).
+### Environmental sensors
 
-### Smart Citizen Stations
+Temperature, humidity, pressure, light and noise sensors are calibrated by their manufacturer, and their readings are processed on the sensor. The main source of error is not the sensor itself, but the **installation**: for instance, the temperature inside an enclosure is affected by the heat of the electronics and by solar radiation. Check how to [modify the temperature and humidity offsets](/knowledge/air/temperature_rel_humidity/Sensirion_SHT3X/#modify-temperature-and-relative-humidity-offset) if needed.
 
-**Electrochemical sensors** 
+### Particulate matter
 
-These sensors can achieve significant accuracy, but they require a particular data post-processing that combines the measurement at the sensor electrodes with the sensor characterisation on the factory as well as other environmental parameters as air temperature and relative humidity (i.e. absolute humidity). Luckily the manufacturer of these sensors, Alphasense, provides us with that reference data. However, the complexity of the operations performed can not be done inside the sensing device as it uses advanced operations as well as historical data from the same device. For that reason, the data needs to be post processed using the Sensors Analysis Framework. The algorithm is **in a beta stage** and later it will be applied automatically on the data once it arrives at the platform. More details can be found in the [*Electrochemical sensor baseline methodology* Section](https://docs.iscape.smartcitizen.me/Components/Gas%20Pro%20Sensor%20Board/Electrochemical%20Sensors/#sensor-calibration).
+PM sensors are characterised by the manufacturer, and they calculate the mass concentration internally, assuming the shape, density and optical properties of the particles. Since these assumptions don't hold for every type of aerosol, readings can be over- or underestimated, and a field calibration is needed in almost all cases to report absolute values. High relative humidity makes particles grow by absorbing water, which leads to overestimations, but it can be corrected [^7]. Check the [particulate matter limitations](/knowledge/air/pm/#limitations) for more details.
 
-![](https://i.imgur.com/Mi896Jh.png)
+### CO~2~
 
-This process doesn't require any on-site reference data but requires the data to be processed using the manufacturer calibration reference per sensor as well as other environmental values as temperature and humidity.
+The NDIR CO~2~ sensors ([SCD30](/knowledge/air/co2/Sensirion_SCD30/#calibration) and [SCD4X](/knowledge/air/co2/Sensirion_SCD4X/#calibration)) are calibrated by the manufacturer, and correct their baseline over time with an **automatic self-calibration**, which assumes that the sensor is exposed to fresh air regularly. When this is not the case, a **forced recalibration** against a known concentration can be done instead. Check each sensor page for how to do it.
 
-**PM sensor**
+### Electrochemical sensors
 
-The selected PM sensor is internally characterised by the manufacturer and, it's readings are currently being evaluated. Preliminarily, the measurements can be as well improved when reference data is available, as some have noted that the PM sensors can be affected by relative humidity. 
+The [Alphasense electrochemical sensors](/knowledge/air/chemical/Alphasense_Electrochemical/) are characterised individually by the manufacturer in laboratory conditions. The firmware only reports the raw voltages of the electrodes, and the concentrations are calculated on the platform using this calibration data, following the Alphasense application notes. For this, the calibration data of each unit needs to be [linked to the device](/guides/data/handling-calibration-data/).
 
-!!! info "Plantower PMS 5003"
-	Read more on the Plantower PMS 5003 implementation on the [**PM Sensor Board**](/Components/PM%20Sensor%20Board/).
+This processing gives good enough information to start a deployment and follow trends, but it does not account for all the effects of temperature, humidity, other pollutants and ageing in the deployment conditions. When accurate values are needed, a field calibration with a reference station is recommended. Check the [data processing section](/knowledge/air/chemical/Alphasense_Electrochemical/#data-processing) for the details.
+
+### Metal oxide sensors
+
+Metal oxide sensors, such as the [SGX MICS](/knowledge/air/chemical/SGX_MICS/) used in previous versions of the SCK, have a large spread in their baseline resistance and sensitivity between units, a low selectivity to their target pollutant, and drift over time. Even when they are characterised in the laboratory, their behaviour changes during the deployment, which makes their individual calibration unrealistic. Their readings should be taken as **indicative** only. Check the [sensor calibration section](/knowledge/air/chemical/SGX_MICS/#sensor-calibration) of the MICS page for more details.
+
+### Water sensors
+
+The Atlas Scientific water sensors need to be calibrated by the user with calibration solutions, before the first use and periodically after that. Check each sensor page: [pH](/knowledge/soil-water/pH/Atlas_pH/#calibration), [dissolved oxygen](/knowledge/soil-water/DO/Atlas_DO/#calibration), [conductivity](/knowledge/soil-water/EC/Atlas_EC/#calibration), [ORP](/knowledge/soil-water/ORP/Atlas_ORP/#calibration) and [temperature](/knowledge/soil-water/temperature/Atlas_Temperature/#calibration). Soil moisture sensors, such as the [Chirp](/knowledge/soil-water/moisture/Chirp_Soil_Moisture/#calibration), are calibrated with dry and wet reference points.
+
+## Data processing
+
+When a sensor needs processing on the platform, we do it automatically with our default algorithms, for the devices that have it set up. If you want to try different algorithms, you can run them yourself, with the same tools we use. Check the guides on [handling calibration data](/guides/data/handling-calibration-data/) and [data processing](/guides/data/custom-data-processing/).
+
+## References
+
+[^1]:
+    Clements, A., S. Lung, A. Arfire, AND A. Polidori. An Update on Low-Cost Sensors for the Measurement of Atmospheric Composition: Evaluation Activities. World Meteorological Organization, Geneva, Switzerland, (2020).
+[^2]:
+    Spinelle, L., M. Gerboles, M. G. Villani, M. Aleixandre, and F. Bonavitacola. “Field Calibration of a Cluster of Low-Cost Available Sensors for Air Quality Monitoring. Part A: Ozone and Nitrogen Dioxide.” Sensors and Actuators B: Chemical (2015). https://doi.org/10.1016/j.snb.2015.03.031.
+[^3]:
+    Hagan, D. H., G. Isaacman-VanWertz, J. P. Franklin, L. M. M. Wallace, B. D. Kocar, C. L. Heald, and J. H. Kroll. “Calibration and Assessment of Electrochemical Air Quality Sensors by Co-Location with Regulatory-Grade Instruments.” Atmospheric Measurement Techniques 11 (2018). https://doi.org/10.5194/amt-11-315-2018.
+[^4]:
+    Zimmerman, N., A. A. Presto, S. P. N. Kumar, J. Gu, A. Hauryliuk, E. S. Robinson, A. L. Robinson, and R. Subramanian. “A Machine Learning Calibration Model Using Random Forests to Improve Sensor Performance for Lower-Cost Air Quality Monitoring.” Atmospheric Measurement Techniques 11 (2018). https://doi.org/10.5194/amt-11-291-2018.
+[^5]:
+    iSCAPE Project Deliverable 7.8 Sensor monitoring experiences and technological innovations (November 2019). [Link](/assets/publications/iSCAPE_D78.pdf)
+[^6]:
+    Node-to-node field calibration of wireless distributed air pollution sensor network. Environmental Pollution (2017). https://doi.org/10.1016/j.envpol.2017.09.042
+[^7]:
+    Di Antonio, Andrea, Olalekan Popoola, Bin Ouyang, John Saffell, and Roderic Jones. “Developing a Relative Humidity Correction for Low-Cost Sensors Measuring Ambient Particulate Matter.” Sensors 18, no. 9 (August 24, 2018): 2790. https://doi.org/10.3390/s18092790.
