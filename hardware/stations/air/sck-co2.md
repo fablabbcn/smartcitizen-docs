@@ -131,7 +131,7 @@ Some components of the Station have individual calibrations such as the Alphasen
 SCAS2100XX
 ```
 
-This number is important to relate to the actual calibration values of the sensors, stored in the [data repository](https://github.com/fablabbcn/smartcitizen-data/tree/master/hardware). In order to postprocess the data and calculate pollutants, make sure that the `Hardware ID` is safely stored in the platform's device, by posting this data to `postprocessing_info` field of the device. You can follow [these instructions](https://docs.smartcitizen.me/guides/data/handling-calibration-data.md) to store the `postprocessing_info` of your device.
+This number is important to relate to the actual calibration values of the sensors, stored in [Smart Citizen Flows](https://flows.smartcitizen.me/api/v1/hardware). In order to process the data and calculate pollutants, make sure that the `Hardware ID` is stored in the `postprocessing` of the device. You can follow [these instructions](https://docs.smartcitizen.me/guides/data/handling-calibration-data.md) to do so.
 
 All the data is sent in raw to the Smart Citizen Platform and it's then processed outside of the sensors themselves. Both raw, and processed data are kept on the platform and can be accessed at any time. Data can be published to other APIs or to [Zenodo](https://zenodo.org) as well, in case of research projects that seek contribution to Open Science Datasets.
 

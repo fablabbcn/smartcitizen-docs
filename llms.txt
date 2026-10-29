@@ -75,6 +75,7 @@
 ## Knowledge
 
 - [Knowledge](https://docs.smartcitizen.me/knowledge.md)
+- [Calibration](https://docs.smartcitizen.me/knowledge/calibration.md)
 
 ### Air
 
@@ -203,7 +204,7 @@
 
 - [Handling calibration data](https://docs.smartcitizen.me/guides/data/handling-calibration-data.md)
 - [Sending data to a different platform](https://docs.smartcitizen.me/guides/data/sending-data-to-other-platforms.md)
-- [Custom data processing](https://docs.smartcitizen.me/guides/data/custom-data-processing.md)
+- [Data processing](https://docs.smartcitizen.me/guides/data/custom-data-processing.md)
 - [Creating data interfaces](https://docs.smartcitizen.me/guides/data/creating-interfaces.md)
 - [Live demos](https://docs.smartcitizen.me/guides/data/live-demos.md)
 - [Visual programming](https://docs.smartcitizen.me/guides/data/visual-programming.md)

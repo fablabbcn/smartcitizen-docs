@@ -4,6 +4,10 @@
 
 In this section, you will find a compilation of the different environmental variables, and the sensors used to monitor them, available in the Smart Citizen Kit. Feel free to contribute!
 
+## Calibration
+
+Low-cost sensors need different levels of calibration, depending on the sensor and on what the data is used for. Check the [calibration section](https://docs.smartcitizen.me/knowledge/calibration.md) to learn about the general approach, and what it means for each type of sensor.
+
 ## Onboard Sensors
 
 Below, you will find the sensors that are included by _default_ in any of the Smart Citizen Kit versions (2.1, 2.2 or 2.3).
@@ -44,3 +48,5 @@ This is a list of supported sensors and other components that you can connect di
 - [TI ADS1115](https://docs.smartcitizen.me/knowledge/other/TI_ADS1X15.md) (Field | other; Metric | current; Connection | external): A high precision 16-bit, 4 channel ADC, used in the Analog Sensor Board.
 - [TI INA219](https://docs.smartcitizen.me/knowledge/other/TI_INA219.md) (Field | other; Metric | current; Connection | external): A digital sensor for measuring electric current and voltage!
 - [Tensiometer / Irrometer](https://docs.smartcitizen.me/knowledge/soil-water/moisture/Tensiometer.md) (Field | soil; Metric | soil tension; Connection | external)
+
+

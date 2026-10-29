@@ -45,7 +45,7 @@ For **formaldehyde** (measured by the [SFA30](https://docs.smartcitizen.me/knowl
 - [Sensirion SFA30](https://docs.smartcitizen.me/knowledge/air/chemical/Sensirion_SFA30.md) (Field | air; Metric | vocs; Connection | external): An electrochemical sensor for measuring formaldehyde (HCHO).
 
 
-## Other chemical measurements
+## Chemical measurements
 
 Chemical composition sensors are those that are able to measure a specific chemical target species that are present in the air. Current state of the art of these sensors has proven capabilities of measuring CO, NO2, NO, SO2, H2S, O3, among others. Measurement principles, limitations and technologies available are different for these different target species. Most of the sensors available in the market are based on two types of technologies: electrochemical sensors, and metal oxides [^14].
 

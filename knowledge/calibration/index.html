@@ -15,6 +15,10 @@
         <link rel="canonical" href="https://docs.smartcitizen.me/knowledge/calibration/">
       
       
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../air/">
       
       
       <link rel="icon" href="../../assets/images/favicon.ico">
@@ -64,6 +68,8 @@
     
     
     
+    <link rel="alternate" type="text/markdown" href="https://docs.smartcitizen.me/knowledge/calibration.md">
+    
     <script defer data-domain="docs.smartcitizen.me" src="https://plausible.io/js/plausible.js"></script>
     <!-- <script src="/javascripts/extra.js"></script> -->
 
@@ -86,7 +92,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#low-cost-sensors-calibration" class="md-skip">
+        <a href="#sensor-calibration" class="md-skip">
           Skip to content
         </a>
       
@@ -233,10 +239,12 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
+      <li class="md-tabs__item md-tabs__item--active">
         <a href="../" class="md-tabs__link">
           
   
@@ -1650,6 +1658,8 @@
       
   
   
+    
+  
   
   
     
@@ -1665,6 +1675,8 @@
       
         
       
+        
+      
     
     
     
@@ -1672,12 +1684,12 @@
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           
@@ -1699,13 +1711,194 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Knowledge
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Calibration
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Calibration
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#process-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Process overview
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Process overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#characterisation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Characterisation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#field-calibration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Field calibration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#calibration-by-sensor-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      Calibration by sensor type
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Calibration by sensor type">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#environmental-sensors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Environmental sensors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#particulate-matter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Particulate matter
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#co2" class="md-nav__link">
+    <span class="md-ellipsis">
+      CO2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#electrochemical-sensors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Electrochemical sensors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metal-oxide-sensors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Metal oxide sensors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#water-sensors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Water sensors
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data processing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
               
             
               
@@ -1744,7 +1937,7 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
         
           
           
@@ -1760,14 +1953,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_2">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
             <span class="md-nav__icon md-icon"></span>
             Air
           </label>
@@ -1803,7 +1996,7 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_2" >
         
           
           
@@ -1819,14 +2012,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2_2_2" id="__nav_2_2_2_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_2_3_2" id="__nav_2_3_2_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_2_2">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3_2">
             <span class="md-nav__icon md-icon"></span>
             Particulate Matter
           </label>
@@ -1941,7 +2134,7 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_3" >
         
           
           
@@ -1957,14 +2150,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2_2_3" id="__nav_2_2_3_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_2_3_3" id="__nav_2_3_3_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_2_3">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3_3">
             <span class="md-nav__icon md-icon"></span>
             Chemical composition
           </label>
@@ -2153,7 +2346,7 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_4" >
         
           
           
@@ -2169,14 +2362,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2_2_4" id="__nav_2_2_4_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_2_3_4" id="__nav_2_3_4_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_2_4">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3_4">
             <span class="md-nav__icon md-icon"></span>
             CO2
           </label>
@@ -2258,7 +2451,7 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_5" >
         
           
           
@@ -2274,14 +2467,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2_2_5" id="__nav_2_2_5_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_2_3_5" id="__nav_2_3_5_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_2_5">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3_5">
             <span class="md-nav__icon md-icon"></span>
             Noise
           </label>
@@ -2346,7 +2539,7 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_6" >
         
           
           
@@ -2362,14 +2555,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2_2_6" id="__nav_2_2_6_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_2_3_6" id="__nav_2_3_6_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_2_6">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3_6">
             <span class="md-nav__icon md-icon"></span>
             Temperature
           </label>
@@ -2476,7 +2669,7 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_7" >
         
           
           
@@ -2492,14 +2685,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2_2_7" id="__nav_2_2_7_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_2_3_7" id="__nav_2_3_7_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_2_7">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3_7">
             <span class="md-nav__icon md-icon"></span>
             Light
           </label>
@@ -2604,7 +2797,7 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_8" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_8" >
         
           
           
@@ -2620,14 +2813,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2_2_8" id="__nav_2_2_8_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_2_3_8" id="__nav_2_3_8_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_8_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_2_8">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3_8">
             <span class="md-nav__icon md-icon"></span>
             Pressure
           </label>
@@ -2727,7 +2920,7 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
         
           
           
@@ -2743,14 +2936,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_3">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
             <span class="md-nav__icon md-icon"></span>
             Soil and Water
           </label>
@@ -2782,7 +2975,7 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_2" >
         
           
           
@@ -2798,14 +2991,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2_3_2" id="__nav_2_3_2_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_2_4_2" id="__nav_2_4_2_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_3_2">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_2">
             <span class="md-nav__icon md-icon"></span>
             pH
           </label>
@@ -2866,7 +3059,7 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_3" >
         
           
           
@@ -2882,14 +3075,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2_3_3" id="__nav_2_3_3_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_2_4_3" id="__nav_2_4_3_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_3_3">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_3">
             <span class="md-nav__icon md-icon"></span>
             Dissolved Oxygen
           </label>
@@ -2950,7 +3143,7 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_4" >
         
           
           
@@ -2966,14 +3159,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2_3_4" id="__nav_2_3_4_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_2_4_4" id="__nav_2_4_4_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_3_4">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_4">
             <span class="md-nav__icon md-icon"></span>
             Conductivity
           </label>
@@ -3034,7 +3227,7 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_5" >
         
           
           
@@ -3050,14 +3243,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2_3_5" id="__nav_2_3_5_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_2_4_5" id="__nav_2_4_5_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_3_5">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_5">
             <span class="md-nav__icon md-icon"></span>
             Temperature
           </label>
@@ -3118,7 +3311,7 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_6" >
         
           
           
@@ -3134,14 +3327,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2_3_6" id="__nav_2_3_6_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_2_4_6" id="__nav_2_4_6_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_3_6">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_4_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_6">
             <span class="md-nav__icon md-icon"></span>
             ORP
           </label>
@@ -3204,7 +3397,7 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_7" >
         
           
           
@@ -3220,14 +3413,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2_3_7" id="__nav_2_3_7_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_2_4_7" id="__nav_2_4_7_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_3_7">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_4_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_7">
             <span class="md-nav__icon md-icon"></span>
             Soil Moisture
           </label>
@@ -3317,7 +3510,7 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
         
           
           
@@ -3333,14 +3526,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_4">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
             <span class="md-nav__icon md-icon"></span>
             Other
           </label>
@@ -3376,7 +3569,7 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5_2" >
         
           
           
@@ -3392,14 +3585,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2_4_2" id="__nav_2_4_2_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_2_5_2" id="__nav_2_5_2_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_4_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_4_2">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5_2">
             <span class="md-nav__icon md-icon"></span>
             Electric Current/Voltage
           </label>
@@ -4083,7 +4276,7 @@
         
   
   <span class="md-ellipsis">
-    Custom data processing
+    Data processing
   </span>
   
 
@@ -4931,18 +5124,120 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#smart-citizen-kits" class="md-nav__link">
+  <a href="#process-overview" class="md-nav__link">
     <span class="md-ellipsis">
-      Smart Citizen Kits
+      Process overview
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Process overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#characterisation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Characterisation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#field-calibration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Field calibration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#calibration-by-sensor-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      Calibration by sensor type
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Calibration by sensor type">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#environmental-sensors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Environmental sensors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#particulate-matter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Particulate matter
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#co2" class="md-nav__link">
+    <span class="md-ellipsis">
+      CO2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#electrochemical-sensors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Electrochemical sensors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metal-oxide-sensors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Metal oxide sensors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#water-sensors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Water sensors
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data processing
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#smart-citizen-stations" class="md-nav__link">
+  <a href="#references" class="md-nav__link">
     <span class="md-ellipsis">
-      Smart Citizen Stations
+      References
     </span>
   </a>
   
@@ -4985,52 +5280,118 @@
   
 
 
-<h1 id="low-cost-sensors-calibration">Low Cost Sensors Calibration<a class="headerlink" href="#low-cost-sensors-calibration" title="Permanent link">&para;</a></h1>
-<p>Low cost sensor calibration and assessment poses a great challenge for data quality objectives. We follow this <strong>sensor calibration procedure</strong>, which can be split into three stages:</p>
-<p><img alt="" src="https://i.imgur.com/6BZqNrR.png" /></p>
+<h1 id="sensor-calibration">Sensor calibration<a class="headerlink" href="#sensor-calibration" title="Permanent link">&para;</a></h1>
+<p>Low-cost sensors give useful information at a fraction of the cost of reference instruments, but their readings are affected by the environment, by other pollutants, by the spread between units and by ageing. <strong>Calibration</strong> is the process that turns the raw readings of a sensor into values that can be trusted for a given purpose. How much calibration is needed depends on the sensor and on what the data is used for: following trends, comparing locations, or reporting absolute concentrations.</p>
+<p>This page explains the general approach, and what it means for each type of sensor we use. The details of each sensor are in its own <a href="/knowledge/">knowledge page</a>.</p>
+<h2 id="process-overview">Process overview<a class="headerlink" href="#process-overview" title="Permanent link">&para;</a></h2>
+<p>Typically, sensor calibration requires a series of steps that involve understanding the behaviour of the sensor, to be able to derive a calibration procedure. This process can be split into three stages:</p>
+<p><img alt="" src="/assets/images/calibration-process-stages.png" /></p>
 <ol>
-<li>
-<p><strong>Behaviour assesment</strong>: in laboratory conditions, serving as base testing for assessing general sensor behaviour.</p>
+<li><strong>Behaviour assessment</strong>: in laboratory conditions, to assess the general behaviour of the sensor.</li>
+<li><strong>Characterisation</strong>: also in laboratory conditions, to find the basic parameters of each sensor.</li>
+<li><strong>Modelling in real world deployments</strong>: to account for other variables, such as environmental factors and cross-sensitivity to other pollutants.</li>
+</ol>
+<p>Not every sensor goes through every stage, and not every stage is done by us. Many sensors are characterised by their manufacturer, and some even apply corrections internally.</p>
+<h3 id="characterisation">Characterisation<a class="headerlink" href="#characterisation" title="Permanent link">&para;</a></h3>
+<p>The <strong>base calibration parameters</strong> are found in controlled conditions:</p>
+<p><img alt="" src="/assets/images/calibration-base-parameters.png" /></p>
+<ul>
+<li><strong>Sensitivity</strong>: the sensor response per unit of the target magnitude (e.g. per ppb of a pollutant) in <em>nominal</em> conditions.</li>
+<li><strong>Zero</strong> (or baseline): the sensor reading in zero air, i.e. with none of the target pollutant.</li>
+<li><strong>Response time</strong> (t<sub>90</sub>): the time the sensor takes to reach 90% of its final reading after a step change.</li>
+<li><strong>Range</strong>: the minimum and maximum values the sensor can measure.</li>
+</ul>
+<h3 id="field-calibration">Field calibration<a class="headerlink" href="#field-calibration" title="Permanent link">&para;</a></h3>
+<p>The conditions in a laboratory can't represent all the conditions found in a real deployment. For this reason, the usual approach is to <strong>co-locate the sensors with reference grade instruments</strong> (normally, an official air quality monitoring station) for a period of time, and to derive calibration models from the two sets of data <sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> <sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup>. These models range from simple linear corrections, to multilinear models that include temperature and humidity, to machine learning models <sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup> <sup id="fnref:4"><a class="footnote-ref" href="#fn:4">4</a></sup>. Some things to keep in mind:</p>
+<ul>
+<li>The models can only be trusted in conditions similar to the ones they were trained with. Co-locations should cover the widest possible range of conditions (seasons, concentrations), and a co-location before and after the deployment is recommended to account for drift <sup id="fnref:5"><a class="footnote-ref" href="#fn:5">5</a></sup> <sup id="fnref:6"><a class="footnote-ref" href="#fn:6">6</a></sup>.</li>
+<li>Models can be specific to each sensor and site, or general models derived from several sensors and co-locations, provided that the differences between sensors are small or can be normalised <sup id="fnref2:6"><a class="footnote-ref" href="#fn:6">6</a></sup>.</li>
+<li>More complex models need more data, and they are more prone to learn the artefacts in the data, such as the noise caused by fast changes in temperature and humidity <sup id="fnref2:5"><a class="footnote-ref" href="#fn:5">5</a></sup>.</li>
+<li>The reference data has its own uncertainty: reference stations can deviate up to 15% from the actual concentration <sup id="fnref3:6"><a class="footnote-ref" href="#fn:6">6</a></sup>.</li>
+</ul>
+<h2 id="calibration-by-sensor-type">Calibration by sensor type<a class="headerlink" href="#calibration-by-sensor-type" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Sensor type</th>
+<th style="text-align: center;">Processing</th>
+<th style="text-align: left;">Calibration</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Temperature, humidity, pressure, light, noise</td>
+<td style="text-align: center;">On the sensor</td>
+<td style="text-align: left;">Factory calibration. Offsets can be adjusted</td>
+</tr>
+<tr>
+<td style="text-align: left;">Particulate matter</td>
+<td style="text-align: center;">On the sensor</td>
+<td style="text-align: left;">Factory calibration. Field calibration recommended</td>
+</tr>
+<tr>
+<td style="text-align: left;">CO<sub>2</sub></td>
+<td style="text-align: center;">On the sensor</td>
+<td style="text-align: left;">Factory calibration and automatic self-calibration</td>
+</tr>
+<tr>
+<td style="text-align: left;">Electrochemical sensors</td>
+<td style="text-align: center;">On the platform</td>
+<td style="text-align: left;">Laboratory calibration by the manufacturer. Field calibration recommended</td>
+</tr>
+<tr>
+<td style="text-align: left;">Metal oxide sensors</td>
+<td style="text-align: center;">On the sensor</td>
+<td style="text-align: left;">None: indicative only</td>
+</tr>
+<tr>
+<td style="text-align: left;">Water sensors</td>
+<td style="text-align: center;">On the sensor</td>
+<td style="text-align: left;">Calibrated by the user with calibration solutions</td>
+</tr>
+</tbody>
+</table>
+<h3 id="environmental-sensors">Environmental sensors<a class="headerlink" href="#environmental-sensors" title="Permanent link">&para;</a></h3>
+<p>Temperature, humidity, pressure, light and noise sensors are calibrated by their manufacturer, and their readings are processed on the sensor. The main source of error is not the sensor itself, but the <strong>installation</strong>: for instance, the temperature inside an enclosure is affected by the heat of the electronics and by solar radiation. Check how to <a href="/knowledge/air/temperature_rel_humidity/Sensirion_SHT3X/#modify-temperature-and-relative-humidity-offset">modify the temperature and humidity offsets</a> if needed.</p>
+<h3 id="particulate-matter">Particulate matter<a class="headerlink" href="#particulate-matter" title="Permanent link">&para;</a></h3>
+<p>PM sensors are characterised by the manufacturer, and they calculate the mass concentration internally, assuming the shape, density and optical properties of the particles. Since these assumptions don't hold for every type of aerosol, readings can be over- or underestimated, and a field calibration is needed in almost all cases to report absolute values. High relative humidity makes particles grow by absorbing water, which leads to overestimations, but it can be corrected <sup id="fnref:7"><a class="footnote-ref" href="#fn:7">7</a></sup>. Check the <a href="/knowledge/air/pm/#limitations">particulate matter limitations</a> for more details.</p>
+<h3 id="co2">CO<sub>2</sub><a class="headerlink" href="#co2" title="Permanent link">&para;</a></h3>
+<p>The NDIR CO<sub>2</sub> sensors (<a href="/knowledge/air/co2/Sensirion_SCD30/#calibration">SCD30</a> and <a href="/knowledge/air/co2/Sensirion_SCD4X/#calibration">SCD4X</a>) are calibrated by the manufacturer, and correct their baseline over time with an <strong>automatic self-calibration</strong>, which assumes that the sensor is exposed to fresh air regularly. When this is not the case, a <strong>forced recalibration</strong> against a known concentration can be done instead. Check each sensor page for how to do it.</p>
+<h3 id="electrochemical-sensors">Electrochemical sensors<a class="headerlink" href="#electrochemical-sensors" title="Permanent link">&para;</a></h3>
+<p>The <a href="/knowledge/air/chemical/Alphasense_Electrochemical/">Alphasense electrochemical sensors</a> are characterised individually by the manufacturer in laboratory conditions. The firmware only reports the raw voltages of the electrodes, and the concentrations are calculated on the platform using this calibration data, following the Alphasense application notes. For this, the calibration data of each unit needs to be <a href="/guides/data/handling-calibration-data/">linked to the device</a>.</p>
+<p>This processing gives good enough information to start a deployment and follow trends, but it does not account for all the effects of temperature, humidity, other pollutants and ageing in the deployment conditions. When accurate values are needed, a field calibration with a reference station is recommended. Check the <a href="/knowledge/air/chemical/Alphasense_Electrochemical/#data-processing">data processing section</a> for the details.</p>
+<h3 id="metal-oxide-sensors">Metal oxide sensors<a class="headerlink" href="#metal-oxide-sensors" title="Permanent link">&para;</a></h3>
+<p>Metal oxide sensors, such as the <a href="/knowledge/air/chemical/SGX_MICS/">SGX MICS</a> used in previous versions of the SCK, have a large spread in their baseline resistance and sensitivity between units, a low selectivity to their target pollutant, and drift over time. Even when they are characterised in the laboratory, their behaviour changes during the deployment, which makes their individual calibration unrealistic. Their readings should be taken as <strong>indicative</strong> only. Check the <a href="/knowledge/air/chemical/SGX_MICS/#sensor-calibration">sensor calibration section</a> of the MICS page for more details.</p>
+<h3 id="water-sensors">Water sensors<a class="headerlink" href="#water-sensors" title="Permanent link">&para;</a></h3>
+<p>The Atlas Scientific water sensors need to be calibrated by the user with calibration solutions, before the first use and periodically after that. Check each sensor page: <a href="/knowledge/soil-water/pH/Atlas_pH/#calibration">pH</a>, <a href="/knowledge/soil-water/DO/Atlas_DO/#calibration">dissolved oxygen</a>, <a href="/knowledge/soil-water/EC/Atlas_EC/#calibration">conductivity</a>, <a href="/knowledge/soil-water/ORP/Atlas_ORP/#calibration">ORP</a> and <a href="/knowledge/soil-water/temperature/Atlas_Temperature/#calibration">temperature</a>. Soil moisture sensors, such as the <a href="/knowledge/soil-water/moisture/Chirp_Soil_Moisture/#calibration">Chirp</a>, are calibrated with dry and wet reference points.</p>
+<h2 id="data-processing">Data processing<a class="headerlink" href="#data-processing" title="Permanent link">&para;</a></h2>
+<p>When a sensor needs processing on the platform, we do it automatically with our default algorithms, for the devices that have it set up. If you want to try different algorithms, you can run them yourself, with the same tools we use. Check the guides on <a href="/guides/data/handling-calibration-data/">handling calibration data</a> and <a href="/guides/data/custom-data-processing/">data processing</a>.</p>
+<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>Clements, A., S. Lung, A. Arfire, AND A. Polidori. An Update on Low-Cost Sensors for the Measurement of Atmospheric Composition: Evaluation Activities. World Meteorological Organization, Geneva, Switzerland, (2020).&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
 </li>
-<li>
-<p><strong>Characterisation</strong>: also in laboratory conditions, assess generic sensor parameters as sensitivity, zero and span.</p>
+<li id="fn:2">
+<p>Spinelle, L., M. Gerboles, M. G. Villani, M. Aleixandre, and F. Bonavitacola. “Field Calibration of a Cluster of Low-Cost Available Sensors for Air Quality Monitoring. Part A: Ozone and Nitrogen Dioxide.” Sensors and Actuators B: Chemical (2015). <a href="https://doi.org/10.1016/j.snb.2015.03.031">https://doi.org/10.1016/j.snb.2015.03.031</a>.&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
 </li>
-<li>
-<p><strong>Modelisation with real world deployment</strong>: including other variables such as environmental factors and sensor cross-sensitivity.</p>
+<li id="fn:3">
+<p>Hagan, D. H., G. Isaacman-VanWertz, J. P. Franklin, L. M. M. Wallace, B. D. Kocar, C. L. Heald, and J. H. Kroll. “Calibration and Assessment of Electrochemical Air Quality Sensors by Co-Location with Regulatory-Grade Instruments.” Atmospheric Measurement Techniques 11 (2018). <a href="https://doi.org/10.5194/amt-11-315-2018">https://doi.org/10.5194/amt-11-315-2018</a>.&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:4">
+<p>Zimmerman, N., A. A. Presto, S. P. N. Kumar, J. Gu, A. Hauryliuk, E. S. Robinson, A. L. Robinson, and R. Subramanian. “A Machine Learning Calibration Model Using Random Forests to Improve Sensor Performance for Lower-Cost Air Quality Monitoring.” Atmospheric Measurement Techniques 11 (2018). <a href="https://doi.org/10.5194/amt-11-291-2018">https://doi.org/10.5194/amt-11-291-2018</a>.&#160;<a class="footnote-backref" href="#fnref:4" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+<li id="fn:5">
+<p>iSCAPE Project Deliverable 7.8 Sensor monitoring experiences and technological innovations (November 2019). <a href="/assets/publications/iSCAPE_D78.pdf">Link</a>&#160;<a class="footnote-backref" href="#fnref:5" title="Jump back to footnote 5 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:5" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+</li>
+<li id="fn:6">
+<p>Node-to-node field calibration of wireless distributed air pollution sensor network. Environmental Pollution (2017). <a href="https://doi.org/10.1016/j.envpol.2017.09.042">https://doi.org/10.1016/j.envpol.2017.09.042</a>&#160;<a class="footnote-backref" href="#fnref:6" title="Jump back to footnote 6 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:6" title="Jump back to footnote 6 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:6" title="Jump back to footnote 6 in the text">&#8617;</a></p>
+</li>
+<li id="fn:7">
+<p>Di Antonio, Andrea, Olalekan Popoola, Bin Ouyang, John Saffell, and Roderic Jones. “Developing a Relative Humidity Correction for Low-Cost Sensors Measuring Ambient Particulate Matter.” Sensors 18, no. 9 (August 24, 2018): 2790. <a href="https://doi.org/10.3390/s18092790">https://doi.org/10.3390/s18092790</a>.&#160;<a class="footnote-backref" href="#fnref:7" title="Jump back to footnote 7 in the text">&#8617;</a></p>
 </li>
 </ol>
-<p>Each of these stages apply differently depending on the type of sensor. For instance the electrochemical sensors present in the <em>Station</em> are already characterised by the manufacturer, while the old SGX MICS4514 Metal Oxyde Sensors in the <em>Urban Board</em> of the <em>Smart Citizen Kit</em> are not. The different characteristics of these sensors make different calibration approaches to be carried out.</p>
-<p><strong>Base calibration parameters</strong> need to be determined in controlled conditions. In this stage, the aim would be to find parameters such as:</p>
-<p><img alt="" src="https://i.imgur.com/FprLD0n.png" /></p>
-<ul>
-<li><strong>Sensor sensitivity</strong>: the sensor response per each ppm of target pollutant in <em>nominal</em> conditions</li>
-<li><strong>Zero</strong>: the sensor reading in zero air (pure air at 25degC).</li>
-<li><strong>Sensor response</strong> (t<sub>90</sub>)</li>
-<li><strong>Sensor range</strong>: maximum and minimum readings for the sensor</li>
-</ul>
-<p>Finally, after this initial calibration assessment, it is critical to gather as much data as possible from <strong>long term sensor deployments</strong>. These deployments should aim to cover the widest range of sensor exposure conditions, in order to generate robust models. While dealing with low cost sensors this stage is very important, as it is detailed in the sections below.</p>
-<p>These sensor deployments serve for two main purposes: to generate <strong>quantitative classification methods</strong> that can classify the air quality in predefined ranges (i.e. 'poor', 'fair', good'); and to generate <strong>predictive qualitative models</strong> for more accurate values. Either of them need large amounts of data if the models are aimed to be representative. Additionally, by the mere nature of the data and the sensors themselves, these models would need to be:</p>
-<ul>
-<li>Robusts to noise</li>
-<li>Capable of learning non-linear relationships</li>
-<li>Handle multivariate inputs</li>
-<li>Capable of learning temporal dependence</li>
-</ul>
-<p>These needs make <strong>machine learning</strong> methods great canditates for modeling the data. These methods are implemented in the Sensor Analysis Framework, as well as other <em>more traditional</em> linear methods. The combination of these algorithms with large amounts of data gathered during, for instance, the iScape project, offers a great opportunity to demonstrate the use of low cost sensors for air quality monitoring.</p>
-<h3 id="smart-citizen-kits">Smart Citizen Kits<a class="headerlink" href="#smart-citizen-kits" title="Permanent link">&para;</a></h3>
-<p>Due to their construction, low-cost metal oxyde sensors suffer from high levels of spread in their baseline resistance and sensitivity. As well, these sensors are generally reactive to other pollutants in the atmosphere, with a low selectivity of the actual target pollutant and drifts in their behaviour can be seen after some weeks of exposure. As well, metal oxyde sensors show short and long term drifts in their calibrations. </p>
-<p><img alt="" src="https://i.imgur.com/JfujXTA.png" /></p>
-<p>Ideally, a <strong>sensor characterisation</strong> in laboratory conditions is needed to assess sensitiviy, baseline resistances sensor-to-sensor spread, aiming to obtain normalising factors for each sensor or group of sensors. Even if possible, the variability of the sensor behaviour during the deployment stage, makes the individual characterisation and calibration of the Metal Oxyde sensors unrealistic. For this reason, indicative measurements are to be expected from this type of low cost sensors. More information about the sensors present in the urban board of the SCK can be found in <a href="/Components/Urban Sensor Board/#a-word-about-metal-oxide-sensors">this section</a>.</p>
-<h3 id="smart-citizen-stations">Smart Citizen Stations<a class="headerlink" href="#smart-citizen-stations" title="Permanent link">&para;</a></h3>
-<p><strong>Electrochemical sensors</strong> </p>
-<p>These sensors can achieve significant accuracy, but they require a particular data post-processing that combines the measurement at the sensor electrodes with the sensor characterisation on the factory as well as other environmental parameters as air temperature and relative humidity (i.e. absolute humidity). Luckily the manufacturer of these sensors, Alphasense, provides us with that reference data. However, the complexity of the operations performed can not be done inside the sensing device as it uses advanced operations as well as historical data from the same device. For that reason, the data needs to be post processed using the Sensors Analysis Framework. The algorithm is <strong>in a beta stage</strong> and later it will be applied automatically on the data once it arrives at the platform. More details can be found in the <a href="https://docs.iscape.smartcitizen.me/Components/Gas%20Pro%20Sensor%20Board/Electrochemical%20Sensors/#sensor-calibration"><em>Electrochemical sensor baseline methodology</em> Section</a>.</p>
-<p><img alt="" src="https://i.imgur.com/Mi896Jh.png" /></p>
-<p>This process doesn't require any on-site reference data but requires the data to be processed using the manufacturer calibration reference per sensor as well as other environmental values as temperature and humidity.</p>
-<p><strong>PM sensor</strong></p>
-<p>The selected PM sensor is internally characterised by the manufacturer and, it's readings are currently being evaluated. Preliminarily, the measurements can be as well improved when reference data is available, as some have noted that the PM sensors can be affected by relative humidity. </p>
-<div class="admonition info">
-<p class="admonition-title">Plantower PMS 5003</p>
-<p>Read more on the Plantower PMS 5003 implementation on the <a href="/Components/PM%20Sensor%20Board/"><strong>PM Sensor Board</strong></a>.</p>
 </div>
 
 
@@ -5038,6 +5399,9 @@
 
 
 
+
+  
+  
 
 
 
@@ -5089,6 +5453,44 @@
 <footer class="md-footer">
   <!-- Link to previous and/or next page -->
   
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Knowledge">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Knowledge
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../air/" class="md-footer__link md-footer__link--next" aria-label="Next: Introduction">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Introduction
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
     
   
 
