@@ -68,7 +68,7 @@ The `hardware ID` identifies a **hardware** description in [Smart Citizen Flows]
 - `versions`: list of hardware versions, in case sensors were replaced, but kept in the same physical unit. Each version has the dates during which it was valid (`from` and `to`, `null` if it is still valid), and the `ids` of its sensors.
 - The other fields (`parameters`, `comment` and `forwarding`) are explained in the [data processing guide](/guides/data/custom-data-processing/#hardware).
 
-In the versions information, data is stored based on the IDs of the sensors and a naming convention to understand where they are connected to or what they are. It is easier to understand the naming convention with an example:
+In the versions, each sensor is stored by its id, with a key that tells its type and where it is connected. For example:
 
 - `AS_48_32`: Alphasense electrochemical sensor, connected to the ADC with address `0x48`, with the Working Electrode connected to the channel 3 of the ADC, and the Auxiliary Electrode connected to the channel 2 of the ADC. The logic is explained below:
     - `AS` refers to Alphasense. This implies that the rest of the name is going to be on the format `X_YZ`

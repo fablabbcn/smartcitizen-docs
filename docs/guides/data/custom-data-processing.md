@@ -18,7 +18,7 @@ Smart Citizen Flows processes the devices that have a `postprocessing` field wit
 !!! info "How to do it?"
     Visit [these instructions](/guides/data/handling-calibration-data/) to store the `postprocessing` of your device.
 
-The `hardware_url` points to a **hardware** description in Flows, which contains what is needed to process the data: which **blueprints** (algorithms) to use, and which **calibration data** applies to the sensors of the device. The `hardware_url` can be the name of the hardware (e.g. `SCAS210022`, normally the hardware ID on the sticker of the device), or a url ending in `hardware/<name>.json`. If the hardware is not in Flows, the device is not processed.
+The `hardware_url` points to a **hardware** description in Flows, with the information needed to process the data: which **blueprints** (algorithms) to use, and which **calibration data** applies to the sensors of the device. The `hardware_url` can be the name of the hardware (e.g. `SCAS210022`, normally the hardware ID on the sticker of the device), or a url ending in `hardware/<name>.json`. If the hardware is not in Flows, the device is not processed.
 
 All this processing metadata (hardware, blueprints, calibrations and sensor names) is public, at [`https://flows.smartcitizen.me/api/v1/`](https://flows.smartcitizen.me/api/v1/). We keep it up to date: the hardware of the units we provide is already in Flows. If something is wrong or missing, [contact us]({{ extra.urls.support.link }}).
 
@@ -88,7 +88,7 @@ The arguments that are `null` are filled in with the hardware: the electrodes ar
 
 Each blueprint has a kind, which defines how Flows runs it:
 
-| Kind | Example | What Flows does |
+| Kind | Example | Processing in Flows |
 |:- |:- |:- |
 | `process` | `sc_air` | Every 3 hours, processes the latest readings of the device (up to 1000) and publishes the results on the platform. |
 | `long` | `sc_air_baseline` | Weekly, processes a long window of the device data (90 days by default), with algorithms that need months of data, such as baselines. The results are **not** published on the platform. |
