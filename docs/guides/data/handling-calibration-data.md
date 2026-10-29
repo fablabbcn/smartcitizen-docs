@@ -36,53 +36,60 @@ Then, in `hardware URL` field, introduce the number in the yellow sticker. Save 
 ## Advanced features
 
 !!! warning
-    Only follow these steps if you are working on the data post-processing of the sensors, or you know what all this means!
+    Only read this if you are working on the data post-processing of the sensors, or you know what all this means!
 
-The above mentioned `hardware ID` serves to identify the hardware calibration data, alongside with the processing description needed for that device. Behind it, the following information needs to be available:
+The `hardware ID` identifies a **hardware** description in [Smart Citizen Flows](https://flows.smartcitizen.me), the service that processes the data of the devices. You can see it in `https://flows.smartcitizen.me/api/v1/hardware/<HARDWARE_ID>`, for instance:
 
 ```
 {
-  "blueprint_url": "https://raw.githubusercontent.com/fablabbcn/smartcitizen-data/master/blueprints/sck_21.json",
-  "description": "Smart Citizen Kit 2.1 With PMS5003",
-  "versions": [],
-  "forwarding": "nilu"
+  "name": "SCAS210022",
+  "blueprints": ["sc_air"],
+  "description": "1PMS5003-2ELEC-AFE",
+  "comment": null,
+  "forwarding": null,
+  "parameters": {},
+  "versions": [
+    {
+      "ids": {
+        "AS_48_32": "214240830",
+        "AS_49_10": "212741109",
+        "PT_49_23": "10-001222"
+      },
+      "from": "2021-02-08",
+      "to": null
+    }
+  ],
+  "url": "https://flows.smartcitizen.me/api/v1/hardware/SCAS210022.json"
 }
 ```
 
-- `blueprint_url`: this field defines the post-processing to be done in the form of a `device-blueprint`.  If you have doubts, please, contact us at[{{ extra.urls.support.name }}]({{ extra.urls.support.link }}) to make sure everything will run smoothly. Finally, other blueprints can be added as defined [in this guide](/guides/data/custom-data-processing/)
+- `blueprints`: the blueprints that define how the data is processed. These are our default algorithms, for instance `sc_air` for the Smart Citizen air quality stations. Check the [data processing guide](/guides/data/custom-data-processing/#blueprints) for more details.
 - `description`: brief description of the hardware.
-- `versions`: list containing hardware versions (in case sensors where replaced, but kept in the same physical unit).
-    ```
-      "versions": [
-        {
-          "ids": {
-            "AS_48_01": "162581715",
-            "AS_48_23": "202365014",
-            "AS_4A_01": "164200218",
-            "AS_4A_23": "204440527"
-          },
-          "from": "2020-11-30",
-          "to": null
-        }
-      ]
-    ```
+- `versions`: list of hardware versions, in case sensors were replaced, but kept in the same physical unit. Each version has the dates during which it was valid (`from` and `to`, `null` if it is still valid), and the `ids` of its sensors.
+- The other fields (`parameters`, `comment` and `forwarding`) are explained in the [data processing guide](/guides/data/custom-data-processing/#hardware).
 
-    In the versions information, data is stored based on the IDs of the sensors and a naming convention to understand were they are connected to or what they are. It is easier to understand the naming convention with an example:
+In the versions information, data is stored based on the IDs of the sensors and a naming convention to understand where they are connected to or what they are. It is easier to understand the naming convention with an example:
 
-    - `AS_48_01`: Alphasense Electrochemical sensor, connected to the ADC with address `48`, with the Working Electrode connected to the channel 0 of the ADC, and the Auxiliary Electrode connected to the channel 1 of the ADC. The logic is explained below:
-        - `AS` refers to Alphasense. This implies that the rest of the name is going to be on the format `X_YZ`
-        - `48` refers to the ADC (analog to digital converter) I2C address. Since we only store the raw data values from the ADC, we use the ADC I2C address to refer to the needed channels
-        - `01` are the two channels from the ADC in question that are used for measuring the WE and AE from the Alphasense sensor
+- `AS_48_32`: Alphasense electrochemical sensor, connected to the ADC with address `0x48`, with the Working Electrode connected to the channel 3 of the ADC, and the Auxiliary Electrode connected to the channel 2 of the ADC. The logic is explained below:
+    - `AS` refers to Alphasense. This implies that the rest of the name is going to be on the format `X_YZ`
+    - `48` refers to the ADC (analog to digital converter) I2C address. Since we only store the raw data values from the ADC, we use the ADC I2C address to refer to the needed channels
+    - `32` are the two channels from the ADC in question that are used for measuring the WE and AE from the Alphasense sensor
+- `PT_49_23`: PT1000 temperature probe of an Alphasense AFE board, connected to the channels 2 and 3 of the ADC with address `0x49`. Its value is the id of the AFE board.
+
+The calibration data of each sensor (provided by Alphasense) is stored in Flows too, and can be checked in `https://flows.smartcitizen.me/api/v1/calibrations/<SENSOR_ID>`.
+
+!!! info "Who manages this?"
+    The hardware descriptions, blueprints and calibrations are managed by us. If you have received a unit with a `hardware ID`, its hardware description is already in Flows. If something is wrong or missing, [contact us]({{ extra.urls.support.link }}).
 
 ### Alternative method
 
-Alternatively, in order to post this data, you can follow to other methods:
+Alternatively, in order to store the `hardware ID` in your device, you can follow two other methods:
 
-- either send us the kit ID and it's corresponding hardware ID, and we will do this for you
-- or, if you are familiar with `http requests` you can `post` this data as such:
+- either send us the kit ID and its corresponding hardware ID, and we will do this for you
+- or, if you are familiar with `http requests`, you can `PATCH` your device as such:
 
 ```
-curl 'https://api.smartcitizen.me/v0/devices/<DEVICE-ID>' -X PATCH -H 'Authorization: Bearer <BEARER-FROM-YOUR-USER-PROFILE>' -H 'Content-Type: application/json;charset=UTF-8' --data-binary '{"postprocessing_attributes": {"blueprint_url": "https://raw.githubusercontent.com/fablabbcn/smartcitizen-data/master/blueprints/<BLUEPRINT_ID>.json", "hardware_url": "https://raw.githubusercontent.com/fablabbcn/smartcitizen-data/master/hardware/<HARDWARE_ID>.json"}}' --compressed
+curl 'https://api.smartcitizen.me/v0/devices/<DEVICE-ID>' -X PATCH -H 'Authorization: Bearer <BEARER-FROM-YOUR-USER-PROFILE>' -H 'Content-Type: application/json;charset=UTF-8' --data-binary '{"postprocessing_attributes": {"hardware_url": "<HARDWARE_ID>"}}' --compressed
 ```
 
 You can get your authorization token on your user profile page in the OAuth section. Make sure to change the following fields in the command above:
@@ -90,7 +97,8 @@ You can get your authorization token on your user profile page in the OAuth sect
 - `<DEVICE-ID>`
 - `<BEARER-FROM-YOUR-USER-PROFILE>`
 - `<HARDWARE_ID>`, for instance `SCAS210002`
-- `<BLUEPRINT_ID>`, for instance `sc_21_station_module` for Smart Citizen Stations
+
+The blueprints are taken from the hardware description: a `blueprint_url` in the device is not used.
 
 !!! info "Check it out"
     Once this process is done, you should be able to check that the `postprocessing` is safely stored in the Platform by visiting: `https://api.smartcitizen.me/v0/devices/<DEVICE-ID>/`. After this, we will take care of processing the data in a periodic way.

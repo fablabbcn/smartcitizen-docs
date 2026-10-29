@@ -57,20 +57,19 @@ As mentioned above, the **counter electrode** is meant to balance the reaction o
 
 ## Usage and considerations
 
-When connected through the SCK Gases Board (`SCK_WITH_GASES_BOARD` firmware flag), the firmware reports the raw voltages of the working (`W`) and auxiliary (`A`) electrodes of each slot:
+The electrochemical sensors are connected to the SCK through the [Analog Sensor Board](/hardware/boards/analog-sensor-board/) (ASB), which reads the working (`W`) and auxiliary (`A`) electrodes of each sensor with two [TI ADS1115](/knowledge/other/TI_ADS1X15/) ADCs. The firmware does not know which sensor is connected to each channel: it reports the raw voltage of each ADC channel, named after the ADC address and the channel number:
 
 | Metric | Shell name | Units | API |
 |:- |:- |:-: |:- |
-| Slot 1 (CO-B4), working electrode | `Gases Board 1W` | mV | [64](https://api.smartcitizen.me/v0/sensors/64) |
-| Slot 1 (CO-B4), auxiliary electrode | `Gases Board 1A` | mV | [65](https://api.smartcitizen.me/v0/sensors/65) |
-| Slot 2 (NO2-B43F), working electrode | `Gases Board 2W` | mV | [61](https://api.smartcitizen.me/v0/sensors/61) |
-| Slot 2 (NO2-B43F), auxiliary electrode | `Gases Board 2A` | mV | [62](https://api.smartcitizen.me/v0/sensors/62) |
-| Slot 3 (OX-B431), working electrode | `Gases Board 3W` | mV | [67](https://api.smartcitizen.me/v0/sensors/67) |
-| Slot 3 (OX-B431), auxiliary electrode | `Gases Board 3A` | mV | [68](https://api.smartcitizen.me/v0/sensors/68) |
-| Temperature | `Gases Board Temperature` | ºC | [79](https://api.smartcitizen.me/v0/sensors/79) |
-| Humidity | `Gases Board Humidity` | % | [80](https://api.smartcitizen.me/v0/sensors/80) |
+| ADC `0x48`, channels 0 to 3 | `ADS1x15 ADC 0x48 Ch0` to `ADS1x15 ADC 0x48 Ch3` | V | [133](https://api.smartcitizen.me/v0/sensors/133), [134](https://api.smartcitizen.me/v0/sensors/134), [135](https://api.smartcitizen.me/v0/sensors/135), [136](https://api.smartcitizen.me/v0/sensors/136) |
+| ADC `0x49`, channels 0 to 3 | `ADS1x15 ADC 0x49 Ch0` to `ADS1x15 ADC 0x49 Ch3` | V | [138](https://api.smartcitizen.me/v0/sensors/138), [139](https://api.smartcitizen.me/v0/sensors/139), [140](https://api.smartcitizen.me/v0/sensors/140), [141](https://api.smartcitizen.me/v0/sensors/141) |
 
-Pollutant concentrations are not calculated by the firmware: they are derived in post-processing and published on the platform as:
+Check the [ADS1115 knowledge page](/knowledge/other/TI_ADS1X15/) for the other addresses. Which channels belong to which sensor and electrode is stored with the [calibration data](/guides/data/handling-calibration-data/) of the device (e.g. `AS_48_01` is an Alphasense sensor with its working electrode on channel 0 and its auxiliary electrode on channel 1 of the ADC `0x48`).
+
+!!! warning "Gases Board"
+    Older units, such as the ones of the iSCAPE project, used the [Gases Pro Board](/hardware/boards/gases-pro-board/) (`SCK_WITH_GASES_BOARD` firmware flag), which reported the electrodes of each slot as `Gases Board 1W`, `Gases Board 1A`, etc. This board is discontinued and no longer sold: new units use the Analog Sensor Board.
+
+Pollutant concentrations are not calculated by the firmware: they are derived in post-processing (see [Data processing](#data-processing) below) and published on the platform as:
 
 | Metric | Units | API |
 |:- |:-: |:- |
@@ -80,16 +79,6 @@ Pollutant concentrations are not calculated by the firmware: they are derived in
 | SO2 | ppb | [155](https://api.smartcitizen.me/v0/sensors/155) |
 | H2S | ppb | [156](https://api.smartcitizen.me/v0/sensors/156) |
 | O3 | ppb | [157](https://api.smartcitizen.me/v0/sensors/157) |
-
-Alphasense Ltd. provides the calibration data in laboratory conditions for each of the electrochemical cells used. This data can be used to calculate pollutant concentration and to correct for _known effects_ by temperature deviations.
-
-!!! info "More on this"
-    Alphasense Ltd. provides very useful application notes for the sensor usage.
-
-Pollutant calculation based on calibration data in laboratory conditions, can be insightful enough for certain applications, but it might not suffice for some conditions in which the sensors are exposed to other pollutants or in harsh environments. For this reason, two different approaches build on top of the laboratory calibration data:
-
-- Usage of more advanced physical models as detailed in [^1]
-- Usage of site-specific calibration models with short-term deployments in co-location with reference measurement equipment and generalised calibration models derived from the junction of these [^4].
 
 ### Measurement range
 
@@ -108,7 +97,7 @@ Note that ambient concentrations are generally in the ppb range, so the useful p
 
 ### Stabilisation
 
-The electrochemical sensors **need stabilisation time under the testing conditions** they will be at. It is important to set and power the sensors with sufficient time (1-2 days) on the test environment for them to adapt. The newer the sensor, the more stabilisation time it requires. For this deployment, you will be receiving brand new sensors.
+The electrochemical sensors **need stabilisation time under the testing conditions** they will be at. It is important to set and power the sensors with sufficient time (1-2 days) on the test environment for them to adapt. The newer the sensor, the more stabilisation time it requires. In general, you will be receiving brand new sensors.
 
 Humidity and temperature extremes will require of further sensor adaptation, in order to dry out or absorb the necessary humidity for their proper functioning.
 
@@ -117,17 +106,42 @@ Humidity and temperature extremes will require of further sensor adaptation, in 
 
 ### Limitations
 
-Electrochemical sensors typically show a good sensitivity, however, they can be affected by a series of factors such as temperature, humidity, and the presence of other pollutants. Not only temperature and humidity absolute levels affect the readings, but also the speed at which the changes take place can induce short term instabilities on the readings that provoke noise and some artefacts. These artefacts can provoke two issues: wrong readings, and wrong calibrations, especially if not cleaned and when using machine learning algorithms [^21]. In addition, ageing and drift are known problems, which affect the loss of sensitivity and deviations in the baseline response [^14]. In general, it is a common practice to include temperature and humidity sensors of the target air, as well as the electrochemical cells used for the measurement. This is particularly relevant in the case of indoor environments, as mentioned above, since the absolute values and the changes can be more abrupt in certain times of the day due to human activity, i.e. opening windows, doors, heating and air conditioning activation, etc. Typically, the approach for the deployment of electrochemical sensors is to provide a factory base calibration, in laboratory conditions, and to correct this in the final deployment conditions, by co-locating the sensors with high-end instruments during a pre-assigned period of time [^14]. In most cases, a laboratory evaluation to derive linear models will not be sufficient, but will provide good enough information to kick-off the deployment. Specific on-site calibration is needed if accurate readings and other effects, as explained above, are to be compensated. This is a recommendation for the case of the TwinAIR pilots.
+Electrochemical sensors have a good sensitivity, but their readings are affected by a series of factors:
 
-### Open questions
+- **Temperature and humidity**: both their absolute levels and the speed at which they change. Fast changes can induce short-term instabilities that show up as noise and artefacts in the readings. If not cleaned, these artefacts lead to wrong readings and to wrong calibration models, especially when using machine learning algorithms [^21]. Indoors, these changes can be more abrupt due to human activity (opening windows and doors, heating or air conditioning, etc.). For this reason, the temperature and humidity of the air around the sensors are always measured along with the electrodes.
+- **Cross-sensitivity** to other pollutants. For instance, the OX-B431 responds to both O~3~ and NO~2~, and needs an NO~2~ sensor to derive O~3~.
+- **Ageing and drift**, which cause a loss of sensitivity and a deviation of the baseline over time [^14].
 
-These methods, however, are still open to discussion and more research is necessary to address all use cases. For this reason, the use of these sensors in the Smart Citizen Station is tailored to each use and adapted to the calibration needs of the deployment.
+The laboratory calibration provided by Alphasense does not account for all these effects in the deployment conditions. It provides good enough information to start a deployment and follow trends, but accurate readings need further calibration in the field (see [Data processing](#data-processing)).
 
-Characterisation techniques based on manufacturer data and physical models (i.e. classical linear regression using sensor sensitivity, span and zero) require a big development effort in order to characterise the sensor behaviour that, in the case of low-cost sensors, is affected by a wide variety of external factors such as temperature, humidity and pollutant cross-sensitivity, each of which imply a larger characterisation effort and that can’t be fully represented in a controlled setting. On the other hand, statistical models are able to generate models that describe the sensor behaviour in a mathematical way, but they need to be properly adjusted with large amounts of test data, preferably in the actual deployment site. This approach can be applied per sensor, or to a batch of sensors, assuming that the inter-sensor variation is low or that they can be normalised.
+## Data processing
 
-In the case of deploying the sensors in different locations, the conditions of these sites should be sufficiently similar to those when the model was generated, since many models won’t be able to extrapolate well, or account for effects they have not seen (i.e. temperature gradients, specific pollutants, etc). How much is ​sufficiently similar​, depends on the type of model and it is not easy to determine and, since this is not often assessed easily, researchers suggest ([^5], [^6]) that a co-location prior to and post data acquisition with reference sensors should be carried out. In any case, the development of these models highly depends on the amount and quality of the data obtained from both: sensor data and reference data. In the case of reference data [^6] have pointed out that reference stations can deviate up to 15% from the actual pollutant concentration, but this has not been taken into account in this study.
+The raw electrode voltages are converted to pollutant concentrations outside of the units. There are different ways of doing so, such as:
 
-Since co-location possibilities could be limited, two options are compared for the calibration of these sensors: a specific on-site calibration with sensor co-location, aiming to calibrate the sensors with the data from that period; and a general model approach, in which all the co-location tests from the different sensors deployed are input into a statistical model that aims to describe the global behaviour. Whether these methods are able to generalise or not, it's yet to be answered, and it's probably to be defined for each use case in particular.
+- physically rooted models
+- empirical (e.g. linear) models
+- to black-box models trained with data (e.g. machine learning).
+
+### Default processing
+
+The default data processing workflow is the **direct calculation of the pollutants based on the laboratory calibration provided by Alphasense**, following the [Alphasense Application Note 803-04](/assets/notes/alphasense-an-803-04-zero-offset.pdf). Alphasense provides the calibration data (electronic zero, sensitivity, and cross-sensitivity to NO~2~ where applicable) for each individual sensor. With it, the processing:
+
+1. Subtracts the electronic zero of each electrode.
+2. Corrects the working electrode with the auxiliary electrode, using the temperature-dependent factors given in the application note.
+3. Removes the NO~2~ cross-sensitivity (for the OX sensor).
+4. Converts the result to ppb with the sensor sensitivity.
+
+This processing runs periodically in [Smart Citizen Flows](https://flows.smartcitizen.me), using the algorithms in [scdata](https://github.com/fablabbcn/smartcitizen-data/), and the results are published on the platform with the metrics listed [above](#usage-and-considerations). Check the [data processing guide](/guides/data/custom-data-processing/) to know how to set it up, or how to try other algorithms yourself.
+
+### Long processing
+
+In addition, [smartcitizen-flows](https://github.com/fablabbcn/smartcitizen-flows) can run a longer batch processing on a window of several months of data (90 days by default) of each device. Instead of relying only on the zero from the laboratory calibration, it estimates the baseline of the working electrode from the data itself, with an asymmetric least squares (ALS) algorithm, and corrects the auxiliary electrode against it, in a similar way as in [^3]. These results are not published on the platform. This processing is used in research projects and is **not offered commercially**.
+
+### Calibration with reference stations
+
+The processing above is based on the laboratory calibration, and it might not suffice when the sensors are exposed to other pollutants or to harsh environments. For this reason, many groups do a finer calibration by **co-locating the units near a reference grade station** for a period of time, and deriving additional calibration factors, from linear and multilinear corrections to machine learning models [^1] [^7] [^8] [^9] [^14]. These models can be specific to each site and sensor, or general models derived from several co-locations [^6]. Since a model can only be trusted in conditions similar to the ones it was trained with, a co-location before and after the deployment is recommended [^5] [^6]. Keep in mind as well that the quality of the reference data matters: reference stations can deviate up to 15% from the actual concentration [^6].
+
+Check the [calibration section](/knowledge/calibration/) for more information.
 
 ## Resources
 
@@ -139,6 +153,9 @@ Below you can find a small selection of publications on these sensors:
 [^4]:Modelling atmospheric composition in urban street canyons: https://rmets.onlinelibrary.wiley.com/doi/full/10.1002/wea.781
 [^5]:ISCAPE D7.8 Sensor monitoring experiences and technological innovations: [link](/assets/publications/iSCAPE_D78.pdf)
 [^6]:Node-to-node field calibration of wireless distributed air pollution sensor network. In Environmental pollution (2017): https://doi.org/10.1016/j.envpol.2017.09.042
+[^7]:Spinelle, L., M. Gerboles, M. G. Villani, M. Aleixandre, and F. Bonavitacola. Field calibration of a cluster of low-cost available sensors for air quality monitoring. Part A: Ozone and nitrogen dioxide. In Sensors and Actuators B: Chemical (2015): https://doi.org/10.1016/j.snb.2015.03.031
+[^8]:Hagan, D. H., G. Isaacman-VanWertz, J. P. Franklin, L. M. M. Wallace, B. D. Kocar, C. L. Heald, and J. H. Kroll. Calibration and assessment of electrochemical air quality sensors by co-location with regulatory-grade instruments. In Atmospheric Measurement Techniques (2018): https://doi.org/10.5194/amt-11-315-2018
+[^9]:Zimmerman, N., A. A. Presto, S. P. N. Kumar, J. Gu, A. Hauryliuk, E. S. Robinson, A. L. Robinson, and R. Subramanian. A machine learning calibration model using random forests to improve sensor performance for lower-cost air quality monitoring. In Atmospheric Measurement Techniques (2018): https://doi.org/10.5194/amt-11-291-2018
 [^14]:
     Clements, A., S. Lung, A. Arfire, AND A. Polidori. An Update on Low-Cost Sensors for the Measurement of Atmospheric Composition: Evaluation Activities. An Update on Low-Cost Sensors for the Measurement of Atmospheric Composition. World Meteorological Organization, Geneva, Switzerland, , NA, (2020).
 [^21]:
